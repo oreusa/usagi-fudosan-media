@@ -2,7 +2,8 @@
   静止画: python3 make_bg.py out.png [seed]
   動画  : python3 make_bg.py out.mp4 [seed] [秒数]
 上からゆるく右へ流れる、幅の違う布のひだ。動画ではひだが風でゆっくり揺れる。
-明るい白〜うすいグレーで、文字の邪魔をしない濃さに抑える。"""
+明るい白〜うすいグレーで、文字の邪魔をしない濃さに抑える。
+動画にはごく細かい粒（ノイズ）を足す：白のなめらかな濃淡が、インスタの圧縮で段々模様になるのを防ぐため。"""
 import subprocess
 import sys
 
@@ -10,7 +11,7 @@ import numpy as np
 from PIL import Image, ImageFilter
 
 W, H = 1080, 1920
-SW, SH = 270, 480  # 動画は1/4で計算して拡大する（ひだはぼかすので見た目は同じ）
+SW, SH = 540, 960  # 動画は1/2で計算して拡大する（ひだはぼかすので見た目は同じ）
 
 
 def _folds(seed):
@@ -50,12 +51,12 @@ def make_video(path, seed=7, seconds=13.0, fps=30):
     folds = _folds(seed)
     norm = max(_field(folds, t, SW, SH)[0].max() for t in np.linspace(0, 9, 10))  # 明るさが時間で揺れないよう固定
     p = subprocess.Popen(["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{SW}x{SH}",
-                          "-r", str(fps), "-i", "-", "-vf", f"scale={W}:{H}:flags=bicubic,gblur=sigma=6",
-                          "-c:v", "libx264", "-preset", "slow", "-crf", "16", "-pix_fmt", "yuv420p", path],
+                          "-r", str(fps), "-i", "-", "-vf", f"scale={W}:{H}:flags=lanczos,gblur=sigma=4,noise=alls=3:allf=t",
+                          "-c:v", "libx264", "-preset", "slow", "-crf", "8", "-pix_fmt", "yuv444p", path],
                          stdin=subprocess.PIPE)
     for k in range(int(round(seconds * fps))):
         shade, x, y = _field(folds, k / fps, SW, SH)
-        img = Image.fromarray(_color(shade, x, y, norm)).filter(ImageFilter.GaussianBlur(5))
+        img = Image.fromarray(_color(shade, x, y, norm)).filter(ImageFilter.GaussianBlur(10))
         p.stdin.write(img.tobytes())
     p.stdin.close()
     p.wait()

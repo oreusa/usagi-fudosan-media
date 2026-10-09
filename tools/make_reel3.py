@@ -191,7 +191,10 @@ def main(spec_path, outdir):
     fc.append(f"{prev}format=yuv420p[vout]")
     mp4 = os.path.join(outdir, f"{spec['name']}.mp4")
     args += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", f"{n + 1}:a", "-t", str(round(total, 2)),
-             "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", mp4]
+             "-c:v", "libx264", "-preset", "slow", "-profile:v", "high", "-crf", "14", "-minrate", "8M", "-maxrate", "20M",
+             "-bufsize", "30M", "-x264-params", "aq-mode=3", "-colorspace", "bt709", "-color_primaries", "bt709",
+             "-color_trc", "bt709", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", mp4]
+    # 画質：インスタは投稿時にもう一度圧縮するので、元を高い画質（8〜20Mbps）で渡す
     subprocess.run(args, check=True)
     for f in layers + [bg]:
         os.remove(f)
