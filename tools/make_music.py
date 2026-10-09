@@ -1,7 +1,7 @@
 """リール用の静かなピアノ曲を作る（自作の曲。音はピアノの録音素材を使う）
-使い方: python3 make_music.py out.wav 秒数 [seed]
+使い方: python3 make_music.py out.wav 秒数 [seed] [雰囲気：piano / slow / musicbox / guitar / epiano]
 
-・ピアノの音：FluidR3 GM（gleitz/midi-js-soundfonts、CC BY 3.0）。tools/sound/piano/ に1音ずつ置く
+・楽器の音：FluidR3 GM（gleitz/midi-js-soundfonts、CC BY 3.0）。tools/sound/<楽器>/ に1音ずつ置く
   → 使ったリールには「音：FluidR3 GM（CC BY 3.0）」を出典の行に書く（make_reel3.py が自動で入れる）
 ・曲：ゆっくり（72BPM）、明るく落ち着いた和音進行。seed で進行と旋律が少し変わるので、毎日同じ曲にならない
 ・最後の1秒で音を消す。音量は控えめ（文字を読む邪魔をしない）
@@ -10,8 +10,16 @@ import os, subprocess, sys, urllib.request
 import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SDIR = os.path.join(HERE, "sound", "piano")
-SRC = "https://raw.githubusercontent.com/gleitz/midi-js-soundfonts/gh-pages/FluidR3_GM/acoustic_grand_piano-mp3/"
+SOUND = os.path.join(HERE, "sound")
+SRC = "https://raw.githubusercontent.com/gleitz/midi-js-soundfonts/gh-pages/FluidR3_GM/{inst}-mp3/"
+# 曲の雰囲気（REEL3_MUSIC で選ぶ）。inst＝楽器、bpm＝速さ、pat＝弾き方
+STYLES = {
+    "piano":    dict(inst="acoustic_grand_piano", folder="piano", bpm=72, pat="arp8"),
+    "slow":     dict(inst="acoustic_grand_piano", folder="piano", bpm=58, pat="block"),
+    "musicbox": dict(inst="music_box", folder="musicbox", bpm=84, pat="arp8"),
+    "guitar":   dict(inst="acoustic_guitar_nylon", folder="guitar", bpm=78, pat="pick"),
+    "epiano":   dict(inst="electric_piano_1", folder="epiano", bpm=70, pat="swing"),
+}
 SR = 44100
 NAMES = ["C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B"]
 CREDIT = "音：FluidR3 GM（CC BY 3.0）"
@@ -28,19 +36,22 @@ def note_name(m):
 
 
 _cache = {}
+ST = STYLES["piano"]
 
 
 def sample(m):
-    if m in _cache:
-        return _cache[m]
-    os.makedirs(SDIR, exist_ok=True)
-    mp3 = os.path.join(SDIR, note_name(m) + ".mp3")
+    key = (ST["inst"], m)
+    if key in _cache:
+        return _cache[key]
+    sdir = os.path.join(SOUND, ST["folder"])
+    os.makedirs(sdir, exist_ok=True)
+    mp3 = os.path.join(sdir, note_name(m) + ".mp3")
     if not os.path.exists(mp3):
-        urllib.request.urlretrieve(SRC + note_name(m) + ".mp3", mp3)
+        urllib.request.urlretrieve(SRC.format(inst=ST["inst"]) + note_name(m) + ".mp3", mp3)
     raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", mp3, "-f", "f32le", "-ac", "1", "-ar", str(SR), "-"],
                          capture_output=True, check=True).stdout
-    _cache[m] = np.frombuffer(raw, dtype=np.float32).copy()
-    return _cache[m]
+    _cache[key] = np.frombuffer(raw, dtype=np.float32).copy()
+    return _cache[key]
 
 
 def place(buf, m, t, vel, length=None):
@@ -73,19 +84,35 @@ def _fftconv(x, ir):
     return np.fft.irfft(np.fft.rfft(x, N) * np.fft.rfft(ir, N), N)[:len(x)]
 
 
-def make(path, seconds, seed=0):
+def make(path, seconds, seed=0, style=None):
+    global ST
+    ST = STYLES[style or os.environ.get("REEL3_MUSIC", "piano")]
     rng = np.random.default_rng(seed)
     prog = PROGS[seed % len(PROGS)]
     key = int(rng.choice([0, 2, 5, 7]))            # C / D / F / G
-    beat = 60 / 72
+    beat = 60 / ST["bpm"]
     bar = beat * 4
     buf = np.zeros(int((seconds + 3) * SR), dtype=np.float32)
     t, k = 0.0, 0
     while t < seconds:
         ch = [48 + key + n for n in prog[k % len(prog)]]
-        place(buf, ch[0] - 12, t, 0.35, bar * 1.5)                      # 低い音（根音）
-        for j, n in enumerate([ch[1], ch[2], ch[3], ch[2]] * 2):        # 8分音符のやさしい分散和音
-            place(buf, n, t + j * beat / 2, 0.16 + 0.04 * (j % 2 == 0), beat * 1.6)
+        pat = ST["pat"]
+        if pat != "pick":
+            place(buf, ch[0] - 12, t, 0.35, bar * 1.5)                  # 低い音（根音）
+        if pat == "arp8":                                               # 8分音符のやさしい分散和音
+            for j, n in enumerate([ch[1], ch[2], ch[3], ch[2]] * 2):
+                place(buf, n, t + j * beat / 2, 0.16 + 0.04 * (j % 2 == 0), beat * 1.6)
+        elif pat == "block":                                            # 2拍ごとに和音をそっと置く
+            for j in (0, 2):
+                for n in ch[1:]:
+                    place(buf, n, t + j * beat + 0.02 * ch.index(n), 0.13, beat * 2.2)
+        elif pat == "pick":                                             # ギターの指弾き（低音→高音）
+            for j, n in enumerate([ch[0], ch[2], ch[3], ch[1] + 12, ch[0] + 12, ch[2], ch[3], ch[1] + 12]):
+                place(buf, n, t + j * beat / 2, 0.3 if j % 4 == 0 else 0.2, beat * 2)
+        elif pat == "swing":                                            # 跳ねるリズムの和音（lofi 風）
+            for j, off in enumerate([0, 1.33, 2, 3.33]):
+                for n in ch[1:]:
+                    place(buf, n, t + off * beat, 0.12 if j % 2 == 0 else 0.08, beat * 0.9)
         if k % 2 == 1 or rng.random() < 0.5:                            # ときどき高い旋律
             for j in range(int(rng.integers(1, 3))):
                 m = ch[int(rng.integers(1, 4))] + 12
@@ -103,4 +130,5 @@ def make(path, seconds, seed=0):
 
 
 if __name__ == "__main__":
-    make(sys.argv[1], float(sys.argv[2]), int(sys.argv[3]) if len(sys.argv) > 3 else 0)
+    make(sys.argv[1], float(sys.argv[2]), int(sys.argv[3]) if len(sys.argv) > 3 else 0,
+         sys.argv[4] if len(sys.argv) > 4 else None)
