@@ -73,7 +73,10 @@ h2 {{ font-size: 72px; font-weight: {WEIGHTS['head']}; line-height: 1.3; letter-
 .src {{ position: absolute; left: 96px; right: 200px; bottom: 440px; font-size: 28px; font-weight: 500; color: {SUB}; line-height: 1.55; }}
 """
 
-MUSIC_CREDIT = "音：FluidR3 GM（CC BY 3.0）"  # make_music.py のピアノ素材の表記
+# 曲（10/09 オーナーが「3:03 PM／しゃろう」に決定。フリーBGM・表記は任意だが作曲者への礼儀で入れる）
+# 曲のファイルは公開しない（tools/sound/bgm/ は .gitignore。再配布にあたるため）。無ければ make_music.py の自作曲
+BGM = {"file": os.path.join(HERE, "sound", "bgm", os.environ.get("REEL3_BGM", "303PM.mp3")), "credit": "曲：3:03 PM／しゃろう"}
+MUSIC_CREDIT = BGM["credit"] if os.path.exists(BGM["file"]) else "音：FluidR3 GM（CC BY 3.0）"
 NUM_RE = re.compile(r"^([0-9０-９,，.．]+)(.*)$")
 
 
@@ -172,11 +175,15 @@ def main(spec_path, outdir):
     total = dur * n - fade * (n - 1)
     bg = os.path.join(outdir, "_bg.mp4")
     make_bg.make_video(bg, int(os.environ.get("REEL3_BG_SEED", "7")), total + 0.2)
-    # 音楽：ピアノの録音素材で作る静かな曲（make_music.py）。リールごとに少し変わる
-    #（10/09 オーナー「音楽嫌すぎ」→ 電子音の合成はやめた）
-    import make_music
+    # 音楽：オーナーが選んだ曲（BGM）。無いときだけ自作曲（make_music.py）
     wav = os.path.join(outdir, "_music.wav")
-    make_music.make(wav, total, sum(map(ord, spec["name"])))
+    if os.path.exists(BGM["file"]):
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", BGM["file"], "-t", f"{total:.2f}", "-af",
+                        f"volume=-5dB,afade=t=in:d=0.3,afade=t=out:st={total - 1.2:.2f}:d=1.2", "-ar", "44100", "-ac", "2", wav],
+                       check=True)
+    else:
+        import make_music
+        make_music.make(wav, total, sum(map(ord, spec["name"])))
     args = ["ffmpeg", "-y", "-loglevel", "error", "-i", bg]
     for lay in layers:
         args += ["-loop", "1", "-framerate", "30", "-t", str(round(total, 2)), "-i", lay]
@@ -195,7 +202,7 @@ def main(spec_path, outdir):
     fc.append(f"{prev}format=yuv420p[vout]")
     mp4 = os.path.join(outdir, f"{spec['name']}.mp4")
     args += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", f"{n + 1}:a", "-t", str(round(total, 2)),
-             "-c:v", "libx264", "-preset", "slow", "-profile:v", "high", "-crf", "15", "-minrate", "8M", "-maxrate", "14M",
+             "-c:v", "libx264", "-preset", "medium", "-profile:v", "high", "-crf", "15", "-minrate", "8M", "-maxrate", "14M",
              "-bufsize", "28M", "-x264-params", "aq-mode=3", "-colorspace", "bt709", "-color_primaries", "bt709",
              "-color_trc", "bt709", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", mp4]
     # 画質：インスタは投稿時にもう一度圧縮するので、元を高い画質（8〜14Mbps。送れる大きさ30MBに収まる）で渡す
