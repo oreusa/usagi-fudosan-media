@@ -9,9 +9,13 @@ from PIL import Image, ImageDraw, ImageFont
 W, H = 1080, 1920
 M = 96               # 端からの余白（80px以上）
 SAFE_TR = 150        # 右上の空ける四方
-FONT_B = "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"
-FONT_BL = "/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc"
-FONT_R = "/usr/share/fonts/opentype/noto/NotoSansCJK-Medium.ttc"
+_HERE = os.path.dirname(os.path.abspath(__file__))
+FONT_SETS = {
+    "noto": ("/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc", "/usr/share/fonts/opentype/noto/NotoSansCJK-Black.ttc", "/usr/share/fonts/opentype/noto/NotoSansCJK-Medium.ttc"),
+    "zenmaru": (f"{_HERE}/fonts/ZenMaruGothic-Bold.ttf", f"{_HERE}/fonts/ZenMaruGothic-Black.ttf", f"{_HERE}/fonts/ZenMaruGothic-Medium.ttf"),
+    "mplus": (f"{_HERE}/fonts/MPLUSRounded1c-Bold.ttf", f"{_HERE}/fonts/MPLUSRounded1c-ExtraBold.ttf", f"{_HERE}/fonts/MPLUSRounded1c-Medium.ttf"),
+}
+FONT_B, FONT_BL, FONT_R = FONT_SETS[os.environ.get("REEL_FONT", "noto")]
 FIELDS = {
     "sell":  {"main": (139, 94, 60),  "bg": (247, 240, 232), "soft": (234, 220, 204), "label": "売却・相場"},
     "money": {"main": (214, 112, 132), "bg": (252, 241, 243), "soft": (246, 214, 221), "label": "お金の制度"},
