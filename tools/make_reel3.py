@@ -129,12 +129,13 @@ def slide_html(spec, s, i, n):
 
 
 def render(spec_path, outdir):
+    """1枚ずつ、確認用の JPG（背景あり）と、動画用の文字だけの PNG（背景透明）を作る"""
     from playwright.sync_api import sync_playwright
     from PIL import Image
     spec = json.load(open(spec_path, encoding="utf-8"))
     os.makedirs(outdir, exist_ok=True)
     n = len(spec["slides"])
-    paths = []
+    paths, layers = [], []
     with sync_playwright() as p:
         b = p.chromium.launch()
         pg = b.new_page(viewport={"width": W, "height": H}, device_scale_factor=2)
@@ -146,43 +147,54 @@ def render(spec_path, outdir):
             pg.wait_for_timeout(150)
             big = os.path.join(outdir, f"_{i}.png")
             pg.screenshot(path=big)
-            os.unlink(f.name)
             out = os.path.join(outdir, f"{spec['name']}-{i + 1}.jpg")
             Image.open(big).convert("RGB").resize((W, H), Image.LANCZOS).save(out, quality=93)
-            os.remove(big)
             paths.append(out)
+            pg.add_style_tag(content="html, body { background: transparent !important; }")
+            pg.screenshot(path=big, omit_background=True)
+            lay = os.path.join(outdir, f"_layer{i}.png")
+            Image.open(big).resize((W, H), Image.LANCZOS).save(lay)
+            layers.append(lay)
+            os.remove(big)
+            os.unlink(f.name)
         b.close()
-    return spec, paths
+    return spec, paths, layers
 
 
 def main(spec_path, outdir):
+    """動く白いシルクの背景（make_bg.py）の上に、文字の層を順にふわっと重ねる"""
     sys.path.insert(0, HERE)
-    import make_reel  # BGM は v2 のものを使う
-    spec, paths = render(spec_path, outdir)
+    import make_bg
+    spec, paths, layers = render(spec_path, outdir)
     n = len(paths)
     dur, fade = spec.get("seconds_per_slide", 3.6), 0.5
     total = dur * n - fade * (n - 1)
-    wav = os.path.join(outdir, f"{spec['name']}-bgm.wav")
-    make_reel.make_bgm(wav, total, seed=sum(map(ord, spec["name"])))
-    fr = int(round(dur * 30))
-    args = ["ffmpeg", "-y", "-loglevel", "error"]
-    for pth in paths:
-        args += ["-i", pth]
-    args += ["-i", wav]
-    fc = []
-    for k in range(n):  # ごくゆっくり寄る（2%）。文字が揺れて見えないよう中心固定
-        fc.append(f"[{k}:v]scale=2160:3840,zoompan=z='1+0.02*on/{fr}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={fr}:s={W}x{H}:fps=30,setsar=1[z{k}]")
-    prev = "[z0]"
-    for k in range(1, n):
-        out = f"[v{k}]"
-        fc.append(f"{prev}[z{k}]xfade=transition=fade:duration={fade}:offset={round(k * (dur - fade), 3)}{out}")
-        prev = out
+    bg = os.path.join(outdir, "_bg.mp4")
+    make_bg.make_video(bg, int(os.environ.get("REEL3_BG_SEED", "7")), total + 0.2)
+    # 音楽：自作の合成音は使わない（10/09 オーナー「音楽嫌すぎ」）。無音の音声を入れておき、
+    # 手で投稿するときはインスタの音楽を後から付けられるようにする
+    args = ["ffmpeg", "-y", "-loglevel", "error", "-i", bg]
+    for lay in layers:
+        args += ["-loop", "1", "-framerate", "30", "-t", str(round(total, 2)), "-i", lay]
+    args += ["-f", "lavfi", "-t", str(round(total, 2)), "-i", "anullsrc=channel_layout=stereo:sample_rate=44100"]
+    fc, prev = [], "[0:v]"
+    for k in range(n):
+        st = k * (dur - fade)
+        f = f"[{k + 1}:v]format=rgba"
+        if k > 0:
+            f += f",fade=t=in:st={st:.2f}:d={fade}:alpha=1"
+        if k < n - 1:
+            f += f",fade=t=out:st={st + dur - fade:.2f}:d={fade}:alpha=1"
+        fc.append(f + f"[t{k}]")
+        fc.append(f"{prev}[t{k}]overlay=0:0:enable='between(t,{max(st - 0.01, 0):.2f},{st + dur:.2f})'[o{k}]")
+        prev = f"[o{k}]"
     fc.append(f"{prev}format=yuv420p[vout]")
     mp4 = os.path.join(outdir, f"{spec['name']}.mp4")
-    args += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", f"{n}:a", "-c:v", "libx264", "-preset", "slow",
-             "-crf", "18", "-c:a", "aac", "-b:a", "128k", "-shortest", "-movflags", "+faststart", mp4]
+    args += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", f"{n + 1}:a", "-t", str(round(total, 2)),
+             "-c:v", "libx264", "-preset", "slow", "-crf", "18", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", mp4]
     subprocess.run(args, check=True)
-    os.remove(wav)
+    for f in layers + [bg]:
+        os.remove(f)
     print("\n".join(paths + [mp4]))
 
 
