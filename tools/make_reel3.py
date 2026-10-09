@@ -14,13 +14,24 @@ HTML と CSS で1枚ずつ組み、Chromium（Playwright）で2倍の解像度�
 import html, json, os, re, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-FONT = os.path.join(HERE, "fonts", "NotoSansJP-VF.ttf")
+# 字体の組（REEL3_FONT で切り替え）。{太さ: ファイル}。中くらい＝500、太字＝700 以上
+FONT_SETS = {
+    "noto": {"100 900": "NotoSansJP-VF.ttf"},
+    "zenkaku": {"500": "ZenKakuGothicNew-Medium.ttf", "700": "ZenKakuGothicNew-Bold.ttf", "800 900": "ZenKakuGothicNew-Black.ttf"},
+    "bizud": {"100 600": "BIZUDPGothic-Regular.ttf", "700 900": "BIZUDPGothic-Bold.ttf"},
+    "plex": {"100 600": "IBMPlexSansJP-Medium.ttf", "700 900": "IBMPlexSansJP-Bold.ttf"},
+}
+FONT_SET = FONT_SETS[os.environ.get("REEL3_FONT", "noto")]
+# 太さの組。"iphone" は iPhone の文字（ヒラギノ角ゴ W3/W6）に近い細めの太さ
+WEIGHTS = {"std": {"title": 800, "head": 700, "body": 500, "num": 900},
+           "iphone": {"title": 650, "head": 600, "body": 400, "num": 700}}[os.environ.get("REEL3_WEIGHT", "std")]
+FONT_FACES = "".join(f'@font-face {{ font-family: "NSJP"; src: url("file://{os.path.join(HERE, "fonts", f)}"); font-weight: {w}; }}\n'
+                     for w, f in FONT_SET.items())
 W, H = 1080, 1920
 BG, INK, ACC, SUB, LINE = "#FAF8F5", "#222222", "#1F6F6B", "#6B6B6B", "#E4DFD7"
 
 CSS = f"""
-@font-face {{ font-family: "NSJP"; src: url("file://{FONT}"); font-weight: 100 900; }}
-* {{ box-sizing: border-box; margin: 0; padding: 0; }}
+{FONT_FACES}* {{ box-sizing: border-box; margin: 0; padding: 0; }}
 html, body {{ width: {W}px; height: {H}px; background: {BG}; }}
 body {{ font-family: "NSJP"; color: {INK}; font-feature-settings: "palt" 1; line-break: strict;
         word-break: keep-all; overflow-wrap: anywhere;
@@ -33,29 +44,29 @@ body {{ font-family: "NSJP"; color: {INK}; font-feature-settings: "palt" 1; line
 .rule-top {{ position: absolute; left: 96px; right: 96px; top: 262px; height: 2px; background: {LINE}; }}
 .block {{ position: absolute; left: 96px; right: 96px; top: 470px; bottom: 420px; }}
 .kicker {{ font-size: 40px; font-weight: 500; color: {SUB}; letter-spacing: .04em; margin-bottom: 36px; }}
-.title {{ font-size: 104px; font-weight: 800; line-height: 1.28; letter-spacing: .02em; }}
+.title {{ font-size: 104px; font-weight: {WEIGHTS['title']}; line-height: 1.28; letter-spacing: .02em; }}
 .title em {{ font-style: normal; color: {ACC}; }}
 .bar {{ width: 120px; height: 8px; background: {ACC}; margin: 56px 0 48px; border-radius: 4px; }}
-.lead {{ font-size: 46px; font-weight: 500; line-height: 1.6; color: {SUB}; letter-spacing: .04em; }}
-h2 {{ font-size: 72px; font-weight: 700; line-height: 1.3; letter-spacing: .02em; }}
+.lead {{ font-size: 46px; font-weight: {WEIGHTS['body']}; line-height: 1.6; color: {SUB}; letter-spacing: .04em; }}
+h2 {{ font-size: 72px; font-weight: {WEIGHTS['head']}; line-height: 1.3; letter-spacing: .02em; }}
 .note {{ font-size: 32px; font-weight: 500; color: {SUB}; line-height: 1.5; margin-top: 20px; }}
 .rows {{ margin-top: 56px; border-top: 2px solid {LINE}; }}
 .row {{ display: flex; justify-content: space-between; align-items: baseline; padding: 34px 0; border-bottom: 2px solid {LINE}; }}
-.row .lab {{ font-size: 48px; font-weight: 500; letter-spacing: .02em; }}
-.row .val {{ font-weight: 900; color: {INK}; white-space: nowrap; }}
+.row .lab {{ font-size: 48px; font-weight: {WEIGHTS['body']}; letter-spacing: .02em; }}
+.row .val {{ font-weight: {WEIGHTS['num']}; color: {INK}; white-space: nowrap; }}
 .row .num {{ font-size: 92px; letter-spacing: -.01em; }}
 .row .unit {{ font-size: 52px; font-weight: 700; margin-left: 4px; }}
-.row.hl .lab {{ font-weight: 700; }}
+.row.hl .lab {{ font-weight: {WEIGHTS['head']}; }}
 .row.hl .val {{ color: {ACC}; }}
 .items {{ margin-top: 64px; display: flex; flex-direction: column; gap: 52px; }}
 .item {{ display: flex; gap: 32px; align-items: flex-start; }}
 .item .no {{ flex: none; width: 64px; height: 64px; border-radius: 50%; border: 3px solid {ACC}; color: {ACC};
              font-size: 34px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 4px; }}
-.item .tx {{ font-size: 52px; font-weight: 500; line-height: 1.6; letter-spacing: .03em; }}
-.item.hl .tx {{ font-weight: 700; }}
-.body {{ font-size: 52px; font-weight: 500; line-height: 1.6; letter-spacing: .03em; margin-top: 48px; }}
+.item .tx {{ font-size: 52px; font-weight: {WEIGHTS['body']}; line-height: 1.6; letter-spacing: .03em; }}
+.item.hl .tx {{ font-weight: {WEIGHTS['head']}; }}
+.body {{ font-size: 52px; font-weight: {WEIGHTS['body']}; line-height: 1.6; letter-spacing: .03em; margin-top: 48px; }}
 .cta {{ margin-top: 64px; padding: 40px 44px; border-radius: 20px; background: #EEF3F2; }}
-.cta .l1 {{ font-size: 44px; font-weight: 500; line-height: 1.6; }}
+.cta .l1 {{ font-size: 44px; font-weight: {WEIGHTS['body']}; line-height: 1.6; }}
 .cta .l2 {{ font-size: 52px; font-weight: 700; color: {ACC}; margin-top: 8px; }}
 .src {{ position: absolute; left: 96px; right: 200px; bottom: 440px; font-size: 28px; font-weight: 500; color: {SUB}; line-height: 1.55; }}
 """
