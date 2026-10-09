@@ -1,4 +1,5 @@
-"""うさぎちゃん不動産 リール見本ジェネレーター（1080x1920 / Pillow + ffmpeg）
+"""うさぎちゃん不動産 リールジェネレーター（1080x1920 / Pillow + ffmpeg）
+10/09 v2：各スライドにゆっくり寄る動きと、自作BGM（著作権の心配なし）を入れる
 使い方: python3 make_reel.py <spec.json> <outdir>
 spec: {"name":..., "field":"sell|money|home", "series":..., "slides":[{...}], "source":...}
 """
@@ -114,6 +115,40 @@ def draw_slide(spec, s, i, n):
     body(d, spec, s, fld, y0)
     return im
 
+def make_bgm(path, seconds, seed=0, sr=44100):
+    """著作権の心配がない自作BGM：やわらかい和音のパッドと、小さなベル。音量は控えめ"""
+    import numpy as np, wave
+    rng = np.random.default_rng(seed)
+    progs = [[60, 64, 67, 71], [57, 60, 64, 67], [53, 57, 60, 64], [55, 59, 62, 65]]  # Cmaj7 Am7 Fmaj7 G7
+    shift = int(rng.integers(-2, 3))
+    t = np.arange(int(sr * seconds)) / sr
+    out = np.zeros_like(t)
+    hz = lambda m: 440.0 * 2 ** ((m + shift - 69) / 12)
+    bar = seconds / 4
+    for b, ch in enumerate(progs):
+        s0, s1 = int(b * bar * sr), int(min(seconds, (b + 1) * bar + 0.6) * sr)
+        tt = t[s0:s1] - t[s0]
+        env = np.minimum(1, tt / 0.6) * np.exp(-tt / (bar * 1.6))
+        for m in ch:
+            for det in (-0.6, 0.6):
+                out[s0:s1] += 0.05 * env * np.sin(2 * np.pi * (hz(m) + det) * tt)
+        out[s0:s1] += 0.06 * env * np.sin(2 * np.pi * hz(ch[0] - 12) * tt)
+        steps = 4
+        for k in range(steps):
+            n0 = int((b * bar + k * bar / steps) * sr)
+            if n0 >= len(t):
+                break
+            m = ch[(k + int(rng.integers(0, 2))) % 4] + 12
+            nt = np.arange(min(int(sr * 0.9), len(t) - n0)) / sr
+            out[n0:n0 + len(nt)] += 0.035 * np.exp(-nt / 0.25) * (np.sin(2 * np.pi * hz(m) * nt) + 0.3 * np.sin(4 * np.pi * hz(m) * nt))
+    fade = np.minimum(1, np.minimum(t / 0.8, (seconds - t) / 1.2))
+    out = out * fade
+    out = out / max(1e-9, np.abs(out).max()) * 0.35
+    st = np.stack([out, out], axis=1)
+    with wave.open(path, "wb") as w:
+        w.setnchannels(2); w.setsampwidth(2); w.setframerate(sr)
+        w.writeframes((st * 32767).astype("<i2").tobytes())
+
 def main(spec_path, outdir):
     spec = json.load(open(spec_path, encoding="utf-8"))
     os.makedirs(outdir, exist_ok=True)
@@ -124,22 +159,33 @@ def main(spec_path, outdir):
         p = os.path.join(outdir, f"{spec['name']}-{i+1}.jpg")
         im.save(p, quality=90); paths.append(p)
     dur, fade = spec.get("seconds_per_slide", 3.2), 0.4
+    total = dur * n - fade * (n - 1)
+    wav = os.path.join(outdir, f"{spec['name']}-bgm.wav")
+    make_bgm(wav, total, seed=sum(map(ord, spec["name"])))
+    fr = int(round(dur * 30))
     args = ["ffmpeg", "-y", "-loglevel", "error"]
     for p in paths:
-        args += ["-loop", "1", "-t", str(dur), "-i", p]
-    args += ["-f", "lavfi", "-t", str(dur * n - fade * (n - 1)), "-i", "anullsrc=r=44100:cl=stereo"]
-    fc, prev = [], "[0:v]"
+        args += ["-i", p]
+    args += ["-i", wav]
+    fc, prev = [], None
+    for k in range(n):
+        # ゆっくり寄る（最大4%）。奇数枚目は少し下から、偶数枚目は少し上から
+        ydir = "0.5+0.15*on/%d" % fr if k % 2 else "0.5-0.15*on/%d" % fr
+        fc.append(f"[{k}:v]scale=2160:3840,zoompan=z='1+0.04*on/{fr}':x='iw/2-(iw/zoom/2)':"
+                  f"y='(ih-ih/zoom)*({ydir})':d={fr}:s={W}x{H}:fps=30,setsar=1[z{k}]")
+    prev = "[z0]"
     for k in range(1, n):
         off = round(k * (dur - fade), 3)
         out = f"[v{k}]"
-        fc.append(f"{prev}[{k}:v]xfade=transition=fade:duration={fade}:offset={off}{out}")
+        fc.append(f"{prev}[z{k}]xfade=transition=fade:duration={fade}:offset={off}{out}")
         prev = out
-    fc.append(f"{prev}format=yuv420p,fps=30[vout]")
+    fc.append(f"{prev}format=yuv420p[vout]")
     mp4 = os.path.join(outdir, f"{spec['name']}.mp4")
     args += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", f"{n}:a",
              "-c:v", "libx264", "-preset", "medium", "-crf", "20", "-c:a", "aac", "-b:a", "128k",
              "-shortest", "-movflags", "+faststart", mp4]
     subprocess.run(args, check=True)
+    os.remove(wav)
     print("\n".join(paths + [mp4]))
 
 if __name__ == "__main__":
