@@ -3,8 +3,8 @@
 HTML と CSS で1枚ずつ組み、Chromium（Playwright）で2倍の解像度に写してから縮小する。
 日本語の詰め（palt）・禁則・本物の太字フォントで、文字をくっきりさせるため。
 デザインの決まり（燈と相談室で決めたもの）：
-  ・背景 #FAF8F5／文字 #222222／強調は深い緑 #1F6F6B を1枚に1か所／注・出典 #6B6B6B
-  ・字体は Noto Sans JP だけ（見出し Bold、本文 Medium、大きい数字 Black）。数字も同じ字体
+  ・背景は白いシルク（tools/bg/silk-white.png、make_bg.py で自作。オーナーの見本の雰囲気）／文字 #222222／強調は深い緑 #1F6F6B を1枚に1か所／注・出典 #6B6B6B
+  ・字体は Noto Sans JP だけ。太さは iPhone の文字（ヒラギノ W3/W6）に近い細め（10/09 オーナーが B 案に決定）
   ・大きさは4段：大きい数字／見出し／本文／注
   ・見出しは全部の枚で同じ高さ（上から470px）。そろえは全枚左。改行は文節の切れ目だけ（BudouX）
   ・キャラクターは入れない。上に小さく名前、右上にページ番号
@@ -21,10 +21,11 @@ FONT_SETS = {
     "bizud": {"100 600": "BIZUDPGothic-Regular.ttf", "700 900": "BIZUDPGothic-Bold.ttf"},
     "plex": {"100 600": "IBMPlexSansJP-Medium.ttf", "700 900": "IBMPlexSansJP-Bold.ttf"},
 }
-FONT_SET = FONT_SETS[os.environ.get("REEL3_FONT", "noto")]
+FONT_SET = FONT_SETS[os.environ.get("REEL3_FONT", "noto")]  # 10/09 オーナーが B（noto＋iphone の太さ）に決定
+BG_IMG = os.path.join(HERE, "bg", os.environ.get("REEL3_BG", "silk-white.png"))  # 背景（make_bg.py で自作）
 # 太さの組。"iphone" は iPhone の文字（ヒラギノ角ゴ W3/W6）に近い細めの太さ
 WEIGHTS = {"std": {"title": 800, "head": 700, "body": 500, "num": 900},
-           "iphone": {"title": 650, "head": 600, "body": 400, "num": 700}}[os.environ.get("REEL3_WEIGHT", "std")]
+           "iphone": {"title": 650, "head": 600, "body": 400, "num": 700}}[os.environ.get("REEL3_WEIGHT", "iphone")]
 FONT_FACES = "".join(f'@font-face {{ font-family: "NSJP"; src: url("file://{os.path.join(HERE, "fonts", f)}"); font-weight: {w}; }}\n'
                      for w, f in FONT_SET.items())
 W, H = 1080, 1920
@@ -32,7 +33,7 @@ BG, INK, ACC, SUB, LINE = "#FAF8F5", "#222222", "#1F6F6B", "#6B6B6B", "#E4DFD7"
 
 CSS = f"""
 {FONT_FACES}* {{ box-sizing: border-box; margin: 0; padding: 0; }}
-html, body {{ width: {W}px; height: {H}px; background: {BG}; }}
+html, body {{ width: {W}px; height: {H}px; background: {BG} url("file://{BG_IMG}") center / cover no-repeat; }}
 body {{ font-family: "NSJP"; color: {INK}; font-feature-settings: "palt" 1; line-break: strict;
         word-break: keep-all; overflow-wrap: anywhere;
         -webkit-font-smoothing: antialiased; }}
@@ -65,7 +66,8 @@ h2 {{ font-size: 72px; font-weight: {WEIGHTS['head']}; line-height: 1.3; letter-
 .item .tx {{ font-size: 52px; font-weight: {WEIGHTS['body']}; line-height: 1.6; letter-spacing: .03em; }}
 .item.hl .tx {{ font-weight: {WEIGHTS['head']}; }}
 .body {{ font-size: 52px; font-weight: {WEIGHTS['body']}; line-height: 1.6; letter-spacing: .03em; margin-top: 48px; }}
-.cta {{ margin-top: 64px; padding: 40px 44px; border-radius: 20px; background: #EEF3F2; }}
+.cta {{ margin-top: 64px; padding: 40px 44px; border-radius: 20px; background: rgba(255,255,255,.72);
+        border: 2px solid rgba(31,111,107,.25); }}
 .cta .l1 {{ font-size: 44px; font-weight: {WEIGHTS['body']}; line-height: 1.6; }}
 .cta .l2 {{ font-size: 52px; font-weight: 700; color: {ACC}; margin-top: 8px; }}
 .src {{ position: absolute; left: 96px; right: 200px; bottom: 440px; font-size: 28px; font-weight: 500; color: {SUB}; line-height: 1.55; }}
