@@ -1,0 +1,5 @@
+tools/sound/piano/*.mp3
+  FluidR3 GM（acoustic grand piano）の1音ずつの録音
+  入手元：https://github.com/gleitz/midi-js-soundfonts （FluidR3_GM/acoustic_grand_piano-mp3）
+  ライセンス：Creative Commons Attribution 3.0（https://creativecommons.org/licenses/by/3.0/）
+  使ったリールには最後の画面の出典の行に「音：FluidR3 GM（CC BY 3.0）」と書く（make_reel3.py が自動で入れる）

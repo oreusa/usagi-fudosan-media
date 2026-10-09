@@ -73,6 +73,7 @@ h2 {{ font-size: 72px; font-weight: {WEIGHTS['head']}; line-height: 1.3; letter-
 .src {{ position: absolute; left: 96px; right: 200px; bottom: 440px; font-size: 28px; font-weight: 500; color: {SUB}; line-height: 1.55; }}
 """
 
+MUSIC_CREDIT = "音：FluidR3 GM（CC BY 3.0）"  # make_music.py のピアノ素材の表記
 NUM_RE = re.compile(r"^([0-9０-９,，.．]+)(.*)$")
 
 
@@ -122,7 +123,7 @@ def slide_html(spec, s, i, n):
         inner = (f'<h2>{esc(s["head"])}</h2><div class="body">{esc(s.get("body"))}</div>'
                  f'<div class="cta"><div class="l1">{esc(s.get("bridge", "売るか決めていない段階でも大丈夫です"))}</div>'
                  f'<div class="l2">{esc(cta)}</div></div>')
-        head += f'<div class="src">出典：{esc(spec.get("source"))}</div>'
+        head += f'<div class="src">出典：{esc(spec.get("source"))}<br>{esc(MUSIC_CREDIT)}</div>'
     else:
         raise ValueError(t)
     return f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="page">{head}<div class="block">{inner}</div></div></body></html>'
@@ -171,12 +172,15 @@ def main(spec_path, outdir):
     total = dur * n - fade * (n - 1)
     bg = os.path.join(outdir, "_bg.mp4")
     make_bg.make_video(bg, int(os.environ.get("REEL3_BG_SEED", "7")), total + 0.2)
-    # 音楽：自作の合成音は使わない（10/09 オーナー「音楽嫌すぎ」）。無音の音声を入れておき、
-    # 手で投稿するときはインスタの音楽を後から付けられるようにする
+    # 音楽：ピアノの録音素材で作る静かな曲（make_music.py）。リールごとに少し変わる
+    #（10/09 オーナー「音楽嫌すぎ」→ 電子音の合成はやめた）
+    import make_music
+    wav = os.path.join(outdir, "_music.wav")
+    make_music.make(wav, total, sum(map(ord, spec["name"])))
     args = ["ffmpeg", "-y", "-loglevel", "error", "-i", bg]
     for lay in layers:
         args += ["-loop", "1", "-framerate", "30", "-t", str(round(total, 2)), "-i", lay]
-    args += ["-f", "lavfi", "-t", str(round(total, 2)), "-i", "anullsrc=channel_layout=stereo:sample_rate=44100"]
+    args += ["-i", wav]
     fc, prev = [], "[0:v]"
     for k in range(n):
         st = k * (dur - fade)
@@ -193,10 +197,10 @@ def main(spec_path, outdir):
     args += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", f"{n + 1}:a", "-t", str(round(total, 2)),
              "-c:v", "libx264", "-preset", "slow", "-profile:v", "high", "-crf", "15", "-minrate", "8M", "-maxrate", "14M",
              "-bufsize", "28M", "-x264-params", "aq-mode=3", "-colorspace", "bt709", "-color_primaries", "bt709",
-             "-color_trc", "bt709", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", mp4]
+             "-color_trc", "bt709", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", mp4]
     # 画質：インスタは投稿時にもう一度圧縮するので、元を高い画質（8〜14Mbps。送れる大きさ30MBに収まる）で渡す
     subprocess.run(args, check=True)
-    for f in layers + [bg]:
+    for f in layers + [bg, wav]:
         os.remove(f)
     print("\n".join(paths + [mp4]))
 
