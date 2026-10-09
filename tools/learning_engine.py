@@ -1,14 +1,22 @@
-"""うさぎちゃん不動産 学習エンジン（10/09 司令ツキ）
+"""うさぎちゃん不動産 学習エンジン（10/09 司令ツキ。v1.2：新しいものの台帳〈ideas〉を追加）
 
 投稿1本ずつの「特徴」と「反応」から、どの特徴が効くかをベイズで推定し、
 翌日の方針（増やす・減らす・試す）と仮説の判定を出す。
 
 使い方:
-  python3 learning_engine.py rows.json hypotheses.json out.json [YYYY-MM-DD]
+  python3 learning_engine.py rows.json hypotheses.json out.json [YYYY-MM-DD] [ideas.json]
     rows.json       : [{id, ch: "twitter"|"threads", jst: "YYYY-MM-DD HH:MM", reach, clicks, replies,
                         tags: {field, kumitate, first, close, region, grain, city, url, trend, len, cta}}]
     hypotheses.json : [{id, dim, treatment, control, status, ...}]（無ければ []）
-    out.json        : {median, arms, policy, hypotheses}
+    ideas.json      : [{id:"I001", title, kind, source, created, status:"new"|"testing"|"adopted"|"dropped"}]（無ければ []）
+                      投稿の tags.idea にアイデアの id が入っていれば、その投稿はそのアイデアの試し
+    out.json        : {median, arms, policy, hypotheses, ideas}
+
+新しいものの台帳（ideas）:
+  リサーチ会議が毎朝、外から新しいもの（SNSの新機能・流行っている形・関西の新しい話題・新しいデータ）を見つけて足す。
+  エンジンは、アイデアを付けた投稿の点数を、同じ媒体の「アイデアなし」の投稿とくらべる。
+  4本以上で P(良い)≥0.85 → adopted（成長担当が K の定番に入れる）／4本以上で ≤0.15 → dropped／それ以外は testing。
+  まだ試していない new は、楽観的な事前分布で抽出し、明日試す2つ（policy.ideas_try）を選ぶ。新しいものほど一度は必ず試される。
 
 点数の決め方:
   score = log((reach + 1) / (その媒体の中央値 + 1))   0 が「ふつう」、+0.69 で2倍、-0.69 で半分
@@ -66,7 +74,37 @@ def ncdf(x):
     return 0.5 * (1 + math.erf(x / math.sqrt(2)))
 
 
-def run(rows, hyps, today):
+def judge_ideas(rows, ideas, today, rnd):
+    base = [r["score"] for r in rows if not r["tags"].get("idea")]
+    mb, vb = posterior(base)
+    out = []
+    for it in ideas:
+        it = dict(it)
+        xs = [r["score"] for r in rows if str(r["tags"].get("idea")) == it["id"]]
+        it["n"] = len(xs)
+        if xs:
+            mt, vt = posterior(xs)
+            p = 1 - ncdf((0 - (mt - mb)) / math.sqrt(vt + vb))
+            it["effect_x"], it["p"] = round(math.exp(mt - mb), 2), round(p, 3)
+            if it.get("status") in ("new", "testing", None):
+                if len(xs) >= 4 and p >= 0.85:
+                    it["status"], it["decided"] = "adopted", today
+                elif len(xs) >= 4 and p <= 0.15:
+                    it["status"], it["decided"] = "dropped", today
+                else:
+                    it["status"] = "testing"
+        out.append(it)
+    # 明日試す2つ：試していない new は楽観的に（平均+0.3）、testing は今の推定で抽出
+    cand = [i for i in out if i.get("status") in ("new", "testing", None)]
+    draws = []
+    for i in cand:
+        m = 0.3 if not i.get("n") else math.log(i.get("effect_x", 1.0))
+        draws.append((rnd.gauss(m, 0.5 if not i.get("n") else 0.3), i["id"]))
+    try_ids = [i for _, i in sorted(draws, reverse=True)[:2]]
+    return out, try_ids
+
+
+def run(rows, hyps, today, ideas=None):
     now = datetime.datetime.strptime(today, "%Y-%m-%d") + datetime.timedelta(hours=1)
     rows = prepare(rows, now)
     med = {}
@@ -153,14 +191,18 @@ def run(rows, hyps, today):
             h["status"] = "testing"
         judged.append(h)
     policy["rules"] = [f"{DIM_JA.get(h['dim'], h['dim'])}：{h['treatment']}（{h['effect_x']}倍）" for h in judged if h.get("status") == "adopted"]
-    return {"median": med, "n": len(rows), "arms": arms, "policy": policy, "hypotheses": judged}
+    ideas_out, try_ids = judge_ideas(rows, ideas or [], today, rnd)
+    policy["ideas_try"] = try_ids
+    policy["ideas_adopted"] = [i["id"] for i in ideas_out if i.get("status") == "adopted"]
+    return {"median": med, "n": len(rows), "arms": arms, "policy": policy, "hypotheses": judged, "ideas": ideas_out}
 
 
 if __name__ == "__main__":
     rows = json.load(open(sys.argv[1], encoding="utf-8"))
     hyps = json.load(open(sys.argv[2], encoding="utf-8")) if len(sys.argv) > 2 else []
     today = sys.argv[4] if len(sys.argv) > 4 else datetime.date.today().isoformat()
-    out = run(rows, hyps, today)
+    ideas = json.load(open(sys.argv[5], encoding="utf-8")) if len(sys.argv) > 5 else []
+    out = run(rows, hyps, today, ideas)
     json.dump(out, open(sys.argv[3], "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     p = out["policy"]
     print("posts", out["n"], "median", out["median"])
@@ -169,3 +211,6 @@ if __name__ == "__main__":
     print("試す:", p["explore"])
     for h in out["hypotheses"]:
         print("仮説", h["id"], h["status"], h.get("effect_x"), h.get("p"), h.get("n_t"), h.get("n_c"))
+    for i in out["ideas"]:
+        print("アイデア", i["id"], i.get("status"), i.get("n"), i.get("effect_x"), i.get("p"))
+    print("明日試すアイデア:", p["ideas_try"])
