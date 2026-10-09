@@ -74,9 +74,9 @@ h2 {{ font-size: 72px; font-weight: {WEIGHTS['head']}; line-height: 1.3; letter-
 """
 
 # 曲（10/09 オーナーが「3:03 PM／しゃろう」に決定。フリーBGM・表記は任意だが作曲者への礼儀で入れる）
-# 曲のファイルは公開しない（tools/sound/bgm/ は .gitignore。再配布にあたるため）。無ければ make_music.py の自作曲
+# 曲のファイルは公開しない（tools/sound/bgm/ は .gitignore。再配布にあたるため）。無ければ無音（控え：scratchpad/bgm/303PM.mp3）
 BGM = {"file": os.path.join(HERE, "sound", "bgm", os.environ.get("REEL3_BGM", "303PM.mp3")), "credit": "曲：3:03 PM／しゃろう"}
-MUSIC_CREDIT = BGM["credit"] if os.path.exists(BGM["file"]) else "音：FluidR3 GM（CC BY 3.0）"
+MUSIC_CREDIT = BGM["credit"] if os.path.exists(BGM["file"]) else ""
 NUM_RE = re.compile(r"^([0-9０-９,，.．]+)(.*)$")
 
 
@@ -126,7 +126,7 @@ def slide_html(spec, s, i, n):
         inner = (f'<h2>{esc(s["head"])}</h2><div class="body">{esc(s.get("body"))}</div>'
                  f'<div class="cta"><div class="l1">{esc(s.get("bridge", "売るか決めていない段階でも大丈夫です"))}</div>'
                  f'<div class="l2">{esc(cta)}</div></div>')
-        head += f'<div class="src">出典：{esc(spec.get("source"))}<br>{esc(MUSIC_CREDIT)}</div>'
+        head += f'<div class="src">出典：{esc(spec.get("source"))}' + (f'<br>{esc(MUSIC_CREDIT)}' if MUSIC_CREDIT else '') + '</div>'
     else:
         raise ValueError(t)
     return f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="page">{head}<div class="block">{inner}</div></div></body></html>'
@@ -181,9 +181,10 @@ def main(spec_path, outdir):
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", BGM["file"], "-t", f"{total:.2f}", "-af",
                         f"volume=-5dB,afade=t=in:d=0.3,afade=t=out:st={total - 1.2:.2f}:d=1.2", "-ar", "44100", "-ac", "2", wav],
                        check=True)
-    else:
-        import make_music
-        make_music.make(wav, total, sum(map(ord, spec["name"])))
+    else:  # 曲が無いときは無音（自作曲はオーナーが不採用。10/09）
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-t", f"{total:.2f}", "-i",
+                        "anullsrc=channel_layout=stereo:sample_rate=44100", wav], check=True)
+        print("注意：曲ファイルが無いので無音で作った（tools/sound/bgm/）", file=sys.stderr)
     args = ["ffmpeg", "-y", "-loglevel", "error", "-i", bg]
     for lay in layers:
         args += ["-loop", "1", "-framerate", "30", "-t", str(round(total, 2)), "-i", lay]
