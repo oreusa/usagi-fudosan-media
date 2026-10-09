@@ -70,14 +70,14 @@ h2 {{ font-size: 72px; font-weight: {WEIGHTS['head']}; line-height: 1.3; letter-
         border: 2px solid rgba(31,111,107,.25); }}
 .cta .l1 {{ font-size: 44px; font-weight: {WEIGHTS['body']}; line-height: 1.6; }}
 .cta .l2 {{ font-size: 52px; font-weight: 700; color: {ACC}; margin-top: 8px; }}
-.src {{ position: absolute; left: 96px; right: 200px; bottom: 440px; font-size: 28px; font-weight: 500; color: {SUB}; line-height: 1.55; }}
+.src {{ margin-top: 36px; margin-right: 104px; font-size: 28px; font-weight: 500; color: {SUB}; line-height: 1.55; }}
 """
 
 # 曲（10/09 オーナーが「3:03 PM／しゃろう」に決定。フリーBGM・表記は任意だが作曲者への礼儀で入れる）
 # 曲のファイルは公開しない（tools/sound/bgm/ は .gitignore。再配布にあたるため）。無ければ無音（控え：scratchpad/bgm/303PM.mp3）
 BGM = {"file": os.path.join(HERE, "sound", "bgm", os.environ.get("REEL3_BGM", "303PM.mp3")), "credit": "曲：3:03 PM／しゃろう"}
 MUSIC_CREDIT = BGM["credit"] if os.path.exists(BGM["file"]) else ""
-NUM_RE = re.compile(r"^([0-9０-９,，.．]+)(.*)$")
+NUM_RE = re.compile(r"^([+＋\-−▲]?[0-9０-９,，.．]+)(.*)$")  # 符号つきの数字も「数字＋小さい単位」に分ける
 
 
 _BUDOUX = None
@@ -125,8 +125,9 @@ def slide_html(spec, s, i, n):
         cta = s.get("cta", "相談はプロフィールから")
         inner = (f'<h2>{esc(s["head"])}</h2><div class="body">{esc(s.get("body"))}</div>'
                  f'<div class="cta"><div class="l1">{esc(s.get("bridge", "売るか決めていない段階でも大丈夫です"))}</div>'
-                 f'<div class="l2">{esc(cta)}</div></div>')
-        head += f'<div class="src">出典：{esc(spec.get("source"))}' + (f'<br>{esc(MUSIC_CREDIT)}' if MUSIC_CREDIT else '') + '</div>'
+                 f'<div class="l2">{esc(cta)}</div></div>'
+                 # 出典は相談の枠のすぐ下に置く（下に固定すると、本文が長いとき枠と重なる。10/09 見た目の審査で発見）
+                 f'<div class="src">出典：{esc(spec.get("source"))}' + (f'<br>{esc(MUSIC_CREDIT)}' if MUSIC_CREDIT else '') + '</div>')
     else:
         raise ValueError(t)
     return f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="page">{head}<div class="block">{inner}</div></div></body></html>'
@@ -173,8 +174,14 @@ def main(spec_path, outdir):
     n = len(paths)
     dur, fade = spec.get("seconds_per_slide", 3.6), 0.5
     total = dur * n - fade * (n - 1)
-    bg = os.path.join(outdir, "_bg.mp4")
-    make_bg.make_video(bg, int(os.environ.get("REEL3_BG_SEED", "7")), total + 0.2)
+    # 背景の動画は長さと seed が同じなら毎回同じなので、作り置きを使う（1本あたり数分の短縮）
+    seed = int(os.environ.get("REEL3_BG_SEED", "7"))
+    cache = os.path.join(HERE, ".cache")
+    os.makedirs(cache, exist_ok=True)
+    bg = os.path.join(cache, f"bg_{seed}_{total + 0.2:.2f}.mp4")
+    if not os.path.exists(bg):
+        make_bg.make_video(bg + ".tmp.mp4", seed, total + 0.2)
+        os.replace(bg + ".tmp.mp4", bg)
     # 音楽：オーナーが選んだ曲（BGM）。無いときだけ自作曲（make_music.py）
     wav = os.path.join(outdir, "_music.wav")
     if os.path.exists(BGM["file"]):
@@ -208,7 +215,7 @@ def main(spec_path, outdir):
              "-color_trc", "bt709", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", mp4]
     # 画質：インスタは投稿時にもう一度圧縮するので、元を高い画質（8〜14Mbps。送れる大きさ30MBに収まる）で渡す
     subprocess.run(args, check=True)
-    for f in layers + [bg, wav]:
+    for f in layers + [wav]:
         os.remove(f)
     print("\n".join(paths + [mp4]))
 
