@@ -74,13 +74,26 @@ def ncdf(x):
     return 0.5 * (1 + math.erf(x / math.sqrt(2)))
 
 
+def idea_ids(tags):
+    # tags.idea は "I003"・"I003,I007"・["I003","I007"] のどれでもよい（10/11 1本で2つ試す日がある）
+    v = tags.get("idea")
+    if not v:
+        return []
+    if isinstance(v, (list, tuple)):
+        return [str(x).strip() for x in v if str(x).strip()]
+    return [x.strip() for x in str(v).replace("、", ",").split(",") if x.strip()]
+
+
+POSTABLE_KINDS = (None, "", "形", "データ", "技術", "題材")  # 「仕組み」「機能」は投稿で試せないので抽選に入れない
+
+
 def judge_ideas(rows, ideas, today, rnd):
-    base = [r["score"] for r in rows if not r["tags"].get("idea")]
+    base = [r["score"] for r in rows if not idea_ids(r["tags"])]
     mb, vb = posterior(base)
     out = []
     for it in ideas:
         it = dict(it)
-        xs = [r["score"] for r in rows if str(r["tags"].get("idea")) == it["id"]]
+        xs = [r["score"] for r in rows if it["id"] in idea_ids(r["tags"])]
         it["n"] = len(xs)
         if xs:
             mt, vt = posterior(xs)
@@ -95,10 +108,11 @@ def judge_ideas(rows, ideas, today, rnd):
                     it["status"] = "testing"
         out.append(it)
     # 明日試す2つ：試していない new は楽観的に（平均+0.3）、testing は今の推定で抽出
-    cand = [i for i in out if i.get("status") in ("new", "testing", None)]
+    cand = [i for i in out if i.get("status") in ("new", "testing", None) and i.get("kind") in POSTABLE_KINDS]
     draws = []
     for i in cand:
-        m = 0.3 if not i.get("n") else math.log(i.get("effect_x", 1.0))
+        # 試していないものは楽観的に。会議・司令ツキが付けた score（10が標準）が高いほど少し先に試す
+        m = (0.3 + 0.05 * (float(i.get("score", 10)) - 10)) if not i.get("n") else math.log(i.get("effect_x", 1.0))
         draws.append((rnd.gauss(m, 0.5 if not i.get("n") else 0.3), i["id"]))
     try_ids = [i for _, i in sorted(draws, reverse=True)[:2]]
     return out, try_ids
