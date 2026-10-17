@@ -11,7 +11,7 @@ HTML と CSS で1枚ずつ組み、Chromium で2倍の解像度に写してか�
 使い方: python3 make_reel4.py <spec.json> <outdir>
 spec の形は tools/specs4/ を参照（cover → item を3〜4枚 → save）
 """
-import html, json, os, re, subprocess, sys, tempfile
+import html, json, os, re, shutil, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 W, H = 1080, 1920
@@ -175,10 +175,17 @@ def render(spec, outdir, credit):
     return paths
 
 
-def main(spec_path, outdir):
+def main(spec_path, outdir, images_only=False):
     spec = json.load(open(spec_path, encoding="utf-8"))
+    # 公開する jpg（X・Threads の画像投稿に使う）には曲名を入れない（10/17 オーナー「音楽名まで入ってて変」）。
+    # 曲名入りの絵は動画のためだけに一時フォルダで作る
+    pub = render(spec, outdir, "")
+    if images_only:
+        print("\n".join(pub))
+        return
     credit = BGM["credit"] if os.path.exists(BGM["file"]) else ""
-    paths = render(spec, outdir, credit)
+    tmp = tempfile.mkdtemp()
+    paths = render(spec, tmp, credit)
     n = len(paths)
     dur, fade = spec.get("seconds_per_slide", 4.0), 0.4
     total = dur * n - fade * (n - 1)
@@ -204,8 +211,10 @@ def main(spec_path, outdir):
              "-r", "30", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
              "-c:a", "aac", "-b:a", "192k", "-ar", "44100", "-movflags", "+faststart", mp4]
     subprocess.run(args, check=True)
-    print("\n".join(paths + [mp4]))
+    shutil.rmtree(tmp, ignore_errors=True)
+    print("\n".join(pub + [mp4]))
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    # 使い方：make_reel4.py spec.json outdir [--images-only]（--images-only は jpg だけ作り直し、動画は触らない）
+    main(sys.argv[1], sys.argv[2], "--images-only" in sys.argv[3:])
