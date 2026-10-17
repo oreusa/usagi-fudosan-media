@@ -15,7 +15,7 @@ import html, json, os, re, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 W, H = 1080, 1920
-ACC, BAND, TIP, LINE, INK, GRID, HL, SUB = "#A07E66", "#EEE5DA", "#F5E6DE", "#D6A99A", "#3A2F28", "#EFE8E0", "#EEDFCF", "#857A70"
+ACC, BAND, TIP, LINE, INK, GRID, HL, SUB = "#A07E66", "#EEE5DA", "#F5E6DE", "#D6A99A", "#3A2F28", "#EFE8E0", "#E9D3BE", "#857A70"
 FONT = os.path.join(HERE, "fonts")
 LOGO = os.path.join(HERE, "brand", "logo.png")
 BGM = {"file": os.path.join(HERE, "sound", "bgm", "303PM.mp3"), "credit": "曲：3:03 PM／しゃろう"}
@@ -42,7 +42,7 @@ body {{ width: {W}px; height: {H}px; background: {BAND}; font-family: G; color: 
 .next span:after {{ content: ""; position: absolute; right: 0; top: -8px; width: 16px; height: 2px; background: {ACC};
                     transform: rotate(35deg); transform-origin: right; }}
 .hl {{ background: linear-gradient(transparent 62%, {HL} 62%); }}
-.pk {{ background: linear-gradient(transparent 62%, {TIP} 62%); }}
+.pk {{ background: linear-gradient(transparent 62%, #F1D5CD 62%); }}
 /* 表紙 */
 .cv {{ position: absolute; left: 110px; right: 110px; top: 420px; height: 1000px; background: #fff;
        clip-path: polygon(0 0, calc(100% - 140px) 0, 100% 140px, 100% 100%, 140px 100%, 0 calc(100% - 140px)); }}
@@ -100,24 +100,23 @@ _BUDOUX = None
 
 
 def tx(s):
-    """改行（\\n）と文節の切れ目（BudouX）だけで行を割る。[[ ]] と {{ }} は下線"""
+    """改行（\\n）と文節の切れ目（BudouX）だけで行を割る。[[ ]] と {{ }} は下線（改行をまたいでもよい）"""
     global _BUDOUX
     if _BUDOUX is None:
         import budoux
         _BUDOUX = budoux.load_default_japanese_parser()
-    out = []
-    for line in str(s or "").split("\n"):
-        parts = re.split(r"(\[\[.*?\]\]|\{\{.*?\}\})", line)
-        h = ""
-        for p in parts:
-            if p.startswith("[["):
-                h += f'<span class="hl">{html.escape(p[2:-2])}</span>'
-            elif p.startswith("{{"):
-                h += f'<span class="pk">{html.escape(p[2:-2])}</span>'
-            elif p:
-                h += "<wbr>".join(html.escape(c) for c in _BUDOUX.parse(p))
-        out.append(h)
-    return "<br>".join(out)
+
+    def plain(t):
+        return "<br>".join("<wbr>".join(html.escape(c) for c in _BUDOUX.parse(l)) if l else "" for l in t.split("\n"))
+    h = ""
+    for p in re.split(r"(\[\[.*?\]\]|\{\{.*?\}\})", str(s or ""), flags=re.S):
+        if p.startswith("[[") and p.endswith("]]"):
+            h += f'<span class="hl">{plain(p[2:-2])}</span>'
+        elif p.startswith("{{") and p.endswith("}}"):
+            h += f'<span class="pk">{plain(p[2:-2])}</span>'
+        elif p:
+            h += plain(p)
+    return h
 
 
 def slide_html(spec, s, i, n, credit):
