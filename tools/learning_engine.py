@@ -84,7 +84,7 @@ def idea_ids(tags):
     return [x.strip() for x in str(v).replace("、", ",").split(",") if x.strip()]
 
 
-POSTABLE_KINDS = (None, "", "形", "データ", "技術", "題材")  # 「仕組み」「機能」は投稿で試せないので抽選に入れない
+POSTABLE_KINDS = (None, "", "形", "データ", "題材")  # 「技術」「仕組み」「機能」は投稿の数字で測れないので抽選に入れない（技術は報告の見せ方など）
 
 
 def judge_ideas(rows, ideas, today, rnd):
