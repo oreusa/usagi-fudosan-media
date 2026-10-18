@@ -43,11 +43,16 @@ body {{ width: {W}px; height: {H}px; background: {BAND}; font-family: G; color: 
                     transform: rotate(35deg); transform-origin: right; }}
 .hl {{ background: linear-gradient(transparent 62%, {HL} 62%); }}
 .pk {{ background: linear-gradient(transparent 62%, #F1D5CD 62%); }}
+.plabel {{ position: absolute; left: 0; right: 0; top: 262px; text-align: center; }}
+.plabel span {{ display: inline-block; border: 3px solid {ACC}; color: {ACC}; font-size: 34px; font-weight: 700; padding: 6px 28px;
+               letter-spacing: .1em; background: #fff; }}
 /* 表紙 */
 .cv {{ position: absolute; left: 110px; right: 110px; top: 420px; height: 1000px; background: #fff;
        clip-path: polygon(0 0, calc(100% - 140px) 0, 100% 140px, 100% 100%, 140px 100%, 0 calc(100% - 140px)); }}
 .cvin {{ position: absolute; left: 150px; right: 150px; top: 420px; height: 1000px; display: flex; flex-direction: column;
          align-items: center; justify-content: center; text-align: center; }}
+.cv-b {{ display: inline-block; background: {ACC}; color: #fff; font-size: 46px; font-weight: 700; padding: 12px 36px;
+         letter-spacing: .1em; margin-bottom: 44px; }}
 .cv-k {{ font-size: 48px; font-weight: 700; letter-spacing: .08em; }}
 .cv-t {{ font-size: 108px; font-weight: 900; letter-spacing: .06em; line-height: 1.3; margin-top: 40px; }}
 .cv-c {{ margin-top: 36px; font-size: 60px; font-weight: 700; letter-spacing: .06em; }}
@@ -124,12 +129,16 @@ def slide_html(spec, s, i, n, credit):
     t = s["type"]
     if t == "cover":
         body = (f'<div class="brand">USAGI-CHAN REAL ESTATE</div><div class="cv"></div><div class="cvin">'
-                f'<div class="cv-k">{tx(s.get("kicker"))}</div><div class="cv-t">{tx(s["title"])}</div>'
+                + (f'<div class="cv-b">{tx(s["badge"])}</div>' if s.get("badge") else "")
+                + f'<div class="cv-k">{tx(s.get("kicker"))}</div><div class="cv-t">{tx(s["title"])}</div>'
                 + (f'<div class="cv-c"><b>{html.escape(str(s["count"]))}</b>{tx(s.get("count_text", "つのポイント"))}</div>' if s.get("count") else "")
-                + f'<div class="cv-s">{tx(spec.get("series"))}</div></div><img class="cv-logo" src="{logo}">')
+                + ("" if s.get("badge") else f'<div class="cv-s">{tx(spec.get("series"))}</div>') + '</div>'
+                + f'<img class="cv-logo" src="{logo}">')
     else:
         holes = '<div class="holes">' + "<i></i>" * 14 + "</div>"
         body = (f'<div class="paper"></div>{holes}<div class="brand"><img src="{logo}">USAGI-CHAN REAL ESTATE</div>')
+        if spec.get("page_label"):
+            body += f'<div class="plabel"><span>{tx(spec["page_label"])}</span></div>'
         if t == "item":
             checks = "".join(f'<div class="ck"><b></b><span>{tx(c)}</span></div>' for c in s.get("checks", []))
             body += (f'<div class="card">{FRAME}</div><div class="cardin">{CLIP}<span class="tag"><span class="n">{html.escape(s["n"])}</span>'
