@@ -212,7 +212,7 @@ def main(spec_path, outdir, images_only=False):
         fc.append(f"{prev}[{k}:v]xfade=transition=fade:duration={fade}:offset={off:.2f}[x{k}]")
         prev = f"[x{k}]"
     fc.append(f"{prev}format=yuv420p[vout]")
-    fc.append(f"[{n}:a]atrim=0:{total:.2f},volume=-5dB,afade=t=in:d=0.3,afade=t=out:st={total - 1.2:.2f}:d=1.2[aout]")
+    fc.append(f"[{n}:a]atrim=0:{total:.2f},volume=-14.5dB,afade=t=in:d=0.3,afade=t=out:st={total - 1.2:.2f}:d=1.2[aout]")
     mp4 = os.path.join(outdir, f"{spec['name']}.mp4")
     # 画面がほぼ動かないので、高めの画質でも 10MB 前後に収まる。インスタは投稿時にもう一度圧縮する
     args += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", "[aout]", "-t", f"{total:.2f}",
