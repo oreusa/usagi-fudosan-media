@@ -18,7 +18,7 @@ W, H = 1080, 1920
 ACC, BAND, TIP, LINE, INK, GRID, HL, SUB = "#A07E66", "#EEE5DA", "#F5E6DE", "#D6A99A", "#3A2F28", "#EFE8E0", "#E9D3BE", "#857A70"
 FONT = os.path.join(HERE, "fonts")
 LOGO = os.path.join(HERE, "brand", "logo.png")
-BGM = {"file": os.path.join(HERE, "sound", "bgm", "303PM.mp3"), "credit": "曲：3:03 PM／しゃろう"}
+BGM = {"file": os.path.join(HERE, "sound", "bgm", "yumeyume-laundry.mp3"), "credit": "曲：泡の音がかわいいポップな曲／さんうさぎ"}  # 10/19 オーナー決定。曲ファイルは /mnt/project-files/bgm/ に控え
 
 CSS = f"""
 @font-face {{ font-family: G; src: url("file://{FONT}/ZenKakuGothicNew-Medium.ttf"); font-weight: 500; }}
