@@ -1,0 +1,6 @@
+{
+  // 関西おでかけリンク集（インスタのプロフィールリンク）。links/ だけを公開する
+  "name": "usagi-odekake",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./links" }
+}
