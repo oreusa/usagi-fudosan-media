@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "ArtifactData",
+      "Artifact",
+      "mcp__claude-code-remote__send_later"
+    ]
+  }
+}
