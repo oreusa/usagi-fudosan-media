@@ -147,10 +147,10 @@ def slide_html(spec, s, i, n, credit):
                      f'<div class="checks">{checks}</div></div>'
                      + (f'<div class="tip">{BULB}<div>{tx(s["tip"])}</div></div>' if s.get("tip") else ""))
         elif t == "save":
-            src = tx(spec.get("source")) + (f"<br>{html.escape(credit)}" if credit else "")
+            src = (("出典：" + tx(spec["source"])) if spec.get("source") else "") + (("<br>" if spec.get("source") else "") + html.escape(credit) if credit else "")  # 自社の案内など出典がない回は「出典：」を出さない
             body += (f'<div class="sv"><h2>{tx(s["head"])}</h2><div class="body">{tx(s.get("body"))}</div>'
                      f'<div class="cta"><div class="l1">{tx(s.get("bridge", "売るか決めていない段階でも大丈夫です"))}</div>'
-                     f'<div class="l2">{tx(s.get("cta", "相談はプロフィールから"))}</div></div><div class="src">出典：{src}</div></div>')
+                     f'<div class="l2">{tx(s.get("cta", "相談はプロフィールから"))}</div></div><div class="src">{src}</div></div>')
         else:
             raise ValueError(t)
     nxt = '<div class="next">Next<span></span></div>' if i < n - 1 else ""
