@@ -18,7 +18,7 @@ W, H = 1080, 1920
 ACC, BAND, TIP, LINE, INK, GRID, HL, SUB = "#A07E66", "#EEE5DA", "#F5E6DE", "#D6A99A", "#3A2F28", "#EFE8E0", "#E9D3BE", "#857A70"
 FONT = os.path.join(HERE, "fonts")
 LOGO = os.path.join(HERE, "brand", "logo.png")
-BGM = {"file": os.path.join(HERE, "sound", "bgm", "yumeyume-laundry.mp3"), "credit": "曲：泡の音がかわいいポップな曲／さんうさぎ"}  # 10/19 オーナー決定。曲ファイルは /mnt/project-files/bgm/ に控え
+BGM = {"file": os.path.join(HERE, "sound", "bgm", "303PM.mp3"), "credit": "曲：3:03 PM／しゃろう"}  # 10/19 夜オーナー決定「前の曲・音量8%」。曲ファイルは gitignore なので /mnt/project-files/bgm/303PM.mp3 から tools/sound/bgm/ へコピーして使う
 
 CSS = f"""
 @font-face {{ font-family: G; src: url("file://{FONT}/ZenKakuGothicNew-Medium.ttf"); font-weight: 500; }}
@@ -212,7 +212,7 @@ def main(spec_path, outdir, images_only=False):
         fc.append(f"{prev}[{k}:v]xfade=transition=fade:duration={fade}:offset={off:.2f}[x{k}]")
         prev = f"[x{k}]"
     fc.append(f"{prev}format=yuv420p[vout]")
-    fc.append(f"[{n}:a]atrim=0:{total:.2f},volume=-14.5dB,afade=t=in:d=0.3,afade=t=out:st={total - 1.2:.2f}:d=1.2[aout]")
+    fc.append(f"[{n}:a]atrim=0:{total:.2f},volume=-21.9dB,afade=t=in:d=0.3,afade=t=out:st={total - 1.2:.2f}:d=1.2[aout]")
     mp4 = os.path.join(outdir, f"{spec['name']}.mp4")
     # 画面がほぼ動かないので、高めの画質でも 10MB 前後に収まる。インスタは投稿時にもう一度圧縮する
     args += ["-filter_complex", ";".join(fc), "-map", "[vout]", "-map", "[aout]", "-t", f"{total:.2f}",
