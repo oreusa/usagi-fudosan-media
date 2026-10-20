@@ -79,35 +79,41 @@ body {{ width: 1080px; height: 1920px; font-family: G; color: {INK}; position: r
 .sh .shot {{ margin: 44px auto 0; width: 560px; height: 600px; overflow: hidden; border: 2px solid {LINE}; border-radius: 34px;
              box-shadow: 0 10px 30px rgba(60,45,35,.10); background: #FAF8F5; }}
 .sh .shot img {{ width: 100%; display: block; }}
-/* 飾り（10/21 オーナー「投稿だしデザインもうちょい加えたい」）。枚ごとにうすい色が変わる（--pc 地の丸、--pd 濃いめ） */
-.panel {{ overflow: hidden; }}
-.panel:before {{ content: ""; position: absolute; right: -150px; top: -150px; width: 380px; height: 380px; border-radius: 50%; background: var(--pc); opacity: .75; }}
-.panel:after {{ content: ""; position: absolute; left: -110px; bottom: -110px; width: 260px; height: 260px; border-radius: 50%;
-                border: 3px dashed var(--pd); opacity: .5; }}
+/* 作り込み（10/21 オーナー「色使いすぎ。見やすさとこだわりがある感じ」）：色は茶色1色、細い線と字の組みで見せる */
+.panel {{ border-top: 2px solid {LINE}; }}
 .panel > * {{ position: relative; z-index: 1; }}
 .panel > .cv-logo {{ position: absolute; }}
+.inner {{ position: absolute !important; inset: 20px; border: 1.5px solid {LINE}; pointer-events: none; z-index: 0 !important; }}
+.corner {{ position: absolute !important; font-family: J; font-size: 24px; letter-spacing: .3em; color: {SUB}; z-index: 2 !important; }}
+.corner.tl {{ left: 56px; top: 50px; }} .corner.tr {{ right: 56px; top: 50px; }}
+/* 表紙 */
 .cv {{ padding-top: 40px; }}
-.inner {{ position: absolute !important; inset: 22px; border: 1.5px solid {LINE}; pointer-events: none; z-index: 0 !important; }}
-.cv-b {{ background: var(--pc); border-color: var(--pd); color: {INK}; }}
-.cv-t .hl, .ttl .hl {{ background: none; }}
-.cv-c b {{ font-family: M; font-weight: 700; color: var(--pd); }}
-.spark {{ display: block; margin: 0 auto -6px; }}
-.nowrap {{ display: flex; align-items: center; gap: 26px; }}
-.no {{ width: 150px; height: 150px; border-radius: 50%; background: var(--pc); display: flex; align-items: center; justify-content: center;
-       font-size: 64px !important; font-weight: 400 !important; color: {INK} !important; flex: none; }}
-.no.w {{ font-size: 44px !important; letter-spacing: .08em; }}
-.ttl {{ margin-top: 0 !important; }}
-.ttl span.u {{ background: linear-gradient(transparent 66%, var(--pc) 66%); }}
-.ck svg circle {{ fill: var(--pc); stroke: var(--pd); }}
-.ck svg path {{ stroke: {INK}; }}
-.tip {{ background: var(--pc) !important; border-left: 0 !important; border-radius: 0 0 0 0; position: relative; }}
-.tip i {{ color: {INK} !important; }}
-.sv .cta {{ background: {ACC}; border-color: {ACC}; }}
-.sv .cta .l1 {{ color: #F3E9E0; }} .sv .cta .l2 {{ color: #fff; }}
-.sv .cta svg path {{ stroke: #fff; }}
-.dots {{ position: absolute; left: 0; right: 0; top: 1540px; display: flex; justify-content: center; gap: 14px; }}
-.dots i {{ width: 14px; height: 14px; border-radius: 50%; background: {LINE}; }}
-.dots i.on {{ background: {ACC}; width: 40px; border-radius: 7px; }}
+.cv-b {{ border: 0; border-top: 2px solid {ACC}; border-bottom: 2px solid {ACC}; padding: 12px 10px; color: {ACC}; font-size: 36px; letter-spacing: .24em; }}
+.cv-k {{ color: {INK}; }}
+.cv-line {{ width: 2px; height: 70px; background: {ACC}; margin: 40px auto 0; }}
+.cv-c b {{ font-family: M; font-weight: 700; color: {ACC}; }}
+/* ポイントの枚 */
+.it, .sv {{ height: auto !important; min-height: 940px; padding-bottom: 80px !important; }}
+.it {{ padding-top: 110px; }}
+.desc {{ line-height: 1.85 !important; }}
+.ck {{ padding: 24px 0 !important; }}
+.tip {{ margin-top: 40px !important; }}
+.head {{ display: flex; align-items: flex-end; gap: 30px; padding-bottom: 30px; border-bottom: 2px solid {INK}; }}
+.no {{ font-family: M !important; font-weight: 700 !important; font-size: 130px !important; line-height: .9 !important; color: {ACC} !important; letter-spacing: 0 !important; }}
+.no.w {{ font-family: J !important; font-weight: 400 !important; font-size: 64px !important; letter-spacing: .12em !important; padding-bottom: 8px; }}
+.ttl {{ margin: 0 0 4px !important; font-size: 70px !important; }}
+.desc {{ border-top: 0 !important; margin-top: 36px !important; padding-top: 0 !important; font-size: 46px !important; }}
+.hl {{ background: linear-gradient(transparent 66%, #EFE3D6 66%); }}
+.pk {{ background: linear-gradient(transparent 66%, #EFE3D6 66%); }}
+.checks {{ gap: 0 !important; margin-top: 30px !important; border-top: 1.5px solid {LINE}; }}
+.ck {{ padding: 20px 0; border-bottom: 1.5px solid {LINE}; font-size: 39px !important; }}
+.tip {{ background: none !important; border-left: 0 !important; padding: 26px 0 0 !important; margin-top: 30px !important; display: flex; gap: 26px; align-items: flex-start; }}
+.tip i {{ flex: none; font-family: M !important; font-weight: 700; font-size: 30px !important; letter-spacing: .1em !important; color: #fff !important;
+          background: {ACC}; padding: 6px 16px; margin: 6px 0 0 !important; }}
+.sv {{ padding-top: 110px; }}
+.sv h2 {{ padding-bottom: 34px; border-bottom: 2px solid {INK}; }}
+.sv .body {{ border-top: 0 !important; padding-top: 0 !important; margin-top: 36px !important; }}
+.sh {{ padding-top: 110px; }}
 """
 
 ARROW = (f'<svg width="96" height="24" viewBox="0 0 96 24" fill="none" stroke="{ACC}" stroke-width="2.4" stroke-linecap="round" '
@@ -123,14 +129,13 @@ SPARK = ('<svg class="spark" width="120" height="44" viewBox="0 0 120 44" fill="
 
 def slide_html(spec, s, i, n, credit):
     logo = f"file://{LOGO}"
-    pc, pd = PAL[i % len(PAL)]
     t = s["type"]
     label = spec.get("page_label") or spec.get("series")
     if t == "cover":
         body = ('<div class="brand">USAGI-CHAN TOWN NOTES</div><div class="panel cv"><div class="inner"></div>'
                 + (f'<div class="cv-b">{tx(s["badge"])}</div>' if s.get("badge") else "")
                 + (f'<div class="cv-k">{tx(s["kicker"])}</div>' if s.get("kicker") else "")
-                + f'{SPARK}<div class="cv-t">{tx(s["title"])}</div><div class="cv-line"></div>'
+                + f'<div class="cv-t">{tx(s["title"])}</div><div class="cv-line"></div>'
                 + (f'<div class="cv-c"><b>{html.escape(str(s["count"]))}</b>{tx(s.get("count_text", "つのポイント"))}</div>' if s.get("count") else "")
                 + ("" if s.get("badge") else f'<div class="cv-s">{tx(spec.get("series"))}</div>')
                 + f'<img class="cv-logo" src="{logo}"></div>')
@@ -140,26 +145,25 @@ def slide_html(spec, s, i, n, credit):
             body += f'<div class="strip">{tx(label)}</div>'
         if t == "item":
             checks = "".join(f'<div class="ck">{CHECK}<span>{tx(c)}</span></div>' for c in s.get("checks", []))
-            body += (f'<div class="panel it"><div class="nowrap"><div class="no{" w" if len(s["n"]) > 2 else ""}">{html.escape(s["n"])}</div>'
-                     f'<div class="ttl"><span class="u">{tx(s["title"])}</span></div></div>'
+            body += (f'<div class="panel it"><div class="inner"></div><div class="corner tl">POINT</div><div class="corner tr">{i + 1:02d} / {n:02d}</div>'
+                     f'<div class="head"><div class="no{" w" if len(s["n"]) > 2 else ""}">{html.escape(s["n"])}</div>'
+                     f'<div class="ttl">{tx(s["title"])}</div></div>'
                      f'<div class="desc">{tx(s["desc"])}</div><div class="checks">{checks}</div>'
-                     + (f'<div class="tip"><i>POINT</i>{tx(s["tip"])}</div>' if s.get("tip") else "") + '</div>')
+                     + (f'<div class="tip"><i>メモ</i>{tx(s["tip"])}</div>' if s.get("tip") else "") + '</div>')
         elif t == "save":
             src = (("出典：" + tx(spec["source"])) if spec.get("source") else "") + (("<br>" if spec.get("source") else "") + html.escape(credit) if credit else "")
-            body += (f'<div class="panel sv"><h2>{tx(s["head"])}</h2><div class="body">{tx(s.get("body"))}</div>'
+            body += (f'<div class="panel sv"><div class="inner"></div><div class="corner tl">SAVE</div><h2>{tx(s["head"])}</h2><div class="body">{tx(s.get("body"))}</div>'
                      f'<div class="cta"><div><div class="l1">{tx(s.get("bridge", "売るか決めていない段階でも大丈夫です"))}</div>'
                      f'<div class="l2">{tx(s.get("cta", "相談はプロフィールから"))}</div></div>{ARROW}</div>'
                      f'<div class="src">{src}</div></div>')
         elif t == "shot":  # ページの画面をのせる枚（お知らせ用）。img は画像ファイルの場所
-            body += (f'<div class="panel sh"><h2>{tx(s["head"])}</h2>'
+            body += (f'<div class="panel sh"><div class="inner"></div><div class="corner tl">NEWS</div><h2>{tx(s["head"])}</h2>'
                      + (f'<div class="sub">{tx(s["sub"])}</div>' if s.get("sub") else "")
                      + f'<div class="shot"><img src="file://{os.path.abspath(s["img"])}"></div></div>')
         else:
             raise ValueError(t)
-        body += f'<div class="page">{i + 1:02d} / {n:02d}</div>'
-    body += '<div class="dots">' + "".join(f'<i class="{"on" if k == i else ""}"></i>' for k in range(n)) + '</div>'
     nxt = f'<div class="next">NEXT{ARROW}</div>' if i < n - 1 else ""
-    return f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body style="--pc:{pc};--pd:{pd}">{body}{nxt}</body></html>'
+    return f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body>{body}{nxt}</body></html>'
 
 
 m.slide_html = slide_html
