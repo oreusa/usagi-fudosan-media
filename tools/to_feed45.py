@@ -6,7 +6,7 @@ import os, re, sys
 from PIL import Image
 
 BAND = (0xEE, 0xE5, 0xDA)
-TOP, BOTTOM = 110, 1640          # 残す範囲（ブランド名から Next → まで）
+TOP, BOTTOM = 110, 1665          # 残す範囲（ブランド名から Next → まで。v5 は Next が少し下にあるので 1665 まで）
 OUT_W, OUT_H = 1080, 1350
 
 def convert(path):
@@ -14,7 +14,8 @@ def convert(path):
     part = im.crop((0, TOP, im.width, BOTTOM))
     s = OUT_H / part.height
     part = part.resize((round(part.width * s), OUT_H), Image.LANCZOS)
-    out = Image.new("RGB", (OUT_W, OUT_H), BAND)
+    bg = im.getpixel((im.width // 2, im.height - 5))  # 地の色を絵の下端から取る（v4 ベージュの帯／v5 生成り）
+    out = Image.new("RGB", (OUT_W, OUT_H), bg)
     out.paste(part, ((OUT_W - part.width) // 2, 0))
     dst = re.sub(r"-(\d+)\.jpg$", r"-f\1.jpg", path)
     out.save(dst, quality=92)

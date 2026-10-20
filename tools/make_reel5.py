@@ -76,7 +76,7 @@ body {{ width: 1080px; height: 1920px; font-family: G; color: {INK}; position: r
 .sh {{ top: 430px; height: 1080px; padding: 64px 76px 0; text-align: center; }}
 .sh h2 {{ font-family: M; font-weight: 700; font-size: 72px; line-height: 1.4; letter-spacing: .08em; }}
 .sh .sub {{ margin-top: 18px; font-size: 36px; font-weight: 700; color: {SUB}; letter-spacing: .06em; }}
-.sh .shot {{ margin: 44px auto 0; width: 560px; height: 600px; overflow: hidden; border: 2px solid {LINE}; border-radius: 34px;
+.sh .shot {{ margin: 44px auto 0; width: 520px; height: 540px; overflow: hidden; border: 2px solid {LINE}; border-radius: 34px;
              box-shadow: 0 10px 30px rgba(60,45,35,.10); background: #FAF8F5; }}
 .sh .shot img {{ width: 100%; display: block; }}
 /* 作り込み（10/21 オーナー「色使いすぎ。見やすさとこだわりがある感じ」）：色は茶色1色、細い線と字の組みで見せる */
