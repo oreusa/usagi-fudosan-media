@@ -4,11 +4,20 @@
 // 集計は /stats で JSON を返す（個人の情報は保存しない。数だけ）。
 import { DurableObject } from "cloudflare:workers";
 
+const RESET = "2026-10-21";
+
 export class Counter extends DurableObject {
   constructor(ctx, env) {
     super(ctx, env);
     this.sql = ctx.storage.sql;
     this.sql.exec("CREATE TABLE IF NOT EXISTS c (day TEXT, k TEXT, n INTEGER, PRIMARY KEY (day, k))");
+    // 数え直し：RESET を変えて公開すると、最初の1回だけ数を全部0に戻す（10/21 オーナー：試しに押した分を消す）
+    this.sql.exec("CREATE TABLE IF NOT EXISTS m (k TEXT PRIMARY KEY, v TEXT)");
+    const done = this.sql.exec("SELECT v FROM m WHERE k = 'reset'").toArray()[0];
+    if (!done || done.v !== RESET) {
+      this.sql.exec("DELETE FROM c");
+      this.sql.exec("INSERT OR REPLACE INTO m VALUES ('reset', ?)", RESET);
+    }
   }
   add(day, k) {
     this.sql.exec("INSERT INTO c VALUES (?, ?, 1) ON CONFLICT(day, k) DO UPDATE SET n = n + 1", day, k);
