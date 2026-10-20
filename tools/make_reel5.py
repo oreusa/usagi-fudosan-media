@@ -50,7 +50,7 @@ body {{ width: 1080px; height: 1920px; font-family: G; color: {INK}; position: r
 .cv-k {{ margin-top: 44px; font-size: 46px; font-weight: 700; letter-spacing: .1em; color: {SUB}; }}
 .cv-t {{ margin-top: 30px; font-family: M; font-weight: 700; font-size: 100px; line-height: 1.34; letter-spacing: .06em; }}
 .cv-line {{ width: 120px; height: 3px; background: {ACC}; margin: 44px auto 0; }}
-.cv-c {{ margin-top: 26px; font-size: 52px; font-weight: 700; letter-spacing: .08em; }}
+.cv-c {{ margin-top: 70px; font-size: 52px; font-weight: 700; letter-spacing: .08em; }}
 .cv-c b {{ font-family: J; font-weight: 400; font-size: 120px; color: {ACC}; margin-right: 10px; vertical-align: -6px; }}
 .cv-s {{ margin-top: 36px; font-size: 34px; font-weight: 500; color: {SUB}; letter-spacing: .12em; }}
 .cv-logo {{ position: absolute; right: 60px; bottom: 50px; height: 130px; }}
@@ -135,7 +135,7 @@ def slide_html(spec, s, i, n, credit):
         body = ('<div class="brand">USAGI-CHAN TOWN NOTES</div><div class="panel cv"><div class="inner"></div>'
                 + (f'<div class="cv-b">{tx(s["badge"])}</div>' if s.get("badge") else "")
                 + (f'<div class="cv-k">{tx(s["kicker"])}</div>' if s.get("kicker") else "")
-                + f'<div class="cv-t">{tx(s["title"])}</div><div class="cv-line"></div>'
+                + f'<div class="cv-t">{tx(s["title"])}</div>'
                 + (f'<div class="cv-c"><b>{html.escape(str(s["count"]))}</b>{tx(s.get("count_text", "つのポイント"))}</div>' if s.get("count") else "")
                 + ("" if s.get("badge") else f'<div class="cv-s">{tx(spec.get("series"))}</div>')
                 + f'<img class="cv-logo" src="{logo}"></div>')
