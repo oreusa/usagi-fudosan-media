@@ -4,3 +4,4 @@
 ・KiwiMaru-Medium.ttf … Kiwi Maru
 make_reel.py は環境変数 REEL_FONT（noto / zenmaru / mplus）で切り替える
 ・Jost-VF.ttf … Jost（英字の「Next」・番号。make_reel4.py）
+・ShipporiMincho-*.ttf … Shippori Mincho（見出し。make_reel5.py。おでかけリストのページと同じ字体）
