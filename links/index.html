@@ -27,7 +27,7 @@ h1{font-size:22px;margin:14px 0 4px}.sub{font-size:13px;color:#857A70;margin:0 0
 .sns a span{font-family:J;font-weight:400;color:#857A70;font-size:12px;margin-left:6px}
 .sns a.co{background:#A07E66;color:#fff;border-color:#A07E66}.sns a.co span{color:#F5E6DE}
 .past{font-size:12.5px;color:#857A70;line-height:2;background:#fff;border-radius:8px;padding:8px 12px;margin-bottom:12px}
-.card{display:flex;align-items:center;gap:12px;position:relative}.card .th{flex:0 0 56px;height:56px;border-radius:12px;background:#F5E6DE;display:flex;align-items:center;justify-content:center}.card .th svg{width:40px;height:40px}.card .bd{flex:1;min-width:0;padding-right:18px}.go{position:absolute;right:12px;top:50%;transform:translateY(-50%);margin:0;float:none}
+.card{display:flex;align-items:center;gap:12px;position:relative}.card .th{flex:0 0 56px;height:56px;border-radius:12px;background:#F5E6DE;display:flex;align-items:center;justify-content:center}.card .th svg{width:40px;height:40px}.card .bd{flex:1;min-width:0;padding-right:18px}.go{position:absolute;right:12px;top:50%;transform:translateY(-50%);margin:0;float:none}.wk.new{background:#7FA36B}.wk.done{background:#D6A99A}.card.nw{border-color:#7FA36B}.card.nw .d{color:#6E9459}.card.nw .go{color:#7FA36B}.badge{display:inline-block;font-size:10.5px;font-weight:700;color:#fff;background:#7FA36B;border-radius:8px;padding:1px 7px;margin-left:6px;vertical-align:1px}.card.dn{border-color:#D6A99A}.card.dn .d{color:#C08A78}.card.dn .go{color:#D6A99A}.card.dn .badge{background:#D6A99A}
 </style></head><body><div class="wrap">
 <div class="head"><img src="assets/logo.png" alt="ロゴ"><div class="en">USAGI-CHAN TOWN NOTES</div>
 <h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p></div>
@@ -43,6 +43,14 @@ h1{font-size:22px;margin:14px 0 4px}.sub{font-size:13px;color:#857A70;margin:0 0
 <a class="card" data-from="2026-10-27" style="display:none" href="https://www.kyotobotanicalgardens.jp/"><div class="bd"><div class="d">11/15（日）まで</div><div class="t">京都府立植物園 菊花展</div><div class="m">京都市左京区｜10/31・11/1は秋のバラ展も</div></div><div class="go">→</div></a>
 <a class="card" data-from="2026-10-25" style="display:none" href="https://www.aws-s.com/lightparks&amp;nightsafari/lightparks/"><div class="bd"><div class="d">10/24（土）から</div><div class="t">アドベンチャーワールド LIGHT PARKS</div><div class="m">和歌山県白浜町｜夜のイベント</div></div><div class="go">→</div></a>
 <p class="m" style="text-align:center;margin:4px 0 12px">新しいおでかけ先は、投稿した日に追加します</p>
+<div class="wk new" style="margin-top:14px">もうすぐできる</div>
+<p class="m" style="text-align:center;margin:4px 0 12px">関西にこれからできる場所を、公式の発表から集めています</p>
+<div id="soon">
+<a class="card nw" data-from="2026-10-20" data-open="2026-11-20" style="display:none" href="https://www.city.osaka.lg.jp/hodoshiryo/osakatokei/0000677513.html"><div class="bd"><div class="d">11/20（金）開園<span class="badge"></span></div><div class="t">うめきたの森（グラングリーン大阪）</div><div class="m">大阪市北区｜池と高さ3mの滝。全体の開園は2027年春ごろ</div></div><div class="go">→</div></a>
+</div>
+<div class="wk done" style="margin-top:14px">できた</div>
+<p class="m" style="text-align:center;margin:4px 0 12px">オープンした場所は、ここに移します</p>
+<div id="done"></div>
 <div class="wk" style="margin-top:14px;background:#b9ada2">終わったおでかけ</div>
 <div class="past">10/18（日）駅祭ティング2026｜天王寺公園 てんしば<br>10/18（日）電車を走らせよう｜和歌山市民図書館 西分館<br>10/17（土）高所作業車の乗車体験｜京都市役所前広場</div>
 <div class="tip">出かける前に、必ず公式ページで最新の情報を確かめてください。</div></div>
@@ -55,4 +63,4 @@ h1{font-size:22px;margin:14px 0 4px}.sub{font-size:13px;color:#857A70;margin:0 0
 <a href="gyosha.html">業者さまへ<span>物件のご紹介・ご相談はこちら</span></a>
 </div>
 <div class="ft">ぴょんと街しらべ│過去のおでかけも、このページに残していきます</div>
-</div><script>(function(){var t=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);document.querySelectorAll("[data-from]").forEach(function(e){if(e.getAttribute("data-from")<=t)e.style.display="";});})();</script></body></html>
+</div><script>(function(){var t=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);document.querySelectorAll("[data-from]").forEach(function(e){if(e.getAttribute("data-from")<=t)e.style.display="";});var T=Date.parse(t),D=document.getElementById("done");document.querySelectorAll("[data-open]").forEach(function(e){var o=e.getAttribute("data-open"),n=Math.round((Date.parse(o)-T)/864e5),b=e.querySelector(".badge");if(n>0){b.textContent="あと"+n+"日";}else{e.className="card dn";b.textContent=n==0?"今日オープン":"オープンしました";D.insertBefore(e,D.firstChild);}});})();</script></body></html>
