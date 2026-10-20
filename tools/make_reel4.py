@@ -84,6 +84,13 @@ body {{ width: {W}px; height: {H}px; background: {BAND}; font-family: G; color: 
 .sv .cta .l1 {{ font-size: 38px; font-weight: 500; line-height: 1.6; }}
 .sv .cta .l2 {{ font-size: 50px; font-weight: 900; color: {ACC}; margin-top: 10px; letter-spacing: .04em; }}
 .sv .src {{ margin-top: 40px; font-size: 28px; font-weight: 500; color: {SUB}; line-height: 1.6; }}
+/* 間取りの枚（type "plan"。図は spec の数字〔m〕からコードで描く。AIの絵は使わない） */
+.pcard {{ position: absolute; left: 110px; width: 860px; top: 400px; height: 380px; background: #fff; border: 3px solid {ACC}; }}
+.pcardin {{ position: absolute; left: 110px; width: 860px; top: 400px; height: 380px; text-align: center; padding-top: 62px; }}
+.pcardin .desc {{ margin-top: 26px; font-size: 40px; line-height: 1.8; }}
+.planbox {{ position: absolute; left: 110px; width: 860px; top: 800px; height: 520px; }}
+.pnote {{ position: absolute; left: 110px; width: 860px; top: 1296px; text-align: right; font-size: 26px; font-weight: 500; color: {SUB}; }}
+.plan .tip {{ top: 1350px; }}
 """
 
 CLIP = (f'<svg class="clip" width="130" height="90" viewBox="0 0 130 90"><rect x="0" y="52" width="130" height="34" rx="16" fill="{ACC}"/>'
@@ -124,6 +131,61 @@ def tx(s):
     return h
 
 
+def plan_svg(pl):
+    """間取り図を SVG で描く。寸法は m。部屋の外形 w×h、rooms（線で区切る部屋）、items（家具など塗りの四角）、
+    doors（壁の切れ目）、windows（二重線）、dims（寸法線）、path（点線の通り道）。縮尺は枠に収まる最大"""
+    BW, BH, M = 860, 520, 70
+    k = min((BW - 2 * M) / pl["w"], (BH - 2 * M) / pl["h"])
+    ox, oy = (BW - pl["w"] * k) / 2, (BH - pl["h"] * k) / 2
+    X = lambda v: ox + v * k
+    Y = lambda v: oy + v * k
+    e = [f'<svg width="{BW}" height="{BH}" viewBox="0 0 {BW} {BH}" font-family="G">',
+         f'<rect x="{X(0)}" y="{Y(0)}" width="{pl["w"] * k}" height="{pl["h"] * k}" fill="#fff" stroke="{INK}" stroke-width="9"/>']
+    for r in pl.get("rooms", []):
+        e.append(f'<rect x="{X(r["x"])}" y="{Y(r["y"])}" width="{r["w"] * k}" height="{r["h"] * k}" fill="{r.get("fill", "#fff")}" '
+                 f'stroke="{INK}" stroke-width="5"/>')
+    for it in pl.get("items", []):
+        hot = it.get("hot")
+        e.append(f'<rect x="{X(it["x"])}" y="{Y(it["y"])}" width="{it["w"] * k}" height="{it["h"] * k}" rx="6" '
+                 f'fill="{"#F1D5CD" if hot else HL}" stroke="{ACC}" stroke-width="3"/>')
+    for d in pl.get("doors", []):  # 壁の切れ目（白で消す）
+        e.append(f'<line x1="{X(d["x1"])}" y1="{Y(d["y1"])}" x2="{X(d["x2"])}" y2="{Y(d["y2"])}" stroke="#fff" stroke-width="12"/>')
+    for wdw in pl.get("windows", []):
+        e.append(f'<line x1="{X(wdw["x1"])}" y1="{Y(wdw["y1"])}" x2="{X(wdw["x2"])}" y2="{Y(wdw["y2"])}" stroke="#fff" stroke-width="12"/>'
+                 f'<line x1="{X(wdw["x1"])}" y1="{Y(wdw["y1"])}" x2="{X(wdw["x2"])}" y2="{Y(wdw["y2"])}" stroke="{ACC}" '
+                 f'stroke-width="12" stroke-dasharray="1 0" opacity=".35"/>')
+    if pl.get("path"):
+        pts = " ".join(f"{X(a)},{Y(b)}" for a, b in pl["path"])
+        e.append(f'<polyline points="{pts}" fill="none" stroke="#D97A6C" stroke-width="6" stroke-dasharray="14 10" stroke-linecap="round"/>')
+        a, b = pl["path"][-1]
+        e.append(f'<circle cx="{X(a)}" cy="{Y(b)}" r="10" fill="#D97A6C"/>')
+    for lb in pl.get("labels", []):
+        fs = lb.get("size", 30)
+        e.append(f'<text x="{X(lb["x"])}" y="{Y(lb["y"]) + fs * .35}" text-anchor="middle" font-size="{fs}" font-weight="{lb.get("weight", 700)}" '
+                 f'fill="{lb.get("color", INK)}">{html.escape(lb["t"])}</text>')
+    for dm in pl.get("dims", []):  # 寸法線：side = top/bottom/left/right
+        sd = dm["side"]
+        if sd in ("top", "bottom"):
+            yy = Y(0) - 34 if sd == "top" else Y(pl["h"]) + 34
+            x1, x2 = X(dm["a"]), X(dm["b"])
+            e.append(f'<line x1="{x1}" y1="{yy}" x2="{x2}" y2="{yy}" stroke="{ACC}" stroke-width="3"/>'
+                     f'<line x1="{x1}" y1="{yy - 12}" x2="{x1}" y2="{yy + 12}" stroke="{ACC}" stroke-width="3"/>'
+                     f'<line x1="{x2}" y1="{yy - 12}" x2="{x2}" y2="{yy + 12}" stroke="{ACC}" stroke-width="3"/>'
+                     f'<rect x="{(x1 + x2) / 2 - 62}" y="{yy - 20}" width="124" height="40" fill="#fff"/>'
+                     f'<text x="{(x1 + x2) / 2}" y="{yy + 11}" text-anchor="middle" font-family="J" font-size="30" font-weight="500" fill="{ACC}">{html.escape(dm["t"])}</text>')
+        else:
+            xx = X(0) - 34 if sd == "left" else X(pl["w"]) + 34
+            y1, y2 = Y(dm["a"]), Y(dm["b"])
+            e.append(f'<line x1="{xx}" y1="{y1}" x2="{xx}" y2="{y2}" stroke="{ACC}" stroke-width="3"/>'
+                     f'<line x1="{xx - 12}" y1="{y1}" x2="{xx + 12}" y2="{y1}" stroke="{ACC}" stroke-width="3"/>'
+                     f'<line x1="{xx - 12}" y1="{y2}" x2="{xx + 12}" y2="{y2}" stroke="{ACC}" stroke-width="3"/>'
+                     f'<rect x="{xx - 22}" y="{(y1 + y2) / 2 - 60}" width="44" height="120" fill="#fff"/>'
+                     f'<text transform="translate({xx + 10},{(y1 + y2) / 2}) rotate(-90)" text-anchor="middle" font-family="J" font-size="30" '
+                     f'font-weight="500" fill="{ACC}">{html.escape(dm["t"])}</text>')
+    e.append("</svg>")
+    return "".join(e)
+
+
 def slide_html(spec, s, i, n, credit):
     logo = f"file://{LOGO}"
     t = s["type"]
@@ -146,6 +208,12 @@ def slide_html(spec, s, i, n, credit):
                      f'<div class="mid"><span class="h">{tx(s.get("check_head", "チェック"))}{PEN}{SCRIB}</span>'
                      f'<div class="checks">{checks}</div></div>'
                      + (f'<div class="tip">{BULB}<div>{tx(s["tip"])}</div></div>' if s.get("tip") else ""))
+        elif t == "plan":
+            body += (f'<div class="pcard"></div><div class="pcardin">{CLIP}<span class="tag"><span class="n">{html.escape(s["n"])}</span>'
+                     f'{tx(s["title"])}</span><div class="desc">{tx(s["desc"])}</div></div>'
+                     f'<div class="planbox">{plan_svg(s["plan"])}</div>'
+                     + (f'<div class="pnote">{tx(s["note"])}</div>' if s.get("note") else "")
+                     + (f'<div class="tip">{BULB}<div>{tx(s["tip"])}</div></div>' if s.get("tip") else ""))
         elif t == "save":
             src = (("出典：" + tx(spec["source"])) if spec.get("source") else "") + (("<br>" if spec.get("source") else "") + html.escape(credit) if credit else "")  # 自社の案内など出典がない回は「出典：」を出さない
             body += (f'<div class="sv"><h2>{tx(s["head"])}</h2><div class="body">{tx(s.get("body"))}</div>'
@@ -154,7 +222,8 @@ def slide_html(spec, s, i, n, credit):
         else:
             raise ValueError(t)
     nxt = '<div class="next">Next<span></span></div>' if i < n - 1 else ""
-    return f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body>{body}{nxt}</body></html>'
+    cls = ' class="plan"' if t == "plan" else ""
+    return f'<!doctype html><html><head><meta charset="utf-8"><style>{CSS}</style></head><body{cls}>{body}{nxt}</body></html>'
 
 
 def render(spec, outdir, credit):
