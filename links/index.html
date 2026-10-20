@@ -6,6 +6,7 @@
 <meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://usagi-odekake.usagi-fudosan.workers.dev/assets/ogp.png">
 <link rel="icon" href="assets/ogp.png"><link rel="apple-touch-icon" href="assets/ogp.png">
 <title>関西おでかけリスト</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
 @font-face{font-family:G;src:url("assets/ZenKakuGothicNew-Medium.ttf");font-weight:500}
 @font-face{font-family:G;src:url("assets/ZenKakuGothicNew-Bold.ttf");font-weight:700}
@@ -31,9 +32,75 @@ h1{font-size:22px;margin:14px 0 4px}.sub{font-size:13px;color:#857A70;margin:0 0
 .flt{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;margin:0 0 14px}.flt button{font-family:G;font-weight:700;font-size:12.5px;border:1.5px solid #A07E66;background:#fff;color:#A07E66;border-radius:16px;padding:5px 12px;cursor:pointer}.flt button.on{background:#A07E66;color:#fff}
 .it{position:relative}.it .card{padding-bottom:48px}.mp{position:absolute;left:14px;bottom:24px;font-size:11.5px;font-weight:700;color:#A07E66;border:1px solid #D6A99A;border-radius:14px;padding:3px 14px;text-decoration:none;background:#fff}
 .tg{display:inline-block;font-family:G;font-size:10.5px;font-weight:700;border-radius:8px;padding:1px 7px;margin-left:6px;vertical-align:1px}.tg.f{background:#E9F1E3;color:#5E8A4A}.wk.we{background:#C9824F}.hid{display:none!important}.more{display:block;margin:0 auto 12px;font-family:G;font-weight:700;font-size:12.5px;color:#A07E66;background:#fff;border:1.5px solid #D6A99A;border-radius:16px;padding:5px 16px;cursor:pointer}
-</style></head><body><div class="wrap">
+
+body{background:#F6F3EE;color:#2B2622}
+.wrap{padding:36px 20px 48px}
+.head img{width:56px}.en{font-size:10.5px;letter-spacing:.42em;color:#8C7B6E;font-weight:300;margin-top:10px}
+h1{font-family:"Shippori Mincho",serif;font-weight:600;font-size:27px;letter-spacing:.14em;margin:18px 0 10px}
+.sub{font-size:12px;line-height:1.9;color:#8C7B6E;margin:0 0 26px}
+.head:after{content:"";display:block;width:28px;height:1px;background:#2B2622;margin:0 auto 22px}
+.flt{gap:0 18px;margin:0 0 30px}.flt button{border:none;background:none;border-radius:0;padding:4px 0;font-weight:500;font-size:13px;color:#8C7B6E;border-bottom:1px solid transparent;letter-spacing:.08em}
+.flt button.on{background:none;color:#2B2622;border-bottom-color:#2B2622}
+.paper{background:none;padding:0}
+.wk,.wk.we,.wk.new,.wk.done{display:block;background:none!important;color:#2B2622;font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spacing:.12em;padding:0;margin:34px 0 16px!important}
+#wkd .wk{margin-top:0!important}
+.wk:before{display:block;font-family:J;font-weight:400;font-size:10.5px;letter-spacing:.38em;color:#A88C76;margin-bottom:6px;content:"UPCOMING"}
+.wk.we:before{content:"THIS WEEKEND"}.wk.new:before{content:"COMING SOON"}.wk.done:before{content:"NEW OPEN"}.wk[style*="b9ada2"]:before{content:"ARCHIVE"}
+.card,.card.nw,.card.dn{background:#fff;border:none;border-radius:2px;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);padding:18px 18px;margin-bottom:14px}
+.it .card{padding-bottom:50px}
+.d{font-size:11px;letter-spacing:.1em;color:#A88C76}
+.t{font-family:"Shippori Mincho",serif;font-weight:600;font-size:16.5px;letter-spacing:.01em;line-height:1.5;margin:6px 0 4px}
+.m{font-size:11.5px;color:#8C7B6E;letter-spacing:.02em}
+.go{color:#2B2622;font-weight:300;font-size:16px;right:16px}
+.tg,.tg.f{background:none;color:#2B2622;border:1px solid #2B2622;border-radius:0;font-weight:500;font-size:9.5px;letter-spacing:.1em;padding:0 6px}
+.mp{left:18px;bottom:20px;border:none;border-bottom:1px solid #2B2622;border-radius:0;background:none;padding:0 0 1px;color:#2B2622;font-weight:500;font-size:11px;letter-spacing:.12em}
+.mp:after{content:" ↗";font-family:J}
+.card.nw{box-shadow:inset 2px 0 0 #7F9A6E,0 6px 18px rgba(43,38,34,.05)}.card.nw .d,.card.nw .go{color:#6F8A5F}
+.badge,.card.dn .badge{background:none;color:#6F8A5F;border:1px solid #6F8A5F;border-radius:0;font-weight:500;letter-spacing:.06em}
+.card.dn .d,.card.dn .go{color:#B07F6C}.card.dn .badge{color:#B07F6C;border-color:#B07F6C}
+.past{background:#fff;border-radius:2px;color:#6E625A}
+.more{border:none;border-bottom:1px solid #2B2622;border-radius:0;background:none;color:#2B2622;font-weight:500;padding:2px 0;letter-spacing:.08em;margin:6px auto 20px}
+.ft{font-size:10.5px;letter-spacing:.06em;color:#8C7B6E;margin-top:26px}
+.sns{margin-top:36px}.sns h2{font-size:10.5px;letter-spacing:.42em;color:#8C7B6E;font-weight:400;margin-bottom:14px}
+.sns a{border:1px solid #2B2622;border-radius:0;background:transparent;font-weight:500;letter-spacing:.06em;padding:13px 14px;font-size:13.5px}
+.sns a.co{background:#2B2622;border-color:#2B2622}
+
+.head{background:#2F5D62;margin:-36px -20px 0;padding:34px 20px 30px;color:#fff}
+.head img{background:#F6F3EE;border-radius:50%;padding:8px;width:52px}
+.head .en{color:#BFD6D3}.head h1{color:#fff}.head .sub{color:#DCE8E6;margin-bottom:0}
+.head:after{background:#E3B65A;margin:20px auto 0;width:36px;height:2px}
+.flt{margin:22px 0 30px}
+.flt button.on{color:var(--pc,#2B2622);border-bottom:2px solid var(--pc,#2B2622)}
+.it .card{box-shadow:inset 4px 0 0 var(--pc),0 6px 18px rgba(43,38,34,.06)}
+.pl{position:absolute;right:16px;top:16px;z-index:2;font-size:10px;font-weight:700;letter-spacing:.1em;color:#fff;background:var(--pc);padding:2px 8px}
+.it .card .bd{padding-right:44px}
+.wk:before{color:#2F5D62}.wk.we:before{color:#C8694B}.wk.new:before{color:#6F8A5F}.wk.done:before{color:#C27C8A}
+.wk:after{content:"";display:block;width:24px;height:2px;margin-top:8px;background:#2F5D62}.wk.we:after{background:#C8694B}.wk.new:after{background:#6F8A5F}.wk.done:after{background:#C27C8A}.wk[style*="b9ada2"]:after{background:#B9ADA2}
+.mp{color:var(--pc);border-bottom-color:var(--pc)}
+.tg,.tg.f{color:#4F7D4A;border-color:#4F7D4A}
+.sns a.co{background:#2F5D62;border-color:#2F5D62}.sns a.co+a.co{background:#C8694B;border-color:#C8694B}
+.tip{background:#FBF1E2;border-radius:0;border-left:3px solid #E3B65A}
+body{background:#F6F3EE}
+.head{background:#EEE5DA}.head img{background:#fff}.head .en{color:#A07E66}.head h1{color:#3A2F28}.head .sub{color:#857A70}.head:after{background:#A07E66}
+.sea{display:flex;align-items:center;justify-content:center;gap:10px;margin:18px 0 0;font-family:J;font-size:11px;letter-spacing:.32em;color:#A07E66}
+.sea:before,.sea:after{content:"";flex:0 0 34px;height:1px;background:#D6A99A}
+.sea b{font-family:"Shippori Mincho",serif;font-weight:600;letter-spacing:.12em;color:#B5643F;font-size:13px}
+.it .card{background:color-mix(in srgb,var(--pc) 5%,#fff)}
+.dt{flex:0 0 52px;text-align:center;border-right:1px solid color-mix(in srgb,var(--pc) 30%,#fff);padding-right:12px;align-self:stretch;display:flex;flex-direction:column;justify-content:center}
+.dt .mo{font-family:J;font-size:10px;letter-spacing:.2em;color:var(--pc)}
+.dt .dy{font-family:J;font-weight:300;font-size:34px;line-height:1;color:var(--pc)}
+.dt .lb{font-size:9.5px;color:#8C7B6E;margin-top:3px;letter-spacing:.08em}
+
+.pick{margin:0 0 26px}.pick .it .card{background:color-mix(in srgb,var(--pc) 13%,#fff);padding-top:40px}
+.pick .it:before{content:"PICK UP";position:absolute;left:16px;top:14px;z-index:2;font-family:J;font-size:10px;font-weight:500;letter-spacing:.3em;color:#fff;background:#B5643F;padding:2px 9px}
+.pick .wk:before{content:"PICK UP";color:#B5643F}
+.pick .t{font-size:19px}
+.cnt{display:flex;gap:8px;justify-content:center;margin:-12px 0 26px;flex-wrap:wrap}
+.cnt span{font-size:11px;letter-spacing:.06em;padding:4px 12px;background:#fff;border:1px solid #E6DED4;color:#6E625A}.cnt b{font-family:J;font-weight:500;font-size:14px;color:#B5643F;margin:0 2px}
+.flt button{color:var(--pc,#8C7B6E)}.pick .t{font-size:20px}.pick .it .card{padding:44px 18px 54px}.head{background:radial-gradient(circle at 14% 26%,#F8E1CF 0 74px,transparent 75px),radial-gradient(circle at 88% 16%,#DCEAF3 0 54px,transparent 55px),radial-gradient(circle at 80% 88%,#E2EBD9 0 48px,transparent 49px),radial-gradient(circle at 6% 92%,#F5DFE2 0 30px,transparent 31px),#F6F3EE!important;margin:-36px -20px 0;padding:36px 20px 26px}
+.head img{background:none;padding:0;width:72px}.head h1{color:#2B2622}.head .en{color:#A07E66}.head .sub{color:#7A6E66}.head:after{background:#A07E66}</style></head><body><div class="wrap">
 <div class="head"><img src="assets/logo.png" alt="ロゴ"><div class="en">USAGI-CHAN TOWN NOTES</div>
-<h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p></div>
+<h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p><div class="sea"><span>AUTUMN 2026</span><b>秋のおでかけ</b></div></div>
 <div class="flt" id="flt"></div><p class="m" id="none" style="display:none;text-align:center;margin:0 0 12px">この府県のおでかけは、これから増やしていきます</p>
 <div class="paper"><div id="wkd" style="display:none"><div class="wk we" id="wkh">今週末に行ける</div><div id="wkl"></div></div><div class="wk">これからのおでかけ</div>
 <a class="card" data-pref="兵庫" data-tag="無料" data-s="" data-e="2026-10-31" data-map="淡路島国営明石海峡公園" href="https://awaji-kaikyopark.kkr.mlit.go.jp/"><div class="bd"><div class="d">10/25（日）入園無料の日</div><div class="t">淡路島国営明石海峡公園</div><div class="m">兵庫県淡路市｜ハロウィン展示は10/31まで</div></div><div class="go">→</div></a>
@@ -74,7 +141,7 @@ var t=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
 document.querySelectorAll("[data-from]").forEach(function(e){if(e.getAttribute("data-from")<=t)e.style.display="";});
 var T=Date.parse(t),D=document.getElementById("done");
 document.querySelectorAll("[data-open]").forEach(function(e){var o=e.getAttribute("data-open"),n=Math.round((Date.parse(o)-T)/864e5),b=e.querySelector(".badge");if(n>0){b.textContent="あと"+n+"日";}else{e.className="card dn";b.textContent=n==0?"今日オープン":"オープンしました";D.insertBefore(e,D.firstChild);}});
-function wrap(a){var w=document.createElement("div");w.className="it";w.setAttribute("data-pref",a.getAttribute("data-pref")||"");a.parentNode.insertBefore(w,a);w.appendChild(a);
+var PC={"大阪":"#C8694B","京都":"#7E5A8C","兵庫":"#2D4E7A","奈良":"#5E8B5A","滋賀":"#3C8DA0","和歌山":"#D98A3D"};function wrap(a){var w=document.createElement("div");w.className="it";w.setAttribute("data-pref",a.getAttribute("data-pref")||"");var pf=a.getAttribute("data-pref")||"";if(PC[pf]){w.style.setProperty("--pc",PC[pf]);var L=document.createElement("span");L.className="pl";L.textContent=pf;w.appendChild(L);}a.parentNode.insertBefore(w,a);w.appendChild(a);
  var tg=(a.getAttribute("data-tag")||"").split(" ").filter(Boolean);if(tg.length){var d=a.querySelector(".d");tg.forEach(function(x){var sp=document.createElement("span");sp.className="tg f";sp.textContent=x;d.appendChild(sp);});}
  var m=a.getAttribute("data-map");if(m){var l=document.createElement("a");l.className="mp";l.textContent="地図";l.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(m);l.setAttribute("data-k","地図｜"+a.querySelector(".t").textContent);w.appendChild(l);}return w;}
 var cards=[].slice.call(document.querySelectorAll("a.card")).filter(function(a){return a.style.display!="none";});
@@ -85,10 +152,18 @@ cards.forEach(function(a){var w=wrap(a);if(a.classList.contains("nw")||a.classLi
  if(days.some(function(d){return s0<=d&&d<=e0;})){var cl=w.cloneNode(true);L.appendChild(cl);k++;}});
 if(k){var f=function(x){var d=new Date(x+"T00:00:00Z");return (d.getUTCMonth()+1)+"/"+d.getUTCDate();};document.getElementById("wkh").textContent="今週末に行ける（"+days.map(f).join("・")+"）";document.getElementById("wkd").style.display="";}
 var P=["大阪","京都","兵庫","奈良","滋賀","和歌山"],have={};document.querySelectorAll(".it").forEach(function(w){have[w.getAttribute("data-pref")]=1;});
-var F=document.getElementById("flt");["すべて"].concat(P.filter(function(p){return have[p];})).forEach(function(p,i){var b=document.createElement("button");b.textContent=p;if(!i)b.className="on";b.onclick=function(){F.querySelectorAll("button").forEach(function(x){x.className="";});b.className="on";var v=0;document.querySelectorAll(".it").forEach(function(w){var ok=p=="すべて"||w.getAttribute("data-pref")==p;w.style.display=ok?"":"none";if(ok)v++;});document.getElementById("none").style.display=v?"none":"";c("絞り込み："+p);};F.appendChild(b);});
+var F=document.getElementById("flt");["すべて"].concat(P.filter(function(p){return have[p];})).forEach(function(p,i){var b=document.createElement("button");b.textContent=p;if(typeof PC!="undefined"&&PC[p])b.style.setProperty("--pc",PC[p]);if(!i)b.className="on";b.onclick=function(){F.querySelectorAll("button").forEach(function(x){x.className="";});b.className="on";var v=0;document.querySelectorAll(".it").forEach(function(w){var ok=p=="すべて"||w.getAttribute("data-pref")==p;w.style.display=ok?"":"none";if(ok)v++;});document.getElementById("none").style.display=v?"none":"";c("絞り込み："+p);};F.appendChild(b);});
 function fold(items,after,name){if(items.length<=5)return;var r=items.slice(5);r.forEach(function(e){e.classList.add("hid");});var b=document.createElement("button");b.className="more";b.textContent="もっと見る（あと"+r.length+"件）";b.onclick=function(){r.forEach(function(e){e.classList.remove("hid");});b.remove();c("もっと見る："+name);};after.parentNode.insertBefore(b,after.nextSibling);}
 fold([].slice.call(D.children),D,"できた");
 var PS=document.querySelector(".past");if(PS){var ln=PS.innerHTML.split(/<br\s*\/?>/i).filter(function(x){return x.trim();});PS.innerHTML=ln.map(function(x){return "<div>"+x+"</div>";}).join("");PS.style.lineHeight="2";fold([].slice.call(PS.children),PS,"終わったおでかけ");}
 c("表示：おでかけリスト");
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;var n=a.getAttribute("data-k");if(!n){var x=a.querySelector(".t");n=x?x.textContent:(a.childNodes[0]&&a.childNodes[0].textContent)||a.textContent;}c("クリック：おでかけリスト｜"+n);},true);
+})();</script><script>(function(){var M=["JAN","FEB","MAR","APR","MAY","JUN","JUL","AUG","SEP","OCT","NOV","DEC"],T=new Date(),td=T.getFullYear()+"-"+("0"+(T.getMonth()+1)).slice(-2)+"-"+("0"+T.getDate()).slice(-2);
+document.querySelectorAll(".it .card").forEach(function(a){var s0=a.getAttribute("data-s")||"",e0=a.getAttribute("data-e")||"",o=a.getAttribute("data-open")||"",d,l;
+if(o){d=o;l="OPEN";}else if(s0&&s0>td){d=s0;l="から";}else if(e0){d=e0;l="まで";}else if(s0){d=s0;l="から";}if(!d)return;
+var x=document.createElement("div");x.className="dt";x.innerHTML='<div class="mo">'+M[+d.slice(5,7)-1]+'</div><div class="dy">'+(+d.slice(8,10))+'</div><div class="lb">'+l+'</div>';});
+var w=document.querySelector("#wkl .it");var fl=document.getElementById("flt");
+if(w){var p=document.createElement("div");p.className="pick";p.innerHTML='<div class="wk">今週のおすすめ</div>';p.appendChild(w.cloneNode(true));var pa=document.querySelector(".paper");pa.insertBefore(p,pa.firstChild);}
+var n=document.querySelectorAll("#wkl .it").length,f=0,seen={};document.querySelectorAll(".paper .it").forEach(function(i){var t=i.querySelector(".t");if(!t||seen[t.textContent])return;seen[t.textContent]=1;if(i.querySelector(".tg.f"))f++;});
+var c=document.createElement("div");c.className="cnt";c.innerHTML='<span>今週末に行ける<b>'+n+'</b>件</span><span>無料で楽しめる<b>'+f+'</b>件</span>';var nn=document.getElementById("none");nn.parentNode.insertBefore(c,nn.nextSibling);
 })();</script></body></html>
