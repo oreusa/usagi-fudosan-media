@@ -1,7 +1,11 @@
 {
   // 関西おでかけリンク集（インスタのプロフィールリンク）。links/ だけを公開する
+  // worker/index.js は表示とクリックの数を数えるだけ（/c と /stats）。ほかは links/ のファイルをそのまま返す
   "name": "usagi-odekake",
   "compatibility_date": "2026-10-01",
-  "assets": { "directory": "./links" },
+  "main": "worker/index.js",
+  "assets": { "directory": "./links", "binding": "ASSETS" },
+  "durable_objects": { "bindings": [{ "name": "COUNTER", "class_name": "Counter" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Counter"] }],
   "workers_dev": true
 }
