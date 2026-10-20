@@ -114,6 +114,11 @@ body {{ width: 1080px; height: 1920px; font-family: G; color: {INK}; position: r
 .sv h2 {{ padding-bottom: 34px; border-bottom: 2px solid {INK}; }}
 .sv .body {{ border-top: 0 !important; padding-top: 0 !important; margin-top: 36px !important; }}
 .sh {{ padding-top: 110px; }}
+.head .no {{ flex: none; white-space: nowrap; }}
+.head .ttl {{ font-size: 62px !important; }}
+.desc {{ font-size: 42px !important; line-height: 1.8 !important; }}
+.ck {{ padding: 18px 0 !important; font-size: 37px !important; }}
+.tip {{ font-size: 36px !important; margin-top: 30px !important; }}
 """
 
 ARROW = (f'<svg width="96" height="24" viewBox="0 0 96 24" fill="none" stroke="{ACC}" stroke-width="2.4" stroke-linecap="round" '
