@@ -277,12 +277,13 @@ body{background:#FAF8F5!important}
 #totop.on{opacity:1;pointer-events:auto}
 .dflt{display:flex;justify-content:center;gap:0;margin:22px 0 0}.dflt button{font-family:G;font-size:12.5px;font-weight:700;letter-spacing:.12em;color:#8C7B6E;background:#fff;border:1px solid #D9CFC4;padding:7px 18px;cursor:pointer;margin-left:-1px}.dflt button.on{background:#2B2622;border-color:#2B2622;color:#fff}.dflt+.flt{margin-top:10px!important}
 .blk.hid{display:none!important}
+.b-now{--sc:#A07E66}.b-now .wk small{font-family:G;font-size:11px;font-weight:500;letter-spacing:.1em;color:#8C7B6E;margin-left:10px}
 </style></head><body><div class="wrap">
 <div class="head"><img src="assets/logo.png" alt="ロゴ"><div class="en">USAGI-CHAN TOWN NOTES</div>
 <h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p><div class="sea"><span>AUTUMN 2026</span><b>秋のおでかけ</b></div></div>
 <div class="flt" id="flt"></div><p class="m" id="none" style="display:none;text-align:center;margin:0 0 12px">この府県のおでかけは、これから増やしていきます</p>
 <div class="paper"><div id="wkd" style="display:none"><div class="wk we" id="wkh">今週末に行ける</div><div id="wkl"></div></div><div class="wk">これからのおでかけ</div>
-<a class="card" data-pref="兵庫" data-tag="無料" data-s="" data-e="2026-10-31" data-map="淡路島国営明石海峡公園" href="https://awaji-kaikyopark.kkr.mlit.go.jp/"><div class="bd"><div class="d">10/25（日）入園無料の日</div><div class="t">淡路島国営明石海峡公園</div><div class="m">兵庫県淡路市｜ハロウィン展示は10/31まで</div></div><div class="go">→</div></a>
+<a class="card" data-pref="兵庫" data-tag="無料" data-s="" data-e="2026-10-31" data-map="淡路島国営明石海峡公園" data-note="10/25（日）は無料" href="https://awaji-kaikyopark.kkr.mlit.go.jp/"><div class="bd"><div class="d">10/25（日）入園無料の日</div><div class="t">淡路島国営明石海峡公園</div><div class="m">兵庫県淡路市｜ハロウィン展示は10/31まで</div></div><div class="go">→</div></a>
 <a class="card" data-pref="大阪" data-tag="" data-s="" data-e="2026-10-30" data-map="万博記念公園" href="https://www.expo70-park.jp/event/77306/"><div class="bd"><div class="d">10/30（金）まで　中学生以下は入園無料</div><div class="t">万博記念公園 コスモス・コキアフェスタ</div><div class="m">大阪府吹田市｜花の丘</div></div><div class="go">→</div></a>
 <a class="card" data-pref="奈良" data-tag="無料" data-s="" data-e="2026-10-31" data-map="奈良県営馬見丘陵公園" href="https://www.pref.nara.lg.jp/n157/70967.html"><div class="bd"><div class="d">10月下旬まで見ごろ</div><div class="t">馬見丘陵公園 秋のダリア・コスモス</div><div class="m">奈良県河合町｜県営の大きな公園</div></div><div class="go">→</div></a>
 <a class="card" data-pref="奈良" data-tag="無料" data-s="2026-10-24" data-e="2026-10-31" data-map="うだ・アニマルパーク" data-from="2026-10-24" style="display:none" href="https://www.pref.nara.lg.jp/n009/20847.html"><div class="bd"><div class="d">10/31（土）まで　入園無料</div><div class="t">うだ・アニマルパーク ハロウィン仮装撮影会</div><div class="m">奈良県宇陀市</div></div><div class="go">→</div></a>
@@ -371,29 +372,39 @@ t.onclick=function(){scrollTo({top:0,behavior:'smooth'})};
 })();
 </script><script>
 (function(){
-// date buttons (today / this weekend / all) + sort by soonest end
-var t=new Date(Date.now()+9*3600e3).toISOString().slice(0,10),T=Date.parse(t);
-var wd=document.getElementById("wkd");if(wd){wd.style.display="none";wd.classList.add("hid");}
+// 開催中 / これから split, clear date lines, weekend button
+var t=new Date(Date.now()+9*3600e3).toISOString().slice(0,10),T=Date.parse(t),W="日月火水木金土";
+function f(x){var d=new Date(x+"T00:00:00Z");return (d.getUTCMonth()+1)+"/"+d.getUTCDate()+"（"+W[d.getUTCDay()]+"）";}
+var wd=document.getElementById("wkd");if(wd){wd.style.display="none";}
 var dw=new Date(T).getUTCDay(),sat=T+((6-dw+7)%7)*864e5;if(dw==0)sat=T-864e5;
 var we=[sat,sat+864e5].map(function(x){return new Date(x).toISOString().slice(0,10);}).filter(function(x){return x>=t;});
-function on(a,days){var s0=a.getAttribute("data-s")||"0000",e0=a.getAttribute("data-e")||"9999";return days.some(function(d){return s0<=d&&d<=e0;});}
-var up=document.querySelector(".blk.b-up");
-if(up){var its=[].slice.call(up.querySelectorAll(".it"));
- its.sort(function(x,y){var a=x.querySelector(".card").getAttribute("data-e")||"9999",b=y.querySelector(".card").getAttribute("data-e")||"9999";return a<b?-1:a>b?1:0;});
- its.forEach(function(i){up.appendChild(i);});}
-var mode="すべて",F=document.getElementById("flt");
-var box=document.createElement("div");box.className="dflt";
+function cov(a,days){var s0=a.getAttribute("data-s")||"0000",e0=a.getAttribute("data-e")||"9999";return days.some(function(d){return s0<=d&&d<=e0;});}
+var up=document.querySelector(".blk.b-up");if(!up)return;
+var hd=up.querySelector(".wk");if(hd)hd.textContent="これから";
+var now=document.createElement("div");now.className="blk b-now";now.innerHTML='<div class="wk">開催中<small>今日行けます</small></div>';up.parentNode.insertBefore(now,up);
+var its=[].slice.call(up.querySelectorAll(".it")),N=[],U=[];
+its.forEach(function(w){var a=w.querySelector(".card"),s0=a.getAttribute("data-s")||"",e0=a.getAttribute("data-e")||"",note=a.getAttribute("data-note")||"",txt;
+ if(!s0||s0<=t){N.push(w);txt=e0?f(e0)+"まで":"開催中";}
+ else{U.push(w);txt=(e0&&e0!=s0)?f(s0)+"〜"+f(e0):(e0?f(s0):f(s0)+"から");}
+ if(note){txt+="｜"+note;if(/無料/.test(note))[].forEach.call(a.querySelectorAll(".tg"),function(x){x.remove();});}
+ var d=a.querySelector(".d"),done=0;[].slice.call(d.childNodes).forEach(function(n){if(n.nodeType==3){if(!done){n.textContent=txt;done=1;}else n.remove();}});
+ if(!done){var pl=d.querySelector(".pl");d.insertBefore(document.createTextNode(txt),pl?pl.nextSibling:d.firstChild);}});
+N.sort(function(x,y){var a=x.querySelector(".card").getAttribute("data-e")||"9999",b=y.querySelector(".card").getAttribute("data-e")||"9999";return a<b?-1:a>b?1:0;}).forEach(function(w){now.appendChild(w);});
+U.sort(function(x,y){var a=x.querySelector(".card").getAttribute("data-s"),b=y.querySelector(".card").getAttribute("data-s");return a<b?-1:a>b?1:0;}).forEach(function(w){up.appendChild(w);});
+if(!N.length)now.style.display="none";
+var mode="すべて",F=document.getElementById("flt"),box=document.createElement("div");box.className="dflt";
 function apply(){var pb=F.querySelector("button.on"),pf=pb?pb.textContent:"すべて",v=0;
- document.querySelectorAll(".paper .blk").forEach(function(b){if(b.id=="wkd")return;var isUp=b.classList.contains("b-up");
-  if(mode!="すべて"&&!isUp){b.classList.add("hid");return;}b.classList.remove("hid");
-  b.querySelectorAll(".it").forEach(function(w){var a=w.querySelector(".card"),ok=(pf=="すべて"||w.getAttribute("data-pref")==pf);
-   if(ok&&mode=="今日")ok=on(a,[t]);if(ok&&mode=="今週末")ok=on(a,we);w.style.display=ok?"":"none";if(ok&&isUp)v++;});});
- var n=document.getElementById("none");if(n){n.textContent=mode=="すべて"?"この府県のおでかけは、これから増やしていきます":(mode=="今日"?"今日行けるおでかけは、ほかの日をご覧ください":"今週末に行けるおでかけは、これから増やしていきます");n.style.display=v?"none":"";}}
-["すべて","今日","今週末"].forEach(function(m,i){var b=document.createElement("button");b.textContent=m;if(!i)b.className="on";
- b.onclick=function(){box.querySelectorAll("button").forEach(function(x){x.className="";});b.className="on";mode=m;apply();
-  try{var cb=JSON.stringify({k:"絞り込み："+m});navigator.sendBeacon&&navigator.sendBeacon("/c",cb);}catch(e){}};box.appendChild(b);});
+ document.querySelectorAll(".paper .blk").forEach(function(b){if(b.id=="wkd")return;var main=b===now||b===up;
+  if(mode!="すべて"&&!main){b.classList.add("hid");return;}b.classList.remove("hid");var k=0;
+  b.querySelectorAll(".it").forEach(function(w){var ok=(pf=="すべて"||w.getAttribute("data-pref")==pf);if(ok&&mode!="すべて")ok=cov(w.querySelector(".card"),we);w.style.display=ok?"":"none";if(ok){k++;if(main)v++;}});
+  if(main)b.classList.toggle("hid",!k);});
+ var n=document.getElementById("none");if(n){n.textContent=mode=="すべて"?"この府県のおでかけは、これから増やしていきます":"今週末に行けるおでかけは、これから増やしていきます";n.style.display=v?"none":"";}}
+var lab=we.length?"今週末 "+we.map(function(x){return x.slice(5).replace(/^0/,"").replace("-0","/").replace("-","/");}).join("・"):"今週末";
+[["すべて","すべて"],["今週末",lab]].forEach(function(m,i){var b=document.createElement("button");b.textContent=m[1];if(!i)b.className="on";
+ b.onclick=function(){box.querySelectorAll("button").forEach(function(x){x.className="";});b.className="on";mode=m[0];apply();
+  try{navigator.sendBeacon&&navigator.sendBeacon("/c",JSON.stringify({k:"絞り込み："+m[0]}));}catch(e){}};box.appendChild(b);});
 F.parentNode.insertBefore(box,F);F.addEventListener("click",function(){setTimeout(apply,0);});
-var c=document.querySelector(".cnt span");if(c){var k=0;if(up)up.querySelectorAll(".it").forEach(function(w){if(on(w.querySelector(".card"),[t]))k++;});c.innerHTML="今日行ける<b>"+k+"</b>件";}
+var c=document.querySelector(".cnt span");if(c)c.innerHTML="開催中<b>"+N.length+"</b>件";
 })();
 </script>
 </body></html>
