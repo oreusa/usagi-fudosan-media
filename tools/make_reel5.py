@@ -119,6 +119,28 @@ body {{ width: 1080px; height: 1920px; font-family: G; color: {INK}; position: r
 .desc {{ font-size: 42px !important; line-height: 1.8 !important; }}
 .ck {{ padding: 18px 0 !important; font-size: 37px !important; }}
 .tip {{ font-size: 36px !important; margin-top: 30px !important; }}
+/* 読みやすさ（10/21 オーナー「文字ばかり。もう少し読みやすさを」）：大きな数字・線の絵・矢印の流れ・左右くらべ。色は茶色1色のまま */
+.ico {{ flex: none; width: 112px; height: 112px; border: 2px solid {LINE}; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 6px; }}
+.ico svg {{ width: 64px; height: 64px; }}
+.big {{ margin-top: 46px; text-align: center; }}
+.big .lb {{ font-size: 38px; font-weight: 700; color: {SUB}; letter-spacing: .1em; }}
+.big .fig {{ margin-top: 6px; font-family: M; font-weight: 700; color: {ACC}; line-height: 1; letter-spacing: .02em; }}
+.big .fig b {{ font-size: 230px; font-weight: 700; }}
+.big .fig span {{ font-size: 76px; margin-left: 8px; color: {INK}; }}
+.big .note {{ margin-top: 22px; font-size: 38px; font-weight: 700; letter-spacing: .06em; line-height: 1.6; }}
+.flow {{ margin-top: 44px; display: flex; flex-direction: column; align-items: stretch; }}
+.flow .st {{ border: 2px solid {LINE}; padding: 26px 30px; display: flex; align-items: center; gap: 26px; font-size: 40px; font-weight: 700; letter-spacing: .05em; line-height: 1.5; }}
+.flow .st em {{ flex: none; font-style: normal; font-family: J; font-size: 30px; letter-spacing: .14em; color: {ACC}; }}
+.flow .st.last {{ border-color: {ACC}; background: #F8F2EB; }}
+.flow .dn {{ height: 58px; display: flex; justify-content: center; }}
+.flow .dn svg {{ height: 58px; }}
+.cmp {{ margin-top: 44px; display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 2px solid {LINE}; }}
+.cmp > div {{ padding: 30px 28px; }}
+.cmp > div + div {{ border-left: 2px solid {LINE}; }}
+.cmp h4 {{ font-family: M; font-weight: 700; font-size: 44px; text-align: center; padding-bottom: 20px; border-bottom: 1.5px solid {LINE}; letter-spacing: .06em; }}
+.cmp > div.on h4 {{ color: {ACC}; }}
+.cmp p {{ margin-top: 20px; font-size: 36px; font-weight: 700; line-height: 1.6; letter-spacing: .04em; }}
+.one {{ margin-top: 30px; font-size: 40px; font-weight: 700; line-height: 1.75; letter-spacing: .05em; text-align: center; }}
 """
 
 ARROW = (f'<svg width="96" height="24" viewBox="0 0 96 24" fill="none" stroke="{ACC}" stroke-width="2.4" stroke-linecap="round" '
@@ -130,6 +152,53 @@ CHECK = (f'<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><circle c
 PAL = [("#F8E1CF", "#D9A98A"), ("#DCEAF3", "#8FB0C6"), ("#E2EBD9", "#9DB68C"), ("#F5DFE2", "#D59EA7")]
 SPARK = ('<svg class="spark" width="120" height="44" viewBox="0 0 120 44" fill="none" stroke="#A07E66" stroke-width="2.2" stroke-linecap="round">'
          '<path d="M60 4v14M60 26v14M46 22h-14M88 22h-14M52 14l-5-5M68 14l5-5M52 30l-5 5M68 30l5 5"/><path d="M8 22h16M96 22h16" opacity=".5"/></svg>')
+
+
+# 細い線の絵（茶色1色）。spec の item に "icon": "名前" で使う
+_I = {
+ "calendar": '<rect x="10" y="14" width="44" height="40" rx="4"/><path d="M10 26h44M22 8v12M42 8v12M20 36h6M30 36h6M40 36h6M20 45h6M30 45h6"/>',
+ "doc": '<path d="M16 6h22l12 12v40H16z"/><path d="M38 6v12h12M24 30h18M24 39h18M24 48h12"/>',
+ "house": '<path d="M8 30L32 10l24 20"/><path d="M14 26v28h36V26"/><path d="M27 54V40h10v14"/>',
+ "yen": '<circle cx="32" cy="32" r="24"/><path d="M22 18l10 14 10-14M32 32v16M24 34h16M24 41h16"/>',
+ "court": '<path d="M8 22L32 10l24 12z"/><path d="M14 26v22M26 26v22M38 26v22M50 26v22M8 54h48"/>',
+ "clock": '<circle cx="32" cy="32" r="24"/><path d="M32 18v15l10 6"/>',
+ "key": '<circle cx="20" cy="32" r="10"/><path d="M30 32h26M48 32v8M56 32v6"/>',
+ "map": '<path d="M8 14l16-6 16 6 16-6v42l-16 6-16-6-16 6z"/><path d="M24 8v42M40 14v42"/>',
+ "train": '<rect x="14" y="8" width="36" height="38" rx="8"/><path d="M14 30h36M24 46l-8 10M40 46l8 10"/><circle cx="23" cy="38" r="2"/><circle cx="41" cy="38" r="2"/>',
+ "tree": '<path d="M32 8l16 24H38l12 16H14l12-16H16z"/><path d="M32 48v10"/>',
+ "shield": '<path d="M32 6l22 8v16c0 14-10 24-22 28C20 54 10 44 10 30V14z"/><path d="M22 32l7 7 13-14"/>',
+ "chart": '<path d="M8 56h48M14 48V34M26 48V22M38 48V30M50 48V14"/>',
+ "people": '<circle cx="22" cy="20" r="8"/><circle cx="44" cy="22" r="7"/><path d="M8 54c0-10 6-18 14-18s14 8 14 18M34 54c0-8 4-14 10-14s10 6 10 14"/>',
+ "flower": '<circle cx="32" cy="24" r="6"/><path d="M32 10a8 8 0 0 1 0 0M32 30v26M32 44c-8 0-14-4-16-10 8 0 14 4 16 10zM32 40c8 0 14-4 16-10-8 0-14 4-16 10z"/><path d="M26 18a8 8 0 1 1 12 0M24 28a8 8 0 1 1 0-8M40 28a8 8 0 1 0 0-8"/>',
+}
+def icon(name):
+    d = _I.get(name)
+    return (f'<div class="ico"><svg viewBox="0 0 64 64" fill="none" stroke="{ACC}" stroke-width="2.6" stroke-linecap="round" '
+            f'stroke-linejoin="round">{d}</svg></div>') if d else ""
+DOWN = (f'<svg viewBox="0 0 24 58" fill="none" stroke="{ACC}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">'
+        f'<path d="M12 4v48M4 42l8 10 8-10"/></svg>')
+
+
+def extra(s):
+    """item の見せ方。big（大きな数字）・flow（矢印の流れ）・compare（左右くらべ）・one（短い1文）"""
+    h = ""
+    if s.get("big"):
+        b = s["big"]
+        h += (f'<div class="big">' + (f'<div class="lb">{tx(b.get("label"))}</div>' if b.get("label") else "")
+              + f'<div class="fig"><b>{html.escape(str(b["num"]))}</b><span>{tx(b.get("unit"))}</span></div>'
+              + (f'<div class="note">{tx(b.get("note"))}</div>' if b.get("note") else "") + '</div>')
+    if s.get("flow"):
+        st = s["flow"]
+        h += '<div class="flow">' + f'<div class="dn">{DOWN}</div>'.join(
+            f'<div class="st{" last" if k == len(st) - 1 else ""}"><em>{k + 1:02d}</em><span>{tx(x)}</span></div>' for k, x in enumerate(st)) + '</div>'
+    if s.get("compare"):
+        c = s["compare"]
+        h += '<div class="cmp">' + "".join(
+            f'<div class="{"on" if side.get("on") else ""}"><h4>{tx(side["h"])}</h4>' + "".join(f'<p>{tx(x)}</p>' for x in side.get("items", [])) + '</div>'
+            for side in c) + '</div>'
+    if s.get("one"):
+        h += f'<div class="one">{tx(s["one"])}</div>'
+    return h
 
 
 def slide_html(spec, s, i, n, credit):
@@ -152,8 +221,9 @@ def slide_html(spec, s, i, n, credit):
             checks = "".join(f'<div class="ck">{CHECK}<span>{tx(c)}</span></div>' for c in s.get("checks", []))
             body += (f'<div class="panel it"><div class="inner"></div><div class="corner tl">POINT</div><div class="corner tr">{i + 1:02d} / {n:02d}</div>'
                      f'<div class="head"><div class="no{" w" if len(s["n"]) > 2 else ""}">{html.escape(s["n"])}</div>'
-                     f'<div class="ttl">{tx(s["title"])}</div></div>'
-                     f'<div class="desc">{tx(s["desc"])}</div><div class="checks">{checks}</div>'
+                     f'<div class="ttl">{tx(s["title"])}</div>' + (f'<div style="margin-left:auto">{icon(s["icon"])}</div>' if s.get("icon") else "") + '</div>'
+                     + (f'<div class="desc">{tx(s["desc"])}</div>' if s.get("desc") else "") + extra(s)
+                     + (f'<div class="checks">{checks}</div>' if checks else "")
                      + (f'<div class="tip"><i>メモ</i>{tx(s["tip"])}</div>' if s.get("tip") else "") + '</div>')
         elif t == "save":
             src = (("出典：" + tx(spec["source"])) if spec.get("source") else "") + (("<br>" if spec.get("source") else "") + html.escape(credit) if credit else "")
