@@ -278,6 +278,7 @@ body{background:#FAF8F5!important}
 .dflt{display:flex;justify-content:center;gap:0;margin:22px 0 0}.dflt button{font-family:G;font-size:12.5px;font-weight:700;letter-spacing:.12em;color:#8C7B6E;background:#fff;border:1px solid #D9CFC4;padding:7px 18px;cursor:pointer;margin-left:-1px}.dflt button.on{background:#2B2622;border-color:#2B2622;color:#fff}.dflt+.flt{margin-top:10px!important}
 .blk.hid{display:none!important}
 .b-now{--sc:#A07E66}.b-now .wk small{font-family:G;font-size:11px;font-weight:500;letter-spacing:.1em;color:#8C7B6E;margin-left:10px}
+.wk.hd2{flex-direction:column!important;align-items:flex-start!important;gap:6px!important}.wk .en2{font-family:J;font-weight:400;font-size:10px;letter-spacing:.36em;color:#A07E66}.wk .jp2{font-family:"Shippori Mincho",serif;font-weight:600}
 </style></head><body><div class="wrap">
 <div class="head"><img src="assets/logo.png" alt="ロゴ"><div class="en">USAGI-CHAN TOWN NOTES</div>
 <h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p><div class="sea"><span>AUTUMN 2026</span><b>秋のおでかけ</b></div></div>
@@ -380,8 +381,8 @@ var dw=new Date(T).getUTCDay(),sat=T+((6-dw+7)%7)*864e5;if(dw==0)sat=T-864e5;
 var we=[sat,sat+864e5].map(function(x){return new Date(x).toISOString().slice(0,10);}).filter(function(x){return x>=t;});
 function cov(a,days){var s0=a.getAttribute("data-s")||"0000",e0=a.getAttribute("data-e")||"9999";return days.some(function(d){return s0<=d&&d<=e0;});}
 var up=document.querySelector(".blk.b-up");if(!up)return;
-var hd=up.querySelector(".wk");if(hd)hd.textContent="これから";
-var now=document.createElement("div");now.className="blk b-now";now.innerHTML='<div class="wk">開催中<small>今日行けます</small></div>';up.parentNode.insertBefore(now,up);
+var hd=up.querySelector(".wk");
+var now=document.createElement("div");now.className="blk b-now";now.innerHTML='<div class="wk">開催中</div>';up.parentNode.insertBefore(now,up);
 var its=[].slice.call(up.querySelectorAll(".it")),N=[],U=[];
 its.forEach(function(w){var a=w.querySelector(".card"),s0=a.getAttribute("data-s")||"",e0=a.getAttribute("data-e")||"",note=a.getAttribute("data-note")||"",txt;
  if(!s0||s0<=t){N.push(w);txt=e0?f(e0)+"まで":"開催中";}
@@ -406,5 +407,9 @@ var lab=we.length?"今週末 "+we.map(function(x){return x.slice(5).replace(/^0/
 F.parentNode.insertBefore(box,F);F.addEventListener("click",function(){setTimeout(apply,0);});
 var c=document.querySelector(".cnt span");if(c)c.innerHTML="開催中<b>"+N.length+"</b>件";
 })();
+</script>
+<script>
+(function(){var M={"開催中":["NOW ON","開催中のおでかけ"],"これからのおでかけ":["COMING UP","これからのおでかけ"],"もうすぐできる":["SOON","もうすぐできる"],"できた":["NEW OPEN","できたばかり"],"終わったおでかけ":["ARCHIVE","終わったおでかけ"]};
+document.querySelectorAll(".paper .blk .wk").forEach(function(w){var k=w.textContent.trim(),m=M[k];if(!m)return;w.innerHTML='<span class="en2">'+m[0]+'</span><span class="jp2">'+m[1]+'</span>';w.classList.add("hd2");});})();
 </script>
 </body></html>
