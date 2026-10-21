@@ -300,7 +300,13 @@ body{background:#FAF8F5!important}
 <div class="wk new" style="margin-top:14px">もうすぐできる</div>
 <p class="m" style="text-align:center;margin:4px 0 12px">関西にこれからできる施設などを、公式の発表から集めています</p>
 <div id="soon">
+<a class="card nw" data-pref="大阪" data-tag="" data-s="" data-e="" data-map="ナッツベリーリゾート大阪" data-open="2026-10-31" href="https://osaka.nutsberry-resort.com/"><div class="bd"><div class="d">10/31（土）グランドオープン<span class="badge"></span></div><div class="t">ナッツベリーリゾート大阪</div><div class="m">大阪府茨木市｜ダムパークいばきたのグランピング。カフェは10/24から</div></div><div class="go">→</div></a>
 <a class="card nw" data-pref="大阪" data-tag="" data-s="" data-e="" data-map="グラングリーン大阪" data-from="2026-10-20" data-open="2026-11-20" style="display:none" href="https://www.city.osaka.lg.jp/hodoshiryo/osakatokei/0000677513.html"><div class="bd"><div class="d">11/20（金）開園<span class="badge"></span></div><div class="t">うめきたの森（グラングリーン大阪）</div><div class="m">大阪市北区｜池と高さ3mの滝。全体の開園は2027年春ごろ</div></div><div class="go">→</div></a>
+<a class="card nw" data-pref="大阪" data-tag="" data-s="" data-e="" data-map="大阪市中央区難波3-8-22" href="https://www.afpbb.com/articles/-/3648165"><div class="bd"><div class="d">12月オープン予定</div><div class="t">アニタッチ OSAKA なんば</div><div class="m">大阪市中央区｜屋内のふれあい動物園。なんば駅から歩いて1分</div></div><div class="go">→</div></a>
+<a class="card nw" data-pref="大阪" data-tag="" data-s="" data-e="" data-map="ヒルトンプラザイースト" href="https://immersivejourney.jp/"><div class="bd"><div class="d">12月下旬オープン予定</div><div class="t">イマーシブジャーニー 大阪</div><div class="m">大阪市北区｜大型のVR体験施設。ヒルトンプラザイースト8階</div></div><div class="go">→</div></a>
+<a class="card nw" data-pref="京都" data-tag="" data-s="" data-e="" data-map="京都市南区東九条東岩本町15-3" href="https://www.superblue.com/"><div class="bd"><div class="d">2027年初めごろ開業予定</div><div class="t">Superblue Kyoto</div><div class="m">京都市南区｜体験型アートの施設。京都駅の東南側</div></div><div class="go">→</div></a>
+<a class="card nw" data-pref="兵庫" data-tag="" data-s="" data-e="" data-map="UCCコーヒー博物館" data-open="2026-07-01" data-done="リニューアル" href="https://www.ucc.co.jp/museum/"><div class="bd"><div class="d">7/1（水）リニューアル<span class="badge"></span></div><div class="t">UCCコーヒー博物館</div><div class="m">神戸市中央区｜6年ぶりの再開。見学は予約制</div></div><div class="go">→</div></a>
+<a class="card nw" data-pref="滋賀" data-tag="" data-s="" data-e="" data-map="びわ湖テラス" data-open="2026-09-14" href="https://www.biwako-valley.com/green/"><div class="bd"><div class="d">9/14（月）オープン<span class="badge"></span></div><div class="t">びわ湖テラス Sky Bridge</div><div class="m">滋賀県大津市｜長さ220mの吊り橋。標高約1100m</div></div><div class="go">→</div></a>
 </div>
 <div class="wk done" style="margin-top:14px">できた</div>
 <p class="m" style="text-align:center;margin:4px 0 12px">オープンした場所は、ここに移します</p>
@@ -322,7 +328,8 @@ function c(k){try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigat
 var t=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
 document.querySelectorAll("[data-from]").forEach(function(e){if(e.getAttribute("data-from")<=t)e.style.display="";});
 var T=Date.parse(t),D=document.getElementById("done");
-document.querySelectorAll("[data-open]").forEach(function(e){var o=e.getAttribute("data-open"),n=Math.round((Date.parse(o)-T)/864e5),b=e.querySelector(".badge");if(n>0){b.textContent="あと"+n+"日";}else{e.className="card dn";b.textContent=n==0?"今日オープン":"オープンしました";D.insertBefore(e,D.firstChild);}});
+document.querySelectorAll("[data-open]").forEach(function(e){var o=e.getAttribute("data-open"),n=Math.round((Date.parse(o)-T)/864e5),b=e.querySelector(".badge");if(n>0){b.textContent="あと"+n+"日";}else{e.className="card dn";b.textContent=n==0?"今日オープン":(e.getAttribute("data-done")||"オープンしました");D.insertBefore(e,D.firstChild);}});
+[].slice.call(D.children).sort(function(x,y){return x.getAttribute("data-open")<y.getAttribute("data-open")?1:-1;}).forEach(function(e){D.appendChild(e);});
 var PC={"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"};function wrap(a){var w=document.createElement("div");w.className="it";w.setAttribute("data-pref",a.getAttribute("data-pref")||"");var pf=a.getAttribute("data-pref")||"";if(PC[pf]){w.style.setProperty("--pc",PC[pf]);var L=document.createElement("span");L.className="pl";L.textContent=pf;var dd=a.querySelector(".d");if(dd)dd.insertBefore(L,dd.firstChild);}a.parentNode.insertBefore(w,a);w.appendChild(a);
  var tg=(a.getAttribute("data-tag")||"").split(" ").filter(Boolean);if(tg.length){var d=a.querySelector(".d");tg.forEach(function(x){var sp=document.createElement("span");sp.className="tg f";sp.textContent=x;d.appendChild(sp);});}
  var m=a.getAttribute("data-map");if(m){var l=document.createElement("a");l.className="mp";l.textContent="地図";l.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(m);l.setAttribute("data-k","地図｜"+a.querySelector(".t").textContent);w.appendChild(l);}return w;}
@@ -400,11 +407,7 @@ function apply(){var pb=F.querySelector("button.on"),pf=pb?pb.textContent:"す�
   b.querySelectorAll(".it").forEach(function(w){var ok=(pf=="すべて"||w.getAttribute("data-pref")==pf);if(ok&&mode!="すべて")ok=cov(w.querySelector(".card"),we);w.style.display=ok?"":"none";if(ok){k++;if(main)v++;}});
   if(main)b.classList.toggle("hid",!k);});
  var n=document.getElementById("none");if(n){n.textContent=mode=="すべて"?"この府県のおでかけは、これから増やしていきます":"今週末に行けるおでかけは、これから増やしていきます";n.style.display=v?"none":"";}}
-var lab=we.length?"今週末 "+we.map(function(x){return x.slice(5).replace(/^0/,"").replace("-0","/").replace("-","/");}).join("・"):"今週末";
-[["すべて","すべて"],["今週末",lab]].forEach(function(m,i){var b=document.createElement("button");b.textContent=m[1];if(!i)b.className="on";
- b.onclick=function(){box.querySelectorAll("button").forEach(function(x){x.className="";});b.className="on";mode=m[0];apply();
-  try{navigator.sendBeacon&&navigator.sendBeacon("/c",JSON.stringify({k:"絞り込み："+m[0]}));}catch(e){}};box.appendChild(b);});
-F.parentNode.insertBefore(box,F);F.addEventListener("click",function(){setTimeout(apply,0);});
+F.addEventListener("click",function(){setTimeout(apply,0);});
 var c=document.querySelector(".cnt span");if(c)c.innerHTML="開催中<b>"+N.length+"</b>件";
 })();
 </script>
