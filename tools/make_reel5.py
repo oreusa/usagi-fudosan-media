@@ -206,7 +206,7 @@ def slide_html(spec, s, i, n, credit):
     t = s["type"]
     label = spec.get("page_label") or spec.get("series")
     if t == "cover":
-        body = ('<div class="brand">USAGI-CHAN TOWN NOTES</div><div class="panel cv"><div class="inner"></div>'
+        body = ('<div class="brand">USAGI TOWN NOTES</div><div class="panel cv"><div class="inner"></div>'
                 + (f'<div class="cv-b">{tx(s["badge"])}</div>' if s.get("badge") else "")
                 + (f'<div class="cv-k">{tx(s["kicker"])}</div>' if s.get("kicker") else "")
                 + f'<div class="cv-t">{tx(s["title"])}</div>'
@@ -214,7 +214,7 @@ def slide_html(spec, s, i, n, credit):
                 + ("" if s.get("badge") else f'<div class="cv-s">{tx(spec.get("series"))}</div>')
                 + f'<img class="cv-logo" src="{logo}"></div>')
     else:
-        body = f'<div class="brand"><img src="{logo}">USAGI-CHAN TOWN NOTES</div>'
+        body = f'<div class="brand"><img src="{logo}">USAGI TOWN NOTES</div>'
         if label:
             body += f'<div class="strip">{tx(label)}</div>'
         if t == "item":
