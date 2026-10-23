@@ -15,5 +15,11 @@
   "url": "https://www.kyotobotanicalgardens.jp/",
   "made_by": "司令ツキ",
   "checked": "京都府立植物園 公式 https://www.kyotobotanicalgardens.jp/ ・菊花展/秋のバラ展 各イベントページ・/access、京都府 https://www.pref.kyoto.jp/plant/（2026年10月20日確認）",
-  "design": "v5（10/21 サイトと同じ見た目に作り直し）"
+  "design": "v5（10/21 サイトと同じ見た目に作り直し）",
+  "story": {
+    "image": "https://oreusa.github.io/usagi-fudosan-media/media/2026-10-27/story-kyoto-botanical-autumn.jpg",
+    "time": "12:30",
+    "link": "https://usagi-odekake.usagi-fudosan.workers.dev/",
+    "alt": "うさぎ│TOWN NOTESのおでかけメモ"
+  }
 }
