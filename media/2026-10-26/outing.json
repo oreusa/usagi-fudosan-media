@@ -15,5 +15,11 @@
   "url": "https://www.city.osaka.lg.jp/hodoshiryo/kensetsu/0000684443.html",
   "made_by": "司令ツキ",
   "checked": "大阪市報道発表（2026年9月25日）https://www.city.osaka.lg.jp/hodoshiryo/kensetsu/0000684443.html（2026年10月20日確認）",
-  "design": "v5（10/21 サイトと同じ見た目に作り直し）"
+  "design": "v5（10/21 サイトと同じ見た目に作り直し）",
+  "story": {
+    "image": "https://oreusa.github.io/usagi-fudosan-media/media/2026-10-26/story-tsurumi-hanaranman.jpg",
+    "time": "12:30",
+    "link": "https://usagi-odekake.usagi-fudosan.workers.dev/",
+    "alt": "うさぎ│TOWN NOTESのおでかけメモ"
+  }
 }

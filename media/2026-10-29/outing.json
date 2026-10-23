@@ -15,5 +15,11 @@
   "url": "https://www.kobe-park.or.jp/shinrin/",
   "made_by": "司令ツキ",
   "checked": "神戸市立森林植物園 公式 https://www.kobe-park.or.jp/shinrin/ （もみじ散策・紅葉のライトアップ・ご利用案内・ネイチャーゲーム体験のページ。2026年10月21日確認）",
-  "design": "v5（10/21 サイトと同じ見た目に作り直し）"
+  "design": "v5（10/21 サイトと同じ見た目に作り直し）",
+  "story": {
+    "image": "https://oreusa.github.io/usagi-fudosan-media/media/2026-10-29/story-shinrin-momiji.jpg",
+    "time": "12:30",
+    "link": "https://usagi-odekake.usagi-fudosan.workers.dev/",
+    "alt": "うさぎ│TOWN NOTESのおでかけメモ"
+  }
 }

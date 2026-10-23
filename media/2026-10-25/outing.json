@@ -15,5 +15,11 @@
   "url": "https://www.aws-s.com/lightparks&nightsafari/lightparks/",
   "made_by": "司令ツキ",
   "checked": "アドベンチャーワールド公式 https://www.aws-s.com/lightparks&nightsafari/lightparks/ ・/lightparks&nightsafari/ ・/guide/opening_hours/（2026年10月20日確認）",
-  "design": "v5（10/21 サイトと同じ見た目に作り直し）"
+  "design": "v5（10/21 サイトと同じ見た目に作り直し）",
+  "story": {
+    "image": "https://oreusa.github.io/usagi-fudosan-media/media/2026-10-25/story-aws-lightparks.jpg",
+    "time": "12:30",
+    "link": "https://usagi-odekake.usagi-fudosan.workers.dev/",
+    "alt": "うさぎ│TOWN NOTESのおでかけメモ"
+  }
 }
