@@ -335,7 +335,7 @@ body{background:#FAF8F5!important}
 </div>
 <div class="ft">ぴょんと街しらべ│過去のおでかけも、このページに残していきます</div>
 </div><script>(function(){
-function c(k){try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
+var O=(function(){try{var q=new URLSearchParams(location.search).get("owner");if(q==="1")localStorage.setItem("usagi_owner","1");if(q==="0")localStorage.removeItem("usagi_owner");if(q!==null)history.replaceState(null,"",location.pathname+location.hash);return localStorage.getItem("usagi_owner")==="1";}catch(e){return false;}})();function c(k){if(O)return;try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
 var t=new Date(Date.now()+9*3600e3).toISOString().slice(0,10);
 document.querySelectorAll("[data-from]").forEach(function(e){if(e.getAttribute("data-from")<=t)e.style.display="";});
 var T=Date.parse(t),D=document.getElementById("done");
