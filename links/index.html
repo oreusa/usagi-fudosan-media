@@ -461,6 +461,8 @@ cap();document.addEventListener("click",function(e){if(e.target.closest("#flt,.d
 .tabs button b i{font-style:normal;font-family:Jost,sans-serif;font-weight:400;font-size:12px;margin-left:3px}
 .tabs button.on{border-bottom-color:var(--c);color:var(--c)}.tabs button.on b{color:#2B2622}
 .tabs button.z{opacity:.35;pointer-events:none}
+/* 10/26 数字は名前の下に小さく「7件」（オーナー候補2） */
+.tabs button b i{display:block;margin:4px 0 0!important;font-size:11px!important;color:#9C9187;letter-spacing:.08em}.tabs button b i::after{content:"件";font-family:G,sans-serif;font-size:9.5px;margin-left:1px}.tabs button.on b i{color:var(--c)}
 .paper .blk.tb .wk{display:none!important}.paper .blk.toff{display:none!important}
 /* カードを低く：地図は右下、矢印は右上、住所の行は省く */
 .paper .it .card{padding-right:70px!important;padding-bottom:18px!important}.paper .it .card .m{display:none}
