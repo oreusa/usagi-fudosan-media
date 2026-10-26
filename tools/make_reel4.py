@@ -19,6 +19,7 @@ ACC, BAND, TIP, LINE, INK, GRID, HL, SUB = "#A07E66", "#EEE5DA", "#F5E6DE", "#D6
 FONT = os.path.join(HERE, "fonts")
 LOGO = os.path.join(HERE, "brand", "logo.png")
 BGM = {"file": os.path.join(HERE, "sound", "bgm", "303PM.mp3"), "credit": "曲：3:03 PM／しゃろう"}  # 10/19 夜オーナー決定「前の曲・音量8%」。曲ファイルは gitignore なので /mnt/project-files/bgm/303PM.mp3 から tools/sound/bgm/ へコピーして使う
+BGM_SHARED = "/mnt/project-files/bgm/303PM.mp3"  # 共有フォルダの曲。手元に無ければここからコピーする
 
 CSS = f"""
 @font-face {{ font-family: G; src: url("file://{FONT}/ZenKakuGothicNew-Medium.ttf"); font-weight: 500; }}
@@ -192,6 +193,12 @@ def main(spec_path, outdir, images_only=False):
     if images_only:
         print("\n".join(pub))
         return
+    if not os.path.exists(BGM["file"]) and os.path.exists(BGM_SHARED):
+        os.makedirs(os.path.dirname(BGM["file"]), exist_ok=True)
+        shutil.copy(BGM_SHARED, BGM["file"])
+    if not os.path.exists(BGM["file"]) and not os.environ.get("ALLOW_SILENT"):
+        # 10/24〜10/26 のリールが曲なしで出たため、無音では作らずに止める
+        sys.exit("曲ファイルがありません：/mnt/project-files/bgm/303PM.mp3 を tools/sound/bgm/ にコピーしてからやり直してください")
     credit = BGM["credit"] if os.path.exists(BGM["file"]) else ""
     tmp = tempfile.mkdtemp()
     paths = render(spec, tmp, credit)
