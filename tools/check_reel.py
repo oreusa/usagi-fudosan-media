@@ -4,7 +4,7 @@
 使い方: python3 tools/check_reel.py media/2026-10-27/ig.json [...]
 ig.json の video（URL）を media/ の手元ファイルに読み替えて、次を確かめる。
   - 動画ファイルがある
-  - 音声トラックがあり、音が鳴っている（平均音量が -60dB より大きい。曲つきは約 -43dB、無音は -91dB）
+  - 音声トラックがあり、音が鳴っていて、音量がオーナーの決めた「8%」どおり（平均 -48〜-38dB。曲つきは約 -43dB、無音は -91dB、音量100%は約 -26dB）
   - 長さが 10 秒以上
   - images が 5 枚あり、ファイルがある
 すべて OK なら「OK」、ひとつでもだめなら「NG …」と出して終了コード 1。
@@ -45,6 +45,9 @@ def check(ig_path):
             ng.append("音声トラックが無い")
         elif vol is None or vol < -60:
             ng.append(f"無音（平均 {vol} dB）")
+        elif not (-48 <= vol <= -38):
+            # オーナー決定（10/19）：曲 3:03 PM を「音量8%」。作ると平均 約 -43dB になる
+            ng.append(f"音量が決まりと違う（平均 {vol} dB。決まりは約 -43dB＝音量8%）")
         if dur < 10:
             ng.append(f"短すぎる（{dur:.1f} 秒）")
     imgs = ig.get("images") or []
