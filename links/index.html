@@ -297,13 +297,17 @@ body{background:#FAF8F5!important}
 .sns a.co::after{content:"→";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-family:J;color:#B08A72;font-size:16px}
 .sns a.co+a.co[href*="ig.me"]{background:#FBF1EA;border-color:#EFD9CB}
 
-/* 10/26 オーナー「もっとカラフルに」→ 見本G：欄ごとに上の線と英字だけ色を付ける（地は白のまま） */
-.paper .blk.b-we{--sc:#D08A2E}.paper .blk.b-now{--sc:#E06C4F}.paper .blk.b-up{--sc:#2F8FA6}.paper .blk.b-new{--sc:#5E9E4A}.paper .blk.b-done{--sc:#D8648A}.paper .blk.b-old{--sc:#9C9187}
-.paper .blk{border-top-width:4px}
-.wk .en2{color:var(--sc)!important;font-weight:600}
-.sns a.co,.sns a.co+a.co{border-left:4px solid var(--bc)}.sns a.co::before,.sns a.co::after{color:var(--bc)}
-.sns a.co[data-en="FOR OWNERS"]{--bc:#E06C4F}.sns a.co+a.co[data-en="FOR AGENTS"]{--bc:#2F8FA6;border-left-color:#2F8FA6}
-.sns a.co+a.co[data-en="LISTING"]{--bc:#5E9E4A;background:#EEF6EA;border-color:#D3E6CB;border-left-color:#5E9E4A}
+/* 10/26 オーナー「無理やりカラフルにしてるところは普通に綺麗に。目がチカチカ」→ 欄の色はやめて1色に */
+.paper .blk,.paper .blk.b-we,.paper .blk.b-now,.paper .blk.b-up,.paper .blk.b-new,.paper .blk.b-done,.paper .blk.b-old{--sc:#2B2622}
+.paper .blk{border-top-width:2px}
+.wk .en2{color:#A07E66!important;font-weight:400}
+/* 下のフォロー・相談：線だけ（箱なし）オーナー候補1 */
+.sns{display:block!important;text-align:center}
+.sns a:not(.co){display:inline-block!important;width:auto!important;border:0!important;border-bottom:1px solid #2B2622!important;background:none!important;padding:4px 0!important;margin:0 10px 22px!important;font-size:13px!important;letter-spacing:.1em!important;color:#2B2622!important}
+.sns a:not(.co) span{display:none!important}
+.sns a.co,.sns a.co+a.co{display:block!important;background:none!important;border:0!important;border-top:1px solid #DDD3C8!important;border-radius:0!important;margin:0!important;padding:18px 40px 18px 4px!important;box-shadow:none!important;text-align:left!important}
+.sns a.co:last-of-type{border-bottom:1px solid #DDD3C8!important}
+.sns a.co::before,.sns a.co::after{color:#9C8775!important}.sns a.co span{color:#8C7B6E!important}
 </style></head><body><div class="wrap">
 <div class="head"><img src="assets/logo.png" alt="ロゴ"><div class="en">USAGI TOWN NOTES</div>
 <h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p><div class="sea" id="sea"><span>AUTUMN 2026</span><b>秋のおでかけ</b></div><svg class="yr" id="yr" viewBox="0 0 240 44" aria-hidden="true"><g fill="none" stroke="#A07E66" stroke-width="1" stroke-linecap="round"><path d="M46 14h18M176 14h18"/></g><g fill="#A07E66"><circle cx="38" cy="14" r="1.3"/><circle cx="202" cy="14" r="1.3"/><circle cx="29" cy="14" r="1" opacity=".7"/><circle cx="211" cy="14" r="1" opacity=".7"/><circle cx="21" cy="14" r=".8" opacity=".45"/><circle cx="219" cy="14" r=".8" opacity=".45"/></g><g class="ss"><path class="ring" d="M81 3l11 11-11 11-11-11z"/><path class="d" d="M81 8.5l5.5 5.5-5.5 5.5-5.5-5.5z"/><text x="81" y="39">春</text></g><g class="ss"><path class="ring" d="M107 3l11 11-11 11-11-11z"/><path class="d" d="M107 8.5l5.5 5.5-5.5 5.5-5.5-5.5z"/><text x="107" y="39">夏</text></g><g class="ss"><path class="ring" d="M133 3l11 11-11 11-11-11z"/><path class="d" d="M133 8.5l5.5 5.5-5.5 5.5-5.5-5.5z"/><text x="133" y="39">秋</text></g><g class="ss"><path class="ring" d="M159 3l11 11-11 11-11-11z"/><path class="d" d="M159 8.5l5.5 5.5-5.5 5.5-5.5-5.5z"/><text x="159" y="39">冬</text></g></svg><script>(function(){var m=new Date().getMonth()+1,c=m>=3&&m<=5?0:m<=8&&m>=6?1:m>=9&&m<=11?2:3,e=document.querySelectorAll("#yr .ss");for(var i=0;i<4;i++)e[i].setAttribute("class","ss "+(i<c?"yp":i==c?"yn":"yx"));var y=new Date().getFullYear()-(m<=2?1:0),q=document.getElementById("sea");if(q){q.firstChild.textContent=["SPRING","SUMMER","AUTUMN","WINTER"][c]+" "+y;q.lastChild.textContent="春夏秋冬".charAt(c)+"のおでかけ";}})();</script></div>
@@ -440,7 +444,7 @@ var c=document.querySelector(".cnt span");if(c)c.innerHTML="開催中<b>"+N.leng
 (function(){var M={"開催中":["NOW ON","開催中のおでかけ"],"これからのおでかけ":["COMING UP","これからのおでかけ"],"もうすぐできる":["SOON","もうすぐできる"],"できた":["NEW OPEN","できたばかり"],"終わったおでかけ":["ARCHIVE","終わったおでかけ"]};
 document.querySelectorAll(".paper .blk .wk").forEach(function(w){var k=w.textContent.trim(),m=M[k];if(!m)return;w.innerHTML='<span class="en2">'+m[0]+'</span><span class="jp2">'+m[1]+'</span>';w.classList.add("hd2");});})();
 </script>
-<style>.it.cap{display:none!important}.cmore{display:block;margin:4px auto 18px;background:none;border:0;border-bottom:1px solid var(--sc,#B5A99D);padding:2px 2px 3px;font-family:G,sans-serif;font-size:13px;color:var(--sc,#5C524A);letter-spacing:.06em;cursor:pointer}</style>
+<style>.it.cap{display:none!important}.cmore{display:block;margin:4px auto 18px;background:none;border:0;border-bottom:1px solid #2B2622;padding:2px 2px 3px;font-family:G,sans-serif;font-size:13px;color:#2B2622;letter-spacing:.06em;cursor:pointer}</style>
 <script>
 /* 10/26 オーナー「長くなるから表示5件までに」：欄ごとに5件まで、残りは「もっと見る」 */
 (function(){var open={};
@@ -471,7 +475,7 @@ cap();document.addEventListener("click",function(e){if(e.target.closest("#flt,.d
 @media (max-width:360px){.tabs button b{font-size:12.5px}}
 </style>
 <script>
-(function(){var T=[["b-now","NOW ON","開催中","#E06C4F"],["b-up","COMING UP","これから","#2F8FA6"],["b-new","SOON","もうすぐ","#5E9E4A"],["b-done","NEW OPEN","できた","#D8648A"]];
+(function(){var T=[["b-now","NOW ON","開催中","#2B2622"],["b-up","COMING UP","これから","#2B2622"],["b-new","SOON","もうすぐ","#2B2622"],["b-done","NEW OPEN","できた","#2B2622"]];
 var B=T.map(function(t){return document.querySelector(".paper .blk."+t[0]);});if(!B[0]&&!B[1])return;
 var bar=document.createElement("div");bar.className="tabs";var cur=-1;
 T.forEach(function(t,i){var b=document.createElement("button");b.style.setProperty("--c",t[3]);b.innerHTML=t[1]+"<b>"+t[2]+"<i></i></b>";b.onclick=function(){show(i);try{c("タブ："+t[2]);}catch(e){}};bar.appendChild(b);if(B[i])B[i].classList.add("tb");});
