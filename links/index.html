@@ -440,4 +440,17 @@ var c=document.querySelector(".cnt span");if(c)c.innerHTML="開催中<b>"+N.leng
 (function(){var M={"開催中":["NOW ON","開催中のおでかけ"],"これからのおでかけ":["COMING UP","これからのおでかけ"],"もうすぐできる":["SOON","もうすぐできる"],"できた":["NEW OPEN","できたばかり"],"終わったおでかけ":["ARCHIVE","終わったおでかけ"]};
 document.querySelectorAll(".paper .blk .wk").forEach(function(w){var k=w.textContent.trim(),m=M[k];if(!m)return;w.innerHTML='<span class="en2">'+m[0]+'</span><span class="jp2">'+m[1]+'</span>';w.classList.add("hd2");});})();
 </script>
+<style>.it.cap{display:none!important}.cmore{display:block;margin:4px auto 18px;background:none;border:0;border-bottom:1px solid var(--sc,#B5A99D);padding:2px 2px 3px;font-family:G,sans-serif;font-size:13px;color:var(--sc,#5C524A);letter-spacing:.06em;cursor:pointer}</style>
+<script>
+/* 10/26 オーナー「長くなるから表示5件までに」：欄ごとに5件まで、残りは「もっと見る」 */
+(function(){var open={};
+function cap(){document.querySelectorAll(".paper .blk").forEach(function(b,i){if(b.classList.contains("b-old"))return;
+ var o=b.querySelector(".cmore");if(o)o.remove();
+ var it=[].filter.call(b.querySelectorAll(".it"),function(w){w.classList.remove("cap");return w.style.display!="none";});
+ if(open[i]||it.length<=5)return;var r=it.slice(5);r.forEach(function(w){w.classList.add("cap");});
+ var m=document.createElement("button");m.className="cmore";m.textContent="もっと見る（あと"+r.length+"件）";
+ m.onclick=function(){open[i]=1;r.forEach(function(w){w.classList.remove("cap");});m.remove();};
+ var last=it[it.length-1];last.parentNode.insertBefore(m,last.nextSibling);});}
+cap();document.addEventListener("click",function(e){if(e.target.closest("#flt,.dflt")){open={};setTimeout(cap,30);}});})();
+</script>
 </body></html>
