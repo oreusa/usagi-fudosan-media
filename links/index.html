@@ -491,6 +491,10 @@ cap();document.addEventListener("click",function(e){if(e.target.closest("#flt,.d
 .paper .it .card{padding-right:70px!important;padding-bottom:18px!important}.paper .it .card .m{display:none}
 .paper .it .card .go{top:20px!important;transform:none!important}
 .paper .it .mp{left:auto!important;right:20px!important;bottom:18px!important;font-size:11.5px}
+/* 10/26 オーナー「地図と矢印が近すぎる。押したら間違う」→ 地図は左下の別の行へ、矢印は右の真ん中。地図は押せる範囲を広く */
+.paper .it .card{padding-bottom:46px!important}
+.paper .it .mp{left:8px!important;right:auto!important;bottom:6px!important;padding:10px 10px!important;border-bottom:0!important;text-decoration:underline;text-decoration-color:#CFC5BA;text-underline-offset:4px}
+.paper .it .card .go{top:50%!important;transform:translateY(-50%)!important}
 @media (max-width:360px){.tabs button b{font-size:12.5px}}
 </style>
 <script>
