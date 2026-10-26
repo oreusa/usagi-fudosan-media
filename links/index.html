@@ -453,4 +453,30 @@ function cap(){document.querySelectorAll(".paper .blk").forEach(function(b,i){if
  var last=it[it.length-1];last.parentNode.insertBefore(m,last.nextSibling);});}
 cap();document.addEventListener("click",function(e){if(e.target.closest("#flt,.dflt")){open={};setTimeout(cap,30);}});})();
 </script>
+<style>
+/* 10/26 オーナー「スッキリさせたいけど工夫したい」→ 案D：開催中・これから・もうすぐ・できた をタブで切り替え */
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);margin:-4px 0 16px;border-bottom:1px solid #E2D6CB}
+.tabs button{background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-1px;padding:8px 0 9px;cursor:pointer;font-family:J,sans-serif;font-size:9px;letter-spacing:.18em;color:#9C9187;text-align:center}
+.tabs button b{display:block;font-family:"Shippori Mincho",serif;font-size:14px;letter-spacing:.04em;font-weight:600;margin-top:3px;color:#5C524A;white-space:nowrap}
+.tabs button b i{font-style:normal;font-family:Jost,sans-serif;font-weight:400;font-size:12px;margin-left:3px}
+.tabs button.on{border-bottom-color:var(--c);color:var(--c)}.tabs button.on b{color:#2B2622}
+.tabs button.z{opacity:.35;pointer-events:none}
+.paper .blk.tb .wk{display:none!important}.paper .blk.toff{display:none!important}
+/* カードを低く：地図は右下、矢印は右上、住所の行は省く */
+.paper .it .card{padding-right:70px!important;padding-bottom:18px!important}.paper .it .card .m{display:none}
+.paper .it .card .go{top:20px!important;transform:none!important}
+.paper .it .mp{left:auto!important;right:20px!important;bottom:18px!important;font-size:11.5px}
+@media (max-width:360px){.tabs button b{font-size:12.5px}}
+</style>
+<script>
+(function(){var T=[["b-now","NOW ON","開催中","#E06C4F"],["b-up","COMING UP","これから","#2F8FA6"],["b-new","SOON","もうすぐ","#5E9E4A"],["b-done","NEW OPEN","できた","#D8648A"]];
+var B=T.map(function(t){return document.querySelector(".paper .blk."+t[0]);});if(!B[0]&&!B[1])return;
+var bar=document.createElement("div");bar.className="tabs";var cur=-1;
+T.forEach(function(t,i){var b=document.createElement("button");b.style.setProperty("--c",t[3]);b.innerHTML=t[1]+"<b>"+t[2]+"<i></i></b>";b.onclick=function(){show(i);try{c("タブ："+t[2]);}catch(e){}};bar.appendChild(b);if(B[i])B[i].classList.add("tb");});
+function n(i){var x=B[i];if(!x||x.classList.contains("hid"))return 0;return [].filter.call(x.querySelectorAll(".it"),function(w){return w.style.display!="none";}).length;}
+function show(i){cur=i;B.forEach(function(x,j){if(x)x.classList.toggle("toff",j!=i);});[].forEach.call(bar.children,function(b,j){b.classList.toggle("on",j==i);});if(B[i])B[i].insertBefore(bar,B[i].firstChild);}
+function upd(){var first=-1;[].forEach.call(bar.children,function(b,j){var k=n(j);b.querySelector("i").textContent=k;b.classList.toggle("z",!k);if(k&&first<0)first=j;});
+ if(cur<0||!n(cur))show(first<0?0:first);else show(cur);}
+upd();document.addEventListener("click",function(e){if(e.target.closest("#flt,.dflt"))setTimeout(upd,60);});})();
+</script>
 </body></html>
