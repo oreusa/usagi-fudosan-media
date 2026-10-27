@@ -71,9 +71,16 @@ details p a{color:#2B2622}
 .faq{background:#fff;border:1px solid #E2D8CD}
 .faq summary{padding-left:44px}
 .faq summary::before{content:"Q";position:absolute;left:18px;top:16px;font-family:J;font-weight:400;font-size:15px;color:#A07E66}
+.mini{text-align:center;margin:22px 0 0}
+.mini a{display:inline-block;text-decoration:none;color:#2B2622;border:1px solid #A07E66;background:#fff;padding:11px 26px;font-family:"Shippori Mincho",serif;font-size:14.5px;font-weight:600;letter-spacing:.1em}
+.mini a::after{content:" →";font-family:J;color:#9C8775}
+.fix{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(250,248,245,.96);border-top:1px solid #E2D8CD}
+.fix.on{display:block}
+.fix a{display:block;max-width:520px;margin:0 auto;text-align:center;text-decoration:none;background:#2B2622;color:#fff;padding:13px 0;font-family:"Shippori Mincho",serif;font-size:15px;font-weight:600;letter-spacing:.12em}
+body{padding-bottom:76px}
 </style></head><body><div class="wrap">
 <div class="head"><img src="assets/logo.png" alt="ロゴ"><div class="en">BEFORE YOU SELL</div>
-<h1>お家を売る前に<br>大事なこと</h1><p class="sub">お家の売却で、あとから<br>「知らなかった」とならないために。</p><div class="bar"><i></i></div></div>
+<h1>お家を売る前に<br>大事なこと</h1><p class="sub">お家の売却で、あとから<br>「知らなかった」とならないために。</p><div class="bar"><i></i></div><div class="mini"><a class="ml" href="https://e-infi.com/#contact">売却のご相談はこちら</a></div></div>
 
 <div class="sec"><div class="lab">BEFORE</div><h2>大事なこと</h2>
 <div class="pane on" id="sell">
@@ -103,7 +110,7 @@ details p a{color:#2B2622}
 <tr><th scope="row">手数料</th><td>仲介手数料がかかります</td><td>仲介手数料はかかりません</td></tr>
 <tr><th scope="row">こんな方に</th><td>時間をかけても、納得のいく価格で売りたい方</td><td>早く現金化したい方、近所に知られずに売りたい方</td></tr>
 </tbody></table>
-<p class="cmpnote">どちらが合うかは、ご事情をうかがったうえでご提案いたします。</p></div>
+<p class="cmpnote">どちらが合うかは、ご事情をうかがったうえでご提案いたします。</p><div class="mini"><a class="ml" href="https://e-infi.com/#contact">売却のご相談はこちら</a></div></div>
 
 <div class="sec"><div class="lab">FLOW</div><h2>ご相談の流れ</h2>
 <ol class="steps"><li>ご相談</li><li>街と相場<br>の調査</li><li>根拠つき<br>の査定</li><li>売り出し<br>・ご案内</li><li>ご成約</li></ol>
@@ -121,8 +128,10 @@ details p a{color:#2B2622}
 
 <div class="sec">
 <div class="sns" style="margin-top:0">
-<a class="co" data-en="FOR OWNERS" href="https://e-infi.com/#contact">お家の売却・査定のご相談<span>無料でお受けしております</span></a>
+<a class="co ml" id="bottom" data-en="FOR OWNERS" href="https://e-infi.com/#contact">お家の売却・査定のご相談<span>無料でお受けしております</span></a>
 </div></div>
 <a class="back" href="./">関西おでかけリストへ戻る</a>
 <div class="ft">うさぎ│TOWN NOTES</div>
+<div class="fix" id="fix"><a class="ml" href="https://e-infi.com/#contact">お家の売却のご相談</a></div>
+<script>(function(){var u="infinity.yamane",d="gmail.com",b="物件の場所：\n\n種類（マンション・戸建て・土地）：\n\nご相談の内容：\n\n\n",h="mailto:"+u+"@"+d+"?subject="+encodeURIComponent("お家の売却のご相談")+"&body="+encodeURIComponent(b);document.querySelectorAll("a.ml").forEach(function(a){a.href=h;});var f=document.getElementById("fix"),t=document.querySelector(".head"),e=document.getElementById("bottom");function c(){var r=e.getBoundingClientRect();var show=window.scrollY>t.offsetHeight&&r.top>window.innerHeight;f.classList.toggle("on",show);}window.addEventListener("scroll",c,{passive:true});c();})();</script>
 <script>(function(){var O=(function(){try{var q=new URLSearchParams(location.search).get("owner");if(q==="1")localStorage.setItem("usagi_owner","1");if(q==="0")localStorage.removeItem("usagi_owner");if(q!==null)history.replaceState(null,"",location.pathname+location.hash);return localStorage.getItem("usagi_owner")==="1";}catch(e){return false;}})();function s(k){if(O)return;try{if(localStorage.getItem("usagi_owner")==="1")return;}catch(e){}try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}s("表示：売る前・買う前に");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;var t=a.querySelector(".t"),n=t?t.textContent:(a.childNodes[0]&&a.childNodes[0].textContent)||a.textContent;s("クリック：売る前・買う前に｜"+n);},true);})();</script></body></html>
