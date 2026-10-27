@@ -1,0 +1,15 @@
+{
+ "name": "story-toji-lightup",
+ "field": "outing",
+ "series": "関西おでかけメモ",
+ "source": "東寺 紅葉のライトアップ 10/31〜12/13（京都観光Navi） https://ja.kyoto.travel/event/single.php?event_id=5098",
+ "checked": "司令ツキ 10/26 おでかけリストに載せるとき公式・観光協会のページで日付を確認（10/27 ストーリー用に表紙だけ）",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "10/31(土)から",
+   "title": "東寺の\n紅葉ライトアップ",
+   "badge": "関西おでかけ情報"
+  }
+ ]
+}
