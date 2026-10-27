@@ -61,6 +61,19 @@ jobs:
                   if p.get("instagram_business_account") and p.get("access_token"):
                       page = p; break
           if not page:
+              # ビジネスの持ち物のページ（business_management が必要）
+              biz = get("me/businesses", fields="id,name", access_token=ut)
+              out["businesses"] = [{"id": b["id"], "name": b.get("name")} for b in biz.get("data", [])]
+              if "error" in biz: out["businesses_error"] = biz["error"]
+              for b in biz.get("data", []):
+                  for kind in ("owned_pages", "client_pages"):
+                      r = get(f'{b["id"]}/{kind}', fields="id,name,access_token,instagram_business_account{id,username}", access_token=ut)
+                      for p in r.get("data", []):
+                          out["pages"].append({"id": p["id"], "name": p.get("name"), "ig": p.get("instagram_business_account"), "via": kind})
+                          if not page and p.get("instagram_business_account") and p.get("access_token"):
+                              page = p
+                      if "error" in r: out[f"{kind}_error"] = r["error"]
+          if not page:
               out["step"] = "no_ig_page"
               json.dump(out, open("ig/setup.json", "w"), ensure_ascii=False, indent=1); raise SystemExit(0)
           ig = page["instagram_business_account"]["id"]; pt = page["access_token"]
