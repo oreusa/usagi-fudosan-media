@@ -19,7 +19,7 @@ await p.waitForTimeout(600);await p.screenshot({{path:'{work}/list.png',fullPage
 open(f'{work}/shot.js', 'w').write(shot); subprocess.run(['node', f'{work}/shot.js'], check=True)
 h = open(os.path.join(D, 'template.html')).read()
 t = spec['text']
-rep = dict(CORNER=t['corner'], A0=t['kicker'], A1=t['title'][0], A2=t['title'][1], A3=t['place'],
+rep = dict(CORNER=t['corner'], A0=t.get('kicker','不動産屋が、<br>街の調査でみつけたおでかけスポット'), A1=t['title'][0], A2=t['title'][1], A3=t['place'],
            MT1=t['map_tag'][0], MT2=t['map_tag'][1], MT3=t['map_tag'][2], MC1=t['map_caption'],
            B1=t['date'][0], B1D=t['date'][1], B2=t['date'][2], B2D=t['date'][3], B3=t['date_title'], B3S=str(t.get('date_title_size', 58)), B4=t['date_note'],
            C0=t['point_kicker'], C1=t['point_title'], C2=t['points'][0], C3=t['points'][1], C4=t['points'][2],

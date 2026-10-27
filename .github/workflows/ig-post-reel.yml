@@ -40,6 +40,11 @@ jobs:
           GV = os.environ["GV"]; PT = os.environ["PT"]
           ig = json.load(open("ig/setup.json"))["ig_user_id"]
           spec = json.load(open(os.environ["SPEC"]))
+          # 決まり（10/28 オーナー）：曲は金木犀とオレンジの空、キャプションの1行目は必ずシリーズ名
+          spec.setdefault("audio_id", "1638443601035185")
+          T = "不動産屋が、街の調査でみつけたおでかけスポット"
+          if spec.get("date") and not spec.get("caption", "").startswith(T):
+              spec["caption"] = T + "\n" + spec.get("caption", "")
           if not spec.get("video_url") and spec.get("date"):
               spec["video_url"] = f"https://oreusa.github.io/usagi-fudosan-media/media/reels/{spec['date']}.mp4"
           def call(method, path, **q):
