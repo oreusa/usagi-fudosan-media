@@ -1,0 +1,2319 @@
+{
+ "cafe": [
+  {
+   "audio_id": "2301778509958269",
+   "title": "Let Me Love You (feat. Ariza)",
+   "display_artist": "Julia Gartha",
+   "duration_in_ms": 178680,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "592271352837708",
+   "title": "Beautiful",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 152054,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "280826401324037",
+   "title": "Missing You",
+   "display_artist": "Somchanda Bhattacharya",
+   "duration_in_ms": 165478,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "622819303274042",
+   "title": "Good Time",
+   "display_artist": "Alex Blue",
+   "duration_in_ms": 141092,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "423124700418880",
+   "title": "Good Vibes",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 126580,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "432524367902096",
+   "title": "Piano Mystique",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 170501,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "393903371411311",
+   "title": "The Nerve",
+   "display_artist": "Elad Marish",
+   "duration_in_ms": 216262,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "400847786393251",
+   "title": "We Got The Vision",
+   "display_artist": "Ecklectic Music",
+   "duration_in_ms": 255250,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "811408122543043",
+   "title": "Sunny Day",
+   "display_artist": "Jonny Houlihan",
+   "duration_in_ms": 199040,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "392354088402489",
+   "title": "Dance With Me",
+   "display_artist": "Alex Blue",
+   "duration_in_ms": 182076,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "24568631946135439",
+   "title": "Cafe E Cafune (Instrumental)",
+   "display_artist": "Company Money",
+   "duration_in_ms": 197680,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "777800535229032",
+   "title": "Cafe E Cafune",
+   "display_artist": "Company Money",
+   "duration_in_ms": 197680,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "934661001819759",
+   "title": "Cafe Lovers",
+   "display_artist": "Global Genius",
+   "duration_in_ms": 134790,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "455524635264435",
+   "title": "Cafe Culture",
+   "display_artist": "Jumbo",
+   "duration_in_ms": 149874,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1038285098145000",
+   "title": "Café Vibes (Reels Sound - Listicle)",
+   "display_artist": "POTG",
+   "duration_in_ms": 13679,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1251595373670800",
+   "title": "Café Carousel",
+   "display_artist": "Bloom",
+   "duration_in_ms": 62228,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "154365621960253",
+   "title": "Cafe Chameleon",
+   "display_artist": "Global Genius",
+   "duration_in_ms": 235469,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "968108380768109",
+   "title": "Café Tropical",
+   "display_artist": "Ecklectic Music",
+   "duration_in_ms": 169809,
+   "is_ads_eligible": null
+  }
+ ],
+ "chill": [
+  {
+   "audio_id": "1327119789379216",
+   "title": "そっと支えられるように",
+   "display_artist": "TAGOMA Chill Music",
+   "duration_in_ms": 189880,
+   "is_ads_eligible": false
+  },
+  {
+   "audio_id": "1733603431418671",
+   "title": "コツコツの日々 (Kotsu Kotsu no Hibi)",
+   "display_artist": "Japanese Chill Vibe",
+   "duration_in_ms": 198120,
+   "is_ads_eligible": false
+  },
+  {
+   "audio_id": "1388161098514399",
+   "title": "Happy Days",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 143830,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "592271352837708",
+   "title": "Beautiful",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 152054,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1372666635060078",
+   "title": "Breathtaker",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 60035,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "249201165751597",
+   "title": "Nayi Rahein",
+   "display_artist": "Dhruv Goel",
+   "duration_in_ms": 177966,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1718120844886611",
+   "title": "Bass Attack",
+   "display_artist": "Scott Dugdale",
+   "duration_in_ms": 87214,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "622819303274042",
+   "title": "Good Time",
+   "display_artist": "Alex Blue",
+   "duration_in_ms": 141092,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "326419273084628",
+   "title": "Revival",
+   "display_artist": "Austin Cannon",
+   "duration_in_ms": 223383,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "157334058355816",
+   "title": "Pretty Thing",
+   "display_artist": "Kiri T",
+   "duration_in_ms": 153050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "423124700418880",
+   "title": "Good Vibes",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 126580,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2477944699150252",
+   "title": "Peaceful Piano",
+   "display_artist": "Dr. Pheel",
+   "duration_in_ms": 176250,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1549844805388281",
+   "title": "Chill",
+   "display_artist": "Brinda",
+   "duration_in_ms": 198963,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1459873868055975",
+   "title": "Chill Night",
+   "display_artist": "Sam Marshall",
+   "duration_in_ms": 183220,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "246995374235644",
+   "title": "Chill Pill Prescription",
+   "display_artist": "Global Genius",
+   "duration_in_ms": 152120,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1578100402861586",
+   "title": "Chill And Relax Too",
+   "display_artist": "bbox",
+   "duration_in_ms": 168049,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1017754917512413",
+   "title": "Chilled Ice",
+   "display_artist": "Lightbox Music",
+   "duration_in_ms": 80516,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "666334169116862",
+   "title": "Chill Vibes Lofi (Reels Sound - Listicle)",
+   "display_artist": "POTG",
+   "duration_in_ms": 12612,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "669560358900982",
+   "title": "Chill Beat Lofi (Reels Sound - Photo Dump)",
+   "display_artist": "POTG",
+   "duration_in_ms": 13550,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "254136441054921",
+   "title": "Chilly",
+   "display_artist": "Kolektivo",
+   "duration_in_ms": 165091,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1502865884855162",
+   "title": "Chill With Me One More Time",
+   "display_artist": "PiNKSHGRFNGR",
+   "duration_in_ms": 174336,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "4126924310773516",
+   "title": "Chill Party",
+   "display_artist": "erloom",
+   "duration_in_ms": 60080,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "549575962512756",
+   "title": "Chill Night",
+   "display_artist": "Black Box",
+   "duration_in_ms": 186461,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2255443357871047",
+   "title": "Chilly Willy",
+   "display_artist": "Charlie Peacock",
+   "duration_in_ms": 325333,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1119326141504254",
+   "title": "Chilli Dog",
+   "display_artist": "Man DeLorean",
+   "duration_in_ms": 136216,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "398977771097849",
+   "title": "Chiller",
+   "display_artist": "Black Box",
+   "duration_in_ms": 194231,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "284869112613073",
+   "title": "Chillhead",
+   "display_artist": "Ross Lara",
+   "duration_in_ms": 151948,
+   "is_ads_eligible": null
+  }
+ ],
+ "acoustic": [
+  {
+   "audio_id": "1626635767828538",
+   "title": "King Crazy (Instrumental)",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 168068,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "351866282607327",
+   "title": "Wildflowers",
+   "display_artist": "Nick Gallant",
+   "duration_in_ms": 134546,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "973266493758189",
+   "title": "You Can Do It Too (Instrumental)",
+   "display_artist": "Jennah Bell",
+   "duration_in_ms": 246857,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1469240064002956",
+   "title": "Just Gorgeous (feat. Plum Soul)",
+   "display_artist": "Jumbo",
+   "duration_in_ms": 168840,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "403106318526552",
+   "title": "Blissfully Myopic",
+   "display_artist": "Makana",
+   "duration_in_ms": 161363,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "666143646062118",
+   "title": "Coffee Runs (Reels Sound - Photo Dump)",
+   "display_artist": "POTG",
+   "duration_in_ms": 33423,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1768312787693890",
+   "title": "Vibes Allright",
+   "display_artist": "LAVLO",
+   "duration_in_ms": 56861,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "510358037368479",
+   "title": "Séquoia",
+   "display_artist": "Yann Falquet",
+   "duration_in_ms": 204830,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "766456768877150",
+   "title": "Primavera",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 165950,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1011178941789966",
+   "title": "Riverbank",
+   "display_artist": "Goldenrod",
+   "duration_in_ms": 78050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1598698241796540",
+   "title": "Acoustic Daybreak",
+   "display_artist": "Afterlight",
+   "duration_in_ms": 63728,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2524552044684612",
+   "title": "Acoustic Whispers",
+   "display_artist": "Jesse Fury",
+   "duration_in_ms": 67890,
+   "is_ads_eligible": null
+  }
+ ],
+ "ukulele": [
+  {
+   "audio_id": "289445007035063",
+   "title": "Surfside Drive (Instrumental)",
+   "display_artist": "Global Genius",
+   "duration_in_ms": 131620,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "3522609217870947",
+   "title": "Uke Puppy (Reels Sound - Listicle)",
+   "display_artist": "POTG",
+   "duration_in_ms": 12351,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "942615577934614",
+   "title": "Sunny Days",
+   "display_artist": "Dhruv Goel",
+   "duration_in_ms": 131820,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "513111414687270",
+   "title": "Vai",
+   "display_artist": "Tony Dark Eyes",
+   "duration_in_ms": 125730,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1871878147048702",
+   "title": "Sun, Love And Laughter",
+   "display_artist": "Makana",
+   "duration_in_ms": 174891,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1258377755279054",
+   "title": "Ogaga (Make The People Happy) (Instrumental)",
+   "display_artist": "Afro Sound Machine",
+   "duration_in_ms": 174300,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "265006529823191",
+   "title": "Bittersweet",
+   "display_artist": "Betty Micheals",
+   "duration_in_ms": 165814,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "752395444364050",
+   "title": "Mouse In A Kitchen (Instrumental)",
+   "display_artist": "Company Money",
+   "duration_in_ms": 177590,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1092328324809119",
+   "title": "Hawaiian Love Song",
+   "display_artist": "Brian Withycombe",
+   "duration_in_ms": 133500,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "587460186676938",
+   "title": "Guitar Peace",
+   "display_artist": "Lance Taber",
+   "duration_in_ms": 203595,
+   "is_ads_eligible": null
+  }
+ ],
+ "happy": [
+  {
+   "audio_id": "1388161098514399",
+   "title": "Happy Days",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 143830,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "130136510998367",
+   "title": "Happy Birthday Mariachi",
+   "display_artist": "Global Genius",
+   "duration_in_ms": 131543,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "377300859387530",
+   "title": "Happy Birthday Piano",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 74711,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2301778509958269",
+   "title": "Let Me Love You (feat. Ariza)",
+   "display_artist": "Julia Gartha",
+   "duration_in_ms": 178680,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "823145229909724",
+   "title": "Maya Maya (Instrumental)",
+   "display_artist": "Neha Karode",
+   "duration_in_ms": 189660,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "592271352837708",
+   "title": "Beautiful",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 152054,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1974992066046785",
+   "title": "Birthday Surprise",
+   "display_artist": "Man DeLorean",
+   "duration_in_ms": 61476,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1372666635060078",
+   "title": "Breathtaker",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 60035,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1315891575680030",
+   "title": "Birthday Acapella",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 120540,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "249201165751597",
+   "title": "Nayi Rahein",
+   "display_artist": "Dhruv Goel",
+   "duration_in_ms": 177966,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1519015175461186",
+   "title": "Happy",
+   "display_artist": "half.cool",
+   "duration_in_ms": 154280,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "923813403749645",
+   "title": "Happy Life",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 134287,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1044245831898294",
+   "title": "Happy Everyday",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 59810,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "160062231411203",
+   "title": "Happy Birthday Pop",
+   "display_artist": "Global Genius",
+   "duration_in_ms": 89480,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1912542116107236",
+   "title": "Happy Time",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 52850,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1057409882044849",
+   "title": "Happy Go Lucky",
+   "display_artist": "Corduroy Egg",
+   "duration_in_ms": 168800,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "676553584164254",
+   "title": "Happy-Go-Lucky",
+   "display_artist": "Lyle Workman",
+   "duration_in_ms": 220714,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "545242899293664",
+   "title": "Happy Is A State of Mind",
+   "display_artist": "Keith Thomas",
+   "duration_in_ms": 164188,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "195786987652909",
+   "title": "Happy Birthday Sultry",
+   "display_artist": "Global Genius",
+   "duration_in_ms": 124817,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "620871786051767",
+   "title": "Happy Birthday (I Love You)",
+   "display_artist": "Ruby Amanfu",
+   "duration_in_ms": 163801,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "496296612880372",
+   "title": "Happy Go Lucky (Reels Sound - Before and After)",
+   "display_artist": "Corduroy Egg",
+   "duration_in_ms": 20000,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "309858409530498",
+   "title": "Happy Birthday Kids Quirky",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 57783,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "493772538249839",
+   "title": "Happy Halloween",
+   "display_artist": "Otis McDonald",
+   "duration_in_ms": 200071,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1070878994380527",
+   "title": "Happy Ending (Instrumental)",
+   "display_artist": "Secret Agent 23 Skidoo",
+   "duration_in_ms": 156570,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "715461886707004",
+   "title": "Happy Birthday LoFi",
+   "display_artist": "Sugartapes",
+   "duration_in_ms": 152710,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "475952991870894",
+   "title": "Happy Go Lucky (Reels Sound - Reveal)",
+   "display_artist": "Corduroy Egg",
+   "duration_in_ms": 29110,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "839682756413522",
+   "title": "Happy Birthday 70s Funk",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 70324,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "135072240543822",
+   "title": "Happy Birthday 1981 High School Dance",
+   "display_artist": "Neko Fuzz",
+   "duration_in_ms": 65545,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1520288871370777",
+   "title": "Happy Birthday Swing",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 67845,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2010598986089994",
+   "title": "Happy (Instrumental)",
+   "display_artist": "half.cool",
+   "duration_in_ms": 154280,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "358311454634178",
+   "title": "Happy Tail",
+   "display_artist": "Lyle Workman",
+   "duration_in_ms": 266079,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1282828153798231",
+   "title": "Happy Hero",
+   "display_artist": "Lightbox Music",
+   "duration_in_ms": 55690,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "234737359630832",
+   "title": "Happy Holiday",
+   "display_artist": "Alex Blue",
+   "duration_in_ms": 234668,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2310561835723586",
+   "title": "Happy Hour",
+   "display_artist": "Jonny Houlihan",
+   "duration_in_ms": 188509,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "908792790347920",
+   "title": "Happy Parade On The Sun",
+   "display_artist": "Folk Physics",
+   "duration_in_ms": 181760,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2265862010252380",
+   "title": "Happy Birthday 2 U",
+   "display_artist": "Julia Gartha",
+   "duration_in_ms": 115615,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "628203889862586",
+   "title": "Happy Sneeze",
+   "display_artist": "Manuel Huizar",
+   "duration_in_ms": 181730,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1058192823775815",
+   "title": "Happy Techno",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 128581,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "205696799997507",
+   "title": "Happy Birthday Irish",
+   "display_artist": "Global Genius",
+   "duration_in_ms": 139731,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "500814952258050",
+   "title": "Happy New Year Baby",
+   "display_artist": "Nick Gallant",
+   "duration_in_ms": 110530,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "6325327284210024",
+   "title": "Happy Accidents",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 127100,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1044337964871983",
+   "title": "Happy Sad",
+   "display_artist": "Summer Islands",
+   "duration_in_ms": 71543,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1576386159666146",
+   "title": "Happy Warrior",
+   "display_artist": "Jumbo",
+   "duration_in_ms": 63850,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "607721779726190",
+   "title": "Happy Meeting",
+   "display_artist": "Jayme Stone & David Travers-Smith (Producers)",
+   "duration_in_ms": 226441,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "3289244314642612",
+   "title": "Happy Days",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 156575,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "169530630315704",
+   "title": "Happy and Forever",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 150959,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1949232008683405",
+   "title": "Happy Birthday Africa",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 60254,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "740981673763763",
+   "title": "Happy To Be Alive",
+   "display_artist": "Mike Floss",
+   "duration_in_ms": 168028,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2387877941331247",
+   "title": "Happy And Free (feat. Lex Kuhl)",
+   "display_artist": "Charlie Peacock",
+   "duration_in_ms": 212923,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "307046473130796",
+   "title": "Happy Birthday 1961 High School Dance",
+   "display_artist": "Neko Fuzz",
+   "duration_in_ms": 88925,
+   "is_ads_eligible": null
+  }
+ ],
+ "lofi": [
+  {
+   "audio_id": "544713431841568",
+   "title": "Lofi Street",
+   "display_artist": "bbox",
+   "duration_in_ms": 182050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "6649404295148094",
+   "title": "Lofi Sunset",
+   "display_artist": "Neko Fuzz",
+   "duration_in_ms": 190708,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "823145229909724",
+   "title": "Maya Maya (Instrumental)",
+   "display_artist": "Neha Karode",
+   "duration_in_ms": 189660,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2477944699150252",
+   "title": "Peaceful Piano",
+   "display_artist": "Dr. Pheel",
+   "duration_in_ms": 176250,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "432524367902096",
+   "title": "Piano Mystique",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 170501,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "868648898493565",
+   "title": "I Was Made For You",
+   "display_artist": "Charlie Peacock",
+   "duration_in_ms": 172570,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "393903371411311",
+   "title": "The Nerve",
+   "display_artist": "Elad Marish",
+   "duration_in_ms": 216262,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "537823448936955",
+   "title": "Soft Kisses",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 131370,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1792855678212714",
+   "title": "Mira Mira (Reels Sound - Photo Dump)",
+   "display_artist": "Music With Sara",
+   "duration_in_ms": 18510,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "973266493758189",
+   "title": "You Can Do It Too (Instrumental)",
+   "display_artist": "Jennah Bell",
+   "duration_in_ms": 246857,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "912937830269606",
+   "title": "Lofi Return",
+   "display_artist": "half.cool",
+   "duration_in_ms": 118860,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1308088923495332",
+   "title": "Lofi Swag",
+   "display_artist": "bbox",
+   "duration_in_ms": 157890,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "722014056738966",
+   "title": "Lofi Funk",
+   "display_artist": "half.cool",
+   "duration_in_ms": 138400,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "624445130386044",
+   "title": "Lofi Love",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 186050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1272137963366391",
+   "title": "Lofi Love (feat. Plum Soul)",
+   "display_artist": "Jumbo",
+   "duration_in_ms": 208743,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1213218503365575",
+   "title": "Lofi Memoir",
+   "display_artist": "Adam Griffith",
+   "duration_in_ms": 174780,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "496700212782181",
+   "title": "Lofi Magic",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 152890,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1066045312481746",
+   "title": "Lofi Dreams",
+   "display_artist": "Neon Avenue",
+   "duration_in_ms": 63847,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "902471383520180",
+   "title": "LoFi Monday",
+   "display_artist": "Otis McDonald",
+   "duration_in_ms": 179317,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1340976656950287",
+   "title": "Lofi Vibes (Reels Sound - Reaction)",
+   "display_artist": "POTG",
+   "duration_in_ms": 19710,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1116990936786838",
+   "title": "Lofi Magic (Reels Sound - Before & After)",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 26520,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "37788696224111486",
+   "title": "Lofi Jingle Bells",
+   "display_artist": "Afterlight",
+   "duration_in_ms": 62951,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "963982810863384",
+   "title": "LoFi&Chill (feat. My City Glory)",
+   "display_artist": "Ross Lara",
+   "duration_in_ms": 172376,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "602395363936390",
+   "title": "LoFiLand",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 149631,
+   "is_ads_eligible": null
+  }
+ ],
+ "jazz": [
+  {
+   "audio_id": "3661927097298204",
+   "title": "Today Has a Little Swing",
+   "display_artist": "EMMA JAZZ",
+   "duration_in_ms": 150648,
+   "is_ads_eligible": false
+  },
+  {
+   "audio_id": "592271352837708",
+   "title": "Beautiful",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 152054,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1372666635060078",
+   "title": "Breathtaker",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 60035,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "622819303274042",
+   "title": "Good Time",
+   "display_artist": "Alex Blue",
+   "duration_in_ms": 141092,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "976299230340697",
+   "title": "Someday (Instrumental)",
+   "display_artist": "Cy Curnin",
+   "duration_in_ms": 219000,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "326419273084628",
+   "title": "Revival",
+   "display_artist": "Austin Cannon",
+   "duration_in_ms": 223383,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2477944699150252",
+   "title": "Peaceful Piano",
+   "display_artist": "Dr. Pheel",
+   "duration_in_ms": 176250,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "432524367902096",
+   "title": "Piano Mystique",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 170501,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "544713431841568",
+   "title": "Lofi Street",
+   "display_artist": "bbox",
+   "duration_in_ms": 182050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1579921342191993",
+   "title": "Motive (Instrumental)",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 189134,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "393903371411311",
+   "title": "The Nerve",
+   "display_artist": "Elad Marish",
+   "duration_in_ms": 216262,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "429293805595060",
+   "title": "Jazzy Poetry Slam",
+   "display_artist": "Global Genius",
+   "duration_in_ms": 132510,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "640772971047304",
+   "title": "Jazz Café Conundrum",
+   "display_artist": "Global Genius",
+   "duration_in_ms": 143960,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "489323178876006",
+   "title": "Jazzy Tada (Loop)",
+   "display_artist": "SooK",
+   "duration_in_ms": 67804,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2846867285481429",
+   "title": "Shining High (Spanglish Retro Love Song)",
+   "display_artist": "Jazz Matías",
+   "duration_in_ms": 189216,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "192110621354646",
+   "title": "Jazzy Wanderer",
+   "display_artist": "Global Genius",
+   "duration_in_ms": 227859,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2923548401114855",
+   "title": "Sopno (feat. Snehaalina Chakroborty)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 206739,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1043995042476097",
+   "title": "Jazz O'Clock",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 174705,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "617551433645524",
+   "title": "Khuje Nao (feat. Snehaalina Chakroborty)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 183950,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1058869890217453",
+   "title": "Jazzina",
+   "display_artist": "Lightbox Music",
+   "duration_in_ms": 56810,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "722919949419486",
+   "title": "Ke Yastai Ho (feat. Uttam Chetri)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 198050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1147750812474165",
+   "title": "Opekkha (feat. Diya Bhattacharya) ",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 205384,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "834193664312489",
+   "title": "Keno (feat. Snehaalina Chakroborty)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 181650,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1050932209337123",
+   "title": "Notun Shuru (New Beginning) (feat. Esha Chakraborty)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 181090,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1148755716047760",
+   "title": "Aadhar Aalo (feat. Sagarika Chakraborty)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 224050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1085899805683756",
+   "title": "Soch (feat. Roshan Bhat)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 203570,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "344556620926802",
+   "title": "Pagol (feat. Srija Chakraborty)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 177935,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "234654698727232",
+   "title": "Hamro Sapna (feat. Uttam Chettri)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 171583,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "535651724900218",
+   "title": "Shobdo (feat. Suryadoy Ghosh)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 198632,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1008722600018927",
+   "title": "Thaha Cha (feat. Uttam Chettri)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 212727,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "180987237561664",
+   "title": "Illam Kaalai (feat. Aparna Krishnakumar)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 188627,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2085799341558721",
+   "title": "Shefali (feat. Srija Chakraborty)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 190694,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "5479037848790134",
+   "title": "Sporsho (feat. Shalini Chaterjee)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 181360,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "248155113347368",
+   "title": "Bodobhyesh (feat. Sagarika Chakraborty)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 193880,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "805869236716795",
+   "title": "Tomar Sathe (feat. Suryadoy Gosh)",
+   "display_artist": "Jazzy Sadhu",
+   "duration_in_ms": 200462,
+   "is_ads_eligible": null
+  }
+ ],
+ "piano": [
+  {
+   "audio_id": "399089134270266",
+   "title": "アシタカせっ記 (交響組曲「もののけ姫」 / Live At Piano Stories '98 Orchestra Nights / 1998)",
+   "display_artist": "久石 譲",
+   "duration_in_ms": 335160,
+   "is_ads_eligible": false
+  },
+  {
+   "audio_id": "432524367902096",
+   "title": "Piano Mystique",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 170501,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1388161098514399",
+   "title": "Happy Days",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 143830,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "592271352837708",
+   "title": "Beautiful",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 152054,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1372666635060078",
+   "title": "Breathtaker",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 60035,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "377300859387530",
+   "title": "Happy Birthday Piano",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 74711,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "296861997666070",
+   "title": "The Nature Of Memories",
+   "display_artist": "Dhruv Goel",
+   "duration_in_ms": 152354,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "976299230340697",
+   "title": "Someday (Instrumental)",
+   "display_artist": "Cy Curnin",
+   "duration_in_ms": 219000,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "423124700418880",
+   "title": "Good Vibes",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 126580,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2477944699150252",
+   "title": "Peaceful Piano",
+   "display_artist": "Dr. Pheel",
+   "duration_in_ms": 176250,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2105400339524442",
+   "title": "Family",
+   "display_artist": "Ruby Amanfu",
+   "duration_in_ms": 172206,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1337624016597307",
+   "title": "Piano for Brian",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 145895,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "771177030946350",
+   "title": "Piano Lullaby",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 181334,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "445556344868453",
+   "title": "Piano Dreams",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 174330,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "948109820857432",
+   "title": "Piano Reflections",
+   "display_artist": "Sam Marshall",
+   "duration_in_ms": 183430,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "828702609285552",
+   "title": "Piano Sketch #2",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 150740,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1065249204386881",
+   "title": "Piano For A Rainy Day",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 174694,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "3012618439128205",
+   "title": "Piano In Bloom (Instrumental)",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 137508,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "3175125592571403",
+   "title": "Piano Sketch #1",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 156555,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "750168916679326",
+   "title": "Piano For A Fallen World",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 169110,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1979086649656308",
+   "title": "Piano In Bloom",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 137508,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "617672687707677",
+   "title": "Piano Hallucinations",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 198726,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "687436917432312",
+   "title": "Piano Secrets",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 182671,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1304451697253803",
+   "title": "Piano Hope",
+   "display_artist": "Sam Marshall",
+   "duration_in_ms": 192640,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2118653321701314",
+   "title": "Piano in C",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 128248,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "3015012582136708",
+   "title": "Piano On A Rainy Day",
+   "display_artist": "Cy Curnin",
+   "duration_in_ms": 190128,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "391273267979112",
+   "title": "Piano Memorial",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 158911,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "732596883977972",
+   "title": "Piano Sketch #5",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 158405,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "223045325575779",
+   "title": "Piano Sketch #4",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 164456,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "298973461643144",
+   "title": "Piano For The People",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 158419,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "466258806098827",
+   "title": "Pianoland",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 180060,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1432391413954705",
+   "title": "Piano For Mariupol",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 141157,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1144846062603194",
+   "title": "Piano Bellisima",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 149216,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "341998476208722",
+   "title": "Piano Simple",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 128695,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1647791838926172",
+   "title": "Piano Mysteria",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 160285,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "289955555612419",
+   "title": "Piano Sketch #3",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 162023,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2833449003479053",
+   "title": "Piano ASMR (Reels Sound - Listicle)",
+   "display_artist": "POTG",
+   "duration_in_ms": 21010,
+   "is_ads_eligible": null
+  }
+ ],
+ "morning": [
+  {
+   "audio_id": "622819303274042",
+   "title": "Good Time",
+   "display_artist": "Alex Blue",
+   "duration_in_ms": 141092,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "423124700418880",
+   "title": "Good Vibes",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 126580,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2477944699150252",
+   "title": "Peaceful Piano",
+   "display_artist": "Dr. Pheel",
+   "duration_in_ms": 176250,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "432524367902096",
+   "title": "Piano Mystique",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 170501,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "150504705576125",
+   "title": "Quirky Bossa (Vocals)",
+   "display_artist": "Scott Dugdale",
+   "duration_in_ms": 48000,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "393903371411311",
+   "title": "The Nerve",
+   "display_artist": "Elad Marish",
+   "duration_in_ms": 216262,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "400847786393251",
+   "title": "We Got The Vision",
+   "display_artist": "Ecklectic Music",
+   "duration_in_ms": 255250,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "811408122543043",
+   "title": "Sunny Day",
+   "display_artist": "Jonny Houlihan",
+   "duration_in_ms": 199040,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1626635767828538",
+   "title": "King Crazy (Instrumental)",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 168068,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "392354088402489",
+   "title": "Dance With Me",
+   "display_artist": "Alex Blue",
+   "duration_in_ms": 182076,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1890086947747170",
+   "title": "Morning Date",
+   "display_artist": "The Poison Oaks",
+   "duration_in_ms": 226046,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "4067782200155864",
+   "title": "Morning Magic",
+   "display_artist": "Global Genius",
+   "duration_in_ms": 162838,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "904589257331128",
+   "title": "Morning Vibes",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 120791,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2361714494094738",
+   "title": "Morning Coffee",
+   "display_artist": "Global Genius",
+   "duration_in_ms": 169588,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "422721516694039",
+   "title": "Morning Coffee",
+   "display_artist": "bbox",
+   "duration_in_ms": 214050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1121322649178424",
+   "title": "Morning Chai",
+   "display_artist": "Dhruv Goel",
+   "duration_in_ms": 124140,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1949197822098435",
+   "title": "Morning Meditation (Instrumental)",
+   "display_artist": "Simona Smirnova",
+   "duration_in_ms": 321650,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "326529176960602",
+   "title": "Morning Sunshine",
+   "display_artist": "bbox",
+   "duration_in_ms": 171479,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "325343796705855",
+   "title": "Morning Light (Instrumental)",
+   "display_artist": "Sugartapes",
+   "duration_in_ms": 150000,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "912431483574563",
+   "title": "Morning Rise",
+   "display_artist": "Sugartapes",
+   "duration_in_ms": 167878,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "856537059890281",
+   "title": "Morning After The Rain (feat. Manonmani)",
+   "display_artist": "Prashanth Techno",
+   "duration_in_ms": 186050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1382075125724294",
+   "title": "Morning Run",
+   "display_artist": "Jayme Stone",
+   "duration_in_ms": 170592,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2273590656307621",
+   "title": "Mornings With You (feat. Brooklyn Basics)",
+   "display_artist": "Trout Recording",
+   "duration_in_ms": 122050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "888698152822622",
+   "title": "Morning Walk",
+   "display_artist": "Jayme Stone",
+   "duration_in_ms": 135488,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "806696771102114",
+   "title": "Morning Light",
+   "display_artist": "Sugartapes",
+   "duration_in_ms": 150000,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2007784286308323",
+   "title": "Morning Song",
+   "display_artist": "Julia Gartha",
+   "duration_in_ms": 137650,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1550885468717930",
+   "title": "Morning Meditation (feat. Rini)",
+   "display_artist": "Simona Smirnova",
+   "duration_in_ms": 321650,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1516220382836585",
+   "title": "Morning Glow",
+   "display_artist": "bbox",
+   "duration_in_ms": 174450,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "557560802892816",
+   "title": "Morning Coffee",
+   "display_artist": "Sugartapes",
+   "duration_in_ms": 179340,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "795557233028886",
+   "title": "Morning Glow (Instrumental)",
+   "display_artist": "bbox",
+   "duration_in_ms": 163692,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1339712265026800",
+   "title": "Morning Toppers",
+   "display_artist": "Afterlight",
+   "duration_in_ms": 64207,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "532934822497655",
+   "title": "Morning To Evening ASMR (Reels Sound - Photo Dump)",
+   "display_artist": "POTG",
+   "duration_in_ms": 16880,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "547153900680488",
+   "title": "Morning Drive",
+   "display_artist": "Sugartapes",
+   "duration_in_ms": 136334,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "289237515639656",
+   "title": "Morning in Xustans",
+   "display_artist": "Emy Phelps & Darol Anger",
+   "duration_in_ms": 388672,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "563691113977170",
+   "title": "Morning Dew (feat. Arun Ramamurthy)",
+   "display_artist": "Mike Block (Producer)",
+   "duration_in_ms": 256520,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1622034531841827",
+   "title": "Morning Kitchen (Reels Sound - Listicle)",
+   "display_artist": "POTG",
+   "duration_in_ms": 12800,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "151098685616683",
+   "title": "Morning Light",
+   "display_artist": "Stelio Marshall",
+   "duration_in_ms": 161809,
+   "is_ads_eligible": null
+  }
+ ],
+ "weekend": [
+  {
+   "audio_id": "529821692609980",
+   "title": "Ilumina (feat. Nucleus)",
+   "display_artist": "Jasmine",
+   "duration_in_ms": 153230,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2007749439488316",
+   "title": "Love Me",
+   "display_artist": "G.No",
+   "duration_in_ms": 195428,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "868648898493565",
+   "title": "I Was Made For You",
+   "display_artist": "Charlie Peacock",
+   "duration_in_ms": 172570,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "400847786393251",
+   "title": "We Got The Vision",
+   "display_artist": "Ecklectic Music",
+   "duration_in_ms": 255250,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "811408122543043",
+   "title": "Sunny Day",
+   "display_artist": "Jonny Houlihan",
+   "duration_in_ms": 199040,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2371659366443335",
+   "title": "Good Day",
+   "display_artist": "COACH",
+   "duration_in_ms": 198157,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2603949126473975",
+   "title": "Dark (Slowed)",
+   "display_artist": "Tony Dark Eyes",
+   "duration_in_ms": 181390,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1723877611365392",
+   "title": "Today Was A Good Day",
+   "display_artist": "CaroMia",
+   "duration_in_ms": 171040,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2249471585814626",
+   "title": "CoffeeNHouse",
+   "display_artist": "cloud cover",
+   "duration_in_ms": 66550,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1277541923560144",
+   "title": "She's In Love (But Ooh)",
+   "display_artist": "GEEZ",
+   "duration_in_ms": 197750,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1579164966992013",
+   "title": "Weekend",
+   "display_artist": "Jordan Olmos",
+   "duration_in_ms": 63050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "250230803959648",
+   "title": "Weekend",
+   "display_artist": "Black Box",
+   "duration_in_ms": 168584,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2105429149988563",
+   "title": "Weekend Drive (Instrumental)",
+   "display_artist": "Corduroy Egg",
+   "duration_in_ms": 166550,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2573571116413942",
+   "title": "Weekend Waltz",
+   "display_artist": "Jim Hustwit",
+   "duration_in_ms": 66900,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "828942175747800",
+   "title": "Weekend Magic (feat. Mike Block)",
+   "display_artist": "Folk Physics",
+   "duration_in_ms": 202160,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1564964150748147",
+   "title": "Weekend Angels",
+   "display_artist": "Last Jerónimo",
+   "duration_in_ms": 182250,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1351036387139493",
+   "title": "Weekend Signal",
+   "display_artist": "Fellow Travelers",
+   "duration_in_ms": 61482,
+   "is_ads_eligible": null
+  }
+ ],
+ "autumn": [
+  {
+   "audio_id": "592271352837708",
+   "title": "Beautiful",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 152054,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1372666635060078",
+   "title": "Breathtaker",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 60035,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "622819303274042",
+   "title": "Good Time",
+   "display_artist": "Alex Blue",
+   "duration_in_ms": 141092,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "976299230340697",
+   "title": "Someday (Instrumental)",
+   "display_artist": "Cy Curnin",
+   "duration_in_ms": 219000,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "326419273084628",
+   "title": "Revival",
+   "display_artist": "Austin Cannon",
+   "duration_in_ms": 223383,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "423124700418880",
+   "title": "Good Vibes",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 126580,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2477944699150252",
+   "title": "Peaceful Piano",
+   "display_artist": "Dr. Pheel",
+   "duration_in_ms": 176250,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "432524367902096",
+   "title": "Piano Mystique",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 170501,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "868648898493565",
+   "title": "I Was Made For You",
+   "display_artist": "Charlie Peacock",
+   "duration_in_ms": 172570,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "393903371411311",
+   "title": "The Nerve",
+   "display_artist": "Elad Marish",
+   "duration_in_ms": 216262,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "304388493784347",
+   "title": "Autumn",
+   "display_artist": "Jennah Bell",
+   "duration_in_ms": 268994,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1812887389315231",
+   "title": "Autumn Colors",
+   "display_artist": "Symphonic Planet",
+   "duration_in_ms": 229050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1692737101950915",
+   "title": "Autumn Reverie",
+   "display_artist": "Magnetic Sirens",
+   "duration_in_ms": 63697,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1484162729486191",
+   "title": "Autumn Hearth (feat. Dren McDonald)",
+   "display_artist": "Daria Novo",
+   "duration_in_ms": 175696,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1235339311487203",
+   "title": "Autumn Rain (Reels Sound - Listicle)",
+   "display_artist": "POTG",
+   "duration_in_ms": 17316,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "3148422045547592",
+   "title": "Autumn Tilt",
+   "display_artist": "Lightbox Music",
+   "duration_in_ms": 66850,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "198574830715825",
+   "title": "Autumn Homage",
+   "display_artist": "Paul Fowler",
+   "duration_in_ms": 260053,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "791966637852094",
+   "title": "Autumn Of Love",
+   "display_artist": "Makana",
+   "duration_in_ms": 182737,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "268612260717369",
+   "title": "Autumn Leaves (feat. Azam Ali)",
+   "display_artist": "Loga Ramin Torkian",
+   "duration_in_ms": 178816,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "353485986552410",
+   "title": "Autumnal Crumble (feat. Folk Physics)",
+   "display_artist": "Mike Block",
+   "duration_in_ms": 190221,
+   "is_ads_eligible": null
+  }
+ ],
+ "おしゃれ": [
+  {
+   "audio_id": "348865150370846",
+   "title": "Make It Better",
+   "display_artist": "Ruby Amanfu",
+   "duration_in_ms": 201230,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1389826223113868",
+   "title": "The Puppy Song",
+   "display_artist": "Company Money",
+   "duration_in_ms": 205329,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1185520743510320",
+   "title": "Loop Craft",
+   "display_artist": "Ross Lara",
+   "duration_in_ms": 151048,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "765900535757819",
+   "title": "One Day At A Time",
+   "display_artist": "Corduroy Egg",
+   "duration_in_ms": 163210,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1252482222387865",
+   "title": "Good Times",
+   "display_artist": "Adam Griffith",
+   "duration_in_ms": 153050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "748138786995261",
+   "title": "Don't Wake Me Up",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 138238,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "924321271233591",
+   "title": "Scientific",
+   "display_artist": "Alex G",
+   "duration_in_ms": 253680,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "565131877647270",
+   "title": "Rise To The Occasion",
+   "display_artist": "Trout Recording",
+   "duration_in_ms": 225172,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1437128744929179",
+   "title": "Crafty",
+   "display_artist": "Neon Avenue",
+   "duration_in_ms": 62781,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1229508550794838",
+   "title": "Sleepy Head",
+   "display_artist": "Kiri T",
+   "duration_in_ms": 156620,
+   "is_ads_eligible": null
+  }
+ ],
+ "カフェ": [
+  {
+   "audio_id": "2249471585814626",
+   "title": "CoffeeNHouse",
+   "display_artist": "cloud cover",
+   "duration_in_ms": 66550,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "422873540895385",
+   "title": "Everything Is Fine",
+   "display_artist": "Ruby Amanfu",
+   "duration_in_ms": 169320,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1043691433415099",
+   "title": "Feelings",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 138120,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1593282984788835",
+   "title": "Chopin Nocturne Op.9 No.2 Sunset Lofi",
+   "display_artist": "Sugartapes",
+   "duration_in_ms": 161820,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "348865150370846",
+   "title": "Make It Better",
+   "display_artist": "Ruby Amanfu",
+   "duration_in_ms": 201230,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1063338476351968",
+   "title": "Coffee Break",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 58870,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2263439694405407",
+   "title": "Golden Ascent",
+   "display_artist": "Afterlight",
+   "duration_in_ms": 65244,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "466789795700938",
+   "title": "Solstice",
+   "display_artist": "Ella Joy Meir",
+   "duration_in_ms": 152780,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1389826223113868",
+   "title": "The Puppy Song",
+   "display_artist": "Company Money",
+   "duration_in_ms": 205329,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1406843256114517",
+   "title": "The Entertainer",
+   "display_artist": "Brian Withycombe",
+   "duration_in_ms": 258750,
+   "is_ads_eligible": null
+  }
+ ],
+ "秋": [
+  {
+   "audio_id": "592271352837708",
+   "title": "Beautiful",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 152054,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1372666635060078",
+   "title": "Breathtaker",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 60035,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "622819303274042",
+   "title": "Good Time",
+   "display_artist": "Alex Blue",
+   "duration_in_ms": 141092,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "976299230340697",
+   "title": "Someday (Instrumental)",
+   "display_artist": "Cy Curnin",
+   "duration_in_ms": 219000,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "326419273084628",
+   "title": "Revival",
+   "display_artist": "Austin Cannon",
+   "duration_in_ms": 223383,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "423124700418880",
+   "title": "Good Vibes",
+   "display_artist": "Giulio Cercato",
+   "duration_in_ms": 126580,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "2477944699150252",
+   "title": "Peaceful Piano",
+   "display_artist": "Dr. Pheel",
+   "duration_in_ms": 176250,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "432524367902096",
+   "title": "Piano Mystique",
+   "display_artist": "Brent Bourgeois",
+   "duration_in_ms": 170501,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "868648898493565",
+   "title": "I Was Made For You",
+   "display_artist": "Charlie Peacock",
+   "duration_in_ms": 172570,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "393903371411311",
+   "title": "The Nerve",
+   "display_artist": "Elad Marish",
+   "duration_in_ms": 216262,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1812887389315231",
+   "title": "Autumn Colors",
+   "display_artist": "Symphonic Planet",
+   "duration_in_ms": 229050,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1692737101950915",
+   "title": "Autumn Reverie",
+   "display_artist": "Magnetic Sirens",
+   "duration_in_ms": 63697,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1484162729486191",
+   "title": "Autumn Hearth (feat. Dren McDonald)",
+   "display_artist": "Daria Novo",
+   "duration_in_ms": 175696,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "1235339311487203",
+   "title": "Autumn Rain (Reels Sound - Listicle)",
+   "display_artist": "POTG",
+   "duration_in_ms": 17316,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "3148422045547592",
+   "title": "Autumn Tilt",
+   "display_artist": "Lightbox Music",
+   "duration_in_ms": 66850,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "198574830715825",
+   "title": "Autumn Homage",
+   "display_artist": "Paul Fowler",
+   "duration_in_ms": 260053,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "791966637852094",
+   "title": "Autumn Of Love",
+   "display_artist": "Makana",
+   "duration_in_ms": 182737,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "268612260717369",
+   "title": "Autumn Leaves (feat. Azam Ali)",
+   "display_artist": "Loga Ramin Torkian",
+   "duration_in_ms": 178816,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "304388493784347",
+   "title": "Autumn",
+   "display_artist": "Jennah Bell",
+   "duration_in_ms": 268994,
+   "is_ads_eligible": null
+  },
+  {
+   "audio_id": "353485986552410",
+   "title": "Autumnal Crumble (feat. Folk Physics)",
+   "display_artist": "Mike Block",
+   "duration_in_ms": 190221,
+   "is_ads_eligible": null
+  }
+ ]
+}
