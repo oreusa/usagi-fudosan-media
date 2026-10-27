@@ -128,10 +128,10 @@ mk($('lamp'),3,(c,i)=>{c.setAttribute('cx',540);c.setAttribute('cy',430);c.setAt
 // scenes [id,start,end]
 const SC=[['s1',0,2.9],['sm',2.9,5.6],['s2',5.6,8.3],['s3',8.3,11.2],['s4',11.2,13.9],['s5',13.9,16.7],['s6',16.7,19.2]];
 function up(id,v){$(id).style.transform=`translateY(${(1-v)*110}%)`;}
-function render(t){
- SC.forEach(([id,a,b])=>$(id).style.visibility=(t>=a&&t<b)?'visible':'hidden');
+function render(T){const t=T/1.5;
+ SC.forEach(([id,a,b],i)=>{const on=t>=a&&t<b;const e=$(id);e.style.visibility=on?'visible':'hidden';const fi=i?out((t-a)/.4):1,fo=i<SC.length-1?out((b-t)/.3):1;e.style.opacity=on?Math.min(fi,fo):0;e.style.transform=`translateY(${(1-fi)*24}px)`;});
  // wipe: dark band sweeps down at each cut (0.5s centered on cut)
- let w=$('w');w.style.height=0;
+ let w=$('w');w.style.display='none';
  SC.slice(1).forEach(([id,a])=>{const p=(t-(a-.25))/.5;if(p>0&&p<1){const top=p<.5?0:(p-.5)*2*1920,h=p<.5?ease(p*2)*1920:1920-top;w.style.top=top+'px';w.style.height=h+'px';}});
  const idx=SC.findIndex(([i,a,b])=>t>=a&&t<b);$('pg').textContent=`0${Math.min(idx,4)+1} / 05`;
  $('pg').style.visibility=idx>=0&&idx<5?'visible':'hidden';
