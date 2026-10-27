@@ -1,0 +1,15 @@
+{
+ "name": "story-suma-rose",
+ "field": "outing",
+ "series": "関西おでかけメモ",
+ "source": "須磨離宮公園 秋のバラ観賞会 12/6まで（公式） https://www.kobe-park.or.jp/rikyu/event/event-27232/",
+ "checked": "司令ツキ 10/26 おでかけリストに載せるとき公式・観光協会のページで日付を確認（10/27 ストーリー用に表紙だけ）",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "12/6(日)まで",
+   "title": "須磨離宮公園の\n秋のバラ",
+   "badge": "関西おでかけ情報"
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "name": "story-yume-cosmos",
+ "field": "outing",
+ "series": "関西おでかけメモ",
+ "source": "夢コスモス園 11/8まで（公式） https://yume-cosmos.com/",
+ "checked": "司令ツキ 10/26 おでかけリストに載せるとき公式・観光協会のページで日付を確認（10/27 ストーリー用に表紙だけ）",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "11/8(日)まで",
+   "title": "亀岡の\n夢コスモス園",
+   "badge": "関西おでかけ情報"
+  }
+ ]
+}

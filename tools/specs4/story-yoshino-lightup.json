@@ -1,0 +1,15 @@
+{
+ "name": "story-yoshino-lightup",
+ "field": "outing",
+ "series": "関西おでかけメモ",
+ "source": "吉野山 紅葉ライトアップ 11/30まで 16:30〜22:00（吉野山観光協会） https://yoshino-kankou.jp/autumn-foliage/",
+ "checked": "司令ツキ 10/26 おでかけリストに載せるとき公式・観光協会のページで日付を確認（10/27 ストーリー用に表紙だけ）",
+ "slides": [
+  {
+   "type": "cover",
+   "kicker": "11/30(月)まで",
+   "title": "吉野山の\n紅葉ライトアップ",
+   "badge": "関西おでかけ情報"
+  }
+ ]
+}

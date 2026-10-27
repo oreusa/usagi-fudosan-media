@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-01",
+  "type": "story",
+  "alt": "吉野山の紅葉ライトアップ（うさぎ│TOWN NOTESのおでかけメモ）",
+  "last_day": "2026-11-30",
+  "url": "https://yoshino-kankou.jp/autumn-foliage/",
+  "made_by": "司令ツキ",
+  "checked": "吉野山 紅葉ライトアップ 11/30まで 16:30〜22:00（吉野山観光協会） https://yoshino-kankou.jp/autumn-foliage/（10/26 おでかけリスト追加時に確認）",
+  "design": "v5 ストーリー（表紙1枚）",
+  "story": {
+    "image": "https://oreusa.github.io/usagi-fudosan-media/media/2026-11-01/story-yoshino-lightup.jpg",
+    "time": "12:30",
+    "link": "https://usagi-odekake.usagi-fudosan.workers.dev/",
+    "alt": "うさぎ│TOWN NOTESのおでかけメモ"
+  }
+}
