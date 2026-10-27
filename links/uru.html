@@ -56,6 +56,12 @@ details[open] summary::after{content:"−"}
 details p{margin:-4px 0 0;padding:0 18px 16px;font-size:12.8px;line-height:1.95;color:#5A4F47}
 details p a{color:#2B2622}
 .hint{font-size:11px;color:#9C8775;text-align:right;margin:6px 2px 0}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);position:relative;margin:4px 0 0;padding:0;list-style:none}
+.steps::before{content:"";position:absolute;left:10%;right:10%;top:6px;height:1px;background:#CDBBAA}
+.steps li{position:relative;text-align:center;font-size:11.5px;line-height:1.6;color:#3A332E;padding-top:20px}
+.steps li::before{content:"";position:absolute;left:50%;top:1px;width:11px;height:11px;margin-left:-6px;border-radius:50%;background:#FAF8F5;border:1px solid #A07E66}
+.steps li:last-child::before{background:#A07E66}
+.free{text-align:center;font-size:12px;color:#8C7B6E;margin-top:24px;letter-spacing:.06em}
 </style></head><body><div class="wrap">
 <div class="head"><img src="assets/logo.png" alt="ロゴ"><div class="en">BEFORE YOU SELL OR BUY</div>
 <h1>売る前・買う前に</h1><p class="sub">家を売る前、買う前に知っておきたいこと。<br>そして、私たちにご相談いただける理由です。</p><div class="bar"></div></div>
@@ -79,7 +85,7 @@ details p a{color:#2B2622}
 <div class="hint">タップでくわしく</div>
 </div>
 
-<div class="sec"><div class="lab">WHY US</div><h2>私たちが、売る・買う・査定を<br>得意としている理由</h2>
+<div class="sec"><div class="lab">ABOUT US</div><h2>私たちの仕事</h2>
 <div class="pt"><b>不動産の中でも、売買が専門です</b><span>査定、売り出し価格の設定、販売活動、買主さまとの条件交渉、契約・お引き渡しまで。売買の一連の流れを、一貫して担当します。</span></div>
 <div class="pt"><b>街ごとに、毎日調べています</b><span>売出価格（いま市場に出ている価格）と成約価格（実際に取引された価格）の差、㎡単価の推移、売り出しから成約までの期間。関西の街ごと・駅ごとに、毎日追いかけています。</span></div>
 <div class="pt"><b>数字は、社員一同で確かめています</b><span>公的な取引データや地価の動きに加え、駅からの道のり、周辺環境、建物の状態といった現地の情報を、社員一同が専門に調べて照らし合わせています。</span></div>
@@ -89,13 +95,12 @@ details p a{color:#2B2622}
 </div>
 
 <div class="sec"><div class="lab">FLOW</div><h2>ご相談の流れ</h2>
-<div class="flow"><span>ご相談</span><i>→</i><span>街と相場の調査</span><i>→</i><span>根拠つきの査定</span><i>→</i><span>売り出し・ご案内</span><i>→</i><span>ご成約</span></div>
-<p class="note">ご相談・査定は無料です。</p></div>
+<ol class="steps"><li>ご相談</li><li>街と相場<br>の調査</li><li>根拠つき<br>の査定</li><li>売り出し<br>・ご案内</li><li>ご成約</li></ol>
+<p class="free">ご相談・査定は無料です</p></div>
 
 <div class="sec"><div class="lab">CONTACT</div><h2>ご相談はこちら</h2>
 <div class="sns" style="margin-top:0">
-<a class="co" data-en="FOR OWNERS" href="https://e-infi.com/#contact">売却・査定のご相談<span>無料でお受けしております（お問い合わせフォーム）</span></a>
-<a class="co" data-en="FOR BUYERS" href="https://e-infi.com/#contact">ご購入のご相談<span>気になる街・物件のこともお気軽に（お問い合わせフォーム）</span></a>
+<a class="co" data-en="CONTACT" href="https://e-infi.com/#contact">売る・買う・査定のご相談<span>無料でお受けしております（お問い合わせフォーム）</span></a>
 </div></div>
 <a class="back" href="./">関西おでかけリストへ戻る</a>
 <div class="ft">うさぎ│TOWN NOTES</div>
