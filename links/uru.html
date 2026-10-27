@@ -13,20 +13,20 @@ body{margin:0;background:#FAF8F5;font-family:G;color:#2B2622}
 .head img{width:60px}
 .en{font-family:J;font-weight:300;font-size:10px;letter-spacing:.42em;color:#8C7B6E;margin-top:10px}
 h1{font-family:"Shippori Mincho",serif;font-weight:600;font-size:26px;letter-spacing:.18em;color:#231E1B;margin:16px 0 12px;font-feature-settings:"palt"}
-.sub{font-size:12.5px;line-height:1.9;color:#6B6058;margin:0;text-wrap:balance}
+.sub{font-size:13px;line-height:2;color:#6B6058;margin:0;text-wrap:balance}
 .bar{display:flex;align-items:center;justify-content:center;gap:10px;margin:24px auto 0}.bar::before,.bar::after{content:"";width:44px;height:1px;background:#CDBBAA}.bar i{width:7px;height:7px;border-radius:50%;border:1px solid #A07E66;background:#FAF8F5}
 .sns{margin-top:30px}
 /* 10/26 リストと統一：箱なし、細い線で区切る */
 .sns a.co{display:block;position:relative;text-decoration:none;color:#2B2622;background:#fff;border:1px solid #E2D8CD;margin:0 0 10px;padding:18px 44px 18px 18px;font-family:"Shippori Mincho",serif;font-size:16px;font-weight:600;letter-spacing:.08em;line-height:1.5}
 .sns a.co::before{content:attr(data-en);display:block;font-family:J;font-size:9.5px;letter-spacing:.32em;color:#9C8775;font-weight:500;margin-bottom:6px}
 .sns a.co::after{content:"→";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-family:J;color:#9C8775;font-size:16px}
-.sns a.co span{display:block;margin-top:6px;font-family:G;font-weight:500;color:#8C7B6E;font-size:11.5px;letter-spacing:.04em}
+.sns a.co span{display:block;margin-top:6px;font-family:G;font-weight:500;color:#8C7B6E;font-size:12px;letter-spacing:.04em}
 .back{display:block;width:max-content;margin:28px auto 0;color:#2B2622;text-decoration:none;font-size:13px;letter-spacing:.1em;border-bottom:1px solid #2B2622;padding-bottom:2px}
 .ft{text-align:center;font-size:10px;letter-spacing:.04em;color:#8C7B6E;margin-top:30px}
 </style><style>
-.sec{margin-top:34px}
-.sec .lab{font-family:J;font-weight:500;font-size:9.5px;letter-spacing:.32em;color:#9C8775}
-.sec h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:19px;letter-spacing:.1em;margin:8px 0 14px;line-height:1.6;font-feature-settings:"palt"}
+.sec{margin-top:52px}
+.sec .lab{display:flex;align-items:center;gap:12px;font-family:J;font-weight:500;font-size:9.5px;letter-spacing:.32em;color:#9C8775}.sec .lab::after{content:"";flex:1;height:1px;background:#E2D8CD}
+.sec h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:20px;letter-spacing:.1em;margin:10px 0 20px;line-height:1.6;font-feature-settings:"palt"}
 .sec p{font-size:13.5px;line-height:2;margin:0 0 12px;color:#3A332E}
 .box{background:#fff;border:1px solid #E2D8CD;padding:16px 18px;margin-bottom:10px}
 .box h3{font-family:"Shippori Mincho",serif;font-weight:600;font-size:15px;letter-spacing:.06em;margin:0 0 10px}
@@ -36,9 +36,9 @@ h1{font-family:"Shippori Mincho",serif;font-weight:600;font-size:26px;letter-spa
 .box li::before{content:"";position:absolute;left:2px;top:15px;width:6px;height:6px;border-radius:50%;background:#C9B4A3}
 .box li:first-child::before{top:7px}
 .box li b{font-weight:700;color:#231E1B}
-.pt{border-left:2px solid #A07E66;padding:2px 0 2px 14px;margin:0 0 16px}
-.pt b{display:block;font-family:"Shippori Mincho",serif;font-size:15px;letter-spacing:.06em;margin-bottom:4px}
-.pt span{font-size:13px;line-height:1.9;color:#5A4F47}
+.pt{border-left:1px solid #C9B4A3;padding:2px 0 2px 16px;margin:0 0 26px}
+.pt b{display:block;font-family:"Shippori Mincho",serif;font-size:16px;letter-spacing:.06em;line-height:1.6;margin-bottom:8px;color:#231E1B}
+.pt span{display:block;font-size:13.5px;line-height:2.05;color:#5A4F47;letter-spacing:.02em}
 .note{font-size:11px;color:#8C7B6E;line-height:1.8;margin-top:8px}
 .in{color:#2B2622}
 .flow{display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center;font-size:12.5px;margin:4px 0 6px}.flow span{background:#fff;border:1px solid #E2D8CD;padding:6px 10px}.flow i{font-style:normal;color:#9C8775;font-family:J}
@@ -49,19 +49,19 @@ h1{font-family:"Shippori Mincho",serif;font-weight:600;font-size:26px;letter-spa
 .pane.on{display:block}
 details{border-top:1px solid #F0E8E0}
 details:first-child{border-top:0}
-summary{list-style:none;cursor:pointer;position:relative;padding:14px 40px 14px 18px;font-size:13.5px;font-weight:700;line-height:1.7;color:#231E1B}
+summary{list-style:none;cursor:pointer;position:relative;padding:17px 44px 17px 18px;font-size:14px;font-weight:700;line-height:1.7;color:#231E1B}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-family:J;font-weight:300;font-size:20px;color:#9C8775}
 details[open] summary::after{content:"−"}
-details p{margin:-4px 0 0;padding:0 18px 16px;font-size:12.8px;line-height:1.95;color:#5A4F47}
+details p{margin:-2px 0 0;padding:0 18px 20px;font-size:13.5px;line-height:2.05;color:#5A4F47;letter-spacing:.02em}
 details p a{color:#2B2622}
 .hint{font-size:11px;color:#9C8775;text-align:right;margin:6px 2px 0}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);position:relative;margin:4px 0 0;padding:0;list-style:none}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);position:relative;margin:10px 0 0;padding:0;list-style:none}
 .steps::before{content:"";position:absolute;left:10%;right:10%;top:6px;height:1px;background:#CDBBAA}
-.steps li{position:relative;text-align:center;font-size:11.5px;line-height:1.6;color:#3A332E;padding-top:20px}
+.steps li{position:relative;text-align:center;font-size:12px;line-height:1.7;color:#3A332E;padding-top:24px}
 .steps li::before{content:"";position:absolute;left:50%;top:1px;width:11px;height:11px;margin-left:-6px;border-radius:50%;background:#FAF8F5;border:1px solid #A07E66}
-.steps li:last-child::before{background:#A07E66}
-.free{text-align:center;font-size:12px;color:#8C7B6E;margin-top:24px;letter-spacing:.06em}
+
+.sec p.free{text-align:center;font-size:12.5px;color:#8C7B6E;margin:30px 0 0;letter-spacing:.08em}
 </style></head><body><div class="wrap">
 <div class="head"><img src="assets/logo.png" alt="ロゴ"><div class="en">BEFORE YOU SELL OR BUY</div>
 <h1>お家を売る・買う前に<br>大事なこと</h1><p class="sub">知っておいていただきたいことと、<br>私たちの仕事についてご紹介します。</p><div class="bar"><i></i></div></div>
