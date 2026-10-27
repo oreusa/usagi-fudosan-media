@@ -1,0 +1,71 @@
+name: ig-post-reel
+# インスタにリールを直接投稿する（曲つき）。
+# 入力の spec は repo 内の JSON: {"video_url","caption","audio_id","audio_volume"(1-100, 任意)}
+# 結果: ig/posts/<日時>.json
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: "投稿内容のJSONファイル（repo内のパス）"
+        required: true
+permissions:
+  contents: write
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    env:
+      GV: "v23.0"
+    steps:
+      - uses: actions/checkout@v4
+      - name: post reel
+        env:
+          APP_SECRET: ${{ secrets.META_APP_SECRET }}
+          SPEC: ${{ github.event.inputs.spec }}
+        run: |
+          set -eu
+          mkdir -p ig/posts
+          PT=$(openssl enc -d -aes-256-cbc -pbkdf2 -a -pass env:APP_SECRET -in ig/page_token.enc)
+          export PT
+          python3 - <<'PY'
+          import json, os, time, urllib.request, urllib.parse
+          GV = os.environ["GV"]; PT = os.environ["PT"]
+          ig = json.load(open("ig/setup.json"))["ig_user_id"]
+          spec = json.load(open(os.environ["SPEC"]))
+          def call(method, path, **q):
+              q["access_token"] = PT
+              data = urllib.parse.urlencode(q).encode()
+              url = f"https://graph.facebook.com/{GV}/{path}"
+              req = urllib.request.Request(url + ("?" + data.decode() if method == "GET" else ""),
+                                           data=None if method == "GET" else data, method=method)
+              try:
+                  with urllib.request.urlopen(req, timeout=60) as r: return json.load(r)
+              except urllib.error.HTTPError as e:
+                  return {"error": json.loads(e.read().decode() or "{}").get("error", {"code": e.code})}
+          log = {"spec": os.environ["SPEC"], "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
+          q = dict(media_type="REELS", video_url=spec["video_url"], caption=spec.get("caption", ""), share_to_feed="true")
+          if spec.get("audio_id"):
+              ac = {"audio_id": spec["audio_id"]}
+              if spec.get("audio_volume"): ac["audio_volume"] = int(spec["audio_volume"])
+              if spec.get("video_volume"): ac["video_volume"] = int(spec["video_volume"])
+              q["audio_configuration"] = json.dumps(ac)
+          c = call("POST", f"{ig}/media", **q); log["container"] = c
+          cid = c.get("id")
+          if cid:
+              for i in range(40):
+                  s = call("GET", cid, fields="status_code,status"); log["status"] = s
+                  if s.get("status_code") in ("FINISHED", "ERROR", "EXPIRED"): break
+                  time.sleep(10)
+              if log["status"].get("status_code") == "FINISHED":
+                  p = call("POST", f"{ig}/media_publish", creation_id=cid); log["publish"] = p
+                  if p.get("id"):
+                      log["permalink"] = call("GET", p["id"], fields="permalink").get("permalink")
+          name = time.strftime("%Y%m%d-%H%M%S", time.gmtime())
+          json.dump(log, open(f"ig/posts/{name}.json", "w"), ensure_ascii=False, indent=1)
+          print(json.dumps({k: log.get(k) for k in ("permalink",)}, ensure_ascii=False))
+          PY
+      - name: commit
+        run: |
+          git config user.name "ig-post bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add ig/posts
+          git diff --cached --quiet || (git commit -m "ig: リール投稿の記録" && git push)
