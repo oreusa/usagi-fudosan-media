@@ -51,6 +51,16 @@ jobs:
           if "error" in acc: out["accounts_error"] = acc["error"]
           page = next((p for p in pages if p.get("instagram_business_account")), None)
           if not page:
+              # ビジネス所有のページは me/accounts に出ないことがある → 許可を出したページIDから直接取る
+              dbg = get("debug_token", input_token=ut, access_token=f"{APP_ID}|{SEC}").get("data", {})
+              out["granted"] = [{"scope": g.get("scope"), "targets": g.get("target_ids")} for g in dbg.get("granular_scopes", [])]
+              ids = {t for g in dbg.get("granular_scopes", []) if g.get("scope", "").startswith("pages_") for t in (g.get("target_ids") or [])}
+              for pid in ids:
+                  p = get(pid, fields="id,name,access_token,instagram_business_account{id,username}", access_token=ut)
+                  out["pages"].append({"id": p.get("id"), "name": p.get("name"), "ig": p.get("instagram_business_account"), "err": p.get("error")})
+                  if p.get("instagram_business_account") and p.get("access_token"):
+                      page = p; break
+          if not page:
               out["step"] = "no_ig_page"
               json.dump(out, open("ig/setup.json", "w"), ensure_ascii=False, indent=1); raise SystemExit(0)
           ig = page["instagram_business_account"]["id"]; pt = page["access_token"]
