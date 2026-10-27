@@ -1,16 +1,16 @@
 {
-  "date": "2026-10-31",
-  "type": "story",
-  "alt": "須磨離宮公園の秋のバラ（うさぎ│TOWN NOTESのおでかけメモ）",
-  "last_day": "2026-12-06",
-  "url": "https://www.kobe-park.or.jp/rikyu/event/event-27232/",
-  "made_by": "司令ツキ",
-  "checked": "須磨離宮公園 秋のバラ観賞会 12/6まで（公式） https://www.kobe-park.or.jp/rikyu/event/event-27232/（10/26 おでかけリスト追加時に確認）",
-  "design": "v5 ストーリー（表紙1枚）",
-  "story": {
-    "image": "https://oreusa.github.io/usagi-fudosan-media/media/2026-10-31/story-suma-rose.jpg",
-    "time": "12:30",
-    "link": "https://usagi-odekake.usagi-fudosan.workers.dev/",
-    "alt": "うさぎ│TOWN NOTESのおでかけメモ"
-  }
+ "date": "2026-10-31",
+ "type": "story",
+ "alt": "須磨離宮公園の秋のバラ（うさぎ│TOWN NOTESのおでかけメモ）",
+ "last_day": "2026-12-06",
+ "url": "https://www.kobe-park.or.jp/rikyu/event/event-27232/",
+ "made_by": "司令ツキ",
+ "checked": "須磨離宮公園 秋のバラ観賞会 12/6まで（公式） https://www.kobe-park.or.jp/rikyu/event/event-27232/（10/26 おでかけリスト追加時に確認）",
+ "design": "v5 ストーリー（表紙1枚）",
+ "story_stopped": {
+  "image": "https://oreusa.github.io/usagi-fudosan-media/media/2026-10-31/story-suma-rose.jpg",
+  "time": "12:30",
+  "link": "https://usagi-odekake.usagi-fudosan.workers.dev/",
+  "alt": "うさぎ│TOWN NOTESのおでかけメモ"
+ }
 }
