@@ -2,12 +2,15 @@ name: ig-post-reel
 # インスタにリールを直接投稿する（曲つき）。
 # 入力の spec は repo 内の JSON: {"video_url","caption","audio_id","audio_volume"(1-100, 任意)}
 # 結果: ig/posts/<日時>.json
+# 毎朝 08:50 JST に ig/reels/<今日>.json があれば、media/reels/<今日>.mp4 を曲つきで投稿する（10/28〜 インスタのリールはこれだけ）
 on:
+  schedule:
+    - cron: "50 23 * * *"
   workflow_dispatch:
     inputs:
       spec:
-        description: "投稿内容のJSONファイル（repo内のパス）"
-        required: true
+        description: "投稿内容のJSONファイル（repo内のパス。空なら今日の ig/reels）"
+        required: false
 permissions:
   contents: write
 jobs:
@@ -24,6 +27,12 @@ jobs:
         run: |
           set -eu
           mkdir -p ig/posts
+          if [ -z "${SPEC:-}" ]; then
+            D=$(TZ=Asia/Tokyo date +%F); SPEC="ig/reels/$D.json"
+            [ -f "$SPEC" ] || { echo "no reel for $D"; exit 0; }
+            if grep -lq "\"$SPEC\"" ig/posts/*.json 2>/dev/null && grep -l "\"$SPEC\"" ig/posts/*.json | xargs grep -q permalink; then echo "already posted"; exit 0; fi
+          fi
+          export SPEC
           PT=$(openssl enc -d -aes-256-cbc -pbkdf2 -a -pass env:APP_SECRET -in ig/page_token.enc)
           export PT
           python3 - <<'PY'
@@ -31,6 +40,8 @@ jobs:
           GV = os.environ["GV"]; PT = os.environ["PT"]
           ig = json.load(open("ig/setup.json"))["ig_user_id"]
           spec = json.load(open(os.environ["SPEC"]))
+          if not spec.get("video_url") and spec.get("date"):
+              spec["video_url"] = f"https://oreusa.github.io/usagi-fudosan-media/media/reels/{spec['date']}.mp4"
           def call(method, path, **q):
               q["access_token"] = PT
               data = urllib.parse.urlencode(q).encode()
