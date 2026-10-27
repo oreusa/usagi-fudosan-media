@@ -39,7 +39,7 @@ jobs:
           out = []
           trend = {a.get("audio_id"): a for a in get("ig_audio", user_id=ig, audio_type="music").get("audio", [])}
           for aid in [x.strip() for x in os.environ["IDS"].split(",") if x.strip()]:
-              d = get(aid, user_id=ig)
+              d = get(aid, user_id=ig, fields="audio_id,title,display_artist,duration_in_ms,download_url")
               row = {"audio_id": aid, "info": {k: v for k, v in d.items() if k != "download_url"}}
               u = d.get("download_url") or trend.get(aid, {}).get("download_url")
               row["trend_keys"] = sorted(trend.get(aid, {}).keys())
