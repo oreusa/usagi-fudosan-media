@@ -57,8 +57,32 @@ details p a{color:#2B2622}
 .hint{font-size:11px;color:#9C8775;text-align:right;margin:6px 2px 0}
 .pt{background:#fff;border:1px solid #E2D8CD;border-left:3px solid #A07E66;padding:14px 16px;margin:0 0 10px}
 .pt small{display:block;font-family:J;font-size:9.5px;letter-spacing:.3em;color:#9C8775;margin-bottom:4px}
-.close{font-family:"Shippori Mincho",serif;font-size:15px;line-height:1.9;text-align:center;margin:22px 0 0;letter-spacing:.06em}
+.closeX{font-family:"Shippori Mincho",serif;font-size:15px;line-height:1.9;text-align:center;margin:22px 0 0;letter-spacing:.06em}
 .flow{display:flex;flex-wrap:wrap;gap:6px 4px;align-items:center;font-size:12.5px;margin:4px 0 6px}.flow span{background:#fff;border:1px solid #E2D8CD;padding:6px 10px}.flow i{font-style:normal;color:#9C8775;font-family:J}
+
+/* 10/27 おしゃれ・読みやすく */
+.sec{margin-top:52px}
+.sec .lab{text-align:center;letter-spacing:.42em}
+.sec h2{text-align:center;font-size:21px;letter-spacing:.14em;margin:10px 0 22px;line-height:1.7}
+.sec h2::after{content:"";display:block;width:24px;height:1px;background:#A07E66;margin:16px auto 0}
+summary{text-wrap:balance;font-size:14px;padding:16px 44px 16px 18px;letter-spacing:.02em}
+details p{font-size:13.2px;line-height:2.05}
+.why{margin:0;padding:0;list-style:none}
+.why li{display:grid;grid-template-columns:34px 1fr;gap:0 6px;padding:18px 2px;border-top:1px solid #E6DDD3}
+.why li:last-child{border-bottom:1px solid #E6DDD3}
+.why .n{font-family:J;font-weight:300;font-size:12px;letter-spacing:.1em;color:#A07E66;padding-top:5px}
+.why b{display:block;font-family:"Shippori Mincho",serif;font-weight:600;font-size:16.5px;letter-spacing:.08em;line-height:1.6;color:#231E1B}
+.why span{display:block;font-size:13px;line-height:1.95;color:#6B6058;margin-top:4px}
+.msg{margin:30px -16px 0;padding:34px 24px;background:#F3EEE8;text-align:center}
+.msg p{font-family:"Shippori Mincho",serif;font-size:16px;line-height:2.2;letter-spacing:.1em;color:#231E1B;margin:0}
+.msg small{text-wrap:balance;display:block;font-size:11.5px;color:#8C7B6E;margin-top:14px;line-height:1.9}
+.msg a{color:#2B2622}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);position:relative;margin:4px 0 0;padding:0;list-style:none}
+.steps::before{content:"";position:absolute;left:10%;right:10%;top:6px;height:1px;background:#CDBBAA}
+.steps li{position:relative;text-align:center;font-size:11.5px;line-height:1.6;color:#3A332E;padding-top:20px}
+.steps li::before{content:"";position:absolute;left:50%;top:1px;width:11px;height:11px;margin-left:-6px;border-radius:50%;background:#FAF8F5;border:1px solid #A07E66}
+.steps li:last-child::before{background:#A07E66}
+.free{text-align:center;font-size:12px;color:#8C7B6E;margin-top:18px;letter-spacing:.06em}
 </style></head><body><div class="wrap">
 <div class="head"><img src="assets/logo.png" alt="ロゴ"><div class="en">BEFORE YOU SELL OR BUY</div>
 <h1>売る前・買う前に</h1><p class="sub">家を売る前、買う前に知っておきたいこと。<br>そして、私たちにご相談いただける理由です。</p><div class="bar"></div></div>
@@ -83,23 +107,23 @@ details p a{color:#2B2622}
 </div>
 
 <div class="sec"><div class="lab">WHY US</div><h2>私たちに任せて、<br>安心していただける理由</h2>
-<div class="pt"><small>ONLY BUYING &amp; SELLING</small><b>売買だけの専門です</b><span>賃貸はあつかわず、家を売る・買うことだけに向き合っています。こうした「知らないと損」も、最初にきちんとお伝えします。</span></div>
-<div class="pt"><small>RESEARCH EVERY DAY</small><b>街ごとに、毎日調べています</b><span>いま出ている金額、実際に売れた金額、その相場が正しいか。関西の街ごとに、毎日変わる数字を追いかけています。</span></div>
-<div class="pt"><small>BY OUR OWN EYES</small><b>数字は、社員一同で確かめています</b><span>機械まかせにはしません。その街の相場や金額は、社員一同が専門に調べ、自分たちの目で確かめています。</span></div>
-<div class="pt"><small>TOWN &amp; HOME</small><b>街と物件の良さを伝えられる</b><span>おでかけ先、新しくできる場所、街の小さな良さまで知っているから、物件の魅力を周りの環境ごとお伝えできます。</span></div>
-<div class="pt"><small>REAL PRICE</small><b>根拠のある「売れる金額」</b><span>高いだけの数字ではなく、毎日の調査にもとづいた、実際に売れる金額をお出しします。</span></div>
-<p class="close">家を売る・買うのは、一生に何度もないこと。<br>だからこそ、街も数字も知っている私たちに。<br>ご相談だけでも、安心してお声がけください。</p>
-<p class="note" style="text-align:center">調べた街の記録は、SNSと<a class="in" href="./">関西おでかけリスト</a>で見ていただけます。</p>
+<ul class="why">
+<li><span class="n">01</span><div><b>売買だけの専門</b><span>賃貸はあつかいません。売る・買うことだけに向き合っています。</span></div></li>
+<li><span class="n">02</span><div><b>街ごとに、毎日調べる</b><span>出ている金額、売れた金額、その相場が正しいか。毎日追いかけています。</span></div></li>
+<li><span class="n">03</span><div><b>社員一同で確かめる</b><span>機械まかせにせず、自分たちの目で確かめています。</span></div></li>
+<li><span class="n">04</span><div><b>街ごと、良さを伝える</b><span>周りの環境まで知っているから、物件の魅力をまるごとお伝えできます。</span></div></li>
+<li><span class="n">05</span><div><b>根拠のある「売れる金額」</b><span>高いだけの数字ではなく、実際に売れる金額をお出しします。</span></div></li>
+</ul>
+<div class="msg"><p>家を売る・買うのは、<br>一生に何度もないこと。<br>だからこそ、街も数字も<br>知っている私たちに。</p><small>ご相談だけでも、安心してお声がけください。<br>調べた街の記録は、SNSと<a href="./">関西おでかけリスト</a>でご覧いただけます。</small></div>
 </div>
 
 <div class="sec"><div class="lab">FLOW</div><h2>ご相談の流れ</h2>
-<div class="flow"><span>ご相談</span><i>→</i><span>街と相場の調査</span><i>→</i><span>根拠つきの査定</span><i>→</i><span>売り出し・ご案内</span><i>→</i><span>ご成約</span></div>
-<p class="note">ご相談・査定は無料です。</p></div>
+<ol class="steps"><li>ご相談</li><li>街と相場<br>の調査</li><li>根拠つき<br>の査定</li><li>売り出し<br>・ご案内</li><li>ご成約</li></ol>
+<p class="free">ご相談・査定は無料です</p></div>
 
 <div class="sec"><div class="lab">CONTACT</div><h2>ご相談はこちら</h2>
 <div class="sns" style="margin-top:0">
-<a class="co" data-en="FOR OWNERS" href="https://e-infi.com/#contact">売却・査定のご相談<span>無料でお受けしております（お問い合わせフォーム）</span></a>
-<a class="co" data-en="FOR BUYERS" href="https://e-infi.com/#contact">ご購入のご相談<span>気になる街・物件のこともお気軽に（お問い合わせフォーム）</span></a>
+<a class="co" data-en="CONTACT" href="https://e-infi.com/#contact">売る・買う・査定のご相談<span>無料でお受けしております（お問い合わせフォーム）</span></a>
 </div></div>
 <a class="back" href="./">関西おでかけリストへ戻る</a>
 <div class="ft">うさぎ│TOWN NOTES</div>
