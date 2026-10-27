@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-04",
-  "type": "story",
-  "alt": "和歌山城紅葉渓庭園（うさぎ│TOWN NOTESのおでかけメモ）",
-  "last_day": "2026-12-10",
-  "url": "https://www.city.wakayama.wakayama.jp/kankou/commissionfilm/1003287/1006649/1006675.html",
-  "made_by": "司令ツキ",
-  "checked": "和歌山城 紅葉渓庭園 見ごろ11月下旬〜12月上旬（和歌山市） https://www.city.wakayama.wakayama.jp/kankou/commissionfilm/1003287/1006649/1006675.html（10/26 おでかけリスト追加時に確認）",
-  "design": "v5 ストーリー（表紙1枚）",
-  "story": {
-    "image": "https://oreusa.github.io/usagi-fudosan-media/media/2026-11-04/story-wakayama-momijidani.jpg",
-    "time": "12:30",
-    "link": "https://usagi-odekake.usagi-fudosan.workers.dev/",
-    "alt": "うさぎ│TOWN NOTESのおでかけメモ"
-  }
+ "date": "2026-11-04",
+ "type": "story",
+ "alt": "和歌山城紅葉渓庭園（うさぎ│TOWN NOTESのおでかけメモ）",
+ "last_day": "2026-12-10",
+ "url": "https://www.city.wakayama.wakayama.jp/kankou/commissionfilm/1003287/1006649/1006675.html",
+ "made_by": "司令ツキ",
+ "checked": "和歌山城 紅葉渓庭園 見ごろ11月下旬〜12月上旬（和歌山市） https://www.city.wakayama.wakayama.jp/kankou/commissionfilm/1003287/1006649/1006675.html（10/26 おでかけリスト追加時に確認）",
+ "design": "v5 ストーリー（表紙1枚）",
+ "story_stopped": {
+  "image": "https://oreusa.github.io/usagi-fudosan-media/media/2026-11-04/story-wakayama-momijidani.jpg",
+  "time": "12:30",
+  "link": "https://usagi-odekake.usagi-fudosan.workers.dev/",
+  "alt": "うさぎ│TOWN NOTESのおでかけメモ"
+ }
 }

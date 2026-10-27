@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-03",
-  "type": "story",
-  "alt": "御堂筋イルミネーション（うさぎ│TOWN NOTESのおでかけメモ）",
-  "last_day": "2026-12-31",
-  "url": "https://hikari-kyoen.com/core/midosuji",
-  "made_by": "司令ツキ",
-  "checked": "御堂筋イルミネーション2026 11/3〜12/31（大阪・光の饗宴 公式） https://hikari-kyoen.com/core/midosuji（10/26 おでかけリスト追加時に確認）",
-  "design": "v5 ストーリー（表紙1枚）",
-  "story": {
-    "image": "https://oreusa.github.io/usagi-fudosan-media/media/2026-11-03/story-midosuji-illumi.jpg",
-    "time": "12:30",
-    "link": "https://usagi-odekake.usagi-fudosan.workers.dev/",
-    "alt": "うさぎ│TOWN NOTESのおでかけメモ"
-  }
+ "date": "2026-11-03",
+ "type": "story",
+ "alt": "御堂筋イルミネーション（うさぎ│TOWN NOTESのおでかけメモ）",
+ "last_day": "2026-12-31",
+ "url": "https://hikari-kyoen.com/core/midosuji",
+ "made_by": "司令ツキ",
+ "checked": "御堂筋イルミネーション2026 11/3〜12/31（大阪・光の饗宴 公式） https://hikari-kyoen.com/core/midosuji（10/26 おでかけリスト追加時に確認）",
+ "design": "v5 ストーリー（表紙1枚）",
+ "story_stopped": {
+  "image": "https://oreusa.github.io/usagi-fudosan-media/media/2026-11-03/story-midosuji-illumi.jpg",
+  "time": "12:30",
+  "link": "https://usagi-odekake.usagi-fudosan.workers.dev/",
+  "alt": "うさぎ│TOWN NOTESのおでかけメモ"
+ }
 }
