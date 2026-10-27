@@ -1,5 +1,23 @@
 {
  "user_token_days": 60.0,
  "pages": [],
+ "granted": [
+  {
+   "scope": "pages_show_list",
+   "targets": null
+  },
+  {
+   "scope": "instagram_basic",
+   "targets": null
+  },
+  {
+   "scope": "instagram_content_publish",
+   "targets": null
+  },
+  {
+   "scope": "pages_read_engagement",
+   "targets": null
+  }
+ ],
  "step": "no_ig_page"
 }
