@@ -1,0 +1,59 @@
+name: ig-audio-preview
+# インスタ公式の曲の試聴用ファイルを取ってくる（社内での聞きくらべ用。投稿には使わない）。
+# 結果: ig/preview/<audio_id>.m4a と ig/preview/list.json
+on:
+  workflow_dispatch:
+    inputs:
+      audio_ids:
+        description: "音源ID（カンマ区切り）"
+        required: true
+permissions:
+  contents: write
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    env:
+      GV: "v23.0"
+    steps:
+      - uses: actions/checkout@v4
+      - name: fetch previews
+        env:
+          APP_SECRET: ${{ secrets.META_APP_SECRET }}
+          IDS: ${{ github.event.inputs.audio_ids }}
+        run: |
+          set -eu
+          mkdir -p ig/preview
+          PT=$(openssl enc -d -aes-256-cbc -pbkdf2 -a -pass env:APP_SECRET -in ig/page_token.enc)
+          export PT
+          python3 - <<'PY'
+          import json, os, urllib.request, urllib.parse
+          GV = os.environ["GV"]; PT = os.environ["PT"]
+          ig = json.load(open("ig/setup.json"))["ig_user_id"]
+          def get(path, **q):
+              q["access_token"] = PT
+              url = f"https://graph.facebook.com/{GV}/{path}?" + urllib.parse.urlencode(q)
+              try:
+                  with urllib.request.urlopen(url, timeout=30) as r: return json.load(r)
+              except urllib.error.HTTPError as e:
+                  return {"error": json.loads(e.read().decode() or "{}").get("error", {"code": e.code})}
+          out = []
+          trend = {a.get("audio_id"): a for a in get("ig_audio", user_id=ig, audio_type="music").get("audio", [])}
+          for aid in [x.strip() for x in os.environ["IDS"].split(",") if x.strip()]:
+              d = get(aid, user_id=ig)
+              row = {"audio_id": aid, "info": {k: v for k, v in d.items() if k != "download_url"}}
+              u = d.get("download_url") or trend.get(aid, {}).get("download_url")
+              row["trend_keys"] = sorted(trend.get(aid, {}).keys())
+              if u:
+                  try:
+                      urllib.request.urlretrieve(u, f"ig/preview/{aid}.m4a"); row["file"] = f"ig/preview/{aid}.m4a"
+                  except Exception as e:
+                      row["download_error"] = str(e)
+              out.append(row)
+          json.dump(out, open("ig/preview/list.json", "w"), ensure_ascii=False, indent=1)
+          PY
+      - name: commit
+        run: |
+          git config user.name "ig-audio bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add ig/preview
+          git diff --cached --quiet || (git commit -m "ig: 曲の試聴ファイル" && git push)
