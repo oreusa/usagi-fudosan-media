@@ -89,5 +89,8 @@ jobs:
         run: |
           git config user.name "ig-post bot"
           git config user.email "actions@users.noreply.github.com"
+          # 出し終わって14日たった動画は消す（容量を増やしすぎない）
+          OLD=$(TZ=Asia/Tokyo date -d '14 days ago' +%F)
+          for f in media/reels/*.mp4; do b=$(basename "$f"); [ "${b:0:10}" \< "$OLD" ] && git rm -q "$f" || true; done
           git add ig/posts
           git diff --cached --quiet || (git commit -m "ig: リール投稿の記録" && git pull --rebase -q && git push)
