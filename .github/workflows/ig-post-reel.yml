@@ -35,6 +35,9 @@ jobs:
           set -eu
           mkdir -p ig/posts
           if [ -z "${SPEC:-}" ]; then
+            H=$(TZ=Asia/Tokyo date +%H)
+            # 定時が大きく遅れて夜中に動いたときは出さない（10/28 夕方の定時が 10/29 00:58 に動き、朝の分を夜中に出した）
+            if [ "$H" -lt 7 ] || [ "$H" -ge 22 ]; then echo "too late/early ($H時)"; exit 0; fi
             D=$(TZ=Asia/Tokyo date +%F); SPEC="ig/reels/$D.json"
             [ "$(TZ=Asia/Tokyo date +%H)" -ge 15 ] && SPEC="ig/reels/$D-pm.json"
             [ -f "$SPEC" ] || { echo "no reel for $D"; exit 0; }
