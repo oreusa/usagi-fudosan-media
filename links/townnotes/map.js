@@ -1,7 +1,9 @@
 /* TOWN NOTES（仮）: おでかけリストに、押すだけで寄っていく地図を組み込む（関西 → 府県 → 市・区）。
    指2本の操作はなし。府県・市区町村の形は links/townnotes/kansai.json（国土数値情報を加工）、場所は geo.json。
    今のページ（タブ・府県ボタン・カード）をそのまま読み、選んでいるタブのカードだけをピンにする。 */
+// 地図のファイルは map.js と同じ場所から読む（どのページ・どの置き場所から使っても同じに動く）
 (function(){
+var TNB=(document.currentScript&&document.currentScript.src||"").replace(/[?#].*$/,"").replace(/[^/]*$/,"");
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
 var NS="http://www.w3.org/2000/svg";
 var PREFS=["兵庫","京都","滋賀","大阪","奈良","和歌山"];
@@ -44,7 +46,7 @@ var css=`
 .tn .hd .n b{font-family:Jost,sans-serif;font-weight:500;font-size:16px;color:#2B2622;margin:0 2px}
 .tn .fr{position:relative;aspect-ratio:1/.86;margin:0 -14px;background:#FDFCFA;overflow:hidden;user-select:none;-webkit-user-select:none}
 .tn .fr:before{content:"";position:absolute;inset:8px;border:1px solid rgba(43,38,34,.28);pointer-events:none;z-index:3}
-.tn .fr:after{content:"";position:absolute;inset:0;background:url(townnotes/grain.png);opacity:.05;pointer-events:none;z-index:4}
+.tn .fr:after{content:"";position:absolute;inset:0;background:url(${TNB}grain.png);opacity:.05;pointer-events:none;z-index:4}
 .tn svg.m{position:absolute;inset:0;width:100%;height:100%;display:block}
 .tn .pf,.tn .mu,.tn .dot,.tn .sel-r{vector-effect:non-scaling-stroke}
 .tn .pf{stroke:#FDFCFA;stroke-width:2px;stroke-linejoin:round;cursor:pointer;transition:fill .5s,opacity .5s}
@@ -87,13 +89,18 @@ var css=`
 .tn .bk{position:absolute;right:12px;top:10px;z-index:6;display:none;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12px;letter-spacing:.06em;color:#5E534B;background:#fff;border:1px solid #DDD3C8;border-radius:99px;padding:8px 14px;cursor:pointer;box-shadow:0 1px 4px rgba(60,40,20,.08)}
 .tn .cen{position:absolute;right:18px;top:20px;z-index:5;font-family:Jost,sans-serif;font-size:9px;letter-spacing:.34em;color:#A39A90;transition:color .4s}
 .tn .hint{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;bottom:14px;background:rgba(255,255,255,.88);border-radius:99px;padding:5px 12px;z-index:5;text-align:center;font-family:"Zen Kaku Gothic New",sans-serif;font-size:10.5px;letter-spacing:.08em;color:#8C7B6E;pointer-events:none}
+.tn .mo{display:none;flex:none;gap:6px;align-items:center;overflow-x:auto;scrollbar-width:none;padding:8px 14px 0;background:#FDFCFA}.tn .mo::-webkit-scrollbar{display:none}.tn .mo button{flex:none}
+.tn:not(.fs) .mo{display:none!important}
+.tn .mo span{flex:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11px;color:#8C7B6E;background:rgba(255,255,255,.88);border-radius:99px;padding:4px 9px}
+.tn .mo button{height:30px;padding:0 10px;border-radius:99px;border:1px solid #E2D6CB;background:#fff;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12px;color:#2B2622;box-shadow:0 2px 6px rgba(60,45,35,.08)}
+.tn .mo button b{display:inline-block;margin-left:6px;min-width:18px;height:18px;line-height:18px;border-radius:9px;background:var(--c);color:#fff;font-family:Jost,sans-serif;font-size:10.5px;font-weight:600}
 .tn .hint:before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:#D9775A;margin-right:7px;vertical-align:1px}
 .tn .g-ic{pointer-events:none;transition:opacity .35s}
 .tn .ic .icb{filter:drop-shadow(0 1.5px 0 rgba(255,255,255,.9)) drop-shadow(0 2px 2px rgba(80,60,40,.18))}
 /* 全画面の地図（地図の中だけで全部できる） */
 .tn.fs{position:fixed;left:0;right:0;top:0;bottom:0;height:100dvh;z-index:200;margin:0;background:#FDFCFA;display:flex;flex-direction:column;overscroll-behavior:contain}
 .tn.fs .fr{flex:1 1 auto;min-height:0;aspect-ratio:auto;margin:0;touch-action:none}
-.tn.fs .chips,.tn.fs .pop,.tn.fs .lg{display:none!important}
+.tn.fs .chips,.tn.fs .pop,.tn.fs .lg,.tn.fs .g-mini{display:none!important}
 .tn.fs .fr:before{display:none}
 .tn .fsh{display:none}
 .tn.fs .fsh{display:block;flex:none;padding:8px 14px 4px;background:#fff;border-bottom:1px solid #EAE2D9;box-shadow:0 2px 10px rgba(60,45,35,.06);position:relative;z-index:8}
@@ -120,6 +127,10 @@ var css=`
 .tn .cc .d u{text-decoration:none;margin-left:6px}
 .tn .cc .t{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:15px;line-height:1.45;color:#2B2622;margin:4px 0 8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.9em}
 .tn .cc .t .nb{display:inline-block;vertical-align:1px;margin-right:6px;width:20px;height:20px;line-height:20px;border-radius:50%;background:var(--c);color:#fff;text-align:center;font-family:Jost,sans-serif;font-style:normal;font-weight:600;font-size:11px}
+.tn .cc .w{display:flex;gap:6px;align-items:center;min-height:22px;margin:-2px 0 6px}
+.tn .cc .w .cpl{font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;font-weight:500;color:#5F544B}
+.tn .cc .w .cpl:before{content:"";display:inline-block;width:9px;height:11px;margin-right:4px;vertical-align:-1px;background:var(--c);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 11'%3E%3Cpath d='M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.6 4.5 11 4.5 11S9 7.6 9 4.5A4.5 4.5 0 0 0 4.5 0Zm0 6.2a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4Z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9 11'%3E%3Cpath d='M4.5 0A4.5 4.5 0 0 0 0 4.5C0 7.6 4.5 11 4.5 11S9 7.6 9 4.5A4.5 4.5 0 0 0 4.5 0Zm0 6.2a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4Z'/%3E%3C/svg%3E") center/contain no-repeat}
+.tn .cc .w .cfr{font-family:"Zen Kaku Gothic New",sans-serif;font-size:10.5px;font-weight:700;color:#4F7A3E;background:#EAF2E4;border-radius:99px;padding:2px 8px}
 .tn .cc .ac{display:flex;gap:16px;align-items:center}
 .tn .cc .ac a{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12px;color:#2B2622;text-decoration:none;border-bottom:1px solid #CFC4B8;padding:6px 0 2px}
 .tn .cc .ac .ix{margin-left:auto;font-family:Jost,sans-serif;font-size:10.5px;color:#B3AAA1;letter-spacing:.08em}
@@ -253,7 +264,14 @@ function apply(full){if(full===undefined)full=true;svg.setAttribute("viewBox",vb
  // 番号ピンに重なる区の名前は消す（番号を見やすく・押しやすく）
  if(full&&lv===3){var DR=$$(".pinx",G.pin).filter(function(g){return g.dataset.n}).map(function(g){return g.querySelector(".dot").getBoundingClientRect()});
   LB.forEach(function(l){if(l.e.classList.contains("hide"))return;var b=l.e.getBoundingClientRect();if(DR.some(function(o){return b.left<o.right&&b.right>o.left&&b.top<o.bottom&&b.bottom>o.top}))l.e.classList.add("hide")})}
+ if(full)moreCities(lv);
 }
+// 重なって名前が消えた市は、地図の下にボタンで並べる（全画面のとき）
+function moreCities(lv){var mo=$(".mo",box),hn=$(".hint",box);if(!mo){mo=document.createElement("div");mo.className="mo";var fr=$(".fr",box);fr.parentNode.insertBefore(mo,fr.nextSibling)}
+ var hid=FS&&lv===2?LB.filter(function(l){return l.g&&l.e.classList.contains("hide")}):[];
+ if(!hid.length){mo.style.display="none";return}
+ mo.innerHTML="<span>ほかにも</span>";hid.forEach(function(l){var b=document.createElement("button");b.type="button";b.innerHTML=esc(l.g.n)+"<b>"+l.g.mus.length+"</b>";b.querySelector("b").textContent=(l.e.querySelector("b")||{}).textContent||"";b.style.setProperty("--c",PC[l.g.p]);b.onclick=function(ev){ev.stopPropagation();goMuni(l.g)};mo.appendChild(b)});
+ mo.style.display="flex"}
 
 // ---- 状態：関西（1）→ 府県（2）→ 市・区（3） ----
 var LB=[];function addL(x,y,cls,html,pri,c){var e=document.createElement("div");e.className="lb "+cls;e.innerHTML=html;if(c)e.style.setProperty("--c",c);LBS.appendChild(e);LB.push({e:e,x:x,y:y,pri:pri});return e}
@@ -287,7 +305,7 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
   // ラベルはその市のピンのすぐ横に（形の端だと、広い市では離れすぎるため）
   var gp=pins.filter(function(i){var mm=muniOf(i);return mm&&mm.grp===g}).map(function(i){return P(i.lon,i.lat)});
   var x1=Math.max.apply(null,gp.map(function(q){return q[0]})),x0=Math.min.apply(null,gp.map(function(q){return q[0]})),cy=gp.reduce(function(a,q){return a+q[1]},0)/gp.length;
-  var e=addL(x1,cy,"m",esc(g.n)+"<b>"+cnt[id]+"</b>",cnt[id],PC[pf]);LB[LB.length-1].side=1;LB[LB.length-1].x2=x0;e.addEventListener("click",function(ev){ev.stopPropagation();goMuni(g)})});
+  var e=addL(x1,cy,"m",esc(g.n)+"<b>"+cnt[id]+"</b>",cnt[id],PC[pf]);LB[LB.length-1].side=1;LB[LB.length-1].x2=x0;LB[LB.length-1].g=g;e.addEventListener("click",function(ev){ev.stopPropagation();goMuni(g)})});
  if(lv===3&&m.city)m.mus.forEach(function(x){var cx=(x.bb[0]+x.bb[2])/2,cy=(x.bb[1]+x.bb[3])/2;addL(cx,cy,"w"+(hw[x.id]?" h":""),esc(x.n),hw[x.id]?2:0)});
  G.mini.innerHTML="";OTH.forEach(function(o){if(pf&&o.pref!==pf)return;var q=P(o.lon,o.lat);el("circle",{cx:q[0],cy:q[1],fill:PC[o.pref]||"#9C9187","fill-opacity":.5,stroke:"#fff","data-m":1},G.mini)});
  G.pin.innerHTML="";var selG=null;
@@ -367,7 +385,9 @@ function drawIcons(){if(!ICG){ICG=el("g",{"class":"g-ic"},svg);svg.insertBefore(
 // ---- 全画面の地図：下のカードを横にめくると、地図のピンが光る ----
 var FS=false,CAR=$(".car",box),carSig="",carItems=[],carLock=null,carQ=false;
 function buildCar(arr){var sig=arr.map(function(i){return i.k}).join("|")+"#"+level();if(sig===carSig)return;carSig=sig;carItems=arr.slice();
- CAR.innerHTML=arr.map(function(it,i){return '<div class="cc" data-i="'+i+'" style="--c:'+(PC[it.pref]||"#2B2622")+'">'+row(it,true).replace('<div class="t">','<div class="t">'+(level()===3&&it._n?'<i class="nb">'+it._n+'</i>':''))+'</div>'}).join("");
+ CAR.innerHTML=arr.map(function(it,i){var mm=muniOf(it),pl=mm?mm.grp.n:"",fr=it.tags.indexOf("無料")>=0;
+  var w='<div class="w">'+(pl?'<span class="cpl">'+esc(pl)+'</span>':'')+(fr?'<span class="cfr">無料</span>':'')+'</div>';
+  return '<div class="cc" data-i="'+i+'" style="--c:'+(PC[it.pref]||"#2B2622")+'">'+row(it,true).replace(/<u style[^>]*>無料<\/u>/,"").replace('<div class="t">','<div class="t">'+(level()===3&&it._n?'<i class="nb">'+it._n+'</i>':'')).replace('<div class="ac">',w+'<div class="ac">')+'</div>'}).join("");
  $$(".cc",CAR).forEach(function(c,i){var ac=$(".ac",c);if(ac){var g2=$(".go2",ac);if(g2)g2.remove();var ix=document.createElement("span");ix.className="ix";ix.textContent=(i+1)+" / "+arr.length;ac.appendChild(ix)}
   c.addEventListener("click",function(e){if(e.target.closest("a"))return;var it=carItems[i];if(sel!==it){carTo(it)}})});
  CAR.scrollLeft=0;if(arr.length&&(!sel||arr.indexOf(sel)<0)){sel=arr[0];setTimeout(function(){render()},0)}markCar()}
@@ -441,7 +461,7 @@ addEventListener("resize",function(){if(ready)apply()});
 mount();
 // 地図のデータは、はじめて開いたときだけ読む（開かない人は軽いまま）
 var loading=false;function load(){loading=true;
-Promise.all([fetch("townnotes/geo.json",{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return{}}),fetch("townnotes/kansai.json").then(function(r){return r.json()})]).then(function(a){
+Promise.all([fetch(TNB+"geo.json",{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return{}}),fetch(TNB+"kansai.json").then(function(r){return r.json()})]).then(function(a){
  Object.keys(a[0]).forEach(function(k){if(a[0][k][0]!=null)GEO[key(k)]=a[0][k]});setup(a[1]);drawIcons();ready=true;lastSig="";sync();window.__tnReady=true;
 }).catch(function(e){console.error(e);$(".fr",box).style.display="none"});}
 setOpen(OPEN);flUpd();
