@@ -32,7 +32,7 @@ var css=`
 .tn .pin .sh{fill:rgba(43,38,34,.20)}
 .tn .pin .hit{fill:transparent}
 .tn .pin .dot{stroke:#fff;stroke-width:1.6px;vector-effect:non-scaling-stroke}
-.tn .pin.soon .dot{fill:#fff!important;stroke-width:1.8px;stroke-dasharray:2.2 1.6}
+.tn .pin.soon .dot{stroke-width:2px;stroke-dasharray:2.4 1.5}
 .tn .pin .rg{fill:none;stroke-width:1.2px;vector-effect:non-scaling-stroke;opacity:0;transform-box:fill-box;transform-origin:center}
 .tn .pin.sel .rg{animation:tnrp 1.8s ease-out infinite}
 @keyframes tnrp{0%{opacity:.75;transform:scale(1)}100%{opacity:0;transform:scale(3.4)}}
@@ -104,7 +104,7 @@ function draw(drop){list=items();var pf=curPref(),tab=curTab();pins.innerHTML=""
  list.slice().sort(function(a,b){return (b.lat||0)-(a.lat||0)}).forEach(function(it){if(it.lat==null)return;shown++;
   var g=document.createElementNS(NS,"g");g.setAttribute("class","pin"+(it.soon?" soon":"")+(sel&&sel.k===it.k?" sel":""));g.dataset.x=X(it.lon);g.dataset.y=Y(it.lat);g.dataset.k=it.k;
   var c=PC[it.pref]||"#2B2622";
-  g.innerHTML='<ellipse class="sh" cx="0" cy=".55" rx=".75" ry=".24"/><circle class="rg" r=".8" stroke="'+c+'"/><g class="dw"><circle class="dot" r=".8" fill="'+c+'" stroke="'+(it.soon?c:"#fff")+'"/></g><circle class="hit" r="1.9"/>';
+  g.innerHTML='<ellipse class="sh" cx="0" cy=".55" rx=".75" ry=".24"/><circle class="rg" r=".8" stroke="'+c+'"/><g class="dw"><circle class="dot" r=".8" style="fill:'+(it.soon?"#fff":c)+';stroke:'+(it.soon?c:"#fff")+'"/></g><circle class="hit" r="1.9"/>';
   g.addEventListener("click",function(e){e.stopPropagation();openPin(it)});pins.appendChild(g);
   if(drop&&!matchMedia("(prefers-reduced-motion: reduce)").matches){var dw=$(".dw",g),dl=Math.min(n++*22,560);
    dw.animate([{transform:"translateY(-5px)",opacity:0},{transform:"translateY(0)",opacity:1,offset:.62},{transform:"translateY(-.7px) scaleY(.92)",offset:.8},{transform:"none",opacity:1}],{duration:480,delay:dl,easing:"ease-out",fill:"backwards"});}});
