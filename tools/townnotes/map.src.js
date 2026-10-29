@@ -17,7 +17,7 @@ function P(lon,lat){return [(lon-134)*82.2,(36-lat)*100]}
 // ---- 見た目 ----
 var css=`
 .tn{margin:0 0 18px}
-.tn-top{padding:6px 0 0}.tn-top .flt{margin:0 0 12px;gap:0 13px;flex-wrap:nowrap}.tn-top .cnt{margin:0 0 6px}
+.tn-top{padding:6px 0 0}.tn-top .flt{margin:0 0 12px;gap:0 13px;flex-wrap:nowrap}
 .tn .hd{display:flex;justify-content:space-between;align-items:flex-end;margin:2px 0 10px}
 .tn .hd .e{font-family:Jost,sans-serif;font-size:9.5px;letter-spacing:.36em;color:#A07E66}
 .tn .hd .j{display:block;font-family:"Shippori Mincho",serif;font-weight:600;font-size:15px;letter-spacing:.1em;color:#2B2622;margin-top:4px}
@@ -189,10 +189,9 @@ function toList(it){var w=it.w;if(w.classList.contains("cap")){var m=$(".cmore",
 
 // ---- 今のページとつなぐ ----
 function mount(){var bar=$(".tabs");if(!bar)return;
- // 府県ボタンと件数は、地図のすぐ上へ（タブ → 府県 → 件数 → 地図）
+ // 府県ボタンは地図のすぐ上へ（件数は押さないので上のまま）
  var top=$(".tn-top");if(!top){top=document.createElement("div");top.className="tn-top"}
  ["flt","none"].forEach(function(id){var e=document.getElementById(id);if(e&&e.parentNode!==top)top.appendChild(e)});
- var c=$(".cnt");if(c&&c.parentNode!==top)top.appendChild(c);
  if(bar.nextSibling!==top)bar.parentNode.insertBefore(top,bar.nextSibling);
  if(top.nextSibling!==box)top.parentNode.insertBefore(box,top.nextSibling);}
 function sync(){mount();if(!ready)return;var pf=curPref(),sig=pf+"|"+curTab();if(sig===lastSig)return;var first=!lastSig,pfChanged=first||lastSig.split("|")[0]!==pf;lastSig=sig;
