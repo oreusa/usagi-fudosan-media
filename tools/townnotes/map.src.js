@@ -161,7 +161,8 @@ function el(t,a,par){var e=document.createElementNS(NS,t);for(var k in a)e.setAt
 var DEFS=null,DP={};
 function mix(h,w){var n=parseInt(h.slice(1),16),r=n>>16,g=n>>8&255,b=n&255;return "rgb("+Math.round(r+(255-r)*w)+","+Math.round(g+(255-g)*w)+","+Math.round(b+(255-b)*w)+")"}
 function shade(h,k){var n=parseInt(h.slice(1),16);return "rgb("+Math.round((n>>16)*k)+","+Math.round((n>>8&255)*k)+","+Math.round((n&255)*k)+")"}
-function D(col){if(col==="#EFE9E1")return col;  // 選んでいない所は点なし（うるさくしない）
+function D(col){return col;  // 点描はやめた（10/29 オーナー：前の方が見やすい）。元の塗りのまま
+ if(col==="#EFE9E1")return col;  // 選んでいない所は点なし（うるさくしない）
  if(!DEFS){DEFS=el("defs",{},svg);svg.insertBefore(DEFS,svg.firstChild)}var id="dp"+col.slice(1);
  if(!DP[id]){var pt=el("pattern",{id:id,patternUnits:"userSpaceOnUse",width:4,height:4},DEFS);el("rect",{width:"100%",height:"100%",fill:mix(col,.55)},pt);DP[id]=el("circle",{cx:2,cy:2,r:1,fill:shade(col,.93)},pt)}
  return "url(#"+id+")"}
