@@ -35,7 +35,7 @@ var css=`
 .tn .lb{position:absolute;white-space:nowrap;transform:translate(-50%,-50%);text-shadow:0 0 2px #FDFCFA,0 0 3px #FDFCFA,0 0 6px rgba(253,252,250,.9)}
 .tn .lb.p{text-align:center;font-family:"Shippori Mincho",serif;font-weight:600;font-size:16px;letter-spacing:.16em;line-height:1.2}
 .tn .lb.p small{display:block;font-family:Jost,sans-serif;font-weight:400;font-size:8.5px;letter-spacing:.32em;margin-top:3px}
-.tn .lb.m{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;letter-spacing:.06em;color:#5C524A}
+.tn .lb.m{pointer-events:auto;cursor:pointer;padding:6px 4px;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;letter-spacing:.06em;color:#5C524A}
 .tn .lb.m b{font-family:Jost,sans-serif;font-weight:500;font-size:10px;color:#fff;background:var(--c);border-radius:8px;padding:0 5px;margin-left:4px;text-shadow:none}
 .tn .lb.w{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500;font-size:10px;letter-spacing:.06em;color:#9C8F84}
 .tn .lb.t.fl{transform:translate(calc(-100% - 12px),-50%)}
@@ -105,9 +105,9 @@ function inGeom(lon,lat,g){var ps=g.type==="Polygon"?[g.coordinates]:g.coordinat
 function el(t,a,par){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e}
 function setup(KS){
  KS.pref.features.forEach(function(f){var p=f.properties.p;PF[p]={bb:gbb(f.geometry),path:el("path",{d:geom2d(f.geometry),"class":"pf",fill:FILL[p]},G.pf)};
-  PF[p].path.addEventListener("click",function(){if(level()===1)pickPref(p)})});
+  PF[p].path.addEventListener("click",function(){if(level()===1&&PF[p].has)flash(PF[p].path,DEEP[p],function(){pickPref(p)})})});
  KS.muni.features.forEach(function(f){var pr=f.properties,m={p:pr.p,n:pr.n,c:pr.c,g:f.geometry,bb:gbb(f.geometry)};m.id=m.p+"|"+m.c+"|"+m.n;
-  m.path=el("path",{d:geom2d(f.geometry),"class":"mu"},G.mu);m.path.addEventListener("click",function(ev){if(level()===2&&state.pref===m.p){ev.stopPropagation();goMuni(m.grp)}});MU.push(m)});
+  m.path=el("path",{d:geom2d(f.geometry),"class":"mu"},G.mu);m.path.addEventListener("click",function(ev){if(level()===2&&state.pref===m.p&&m.grp.has){ev.stopPropagation();var g=m.grp;g.mus.forEach(function(x){x.path.style.fill=DEEP[x.p]});setTimeout(function(){goMuni(g)},180)}});MU.push(m)});
  // 大阪市・京都市・神戸市・堺市などは、区をまとめて「市」として寄る
  MU.forEach(function(m){var gid=m.p+"|"+(m.c||m.n);var g=GR[gid];if(!g){g=GR[gid]={id:gid,p:m.p,n:m.c||m.n,city:!!m.c,mus:[],bb:[1e9,1e9,-1e9,-1e9]}}g.mus.push(m);m.grp=g;g.bb=[Math.min(g.bb[0],m.bb[0]),Math.min(g.bb[1],m.bb[1]),Math.max(g.bb[2],m.bb[2]),Math.max(g.bb[3],m.bb[3])]});
  var b=[1e9,1e9,-1e9,-1e9];PREFS.forEach(function(p){var x=PF[p].bb;b=[Math.min(b[0],x[0]),Math.min(b[1],x[1]),Math.max(b[2],x[2]),Math.max(b[3],x[3])]});HOME=b;
@@ -137,19 +137,23 @@ var state={pref:"",muni:null},list=[],lastSig="",ready=false,sel=null;
 function level(){return state.muni?3:state.pref?2:1}
 function goMuni(g){state.muni=g;sel=null;pop.classList.remove("on");render();fly(fit(g.bb,g.city?.04:.22))}
 function goPref(){state.muni=null;sel=null;pop.classList.remove("on");render();fly(state.pref?fit(PF[state.pref].bb,.03):fit(HOME,.02))}
+// 押した所を一瞬こく光らせてから動く（押せたことが分かるように）
+function flash(path,col,fn){path.setAttribute("fill",col);setTimeout(fn,180)}
 function pickPref(pf){var b=$$("#flt button").filter(function(x){return x.textContent===(pf||"すべて")})[0];if(b)b.click();}
 function muniOf(it){if(it._m!==undefined)return it._m;it._m=null;for(var i=0;i<MU.length;i++){var m=MU[i];if(m.p===it.pref&&inGeom(it.lon,it.lat,m.g)){it._m=m;break}}
  if(!it._m){var q=P(it.lon,it.lat),best=1e9;MU.forEach(function(m){if(m.p!==it.pref)return;var cx=(m.bb[0]+m.bb[2])/2,cy=(m.bb[1]+m.bb[3])/2,d=(cx-q[0])*(cx-q[0])+(cy-q[1])*(cy-q[1]);if(d<best){best=d;it._m=m}})}return it._m}
 
 function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(function(i){return i.lat!=null});
- PREFS.forEach(function(p){var on=!pf||p===pf;PF[p].path.setAttribute("fill",on?FILL[p]:"#F1ECE5");});
+ PREFS.forEach(function(p){var n=pins.filter(function(i){return i.pref===p}).length;PF[p].has=n>0;var on=lv===1?n>0:p===pf;PF[p].path.setAttribute("fill",on?FILL[p]:"#F1ECE5");PF[p].path.style.cursor=lv===1&&n>0?"pointer":"default"});
  var cnt={};pins.forEach(function(i){if(i.pref!==pf)return;var mm=muniOf(i);if(mm){cnt[mm.grp.id]=(cnt[mm.grp.id]||0)+1}});
  var LIGHT=function(p){return {"大阪":"#FBEEE8","京都":"#F4EFF8","兵庫":"#EEF3FA","奈良":"#EEF6EC","滋賀":"#EAF6F8","和歌山":"#FCF3E4"}[p]};
+ Object.keys(GR).forEach(function(id){GR[id].has=!!cnt[id]});
+ if(lv===2)PF[pf].path.setAttribute("fill","#F1ECE5");
  if(lv===3)PF[pf].path.setAttribute("fill",LIGHT(pf));
- MU.forEach(function(x){var inP=x.p===pf;x.path.style.opacity=inP?1:0;x.path.style.pointerEvents=inP?"auto":"none";x.path.style.fill=m&&x.grp===m?FILL[x.p]:"transparent"});
+ MU.forEach(function(x){var inP=x.p===pf;x.path.style.opacity=inP?1:0;var hot=lv===2&&x.grp.has;x.path.style.pointerEvents=inP&&(lv!==2||hot)?"auto":"none";x.path.style.cursor=hot?"pointer":"default";x.path.style.fill=(m&&x.grp===m)||hot?FILL[x.p]:"transparent"});
  LBS.innerHTML="";LB=[];
- if(lv===1)PREFS.forEach(function(p){var c=LP[p],q=P(c[0],c[1]),n=pins.filter(function(i){return i.pref===p}).length;addL(q[0],q[1],"p",p+(n?"<small>"+n+" SPOTS</small>":""),9).style.color=PC[p]});
- if(lv===2)Object.keys(GR).forEach(function(id){var g=GR[id];if(g.p!==pf||!cnt[id])return;var cx=(g.bb[0]+g.bb[2])/2,cy=(g.bb[1]+g.bb[3])/2;addL(cx,cy,"m",esc(g.n)+"<b>"+cnt[id]+"</b>",cnt[id],PC[pf])});
+ if(lv===1)PREFS.forEach(function(p){var c=LP[p],q=P(c[0],c[1]),n=pins.filter(function(i){return i.pref===p}).length;addL(q[0],q[1],"p",p+(n?"<small>"+n+(n>1?" SPOTS":" SPOT")+"</small>":""),9).style.color=n?PC[p]:"#B9AFA5"});
+ if(lv===2)Object.keys(GR).forEach(function(id){var g=GR[id];if(g.p!==pf||!cnt[id])return;var cx=(g.bb[0]+g.bb[2])/2,cy=(g.bb[1]+g.bb[3])/2;var e=addL(cx,cy,"m",esc(g.n)+"<b>"+cnt[id]+"</b>",cnt[id],PC[pf]);e.addEventListener("click",function(ev){ev.stopPropagation();goMuni(g)})});
  if(lv===3&&m.city)m.mus.forEach(function(x){var cx=(x.bb[0]+x.bb[2])/2,cy=(x.bb[1]+x.bb[3])/2;addL(cx,cy,"w",esc(x.n),0)});
  G.pin.innerHTML="";
  pins.forEach(function(it){if(pf&&it.pref!==pf)return;var q=P(it.lon,it.lat),c=PC[it.pref]||"#2B2622",inM=lv===3&&muniOf(it)&&muniOf(it).grp===m,r=lv===1?2.6:lv===2?5:(inM?7:3.5);
@@ -165,7 +169,7 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
  if(lv===1)cur("関西");else{cb("関西",function(){pickPref("")});sep();if(lv===2)cur(pf);else{cb(pf,function(){goPref()});sep();cur(m.n)}}
  var ce=$(".cen",box);ce.textContent=pf?EN[pf]:"KANSAI";ce.style.color=pf?PC[pf]:"";ce.style.display=lv===1?"":"none";
  var bk=$(".bk",box);bk.style.display=lv===1?"none":"block";bk.textContent=lv===3?"‹ "+pf+"にもどる":"‹ 関西にもどる";bk.onclick=function(){if(level()===3)goPref();else pickPref("")};
- $(".hint",box).textContent=lv===1?"府県を押すと、近づきます":lv===2?"市や区を押すと、もっと近づきます":"ピンを押すと、くわしく見られます";
+ $(".hint",box).textContent=lv===1?"色のついた府県を押すと、近づきます":lv===2?"色のついた所を押すと、もっと近づきます":"ピンを押すと、くわしく見られます";
  $("#tnn",box).innerHTML=(lv===3?m.n:pf||"関西")+"の"+curTab()+"<b>"+(lv===3?(cnt[m.id]||0):pins.filter(function(i){return !pf||i.pref===pf}).length)+"</b>か所";
  apply();}
 
