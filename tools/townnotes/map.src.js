@@ -88,6 +88,8 @@ var css=`
 .tn .cen{position:absolute;right:18px;top:20px;z-index:5;font-family:Jost,sans-serif;font-size:9px;letter-spacing:.34em;color:#A39A90;transition:color .4s}
 .tn .hint{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;bottom:14px;background:rgba(255,255,255,.88);border-radius:99px;padding:5px 12px;z-index:5;text-align:center;font-family:"Zen Kaku Gothic New",sans-serif;font-size:10.5px;letter-spacing:.08em;color:#8C7B6E;pointer-events:none}
 .tn .hint:before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:#D9775A;margin-right:7px;vertical-align:1px}
+.tn .g-ic{pointer-events:none;transition:opacity .35s}
+.tn .ic .icb{filter:drop-shadow(0 1.5px 0 rgba(255,255,255,.9)) drop-shadow(0 2px 2px rgba(80,60,40,.18))}
 .tn .zm{position:absolute;right:12px;bottom:46px;z-index:6;display:flex;flex-direction:column;gap:6px}
 .tn .zm button,.tn .omk{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.94);border:1px solid #DDD3C8;box-shadow:0 1px 4px rgba(60,45,35,.1);color:#5E534B;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;padding:0}
 .tn .zm button{width:36px;height:36px;border-radius:50%;font-family:Jost,sans-serif;font-size:19px;font-weight:400;line-height:1}
@@ -197,7 +199,8 @@ FR.addEventListener("click",function(e){if(moved&&!e.target.closest("button")){e
  if(hit){e.stopPropagation();hit.e.click()}},true);
 function px(){var r=svg.getBoundingClientRect();return vb[2]/(r.width||360)}  // 画面の1pxが地図の何単位か
 // full=false：動いている途中（軽く：文字の位置だけ動かす）／full：止まったとき（文字の重なりも整える）
-function apply(full){if(full===undefined)full=true;svg.setAttribute("viewBox",vb.join(" "));var u=px(),lv=level();dotSize(u);G.sh.setAttribute("transform","translate("+(1.4*u)+" "+(2.2*u)+")");
+function apply(full){if(full===undefined)full=true;svg.setAttribute("viewBox",vb.join(" "));var u=px(),lv=level();dotSize(u);
+ if(ICG){ICG.style.opacity=lv===1?1:0;$$(".ic",ICG).forEach(function(g){var k=34/40*u;g.setAttribute("transform","translate("+(g.__q[0]-20*k)+" "+(g.__q[1]-20*k)+") scale("+k+")")})}G.sh.setAttribute("transform","translate("+(1.4*u)+" "+(2.2*u)+")");
  // 文字は HTML で重ねる（小さくてもきれいに出る）。重なる文字は、大事な方だけ出す
  var r=svg.getBoundingClientRect(),placed=[];
  function pos(l){var x=((l.flip?l.x2:l.x)-vb[0])/vb[2]*r.width,y=(l.y-vb[1])/vb[3]*r.height;l.e.style.transform="translate("+x.toFixed(1)+"px,"+y.toFixed(1)+"px) "+(l.side?(l.flip?"translate(calc(-100% - 8px),-50%)":"translate(8px,-50%)"):"translate(-50%,-50%)")}
@@ -310,6 +313,21 @@ $(".x",pop).addEventListener("click",closePop);
 function toList(it){var w=it.w;if(w.classList.contains("cap")){var m=$(".cmore",w.parentNode);if(m)m.click();}
  w.classList.add("tnf");w.style.setProperty("--pc",PC[it.pref]||"#2B2622");w.scrollIntoView({behavior:"smooth",block:"center"});setTimeout(function(){w.classList.remove("tnf")},2200)}
 
+
+// ---- 名物の絵（関西の画面だけ。見て楽しむ飾りなので押せない） ----
+// 形は 40×40 の中に描く。線は府県の色、中は白
+var ICON={
+ "大阪":{at:[135.02,34.27],n:"大阪城",s:'<path d="M8 33h24l-2-6H10z" fill="#EADBC8"/><path d="M12 27h16v-6H12z" fill="#fff"/><path d="M9 21h22l-4-4H13z" fill="#7FAE9A"/><path d="M14 17h12v-4H14z" fill="#fff"/><path d="M11 13h18l-4-4H15z" fill="#7FAE9A"/><path d="M18 9l2-3 2 3" fill="#E7B84B"/><path d="M18 27v-3h4v3" fill="#C9A27A"/>'},
+ "京都":{at:[135.80,35.36],n:"五重塔",s:'<path d="M20 3v5"/><path d="M11 12h18l-3-4H14z" fill="#fff"/><path d="M12 17h16l-3-4H15z" fill="#fff"/><path d="M11 22h18l-3-4H14z" fill="#fff"/><path d="M10 27h20l-3-4H13z" fill="#fff"/><path d="M9 32h22l-3-4H12z" fill="#fff"/><path d="M14 32v3h12v-3" fill="#EADBC8"/>'},
+ "兵庫":{at:[134.40,34.85],n:"姫路城",s:'<path d="M9 34h22l-2-5H11z" fill="#EADBC8"/><path d="M12 29h16v-5H12z" fill="#fff"/><path d="M10 24h20l-4-4H14z" fill="#fff"/><path d="M14 20h12v-4H14z" fill="#fff"/><path d="M12 16h16l-4-4h-8z" fill="#fff"/><path d="M16 12h8v-3h-8z" fill="#fff"/><path d="M15 9h10l-2-3h-6z" fill="#fff"/>'},
+ "奈良":{at:[135.97,34.02],n:"鹿",s:'<path d="M12 22c0-4 4-6 10-6h4c3 0 5 2 5 5v2c0 3-2 4-5 4H15c-2 0-3-2-3-5z" fill="#E9CFA9"/><path d="M15 27v7M19 27v7M25 27v7M29 26v8"/><path d="M28 17l2-7 4-2c1 0 2 1 1 3l-2 2" fill="#E9CFA9"/><path d="M29 9l-1-4M31 8l2-4M27 6l-2-1M33 5l2 0"/><circle cx="18" cy="21" r="1" fill="#fff" stroke="none"/><circle cx="22" cy="20" r="1" fill="#fff" stroke="none"/><circle cx="31.5" cy="11.5" r=".8" fill="#2B2622" stroke="none"/>'},
+ "滋賀":{at:[136.12,35.43],n:"びわ湖",s:'<path d="M6 30c3 2 6 2 9 0s6-2 9 0 6 2 9 0" fill="none"/><path d="M9 26h22l-3 4H12z" fill="#fff"/><path d="M20 6v20"/><path d="M20 8l9 14h-9z" fill="#fff"/><path d="M19 11l-7 11h7z" fill="#D8EEF2"/>'},
+ "和歌山":{at:[135.72,33.72],n:"パンダ",s:'<circle cx="12" cy="11" r="4" fill="#3A322C"/><circle cx="28" cy="11" r="4" fill="#3A322C"/><circle cx="20" cy="21" r="12" fill="#fff"/><ellipse cx="15.5" cy="20" rx="3" ry="3.6" fill="#3A322C" transform="rotate(-20 15.5 20)"/><ellipse cx="24.5" cy="20" rx="3" ry="3.6" fill="#3A322C" transform="rotate(20 24.5 20)"/><circle cx="16" cy="19.5" r="1" fill="#fff" stroke="none"/><circle cx="24" cy="19.5" r="1" fill="#fff" stroke="none"/><path d="M18.5 25.5h3l-1.5 1.5z" fill="#3A322C"/>'}
+};
+var ICG=null;
+function drawIcons(){if(!ICG){ICG=el("g",{"class":"g-ic"},svg);svg.insertBefore(ICG,G.mini)}ICG.innerHTML="";
+ PREFS.forEach(function(p){var I=ICON[p];if(!I)return;var q=P(I.at[0],I.at[1]),g=el("g",{"class":"ic"},ICG);g.__q=q;
+  g.innerHTML='<g class="icb" fill="none" stroke="'+PC[p]+'" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">'+I.s+'</g>';var t=el("title",{},g);t.textContent=I.n})}
 // ---- ＋／−／⟳ボタン（指の操作なしで、寄る・引く・最初にもどる） ----
 function zoomBy(k){var H0=fit(HOME,.02),cx=vb[0]+vb[2]/2,cy=vb[1]+vb[3]/2,W=Math.max(10,Math.min(vb[2]*k,H0[2])),H=W*vb[3]/vb[2];
  if(W>=H0[2]-1e-6){fly(H0);return}fly([cx-W/2,cy-H/2,W,H])}
@@ -361,7 +379,7 @@ mount();
 // 地図のデータは、はじめて開いたときだけ読む（開かない人は軽いまま）
 var loading=false;function load(){loading=true;
 Promise.all([fetch("/townnotes/geo.json",{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return{}}),fetch("/townnotes/kansai.json").then(function(r){return r.json()})]).then(function(a){
- Object.keys(a[0]).forEach(function(k){if(a[0][k][0]!=null)GEO[key(k)]=a[0][k]});setup(a[1]);ready=true;lastSig="";sync();window.__tnReady=true;
+ Object.keys(a[0]).forEach(function(k){if(a[0][k][0]!=null)GEO[key(k)]=a[0][k]});setup(a[1]);drawIcons();ready=true;lastSig="";sync();window.__tnReady=true;
 }).catch(function(e){console.error(e);$(".fr",box).style.display="none"});}
 setOpen(OPEN);flUpd();
 })();
