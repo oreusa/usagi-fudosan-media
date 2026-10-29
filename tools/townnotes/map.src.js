@@ -385,6 +385,13 @@ function buildHead(){var tb=$(".fsh .tb",box),pr=$(".fsh .pf",box);tb.innerHTML=
  $$("#flt button").forEach(function(b){var x=document.createElement("button");x.type="button";x.textContent=b.textContent;if(PC[b.textContent])x.style.setProperty("--c",PC[b.textContent]);if(b.classList.contains("on"))x.className="on";x.onclick=function(){b.click();setTimeout(function(){sync();buildHead()},120)};pr.appendChild(x)})}
 // スマホの「戻る」でも地図を閉じる
 addEventListener("popstate",function(){if(OPEN)setOpen(false,true)});
+// 別のページから戻った時・開き直した時は、地図を閉じて最初の状態から（前の続きのまま残さない）
+function fresh(){var st=history.state;if(st&&st.tnmap)try{history.replaceState(null,"")}catch(e){}
+ if(OPEN)setOpen(false,true);
+ var t=$(".tabs button");if(t&&!t.classList.contains("on"))t.click();
+ var a=$("#flt button");if(a&&!a.classList.contains("on"))a.click()}
+addEventListener("pageshow",function(e){if(e.persisted)fresh()});
+if(history.state&&history.state.tnmap)fresh();
 $(".fsh .cl",box).addEventListener("click",function(){if(history.state&&history.state.tnmap)history.back();else setOpen(false)});
 // ---- ＋／−／⟳ボタン（指の操作なしで、寄る・引く・最初にもどる） ----
 function zoomBy(k){var H0=fit(HOME,.02),cx=vb[0]+vb[2]/2,cy=vb[1]+vb[3]/2,W=Math.max(10,Math.min(vb[2]*k,H0[2])),H=W*vb[3]/vb[2];
