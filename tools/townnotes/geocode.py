@@ -23,19 +23,22 @@ def gsi(q):
 src = open(SRC, encoding='utf-8').read()
 old = json.load(open(OUT)) if os.path.exists(OUT) else {}
 res = {}
-for m in re.finditer(r'<a class="card"([^>]*)>(.*?)</a>', src, re.S):
+for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', src, re.S):
     attrs, body = m.group(1), m.group(2)
     a = dict(re.findall(r'data-(\w+)="([^"]*)"', attrs))
     t = re.search(r'class="t">(.*?)</div>', body); mm = re.search(r'class="m">(.*?)</div>', body)
     if not t: continue
     title = html.unescape(re.sub('<[^>]+>', '', t.group(1))).strip()
     if title in res: continue
-    if title in old and old[title][2] != 'pref': res[title] = old[title]; continue
+    if title in old and old[title][2] not in ('pref', 'city', 'none'): res[title] = old[title]; continue
     pref = a.get('pref', ''); place = html.unescape(a.get('map', ''))
     city, spot = '', ''
     if mm:
         parts = html.unescape(mm.group(1)).split('｜'); city = parts[0].strip(); spot = parts[1].strip() if len(parts) > 1 else ''
-    tries = [('place', nomi, place), ('spot', nomi, (spot + ' ' + city).strip()), ('title', nomi, title + ' ' + city), ('city', gsi, city), ('city', nomi, city)]
+    pf = {'大阪': '大阪府', '京都': '京都府', '兵庫': '兵庫県', '奈良': '奈良県', '滋賀': '滋賀県', '和歌山': '和歌山県'}.get(pref, '')
+    tries = [('place', nomi, place), ('spot', nomi, (spot + ' ' + city).strip()), ('title', nomi, title + ' ' + city),
+             ('spot', nomi, (spot + ' ' + pf).strip() if spot else ''), ('spot', nomi, spot), ('place', nomi, place.split(' ')[0] + ' ' + pf if place else ''),
+             ('spot', gsi, spot), ('city', gsi, city), ('city', nomi, city)]
     got = None
     for kind, fn, q in tries:
         if not q: continue

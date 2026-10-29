@@ -1,12 +1,19 @@
-"""TOWN NOTES（仮）のページを作る: python3 tools/townnotes/build.py
-地図はリールと同じ（tools/outing_reel/paths.json）。出力 links/townnotes/index.html"""
+"""TOWN NOTES（仮）: 今のおでかけリスト（links/index.html）に地図を組み込んだ試作を作る。
+python3 tools/townnotes/build.py → links/townnotes/index.html と links/townnotes/map.js
+本番にするときは links/index.html に <script src="/townnotes/map.js" defer></script> を足すだけ。"""
 import json, os
-D = os.path.dirname(os.path.abspath(__file__)); R = os.path.join(D, '..', '..')
+D = os.path.dirname(os.path.abspath(__file__)); R = os.path.abspath(os.path.join(D, '..', '..'))
 P = json.load(open(os.path.join(R, 'tools/outing_reel/paths.json')))
-JP = {'osaka': '大阪', 'kyoto': '京都', 'hyogo': '兵庫', 'nara': '奈良', 'shiga': '滋賀', 'wakayama': '和歌山'}
-mo = ''.join(f'<path class="mo" d="{d}"/>' for k, d in P.items() if k not in JP)
-mk = ''.join(f'<path class="mk" id="p_{k}" data-pref="{v}" d="{P[k]}"/>' for k, v in JP.items())
-svg = f'<svg id="map" viewBox="200.5 251 60 60" preserveAspectRatio="xMidYMid slice"><g id="base">{mo}{mk}</g><g id="pins"></g></svg>'
-h = open(os.path.join(D, 'page.tpl.html'), encoding='utf-8').read().replace('__SVG__', svg)
+js = open(os.path.join(D, 'map.src.js'), encoding='utf-8').read().replace('__PATHS__', json.dumps(P, separators=(',', ':')))
 os.makedirs(os.path.join(R, 'links/townnotes'), exist_ok=True)
+open(os.path.join(R, 'links/townnotes/map.js'), 'w', encoding='utf-8').write(js)
+h = open(os.path.join(R, 'links/index.html'), encoding='utf-8').read()
+h = h.replace('<head><meta charset="utf-8">', '<head><meta charset="utf-8"><base href="/">', 1)
+# 試作ページは数えない（本番の数字を汚さない）
+old = 'return localStorage.getItem("usagi_owner")==="1";}catch(e){return false;}})();'
+assert h.count(old) == 1; h = h.replace(old, 'return true;}catch(e){return true;}})();')
+h = h.replace('<title>関西おでかけリスト</title>', '<title>関西おでかけリスト（地図つき試作）</title>')
+badge = '<div style="position:fixed;top:8px;left:8px;z-index:50;font-family:Jost,sans-serif;font-size:10px;letter-spacing:.2em;background:#2B2622;color:#fff;padding:2px 8px;pointer-events:none">PROTOTYPE</div>'
+h = h.replace('</body></html>', badge + '<script src="/townnotes/map.js" defer></script></body></html>')
+assert 'townnotes/map.js' in h
 open(os.path.join(R, 'links/townnotes/index.html'), 'w', encoding='utf-8').write(h); print('ok')
