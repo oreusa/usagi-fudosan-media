@@ -4,9 +4,20 @@ python3 tools/townnotes/build.py → links/townnotes/index.html と links/townno
 import json, os
 D = os.path.dirname(os.path.abspath(__file__)); R = os.path.abspath(os.path.join(D, '..', '..'))
 P = json.load(open(os.path.join(R, 'tools/outing_reel/paths.json')))
-js = open(os.path.join(D, 'map.src.js'), encoding='utf-8').read().replace('__PATHS__', json.dumps(P, separators=(',', ':')))
+
+def assemble(region, site, mini):
+    """地図の本体（map.src.js）に、地域の設定（region-*.js）とページとのつなぎ（site-*.js）を入れる。
+    mini = 「地図で見る」ボタンの小さい絵（府県名 → 形のpath）"""
+    core = open(os.path.join(D, 'map.src.js'), encoding='utf-8').read()
+    reg = open(region, encoding='utf-8').read()
+    reg = reg[reg.index('{'):].replace('__MINI__', json.dumps(mini, ensure_ascii=False, separators=(',', ':')))
+    st = open(site, encoding='utf-8').read()
+    assert core.count('__REGION__') == 1 and core.count('/*@SITE*/') == 1
+    return core.replace('__REGION__', reg.strip()).replace('/*@SITE*/', st.strip())
+
 # 「地図で見る」ボタンの小さい関西の絵（府県の形だけ。大きさはページで測る）
-js = js.replace('__MINI__', json.dumps({k: P[k] for k in ['hyogo','kyoto','shiga','osaka','nara','wakayama']}, separators=(',', ':')))
+MK = {'hyogo': '兵庫', 'kyoto': '京都', 'shiga': '滋賀', 'osaka': '大阪', 'nara': '奈良', 'wakayama': '和歌山'}
+js = assemble(os.path.join(D, 'region-kansai.js'), os.path.join(D, 'site-tsuki.js'), {MK[k]: P[k] for k in MK})
 
 os.makedirs(os.path.join(R, 'links/townnotes'), exist_ok=True)
 open(os.path.join(R, 'links/townnotes/map.js'), 'w', encoding='utf-8').write(js)
