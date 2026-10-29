@@ -63,6 +63,18 @@ var css=`
 .tn .lb.hide{visibility:hidden}
 .tn .hit{fill:transparent;cursor:pointer}
 .tn .sel-r{fill:none;opacity:.5}
+.tn .pinx{transition:opacity .25s}
+.tn .pinx.dim{opacity:.35}
+.tn .glo{fill:none;stroke-width:2;transform-box:fill-box;transform-origin:center;animation:tnglo 1.3s cubic-bezier(.2,.7,.3,1) 3;opacity:0}
+@keyframes tnglo{0%{transform:scale(.7);opacity:.85}100%{transform:scale(2.1);opacity:0}}
+@media (prefers-reduced-motion:reduce){.tn .glo{animation:none}}
+.tn .chips button.sp{transition:background .2s,border-left-width .2s}
+.tn .chips button.sp.on{background:color-mix(in srgb,var(--c) 9%,#fff);border-left-width:7px}
+.tn .chips button.sp.on i{transform:scale(1.15);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 22%,#fff)}
+.tn .chips button.sp.on:after{content:"−"}
+.tn .chips .pop{flex:1 1 100%;margin-top:-8px}
+.tn .chips .pop .nb{display:none}
+.tn .pop .nb{display:inline-block;vertical-align:2px;margin-right:8px;width:22px;height:22px;line-height:22px;border-radius:50%;background:var(--pc);color:#fff;text-align:center;font-family:Jost,sans-serif;font-style:normal;font-weight:600;font-size:12px}
 .tn .crumb{position:absolute;left:18px;top:16px;z-index:5;display:flex;align-items:center;gap:6px;font-family:"Shippori Mincho",serif;font-weight:600;font-size:13px;letter-spacing:.08em;color:#2B2622}
 .tn .crumb button{font:inherit;color:#8C7B6E;background:none;border:0;padding:6px 0;cursor:pointer;text-decoration:underline;text-decoration-color:#D9CFC4;text-underline-offset:4px}
 .tn .crumb i{font-style:normal;font-family:Jost,sans-serif;color:#B3AAA1;font-weight:300}
@@ -207,18 +219,19 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
   var x1=Math.max.apply(null,gp.map(function(q){return q[0]})),x0=Math.min.apply(null,gp.map(function(q){return q[0]})),cy=gp.reduce(function(a,q){return a+q[1]},0)/gp.length;
   var e=addL(x1,cy,"m",esc(g.n)+"<b>"+cnt[id]+"</b>",cnt[id],PC[pf]);LB[LB.length-1].side=1;LB[LB.length-1].x2=x0;e.addEventListener("click",function(ev){ev.stopPropagation();goMuni(g)})});
  if(lv===3&&m.city)m.mus.forEach(function(x){var cx=(x.bb[0]+x.bb[2])/2,cy=(x.bb[1]+x.bb[3])/2;addL(cx,cy,"w"+(hw[x.id]?" h":""),esc(x.n),hw[x.id]?2:0)});
- G.pin.innerHTML="";
+ G.pin.innerHTML="";var selG=null;
  // 市の画面では、ピンに北から順に番号をふる（下の一覧と同じ番号）
  var NUM=lv===3?pins.filter(function(i){var mm=muniOf(i);return mm&&mm.grp===m}).sort(function(a,b){return b.lat-a.lat||a.lon-b.lon}):[];NUM.forEach(function(it,i){it._n=i+1});
- pins.forEach(function(it){if(pf&&it.pref!==pf)return;var q=P(it.lon,it.lat),c=PC[it.pref]||"#2B2622",inM=lv===3&&muniOf(it)&&muniOf(it).grp===m,r=lv===1?2.6:lv===2?5:(inM?9:3.5);
-  var g=el("g",{"class":"pinx"},G.pin);g.dataset.r=r;
+ pins.forEach(function(it){if(pf&&it.pref!==pf)return;var q=P(it.lon,it.lat),c=PC[it.pref]||"#2B2622",inM=lv===3&&muniOf(it)&&muniOf(it).grp===m,isS=sel&&sel.k===it.k,r=lv===1?2.6:lv===2?5:(inM?(isS?11:9):3.5);
+  var g=el("g",{"class":"pinx"+(lv===3&&sel&&inM&&!isS?" dim":"")},G.pin);g.dataset.r=r;if(isS)selG=g;
   if(lv>1)el("circle",{"class":"psh",cx:q[0],cy:q[1]},g);
-  if(sel&&sel.k===it.k)el("circle",{"class":"sel-r",cx:q[0],cy:q[1],stroke:c},g);
+  if(isS){el("circle",{"class":"sel-r",cx:q[0],cy:q[1],stroke:c},g);if(inM)el("circle",{"class":"glo",cx:q[0],cy:q[1],stroke:c},g)}
   el("circle",{"class":"dot",cx:q[0],cy:q[1],fill:it.soon?"#fff":c,stroke:it.soon?c:"#fff"},g);
   if(inM){var t=el("text",{"class":"pn",x:q[0],y:q[1]},g);t.textContent=it._n;g.dataset.n=1;if(it.soon)t.setAttribute("fill",c)}
   g.__it=it;g.__q=q;
   var h=el("circle",{"class":"hit",cx:q[0],cy:q[1]},g);h.addEventListener("click",function(ev){ev.stopPropagation();tapPin(it)});
   });
+ if(selG)G.pin.appendChild(selG);  // 選んだピンをいちばん上に
  var cr=$(".crumb",box);cr.innerHTML="";
  function cb(txt,fn){var b=document.createElement("button");b.type="button";b.textContent=txt;b.onclick=fn;cr.appendChild(b)}
  function sep(){var i=document.createElement("i");i.textContent="›";cr.appendChild(i)}
@@ -226,10 +239,11 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
  if(lv===1)cur("関西");else{cb("関西",function(){pickPref("")});sep();if(lv===2)cur(pf);else{cb(pf,function(){goPref()});sep();cur(m.n)}}
  var ce=$(".cen",box);ce.textContent=pf?EN[pf]:"KANSAI";ce.style.color=pf?PC[pf]:"";ce.style.display=lv===1?"":"none";
  var bk=$(".bk",box);bk.style.display=lv===1?"none":"block";bk.textContent=lv===3?"‹ "+pf+"にもどる":"‹ 関西にもどる";bk.onclick=function(){if(level()===3)goPref();else pickPref("")};
- var ch=$(".chips",box);ch.innerHTML="";
- if(lv===3)NUM.forEach(function(it){var b=document.createElement("button");b.type="button";b.className="sp";b.style.setProperty("--c",PC[pf]);b.innerHTML="<i>"+it._n+"</i><span>"+esc(it.t)+"</span>";b.onclick=function(){openPin(it)};ch.appendChild(b)});
+ var ch=$(".chips",box);if(pop.parentNode===ch)box.insertBefore(pop,ch);ch.innerHTML="";
+ if(lv===3)NUM.forEach(function(it){var b=document.createElement("button");b.type="button";b.className="sp";b.style.setProperty("--c",PC[pf]);b.dataset.k=it.k;if(sel&&sel.k===it.k&&pop.classList.contains("on"))b.classList.add("on");b.innerHTML="<i>"+it._n+"</i><span>"+esc(it.t)+"</span>";b.onclick=function(){if(sel&&sel.k===it.k&&pop.classList.contains("on"))closePop();else openPin(it,null,"list")};ch.appendChild(b)});
  if(lv===2){Object.keys(GR).map(function(id){return GR[id]}).filter(function(g){return g.p===pf&&cnt[g.id]}).sort(function(a,b){return cnt[b.id]-cnt[a.id]}).forEach(function(g){var b=document.createElement("button");b.type="button";b.style.setProperty("--c",PC[pf]);if(m===g)b.className="cur";b.innerHTML=esc(g.n)+"<b>"+cnt[g.id]+"</b>";b.onclick=function(){if(state.muni!==g)goMuni(g)};ch.appendChild(b)})}
  ch.classList.toggle("on",lv>1&&ch.children.length>0);ch.classList.toggle("l3",lv===3);
+ placePop();
  $(".hint",box).textContent=lv===1?"色のついた府県を押すと、近づきます":lv===2?"下のボタンか、色のついた所を押すと近づきます":"番号を押すか、下の一覧から選べます";
  $("#tnn",box).innerHTML=(lv===3?m.n:pf||"関西")+"の"+curTab()+"<b>"+(lv===3?(cnt[m.id]||0):pins.filter(function(i){return !pf||i.pref===pf}).length)+"</b>か所";
  apply();}
@@ -245,11 +259,16 @@ function row(it,full){var c=PC[it.pref]||"#2B2622";
  var h='<div class="d"><i style="color:'+c+'">● '+esc(it.pref)+'</i>'+esc(it.d)+it.tags.map(function(t){return '<u style="color:#5E8A4A">'+esc(t)+'</u>'}).join("")+'</div><div class="t">'+esc(it.t)+'</div>';
  if(full)h+='<div class="ac"><a href="'+esc(it.href)+'" target="_blank" rel="noopener" data-k="地図ピン｜'+esc(it.t)+'">くわしく見る →</a>'+(it.map?'<a href="'+esc(it.map)+'" target="_blank" rel="noopener" data-k="地図ピン地図｜'+esc(it.t)+'">行き方 ↗</a>':'')+'<a href="#" class="go2">リストで見る ↓</a></div>';
  return h}
-function openPin(it,near){if(!it)return;sel=it;near=(near&&near.length?near:[it]).slice();near.sort(function(a,b){return a===it?-1:b===it?1:0});
+// カードの出る場所：地図で押したら地図のすぐ下、一覧で押したらその行のすぐ下
+var popAt="map";
+function placePop(){var ch=$(".chips",box),row=popAt==="list"&&sel&&level()===3?$$("button.sp",ch).filter(function(b){return b.dataset.k===String(sel.k)})[0]:null;
+ if(row)row.after(pop);else if(pop.previousElementSibling!==$(".fr",box))$(".fr",box).after(pop)}
+function openPin(it,near,from){if(!it)return;sel=it;popAt=from==="list"?"list":"map";near=(near&&near.length?near:[it]).slice();near.sort(function(a,b){return a===it?-1:b===it?1:0});
  var pb=$(".pb",pop);pop.style.setProperty("--pc",PC[it.pref]||"#2B2622");
  if(near.length>1){pb.innerHTML='<div class="gh">この辺りに '+near.length+' 件</div>'+near.map(function(o,i){return '<div class="pi'+(i?" mini":"")+'" data-i="'+i+'">'+row(o,!i)+'</div>'}).join("");
   $$(".pi.mini",pb).forEach(function(e){e.addEventListener("click",function(){openPin(near[+e.dataset.i],near)})});}
  else pb.innerHTML='<div class="pi">'+row(it,true)+'</div>';
+ var t1=$(".t",pb);if(t1&&level()===3&&it._n){var nb=document.createElement("i");nb.className="nb";nb.textContent=it._n;t1.prepend(nb)}  // 地図と同じ番号をカードにも
  var g2=$(".go2",pb);if(g2)g2.addEventListener("click",function(e){e.preventDefault();toList(it)});
  pop.classList.add("on");render();
  setTimeout(function(){var b=pop.getBoundingClientRect();if(b.bottom>innerHeight-20)scrollBy({top:Math.min(b.bottom-innerHeight+40,b.top-60),behavior:"smooth"})},60);}
