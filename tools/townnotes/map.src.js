@@ -94,15 +94,18 @@ var css=`
 .tn.fs{position:fixed;left:0;right:0;top:0;bottom:0;height:100dvh;z-index:200;margin:0;background:#FDFCFA;display:flex;flex-direction:column;overscroll-behavior:contain}
 .tn.fs .fr{flex:1 1 auto;min-height:0;aspect-ratio:auto;margin:0;touch-action:none}
 .tn.fs .chips,.tn.fs .pop,.tn.fs .lg{display:none!important}
+.tn.fs .fr:before{display:none}
 .tn .fsh{display:none}
-.tn.fs .fsh{display:block;flex:none;padding:10px 14px 6px;background:#fff;border-bottom:1px solid #EAE2D9;box-shadow:0 2px 10px rgba(60,45,35,.06);position:relative;z-index:8}
-.tn .fsh .ttl{display:flex;align-items:center;justify-content:space-between;margin:0 0 8px}
-.tn .fsh .ttl b{font-family:"Shippori Mincho",serif;font-weight:600;font-size:16px;letter-spacing:.12em;color:#2B2622}
-.tn .fsh .ttl b small{display:block;font-family:Jost,sans-serif;font-weight:400;font-size:8.5px;letter-spacing:.3em;color:#A39A90;margin-bottom:2px}
-.tn .fsh .cl{width:40px;height:40px;border-radius:50%;border:1px solid #DDD3C8;background:#fff;font-family:Jost,sans-serif;font-size:20px;color:#5E534B;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.tn.fs .fsh{display:block;flex:none;padding:8px 14px 4px;background:#fff;border-bottom:1px solid #EAE2D9;box-shadow:0 2px 10px rgba(60,45,35,.06);position:relative;z-index:8}
+.tn .fsh .ttl{display:flex;align-items:center;justify-content:space-between;margin:0 0 6px}
+.tn .fsh .ttl b{display:flex;align-items:baseline;gap:10px;font-family:"Shippori Mincho",serif;font-weight:600;font-size:16px;letter-spacing:.12em;color:#2B2622}
+@media(max-width:379px){.tn .fsh .ttl b small{display:none}}
+.tn .fsh .ttl b{white-space:nowrap}
+.tn .fsh .ttl b small{order:2;font-family:Jost,sans-serif;font-weight:400;font-size:8.5px;letter-spacing:.3em;color:#A39A90}
+.tn .fsh .cl{width:36px;height:36px;border-radius:50%;border:1px solid #DDD3C8;background:#fff;font-family:Jost,sans-serif;font-size:20px;color:#5E534B;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
 .tn .fsh .row{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px 0 6px}
 .tn .fsh .row::-webkit-scrollbar{display:none}
-.tn .fsh .row button{flex:none;height:34px;padding:0 13px;border-radius:17px;border:1px solid #E2D9CF;background:#fff;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.04em;color:#5E534B;cursor:pointer;white-space:nowrap}
+.tn .fsh .row button{flex:none;height:32px;padding:0 13px;border-radius:17px;border:1px solid #E2D9CF;background:#fff;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.04em;color:#5E534B;cursor:pointer;white-space:nowrap}
 .tn .fsh .row button.on{background:#2B2622;border-color:#2B2622;color:#fff}
 .tn .fsh .row.pf button{color:var(--c,#5E534B)}
 .tn .fsh .row.pf button.on{background:var(--c,#2B2622);border-color:var(--c,#2B2622);color:#fff}
@@ -120,9 +123,9 @@ var css=`
 .tn .cc .ac{display:flex;gap:16px;align-items:center}
 .tn .cc .ac a{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12px;color:#2B2622;text-decoration:none;border-bottom:1px solid #CFC4B8;padding:6px 0 2px}
 .tn .cc .ac .ix{margin-left:auto;font-family:Jost,sans-serif;font-size:10.5px;color:#B3AAA1;letter-spacing:.08em}
-.tn .zm{position:absolute;right:12px;bottom:46px;z-index:6;display:flex;flex-direction:column;gap:6px}
+.tn .zm{position:absolute;right:10px;bottom:46px;z-index:6;display:flex;flex-direction:column;gap:6px}
 .tn .zm button,.tn .omk{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.94);border:1px solid #DDD3C8;box-shadow:0 1px 4px rgba(60,45,35,.1);color:#5E534B;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;padding:0}
-.tn .zm button{width:36px;height:36px;border-radius:50%;font-family:Jost,sans-serif;font-size:19px;font-weight:400;line-height:1}
+.tn .zm button{width:34px;height:34px;border-radius:50%;font-family:Jost,sans-serif;font-size:19px;font-weight:400;line-height:1}
 .tn .zm button:active,.tn .omk:active{transform:scale(.93)}
 .tn .omk{position:absolute;left:12px;bottom:46px;z-index:6;gap:6px;height:36px;padding:0 14px;border-radius:18px;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12px;letter-spacing:.06em}
 .tn .omk svg{width:15px;height:15px}
@@ -160,7 +163,7 @@ var box=document.createElement("div");box.className="tn";
 box.innerHTML=''+
  '<div class="fsh"><div class="ttl"><b><small>TOWN NOTES MAP</small>関西おでかけマップ</b><button type="button" class="cl" aria-label="地図を閉じる">×</button></div><div class="row tb"></div><div class="row pf"></div></div>'+
  '<div class="fr"><svg class="m" preserveAspectRatio="xMidYMid meet"><g class="g-sh"></g><g class="g-pf"></g><g class="g-mu"></g><g class="g-mini"></g><g class="g-pin"></g></svg><div class="lbs"></div>'+
- '<div class="crumb"></div><div class="n" id="tnn"></div><div class="cen">KANSAI</div><button type="button" class="bk"></button><div class="hint"></div><div class="zm"><button type="button" data-z="in" aria-label="近づく">＋</button><button type="button" data-z="out" aria-label="はなれる">−</button><button type="button" data-z="home" aria-label="最初にもどる">⟳</button></div><button type="button" class="omk"><svg viewBox="0 0 24 24" fill="none" stroke="#B5532F" stroke-width="1.8" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="9" cy="9" r="1.2" fill="#B5532F"/><circle cx="15" cy="15" r="1.2" fill="#B5532F"/><circle cx="15" cy="9" r="1.2" fill="#B5532F"/><circle cx="9" cy="15" r="1.2" fill="#B5532F"/></svg>おまかせ</button><div class="cr">地図：国土数値情報（行政区域）を加工</div></div>'+
+ '<div class="crumb"></div><div class="n" id="tnn"></div><div class="cen">KANSAI</div><button type="button" class="bk"></button><div class="hint"></div><div class="zm"><button type="button" data-z="in" aria-label="近づく">＋</button><button type="button" data-z="out" aria-label="はなれる">−</button></div><div class="cr">地図：国土数値情報（行政区域）を加工</div></div>'+
  '<div class="car"></div>'+
  '<div class="chips"></div>'+
  '<div class="pop" role="dialog"><button class="x" type="button" aria-label="閉じる">×</button><div class="pb"></div></div>'+
@@ -237,7 +240,7 @@ function apply(full){if(full===undefined)full=true;svg.setAttribute("viewBox",vb
  var r=svg.getBoundingClientRect(),placed=[];
  function pos(l){var x=((l.flip?l.x2:l.x)-vb[0])/vb[2]*r.width,y=(l.y-vb[1])/vb[3]*r.height;l.e.style.transform="translate("+x.toFixed(1)+"px,"+y.toFixed(1)+"px) "+(l.side?(l.flip?"translate(calc(-100% - 8px),-50%)":"translate(8px,-50%)"):"translate(-50%,-50%)")}
  LB.forEach(function(l){if(full){l.flip=false;l.e.classList.remove("hide")}pos(l)});
- if(full)LB.forEach(function(l){if(!l.side)return;var b=l.e.getBoundingClientRect();if(b.right>r.right-12){l.flip=true;pos(l)}});
+ if(full)LB.forEach(function(l){if(!l.side)return;var b=l.e.getBoundingClientRect();if(b.right>r.right-(FS?56:12)){l.flip=true;pos(l)}});
  if(full)LB.slice().sort(function(a,b){return b.pri-a.pri}).forEach(function(l){l.e.classList.remove("fl");var b=l.e.getBoundingClientRect();if(l.e.classList.contains("t")&&b.right>r.right-16){l.e.classList.add("fl");b=l.e.getBoundingClientRect()}if(b.right<r.left||b.left>r.right||b.bottom<r.top+40||b.top>r.bottom-30){l.e.classList.add("hide");return}
   if(placed.some(function(o){return b.left<o.right+2&&b.right>o.left-2&&b.top<o.bottom+1&&b.bottom>o.top-1})){l.e.classList.add("hide");return}placed.push(b)});
  if(full&&lv===3){var gs=$$(".pinx",G.pin).filter(function(g){return g.dataset.n}),D=23;
@@ -313,7 +316,7 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
  if(FS)buildCar(lv===3?NUM:pins.filter(function(i){return !pf||i.pref===pf}));
  ch.classList.toggle("on",lv>1&&ch.children.length>0);ch.classList.toggle("l3",lv===3);
  placePop();
- $(".hint",box).textContent=FS?(lv===1?"府県を押すか、下のカードを横にめくってください":lv===2?"市の名前を押すと近づきます。カードもめくれます":"番号を押すか、カードを横にめくってください"):lv===1?"色のついた府県を押すと、近づきます":lv===2?"下のボタンか、色のついた所を押すと近づきます":"番号を押すか、下の一覧から選べます";
+ $(".hint",box).textContent=FS?(lv===1?"府県を押すか、カードをめくってください":lv===2?"市の名前を押すと近づきます":"番号を押すか、カードをめくってください"):lv===1?"色のついた府県を押すと、近づきます":lv===2?"下のボタンか、色のついた所を押すと近づきます":"番号を押すか、下の一覧から選べます";
  $("#tnn",box).innerHTML=(lv===3?m.n:pf||"関西")+"の"+curTab()+"<b>"+(lv===3?(cnt[m.id]||0):pins.filter(function(i){return !pf||i.pref===pf}).length)+"</b>か所";
  apply();}
 
@@ -367,7 +370,7 @@ function buildCar(arr){var sig=arr.map(function(i){return i.k}).join("|")+"#"+le
  CAR.innerHTML=arr.map(function(it,i){return '<div class="cc" data-i="'+i+'" style="--c:'+(PC[it.pref]||"#2B2622")+'">'+row(it,true).replace('<div class="t">','<div class="t">'+(level()===3&&it._n?'<i class="nb">'+it._n+'</i>':''))+'</div>'}).join("");
  $$(".cc",CAR).forEach(function(c,i){var ac=$(".ac",c);if(ac){var g2=$(".go2",ac);if(g2)g2.remove();var ix=document.createElement("span");ix.className="ix";ix.textContent=(i+1)+" / "+arr.length;ac.appendChild(ix)}
   c.addEventListener("click",function(e){if(e.target.closest("a"))return;var it=carItems[i];if(sel!==it){carTo(it)}})});
- CAR.scrollLeft=0;markCar()}
+ CAR.scrollLeft=0;if(arr.length&&(!sel||arr.indexOf(sel)<0)){sel=arr[0];setTimeout(function(){render()},0)}markCar()}
 function markCar(){$$(".cc",CAR).forEach(function(c,i){c.classList.toggle("on",carItems[i]===sel)})}
 function carTo(it){var i=carItems.indexOf(it);if(i<0)return;var c=$$(".cc",CAR)[i];carLock=it;sel=it;markCar();
  CAR.scrollTo({left:c.offsetLeft-(CAR.clientWidth-c.offsetWidth)/2,behavior:RM?"auto":"smooth"});setTimeout(function(){carLock=null},700);seePin(it)}
@@ -388,12 +391,6 @@ function zoomBy(k){var H0=fit(HOME,.02),cx=vb[0]+vb[2]/2,cy=vb[1]+vb[3]/2,W=Math
  if(W>=H0[2]-1e-6){fly(H0);return}fly([cx-W/2,cy-H/2,W,H])}
 $$(".zm button",box).forEach(function(b){b.addEventListener("click",function(e){e.stopPropagation();var z=b.dataset.z;
  if(z==="in")zoomBy(.6);else if(z==="out")zoomBy(1.7);else{if(level()>1)pickPref("");else fly(fit(HOME,.02))}})});
-// ---- おまかせ：いまのタブから1か所えらんで、地図がそこへ飛ぶ ----
-var lastOmk=null;
-$(".omk",box).addEventListener("click",function(e){e.stopPropagation();var pool=list.filter(function(i){return i.lat!=null&&i!==lastOmk});if(!pool.length)return;
- var it=pool[Math.floor(Math.random()*pool.length)];lastOmk=it;
- function go(){var mm=muniOf(it);if(!mm){openPin(it,null,"map");return}var same=state.muni===mm.grp;if(!same)goMuni(mm.grp);setTimeout(function(){openPin(it,null,"map")},same?0:560)}
- if(state.pref!==it.pref){pickPref(it.pref);setTimeout(go,650)}else go()});
 
 // ---- 今のページとつなぐ ----
 function mount(){var bar=$(".tabs");if(!bar)return;
@@ -430,6 +427,7 @@ var flTxt="";function flUpd(){var paper=curBlk(),tabs=$(".tabs");if(!paper||!tab
 var flq=false;addEventListener("scroll",function(){if(flq)return;flq=true;requestAnimationFrame(function(){flq=false;flUpd()})},{passive:true});
 function sync(){mount();if(!ready||!OPEN)return;var pf=curPref(),sig=pf+"|"+curTab();if(sig===lastSig)return;var first=!lastSig,pfChanged=first||lastSig.split("|")[0]!==pf;lastSig=sig;
  list=items();OTH=others();var tb=curTab();$(".lg",box).innerHTML='<span'+(tb==="もうすぐ"?' class="s"':'')+'>'+esc(tb)+'</span><span class="o">ほかのタブ</span>';$(".lg",box).style.display="flex";sel=null;pop.classList.remove("on");
+ if(!pfChanged&&state.muni&&!list.some(function(i){var mm=i.lat!=null&&i.pref===state.pref&&muniOf(i);return mm&&mm.grp===state.muni})){goPref();return}
  if(pfChanged){state.pref=pf;state.muni=null;if(first){var hb=pf&&hotBox(pf);vb=pf?(hb?fit(hb,.18):fit(PF[pf].bb,.03)):fit(HOME,.02);render()}else goPref()}else render();}
 document.addEventListener("click",function(e){if(e.target.closest("#flt,.tabs,.dflt"))setTimeout(sync,90)});
 addEventListener("resize",function(){if(ready)apply()});
