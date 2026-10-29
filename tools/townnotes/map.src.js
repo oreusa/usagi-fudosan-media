@@ -17,6 +17,12 @@ function P(lon,lat){return [(lon-134)*82.2,(36-lat)*100]}
 // ---- 見た目 ----
 var css=`
 .tn{margin:0 0 18px}
+.tn .chips{display:none;flex-wrap:wrap;gap:8px;margin:10px 0 2px}
+.tn .chips.on{display:flex}
+.tn .chips button{flex:1 1 calc(50% - 4px);display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:46px;padding:0 14px;background:#fff;border:1px solid #E2D9CF;border-left:4px solid var(--c);font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:14px;letter-spacing:.04em;color:#3A2F28;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;text-align:left}
+.tn .chips button b{font-family:Jost,sans-serif;font-weight:500;font-size:13px;color:#fff;background:var(--c);border-radius:10px;padding:1px 8px}
+.tn .chips button.cur{background:var(--c);color:#fff}.tn .chips button.cur b{background:#fff;color:var(--c)}
+.tn .chips button:active{transform:scale(.98)}
 .tn .fr,.tn .fr *{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
 .tabs button,#flt button,.tn button,.tn .pop a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .tgrp{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;margin:2px 0 6px}
@@ -84,6 +90,7 @@ var box=document.createElement("div");box.className="tn";
 box.innerHTML=''+
  '<div class="fr"><svg class="m" preserveAspectRatio="xMidYMid meet"><g class="g-pf"></g><g class="g-mu"></g><g class="g-pin"></g></svg><div class="lbs"></div>'+
  '<div class="crumb"></div><div class="n" id="tnn"></div><div class="cen">KANSAI</div><button type="button" class="bk"></button><div class="hint"></div><div class="cr">地図：国土数値情報（行政区域）を加工</div></div>'+
+ '<div class="chips"></div>'+
  '<div class="pop" role="dialog"><button class="x" type="button" aria-label="閉じる">×</button><div class="pb"></div></div>'+
  '<div class="lg"><span>開催・オープン</span><span class="s">これからできる</span></div>';
 var svg=$("svg.m",box),G={pf:$(".g-pf",svg),mu:$(".g-mu",svg),pin:$(".g-pin",svg)},LBS=$(".lbs",box),pop=$(".pop",box);
@@ -115,7 +122,7 @@ function setup(KS){
  KS.muni.features.forEach(function(f){var pr=f.properties,m={p:pr.p,n:pr.n,c:pr.c,g:f.geometry,bb:gbb(f.geometry)};m.id=m.p+"|"+m.c+"|"+m.n;
   m.path=el("path",{d:geom2d(f.geometry),"class":"mu"},G.mu);m.path.__mu=m;m.path.addEventListener("click",function(ev){if(level()===2&&state.pref===m.p&&m.grp.has){ev.stopPropagation();var g=m.grp;g.mus.forEach(function(x){x.path.style.fill=DEEP[x.p]});setTimeout(function(){goMuni(g)},180)}});MU.push(m)});
  // 大阪市・京都市・神戸市・堺市などは、区をまとめて「市」として寄る
- MU.forEach(function(m){var gid=m.p+"|"+(m.c||m.n);var g=GR[gid];if(!g){g=GR[gid]={id:gid,p:m.p,n:m.c||m.n,city:!!m.c,mus:[],bb:[1e9,1e9,-1e9,-1e9]}}g.mus.push(m);m.grp=g;g.bb=[Math.min(g.bb[0],m.bb[0]),Math.min(g.bb[1],m.bb[1]),Math.max(g.bb[2],m.bb[2]),Math.max(g.bb[3],m.bb[3])]});
+ MU.forEach(function(m){var cc=m.c&&/市$/.test(m.c)?m.c:"";var gid=m.p+"|"+(cc||m.n);var g=GR[gid];if(!g){g=GR[gid]={id:gid,p:m.p,n:cc||m.n,city:!!cc,mus:[],bb:[1e9,1e9,-1e9,-1e9]}}g.mus.push(m);m.grp=g;g.bb=[Math.min(g.bb[0],m.bb[0]),Math.min(g.bb[1],m.bb[1]),Math.max(g.bb[2],m.bb[2]),Math.max(g.bb[3],m.bb[3])]});
  var b=[1e9,1e9,-1e9,-1e9];PREFS.forEach(function(p){var x=PF[p].bb;b=[Math.min(b[0],x[0]),Math.min(b[1],x[1]),Math.max(b[2],x[2]),Math.max(b[3],x[3])]});HOME=b;
 }
 
@@ -154,7 +161,8 @@ var state={pref:"",muni:null},list=[],lastSig="",ready=false,sel=null;
 function level(){return state.muni?3:state.pref?2:1}
 function goMuni(g){state.muni=g;sel=null;pop.classList.remove("on");render();fly(fit(g.bb,g.city?.04:.22));
  var only=list.filter(function(i){return i.lat!=null&&i.pref===g.p&&muniOf(i)&&muniOf(i).grp===g});if(only.length===1)setTimeout(function(){openPin(only[0])},700)}
-function goPref(){state.muni=null;sel=null;pop.classList.remove("on");render();fly(state.pref?fit(PF[state.pref].bb,.03):fit(HOME,.02))}
+function hotBox(pf){var b=null;list.forEach(function(i){if(i.lat==null||i.pref!==pf)return;var m=muniOf(i);if(!m)return;var g=m.grp.bb;b=b?[Math.min(b[0],g[0]),Math.min(b[1],g[1]),Math.max(b[2],g[2]),Math.max(b[3],g[3])]:g.slice()});return b}
+function goPref(){state.muni=null;sel=null;pop.classList.remove("on");render();var hb=state.pref&&hotBox(state.pref);fly(state.pref?(hb?fit(hb,.18):fit(PF[state.pref].bb,.03)):fit(HOME,.02))}
 // 押した所を一瞬こく光らせてから動く（押せたことが分かるように）
 function flash(path,col,fn){path.setAttribute("fill",col);setTimeout(fn,180)}
 function pickPref(pf){var b=$$("#flt button").filter(function(x){return x.textContent===(pf||"すべて")})[0];if(b)b.click();}
@@ -187,7 +195,10 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
  if(lv===1)cur("関西");else{cb("関西",function(){pickPref("")});sep();if(lv===2)cur(pf);else{cb(pf,function(){goPref()});sep();cur(m.n)}}
  var ce=$(".cen",box);ce.textContent=pf?EN[pf]:"KANSAI";ce.style.color=pf?PC[pf]:"";ce.style.display=lv===1?"":"none";
  var bk=$(".bk",box);bk.style.display=lv===1?"none":"block";bk.textContent=lv===3?"‹ "+pf+"にもどる":"‹ 関西にもどる";bk.onclick=function(){if(level()===3)goPref();else pickPref("")};
- $(".hint",box).textContent=lv===1?"色のついた府県を押すと、近づきます":lv===2?"色のついた所を押すと、近づきます":"ピンを押すと、くわしく見られます";
+ var ch=$(".chips",box);ch.innerHTML="";
+ if(lv>1){Object.keys(GR).map(function(id){return GR[id]}).filter(function(g){return g.p===pf&&cnt[g.id]}).sort(function(a,b){return cnt[b.id]-cnt[a.id]}).forEach(function(g){var b=document.createElement("button");b.type="button";b.style.setProperty("--c",PC[pf]);if(m===g)b.className="cur";b.innerHTML=esc(g.n)+"<b>"+cnt[g.id]+"</b>";b.onclick=function(){if(state.muni!==g)goMuni(g)};ch.appendChild(b)})}
+ ch.classList.toggle("on",lv>1&&ch.children.length>0);
+ $(".hint",box).textContent=lv===1?"色のついた府県を押すと、近づきます":lv===2?"下のボタンか、色のついた所を押すと近づきます":"ピンを押すと、くわしく見られます";
  $("#tnn",box).innerHTML=(lv===3?m.n:pf||"関西")+"の"+curTab()+"<b>"+(lv===3?(cnt[m.id]||0):pins.filter(function(i){return !pf||i.pref===pf}).length)+"</b>か所";
  apply();}
 
