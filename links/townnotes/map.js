@@ -17,7 +17,9 @@ function P(lon,lat){return [(lon-134)*82.2,(36-lat)*100]}
 // ---- 見た目 ----
 var css=`
 .tn{margin:0 0 18px}
-.tn-top{padding:6px 0 0}.tn-top .flt{margin:0 0 12px;gap:0 13px;flex-wrap:nowrap}
+.tn-top{margin-top:-16px}.tn-top .flt{margin:0 0 10px;border-top:0;padding:8px 0;gap:0 13px;flex-wrap:nowrap}
+.tn .n{position:absolute;left:18px;top:46px;z-index:5;pointer-events:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:10.5px;color:#8C7B6E;letter-spacing:.06em}
+.tn .n b{font-family:Jost,sans-serif;font-weight:500;font-size:14px;color:#2B2622;margin:0 2px}
 .tn .hd{display:flex;justify-content:space-between;align-items:flex-end;margin:2px 0 10px}
 .tn .hd .e{font-family:Jost,sans-serif;font-size:9.5px;letter-spacing:.36em;color:#A07E66}
 .tn .hd .j{display:block;font-family:"Shippori Mincho",serif;font-weight:600;font-size:15px;letter-spacing:.1em;color:#2B2622;margin-top:4px}
@@ -73,9 +75,9 @@ var st=document.createElement("style");st.textContent=css;document.head.appendCh
 
 // ---- 枠 ----
 var box=document.createElement("div");box.className="tn";
-box.innerHTML='<div class="hd"><div><span class="e">MAP</span><span class="j">地図で見る</span></div><div class="n" id="tnn"></div></div>'+
+box.innerHTML=''+
  '<div class="fr"><svg class="m" preserveAspectRatio="xMidYMid meet"><g class="g-pf"></g><g class="g-mu"></g><g class="g-pin"></g></svg><div class="lbs"></div>'+
- '<div class="crumb"></div><div class="cen">KANSAI</div><button type="button" class="bk"></button><div class="hint"></div><div class="cr">地図：国土数値情報（行政区域）を加工</div></div>'+
+ '<div class="crumb"></div><div class="n" id="tnn"></div><div class="cen">KANSAI</div><button type="button" class="bk"></button><div class="hint"></div><div class="cr">地図：国土数値情報（行政区域）を加工</div></div>'+
  '<div class="pop" role="dialog"><button class="x" type="button" aria-label="閉じる">×</button><div class="pb"></div></div>'+
  '<div class="lg"><span>開催・オープン</span><span class="s">これからできる</span></div>';
 var svg=$("svg.m",box),G={pf:$(".g-pf",svg),mu:$(".g-mu",svg),pin:$(".g-pin",svg)},LBS=$(".lbs",box),pop=$(".pop",box);
