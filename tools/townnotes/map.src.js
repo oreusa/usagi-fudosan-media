@@ -128,14 +128,15 @@ function apply(){svg.setAttribute("viewBox",vb.join(" "));var u=px(),lv=level();
  LB.forEach(function(l){var x=(l.x-vb[0])/vb[2]*r.width,y=(l.y-vb[1])/vb[3]*r.height;l.e.style.left=x+"px";l.e.style.top=y+"px";l.e.classList.remove("hide")});
  LB.slice().sort(function(a,b){return b.pri-a.pri}).forEach(function(l){l.e.classList.remove("fl");var b=l.e.getBoundingClientRect();if(l.e.classList.contains("t")&&b.right>r.right-16){l.e.classList.add("fl");b=l.e.getBoundingClientRect()}if(b.right<r.left||b.left>r.right||b.bottom<r.top+40||b.top>r.bottom-30){l.e.classList.add("hide");return}
   if(placed.some(function(o){return b.left<o.right+2&&b.right>o.left-2&&b.top<o.bottom+1&&b.bottom>o.top-1})){l.e.classList.add("hide");return}placed.push(b)});
- $$(".pinx",G.pin).forEach(function(g){var r=+g.dataset.r,d=g.querySelector(".dot");d.setAttribute("r",r*u);d.setAttribute("stroke-width",(r>4?2:1.2)*u);g.querySelector(".hit").setAttribute("r",(lv===1?0:18)*u);var s=g.querySelector(".sel-r");if(s){s.setAttribute("r",(r+7)*u);s.setAttribute("stroke-width",1.5*u)}});
+ $$(".pinx",G.pin).forEach(function(g){var r=+g.dataset.r,d=g.querySelector(".dot");d.setAttribute("r",r*u);d.setAttribute("stroke-width",(r>4?2:1.2)*u);g.querySelector(".hit").setAttribute("r",(lv===1||(lv===3&&r<4)?0:22)*u);var s=g.querySelector(".sel-r");if(s){s.setAttribute("r",(r+7)*u);s.setAttribute("stroke-width",1.5*u)}});
 }
 
 // ---- 状態：関西（1）→ 府県（2）→ 市・区（3） ----
 var LB=[];function addL(x,y,cls,html,pri,c){var e=document.createElement("div");e.className="lb "+cls;e.innerHTML=html;if(c)e.style.setProperty("--c",c);LBS.appendChild(e);LB.push({e:e,x:x,y:y,pri:pri});return e}
 var state={pref:"",muni:null},list=[],lastSig="",ready=false,sel=null;
 function level(){return state.muni?3:state.pref?2:1}
-function goMuni(g){state.muni=g;sel=null;pop.classList.remove("on");render();fly(fit(g.bb,g.city?.04:.22))}
+function goMuni(g){state.muni=g;sel=null;pop.classList.remove("on");render();fly(fit(g.bb,g.city?.04:.22));
+ var only=list.filter(function(i){return i.lat!=null&&i.pref===g.p&&muniOf(i)&&muniOf(i).grp===g});if(only.length===1)setTimeout(function(){openPin(only[0])},700)}
 function goPref(){state.muni=null;sel=null;pop.classList.remove("on");render();fly(state.pref?fit(PF[state.pref].bb,.03):fit(HOME,.02))}
 // 押した所を一瞬こく光らせてから動く（押せたことが分かるように）
 function flash(path,col,fn){path.setAttribute("fill",col);setTimeout(fn,180)}
@@ -175,7 +176,7 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
 
 // ---- ピンを押したとき（指1本分のまわりのピンも一緒に出す） ----
 function tapPin(it){var lv=level();if(lv===1){pickPref(it.pref);return}
- var u=px(),q=P(it.lon,it.lat),near=list.filter(function(o){if(o.lat==null||(state.pref&&o.pref!==state.pref))return false;var z=P(o.lon,o.lat);return Math.hypot(z[0]-q[0],z[1]-q[1])<20*u});
+ var u=px(),q=P(it.lon,it.lat),near=list.filter(function(o){if(o.lat==null||(state.pref&&o.pref!==state.pref))return false;var z=P(o.lon,o.lat);return Math.hypot(z[0]-q[0],z[1]-q[1])<24*u});
  if(lv===2&&near.length>2){var mm=muniOf(it);if(mm){goMuni(mm.grp);return}}
  openPin(it,near)}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
@@ -189,7 +190,8 @@ function openPin(it,near){if(!it)return;sel=it;near=(near&&near.length?near:[it]
   $$(".pi.mini",pb).forEach(function(e){e.addEventListener("click",function(){openPin(near[+e.dataset.i],near)})});}
  else pb.innerHTML='<div class="pi">'+row(it,true)+'</div>';
  var g2=$(".go2",pb);if(g2)g2.addEventListener("click",function(e){e.preventDefault();toList(it)});
- pop.classList.add("on");render();}
+ pop.classList.add("on");render();
+ setTimeout(function(){var b=pop.getBoundingClientRect();if(b.bottom>innerHeight-20)scrollBy({top:Math.min(b.bottom-innerHeight+40,b.top-60),behavior:"smooth"})},60);}
 function closePop(){pop.classList.remove("on");if(sel){sel=null;if(ready)render()}}
 $(".x",pop).addEventListener("click",closePop);
 function toList(it){var w=it.w;if(w.classList.contains("cap")){var m=$(".cmore",w.parentNode);if(m)m.click();}
