@@ -5,6 +5,9 @@ import json, os
 D = os.path.dirname(os.path.abspath(__file__)); R = os.path.abspath(os.path.join(D, '..', '..'))
 P = json.load(open(os.path.join(R, 'tools/outing_reel/paths.json')))
 js = open(os.path.join(D, 'map.src.js'), encoding='utf-8').read().replace('__PATHS__', json.dumps(P, separators=(',', ':')))
+# 「地図で見る」ボタンの小さい関西の絵（府県の形だけ。大きさはページで測る）
+js = js.replace('__MINI__', json.dumps({k: P[k] for k in ['hyogo','kyoto','shiga','osaka','nara','wakayama']}, separators=(',', ':')))
+
 os.makedirs(os.path.join(R, 'links/townnotes'), exist_ok=True)
 open(os.path.join(R, 'links/townnotes/map.js'), 'w', encoding='utf-8').write(js)
 h = open(os.path.join(R, 'links/index.html'), encoding='utf-8').read()
