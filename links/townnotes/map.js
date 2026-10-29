@@ -90,6 +90,36 @@ var css=`
 .tn .hint:before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:#D9775A;margin-right:7px;vertical-align:1px}
 .tn .g-ic{pointer-events:none;transition:opacity .35s}
 .tn .ic .icb{filter:drop-shadow(0 1.5px 0 rgba(255,255,255,.9)) drop-shadow(0 2px 2px rgba(80,60,40,.18))}
+/* 全画面の地図（地図の中だけで全部できる） */
+.tn.fs{position:fixed;left:0;right:0;top:0;bottom:0;height:100dvh;z-index:200;margin:0;background:#FDFCFA;display:flex;flex-direction:column;overscroll-behavior:contain}
+.tn.fs .fr{flex:1 1 auto;min-height:0;aspect-ratio:auto;margin:0;touch-action:none}
+.tn.fs .chips,.tn.fs .pop,.tn.fs .lg{display:none!important}
+.tn .fsh{display:none}
+.tn.fs .fsh{display:block;flex:none;padding:10px 14px 6px;background:#fff;border-bottom:1px solid #EAE2D9;box-shadow:0 2px 10px rgba(60,45,35,.06);position:relative;z-index:8}
+.tn .fsh .ttl{display:flex;align-items:center;justify-content:space-between;margin:0 0 8px}
+.tn .fsh .ttl b{font-family:"Shippori Mincho",serif;font-weight:600;font-size:16px;letter-spacing:.12em;color:#2B2622}
+.tn .fsh .ttl b small{display:block;font-family:Jost,sans-serif;font-weight:400;font-size:8.5px;letter-spacing:.3em;color:#A39A90;margin-bottom:2px}
+.tn .fsh .cl{width:40px;height:40px;border-radius:50%;border:1px solid #DDD3C8;background:#fff;font-family:Jost,sans-serif;font-size:20px;color:#5E534B;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0}
+.tn .fsh .row{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px 0 6px}
+.tn .fsh .row::-webkit-scrollbar{display:none}
+.tn .fsh .row button{flex:none;height:34px;padding:0 13px;border-radius:17px;border:1px solid #E2D9CF;background:#fff;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.04em;color:#5E534B;cursor:pointer;white-space:nowrap}
+.tn .fsh .row button.on{background:#2B2622;border-color:#2B2622;color:#fff}
+.tn .fsh .row.pf button{color:var(--c,#5E534B)}
+.tn .fsh .row.pf button.on{background:var(--c,#2B2622);border-color:var(--c,#2B2622);color:#fff}
+.tn .fsh .row button small{font-family:Jost,sans-serif;font-weight:500;font-size:11px;margin-left:5px;opacity:.75}
+.tn .car{display:none}
+.tn.fs .car{display:flex;flex:none;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:10px 9% calc(14px + env(safe-area-inset-bottom));background:linear-gradient(rgba(253,252,250,0),#FDFCFA 30%);margin-top:-6px;position:relative;z-index:7}
+.tn .car::-webkit-scrollbar{display:none}
+.tn .cc{flex:0 0 82%;scroll-snap-align:center;background:#fff;border:1px solid #E2D6CB;border-left:4px solid var(--c);border-radius:3px;padding:11px 14px 10px;box-shadow:0 4px 14px rgba(60,45,35,.08);transition:transform .25s,box-shadow .25s;cursor:pointer}
+.tn .cc.on{transform:translateY(-3px);box-shadow:0 8px 20px rgba(60,45,35,.14)}
+.tn .cc .d{font-family:"Zen Kaku Gothic New",sans-serif;font-size:11px;color:#8C7B6E;letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tn .cc .d i{font-style:normal;font-weight:700;margin-right:6px}
+.tn .cc .d u{text-decoration:none;margin-left:6px}
+.tn .cc .t{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:15px;line-height:1.45;color:#2B2622;margin:4px 0 8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.9em}
+.tn .cc .t .nb{display:inline-block;vertical-align:1px;margin-right:6px;width:20px;height:20px;line-height:20px;border-radius:50%;background:var(--c);color:#fff;text-align:center;font-family:Jost,sans-serif;font-style:normal;font-weight:600;font-size:11px}
+.tn .cc .ac{display:flex;gap:16px;align-items:center}
+.tn .cc .ac a{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12px;color:#2B2622;text-decoration:none;border-bottom:1px solid #CFC4B8;padding:6px 0 2px}
+.tn .cc .ac .ix{margin-left:auto;font-family:Jost,sans-serif;font-size:10.5px;color:#B3AAA1;letter-spacing:.08em}
 .tn .zm{position:absolute;right:12px;bottom:46px;z-index:6;display:flex;flex-direction:column;gap:6px}
 .tn .zm button,.tn .omk{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.94);border:1px solid #DDD3C8;box-shadow:0 1px 4px rgba(60,45,35,.1);color:#5E534B;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;padding:0}
 .tn .zm button{width:36px;height:36px;border-radius:50%;font-family:Jost,sans-serif;font-size:19px;font-weight:400;line-height:1}
@@ -128,8 +158,10 @@ var st=document.createElement("style");st.textContent=css;document.head.appendCh
 // ---- 枠 ----
 var box=document.createElement("div");box.className="tn";
 box.innerHTML=''+
+ '<div class="fsh"><div class="ttl"><b><small>TOWN NOTES MAP</small>関西おでかけマップ</b><button type="button" class="cl" aria-label="地図を閉じる">×</button></div><div class="row tb"></div><div class="row pf"></div></div>'+
  '<div class="fr"><svg class="m" preserveAspectRatio="xMidYMid meet"><g class="g-sh"></g><g class="g-pf"></g><g class="g-mu"></g><g class="g-mini"></g><g class="g-pin"></g></svg><div class="lbs"></div>'+
  '<div class="crumb"></div><div class="n" id="tnn"></div><div class="cen">KANSAI</div><button type="button" class="bk"></button><div class="hint"></div><div class="zm"><button type="button" data-z="in" aria-label="近づく">＋</button><button type="button" data-z="out" aria-label="はなれる">−</button><button type="button" data-z="home" aria-label="最初にもどる">⟳</button></div><button type="button" class="omk"><svg viewBox="0 0 24 24" fill="none" stroke="#B5532F" stroke-width="1.8" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="9" cy="9" r="1.2" fill="#B5532F"/><circle cx="15" cy="15" r="1.2" fill="#B5532F"/><circle cx="15" cy="9" r="1.2" fill="#B5532F"/><circle cx="9" cy="15" r="1.2" fill="#B5532F"/></svg>おまかせ</button><div class="cr">地図：国土数値情報（行政区域）を加工</div></div>'+
+ '<div class="car"></div>'+
  '<div class="chips"></div>'+
  '<div class="pop" role="dialog"><button class="x" type="button" aria-label="閉じる">×</button><div class="pb"></div></div>'+
  '<div class="lg"><span>開催・オープン</span><span class="s">これからできる</span></div>';
@@ -258,10 +290,10 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
  G.pin.innerHTML="";var selG=null;
  // 市の画面では、ピンに北から順に番号をふる（下の一覧と同じ番号）
  var NUM=lv===3?pins.filter(function(i){var mm=muniOf(i);return mm&&mm.grp===m}).sort(function(a,b){return b.lat-a.lat||a.lon-b.lon}):[];NUM.forEach(function(it,i){it._n=i+1});
- pins.forEach(function(it){if(pf&&it.pref!==pf)return;var q=P(it.lon,it.lat),c=PC[it.pref]||"#2B2622",inM=lv===3&&muniOf(it)&&muniOf(it).grp===m,isS=sel&&sel.k===it.k,r=lv===1?2.6:lv===2?5:(inM?(isS?11:9):3.5);
+ pins.forEach(function(it){if(pf&&it.pref!==pf)return;var q=P(it.lon,it.lat),c=PC[it.pref]||"#2B2622",inM=lv===3&&muniOf(it)&&muniOf(it).grp===m,isS=sel&&sel.k===it.k,r=lv===1?(isS?6:2.6):lv===2?(isS?8:5):(inM?(isS?11:9):3.5);
   var g=el("g",{"class":"pinx"+(lv===3&&sel&&inM&&!isS?" dim":"")},G.pin);g.dataset.r=r;if(isS)selG=g;
   if(lv>1)el("circle",{"class":"psh",cx:q[0],cy:q[1]},g);
-  if(isS){el("circle",{"class":"sel-r",cx:q[0],cy:q[1],stroke:c},g);if(inM)el("circle",{"class":"glo",cx:q[0],cy:q[1],stroke:c},g)}
+  if(isS){el("circle",{"class":"sel-r",cx:q[0],cy:q[1],stroke:c},g);if(inM||FS)el("circle",{"class":"glo",cx:q[0],cy:q[1],stroke:c},g)}
   el("circle",{"class":"dot",cx:q[0],cy:q[1],fill:it.soon?"#fff":c,stroke:it.soon?c:"#fff"},g);
   if(inM){var t=el("text",{"class":"pn",x:q[0],y:q[1]},g);t.textContent=it._n;g.dataset.n=1;if(it.soon)t.setAttribute("fill",c)}
   g.__it=it;g.__q=q;
@@ -278,9 +310,10 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
  var ch=$(".chips",box);if(pop.parentNode===ch)box.insertBefore(pop,ch);ch.innerHTML="";
  if(lv===3)NUM.forEach(function(it){var b=document.createElement("button");b.type="button";b.className="sp";b.style.setProperty("--c",PC[pf]);b.dataset.k=it.k;if(sel&&sel.k===it.k&&pop.classList.contains("on"))b.classList.add("on");b.innerHTML="<i>"+it._n+"</i><span>"+esc(it.t)+"</span>";b.onclick=function(){if(sel&&sel.k===it.k&&pop.classList.contains("on"))closePop();else openPin(it,null,"list")};ch.appendChild(b)});
  if(lv===2){Object.keys(GR).map(function(id){return GR[id]}).filter(function(g){return g.p===pf&&cnt[g.id]}).sort(function(a,b){return cnt[b.id]-cnt[a.id]}).forEach(function(g){var b=document.createElement("button");b.type="button";b.style.setProperty("--c",PC[pf]);if(m===g)b.className="cur";b.innerHTML=esc(g.n)+"<b>"+cnt[g.id]+"</b>";b.onclick=function(){if(state.muni!==g)goMuni(g)};ch.appendChild(b)})}
+ if(FS)buildCar(lv===3?NUM:pins.filter(function(i){return !pf||i.pref===pf}));
  ch.classList.toggle("on",lv>1&&ch.children.length>0);ch.classList.toggle("l3",lv===3);
  placePop();
- $(".hint",box).textContent=lv===1?"色のついた府県を押すと、近づきます":lv===2?"下のボタンか、色のついた所を押すと近づきます":"番号を押すか、下の一覧から選べます";
+ $(".hint",box).textContent=FS?(lv===1?"府県を押すか、下のカードを横にめくってください":lv===2?"市の名前を押すと近づきます。カードもめくれます":"番号を押すか、カードを横にめくってください"):lv===1?"色のついた府県を押すと、近づきます":lv===2?"下のボタンか、色のついた所を押すと近づきます":"番号を押すか、下の一覧から選べます";
  $("#tnn",box).innerHTML=(lv===3?m.n:pf||"関西")+"の"+curTab()+"<b>"+(lv===3?(cnt[m.id]||0):pins.filter(function(i){return !pf||i.pref===pf}).length)+"</b>か所";
  apply();}
 
@@ -299,7 +332,7 @@ function row(it,full){var c=PC[it.pref]||"#2B2622";
 var popAt="map";
 function placePop(){var ch=$(".chips",box),row=popAt==="list"&&sel&&level()===3?$$("button.sp",ch).filter(function(b){return b.dataset.k===String(sel.k)})[0]:null;
  if(row)row.after(pop);else if(pop.previousElementSibling!==$(".fr",box))$(".fr",box).after(pop)}
-function openPin(it,near,from){if(!it)return;sel=it;popAt=from==="list"?"list":"map";near=(near&&near.length?near:[it]).slice();near.sort(function(a,b){return a===it?-1:b===it?1:0});
+function openPin(it,near,from){if(!it)return;if(FS){sel=it;render();carTo(it);return}sel=it;popAt=from==="list"?"list":"map";near=(near&&near.length?near:[it]).slice();near.sort(function(a,b){return a===it?-1:b===it?1:0});
  var pb=$(".pb",pop);pop.style.setProperty("--pc",PC[it.pref]||"#2B2622");
  if(near.length>1){pb.innerHTML='<div class="gh">この辺りに '+near.length+' 件</div>'+near.map(function(o,i){return '<div class="pi'+(i?" mini":"")+'" data-i="'+i+'">'+row(o,!i)+'</div>'}).join("");
   $$(".pi.mini",pb).forEach(function(e){e.addEventListener("click",function(){openPin(near[+e.dataset.i],near)})});}
@@ -328,6 +361,28 @@ var ICG=null;
 function drawIcons(){if(!ICG){ICG=el("g",{"class":"g-ic"},svg);svg.insertBefore(ICG,G.mini)}ICG.innerHTML="";
  PREFS.forEach(function(p){var I=ICON[p];if(!I)return;var q=P(I.at[0],I.at[1]),g=el("g",{"class":"ic"},ICG);g.__q=q;
   g.innerHTML='<g class="icb" fill="none" stroke="'+PC[p]+'" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">'+I.s+'</g>';var t=el("title",{},g);t.textContent=I.n})}
+// ---- 全画面の地図：下のカードを横にめくると、地図のピンが光る ----
+var FS=false,CAR=$(".car",box),carSig="",carItems=[],carLock=null,carQ=false;
+function buildCar(arr){var sig=arr.map(function(i){return i.k}).join("|")+"#"+level();if(sig===carSig)return;carSig=sig;carItems=arr.slice();
+ CAR.innerHTML=arr.map(function(it,i){return '<div class="cc" data-i="'+i+'" style="--c:'+(PC[it.pref]||"#2B2622")+'">'+row(it,true).replace('<div class="t">','<div class="t">'+(level()===3&&it._n?'<i class="nb">'+it._n+'</i>':''))+'</div>'}).join("");
+ $$(".cc",CAR).forEach(function(c,i){var ac=$(".ac",c);if(ac){var g2=$(".go2",ac);if(g2)g2.remove();var ix=document.createElement("span");ix.className="ix";ix.textContent=(i+1)+" / "+arr.length;ac.appendChild(ix)}
+  c.addEventListener("click",function(e){if(e.target.closest("a"))return;var it=carItems[i];if(sel!==it){carTo(it)}})});
+ CAR.scrollLeft=0;markCar()}
+function markCar(){$$(".cc",CAR).forEach(function(c,i){c.classList.toggle("on",carItems[i]===sel)})}
+function carTo(it){var i=carItems.indexOf(it);if(i<0)return;var c=$$(".cc",CAR)[i];carLock=it;sel=it;markCar();
+ CAR.scrollTo({left:c.offsetLeft-(CAR.clientWidth-c.offsetWidth)/2,behavior:RM?"auto":"smooth"});setTimeout(function(){carLock=null},700);seePin(it)}
+function seePin(it){var q=P(it.lon,it.lat),mx=vb[2]*.12,my=vb[3]*.18;if(q[0]<vb[0]+mx||q[0]>vb[0]+vb[2]-mx||q[1]<vb[1]+my||q[1]>vb[1]+vb[3]-my)fly([q[0]-vb[2]/2,q[1]-vb[3]/2,vb[2],vb[3]])}
+CAR.addEventListener("scroll",function(){if(carQ)return;carQ=true;requestAnimationFrame(function(){carQ=false;var mid=CAR.scrollLeft+CAR.clientWidth/2,best=-1,bd=1e9;
+ $$(".cc",CAR).forEach(function(c,i){var d=Math.abs(c.offsetLeft+c.offsetWidth/2-mid);if(d<bd){bd=d;best=i}});var it=carItems[best];
+ if(!it||it===sel)return;if(carLock&&carLock!==it)return;sel=it;render();markCar();seePin(it)})},{passive:true});
+// 上の帯：タブと府県ボタン（ページの本物のボタンを押す）
+function buildHead(){var tb=$(".fsh .tb",box),pr=$(".fsh .pf",box);tb.innerHTML="";pr.innerHTML="";
+ $$(".tabs button").forEach(function(b){var x=document.createElement("button");x.type="button";var bb=b.querySelector("b"),n=bb?bb.childNodes[0].textContent:b.textContent,cn=bb&&bb.querySelector("small,span,i");
+  x.innerHTML=esc(n)+(cn?"<small>"+esc(cn.textContent.replace(/[^0-9]/g,""))+"</small>":"");if(b.classList.contains("on"))x.className="on";x.onclick=function(){b.click();setTimeout(function(){sync();buildHead()},120)};tb.appendChild(x)});
+ $$("#flt button").forEach(function(b){var x=document.createElement("button");x.type="button";x.textContent=b.textContent;if(PC[b.textContent])x.style.setProperty("--c",PC[b.textContent]);if(b.classList.contains("on"))x.className="on";x.onclick=function(){b.click();setTimeout(function(){sync();buildHead()},120)};pr.appendChild(x)})}
+// スマホの「戻る」でも地図を閉じる
+addEventListener("popstate",function(){if(OPEN)setOpen(false,true)});
+$(".fsh .cl",box).addEventListener("click",function(){if(history.state&&history.state.tnmap)history.back();else setOpen(false)});
 // ---- ＋／−／⟳ボタン（指の操作なしで、寄る・引く・最初にもどる） ----
 function zoomBy(k){var H0=fit(HOME,.02),cx=vb[0]+vb[2]/2,cy=vb[1]+vb[3]/2,W=Math.max(10,Math.min(vb[2]*k,H0[2])),H=W*vb[3]/vb[2];
  if(W>=H0[2]-1e-6){fly(H0);return}fly([cx-W/2,cy-H/2,W,H])}
@@ -351,23 +406,26 @@ function mount(){var bar=$(".tabs");if(!bar)return;
  if(bar.nextSibling!==top)bar.parentNode.insertBefore(top,bar.nextSibling);
  // 地図は「地図で見る」を押した人だけに出す（リストが主役）
  if(top.nextSibling!==mb)top.parentNode.insertBefore(mb,top.nextSibling);
- if(mb.nextSibling!==box)mb.parentNode.insertBefore(box,mb.nextSibling);}
+ if(!FS&&mb.nextSibling!==box)mb.parentNode.insertBefore(box,mb.nextSibling);}
 var mb=document.createElement("button");mb.type="button";mb.className="tnbtn";
-var OPEN=false;try{OPEN=sessionStorage.getItem("tnmap")==="1"}catch(e){}
-function setOpen(v){OPEN=v;box.classList.toggle("shut",!v);mb.classList.toggle("on",v);
- mb.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="#B5532F" stroke-width="1.8" stroke-linejoin="round"><path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5V4l-6 2.5L9 4Z"/><path d="M9 4v13M15 6.5v13"/></svg>'+(v?"地図を閉じる":"地図で見る")+"<b>⌄</b>";
- try{sessionStorage.setItem("tnmap",v?"1":"0")}catch(e){}
- if(v){if(!loading)load();else if(ready){lastSig="";sync()}}else{sel=null;pop.classList.remove("on")}
+var OPEN=false;
+mb.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="#B5532F" stroke-width="1.8" stroke-linejoin="round"><path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5V4l-6 2.5L9 4Z"/><path d="M9 4v13M15 6.5v13"/></svg>地図で見る<b>›</b>';
+// 開くと画面いっぱいの地図になる。閉じるとリストのいつもの場所にもどる
+function setOpen(v,fromPop){if(v===OPEN&&v)return;OPEN=v;FS=v;
+ if(v){document.body.appendChild(box);box.classList.remove("shut");box.classList.add("fs");document.documentElement.style.overflow="hidden";
+  if(!fromPop)try{history.pushState({tnmap:1},"")}catch(e){}
+  buildHead();carSig="";if(!loading)load();else if(ready){lastSig="";sync()}}
+ else{box.classList.remove("fs");box.classList.add("shut");document.documentElement.style.overflow="";sel=null;pop.classList.remove("on");mount()}
  if(typeof flUpd==="function"&&fl)flUpd()}
-mb.addEventListener("click",function(){setOpen(!OPEN)});
+mb.addEventListener("click",function(){setOpen(true)});
 // 画面の下に浮かぶ地図ボタン（リストのどこからでも地図へ）
 var fl=document.createElement("button");fl.type="button";fl.className="tnfl";document.body.appendChild(fl);
 var MAPI='<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"><path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5V4l-6 2.5L9 4Z"/><path d="M9 4v13M15 6.5v13"/></svg>';
 function toMap(){var y=box.getBoundingClientRect().top+scrollY-12;scrollTo({top:y,behavior:RM?"auto":"smooth"})}
-fl.addEventListener("click",function(){if(!OPEN)setOpen(true);setTimeout(toMap,OPEN?30:60)});
+fl.addEventListener("click",function(){setOpen(true)});
 var flTxt="";function flUpd(){var paper=curBlk(),tabs=$(".tabs");if(!paper||!tabs){fl.classList.remove("on");return}
  var tb=tabs.getBoundingClientRect(),pb=paper.getBoundingClientRect(),inList=tb.top<innerHeight*.5&&pb.bottom>innerHeight-70,show=false,t="";var mo=$(".more",paper);if(mo){var mr=mo.getBoundingClientRect();if(mr.height&&mr.top<innerHeight-10&&mr.bottom>innerHeight-80)inList=false}
- if(inList){if(!OPEN){show=mb.getBoundingClientRect().bottom<0;t="地図で見る"}else{var bb=box.getBoundingClientRect();show=bb.bottom<60||bb.top>innerHeight;t="地図にもどる"}}
+ if(inList&&!OPEN){show=mb.getBoundingClientRect().bottom<0;t="地図で見る"}
  if(t&&t!==flTxt){flTxt=t;fl.innerHTML=MAPI+t}fl.classList.toggle("on",show)}
 var flq=false;addEventListener("scroll",function(){if(flq)return;flq=true;requestAnimationFrame(function(){flq=false;flUpd()})},{passive:true});
 function sync(){mount();if(!ready||!OPEN)return;var pf=curPref(),sig=pf+"|"+curTab();if(sig===lastSig)return;var first=!lastSig,pfChanged=first||lastSig.split("|")[0]!==pf;lastSig=sig;
