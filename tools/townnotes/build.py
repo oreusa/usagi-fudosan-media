@@ -11,6 +11,14 @@ js = js.replace('__MINI__', json.dumps({k: P[k] for k in ['hyogo','kyoto','shiga
 os.makedirs(os.path.join(R, 'links/townnotes'), exist_ok=True)
 open(os.path.join(R, 'links/townnotes/map.js'), 'w', encoding='utf-8').write(js)
 h = open(os.path.join(R, 'links/index.html'), encoding='utf-8').read()
+import re
+# 本番のリスト（links/index.html）の地図の読み込みも、新しい版の ?v= にそろえる
+v = __import__('hashlib').sha1(js.encode('utf-8')).hexdigest()[:8]
+live = re.sub(r'/townnotes/map\.js\?v=[0-9a-f]+', '/townnotes/map.js?v=' + v, h)
+if live != h:
+    open(os.path.join(R, 'links/index.html'), 'w', encoding='utf-8').write(live)
+# 試作ページには本番の読み込みを持ちこまない（下で試作用を足す）
+h = re.sub(r'<script src="/townnotes/map\.js[^"]*" defer></script>', '', h)
 # 試作は links/townnotes/ にあるので、上の階のファイルは ../ で指す（Cloudflareでも予備のGitHubページでも同じに動く）
 for a in ['src="assets/','href="assets/','href="gyosha.html"','href="uru.html"']:
     h = h.replace(a, a.replace('="', '="../'))
