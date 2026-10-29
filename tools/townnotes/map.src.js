@@ -44,6 +44,7 @@ var css=`
 .tn .crumb{position:absolute;left:18px;top:16px;z-index:5;display:flex;align-items:center;gap:6px;font-family:"Shippori Mincho",serif;font-weight:600;font-size:13px;letter-spacing:.08em;color:#2B2622}
 .tn .crumb button{font:inherit;color:#8C7B6E;background:none;border:0;padding:6px 0;cursor:pointer;text-decoration:underline;text-decoration-color:#D9CFC4;text-underline-offset:4px}
 .tn .crumb i{font-style:normal;font-family:Jost,sans-serif;color:#B3AAA1;font-weight:300}
+.tn .bk{position:absolute;right:12px;top:10px;z-index:6;display:none;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12px;letter-spacing:.06em;color:#5E534B;background:#fff;border:1px solid #DDD3C8;border-radius:99px;padding:8px 14px;cursor:pointer;box-shadow:0 1px 4px rgba(60,40,20,.08)}
 .tn .cen{position:absolute;right:18px;top:20px;z-index:5;font-family:Jost,sans-serif;font-size:9px;letter-spacing:.34em;color:#A39A90;transition:color .4s}
 .tn .hint{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;bottom:14px;background:rgba(255,255,255,.88);border-radius:99px;padding:5px 12px;z-index:5;text-align:center;font-family:"Zen Kaku Gothic New",sans-serif;font-size:10.5px;letter-spacing:.08em;color:#8C7B6E;pointer-events:none}
 .tn .hint:before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:#D9775A;margin-right:7px;vertical-align:1px}
@@ -74,7 +75,7 @@ var st=document.createElement("style");st.textContent=css;document.head.appendCh
 var box=document.createElement("div");box.className="tn";
 box.innerHTML='<div class="hd"><div><span class="e">MAP</span><span class="j">地図で見る</span></div><div class="n" id="tnn"></div></div>'+
  '<div class="fr"><svg class="m" preserveAspectRatio="xMidYMid meet"><g class="g-pf"></g><g class="g-mu"></g><g class="g-pin"></g></svg><div class="lbs"></div>'+
- '<div class="crumb"></div><div class="cen">KANSAI</div><div class="hint"></div><div class="cr">地図：国土数値情報（行政区域）を加工</div></div>'+
+ '<div class="crumb"></div><div class="cen">KANSAI</div><button type="button" class="bk"></button><div class="hint"></div><div class="cr">地図：国土数値情報（行政区域）を加工</div></div>'+
  '<div class="pop" role="dialog"><button class="x" type="button" aria-label="閉じる">×</button><div class="pb"></div></div>'+
  '<div class="lg"><span>開催・オープン</span><span class="s">これからできる</span></div>';
 var svg=$("svg.m",box),G={pf:$(".g-pf",svg),mu:$(".g-mu",svg),pin:$(".g-pin",svg)},LBS=$(".lbs",box),pop=$(".pop",box);
@@ -102,9 +103,9 @@ function inGeom(lon,lat,g){var ps=g.type==="Polygon"?[g.coordinates]:g.coordinat
 function el(t,a,par){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e}
 function setup(KS){
  KS.pref.features.forEach(function(f){var p=f.properties.p;PF[p]={bb:gbb(f.geometry),path:el("path",{d:geom2d(f.geometry),"class":"pf",fill:FILL[p]},G.pf)};
-  PF[p].path.addEventListener("click",function(){if(state.pref!==p)pickPref(p)})});
+  PF[p].path.addEventListener("click",function(){if(level()===1)pickPref(p)})});
  KS.muni.features.forEach(function(f){var pr=f.properties,m={p:pr.p,n:pr.n,c:pr.c,g:f.geometry,bb:gbb(f.geometry)};m.id=m.p+"|"+m.c+"|"+m.n;
-  m.path=el("path",{d:geom2d(f.geometry),"class":"mu"},G.mu);m.path.addEventListener("click",function(ev){if(state.pref===m.p){ev.stopPropagation();goMuni(m.grp)}});MU.push(m)});
+  m.path=el("path",{d:geom2d(f.geometry),"class":"mu"},G.mu);m.path.addEventListener("click",function(ev){if(level()===2&&state.pref===m.p){ev.stopPropagation();goMuni(m.grp)}});MU.push(m)});
  // 大阪市・京都市・神戸市・堺市などは、区をまとめて「市」として寄る
  MU.forEach(function(m){var gid=m.p+"|"+(m.c||m.n);var g=GR[gid];if(!g){g=GR[gid]={id:gid,p:m.p,n:m.c||m.n,city:!!m.c,mus:[],bb:[1e9,1e9,-1e9,-1e9]}}g.mus.push(m);m.grp=g;g.bb=[Math.min(g.bb[0],m.bb[0]),Math.min(g.bb[1],m.bb[1]),Math.max(g.bb[2],m.bb[2]),Math.max(g.bb[3],m.bb[3])]});
  var b=[1e9,1e9,-1e9,-1e9];PREFS.forEach(function(p){var x=PF[p].bb;b=[Math.min(b[0],x[0]),Math.min(b[1],x[1]),Math.max(b[2],x[2]),Math.max(b[3],x[3])]});HOME=b;
@@ -160,7 +161,8 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
  function sep(){var i=document.createElement("i");i.textContent="›";cr.appendChild(i)}
  function cur(txt){var s=document.createElement("span");s.textContent=txt;cr.appendChild(s)}
  if(lv===1)cur("関西");else{cb("関西",function(){pickPref("")});sep();if(lv===2)cur(pf);else{cb(pf,function(){goPref()});sep();cur(m.n)}}
- var ce=$(".cen",box);ce.textContent=pf?EN[pf]:"KANSAI";ce.style.color=pf?PC[pf]:"";
+ var ce=$(".cen",box);ce.textContent=pf?EN[pf]:"KANSAI";ce.style.color=pf?PC[pf]:"";ce.style.display=lv===1?"":"none";
+ var bk=$(".bk",box);bk.style.display=lv===1?"none":"block";bk.textContent=lv===3?"‹ "+pf+"にもどる":"‹ 関西にもどる";bk.onclick=function(){if(level()===3)goPref();else pickPref("")};
  $(".hint",box).textContent=lv===1?"府県を押すと、近づきます":lv===2?"市や区を押すと、もっと近づきます":"ピンを押すと、くわしく見られます";
  $("#tnn",box).innerHTML=(lv===3?m.n:pf||"関西")+"の"+curTab()+"<b>"+(lv===3?(cnt[m.id]||0):pins.filter(function(i){return !pf||i.pref===pf}).length)+"</b>か所";
  apply();}
