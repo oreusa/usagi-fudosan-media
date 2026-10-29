@@ -17,6 +17,9 @@ function P(lon,lat){return [(lon-134)*82.2,(36-lat)*100]}
 // ---- 見た目 ----
 var css=`
 .tn{margin:0 0 18px}
+.tgrp{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;margin:2px 0 6px}
+.tgrp span{display:block;text-align:center;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;letter-spacing:.14em;color:#8C7B6E;padding:0 0 6px;border-bottom:1px solid #D6CCC1;position:relative}
+.tgrp span:after{content:"";position:absolute;left:50%;bottom:-4px;width:7px;height:7px;background:#FDFCFA;border-right:1px solid #D6CCC1;border-bottom:1px solid #D6CCC1;transform:translateX(-50%) rotate(45deg)}
 .tn-top{margin-top:-16px}.tn-top .flt{margin:0 0 10px;border-top:0;padding:8px 0;gap:0 13px;flex-wrap:nowrap}
 .tn .n{position:absolute;left:18px;top:46px;z-index:5;pointer-events:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:10.5px;color:#8C7B6E;letter-spacing:.06em}
 .tn .n b{font-family:Jost,sans-serif;font-weight:500;font-size:14px;color:#2B2622;margin:0 2px}
@@ -210,6 +213,9 @@ function toList(it){var w=it.w;if(w.classList.contains("cap")){var m=$(".cmore",
 
 // ---- 今のページとつなぐ ----
 function mount(){var bar=$(".tabs");if(!bar)return;
+ // タブの上に「イベント｜新しいお店・施設」の見出し（4つのタブの中身を分かりやすく）
+ var tg=$(".tgrp");if(!tg){tg=document.createElement("div");tg.className="tgrp";tg.innerHTML='<span>イベント</span><span>新しいお店・施設</span>'}
+ if(bar.previousSibling!==tg)bar.parentNode.insertBefore(tg,bar);
  // 府県ボタンは地図のすぐ上へ（件数は押さないので上のまま）
  var top=$(".tn-top");if(!top){top=document.createElement("div");top.className="tn-top"}
  ["flt","none"].forEach(function(id){var e=document.getElementById(id);if(e&&e.parentNode!==top)top.appendChild(e)});
