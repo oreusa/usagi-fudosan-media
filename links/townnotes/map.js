@@ -43,13 +43,16 @@ var css=`
 .tn .pf,.tn .mu,.tn .dot,.tn .sel-r{vector-effect:non-scaling-stroke}
 .tn .pf{stroke:#FDFCFA;stroke-width:2px;stroke-linejoin:round;cursor:pointer;transition:fill .5s,opacity .5s}
 .tn .mu{fill:transparent;stroke:#FDFCFA;stroke-width:1.1px;stroke-linejoin:round;cursor:pointer;transition:fill .4s,opacity .4s}
+.tn .sh{fill:rgba(120,88,58,.16);transition:opacity .4s}
+.tn .psh{fill:rgba(70,45,25,.22)}
 .tn .lbs{position:absolute;inset:0;pointer-events:none;z-index:2}
 .tn .lb{position:absolute;left:0;top:0;will-change:transform;white-space:nowrap;text-shadow:0 0 2px #FDFCFA,0 0 3px #FDFCFA,0 0 6px rgba(253,252,250,.9)}
 .tn .lb.p{text-align:center;font-family:"Shippori Mincho",serif;font-weight:600;font-size:16px;letter-spacing:.16em;line-height:1.2}
 .tn .lb.p small{display:block;font-family:Jost,sans-serif;font-weight:400;font-size:8.5px;letter-spacing:.32em;margin-top:3px}
-.tn .lb.m{pointer-events:auto;cursor:pointer;padding:6px 4px;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;letter-spacing:.06em;color:#5C524A}
-.tn .lb.m b{font-family:Jost,sans-serif;font-weight:500;font-size:10px;color:#fff;background:var(--c);border-radius:8px;padding:0 5px;margin-left:4px;text-shadow:none}
-.tn .lb.w{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500;font-size:10px;letter-spacing:.06em;color:#9C8F84}
+.tn .lb.m{pointer-events:auto;cursor:pointer;display:flex;align-items:center;gap:6px;padding:4px 5px 4px 10px;background:#fff;border-radius:99px;box-shadow:0 1px 2px rgba(60,40,20,.10),0 3px 10px rgba(60,40,20,.10);text-shadow:none;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.06em;color:#3A2F28}
+.tn .lb.m b{font-family:Jost,sans-serif;font-weight:500;font-size:10.5px;line-height:18px;min-width:18px;text-align:center;color:#fff;background:var(--c);border-radius:9px;padding:0 4px}
+.tn .lb.w{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500;font-size:10px;letter-spacing:.06em;color:#A89C91}
+.tn .lb.w.h{font-weight:700;font-size:11px;color:#4A3F37}
 .tn .lb.t.fl{transform:translate(calc(-100% - 12px),-50%)}
 .tn .lb.t{transform:translate(12px,-50%);font-family:"Shippori Mincho",serif;font-weight:600;font-size:12px;color:#2B2622}
 .tn .lb.hide{visibility:hidden}
@@ -88,12 +91,12 @@ var st=document.createElement("style");st.textContent=css;document.head.appendCh
 // ---- 枠 ----
 var box=document.createElement("div");box.className="tn";
 box.innerHTML=''+
- '<div class="fr"><svg class="m" preserveAspectRatio="xMidYMid meet"><g class="g-pf"></g><g class="g-mu"></g><g class="g-pin"></g></svg><div class="lbs"></div>'+
+ '<div class="fr"><svg class="m" preserveAspectRatio="xMidYMid meet"><g class="g-sh"></g><g class="g-pf"></g><g class="g-mu"></g><g class="g-pin"></g></svg><div class="lbs"></div>'+
  '<div class="crumb"></div><div class="n" id="tnn"></div><div class="cen">KANSAI</div><button type="button" class="bk"></button><div class="hint"></div><div class="cr">地図：国土数値情報（行政区域）を加工</div></div>'+
  '<div class="chips"></div>'+
  '<div class="pop" role="dialog"><button class="x" type="button" aria-label="閉じる">×</button><div class="pb"></div></div>'+
  '<div class="lg"><span>開催・オープン</span><span class="s">これからできる</span></div>';
-var svg=$("svg.m",box),G={pf:$(".g-pf",svg),mu:$(".g-mu",svg),pin:$(".g-pin",svg)},LBS=$(".lbs",box),pop=$(".pop",box);
+var svg=$("svg.m",box),G={sh:$(".g-sh",svg),pf:$(".g-pf",svg),mu:$(".g-mu",svg),pin:$(".g-pin",svg)},LBS=$(".lbs",box),pop=$(".pop",box);
 
 // ---- 今のページの状態を読む ----
 function curPref(){var b=$("#flt button.on");return b&&b.textContent!=="すべて"?b.textContent:""}
@@ -117,7 +120,7 @@ function inRing(x,y,r){var c=false;for(var i=0,j=r.length-1;i<r.length;j=i++){va
 function inGeom(lon,lat,g){var ps=g.type==="Polygon"?[g.coordinates]:g.coordinates;return ps.some(function(p){return inRing(lon,lat,p[0])&&!p.slice(1).some(function(h){return inRing(lon,lat,h)})})}
 function el(t,a,par){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);if(par)par.appendChild(e);return e}
 function setup(KS){
- KS.pref.features.forEach(function(f){var p=f.properties.p;PF[p]={bb:gbb(f.geometry),path:el("path",{d:geom2d(f.geometry),"class":"pf",fill:FILL[p]},G.pf)};
+ KS.pref.features.forEach(function(f){var p=f.properties.p,d=geom2d(f.geometry);PF[p]={bb:gbb(f.geometry),sh:el("path",{d:d,"class":"sh"},G.sh),path:el("path",{d:d,"class":"pf",fill:FILL[p]},G.pf)};
   PF[p].path.addEventListener("click",function(){if(level()===1&&PF[p].has)flash(PF[p].path,DEEP[p],function(){pickPref(p)})})});
  KS.muni.features.forEach(function(f){var pr=f.properties,m={p:pr.p,n:pr.n,c:pr.c,g:f.geometry,bb:gbb(f.geometry)};m.id=m.p+"|"+m.c+"|"+m.n;
   m.path=el("path",{d:geom2d(f.geometry),"class":"mu"},G.mu);m.path.__mu=m;m.path.addEventListener("click",function(ev){if(level()===2&&state.pref===m.p&&m.grp.has){ev.stopPropagation();var g=m.grp;g.mus.forEach(function(x){x.path.style.fill=DEEP[x.p]});setTimeout(function(){goMuni(g)},180)}});MU.push(m)});
@@ -146,13 +149,15 @@ FR.addEventListener("click",function(e){if(moved&&!e.target.closest("button")){e
  if(hit){e.stopPropagation();hit.e.click()}},true);
 function px(){var r=svg.getBoundingClientRect();return vb[2]/(r.width||360)}  // 画面の1pxが地図の何単位か
 // full=false：動いている途中（軽く：文字の位置だけ動かす）／full：止まったとき（文字の重なりも整える）
-function apply(full){if(full===undefined)full=true;svg.setAttribute("viewBox",vb.join(" "));var u=px(),lv=level();
+function apply(full){if(full===undefined)full=true;svg.setAttribute("viewBox",vb.join(" "));var u=px(),lv=level();G.sh.setAttribute("transform","translate("+(1.4*u)+" "+(2.2*u)+")");
  // 文字は HTML で重ねる（小さくてもきれいに出る）。重なる文字は、大事な方だけ出す
  var r=svg.getBoundingClientRect(),placed=[];
- LB.forEach(function(l){var x=(l.x-vb[0])/vb[2]*r.width,y=(l.y-vb[1])/vb[3]*r.height;l.e.style.transform="translate("+x.toFixed(1)+"px,"+y.toFixed(1)+"px) translate(-50%,-50%)";if(full)l.e.classList.remove("hide")});
+ function pos(l){var x=((l.flip?l.x2:l.x)-vb[0])/vb[2]*r.width,y=(l.y-vb[1])/vb[3]*r.height;l.e.style.transform="translate("+x.toFixed(1)+"px,"+y.toFixed(1)+"px) "+(l.side?(l.flip?"translate(calc(-100% - 8px),-50%)":"translate(8px,-50%)"):"translate(-50%,-50%)")}
+ LB.forEach(function(l){if(full){l.flip=false;l.e.classList.remove("hide")}pos(l)});
+ if(full)LB.forEach(function(l){if(!l.side)return;var b=l.e.getBoundingClientRect();if(b.right>r.right-12){l.flip=true;pos(l)}});
  if(full)LB.slice().sort(function(a,b){return b.pri-a.pri}).forEach(function(l){l.e.classList.remove("fl");var b=l.e.getBoundingClientRect();if(l.e.classList.contains("t")&&b.right>r.right-16){l.e.classList.add("fl");b=l.e.getBoundingClientRect()}if(b.right<r.left||b.left>r.right||b.bottom<r.top+40||b.top>r.bottom-30){l.e.classList.add("hide");return}
   if(placed.some(function(o){return b.left<o.right+2&&b.right>o.left-2&&b.top<o.bottom+1&&b.bottom>o.top-1})){l.e.classList.add("hide");return}placed.push(b)});
- $$(".pinx",G.pin).forEach(function(g){var r=+g.dataset.r,d=g.querySelector(".dot");d.setAttribute("r",r*u);if(full)d.setAttribute("stroke-width",r>4?2:1.2);g.querySelector(".hit").setAttribute("r",(lv===1||(lv===3&&r<4)?0:22)*u);var s=g.querySelector(".sel-r");if(s){s.setAttribute("r",(r+7)*u);s.setAttribute("stroke-width",1.5)}});
+ $$(".pinx",G.pin).forEach(function(g){var r=+g.dataset.r,d=g.querySelector(".dot");d.setAttribute("r",r*u);var ps=g.querySelector(".psh");if(ps){ps.setAttribute("r",(r+.6)*u);ps.setAttribute("transform","translate(0 "+(1.6*u)+")")}if(full)d.setAttribute("stroke-width",r>4?2:1.2);g.querySelector(".hit").setAttribute("r",(lv===1||(lv===3&&r<4)?0:22)*u);var s=g.querySelector(".sel-r");if(s){s.setAttribute("r",(r+7)*u);s.setAttribute("stroke-width",1.5)}});
 }
 
 // ---- 状態：関西（1）→ 府県（2）→ 市・区（3） ----
@@ -170,20 +175,29 @@ function muniOf(it){if(it._m!==undefined)return it._m;it._m=null;for(var i=0;i<M
  if(!it._m){var q=P(it.lon,it.lat),best=1e9;MU.forEach(function(m){if(m.p!==it.pref)return;var cx=(m.bb[0]+m.bb[2])/2,cy=(m.bb[1]+m.bb[3])/2,d=(cx-q[0])*(cx-q[0])+(cy-q[1])*(cy-q[1]);if(d<best){best=d;it._m=m}})}return it._m}
 
 function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(function(i){return i.lat!=null});
- PREFS.forEach(function(p){var n=pins.filter(function(i){return i.pref===p}).length;PF[p].has=n>0;var on=lv===1?n>0:p===pf;PF[p].path.setAttribute("fill",on?FILL[p]:"#F1ECE5");PF[p].path.style.cursor=lv===1&&n>0?"pointer":"default"});
+ PREFS.forEach(function(p){var n=pins.filter(function(i){return i.pref===p}).length;PF[p].has=n>0;var on=lv===1?n>0:p===pf;PF[p].path.setAttribute("fill",on?FILL[p]:"#EFE9E1");PF[p].sh.style.opacity=on?1:0;PF[p].path.style.cursor=lv===1&&n>0?"pointer":"default"});
  var cnt={};pins.forEach(function(i){if(i.pref!==pf)return;var mm=muniOf(i);if(mm){cnt[mm.grp.id]=(cnt[mm.grp.id]||0)+1}});
  var LIGHT=function(p){return {"大阪":"#FBEEE8","京都":"#F4EFF8","兵庫":"#EEF3FA","奈良":"#EEF6EC","滋賀":"#EAF6F8","和歌山":"#FCF3E4"}[p]};
  Object.keys(GR).forEach(function(id){GR[id].has=!!cnt[id]});
- if(lv===2)PF[pf].path.setAttribute("fill","#F1ECE5");
+ if(lv===2)PF[pf].path.setAttribute("fill",LIGHT(pf));
  if(lv===3)PF[pf].path.setAttribute("fill",LIGHT(pf));
- MU.forEach(function(x){var inP=x.p===pf;x.path.style.display=inP?"":"none";var hot=lv===2&&x.grp.has;x.path.style.pointerEvents=inP&&(lv!==2||hot)?"auto":"none";x.path.style.cursor=hot?"pointer":"default";x.path.style.fill=(m&&x.grp===m)||hot?FILL[x.p]:"transparent"});
+ // 線は「おでかけ先がある市・区」と「今いる市の区」だけ描く（ほかは描かず、すっきり見せる）
+ var hw={};if(lv===3)pins.forEach(function(i){var mm=muniOf(i);if(mm&&mm.grp===m)hw[mm.id]=1});
+ MU.forEach(function(x){var inP=x.p===pf,mine=lv===3&&x.grp===m,hot=x.grp.has,show=inP&&(lv===2?hot:(mine||hot));x.path.style.display=show?"":"none";if(!show)return;
+  x.path.style.pointerEvents=lv===2?"auto":"none";x.path.style.cursor=lv===2?"pointer":"default";
+  x.path.style.fill=mine?(hw[x.id]?DEEP[x.p]:FILL[x.p]):FILL[x.p];x.path.style.opacity=lv===3&&!mine?.55:1});
  LBS.innerHTML="";LB=[];
  if(lv===1)PREFS.forEach(function(p){var c=LP[p],q=P(c[0],c[1]),n=pins.filter(function(i){return i.pref===p}).length;addL(q[0],q[1],"p",p+(n?"<small>"+n+(n>1?" SPOTS":" SPOT")+"</small>":""),9).style.color=n?PC[p]:"#B9AFA5"});
- if(lv===2)Object.keys(GR).forEach(function(id){var g=GR[id];if(g.p!==pf||!cnt[id])return;var cx=(g.bb[0]+g.bb[2])/2,cy=(g.bb[1]+g.bb[3])/2;var e=addL(cx,cy,"m",esc(g.n)+"<b>"+cnt[id]+"</b>",cnt[id],PC[pf]);e.addEventListener("click",function(ev){ev.stopPropagation();goMuni(g)})});
- if(lv===3&&m.city)m.mus.forEach(function(x){var cx=(x.bb[0]+x.bb[2])/2,cy=(x.bb[1]+x.bb[3])/2;addL(cx,cy,"w",esc(x.n),0)});
+ if(lv===2)Object.keys(GR).forEach(function(id){var g=GR[id];if(g.p!==pf||!cnt[id])return;
+  // ラベルはその市のピンのすぐ横に（形の端だと、広い市では離れすぎるため）
+  var gp=pins.filter(function(i){var mm=muniOf(i);return mm&&mm.grp===g}).map(function(i){return P(i.lon,i.lat)});
+  var x1=Math.max.apply(null,gp.map(function(q){return q[0]})),x0=Math.min.apply(null,gp.map(function(q){return q[0]})),cy=gp.reduce(function(a,q){return a+q[1]},0)/gp.length;
+  var e=addL(x1,cy,"m",esc(g.n)+"<b>"+cnt[id]+"</b>",cnt[id],PC[pf]);LB[LB.length-1].side=1;LB[LB.length-1].x2=x0;e.addEventListener("click",function(ev){ev.stopPropagation();goMuni(g)})});
+ if(lv===3&&m.city)m.mus.forEach(function(x){var cx=(x.bb[0]+x.bb[2])/2,cy=(x.bb[1]+x.bb[3])/2;addL(cx,cy,"w"+(hw[x.id]?" h":""),esc(x.n),hw[x.id]?2:0)});
  G.pin.innerHTML="";
  pins.forEach(function(it){if(pf&&it.pref!==pf)return;var q=P(it.lon,it.lat),c=PC[it.pref]||"#2B2622",inM=lv===3&&muniOf(it)&&muniOf(it).grp===m,r=lv===1?2.6:lv===2?5:(inM?7:3.5);
   var g=el("g",{"class":"pinx"},G.pin);g.dataset.r=r;
+  if(lv>1)el("circle",{"class":"psh",cx:q[0],cy:q[1]},g);
   if(sel&&sel.k===it.k)el("circle",{"class":"sel-r",cx:q[0],cy:q[1],stroke:c},g);
   el("circle",{"class":"dot",cx:q[0],cy:q[1],fill:it.soon?"#fff":c,stroke:it.soon?c:"#fff"},g);
   var h=el("circle",{"class":"hit",cx:q[0],cy:q[1]},g);h.addEventListener("click",function(ev){ev.stopPropagation();tapPin(it)});
