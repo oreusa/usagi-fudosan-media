@@ -447,7 +447,9 @@ function setOpen(v,fromPop){if(v===OPEN&&v)return;OPEN=v;FS=v;
   buildHead();carSig="";if(!loading)load();else if(ready){lastSig="";sync()}}
  else{box.classList.remove("fs");box.classList.add("shut");document.documentElement.style.overflow="";sel=null;pop.classList.remove("on");mount()}
  if(v===false)mbUpd()}
-mb.addEventListener("click",function(){setOpen(true)});
+// 本番のリストでだけ「地図で見る」が押された数を数える（試作ページ・オーナーは数えない）
+function cnt1(k){try{if(/\/townnotes\//.test(location.pathname)||/github\.io$/.test(location.hostname)||localStorage.getItem("usagi_owner")==="1")return;var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true})}catch(e){}}
+mb.addEventListener("click",function(){cnt1("地図｜地図で見る");setOpen(true)});
 function toMap(){var y=box.getBoundingClientRect().top+scrollY-12;scrollTo({top:y,behavior:RM?"auto":"smooth"})}
 function sync(){mount();if(!ready||!OPEN)return;var pf=curPref(),sig=pf+"|"+curTab();if(sig===lastSig)return;var first=!lastSig,pfChanged=first||lastSig.split("|")[0]!==pf;lastSig=sig;
  list=items();OTH=others();var tb=curTab();$(".lg",box).innerHTML='<span'+(tb==="もうすぐ"?' class="s"':'')+'>'+esc(tb)+'</span><span class="o">ほかのタブ</span>';$(".lg",box).style.display="flex";sel=null;pop.classList.remove("on");
