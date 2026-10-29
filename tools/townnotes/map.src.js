@@ -28,7 +28,7 @@ var css=`
 .tn .hd .j{display:block;font-family:"Shippori Mincho",serif;font-weight:600;font-size:15px;letter-spacing:.1em;color:#2B2622;margin-top:4px}
 .tn .hd .n{font-family:"Zen Kaku Gothic New",sans-serif;font-size:11px;color:#8C7B6E;letter-spacing:.06em}
 .tn .hd .n b{font-family:Jost,sans-serif;font-weight:500;font-size:16px;color:#2B2622;margin:0 2px}
-.tn .fr{position:relative;aspect-ratio:1/1.12;background:#FDFCFA;overflow:hidden;user-select:none;-webkit-user-select:none}
+.tn .fr{position:relative;aspect-ratio:1/.86;margin:0 -14px;background:#FDFCFA;overflow:hidden;user-select:none;-webkit-user-select:none}
 .tn .fr:before{content:"";position:absolute;inset:8px;border:1px solid rgba(43,38,34,.28);pointer-events:none;z-index:3}
 .tn .fr:after{content:"";position:absolute;inset:0;background:url(/townnotes/grain.png);opacity:.05;mix-blend-mode:multiply;pointer-events:none;z-index:4}
 .tn svg.m{position:absolute;inset:0;width:100%;height:100%;display:block}
