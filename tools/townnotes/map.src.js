@@ -76,7 +76,7 @@ var JA=["coalesce",["get","name:ja"],["get","name"]];
 function style(){return{version:8,glyphs:"https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf",
  sources:{o:{type:"vector",url:"https://tiles.openfreemap.org/planet"}},
  layers:[
- {id:"bg",type:"background",paint:{"background-color":"#FBF8F3"}},
+ {id:"bg",type:"background",paint:{"background-color":"#FCF9F4"}},
  {id:"res",type:"fill",source:"o","source-layer":"landuse",filter:["match",["get","class"],["residential","suburb","neighbourhood"],true,false],paint:{"fill-color":"#F6F1EA","fill-opacity":["interpolate",["linear"],["zoom"],8,0,11,1]}},
  {id:"wood",type:"fill",source:"o","source-layer":"landcover",filter:["match",["get","class"],["wood","forest","grass","farmland"],true,false],paint:{"fill-color":["match",["get","class"],"farmland","#F3F0E2","#E4EFD9"],"fill-opacity":.8}},
  {id:"park",type:"fill",source:"o","source-layer":"park",paint:{"fill-color":"#D9EBCB","fill-opacity":.9}},
@@ -100,6 +100,8 @@ function style(){return{version:8,glyphs:"https://tiles.openfreemap.org/fonts/{f
 // ---- 地図 ----
 var map=null,list=[],sel=null,lastSig="",ready=false;
 function geo(){return{type:"FeatureCollection",features:list.filter(function(i){return i.lat!=null}).map(function(i,n){return{type:"Feature",id:n,geometry:{type:"Point",coordinates:[i.lon,i.lat]},properties:{k:i.k,pref:i.pref,t:i.t,soon:i.soon?1:0}}})}}
+var PL={"大阪":[135.40,34.47],"京都":[135.42,35.32],"兵庫":[134.72,35.12],"奈良":[135.93,34.28],"滋賀":[136.30,35.02],"和歌山":[135.45,33.92]};
+var PL2=["match",["get","n"]];Object.keys(PC).forEach(function(p){PL2.push(p,PC[p])});PL2.push("#2B2622");
 var PM=["match",["get","pref"]];Object.keys(PC).forEach(function(p){PM.push(p,PC[p])});PM.push("#2B2622");
 function build(){
  map=new maplibregl.Map({container:"tnmap",style:style(),bounds:BB[""],fitBoundsOptions:{padding:14},attributionControl:false,cooperativeGestures:true,dragRotate:false,pitchWithRotate:false,touchPitch:false,
@@ -107,10 +109,16 @@ function build(){
   locale:{"CooperativeGesturesHandler.WindowsHelpText":"Ctrl を押しながらスクロールで拡大できます","CooperativeGesturesHandler.MacHelpText":"⌘ を押しながらスクロールで拡大できます","CooperativeGesturesHandler.MobileHelpText":"2本の指で、広げたり動かしたりできます","NavigationControl.ZoomIn":"拡大","NavigationControl.ZoomOut":"縮小"}});
  map.touchZoomRotate.disableRotation();
  map.addControl(new maplibregl.NavigationControl({showCompass:false}),"top-right");
- map.addControl(new maplibregl.AttributionControl({compact:true,customAttribution:'<a href="https://openfreemap.org" target="_blank" rel="noopener">OpenFreeMap</a> © <a href="https://www.openmaptiles.org/" target="_blank" rel="noopener">OpenMapTiles</a> © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'}),"bottom-right");
+ map.addControl(new maplibregl.AttributionControl({compact:true}),"bottom-right");
  map.on("load",function(){var ld=$(".ld",box);if(ld)ld.remove();
+  // 出典は (i) を押したときだけ開く
+  var at=$(".maplibregl-ctrl-attrib",box);if(at)at.classList.remove("maplibregl-compact-show");
+  // 府県名（広く見ているときだけ。府県ボタンと同じ色）
+  map.addSource("pl",{type:"geojson",data:{type:"FeatureCollection",features:Object.keys(PL).map(function(p){return{type:"Feature",geometry:{type:"Point",coordinates:PL[p]},properties:{n:p}}})}});
+  map.addLayer({id:"pl",type:"symbol",source:"pl",maxzoom:8.8,layout:{"text-field":["get","n"],"text-font":FB,"text-size":15,"text-letter-spacing":.3,"text-allow-overlap":true},paint:{"text-color":PL2,"text-halo-color":"rgba(255,255,255,.95)","text-halo-width":2.2,"text-opacity":.9}});
   map.addSource("p",{type:"geojson",data:geo(),cluster:true,clusterRadius:34,clusterMaxZoom:12});
-  map.addLayer({id:"cl",type:"circle",source:"p",filter:["has","point_count"],paint:{"circle-color":"#fff","circle-stroke-color":"#2B2622","circle-stroke-width":1.6,"circle-radius":["step",["get","point_count"],14,5,17,15,21]}});
+  map.addLayer({id:"cl-ring",type:"circle",source:"p",filter:["has","point_count"],paint:{"circle-color":"#E8B49E","circle-opacity":.35,"circle-radius":["step",["get","point_count"],19,5,23,15,28]}});
+  map.addLayer({id:"cl",type:"circle",source:"p",filter:["has","point_count"],paint:{"circle-color":"#fff","circle-stroke-color":"#C9826A","circle-stroke-width":2,"circle-radius":["step",["get","point_count"],14,5,17,15,21]}});
   map.addLayer({id:"cl-n",type:"symbol",source:"p",filter:["has","point_count"],layout:{"text-field":["get","point_count_abbreviated"],"text-font":FB,"text-size":13,"text-allow-overlap":true},paint:{"text-color":"#2B2622"}});
   map.addLayer({id:"pin-halo",type:"circle",source:"p",filter:["all",["!",["has","point_count"]],["==",["get","k"],""]],paint:{"circle-radius":20,"circle-color":PM,"circle-opacity":.18}});
   map.addLayer({id:"pin",type:"circle",source:"p",filter:["!",["has","point_count"]],paint:{"circle-radius":["interpolate",["linear"],["zoom"],7,7,13,10],"circle-color":["case",["==",["get","soon"],1],"#fff",PM],"circle-stroke-color":["case",["==",["get","soon"],1],PM,"#fff"],"circle-stroke-width":["case",["==",["get","soon"],1],3,2.5]}});
