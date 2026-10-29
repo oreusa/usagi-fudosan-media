@@ -43,5 +43,6 @@ for m in re.finditer(r'<a class="card"([^>]*)>(.*?)</a>', src, re.S):
         if r and ok(pref, *r): got = [round(r[0], 5), round(r[1], 5), kind]; break
     res[title] = got or [None, None, 'none']
     print(title, res[title])
+os.makedirs(os.path.dirname(OUT), exist_ok=True)
 json.dump(res, open(OUT, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
 print('done', len(res), sum(1 for v in res.values() if v[2] in ('place', 'spot', 'title')), 'exact')
