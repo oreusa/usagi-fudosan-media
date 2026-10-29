@@ -107,6 +107,12 @@ var css=`
 .tn .lg{display:none;justify-content:center;gap:16px;margin:8px 0 0;font-size:10px;color:#9C9187;letter-spacing:.06em}
 .tn .lg span:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:#9C9187;margin-right:5px;vertical-align:-1px}
 .tn .lg span.s:before{background:#fff;box-shadow:inset 0 0 0 2px #9C9187}
+.tn .lg span.o:before{width:5px;height:5px;opacity:.5;vertical-align:1px}
+.tn .g-mini circle{pointer-events:none}
+.tnfl{position:fixed;left:50%;bottom:20px;z-index:51;display:flex;align-items:center;gap:8px;height:44px;padding:0 20px;border:0;border-radius:22px;background:#2B2622;color:#fff;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:14px;letter-spacing:.08em;box-shadow:0 6px 18px rgba(43,38,34,.28);transform:translate(-50%,90px);opacity:0;pointer-events:none;transition:transform .35s cubic-bezier(.2,.8,.2,1),opacity .25s;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.tnfl.on{transform:translate(-50%,0);opacity:1;pointer-events:auto}
+.tnfl svg{width:17px;height:17px}
+@media (prefers-reduced-motion:reduce){.tnfl{transition:opacity .2s}}
 .it.tnf .card{box-shadow:0 0 0 2px var(--pc,#2B2622)!important;transition:box-shadow .3s}
 `;
 var st=document.createElement("style");st.textContent=css;document.head.appendChild(st);
@@ -114,18 +120,21 @@ var st=document.createElement("style");st.textContent=css;document.head.appendCh
 // ---- 枠 ----
 var box=document.createElement("div");box.className="tn";
 box.innerHTML=''+
- '<div class="fr"><svg class="m" preserveAspectRatio="xMidYMid meet"><g class="g-sh"></g><g class="g-pf"></g><g class="g-mu"></g><g class="g-pin"></g></svg><div class="lbs"></div>'+
+ '<div class="fr"><svg class="m" preserveAspectRatio="xMidYMid meet"><g class="g-sh"></g><g class="g-pf"></g><g class="g-mu"></g><g class="g-mini"></g><g class="g-pin"></g></svg><div class="lbs"></div>'+
  '<div class="crumb"></div><div class="n" id="tnn"></div><div class="cen">KANSAI</div><button type="button" class="bk"></button><div class="hint"></div><div class="cr">地図：国土数値情報（行政区域）を加工</div></div>'+
  '<div class="chips"></div>'+
  '<div class="pop" role="dialog"><button class="x" type="button" aria-label="閉じる">×</button><div class="pb"></div></div>'+
  '<div class="lg"><span>開催・オープン</span><span class="s">これからできる</span></div>';
-var svg=$("svg.m",box),G={sh:$(".g-sh",svg),pf:$(".g-pf",svg),mu:$(".g-mu",svg),pin:$(".g-pin",svg)},LBS=$(".lbs",box),pop=$(".pop",box);
+var svg=$("svg.m",box),G={sh:$(".g-sh",svg),pf:$(".g-pf",svg),mu:$(".g-mu",svg),mini:$(".g-mini",svg),pin:$(".g-pin",svg)},LBS=$(".lbs",box),pop=$(".pop",box);
 
 // ---- 今のページの状態を読む ----
 function curPref(){var b=$("#flt button.on");return b&&b.textContent!=="すべて"?b.textContent:""}
 function curBlk(){return $(".paper .blk.tb:not(.toff)")||$(".paper .blk.b-now")}
 function curTab(){var b=$(".tabs button.on b");return b?b.childNodes[0].textContent:"開催中"}
-var GEO={};
+var GEO={},OTH=[];
+// ほかのタブの場所（地図に小さな点で出すだけ。押せない）
+function others(){var cb=curBlk(),seen={},out=[];list.forEach(function(i){seen[i.k]=1});
+ $$(".paper .blk").forEach(function(blk){if(blk===cb)return;$$(".it",blk).forEach(function(w){var tt=$(".card .t",w),k=key(tt&&tt.textContent),g=k&&GEO[k];if(!g||g[0]==null||seen[k])return;seen[k]=1;out.push({k:k,pref:w.getAttribute("data-pref")||"",lat:g[0],lon:g[1]})})});return out}
 function items(){var blk=curBlk();if(!blk)return[];var seen={},out=[],soon=blk.classList.contains("b-new");
  $$(".it",blk).forEach(function(w){if(w.style.display==="none")return;var a=$(".card",w);if(!a)return;var tt=$(".t",a),k=key(tt&&tt.textContent);if(!k||seen[k])return;seen[k]=1;
   var g=GEO[k];var d=$(".d",a),dt="",tags=[];if(d)[].forEach.call(d.childNodes,function(n){if(n.nodeType===3)dt+=n.textContent;else if(n.classList&&n.classList.contains("tg"))tags.push(n.textContent)});
@@ -185,6 +194,7 @@ function apply(full){if(full===undefined)full=true;svg.setAttribute("viewBox",vb
   var P2=gs.map(function(g){return [g.__q[0]/u,g.__q[1]/u]}),O=P2.map(function(q){return q.slice()});
   for(var it=0;it<80;it++){var mv=false;for(var i=0;i<P2.length;i++)for(var j=i+1;j<P2.length;j++){var dx=P2[j][0]-P2[i][0],dy=P2[j][1]-P2[i][1],d=Math.hypot(dx,dy);if(d<D){mv=true;if(d<.01){dx=Math.cos(i+j);dy=Math.sin(i+j);d=1}var k=(D-d)/2/d;P2[i][0]-=dx*k;P2[i][1]-=dy*k;P2[j][0]+=dx*k;P2[j][1]+=dy*k}}if(!mv)break}
   gs.forEach(function(g,i){var dx=(P2[i][0]-O[i][0])*u,dy=(P2[i][1]-O[i][1])*u;if(Math.abs(dx)+Math.abs(dy)<1e-6)g.removeAttribute("transform");else g.setAttribute("transform","translate("+dx+" "+dy+")")})}
+ var mr=(lv===1?1.4:lv===2?2.4:3)*u;$$("circle",G.mini).forEach(function(c){c.setAttribute("r",mr);c.setAttribute("stroke-width",.6)});
  $$(".pinx",G.pin).forEach(function(g){var r=+g.dataset.r,d=g.querySelector(".dot");d.setAttribute("r",r*u);var tn=g.querySelector(".pn");if(tn)tn.setAttribute("font-size",10*u);if(!full)g.removeAttribute("transform");var ps=g.querySelector(".psh");if(ps){ps.setAttribute("r",(r+.6)*u);ps.setAttribute("transform","translate(0 "+(1.6*u)+")")}if(full)d.setAttribute("stroke-width",r>4?2:1.2);g.querySelector(".hit").setAttribute("r",(lv===1?0:lv===3?(r<4?0:12):22)*u);var s=g.querySelector(".sel-r");if(s){s.setAttribute("r",(r+7)*u);s.setAttribute("stroke-width",1.5)}});
  // 番号ピンに重なる区の名前は消す（番号を見やすく・押しやすく）
  if(full&&lv===3){var DR=$$(".pinx",G.pin).filter(function(g){return g.dataset.n}).map(function(g){return g.querySelector(".dot").getBoundingClientRect()});
@@ -225,6 +235,7 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
   var x1=Math.max.apply(null,gp.map(function(q){return q[0]})),x0=Math.min.apply(null,gp.map(function(q){return q[0]})),cy=gp.reduce(function(a,q){return a+q[1]},0)/gp.length;
   var e=addL(x1,cy,"m",esc(g.n)+"<b>"+cnt[id]+"</b>",cnt[id],PC[pf]);LB[LB.length-1].side=1;LB[LB.length-1].x2=x0;e.addEventListener("click",function(ev){ev.stopPropagation();goMuni(g)})});
  if(lv===3&&m.city)m.mus.forEach(function(x){var cx=(x.bb[0]+x.bb[2])/2,cy=(x.bb[1]+x.bb[3])/2;addL(cx,cy,"w"+(hw[x.id]?" h":""),esc(x.n),hw[x.id]?2:0)});
+ G.mini.innerHTML="";OTH.forEach(function(o){if(pf&&o.pref!==pf)return;var q=P(o.lon,o.lat);el("circle",{cx:q[0],cy:q[1],fill:PC[o.pref]||"#9C9187","fill-opacity":.5,stroke:"#fff","data-m":1},G.mini)});
  G.pin.innerHTML="";var selG=null;
  // 市の画面では、ピンに北から順に番号をふる（下の一覧と同じ番号）
  var NUM=lv===3?pins.filter(function(i){var mm=muniOf(i);return mm&&mm.grp===m}).sort(function(a,b){return b.lat-a.lat||a.lon-b.lon}):[];NUM.forEach(function(it,i){it._n=i+1});
@@ -300,10 +311,21 @@ var OPEN=false;try{OPEN=sessionStorage.getItem("tnmap")==="1"}catch(e){}
 function setOpen(v){OPEN=v;box.classList.toggle("shut",!v);mb.classList.toggle("on",v);
  mb.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="#B5532F" stroke-width="1.8" stroke-linejoin="round"><path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5V4l-6 2.5L9 4Z"/><path d="M9 4v13M15 6.5v13"/></svg>'+(v?"地図を閉じる":"地図で見る")+"<b>⌄</b>";
  try{sessionStorage.setItem("tnmap",v?"1":"0")}catch(e){}
- if(v){if(!loading)load();else if(ready){lastSig="";sync()}}else{sel=null;pop.classList.remove("on")}}
+ if(v){if(!loading)load();else if(ready){lastSig="";sync()}}else{sel=null;pop.classList.remove("on")}
+ if(typeof flUpd==="function"&&fl)flUpd()}
 mb.addEventListener("click",function(){setOpen(!OPEN)});
+// 画面の下に浮かぶ地図ボタン（リストのどこからでも地図へ）
+var fl=document.createElement("button");fl.type="button";fl.className="tnfl";document.body.appendChild(fl);
+var MAPI='<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"><path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5V4l-6 2.5L9 4Z"/><path d="M9 4v13M15 6.5v13"/></svg>';
+function toMap(){var y=box.getBoundingClientRect().top+scrollY-12;scrollTo({top:y,behavior:RM?"auto":"smooth"})}
+fl.addEventListener("click",function(){if(!OPEN)setOpen(true);setTimeout(toMap,OPEN?30:60)});
+var flTxt="";function flUpd(){var paper=curBlk(),tabs=$(".tabs");if(!paper||!tabs){fl.classList.remove("on");return}
+ var tb=tabs.getBoundingClientRect(),pb=paper.getBoundingClientRect(),inList=tb.top<innerHeight*.5&&pb.bottom>innerHeight-70,show=false,t="";var mo=$(".more",paper);if(mo){var mr=mo.getBoundingClientRect();if(mr.height&&mr.top<innerHeight-10&&mr.bottom>innerHeight-80)inList=false}
+ if(inList){if(!OPEN){show=mb.getBoundingClientRect().bottom<0;t="地図で見る"}else{var bb=box.getBoundingClientRect();show=bb.bottom<60||bb.top>innerHeight;t="地図にもどる"}}
+ if(t&&t!==flTxt){flTxt=t;fl.innerHTML=MAPI+t}fl.classList.toggle("on",show)}
+var flq=false;addEventListener("scroll",function(){if(flq)return;flq=true;requestAnimationFrame(function(){flq=false;flUpd()})},{passive:true});
 function sync(){mount();if(!ready||!OPEN)return;var pf=curPref(),sig=pf+"|"+curTab();if(sig===lastSig)return;var first=!lastSig,pfChanged=first||lastSig.split("|")[0]!==pf;lastSig=sig;
- list=items();$(".lg",box).style.display=curTab()==="もうすぐ"?"flex":"none";sel=null;pop.classList.remove("on");
+ list=items();OTH=others();var tb=curTab();$(".lg",box).innerHTML='<span'+(tb==="もうすぐ"?' class="s"':'')+'>'+esc(tb)+'</span><span class="o">ほかのタブ</span>';$(".lg",box).style.display="flex";sel=null;pop.classList.remove("on");
  if(pfChanged){state.pref=pf;state.muni=null;if(first){var hb=pf&&hotBox(pf);vb=pf?(hb?fit(hb,.18):fit(PF[pf].bb,.03)):fit(HOME,.02);render()}else goPref()}else render();}
 document.addEventListener("click",function(e){if(e.target.closest("#flt,.tabs,.dflt"))setTimeout(sync,90)});
 addEventListener("resize",function(){if(ready)apply()});
@@ -313,5 +335,5 @@ var loading=false;function load(){loading=true;
 Promise.all([fetch("/townnotes/geo.json",{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return{}}),fetch("/townnotes/kansai.json").then(function(r){return r.json()})]).then(function(a){
  Object.keys(a[0]).forEach(function(k){if(a[0][k][0]!=null)GEO[key(k)]=a[0][k]});setup(a[1]);ready=true;lastSig="";sync();window.__tnReady=true;
 }).catch(function(e){console.error(e);$(".fr",box).style.display="none"});}
-setOpen(OPEN);
+setOpen(OPEN);flUpd();
 })();
