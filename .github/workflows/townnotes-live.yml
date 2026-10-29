@@ -20,3 +20,7 @@ jobs:
           curl -sS "$U/townnotes/map.js" | grep -c 'function fresh' || true
           echo "--- cloudflare status"
           curl -sS https://www.cloudflarestatus.com/api/v2/incidents/unresolved.json | python3 -c "import json,sys;d=json.load(sys.stdin);[print(i['name'],'|',i['status'],'|',i['created_at'],'|',[c['name'] for c in i.get('components',[])]) for i in d['incidents']]" || true
+          echo "--- github pages (予備)"
+          G=https://oreusa.github.io/usagi-fudosan-media/links/townnotes/
+          curl -sS -o gp.html -w '%{http_code}\n' $G; grep -o 'townnotes/map.js[^"]*' gp.html || true
+          curl -sS -o /dev/null -w 'map.js %{http_code}\n' https://oreusa.github.io/usagi-fudosan-media/links/townnotes/map.js

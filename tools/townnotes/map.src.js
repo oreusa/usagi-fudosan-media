@@ -44,7 +44,7 @@ var css=`
 .tn .hd .n b{font-family:Jost,sans-serif;font-weight:500;font-size:16px;color:#2B2622;margin:0 2px}
 .tn .fr{position:relative;aspect-ratio:1/.86;margin:0 -14px;background:#FDFCFA;overflow:hidden;user-select:none;-webkit-user-select:none}
 .tn .fr:before{content:"";position:absolute;inset:8px;border:1px solid rgba(43,38,34,.28);pointer-events:none;z-index:3}
-.tn .fr:after{content:"";position:absolute;inset:0;background:url(/townnotes/grain.png);opacity:.05;pointer-events:none;z-index:4}
+.tn .fr:after{content:"";position:absolute;inset:0;background:url(townnotes/grain.png);opacity:.05;pointer-events:none;z-index:4}
 .tn svg.m{position:absolute;inset:0;width:100%;height:100%;display:block}
 .tn .pf,.tn .mu,.tn .dot,.tn .sel-r{vector-effect:non-scaling-stroke}
 .tn .pf{stroke:#FDFCFA;stroke-width:2px;stroke-linejoin:round;cursor:pointer;transition:fill .5s,opacity .5s}
@@ -441,7 +441,7 @@ addEventListener("resize",function(){if(ready)apply()});
 mount();
 // 地図のデータは、はじめて開いたときだけ読む（開かない人は軽いまま）
 var loading=false;function load(){loading=true;
-Promise.all([fetch("/townnotes/geo.json",{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return{}}),fetch("/townnotes/kansai.json").then(function(r){return r.json()})]).then(function(a){
+Promise.all([fetch("townnotes/geo.json",{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return{}}),fetch("townnotes/kansai.json").then(function(r){return r.json()})]).then(function(a){
  Object.keys(a[0]).forEach(function(k){if(a[0][k][0]!=null)GEO[key(k)]=a[0][k]});setup(a[1]);drawIcons();ready=true;lastSig="";sync();window.__tnReady=true;
 }).catch(function(e){console.error(e);$(".fr",box).style.display="none"});}
 setOpen(OPEN);flUpd();
