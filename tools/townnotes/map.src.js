@@ -1,5 +1,5 @@
-/* TOWN NOTES（仮）: おでかけリストに、指で拡大できる地図とピンを組み込む。
-   地図: MapLibre GL + OpenFreeMap（無料・キー不要。地図データ © OpenStreetMap）。色は自前の明るい配色。
+/* TOWN NOTES（仮）: おでかけリストに、指で拡大できるイラストの地図とピンを組み込む。
+   地図: MapLibre GL で、府県と市区町村の形（links/townnotes/kansai.json、国土数値情報を加工）だけを描く。道路や地図タイルは使わない。
    今のページ（タブ・府県ボタン・カード）をそのまま読み、選んでいるタブと府県のピンだけを立てる。
    場所は /townnotes/geo.json（tools/townnotes/geocode.py が作る）。 */
 (function(){
@@ -70,59 +70,56 @@ function items(){var blk=curBlk();if(!blk)return[];var seen={},out=[],soon=blk.c
   var mp=$(".mp",w);out.push({w:w,a:a,k:k,t:$$(".nwp",tt).map(function(s){return s.textContent}).join(" ")||tt.textContent,pref:w.getAttribute("data-pref")||"",d:dt.replace(/^\s*[｜|]\s*/,"").trim(),tags:tags,href:a.getAttribute("href"),map:mp?mp.href:"",lat:g&&g[0],lon:g&&g[1],soon:soon});});
  return out}
 
-// ---- 明るい地図の配色（OpenMapTiles の形に、自前の色をつける） ----
-var F=["Noto Sans Regular"],FB=["Noto Sans Bold"];
-var JA=["coalesce",["get","name:ja"],["get","name"]];
-function style(){return{version:8,glyphs:"https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf",
- sources:{o:{type:"vector",url:"https://tiles.openfreemap.org/planet"}},
- layers:[
- {id:"bg",type:"background",paint:{"background-color":"#FCF9F4"}},
- {id:"res",type:"fill",source:"o","source-layer":"landuse",filter:["match",["get","class"],["residential","suburb","neighbourhood"],true,false],paint:{"fill-color":"#F6F1EA","fill-opacity":["interpolate",["linear"],["zoom"],8,0,11,1]}},
- {id:"wood",type:"fill",source:"o","source-layer":"landcover",filter:["match",["get","class"],["wood","forest","grass","farmland"],true,false],paint:{"fill-color":["match",["get","class"],"farmland","#F3F0E2","#E4EFD9"],"fill-opacity":.8}},
- {id:"park",type:"fill",source:"o","source-layer":"park",paint:{"fill-color":"#D9EBCB","fill-opacity":.9}},
- {id:"water",type:"fill",source:"o","source-layer":"water",paint:{"fill-color":"#BFE0EE"}},
- {id:"river",type:"line",source:"o","source-layer":"waterway",minzoom:9,paint:{"line-color":"#BFE0EE","line-width":["interpolate",["linear"],["zoom"],9,.6,14,2.5]}},
- {id:"bld",type:"fill",source:"o","source-layer":"building",minzoom:14,paint:{"fill-color":"#EFE8DF","fill-outline-color":"#E6DDD2"}},
- {id:"rd-minor",type:"line",source:"o","source-layer":"transportation",minzoom:12,filter:["match",["get","class"],["minor","service","tertiary"],true,false],paint:{"line-color":"#FFFFFF","line-width":["interpolate",["linear"],["zoom"],12,.8,16,5]}},
- {id:"rd-major-c",type:"line",source:"o","source-layer":"transportation",minzoom:8,filter:["match",["get","class"],["primary","secondary","trunk","motorway"],true,false],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":"#EADFD2","line-width":["interpolate",["linear"],["zoom"],8,1.2,12,3.5,16,10]}},
- {id:"rd-major",type:"line",source:"o","source-layer":"transportation",minzoom:8,filter:["match",["get","class"],["primary","secondary","trunk","motorway"],true,false],layout:{"line-cap":"round","line-join":"round"},paint:{"line-color":["match",["get","class"],["motorway","trunk"],"#FFF4DF","#FFFFFF"],"line-width":["interpolate",["linear"],["zoom"],8,.6,12,2.2,16,8]}},
- {id:"rail",type:"line",source:"o","source-layer":"transportation",minzoom:9,filter:["match",["get","class"],["rail","transit"],true,false],paint:{"line-color":"#C9BBAE","line-width":["interpolate",["linear"],["zoom"],9,.6,14,1.6]}},
- {id:"bd-city",type:"line",source:"o","source-layer":"boundary",minzoom:9,filter:["all",[">=",["get","admin_level"],7],["<=",["get","admin_level"],8],["!=",["get","maritime"],1]],paint:{"line-color":"#D8CABB","line-width":.8,"line-dasharray":[2,2]}},
- {id:"bd-pref",type:"line",source:"o","source-layer":"boundary",filter:["all",["==",["get","admin_level"],4],["!=",["get","maritime"],1]],paint:{"line-color":"#B9A693","line-width":["interpolate",["linear"],["zoom"],6,1,12,2],"line-dasharray":[3,2]}},
- {id:"st-dot",type:"circle",source:"o","source-layer":"poi",minzoom:12.5,filter:["all",["==",["get","class"],"railway"],["==",["get","subclass"],"station"]],paint:{"circle-radius":3,"circle-color":"#fff","circle-stroke-color":"#9C8C7E","circle-stroke-width":1.2}},
- {id:"st",type:"symbol",source:"o","source-layer":"poi",minzoom:12.5,filter:["all",["==",["get","class"],"railway"],["==",["get","subclass"],"station"]],layout:{"text-field":JA,"text-font":F,"text-size":10.5,"text-offset":[0,.7],"text-anchor":"top","text-optional":true},paint:{"text-color":"#7C6E62","text-halo-color":"#fff","text-halo-width":1.4}},
- {id:"lb-small",type:"symbol",source:"o","source-layer":"place",minzoom:10.5,filter:["match",["get","class"],["suburb","quarter","neighbourhood","village","hamlet"],true,false],layout:{"text-field":JA,"text-font":F,"text-size":["interpolate",["linear"],["zoom"],10.5,10,14,12],"text-letter-spacing":.08},paint:{"text-color":"#8C7B6E","text-halo-color":"#fff","text-halo-width":1.5}},
- {id:"lb-town",type:"symbol",source:"o","source-layer":"place",minzoom:8.5,filter:["==",["get","class"],"town"],layout:{"text-field":JA,"text-font":F,"text-size":["interpolate",["linear"],["zoom"],8.5,10.5,13,13]},paint:{"text-color":"#5C524A","text-halo-color":"#fff","text-halo-width":1.6}},
- {id:"lb-city",type:"symbol",source:"o","source-layer":"place",minzoom:6.5,filter:["==",["get","class"],"city"],layout:{"text-field":JA,"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],7,11,12,15]},paint:{"text-color":"#3F3630","text-halo-color":"#fff","text-halo-width":1.8}},
- {id:"lb-pref",type:"symbol",source:"o","source-layer":"place",maxzoom:8.6,filter:["==",["get","class"],"state"],layout:{"text-field":JA,"text-font":FB,"text-size":13,"text-letter-spacing":.25},paint:{"text-color":"#A07E66","text-halo-color":"#fff","text-halo-width":2}}
- ]}}
+// ---- イラストの地図（リールと同じ「府県の形だけ」の地図。府県と市区町村の形は国土数値情報を軽くしたもの） ----
+var FB=["Noto Sans Bold"];
+var SOFT={"大阪":"#FBE0D5","京都":"#ECE2F5","兵庫":"#DDEAF8","奈良":"#DEF0DC","滋賀":"#D5EFF2","和歌山":"#FBEACF"};
+function mt(o,k){var e=["match",["get",k]];Object.keys(o).forEach(function(p){e.push(p,o[p])});e.push("#EEE");return e}
+function style(){return{version:8,glyphs:"https://tiles.openfreemap.org/fonts/{fontstack}/{range}.pbf",sources:{},layers:[{id:"sea",type:"background",paint:{"background-color":"#D3EBF4"}}]}}
 
 // ---- 地図 ----
 var map=null,list=[],sel=null,lastSig="",ready=false;
 function geo(){return{type:"FeatureCollection",features:list.filter(function(i){return i.lat!=null}).map(function(i,n){return{type:"Feature",id:n,geometry:{type:"Point",coordinates:[i.lon,i.lat]},properties:{k:i.k,pref:i.pref,t:i.t,soon:i.soon?1:0}}})}}
 var PL={"大阪":[135.40,34.47],"京都":[135.42,35.32],"兵庫":[134.72,35.12],"奈良":[135.93,34.28],"滋賀":[136.30,35.02],"和歌山":[135.45,33.92]};
-var PL2=["match",["get","n"]];Object.keys(PC).forEach(function(p){PL2.push(p,PC[p])});PL2.push("#2B2622");
-var PM=["match",["get","pref"]];Object.keys(PC).forEach(function(p){PM.push(p,PC[p])});PM.push("#2B2622");
-function build(){
+// かわいいピン（しずく形）。府県の色ごとに作る
+function pinImg(c,soon){var W=56,H=72,cv=document.createElement("canvas");cv.width=W;cv.height=H;var g=cv.getContext("2d"),cx=28,cy=26,r=20;
+ function shape(){g.beginPath();g.arc(cx,cy,r,Math.PI*0.80,Math.PI*0.20,false);g.quadraticCurveTo(cx+9,cy+r+8,cx,cy+r+22);g.quadraticCurveTo(cx-9,cy+r+8,cx-r*Math.cos(Math.PI*0.2),cy+r*Math.sin(Math.PI*0.2));g.closePath();}
+ g.save();g.shadowColor="rgba(80,60,40,.28)";g.shadowBlur=6;g.shadowOffsetY=3;shape();g.fillStyle=soon?"#fff":c;g.fill();g.restore();
+ shape();g.lineWidth=4;g.strokeStyle=soon?c:"#fff";if(soon)g.setLineDash([6,4]);g.stroke();g.setLineDash([]);
+ g.beginPath();g.arc(cx,cy,7.5,0,7);g.fillStyle=soon?c:"#fff";g.fill();
+ if(!soon){g.beginPath();g.ellipse(cx-8,cy-9,5,3,-.6,0,7);g.fillStyle="rgba(255,255,255,.35)";g.fill();}
+ return g.getImageData(0,0,W,H)}
+function build(KS){
  map=new maplibregl.Map({container:"tnmap",style:style(),bounds:BB[""],fitBoundsOptions:{padding:14},attributionControl:false,cooperativeGestures:true,dragRotate:false,pitchWithRotate:false,touchPitch:false,
-  localIdeographFontFamily:"'Zen Kaku Gothic New','Hiragino Sans','Noto Sans JP',sans-serif",minZoom:6,maxZoom:17,maxBounds:[[132.8,32.6],[137.9,36.6]],
+  localIdeographFontFamily:"'Zen Maru Gothic','Zen Kaku Gothic New','Hiragino Maru Gothic ProN',sans-serif",minZoom:6.4,maxZoom:13.5,maxBounds:[[132.9,32.7],[137.8,36.5]],
   locale:{"CooperativeGesturesHandler.WindowsHelpText":"Ctrl を押しながらスクロールで拡大できます","CooperativeGesturesHandler.MacHelpText":"⌘ を押しながらスクロールで拡大できます","CooperativeGesturesHandler.MobileHelpText":"2本の指で、広げたり動かしたりできます","NavigationControl.ZoomIn":"拡大","NavigationControl.ZoomOut":"縮小"}});
  map.touchZoomRotate.disableRotation();
  map.addControl(new maplibregl.NavigationControl({showCompass:false}),"top-right");
- map.addControl(new maplibregl.AttributionControl({compact:true}),"bottom-right");
+ map.addControl(new maplibregl.AttributionControl({compact:true,customAttribution:"出典：国土数値情報（行政区域データ）を加工（スマートニュース メディア研究所）"}),"bottom-right");
  map.on("load",function(){var ld=$(".ld",box);if(ld)ld.remove();
-  // 出典は (i) を押したときだけ開く
   var at=$(".maplibregl-ctrl-attrib",box);if(at)at.classList.remove("maplibregl-compact-show");
-  // 府県名（広く見ているときだけ。府県ボタンと同じ色）
-  map.addSource("pl",{type:"geojson",data:{type:"FeatureCollection",features:Object.keys(PL).map(function(p){return{type:"Feature",geometry:{type:"Point",coordinates:PL[p]},properties:{n:p}}})}});
-  map.addLayer({id:"pl",type:"symbol",source:"pl",maxzoom:8.8,layout:{"text-field":["get","n"],"text-font":FB,"text-size":15,"text-letter-spacing":.3,"text-allow-overlap":true},paint:{"text-color":PL2,"text-halo-color":"rgba(255,255,255,.95)","text-halo-width":2.2,"text-opacity":.9}});
-  map.addSource("p",{type:"geojson",data:geo(),cluster:true,clusterRadius:34,clusterMaxZoom:12});
-  map.addLayer({id:"cl-ring",type:"circle",source:"p",filter:["has","point_count"],paint:{"circle-color":"#E8B49E","circle-opacity":.35,"circle-radius":["step",["get","point_count"],19,5,23,15,28]}});
-  map.addLayer({id:"cl",type:"circle",source:"p",filter:["has","point_count"],paint:{"circle-color":"#fff","circle-stroke-color":"#C9826A","circle-stroke-width":2,"circle-radius":["step",["get","point_count"],14,5,17,15,21]}});
-  map.addLayer({id:"cl-n",type:"symbol",source:"p",filter:["has","point_count"],layout:{"text-field":["get","point_count_abbreviated"],"text-font":FB,"text-size":13,"text-allow-overlap":true},paint:{"text-color":"#2B2622"}});
-  map.addLayer({id:"pin-halo",type:"circle",source:"p",filter:["all",["!",["has","point_count"]],["==",["get","k"],""]],paint:{"circle-radius":20,"circle-color":PM,"circle-opacity":.18}});
-  map.addLayer({id:"pin",type:"circle",source:"p",filter:["!",["has","point_count"]],paint:{"circle-radius":["interpolate",["linear"],["zoom"],7,7,13,10],"circle-color":["case",["==",["get","soon"],1],"#fff",PM],"circle-stroke-color":["case",["==",["get","soon"],1],PM,"#fff"],"circle-stroke-width":["case",["==",["get","soon"],1],3,2.5]}});
-  map.addLayer({id:"pin-name",type:"symbol",source:"p",minzoom:11.5,filter:["!",["has","point_count"]],layout:{"text-field":["get","t"],"text-font":FB,"text-size":11.5,"text-offset":[0,1.3],"text-anchor":"top","text-max-width":9,"text-optional":true},paint:{"text-color":"#2B2622","text-halo-color":"#fff","text-halo-width":1.8}});
+  Object.keys(PC).forEach(function(p){map.addImage("pin-"+p,pinImg(PC[p],0),{pixelRatio:2});map.addImage("pin-"+p+"-s",pinImg(PC[p],1),{pixelRatio:2});});
+  map.addSource("nb",{type:"geojson",data:KS.nb});map.addSource("pf",{type:"geojson",data:KS.pref});map.addSource("mu",{type:"geojson",data:KS.muni});map.addSource("ml",{type:"geojson",data:KS.lab});
+  map.addSource("pl",{type:"geojson",data:{type:"FeatureCollection",features:Object.keys(PL).map(function(p){return{type:"Feature",geometry:{type:"Point",coordinates:PL[p]},properties:{p:p}}})}});
+  // まわりの県は薄く
+  map.addLayer({id:"nb",type:"fill",source:"nb",paint:{"fill-color":"#F3EEE6","fill-outline-color":"#E6DDD2"}});
+  // 関西はシールのように、影＋白いふち
+  map.addLayer({id:"pf-sh",type:"fill",source:"pf",paint:{"fill-color":"#C9B8A6","fill-opacity":.45,"fill-translate":[0,4]}});
+  map.addLayer({id:"pf",type:"fill",source:"pf",paint:{"fill-color":mt(SOFT,"p"),"fill-opacity":1}});
+  map.addLayer({id:"mu",type:"line",source:"mu",minzoom:7.6,paint:{"line-color":"#FFFFFF","line-width":["interpolate",["linear"],["zoom"],8,.6,12,1.6],"line-opacity":.95}});
+  map.addLayer({id:"pf-w",type:"line",source:"pf",layout:{"line-join":"round"},paint:{"line-color":"#FFFFFF","line-width":["interpolate",["linear"],["zoom"],6,3,11,6]}});
+  map.addLayer({id:"pf-l",type:"line",source:"pf",layout:{"line-join":"round"},paint:{"line-color":"#5A4E45","line-width":["interpolate",["linear"],["zoom"],6,1.1,11,1.8]}});
+  // 市区町村の名前（広げると出る。大阪市などの区は、もう少し広げてから）
+  map.addLayer({id:"ml",type:"symbol",source:"ml",minzoom:8.4,filter:["==",["get","c"],""],layout:{"text-field":["get","n"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],8.4,10,12,13],"text-padding":4},paint:{"text-color":"#7A6C60","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.6}});
+  map.addLayer({id:"ml-w",type:"symbol",source:"ml",minzoom:10,filter:["!=",["get","c"],""],layout:{"text-field":["get","n"],"text-font":FB,"text-size":["interpolate",["linear"],["zoom"],10,10.5,13,13.5],"text-padding":3},paint:{"text-color":"#7A6C60","text-halo-color":"rgba(255,255,255,.9)","text-halo-width":1.6}});
+  map.addLayer({id:"pl",type:"symbol",source:"pl",maxzoom:8.4,layout:{"text-field":["get","p"],"text-font":FB,"text-size":16,"text-letter-spacing":.3,"text-allow-overlap":true},paint:{"text-color":mt(PC,"p"),"text-halo-color":"rgba(255,255,255,.95)","text-halo-width":2.4}});
+  // ピン
+  map.addSource("p",{type:"geojson",data:geo(),cluster:true,clusterRadius:36,clusterMaxZoom:11});
+  map.addLayer({id:"cl-ring",type:"circle",source:"p",filter:["has","point_count"],paint:{"circle-color":"#FFFFFF","circle-opacity":.55,"circle-radius":["step",["get","point_count"],20,5,24,15,29]}});
+  map.addLayer({id:"cl",type:"circle",source:"p",filter:["has","point_count"],paint:{"circle-color":"#FFFDF9","circle-stroke-color":"#E39A7E","circle-stroke-width":2.5,"circle-radius":["step",["get","point_count"],14,5,17,15,21]}});
+  map.addLayer({id:"cl-n",type:"symbol",source:"p",filter:["has","point_count"],layout:{"text-field":["get","point_count_abbreviated"],"text-font":FB,"text-size":13.5,"text-allow-overlap":true},paint:{"text-color":"#5A4E45"}});
+  map.addLayer({id:"pin-halo",type:"circle",source:"p",filter:["all",["!",["has","point_count"]],["==",["get","k"],""]],paint:{"circle-radius":22,"circle-color":mt(PC,"pref"),"circle-opacity":.22,"circle-translate":[0,-14]}});
+  map.addLayer({id:"pin",type:"symbol",source:"p",filter:["!",["has","point_count"]],layout:{"icon-image":["concat","pin-",["get","pref"],["case",["==",["get","soon"],1],"-s",""]],"icon-anchor":"bottom","icon-allow-overlap":true,"icon-size":["interpolate",["linear"],["zoom"],7,.85,12,1.05]}});
+  map.addLayer({id:"pin-name",type:"symbol",source:"p",minzoom:10.5,filter:["!",["has","point_count"]],layout:{"text-field":["get","t"],"text-font":FB,"text-size":11.5,"text-offset":[0,.5],"text-anchor":"top","text-max-width":9,"text-optional":true},paint:{"text-color":"#3F3630","text-halo-color":"#fff","text-halo-width":2}});
   map.on("click",onTap);
   ["cl","pin"].forEach(function(l){map.on("mouseenter",l,function(){map.getCanvas().style.cursor="pointer"});map.on("mouseleave",l,function(){map.getCanvas().style.cursor=""})});
   ready=true;lastSig="";sync();window.__tnReady=true;});
@@ -133,7 +130,7 @@ function build(){
 // 押した所のまわり（指1本分）をまとめて見る。押し間違えにくくする
 function onTap(e){var p=e.point,r=22,fs=map.queryRenderedFeatures([[p.x-r,p.y-r],[p.x+r,p.y+r]],{layers:["cl","pin"]});
  if(!fs.length){closePop();return;}
- function d2(f){var q=map.project(f.geometry.coordinates);return (q.x-p.x)*(q.x-p.x)+(q.y-p.y)*(q.y-p.y)}
+ function d2(f){var q=map.project(f.geometry.coordinates);if(!f.properties.cluster)q.y-=16;return (q.x-p.x)*(q.x-p.x)+(q.y-p.y)*(q.y-p.y)}
  fs.sort(function(a,b){return d2(a)-d2(b)});var f=fs[0];
  if(f.properties.cluster){map.getSource("p").getClusterExpansionZoom(f.properties.cluster_id).then(function(z){map.easeTo({center:f.geometry.coordinates,zoom:Math.min(z+.3,15),duration:RM?0:650})});return;}
  var ks={};fs.forEach(function(x){if(!x.properties.cluster)ks[x.properties.k]=1});
@@ -166,11 +163,11 @@ function draw(){list=items();var pf=curPref(),tab=curTab(),n=list.filter(functio
  if(ready)map.getSource("p").setData(geo());}
 function mount(){var bar=$(".tabs");if(bar&&bar.nextSibling!==box)bar.parentNode.insertBefore(box,bar.nextSibling);}
 function sync(){mount();var pf=curPref(),sig=pf+"|"+curTab();if(sig===lastSig)return;var first=!lastSig,pfChanged=first||lastSig.split("|")[0]!==pf;lastSig=sig;closePop();draw();
- if(ready){map.resize();if(pfChanged)map.fitBounds(BB[pf],{padding:16,duration:(RM||first)?0:900});}}
+ if(ready){map.resize();map.setPaintProperty("pf","fill-color",pf?["case",["==",["get","p"],pf],SOFT[pf],"#F6F1EA"]:mt(SOFT,"p"));if(pfChanged)map.fitBounds(BB[pf],{padding:16,duration:(RM||first)?0:900});}}
 document.addEventListener("click",function(e){if(e.target.closest("#flt,.tabs,.dflt"))setTimeout(sync,90)});
 
 // ---- 読みこみ ----
 function load(){var l=document.createElement("link");l.rel="stylesheet";l.href=LIB+".css";document.head.appendChild(l);
- var s=document.createElement("script");s.src=LIB+".js";s.onload=build;s.onerror=function(){$(".fr",box).style.display="none"};document.head.appendChild(s);}
+ var s=document.createElement("script");s.src=LIB+".js";s.onload=function(){var f=document.createElement("link");f.rel="stylesheet";f.href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&display=swap";document.head.appendChild(f);Promise.all([fetch("/townnotes/kansai.json").then(function(r){return r.json()}),document.fonts.load('700 12px "Zen Maru Gothic"').catch(function(){})]).then(function(a){build(a[0])});};s.onerror=function(){$(".fr",box).style.display="none"};document.head.appendChild(s);}
 fetch("/townnotes/geo.json",{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return{}}).then(function(g){Object.keys(g).forEach(function(k){if(g[k][0]!=null)GEO[key(k)]=g[k]});mount();draw();load();});
 })();
