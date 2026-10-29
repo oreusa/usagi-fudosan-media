@@ -3,7 +3,7 @@ name: townnotes-geo
 on:
   push:
     branches: [claude/project-thread-fofi9q]
-    paths: [tools/townnotes/**, .github/workflows/townnotes-geo.yml]
+    paths: [tools/townnotes/geocode.py, .github/workflows/townnotes-geo.yml]
   workflow_dispatch:
 permissions:
   contents: write

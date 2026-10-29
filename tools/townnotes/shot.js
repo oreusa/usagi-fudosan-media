@@ -1,0 +1,19 @@
+// TOWN NOTES（仮）の地図を GitHub Actions で撮る（作業環境からは地図のタイルに届かないため）。
+const {chromium}=require('playwright');const fs=require('fs');
+(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,hasTouch:true,isMobile:true});
+const log=[];p.on('pageerror',e=>log.push('E '+e.message));p.on('console',m=>{if(m.type()=='error')log.push('C '+m.text())});
+await p.route('**/c',r=>r.fulfill({status:204}));
+fs.mkdirSync('shots/townnotes',{recursive:true});
+const idle=async()=>{await p.waitForFunction(()=>window.__tnMap&&window.__tnMap.loaded()&&window.__tnMap.areTilesLoaded(),null,{timeout:30000}).catch(()=>log.push('idle timeout'));await p.waitForTimeout(800);};
+const top=async(d)=>{await p.evaluate(d=>{const e=document.querySelector('.tn');scrollTo(0,e.getBoundingClientRect().top+scrollY-d)},d);await p.waitForTimeout(300);};
+await p.goto('http://localhost:8765/townnotes/');await p.waitForFunction(()=>window.__tnReady,null,{timeout:40000}).catch(()=>log.push('not ready'));await idle();
+await top(230);await p.screenshot({path:'shots/townnotes/1-kansai.png'});
+await p.evaluate(()=>[...document.querySelectorAll('#flt button')].find(x=>x.textContent=='大阪').click());await p.waitForTimeout(1500);await idle();
+await top(60);await p.screenshot({path:'shots/townnotes/2-osaka.png'});
+await p.evaluate(()=>window.__tnMap.jumpTo({center:[135.505,34.69],zoom:13}));await idle();await p.screenshot({path:'shots/townnotes/3-zoom13.png'});
+await p.evaluate(()=>window.__tnMap.jumpTo({center:[135.50,34.70],zoom:11}));await idle();await p.screenshot({path:'shots/townnotes/4-zoom11.png'});
+const pt=await p.evaluate(()=>{const m=window.__tnMap;const f=m.queryRenderedFeatures({layers:['pin']})[0];if(!f)return null;const q=m.project(f.geometry.coordinates);const r=m.getCanvas().getBoundingClientRect();return {x:r.left+q.x,y:r.top+q.y};});
+if(pt){await p.mouse.click(pt.x,pt.y);await p.waitForTimeout(800);await p.screenshot({path:'shots/townnotes/5-pin.png'});}else log.push('no pin');
+await p.evaluate(()=>[...document.querySelectorAll('#flt button')].find(x=>x.textContent=='すべて').click());await p.waitForTimeout(300);
+await p.evaluate(()=>document.querySelectorAll('.tabs button')[2].click());await p.waitForTimeout(1500);await idle();await top(60);await p.screenshot({path:'shots/townnotes/6-soon.png'});
+fs.writeFileSync('shots/townnotes/log.txt',log.join('\n')+'\n');await b.close();})();
