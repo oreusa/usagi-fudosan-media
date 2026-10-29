@@ -17,6 +17,12 @@ function P(lon,lat){return [(lon-134)*82.2,(36-lat)*100]}
 // ---- 見た目 ----
 var css=`
 .tn{margin:0 0 18px}
+.tn.shut{display:none}
+.tnbtn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;height:44px;margin:0 0 14px;background:#fff;border:1px solid #E2D9CF;border-radius:22px;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:14px;letter-spacing:.08em;color:#3A2F28;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;box-shadow:0 1px 0 rgba(43,38,34,.04)}
+.tnbtn svg{width:17px;height:17px;flex:none}
+.tnbtn b{font-family:Jost,sans-serif;font-weight:500;font-size:15px;color:#B3AAA1;transition:transform .25s}
+.tnbtn.on b{transform:rotate(180deg)}
+.tnbtn.on{margin-bottom:10px}
 .tn .chips{display:none;flex-wrap:wrap;gap:8px;margin:10px 0 2px}
 .tn .chips.on{display:flex}
 .tn .chips button{flex:1 1 calc(50% - 4px);display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:46px;padding:0 14px;background:#fff;border:1px solid #E2D9CF;border-left:4px solid var(--c);font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:14px;letter-spacing:.04em;color:#3A2F28;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;text-align:left}
@@ -286,14 +292,26 @@ function mount(){var bar=$(".tabs");if(!bar)return;
  var top=$(".tn-top");if(!top){top=document.createElement("div");top.className="tn-top"}
  ["flt","none"].forEach(function(id){var e=document.getElementById(id);if(e&&e.parentNode!==top)top.appendChild(e)});
  if(bar.nextSibling!==top)bar.parentNode.insertBefore(top,bar.nextSibling);
- if(top.nextSibling!==box)top.parentNode.insertBefore(box,top.nextSibling);}
-function sync(){mount();if(!ready)return;var pf=curPref(),sig=pf+"|"+curTab();if(sig===lastSig)return;var first=!lastSig,pfChanged=first||lastSig.split("|")[0]!==pf;lastSig=sig;
+ // 地図は「地図で見る」を押した人だけに出す（リストが主役）
+ if(top.nextSibling!==mb)top.parentNode.insertBefore(mb,top.nextSibling);
+ if(mb.nextSibling!==box)mb.parentNode.insertBefore(box,mb.nextSibling);}
+var mb=document.createElement("button");mb.type="button";mb.className="tnbtn";
+var OPEN=false;try{OPEN=sessionStorage.getItem("tnmap")==="1"}catch(e){}
+function setOpen(v){OPEN=v;box.classList.toggle("shut",!v);mb.classList.toggle("on",v);
+ mb.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="#B5532F" stroke-width="1.8" stroke-linejoin="round"><path d="M9 4 3 6.5v13L9 17l6 2.5 6-2.5V4l-6 2.5L9 4Z"/><path d="M9 4v13M15 6.5v13"/></svg>'+(v?"地図を閉じる":"地図で見る")+"<b>⌄</b>";
+ try{sessionStorage.setItem("tnmap",v?"1":"0")}catch(e){}
+ if(v){if(!loading)load();else if(ready){lastSig="";sync()}}else{sel=null;pop.classList.remove("on")}}
+mb.addEventListener("click",function(){setOpen(!OPEN)});
+function sync(){mount();if(!ready||!OPEN)return;var pf=curPref(),sig=pf+"|"+curTab();if(sig===lastSig)return;var first=!lastSig,pfChanged=first||lastSig.split("|")[0]!==pf;lastSig=sig;
  list=items();$(".lg",box).style.display=curTab()==="もうすぐ"?"flex":"none";sel=null;pop.classList.remove("on");
- if(pfChanged){state.pref=pf;state.muni=null;if(first){vb=fit(HOME,.02);render()}else goPref()}else render();}
+ if(pfChanged){state.pref=pf;state.muni=null;if(first){var hb=pf&&hotBox(pf);vb=pf?(hb?fit(hb,.18):fit(PF[pf].bb,.03)):fit(HOME,.02);render()}else goPref()}else render();}
 document.addEventListener("click",function(e){if(e.target.closest("#flt,.tabs,.dflt"))setTimeout(sync,90)});
 addEventListener("resize",function(){if(ready)apply()});
 mount();
+// 地図のデータは、はじめて開いたときだけ読む（開かない人は軽いまま）
+var loading=false;function load(){loading=true;
 Promise.all([fetch("/townnotes/geo.json",{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return{}}),fetch("/townnotes/kansai.json").then(function(r){return r.json()})]).then(function(a){
  Object.keys(a[0]).forEach(function(k){if(a[0][k][0]!=null)GEO[key(k)]=a[0][k]});setup(a[1]);ready=true;lastSig="";sync();window.__tnReady=true;
-}).catch(function(e){console.error(e);$(".fr",box).style.display="none"});
+}).catch(function(e){console.error(e);$(".fr",box).style.display="none"});}
+setOpen(OPEN);
 })();
