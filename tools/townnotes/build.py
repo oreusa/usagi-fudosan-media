@@ -8,7 +8,7 @@ js = open(os.path.join(D, 'map.src.js'), encoding='utf-8').read().replace('__PAT
 os.makedirs(os.path.join(R, 'links/townnotes'), exist_ok=True)
 open(os.path.join(R, 'links/townnotes/map.js'), 'w', encoding='utf-8').write(js)
 h = open(os.path.join(R, 'links/index.html'), encoding='utf-8').read()
-h = h.replace('<head><meta charset="utf-8">', '<head><meta charset="utf-8"><base href="/">', 1)
+h = h.replace('<head><meta charset="utf-8">', '<head><meta charset="utf-8"><script>document.write(\'<base href="\'+(/github\\.io$/.test(location.hostname)?"/usagi-fudosan-media/links/":"/")+\'">\')</script>', 1)
 # 試作ページは数えない（本番の数字を汚さない）
 old = 'return localStorage.getItem("usagi_owner")==="1";}catch(e){return false;}})();'
 assert h.count(old) == 1; h = h.replace(old, 'return true;}catch(e){return true;}})();')
@@ -17,6 +17,6 @@ badge = '<div style="position:fixed;top:8px;left:8px;z-index:50;font-family:Jost
 # 中身が変わるたびに ?v= を変えて、スマホに古い地図が残らないようにする
 import hashlib
 v = hashlib.sha1(js.encode('utf-8')).hexdigest()[:8]
-h = h.replace('</body></html>', badge + '<script src="/townnotes/map.js?v=' + v + '" defer></script></body></html>')
+h = h.replace('</body></html>', badge + '<script src="townnotes/map.js?v=' + v + '" defer></script></body></html>')
 assert 'townnotes/map.js' in h
 open(os.path.join(R, 'links/townnotes/index.html'), 'w', encoding='utf-8').write(h); print('ok')
