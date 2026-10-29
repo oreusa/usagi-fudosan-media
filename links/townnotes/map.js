@@ -30,12 +30,13 @@ var css=`
 .tn .hd .n b{font-family:Jost,sans-serif;font-weight:500;font-size:16px;color:#2B2622;margin:0 2px}
 .tn .fr{position:relative;aspect-ratio:1/.86;margin:0 -14px;background:#FDFCFA;overflow:hidden;user-select:none;-webkit-user-select:none}
 .tn .fr:before{content:"";position:absolute;inset:8px;border:1px solid rgba(43,38,34,.28);pointer-events:none;z-index:3}
-.tn .fr:after{content:"";position:absolute;inset:0;background:url(/townnotes/grain.png);opacity:.05;mix-blend-mode:multiply;pointer-events:none;z-index:4}
+.tn .fr:after{content:"";position:absolute;inset:0;background:url(/townnotes/grain.png);opacity:.05;pointer-events:none;z-index:4}
 .tn svg.m{position:absolute;inset:0;width:100%;height:100%;display:block}
-.tn .pf{stroke:#FDFCFA;stroke-linejoin:round;cursor:pointer;transition:fill .5s,opacity .5s}
-.tn .mu{fill:transparent;stroke:#FDFCFA;stroke-linejoin:round;cursor:pointer;transition:fill .4s,opacity .4s}
+.tn .pf,.tn .mu,.tn .dot,.tn .sel-r{vector-effect:non-scaling-stroke}
+.tn .pf{stroke:#FDFCFA;stroke-width:2px;stroke-linejoin:round;cursor:pointer;transition:fill .5s,opacity .5s}
+.tn .mu{fill:transparent;stroke:#FDFCFA;stroke-width:1.1px;stroke-linejoin:round;cursor:pointer;transition:fill .4s,opacity .4s}
 .tn .lbs{position:absolute;inset:0;pointer-events:none;z-index:2}
-.tn .lb{position:absolute;white-space:nowrap;transform:translate(-50%,-50%);text-shadow:0 0 2px #FDFCFA,0 0 3px #FDFCFA,0 0 6px rgba(253,252,250,.9)}
+.tn .lb{position:absolute;left:0;top:0;will-change:transform;white-space:nowrap;text-shadow:0 0 2px #FDFCFA,0 0 3px #FDFCFA,0 0 6px rgba(253,252,250,.9)}
 .tn .lb.p{text-align:center;font-family:"Shippori Mincho",serif;font-weight:600;font-size:16px;letter-spacing:.16em;line-height:1.2}
 .tn .lb.p small{display:block;font-family:Jost,sans-serif;font-weight:400;font-size:8.5px;letter-spacing:.32em;margin-top:3px}
 .tn .lb.m{pointer-events:auto;cursor:pointer;padding:6px 4px;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;letter-spacing:.06em;color:#5C524A}
@@ -120,28 +121,27 @@ function setup(KS){
 var vb=[0,0,100,100],anim=0;
 function aspect(){var r=$(".fr",box).getBoundingClientRect();return r.width?r.height/r.width:1.12}
 function fit(b,pad){var w=b[2]-b[0],h=b[3]-b[1],A=aspect();pad=pad||.12;var W=w*(1+pad*2),H=h*(1+pad*2)+h*.16;if(H/W>A)W=H/A;else H=W*A;var cx=(b[0]+b[2])/2,cy=(b[1]+b[3])/2;return [cx-W/2,cy-H/2,W,H]}
-function fly(to){var from=vb.slice(),t0=performance.now(),D=RM?1:650;cancelAnimationFrame(anim);
- (function f(n){var k=Math.min(1,(n-t0)/D),e=1-Math.pow(1-k,3);vb=from.map(function(v,i){return v+(to[i]-v)*e});apply();if(k<1)anim=requestAnimationFrame(f)})(t0)}
+function fly(to){var from=vb.slice(),t0=performance.now(),D=RM?1:450;cancelAnimationFrame(anim);
+ (function f(n){var k=Math.min(1,(n-t0)/D),e=1-Math.pow(1-k,3);vb=from.map(function(v,i){return v+(to[i]-v)*e});apply(k>=1);if(k<1)anim=requestAnimationFrame(f)})(t0)}
 // ---- 指1本でなぞって動かす（府県・市に寄っているときだけ。関西全体ではページのスクロールを優先） ----
 var drag=null,moved=false;
 function panBox(){return level()===3?state.muni.bb:level()===2?PF[state.pref].bb:null}
 function clampVb(v){var b=panBox();if(!b)return v;var cx=v[0]+v[2]/2,cy=v[1]+v[3]/2;var w=(b[2]-b[0])*.3,h=(b[3]-b[1])*.3;cx=Math.max(b[0]+w,Math.min(b[2]-w,cx));cy=Math.max(b[1]+h,Math.min(b[3]-h,cy));return [cx-v[2]/2,cy-v[3]/2,v[2],v[3]]}
 var FR=$(".fr",box);FR.addEventListener("pointerdown",function(e){if(level()===1||e.target.closest("button"))return;cancelAnimationFrame(anim);drag={x:e.clientX,y:e.clientY,v:vb.slice(),id:e.pointerId};moved=false});
-FR.addEventListener("pointermove",function(e){if(!drag||e.pointerId!==drag.id)return;var dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(!moved&&Math.hypot(dx,dy)<6)return;if(!moved){moved=true;try{FR.setPointerCapture(drag.id)}catch(_){}}var u=drag.v[2]/(svg.getBoundingClientRect().width||360);vb=clampVb([drag.v[0]-dx*u,drag.v[1]-dy*u,drag.v[2],drag.v[3]]);apply()});
-function endDrag(){drag=null;setTimeout(function(){moved=false},0)}
+FR.addEventListener("pointermove",function(e){if(!drag||e.pointerId!==drag.id)return;var dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(!moved&&Math.hypot(dx,dy)<6)return;if(!moved){moved=true;try{FR.setPointerCapture(drag.id)}catch(_){}}var u=drag.v[2]/(drag.w||(drag.w=svg.getBoundingClientRect().width||360));vb=clampVb([drag.v[0]-dx*u,drag.v[1]-dy*u,drag.v[2],drag.v[3]]);if(!drag.raf)drag.raf=requestAnimationFrame(function(){if(drag)drag.raf=0;apply(false)})});
+function endDrag(){var was=moved;drag=null;if(was)apply(true);setTimeout(function(){moved=false},0)}
 FR.addEventListener("pointerup",endDrag);FR.addEventListener("pointercancel",endDrag);
 // なぞった後の「押した」は無視（押し間違い防止）
 FR.addEventListener("click",function(e){if(moved){e.stopPropagation();e.preventDefault()}},true);
 function px(){var r=svg.getBoundingClientRect();return vb[2]/(r.width||360)}  // 画面の1pxが地図の何単位か
-function apply(){svg.setAttribute("viewBox",vb.join(" "));var u=px(),lv=level();
- PREFS.forEach(function(p){PF[p].path.setAttribute("stroke-width",(lv===1?2.4:1.6)*u)});
- MU.forEach(function(m){m.path.setAttribute("stroke-width",(lv===3?1.3:.9)*u)});
+// full=false：動いている途中（軽く：文字の位置だけ動かす）／full：止まったとき（文字の重なりも整える）
+function apply(full){if(full===undefined)full=true;svg.setAttribute("viewBox",vb.join(" "));var u=px(),lv=level();
  // 文字は HTML で重ねる（小さくてもきれいに出る）。重なる文字は、大事な方だけ出す
  var r=svg.getBoundingClientRect(),placed=[];
- LB.forEach(function(l){var x=(l.x-vb[0])/vb[2]*r.width,y=(l.y-vb[1])/vb[3]*r.height;l.e.style.left=x+"px";l.e.style.top=y+"px";l.e.classList.remove("hide")});
- LB.slice().sort(function(a,b){return b.pri-a.pri}).forEach(function(l){l.e.classList.remove("fl");var b=l.e.getBoundingClientRect();if(l.e.classList.contains("t")&&b.right>r.right-16){l.e.classList.add("fl");b=l.e.getBoundingClientRect()}if(b.right<r.left||b.left>r.right||b.bottom<r.top+40||b.top>r.bottom-30){l.e.classList.add("hide");return}
+ LB.forEach(function(l){var x=(l.x-vb[0])/vb[2]*r.width,y=(l.y-vb[1])/vb[3]*r.height;l.e.style.transform="translate("+x.toFixed(1)+"px,"+y.toFixed(1)+"px) translate(-50%,-50%)";if(full)l.e.classList.remove("hide")});
+ if(full)LB.slice().sort(function(a,b){return b.pri-a.pri}).forEach(function(l){l.e.classList.remove("fl");var b=l.e.getBoundingClientRect();if(l.e.classList.contains("t")&&b.right>r.right-16){l.e.classList.add("fl");b=l.e.getBoundingClientRect()}if(b.right<r.left||b.left>r.right||b.bottom<r.top+40||b.top>r.bottom-30){l.e.classList.add("hide");return}
   if(placed.some(function(o){return b.left<o.right+2&&b.right>o.left-2&&b.top<o.bottom+1&&b.bottom>o.top-1})){l.e.classList.add("hide");return}placed.push(b)});
- $$(".pinx",G.pin).forEach(function(g){var r=+g.dataset.r,d=g.querySelector(".dot");d.setAttribute("r",r*u);d.setAttribute("stroke-width",(r>4?2:1.2)*u);g.querySelector(".hit").setAttribute("r",(lv===1||(lv===3&&r<4)?0:22)*u);var s=g.querySelector(".sel-r");if(s){s.setAttribute("r",(r+7)*u);s.setAttribute("stroke-width",1.5*u)}});
+ $$(".pinx",G.pin).forEach(function(g){var r=+g.dataset.r,d=g.querySelector(".dot");d.setAttribute("r",r*u);if(full)d.setAttribute("stroke-width",r>4?2:1.2);g.querySelector(".hit").setAttribute("r",(lv===1||(lv===3&&r<4)?0:22)*u);var s=g.querySelector(".sel-r");if(s){s.setAttribute("r",(r+7)*u);s.setAttribute("stroke-width",1.5)}});
 }
 
 // ---- 状態：関西（1）→ 府県（2）→ 市・区（3） ----
@@ -164,7 +164,7 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
  Object.keys(GR).forEach(function(id){GR[id].has=!!cnt[id]});
  if(lv===2)PF[pf].path.setAttribute("fill","#F1ECE5");
  if(lv===3)PF[pf].path.setAttribute("fill",LIGHT(pf));
- MU.forEach(function(x){var inP=x.p===pf;x.path.style.opacity=inP?1:0;var hot=lv===2&&x.grp.has;x.path.style.pointerEvents=inP&&(lv!==2||hot)?"auto":"none";x.path.style.cursor=hot?"pointer":"default";x.path.style.fill=(m&&x.grp===m)||hot?FILL[x.p]:"transparent"});
+ MU.forEach(function(x){var inP=x.p===pf;x.path.style.display=inP?"":"none";var hot=lv===2&&x.grp.has;x.path.style.pointerEvents=inP&&(lv!==2||hot)?"auto":"none";x.path.style.cursor=hot?"pointer":"default";x.path.style.fill=(m&&x.grp===m)||hot?FILL[x.p]:"transparent"});
  LBS.innerHTML="";LB=[];
  if(lv===1)PREFS.forEach(function(p){var c=LP[p],q=P(c[0],c[1]),n=pins.filter(function(i){return i.pref===p}).length;addL(q[0],q[1],"p",p+(n?"<small>"+n+(n>1?" SPOTS":" SPOT")+"</small>":""),9).style.color=n?PC[p]:"#B9AFA5"});
  if(lv===2)Object.keys(GR).forEach(function(id){var g=GR[id];if(g.p!==pf||!cnt[id])return;var cx=(g.bb[0]+g.bb[2])/2,cy=(g.bb[1]+g.bb[3])/2;var e=addL(cx,cy,"m",esc(g.n)+"<b>"+cnt[id]+"</b>",cnt[id],PC[pf]);e.addEventListener("click",function(ev){ev.stopPropagation();goMuni(g)})});
