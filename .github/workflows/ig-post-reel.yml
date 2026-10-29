@@ -89,6 +89,19 @@ jobs:
                   p = call("POST", f"{ig}/media_publish", creation_id=cid); log["publish"] = p
                   if p.get("id"):
                       log["permalink"] = call("GET", p["id"], fields="permalink").get("permalink")
+          # リールが出たら、spec の "stories"（動画URLの並び）をストーリーとして順に出す（リンクスタンプは付けられない）
+          if log.get("permalink") and spec.get("stories"):
+              log["stories"] = []
+              for su in spec["stories"]:
+                  sc = call("POST", f"{ig}/media", media_type="STORIES", video_url=su); st = {"url": su, "container": sc}
+                  if sc.get("id"):
+                      for i in range(40):
+                          ss = call("GET", sc["id"], fields="status_code"); st["status"] = ss
+                          if ss.get("status_code") in ("FINISHED", "ERROR", "EXPIRED"): break
+                          time.sleep(10)
+                      if st["status"].get("status_code") == "FINISHED":
+                          st["publish"] = call("POST", f"{ig}/media_publish", creation_id=sc["id"])
+                  log["stories"].append(st)
           name = time.strftime("%Y%m%d-%H%M%S", time.gmtime())
           json.dump(log, open(f"ig/posts/{name}.json", "w"), ensure_ascii=False, indent=1)
           print(json.dumps({k: log.get(k) for k in ("permalink",)}, ensure_ascii=False))
