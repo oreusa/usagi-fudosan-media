@@ -10,8 +10,8 @@ await p.goto('http://localhost:8765/townnotes/');await p.waitForFunction(()=>win
 await top(230);await p.screenshot({path:'shots/townnotes/1-kansai.png'});
 await p.evaluate(()=>[...document.querySelectorAll('#flt button')].find(x=>x.textContent=='大阪').click());await p.waitForTimeout(1500);await idle();
 await top(60);await p.screenshot({path:'shots/townnotes/2-osaka.png'});
-await p.evaluate(()=>window.__tnMap.jumpTo({center:[135.505,34.69],zoom:13}));await idle();await p.screenshot({path:'shots/townnotes/3-zoom13.png'});
-await p.evaluate(()=>window.__tnMap.jumpTo({center:[135.50,34.70],zoom:11}));await idle();await p.screenshot({path:'shots/townnotes/4-zoom11.png'});
+await p.evaluate(()=>window.__tnMap.jumpTo({center:[135.50,34.67],zoom:12}));await idle();await p.screenshot({path:'shots/townnotes/3-zoom13.png'});
+await p.evaluate(()=>window.__tnMap.jumpTo({center:[135.52,34.68],zoom:10.3}));await idle();await p.screenshot({path:'shots/townnotes/4-zoom11.png'});
 const pt=await p.evaluate(()=>{const m=window.__tnMap;const f=m.queryRenderedFeatures({layers:['pin']})[0];if(!f)return null;const q=m.project(f.geometry.coordinates);const r=m.getCanvas().getBoundingClientRect();return {x:r.left+q.x,y:r.top+q.y};});
 if(pt){await p.mouse.click(pt.x,pt.y);await p.waitForTimeout(800);await p.screenshot({path:'shots/townnotes/5-pin.png'});}else log.push('no pin');
 await p.evaluate(()=>[...document.querySelectorAll('#flt button')].find(x=>x.textContent=='すべて').click());await p.waitForTimeout(300);
