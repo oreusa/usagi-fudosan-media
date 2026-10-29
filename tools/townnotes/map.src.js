@@ -17,6 +17,8 @@ function P(lon,lat){return [(lon-134)*82.2,(36-lat)*100]}
 // ---- 見た目 ----
 var css=`
 .tn{margin:0 0 18px}
+.tn .fr,.tn .fr *{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
+.tabs button,#flt button,.tn button,.tn .pop a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .tgrp{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;margin:2px 0 6px}
 .tgrp span{display:block;text-align:center;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;letter-spacing:.14em;color:#8C7B6E;padding:0 0 6px;border-bottom:1px solid #D6CCC1;position:relative}
 .tgrp span:after{content:"";position:absolute;left:50%;bottom:-4px;width:7px;height:7px;background:#FDFCFA;border-right:1px solid #D6CCC1;border-bottom:1px solid #D6CCC1;transform:translateX(-50%) rotate(45deg)}
@@ -130,6 +132,7 @@ function clampVb(v){var b=panBox();if(!b)return v;var cx=v[0]+v[2]/2,cy=v[1]+v[3
 var FR=$(".fr",box);FR.addEventListener("pointerdown",function(e){if(level()===1||e.target.closest("button"))return;cancelAnimationFrame(anim);drag={x:e.clientX,y:e.clientY,v:vb.slice(),id:e.pointerId};moved=false});
 FR.addEventListener("pointermove",function(e){if(!drag||e.pointerId!==drag.id)return;var dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(!moved&&Math.hypot(dx,dy)<6)return;if(!moved){moved=true;try{FR.setPointerCapture(drag.id)}catch(_){}}var u=drag.v[2]/(drag.w||(drag.w=svg.getBoundingClientRect().width||360));vb=clampVb([drag.v[0]-dx*u,drag.v[1]-dy*u,drag.v[2],drag.v[3]]);if(!drag.raf)drag.raf=requestAnimationFrame(function(){if(drag)drag.raf=0;apply(false)})});
 function endDrag(){var was=moved;drag=null;if(was)apply(true);setTimeout(function(){moved=false},0)}
+FR.addEventListener("touchmove",function(e){if(level()>1)e.preventDefault()},{passive:false});
 FR.addEventListener("pointerup",endDrag);FR.addEventListener("pointercancel",endDrag);
 // なぞった後の「押した」は無視（押し間違い防止）
 FR.addEventListener("click",function(e){if(moved){e.stopPropagation();e.preventDefault()}},true);
