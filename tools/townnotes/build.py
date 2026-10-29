@@ -14,6 +14,9 @@ old = 'return localStorage.getItem("usagi_owner")==="1";}catch(e){return false;}
 assert h.count(old) == 1; h = h.replace(old, 'return true;}catch(e){return true;}})();')
 h = h.replace('<title>関西おでかけリスト</title>', '<title>関西おでかけリスト（地図つき試作）</title>')
 badge = '<div style="position:fixed;top:8px;left:8px;z-index:50;font-family:Jost,sans-serif;font-size:10px;letter-spacing:.2em;background:#2B2622;color:#fff;padding:2px 8px;pointer-events:none">PROTOTYPE</div>'
-h = h.replace('</body></html>', badge + '<script src="/townnotes/map.js" defer></script></body></html>')
+# 中身が変わるたびに ?v= を変えて、スマホに古い地図が残らないようにする
+import hashlib
+v = hashlib.sha1(js.encode('utf-8')).hexdigest()[:8]
+h = h.replace('</body></html>', badge + '<script src="/townnotes/map.js?v=' + v + '" defer></script></body></html>')
 assert 'townnotes/map.js' in h
 open(os.path.join(R, 'links/townnotes/index.html'), 'w', encoding='utf-8').write(h); print('ok')
