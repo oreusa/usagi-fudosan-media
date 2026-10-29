@@ -1,5 +1,6 @@
 name: link-stats
 # 毎朝 08:30 JST に、おでかけリストのクリック数（/stats）を stats/link.json に保存する。
+# link-30.json（30日分）は日曜のおでかけリスト基準の学習で使う。
 # 朝の報告がこのファイルを読んで管制室に書く（作業環境からは workers.dev に直接つなげないため）。
 on:
   schedule:
@@ -16,10 +17,11 @@ jobs:
         run: |
           mkdir -p stats
           curl -fsS "https://usagi-odekake.usagi-fudosan.workers.dev/stats?days=3" -o stats/link.json
+          curl -fsS "https://usagi-odekake.usagi-fudosan.workers.dev/stats?days=30" -o stats/link-30.json
           python3 -c "import json;d=json.load(open('stats/link.json'));print(d['days'],len(d['by_day']))"
       - name: commit
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/link.json
+          git add stats/link.json stats/link-30.json
           git diff --cached --quiet || (git commit -m "stats: link page clicks $(TZ=Asia/Tokyo date +%F)" && git push)
