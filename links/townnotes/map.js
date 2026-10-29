@@ -163,7 +163,7 @@ function draw(){list=items();var pf=curPref(),tab=curTab(),n=list.filter(functio
  if(ready)map.getSource("p").setData(geo());}
 function mount(){var bar=$(".tabs");if(bar&&bar.nextSibling!==box)bar.parentNode.insertBefore(box,bar.nextSibling);}
 function sync(){mount();var pf=curPref(),sig=pf+"|"+curTab();if(sig===lastSig)return;var first=!lastSig,pfChanged=first||lastSig.split("|")[0]!==pf;lastSig=sig;closePop();draw();
- if(ready){map.resize();map.setPaintProperty("pf","fill-opacity",pf?["case",["==",["get","p"],pf],1,.45]:1);if(pfChanged)map.fitBounds(BB[pf],{padding:16,duration:(RM||first)?0:900});}}
+ if(ready){map.resize();map.setPaintProperty("pf","fill-color",pf?["case",["==",["get","p"],pf],SOFT[pf],"#F6F1EA"]:mt(SOFT,"p"));if(pfChanged)map.fitBounds(BB[pf],{padding:16,duration:(RM||first)?0:900});}}
 document.addEventListener("click",function(e){if(e.target.closest("#flt,.tabs,.dflt"))setTimeout(sync,90)});
 
 // ---- 読みこみ ----
