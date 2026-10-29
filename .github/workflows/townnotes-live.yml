@@ -18,3 +18,5 @@ jobs:
           curl -sS "$U$J" -o map.js; wc -c map.js
           echo "omk count: $(grep -c 'omk' map.js)"; echo "fresh: $(grep -c 'function fresh' map.js)"
           curl -sS "$U/townnotes/map.js" | grep -c 'function fresh' || true
+          echo "--- cloudflare status"
+          curl -sS https://www.cloudflarestatus.com/api/v2/incidents/unresolved.json | python3 -c "import json,sys;d=json.load(sys.stdin);[print(i['name'],'|',i['status'],'|',i['created_at'],'|',[c['name'] for c in i.get('components',[])]) for i in d['incidents']]" || true
