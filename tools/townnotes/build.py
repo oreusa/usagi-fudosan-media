@@ -4,9 +4,13 @@ python3 tools/townnotes/build.py → links/townnotes/index.html と links/townno
 import json, os
 D = os.path.dirname(os.path.abspath(__file__)); R = os.path.abspath(os.path.join(D, '..', '..'))
 P = json.load(open(os.path.join(R, 'tools/outing_reel/paths.json')))
-js = open(os.path.join(D, 'map.src.js'), encoding='utf-8').read().replace('__PATHS__', json.dumps(P, separators=(',', ':')))
+
+import sys; sys.path.insert(0, D)
+from assemble import assemble
+
 # 「地図で見る」ボタンの小さい関西の絵（府県の形だけ。大きさはページで測る）
-js = js.replace('__MINI__', json.dumps({k: P[k] for k in ['hyogo','kyoto','shiga','osaka','nara','wakayama']}, separators=(',', ':')))
+MK = {'hyogo': '兵庫', 'kyoto': '京都', 'shiga': '滋賀', 'osaka': '大阪', 'nara': '奈良', 'wakayama': '和歌山'}
+js = assemble(os.path.join(D, 'region-kansai.js'), os.path.join(D, 'site-tsuki.js'), {MK[k]: P[k] for k in MK})
 
 os.makedirs(os.path.join(R, 'links/townnotes'), exist_ok=True)
 open(os.path.join(R, 'links/townnotes/map.js'), 'w', encoding='utf-8').write(js)

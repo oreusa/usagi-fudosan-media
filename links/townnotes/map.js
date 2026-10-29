@@ -6,15 +6,32 @@
 var TNB=(document.currentScript&&document.currentScript.src||"").replace(/[?#].*$/,"").replace(/[^/]*$/,"");
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
 var NS="http://www.w3.org/2000/svg";
-var PREFS=["兵庫","京都","滋賀","大阪","奈良","和歌山"];
-var PC={"大阪":"#D9775A","京都":"#9C7BB8","兵庫":"#4F86C6","奈良":"#5FA06A","滋賀":"#3FA3B5","和歌山":"#E09A3E"};      // ピン・文字
-var FILL={"大阪":"#F7D9CC","京都":"#E6DBF1","兵庫":"#D6E4F5","奈良":"#D8ECD4","滋賀":"#D0EBEF","和歌山":"#F8E4C4"};    // 府県の面
-var DEEP={"大阪":"#F0BFA9","京都":"#D3C1E6","兵庫":"#B9D0EE","奈良":"#BCDDB5","滋賀":"#AEDCE3","和歌山":"#F1CF98"};    // 選んだ市・区
-var EN={"大阪":"OSAKA","京都":"KYOTO","兵庫":"HYOGO","奈良":"NARA","滋賀":"SHIGA","和歌山":"WAKAYAMA"};
 var key=function(s){return String(s||"").replace(/\s+/g,"")};
 var RM=matchMedia("(prefers-reduced-motion: reduce)").matches;
-// 経度・緯度 → 地図の座標（関西あたりで形がゆがまないよう、経度に cos(34.7°) をかける）
-function P(lon,lat){return [(lon-134)*82.2,(36-lat)*100]}
+// ---- 地域の設定（関西・関東など。build.py が tools/townnotes/region-*.json から入れる） ----
+var R={
+name:"関西",en_all:"KANSAI",unit:"府県",shapes:"kansai.json",
+proj:[134,82.2,36],
+prefs:["兵庫","京都","滋賀","大阪","奈良","和歌山"],
+pc:{"大阪":"#D9775A","京都":"#9C7BB8","兵庫":"#4F86C6","奈良":"#5FA06A","滋賀":"#3FA3B5","和歌山":"#E09A3E"},
+fill:{"大阪":"#F7D9CC","京都":"#E6DBF1","兵庫":"#D6E4F5","奈良":"#D8ECD4","滋賀":"#D0EBEF","和歌山":"#F8E4C4"},
+deep:{"大阪":"#F0BFA9","京都":"#D3C1E6","兵庫":"#B9D0EE","奈良":"#BCDDB5","滋賀":"#AEDCE3","和歌山":"#F1CF98"},
+en:{"大阪":"OSAKA","京都":"KYOTO","兵庫":"HYOGO","奈良":"NARA","滋賀":"SHIGA","和歌山":"WAKAYAMA"},
+lp:{"大阪":[135.43,34.52],"京都":[135.45,35.30],"兵庫":[134.78,35.12],"奈良":[135.88,34.30],"滋賀":[136.20,35.05],"和歌山":[135.50,33.98]},
+light:{"大阪":"#FBEEE8","京都":"#F4EFF8","兵庫":"#EEF3FA","奈良":"#EEF6EC","滋賀":"#EAF6F8","和歌山":"#FCF3E4"},
+mini:{"兵庫":"m 213.21993,277.54889 -1.09,0.9 -1.21,-0.22 0,0 -0.54,-1.37 -1.08,-0.96 -0.18,-0.47 0.7,-1.31 -0.68,-0.85 0.35,-0.32 0.15,-0.91 -0.2,-0.59 0.92,-0.54 0.06,-0.93 0.59,-0.25 0.24,-1.1 0.24,-0.26 0.67,0.07 0.08,-0.78 -0.63,-0.66 0.44,-0.8 0,0 0.58,0.26 1.64,-1.15 -0.26,-1.16 0.15,-0.43 -0.73,-0.96 0.09,-1.08 -0.73,-0.34 -0.49,-1.88 0.12,-1.02 -0.38,-0.77 -0.69,-0.52 0,0 2.13,-0.66 1.22,-0.74 1.2,0.31 0.42,0.47 0.82,-0.67 1.38,0.2 1.28,-0.29 0.45,0.33 0.98,-0.06 0,0 0.02,2.02 0.86,0.8 0.21,0.61 0.72,0.18 1.33,-0.66 0.32,0.54 0,2.63 -0.91,0.52 -1.14,-0.55 -0.37,1 0.02,1.27 1.49,0.61 1.32,1.13 0.76,-0.46 1.02,0.02 0.02,0.78 0.86,0.82 -0.25,0.55 0.55,0.24 0.43,-0.36 0.81,0.04 0.22,0.06 0.04,0.73 0.85,-0.18 0.97,0.49 0.29,1.26 -0.38,0.21 -0.17,0.54 0,0 -0.43,-0.05 -0.29,0.31 0.4,0.24 0.08,0.97 -0.24,0.36 1.4,0.81 0.96,0.14 -0.91,0.51 0.43,0.25 -0.47,2.04 0.74,1.24 0.15,1.43 -0.54,1.21 0,0 -0.44,-0.33 0.14,-0.47 -0.25,-0.52 -0.92,0.32 -0.42,-0.6 -0.97,-0.13 -1.98,0.94 -0.1,0.68 -2.58,0.64 -4.27,-1.72 -1.67,-1.65 -5.72,0.05 z m 9.4,11.08 0.22,0.77 -2.06,0.84 -0.98,0.82 -1.34,0.19 -0.01,-0.45 -0.59,-0.31 0.06,-0.5 -0.43,-0.16 -0.54,-1.01 0.67,-0.96 0.38,0.24 0.47,-0.24 1.33,-2.82 0.4,-0.46 0.41,0.01 0.95,-1.5 0.95,-0.43 0.77,-1.12 0.55,-0.29 0.44,0.83 -0.6,0.72 -0.15,0.77 -1.78,2.33 -0.01,1.54 0.89,1.19 z","京都":"m 231.14993,270.89889 0.17,-0.53 0.37,-0.21 -0.29,-1.26 -0.97,-0.49 -0.86,0.18 -0.04,-0.74 -0.22,-0.06 -0.81,-0.04 -0.42,0.36 -0.56,-0.24 0.25,-0.55 -0.86,-0.83 -0.02,-0.77 -1.02,-0.03 -0.77,0.47 -1.32,-1.14 -1.49,-0.61 -0.02,-1.26 0.37,-1 1.14,0.55 0.91,-0.52 0.01,-2.63 -0.33,-0.54 -1.33,0.66 -0.72,-0.18 -0.21,-0.61 -0.86,-0.8 -0.02,-2.02 0,0 0.26,0.3 0.97,-0.02 0.59,-0.3 0.45,-0.78 0.81,0.06 1.92,-1.35 1.89,-0.6 1.08,0.68 0.66,1.2 -1.07,1.01 -0.19,0.74 -1.09,1.32 0.06,0.6 0.3,-0.01 0.59,-0.97 0.61,0.34 0.13,0.17 -0.64,0.55 1.35,0.61 0.25,-0.33 0.14,1.38 0.48,-0.48 0.84,0.21 0.05,-0.51 -1.26,-0.79 0.85,-0.68 0.93,-0.11 0.15,-0.58 0.35,-0.01 0.01,0.57 0.41,0.25 0,0 -0.41,0.89 0.52,0.42 -0.29,1.01 1.31,1.21 0.13,0.87 1.73,0.19 1.5,0.59 1.37,-0.26 0,0 1.18,1.84 0.42,-0.01 -0.38,1.44 0.43,2.11 -0.31,1.74 -0.34,0.25 0.29,1.17 0.89,1.51 -0.24,1.07 0.71,0.47 0.73,-0.38 0.13,0.88 0.31,-0.05 0.3,0.37 0.4,-0.15 0.61,0.6 -0.26,0.26 0.15,0.41 0,0 0.45,1.2 0,0 -0.34,0.75 -0.58,-0.08 -0.49,-0.67 -0.99,-0.01 0.08,-0.36 -0.74,1.13 -0.73,0.08 -1.92,-0.52 -0.52,-1.22 0,0 0.28,-0.62 -1.02,-1.15 -0.31,-1.06 -1.24,-1.15 0,-0.62 -0.75,-0.02 -0.26,0.68 0.38,0.42 -0.79,0.26 -0.69,-0.73 -0.25,0.11 -0.07,-1.16 -2.16,-0.6 z","滋賀":"m 251.72993,266.75889 0.07,0.85 0.71,0.73 -0.73,2.5 -0.04,1.38 -0.78,1.1 -0.21,0.92 -2.34,1.13 -1.33,-0.66 -1.02,0.01 -0.33,-0.38 -0.47,0.39 0.07,0.26 0.62,0.04 0.08,0.26 -0.77,0.62 0.07,0.52 -1.34,0.55 0,0 -0.15,-0.41 0.26,-0.26 -0.61,-0.6 -0.4,0.15 -0.3,-0.37 -0.31,0.05 -0.13,-0.88 -0.73,0.38 -0.71,-0.47 0.24,-1.07 -0.89,-1.51 -0.29,-1.17 0.34,-0.25 0.31,-1.74 -0.43,-2.11 0.38,-1.44 -0.42,0.01 -1.18,-1.84 0,0 0.45,-0.74 0.37,-0.1 0.06,-0.5 0.65,0 0.35,0.4 0.57,-0.28 1.04,-2.76 0.77,0.77 0.46,-0.1 0.46,-0.88 1.29,-0.12 0.35,-1.07 1.1,0.32 0.14,-0.75 -0.83,-1.76 0.31,-0.67 0.67,-0.13 1.81,0.93 0,0 0.26,1.07 0.66,0.07 -0.12,1.6 0.78,0.29 0.31,-0.5 0.55,0.71 -0.24,0.89 0.63,0.64 -0.09,1 0.53,0.85 -0.55,0.44 -0.04,1.34 -0.32,0.52 -0.02,0.93 -0.32,0.21 z","大阪":"m 232.13993,283.27889 0.37,-0.8 -0.64,-0.14 -0.03,-0.81 0.3,-0.51 0.74,-0.43 -0.46,-0.23 0,0 0.54,-1.21 -0.15,-1.43 -0.74,-1.24 0.47,-2.04 -0.43,-0.25 0.91,-0.51 -0.96,-0.14 -1.4,-0.81 0.24,-0.36 -0.08,-0.97 -0.4,-0.24 0.29,-0.31 0.43,0.05 0,0 0.19,0.74 2.16,0.6 0.07,1.16 0.25,-0.11 0.69,0.73 0.79,-0.26 -0.38,-0.42 0.26,-0.68 0.75,0.02 0,0.61 1.24,1.15 0.3,1.06 1.03,1.16 -0.29,0.62 0,0 -0.35,-0.06 -0.15,1.36 -0.51,0.44 -0.51,2.37 0.38,0.08 0.21,0.45 -0.57,0.9 0.53,1.26 0.08,1.16 -0.19,1.1 -0.61,0.37 0,0 -1.29,0.18 -1.2,0.8 -1.62,-0.14 -2.06,0.74 -1.63,0.09 -1.23,0.79 -1.04,0.18 -0.43,-0.04 -0.13,-0.88 -0.27,-0.09 0,0 2.57,-0.85 1.84,-1.68 0.97,-1.49 1.15,-1.04 z","奈良":"m 244.43993,278.17889 0.8,1.57 -0.38,0.52 0.05,0.59 -0.43,1.01 0.26,0.41 1.03,0.5 0.82,-0.27 0.47,1.01 0.65,-0.27 0.29,0.96 -0.39,0.95 -2.18,0.32 -0.5,0.95 1.15,1.85 -0.66,0.36 0.69,1.16 -0.72,1.36 0.37,0.68 -0.13,1.75 -0.24,0.27 0.14,1.33 -1.62,-0.25 -0.82,1.11 -1.21,0.39 -1.1,1.72 0,0 -2.01,0.34 -0.66,-0.41 -0.66,-0.01 -1.15,0.68 -0.22,-0.57 -0.37,-0.13 0.71,-1.83 -0.28,-0.51 -0.58,-0.21 0.06,-0.52 -1.14,-0.96 0.12,-0.54 1.5,-1.45 0.38,-0.58 -0.01,-0.71 0.54,-0.27 0.81,0.37 0.39,-0.6 -0.21,-0.65 -0.89,-0.5 -0.2,-1.72 -0.4,-0.68 0,0 0.61,-0.37 0.19,-1.1 -0.08,-1.17 -0.53,-1.25 0.57,-0.9 -0.21,-0.45 -0.38,-0.07 0.51,-2.37 0.51,-0.44 0.16,-1.36 0.35,0.06 0,0 0.52,1.22 1.92,0.52 0.73,-0.08 0.74,-1.13 -0.08,0.36 0.99,0.01 0.49,0.67 0.58,0.08 z","和歌山":"m 240.04993,307.16889 -0.54,0.38 -0.32,0.69 0.09,0.71 -0.48,0.08 -0.25,-0.35 0.32,-0.75 -0.79,0.11 -1.88,-0.75 -2.35,-0.38 -2.02,-1.21 -0.41,-0.74 0.15,-0.79 -1.27,-0.63 0.98,-0.53 0.25,-0.57 -1.44,-1.22 -2.62,-1.21 -0.68,-1.41 -0.77,-0.38 -1.11,0.32 0.21,-2.33 1.57,-0.64 0.49,-0.63 -0.73,-0.76 -1.12,-0.25 0.61,-0.64 0.3,-0.83 0.87,0.07 0.3,-0.35 -0.13,-0.75 -0.75,-0.2 -0.43,-1.22 -1,-1.08 0.13,-0.48 0.36,-0.14 0,0 0.27,0.09 0.13,0.88 0.43,0.04 1.04,-0.18 1.23,-0.79 1.63,-0.09 2.06,-0.74 1.62,0.14 1.2,-0.8 1.29,-0.18 0,0 0.4,0.68 0.2,1.72 0.89,0.5 0.21,0.66 -0.39,0.6 -0.81,-0.37 -0.55,0.27 0.01,0.71 -0.38,0.57 -1.49,1.45 -0.13,0.54 1.14,0.96 -0.06,0.53 0.58,0.21 0.28,0.51 -0.71,1.83 0.38,0.13 0.21,0.57 1.15,-0.68 0.66,0.01 0.66,0.41 2.01,-0.34 0,0 -0.07,1.92 1.7,1.94 1.29,0.27 0,0 -0.33,0.45 -0.15,1.15 -0.96,0.26 -0.23,0.85 0.72,0.28 -0.07,0.35 -2.08,1.46 -0.52,0.09 z"},
+icons:{
+ "大阪":{at:[135.02,34.27],n:"大阪城",s:'<path d="M8 33h24l-2-6H10z" fill="#EADBC8"/><path d="M12 27h16v-6H12z" fill="#fff"/><path d="M9 21h22l-4-4H13z" fill="#7FAE9A"/><path d="M14 17h12v-4H14z" fill="#fff"/><path d="M11 13h18l-4-4H15z" fill="#7FAE9A"/><path d="M18 9l2-3 2 3" fill="#E7B84B"/><path d="M18 27v-3h4v3" fill="#C9A27A"/>'},
+ "京都":{at:[135.80,35.36],n:"五重塔",s:'<path d="M20 3v5"/><path d="M11 12h18l-3-4H14z" fill="#fff"/><path d="M12 17h16l-3-4H15z" fill="#fff"/><path d="M11 22h18l-3-4H14z" fill="#fff"/><path d="M10 27h20l-3-4H13z" fill="#fff"/><path d="M9 32h22l-3-4H12z" fill="#fff"/><path d="M14 32v3h12v-3" fill="#EADBC8"/>'},
+ "兵庫":{at:[134.40,34.85],n:"姫路城",s:'<path d="M9 34h22l-2-5H11z" fill="#EADBC8"/><path d="M12 29h16v-5H12z" fill="#fff"/><path d="M10 24h20l-4-4H14z" fill="#fff"/><path d="M14 20h12v-4H14z" fill="#fff"/><path d="M12 16h16l-4-4h-8z" fill="#fff"/><path d="M16 12h8v-3h-8z" fill="#fff"/><path d="M15 9h10l-2-3h-6z" fill="#fff"/>'},
+ "奈良":{at:[135.97,34.02],n:"鹿",s:'<path d="M12 22c0-4 4-6 10-6h4c3 0 5 2 5 5v2c0 3-2 4-5 4H15c-2 0-3-2-3-5z" fill="#E9CFA9"/><path d="M15 27v7M19 27v7M25 27v7M29 26v8"/><path d="M28 17l2-7 4-2c1 0 2 1 1 3l-2 2" fill="#E9CFA9"/><path d="M29 9l-1-4M31 8l2-4M27 6l-2-1M33 5l2 0"/><circle cx="18" cy="21" r="1" fill="#fff" stroke="none"/><circle cx="22" cy="20" r="1" fill="#fff" stroke="none"/><circle cx="31.5" cy="11.5" r=".8" fill="#2B2622" stroke="none"/>'},
+ "滋賀":{at:[136.12,35.43],n:"びわ湖",s:'<path d="M6 30c3 2 6 2 9 0s6-2 9 0 6 2 9 0" fill="none"/><path d="M9 26h22l-3 4H12z" fill="#fff"/><path d="M20 6v20"/><path d="M20 8l9 14h-9z" fill="#fff"/><path d="M19 11l-7 11h7z" fill="#D8EEF2"/>'},
+ "和歌山":{at:[135.72,33.72],n:"パンダ",s:'<circle cx="12" cy="11" r="4" fill="#3A322C"/><circle cx="28" cy="11" r="4" fill="#3A322C"/><circle cx="20" cy="21" r="12" fill="#fff"/><ellipse cx="15.5" cy="20" rx="3" ry="3.6" fill="#3A322C" transform="rotate(-20 15.5 20)"/><ellipse cx="24.5" cy="20" rx="3" ry="3.6" fill="#3A322C" transform="rotate(20 24.5 20)"/><circle cx="16" cy="19.5" r="1" fill="#fff" stroke="none"/><circle cx="24" cy="19.5" r="1" fill="#fff" stroke="none"/><path d="M18.5 25.5h3l-1.5 1.5z" fill="#3A322C"/>'}
+}
+};
+var PREFS=R.prefs,PC=R.pc,FILL=R.fill,DEEP=R.deep,EN=R.en;
+// 経度・緯度 → 地図の座標（その地域で形がゆがまないよう、経度に cos(緯度) をかける）
+function P(lon,lat){return [(lon-R.proj[0])*R.proj[1],(R.proj[2]-lat)*100]}
 
 // ---- 見た目 ----
 var css=`
@@ -37,7 +54,7 @@ var css=`
 .tn .chips button.cur{background:var(--c);color:#fff}.tn .chips button.cur b{background:#fff;color:var(--c)}
 .tn .chips button:active{transform:scale(.98)}
 .tn .fr,.tn .fr *{-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
-.tabs button,#flt button,.tn button,.tn .pop a{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.tn button,.tn .pop a,.tnbtn{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .tgrp{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;margin:2px 0 6px}
 .tgrp span{display:block;text-align:center;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;letter-spacing:.14em;color:#8C7B6E;padding:0 0 6px;border-bottom:1px solid #D6CCC1;position:relative}
 .tgrp span:after{content:"";position:absolute;left:50%;bottom:-4px;width:7px;height:7px;background:#FDFCFA;border-right:1px solid #D6CCC1;border-bottom:1px solid #D6CCC1;transform:translateX(-50%) rotate(45deg)}
@@ -174,9 +191,9 @@ var st=document.createElement("style");st.textContent=css;document.head.appendCh
 // ---- 枠 ----
 var box=document.createElement("div");box.className="tn";
 box.innerHTML=''+
- '<div class="fsh"><div class="ttl"><b><small>TOWN NOTES MAP</small>関西おでかけマップ</b><button type="button" class="cl" aria-label="地図を閉じる">×</button></div><div class="row tb"></div><div class="row pf"></div></div>'+
+ '<div class="fsh"><div class="ttl"><b><small>TOWN NOTES MAP</small>'+R.name+'おでかけマップ</b><button type="button" class="cl" aria-label="地図を閉じる">×</button></div><div class="row tb"></div><div class="row pf"></div></div>'+
  '<div class="fr"><svg class="m" preserveAspectRatio="xMidYMid meet"><g class="g-sh"></g><g class="g-pf"></g><g class="g-mu"></g><g class="g-mini"></g><g class="g-pin"></g></svg><div class="lbs"></div>'+
- '<div class="crumb"></div><div class="n" id="tnn"></div><div class="cen">KANSAI</div><button type="button" class="bk"></button><div class="hint"></div><div class="zm"><button type="button" data-z="in" aria-label="近づく">＋</button><button type="button" data-z="out" aria-label="はなれる">−</button></div><div class="cr">地図：国土数値情報（行政区域）を加工</div></div>'+
+ '<div class="crumb"></div><div class="n" id="tnn"></div><div class="cen">'+R.en_all+'</div><button type="button" class="bk"></button><div class="hint"></div><div class="zm"><button type="button" data-z="in" aria-label="近づく">＋</button><button type="button" data-z="out" aria-label="はなれる">−</button></div><div class="cr">地図：国土数値情報（行政区域）を加工</div></div>'+
  '<div class="car"></div>'+
  '<div class="chips"></div>'+
  '<div class="pop" role="dialog"><button class="x" type="button" aria-label="閉じる">×</button><div class="pb"></div></div>'+
@@ -184,10 +201,12 @@ box.innerHTML=''+
 var svg=$("svg.m",box),G={sh:$(".g-sh",svg),pf:$(".g-pf",svg),mu:$(".g-mu",svg),mini:$(".g-mini",svg),pin:$(".g-pin",svg)},LBS=$(".lbs",box),pop=$(".pop",box);
 
 // ---- 今のページの状態を読む ----
+var GEO={},OTH=[];
+// ---- 月のページ（関西おでかけリスト）とつなぐ所 ----
+// 地図の本体はページの作りを知らない。ページごとの違いはここだけに書く（燈のページは site-akari.js）
 function curPref(){var b=$("#flt button.on");return b&&b.textContent!=="すべて"?b.textContent:""}
 function curBlk(){return $(".paper .blk.tb:not(.toff)")||$(".paper .blk.b-now")}
 function curTab(){var b=$(".tabs button.on b");return b?b.childNodes[0].textContent:"開催中"}
-var GEO={},OTH=[];
 // ほかのタブの場所（地図に小さな点で出すだけ。押せない）
 function others(){var cb=curBlk(),seen={},out=[];list.forEach(function(i){seen[i.k]=1});
  $$(".paper .blk").forEach(function(blk){if(blk===cb)return;$$(".it",blk).forEach(function(w){var tt=$(".card .t",w),k=key(tt&&tt.textContent),g=k&&GEO[k];if(!g||g[0]==null||seen[k])return;seen[k]=1;out.push({k:k,pref:w.getAttribute("data-pref")||"",lat:g[0],lon:g[1]})})});return out}
@@ -196,10 +215,30 @@ function items(){var blk=curBlk();if(!blk)return[];var seen={},out=[],soon=blk.c
   var g=GEO[k];var d=$(".d",a),dt="",tags=[];if(d)[].forEach.call(d.childNodes,function(n){if(n.nodeType===3)dt+=n.textContent;else if(n.classList&&n.classList.contains("tg"))tags.push(n.textContent)});
   var mp=$(".mp",w);out.push({w:w,a:a,k:k,t:$$(".nwp",tt).map(function(s){return s.textContent}).join(" ")||tt.textContent,pref:w.getAttribute("data-pref")||"",d:dt.replace(/^\s*[｜|]\s*/,"").trim(),tags:tags,href:a.getAttribute("href"),map:mp?mp.href:"",lat:g&&g[0],lon:g&&g[1],soon:soon});});
  return out}
+function pickPref(pf){var b=$$("#flt button").filter(function(x){return x.textContent===(pf||"すべて")})[0];if(b)b.click();}
+function mount(){var bar=$(".tabs");if(!bar)return;
+ // タブの上に「イベント｜新しいお店・施設」の見出し（4つのタブの中身を分かりやすく）
+ var tg=$(".tgrp");if(!tg){tg=document.createElement("div");tg.className="tgrp";tg.innerHTML='<span>イベント</span><span>新しいお店・施設</span>'}
+ if(bar.previousSibling!==tg)bar.parentNode.insertBefore(tg,bar);
+ // 府県ボタンは地図のすぐ上へ（件数は押さないので上のまま）
+ var top=$(".tn-top");if(!top){top=document.createElement("div");top.className="tn-top"}
+ ["flt","none"].forEach(function(id){var e=document.getElementById(id);if(e&&e.parentNode!==top)top.appendChild(e)});
+ if(bar.nextSibling!==top)bar.parentNode.insertBefore(top,bar.nextSibling);
+ // 地図は「地図で見る」を押した人だけに出す（リストが主役）
+ if(top.nextSibling!==mb)top.parentNode.insertBefore(mb,top.nextSibling);
+ if(!FS&&mb.nextSibling!==box)mb.parentNode.insertBefore(box,mb.nextSibling);}
+// 上の帯に写すタブ（名前・件数・押す物）
+function tabList(){return $$(".tabs button").map(function(b){var bb=b.querySelector("b"),n=bb?bb.childNodes[0].textContent:b.textContent,cn=bb&&bb.querySelector("small,span,i");
+ return {el:b,name:n,count:cn?cn.textContent.replace(/[^0-9]/g,""):"",on:b.classList.contains("on"),off:false}})}
+function prefList(){return $$("#flt button").map(function(b){return {el:b,name:b.textContent,on:b.classList.contains("on")}})}
+function tabCount(){var b=$(".tabs button.on"),m=b&&b.textContent.match(/(\d+)\D*$/);return m?m[1]:""}
+var ZONE="#flt,.tabs,.dflt";
+// 本番のリストでだけ「地図で見る」が押された数を数える（試作ページ・オーナーは数えない）
+function cnt1(k){try{if(/\/townnotes\//.test(location.pathname)||/github\.io$/.test(location.hostname)||localStorage.getItem("usagi_owner")==="1")return;var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true})}catch(e){}}
 
 // ---- 形のデータ ----
 var PF={},MU=[],GR={},HOME=null;
-var LP={"大阪":[135.43,34.52],"京都":[135.45,35.30],"兵庫":[134.78,35.12],"奈良":[135.88,34.30],"滋賀":[136.20,35.05],"和歌山":[135.50,33.98]};
+var LP=R.lp;
 function ring2d(r){return r.map(function(c,i){var q=P(c[0],c[1]);return (i?"L":"M")+q[0].toFixed(2)+" "+q[1].toFixed(2)}).join("")+"Z"}
 function geom2d(g){var ps=g.type==="Polygon"?[g.coordinates]:g.coordinates;return ps.map(function(p){return p.map(ring2d).join("")}).join("")}
 function gbb(g){var b=[1e9,1e9,-1e9,-1e9],ps=g.type==="Polygon"?[g.coordinates]:g.coordinates;ps.forEach(function(p){p[0].forEach(function(c){var q=P(c[0],c[1]);b[0]=Math.min(b[0],q[0]);b[1]=Math.min(b[1],q[1]);b[2]=Math.max(b[2],q[0]);b[3]=Math.max(b[3],q[1])})});return b}
@@ -285,14 +324,14 @@ function hotBox(pf){var b=null;list.forEach(function(i){if(i.lat==null||i.pref!=
 function goPref(){state.muni=null;sel=null;pop.classList.remove("on");render();var hb=state.pref&&hotBox(state.pref);fly(state.pref?(hb?fit(hb,.18):fit(PF[state.pref].bb,.03)):fit(HOME,.02))}
 // 押した所を一瞬こく光らせてから動く（押せたことが分かるように）
 function flash(path,col,fn){path.setAttribute("fill",D(col));setTimeout(fn,180)}
-function pickPref(pf){var b=$$("#flt button").filter(function(x){return x.textContent===(pf||"すべて")})[0];if(b)b.click();}
+
 function muniOf(it){if(it._m!==undefined)return it._m;it._m=null;for(var i=0;i<MU.length;i++){var m=MU[i];if(m.p===it.pref&&inGeom(it.lon,it.lat,m.g)){it._m=m;break}}
  if(!it._m){var q=P(it.lon,it.lat),best=1e9;MU.forEach(function(m){if(m.p!==it.pref)return;var cx=(m.bb[0]+m.bb[2])/2,cy=(m.bb[1]+m.bb[3])/2,d=(cx-q[0])*(cx-q[0])+(cy-q[1])*(cy-q[1]);if(d<best){best=d;it._m=m}})}return it._m}
 
 function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(function(i){return i.lat!=null});
  PREFS.forEach(function(p){var n=pins.filter(function(i){return i.pref===p}).length;PF[p].has=n>0;var on=lv===1?n>0:p===pf;PF[p].path.setAttribute("fill",D(on?FILL[p]:"#EFE9E1"));PF[p].sh.style.opacity=on?1:0;PF[p].path.style.cursor=lv===1&&n>0?"pointer":"default"});
  var cnt={};pins.forEach(function(i){if(i.pref!==pf)return;var mm=muniOf(i);if(mm){cnt[mm.grp.id]=(cnt[mm.grp.id]||0)+1}});
- var LIGHT=function(p){return {"大阪":"#FBEEE8","京都":"#F4EFF8","兵庫":"#EEF3FA","奈良":"#EEF6EC","滋賀":"#EAF6F8","和歌山":"#FCF3E4"}[p]};
+ var LIGHT=function(p){return R.light[p]};
  Object.keys(GR).forEach(function(id){GR[id].has=!!cnt[id]});
  if(lv===2)PF[pf].path.setAttribute("fill",D(LIGHT(pf)));
  if(lv===3)PF[pf].path.setAttribute("fill",D(LIGHT(pf)));
@@ -327,18 +366,18 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
  function cb(txt,fn){var b=document.createElement("button");b.type="button";b.textContent=txt;b.onclick=fn;cr.appendChild(b)}
  function sep(){var i=document.createElement("i");i.textContent="›";cr.appendChild(i)}
  function cur(txt){var s=document.createElement("span");s.textContent=txt;cr.appendChild(s)}
- if(lv===1)cur("関西");else{cb("関西",function(){pickPref("")});sep();if(lv===2)cur(pf);else{cb(pf,function(){goPref()});sep();cur(m.n)}}
- var ce=$(".cen",box);ce.textContent=pf?EN[pf]:"KANSAI";ce.style.color=pf?PC[pf]:"";ce.style.display=lv===1?"":"none";
- var bk=$(".bk",box);bk.style.display=lv===1?"none":"block";bk.textContent=lv===3?"‹ "+pf+"にもどる":"‹ 関西にもどる";bk.onclick=function(){if(level()===3)goPref();else pickPref("")};
+ if(lv===1)cur(R.name);else{cb(R.name,function(){pickPref("")});sep();if(lv===2)cur(pf);else{cb(pf,function(){goPref()});sep();cur(m.n)}}
+ var ce=$(".cen",box);ce.textContent=pf?EN[pf]:R.en_all;ce.style.color=pf?PC[pf]:"";ce.style.display=lv===1?"":"none";
+ var bk=$(".bk",box);bk.style.display=lv===1?"none":"block";bk.textContent=lv===3?"‹ "+pf+"にもどる":"‹ "+R.name+"にもどる";bk.onclick=function(){if(level()===3)goPref();else pickPref("")};
  var ch=$(".chips",box);if(pop.parentNode===ch)box.insertBefore(pop,ch);ch.innerHTML="";
  if(lv===3)NUM.forEach(function(it){var b=document.createElement("button");b.type="button";b.className="sp";b.style.setProperty("--c",PC[pf]);b.dataset.k=it.k;if(sel&&sel.k===it.k&&pop.classList.contains("on"))b.classList.add("on");b.innerHTML="<i>"+it._n+"</i><span>"+esc(it.t)+"</span>";b.onclick=function(){if(sel&&sel.k===it.k&&pop.classList.contains("on"))closePop();else openPin(it,null,"list")};ch.appendChild(b)});
  if(lv===2){Object.keys(GR).map(function(id){return GR[id]}).filter(function(g){return g.p===pf&&cnt[g.id]}).sort(function(a,b){return cnt[b.id]-cnt[a.id]}).forEach(function(g){var b=document.createElement("button");b.type="button";b.style.setProperty("--c",PC[pf]);if(m===g)b.className="cur";b.innerHTML=esc(g.n)+"<b>"+cnt[g.id]+"</b>";b.onclick=function(){if(state.muni!==g)goMuni(g)};ch.appendChild(b)})}
  if(FS)buildCar(lv===3?NUM:pins.filter(function(i){return !pf||i.pref===pf}));
  ch.classList.toggle("on",lv>1&&ch.children.length>0);ch.classList.toggle("l3",lv===3);
  placePop();
- var hn=$(".hint",box),ht=FS?(lv===1?"府県を押すか、カードをめくってください":lv===2?"市の名前を押すと近づきます":"番号を押すか、カードをめくってください"):"";if(FS&&ht!==hn.textContent){hn.classList.add("sh");clearTimeout(hn._t);hn._t=setTimeout(function(){hn.classList.remove("sh")},3200)}
- $(".hint",box).textContent=FS?(lv===1?"府県を押すか、カードをめくってください":lv===2?"市の名前を押すと近づきます":"番号を押すか、カードをめくってください"):lv===1?"色のついた府県を押すと、近づきます":lv===2?"下のボタンか、色のついた所を押すと近づきます":"番号を押すか、下の一覧から選べます";
- $("#tnn",box).innerHTML=(lv===3?m.n:pf||"関西")+"の"+curTab()+"<b>"+(lv===3?(cnt[m.id]||0):pins.filter(function(i){return !pf||i.pref===pf}).length)+"</b>か所";
+ var hn=$(".hint",box),ht=FS?(lv===1?R.unit+"を押すか、カードをめくってください":lv===2?"市の名前を押すと近づきます":"番号を押すか、カードをめくってください"):"";if(FS&&ht!==hn.textContent){hn.classList.add("sh");clearTimeout(hn._t);hn._t=setTimeout(function(){hn.classList.remove("sh")},3200)}
+ $(".hint",box).textContent=FS?(lv===1?R.unit+"を押すか、カードをめくってください":lv===2?"市の名前を押すと近づきます":"番号を押すか、カードをめくってください"):lv===1?"色のついた府県を押すと、近づきます":lv===2?"下のボタンか、色のついた所を押すと近づきます":"番号を押すか、下の一覧から選べます";
+ $("#tnn",box).innerHTML=(lv===3?m.n:pf||R.name)+"の"+curTab()+"<b>"+(lv===3?(cnt[m.id]||0):pins.filter(function(i){return !pf||i.pref===pf}).length)+"</b>か所";
  apply();}
 
 // ---- ピンを押したとき（指1本分のまわりのピンも一緒に出す） ----
@@ -373,14 +412,7 @@ function toList(it){var w=it.w;if(w.classList.contains("cap")){var m=$(".cmore",
 
 // ---- 名物の絵（関西の画面だけ。見て楽しむ飾りなので押せない） ----
 // 形は 40×40 の中に描く。線は府県の色、中は白
-var ICON={
- "大阪":{at:[135.02,34.27],n:"大阪城",s:'<path d="M8 33h24l-2-6H10z" fill="#EADBC8"/><path d="M12 27h16v-6H12z" fill="#fff"/><path d="M9 21h22l-4-4H13z" fill="#7FAE9A"/><path d="M14 17h12v-4H14z" fill="#fff"/><path d="M11 13h18l-4-4H15z" fill="#7FAE9A"/><path d="M18 9l2-3 2 3" fill="#E7B84B"/><path d="M18 27v-3h4v3" fill="#C9A27A"/>'},
- "京都":{at:[135.80,35.36],n:"五重塔",s:'<path d="M20 3v5"/><path d="M11 12h18l-3-4H14z" fill="#fff"/><path d="M12 17h16l-3-4H15z" fill="#fff"/><path d="M11 22h18l-3-4H14z" fill="#fff"/><path d="M10 27h20l-3-4H13z" fill="#fff"/><path d="M9 32h22l-3-4H12z" fill="#fff"/><path d="M14 32v3h12v-3" fill="#EADBC8"/>'},
- "兵庫":{at:[134.40,34.85],n:"姫路城",s:'<path d="M9 34h22l-2-5H11z" fill="#EADBC8"/><path d="M12 29h16v-5H12z" fill="#fff"/><path d="M10 24h20l-4-4H14z" fill="#fff"/><path d="M14 20h12v-4H14z" fill="#fff"/><path d="M12 16h16l-4-4h-8z" fill="#fff"/><path d="M16 12h8v-3h-8z" fill="#fff"/><path d="M15 9h10l-2-3h-6z" fill="#fff"/>'},
- "奈良":{at:[135.97,34.02],n:"鹿",s:'<path d="M12 22c0-4 4-6 10-6h4c3 0 5 2 5 5v2c0 3-2 4-5 4H15c-2 0-3-2-3-5z" fill="#E9CFA9"/><path d="M15 27v7M19 27v7M25 27v7M29 26v8"/><path d="M28 17l2-7 4-2c1 0 2 1 1 3l-2 2" fill="#E9CFA9"/><path d="M29 9l-1-4M31 8l2-4M27 6l-2-1M33 5l2 0"/><circle cx="18" cy="21" r="1" fill="#fff" stroke="none"/><circle cx="22" cy="20" r="1" fill="#fff" stroke="none"/><circle cx="31.5" cy="11.5" r=".8" fill="#2B2622" stroke="none"/>'},
- "滋賀":{at:[136.12,35.43],n:"びわ湖",s:'<path d="M6 30c3 2 6 2 9 0s6-2 9 0 6 2 9 0" fill="none"/><path d="M9 26h22l-3 4H12z" fill="#fff"/><path d="M20 6v20"/><path d="M20 8l9 14h-9z" fill="#fff"/><path d="M19 11l-7 11h7z" fill="#D8EEF2"/>'},
- "和歌山":{at:[135.72,33.72],n:"パンダ",s:'<circle cx="12" cy="11" r="4" fill="#3A322C"/><circle cx="28" cy="11" r="4" fill="#3A322C"/><circle cx="20" cy="21" r="12" fill="#fff"/><ellipse cx="15.5" cy="20" rx="3" ry="3.6" fill="#3A322C" transform="rotate(-20 15.5 20)"/><ellipse cx="24.5" cy="20" rx="3" ry="3.6" fill="#3A322C" transform="rotate(20 24.5 20)"/><circle cx="16" cy="19.5" r="1" fill="#fff" stroke="none"/><circle cx="24" cy="19.5" r="1" fill="#fff" stroke="none"/><path d="M18.5 25.5h3l-1.5 1.5z" fill="#3A322C"/>'}
-};
+var ICON=R.icons;
 var ICG=null;
 function drawIcons(){if(!ICG){ICG=el("g",{"class":"g-ic"},svg);svg.insertBefore(ICG,G.mini)}ICG.innerHTML="";
  PREFS.forEach(function(p){var I=ICON[p];if(!I)return;var q=P(I.at[0],I.at[1]),g=el("g",{"class":"ic"},ICG);g.__q=q;
@@ -403,16 +435,15 @@ CAR.addEventListener("scroll",function(){if(carQ)return;carQ=true;requestAnimati
  if(!it||it===sel)return;if(carLock&&carLock!==it)return;sel=it;render();markCar();seePin(it)})},{passive:true});
 // 上の帯：タブと府県ボタン（ページの本物のボタンを押す）
 function buildHead(){var tb=$(".fsh .tb",box),pr=$(".fsh .pf",box);tb.innerHTML="";pr.innerHTML="";
- $$(".tabs button").forEach(function(b){var x=document.createElement("button");x.type="button";var bb=b.querySelector("b"),n=bb?bb.childNodes[0].textContent:b.textContent,cn=bb&&bb.querySelector("small,span,i");
-  x.innerHTML=esc(n)+(cn?"<small>"+esc(cn.textContent.replace(/[^0-9]/g,""))+"</small>":"");if(b.classList.contains("on"))x.className="on";x.onclick=function(){b.click();setTimeout(function(){sync();buildHead()},120)};tb.appendChild(x)});
- $$("#flt button").forEach(function(b){var x=document.createElement("button");x.type="button";x.textContent=b.textContent;if(PC[b.textContent])x.style.setProperty("--c",PC[b.textContent]);if(b.classList.contains("on"))x.className="on";x.onclick=function(){b.click();setTimeout(function(){sync();buildHead()},120)};pr.appendChild(x)})}
+ tabList().forEach(function(t){if(t.off)return;var x=document.createElement("button");x.type="button";x.innerHTML=esc(t.name)+(t.count?"<small>"+esc(t.count)+"</small>":"");if(t.on)x.className="on";x.onclick=function(){t.el.click();setTimeout(function(){sync();buildHead()},120)};tb.appendChild(x)});
+ prefList().forEach(function(t){var x=document.createElement("button");x.type="button";x.textContent=t.name;if(PC[t.name])x.style.setProperty("--c",PC[t.name]);if(t.on)x.className="on";x.onclick=function(){t.el.click();setTimeout(function(){sync();buildHead()},120)};pr.appendChild(x)})}
 // スマホの「戻る」でも地図を閉じる
 addEventListener("popstate",function(){if(OPEN)setOpen(false,true)});
 // 別のページから戻った時・開き直した時は、地図を閉じて最初の状態から（前の続きのまま残さない）
 function fresh(){var st=history.state;if(st&&st.tnmap)try{history.replaceState(null,"")}catch(e){}
  if(OPEN)setOpen(false,true);
- var t=$(".tabs button");if(t&&!t.classList.contains("on"))t.click();
- var a=$("#flt button");if(a&&!a.classList.contains("on"))a.click()}
+ var t=tabList().filter(function(x){return !x.off})[0];if(t&&!t.on)t.el.click();
+ var a=prefList()[0];if(a&&!a.on)a.el.click()}
 addEventListener("pageshow",function(e){if(e.persisted)fresh()});
 if(history.state&&history.state.tnmap)fresh();
 $(".fsh .cl",box).addEventListener("click",function(){if(history.state&&history.state.tnmap)history.back();else setOpen(false)});
@@ -423,23 +454,12 @@ $$(".zm button",box).forEach(function(b){b.addEventListener("click",function(e){
  if(z==="in")zoomBy(.6);else if(z==="out")zoomBy(1.7);else{if(level()>1)pickPref("");else fly(fit(HOME,.02))}})});
 
 // ---- 今のページとつなぐ ----
-function mount(){var bar=$(".tabs");if(!bar)return;
- // タブの上に「イベント｜新しいお店・施設」の見出し（4つのタブの中身を分かりやすく）
- var tg=$(".tgrp");if(!tg){tg=document.createElement("div");tg.className="tgrp";tg.innerHTML='<span>イベント</span><span>新しいお店・施設</span>'}
- if(bar.previousSibling!==tg)bar.parentNode.insertBefore(tg,bar);
- // 府県ボタンは地図のすぐ上へ（件数は押さないので上のまま）
- var top=$(".tn-top");if(!top){top=document.createElement("div");top.className="tn-top"}
- ["flt","none"].forEach(function(id){var e=document.getElementById(id);if(e&&e.parentNode!==top)top.appendChild(e)});
- if(bar.nextSibling!==top)bar.parentNode.insertBefore(top,bar.nextSibling);
- // 地図は「地図で見る」を押した人だけに出す（リストが主役）
- if(top.nextSibling!==mb)top.parentNode.insertBefore(mb,top.nextSibling);
- if(!FS&&mb.nextSibling!==box)mb.parentNode.insertBefore(box,mb.nextSibling);}
 var mb=document.createElement("button");mb.type="button";mb.className="tnbtn";
 var OPEN=false;
-var MINI={"hyogo":"m 213.21993,277.54889 -1.09,0.9 -1.21,-0.22 0,0 -0.54,-1.37 -1.08,-0.96 -0.18,-0.47 0.7,-1.31 -0.68,-0.85 0.35,-0.32 0.15,-0.91 -0.2,-0.59 0.92,-0.54 0.06,-0.93 0.59,-0.25 0.24,-1.1 0.24,-0.26 0.67,0.07 0.08,-0.78 -0.63,-0.66 0.44,-0.8 0,0 0.58,0.26 1.64,-1.15 -0.26,-1.16 0.15,-0.43 -0.73,-0.96 0.09,-1.08 -0.73,-0.34 -0.49,-1.88 0.12,-1.02 -0.38,-0.77 -0.69,-0.52 0,0 2.13,-0.66 1.22,-0.74 1.2,0.31 0.42,0.47 0.82,-0.67 1.38,0.2 1.28,-0.29 0.45,0.33 0.98,-0.06 0,0 0.02,2.02 0.86,0.8 0.21,0.61 0.72,0.18 1.33,-0.66 0.32,0.54 0,2.63 -0.91,0.52 -1.14,-0.55 -0.37,1 0.02,1.27 1.49,0.61 1.32,1.13 0.76,-0.46 1.02,0.02 0.02,0.78 0.86,0.82 -0.25,0.55 0.55,0.24 0.43,-0.36 0.81,0.04 0.22,0.06 0.04,0.73 0.85,-0.18 0.97,0.49 0.29,1.26 -0.38,0.21 -0.17,0.54 0,0 -0.43,-0.05 -0.29,0.31 0.4,0.24 0.08,0.97 -0.24,0.36 1.4,0.81 0.96,0.14 -0.91,0.51 0.43,0.25 -0.47,2.04 0.74,1.24 0.15,1.43 -0.54,1.21 0,0 -0.44,-0.33 0.14,-0.47 -0.25,-0.52 -0.92,0.32 -0.42,-0.6 -0.97,-0.13 -1.98,0.94 -0.1,0.68 -2.58,0.64 -4.27,-1.72 -1.67,-1.65 -5.72,0.05 z m 9.4,11.08 0.22,0.77 -2.06,0.84 -0.98,0.82 -1.34,0.19 -0.01,-0.45 -0.59,-0.31 0.06,-0.5 -0.43,-0.16 -0.54,-1.01 0.67,-0.96 0.38,0.24 0.47,-0.24 1.33,-2.82 0.4,-0.46 0.41,0.01 0.95,-1.5 0.95,-0.43 0.77,-1.12 0.55,-0.29 0.44,0.83 -0.6,0.72 -0.15,0.77 -1.78,2.33 -0.01,1.54 0.89,1.19 z","kyoto":"m 231.14993,270.89889 0.17,-0.53 0.37,-0.21 -0.29,-1.26 -0.97,-0.49 -0.86,0.18 -0.04,-0.74 -0.22,-0.06 -0.81,-0.04 -0.42,0.36 -0.56,-0.24 0.25,-0.55 -0.86,-0.83 -0.02,-0.77 -1.02,-0.03 -0.77,0.47 -1.32,-1.14 -1.49,-0.61 -0.02,-1.26 0.37,-1 1.14,0.55 0.91,-0.52 0.01,-2.63 -0.33,-0.54 -1.33,0.66 -0.72,-0.18 -0.21,-0.61 -0.86,-0.8 -0.02,-2.02 0,0 0.26,0.3 0.97,-0.02 0.59,-0.3 0.45,-0.78 0.81,0.06 1.92,-1.35 1.89,-0.6 1.08,0.68 0.66,1.2 -1.07,1.01 -0.19,0.74 -1.09,1.32 0.06,0.6 0.3,-0.01 0.59,-0.97 0.61,0.34 0.13,0.17 -0.64,0.55 1.35,0.61 0.25,-0.33 0.14,1.38 0.48,-0.48 0.84,0.21 0.05,-0.51 -1.26,-0.79 0.85,-0.68 0.93,-0.11 0.15,-0.58 0.35,-0.01 0.01,0.57 0.41,0.25 0,0 -0.41,0.89 0.52,0.42 -0.29,1.01 1.31,1.21 0.13,0.87 1.73,0.19 1.5,0.59 1.37,-0.26 0,0 1.18,1.84 0.42,-0.01 -0.38,1.44 0.43,2.11 -0.31,1.74 -0.34,0.25 0.29,1.17 0.89,1.51 -0.24,1.07 0.71,0.47 0.73,-0.38 0.13,0.88 0.31,-0.05 0.3,0.37 0.4,-0.15 0.61,0.6 -0.26,0.26 0.15,0.41 0,0 0.45,1.2 0,0 -0.34,0.75 -0.58,-0.08 -0.49,-0.67 -0.99,-0.01 0.08,-0.36 -0.74,1.13 -0.73,0.08 -1.92,-0.52 -0.52,-1.22 0,0 0.28,-0.62 -1.02,-1.15 -0.31,-1.06 -1.24,-1.15 0,-0.62 -0.75,-0.02 -0.26,0.68 0.38,0.42 -0.79,0.26 -0.69,-0.73 -0.25,0.11 -0.07,-1.16 -2.16,-0.6 z","shiga":"m 251.72993,266.75889 0.07,0.85 0.71,0.73 -0.73,2.5 -0.04,1.38 -0.78,1.1 -0.21,0.92 -2.34,1.13 -1.33,-0.66 -1.02,0.01 -0.33,-0.38 -0.47,0.39 0.07,0.26 0.62,0.04 0.08,0.26 -0.77,0.62 0.07,0.52 -1.34,0.55 0,0 -0.15,-0.41 0.26,-0.26 -0.61,-0.6 -0.4,0.15 -0.3,-0.37 -0.31,0.05 -0.13,-0.88 -0.73,0.38 -0.71,-0.47 0.24,-1.07 -0.89,-1.51 -0.29,-1.17 0.34,-0.25 0.31,-1.74 -0.43,-2.11 0.38,-1.44 -0.42,0.01 -1.18,-1.84 0,0 0.45,-0.74 0.37,-0.1 0.06,-0.5 0.65,0 0.35,0.4 0.57,-0.28 1.04,-2.76 0.77,0.77 0.46,-0.1 0.46,-0.88 1.29,-0.12 0.35,-1.07 1.1,0.32 0.14,-0.75 -0.83,-1.76 0.31,-0.67 0.67,-0.13 1.81,0.93 0,0 0.26,1.07 0.66,0.07 -0.12,1.6 0.78,0.29 0.31,-0.5 0.55,0.71 -0.24,0.89 0.63,0.64 -0.09,1 0.53,0.85 -0.55,0.44 -0.04,1.34 -0.32,0.52 -0.02,0.93 -0.32,0.21 z","osaka":"m 232.13993,283.27889 0.37,-0.8 -0.64,-0.14 -0.03,-0.81 0.3,-0.51 0.74,-0.43 -0.46,-0.23 0,0 0.54,-1.21 -0.15,-1.43 -0.74,-1.24 0.47,-2.04 -0.43,-0.25 0.91,-0.51 -0.96,-0.14 -1.4,-0.81 0.24,-0.36 -0.08,-0.97 -0.4,-0.24 0.29,-0.31 0.43,0.05 0,0 0.19,0.74 2.16,0.6 0.07,1.16 0.25,-0.11 0.69,0.73 0.79,-0.26 -0.38,-0.42 0.26,-0.68 0.75,0.02 0,0.61 1.24,1.15 0.3,1.06 1.03,1.16 -0.29,0.62 0,0 -0.35,-0.06 -0.15,1.36 -0.51,0.44 -0.51,2.37 0.38,0.08 0.21,0.45 -0.57,0.9 0.53,1.26 0.08,1.16 -0.19,1.1 -0.61,0.37 0,0 -1.29,0.18 -1.2,0.8 -1.62,-0.14 -2.06,0.74 -1.63,0.09 -1.23,0.79 -1.04,0.18 -0.43,-0.04 -0.13,-0.88 -0.27,-0.09 0,0 2.57,-0.85 1.84,-1.68 0.97,-1.49 1.15,-1.04 z","nara":"m 244.43993,278.17889 0.8,1.57 -0.38,0.52 0.05,0.59 -0.43,1.01 0.26,0.41 1.03,0.5 0.82,-0.27 0.47,1.01 0.65,-0.27 0.29,0.96 -0.39,0.95 -2.18,0.32 -0.5,0.95 1.15,1.85 -0.66,0.36 0.69,1.16 -0.72,1.36 0.37,0.68 -0.13,1.75 -0.24,0.27 0.14,1.33 -1.62,-0.25 -0.82,1.11 -1.21,0.39 -1.1,1.72 0,0 -2.01,0.34 -0.66,-0.41 -0.66,-0.01 -1.15,0.68 -0.22,-0.57 -0.37,-0.13 0.71,-1.83 -0.28,-0.51 -0.58,-0.21 0.06,-0.52 -1.14,-0.96 0.12,-0.54 1.5,-1.45 0.38,-0.58 -0.01,-0.71 0.54,-0.27 0.81,0.37 0.39,-0.6 -0.21,-0.65 -0.89,-0.5 -0.2,-1.72 -0.4,-0.68 0,0 0.61,-0.37 0.19,-1.1 -0.08,-1.17 -0.53,-1.25 0.57,-0.9 -0.21,-0.45 -0.38,-0.07 0.51,-2.37 0.51,-0.44 0.16,-1.36 0.35,0.06 0,0 0.52,1.22 1.92,0.52 0.73,-0.08 0.74,-1.13 -0.08,0.36 0.99,0.01 0.49,0.67 0.58,0.08 z","wakayama":"m 240.04993,307.16889 -0.54,0.38 -0.32,0.69 0.09,0.71 -0.48,0.08 -0.25,-0.35 0.32,-0.75 -0.79,0.11 -1.88,-0.75 -2.35,-0.38 -2.02,-1.21 -0.41,-0.74 0.15,-0.79 -1.27,-0.63 0.98,-0.53 0.25,-0.57 -1.44,-1.22 -2.62,-1.21 -0.68,-1.41 -0.77,-0.38 -1.11,0.32 0.21,-2.33 1.57,-0.64 0.49,-0.63 -0.73,-0.76 -1.12,-0.25 0.61,-0.64 0.3,-0.83 0.87,0.07 0.3,-0.35 -0.13,-0.75 -0.75,-0.2 -0.43,-1.22 -1,-1.08 0.13,-0.48 0.36,-0.14 0,0 0.27,0.09 0.13,0.88 0.43,0.04 1.04,-0.18 1.23,-0.79 1.63,-0.09 2.06,-0.74 1.62,0.14 1.2,-0.8 1.29,-0.18 0,0 0.4,0.68 0.2,1.72 0.89,0.5 0.21,0.66 -0.39,0.6 -0.81,-0.37 -0.55,0.27 0.01,0.71 -0.38,0.57 -1.49,1.45 -0.13,0.54 1.14,0.96 -0.06,0.53 0.58,0.21 0.28,0.51 -0.71,1.83 0.38,0.13 0.21,0.57 1.15,-0.68 0.66,0.01 0.66,0.41 2.01,-0.34 0,0 -0.07,1.92 1.7,1.94 1.29,0.27 0,0 -0.33,0.45 -0.15,1.15 -0.96,0.26 -0.23,0.85 0.72,0.28 -0.07,0.35 -2.08,1.46 -0.52,0.09 z"},MK={hyogo:"兵庫",kyoto:"京都",shiga:"滋賀",osaka:"大阪",nara:"奈良",wakayama:"和歌山"};
-mb.innerHTML='<span class="mm"><svg>'+Object.keys(MK).map(function(k){return '<path d="'+MINI[k]+'" fill="'+DEEP[MK[k]]+'" stroke="#fff" stroke-width="1" vector-effect="non-scaling-stroke"/>'}).join("")+'</svg></span><span class="tx"><b class="t1">地図で見る</b><small class="t2"></small></span><i class="ar">›</i>';
+var MINI=R.mini;
+mb.innerHTML='<span class="mm"><svg>'+Object.keys(MINI).map(function(k){return '<path d="'+MINI[k]+'" fill="'+DEEP[k]+'" stroke="#fff" stroke-width="1" vector-effect="non-scaling-stroke"/>'}).join("")+'</svg></span><span class="tx"><b class="t1">地図で見る</b><small class="t2"></small></span><i class="ar">›</i>';
 // ボタンの小さい文字：今のタブの件数（例：開催中の76か所を、関西の地図で）
-function mbUpd(){var b=$(".tabs button.on"),m=b&&b.textContent.match(/(\d+)\D*$/),t=curTab();$(".t2",mb).textContent=m?t+"の"+m[1]+"か所を、関西の地図で":"関西の地図で探す"}
+function mbUpd(){var n=tabCount(),t=curTab();$(".t2",mb).textContent=n?t+"の"+n+"か所を、"+R.name+"の地図で":R.name+"の地図で探す"}
 // 開くと画面いっぱいの地図になる。閉じるとリストのいつもの場所にもどる
 function setOpen(v,fromPop){if(v===OPEN&&v)return;OPEN=v;FS=v;
  if(v){document.body.appendChild(box);box.classList.remove("shut");box.classList.add("fs");document.documentElement.style.overflow="hidden";
@@ -447,20 +467,18 @@ function setOpen(v,fromPop){if(v===OPEN&&v)return;OPEN=v;FS=v;
   buildHead();carSig="";if(!loading)load();else if(ready){lastSig="";sync()}}
  else{box.classList.remove("fs");box.classList.add("shut");document.documentElement.style.overflow="";sel=null;pop.classList.remove("on");mount()}
  if(v===false)mbUpd()}
-// 本番のリストでだけ「地図で見る」が押された数を数える（試作ページ・オーナーは数えない）
-function cnt1(k){try{if(/\/townnotes\//.test(location.pathname)||/github\.io$/.test(location.hostname)||localStorage.getItem("usagi_owner")==="1")return;var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true})}catch(e){}}
 mb.addEventListener("click",function(){cnt1("地図｜地図で見る");setOpen(true)});
 function toMap(){var y=box.getBoundingClientRect().top+scrollY-12;scrollTo({top:y,behavior:RM?"auto":"smooth"})}
 function sync(){mount();if(!ready||!OPEN)return;var pf=curPref(),sig=pf+"|"+curTab();if(sig===lastSig)return;var first=!lastSig,pfChanged=first||lastSig.split("|")[0]!==pf;lastSig=sig;
  list=items();OTH=others();var tb=curTab();$(".lg",box).innerHTML='<span'+(tb==="もうすぐ"?' class="s"':'')+'>'+esc(tb)+'</span><span class="o">ほかのタブ</span>';$(".lg",box).style.display="flex";sel=null;pop.classList.remove("on");
  if(!pfChanged&&state.muni&&!list.some(function(i){var mm=i.lat!=null&&i.pref===state.pref&&muniOf(i);return mm&&mm.grp===state.muni})){goPref();return}
  if(pfChanged){state.pref=pf;state.muni=null;if(first){var hb=pf&&hotBox(pf);vb=pf?(hb?fit(hb,.18):fit(PF[pf].bb,.03)):fit(HOME,.02);render()}else goPref()}else render();}
-document.addEventListener("click",function(e){if(e.target.closest("#flt,.tabs,.dflt"))setTimeout(function(){sync();mbUpd()},90)});
+document.addEventListener("click",function(e){if(e.target.closest(ZONE))setTimeout(function(){sync();mbUpd()},90)});
 addEventListener("resize",function(){if(ready)apply()});
 mount();
 // 地図のデータは、はじめて開いたときだけ読む（開かない人は軽いまま）
 var loading=false;function load(){loading=true;
-Promise.all([fetch(TNB+"geo.json",{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return{}}),fetch(TNB+"kansai.json").then(function(r){return r.json()})]).then(function(a){
+Promise.all([fetch(TNB+"geo.json",{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return{}}),fetch(TNB+R.shapes).then(function(r){return r.json()})]).then(function(a){
  Object.keys(a[0]).forEach(function(k){if(a[0][k][0]!=null)GEO[key(k)]=a[0][k]});setup(a[1]);drawIcons();ready=true;lastSig="";sync();window.__tnReady=true;
 }).catch(function(e){console.error(e);$(".fr",box).style.display="none"});}
 setOpen(OPEN);mbUpd();

@@ -11,13 +11,12 @@ jobs:
     steps:
       - run: |
           U=https://usagi-odekake.usagi-fudosan.workers.dev
-          curl -sSI $U/townnotes/ | sed -n '1,20p'
-          curl -sS $U/townnotes/ -o page.html; grep -o 'map.js[^"]*' page.html
-          J=$(grep -o '/townnotes/map.js[^"]*' page.html | head -1)
-          curl -sSI "$U$J" | sed -n '1,20p'
-          curl -sS "$U$J" -o map.js; wc -c map.js
-          echo "omk count: $(grep -c 'omk' map.js)"; echo "fresh: $(grep -c 'function fresh' map.js)"
-          curl -sS "$U/townnotes/map.js" | grep -c 'function fresh' || true
+          echo "--- 本番のリスト"
+          curl -sS $U/ -o top.html; grep -o '/townnotes/map.js[^"]*' top.html || echo "地図の読み込みなし"
+          J=$(grep -o '/townnotes/map.js[^"]*' top.html | head -1)
+          [ -n "$J" ] && curl -sS "$U$J" -o map.js && wc -c map.js && echo "mbUpd: $(grep -c 'function mbUpd' map.js)  cnt1: $(grep -c 'function cnt1' map.js)"
+          echo "--- 試作ページ"
+          curl -sS $U/townnotes/ | grep -o 'src="map.js[^"]*"' || true
           echo "--- cloudflare status"
           curl -sS https://www.cloudflarestatus.com/api/v2/incidents/unresolved.json | python3 -c "import json,sys;d=json.load(sys.stdin);[print(i['name'],'|',i['status'],'|',i['created_at'],'|',[c['name'] for c in i.get('components',[])]) for i in d['incidents']]" || true
           echo "--- github pages (予備)"
