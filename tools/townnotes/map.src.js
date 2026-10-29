@@ -113,7 +113,7 @@ function setup(KS){
  KS.pref.features.forEach(function(f){var p=f.properties.p;PF[p]={bb:gbb(f.geometry),path:el("path",{d:geom2d(f.geometry),"class":"pf",fill:FILL[p]},G.pf)};
   PF[p].path.addEventListener("click",function(){if(level()===1&&PF[p].has)flash(PF[p].path,DEEP[p],function(){pickPref(p)})})});
  KS.muni.features.forEach(function(f){var pr=f.properties,m={p:pr.p,n:pr.n,c:pr.c,g:f.geometry,bb:gbb(f.geometry)};m.id=m.p+"|"+m.c+"|"+m.n;
-  m.path=el("path",{d:geom2d(f.geometry),"class":"mu"},G.mu);m.path.addEventListener("click",function(ev){if(level()===2&&state.pref===m.p&&m.grp.has){ev.stopPropagation();var g=m.grp;g.mus.forEach(function(x){x.path.style.fill=DEEP[x.p]});setTimeout(function(){goMuni(g)},180)}});MU.push(m)});
+  m.path=el("path",{d:geom2d(f.geometry),"class":"mu"},G.mu);m.path.__mu=m;m.path.addEventListener("click",function(ev){if(level()===2&&state.pref===m.p&&m.grp.has){ev.stopPropagation();var g=m.grp;g.mus.forEach(function(x){x.path.style.fill=DEEP[x.p]});setTimeout(function(){goMuni(g)},180)}});MU.push(m)});
  // 大阪市・京都市・神戸市・堺市などは、区をまとめて「市」として寄る
  MU.forEach(function(m){var gid=m.p+"|"+(m.c||m.n);var g=GR[gid];if(!g){g=GR[gid]={id:gid,p:m.p,n:m.c||m.n,city:!!m.c,mus:[],bb:[1e9,1e9,-1e9,-1e9]}}g.mus.push(m);m.grp=g;g.bb=[Math.min(g.bb[0],m.bb[0]),Math.min(g.bb[1],m.bb[1]),Math.max(g.bb[2],m.bb[2]),Math.max(g.bb[3],m.bb[3])]});
  var b=[1e9,1e9,-1e9,-1e9];PREFS.forEach(function(p){var x=PF[p].bb;b=[Math.min(b[0],x[0]),Math.min(b[1],x[1]),Math.max(b[2],x[2]),Math.max(b[3],x[3])]});HOME=b;
@@ -125,17 +125,18 @@ function aspect(){var r=$(".fr",box).getBoundingClientRect();return r.width?r.he
 function fit(b,pad){var w=b[2]-b[0],h=b[3]-b[1],A=aspect();pad=pad||.12;var W=w*(1+pad*2),H=h*(1+pad*2)+h*.16;if(H/W>A)W=H/A;else H=W*A;var cx=(b[0]+b[2])/2,cy=(b[1]+b[3])/2;return [cx-W/2,cy-H/2,W,H]}
 function fly(to){var from=vb.slice(),t0=performance.now(),D=RM?1:450;cancelAnimationFrame(anim);
  (function f(n){var k=Math.min(1,(n-t0)/D),e=1-Math.pow(1-k,3);vb=from.map(function(v,i){return v+(to[i]-v)*e});apply(k>=1);if(k<1)anim=requestAnimationFrame(f)})(t0)}
-// ---- 指1本でなぞって動かす（府県・市に寄っているときだけ。関西全体ではページのスクロールを優先） ----
-var drag=null,moved=false;
-function panBox(){return level()===3?state.muni.bb:level()===2?PF[state.pref].bb:null}
-function clampVb(v){var b=panBox();if(!b)return v;var cx=v[0]+v[2]/2,cy=v[1]+v[3]/2;var w=(b[2]-b[0])*.3,h=(b[3]-b[1])*.3;cx=Math.max(b[0]+w,Math.min(b[2]-w,cx));cy=Math.max(b[1]+h,Math.min(b[3]-h,cy));return [cx-v[2]/2,cy-v[3]/2,v[2],v[3]]}
-var FR=$(".fr",box);FR.addEventListener("pointerdown",function(e){if(level()===1||e.target.closest("button"))return;cancelAnimationFrame(anim);drag={x:e.clientX,y:e.clientY,v:vb.slice(),id:e.pointerId};moved=false});
-FR.addEventListener("pointermove",function(e){if(!drag||e.pointerId!==drag.id)return;var dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(!moved&&Math.hypot(dx,dy)<6)return;if(!moved){moved=true;try{FR.setPointerCapture(drag.id)}catch(_){}}var u=drag.v[2]/(drag.w||(drag.w=svg.getBoundingClientRect().width||360));vb=clampVb([drag.v[0]-dx*u,drag.v[1]-dy*u,drag.v[2],drag.v[3]]);if(!drag.raf)drag.raf=requestAnimationFrame(function(){if(drag)drag.raf=0;apply(false)})});
-function endDrag(){var was=moved;drag=null;if(was)apply(true);setTimeout(function(){moved=false},0)}
-FR.addEventListener("touchmove",function(e){if(level()>1)e.preventDefault()},{passive:false});
-FR.addEventListener("pointerup",endDrag);FR.addEventListener("pointercancel",endDrag);
-// なぞった後の「押した」は無視（押し間違い防止）
-FR.addEventListener("click",function(e){if(moved){e.stopPropagation();e.preventDefault()}},true);
+// ---- 地図は動かさない（押すと寄るだけ）。押し間違いを防ぐ ----
+// ・指が少しでもずれたら「押した」にしない（ページを下にずらしただけで寄らない）
+// ・府県の画面で色のついた所の少し外を押したときは、いちばん近い色のついた市・区へ寄る
+var FR=$(".fr",box),tap0=null,moved=false;
+FR.addEventListener("pointerdown",function(e){tap0={x:e.clientX,y:e.clientY};moved=false});
+FR.addEventListener("pointermove",function(e){if(tap0&&Math.hypot(e.clientX-tap0.x,e.clientY-tap0.y)>10)moved=true});
+FR.addEventListener("pointercancel",function(){moved=true});
+FR.addEventListener("click",function(e){if(moved&&!e.target.closest("button")){e.stopPropagation();e.preventDefault();return}
+ if(level()!==2||e.target.closest("button,.lb")||(e.target.classList&&e.target.classList.contains("hit")))return;
+ var hit=null;if(e.target.__mu&&e.target.__mu.grp.has)return;
+ var best=30;LB.forEach(function(l){if(!l.e.classList.contains("m")||l.e.classList.contains("hide"))return;var b=l.e.getBoundingClientRect(),d=Math.hypot(Math.max(b.left-e.clientX,0,e.clientX-b.right),Math.max(b.top-e.clientY,0,e.clientY-b.bottom));if(d<best){best=d;hit=l}});
+ if(hit){e.stopPropagation();hit.e.click()}},true);
 function px(){var r=svg.getBoundingClientRect();return vb[2]/(r.width||360)}  // 画面の1pxが地図の何単位か
 // full=false：動いている途中（軽く：文字の位置だけ動かす）／full：止まったとき（文字の重なりも整える）
 function apply(full){if(full===undefined)full=true;svg.setAttribute("viewBox",vb.join(" "));var u=px(),lv=level();
@@ -186,8 +187,7 @@ function render(){var lv=level(),pf=state.pref,m=state.muni,pins=list.filter(fun
  if(lv===1)cur("関西");else{cb("関西",function(){pickPref("")});sep();if(lv===2)cur(pf);else{cb(pf,function(){goPref()});sep();cur(m.n)}}
  var ce=$(".cen",box);ce.textContent=pf?EN[pf]:"KANSAI";ce.style.color=pf?PC[pf]:"";ce.style.display=lv===1?"":"none";
  var bk=$(".bk",box);bk.style.display=lv===1?"none":"block";bk.textContent=lv===3?"‹ "+pf+"にもどる":"‹ 関西にもどる";bk.onclick=function(){if(level()===3)goPref();else pickPref("")};
- var fr0=$(".fr",box);fr0.style.touchAction=lv===1?"auto":"none";svg.style.cursor=lv===1?"":"grab";
- $(".hint",box).textContent=lv===1?"色のついた府県を押すと、近づきます":lv===2?"色のついた所を押すと、近づきます":"なぞって動かせます・ピンを押すと、くわしく";
+ $(".hint",box).textContent=lv===1?"色のついた府県を押すと、近づきます":lv===2?"色のついた所を押すと、近づきます":"ピンを押すと、くわしく見られます";
  $("#tnn",box).innerHTML=(lv===3?m.n:pf||"関西")+"の"+curTab()+"<b>"+(lv===3?(cnt[m.id]||0):pins.filter(function(i){return !pf||i.pref===pf}).length)+"</b>か所";
  apply();}
 
