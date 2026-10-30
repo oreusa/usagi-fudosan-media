@@ -86,6 +86,8 @@ var css=`
 .tn .lb.p small{display:block;font-family:Jost,sans-serif;font-weight:400;font-size:8.5px;letter-spacing:.32em;margin-top:3px}
 .tn .lb.p.sm{font-size:14px;letter-spacing:.1em}.tn .lb.p.sm small{letter-spacing:.14em;margin-top:1px}
 .tn .lb.m{pointer-events:auto;cursor:pointer;display:flex;align-items:center;gap:6px;padding:4px 5px 4px 10px;background:#fff;border-radius:99px;box-shadow:0 1px 2px rgba(60,40,20,.10),0 3px 10px rgba(60,40,20,.10);text-shadow:none;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11.5px;letter-spacing:.06em;color:#3A2F28}
+.tn .ldr{position:absolute;left:0;top:0;height:1px;background:var(--c,#8A7B6E);opacity:.55;transform-origin:0 50%;pointer-events:none;display:none}
+.tn .lb.m.cm{gap:3px;padding:2px 3px 2px 7px;font-size:9.5px;letter-spacing:0}.tn .lb.m.cm b{font-size:9px;line-height:14px;min-width:14px;padding:0 3px}
 .tn .lb.m b{font-family:Jost,sans-serif;font-weight:500;font-size:10.5px;line-height:18px;min-width:18px;text-align:center;color:#fff;background:var(--c);border-radius:9px;padding:0 4px}
 .tn .lb.w{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:500;font-size:10px;letter-spacing:.06em;color:#A89C91}
 .tn .lb.w.h{font-weight:700;font-size:11px;color:#4A3F37}
@@ -304,8 +306,12 @@ function apply(full){if(full===undefined)full=true;svg.setAttribute("viewBox",vb
  if(ICG){ICG.style.opacity=lv===1?1:0;$$(".ic",ICG).forEach(function(g){var k=34/40*u;g.setAttribute("transform","translate("+(g.__q[0]-20*k)+" "+(g.__q[1]-20*k)+") scale("+k+")")})}G.sh.setAttribute("transform","translate("+(1.4*u)+" "+(2.2*u)+")");
  // 文字は HTML で重ねる（小さくてもきれいに出る）。重なる文字は、大事な方だけ出す
  var r=svg.getBoundingClientRect(),placed=[];
- function pos(l){var x=((l.flip?l.x2:l.x)-vb[0])/vb[2]*r.width+(l.ox||0),y=(l.y-vb[1])/vb[3]*r.height+(l.oy||0);l.e.style.transform="translate("+x.toFixed(1)+"px,"+y.toFixed(1)+"px) "+(l.side?(l.flip?"translate(calc(-100% - 8px),-50%)":"translate(8px,-50%)"):"translate(-50%,-50%)")}
- LB.forEach(function(l){if(full){l.flip=false;l.ox=l.oy=0;l.e.classList.remove("hide","sm")}pos(l)});
+ function pos(l){var x=((l.flip?l.x2:l.x)-vb[0])/vb[2]*r.width+(l.ox||0),y=(l.y-vb[1])/vb[3]*r.height+(l.oy||0);l.e.style.transform="translate("+x.toFixed(1)+"px,"+y.toFixed(1)+"px) "+(l.side?(l.flip?"translate(calc(-100% - 8px),-50%)":"translate(8px,-50%)"):"translate(-50%,-50%)");
+  // ずらした札は、点から細い線でつなぐ（どの点の名前か分かるように）
+  if(l.side){var far=Math.hypot(l.ox||0,l.oy||0)>=14;if(far&&!l.ln){l.ln=document.createElement("i");l.ln.className="ldr";LBS.insertBefore(l.ln,LBS.firstChild)}
+   if(l.ln){l.ln.style.display=far?"block":"none";if(far){var dx=((l.x+l.x2)/2-vb[0])/vb[2]*r.width,dy=(l.y-vb[1])/vb[3]*r.height,ax=x+(l.flip?-8:8),ay=y,L=Math.hypot(ax-dx,ay-dy);
+    l.ln.style.width=L.toFixed(1)+"px";l.ln.style.transform="translate("+dx.toFixed(1)+"px,"+dy.toFixed(1)+"px) rotate("+Math.atan2(ay-dy,ax-dx)+"rad)";l.ln.style.setProperty("--c",l.e.style.getPropertyValue("--c"))}}}}
+ LB.forEach(function(l){if(full){l.flip=false;l.ox=l.oy=0;l.e.classList.remove("hide","sm","cm")}pos(l)});
  if(full)LB.forEach(function(l){if(!l.side)return;var b=l.e.getBoundingClientRect();if(b.right>r.right-(FS?56:12)){l.flip=true;pos(l)}});
  if(full)LB.slice().sort(function(a,b){return b.pri-a.pri}).forEach(function(l){l.e.classList.remove("fl");var b=l.e.getBoundingClientRect();if(l.e.classList.contains("t")&&b.right>r.right-16){l.e.classList.add("fl");b=l.e.getBoundingClientRect()}if(b.right<r.left||b.left>r.right||b.bottom<r.top+40||b.top>r.bottom-30){l.e.classList.add("hide");return}
   function hit(b){return placed.some(function(o){return b.left<o.right+2&&b.right>o.left-2&&b.top<o.bottom+1&&b.bottom>o.top-1})}
@@ -313,6 +319,12 @@ function apply(full){if(full===undefined)full=true;svg.setAttribute("viewBox",vb
   if(hit(b)&&l.e.classList.contains("p")){var OF=[[0,10],[0,-10],[14,0],[-14,0],[0,20],[0,-20],[22,10],[-22,10],[22,-10],[-22,-10],[0,30],[0,-30]];
    for(var t=0;t<2&&hit(b);t++){if(t)l.e.classList.add("sm");for(var i=0;i<OF.length;i++){l.ox=OF[i][0];l.oy=OF[i][1];pos(l);b=l.e.getBoundingClientRect();if(!hit(b))break}}
    if(hit(b)){l.ox=l.oy=0;pos(l);b=l.e.getBoundingClientRect()}placed.push(b);return}
+  // 色のついた市（件数つき）は、重なったら反対側・少し上下にずらして、なるべく地図に残す（「ほかにも」に行く市を減らす）
+  if(hit(b)&&l.side&&l.e.classList.contains("m")&&l.e.querySelector("b")){var f0=l.flip,ok=false,inF=function(b){return b.left>=r.left+4&&b.right<=r.right-(FS?56:12)&&b.top>=r.top+40&&b.bottom<=r.bottom-30};
+   // 重なった市の札は、点のまわりの空いている所をさがして置く（近い所から。遠いときは線でつなぐ）。それでもだめなら小さい札で
+   var C=[];[0,14,26,40,56,72].forEach(function(R){(R?[0,1,2,3,4,5,6,7]:[0]).forEach(function(k){var an=k*Math.PI/4;C.push([Math.round(R*Math.cos(an)),Math.round(R*Math.sin(an))])})});
+   for(var st2=0;st2<2&&!ok;st2++){if(st2)l.e.classList.add("cm");for(var q=0;q<C.length&&!ok;q++)for(var fz=0;fz<2&&!ok;fz++){l.flip=fz?!f0:f0;l.ox=C[q][0];l.oy=C[q][1];pos(l);b=l.e.getBoundingClientRect();if(!hit(b)&&inF(b))ok=true}}
+   if(!ok){l.e.classList.remove("cm");l.flip=f0;l.ox=l.oy=0;pos(l);b=l.e.getBoundingClientRect()}}
   if(hit(b)){l.e.classList.add("hide");return}placed.push(b)});
  if(full&&lv===3){var gs=$$(".pinx",G.pin).filter(function(g){return g.dataset.n}),D=23;
   // 近すぎるピンは、おたがいに少しずつ押しのけて、どれも指で押せる間をあける（画面で23px）
@@ -329,15 +341,19 @@ function apply(full){if(full===undefined)full=true;svg.setAttribute("viewBox",vb
 }
 // 選んだピンの上に小さな吹き出し（名前・日付・無料）。物件サイトの地図のように、下のカードを見なくても分かる。押せない（押し間違いを作らない）
 var BUB=document.createElement("div");BUB.className="qb";FR.appendChild(BUB);var bubIt=null;
-// 関西・関東の全体の画面では出さない（府県の名前をかくさないため）。府県・市に寄ったときだけ
-function placeBub(){if(!FS||!sel||sel.lat==null||level()<2){BUB.classList.remove("on");bubIt=null;return}
+// 吹き出しは市に寄ったときだけ（全体・府県の画面では、府県や市の名前の札をかくさないため。そこでは下のカードで見る）
+function placeBub(){if(!FS||!sel||sel.lat==null||level()<3){BUB.classList.remove("on");bubIt=null;return}
  var g=$$(".pinx",G.pin).filter(function(x){return x.querySelector(".sel-r")})[0];if(!g){BUB.classList.remove("on");return}
  if(bubIt!==sel){bubIt=sel;var fr=(sel.tags||[]).some(function(t){return t.indexOf("無料")>=0});
   BUB.style.setProperty("--c",PC[sel.pref]||"#2B2622");
   BUB.classList.toggle("ph",TRY);BUB.innerHTML=(TRY?thumb(sel,'qth'):'')+'<div class="qx"><div class="qm"><span class="qp">'+esc(sel.pref)+'</span>'+(sel.d?'<span class="qd">'+esc(sel.d)+'</span>':'')+(fr?'<span class="qf">無料</span>':'')+'</div><div class="qt">'+esc(sel.t)+'</div></div>'}
  var R=FR.getBoundingClientRect(),d=g.querySelector(".dot").getBoundingClientRect(),cx=d.left+d.width/2-R.left,top=d.top-R.top,bot=d.bottom-R.top;
  if(cx<0||cx>R.width||top<0||bot>R.height){BUB.classList.remove("on");return}
- BUB.classList.add("on");var w=BUB.offsetWidth,h=BUB.offsetHeight,x=Math.max(8,Math.min(R.width-w-8,cx-w/2)),below=top-h-12<44,y=below?bot+10:top-h-10;
+ BUB.classList.add("on");var w=BUB.offsetWidth,h=BUB.offsetHeight,x=Math.max(8,Math.min(R.width-w-8,cx-w/2));
+ // 上と下で、市の名前の札に重ならない方に出す（重なりが少ない方）
+ var L=$$(".lb.m:not(.hide)",box).map(function(e){var b=e.getBoundingClientRect();return [b.left-R.left,b.top-R.top,b.right-R.left,b.bottom-R.top]});
+ function cover(y){if(y<44||y+h>R.height-28)return 1e9;var a=0;L.forEach(function(q){var ox=Math.min(x+w,q[2])-Math.max(x,q[0]),oy=Math.min(y+h,q[3])-Math.max(y,q[1]);if(ox>0&&oy>0)a+=ox*oy});return a}
+ var yu=top-h-10,yd=bot+10,cu=cover(yu),cd=cover(yd),below=cd<cu,y=below?yd:yu;if(cu>=1e9&&cd>=1e9){below=top-h-12<44;y=below?yd:yu}
  BUB.classList.toggle("dn",below);BUB.style.transform="translate("+x.toFixed(1)+"px,"+y.toFixed(1)+"px)";BUB.style.setProperty("--ax",(cx-x).toFixed(1)+"px")}
 // 重なって名前が消えた市は、地図の下にボタンで並べる（全画面のとき）
 function moreCities(lv){var mo=$(".mo",box),hn=$(".hint",box);if(!mo){mo=document.createElement("div");mo.className="mo";var fr=$(".fr",box);fr.parentNode.insertBefore(mo,fr.nextSibling)}
