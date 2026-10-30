@@ -39,6 +39,7 @@ open(f'{work}/rec.js', 'w').write(rec)
 if len(sys.argv) > 3:  # 確認用の静止画だけ
     subprocess.run(['node', f'{work}/rec.js', sys.argv[3]], check=True); print(work); sys.exit()
 subprocess.run(['node', f'{work}/rec.js'], check=True)
-subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-framerate', '30', '-i', f'{work}/fr/%04d.jpg', '-f', 'lavfi', '-i', 'anullsrc=r=44100:cl=stereo',
-                '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '20', '-c:a', 'aac', '-shortest', '-movflags', '+faststart', out], check=True)
+subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-framerate', '30', '-i', f'{work}/fr/%04d.jpg', '-i', os.path.join(ROOT, 'tools', 'brand', 'reel_bgm.m4a'),
+                '-map', '0:v', '-map', '1:a', '-af', 'afade=t=out:st=26.8:d=2', '-t', '28.8',
+                '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-crf', '20', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', out], check=True)
 print(out)
