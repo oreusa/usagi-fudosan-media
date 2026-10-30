@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://usagi-odekake.usagi-fudosan.workers.dev/sitemap.xml
