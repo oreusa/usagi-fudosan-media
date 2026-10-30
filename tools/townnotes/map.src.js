@@ -77,6 +77,11 @@ var css=`
 .tn .sel-r{fill:none;opacity:.5}
 .tn .qb{position:absolute;left:0;top:0;z-index:4;max-width:min(240px,70%);padding:7px 11px 8px;background:#fff;border:1px solid #E2D6CB;border-top:3px solid var(--c);border-radius:4px;box-shadow:0 4px 14px rgba(60,45,35,.16);pointer-events:none;opacity:0;transition:opacity .18s}
 .tn .qb.on{opacity:1}
+.tn .qb.ph{display:flex;align-items:center;gap:9px;max-width:min(270px,78%);padding-left:8px}
+.tn .qth{flex:0 0 40px;height:40px;border-radius:4px;display:flex;align-items:center;justify-content:center}.tn .qth svg{width:26px;height:26px}
+.tn .qx{min-width:0}
+.tn .cc.ph{position:relative}.tn .cc.ph .cb>:not(.ac){padding-right:58px}
+.tn .cth{position:absolute;top:12px;right:12px;width:48px;height:48px;border-radius:4px;display:flex;align-items:center;justify-content:center}.tn .cth svg{width:30px;height:30px}
 .tn .qb:after{content:"";position:absolute;left:var(--ax);bottom:-6px;width:10px;height:10px;margin-left:-5px;background:#fff;border-right:1px solid #E2D6CB;border-bottom:1px solid #E2D6CB;transform:rotate(45deg)}
 .tn .qb.dn:after{bottom:auto;top:-6px;transform:rotate(225deg);background:var(--c);border:0}
 .tn .qb .qm{display:flex;flex-wrap:wrap;align-items:center;gap:2px 8px;font-size:10.5px;line-height:1.4;color:#7A6F66}
@@ -278,7 +283,7 @@ function placeBub(){if(!FS||!sel||sel.lat==null||level()<2){BUB.classList.remove
  var g=$$(".pinx",G.pin).filter(function(x){return x.querySelector(".sel-r")})[0];if(!g){BUB.classList.remove("on");return}
  if(bubIt!==sel){bubIt=sel;var fr=(sel.tags||[]).some(function(t){return t.indexOf("無料")>=0});
   BUB.style.setProperty("--c",PC[sel.pref]||"#2B2622");
-  BUB.innerHTML='<div class="qm"><span class="qp">'+esc(sel.pref)+'</span>'+(sel.d?'<span class="qd">'+esc(sel.d)+'</span>':'')+(fr?'<span class="qf">無料</span>':'')+'</div><div class="qt">'+esc(sel.t)+'</div>'}
+  BUB.classList.toggle("ph",TRY);BUB.innerHTML=(TRY?thumb(sel,'qth'):'')+'<div class="qx"><div class="qm"><span class="qp">'+esc(sel.pref)+'</span>'+(sel.d?'<span class="qd">'+esc(sel.d)+'</span>':'')+(fr?'<span class="qf">無料</span>':'')+'</div><div class="qt">'+esc(sel.t)+'</div></div>'}
  var R=FR.getBoundingClientRect(),d=g.querySelector(".dot").getBoundingClientRect(),cx=d.left+d.width/2-R.left,top=d.top-R.top,bot=d.bottom-R.top;
  if(cx<0||cx>R.width||top<0||bot>R.height){BUB.classList.remove("on");return}
  BUB.classList.add("on");var w=BUB.offsetWidth,h=BUB.offsetHeight,x=Math.max(8,Math.min(R.width-w-8,cx-w/2)),below=top-h-12<44,y=below?bot+10:top-h-10;
@@ -393,12 +398,33 @@ var ICG=null;
 function drawIcons(){if(!ICG){ICG=el("g",{"class":"g-ic"},svg);svg.insertBefore(ICG,G.mini)}ICG.innerHTML="";
  PREFS.forEach(function(p){var I=ICON[p];if(!I)return;var q=P(I.at[0],I.at[1]),g=el("g",{"class":"ic"},ICG);g.__q=q;
   g.innerHTML='<g class="icb" fill="none" stroke="'+PC[p]+'" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">'+I.s+'</g>';var t=el("title",{},g);t.textContent=I.n})}
+// ---- 試し（試作ページだけ）：カードと吹き出しに、中身が分かる小さな絵（写真の代わり。公式の写真は使わない） ----
+var TRY=!!window.TN_TRY,LIGHT=R.light||{};
+var KIND=[[/紅葉|もみじ|モミジ|錦秋|いちょう|イチョウ|銀杏/,"leaf"],[/花|コスモス|菊|バラ|ばら|ダリア|ガーデン|植物|フラワー/,"flower"],[/動物|アニマル|水族|牧場|ズー|どうぶつ|ネコ|猫|犬/,"paw"],
+ [/イルミ|ライトアップ|光|ナイト|夜景|灯|ENLIGHT|ルミナ/,"spark"],[/美術|博物|博覧|展|アート|芸術|ミュージアム|資料館|ギャラリー|コレクション|漫画|コナン|ムーミン/,"frame"],
+ [/カフェ|コーヒー|珈琲|喫茶|パン|スイーツ|グルメ|食|ラーメン|酒|やきいも|枝豆|収穫|味覚|マルシェ|市場/,"cup"],[/温泉|湯|サウナ|スパ/,"onsen"],[/神社|寺|大社|城|宮|参道|御朱印/,"torii"],
+ [/祭|まつり|フェス|フェア|縁日|ハロウィ|HALLOWEEN|カーニバル|YOKAI|妖怪/i,"lantern"],[/水上|クルーズ|船|川下り|舟/,"boat"],[/公園|丘陵|高原|森|山|雲海|ハイキング|自然/,"tree"],[/オープン|開業|新店|施設|モール|ホテル|アリーナ|リゾート|駅|タワー/,"shop"]];
+var KI={leaf:'<path d="M12 3l1.6 3.6 3.6-1-1 3.6 3.3 1.8-3.6 1.6 1.2 3.4-3.6-1.4L12 18l-1.5-3.4-3.6 1.4 1.2-3.4L4.5 11l3.3-1.8-1-3.6 3.6 1z"/><path d="M12 18v3.5"/>',
+ spark:'<path d="M12 3c.8 4.6 2.9 6.9 7.5 7.6-4.6.8-6.7 3-7.5 7.6-.8-4.6-2.9-6.8-7.5-7.6C9.1 9.9 11.2 7.6 12 3z"/><path d="M18.5 16.5l.6 1.6 1.6.6-1.6.6-.6 1.6-.6-1.6-1.6-.6 1.6-.6z"/>',
+ lantern:'<path d="M9 4.5h6M9 19.5h6M12 2.5v2M12 19.5v2"/><path d="M8.5 6.5c-2.6 3.3-2.6 7.7 0 11h7c2.6-3.3 2.6-7.7 0-11z"/><path d="M6.6 10h10.8M6.6 14h10.8"/>',
+ flower:'<circle cx="12" cy="10" r="2.2"/><path d="M12 7.8c-1.6-3.4 1.6-3.4 0 0M14.1 9.3c2.8-2.5 3.8.5 0 1.4M13.3 12c1.8 3.3-1.2 4.1-1.3.2M10.7 12c-1.8 3.3 1.2 4.1 1.3.2M9.9 9.3c-2.8-2.5-3.8.5 0 1.4"/><path d="M12 12.2V21M12 17c1.5-1.6 3-2 4.5-1.8"/>',
+ frame:'<rect x="4" y="5" width="16" height="13" rx="1"/><path d="M4 15l4.5-4 3.5 3 2.5-2 5.5 4.5"/><circle cx="15.5" cy="8.8" r="1.3"/><path d="M9 21h6"/>',
+ cup:'<path d="M5 9h11v5a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5z"/><path d="M16 10.5h1.5a2.3 2.3 0 0 1 0 4.6H16"/><path d="M8.5 3.5c-1 1.2 1 2 0 3.3M12 3.5c-1 1.2 1 2 0 3.3"/>',
+ onsen:'<path d="M4.5 13c0 4.2 3.4 7 7.5 7s7.5-2.8 7.5-7z"/><path d="M8 10c-1.2-1.6 1.2-2.6 0-4.4M12 10c-1.2-1.6 1.2-2.6 0-4.4M16 10c-1.2-1.6 1.2-2.6 0-4.4"/>',
+ paw:'<ellipse cx="12" cy="15.5" rx="4" ry="3.3"/><circle cx="6.8" cy="10.5" r="1.7"/><circle cx="17.2" cy="10.5" r="1.7"/><circle cx="9.7" cy="6.8" r="1.7"/><circle cx="14.3" cy="6.8" r="1.7"/>',
+ torii:'<path d="M3.5 5.5c5.6 1.2 11.4 1.2 17 0M5.5 9.5h13M7.5 7v13.5M16.5 7v13.5M12 6.6v2.9"/>',
+ shop:'<path d="M4 9l1.5-4.5h13L20 9"/><path d="M4 9c0 1.5 1.3 2.3 2.7 2.3S9.3 10.5 9.3 9c0 1.5 1.3 2.3 2.7 2.3s2.7-.8 2.7-2.3c0 1.5 1.3 2.3 2.6 2.3S20 10.5 20 9"/><path d="M5.5 11.3V20h13v-8.7M10 20v-5h4v5"/>',
+ boat:'<path d="M3.5 14.5h17l-2.5 4h-12z"/><path d="M12 4v10.5M12 5l5.5 7.5H12"/><path d="M3 21c1.5-1 3-1 4.5 0s3 1 4.5 0 3-1 4.5 0 3 1 4.5 0"/>',
+ tree:'<path d="M12 3l5 6.5h-2.5l4 5.5H5.5l4-5.5H7z"/><path d="M12 15v6"/>',
+ pin:'<path d="M12 21s6.5-6.1 6.5-11A6.5 6.5 0 0 0 5.5 10c0 4.9 6.5 11 6.5 11z"/><circle cx="12" cy="10" r="2.3"/>'};
+function kindOf(it){var t=(it.t||"")+" "+(it.tags||[]).join(" ");for(var i=0;i<KIND.length;i++)if(KIND[i][0].test(t))return KIND[i][1];return it.soon||/できた|もうすぐ/.test(curTab())?"shop":"pin"}
+function thumb(it,cls){var c=PC[it.pref]||"#2B2622";return '<div class="'+cls+'" style="background:'+(LIGHT[it.pref]||"#F4EFEA")+'"><svg viewBox="0 0 24 24" fill="none" stroke="'+c+'" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">'+KI[kindOf(it)]+'</svg></div>'}
 // ---- 全画面の地図：下のカードを横にめくると、地図のピンが光る ----
 var FS=false,CAR=$(".car",box),carSig="",carItems=[],carLock=null,carQ=false;
 function buildCar(arr){var sig=arr.map(function(i){return i.k}).join("|")+"#"+level();if(sig===carSig)return;carSig=sig;carItems=arr.slice();
  CAR.innerHTML=arr.map(function(it,i){var mm=muniOf(it),pl=mm?mm.grp.n:"",fr=it.tags.indexOf("無料")>=0;
   var w='<div class="w">'+(pl?'<span class="cpl">'+esc(pl)+'</span>':'')+(fr?'<span class="cfr">無料</span>':'')+'</div>';
-  return '<div class="cc" data-i="'+i+'" style="--c:'+(PC[it.pref]||"#2B2622")+'">'+row(it,true).replace(/<u style[^>]*>無料<\/u>/,"").replace('<div class="t">','<div class="t">'+(level()===3&&it._n?'<i class="nb">'+it._n+'</i>':'')).replace('<div class="ac">',w+'<div class="ac">')+'</div>'}).join("");
+  return '<div class="cc'+(TRY?' ph':'')+'" data-i="'+i+'" style="--c:'+(PC[it.pref]||"#2B2622")+'">'+(TRY?thumb(it,'cth')+'<div class="cb">':'')+row(it,true).replace(/<u style[^>]*>無料<\/u>/,"").replace('<div class="t">','<div class="t">'+(level()===3&&it._n?'<i class="nb">'+it._n+'</i>':'')).replace('<div class="ac">',w+'<div class="ac">')+(TRY?'</div>':'')+'</div>'}).join("");
  $$(".cc",CAR).forEach(function(c,i){var ac=$(".ac",c);if(ac){var g2=$(".go2",ac);if(g2)g2.remove();var ix=document.createElement("span");ix.className="ix";ix.textContent=(i+1)+" / "+arr.length;ac.appendChild(ix)}
   c.addEventListener("click",function(e){if(e.target.closest("a"))return;var it=carItems[i];if(sel!==it){carTo(it)}})});
  CAR.scrollLeft=0;if(arr.length&&(!sel||arr.indexOf(sel)<0)){sel=arr[0];setTimeout(function(){render()},0)}markCar()}
