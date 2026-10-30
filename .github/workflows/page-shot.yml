@@ -1,0 +1,22 @@
+name: page-shot
+# 公開中のページをスマホの幅で撮って shots/page/ に保存する（作業環境から pages.dev・workers.dev に届かないため）
+on:
+  workflow_dispatch:
+    inputs:
+      url: {description: "撮るページ", required: true, default: "https://usagi-life-notes.pages.dev/"}
+      tabs: {description: "タブのセレクタ（任意）", required: false, default: "#cats button"}
+      name: {description: "保存するフォルダ名", required: true, default: "akari"}
+permissions:
+  contents: write
+jobs:
+  shot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm i --no-save playwright@1.49.1 && npx playwright install --with-deps chromium
+      - run: node tools/shot_page.js "${{ inputs.url }}" "shots/page/${{ inputs.name }}" "${{ inputs.tabs }}"
+      - run: |
+          git config user.name "page-shot bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add shots/page
+          git diff --cached --quiet || (git commit -m "page-shot: ${{ inputs.name }}" && git pull --rebase -q && git push)
