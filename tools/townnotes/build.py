@@ -34,6 +34,7 @@ badge = '<div style="position:fixed;top:8px;left:8px;z-index:50;font-family:Jost
 # 中身が変わるたびに ?v= を変えて、スマホに古い地図が残らないようにする
 import hashlib
 v = hashlib.sha1(js.encode('utf-8')).hexdigest()[:8]
-h = h.replace('</body></html>', badge + '<script src="map.js?v=' + v + '" defer></script></body></html>')
+# 試し（TN_TRY）：試作ページだけで、新しい見せ方を先に試す
+h = h.replace('</body></html>', badge + '<script>window.TN_TRY=1</script><script src="map.js?v=' + v + '" defer></script></body></html>')
 assert 'src="map.js?v=' in h
 open(os.path.join(R, 'links/townnotes/index.html'), 'w', encoding='utf-8').write(h); print('ok')
