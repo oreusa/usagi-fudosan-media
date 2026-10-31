@@ -660,6 +660,9 @@ upd();document.addEventListener("click",function(e){if(e.target.closest("#flt,.d
 .ykl .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ykl .mt{color:#8C7B6E;white-space:nowrap;font-size:11px}
 .ykl .src{font-size:10px;color:#A89A8E;padding:6px 0 2px;text-align:right}
 .yk a.op{background:#F5F5F5}
+/* 10/31 オーナー「中も白、外も白で分かりにくい」→ 外（リストの箱）だけうすいシルバー、カードは白。ほかは変えない */
+.paper .blk{background:#F1F2F4!important}
+.paper .it .card{background:#fff!important}
 </style>
 <script>
 /* 10/31 近くの宿：泊まりがけで行く所（街の真ん中から20km以上）のカードの下に、楽天トラベルの評価の高い宿を3つ。一覧は /kansai-yado.json（燈の page.yml が作り、link-stats が毎朝写す） */
@@ -683,4 +686,4 @@ window.addEventListener("load",function(){P.then(function(){run();sync();setTime
 document.addEventListener("click",function(){P.then(function(){setTimeout(function(){run();sync();},80);});},true);
 })();
 </script>
-<div style="position:fixed;top:8px;left:8px;z-index:50;font-family:Jost,sans-serif;font-size:10px;letter-spacing:.2em;background:#2B2622;color:#fff;padding:2px 8px;pointer-events:none">PROTOTYPE</div><script>window.TN_TRY=1</script><script src="map.js?v=42c6ed39" defer></script></body></html>
+<div style="position:fixed;top:8px;left:8px;z-index:50;font-family:Jost,sans-serif;font-size:10px;letter-spacing:.2em;background:#2B2622;color:#fff;padding:2px 8px;pointer-events:none">PROTOTYPE</div><script>window.TN_TRY=1</script><script src="map.js?v=b3682cbe" defer></script></body></html>
