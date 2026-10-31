@@ -76,10 +76,10 @@ def render(sel, fname, title, desc, ogt, en, h1a, h1b, sub, links, crumb):
         secs += f'<section id="{p}" class="ps" style="--c:{PC[p]}"><h2>{fu(p)}のイルミネーション<small>{len(cards[p])}件</small></h2>' + "".join(cards[p]) + '</section>'
     nav = ('<div class="flt" id="flt"><button class="on" data-p="すべて">すべて</button>' + "".join(f'<button data-p="{p}" style="--pc:{PC[p]}">{p}</button>' for p in PREFS) + '</div>') if len(sel) > 1 else ""
     fh, fj = faq(sel)
-    url = BASE + fname
+    url = BASE + fname.replace(".html", "")  # workers.dev は .html を外したアドレスへ転送するので、正しいアドレスはこちら
     l = [x for p in sel for x in lds[p]]
     ldj = [{"@context":"https://schema.org","@type":"ItemList","name":ogt,"itemListElement":[{"@type":"ListItem","position":i+1,"item":ev} for i,ev in enumerate(l)]}, fj,
-           {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":i+1,"name":n,"item":BASE+u} for i,(n,u) in enumerate(crumb)]}]
+           {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":i+1,"name":n,"item":BASE+u.replace(".html","")} for i,(n,u) in enumerate(crumb)]}]
     lds_html = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ldj)
     mapjs = f'<script src="townnotes/map-illumi.js?v={MV}" defer></script>' if len(sel) > 1 else ""
     return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -146,8 +146,8 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 OUT = os.path.join(os.path.dirname(__file__), "../../links/")
 cnt = sum(len(v) for v in cards.values())
 def plinks(cur):
-    a = [f'<a href="illumination.html">関西ぜんぶ</a>'] if cur else []
-    return '<div class="plh">府県ごとに見る</div>' + "".join(a) + "".join(f'<a href="illumination-{SLUG[p]}.html" style="--pc:{PC[p]}"{" aria-current=page" if p == cur else ""}>{fu(p)}</a>' for p in PREFS)
+    a = [f'<a href="illumination">関西ぜんぶ</a>'] if cur else []
+    return '<div class="plh">府県ごとに見る</div>' + "".join(a) + "".join(f'<a href="illumination-{SLUG[p]}" style="--pc:{PC[p]}"{" aria-current=page" if p == cur else ""}>{fu(p)}</a>' for p in PREFS)
 pages = {"illumination.html": render(PREFS, "illumination.html",
     "関西イルミネーション2026-2027｜大阪・京都・兵庫・奈良・滋賀・和歌山の日程一覧",
     f"関西6府県のイルミネーション{cnt}か所を、府県ごとに日程・場所・無料かどうかで一覧にしました。御堂筋イルミネーション、神戸イルミナージュ、姫路城イルミネーションなど。{upd}更新。",
@@ -165,6 +165,6 @@ for p in PREFS:
         [("関西おでかけリスト", ""), ("関西イルミネーション2026-2027", "illumination.html"), (f"{p}のイルミネーション", f"illumination-{SLUG[p]}.html")])
 for f, h in pages.items():
     open(OUT + f, "w").write(h)
-sm = "".join(f'<url><loc>{BASE}{f}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", *pages])
+sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", *pages])
 open(OUT + "sitemap.xml", "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{sm}</urlset>\n')
 print(cnt, {p: len(v) for p, v in cards.items()}, len(pages), "pages")
