@@ -6,7 +6,7 @@
   function pick(){try{var v=localStorage.getItem(K);if(v==="day"||v==="night")return v;}catch(e){}
     var h=new Date(Date.now()+9*36e5).getUTCHours();return (h>=18||h<6)?"night":"day";}
   function set(v){d.classList.toggle("night",v==="night");if(b)b.setAttribute("aria-label",v==="night"?"昼の見た目にする":"夜の見た目にする");if(b)b.innerHTML=v==="night"?SUN:MOON;}
-  var css="html.night{background:#fff;filter:invert(.9) hue-rotate(180deg)}"+
+  var css="html.night{background:#fff;filter:invert(.8) hue-rotate(180deg)}"+
     "html.night img,html.night video,html.night picture,html.night svg image,html.night .nofilt,html.night .tnbtn .mm{filter:invert(1) hue-rotate(180deg)}"+
     "html.night .head img{background:#fff;border-radius:50%}"+
     "#daynight{position:fixed;top:12px;right:12px;z-index:9999;width:38px;height:38px;border-radius:50%;border:1px solid #DADADA;background:#fff;color:#5B5450;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.06)}"+
