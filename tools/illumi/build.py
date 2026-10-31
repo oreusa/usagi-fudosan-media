@@ -34,7 +34,7 @@ for it in sorted(ITEMS, key=key):
         if e: ev["endDate"] = e
         if free: ev["isAccessibleForFree"] = True
         ld.append(ev)
-nav = "".join(f'<a href="#{p}" style="--c:{PC[p]}">{p}</a>' for p in PREFS)
+nav = '<button class="on" data-p="すべて">すべて</button>' + "".join(f'<button data-p="{p}" style="--pc:{PC[p]}">{p}</button>' for p in PREFS)
 secs = ""
 for p in PREFS:
     secs += f'<section id="{p}" class="pf" style="--c:{PC[p]}"><h2>{p}{"府" if p in ("大阪","京都") else "県"}<small>{len(cards[p])}件</small></h2>' + "".join(cards[p]) + '</section>'
@@ -60,8 +60,9 @@ h1{{font-family:"Shippori Mincho",serif;font-weight:600;font-size:23px;line-heig
 h1 span{{display:block;font-size:14px;letter-spacing:.2em;color:#6B6058;margin-top:4px}}
 .sub{{font-size:13px;line-height:2;color:#6B6058;margin:0;text-wrap:balance}}
 .upd{{font-size:11px;color:#8C7B6E;margin-top:8px}}
-nav{{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:20px 0 6px}}
-nav a{{text-decoration:none;color:var(--c);border:1px solid var(--c);padding:6px 12px;font-size:13px;letter-spacing:.08em;background:#fff}}
+.flt{{display:flex;flex-wrap:wrap;justify-content:center;gap:0 20px;margin:22px 0 6px;padding:10px 0;border-top:1px solid #DDD3C8;border-bottom:1px solid #DDD3C8}}
+.flt button{{border:none;background:none;border-radius:0;padding:4px 0;font-family:"Zen Kaku Gothic New";font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--pc,#8C7B6E);border-bottom:1px solid transparent;cursor:pointer}}
+.flt button.on{{color:var(--pc,#2B2622);border-bottom-color:var(--pc,#2B2622)}}
 .pf{{scroll-margin-top:12px;margin-top:30px}}
 h2{{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spacing:.14em;margin:0 0 12px;padding-left:10px;border-left:3px solid var(--c);display:flex;align-items:baseline;gap:10px}}
 h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-spacing:.04em;font-weight:500}}
@@ -82,12 +83,12 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 <h1>関西イルミネーション<span>2026 - 2027 日程一覧</span></h1>
 <p class="sub">大阪・京都・兵庫・奈良・滋賀・和歌山の{cnt}か所を、<br>府県ごとに日程・場所・無料かどうかでまとめました。</p>
 <div class="upd">{upd} 更新</div></div>
-<nav>{nav}</nav>
+<div class="flt" id="flt">{nav}</div>
 {secs}
 <p class="note">日程はウォーカープラスと各公式の発表をもとにしています。「発表前」は、2026年の日程がまだ出ていない所です（昨年の期間を目安にのせています）。発表されしだい書き足します。点灯時間や料金は変わることがあるので、お出かけ前にリンク先でご確認ください。</p>
 <a class="back" href="./">関西おでかけリストを見る</a>
 <div class="ft">うさぎ│TOWN NOTES</div></div>
-<script>(function(){{var t=new Date(Date.now()+9*36e5).toISOString().slice(0,10);document.querySelectorAll(".card").forEach(function(c){{var s=c.dataset.s,e=c.dataset.e,st=c.querySelector(".st");if(!s)return;if(e&&e<t){{c.remove();return;}}if(s<=t){{st.textContent="開催中";st.className="st on";}}else{{st.textContent="これから";st.className="st soon";}}}});document.querySelectorAll(".pf").forEach(function(x){{x.querySelector("small").textContent=x.querySelectorAll(".card").length+"件";}});}})();</script>
+<script>(function(){{var t=new Date(Date.now()+9*36e5).toISOString().slice(0,10);document.querySelectorAll(".card").forEach(function(c){{var s=c.dataset.s,e=c.dataset.e,st=c.querySelector(".st");if(!s)return;if(e&&e<t){{c.remove();return;}}if(s<=t){{st.textContent="開催中";st.className="st on";}}else{{st.textContent="これから";st.className="st soon";}}}});document.querySelectorAll(".pf").forEach(function(x){{x.querySelector("small").textContent=x.querySelectorAll(".card").length+"件";}});var F=document.getElementById("flt");F.querySelectorAll("button").forEach(function(b){{b.onclick=function(){{F.querySelectorAll("button").forEach(function(x){{x.classList.remove("on");}});b.classList.add("on");var p=b.dataset.p;document.querySelectorAll(".pf").forEach(function(x){{x.style.display=(p=="すべて"||x.id==p)?"":"none";}});try{{navigator.sendBeacon("/c",JSON.stringify({{k:"絞り込み：イルミネーション｜"+p}}));}}catch(e){{}}}};}});}})();</script>
 <script>(function(){{var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function s(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}s("表示：イルミネーション"+(document.referrer&&!/usagi-odekake/.test(document.referrer)?"（外から）":""));document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;var t=a.querySelector(".t");s("クリック：イルミネーション｜"+(t?t.textContent:a.textContent));}},true);}})();</script>
 </body></html>'''
 open(os.path.join(os.path.dirname(__file__), "../../links/illumination.html"), "w").write(page)
