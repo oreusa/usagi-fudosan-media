@@ -43,6 +43,8 @@ def fu(p): return p + ("府" if p in ("大阪","京都") else "県")
 BASE = "https://usagi-odekake.usagi-fudosan.workers.dev/"
 upd = f"{TODAY.year}年{TODAY.month}月{TODAY.day}日"
 _mj = os.path.join(os.path.dirname(__file__), "../../links/townnotes/map-illumi.js")
+_yj = os.path.join(os.path.dirname(__file__), "../../links/assets/yado.js")
+YV = hashlib.sha1(open(_yj, "rb").read()).hexdigest()[:8] if os.path.exists(_yj) else "0"  # 10/31 近くの宿
 MV = hashlib.sha1(open(_mj, "rb").read()).hexdigest()[:8] if os.path.exists(_mj) else "0"
 def jd(x): return f"{datetime.date.fromisoformat(x).month}/{datetime.date.fromisoformat(x).day}"
 def faq(sel):
@@ -141,7 +143,7 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 <div class="ft">うさぎ│TOWN NOTES</div></div>
 <script>(function(){{var t=new Date(Date.now()+9*36e5).toISOString().slice(0,10);document.querySelectorAll(".card").forEach(function(c){{var s=c.dataset.s,e=c.dataset.e,st=c.querySelector(".st");if(!s)return;if(e&&e<t){{(c.closest(".it")||c).remove();return;}}if(s<=t){{st.textContent="開催中";st.className="st on";}}else{{st.textContent="これから";st.className="st soon";}}}});document.querySelectorAll(".ps").forEach(function(x){{x.querySelector("small").textContent=x.querySelectorAll(".card").length+"件";if(!x.querySelector(".card"))x.style.display="none";}});var F=document.getElementById("flt");if(F)F.querySelectorAll("button").forEach(function(b){{b.onclick=function(){{F.querySelectorAll("button").forEach(function(x){{x.classList.remove("on");}});b.classList.add("on");var p=b.dataset.p;document.querySelectorAll(".ps").forEach(function(x){{x.style.display=((p=="すべて"||x.id==p)&&x.querySelector(".card"))?"":"none";}});try{{navigator.sendBeacon("/c",JSON.stringify({{k:"絞り込み：イルミネーション｜"+p}}));}}catch(e){{}}}};}});}})();</script>
 <script>(function(){{var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function s(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}s("表示：イルミネーション"+(document.referrer&&!/usagi-odekake/.test(document.referrer)?"（外から）":""));document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;var t=a.querySelector(".t"),n=a.getAttribute("data-k");s("クリック：イルミネーション｜"+(n||(t?t.textContent:a.textContent)));}},true);}})();</script>
-{mapjs}
+{mapjs}<script src="assets/yado.js?v={YV}" defer></script>
 </body></html>'''
 OUT = os.path.join(os.path.dirname(__file__), "../../links/")
 cnt = sum(len(v) for v in cards.values())
