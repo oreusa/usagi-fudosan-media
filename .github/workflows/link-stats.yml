@@ -24,10 +24,10 @@ jobs:
         run: python3 tools/illumi/build.py "$(TZ=Asia/Tokyo date +%F)"
       - name: near hotels (from 燈's site, for the 近くの宿 buttons)
         # 10/31 宿の一覧を月のページと同じ場所に置く（見るたびに燈のサイトから読むと遅いため）。取れない日は前のまま
-        run: curl -fsS "https://usagi-life-notes.pages.dev/kansai-yado.json" -o links/proto/kansai-yado.json || true
+        run: curl -fsS "https://usagi-life-notes.pages.dev/kansai-yado.json" -o links/kansai-yado.json || true
       - name: commit
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/link.json stats/link-30.json links/illumination*.html links/sitemap.xml links/proto/kansai-yado.json
+          git add stats/link.json stats/link-30.json links/illumination*.html links/sitemap.xml links/kansai-yado.json
           git diff --cached --quiet || (git commit -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)" && git push)
