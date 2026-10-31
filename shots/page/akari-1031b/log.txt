@@ -1,0 +1,4 @@
+0 おでかけ112 imgs=1 broken=0
+1 お得3 imgs=0 broken=0
+2 宿7 imgs=3 broken=1
+3 買い物59 imgs=6 broken=0
