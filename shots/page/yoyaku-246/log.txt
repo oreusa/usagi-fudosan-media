@@ -1,0 +1,7 @@
+0 すべて imgs=0 broken=0
+1 大阪 imgs=0 broken=0
+2 京都 imgs=0 broken=0
+3 兵庫 imgs=0 broken=0
+4 奈良 imgs=0 broken=0
+5 滋賀 imgs=0 broken=0
+6 和歌山 imgs=0 broken=0
