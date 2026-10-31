@@ -219,11 +219,11 @@ var svg=$("svg.m",box),G={sh:$(".g-sh",svg),pf:$(".g-pf",svg),mu:$(".g-mu",svg),
 // ---- 今のページの状態を読む ----
 var GEO={},OTH=[];
 // ---- 月の「関西イルミネーション」ページ（tools/illumi/build.py）とつなぐ所 ----
-// ページの作り：府県ボタン #flt button[data-p]、府県ごとの箱 .pf、カード .it > a.card（.t 名前・.d 日程・.tg の中に 無料）、地図ボタン a.mp
+// ページの作り：府県ボタン #flt button[data-p]、府県ごとの箱 .ps（地図の府県の形が .pf なので別の名前）、カード .it > a.card（.t 名前・.d 日程・.tg の中に 無料）、地図ボタン a.mp
 function curPref(){var b=$("#flt button.on");return b&&b.dataset.p!=="すべて"?b.dataset.p:""}
 function curTab(){return "イルミネーション"}
 function items(){var pf=curPref(),seen={},out=[];
- $$(".pf .it").forEach(function(w){var p=w.getAttribute("data-pref")||"";if(pf&&p!==pf)return;var a=$(".card",w);if(!a)return;var tt=$(".t",a),k=key(tt&&tt.textContent);if(!k||seen[k])return;seen[k]=1;
+ $$(".ps .it").forEach(function(w){var p=w.getAttribute("data-pref")||"";if(pf&&p!==pf)return;var a=$(".card",w);if(!a)return;var tt=$(".t",a),k=key(tt&&tt.textContent);if(!k||seen[k])return;seen[k]=1;
   var g=GEO[k],d=$(".d",a),mp=$(".mp",w),tags=$$(".fr",a).map(function(e){return e.textContent});
   out.push({w:w,a:a,k:k,t:tt.textContent,pref:p,d:d?d.textContent:"",tags:tags,href:a.getAttribute("href"),map:mp?mp.href:"",lat:g&&g[0],lon:g&&g[1],soon:false})});
  return out}
