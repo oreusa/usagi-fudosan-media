@@ -93,9 +93,9 @@ def render(sel, fname, title, desc, ogt, en, h1a, h1b, sub, links, crumb):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
 {lds_html}
 <style>
-body{{margin:0;background:#FDFCFA;font-family:"Zen Kaku Gothic New";color:#2B2622}}
+body{{margin:0;background:#FFFFFF;font-family:"Zen Kaku Gothic New";color:#2B2622}}
 .wrap{{max-width:440px;margin:0 auto;padding:0 16px 40px}}
-.head{{text-align:center;margin:0 -16px;padding:30px 16px 26px;background:radial-gradient(circle at 14% 26%,rgba(242,214,194,.55) 0 74px,transparent 75px),radial-gradient(circle at 88% 16%,rgba(205,224,236,.6) 0 54px,transparent 55px),radial-gradient(circle at 80% 88%,rgba(214,228,205,.6) 0 48px,transparent 49px),#FDFCFA}}
+.head{{text-align:center;margin:0 -16px;padding:30px 16px 26px;background:radial-gradient(circle at 14% 26%,rgba(242,214,194,.55) 0 74px,transparent 75px),radial-gradient(circle at 88% 16%,rgba(205,224,236,.6) 0 54px,transparent 55px),radial-gradient(circle at 80% 88%,rgba(214,228,205,.6) 0 48px,transparent 49px),#FFFFFF}}
 .head img{{width:60px;height:60px}}
 .en{{font-family:Jost;font-weight:300;font-size:10px;letter-spacing:.42em;color:#8C7B6E;margin-top:10px}}
 h1{{font-family:"Shippori Mincho",serif;font-weight:600;font-size:23px;line-height:1.5;letter-spacing:.1em;color:#231E1B;margin:14px 0 10px;font-feature-settings:"palt"}}
@@ -120,7 +120,7 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 .mp{{position:absolute;left:16px;bottom:10px;font-size:11px;letter-spacing:.08em;color:#6B6058;text-decoration:none;border-bottom:1px solid #C9BDB1;line-height:1.4}}
 .mp:before{{content:"";display:inline-block;width:8px;height:10px;margin-right:4px;vertical-align:-1px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 10'%3E%3Cpath d='M4 0a4 4 0 0 0-4 4c0 3 4 6 4 6s4-3 4-6a4 4 0 0 0-4-4z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 10'%3E%3Cpath d='M4 0a4 4 0 0 0-4 4c0 3 4 6 4 6s4-3 4-6a4 4 0 0 0-4-4z'/%3E%3C/svg%3E") center/contain no-repeat}}
 .go{{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-family:Jost;color:#9C8775}}
-.note{{font-size:12px;line-height:1.9;color:#7A6E66;background:#F7F2EC;padding:14px 16px;margin-top:30px}}
+.note{{font-size:12px;line-height:1.9;color:#7A6E66;background:#F5F5F5;padding:14px 16px;margin-top:30px}}
 .back{{display:block;width:max-content;margin:28px auto 0;color:#2B2622;text-decoration:none;font-size:13px;letter-spacing:.1em;border-bottom:1px solid #2B2622;padding-bottom:2px}}
 .tn .lg .o{{display:none}}
 .ft{{text-align:center;font-size:10px;letter-spacing:.04em;color:#8C7B6E;margin-top:30px}}

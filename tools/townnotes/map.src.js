@@ -38,7 +38,7 @@ var css=`
 .tn button,.tn .pop a,.tnbtn{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .tgrp{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;margin:2px 0 6px}
 .tgrp span{display:block;text-align:center;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;letter-spacing:.14em;color:#8C7B6E;padding:0 0 6px;border-bottom:1px solid #D6CCC1;position:relative}
-.tgrp span:after{content:"";position:absolute;left:50%;bottom:-4px;width:7px;height:7px;background:#FDFCFA;border-right:1px solid #D6CCC1;border-bottom:1px solid #D6CCC1;transform:translateX(-50%) rotate(45deg)}
+.tgrp span:after{content:"";position:absolute;left:50%;bottom:-4px;width:7px;height:7px;background:#FFFFFF;border-right:1px solid #D6CCC1;border-bottom:1px solid #D6CCC1;transform:translateX(-50%) rotate(45deg)}
 .tn-top{margin-top:-16px}.tn-top .flt{margin:0 0 10px;border-top:0;padding:8px 0;gap:0 13px;flex-wrap:nowrap}
 .tn .n{position:absolute;left:18px;top:46px;z-index:5;pointer-events:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:10.5px;color:#8C7B6E;letter-spacing:.06em}
 .tn .n b{font-family:Jost,sans-serif;font-weight:500;font-size:14px;color:#2B2622;margin:0 2px}
@@ -47,13 +47,13 @@ var css=`
 .tn .hd .j{display:block;font-family:"Shippori Mincho",serif;font-weight:600;font-size:15px;letter-spacing:.1em;color:#2B2622;margin-top:4px}
 .tn .hd .n{font-family:"Zen Kaku Gothic New",sans-serif;font-size:11px;color:#8C7B6E;letter-spacing:.06em}
 .tn .hd .n b{font-family:Jost,sans-serif;font-weight:500;font-size:16px;color:#2B2622;margin:0 2px}
-.tn .fr{position:relative;aspect-ratio:1/.86;margin:0 -14px;background:#FDFCFA;overflow:hidden;user-select:none;-webkit-user-select:none}
+.tn .fr{position:relative;aspect-ratio:1/.86;margin:0 -14px;background:#FFFFFF;overflow:hidden;user-select:none;-webkit-user-select:none}
 .tn .fr:before{content:"";position:absolute;inset:8px;border:1px solid rgba(43,38,34,.28);pointer-events:none;z-index:3}
 .tn .fr:after{content:"";position:absolute;inset:0;background:url(${TNB}grain.png);opacity:.05;pointer-events:none;z-index:4}
 .tn svg.m{position:absolute;inset:0;width:100%;height:100%;display:block}
 .tn .pf,.tn .mu,.tn .dot,.tn .sel-r{vector-effect:non-scaling-stroke}
-.tn .pf{stroke:#FDFCFA;stroke-width:2px;stroke-linejoin:round;cursor:pointer;transition:fill .5s,opacity .5s}
-.tn .mu{fill:transparent;stroke:#FDFCFA;stroke-width:1.1px;stroke-linejoin:round;cursor:pointer;transition:fill .4s,opacity .4s}
+.tn .pf{stroke:#FFFFFF;stroke-width:2px;stroke-linejoin:round;cursor:pointer;transition:fill .5s,opacity .5s}
+.tn .mu{fill:transparent;stroke:#FFFFFF;stroke-width:1.1px;stroke-linejoin:round;cursor:pointer;transition:fill .4s,opacity .4s}
 .tn .sh{fill:rgba(120,88,58,.16);transition:opacity .4s}
 .tn .psh{fill:rgba(70,45,25,.22)}
 .tn .pn{font-family:Jost,sans-serif;font-weight:600;fill:#fff;text-anchor:middle;dominant-baseline:central;pointer-events:none}
@@ -62,7 +62,7 @@ var css=`
 .tn .chips button.sp span{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .tn .chips button.sp:after{content:"›";font-family:Jost,sans-serif;font-size:18px;color:#B3AAA1}
 .tn .lbs{position:absolute;inset:0;pointer-events:none;z-index:2}
-.tn .lb{position:absolute;left:0;top:0;will-change:transform;white-space:nowrap;text-shadow:0 0 2px #FDFCFA,0 0 3px #FDFCFA,0 0 6px rgba(253,252,250,.9)}
+.tn .lb{position:absolute;left:0;top:0;will-change:transform;white-space:nowrap;text-shadow:0 0 2px #FFFFFF,0 0 3px #FFFFFF,0 0 6px rgba(253,252,250,.9)}
 .tn .lb.p{text-align:center;font-family:"Shippori Mincho",serif;font-weight:600;font-size:16px;letter-spacing:.16em;line-height:1.2}
 .tn .lb.p small{display:block;font-family:Jost,sans-serif;font-weight:400;font-size:8.5px;letter-spacing:.32em;margin-top:3px}
 .tn .lb.p.sm{font-size:14px;letter-spacing:.1em}.tn .lb.p.sm small{letter-spacing:.14em;margin-top:1px}
@@ -108,7 +108,7 @@ var css=`
 .tn .bk{position:absolute;right:12px;top:10px;z-index:6;display:none;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12px;letter-spacing:.06em;color:#5E534B;background:#fff;border:1px solid #DDD3C8;border-radius:99px;padding:8px 14px;cursor:pointer;box-shadow:0 1px 4px rgba(60,40,20,.08)}
 .tn .cen{position:absolute;right:18px;top:20px;z-index:5;font-family:Jost,sans-serif;font-size:9px;letter-spacing:.34em;color:#A39A90;transition:color .4s}
 .tn .hint{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;bottom:14px;background:rgba(255,255,255,.88);border-radius:99px;padding:5px 12px;z-index:5;text-align:center;font-family:"Zen Kaku Gothic New",sans-serif;font-size:10.5px;letter-spacing:.08em;color:#8C7B6E;pointer-events:none}
-.tn .mo{display:none;flex:none;gap:6px;align-items:center;overflow-x:auto;scrollbar-width:none;padding:8px 14px 0;background:#FDFCFA}.tn .mo::-webkit-scrollbar{display:none}.tn .mo button{flex:none}
+.tn .mo{display:none;flex:none;gap:6px;align-items:center;overflow-x:auto;scrollbar-width:none;padding:8px 14px 0;background:#FFFFFF}.tn .mo::-webkit-scrollbar{display:none}.tn .mo button{flex:none}
 .tn:not(.fs) .mo{display:none!important}
 .tn .mo span{flex:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11px;color:#8C7B6E;background:rgba(255,255,255,.88);border-radius:99px;padding:4px 9px}
 .tn .mo button{height:30px;padding:0 10px;border-radius:99px;border:1px solid #E2D6CB;background:#fff;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:12px;color:#2B2622;box-shadow:0 2px 6px rgba(60,45,35,.08)}
@@ -118,7 +118,7 @@ var css=`
 .tn .g-ic{pointer-events:none;transition:opacity .35s}
 .tn .ic .icb{filter:drop-shadow(0 1.5px 0 rgba(255,255,255,.9)) drop-shadow(0 2px 2px rgba(80,60,40,.18))}
 /* 全画面の地図（地図の中だけで全部できる） */
-.tn.fs{position:fixed;left:0;right:0;top:0;bottom:0;height:100dvh;z-index:200;margin:0;background:#FDFCFA;display:flex;flex-direction:column;overscroll-behavior:contain}
+.tn.fs{position:fixed;left:0;right:0;top:0;bottom:0;height:100dvh;z-index:200;margin:0;background:#FFFFFF;display:flex;flex-direction:column;overscroll-behavior:contain}
 .tn.fs .fr{flex:1 1 auto;min-height:0;aspect-ratio:auto;margin:0;touch-action:none}
 .tn.fs .chips,.tn.fs .pop,.tn.fs .lg,.tn.fs .g-mini{display:none!important}
 .tn.fs .fr:before{display:none}
@@ -138,7 +138,7 @@ var css=`
 .tn .fsh .row.pf button.on{background:var(--c,#2B2622);border-color:var(--c,#2B2622);color:#fff}
 .tn .fsh .row button small{font-family:Jost,sans-serif;font-weight:500;font-size:11px;margin-left:5px;opacity:.75}
 .tn .car{display:none}
-.tn.fs .car{display:flex;flex:none;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:10px 9% calc(14px + env(safe-area-inset-bottom));background:linear-gradient(rgba(253,252,250,0),#FDFCFA 30%);margin-top:-6px;position:relative;z-index:7}
+.tn.fs .car{display:flex;flex:none;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:10px 9% calc(14px + env(safe-area-inset-bottom));background:linear-gradient(rgba(253,252,250,0),#FFFFFF 30%);margin-top:-6px;position:relative;z-index:7}
 .tn .car::-webkit-scrollbar{display:none}
 .tn .cc{flex:0 0 82%;scroll-snap-align:center;background:#fff;border:1px solid #E2D6CB;border-left:4px solid var(--c);border-radius:3px;padding:11px 14px 10px;box-shadow:0 4px 14px rgba(60,45,35,.08);transition:transform .25s,box-shadow .25s;cursor:pointer}
 .tn .cc.on{transform:translateY(-3px);box-shadow:0 8px 20px rgba(60,45,35,.14)}
