@@ -660,6 +660,13 @@ upd();document.addEventListener("click",function(e){if(e.target.closest("#flt,.d
 .ykl .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ykl .mt{color:#8C7B6E;white-space:nowrap;font-size:11px}
 .ykl .src{font-size:10px;color:#A89A8E;padding:6px 0 2px;text-align:right}
 .yk a.op{background:#F5F5F5}
+/* 10/31 オーナー「枠が全部同じ色で分かれが分かりにくい」「白は好き、シルバーと組み合わせてオシャレに」
+   リストの箱＝うすいシルバー、カード＝白。上の線は銀の光り方。 */
+.paper .blk{background:linear-gradient(90deg,#9EA5AD,#E6E9EC 30%,#B4BBC3 58%,#ECEEF0 82%,#A9B0B8) top/100% 2px no-repeat,#F1F2F4!important;border:1px solid #DCDFE3!important;border-top:0!important;padding-top:2px}
+.paper .it .card{background:#fff!important;border:1px solid #D3D7DC!important;border-radius:8px!important;box-shadow:inset 3px 0 0 var(--pc),0 1px 1px rgba(40,50,65,.04),0 4px 14px rgba(40,50,65,.07)!important}
+.paper .pick .it .card{border-color:#C6CBD1!important}
+.yk a{border-color:#CDD2D8!important;color:#5E6670!important;box-shadow:0 1px 2px rgba(40,50,65,.05)}
+.tnbtn{border-color:#D3D7DC!important;box-shadow:0 1px 1px rgba(40,50,65,.04),0 4px 14px rgba(40,50,65,.06)!important}
 </style>
 <script>
 /* 10/31 近くの宿：泊まりがけで行く所（街の真ん中から20km以上）のカードの下に、楽天トラベルの評価の高い宿を3つ。一覧は /kansai-yado.json（燈の page.yml が作り、link-stats が毎朝写す） */
