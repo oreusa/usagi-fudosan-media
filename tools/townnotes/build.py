@@ -14,6 +14,8 @@ js = assemble(os.path.join(D, 'region-kansai.js'), os.path.join(D, 'site-tsuki.j
 
 os.makedirs(os.path.join(R, 'links/townnotes'), exist_ok=True)
 open(os.path.join(R, 'links/townnotes/map.js'), 'w', encoding='utf-8').write(js)
+# イルミネーションのページ用（同じ地図の本体に、ページとのつなぎだけ変える）
+open(os.path.join(R, 'links/townnotes/map-illumi.js'), 'w', encoding='utf-8').write(assemble(os.path.join(D, 'region-kansai.js'), os.path.join(D, 'site-illumi.js'), {MK[k]: P[k] for k in MK}))
 h = open(os.path.join(R, 'links/index.html'), encoding='utf-8').read()
 import re
 # 本番のリスト（links/index.html）の地図の読み込みも、新しい版の ?v= にそろえる
