@@ -94,7 +94,7 @@ h1{{font-family:"Shippori Mincho",serif;font-weight:600;font-size:24px;line-heig
 .ps{{scroll-margin-top:60px;margin-top:28px}}
 h2{{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spacing:.14em;margin:0 0 12px;padding-left:10px;border-left:3px solid var(--c);display:flex;align-items:baseline;gap:10px}}
 h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-spacing:.04em;font-weight:500}}
-.it{{margin-bottom:16px;background:#fff;border:1px solid #D3D7DC;border-radius:8px;box-shadow:inset 3px 0 0 var(--c),0 1px 1px rgba(40,50,65,.04),0 4px 14px rgba(40,50,65,.07)}}
+.it{{margin-bottom:16px;background:#fff;border:1px solid #E6E6E6}}
 .card{{display:block;position:relative;text-decoration:none;color:inherit;padding:14px 64px 12px 16px}}
 .tg{{display:flex;gap:6px;margin-bottom:6px}}
 .st,.fr{{font-size:10.5px;letter-spacing:.06em;padding:1px 7px;border:1px solid;line-height:1.7}}
