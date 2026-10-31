@@ -128,7 +128,7 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 .pl{{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:26px}}.pl .plh{{width:100%;text-align:center;font-size:11px;letter-spacing:.2em;color:#8C7B6E}}
 .pl a{{font-size:13px;color:var(--pc,#2B2622);text-decoration:none;border:1px solid #DDD3C8;padding:6px 12px;background:#fff}}.pl a[aria-current]{{background:var(--pc);color:#fff;border-color:var(--pc)}}
 </style></head><body><div class="wrap">
-<div class="head"><img src="assets/logo-s.png" width="60" height="60" alt="うさぎ│TOWN NOTES のロゴ"><div class="en">{en}</div>
+<div class="head"><img src="assets/logo-s.png?v=2" width="60" height="60" alt="うさぎ│TOWN NOTES のロゴ"><div class="en">{en}</div>
 <h1>{h1a}<span>{h1b}</span></h1>
 <p class="sub">{sub}</p>
 <div class="upd">{upd} 更新</div></div>
