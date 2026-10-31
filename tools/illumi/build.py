@@ -102,7 +102,7 @@ h1{{font-family:"Shippori Mincho",serif;font-weight:600;font-size:23px;line-heig
 h1 span{{display:block;font-size:14px;letter-spacing:.2em;color:#6B6058;margin-top:4px}}
 .sub{{font-size:13px;line-height:2;color:#6B6058;margin:0;text-wrap:balance}}
 .upd{{font-size:11px;color:#8C7B6E;margin-top:8px}}
-.flt{{display:flex;flex-wrap:wrap;justify-content:center;gap:0 20px;margin:22px 0 6px;padding:10px 0;border-top:1px solid #DDD3C8;border-bottom:1px solid #DDD3C8}}
+.flt{{display:flex;flex-wrap:wrap;justify-content:center;gap:0 20px;margin:22px 0 6px;padding:10px 0;border-top:1px solid #D4D4D4;border-bottom:1px solid #D4D4D4}}
 .flt button{{border:none;background:none;border-radius:0;padding:4px 0;font-family:"Zen Kaku Gothic New";font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--pc,#8C7B6E);border-bottom:1px solid transparent;cursor:pointer}}
 .flt button.on{{color:var(--pc,#2B2622);border-bottom-color:var(--pc,#2B2622)}}
 .ps{{scroll-margin-top:12px;margin-top:30px}}
@@ -128,8 +128,8 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 .faq details{{background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05);margin-bottom:8px;padding:12px 16px}}
 .faq summary{{font-weight:700;font-size:14px;line-height:1.6;cursor:pointer}}.faq p{{font-size:13px;line-height:1.9;color:#5E544D;margin:8px 0 0}}
 .pl{{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:26px}}.pl .plh{{width:100%;text-align:center;font-size:11px;letter-spacing:.2em;color:#8C7B6E}}
-.pl a{{font-size:13px;color:var(--pc,#2B2622);text-decoration:none;border:1px solid #DDD3C8;padding:6px 12px;background:#fff}}.pl a[aria-current]{{background:var(--pc);color:#fff;border-color:var(--pc)}}
-</style></head><body><div class="wrap">
+.pl a{{font-size:13px;color:var(--pc,#2B2622);text-decoration:none;border:1px solid #D4D4D4;padding:6px 12px;background:#fff}}.pl a[aria-current]{{background:var(--pc);color:#fff;border-color:var(--pc)}}
+</style><script src="assets/night.js?v=1"></script></head><body><div class="wrap">
 <div class="head"><img src="assets/logo-s.png?v=2" width="60" height="60" alt="うさぎ│TOWN NOTES のロゴ"><div class="en">{en}</div>
 <h1>{h1a}<span>{h1b}</span></h1>
 <p class="sub">{sub}</p>
