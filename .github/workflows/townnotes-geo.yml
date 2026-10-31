@@ -17,4 +17,4 @@ jobs:
           git config user.name "townnotes bot"
           git config user.email "actions@users.noreply.github.com"
           git add links/townnotes/geo.json
-          git diff --cached --quiet || (git commit -m "townnotes: geo.json" && git push)
+          git diff --cached --quiet || (git commit -m "townnotes: geo.json" && for i in 1 2 3; do git pull --rebase -q origin main && git push && break; sleep 5; done)
