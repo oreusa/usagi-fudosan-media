@@ -1,6 +1,6 @@
 """関西イルミネーションのまとめページを作る（検索から人を呼ぶ冬のページ、10/31 オーナー「2やってみて」）。
 python3 tools/illumi/build.py → links/illumination.html"""
-import datetime, html, json, sys, os
+import datetime, html, json, sys, os, re, urllib.parse, hashlib
 sys.path.insert(0, os.path.dirname(__file__))
 from data import ITEMS
 TODAY = datetime.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else datetime.date.today()
@@ -28,7 +28,10 @@ for it in sorted(ITEMS, key=key):
     if cls == "end": continue
     d = when(s, e) if s else f"2026年の日程は発表前（昨年 {last}）"
     tags = f'<span class="st {cls}">{lab}</span>' + ('<span class="fr">無料</span>' if free else '')
-    cards[p].append(f'<a class="card" data-s="{s or ""}" data-e="{e or ""}" href="{url}" target="_blank" rel="noopener"><div class="tg">{tags}</div><div class="d">{html.escape(d)}</div><div class="t">{html.escape(n)}</div><div class="m">{html.escape(m)}</div><div class="go">→</div></a>')
+    city, spot = m.split("｜")[0], re.sub(r"（.*?）", "", m.split("｜")[-1]).strip()
+    q = f"{spot} {city}"
+    gm = "https://www.google.com/maps/search/?api=1&query=" + urllib.parse.quote(q)
+    cards[p].append(f'<div class="it" data-pref="{p}"><a class="card" data-pref="{p}" data-map="{html.escape(q)}" data-s="{s or ""}" data-e="{e or ""}" href="{url}" target="_blank" rel="noopener"><div class="tg">{tags}</div><div class="d">{html.escape(d)}</div><div class="t">{html.escape(n)}</div><div class="m">{html.escape(m)}</div><div class="go">→</div></a><a class="mp" href="{gm}" target="_blank" rel="noopener" data-k="地図｜{html.escape(n)}">地図</a></div>')
     if s:
         ev = {"@type":"Event","name":n,"startDate":s,"location":{"@type":"Place","name":m.split("｜")[-1],"address":f"{p}{'府' if p in ('大阪','京都') else '県'}{m.split('｜')[0]}"},"url":url,"eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode"}
         if e: ev["endDate"] = e
@@ -42,6 +45,8 @@ cnt = sum(len(v) for v in cards.values())
 upd = f"{TODAY.year}年{TODAY.month}月{TODAY.day}日"
 TITLE = "関西イルミネーション2026-2027｜大阪・京都・兵庫・奈良・滋賀・和歌山の日程一覧"
 DESC = f"関西6府県のイルミネーション{cnt}か所を、府県ごとに日程・場所・無料かどうかで一覧にしました。御堂筋イルミネーション、神戸イルミナージュ、姫路城イルミネーションなど。{upd}更新。"
+_mj = os.path.join(os.path.dirname(__file__), "../../links/townnotes/map-illumi.js")
+MV = hashlib.sha1(open(_mj, "rb").read()).hexdigest()[:8] if os.path.exists(_mj) else "0"
 URL = "https://usagi-odekake.usagi-fudosan.workers.dev/illumination.html"
 page = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{TITLE}</title><meta name="description" content="{DESC}"><link rel="canonical" href="{URL}">
@@ -74,9 +79,13 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 .d{{font-size:13px;color:var(--c);font-weight:700;letter-spacing:.02em}}
 .t{{font-family:"Shippori Mincho",serif;font-weight:600;font-size:15.5px;line-height:1.5;margin:4px 0 4px;letter-spacing:.04em}}
 .m{{font-size:12px;color:#7A6E66;line-height:1.6}}
+.it{{position:relative;margin-bottom:12px}}.it .card{{margin-bottom:0;padding-bottom:30px}}
+.mp{{position:absolute;left:16px;bottom:10px;font-size:11px;letter-spacing:.08em;color:#6B6058;text-decoration:none;border-bottom:1px solid #C9BDB1;line-height:1.4}}
+.mp:before{{content:"";display:inline-block;width:8px;height:10px;margin-right:4px;vertical-align:-1px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 10'%3E%3Cpath d='M4 0a4 4 0 0 0-4 4c0 3 4 6 4 6s4-3 4-6a4 4 0 0 0-4-4z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 10'%3E%3Cpath d='M4 0a4 4 0 0 0-4 4c0 3 4 6 4 6s4-3 4-6a4 4 0 0 0-4-4z'/%3E%3C/svg%3E") center/contain no-repeat}}
 .go{{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-family:Jost;color:#9C8775}}
 .note{{font-size:12px;line-height:1.9;color:#7A6E66;background:#F7F2EC;padding:14px 16px;margin-top:30px}}
 .back{{display:block;width:max-content;margin:28px auto 0;color:#2B2622;text-decoration:none;font-size:13px;letter-spacing:.1em;border-bottom:1px solid #2B2622;padding-bottom:2px}}
+.tn .lg .o{{display:none}}
 .ft{{text-align:center;font-size:10px;letter-spacing:.04em;color:#8C7B6E;margin-top:30px}}
 </style></head><body><div class="wrap">
 <div class="head"><img src="assets/logo-s.png" width="60" height="60" alt="うさぎ│TOWN NOTES のロゴ"><div class="en">KANSAI ILLUMINATION</div>
@@ -85,11 +94,12 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 <div class="upd">{upd} 更新</div></div>
 <div class="flt" id="flt">{nav}</div>
 {secs}
-<p class="note">日程はウォーカープラスと各公式の発表をもとにしています。「発表前」は、2026年の日程がまだ出ていない所です（昨年の期間を目安にのせています）。発表されしだい書き足します。点灯時間や料金は変わることがあるので、お出かけ前にリンク先でご確認ください。</p>
+<p class="note">日程は各公式の発表をもとにしています。名前を押すと公式のページ、「地図」を押すと場所が開きます。「発表前」は、2026年の日程がまだ出ていない所です（昨年の期間を目安にのせています）。発表されしだい書き足します。点灯時間や料金は変わることがあるので、お出かけ前にリンク先でご確認ください。</p>
 <a class="back" href="./">関西おでかけリストを見る</a>
 <div class="ft">うさぎ│TOWN NOTES</div></div>
-<script>(function(){{var t=new Date(Date.now()+9*36e5).toISOString().slice(0,10);document.querySelectorAll(".card").forEach(function(c){{var s=c.dataset.s,e=c.dataset.e,st=c.querySelector(".st");if(!s)return;if(e&&e<t){{c.remove();return;}}if(s<=t){{st.textContent="開催中";st.className="st on";}}else{{st.textContent="これから";st.className="st soon";}}}});document.querySelectorAll(".pf").forEach(function(x){{x.querySelector("small").textContent=x.querySelectorAll(".card").length+"件";}});var F=document.getElementById("flt");F.querySelectorAll("button").forEach(function(b){{b.onclick=function(){{F.querySelectorAll("button").forEach(function(x){{x.classList.remove("on");}});b.classList.add("on");var p=b.dataset.p;document.querySelectorAll(".pf").forEach(function(x){{x.style.display=(p=="すべて"||x.id==p)?"":"none";}});try{{navigator.sendBeacon("/c",JSON.stringify({{k:"絞り込み：イルミネーション｜"+p}}));}}catch(e){{}}}};}});}})();</script>
-<script>(function(){{var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function s(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}s("表示：イルミネーション"+(document.referrer&&!/usagi-odekake/.test(document.referrer)?"（外から）":""));document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;var t=a.querySelector(".t");s("クリック：イルミネーション｜"+(t?t.textContent:a.textContent));}},true);}})();</script>
+<script>(function(){{var t=new Date(Date.now()+9*36e5).toISOString().slice(0,10);document.querySelectorAll(".card").forEach(function(c){{var s=c.dataset.s,e=c.dataset.e,st=c.querySelector(".st");if(!s)return;if(e&&e<t){{(c.closest(".it")||c).remove();return;}}if(s<=t){{st.textContent="開催中";st.className="st on";}}else{{st.textContent="これから";st.className="st soon";}}}});document.querySelectorAll(".pf").forEach(function(x){{x.querySelector("small").textContent=x.querySelectorAll(".card").length+"件";if(!x.querySelector(".card"))x.style.display="none";}});var F=document.getElementById("flt");F.querySelectorAll("button").forEach(function(b){{b.onclick=function(){{F.querySelectorAll("button").forEach(function(x){{x.classList.remove("on");}});b.classList.add("on");var p=b.dataset.p;document.querySelectorAll(".pf").forEach(function(x){{x.style.display=((p=="すべて"||x.id==p)&&x.querySelector(".card"))?"":"none";}});try{{navigator.sendBeacon("/c",JSON.stringify({{k:"絞り込み：イルミネーション｜"+p}}));}}catch(e){{}}}};}});}})();</script>
+<script>(function(){{var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function s(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}s("表示：イルミネーション"+(document.referrer&&!/usagi-odekake/.test(document.referrer)?"（外から）":""));document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;var t=a.querySelector(".t"),n=a.getAttribute("data-k");s("クリック：イルミネーション｜"+(n||(t?t.textContent:a.textContent)));}},true);}})();</script>
+<script src="townnotes/map-illumi.js?v={MV}" defer></script>
 </body></html>'''
 open(os.path.join(os.path.dirname(__file__), "../../links/illumination.html"), "w").write(page)
 print(cnt, {p: len(v) for p, v in cards.items()})
