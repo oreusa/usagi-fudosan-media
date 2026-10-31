@@ -679,7 +679,7 @@ w.insertAdjacentElement("afterend",d);d.insertAdjacentElement("afterend",u);}els
 function ck(k){try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
 function vis(e){for(;e&&e!==document.body;e=e.parentElement){if(e.hidden||getComputedStyle(e).display=="none")return false;}return true;}
 function sync(){document.querySelectorAll(".yk,.ykl").forEach(function(x){if(x.className=="ykl"&&!x._c)x._c=x.previousElementSibling&&x.previousElementSibling._c;var on=x._c&&vis(x._c);x.hidden=!on||(x.className=="ykl"&&!x.dataset.op);});}
-var P=fetch("/proto/kansai-yado.json").then(function(r){return r.ok?r.json():{}}).then(function(j){Y={};for(var k in (j||{}))Y[k.replace(/\s+/g,"")]=j[k];}).catch(function(){});
+var P=fetch("/kansai-yado.json").then(function(r){return r.ok?r.json():{}}).then(function(j){Y={};for(var k in (j||{}))Y[k.replace(/\s+/g,"")]=j[k];}).catch(function(){});
 window.addEventListener("load",function(){P.then(function(){run();sync();setTimeout(function(){run();sync();},800);});});
 document.addEventListener("click",function(){P.then(function(){setTimeout(function(){run();sync();},80);});},true);
 var n=document.createElement("p");n.className="ykn";n.textContent="【試し】チケットの予約ができる所に「チケットを予約」、泊まりがけで行く所に「近くの宿」（押すと評価の高い宿を3つ）を付けた見本です。本番では、ここから予約されると紹介料が入るリンクにします。";
