@@ -129,7 +129,7 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 .faq summary{{font-weight:700;font-size:14px;line-height:1.6;cursor:pointer}}.faq p{{font-size:13px;line-height:1.9;color:#5E544D;margin:8px 0 0}}
 .pl{{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:26px}}.pl .plh{{width:100%;text-align:center;font-size:11px;letter-spacing:.2em;color:#8C7B6E}}
 .pl a{{font-size:13px;color:var(--pc,#2B2622);text-decoration:none;border:1px solid #D4D4D4;padding:6px 12px;background:#fff}}.pl a[aria-current]{{background:var(--pc);color:#fff;border-color:var(--pc)}}
-</style><script src="assets/night.js?v=2"></script></head><body><div class="wrap">
+</style><script src="assets/night.js?v=3"></script><script src="assets/menu.js?v=1" defer></script></head><body><div class="wrap">
 <div class="head"><img src="assets/logo-s.png?v=2" width="60" height="60" alt="うさぎ│TOWN NOTES のロゴ"><div class="en">{en}</div>
 <h1>{h1a}<span>{h1b}</span></h1>
 <p class="sub">{sub}</p>
@@ -167,6 +167,6 @@ for p in PREFS:
         [("関西おでかけリスト", ""), ("関西イルミネーション2026-2027", "illumination.html"), (f"{p}のイルミネーション", f"illumination-{SLUG[p]}.html")])
 for f, h in pages.items():
     open(OUT + f, "w").write(h)
-sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", *pages])
+sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", *pages, "tomari.html"])
 open(OUT + "sitemap.xml", "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{sm}</urlset>\n')
 print(cnt, {p: len(v) for p, v in cards.items()}, len(pages), "pages")
