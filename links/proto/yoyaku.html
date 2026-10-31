@@ -650,6 +650,12 @@ upd();document.addEventListener("click",function(e){if(e.target.closest("#flt,.d
 .yk a{color:#8C6A55;text-decoration:none;border:1px solid #D9C7B8;background:#fff;border-radius:99px;padding:6px 12px}
 .yk a:before{content:"";display:inline-block;width:9px;height:9px;margin-right:5px;vertical-align:-1px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M1 2h8v2a1 1 0 0 0 0 2v2H1V6a1 1 0 0 0 0-2z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M1 2h8v2a1 1 0 0 0 0 2v2H1V6a1 1 0 0 0 0-2z'/%3E%3C/svg%3E") center/contain no-repeat}
 .yk a.inn:before{-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M1 9V4l4-3 4 3v5H6V6H4v3z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M1 9V4l4-3 4 3v5H6V6H4v3z'/%3E%3C/svg%3E") center/contain no-repeat}
+.ykl{list-style:none;margin:-4px 2px 14px;padding:4px 14px;background:#fff;border:1px solid #E8DDD3;border-radius:10px;font-size:12px}
+.ykl li{border-top:1px solid #F1EAE3}.ykl li:first-child{border-top:0}
+.ykl a{display:flex;justify-content:space-between;gap:10px;padding:10px 0;color:#3A302A;text-decoration:none}
+.ykl .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ykl .mt{color:#8C7B6E;white-space:nowrap;font-size:11px}
+.ykl .src{font-size:10px;color:#A89A8E;padding:6px 0 2px;text-align:right}
+.yk a.op{background:#F7F2EC}
 .ykn{font-size:11px;line-height:1.8;color:#8C7B6E;background:#F7F2EC;padding:10px 14px;margin:14px 0}
 </style>
 <script>
@@ -658,16 +664,21 @@ upd();document.addEventListener("click",function(e){if(e.target.closest("#flt,.d
 var T={"ハルカス300×名探偵コナン":[["チケットを予約","https://www.asoview.com/base/155273/"]],
 "ALL OF EVANGELION（エヴァ30周年展）":[["入園チケット","https://www.asoview.com/base/153240/"]],
 "怪々YOKAI祭 2026":[["入村チケット","https://www.asoview.com/base/154273/"]],
-"ムーミン×神戸ポートタワー":[["チケットを予約","https://www.asoview.com/base/150479/"]],
-"曽爾高原 山灯り":[["近くの宿","https://travel.rakuten.co.jp/yado/nara/","inn"]],
-"淡路島 秋のカーニバル2026":[["近くの宿","https://travel.rakuten.co.jp/yado/hyogo/","inn"]],
-"神戸六甲ミーツ・アート2026":[["近くの宿","https://travel.rakuten.co.jp/yado/hyogo/","inn"]]};
-function run(){document.querySelectorAll("a.card").forEach(function(c){var t=c.querySelector(".t");if(!t)return;var L=T[t.textContent.trim()];if(!L||c.dataset.yk)return;c.dataset.yk=1;
+"ムーミン×神戸ポートタワー":[["チケットを予約","https://www.asoview.com/base/150479/"]]};
+var Y={};
+function run(){document.querySelectorAll("a.card").forEach(function(c){var t=c.querySelector(".t");if(!t)return;var L=T[t.textContent.trim()];var H=Y[t.textContent.trim()];if((!L&&!H)||c.dataset.yk)return;c.dataset.yk=1;L=L||[];
 var d=document.createElement("div");d.className="yk";L.forEach(function(x){var a=document.createElement("a");a.href=x[1];a.target="_blank";a.rel="noopener sponsored";a.textContent=x[0];if(x[2])a.className=x[2];d.appendChild(a);});
-var w=c.closest(".it")||c;w.insertAdjacentElement("afterend",d);});}
-window.addEventListener("load",function(){run();setTimeout(run,800);});
-document.addEventListener("click",function(){setTimeout(run,50);},true);
-var n=document.createElement("p");n.className="ykn";n.textContent="【試し】チケットや宿の予約ができる所に「チケットを予約」「近くの宿」を付けた見本です。本番では、ここから予約されると紹介料が入るリンクにします。";
+var w=c.closest(".it")||c;
+if(H){var b=document.createElement("a");b.href="#";b.className="inn";b.textContent="近くの宿";d.appendChild(b);
+var u=document.createElement("ul");u.className="ykl";u.hidden=true;H.forEach(function(h){var li=document.createElement("li");var a=document.createElement("a");a.href=h.u;a.target="_blank";a.rel="noopener sponsored";
+var m=document.createElement("span");m.className="nm";m.textContent=h.n;a.appendChild(m);var s2=document.createElement("span");s2.className="mt";s2.textContent=(h.km<0.1?"すぐそば":h.km+"km")+(h.r?"・★"+h.r:"")+(h.min?"・"+Number(h.min).toLocaleString()+"円〜":"");a.appendChild(s2);li.appendChild(a);u.appendChild(li);});
+var li=document.createElement("li");li.className="src";li.textContent="楽天トラベルの宿・ここからの近さ";u.appendChild(li);
+b.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();u.hidden=!u.hidden;b.classList.toggle("op",!u.hidden);});
+w.insertAdjacentElement("afterend",d);d.insertAdjacentElement("afterend",u);}else w.insertAdjacentElement("afterend",d);});}
+var P=fetch("https://usagi-life-notes.pages.dev/kansai-yado.json").then(function(r){return r.ok?r.json():{}}).then(function(j){Y=j||{};}).catch(function(){});
+window.addEventListener("load",function(){P.then(function(){run();setTimeout(run,800);});});
+document.addEventListener("click",function(){P.then(function(){setTimeout(run,50);});},true);
+var n=document.createElement("p");n.className="ykn";n.textContent="【試し】チケットの予約ができる所に「チケットを予約」、宿が近くにある所に「近くの宿」（押すと近い順に3つ）を付けた見本です。本番では、ここから予約されると紹介料が入るリンクにします。";
 window.addEventListener("load",function(){var f=document.getElementById("flt");if(f)f.insertAdjacentElement("afterend",n);});
 })();
 </script>
