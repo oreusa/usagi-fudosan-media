@@ -1,10 +1,8 @@
-# リンクの確かめ（2026-10-31 17:17 JST・205件）
+# リンクの確かめ（2026-10-31 20:13 JST・206件）
 
 ## 開けない（直す）
 - ✗ 天理市 光の祭典（links/illumination-nara.html）404 https://www.city.tenri.nara.jp/kakuka/shichoukoushitsu/sougouseisakuka/teijyujirituken/teijujiritsukenibentojoho/15242.html
 - ✗ 馬見クリスマス きらめきマルシェ（links/illumination-nara.html）URLError https://www.pref.nara.jp/67882.htm
-- ✗ しあわせ回廊 なら瑠璃絵（links/illumination-nara.html）TimeoutError https://rurie.jp/
-- ✗ OSAKA光のルネサンス 中之島イルミネーションストリート（links/illumination-osaka.html）404 https://www.hikari-kyoen.com/renaissance/index.html
 - ✗ 徐福公園ライトアップ（links/illumination-wakayama.html）404 https://www.shinguu.jp/spots/detail/A0005
 - ✗ 百済寺と近江の仏教美術（links/index.html）URLError https://www.miho.or.jp/
 - ✗ 和歌山城 光と幻想の夜（links/index.html）522 https://wakayamajo.jp/
@@ -17,3 +15,4 @@
 - links/index.html：淡路島 秋のカーニバル2026 ／ 淡路島国営明石海峡公園 → https://awaji-kaikyopark.kkr.mlit.go.jp/
 
 ※ 403 はサイトが機械を断っているだけのことが多いので、数に入れない。
+※ 市や県・観光協会のサイトは、外国（GitHub の機械）からだと 404 や つながらない を返すことがある（10/31 天理市・高槻市・新宮・好古園は WebFetch では開けた）。直す前に WebFetch で開けるか必ず確かめ、開ければそのままにする。
