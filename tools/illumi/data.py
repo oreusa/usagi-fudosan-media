@@ -2,8 +2,8 @@
 # (府県, 名前, 市町村｜会場, 始まり, 終わり, 無料, URL, 昨年の期間=発表前のときだけ)
 ITEMS = [
  ("大阪","御堂筋イルミネーション2026","大阪市｜御堂筋（梅田〜なんば 約4km）","2026-11-03","2026-12-31",True,"https://www.hikari-kyoen.com/midosuji/",None),
- ("大阪","OSAKA光のルネサンス 中之島イルミネーションストリート","大阪市北区｜中之島・御堂筋","2026-11-03","2026-12-31",True,"https://www.hikari-kyoen.com/renaissance/index.html",None),
- ("大阪","中央公会堂プロジェクションマッピング","大阪市北区｜大阪市中央公会堂","2026-12-11","2026-12-25",True,"https://www.hikari-kyoen.com/renaissance/index.html",None),
+ ("大阪","OSAKA光のルネサンス 中之島イルミネーションストリート","大阪市北区｜中之島・御堂筋","2026-11-03","2026-12-31",True,"https://hikari-kyoen.com/core/renaissance",None),
+ ("大阪","中央公会堂プロジェクションマッピング","大阪市北区｜大阪市中央公会堂","2026-12-11","2026-12-25",True,"https://hikari-kyoen.com/core/renaissance",None),
  ("大阪","グランフロント大阪 GRAND WISH CHRISTMAS","大阪市北区｜グランフロント大阪","2026-11-04","2026-12-25",True,"https://www.grandfront-osaka.jp/",None),
  ("大阪","梅田スカイビル クリスマス2026","大阪市北区｜新梅田シティ","2026-11-13","2026-12-25",True,"https://www.skybldg.co.jp/event/xmas/",None),
  ("大阪","フェスティバルイルミネーション2026","大阪市北区｜中之島フェスティバルタワー","2026-11-01","2027-02-28",True,"https://www.festival-city.jp/",None),

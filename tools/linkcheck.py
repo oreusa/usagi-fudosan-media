@@ -6,7 +6,8 @@ import collections, concurrent.futures as cf, glob, html, re, urllib.request, ss
 
 UA = "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1"
 PAGES = ["links/index.html"] + sorted(glob.glob("links/illumination*.html"))
-OK_SAME = {"https://www.hikari-kyoen.com/renaissance/index.html"}  # 同じ催しのまとめページ（御堂筋と中央公会堂）
+OK_SAME = {"https://hikari-kyoen.com/core/renaissance",  # 中之島と中央公会堂（同じ催し）
+           "https://www.tsubosaka1300.or.jp/news130.html"}  # 壺阪寺・岡寺・室生寺の合同ライトアップ「光の巡礼」
 
 
 def cards(p):
@@ -51,7 +52,8 @@ def main():
     out = [f"# リンクの確かめ（{now} JST・{len(res)}件）", "", "## 開けない（直す）"]
     out += [f"- ✗ {allc[u][0]}（{allc[u][1]}）{s} {u}" for u, s in sorted(bad, key=lambda x: allc[x[0]][1])] or ["- なし"]
     out += ["", "## 別の催しに同じURL（どちらかが違うページかも）"] + (same or ["- なし"])
-    out += ["", "※ 403 はサイトが機械を断っているだけのことが多いので、数に入れない。"]
+    out += ["", "※ 403 はサイトが機械を断っているだけのことが多いので、数に入れない。",
+            "※ 市や県・観光協会のサイトは、外国（GitHub の機械）からだと 404 や つながらない を返すことがある（10/31 天理市・高槻市・新宮・好古園は WebFetch では開けた）。直す前に WebFetch で開けるか必ず確かめ、開ければそのままにする。"]
     open("stats/linkcheck.md", "w", encoding="utf-8").write("\n".join(out) + "\n")
     print("\n".join(out))
 
