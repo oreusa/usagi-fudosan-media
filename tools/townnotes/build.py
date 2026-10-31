@@ -16,8 +16,11 @@ os.makedirs(os.path.join(R, 'links/townnotes'), exist_ok=True)
 open(os.path.join(R, 'links/townnotes/map.js'), 'w', encoding='utf-8').write(js)
 # イルミネーションのページ用（同じ地図の本体に、ページとのつなぎだけ変える）
 open(os.path.join(R, 'links/townnotes/map-illumi.js'), 'w', encoding='utf-8').write(assemble(os.path.join(D, 'region-kansai.js'), os.path.join(D, 'site-illumi.js'), {MK[k]: P[k] for k in MK}))
+# 泊まりのページ用（10/31 オーナー「お泊まりは地図作らないの？…作って」）。ピンを押すと近くの宿3軒も出る
+import re, hashlib
+jt = assemble(os.path.join(D, 'region-kansai.js'), os.path.join(D, 'site-tomari.js'), {MK[k]: P[k] for k in MK})
+open(os.path.join(R, 'links/townnotes/map-tomari.js'), 'w', encoding='utf-8').write(jt)
 h = open(os.path.join(R, 'links/index.html'), encoding='utf-8').read()
-import re
 # 本番のリスト（links/index.html）の地図の読み込みも、新しい版の ?v= にそろえる
 v = __import__('hashlib').sha1(js.encode('utf-8')).hexdigest()[:8]
 live = re.sub(r'/townnotes/map\.js\?v=[0-9a-f]+', '/townnotes/map.js?v=' + v, h)

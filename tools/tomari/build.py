@@ -11,6 +11,10 @@ WD = "月火水木金土日"
 E = html.escape
 yado = json.load(open(os.path.join(R, "links/kansai-yado.json")))
 Y = {re.sub(r"\s+", "", k): v for k, v in yado.items() if v}
+# 宿の名前のうしろの「<淡路島>」「 ^」は楽天の付け足し（燈の kansai_yado.py でも消す）
+for v in Y.values():
+    for h in v:
+        h["n"] = re.sub(r"\s*(<[^<>]*>|\^)\s*$", "", h.get("n", "")).strip()
 
 def txt(s):
     return html.unescape(re.sub(r"<[^>]+>", "", s or "")).strip()
@@ -70,6 +74,10 @@ for p in PREFS:
 btns = '<button class="on" data-p="すべて">すべて</button>' + "".join(f'<button data-p="{p}" style="--pc:{PC[p]}">{p}</button>' for p in PREFS if items[p])
 upd = f"{TODAY.year}年{TODAY.month}月{TODAY.day}日"
 BASE = "https://usagi-odekake.usagi-fudosan.workers.dev/"
+# 地図（tools/townnotes/build.py が作る map-tomari.js）。中身が変わったら ?v= も変わる
+import hashlib
+_mj = os.path.join(R, "links/townnotes/map-tomari.js")
+MAPJS = f'<script src="townnotes/map-tomari.js?v={hashlib.sha1(open(_mj, "rb").read()).hexdigest()[:8]}" defer></script>' if os.path.exists(_mj) else ""
 out = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>泊まりで行く関西のおでかけ｜近くの宿つき</title><meta name="description" content="関西の少し遠いおでかけ{n_all}か所と、近くの評価の高い宿をまとめました。大阪・京都・兵庫・奈良・滋賀・和歌山。">
 <link rel="canonical" href="{BASE}tomari"><meta property="og:title" content="泊まりで行く関西のおでかけ"><meta property="og:image" content="{BASE}assets/ogp.png">
@@ -139,7 +147,7 @@ wk.addEventListener("click",function(){{W=!W;wk.setAttribute("aria-pressed",W);d
 function ck(k){{try{{if(localStorage.getItem("usagi_owner")==="1")return;}}catch(e){{}}try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}
 document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a[data-k]");if(a)ck(a.dataset.k.indexOf("宿｜")===0?a.dataset.k:"泊まり｜"+a.dataset.k);}},true);
 ck("表示：泊まりで行くおでかけ");
-}})();</script></body></html>
+}})();</script>{MAPJS}</body></html>
 '''
 open(os.path.join(R, "links/tomari.html"), "w", encoding="utf-8").write(out)
 print("ok", n_all, n_inn)
