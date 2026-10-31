@@ -671,17 +671,18 @@ function run(){document.querySelectorAll("a.card").forEach(function(c){var t=c.q
 var d=document.createElement("div");d.className="yk";L.forEach(function(x){var a=document.createElement("a");a.href=x[1];a.target="_blank";a.rel="noopener sponsored";a.textContent=x[0];if(x[2])a.className=x[2];d.appendChild(a);});
 var w=c.closest(".it")||c;d._c=c;
 if(H){var b=document.createElement("a");b.href="#";b.className="inn";b.textContent="近くの宿";d.appendChild(b);
-var u=document.createElement("ul");u.className="ykl";u.hidden=true;H.forEach(function(h){var li=document.createElement("li");var a=document.createElement("a");a.href=h.u;a.target="_blank";a.rel="noopener sponsored";
+var u=document.createElement("ul");u.className="ykl";u.hidden=true;H.forEach(function(h){var li=document.createElement("li");var a=document.createElement("a");a.href=h.u;a.target="_blank";a.rel="noopener sponsored";a.addEventListener("click",function(){ck("宿｜"+t.textContent.trim()+"｜"+h.n);});
 var m=document.createElement("span");m.className="nm";m.textContent=h.n;a.appendChild(m);var s2=document.createElement("span");s2.className="mt";s2.textContent=(h.km<0.1?"すぐそば":h.km+"km")+(h.r?"・★"+h.r:"")+(h.min?"・"+Number(h.min).toLocaleString()+"円〜":"");a.appendChild(s2);li.appendChild(a);u.appendChild(li);});
-var li=document.createElement("li");li.className="src";li.textContent="楽天トラベルの宿・ここからの近さ";u.appendChild(li);
-b.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();u.dataset.op=u.dataset.op?"":"1";b.classList.toggle("op",!!u.dataset.op);sync();});
+var li=document.createElement("li");li.className="src";li.textContent="楽天トラベルの評価3.5以上・ここからの近さ";u.appendChild(li);
+b.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();if(!u.dataset.op)ck("宿を開く｜"+t.textContent.trim());u.dataset.op=u.dataset.op?"":"1";b.classList.toggle("op",!!u.dataset.op);sync();});
 w.insertAdjacentElement("afterend",d);d.insertAdjacentElement("afterend",u);}else w.insertAdjacentElement("afterend",d);});}
+function ck(k){try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
 function vis(e){for(;e&&e!==document.body;e=e.parentElement){if(e.hidden||getComputedStyle(e).display=="none")return false;}return true;}
 function sync(){document.querySelectorAll(".yk,.ykl").forEach(function(x){if(x.className=="ykl"&&!x._c)x._c=x.previousElementSibling&&x.previousElementSibling._c;var on=x._c&&vis(x._c);x.hidden=!on||(x.className=="ykl"&&!x.dataset.op);});}
-var P=fetch("https://usagi-life-notes.pages.dev/kansai-yado.json").then(function(r){return r.ok?r.json():{}}).then(function(j){Y={};for(var k in (j||{}))Y[k.replace(/\s+/g,"")]=j[k];}).catch(function(){});
+var P=fetch("/proto/kansai-yado.json").then(function(r){return r.ok?r.json():{}}).then(function(j){Y={};for(var k in (j||{}))Y[k.replace(/\s+/g,"")]=j[k];}).catch(function(){});
 window.addEventListener("load",function(){P.then(function(){run();sync();setTimeout(function(){run();sync();},800);});});
 document.addEventListener("click",function(){P.then(function(){setTimeout(function(){run();sync();},80);});},true);
-var n=document.createElement("p");n.className="ykn";n.textContent="【試し】チケットの予約ができる所に「チケットを予約」、宿が近くにある所に「近くの宿」（押すと近い順に3つ）を付けた見本です。本番では、ここから予約されると紹介料が入るリンクにします。";
+var n=document.createElement("p");n.className="ykn";n.textContent="【試し】チケットの予約ができる所に「チケットを予約」、泊まりがけで行く所に「近くの宿」（押すと評価の高い宿を3つ）を付けた見本です。本番では、ここから予約されると紹介料が入るリンクにします。";
 window.addEventListener("load",function(){var f=document.getElementById("flt");if(f)f.insertAdjacentElement("afterend",n);});
 })();
 </script>
