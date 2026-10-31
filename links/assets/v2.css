@@ -47,3 +47,5 @@ html body .paper .it .card{box-shadow:inset 4px 0 0 var(--pc)!important}
 .paper .it .card .go{background:var(--pc)!important}
 .v2c span.on{background:var(--pc);color:#fff}
 .v2c span.p{background:color-mix(in srgb,var(--pc) 12%,#fff);color:color-mix(in srgb,var(--pc) 80%,#000)}
+/* 10/31 オーナー「場所変だよ」→ 三本線を隠したので、太陽と月のマークを右の角へ */
+html.v2bar-on #utheme{right:12px}
