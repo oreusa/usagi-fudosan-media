@@ -129,7 +129,7 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 .faq summary{{font-weight:700;font-size:14px;line-height:1.6;cursor:pointer}}.faq p{{font-size:13px;line-height:1.9;color:#5E544D;margin:8px 0 0}}
 .pl{{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:26px}}.pl .plh{{width:100%;text-align:center;font-size:11px;letter-spacing:.2em;color:#8C7B6E}}
 .pl a{{font-size:13px;color:var(--pc,#2B2622);text-decoration:none;border:1px solid #D4D4D4;padding:6px 12px;background:#fff}}.pl a[aria-current]{{background:var(--pc);color:#fff;border-color:var(--pc)}}
-</style><script src="assets/night.js?v=5"></script><script src="assets/menu.js?v=8" defer></script></head><body><div class="wrap">
+</style><script src="assets/night.js?v=5"></script><script src="assets/menu.js?v=9" defer></script></head><body><div class="wrap">
 <div class="head"><img src="assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">{en}</div>
 <h1>{h1a}<span>{h1b}</span></h1>
 <p class="sub">{sub}</p>
@@ -139,7 +139,7 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 {fh}
 <p class="note">日程は各公式の発表をもとにしています。名前を押すと公式のページ、「地図」を押すと場所が開きます。「発表前」は、2026年の日程がまだ出ていない所です（昨年の期間を目安にのせています）。発表されしだい書き足します。点灯時間や料金は変わることがあるので、お出かけ前にリンク先でご確認ください。</p>
 <nav class="pl" aria-label="府県ごとのイルミネーション">{links}</nav>
-<a class="back" href="./">関西おでかけリストを見る</a>
+<a class="back" href="/odekake">関西おでかけリストを見る</a>
 <div class="ft">TOWN NOTE</div></div>
 <script>(function(){{var t=new Date(Date.now()+9*36e5).toISOString().slice(0,10);document.querySelectorAll(".card").forEach(function(c){{var s=c.dataset.s,e=c.dataset.e,st=c.querySelector(".st");if(!s)return;if(e&&e<t){{(c.closest(".it")||c).remove();return;}}if(s<=t){{st.textContent="開催中";st.className="st on";}}else{{st.textContent="これから";st.className="st soon";}}}});document.querySelectorAll(".ps").forEach(function(x){{x.querySelector("small").textContent=x.querySelectorAll(".card").length+"件";if(!x.querySelector(".card"))x.style.display="none";}});var F=document.getElementById("flt");if(F)F.querySelectorAll("button").forEach(function(b){{b.onclick=function(){{F.querySelectorAll("button").forEach(function(x){{x.classList.remove("on");}});b.classList.add("on");var p=b.dataset.p;document.querySelectorAll(".ps").forEach(function(x){{x.style.display=((p=="すべて"||x.id==p)&&x.querySelector(".card"))?"":"none";}});try{{navigator.sendBeacon("/c",JSON.stringify({{k:"絞り込み：イルミネーション｜"+p}}));}}catch(e){{}}}};}});}})();</script>
 <script>(function(){{var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function s(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}s("表示：イルミネーション"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":""));document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;var t=a.querySelector(".t"),n=a.getAttribute("data-k");s("クリック：イルミネーション｜"+(n||(t?t.textContent:a.textContent)));}},true);}})();</script>
@@ -155,7 +155,7 @@ pages = {"illumination.html": render(PREFS, "illumination.html",
     f"関西6府県のイルミネーション{cnt}か所を、府県ごとに日程・場所・無料かどうかで一覧にしました。御堂筋イルミネーション、神戸イルミナージュ、姫路城イルミネーションなど。{upd}更新。",
     "関西イルミネーション2026-2027 日程一覧", "KANSAI ILLUMINATION", "関西イルミネーション", "2026 - 2027 日程一覧",
     f"大阪・京都・兵庫・奈良・滋賀・和歌山の{cnt}か所を、<br>府県ごとに日程・場所・無料かどうかでまとめました。", plinks(None),
-    [("関西おでかけリスト", ""), ("関西イルミネーション2026-2027", "illumination.html")])}
+    [("関西おでかけリスト", "odekake"), ("関西イルミネーション2026-2027", "illumination.html")])}
 for p in PREFS:
     n = len(cards[p]); nm = "、".join(x[0] for x in evs[p][:3])
     fr = sum(1 for x in evs[p] if x[4])
@@ -164,9 +164,9 @@ for p in PREFS:
         f"{fu(p)}のイルミネーション{n}か所（無料{fr}か所）を、日程・場所・無料かどうかで一覧にしました。{nm}など。点灯期間は各公式の発表どおり。{upd}更新。",
         f"{p}のイルミネーション2026-2027 日程一覧", f"{SLUG[p].upper()} ILLUMINATION", f"{p}のイルミネーション", "2026 - 2027 日程一覧",
         f"{fu(p)}の{n}か所を、日程・場所・<br>無料かどうかでまとめました。", plinks(p),
-        [("関西おでかけリスト", ""), ("関西イルミネーション2026-2027", "illumination.html"), (f"{p}のイルミネーション", f"illumination-{SLUG[p]}.html")])
+        [("関西おでかけリスト", "odekake"), ("関西イルミネーション2026-2027", "illumination.html"), (f"{p}のイルミネーション", f"illumination-{SLUG[p]}.html")])
 for f, h in pages.items():
     open(OUT + f, "w").write(h)
-sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", *pages, "tomari.html"])
+sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", "odekake", *pages, "tomari.html"])
 open(OUT + "sitemap.xml", "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{sm}</urlset>\n')
 print(cnt, {p: len(v) for p, v in cards.items()}, len(pages), "pages")

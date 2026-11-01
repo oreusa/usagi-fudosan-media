@@ -22,17 +22,17 @@ function goT(){
 /* TOWN NOTE の入口ページ：2つのリストとご相談 */
 var I2={od:'<svg viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>',fd:'<svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V5M16 20v-7M22 20H2"/></svg>',sd:'<svg viewBox="0 0 24 24"><path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/></svg>'};
 var bar=document.createElement("nav");bar.id="v2bar";bar.setAttribute("aria-label","すぐ移動");
-bar.innerHTML='<a href="/">'+I2.od+'<span>おでかけ</span></a><a href="/fudosan-list">'+I2.fd+'<span>不動産</span></a><a href="/fudosan.html">'+I2.sd+'<span>ご相談</span></a><button class="mn" type="button"><i></i>MENU</button>';
+bar.innerHTML='<a href="/odekake">'+I2.od+'<span>おでかけ</span></a><a href="/fudosan-list">'+I2.fd+'<span>不動産</span></a><a href="/fudosan.html">'+I2.sd+'<span>ご相談</span></a><button class="mn" type="button"><i></i>MENU</button>';
 bar.querySelectorAll("a").forEach(function(a){a.setAttribute("data-k","下のバー｜"+a.textContent);});
 bar.querySelector(".mn").onclick=function(){var m=document.getElementById("umenu");if(m)m.click();};
 document.body.appendChild(bar);bar.classList.add("on");document.documentElement.classList.add("v2bar-on");
 }
 function go(){
-if(/^\/town-notes/.test(location.pathname))return goT();
+if(/^\/(town-notes)?$/.test(location.pathname))return goT();
 if(/^\/(fudosan|uru|gyosha|chika-|machi\/)/.test(location.pathname))return goF();
 var bar=document.createElement("nav");bar.id="v2bar";bar.setAttribute("aria-label","すぐ移動");
 var inn=/\/tomari/.test(location.pathname);
-bar.innerHTML='<a data-h="/?v2t=0">'+I.now+'<span>開催中</span></a><a data-h="/?v2t=1">'+I.up+'<span>これから</span></a><a data-h="/?v2t=map">'+I.map+'<span>地図</span></a><a data-h="/tomari.html"'+(inn?' class="cur"':'')+'>'+I.inn+'<span>泊まり</span></a><button class="mn" type="button"><i></i>MENU</button>';
+bar.innerHTML='<a data-h="/odekake?v2t=0">'+I.now+'<span>開催中</span></a><a data-h="/odekake?v2t=1">'+I.up+'<span>これから</span></a><a data-h="/odekake?v2t=map">'+I.map+'<span>地図</span></a><a data-h="/tomari.html"'+(inn?' class="cur"':'')+'>'+I.inn+'<span>泊まり</span></a><button class="mn" type="button"><i></i>MENU</button>';
 bar.querySelectorAll("a").forEach(function(a){a.href=a.dataset.h;a.setAttribute("data-k","下のバー｜"+a.textContent);});
 bar.querySelector(".mn").onclick=function(){var m=document.getElementById("umenu");if(m)m.click();};
 document.body.appendChild(bar);bar.classList.add("on");document.documentElement.classList.add("v2bar-on");

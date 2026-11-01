@@ -48,14 +48,14 @@ SVG = (f'<svg class="kmap" viewBox="-10 -10 {W + 20:.0f} {H + 20:.0f}" role="img
        f'<g class="lb">{"".join(labels)}</g></svg>')
 
 desc = "関西の不動産屋が、街を調査して見つけたことを、1冊のノートにまとめています。イベントや新しいお店・施設の「関西おでかけリスト」と、地価・人口・できる物を公式の数字で見る「関西不動産リスト」。"
-ld = {"@context": "https://schema.org", "@type": "WebSite", "name": "TOWN NOTE", "url": f"{BASE}/town-notes", "description": desc}
+ld = {"@context": "https://schema.org", "@type": "WebSite", "name": "TOWN NOTE", "url": f"{BASE}/", "description": desc}
 
 CHIPS = ["梅田", "吹田", "京都市", "宇治", "神戸", "西宮", "奈良市", "生駒", "大津", "草津", "和歌山市", "白浜"]
 
 page = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>TOWN NOTE（タウンノート）｜関西おでかけリスト・関西不動産リスト</title>
-<meta name="description" content="{E(desc)}">{'' if live else '<meta name="robots" content="noindex">'}{f'<link rel="canonical" href="{BASE}/town-notes">' if live else ''}
-<meta property="og:type" content="website"><meta property="og:url" content="{BASE}/town-notes"><meta property="og:title" content="TOWN NOTE"><meta property="og:description" content="{E(desc)}">
+<meta name="description" content="{E(desc)}">{'' if live else '<meta name="robots" content="noindex">'}{f'<link rel="canonical" href="{BASE}/">' if live else ''}
+<meta property="og:type" content="website"><meta property="og:url" content="{BASE}/"><meta property="og:title" content="TOWN NOTE"><meta property="og:description" content="{E(desc)}">
 <meta property="og:image" content="{BASE}/assets/ogp.png"><meta name="twitter:card" content="summary">
 <link rel="icon" href="/assets/ogp.png"><link rel="apple-touch-icon" href="/assets/ogp.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
@@ -123,7 +123,7 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 .sns{{margin:30px 0 0;text-align:center}}.sns h2{{font-family:Jost;font-weight:400;font-size:10.5px;letter-spacing:.42em;color:#8C7B6E;margin:0 0 12px}}
 .sns a{{display:inline-block;margin:0 10px;color:#2B2622;text-decoration:none;font-family:Jost;font-size:14px;letter-spacing:.06em;border-bottom:1px solid #2B2622;padding-bottom:2px}}
 .ft{{text-align:center;font-size:10.5px;letter-spacing:.06em;color:#8C7B6E;margin-top:30px}}
-</style><script src="/assets/night.js?v=5"></script><script src="/assets/menu.js?v=8" defer></script><script src="/assets/v2sub.js?v=6" defer></script></head><body><div class="wrap">
+</style><script src="/assets/night.js?v=5"></script><script src="/assets/menu.js?v=9" defer></script><script src="/assets/v2sub.js?v=7" defer></script></head><body><div class="wrap">
 <header class="head"><img src="/assets/logo-s.png?v=2" width="74" height="74" alt="TOWN NOTE のロゴ">
 <h1>TOWN NOTE</h1><div class="kana">タウンノート</div>
 <p class="cp">関西の街の、1冊のノート。</p>
@@ -137,7 +137,7 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 <div class="res" id="res"></div></section>
 
 <section class="lists"><h2>IN THIS NOTE　─　このノートの中身</h2>
-<a class="ls" href="/" data-k="入口｜関西おでかけリスト" style="--ac:#B97A62;--bg:#FBEEE8;--c:#B97A62"><div class="no"><small>PAGE</small>01</div><div class="en">KANSAI ODEKAKE</div><h3>関西おでかけリスト</h3>
+<a class="ls" href="/odekake" data-k="入口｜関西おでかけリスト" style="--ac:#B97A62;--bg:#FBEEE8;--c:#B97A62"><div class="no"><small>PAGE</small>01</div><div class="en">KANSAI ODEKAKE</div><h3>関西おでかけリスト</h3>
 <p>イベント・新しいお店や施設を、公式ページつきで。<br>今週末に行ける所も、地図でも探せます。</p>
 <div class="st"><div><span>開催中</span><b id="o1">―</b></div><div><span>これから</span><b id="o2">―</b></div><div><span>入場無料</span><b id="o3">―</b></div></div>
 <div class="pv" id="opv"></div><div class="go">おでかけリストを開く<span>→</span></div></a>
@@ -159,7 +159,7 @@ function pct(v){{return (v>0?"+":v<0?"−":"±")+Math.abs(v).toFixed(1)+"%"}}
 var today=new Date(Date.now()+9*36e5).toISOString().slice(0,10);
 // おでかけ：今のリストを読んで、開催中・これからを数える（終わった物は数えない）
 var OD=[],TW=[],FA=0;
-var pO=fetch("/").then(function(r){{return r.text()}}).then(function(t){{var d=new DOMParser().parseFromString(t,"text/html");
+var pO=fetch("/odekake").then(function(r){{return r.text()}}).then(function(t){{var d=new DOMParser().parseFromString(t,"text/html");
  d.querySelectorAll(".paper a.card").forEach(function(a){{var e=a.getAttribute("data-e")||"",s=a.getAttribute("data-s")||"",tt=a.querySelector(".t"),m=a.querySelector(".m");if(e&&e<today)return;if(!tt)return;
   OD.push({{t:tt.textContent.trim(),m:m?m.textContent.trim():"",p:a.getAttribute("data-pref")||"",h:a.getAttribute("href"),f:/無料/.test(a.getAttribute("data-tag")||""),now:!!(s&&s<=today&&(!e||e>=today)),up:!!(s&&s>today)}});}});
  var n1=OD.filter(function(x){{return x.now}}).length,n2=OD.filter(function(x){{return x.up}}).length;document.getElementById("o1").innerHTML=n1+'<small style="font-size:12px">件</small>';document.getElementById("o2").innerHTML=n2+'<small style="font-size:12px">件</small>';
@@ -175,7 +175,7 @@ svg.querySelectorAll(".pf path").forEach(function(el){{el.addEventListener("clic
  svg.classList.add("sel");svg.querySelectorAll(".pf path").forEach(function(x){{x.classList.toggle("on",x.getAttribute("data-p")===p)}});
  var od=OD.filter(function(x){{return x.p===p}}),nw=od.filter(function(x){{return x.now}}),tw=TW.filter(function(x){{return x.p===p}}),up=tw.filter(function(x){{return x.r8>0}}),tp=tw.slice().sort(function(a,b){{return b.r8-a.r8}})[0];
  pp.style.setProperty("--pc",PC[p]);pp.hidden=false;
- pp.innerHTML='<h3>'+p+'<small>'+EN[p]+'</small></h3><div class="g"><a href="/" data-k="入口の地図｜おでかけ｜'+p+'"><span>おでかけ（開催中）</span><b>'+nw.length+'<small style="font-size:12px">件</small></b><em>'+(nw[0]?esc(nw[0].t):"これから足します")+'</em></a><a href="/chika-kansai#'+ID[p]+'" data-k="入口の地図｜地価｜'+p+'"><span>上がった街</span><b>'+up.length+'<small style="font-size:12px">／'+tw.length+'</small></b><em>'+(tp?"1位 "+esc(tp.n)+" "+pct(tp.r8):"")+'</em></a></div>';
+ pp.innerHTML='<h3>'+p+'<small>'+EN[p]+'</small></h3><div class="g"><a href="/odekake" data-k="入口の地図｜おでかけ｜'+p+'"><span>おでかけ（開催中）</span><b>'+nw.length+'<small style="font-size:12px">件</small></b><em>'+(nw[0]?esc(nw[0].t):"これから足します")+'</em></a><a href="/chika-kansai#'+ID[p]+'" data-k="入口の地図｜地価｜'+p+'"><span>上がった街</span><b>'+up.length+'<small style="font-size:12px">／'+tw.length+'</small></b><em>'+(tp?"1位 "+esc(tp.n)+" "+pct(tp.r8):"")+'</em></a></div>';
  c("入口の地図："+p);}});}});}});
 // あなたの街：おでかけと地価をまとめて
 var q=document.getElementById("q"),res=document.getElementById("res"),tq;

@@ -224,7 +224,7 @@ h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spa
 .ft{text-align:center;font-size:10px;letter-spacing:.04em;color:#8C7B6E;margin-top:30px}"""
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">'
-SCRIPTS = '<script src="/assets/night.js?v=5"></script><script src="/assets/menu.js?v=8" defer></script><script src="/assets/v2sub.js?v=6" defer></script>'
+SCRIPTS = '<script src="/assets/night.js?v=5"></script><script src="/assets/menu.js?v=9" defer></script><script src="/assets/v2sub.js?v=7" defer></script>'
 
 
 def beacon(name):
