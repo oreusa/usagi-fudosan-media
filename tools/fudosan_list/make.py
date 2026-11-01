@@ -51,8 +51,8 @@ h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v
 h = h.replace('<h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p>',
               '<h1>関西不動産リスト</h1><p class="sub">関西の街を調査して見つけた数字を、<br>公式の資料つきで紹介しています</p>')
 h = re.sub(r'<div class="sea" id="sea">.*?</div><svg class="yr" id="yr".*?</svg>', "", h, count=1, flags=re.S)
-SW = ('<nav class="tnsw" aria-label="TOWN NOTES のリスト"><a href="./" data-k="切り替え｜おでかけ">おでかけ</a>'
-      '<a href="fudosan-list" class="on" aria-current="page">不動産</a></nav>')
+SW = ('<nav class="tnsw" aria-label="TOWN NOTES のリスト"><a href="./" data-k="切り替え｜おでかけ">関西おでかけリスト</a>'
+      '<a href="fudosan-list" class="on" aria-current="page">関西不動産リスト</a></nav>')
 h = h.replace('<a class="ilk" href="illumination">関西イルミネーション 2026 日程一覧<span>→</span></a>',
               SW + '<a class="ilk" href="chika-osaka">大阪市24区 地価ランキング 2026<span>→</span></a>')
 h = h.replace("この府県のおでかけは、これから増やしていきます", "この府県の分は、これから増やしていきます")
@@ -114,8 +114,8 @@ assert old_tabs in h
 h = h.replace(old_tabs, json.dumps([[c, en, jp, "#2B2622"] for _, c, en, jp, _ in TABS], ensure_ascii=False))
 
 # 切り替えの見た目（おでかけのタブと同じ線と文字）
-SW_CSS = ('<style>.tnsw{display:flex;justify-content:center;gap:0 34px;margin:4px 0 18px}'
-          '.tnsw a{font-family:"Shippori Mincho",serif;font-weight:600;font-size:15px;letter-spacing:.14em;color:#9C9187;text-decoration:none;padding:4px 2px 6px;border-bottom:2px solid transparent}'
+SW_CSS = ('<style>.tnsw{display:flex;justify-content:center;gap:0 22px;margin:4px 0 18px}'
+          '.tnsw a{font-family:"Shippori Mincho",serif;font-weight:600;font-size:14px;letter-spacing:.06em;color:#9C9187;text-decoration:none;padding:4px 2px 6px;border-bottom:2px solid transparent}'
           '.tnsw a.on{color:#2B2622;border-bottom-color:#2B2622}</style>')
 h = h.replace("</head>", SW_CSS + "</head>", 1)
 
