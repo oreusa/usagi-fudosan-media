@@ -1,4 +1,4 @@
-"""TOWN NOTES の入口ページ（links/town-notes.html）を作る。
+"""TOWN NOTE の入口ページ（links/town-notes.html）を作る。
 11/1 12:54 オーナー「TOWNNOTEを作れ。項目は2種類。1番最初の入口だ」「最初の入口はかなり手を入れろ」
 → 関西おでかけリスト と 関西不動産リスト の2つの入口。上に関西の絵地図、まんなかに「あなたの街」を両方まとめて探せる窓。
   数（開催中・これから・街・数字）はページを開いた時に両方のリストから読むので、手で直さなくても毎日合う。
@@ -47,15 +47,15 @@ SVG = (f'<svg class="kmap" viewBox="-10 -10 {W + 20:.0f} {H + 20:.0f}" role="img
        f'<g class="pf" stroke="#fff" stroke-width="2.4" stroke-linejoin="round">{"".join(paths)}</g>'
        f'<g class="lb">{"".join(labels)}</g></svg>')
 
-desc = "関西の不動産屋が、街を調査して見つけたことを2つのリストにまとめています。イベントや新しいお店・施設の「関西おでかけリスト」と、地価・人口・できる物を公式の数字で見る「関西不動産リスト」。"
-ld = {"@context": "https://schema.org", "@type": "WebSite", "name": "TOWN NOTES", "url": f"{BASE}/town-notes", "description": desc}
+desc = "関西の不動産屋が、街を調査して見つけたことを、1冊のノートにまとめています。イベントや新しいお店・施設の「関西おでかけリスト」と、地価・人口・できる物を公式の数字で見る「関西不動産リスト」。"
+ld = {"@context": "https://schema.org", "@type": "WebSite", "name": "TOWN NOTE", "url": f"{BASE}/town-notes", "description": desc}
 
 CHIPS = ["梅田", "吹田", "京都市", "宇治", "神戸", "西宮", "奈良市", "生駒", "大津", "草津", "和歌山市", "白浜"]
 
 page = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TOWN NOTES（タウンノーツ）｜関西おでかけリスト・関西不動産リスト</title>
+<title>TOWN NOTE（タウンノート）｜関西おでかけリスト・関西不動産リスト</title>
 <meta name="description" content="{E(desc)}">{'' if live else '<meta name="robots" content="noindex">'}{f'<link rel="canonical" href="{BASE}/town-notes">' if live else ''}
-<meta property="og:type" content="website"><meta property="og:url" content="{BASE}/town-notes"><meta property="og:title" content="TOWN NOTES"><meta property="og:description" content="{E(desc)}">
+<meta property="og:type" content="website"><meta property="og:url" content="{BASE}/town-notes"><meta property="og:title" content="TOWN NOTE"><meta property="og:description" content="{E(desc)}">
 <meta property="og:image" content="{BASE}/assets/ogp.png"><meta name="twitter:card" content="summary">
 <link rel="icon" href="/assets/ogp.png"><link rel="apple-touch-icon" href="/assets/ogp.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
@@ -101,6 +101,7 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 .ls{{position:relative;display:block;text-decoration:none;color:#2B2622;background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05),0 10px 26px rgba(43,38,34,.07);padding:22px 20px 18px;margin:0 0 18px;overflow:hidden}}
 .ls:before{{content:"";position:absolute;right:-46px;top:-46px;width:150px;height:150px;border-radius:50%;background:var(--bg)}}
 .ls .no{{position:relative;font-family:Jost;font-weight:300;font-size:30px;color:var(--ac);line-height:1}}
+.ls .no small{{font-size:10px;letter-spacing:.3em;margin-right:8px;vertical-align:middle;color:#9C8775}}
 .ls .en{{position:relative;font-family:Jost;font-size:10px;letter-spacing:.3em;color:#9C8775;margin-top:10px}}
 .ls h3{{position:relative;font-family:"Shippori Mincho",serif;font-weight:600;font-size:23px;letter-spacing:.12em;margin:6px 0 0}}
 .ls p{{position:relative;font-size:12.5px;line-height:1.9;color:#6B6058;margin:6px 0 0}}
@@ -122,11 +123,11 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 .sns{{margin:30px 0 0;text-align:center}}.sns h2{{font-family:Jost;font-weight:400;font-size:10.5px;letter-spacing:.42em;color:#8C7B6E;margin:0 0 12px}}
 .sns a{{display:inline-block;margin:0 10px;color:#2B2622;text-decoration:none;font-family:Jost;font-size:14px;letter-spacing:.06em;border-bottom:1px solid #2B2622;padding-bottom:2px}}
 .ft{{text-align:center;font-size:10.5px;letter-spacing:.06em;color:#8C7B6E;margin-top:30px}}
-</style><script src="/assets/night.js?v=5"></script><script src="/assets/menu.js?v=7" defer></script><script src="/assets/v2sub.js?v=6" defer></script></head><body><div class="wrap">
-<header class="head"><img src="/assets/logo-s.png?v=2" width="74" height="74" alt="TOWN NOTES のロゴ">
-<h1>TOWN NOTES</h1><div class="kana">タウンノーツ</div>
-<p class="cp">関西の街の、調べ帳。</p>
-<p class="sub">関西の不動産屋が、街を調査して見つけたことを、<br>公式の情報つきで、2つのリストに書きとめています。</p>
+</style><script src="/assets/night.js?v=5"></script><script src="/assets/menu.js?v=8" defer></script><script src="/assets/v2sub.js?v=6" defer></script></head><body><div class="wrap">
+<header class="head"><img src="/assets/logo-s.png?v=2" width="74" height="74" alt="TOWN NOTE のロゴ">
+<h1>TOWN NOTE</h1><div class="kana">タウンノート</div>
+<p class="cp">関西の街の、1冊のノート。</p>
+<p class="sub">関西の不動産屋が、街を調査して見つけたことを、<br>公式の情報つきで、このノートに書きとめています。</p>
 <div class="nofilt">{SVG}</div><div class="mapcap">府県を押すと、その府県の数が出ます</div><div class="pp" id="pp" hidden></div></header>
 
 <section class="find"><h2><small>YOUR TOWN</small>あなたの街を探す</h2>
@@ -135,21 +136,21 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 <div class="chips">{"".join(f'<button type="button">{c}</button>' for c in CHIPS)}</div>
 <div class="res" id="res"></div></section>
 
-<section class="lists"><h2>2 LISTS</h2>
-<a class="ls" href="/" data-k="入口｜関西おでかけリスト" style="--ac:#B97A62;--bg:#FBEEE8;--c:#B97A62"><div class="no">01</div><div class="en">KANSAI ODEKAKE</div><h3>関西おでかけリスト</h3>
+<section class="lists"><h2>IN THIS NOTE　─　このノートの中身</h2>
+<a class="ls" href="/" data-k="入口｜関西おでかけリスト" style="--ac:#B97A62;--bg:#FBEEE8;--c:#B97A62"><div class="no"><small>PAGE</small>01</div><div class="en">KANSAI ODEKAKE</div><h3>関西おでかけリスト</h3>
 <p>イベント・新しいお店や施設を、公式ページつきで。<br>今週末に行ける所も、地図でも探せます。</p>
 <div class="st"><div><span>開催中</span><b id="o1">―</b></div><div><span>これから</span><b id="o2">―</b></div><div><span>入場無料</span><b id="o3">―</b></div></div>
 <div class="pv" id="opv"></div><div class="go">おでかけリストを開く<span>→</span></div></a>
-<a class="ls" href="/fudosan-list" data-k="入口｜関西不動産リスト" style="--ac:#4F6681;--bg:#EEF3FA;--c:#4F6681"><div class="no">02</div><div class="en">KANSAI REAL ESTATE</div><h3>関西不動産リスト</h3>
+<a class="ls" href="/fudosan-list" data-k="入口｜関西不動産リスト" style="--ac:#4F6681;--bg:#EEF3FA;--c:#4F6681"><div class="no"><small>PAGE</small>02</div><div class="en">KANSAI REAL ESTATE</div><h3>関西不動産リスト</h3>
 <p>地価・人口・できる物・制度を、公式の数字で。<br>あなたの街が、1年でどう動いたかがわかります。</p>
 <div class="st"><div><span>関西の街</span><b id="f1">―</b></div><div><span>上がった街</span><b id="f2">―</b></div><div><span>調べた数字</span><b id="f3">―</b></div></div>
 <div class="pv" id="fpv"></div><div class="go">不動産リストを開く<span>→</span></div></a></section>
 
-<section class="prom"><h2>OUR NOTES</h2><ol><li><b>公式だけ</b>公式ページ・<br>公式の数字だけ</li><li><b>6府県</b>どの府県も<br>同じように</li><li><b>毎日ふえる</b>見つけたら、<br>その日に足します</li></ol></section>
+<section class="prom"><h2>NOTE RULES　─　書きかたの約束</h2><ol><li><b>公式だけ</b>公式ページ・<br>公式の数字だけ</li><li><b>6府県</b>どの府県も<br>同じように</li><li><b>毎日ふえる</b>見つけたら、<br>その日に足します</li></ol></section>
 
 <nav class="cos"><a href="/fudosan.html" data-k="入口｜不動産のご相談"><small>REAL ESTATE</small><b>不動産のご相談</b><span>売却・査定、お家を売る前に大事なこと</span></a><a href="https://ig.me/m/fudousan_ai_si" data-k="入口｜おでかけ掲載"><small>LISTING</small><b>おでかけ掲載</b><span>新しいお店や、毎年のイベントのご紹介</span></a></nav>
 <div class="sns"><h2>FOLLOW</h2><a href="https://www.instagram.com/fudousan_ai_si/">Instagram</a><a href="https://www.threads.com/@fudousan_ai_si">Threads</a><a href="https://x.com/fudosan_ai_si">X</a></div>
-<div class="ft">ぴょんと街しらべ│TOWN NOTES</div></div>
+<div class="ft">ぴょんと街しらべ│TOWN NOTE</div></div>
 <script>(function(){{
 var PC={json.dumps(PC, ensure_ascii=False)};
 var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function c(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}
@@ -186,8 +187,8 @@ function find(v){{v=v.replace(/\\s/g,"");if(!v){{res.innerHTML="";return;}}var v
  res.innerHTML=h||'<div class="none">「'+esc(v)+'」はまだありません。調べて、リストに足していきます。</div>';}}
 q.oninput=function(){{Promise.all([pO,pF]).then(function(){{find(q.value)}});clearTimeout(tq);tq=setTimeout(function(){{if(q.value.trim())c("入口で探す："+q.value.trim())}},1500);}};
 document.querySelectorAll(".chips button").forEach(function(b){{b.onclick=function(){{q.value=b.textContent;Promise.all([pO,pF]).then(function(){{find(b.textContent)}});c("入口で探す："+b.textContent);}}}});
-c("表示：TOWN NOTES 入口"+(document.referrer&&!/usagi-odekake/.test(document.referrer)?"（外から）":""));
-document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;c("クリック：TOWN NOTES 入口｜"+(a.getAttribute("data-k")||a.textContent.trim().slice(0,30)));}},true);
+c("表示：TOWN NOTE 入口"+(document.referrer&&!/usagi-odekake/.test(document.referrer)?"（外から）":""));
+document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;c("クリック：TOWN NOTE 入口｜"+(a.getAttribute("data-k")||a.textContent.trim().slice(0,30)));}},true);
 }})();</script></body></html>'''
 open(os.path.join(ROOT, "links/town-notes.html"), "w", encoding="utf-8").write(page)
 print("ok", len(page))

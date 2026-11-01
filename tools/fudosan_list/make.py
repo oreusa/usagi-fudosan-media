@@ -51,7 +51,7 @@ h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v
 h = h.replace('<h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p>',
               '<h1>関西不動産リスト</h1><p class="sub">関西の街を調査して見つけた数字を、<br>公式の資料つきで紹介しています</p>')
 h = re.sub(r'<div class="sea" id="sea">.*?</div><svg class="yr" id="yr".*?</svg>', "", h, count=1, flags=re.S)
-SW = ('<nav class="tnsw" aria-label="TOWN NOTES のリスト"><a href="./" data-k="切り替え｜おでかけ">関西おでかけリスト</a>'
+SW = ('<nav class="tnsw" aria-label="TOWN NOTE のリスト"><a href="./" data-k="切り替え｜おでかけ">関西おでかけリスト</a>'
       '<a href="fudosan-list" class="on" aria-current="page">関西不動産リスト</a></nav>')
 h = h.replace('<a class="ilk" href="illumination">関西イルミネーション 2026 日程一覧<span>→</span></a>',
               '<a class="ilk" href="chika-kansai">関西 __NT__の街 地価ランキング 2026<span>→</span></a>')
