@@ -13,3 +13,4 @@ html.top2 .tabs{display:grid!important;grid-template-columns:repeat(4,1fr)!impor
 html.top2 .tabs button{font-size:0!important;letter-spacing:0!important;padding:10px 0 9px!important}
 html.top2 .tabs button b{display:block!important;font-family:"Zen Kaku Gothic New",sans-serif!important;font-size:13.5px!important;font-weight:700!important;letter-spacing:.02em!important;margin:0!important;white-space:nowrap}
 html.top2 .tabs button b i{display:block!important;font-family:Jost,sans-serif!important;font-style:normal!important;font-size:11px!important;font-weight:400!important;color:#8C7B6E!important;margin-top:3px!important}
+html.top2 .qk b.ln{font-size:11.5px;letter-spacing:0}
