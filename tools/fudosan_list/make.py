@@ -76,24 +76,71 @@ if not (SOUBA_LIVE or TRY):
     FACTS = [o for o in FACTS if o["tab"] != "souba"]
 
 
+SB_MAX = {}
+
+
+def sb_card(o):
+    # 11/1 オーナー「もう少し見やすく」「見やすく分かりやすくって大事」→ 売り買いは1行で比べる形（地域・値段・1年前との差・横の棒）
+    w = round(o["price"] / SB_MAX[o["kind"]] * 100)
+    c = "up" if o["chg"] > 0 else "down"
+    return (f'<a class="card sb" data-pref="{o["pref"]}" data-cat="souba" data-kind="{o["kind"]}" data-date="{o["date"]}" href="{E(o["url"])}">'
+            f'<div class="bd"><div class="d">{E(o["src"])}</div><div class="t"><span class="sa">{E(o["area"])}</span>'
+            f'<span class="sp">{o["price"]:,}<small>万円</small></span><span class="sc {c}">{o["chg"]:+.1f}%</span></div>'
+            f'<i class="sbb" style="--w:{w}%"></i><div class="sbs">{E(o["sub"])}</div><div class="m"></div></div><div class="go">→</div></a>')
+
+
 def card(o):
+    if o["tab"] == "souba":
+        return sb_card(o)
     return (f'<a class="card" data-pref="{o["pref"]}" data-cat="{o["tab"]}" data-date="{o["date"]}" href="{E(o["url"])}">'
             f'<div class="bd"><div class="d">{E(o["src"])}</div><div class="t">{E(o["t"]).replace("｜", "<br>" if o["tab"] == "souba" else "　")}</div>'
             f'<div class="m">{E(o["m"])}</div></div><div class="go">→</div></a>')
 
 
 blocks = []
+SB_HEAD = ('<div class="sbk" role="group" aria-label="家の種類"><button type="button" data-k="m" class="on">中古マンション</button>'
+           '<button type="button" data-k="k">中古一戸建て</button></div>'
+           '<p class="sbn">2026年7〜9月に売れた値段の平均と、<br>1年前からの変化です（近畿レインズ）。押すと元の資料が開きます。</p>')
+SB_CSS = """<style>
+.sbk{display:flex;gap:0;margin:2px 0 10px;border:1px solid #D8D2CB;border-radius:999px;padding:3px}
+.sbk button{flex:1;border:0;background:none;border-radius:999px;padding:8px 0;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:13.5px;color:#8C7B6E;cursor:pointer}
+.sbk button.on{background:#2B2622;color:#fff}
+.sbn{font-size:12px;line-height:1.8;color:#8C7B6E;margin:0 0 12px;text-align:center}
+.paper .it:has(.card.sb){margin-bottom:8px!important}
+html body .paper .it .card.sb{padding:13px 46px 12px 16px!important}
+html body .paper .it .card.sb .v2c,html body .paper .it .card.sb .v2d,html body .paper .it .card.sb .d{display:none!important}
+html body .paper .card.sb .t{display:grid!important;grid-template-columns:minmax(0,1fr) auto auto;align-items:baseline;gap:0 10px;margin:0!important}
+.card.sb .sa{font-family:"Shippori Mincho",serif;font-weight:600;font-size:15.5px;line-height:1.35}
+.card.sb .sp{font-family:Jost,sans-serif;font-weight:500;font-size:21px;letter-spacing:.01em;color:#2B2622;white-space:nowrap}
+.card.sb .sp small{font-family:"Zen Kaku Gothic New",sans-serif;font-size:11.5px;font-weight:700;margin-left:2px}
+.card.sb .sc{font-family:Jost,sans-serif;font-size:12.5px;font-weight:500;border-radius:999px;padding:2px 8px;white-space:nowrap;min-width:3.6em;text-align:center}
+.card.sb .sc.up{background:#F6E7E1;color:#A9583F}.card.sb .sc.down{background:#E7ECF2;color:#4F6681}
+.card.sb .sbb{display:block;height:4px;border-radius:2px;background:#EEEAE6;margin:8px 0 6px;position:relative;overflow:hidden}
+.card.sb .sbb:after{content:"";position:absolute;left:0;top:0;bottom:0;width:var(--w);background:var(--pc);border-radius:2px;opacity:.75}
+.card.sb .sbs{font-size:11.5px;color:#8C7B6E;letter-spacing:.02em}
+html body .paper .it .card.sb .go{top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;width:26px!important;height:26px!important;font-size:13px!important;right:12px!important}
+</style>
+<script>(function(){var B=document.querySelector(".blk.b-old");if(!B)return;B.dataset.k="m";
+function ap(){var on=document.querySelector("#flt button.on"),pf=on?on.textContent:"すべて";B.querySelectorAll(".it").forEach(function(w){var c=w.querySelector(".card");if(!c)return;w.style.display=(c.dataset.kind===B.dataset.k&&(pf==="すべて"||w.getAttribute("data-pref")===pf))?"":"none";});}
+B.querySelectorAll(".sbk button").forEach(function(b){b.onclick=function(){B.dataset.k=b.dataset.k;B.querySelectorAll(".sbk button").forEach(function(x){x.classList.toggle("on",x===b)});ap();try{navigator.sendBeacon&&localStorage.getItem("usagi_owner")!=="1"&&navigator.sendBeacon("/c",JSON.stringify({k:"売り買い："+b.textContent}))}catch(e){}};});
+document.addEventListener("click",function(e){if(e.target.closest("#flt"))setTimeout(ap,10);});ap();})();</script>"""
 for key, cls, en, jp, head in TABS:
     items = [o for o in FACTS if o["tab"] == key]
     items.sort(key=lambda o: (ORDER.index(o["pref"]), o["date"]), reverse=False)
     # 府県が偏らないように、府県を順番に1枚ずつ並べる
     by = {p: sorted([o for o in items if o["pref"] == p], key=lambda o: (o.get("pin", 0), o["date"]), reverse=True) for p in ORDER}
     seq = []
+    if key == "souba":
+        for k in ("m", "k"):
+            SB_MAX[k] = max(o["price"] for o in items if o["kind"] == k)
+        by = {}
+        seq = sorted(items, key=lambda o: (o["kind"] != "m", ORDER.index(o["pref"]), FACTS.index(o)))
     while any(by.values()):
         for p in ORDER:
             if by[p]:
                 seq.append(by[p].pop(0))
-    blocks.append(f'<div class="blk {cls}"><div class="wk hd2"><span class="en2">{en}</span><span class="jp2">{head}</span></div>'
+    extra = SB_HEAD if key == "souba" else ""
+    blocks.append(f'<div class="blk {cls}"><div class="wk hd2"><span class="en2">{en}</span><span class="jp2">{head}</span></div>{extra}'
                   + "\n".join(card(o) for o in seq) + "</div>")
 
 paper = ('<div class="paper">' + "\n".join(blocks) +
@@ -155,6 +202,8 @@ if(bar.nextSibling!==top)bar.parentNode.insertBefore(top,bar.nextSibling);}
 mount();document.addEventListener("click",function(e){if(e.target.closest(".tabs,#flt"))setTimeout(mount,80);});})();</script>"""
 MOUNT = MOUNT.replace("__NTABS__", str(len(TABS))).replace("__NNUM__", str(len(TABS) - 2))
 h = h.replace("</body>", MOUNT + "</body>", 1)
+if any(t[0] == "souba" for t in TABS):
+    h = h.replace("</body>", SB_CSS + "</body>", 1)
 
 
 # ---- 下のバーの「街で探す」「新着」（11/1 オーナー「完全別項目で分けろよ」「作る前に工夫考えろよ」）
