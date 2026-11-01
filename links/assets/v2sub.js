@@ -5,11 +5,11 @@ var st=document.createElement("style");st.textContent=":root{--ink:#1C1C1C;--acc
 var I={now:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>',up:'<svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>',map:'<svg viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>',inn:'<svg viewBox="0 0 24 24"><path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/></svg>'};
 function goF(){
 /* 11/1 オーナー「バーの中身も不動産リストで、完全別項目で分けろよ」→ 不動産リスト用の下のバー。
-   上のタブ（地価・人口…）と同じ物は並べない。街で探す・ランキング・新着・売る前に。 */
-var F={q:'<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>',rk:'<svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V5M16 20v-7M22 20H2"/></svg>',nw:'<svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>',ur:'<svg viewBox="0 0 24 24"><path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/></svg>'};
-var here=/\/fudosan-list/.test(location.pathname),rk=/\/chika-osaka/.test(location.pathname);
+   上のタブ（地価・人口…）と同じ物は並べない。街で探す・地図・ランキング・売る前に（新着は MENU）。 */
+var F={q:'<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>',rk:'<svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V5M16 20v-7M22 20H2"/></svg>',mp:'<svg viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>',ur:'<svg viewBox="0 0 24 24"><path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/></svg>'};
+var here=/\/fudosan-list/.test(location.pathname),rk=/\/chika-/.test(location.pathname);
 var bar=document.createElement("nav");bar.id="v2bar";bar.setAttribute("aria-label","すぐ移動");
-bar.innerHTML='<a data-m="q">'+F.q+'<span>街で探す</span></a><a data-h="/chika-osaka"'+(rk?' class="cur"':'')+'>'+F.rk+'<span>ランキング</span></a><a data-m="new">'+F.nw+'<span>新着</span></a><a data-h="/uru.html">'+F.ur+'<span>売る前に</span></a><button class="mn" type="button"><i></i>MENU</button>';
+bar.innerHTML='<a data-m="q">'+F.q+'<span>街で探す</span></a><a data-m="map">'+F.mp+'<span>地図</span></a><a data-h="/chika-kansai"'+(rk?' class="cur"':'')+'>'+F.rk+'<span>ランキング</span></a><a data-h="/uru.html">'+F.ur+'<span>売る前に</span></a><button class="mn" type="button"><i></i>MENU</button>';
 bar.querySelectorAll("a").forEach(function(a){a.setAttribute("data-k","下のバー｜"+a.textContent);
  if(a.dataset.h){a.href=a.dataset.h;return;}
  if(here&&window.FQ){a.href="#";a.onclick=function(e){e.preventDefault();window.FQ.open(a.dataset.m);};}
@@ -19,7 +19,7 @@ document.body.appendChild(bar);bar.classList.add("on");document.documentElement.
 window.V2BAR=bar;
 }
 function go(){
-if(/\/(fudosan-list|chika-osaka)/.test(location.pathname))return goF();
+if(/^\/(fudosan-list|chika-|machi\/)/.test(location.pathname))return goF();
 var bar=document.createElement("nav");bar.id="v2bar";bar.setAttribute("aria-label","すぐ移動");
 var inn=/\/tomari/.test(location.pathname);
 bar.innerHTML='<a data-h="/?v2t=0">'+I.now+'<span>開催中</span></a><a data-h="/?v2t=1">'+I.up+'<span>これから</span></a><a data-h="/?v2t=map">'+I.map+'<span>地図</span></a><a data-h="/tomari.html"'+(inn?' class="cur"':'')+'>'+I.inn+'<span>泊まり</span></a><button class="mn" type="button"><i></i>MENU</button>';

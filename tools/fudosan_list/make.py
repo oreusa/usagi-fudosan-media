@@ -45,7 +45,7 @@ drop(r'開催中 / これから split')             # 開催中・これから�
 drop(r'"開催中":\["NOW ON"')                 # 欄の見出しの英字（下で直接書く）
 drop(r'近くの宿：')                          # 近くの宿
 h = re.sub(r'<script src="/townnotes/map\.js[^"]*" defer></script>', "", h)
-h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v2sub.js?v=3" defer></script>', h)
+h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v2sub.js?v=4" defer></script>', h)
 
 # ---- 見出し
 h = h.replace('<h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p>',
@@ -54,7 +54,7 @@ h = re.sub(r'<div class="sea" id="sea">.*?</div><svg class="yr" id="yr".*?</svg>
 SW = ('<nav class="tnsw" aria-label="TOWN NOTES のリスト"><a href="./" data-k="切り替え｜おでかけ">関西おでかけリスト</a>'
       '<a href="fudosan-list" class="on" aria-current="page">関西不動産リスト</a></nav>')
 h = h.replace('<a class="ilk" href="illumination">関西イルミネーション 2026 日程一覧<span>→</span></a>',
-              '<a class="ilk" href="chika-osaka">大阪市24区 地価ランキング 2026<span>→</span></a>')
+              '<a class="ilk" href="chika-kansai">関西 __NT__の街 地価ランキング 2026<span>→</span></a>')
 h = h.replace("この府県のおでかけは、これから増やしていきます", "この府県の分は、これから増やしていきます")
 
 # ---- カード
@@ -108,7 +108,7 @@ document.querySelectorAll(".paper a.card").forEach(function(a){var w=document.cr
 var P=["大阪","京都","兵庫","奈良","滋賀","和歌山"],F=document.getElementById("flt");
 ["すべて"].concat(P).forEach(function(p,i){var b=document.createElement("button");b.textContent=p;if(PC[p])b.style.setProperty("--pc",PC[p]);if(!i)b.className="on";b.onclick=function(){F.querySelectorAll("button").forEach(function(x){x.className="";});b.className="on";var v=0;document.querySelectorAll(".paper .it").forEach(function(w){var ok=p=="すべて"||w.getAttribute("data-pref")==p;w.style.display=ok?"":"none";if(ok)v++;});document.getElementById("none").style.display=v?"none":"";c("絞り込み（不動産）："+p);};F.appendChild(b);});
 document.addEventListener("click",function(ev){var s=ev.target.closest&&ev.target.closest(".v2c span.p");if(!s)return;ev.preventDefault();ev.stopPropagation();var b=[].find.call(F.querySelectorAll("button"),function(x){return x.textContent===s.dataset.p});if(b){b.click();scrollTo({top:F.getBoundingClientRect().top+scrollY-70,behavior:"smooth"});}},true);
-var n=document.querySelectorAll(".paper .it").length,x=document.createElement("div");x.className="cnt";x.innerHTML='<span>調べた数字<b>'+n+'</b>件</span><span>6府県<b>すべて</b></span>';var nn=document.getElementById("none");nn.parentNode.insertBefore(x,nn.nextSibling);
+var n=document.querySelectorAll(".paper .it").length,x=document.createElement("div");x.className="cnt";x.innerHTML='<span>関西の街<b>__NT__</b></span><span>調べた数字<b>'+n+'</b>件</span>';var nn=document.getElementById("none");nn.parentNode.insertBefore(x,nn.nextSibling);
 c("表示：不動産リスト"+(document.referrer&&!/usagi-odekake/.test(document.referrer)?"（外から）":""));
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;var k=a.getAttribute("data-k");if(!k){var t=a.querySelector(".t");k=t?t.textContent:a.textContent;}c("クリック：不動産リスト｜"+k);},true);
 })();</script>'''
@@ -143,21 +143,9 @@ h = h.replace("</body>", MOUNT + "</body>", 1)
 # ---- 下のバーの「街で探す」「新着」（11/1 オーナー「完全別項目で分けろよ」「作る前に工夫考えろよ」）
 # 開く人が知りたいのは「自分の街の数字」→ 市・区・駅の名前で探せるようにする。新着はまた見に来る理由。
 from collections import Counter
-cnt = {p: Counter() for p in ORDER}
-for o in FACTS:
-    for w in set(re.findall(r"[一-龥ヶヵ]{1,5}(?:駅|(?:区|市|町)(?![一-龥]*駅))", o["t"])):
-        if len(w) >= 2 and w not in ("大阪市", "京都市", "神戸市", "市町") and not w.endswith("府の市"):
-            cnt[o["pref"]][w] += 1
-# 府県が偏らないように、府県を順番に1つずつ
-rank = {p: [w for w, _ in cnt[p].most_common()] for p in ORDER}
-PLACES = []
-while len(PLACES) < 18 and any(rank.values()):
-    for p in ORDER:
-        if rank[p] and len(PLACES) < 18:
-            w = rank[p].pop(0)
-            if w not in PLACES:
-                PLACES.append(w)
-FQ = r"""<style>#fq{display:none;margin:6px 0 24px}html.fq-on #fq{display:block}html.fq-on .paper:not(#fq){display:none}#fq.paper{display:none}html.fq-on #fq.paper{display:block}
+# 府県が偏らないように、6府県からよく探されそうな街を選ぶ（11/1 全部の街を入れたので、候補は入口だけ）
+PLACES = ["北区", "吹田市", "豊中市", "中京区", "宇治市", "神戸市中央区", "西宮市", "姫路市", "奈良市", "生駒市", "大津市", "草津市", "和歌山市", "田辺市"]
+FQ = r"""<style>#fq{display:none;margin:6px 0 24px}html.fq-on .paper:not(#fq){display:none}#fq.paper{display:none}html.fq-on #fq.paper{display:block}
 #fq .fh{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 12px;padding:0 2px 8px;border-bottom:1px solid #D6CCC1}
 #fq .fh b{font-family:"Shippori Mincho",serif;font-size:17px;font-weight:600;color:#2B2622;letter-spacing:.06em}
 #fq .fh button{border:0;background:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;font-weight:700;color:#8C7B6E;cursor:pointer;padding:4px 0}
@@ -166,31 +154,76 @@ FQ = r"""<style>#fq{display:none;margin:6px 0 24px}html.fq-on #fq{display:block}
 #fq .fc{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
 #fq .fc button{border:1px solid #D6CCC1;background:#fff;border-radius:999px;padding:6px 12px;font-family:"Zen Kaku Gothic New",sans-serif;font-size:12.5px;font-weight:700;color:#5C5048;cursor:pointer}
 #fq .fn{font-family:"Zen Kaku Gothic New",sans-serif;font-size:12.5px;color:#8C7B6E;margin:4px 2px 10px}
-#fq .fr .it{display:block!important}#fq .frq{display:block;width:100%;margin:4px 0 8px;padding:13px;border:0;border-radius:12px;background:#3A2F28;color:#fff;font-family:"Zen Kaku Gothic New",sans-serif;font-size:13.5px;font-weight:700;cursor:pointer}#fq .frq:disabled{background:#8C7B6E}</style>
+#fq .fr .it{display:block!important}#fq .frq{display:block;width:100%;margin:4px 0 8px;padding:13px;border:0;border-radius:12px;background:#3A2F28;color:#fff;font-family:"Zen Kaku Gothic New",sans-serif;font-size:13.5px;font-weight:700;cursor:pointer}#fq .frq:disabled{background:#8C7B6E}
+#fq .tw{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;background:#fff;text-decoration:none;color:#2B2622;padding:13px 14px;margin:0 0 8px;border-left:3px solid var(--pc);box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);font-family:"Zen Kaku Gothic New",sans-serif}
+#fq .tw i{font-style:normal;font-size:11px;font-weight:700;color:var(--pc);border:1px solid var(--pc);border-radius:999px;padding:1px 8px}
+#fq .tw b{font-size:15px}#fq .tw b small{display:block;font-size:11px;font-weight:500;color:#8C7B6E;margin-top:2px}
+#fq .tw em{font-style:normal;font-family:Jost,sans-serif;font-weight:500;font-size:17px}
+#fq .sec{font-family:Jost,sans-serif;font-size:10px;letter-spacing:.3em;color:#9C8775;margin:16px 2px 8px}
+#fq .mpf{display:flex;flex-wrap:nowrap;gap:0 12px;justify-content:center;overflow-x:auto;padding:4px 0 10px}
+#fq .mpf button{flex:none;border:0;background:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:13.5px;font-weight:700;color:var(--pc,#5C5048);padding:4px 0;border-bottom:2px solid transparent;cursor:pointer}
+#fq .mpf button.on{border-bottom-color:currentColor}
+#fq .mpw{background:#fff;border:1px solid #ECECEC;padding:8px}#fq .mpw svg{display:block;width:100%;height:auto;max-height:62vh;touch-action:manipulation}
+#fq .mpw path{cursor:pointer;stroke:#fff;stroke-width:.6;vector-effect:non-scaling-stroke}#fq .mpw path.sel{stroke:#2B2622;stroke-width:2}
+#fq .lg{display:flex;flex-wrap:wrap;gap:6px 14px;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11px;color:#7A6E66;margin:8px 2px 0}#fq .lg span:before{content:"";display:inline-block;width:12px;height:12px;vertical-align:-2px;margin-right:4px;background:var(--b)}
+#fq .mpi{min-height:10px;margin-top:10px}</style>
 <script>(function(){var PL=__PLACES__;
+var PC={"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"},PS=["大阪","京都","兵庫","奈良","滋賀","和歌山"];
 var O=(function(){try{return localStorage.getItem("usagi_owner")==="1";}catch(e){return false;}})();function c(k){if(O)return;try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
 var paper=document.querySelector(".paper"),box=document.createElement("div");box.id="fq";box.className="paper";paper.parentNode.insertBefore(box,paper);
 var all=[].slice.call(paper.querySelectorAll(".it"));
-function show(list,note){var r=box.querySelector(".fr");r.className="fr blk";r.innerHTML="";box.querySelector(".fn").textContent=note;list.forEach(function(w){r.appendChild(w.cloneNode(true))});}
-function find(q){q=q.replace(/\s/g,"");if(!q){show([],"市・区・駅の名前を入れるか、下から選んでください");return;}
- var hit=all.filter(function(w){return w.textContent.replace(/\s/g,"").indexOf(q)>=0});
- show(hit,hit.length?"「"+q+"」の数字 "+hit.length+"件":"「"+q+"」の数字はまだありません。");
- var r=box.querySelector(".fr");if(!hit.length&&q.length>=2){var b=document.createElement("button");b.type="button";b.className="frq";b.textContent="「"+q+"」を調べてほしい";b.onclick=function(){c("調べてほしい："+q);b.disabled=true;b.textContent="受け付けました。調べて、このリストに足します";};r.appendChild(b);}}
+var TW=null,TWP=fetch("/assets/towns.json").then(function(r){return r.json()}).then(function(d){TW=d;return d}).catch(function(){TW=[];return[]});
+function pct(v){return (v>0?"+":v<0?"−":"±")+Math.abs(v).toFixed(1)+"%"}
+function esc(s){return String(s).replace(/[&<>"]/g,function(x){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[x]})}
+function twRow(t){return '<a class="tw" style="--pc:'+PC[t.p]+'" href="/machi/'+t.id+'" data-k="街｜'+esc(t.n)+'"><i>'+t.p+'</i><b>'+esc(t.n)+'<small>住宅地 1年の動き・'+t.p+'で'+t.rk+'位／'+t.of+'</small></b><em style="color:'+(t.r8>0?PC[t.p]:"#7A6E66")+'">'+pct(t.r8)+'</em></a>'}
+function find(q){q=q.replace(/\s/g,"");var r=box.querySelector(".fr"),fn=box.querySelector(".fn");r.className="fr blk";r.innerHTML="";
+ if(!q){fn.textContent="市・区・町の名前を入れるか、下から選んでください（関西 "+(TW?TW.length:"")+" の街）";return;}
+ var qq=q.replace(/(市|区|町|村|駅)$/,"");
+ var tw=(TW||[]).filter(function(t){return t.n.indexOf(qq)>=0||t.s.indexOf(qq)>=0||(q.length>=3&&q.indexOf(t.s.replace(/(市|町|村)$/,""))>=0&&t.s.replace(/(市|町|村)$/,"").length>=2)}).slice(0,20);
+ var hit=all.filter(function(w){return w.textContent.replace(/\s/g,"").indexOf(qq)>=0});
+ fn.textContent=tw.length||hit.length?"「"+q+"」　街 "+tw.length+"・調べた数字 "+hit.length+"件":"「"+q+"」はまだありません。";
+ if(tw.length){r.insertAdjacentHTML("beforeend",'<div class="sec">TOWN　街の地価</div>'+tw.map(twRow).join(""));}
+ if(hit.length){r.insertAdjacentHTML("beforeend",'<div class="sec">NUMBERS　調べた数字</div>');hit.forEach(function(w){r.appendChild(w.cloneNode(true))});}
+ if(q.length>=2){var b=document.createElement("button");b.type="button";b.className="frq";b.textContent=(tw.length||hit.length?"「"+q+"」をもっと細かく調べてほしい":"「"+q+"」を調べてほしい");b.onclick=function(){c("調べてほしい："+q);b.disabled=true;b.textContent="受け付けました。調べて、このリストに足します";};r.appendChild(b);}}
+// ---- 地図（上がった街・下がった街を色で）
+var GEO=null;function geo(){return GEO?Promise.resolve(GEO):fetch("/townnotes/kansai.json").then(function(r){return r.json()}).then(function(d){GEO=d;return d})}
+function full(p){var cc=p.c||"";return (!cc||/郡$/.test(cc))?p.n:cc+p.n}
+function rings(g){return g.type==="Polygon"?g.coordinates:[].concat.apply([],g.coordinates)}
+function drawMap(pf){var w=box.querySelector(".mpw"),info=box.querySelector(".mpi");w.innerHTML='<p class="fn">地図を読みこんでいます…</p>';
+ Promise.all([geo(),TWP]).then(function(r){var g=r[0],by={};TW.forEach(function(t){by[t.p+"|"+t.n]=t});
+  var fs=g.muni.features.filter(function(f){return !pf||f.properties.p===pf});
+  var x0=1e9,y0=1e9,x1=-1e9,y1=-1e9;fs.forEach(function(f){rings(f.geometry).forEach(function(rg){rg.forEach(function(p){if(p[0]<x0)x0=p[0];if(p[0]>x1)x1=p[0];if(p[1]<y0)y0=p[1];if(p[1]>y1)y1=p[1]})})});
+  var k=Math.cos((y0+y1)/2*Math.PI/180),s=1000/Math.max((x1-x0)*k,y1-y0),W=(x1-x0)*k*s,H=(y1-y0)*s;
+  function P(p){return ((p[0]-x0)*k*s).toFixed(1)+","+((y1-p[1])*s).toFixed(1)}
+  var h='<svg viewBox="-6 -6 '+(W+12).toFixed(0)+' '+(H+12).toFixed(0)+'" role="img" aria-label="関西の地価の地図">';
+  fs.forEach(function(f){var n=full(f.properties),t=by[f.properties.p+"|"+n],fill,op=1;
+   if(!t)fill="#F4F4F4";else if(t.r8>0){fill=PC[t.p];op=(.22+.78*Math.min(t.r8,6)/6).toFixed(2)}else fill=t.r8<0?"#CFCFCF":"#E2E2E2";
+   var d="";rings(f.geometry).forEach(function(rg){d+="M"+rg.map(P).join("L")+"Z"});
+   h+='<path d="'+d+'" fill="'+fill+'" fill-opacity="'+op+'" data-n="'+esc(n)+'" data-p="'+f.properties.p+'"><title>'+esc(n)+(t?" "+pct(t.r8):"")+'</title></path>'});
+  w.innerHTML=h+'</svg>';info.innerHTML='<p class="fn">街を押すと、その街の数字が出ます。</p>';
+  w.querySelector("svg").addEventListener("click",function(e){var pth=e.target.closest("path");if(!pth)return;w.querySelectorAll("path.sel").forEach(function(x){x.classList.remove("sel")});pth.classList.add("sel");pth.parentNode.appendChild(pth);
+   var t=by[pth.dataset.p+"|"+pth.dataset.n];info.innerHTML=t?twRow(t):'<p class="fn">'+esc(pth.dataset.n)+'は、府県の資料に住宅地の平均がありません。</p><button type="button" class="frq">'+esc(pth.dataset.n)+'を調べてほしい</button>';
+   var rb=info.querySelector(".frq");if(rb)rb.onclick=function(){c("調べてほしい："+pth.dataset.n);rb.disabled=true;rb.textContent="受け付けました。調べて、このリストに足します";};c("地図｜"+pth.dataset.n);});
+ });}
 var tq;
 function open(m){document.documentElement.classList.add("fq-on");
  if(m==="new"){box.innerHTML='<div class="fh"><b>新着の数字</b><button type="button">リストにもどる ×</button></div><div class="fn"></div><div class="fr"></div>';
-  var l=all.slice().sort(function(a,b){return (b.querySelector("a").dataset.date||"").localeCompare(a.querySelector("a").dataset.date||"")}).slice(0,12);show(l,"最近足した数字 "+l.length+"件");c("不動産リスト｜新着");}
- else{box.innerHTML='<div class="fh"><b>街で探す</b><button type="button">リストにもどる ×</button></div><input class="fi" type="search" placeholder="例：北区、西宮、丹波橋" enterkeyhint="search"><div class="fc"></div><div class="fn"></div><div class="fr"></div>';
+  var l=all.slice().sort(function(a,b){return (b.querySelector("a").dataset.date||"").localeCompare(a.querySelector("a").dataset.date||"")}).slice(0,12);var r=box.querySelector(".fr");r.className="fr blk";box.querySelector(".fn").textContent="最近足した数字 "+l.length+"件";l.forEach(function(w){r.appendChild(w.cloneNode(true))});c("不動産リスト｜新着");}
+ else if(m==="map"){box.innerHTML='<div class="fh"><b>地図で見る</b><button type="button">リストにもどる ×</button></div><nav class="mpf"></nav><div class="mpw"></div><div class="lg"><span style="--b:linear-gradient(90deg,#E9D3C9,#B97A62)">色が濃いほど上がった</span><span style="--b:#CFCFCF">下がった</span><span style="--b:#E2E2E2">横ばい</span><span style="--b:#F4F4F4;outline:1px solid #E4E4E4">数字なし</span></div><div class="mpi"></div><p class="fn" style="margin-top:12px">住宅地の1年の動き（令和8年地価公示、2026年1月1日時点）</p>';
+  var nv=box.querySelector(".mpf");["すべて"].concat(PS).forEach(function(p,i){var b=document.createElement("button");b.type="button";b.textContent=p;if(PC[p])b.style.setProperty("--pc",PC[p]);if(!i)b.className="on";b.onclick=function(){nv.querySelectorAll("button").forEach(function(x){x.className=""});b.className="on";drawMap(i?p:"");c("地図：府県 "+p);};nv.appendChild(b);});
+  drawMap("");c("不動産リスト｜地図");}
+ else{box.innerHTML='<div class="fh"><b>街で探す</b><button type="button">リストにもどる ×</button></div><input class="fi" type="search" placeholder="例：吹田、西宮、草津" enterkeyhint="search"><div class="fc"></div><div class="fn"></div><div class="fr"></div>';
   var fc=box.querySelector(".fc"),fi=box.querySelector(".fi");PL.forEach(function(p){var b=document.createElement("button");b.type="button";b.textContent=p;b.onclick=function(){fi.value=p;find(p);c("街で探す："+p);};fc.appendChild(b);});
-  fi.oninput=function(){find(fi.value);clearTimeout(tq);tq=setTimeout(function(){if(fi.value.trim())c("街で探す："+fi.value.trim())},1500);};find("");c("不動産リスト｜街で探す");}
+  fi.oninput=function(){find(fi.value);clearTimeout(tq);tq=setTimeout(function(){if(fi.value.trim())c("街で探す："+fi.value.trim())},1500);};find("");TWP.then(function(){if(!fi.value)find("")});c("不動産リスト｜街で探す");}
  box.querySelector(".fh button").onclick=close;
  if(window.V2BAR)window.V2BAR.querySelectorAll("a[data-m]").forEach(function(a){a.classList.toggle("cur",a.dataset.m===m)});
  scrollTo({top:box.getBoundingClientRect().top+scrollY-14,behavior:"smooth"});}
 function close(){document.documentElement.classList.remove("fq-on");box.innerHTML="";if(window.V2BAR)window.V2BAR.querySelectorAll("a[data-m]").forEach(function(a){a.classList.remove("cur")});scrollTo({top:paper.getBoundingClientRect().top+scrollY-120,behavior:"smooth"});}
 window.FQ={open:open,close:close};
-var q=(location.search.match(/[?&]fq=(q|new)/)||[])[1];if(q){history.replaceState(null,"",location.pathname+location.hash);addEventListener("load",function(){setTimeout(function(){open(q)},200)});}
+var q=(location.search.match(/[?&]fq=(q|new|map)/)||[])[1];if(q){history.replaceState(null,"",location.pathname+location.hash);addEventListener("load",function(){setTimeout(function(){open(q)},200)});}
 })();</script>""".replace("__PLACES__", json.dumps(PLACES, ensure_ascii=False))
 h = h.replace("</body>", FQ + "</body>", 1)
 
+h = h.replace("__NT__", str(len(json.load(open(os.path.join(ROOT, "links/assets/towns.json"), encoding="utf-8")))))
 open(OUT, "w", encoding="utf-8").write(h)
 print("ok", "live" if live else "preview(noindex)", len(FACTS), "cards", len(h), "bytes")
