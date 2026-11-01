@@ -46,7 +46,7 @@ drop(r'開催中 / これから split')             # 開催中・これから�
 drop(r'"開催中":\["NOW ON"')                 # 欄の見出しの英字（下で直接書く）
 drop(r'近くの宿：')                          # 近くの宿
 h = re.sub(r'<script src="/townnotes/map\.js[^"]*" defer></script>', "", h)
-h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v2sub.js?v=7" defer></script>', h)
+h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v2sub.js?v=8" defer></script>', h)
 
 # ---- 見出し
 h = h.replace('<h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p>',
@@ -199,7 +199,7 @@ if(bar.previousSibling!==tg)bar.parentNode.insertBefore(tg,bar);
 var top=document.querySelector(".tn-top");if(!top){top=document.createElement("div");top.className="tn-top"}
 ["flt","none"].forEach(function(id){var e=document.getElementById(id);if(e&&e.parentNode!==top)top.appendChild(e)});
 if(bar.nextSibling!==top)bar.parentNode.insertBefore(top,bar.nextSibling);}
-mount();document.addEventListener("click",function(e){if(e.target.closest(".tabs,#flt"))setTimeout(mount,80);});})();</script>"""
+/* 11/1 オーナー「おでかけのようにスムーズに」→ タブを押すと見出しが一瞬ずれていた（80ms あとに付け直していた）。描く前にすぐ付け直す */mount();var mq=0;new MutationObserver(function(){if(mq)return;mq=1;mount();mq=0;}).observe(document.querySelector(".paper")||document.body,{childList:true,subtree:true});})();</script>"""
 MOUNT = MOUNT.replace("__NTABS__", str(len(TABS))).replace("__NNUM__", str(len(TABS) - 2))
 h = h.replace("</body>", MOUNT + "</body>", 1)
 if any(t[0] == "souba" for t in TABS):
@@ -211,7 +211,7 @@ if any(t[0] == "souba" for t in TABS):
 from collections import Counter
 # 府県が偏らないように、6府県からよく探されそうな街を選ぶ（11/1 全部の街を入れたので、候補は入口だけ）
 PLACES = ["北区", "吹田市", "豊中市", "中京区", "宇治市", "神戸市中央区", "西宮市", "姫路市", "奈良市", "生駒市", "大津市", "草津市", "和歌山市", "田辺市"]
-FQ = r"""<style>#fq{display:none;margin:6px 0 24px}html.fq-on .paper:not(#fq){display:none}#fq.paper{display:none}html.fq-on #fq.paper{display:block}
+FQ = r"""<style>#fq{display:none;margin:6px 0 24px}html.fq-on #fq.paper{animation:fqin .24s ease-out}@keyframes fqin{from{opacity:0;transform:translateY(8px)}}@media (prefers-reduced-motion:reduce){html.fq-on #fq.paper{animation:none}}html.fq-on .paper:not(#fq){display:none}#fq.paper{display:none}html.fq-on #fq.paper{display:block}
 #fq .fh{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 12px;padding:0 2px 8px;border-bottom:1px solid #D6CCC1}
 #fq .fh b{font-family:"Shippori Mincho",serif;font-size:17px;font-weight:600;color:#2B2622;letter-spacing:.06em}
 #fq .fh button{border:0;background:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;font-weight:700;color:#8C7B6E;cursor:pointer;padding:4px 0}
@@ -297,7 +297,7 @@ function drawMap(pf,city){var w=box.querySelector(".mpw"),info=box.querySelector
    var rb=info.querySelector(".frq");if(rb)rb.onclick=function(){c("調べてほしい："+pth.dataset.n);rb.disabled=true;rb.textContent="受け付けました。調べて、このリストに足します";};c("地図｜"+pth.dataset.n);});
  });}
 var tq;
-function open(m){document.documentElement.classList.add("fq-on");
+/* 11/1 オーナー「おでかけのようにスムーズに」→ 開く前の場所を覚えて、閉じたらそこへ戻す。開くときは長いスクロールをせず、すっと出す */var sy=null;function open(m){if(!document.documentElement.classList.contains("fq-on"))sy=scrollY;document.documentElement.classList.add("fq-on");
  if(m==="new"){box.innerHTML='<div class="fh"><b>新着の数字</b><button type="button">リストにもどる ×</button></div><div class="fn"></div><div class="fr"></div>';
   var l=all.slice().sort(function(a,b){return (b.querySelector("a").dataset.date||"").localeCompare(a.querySelector("a").dataset.date||"")}).slice(0,12);var r=box.querySelector(".fr");r.className="fr blk";box.querySelector(".fn").textContent="最近足した数字 "+l.length+"件";l.forEach(function(w){r.appendChild(w.cloneNode(true))});c("不動産リスト｜新着");}
  else if(m==="map"){box.innerHTML='<div class="fh"><b>地図で見る</b><button type="button">リストにもどる ×</button></div><nav class="mpf"></nav><nav class="mpf mpc"></nav><div class="mpw nofilt"></div><div class="lg"><span style="--b:linear-gradient(90deg,#E9D3C9,#B97A62)">色が濃いほど上がった</span><span style="--b:#CFCFCF">下がった</span><span style="--b:#E2E2E2">横ばい</span><span style="--b:#F4F4F4;outline:1px solid #E4E4E4">数字なし</span></div><div class="mpi"></div><p class="fn" style="margin-top:12px">住宅地の1年の動き（令和8年地価公示、2026年1月1日時点）</p>';
@@ -308,8 +308,8 @@ function open(m){document.documentElement.classList.add("fq-on");
   fi.oninput=function(){find(fi.value);clearTimeout(tq);tq=setTimeout(function(){if(fi.value.trim())c("街で探す："+fi.value.trim())},1500);};find("");TWP.then(function(){if(!fi.value)find("")});c("不動産リスト｜街で探す");}
  box.querySelector(".fh button").onclick=close;
  if(window.V2BAR)window.V2BAR.querySelectorAll("a[data-m]").forEach(function(a){a.classList.toggle("cur",a.dataset.m===m)});
- scrollTo({top:box.getBoundingClientRect().top+scrollY-14,behavior:"smooth"});}
-function close(){document.documentElement.classList.remove("fq-on");box.innerHTML="";if(window.V2BAR)window.V2BAR.querySelectorAll("a[data-m]").forEach(function(a){a.classList.remove("cur")});scrollTo({top:paper.getBoundingClientRect().top+scrollY-120,behavior:"smooth"});}
+ scrollTo({top:box.getBoundingClientRect().top+scrollY-14,behavior:"instant"});}
+function close(){document.documentElement.classList.remove("fq-on");box.innerHTML="";if(window.V2BAR)window.V2BAR.querySelectorAll("a[data-m]").forEach(function(a){a.classList.remove("cur")});scrollTo({top:sy!=null?sy:paper.getBoundingClientRect().top+scrollY-120,behavior:"instant"});sy=null;}
 window.FQ={open:open,close:close};
 var q=(location.search.match(/[?&]fq=(q|new|map)/)||[])[1];if(q){history.replaceState(null,"",location.pathname+location.hash);addEventListener("load",function(){setTimeout(function(){open(q)},200)});}
 })();</script>""".replace("__PLACES__", json.dumps(PLACES, ensure_ascii=False))
