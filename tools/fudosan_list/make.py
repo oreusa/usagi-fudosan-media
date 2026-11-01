@@ -45,7 +45,7 @@ drop(r'開催中 / これから split')             # 開催中・これから�
 drop(r'"開催中":\["NOW ON"')                 # 欄の見出しの英字（下で直接書く）
 drop(r'近くの宿：')                          # 近くの宿
 h = re.sub(r'<script src="/townnotes/map\.js[^"]*" defer></script>', "", h)
-h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v2sub.js?v=5" defer></script>', h)
+h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v2sub.js?v=6" defer></script>', h)
 
 # ---- 見出し
 h = h.replace('<h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p>',
@@ -168,8 +168,8 @@ FQ = r"""<style>#fq{display:none;margin:6px 0 24px}html.fq-on .paper:not(#fq){di
 #fq .mpf{display:flex;flex-wrap:nowrap;gap:0 12px;justify-content:center;overflow-x:auto;padding:4px 0 10px}
 #fq .mpf button{flex:none;border:0;background:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:13.5px;font-weight:700;color:var(--pc,#5C5048);padding:4px 0;border-bottom:2px solid transparent;cursor:pointer}
 #fq .mpf button.on{border-bottom-color:currentColor}#fq .mpc{padding-top:0}#fq .mpc:empty{display:none}#fq .mpc button{font-size:12.5px;color:#5C5048;border:1px solid #D6CCC1;border-radius:999px;padding:5px 12px}#fq .mpc button.on{background:#3A2F28;color:#fff;border-color:#3A2F28}
-#fq .mpw{background:#fff;border:1px solid #ECECEC;padding:8px}#fq .mpw svg{display:block;width:100%;height:auto;max-height:62vh;touch-action:manipulation}
-#fq .mpw path{cursor:pointer;stroke:#fff;stroke-width:.6;vector-effect:non-scaling-stroke}#fq .mpw path.sel{stroke:#2B2622;stroke-width:2}
+#fq .mpw{background:#fff;border:1px solid #ECECEC;padding:8px}#fq .mpw svg{display:block;width:100%;height:auto;max-height:70vh;touch-action:manipulation}
+#fq .mpw path{cursor:pointer;stroke:#fff;stroke-width:1.1;vector-effect:non-scaling-stroke}#fq .mpw path.sel{stroke:#2B2622;stroke-width:2}
 #fq .lg{display:flex;flex-wrap:wrap;gap:6px 14px;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11px;color:#7A6E66;margin:8px 2px 0}#fq .lg span:before{content:"";display:inline-block;width:12px;height:12px;vertical-align:-2px;margin-right:4px;background:var(--b)}
 #fq .mpi{min-height:10px;margin-top:10px}</style>
 <script>(function(){var PL=__PLACES__;
@@ -215,8 +215,8 @@ function drawMap(pf,city){var w=box.querySelector(".mpw"),info=box.querySelector
   fs.forEach(function(f){var key=f.properties.p+"|"+full(f.properties);if(seen[key])return;seen[key]=1;var n=full(f.properties),cty=cityOf(n);
    if(cty&&!city){grp[f.properties.p+"|"+cty]=grp[f.properties.p+"|"+cty]||{p:f.properties.p,n:cty,xs:[],ys:[],ar:0};var gg=grp[f.properties.p+"|"+cty],q=LB[key]||[0,0];gg.xs.push(X(q));gg.ys.push(Y(q));gg.ar+=ar[key];return;}
    var q=LB[key];if(!q)return;var t=by[key],nm=city?n.replace(city,""):n;
-   L.push({x:X(q),y:Y(q),a:all||!t?[nm]:[nm,pct(t.r8)],fs:all?24:30,c:t&&t.r8>0?PC[t.p]:"#6B6058",pri:ar[key]*(t?1:.3),n:n})});
-  Object.keys(grp).forEach(function(k2){var gg=grp[k2],mx=gg.xs.reduce(function(a,b){return a+b},0)/gg.xs.length,my=gg.ys.reduce(function(a,b){return a+b},0)/gg.ys.length;L.push({x:mx,y:my,a:[gg.n],fs:all?28:34,c:"#2B2622",pri:1e8,bold:1})});
+   L.push({x:X(q),y:Y(q),a:all||!t?[nm]:[nm,pct(t.r8)],fs:all?26:33,c:t&&t.r8>0?PC[t.p]:"#6B6058",pri:ar[key]*(t?1:.3),n:n})});
+  Object.keys(grp).forEach(function(k2){var gg=grp[k2],mx=gg.xs.reduce(function(a,b){return a+b},0)/gg.xs.length,my=gg.ys.reduce(function(a,b){return a+b},0)/gg.ys.length;L.push({x:mx,y:my,a:[gg.n],fs:all?30:37,c:"#2B2622",pri:1e8,bold:1})});
   L.sort(function(a,b){return b.pri-a.pri});
   var boxes=[],out="";function hit(b){if(b[0]<-6||b[1]<-6||b[2]>W+6||b[3]>H+6)return true;for(var i=0;i<boxes.length;i++){var o=boxes[i];if(b[0]<o[2]&&b[2]>o[0]&&b[1]<o[3]&&b[3]>o[1])return true}return false}
   L.forEach(function(l){var tries=[[0,0]],lines=l.a;
@@ -228,7 +228,7 @@ function drawMap(pf,city){var w=box.querySelector(".mpw"),info=box.querySelector
    if(!ok)return;boxes.push(ok.b);var cx=l.x+ok.o[0],cy=(ok.b[1]+ok.b[3])/2,n=ok.ln.length,ht=l.fs*1.12;
    if(ok.o[0]||ok.o[1])out+='<line x1="'+l.x.toFixed(0)+'" y1="'+l.y.toFixed(0)+'" x2="'+cx.toFixed(0)+'" y2="'+cy.toFixed(0)+'" stroke="#8C7B6E" stroke-width="1.4" vector-effect="non-scaling-stroke"/><circle cx="'+l.x.toFixed(0)+'" cy="'+l.y.toFixed(0)+'" r="'+(l.fs*.14).toFixed(1)+'" fill="#8C7B6E"/>';
    ok.ln.forEach(function(t,i){var y=cy-(n-1)*ht/2+i*ht;out+='<text x="'+cx.toFixed(0)+'" y="'+y.toFixed(0)+'" font-size="'+(i?l.fs*.82:l.fs).toFixed(0)+'" fill="'+(i?l.c:l.pf?l.c:"#2B2622")+'" font-weight="'+(l.pf||l.bold||!i?700:500)+'"'+(l.pf?' letter-spacing=".12em"':'')+(i?' font-family="Jost,sans-serif"':'')+'>'+esc(t)+'</text>'});});
-  h+='<g class="lbl" style="pointer-events:none;font-family:\'Zen Kaku Gothic New\',sans-serif;paint-order:stroke;stroke:#fff;stroke-width:'+(7).toFixed(0)+'px;stroke-linejoin:round;text-anchor:middle;dominant-baseline:central">'+out+'</g>';
+  h+='<g class="lbl" style="pointer-events:none;font-family:\'Zen Kaku Gothic New\',sans-serif;paint-order:stroke;stroke:#fff;stroke-width:'+(8.5).toFixed(1)+'px;stroke-linejoin:round;text-anchor:middle;dominant-baseline:central">'+out+'</g>';
   w.innerHTML=h+'</svg>';info.innerHTML='<p class="fn">'+(all?"府県を選ぶと、市・区・町の名前と数字が出ます。":"街を押すと、その街の数字が出ます。")+'</p>';
   var cb=box.querySelector(".mpc");cb.innerHTML="";if(pf&&CITY[pf]){[pf+"ぜんぶ"].concat(CITY[pf]).forEach(function(cn,i){var b=document.createElement("button");b.type="button";b.textContent=i?cn+"を大きく":cn;if((i&&cn===city)||(!i&&!city))b.className="on";b.onclick=function(){drawMap(pf,i?cn:"");c("地図：市 "+cn);};cb.appendChild(b);});}
   w.querySelector("svg").addEventListener("click",function(e){var pth=e.target.closest("path");if(!pth)return;w.querySelectorAll("path.sel").forEach(function(x){x.classList.remove("sel")});pth.classList.add("sel");pth.parentNode.insertBefore(pth,w.querySelector("g.lbl"));
