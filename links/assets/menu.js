@@ -2,8 +2,8 @@
    全ページ共通のメニュー。右上の三本線 → 右から出る紙。昼と夜の切り替えもここ（night.js）。
    ページを足すときは L に1行足すだけ。押された数は /c に「メニュー｜名前」で数える。 */
 (function(){
-  var P=location.pathname.replace(/^\/townnotes\//,"/"),here=
-    /^\/(index\.html)?$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/tomari/.test(P)?"tomari":/^\/(fudosan|uru|gyosha)/.test(P)?"fudosan":"";
+  var P=location.pathname.replace(/^\/townnotes\//,"/"),FU=/^\/(fudosan-list|chika-osaka)/.test(P),here=
+    /^\/fudosan-list/.test(P)?"flist":/^\/chika-osaka/.test(P)?"chika":/^\/(index\.html)?$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/tomari/.test(P)?"tomari":/^\/(fudosan|uru|gyosha)/.test(P)?"fudosan":"";
   var L=[
     ["LIST","list","/","関西おでかけリスト","開催中・これからのおでかけ"],
     ["MAP","map","/#map","地図で見る","関西の地図から、近くのおでかけを"],
@@ -13,6 +13,19 @@
     ["REAL ESTATE","fudosan","/fudosan.html","不動産のご相談","売却・査定、売る前に大事なこと"],
     ["LISTING","listing","https://ig.me/m/fudousan_ai_si","おでかけ掲載","新しいお店やイベントのご紹介"]
   ];
+  /* 11/1 オーナー「完全に分ける。メニューもそうだ」→ 関西不動産リストのページは不動産だけのメニュー */
+  if(FU)L=[
+    ["LIST","flist","/fudosan-list","関西不動産リスト","地価・人口・できる物・制度を、公式の数字で"],
+    ["SEARCH","fq","/fudosan-list?fq=q","街で探す","市・区・駅の名前で、その街の数字を"],
+    ["RANKING","chika","/chika-osaka.html","大阪市24区 地価ランキング","2026　住宅地・商業地の上がり幅"],
+    ["NEW","fnew","/fudosan-list?fq=new","新着の数字","最近足した数字"],
+    ["-","CONTACT"],
+    ["BEFORE SELLING","uru","/uru.html","売る前に大事なこと","売るか、持ち続けるか。迷ったときに"],
+    ["REAL ESTATE","fudosan","/fudosan.html","不動産のご相談","売却・査定のご相談"],
+    ["-","関連サイト"],
+    ["KANSAI ODEKAKE","list","/","関西おでかけリスト","関西のイベント・新しいお店や施設"]
+  ];
+  else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・できる物・制度を、公式の数字で"]]);
   var css=
   "#umenu{position:fixed;top:12px;right:12px;z-index:9990;width:42px;height:42px;border-radius:50%;border:1px solid #DADADA;background:rgba(255,255,255,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.07);-webkit-tap-highlight-color:transparent}"+
 "#utheme{position:fixed;top:12px;right:62px;z-index:9990;width:76px;height:42px;border-radius:99px;border:1px solid #DADADA;background:rgba(255,255,255,.94);padding:0;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.07);-webkit-tap-highlight-color:transparent;transition:opacity .25s,transform .25s}"+
@@ -68,7 +81,7 @@
     var btn=document.createElement("button");btn.id="umenu";btn.type="button";btn.setAttribute("aria-label","メニューを開く");btn.setAttribute("aria-expanded","false");btn.setAttribute("aria-controls","upan");btn.innerHTML="<i></i><i></i><i></i>";
     var mask=document.createElement("div");mask.id="umask";
     var pan=document.createElement("div");pan.id="upan";pan.setAttribute("role","dialog");pan.setAttribute("aria-modal","true");pan.setAttribute("aria-label","メニュー");pan.setAttribute("aria-hidden","true");
-    var h='<div class="uh"><img src="/assets/logo-s.png?v=2" alt=""><b>USAGI TOWN NOTES</b><button class="ux" type="button" aria-label="メニューを閉じる">×</button></div><nav><div class="ug">KANSAI ODEKAKE</div>';
+    var h='<div class="uh"><img src="/assets/logo-s.png?v=2" alt=""><b>USAGI TOWN NOTES</b><button class="ux" type="button" aria-label="メニューを閉じる">×</button></div><nav><div class="ug">'+(FU?"KANSAI REAL ESTATE":"KANSAI ODEKAKE")+'</div>';
     L.forEach(function(x){
       if(x[0]==="-"){h+='<div class="ug">'+x[1]+'</div>';return;}
       var cur=x[1]===here,ext=/^https?:/.test(x[2]);

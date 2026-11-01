@@ -54,7 +54,7 @@ h = re.sub(r'<div class="sea" id="sea">.*?</div><svg class="yr" id="yr".*?</svg>
 SW = ('<nav class="tnsw" aria-label="TOWN NOTES のリスト"><a href="./" data-k="切り替え｜おでかけ">関西おでかけリスト</a>'
       '<a href="fudosan-list" class="on" aria-current="page">関西不動産リスト</a></nav>')
 h = h.replace('<a class="ilk" href="illumination">関西イルミネーション 2026 日程一覧<span>→</span></a>',
-              SW + '<a class="ilk" href="chika-osaka">大阪市24区 地価ランキング 2026<span>→</span></a>')
+              '<a class="ilk" href="chika-osaka">大阪市24区 地価ランキング 2026<span>→</span></a>')
 h = h.replace("この府県のおでかけは、これから増やしていきます", "この府県の分は、これから増やしていきます")
 
 # ---- カード
@@ -89,6 +89,14 @@ paper = ('<div class="paper">' + "\n".join(blocks) +
          '<div class="tip">数字は公式の資料の時点のものです。家ごとの値段は、場所・広さ・築年数などで変わります。</div></div>')
 h = re.sub(r'<div class="paper">.*?<div class="tip">.*?</div></div>', lambda m: paper, h, count=1, flags=re.S)
 h = h.replace("ぴょんと街しらべ│過去のおでかけも、このページに残していきます", "ぴょんと街しらべ│調べた数字は、このページに残していきます")
+# 下の箱の「おでかけ掲載」は、不動産リストでは「売る前に大事なこと」に（完全に分ける）
+OLD_LS = '<a class="co" data-en="LISTING" href="https://ig.me/m/fudousan_ai_si">おでかけ掲載<span>新しいお店や、毎年のイベント。<br>うさぎがご紹介します。ご相談はこちら</span></a>'
+assert OLD_LS in h
+h = h.replace(OLD_LS, '<a class="co" data-en="BEFORE SELLING" href="uru.html">売る前に大事なこと<span>売るか、持ち続けるか。<br>迷ったときに読むページです</span></a>')
+# 11/1 オーナー「上の切り替えはやめて、1番下にもう一方のリスト。完全に分ける」
+TNX_OLD = '<a class="tnx" href="fudosan-list" data-k="下の入口｜関西不動産リスト"><small>関連サイト</small><b>関西不動産リスト<span>→</span></b><i>地価・人口・できる物・制度を、公式の数字で</i></a>'
+assert TNX_OLD in h
+h = h.replace(TNX_OLD, '<a class="tnx" href="./" data-k="下の入口｜関西おでかけリスト"><small>関連サイト</small><b>関西おでかけリスト<span>→</span></b><i>関西のイベント・新しいお店や施設を、公式ページつきで</i></a>')
 
 # ---- 府県の絞り込み・カードの包み・数え（index の仕組みを不動産用に短くしたもの）
 main_js = r'''<script>(function(){
