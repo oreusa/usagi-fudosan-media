@@ -1,4 +1,4 @@
-# リンクの確かめ（2026-10-31 20:13 JST・206件）
+# リンクの確かめ（2026-11-01 09:23 JST・206件）
 
 ## 開けない（直す）
 - ✗ 天理市 光の祭典（links/illumination-nara.html）404 https://www.city.tenri.nara.jp/kakuka/shichoukoushitsu/sougouseisakuka/teijyujirituken/teijujiritsukenibentojoho/15242.html
@@ -10,6 +10,7 @@
 - ✗ 壺阪寺 光の巡礼（links/index.html）404 https://www.tsubosaka1300.or.jp/news130.html
 - ✗ 市堀川イルミネーション（links/index.html）404 https://www.wakayama-kanko.or.jp/spots/NIGHTLIFE007/
 - ✗ 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
+- ✗ 東条湖おもちゃ王国 トミカ・プラレールランド（links/index.html）URLError https://www.omochaoukoku.com/tojoko/
 
 ## 別の催しに同じURL（どちらかが違うページかも）
 - links/index.html：淡路島 秋のカーニバル2026 ／ 淡路島国営明石海峡公園 → https://awaji-kaikyopark.kkr.mlit.go.jp/
