@@ -20,13 +20,13 @@ h1{font-family:"Shippori Mincho",serif;font-weight:600;font-size:26px;letter-spa
 .sns a.co span{display:block;margin-top:6px;font-family:"Zen Kaku Gothic New";font-weight:500;color:#8C7B6E;font-size:11.5px;letter-spacing:.04em}
 .back{display:block;width:max-content;margin:28px auto 0;color:#2B2622;text-decoration:none;font-size:13px;letter-spacing:.1em;border-bottom:1px solid #2B2622;padding-bottom:2px}
 .ft{text-align:center;font-size:10px;letter-spacing:.04em;color:#8C7B6E;margin-top:30px}
-</style><script src="assets/night.js?v=5"></script><script src="assets/menu.js?v=5" defer></script></head><body><div class="wrap">
+</style><script src="assets/night.js?v=5"></script><script src="assets/menu.js?v=6" defer></script><script src="assets/v2sub.js?v=5" defer></script></head><body><div class="wrap">
 <div class="head"><img src="assets/logo-s.png?v=2" width="60" height="60" alt="ロゴ"><div class="en">FOR REAL ESTATE PROFESSIONALS</div>
 <h1>業者さま向け</h1><p class="sub">関西エリアの物件のご紹介・ご相談を承っております。<br>お気軽にお問い合わせください。</p><div class="bar"></div></div>
 <div class="sns">
 <a class="co" data-en="CONTACT" id="ml" href="#">物件のご紹介・ご相談はこちら<span>メールが開きます（資料・写真を添付できます）</span></a>
 <a class="co" data-en="COMPANY" href="https://e-infi.com/">会社のホームページ<span>株式会社インフィニティ</span></a>
 </div>
-<a class="back" href="./">関西おでかけリストへ戻る</a>
+<a class="back" href="fudosan-list">関西不動産リストへ戻る</a>
 <div class="ft">株式会社インフィニティ</div>
 <script>(function(){var u="Infinity.daikoku",d="gmail.com",a=document.getElementById("ml"),b="\n\n\n\n※お手元に物件資料・写真がございましたら、添付のうえご送信ください。\n";a.href="mailto:"+u+"@"+d+"?subject="+encodeURIComponent("物件のご紹介・ご相談")+"&body="+encodeURIComponent(b);})();</script><script>(function(){var O=(function(){try{var q=new URLSearchParams(location.search).get("owner");if(q==="1")localStorage.setItem("usagi_owner","1");if(q==="0")localStorage.removeItem("usagi_owner");if(q!==null)history.replaceState(null,"",location.pathname+location.hash);return localStorage.getItem("usagi_owner")==="1";}catch(e){return false;}})();function s(k){if(O)return;try{if(localStorage.getItem("usagi_owner")==="1")return;}catch(e){}try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}s("表示：業者さまへ");document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;var t=a.querySelector(".t"),n=t?t.textContent:(a.childNodes[0]&&a.childNodes[0].textContent)||a.textContent;s("クリック：業者さまへ｜"+n);},true);})();</script></body></html>

@@ -2,8 +2,8 @@
    全ページ共通のメニュー。右上の三本線 → 右から出る紙。昼と夜の切り替えもここ（night.js）。
    ページを足すときは L に1行足すだけ。押された数は /c に「メニュー｜名前」で数える。 */
 (function(){
-  var P=location.pathname.replace(/^\/townnotes\//,"/"),FU=/^\/(fudosan-list|chika-|machi\/)/.test(P),here=
-    /^\/fudosan-list/.test(P)?"flist":/^\/chika-kansai/.test(P)?"chika":/^\/chika-osaka/.test(P)?"chikao":/^\/(index\.html)?$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/tomari/.test(P)?"tomari":/^\/(fudosan|uru|gyosha)/.test(P)?"fudosan":"";
+  var P=location.pathname.replace(/^\/townnotes\//,"/"),FU=/^\/(fudosan|uru|gyosha|chika-|machi\/)/.test(P),here=
+    /^\/fudosan-list/.test(P)?"flist":/^\/chika-kansai/.test(P)?"chika":/^\/chika-osaka/.test(P)?"chikao":/^\/(index\.html)?$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/tomari/.test(P)?"tomari":/^\/uru/.test(P)?"uru":/^\/(fudosan|gyosha)/.test(P)?"fudosan":"";
   var L=[
     ["LIST","list","/","関西おでかけリスト","開催中・これからのおでかけ"],
     ["MAP","map","/#map","地図で見る","関西の地図から、近くのおでかけを"],
