@@ -1,4 +1,4 @@
-# リンクの確かめ（2026-11-01 09:23 JST・206件）
+# リンクの確かめ（2026-11-01 11:26 JST・206件）
 
 ## 開けない（直す）
 - ✗ 天理市 光の祭典（links/illumination-nara.html）404 https://www.city.tenri.nara.jp/kakuka/shichoukoushitsu/sougouseisakuka/teijyujirituken/teijujiritsukenibentojoho/15242.html
