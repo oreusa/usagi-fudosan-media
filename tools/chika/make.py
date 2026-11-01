@@ -18,7 +18,7 @@ D = {
 }
 AVG = (5.8, 6.5, 11.6, 12.7)
 assert len(D) == 24
-URL = "https://usagi-odekake.usagi-fudosan.workers.dev/chika-osaka"
+URL = "https://townnote.pages.dev/chika-osaka"
 live = "--live" in sys.argv
 
 
@@ -76,7 +76,7 @@ page = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name
 <meta name="description" content="{E(desc)}">
 {'' if live else '<meta name="robots" content="noindex">'}{'<link rel="canonical" href="' + URL + '">' if live else ''}
 <meta property="og:type" content="article"><meta property="og:url" content="{URL}"><meta property="og:title" content="大阪市24区 地価ランキング2026"><meta property="og:description" content="{E(desc)}">
-<meta property="og:image" content="https://usagi-odekake.usagi-fudosan.workers.dev/assets/ogp.png"><meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://townnote.pages.dev/assets/ogp.png"><meta name="twitter:card" content="summary">
 <link rel="icon" href="assets/ogp.png"><link rel="apple-touch-icon" href="assets/ogp.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
@@ -137,7 +137,7 @@ ol{{list-style:none;margin:0;padding:0}}
 <a class="back" href="fudosan-list">関西不動産リストを見る</a><a class="back" href="chika-kansai" style="margin-top:12px">関西 ぜんぶの街のランキングを見る</a>
 <div class="ft">TOWN NOTE</div></div>
 <script>document.querySelectorAll(".flt button").forEach(function(b){{b.onclick=function(){{document.querySelectorAll(".flt button,.pane").forEach(function(x){{x.classList.remove("on")}});b.classList.add("on");document.getElementById(b.dataset.p).classList.add("on");}}}});</script>
-<script>(function(){{var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function s(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}s("表示：地価ランキング大阪市"+(document.referrer&&!/usagi-odekake/.test(document.referrer)?"（外から）":""));document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a,.flt button");if(!a)return;s("クリック：地価ランキング大阪市｜"+(a.getAttribute("data-k")||a.textContent.trim()));}},true);}})();</script>
+<script>(function(){{var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function s(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}s("表示：地価ランキング大阪市"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":""));document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a,.flt button");if(!a)return;s("クリック：地価ランキング大阪市｜"+(a.getAttribute("data-k")||a.textContent.trim()));}},true);}})();</script>
 </body></html>
 '''
 open("links/chika-osaka.html", "w", encoding="utf-8").write(page)

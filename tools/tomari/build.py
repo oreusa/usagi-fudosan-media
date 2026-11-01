@@ -73,7 +73,7 @@ for p in PREFS:
 
 btns = '<button class="on" data-p="すべて">すべて</button>' + "".join(f'<button data-p="{p}" style="--pc:{PC[p]}">{p}</button>' for p in PREFS if items[p])
 upd = f"{TODAY.year}年{TODAY.month}月{TODAY.day}日"
-BASE = "https://usagi-odekake.usagi-fudosan.workers.dev/"
+BASE = "https://townnote.pages.dev/"
 # 地図（tools/townnotes/build.py が作る map-tomari.js）。中身が変わったら ?v= も変わる
 import hashlib
 _mj = os.path.join(R, "links/townnotes/map-tomari.js")

@@ -11,7 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 T = os.path.join(ROOT, "tools/fudosan_list/towns")
 live = "--live" in sys.argv
 E = html.escape
-BASE = "https://usagi-odekake.usagi-fudosan.workers.dev"
+BASE = "https://townnote.pages.dev"
 TODAY = "2026年11月1日"
 
 PREFS = [  # (府県, csv, 英字, 色, 出典の名前, 出典URL, 府県の言い方)

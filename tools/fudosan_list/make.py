@@ -10,7 +10,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 SRC = os.path.join(ROOT, "links/index.html")
 OUT = os.path.join(ROOT, "links/fudosan-list.html")
 FACTS = json.load(open(os.path.join(ROOT, "tools/fudosan_list/facts.json"), encoding="utf-8"))
-URL = "https://usagi-odekake.usagi-fudosan.workers.dev/fudosan-list"
+URL = "https://townnote.pages.dev/fudosan-list"
 live = "--live" in sys.argv
 E = html.escape
 
@@ -30,7 +30,7 @@ def drop(pat):
 h = h.replace("<title>関西おでかけリスト</title>", "<title>関西不動産リスト｜地価・人口・できる物・制度を公式の数字で</title>")
 desc = "大阪・京都・兵庫・奈良・滋賀・和歌山の地価、人口、駅の乗る人、新しくできる物、住まいの制度を、公式の資料つきでまとめました。"
 h = re.sub(r'<meta name="description"[^>]*>', f'<meta name="description" content="{desc}">' + ("" if live else '<meta name="robots" content="noindex">'), h, count=1)
-h = h.replace('content="https://usagi-odekake.usagi-fudosan.workers.dev/"', f'content="{URL}"')
+h = h.replace('content="https://townnote.pages.dev/"', f'content="{URL}"')
 h = h.replace('<meta property="og:title" content="関西おでかけリスト">', '<meta property="og:title" content="関西不動産リスト">')
 h = re.sub(r'<meta property="og:description"[^>]*>', f'<meta property="og:description" content="{desc}">', h, count=1)
 
@@ -114,7 +114,7 @@ var P=["大阪","京都","兵庫","奈良","滋賀","和歌山"],F=document.getE
 ["すべて"].concat(P).forEach(function(p,i){var b=document.createElement("button");b.textContent=p;if(PC[p])b.style.setProperty("--pc",PC[p]);if(!i)b.className="on";b.onclick=function(){F.querySelectorAll("button").forEach(function(x){x.className="";});b.className="on";var v=0;document.querySelectorAll(".paper .it").forEach(function(w){var ok=p=="すべて"||w.getAttribute("data-pref")==p;w.style.display=ok?"":"none";if(ok)v++;});document.getElementById("none").style.display=v?"none":"";c("絞り込み（不動産）："+p);};F.appendChild(b);});
 document.addEventListener("click",function(ev){var s=ev.target.closest&&ev.target.closest(".v2c span.p");if(!s)return;ev.preventDefault();ev.stopPropagation();var b=[].find.call(F.querySelectorAll("button"),function(x){return x.textContent===s.dataset.p});if(b){b.click();scrollTo({top:F.getBoundingClientRect().top+scrollY-70,behavior:"smooth"});}},true);
 var n=document.querySelectorAll(".paper .it").length,x=document.createElement("div");x.className="cnt";x.innerHTML='<span>関西の街<b>__NT__</b></span><span>調べた数字<b>'+n+'</b>件</span>';var nn=document.getElementById("none");nn.parentNode.insertBefore(x,nn.nextSibling);
-c("表示：不動産リスト"+(document.referrer&&!/usagi-odekake/.test(document.referrer)?"（外から）":""));
+c("表示：不動産リスト"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":""));
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;var k=a.getAttribute("data-k");if(!k){var t=a.querySelector(".t");k=t?t.textContent:a.textContent;}c("クリック：不動産リスト｜"+k);},true);
 })();</script>'''
 old_main = [s for s in scripts if 'getElementById("flt")' in s and "wrap(a)" in s]
