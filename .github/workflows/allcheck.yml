@@ -25,6 +25,8 @@ jobs:
           npx playwright install --with-deps chromium >/dev/null
       - name: 全ページを開いて確かめる
         run: NODE_PATH=/tmp/pw/node_modules node tools/allcheck/check.js /tmp/out
+      - name: 夜の見た目でも全ページを開く（night/ に置く）
+        run: THEME=night NODE_PATH=/tmp/pw/node_modules node tools/allcheck/check.js /tmp/out/night || true
       - name: allcheck ブランチに置く（毎回その日の分だけ）
         run: |
           cd /tmp/out

@@ -10,7 +10,8 @@
     document.dispatchEvent(new CustomEvent("usagi-theme",{detail:v}));}
   var css="html.night{background:#fff;filter:invert(.95) hue-rotate(180deg)}"+
     "html.night img,html.night video,html.night picture,html.night svg image,html.night .nofilt,html.night .tnbtn .mm{filter:invert(1) hue-rotate(180deg)}"+
-    "html.night .head img{background:#fff;border-radius:50%;filter:brightness(.72) invert(1) hue-rotate(180deg)}"+
+    /* 11/2 オーナー「中のデザインだけ光らせたら？」→ 夜は丸い台をなくし、ロゴの線だけを光らせる */
+    "html.night .head img{background:none;filter:brightness(1.35) saturate(1.2) drop-shadow(0 0 3px rgba(255,214,170,.75)) drop-shadow(0 0 10px rgba(255,190,140,.35)) invert(1) hue-rotate(180deg)}"+
     /* 11/2 オーナー「夜もっと何とかならん」「夜のお洒落感」→ 真っ黒をやめて深い夜空の紺に。白い面も同じ紺になるよう、薄い青を全体に重ねる */
     "html.night body:after{content:'';position:fixed;inset:-50vh 0;background:#E9F0FF;mix-blend-mode:multiply;pointer-events:none;z-index:2147483646}"+
     /* 題名まわりの丸い飾りは、夜は星と月あかりに */
@@ -28,7 +29,24 @@
     "html.night .kmap .lb .jp{fill:#F3F1EC}"+
     "html.night .kmap .lb .en{fill:#9AA6BF}"+
     /* いまから行ける の地図：夜は暗い地図に */
-    "html.night .rd svg{filter:brightness(.42) saturate(1.1) invert(1) hue-rotate(180deg)}"+
+    "html.night .rd svg{filter:invert(1) hue-rotate(180deg)}"+
+    /* 11/2 オーナー「他のページまだ白モヤ」→ いまから行ける の地図も入口と同じ夜の地図に（白っぽい灰色をやめる） */
+    "html.night .rd svg>rect{fill:#141A28}"+
+    /* 街のページ（machi）の小さな地図：白い箱になっていたので、夜は全体と同じ紺に */
+    "html.night .mp.nofilt{filter:none;border-color:#fff}"+
+    "html.night .rq{background:#121826}"+
+    /* 地図で見る（全画面の地図）：夜は暗すぎたので、少し明るく・色をはっきり */
+    "html.night .tn svg.m{filter:brightness(.74) saturate(1.5)}"+
+    "html.night #mpL path{fill-opacity:.42;stroke:rgba(255,255,255,.1)}"+
+    "html.night #mpL path[fill=none]{stroke:rgba(255,255,255,.35)}"+
+    "html.night .rd .mn{fill:#8F9AB3}"+
+    "html.night .rd .rng{stroke:#C9D2E6;opacity:.5}"+
+    "html.night .rd .rgl{fill:#E6EAF2;stroke:#141A28}"+
+    "html.night .rd .pt{stroke:#141A28}"+
+    "html.night #mpMe circle:first-child{fill:#fff;opacity:.15}html.night #mpMe circle+circle{fill:#F3F1EC;stroke:#141A28}html.night #mpMe rect{fill:#F3F1EC}html.night #mpMe text{fill:#141A28}"+
+    /* 飾りの丸（入口の PAGE 01/02 の後ろ、燈のイルミの題名の後ろ）は夜は出さない */
+    "html.night a.ls:before{display:none}"+
+    /* */
     /* MENU の四角は、夜はベージュにならないよう月あかりの銀に */
     "html.night #v2bar button.mn{background:#121826}"+
     "html.night .rd{border-color:#000}"+
