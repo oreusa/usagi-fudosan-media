@@ -30,5 +30,7 @@ bar.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)
   else document.getElementById("umenu").click();});
 /* 10/31 オーナー「下のバーなんで途中まで？」→ はじめから出しておく */
 bar.classList.add("on");document.documentElement.classList.add("v2bar-on");
+/* 11/1 ほかのページの下のバーから来たとき（?v2t=0|1|map）は、そのボタンを押したのと同じにする */
+var q=(location.search.match(/[?&]v2t=([^&]+)/)||[])[1];if(q){var qb=bar.querySelector(q==="map"?'[data-a="map"]':'[data-t="'+q+'"]');if(qb)setTimeout(function(){qb.click()},300);history.replaceState(null,"",location.pathname+location.hash);}
 if(tabs)tabs.addEventListener("click",function(){setTimeout(syncBar,30)});
 })();
