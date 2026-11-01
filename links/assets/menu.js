@@ -28,11 +28,11 @@
     ["FOR AGENTS","gyosha","/gyosha.html","業者さまへ","物件のご紹介・ご相談はこちら"],
     ["-","関連サイト"],
     ["KANSAI ODEKAKE","list","/","関西おでかけリスト","関西のイベント・新しいお店や施設"],
-    ["TOWN NOTES","tn","/town-notes","TOWN NOTES","2つのリストの入口"]
+    ["TOWN NOTE","tn","/town-notes","TOWN NOTE","関西の街の、1冊のノート"]
   ];
-  else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・できる物・制度を、公式の数字で"],["TOWN NOTES","tn","/town-notes","TOWN NOTES","2つのリストの入口"]]);
-  /* TOWN NOTES の入口ページは、2つのリストとご相談だけ */
-  if(/^\/town-notes/.test(P))L=[["-","TOWN NOTES"],["KANSAI ODEKAKE","list","/","関西おでかけリスト","関西のイベント・新しいお店や施設"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・できる物・制度を、公式の数字で"],["-","CONTACT"],["BEFORE YOU SELL","uru","/uru.html","お家を売る前に大事なこと","ご相談の前に、ぜひご覧ください"],["FOR OWNERS","satei","https://e-infi.com/#contact","お家の売却・査定のご相談","無料でお受けしております（お問い合わせフォーム）"],["LISTING","listing","https://ig.me/m/fudousan_ai_si","おでかけ掲載","新しいお店やイベントのご紹介"]];
+  else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・できる物・制度を、公式の数字で"],["TOWN NOTE","tn","/town-notes","TOWN NOTE","関西の街の、1冊のノート"]]);
+  /* TOWN NOTE の入口ページは、2つのリストとご相談だけ */
+  if(/^\/town-notes/.test(P))L=[["-","TOWN NOTE"],["KANSAI ODEKAKE","list","/","関西おでかけリスト","関西のイベント・新しいお店や施設"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・できる物・制度を、公式の数字で"],["-","CONTACT"],["BEFORE YOU SELL","uru","/uru.html","お家を売る前に大事なこと","ご相談の前に、ぜひご覧ください"],["FOR OWNERS","satei","https://e-infi.com/#contact","お家の売却・査定のご相談","無料でお受けしております（お問い合わせフォーム）"],["LISTING","listing","https://ig.me/m/fudousan_ai_si","おでかけ掲載","新しいお店やイベントのご紹介"]];
   var css=
   "#umenu{position:fixed;top:12px;right:12px;z-index:9990;width:42px;height:42px;border-radius:50%;border:1px solid #DADADA;background:rgba(255,255,255,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.07);-webkit-tap-highlight-color:transparent}"+
 "#utheme{position:fixed;top:12px;right:62px;z-index:9990;width:76px;height:42px;border-radius:99px;border:1px solid #DADADA;background:rgba(255,255,255,.94);padding:0;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.07);-webkit-tap-highlight-color:transparent;transition:opacity .25s,transform .25s}"+
@@ -88,7 +88,7 @@
     var btn=document.createElement("button");btn.id="umenu";btn.type="button";btn.setAttribute("aria-label","メニューを開く");btn.setAttribute("aria-expanded","false");btn.setAttribute("aria-controls","upan");btn.innerHTML="<i></i><i></i><i></i>";
     var mask=document.createElement("div");mask.id="umask";
     var pan=document.createElement("div");pan.id="upan";pan.setAttribute("role","dialog");pan.setAttribute("aria-modal","true");pan.setAttribute("aria-label","メニュー");pan.setAttribute("aria-hidden","true");
-    var h='<div class="uh"><img src="/assets/logo-s.png?v=2" alt=""><b>TOWN NOTES</b><button class="ux" type="button" aria-label="メニューを閉じる">×</button></div><nav>'+(/^\/town-notes/.test(P)?"":'<div class="ug">'+(FU?"KANSAI REAL ESTATE":"KANSAI ODEKAKE")+'</div>');
+    var h='<div class="uh"><img src="/assets/logo-s.png?v=2" alt=""><b>TOWN NOTE</b><button class="ux" type="button" aria-label="メニューを閉じる">×</button></div><nav>'+(/^\/town-notes/.test(P)?"":'<div class="ug">'+(FU?"KANSAI REAL ESTATE":"KANSAI ODEKAKE")+'</div>');
     L.forEach(function(x){
       if(x[0]==="-"){h+='<div class="ug">'+x[1]+'</div>';return;}
       var cur=x[1]===here,ext=/^https?:/.test(x[2]);

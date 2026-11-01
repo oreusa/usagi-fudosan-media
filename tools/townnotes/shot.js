@@ -1,4 +1,4 @@
-// TOWN NOTES（仮）の地図を撮る（GitHub Actions でも手元でも動く）。node tools/townnotes/shot.js [URL]
+// TOWN NOTE（仮）の地図を撮る（GitHub Actions でも手元でも動く）。node tools/townnotes/shot.js [URL]
 const {chromium}=require('playwright');const fs=require('fs');
 const U=process.argv[2]||'http://localhost:8765/townnotes/';
 (async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:390,height:844},deviceScaleFactor:2,hasTouch:true,isMobile:true});

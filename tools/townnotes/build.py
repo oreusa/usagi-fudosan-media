@@ -1,4 +1,4 @@
-"""TOWN NOTES（仮）: 今のおでかけリスト（links/index.html）に地図を組み込んだ試作を作る。
+"""TOWN NOTE（仮）: 今のおでかけリスト（links/index.html）に地図を組み込んだ試作を作る。
 python3 tools/townnotes/build.py → links/townnotes/index.html と links/townnotes/map.js
 本番にするときは links/index.html に <script src="/townnotes/map.js" defer></script> を足すだけ。"""
 import json, os

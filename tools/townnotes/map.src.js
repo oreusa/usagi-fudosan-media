@@ -1,4 +1,4 @@
-/* TOWN NOTES（仮）: おでかけリストに、押すだけで寄っていく地図を組み込む（関西 → 府県 → 市・区）。
+/* TOWN NOTE（仮）: おでかけリストに、押すだけで寄っていく地図を組み込む（関西 → 府県 → 市・区）。
    指2本の操作はなし。府県・市区町村の形は links/townnotes/kansai.json（国土数値情報を加工）、場所は geo.json。
    今のページ（タブ・府県ボタン・カード）をそのまま読み、選んでいるタブのカードだけをピンにする。 */
 // 地図のファイルは map.js と同じ場所から読む（どのページ・どの置き場所から使っても同じに動く）
@@ -189,7 +189,7 @@ var st=document.createElement("style");st.textContent=css;document.head.appendCh
 // ---- 枠 ----
 var box=document.createElement("div");box.className="tn";
 box.innerHTML=''+
- '<div class="fsh"><div class="ttl"><b><small>TOWN NOTES MAP</small>'+R.name+'おでかけマップ</b><button type="button" class="cl" aria-label="地図を閉じる">×</button></div><div class="row tb"></div><div class="row pf"></div></div>'+
+ '<div class="fsh"><div class="ttl"><b><small>TOWN NOTE MAP</small>'+R.name+'おでかけマップ</b><button type="button" class="cl" aria-label="地図を閉じる">×</button></div><div class="row tb"></div><div class="row pf"></div></div>'+
  '<div class="fr"><svg class="m" preserveAspectRatio="xMidYMid meet"><g class="g-sh"></g><g class="g-pf"></g><g class="g-mu"></g><g class="g-mini"></g><g class="g-pin"></g></svg><div class="lbs"></div>'+
  '<div class="crumb"></div><div class="n" id="tnn"></div><div class="cen">'+R.en_all+'</div><button type="button" class="bk"></button><div class="hint"></div><div class="zm"><button type="button" data-z="in" aria-label="近づく">＋</button><button type="button" data-z="out" aria-label="はなれる">−</button></div><div class="cr">地図：国土数値情報（行政区域）を加工</div></div>'+
  '<div class="car"></div>'+

@@ -224,7 +224,7 @@ h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spa
 .ft{text-align:center;font-size:10px;letter-spacing:.04em;color:#8C7B6E;margin-top:30px}"""
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">'
-SCRIPTS = '<script src="/assets/night.js?v=5"></script><script src="/assets/menu.js?v=7" defer></script><script src="/assets/v2sub.js?v=6" defer></script>'
+SCRIPTS = '<script src="/assets/night.js?v=5"></script><script src="/assets/menu.js?v=8" defer></script><script src="/assets/v2sub.js?v=6" defer></script>'
 
 
 def beacon(name):
@@ -302,7 +302,7 @@ def town_page(t):
     nb_h = '<h2>近くの街</h2><ul class="nb">' + "".join(
         f'<li><a href="/machi/{a["id"]}" data-k="近くの街｜{E(a["n"])}">{E(a["n"])}<small>{E(a["p"])}</small><b style="color:{PI[a["p"]][3]}">{pct(a["r8"])}</b></a></li>' for a in nb) + '</ul>'
     body = f'''<style>{HEAD_CSS}{TOWN_CSS}</style>{SCRIPTS}</head><body style="--pc:{col}"><div class="wrap">
-<div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTES のロゴ"><div class="en">{en} ─ LAND PRICE</div>
+<div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">{en} ─ LAND PRICE</div>
 <h1>{E(n)}の地価<span>2026 住宅地の1年の動き</span></h1>
 <p class="sub">国の地価公示の数字で、<br>{E(pfull)}{E(n)}の住宅地の動きを見ます。</p>
 <div class="upd">2026年1月1日時点の数字（{TODAY} 作成）</div></div>
@@ -319,7 +319,7 @@ def town_page(t):
 <a class="uru" href="/uru.html" data-k="お家を売る前に大事なこと"><div class="k">お家を売る・持ち続ける前に</div><div class="t">お家を売る前に大事なこと</div><div class="m">売るか、持ち続けるか。<br>迷ったときに読むページです。</div></a>
 <p class="note">出典：{E(sname)}（価格時点 2026年1月1日）<br><a href="{E(surl)}" data-k="出典">{E(surl)}</a><br>数字は街の中の調査地点の平均の変動率で、1軒ずつの値段ではありません。</p>
 <a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
-<div class="ft">TOWN NOTES</div></div>
+<div class="ft">TOWN NOTE</div></div>
 <script>(function(){{var b=document.querySelector(".rq");if(!b)return;b.onclick=function(){{try{{if(localStorage.getItem("usagi_owner")!=="1"){{var d=JSON.stringify({{k:"調べてほしい："+b.dataset.n}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",d)))fetch("/c",{{method:"POST",body:d,keepalive:true}});}}}}catch(e){{}}b.disabled=true;b.textContent="受け付けました。調べて、このリストに足します";}};}})();</script>
 {beacon("街｜" + n)}</body></html>'''
     return head(title, desc, url, ld) + body
@@ -390,7 +390,7 @@ ld = {"@context": "https://schema.org", "@graph": [
     {"@type": "Dataset", "name": "関西の市区町村 住宅地の地価ランキング（令和8年地価公示）", "description": desc, "temporalCoverage": "2026-01-01", "spatialCoverage": "関西"},
     {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]}]}
 rk = head(f"関西 地価ランキング2026｜{len(towns)}の市区町村の住宅地（令和8年地価公示）", desc, f"{BASE}/chika-kansai", ld) + f'''<style>{HEAD_CSS}{RK_CSS}</style>{SCRIPTS}</head><body><div class="wrap">
-<div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTES のロゴ"><div class="en">KANSAI ─ LAND PRICE</div>
+<div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">KANSAI ─ LAND PRICE</div>
 <h1>関西 地価ランキング<span>2026 住宅地の1年の動き</span></h1>
 <p class="sub">6府県・{len(towns)}の市区町村を、<br>国の地価公示の数字で並べました。</p>
 <div class="upd">2026年1月1日時点の数字（{TODAY} 作成）</div></div>
@@ -404,7 +404,7 @@ rk = head(f"関西 地価ランキング2026｜{len(towns)}の市区町村の住
 <a class="uru" href="/uru.html" data-k="お家を売る前に大事なこと"><div class="k">お家を売る・持ち続ける前に</div><div class="t">お家を売る前に大事なこと</div><div class="m">売るか、持ち続けるか。<br>迷ったときに読むページです。</div></a>
 <p class="note">出典（価格時点 2026年1月1日）<br>{srcs}<br>数字は街の中の調査地点の平均の変動率で、1軒ずつの値段ではありません。</p>
 <a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
-<div class="ft">TOWN NOTES</div></div>
+<div class="ft">TOWN NOTE</div></div>
 <script>(function(){{function go(k){{var b=document.querySelector('.flt button[data-p="'+k+'"]');if(!b)return;document.querySelectorAll(".flt button,.pane").forEach(function(x){{x.classList.remove("on")}});b.classList.add("on");document.getElementById(k).classList.add("on");}}
 document.querySelectorAll(".flt button").forEach(function(b){{b.onclick=function(){{go(b.dataset.p);history.replaceState(null,"","#"+b.dataset.p);}}}});if(location.hash)go(location.hash.slice(1));}})();</script>
 {beacon("地価ランキング関西")}</body></html>'''
