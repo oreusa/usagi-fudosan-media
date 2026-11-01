@@ -28,9 +28,9 @@
     ["FOR AGENTS","gyosha","/gyosha.html","業者さまへ","物件のご紹介・ご相談はこちら"],
     ["-","関連サイト"],
     ["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],
-    ["TOWN NOTE","tn","/","TOWN NOTE","関西の街の、1冊のノート"]
+    ["TOWN NOTE","tn","/","TOWN NOTE","関西の街しらべノート"]
   ];
-  else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・できる物・制度を、公式の数字で"],["TOWN NOTE","tn","/","TOWN NOTE","関西の街の、1冊のノート"]]);
+  else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・できる物・制度を、公式の数字で"],["TOWN NOTE","tn","/","TOWN NOTE","関西の街しらべノート"]]);
   /* TOWN NOTE の入口ページは、2つのリストとご相談だけ */
   if(/^\/(town-notes)?$/.test(P))L=[["-","TOWN NOTE"],["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・できる物・制度を、公式の数字で"],["-","CONTACT"],["BEFORE YOU SELL","uru","/uru.html","お家を売る前に大事なこと","ご相談の前に、ぜひご覧ください"],["FOR OWNERS","satei","https://e-infi.com/#contact","お家の売却・査定のご相談","無料でお受けしております（お問い合わせフォーム）"],["LISTING","listing","https://ig.me/m/fudousan_ai_si","おでかけ掲載","新しいお店やイベントのご紹介"]];
   var css=

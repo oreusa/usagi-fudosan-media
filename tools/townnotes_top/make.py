@@ -47,7 +47,7 @@ SVG = (f'<svg class="kmap" viewBox="-10 -10 {W + 20:.0f} {H + 20:.0f}" role="img
        f'<g class="pf" stroke="#fff" stroke-width="2.4" stroke-linejoin="round">{"".join(paths)}</g>'
        f'<g class="lb">{"".join(labels)}</g></svg>')
 
-desc = "関西の不動産屋が、街を調査して見つけたことを、1冊のノートにまとめています。イベントや新しいお店・施設の「関西おでかけリスト」と、地価・人口・できる物を公式の数字で見る「関西不動産リスト」。"
+desc = "関西の不動産屋が、街を調査して見つけたことを、ノートにまとめています。イベントや新しいお店・施設の「関西おでかけリスト」と、地価・人口・できる物を公式の数字で見る「関西不動産リスト」。"
 ld = {"@context": "https://schema.org", "@type": "WebSite", "name": "TOWN NOTE", "url": f"{BASE}/", "description": desc}
 
 CHIPS = ["梅田", "吹田", "京都市", "宇治", "神戸", "西宮", "奈良市", "生駒", "大津", "草津", "和歌山市", "白浜"]
@@ -126,7 +126,7 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 </style><script src="/assets/night.js?v=5"></script><script src="/assets/menu.js?v=9" defer></script><script src="/assets/v2sub.js?v=7" defer></script></head><body><div class="wrap">
 <header class="head"><img src="/assets/logo-s.png?v=2" width="74" height="74" alt="TOWN NOTE のロゴ">
 <h1>TOWN NOTE</h1><div class="kana">タウンノート</div>
-<p class="cp">関西の街の、1冊のノート。</p>
+<p class="cp">関西の街しらべノート。</p>
 <p class="sub">関西の不動産屋が、街を調査して見つけたことを、<br>公式の情報つきで、このノートに書きとめています。</p>
 <div class="nofilt">{SVG}</div><div class="mapcap">府県を押すと、その府県の数が出ます</div><div class="pp" id="pp" hidden></div></header>
 
