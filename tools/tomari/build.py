@@ -141,12 +141,13 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 var B=document.querySelectorAll("#flt button"),S=document.querySelectorAll(".ps"),wk=document.getElementById("wk"),P="すべて",W=false;
 function we(){{var n=new Date(Date.now()+9*36e5),d=n.getUTCDay(),sat=new Date(n);sat.setUTCDate(n.getUTCDate()+((6-d+7)%7));if(d===0)sat.setUTCDate(n.getUTCDate()-1);var sun=new Date(sat);sun.setUTCDate(sat.getUTCDate()+1);return [sat.toISOString().slice(0,10),sun.toISOString().slice(0,10)];}}
 var WE=we();
-function draw(){{var any=0;S.forEach(function(s){{var on=P==="すべて"||s.dataset.p===P,c=0;s.querySelectorAll(".it").forEach(function(it){{var a=it.dataset.s||"0000",e=it.dataset.e||"9999",ok=!W||(a<=WE[1]&&e>=WE[0]);it.hidden=!ok;if(ok)c++;}});s.hidden=!on||!c;if(on&&c)any++;}});document.getElementById("none").style.display=any?"none":"block";}}
+var TD=new Date(Date.now()+9*36e5).toISOString().slice(0,10);/* 11/2 終わった日を過ぎたら、作り直し前でも出さない */
+function draw(){{var any=0;S.forEach(function(s){{var on=P==="すべて"||s.dataset.p===P,c=0;s.querySelectorAll(".it").forEach(function(it){{var a=it.dataset.s||"0000",e=it.dataset.e||"9999",ok=e>=TD&&(!W||(a<=WE[1]&&e>=WE[0]));it.hidden=!ok;if(ok)c++;}});var h=s.querySelector("h2 small");if(h)h.textContent=c+"か所";s.hidden=!on||!c;if(on&&c)any++;}});document.getElementById("none").style.display=any?"none":"block";}}
 B.forEach(function(b){{b.addEventListener("click",function(){{B.forEach(function(x){{x.classList.toggle("on",x===b)}});P=b.dataset.p;draw();ck("泊まり｜絞り込み："+P);var t=document.querySelector(".flt").getBoundingClientRect().top+scrollY;if(scrollY>t)scrollTo({{top:t,behavior:"smooth"}});}});}});
 wk.addEventListener("click",function(){{W=!W;wk.setAttribute("aria-pressed",W);draw();ck("泊まり｜この週末");}});
 function ck(k){{try{{if(localStorage.getItem("usagi_owner")==="1")return;}}catch(e){{}}try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}
 document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a[data-k]");if(a)ck(a.dataset.k.indexOf("宿｜")===0?a.dataset.k:"泊まり｜"+a.dataset.k);}},true);
-ck("表示：泊まりで行くおでかけ");
+draw();ck("表示：泊まりで行くおでかけ");
 }})();</script>{MAPJS}</body></html>
 '''
 open(os.path.join(R, "links/tomari.html"), "w", encoding="utf-8").write(out)
