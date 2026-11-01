@@ -58,7 +58,10 @@
   "#upan .ux{width:42px;height:42px;border:0;background:none;font-size:24px;line-height:1;color:#3A3330;cursor:pointer;border-radius:50%}"+
   "#upan .ux:active{background:#F3F3F3}"+
   "#upan nav{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:6px 0 10px}"+
-  "#upan .ug{font-family:Jost,sans-serif;font-size:9.5px;letter-spacing:.34em;color:#A09488;padding:18px 20px 6px}"+
+  /* 11/1 オーナー「メニュージャンルの区切りあると分かりやすい」→ ジャンルの見出しを薄い帯にして、日本語で */
+  "#upan .ug{display:flex;align-items:baseline;gap:10px;margin-top:14px;padding:9px 20px;background:#F1F2F4;border-top:1px solid #E4E5E8;border-bottom:1px solid #E4E5E8;font-size:12.5px;font-weight:700;letter-spacing:.12em;color:#3A3330}"+
+  "#upan nav>.ug:first-child{margin-top:0;border-top:0}"+
+  "#upan .ug small{font-family:Jost,sans-serif;font-weight:400;font-size:9px;letter-spacing:.3em;color:#9C8775}"+
   "#upan a.ui{display:block;position:relative;text-decoration:none;color:#2B2622;padding:13px 44px 13px 20px;border-top:1px solid #F1F1F1}"+
   "#upan a.ui:first-of-type{border-top:0}"+
   "#upan a.ui:active{background:#F7F7F7}"+
@@ -82,15 +85,17 @@
   function ck(k){try{if(localStorage.getItem("usagi_owner")==="1")return;}catch(e){}try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
   var SUN='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.3M12 19.1v2.3M2.6 12h2.3M19.1 12h2.3M5.35 5.35l1.6 1.6M17.05 17.05l1.6 1.6M5.35 18.65l1.6-1.6M17.05 6.95l1.6-1.6"/></svg>',MOON='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 14.6A8 8 0 0 1 9.4 4.4a8 8 0 1 0 10.2 10.2z"/><path class="sp" d="M17.2 3.4v2.8M15.8 4.8h2.8"/></svg>',MK="メニュー｜";
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  var GJ={"KANSAI ODEKAKE":"おでかけ","KANSAI REAL ESTATE":"不動産の数字","TOWN NOTE":"2つのリスト","CONTACT":"ご相談・お問い合わせ"};
+  function ug(k){return '<div class="ug">'+esc(GJ[k]||k)+(GJ[k]?'<small>'+k+'</small>':"")+'</div>';}
   function openMap(){var n=0;(function t(){var b=document.querySelector(".tnbtn");if(b){b.click();return;}if(++n<40)setTimeout(t,100);})();}
   function build(){
     var st=document.createElement("style");st.textContent=css;document.head.appendChild(st);
     var btn=document.createElement("button");btn.id="umenu";btn.type="button";btn.setAttribute("aria-label","メニューを開く");btn.setAttribute("aria-expanded","false");btn.setAttribute("aria-controls","upan");btn.innerHTML="<i></i><i></i><i></i>";
     var mask=document.createElement("div");mask.id="umask";
     var pan=document.createElement("div");pan.id="upan";pan.setAttribute("role","dialog");pan.setAttribute("aria-modal","true");pan.setAttribute("aria-label","メニュー");pan.setAttribute("aria-hidden","true");
-    var h='<div class="uh"><img src="/assets/logo-s.png?v=2" alt=""><b>TOWN NOTE</b><button class="ux" type="button" aria-label="メニューを閉じる">×</button></div><nav>'+(/^\/town-notes/.test(P)?"":'<div class="ug">'+(FU?"KANSAI REAL ESTATE":"KANSAI ODEKAKE")+'</div>');
+    var h='<div class="uh"><img src="/assets/logo-s.png?v=2" alt=""><b>TOWN NOTE</b><button class="ux" type="button" aria-label="メニューを閉じる">×</button></div><nav>'+(/^\/(town-notes)?$/.test(P)?"":ug(FU?"KANSAI REAL ESTATE":"KANSAI ODEKAKE"));
     L.forEach(function(x){
-      if(x[0]==="-"){h+='<div class="ug">'+x[1]+'</div>';return;}
+      if(x[0]==="-"){h+=ug(x[1]);return;}
       var cur=x[1]===here,ext=/^https?:/.test(x[2]);
       h+='<a class="ui'+(cur?" cur":"")+'" data-k="'+x[1]+'" href="'+x[2]+'"'+(ext?' target="_blank" rel="noopener"':"")+(cur?' aria-current="page"':"")+'><small>'+x[0]+'</small><span>'+esc(x[3])+'</span><em>'+esc(x[4])+'</em></a>';
     });
