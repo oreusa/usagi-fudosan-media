@@ -57,6 +57,9 @@ SW = ('<nav class="tnsw" aria-label="TOWN NOTE のリスト"><a href="/odekake" 
 h = h.replace('<a class="ilk" href="illumination">関西イルミネーション 2026 日程一覧<span>→</span></a>',
               '<a class="ilk" href="chika-kansai">関西 __NT__の街 地価ランキング 2026<span>→</span></a>')
 h = h.replace('<a class="ilk" href="ima" data-k="上の入口｜いまから行ける">いまから行けるおでかけ（近い順）<span>→</span></a>', '')  # おでかけ側だけの入口
+# トップの3つの入口（top2）はおでかけ側だけ。不動産リストには持ちこまない
+h = re.sub(r'<script>document\.documentElement\.classList\.add\("top2"\)</script><link rel="stylesheet" href="assets/top2\.css\?v=\d+">', '', h)
+h = re.sub(r'<script src="assets/top2\.js\?v=\d+"></script>', '', h)
 h = h.replace("この府県のおでかけは、これから増やしていきます", "この府県の分は、これから増やしていきます")
 
 # ---- カード
