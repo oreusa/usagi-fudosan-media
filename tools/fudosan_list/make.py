@@ -45,14 +45,14 @@ drop(r'開催中 / これから split')             # 開催中・これから�
 drop(r'"開催中":\["NOW ON"')                 # 欄の見出しの英字（下で直接書く）
 drop(r'近くの宿：')                          # 近くの宿
 h = re.sub(r'<script src="/townnotes/map\.js[^"]*" defer></script>', "", h)
-h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v2sub.js?v=2" defer></script>', h)
+h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v2sub.js?v=3" defer></script>', h)
 
 # ---- 見出し
 h = h.replace('<h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p>',
               '<h1>関西不動産リスト</h1><p class="sub">関西の街を調査して見つけた数字を、<br>公式の資料つきで紹介しています</p>')
 h = re.sub(r'<div class="sea" id="sea">.*?</div><svg class="yr" id="yr".*?</svg>', "", h, count=1, flags=re.S)
-SW = ('<nav class="tnsw" aria-label="TOWN NOTES のリスト"><a href="./" data-k="切り替え｜おでかけ">おでかけ</a>'
-      '<a href="fudosan-list" class="on" aria-current="page">不動産</a></nav>')
+SW = ('<nav class="tnsw" aria-label="TOWN NOTES のリスト"><a href="./" data-k="切り替え｜おでかけ">関西おでかけリスト</a>'
+      '<a href="fudosan-list" class="on" aria-current="page">関西不動産リスト</a></nav>')
 h = h.replace('<a class="ilk" href="illumination">関西イルミネーション 2026 日程一覧<span>→</span></a>',
               SW + '<a class="ilk" href="chika-osaka">大阪市24区 地価ランキング 2026<span>→</span></a>')
 h = h.replace("この府県のおでかけは、これから増やしていきます", "この府県の分は、これから増やしていきます")
@@ -66,7 +66,7 @@ ORDER = ["大阪", "京都", "兵庫", "奈良", "滋賀", "和歌山"]
 
 
 def card(o):
-    return (f'<a class="card" data-pref="{o["pref"]}" data-cat="{o["tab"]}" href="{E(o["url"])}">'
+    return (f'<a class="card" data-pref="{o["pref"]}" data-cat="{o["tab"]}" data-date="{o["date"]}" href="{E(o["url"])}">'
             f'<div class="bd"><div class="d">{E(o["src"])}</div><div class="t">{E(o["t"].replace("｜", "　"))}</div>'
             f'<div class="m">{E(o["m"])}</div></div><div class="go">→</div></a>')
 
@@ -114,8 +114,8 @@ assert old_tabs in h
 h = h.replace(old_tabs, json.dumps([[c, en, jp, "#2B2622"] for _, c, en, jp, _ in TABS], ensure_ascii=False))
 
 # 切り替えの見た目（おでかけのタブと同じ線と文字）
-SW_CSS = ('<style>.tnsw{display:flex;justify-content:center;gap:0 34px;margin:4px 0 18px}'
-          '.tnsw a{font-family:"Shippori Mincho",serif;font-weight:600;font-size:15px;letter-spacing:.14em;color:#9C9187;text-decoration:none;padding:4px 2px 6px;border-bottom:2px solid transparent}'
+SW_CSS = ('<style>.tnsw{display:flex;justify-content:center;gap:0 22px;margin:4px 0 18px}'
+          '.tnsw a{font-family:"Shippori Mincho",serif;font-weight:600;font-size:14px;letter-spacing:.06em;color:#9C9187;text-decoration:none;padding:4px 2px 6px;border-bottom:2px solid transparent}'
           '.tnsw a.on{color:#2B2622;border-bottom-color:#2B2622}</style>')
 h = h.replace("</head>", SW_CSS + "</head>", 1)
 
@@ -130,6 +130,59 @@ var top=document.querySelector(".tn-top");if(!top){top=document.createElement("d
 if(bar.nextSibling!==top)bar.parentNode.insertBefore(top,bar.nextSibling);}
 mount();document.addEventListener("click",function(e){if(e.target.closest(".tabs,#flt"))setTimeout(mount,80);});})();</script>"""
 h = h.replace("</body>", MOUNT + "</body>", 1)
+
+
+# ---- 下のバーの「街で探す」「新着」（11/1 オーナー「完全別項目で分けろよ」「作る前に工夫考えろよ」）
+# 開く人が知りたいのは「自分の街の数字」→ 市・区・駅の名前で探せるようにする。新着はまた見に来る理由。
+from collections import Counter
+cnt = {p: Counter() for p in ORDER}
+for o in FACTS:
+    for w in set(re.findall(r"[一-龥ヶヵ]{1,5}(?:駅|(?:区|市|町)(?![一-龥]*駅))", o["t"])):
+        if len(w) >= 2 and w not in ("大阪市", "京都市", "神戸市", "市町") and not w.endswith("府の市"):
+            cnt[o["pref"]][w] += 1
+# 府県が偏らないように、府県を順番に1つずつ
+rank = {p: [w for w, _ in cnt[p].most_common()] for p in ORDER}
+PLACES = []
+while len(PLACES) < 18 and any(rank.values()):
+    for p in ORDER:
+        if rank[p] and len(PLACES) < 18:
+            w = rank[p].pop(0)
+            if w not in PLACES:
+                PLACES.append(w)
+FQ = r"""<style>#fq{display:none;margin:6px 0 24px}html.fq-on #fq{display:block}html.fq-on .paper:not(#fq){display:none}#fq.paper{display:none}html.fq-on #fq.paper{display:block}
+#fq .fh{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 12px;padding:0 2px 8px;border-bottom:1px solid #D6CCC1}
+#fq .fh b{font-family:"Shippori Mincho",serif;font-size:17px;font-weight:600;color:#2B2622;letter-spacing:.06em}
+#fq .fh button{border:0;background:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;font-weight:700;color:#8C7B6E;cursor:pointer;padding:4px 0}
+#fq .fi{display:block;width:100%;box-sizing:border-box;font-size:16px;padding:12px 14px;border:1px solid #D6CCC1;border-radius:12px;background:#fff;color:#2B2622;font-family:"Zen Kaku Gothic New",sans-serif;outline:none}
+#fq .fi:focus{border-color:#8C7B6E}
+#fq .fc{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
+#fq .fc button{border:1px solid #D6CCC1;background:#fff;border-radius:999px;padding:6px 12px;font-family:"Zen Kaku Gothic New",sans-serif;font-size:12.5px;font-weight:700;color:#5C5048;cursor:pointer}
+#fq .fn{font-family:"Zen Kaku Gothic New",sans-serif;font-size:12.5px;color:#8C7B6E;margin:4px 2px 10px}
+#fq .fr .it{display:block!important}#fq .frq{display:block;width:100%;margin:4px 0 8px;padding:13px;border:0;border-radius:12px;background:#3A2F28;color:#fff;font-family:"Zen Kaku Gothic New",sans-serif;font-size:13.5px;font-weight:700;cursor:pointer}#fq .frq:disabled{background:#8C7B6E}</style>
+<script>(function(){var PL=__PLACES__;
+var O=(function(){try{return localStorage.getItem("usagi_owner")==="1";}catch(e){return false;}})();function c(k){if(O)return;try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
+var paper=document.querySelector(".paper"),box=document.createElement("div");box.id="fq";box.className="paper";paper.parentNode.insertBefore(box,paper);
+var all=[].slice.call(paper.querySelectorAll(".it"));
+function show(list,note){var r=box.querySelector(".fr");r.className="fr blk";r.innerHTML="";box.querySelector(".fn").textContent=note;list.forEach(function(w){r.appendChild(w.cloneNode(true))});}
+function find(q){q=q.replace(/\s/g,"");if(!q){show([],"市・区・駅の名前を入れるか、下から選んでください");return;}
+ var hit=all.filter(function(w){return w.textContent.replace(/\s/g,"").indexOf(q)>=0});
+ show(hit,hit.length?"「"+q+"」の数字 "+hit.length+"件":"「"+q+"」の数字はまだありません。");
+ var r=box.querySelector(".fr");if(!hit.length&&q.length>=2){var b=document.createElement("button");b.type="button";b.className="frq";b.textContent="「"+q+"」を調べてほしい";b.onclick=function(){c("調べてほしい："+q);b.disabled=true;b.textContent="受け付けました。調べて、このリストに足します";};r.appendChild(b);}}
+var tq;
+function open(m){document.documentElement.classList.add("fq-on");
+ if(m==="new"){box.innerHTML='<div class="fh"><b>新着の数字</b><button type="button">リストにもどる ×</button></div><div class="fn"></div><div class="fr"></div>';
+  var l=all.slice().sort(function(a,b){return (b.querySelector("a").dataset.date||"").localeCompare(a.querySelector("a").dataset.date||"")}).slice(0,12);show(l,"最近足した数字 "+l.length+"件");c("不動産リスト｜新着");}
+ else{box.innerHTML='<div class="fh"><b>街で探す</b><button type="button">リストにもどる ×</button></div><input class="fi" type="search" placeholder="例：北区、西宮、丹波橋" enterkeyhint="search"><div class="fc"></div><div class="fn"></div><div class="fr"></div>';
+  var fc=box.querySelector(".fc"),fi=box.querySelector(".fi");PL.forEach(function(p){var b=document.createElement("button");b.type="button";b.textContent=p;b.onclick=function(){fi.value=p;find(p);c("街で探す："+p);};fc.appendChild(b);});
+  fi.oninput=function(){find(fi.value);clearTimeout(tq);tq=setTimeout(function(){if(fi.value.trim())c("街で探す："+fi.value.trim())},1500);};find("");c("不動産リスト｜街で探す");}
+ box.querySelector(".fh button").onclick=close;
+ if(window.V2BAR)window.V2BAR.querySelectorAll("a[data-m]").forEach(function(a){a.classList.toggle("cur",a.dataset.m===m)});
+ scrollTo({top:box.getBoundingClientRect().top+scrollY-14,behavior:"smooth"});}
+function close(){document.documentElement.classList.remove("fq-on");box.innerHTML="";if(window.V2BAR)window.V2BAR.querySelectorAll("a[data-m]").forEach(function(a){a.classList.remove("cur")});scrollTo({top:paper.getBoundingClientRect().top+scrollY-120,behavior:"smooth"});}
+window.FQ={open:open,close:close};
+var q=(location.search.match(/[?&]fq=(q|new)/)||[])[1];if(q){history.replaceState(null,"",location.pathname+location.hash);addEventListener("load",function(){setTimeout(function(){open(q)},200)});}
+})();</script>""".replace("__PLACES__", json.dumps(PLACES, ensure_ascii=False))
+h = h.replace("</body>", FQ + "</body>", 1)
 
 open(OUT, "w", encoding="utf-8").write(h)
 print("ok", "live" if live else "preview(noindex)", len(FACTS), "cards", len(h), "bytes")
