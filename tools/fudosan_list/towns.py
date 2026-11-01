@@ -150,6 +150,46 @@ def pref_svg(pf, hi):
     if (pf, hi) in LAB:
         cx, cy = proj(*LAB[(pf, hi)], b)
         ps.append(f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="9" fill="none" stroke="#2B2622" stroke-width="1.6"/><circle cx="{cx:.0f}" cy="{cy:.0f}" r="2.4" fill="#2B2622"/>')
+    # 11/1 オーナー「地図はちゃんと地名まで入れる」→ まわりの街の名前も、重ならない所に置く
+    area = {}
+    for k in keys:
+        xs2 = [x for g in SHAPE[k] for r in rings(g) for x, _ in r]
+        ys2 = [y for g in SHAPE[k] for r in rings(g) for _, y in r]
+        area[k] = (max(xs2) - min(xs2)) * (max(ys2) - min(ys2))
+    labs, grp = [], {}
+    for k in keys:
+        if k not in LAB:
+            continue
+        cty = re.match(r"^(大阪市|堺市|京都市|神戸市)", k[1])
+        if cty and not city:
+            g = grp.setdefault(cty.group(1), [])
+            g.append(proj(*LAB[k], b))
+            continue
+        nm = k[1][len(city.group(1)):] if city else k[1]
+        x, y = proj(*LAB[k], b)
+        labs.append((1e9 if k[1] == hi else area[k], x, y, nm, k[1] == hi))
+    for cn, pts in grp.items():
+        labs.append((1e8, sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts), cn, False))
+    labs.sort(key=lambda l: -l[0])
+    boxes, tx = [], []
+    for _, x, y, nm, on in labs:
+        fs = 15 if on else 10.5
+        w, h = len(nm) * fs * 1.02, fs * 1.2
+        for dx, dy in ([(0, -16), (0, 18), (w * .6 + 8, 0), (-w * .6 - 8, 0), (w * .6 + 8, -14), (-w * .6 - 8, -14)] if on else [(0, 0), (0, -h), (0, h)]):
+            bx = (x + dx - w / 2, y + dy - h / 2, x + dx + w / 2, y + dy + h / 2)
+            if bx[0] < -4 or bx[2] > W + 4 or bx[1] < -4 or bx[3] > H + 4:
+                continue
+            if any(bx[0] < o[2] and bx[2] > o[0] and bx[1] < o[3] and bx[3] > o[1] for o in boxes):
+                continue
+            boxes.append(bx)
+            tx.append(f'<text x="{x + dx:.0f}" y="{y + dy:.0f}" font-size="{fs}" font-weight="{700 if on else 500}" fill="{"#2B2622" if on else "#5C5048"}">{E(nm)}</text>')
+            break
+        else:
+            if on:  # 自分の街の名前は必ず出す（はみ出す時は内側へ寄せる）
+                cx2 = min(max(x, w / 2), W - w / 2)
+                cy2 = min(max(y - 16, h / 2), H - h / 2)
+                tx.append(f'<text x="{cx2:.0f}" y="{cy2:.0f}" font-size="{fs}" font-weight="700" fill="#2B2622">{E(nm)}</text>')
+    ps.append('<g style="font-family:\'Zen Kaku Gothic New\',sans-serif;paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round;text-anchor:middle;dominant-baseline:central">' + "".join(tx) + '</g>')
     return f'<svg viewBox="-4 -4 {W + 8:.0f} {H + 8:.0f}" role="img" aria-label="{E(PI[pf][6])}の地図。{E(hi)}の場所">{"".join(ps)}</svg>'
 
 
@@ -250,8 +290,8 @@ def town_page(t):
             {"@type": "ListItem", "position": 1, "name": "関西不動産リスト", "item": f"{BASE}/fudosan-list"},
             {"@type": "ListItem", "position": 2, "name": "関西 地価ランキング", "item": f"{BASE}/chika-kansai"},
             {"@type": "ListItem", "position": 3, "name": f"{n}の地価", "item": url}]}]}
-    big = (f'<div class="big"><div><span>住宅地 1年の動き</span><b>{pct(t["r8"])}</b></div>'
-           f'<div><span>{pfull}での順位</span><b>{t["rank"]}<small style="font-size:13px">位／{t["of"]}</small></b></div>'
+    big = (f'<div class="big"><div><span>住宅地 1年の動き</span><b style="color:{col if t["r8"] > 0 else "#6B6058"}">{pct(t["r8"])}</b></div>'
+           f'<div><span>{pfull}での順位</span><b style="color:#2B2622">{t["rank"]}<small style="font-size:13px">位／{t["of"]}</small></b></div>'
            + (f'<div><span>前の年（令和7年）</span><b style="color:#6B6058">{pct(t["r7"])}</b></div>' if t["r7"] is not None else '')
            + (f'<div><span>住宅地の平均価格（1㎡）</span><b style="color:#6B6058">{t["price"] / 10000:.2f}万円</b></div>' if t["price"] else '')
            + (f'<div class="w"><b>{E(trend)}。</b></div>' if trend else '') + '</div>')
@@ -267,7 +307,7 @@ def town_page(t):
 <p class="sub">国の地価公示の数字で、<br>{E(pfull)}{E(n)}の住宅地の動きを見ます。</p>
 <div class="upd">2026年1月1日時点の数字（{TODAY} 作成）</div></div>
 {big}
-<div class="mp">{pref_svg(t["p"], n)}<p>{E(scope_name(t))}の中の{E(short(n) if scope_name(t) != pfull else n)}</p></div>
+<div class="mp nofilt">{pref_svg(t["p"], n)}<p>{E(scope_name(t))}の中の{E(short(n) if scope_name(t) != pfull else n)}</p></div>
 {rel_h}
 {nb_h}
 <a class="back" href="/chika-kansai#{fn}" data-k="{E(pfull)}のランキング" style="margin-top:18px">{E(pfull)}の街をランキングで見る</a>
