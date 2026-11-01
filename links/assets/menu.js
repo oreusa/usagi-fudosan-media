@@ -2,8 +2,8 @@
    全ページ共通のメニュー。右上の三本線 → 右から出る紙。昼と夜の切り替えもここ（night.js）。
    ページを足すときは L に1行足すだけ。押された数は /c に「メニュー｜名前」で数える。 */
 (function(){
-  var P=location.pathname.replace(/^\/townnotes\//,"/"),FU=/^\/(fudosan-list|chika-osaka)/.test(P),here=
-    /^\/fudosan-list/.test(P)?"flist":/^\/chika-osaka/.test(P)?"chika":/^\/(index\.html)?$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/tomari/.test(P)?"tomari":/^\/(fudosan|uru|gyosha)/.test(P)?"fudosan":"";
+  var P=location.pathname.replace(/^\/townnotes\//,"/"),FU=/^\/(fudosan-list|chika-|machi\/)/.test(P),here=
+    /^\/fudosan-list/.test(P)?"flist":/^\/chika-kansai/.test(P)?"chika":/^\/chika-osaka/.test(P)?"chikao":/^\/(index\.html)?$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/tomari/.test(P)?"tomari":/^\/(fudosan|uru|gyosha)/.test(P)?"fudosan":"";
   var L=[
     ["LIST","list","/","関西おでかけリスト","開催中・これからのおでかけ"],
     ["MAP","map","/#map","地図で見る","関西の地図から、近くのおでかけを"],
@@ -16,8 +16,10 @@
   /* 11/1 オーナー「完全に分ける。メニューもそうだ」→ 関西不動産リストのページは不動産だけのメニュー */
   if(FU)L=[
     ["LIST","flist","/fudosan-list","関西不動産リスト","地価・人口・できる物・制度を、公式の数字で"],
-    ["SEARCH","fq","/fudosan-list?fq=q","街で探す","市・区・駅の名前で、その街の数字を"],
-    ["RANKING","chika","/chika-osaka.html","大阪市24区 地価ランキング","2026　住宅地・商業地の上がり幅"],
+    ["SEARCH","fq","/fudosan-list?fq=q","街で探す","市・区・町の名前で、その街の地価を"],
+    ["MAP","fmap","/fudosan-list?fq=map","地図で見る","上がった街・下がった街を、色で"],
+    ["RANKING","chika","/chika-kansai","関西 地価ランキング","6府県・205の市区町村の住宅地"],
+    ["OSAKA CITY","chikao","/chika-osaka","大阪市24区 地価ランキング","住宅地・商業地の上がり幅"],
     ["NEW","fnew","/fudosan-list?fq=new","新着の数字","最近足した数字"],
     ["-","CONTACT"],
     ["BEFORE SELLING","uru","/uru.html","売る前に大事なこと","売るか、持ち続けるか。迷ったときに"],
