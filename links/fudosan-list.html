@@ -529,7 +529,7 @@ function find(q){q=q.replace(/\s/g,"");var r=box.querySelector(".fr"),fn=box.que
 var GEO=null;function geo(){return GEO?Promise.resolve(GEO):fetch("/townnotes/kansai.json").then(function(r){return r.json()}).then(function(d){GEO=d;return d})}
 function full(p){var cc=p.c||"";return (!cc||/郡$/.test(cc))?p.n:cc+p.n}
 function rings(g){return g.type==="Polygon"?g.coordinates:[].concat.apply([],g.coordinates)}
-var LP={"大阪":[135.43,34.52],"京都":[135.45,35.30],"兵庫":[134.78,35.12],"奈良":[135.88,34.30],"滋賀":[136.20,35.05],"和歌山":[135.50,33.98]},CITY={"大阪":["大阪市","堺市"],"京都":["京都市"],"兵庫":["神戸市"]};
+var LP={"大阪":[135.43,34.52],"京都":[135.45,35.30],"兵庫":[134.78,35.12],"奈良":[135.88,34.30],"滋賀":[136.20,35.05],"和歌山":[135.50,33.98]},CITY={"大阪":["大阪市","堺市"],"京都":["京都市"],"兵庫":["神戸市"]};KU={"大阪市":24,"堺市":7,"京都市":11,"神戸市":9};
 function cityOf(n){var m=n.match(/^(大阪市|堺市|京都市|神戸市)/);return m?m[1]:""}
 // 11/1 オーナー「地図はちゃんと地名まで入れる」→ 名前と数字を、重ならないように置く（重なる時は少しずらして線でつなぐ）
 function drawMap(pf,city){var w=box.querySelector(".mpw"),info=box.querySelector(".mpi");w.innerHTML='<p class="fn">地図を読みこんでいます…</p>';
@@ -565,7 +565,7 @@ function drawMap(pf,city){var w=box.querySelector(".mpw"),info=box.querySelector
    ok.ln.forEach(function(t,i){var y=cy-(n-1)*ht/2+i*ht;out+='<text x="'+cx.toFixed(0)+'" y="'+y.toFixed(0)+'" font-size="'+(i?l.fs*.82:l.fs).toFixed(0)+'" fill="'+(i?l.c:l.pf?l.c:"#2B2622")+'" font-weight="'+(l.pf||l.bold||!i?700:500)+'"'+(l.pf?' letter-spacing=".12em"':'')+(i?' font-family="Jost,sans-serif"':'')+'>'+esc(t)+'</text>'});});
   h+='<g class="lbl" style="pointer-events:none;font-family:\'Zen Kaku Gothic New\',sans-serif;paint-order:stroke;stroke:#fff;stroke-width:'+(8.5).toFixed(1)+'px;stroke-linejoin:round;text-anchor:middle;dominant-baseline:central">'+out+'</g>';
   w.innerHTML=h+'</svg>';info.innerHTML='<p class="fn">'+(all?"府県を選ぶと、市・区・町の名前と数字が出ます。":"街を押すと、その街の数字が出ます。")+'</p>';
-  var cb=box.querySelector(".mpc");cb.innerHTML="";if(pf&&CITY[pf]){[pf+"ぜんぶ"].concat(CITY[pf]).forEach(function(cn,i){var b=document.createElement("button");b.type="button";b.textContent=i?cn+"を大きく":cn;if((i&&cn===city)||(!i&&!city))b.className="on";b.onclick=function(){drawMap(pf,i?cn:"");c("地図：市 "+cn);};cb.appendChild(b);});}
+  var cb=box.querySelector(".mpc");cb.innerHTML="";if(pf&&CITY[pf]){[pf+"ぜんぶ"].concat(CITY[pf]).forEach(function(cn,i){var b=document.createElement("button");b.type="button";b.textContent=i?cn+"の"+KU[cn]+"区":cn;if((i&&cn===city)||(!i&&!city))b.className="on";b.onclick=function(){drawMap(pf,i?cn:"");c("地図：市 "+cn);};cb.appendChild(b);});}
   w.querySelector("svg").addEventListener("click",function(e){var pth=e.target.closest("path");if(!pth)return;w.querySelectorAll("path.sel").forEach(function(x){x.classList.remove("sel")});pth.classList.add("sel");pth.parentNode.insertBefore(pth,w.querySelector("g.lbl"));
    var t=by[pth.dataset.p+"|"+pth.dataset.n];info.innerHTML=t?twRow(t):'<p class="fn">'+esc(pth.dataset.n)+'は、府県の資料に住宅地の平均がありません。</p><button type="button" class="frq">'+esc(pth.dataset.n)+'を調べてほしい</button>';
    var rb=info.querySelector(".frq");if(rb)rb.onclick=function(){c("調べてほしい："+pth.dataset.n);rb.disabled=true;rb.textContent="受け付けました。調べて、このリストに足します";};c("地図｜"+pth.dataset.n);});
