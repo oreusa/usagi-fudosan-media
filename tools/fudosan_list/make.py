@@ -45,7 +45,7 @@ drop(r'開催中 / これから split')             # 開催中・これから�
 drop(r'"開催中":\["NOW ON"')                 # 欄の見出しの英字（下で直接書く）
 drop(r'近くの宿：')                          # 近くの宿
 h = re.sub(r'<script src="/townnotes/map\.js[^"]*" defer></script>', "", h)
-h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v2sub.js?v=4" defer></script>', h)
+h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v2sub.js?v=5" defer></script>', h)
 
 # ---- 見出し
 h = h.replace('<h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p>',
@@ -93,6 +93,11 @@ h = h.replace("ぴょんと街しらべ│過去のおでかけも、このペ�
 OLD_LS = '<a class="co" data-en="LISTING" href="https://ig.me/m/fudousan_ai_si">おでかけ掲載<span>新しいお店や、毎年のイベント。<br>うさぎがご紹介します。ご相談はこちら</span></a>'
 assert OLD_LS in h
 h = h.replace(OLD_LS, '<a class="co" data-en="BEFORE SELLING" href="uru.html">売る前に大事なこと<span>売るか、持ち続けるか。<br>迷ったときに読むページです</span></a>')
+# 11/1 12:45 オーナー「不動産リスト（の下）にこの項目そのまま入れたら良い」→ ご相談ページ（fudosan.html）の3つをそのまま
+FD = open(os.path.join(ROOT, "links/fudosan.html"), encoding="utf-8").read()
+items = re.findall(r'<a class="co" data-en="[^"]*" href="[^"]*">.*?</a>', FD, flags=re.S)
+assert len(items) == 3, items
+h = re.sub(r'<div class="cos">.*?</div>', lambda m: '<div class="cos">' + "\n".join(items) + '</div>', h, count=1, flags=re.S)
 # 11/1 オーナー「上の切り替えはやめて、1番下にもう一方のリスト。完全に分ける」
 TNX_OLD = '<a class="tnx" href="fudosan-list" data-k="下の入口｜関西不動産リスト"><small>関連サイト</small><b>関西不動産リスト<span>→</span></b><i>地価・人口・できる物・制度を、公式の数字で</i></a>'
 assert TNX_OLD in h
