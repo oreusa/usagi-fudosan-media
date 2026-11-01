@@ -161,7 +161,7 @@ function load(){Promise.all([
 ]).then(function(v){var doc=new DOMParser().parseFromString(v[0],"text/html"),G=v[1],seen={};
   doc.querySelectorAll("a.card[data-pref]").forEach(function(a){var t=(a.querySelector(".t")||{}).textContent||"",g=G[t];if(!g||g[0]==null||seen[t])return;seen[t]=1;
     var s=a.dataset.s||"",e=a.dataset.e||"",op=a.dataset.open||"",m=(a.querySelector(".m")||{}).textContent||"",d=(a.querySelector(".d")||{}).textContent||"";
-    var open=e?(s<=T&&T<=e):(op?op<=T:true);
+    var open=e?(s<=T&&T<=e):(op?op<=T:!/予定|準備中|オープン前/.test(d));  /* 日付の無い「12月オープン予定」などは、まだ行けないので出さない */
     if(!open)return;
     ITEMS.push({t:t,p:a.dataset.pref,s:s,e:e,op:op,free:a.dataset.tag==="無料",m:m.replace(/^[^｜]*｜/,""),place:m.split("｜")[0],d:d,href:a.getAttribute("href"),la:+g[0],lo:+g[1],
       inside:/美術館|博物館|ミュージアム|展$|展[　 （(]|展覧|水族館|ホール|アリーナ|ドーム|百貨店|ハルカス|プラネタリウム|シアター|館/.test(t+" "+m)});});
