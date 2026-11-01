@@ -48,14 +48,14 @@ SVG = (f'<svg class="kmap" viewBox="-10 -10 {W + 20:.0f} {H + 20:.0f}" role="img
        f'<g class="lb">{"".join(labels)}</g></svg>')
 
 desc = "関西の不動産屋が、街を調査して見つけたことを2つのリストにまとめています。イベントや新しいお店・施設の「関西おでかけリスト」と、地価・人口・できる物を公式の数字で見る「関西不動産リスト」。"
-ld = {"@context": "https://schema.org", "@type": "WebSite", "name": "うさぎ│TOWN NOTES", "url": f"{BASE}/town-notes", "description": desc}
+ld = {"@context": "https://schema.org", "@type": "WebSite", "name": "TOWN NOTES", "url": f"{BASE}/town-notes", "description": desc}
 
 CHIPS = ["梅田", "吹田", "京都市", "宇治", "神戸", "西宮", "奈良市", "生駒", "大津", "草津", "和歌山市", "白浜"]
 
 page = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>うさぎ│TOWN NOTES｜関西おでかけリスト・関西不動産リスト</title>
+<title>TOWN NOTES（タウンノーツ）｜関西おでかけリスト・関西不動産リスト</title>
 <meta name="description" content="{E(desc)}">{'' if live else '<meta name="robots" content="noindex">'}{f'<link rel="canonical" href="{BASE}/town-notes">' if live else ''}
-<meta property="og:type" content="website"><meta property="og:url" content="{BASE}/town-notes"><meta property="og:title" content="うさぎ│TOWN NOTES"><meta property="og:description" content="{E(desc)}">
+<meta property="og:type" content="website"><meta property="og:url" content="{BASE}/town-notes"><meta property="og:title" content="TOWN NOTES"><meta property="og:description" content="{E(desc)}">
 <meta property="og:image" content="{BASE}/assets/ogp.png"><meta name="twitter:card" content="summary">
 <link rel="icon" href="/assets/ogp.png"><link rel="apple-touch-icon" href="/assets/ogp.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
@@ -66,7 +66,8 @@ body{{margin:0;background:#FFFFFF;font-family:"Zen Kaku Gothic New",sans-serif;c
 .head{{position:relative;text-align:center;margin:0 -16px;padding:34px 16px 6px;background:radial-gradient(circle at 10% 14%,rgba(242,214,194,.55) 0 84px,transparent 85px),radial-gradient(circle at 92% 8%,rgba(205,224,236,.6) 0 60px,transparent 61px),radial-gradient(circle at 4% 62%,rgba(236,214,222,.45) 0 40px,transparent 41px)}}
 .head img{{width:74px;height:74px}}
 .brand{{font-family:Jost;font-weight:300;font-size:10.5px;letter-spacing:.5em;color:#8C7B6E;margin:12px 0 0;padding-left:.5em}}
-h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-height:1.1;margin:10px 0 0;padding-left:.16em;color:#231E1B}}
+h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-height:1.1;margin:16px 0 0;padding-left:.16em;color:#231E1B}}
+.kana{{font-size:11px;font-weight:500;letter-spacing:.5em;padding-left:.5em;color:#8C7B6E;margin:8px 0 0}}
 .cp{{font-family:"Shippori Mincho",serif;font-weight:600;font-size:19px;letter-spacing:.14em;margin:16px 0 0;color:#2B2622}}
 .sub{{font-size:13px;line-height:2;color:#6B6058;margin:12px 0 0;text-wrap:balance}}
 .kmap{{display:block;width:100%;height:auto;margin:18px 0 0}}
@@ -122,8 +123,8 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 .sns a{{display:inline-block;margin:0 10px;color:#2B2622;text-decoration:none;font-family:Jost;font-size:14px;letter-spacing:.06em;border-bottom:1px solid #2B2622;padding-bottom:2px}}
 .ft{{text-align:center;font-size:10.5px;letter-spacing:.06em;color:#8C7B6E;margin-top:30px}}
 </style><script src="/assets/night.js?v=5"></script><script src="/assets/menu.js?v=7" defer></script><script src="/assets/v2sub.js?v=6" defer></script></head><body><div class="wrap">
-<header class="head"><img src="/assets/logo-s.png?v=2" width="74" height="74" alt="うさぎ│TOWN NOTES のロゴ">
-<div class="brand">USAGI</div><h1>TOWN NOTES</h1>
+<header class="head"><img src="/assets/logo-s.png?v=2" width="74" height="74" alt="TOWN NOTES のロゴ">
+<h1>TOWN NOTES</h1><div class="kana">タウンノーツ</div>
 <p class="cp">関西の街の、調べ帳。</p>
 <p class="sub">関西の不動産屋が、街を調査して見つけたことを、<br>公式の情報つきで、2つのリストに書きとめています。</p>
 <div class="nofilt">{SVG}</div><div class="mapcap">府県を押すと、その府県の数が出ます</div><div class="pp" id="pp" hidden></div></header>
@@ -148,7 +149,7 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 
 <nav class="cos"><a href="/fudosan.html" data-k="入口｜不動産のご相談"><small>REAL ESTATE</small><b>不動産のご相談</b><span>売却・査定、お家を売る前に大事なこと</span></a><a href="https://ig.me/m/fudousan_ai_si" data-k="入口｜おでかけ掲載"><small>LISTING</small><b>おでかけ掲載</b><span>新しいお店や、毎年のイベントのご紹介</span></a></nav>
 <div class="sns"><h2>FOLLOW</h2><a href="https://www.instagram.com/fudousan_ai_si/">Instagram</a><a href="https://www.threads.com/@fudousan_ai_si">Threads</a><a href="https://x.com/fudosan_ai_si">X</a></div>
-<div class="ft">ぴょんと街しらべ│うさぎ│TOWN NOTES</div></div>
+<div class="ft">ぴょんと街しらべ│TOWN NOTES</div></div>
 <script>(function(){{
 var PC={json.dumps(PC, ensure_ascii=False)};
 var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function c(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}
