@@ -153,6 +153,7 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 <div class="ft">ぴょんと街しらべ│TOWN NOTE</div></div>
 <script>(function(){{
 var PC={json.dumps(PC, ensure_ascii=False)};
+try{{var oq=new URLSearchParams(location.search).get("owner");if(oq==="1")localStorage.setItem("usagi_owner","1");if(oq==="0")localStorage.removeItem("usagi_owner");if(oq!==null)history.replaceState(null,"",location.pathname+location.hash);}}catch(e){{}}
 var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function c(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}
 function esc(s){{return String(s).replace(/[&<>"]/g,function(x){{return{{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}}[x]}})}}
 function pct(v){{return (v>0?"+":v<0?"−":"±")+Math.abs(v).toFixed(1)+"%"}}
