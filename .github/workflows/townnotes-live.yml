@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          U=https://usagi-odekake.usagi-fudosan.workers.dev
+          U=https://townnote.pages.dev
           echo "--- 本番のリスト"
           curl -sS $U/ -o top.html; grep -o '/townnotes/map.js[^"]*' top.html || echo "地図の読み込みなし"
           J=$(grep -o '/townnotes/map.js[^"]*' top.html | head -1)

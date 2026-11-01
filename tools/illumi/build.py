@@ -40,7 +40,7 @@ for it in sorted(ITEMS, key=key):
         ld.append(ev); lds[p].append(ev)
 SLUG = {"大阪":"osaka","京都":"kyoto","兵庫":"hyogo","奈良":"nara","滋賀":"shiga","和歌山":"wakayama"}
 def fu(p): return p + ("府" if p in ("大阪","京都") else "県")
-BASE = "https://usagi-odekake.usagi-fudosan.workers.dev/"
+BASE = "https://townnote.pages.dev/"
 upd = f"{TODAY.year}年{TODAY.month}月{TODAY.day}日"
 _mj = os.path.join(os.path.dirname(__file__), "../../links/townnotes/map-illumi.js")
 _yj = os.path.join(os.path.dirname(__file__), "../../links/assets/yado.js")
@@ -87,7 +87,7 @@ def render(sel, fname, title, desc, ogt, en, h1a, h1b, sub, links, crumb):
     return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title><meta name="description" content="{desc}"><link rel="canonical" href="{url}">
 <meta property="og:type" content="article"><meta property="og:url" content="{url}"><meta property="og:title" content="{ogt}"><meta property="og:description" content="{desc}">
-<meta property="og:image" content="https://usagi-odekake.usagi-fudosan.workers.dev/assets/ogp.png"><meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://townnote.pages.dev/assets/ogp.png"><meta name="twitter:card" content="summary">
 <meta property="article:modified_time" content="{TODAY.isoformat()}T07:00:00+09:00">
 <link rel="icon" href="assets/ogp.png"><link rel="apple-touch-icon" href="assets/ogp.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
@@ -142,7 +142,7 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 <a class="back" href="./">関西おでかけリストを見る</a>
 <div class="ft">TOWN NOTE</div></div>
 <script>(function(){{var t=new Date(Date.now()+9*36e5).toISOString().slice(0,10);document.querySelectorAll(".card").forEach(function(c){{var s=c.dataset.s,e=c.dataset.e,st=c.querySelector(".st");if(!s)return;if(e&&e<t){{(c.closest(".it")||c).remove();return;}}if(s<=t){{st.textContent="開催中";st.className="st on";}}else{{st.textContent="これから";st.className="st soon";}}}});document.querySelectorAll(".ps").forEach(function(x){{x.querySelector("small").textContent=x.querySelectorAll(".card").length+"件";if(!x.querySelector(".card"))x.style.display="none";}});var F=document.getElementById("flt");if(F)F.querySelectorAll("button").forEach(function(b){{b.onclick=function(){{F.querySelectorAll("button").forEach(function(x){{x.classList.remove("on");}});b.classList.add("on");var p=b.dataset.p;document.querySelectorAll(".ps").forEach(function(x){{x.style.display=((p=="すべて"||x.id==p)&&x.querySelector(".card"))?"":"none";}});try{{navigator.sendBeacon("/c",JSON.stringify({{k:"絞り込み：イルミネーション｜"+p}}));}}catch(e){{}}}};}});}})();</script>
-<script>(function(){{var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function s(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}s("表示：イルミネーション"+(document.referrer&&!/usagi-odekake/.test(document.referrer)?"（外から）":""));document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;var t=a.querySelector(".t"),n=a.getAttribute("data-k");s("クリック：イルミネーション｜"+(n||(t?t.textContent:a.textContent)));}},true);}})();</script>
+<script>(function(){{var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function s(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}s("表示：イルミネーション"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":""));document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;var t=a.querySelector(".t"),n=a.getAttribute("data-k");s("クリック：イルミネーション｜"+(n||(t?t.textContent:a.textContent)));}},true);}})();</script>
 {mapjs}<script src="assets/yado.js?v={YV}" defer></script>
 </body></html>'''
 OUT = os.path.join(os.path.dirname(__file__), "../../links/")

@@ -9,7 +9,7 @@ import html, json, math, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 live = "--live" in sys.argv
 E = html.escape
-BASE = "https://usagi-odekake.usagi-fudosan.workers.dev"
+BASE = "https://townnote.pages.dev"
 K = json.load(open(os.path.join(ROOT, "links/townnotes/kansai.json"), encoding="utf-8"))
 PC = {"大阪": "#B97A62", "京都": "#8A7495", "兵庫": "#4F6681", "奈良": "#6F8C68", "滋賀": "#5F8F98", "和歌山": "#C4925A"}
 FILL = {"大阪": "#F7D9CC", "京都": "#E6DBF1", "兵庫": "#D6E4F5", "奈良": "#D8ECD4", "滋賀": "#D0EBEF", "和歌山": "#F8E4C4"}
@@ -187,7 +187,7 @@ function find(v){{v=v.replace(/\\s/g,"");if(!v){{res.innerHTML="";return;}}var v
  res.innerHTML=h||'<div class="none">「'+esc(v)+'」はまだありません。調べて、リストに足していきます。</div>';}}
 q.oninput=function(){{Promise.all([pO,pF]).then(function(){{find(q.value)}});clearTimeout(tq);tq=setTimeout(function(){{if(q.value.trim())c("入口で探す："+q.value.trim())}},1500);}};
 document.querySelectorAll(".chips button").forEach(function(b){{b.onclick=function(){{q.value=b.textContent;Promise.all([pO,pF]).then(function(){{find(b.textContent)}});c("入口で探す："+b.textContent);}}}});
-c("表示：TOWN NOTE 入口"+(document.referrer&&!/usagi-odekake/.test(document.referrer)?"（外から）":""));
+c("表示：TOWN NOTE 入口"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":""));
 document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;c("クリック：TOWN NOTE 入口｜"+(a.getAttribute("data-k")||a.textContent.trim().slice(0,30)));}},true);
 }})();</script></body></html>'''
 open(os.path.join(ROOT, "links/town-notes.html"), "w", encoding="utf-8").write(page)

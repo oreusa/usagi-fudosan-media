@@ -47,6 +47,11 @@ export default {
       const sorted = Object.fromEntries(Object.entries(total).sort((a, b) => b[1] - a[1]));
       return Response.json({ days, total: sorted, by_day: rows }, { headers: { "cache-control": "no-store" } });
     }
+    // 11/1 URLを TOWN NOTE（townnote.pages.dev）へ引っ越し。古いURLのページは新しいURLへ自動で飛ばす。
+    // /c と /stats は、新しいURLからも数を送ってくるので、ここで今まで通り数え続ける。
+    if (req.method === "GET" || req.method === "HEAD") {
+      return Response.redirect("https://townnote.pages.dev" + url.pathname + url.search, 301);
+    }
     return env.ASSETS.fetch(req);
   },
 };
