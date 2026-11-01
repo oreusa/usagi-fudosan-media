@@ -32,7 +32,8 @@ def rank(i_now, i_prev):
     return out
 
 
-def li(rows, avg_now, avg_prev, mx):
+def li(rows, avg_now, avg_prev, mx=None):
+    mx = mx or max(r[2] for r in rows)
     h = []
     for r, name, now, prev in rows:
         d = round(now - prev, 1)
@@ -97,13 +98,13 @@ h1 span{{display:block;font-size:14px;letter-spacing:.2em;color:#6B6058;margin-t
 h2{{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spacing:.14em;margin:22px 0 4px;padding-left:10px;border-left:3px solid #B97A62}}
 .cap{{font-size:11.5px;color:#8C7B6E;margin:0 0 10px;line-height:1.7}}
 ol{{list-style:none;margin:0;padding:0}}
-.r{{display:grid;grid-template-columns:26px 74px 1fr 62px;grid-template-rows:auto auto;align-items:center;column-gap:8px;padding:9px 2px;border-bottom:1px solid #ECECEC}}
-.no{{font-family:Jost;font-size:14px;color:#9C9187;text-align:center;grid-row:1/3}}
+.r{{display:grid;grid-template-columns:26px 1fr auto;align-items:center;column-gap:10px;row-gap:5px;padding:11px 2px;border-bottom:1px solid #ECECEC}}
+.no{{font-family:Jost;font-size:14px;color:#9C9187;text-align:center;grid-row:1/4}}
 .top .no{{color:#fff;background:#B97A62;border-radius:50%;width:24px;height:24px;line-height:24px;font-size:13px}}
-.nm{{font-weight:700;font-size:14px;letter-spacing:.04em}}
-.bar{{height:8px;background:#F1F2F4;position:relative}}.bar i{{position:absolute;left:0;top:0;bottom:0;background:#D9A48C}}.top .bar i{{background:#B97A62}}
-.v{{font-family:Jost;font-weight:500;font-size:17px;text-align:right}}.v small{{font-size:11px;margin-left:1px}}
-.pv{{grid-column:2/5;font-size:11px;color:#8C7B6E;margin-top:2px}}.pv b{{font-weight:500;margin-left:8px}}.pv .up{{color:#6F8A5F}}.pv .dn{{color:#B05A4A}}
+.nm{{grid-column:2;grid-row:1;font-weight:700;font-size:14px;letter-spacing:.04em}}
+.bar{{grid-column:2/4;grid-row:2;height:6px;background:#F1F2F4;position:relative}}.bar i{{position:absolute;left:0;top:0;bottom:0;background:#D9A48C}}.top .bar i{{background:#B97A62}}
+.v{{grid-column:3;grid-row:1;font-family:Jost;font-weight:500;font-size:17px;text-align:right}}.v small{{font-size:11px;margin-left:1px}}
+.pv{{grid-column:2/4;grid-row:3;font-size:11px;color:#8C7B6E}}.pv b{{font-weight:500;margin-left:8px}}.pv .up{{color:#6F8A5F}}.pv .dn{{color:#B05A4A}}
 .avg{{display:flex;justify-content:space-between;font-size:13px;padding:10px 4px;background:#F5F5F5;margin-top:8px}}.avg b{{font-family:Jost;font-weight:500}}
 .pane{{display:none}}.pane.on{{display:block}}
 .faq{{margin-top:34px}}.faq details{{background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);margin-bottom:8px;padding:12px 16px}}
@@ -122,11 +123,11 @@ ol{{list-style:none;margin:0;padding:0}}
 <nav class="flt"><button class="on" data-p="res">住宅地</button><button data-p="com">商業地</button></nav>
 <section class="pane on" id="res"><h2>住宅地の上がり幅</h2><p class="cap">区の中の調査地点の平均。右は前の年（令和7年）と、そこからの差です。</p>
 <ol>
-{li(res, AVG[1], AVG[0], mx)}
+{li(res, AVG[1], AVG[0])}
 </ol><div class="avg"><span>大阪市の平均</span><b>+{AVG[1]:.1f}%（前年 +{AVG[0]:.1f}%）</b></div></section>
 <section class="pane" id="com"><h2>商業地の上がり幅</h2><p class="cap">お店・オフィスの多い場所の調査地点の平均です。</p>
 <ol>
-{li(com, AVG[3], AVG[2], mx)}
+{li(com, AVG[3], AVG[2])}
 </ol><div class="avg"><span>大阪市の平均</span><b>+{AVG[3]:.1f}%（前年 +{AVG[2]:.1f}%）</b></div></section>
 <section class="faq"><h2>よくある質問</h2>
 {"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in faq)}
