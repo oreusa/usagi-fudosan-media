@@ -3,10 +3,11 @@
    ページを足すときは L に1行足すだけ。押された数は /c に「メニュー｜名前」で数える。 */
 (function(){
   var P=location.pathname.replace(/^\/townnotes\//,"/"),FU=/^\/(fudosan|uru|gyosha|chika-|machi\/)/.test(P),here=
-    /^\/fudosan-list/.test(P)?"flist":/^\/chika-kansai/.test(P)?"chika":/^\/chika-osaka/.test(P)?"chikao":/^\/(odekake|index\.html)$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/tomari/.test(P)?"tomari":/^\/(town-notes)?$/.test(P)?"tn":/^\/uru/.test(P)?"uru":/^\/gyosha/.test(P)?"gyosha":/^\/(fudosan|gyosha)/.test(P)?"fudosan":"";
+    /^\/fudosan-list/.test(P)?"flist":/^\/chika-kansai/.test(P)?"chika":/^\/chika-osaka/.test(P)?"chikao":/^\/(odekake|index\.html)$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/tomari/.test(P)?"tomari":/^\/ima/.test(P)?"ima":/^\/(town-notes)?$/.test(P)?"tn":/^\/uru/.test(P)?"uru":/^\/gyosha/.test(P)?"gyosha":/^\/(fudosan|gyosha)/.test(P)?"fudosan":"";
   var L=[
     ["LIST","list","/odekake","関西おでかけリスト","開催中・これからのおでかけ"],
     ["MAP","map","/odekake#map","地図で見る","関西の地図から、近くのおでかけを"],
+    ["NOW","ima","/ima","いまから行けるおでかけ","いる場所から近い順に、きょう開いている所"],
     ["ILLUMINATION","illumi","/illumination.html","イルミネーション日程","2026-2027　府県ごとの日程と無料の所"],
     ["STAY","tomari","/tomari.html","泊まりで行くおでかけ","遠くのおでかけと、近くの宿"],
     ["-","CONTACT"],

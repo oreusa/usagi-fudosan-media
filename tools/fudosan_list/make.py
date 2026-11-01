@@ -56,6 +56,7 @@ SW = ('<nav class="tnsw" aria-label="TOWN NOTE のリスト"><a href="/odekake" 
       '<a href="fudosan-list" class="on" aria-current="page">関西不動産リスト</a></nav>')
 h = h.replace('<a class="ilk" href="illumination">関西イルミネーション 2026 日程一覧<span>→</span></a>',
               '<a class="ilk" href="chika-kansai">関西 __NT__の街 地価ランキング 2026<span>→</span></a>')
+h = h.replace('<a class="ilk" href="ima" data-k="上の入口｜いまから行ける">いまから行けるおでかけ（近い順）<span>→</span></a>', '')  # おでかけ側だけの入口
 h = h.replace("この府県のおでかけは、これから増やしていきます", "この府県の分は、これから増やしていきます")
 
 # ---- カード
@@ -192,7 +193,7 @@ h = h.replace("</head>", SW_CSS + "</head>", 1)
 
 
 # タブの上の見出し（数字｜街と暮らし）と、府県ボタンをタブの下へ（おでかけの map.js と同じ形・同じ見た目）
-MOUNT = r"""<style>.tabs{grid-template-columns:repeat(__NTABS__,1fr)!important}.tgrp{display:grid;grid-template-columns:__NNUM__fr 2fr;gap:0 14px;margin:2px 0 6px}.tgrp span{display:block;text-align:center;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;letter-spacing:.14em;color:#8C7B6E;padding:0 0 6px;border-bottom:1px solid #D6CCC1;position:relative}.tgrp span:after{content:"";position:absolute;left:50%;bottom:-4px;width:7px;height:7px;background:#FFFFFF;border-right:1px solid #D6CCC1;border-bottom:1px solid #D6CCC1;transform:translateX(-50%) rotate(45deg)}.tn-top{margin-top:-16px}.tn-top .flt{margin:0 0 10px;border-top:0;padding:8px 0;gap:0 13px;flex-wrap:nowrap}</style>
+MOUNT = r"""<style>.tabs{grid-template-columns:repeat(__NTABS__,1fr)!important}.tgrp{display:grid;grid-template-columns:__NNUM__fr 2fr;gap:0 14px;margin:2px 0 6px}.tgrp span{display:block;text-align:center;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;letter-spacing:.14em;color:#8C7B6E;padding:0 0 6px;border-bottom:1px solid #CECECE;position:relative}.tgrp span:after{content:"";position:absolute;left:50%;bottom:-4px;width:7px;height:7px;background:#FFFFFF;border-right:1px solid #CECECE;border-bottom:1px solid #CECECE;transform:translateX(-50%) rotate(45deg)}.tn-top{margin-top:-16px}.tn-top .flt{margin:0 0 10px;border-top:0;padding:8px 0;gap:0 13px;flex-wrap:nowrap}</style>
 <script>(function(){function mount(){var bar=document.querySelector(".tabs");if(!bar)return;
 var tg=document.querySelector(".tgrp");if(!tg){tg=document.createElement("div");tg.className="tgrp";tg.innerHTML='<span>数字</span><span>街と暮らし</span>'}
 if(bar.previousSibling!==tg)bar.parentNode.insertBefore(tg,bar);
@@ -212,13 +213,13 @@ from collections import Counter
 # 府県が偏らないように、6府県からよく探されそうな街を選ぶ（11/1 全部の街を入れたので、候補は入口だけ）
 PLACES = ["北区", "吹田市", "豊中市", "中京区", "宇治市", "神戸市中央区", "西宮市", "姫路市", "奈良市", "生駒市", "大津市", "草津市", "和歌山市", "田辺市"]
 FQ = r"""<style>#fq{display:none;margin:6px 0 24px}html.fq-on #fq.paper{animation:fqin .24s ease-out}@keyframes fqin{from{opacity:0;transform:translateY(8px)}}@media (prefers-reduced-motion:reduce){html.fq-on #fq.paper{animation:none}}html.fq-on .paper:not(#fq){display:none}#fq.paper{display:none}html.fq-on #fq.paper{display:block}
-#fq .fh{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 12px;padding:0 2px 8px;border-bottom:1px solid #D6CCC1}
+#fq .fh{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 12px;padding:0 2px 8px;border-bottom:1px solid #CECECE}
 #fq .fh b{font-family:"Shippori Mincho",serif;font-size:17px;font-weight:600;color:#2B2622;letter-spacing:.06em}
 #fq .fh button{border:0;background:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;font-weight:700;color:#8C7B6E;cursor:pointer;padding:4px 0}
-#fq .fi{display:block;width:100%;box-sizing:border-box;font-size:16px;padding:12px 14px;border:1px solid #D6CCC1;border-radius:12px;background:#fff;color:#2B2622;font-family:"Zen Kaku Gothic New",sans-serif;outline:none}
+#fq .fi{display:block;width:100%;box-sizing:border-box;font-size:16px;padding:12px 14px;border:1px solid #CECECE;border-radius:12px;background:#fff;color:#2B2622;font-family:"Zen Kaku Gothic New",sans-serif;outline:none}
 #fq .fi:focus{border-color:#8C7B6E}
 #fq .fc{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 14px}
-#fq .fc button{border:1px solid #D6CCC1;background:#fff;border-radius:999px;padding:6px 12px;font-family:"Zen Kaku Gothic New",sans-serif;font-size:12.5px;font-weight:700;color:#5C5048;cursor:pointer}
+#fq .fc button{border:1px solid #CECECE;background:#fff;border-radius:999px;padding:6px 12px;font-family:"Zen Kaku Gothic New",sans-serif;font-size:12.5px;font-weight:700;color:#5C5048;cursor:pointer}
 #fq .fn{font-family:"Zen Kaku Gothic New",sans-serif;font-size:12.5px;color:#8C7B6E;margin:4px 2px 10px}
 #fq .fr .it{display:block!important}#fq .frq{display:block;width:100%;margin:4px 0 8px;padding:13px;border:0;border-radius:12px;background:#3A2F28;color:#fff;font-family:"Zen Kaku Gothic New",sans-serif;font-size:13.5px;font-weight:700;cursor:pointer}#fq .frq:disabled{background:#8C7B6E}
 #fq .tw{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px;background:#fff;text-decoration:none;color:#2B2622;padding:13px 14px;margin:0 0 8px;border-left:3px solid var(--pc);box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);font-family:"Zen Kaku Gothic New",sans-serif}
@@ -228,7 +229,7 @@ FQ = r"""<style>#fq{display:none;margin:6px 0 24px}html.fq-on #fq.paper{animatio
 #fq .sec{font-family:Jost,sans-serif;font-size:10px;letter-spacing:.3em;color:#9C8775;margin:16px 2px 8px}
 #fq .mpf{display:flex;flex-wrap:nowrap;gap:0 12px;justify-content:center;overflow-x:auto;padding:4px 0 10px}
 #fq .mpf button{flex:none;border:0;background:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:13.5px;font-weight:700;color:var(--pc,#5C5048);padding:4px 0;border-bottom:2px solid transparent;cursor:pointer}
-#fq .mpf button.on{border-bottom-color:currentColor}#fq .mpc{padding-top:0}#fq .mpc:empty{display:none}#fq .mpc button{font-size:12.5px;color:#5C5048;border:1px solid #D6CCC1;border-radius:999px;padding:5px 12px}#fq .mpc button.on{background:#3A2F28;color:#fff;border-color:#3A2F28}
+#fq .mpf button.on{border-bottom-color:currentColor}#fq .mpc{padding-top:0}#fq .mpc:empty{display:none}#fq .mpc button{font-size:12.5px;color:#5C5048;border:1px solid #CECECE;border-radius:999px;padding:5px 12px}#fq .mpc button.on{background:#3A2F28;color:#fff;border-color:#3A2F28}
 #fq .mpw{background:#fff;border:1px solid #ECECEC;padding:8px}#fq .mpw svg{display:block;width:100%;height:auto;max-height:70vh;touch-action:manipulation}
 #fq .mpw path{cursor:pointer;stroke:#fff;stroke-width:1.1;vector-effect:non-scaling-stroke}#fq .mpw path.sel{stroke:#2B2622;stroke-width:2}
 #fq .lg{display:flex;flex-wrap:wrap;gap:6px 14px;font-family:"Zen Kaku Gothic New",sans-serif;font-size:11px;color:#7A6E66;margin:8px 2px 0}#fq .lg span:before{content:"";display:inline-block;width:12px;height:12px;vertical-align:-2px;margin-right:4px;background:var(--b)}
