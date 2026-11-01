@@ -59,16 +59,26 @@ h = h.replace('<a class="ilk" href="illumination">関西イルミネーション
 h = h.replace("この府県のおでかけは、これから増やしていきます", "この府県の分は、これから増やしていきます")
 
 # ---- カード
-TABS = [("chika", "b-now", "LAND PRICE", "地価・相場", "地価・相場の数字"),
+# 11/1 オーナーが「売り買いの相場」を選んだ → 地価の次に新しいタブ（近畿レインズの成約価格）。「相場」はこちらに移したので、1つめは「地価」
+TABS = [("chika", "b-now", "LAND PRICE", "地価", "地価の数字"),
+        ("souba", "b-old", "MARKET", "売り買い", "売り買いの相場（売れた値段）"),
         ("jinko", "b-up", "PEOPLE", "人口・駅", "人口と駅の数字"),
         ("dekiru", "b-new", "NEW", "できる", "できる・できた"),
         ("seido", "b-done", "MONEY", "制度", "住まいの制度とお金")]
 ORDER = ["大阪", "京都", "兵庫", "奈良", "滋賀", "和歌山"]
+# 売り買いはオーナーの OK まで見本だけ（--try で links/fudosan-list-try.html に出す）。OK が出たら SOUBA_LIVE = True
+SOUBA_LIVE = False
+TRY = "--try" in sys.argv
+if TRY:
+    OUT = os.path.join(ROOT, "links/fudosan-list-try.html")
+if not (SOUBA_LIVE or TRY):
+    TABS = [("chika", "b-now", "LAND PRICE", "地価・相場", "地価・相場の数字")] + [t for t in TABS if t[0] not in ("souba", "chika")]
+    FACTS = [o for o in FACTS if o["tab"] != "souba"]
 
 
 def card(o):
     return (f'<a class="card" data-pref="{o["pref"]}" data-cat="{o["tab"]}" data-date="{o["date"]}" href="{E(o["url"])}">'
-            f'<div class="bd"><div class="d">{E(o["src"])}</div><div class="t">{E(o["t"].replace("｜", "　"))}</div>'
+            f'<div class="bd"><div class="d">{E(o["src"])}</div><div class="t">{E(o["t"]).replace("｜", "<br>" if o["tab"] == "souba" else "　")}</div>'
             f'<div class="m">{E(o["m"])}</div></div><div class="go">→</div></a>')
 
 
@@ -107,7 +117,7 @@ h = h.replace(TNX_OLD, '<a class="tnx" href="/odekake" data-k="下の入口｜�
 # ---- 府県の絞り込み・カードの包み・数え（index の仕組みを不動産用に短くしたもの）
 main_js = r'''<script>(function(){
 var O=(function(){try{return localStorage.getItem("usagi_owner")==="1";}catch(e){return false;}})();function c(k){if(O)return;try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
-var PC={"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"},CAT={chika:"地価",jinko:"人口・駅",dekiru:"できる",seido:"制度"};
+var PC={"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"},CAT={chika:"地価",souba:"売り買い",jinko:"人口・駅",dekiru:"できる",seido:"制度"};
 document.querySelectorAll(".paper a.card").forEach(function(a){var w=document.createElement("div");w.className="it";var pf=a.getAttribute("data-pref");w.setAttribute("data-pref",pf);if(PC[pf])w.style.setProperty("--pc",PC[pf]);a.parentNode.insertBefore(w,a);w.appendChild(a);
  var bd=a.querySelector(".bd"),d=a.querySelector(".d"),cx=document.createElement("div");cx.className="v2c";cx.innerHTML='<span class="p" data-p="'+pf+'">'+pf+'</span><span>'+CAT[a.getAttribute("data-cat")]+'</span>';
  var dt=document.createElement("div");dt.className="v2d";dt.textContent=d.textContent;bd.insertBefore(dt,bd.firstChild);bd.insertBefore(cx,dt);});
@@ -135,7 +145,7 @@ h = h.replace("</head>", SW_CSS + "</head>", 1)
 
 
 # タブの上の見出し（数字｜街と暮らし）と、府県ボタンをタブの下へ（おでかけの map.js と同じ形・同じ見た目）
-MOUNT = r"""<style>.tgrp{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;margin:2px 0 6px}.tgrp span{display:block;text-align:center;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;letter-spacing:.14em;color:#8C7B6E;padding:0 0 6px;border-bottom:1px solid #D6CCC1;position:relative}.tgrp span:after{content:"";position:absolute;left:50%;bottom:-4px;width:7px;height:7px;background:#FFFFFF;border-right:1px solid #D6CCC1;border-bottom:1px solid #D6CCC1;transform:translateX(-50%) rotate(45deg)}.tn-top{margin-top:-16px}.tn-top .flt{margin:0 0 10px;border-top:0;padding:8px 0;gap:0 13px;flex-wrap:nowrap}</style>
+MOUNT = r"""<style>.tabs{grid-template-columns:repeat(__NTABS__,1fr)!important}.tgrp{display:grid;grid-template-columns:__NNUM__fr 2fr;gap:0 14px;margin:2px 0 6px}.tgrp span{display:block;text-align:center;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:11px;letter-spacing:.14em;color:#8C7B6E;padding:0 0 6px;border-bottom:1px solid #D6CCC1;position:relative}.tgrp span:after{content:"";position:absolute;left:50%;bottom:-4px;width:7px;height:7px;background:#FFFFFF;border-right:1px solid #D6CCC1;border-bottom:1px solid #D6CCC1;transform:translateX(-50%) rotate(45deg)}.tn-top{margin-top:-16px}.tn-top .flt{margin:0 0 10px;border-top:0;padding:8px 0;gap:0 13px;flex-wrap:nowrap}</style>
 <script>(function(){function mount(){var bar=document.querySelector(".tabs");if(!bar)return;
 var tg=document.querySelector(".tgrp");if(!tg){tg=document.createElement("div");tg.className="tgrp";tg.innerHTML='<span>数字</span><span>街と暮らし</span>'}
 if(bar.previousSibling!==tg)bar.parentNode.insertBefore(tg,bar);
@@ -143,6 +153,7 @@ var top=document.querySelector(".tn-top");if(!top){top=document.createElement("d
 ["flt","none"].forEach(function(id){var e=document.getElementById(id);if(e&&e.parentNode!==top)top.appendChild(e)});
 if(bar.nextSibling!==top)bar.parentNode.insertBefore(top,bar.nextSibling);}
 mount();document.addEventListener("click",function(e){if(e.target.closest(".tabs,#flt"))setTimeout(mount,80);});})();</script>"""
+MOUNT = MOUNT.replace("__NTABS__", str(len(TABS))).replace("__NNUM__", str(len(TABS) - 2))
 h = h.replace("</body>", MOUNT + "</body>", 1)
 
 
