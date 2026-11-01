@@ -126,7 +126,6 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 </style><script src="/assets/night.js?v=5"></script><script src="/assets/menu.js?v=9" defer></script><script src="/assets/v2sub.js?v=7" defer></script></head><body><div class="wrap">
 <header class="head"><img src="/assets/logo-s.png?v=2" width="74" height="74" alt="TOWN NOTE のロゴ">
 <h1>TOWN NOTE</h1><div class="kana">タウンノート</div>
-<p class="cp">関西の街しらべノート。</p>
 <p class="sub">関西の不動産屋が、街を調査して見つけたことを、<br>公式の情報つきで、このノートに書きとめています。</p>
 <div class="nofilt">{SVG}</div><div class="mapcap">府県を押すと、その府県の数が出ます</div><div class="pp" id="pp" hidden></div></header>
 
