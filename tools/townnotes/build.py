@@ -42,4 +42,6 @@ v = hashlib.sha1(js.encode('utf-8')).hexdigest()[:8]
 # 試し（TN_TRY）：試作ページだけで、新しい見せ方を先に試す
 h = h.replace('</body></html>', badge + '<script>window.TN_TRY=1</script><script src="map.js?v=' + v + '" defer></script></body></html>')
 assert 'src="map.js?v=' in h
-open(os.path.join(R, 'links/townnotes/index.html'), 'w', encoding='utf-8').write(h); print('ok')
+# 11/1 試作は役目を終えた（地図は本番のリストに入った）。古い見た目が人目に出ないよう、本番のリストへ送る
+RED = '<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="robots" content="noindex"><meta http-equiv="refresh" content="0;url=/odekake"><link rel="canonical" href="/odekake"><title>関西おでかけリスト</title><script>location.replace("/odekake")</script></head><body></body></html>'
+open(os.path.join(R, 'links/townnotes/index.html'), 'w', encoding='utf-8').write(RED); print('ok')

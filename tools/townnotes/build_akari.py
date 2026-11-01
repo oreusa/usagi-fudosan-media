@@ -8,8 +8,8 @@ from assemble import assemble
 A = os.path.abspath(sys.argv[1]); out = os.path.join(A, 'site', 'townnotes'); os.makedirs(out, exist_ok=True)
 # 10/31 月のページは真っ白（オーナー「アイボリー気に入らない」）にしたが、燈のページは今も #FDFCFA の紙の色。
 # 燈の見た目は変えないように、月で白・グレーにした色を燈の分だけ元の色にもどす（1対1。ほかの所には使っていない色）
-WARM = {'#FFFFFF': '#FDFCFA', '#D8D8D8': '#E2D6CB', '#DADADA': '#E2D9CF', '#D4D4D4': '#DDD3C8', '#E3E3E3': '#EAE2D9',
-        '#EBEBEB': '#F0EAE3', '#EAEAEA': '#EFE9E1', '#F0F0F0': '#F4EFEA'}
+# 11/1 燈のページも真っ白・グレーにそろえた（オーナー「ベージュは使わない」）ので、もう元の色にはもどさない
+WARM = {}
 _asm = assemble
 def assemble(*a):
     js = _asm(*a)

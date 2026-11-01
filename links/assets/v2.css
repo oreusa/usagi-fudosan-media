@@ -38,7 +38,7 @@ html[style*="overflow: hidden"] #v2bar{display:none}
 /* 近くの宿はカードの中、地図の右 */
 html body .paper .it .yk{position:absolute;left:78px;bottom:14px;margin:0!important;display:block}
 html body .paper .it .yk[hidden]{display:none}
-html body .paper .it .yk a{border:0!important;background:none!important;box-shadow:none!important;padding:4px 0!important;color:var(--sub)!important;font-size:12px;text-decoration:underline;text-underline-offset:3px}
+html body .paper .it .yk a{display:inline-block;line-height:inherit;border:0!important;background:none!important;box-shadow:none!important;padding:4px 0!important;color:var(--sub)!important;font-size:12px;text-decoration:underline;text-underline-offset:3px}
 html body .paper .it .yk a:before{display:none}
 .tip{border:0!important;background:none!important;padding:18px 0 4px!important;text-align:center!important;color:var(--sub)!important;font-size:12px!important;line-height:1.9!important}
 /* 10/31 オーナー「ネイビーはビジネス感」→ 色は府県の色に戻す。差し色はロゴに近い濃い茶色 */

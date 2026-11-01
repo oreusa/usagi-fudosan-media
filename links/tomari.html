@@ -67,4 +67,4 @@ wk.addEventListener("click",function(){W=!W;wk.setAttribute("aria-pressed",W);dr
 function ck(k){try{if(localStorage.getItem("usagi_owner")==="1")return;}catch(e){}try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
 document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[data-k]");if(a)ck(a.dataset.k.indexOf("宿｜")===0?a.dataset.k:"泊まり｜"+a.dataset.k);},true);
 ck("表示：泊まりで行くおでかけ");
-})();</script><script src="townnotes/map-tomari.js?v=e5a95419" defer></script></body></html>
+})();</script><script src="townnotes/map-tomari.js?v=c8f75eae" defer></script></body></html>
