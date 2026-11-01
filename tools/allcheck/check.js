@@ -89,6 +89,8 @@ async function one(ctx, site, p) {
     userAgent: "Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1 allcheck" });
   // 数に入れない印（月：usagi_owner、燈：クッキー me=1）
   await ctx.addInitScript(() => { try { localStorage.setItem("usagi_owner", "1"); } catch (e) {} });
+  // 11/2 オーナー「他のページまだ白モヤ…統一してない」→ 夜の見た目も毎朝撮る（THEME=night で夜にして開く）
+  if (process.env.THEME === "night") await ctx.addInitScript(() => { try { localStorage.setItem("usagi_theme", "night"); } catch (e) {} });
   await ctx.addCookies([{ name: "me", value: "1", domain: "usagi-life-notes.pages.dev", path: "/", secure: true }]);
   const rows = [];
   for (const s of SITES) for (const p of await pages(s)) { const r = await one(ctx, s, p); rows.push(r); console.log(r.site, r.p, r.prob.length ? r.prob.join(" / ") : "OK"); }
