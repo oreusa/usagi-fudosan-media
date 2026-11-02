@@ -27,7 +27,7 @@ def drop(pat):
 
 
 # ---- head
-h = h.replace("<title>関西おでかけリスト</title>", "<title>関西不動産リスト｜地価・人口・できる物・制度を公式の数字で</title>")
+h = re.sub(r"<title>[^<]*</title>", "<title>関西不動産リスト｜地価・人口・できる物・制度を公式の数字で</title>", h, count=1)  # 11/2 おでかけの題名が変わっても必ず置きかえる
 desc = "大阪・京都・兵庫・奈良・滋賀・和歌山の地価、人口、駅の乗る人、新しくできる物、住まいの制度を、公式の資料つきでまとめました。"
 h = re.sub(r'<meta name="description"[^>]*>', f'<meta name="description" content="{desc}">' + ("" if live else '<meta name="robots" content="noindex">'), h, count=1)
 h = h.replace('content="https://townnote.pages.dev/odekake"', f'content="{URL}"')

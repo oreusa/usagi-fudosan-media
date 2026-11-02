@@ -106,6 +106,8 @@ async function one(ctx, site, p) {
   const rows = [];
   for (const s of SITES) for (const p of await pages(s)) { const r = await one(ctx, s, p); rows.push(r); console.log(r.site, r.p, r.prob.length ? r.prob.join(" / ") : "OK"); }
   await b.close();
+  // 11/2 月 /fudosan-list の題名が おでかけ のままだった → 同じサイトで題名が同じページを出す
+  for (const r of rows) { const d = rows.filter(x => x !== r && x.site === r.site && x.title && x.title === r.title); if (d.length) r.prob.push("題名がほかのページと同じ（" + d.map(x => x.p).join("・") + "）"); }
   const ng = rows.filter(r => r.prob.length);
   let md = `# 全ページ点検 ${new Date(Date.now() + 9 * 36e5).toISOString().slice(0, 16).replace("T", " ")}（日本時間）\n\n`;
   md += `見たページ：${rows.length}（月 ${rows.filter(r => r.site === "月").length}・燈 ${rows.filter(r => r.site === "燈").length}）／気になる所があるページ：${ng.length}\n\n`;
