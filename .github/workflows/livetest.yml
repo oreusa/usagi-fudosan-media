@@ -1,0 +1,18 @@
+name: livetest
+# 公開中の月・燈の地図が本当に動くかを確かめる（tools/livetest/map.js）。結果は livetest ブランチの out/
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: {group: livetest, cancel-in-progress: false}
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm i --no-save playwright@1.49.1 && npx playwright install --with-deps chromium
+      - run: node tools/livetest/map.js
+      - run: |
+          cp -r out /tmp/out && git config user.name "livetest bot" && git config user.email "actions@users.noreply.github.com"
+          git checkout --orphan livetest && git rm -rqf . && cp -r /tmp/out out && git add out && git commit -qm "livetest $(date -u +%FT%TZ)" && git push -qf origin livetest

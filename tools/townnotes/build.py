@@ -26,6 +26,15 @@ v = __import__('hashlib').sha1(js.encode('utf-8')).hexdigest()[:8]
 live = re.sub(r'/townnotes/map\.js\?v=[0-9a-f]+', '/townnotes/map.js?v=' + v, h)
 if live != h:
     open(os.path.join(R, 'links/index.html'), 'w', encoding='utf-8').write(live)
+# 11/2 イルミ・紅葉・泊まりのページの地図も、作り直すたびに ?v= を今の中身にそろえる（古い地図がスマホに残らないように）
+import glob
+for f, name in [(os.path.join(R, 'links/townnotes/map-illumi.js'), 'map-illumi'), (os.path.join(R, 'links/townnotes/map-tomari.js'), 'map-tomari')]:
+    hv = hashlib.sha1(open(f, encoding='utf-8').read().encode('utf-8')).hexdigest()[:8]
+    for page in glob.glob(os.path.join(R, 'links/*.html')):
+        t = open(page, encoding='utf-8').read()
+        t2 = re.sub(r'townnotes/' + name + r'\.js\?v=[0-9a-f]+', 'townnotes/' + name + '.js?v=' + hv, t)
+        if t2 != t:
+            open(page, 'w', encoding='utf-8').write(t2)
 # 試作ページには本番の読み込みを持ちこまない（下で試作用を足す）
 h = re.sub(r'<script src="/townnotes/map\.js[^"]*" defer></script>', '', h)
 # 試作は links/townnotes/ にあるので、上の階のファイルは ../ で指す（Cloudflareでも予備のGitHubページでも同じに動く）
