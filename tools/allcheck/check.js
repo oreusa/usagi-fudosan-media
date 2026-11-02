@@ -64,6 +64,10 @@ async function one(ctx, site, p) {
       bg: getComputedStyle(document.body).backgroundColor,
       h: document.body.scrollHeight,
       old: old.slice(0, 5), oldN: old.length, beige,
+      // 11/2 燈の入口で「比べた物 0件」が出ていたのを見逃した → 数の欄が 0件・―・NaN・undefined のままなら問題にする
+      zero: [...document.querySelectorAll("b,strong,.n,.num")].filter(e => vis(e) && /^(0(件|つ|軒|か所)?|―|-|NaN.*|undefined.*)$/.test(e.textContent.trim())).map(e => ((e.parentElement && e.parentElement.textContent) || "").trim().replace(/\s+/g, " ").slice(0, 20)).slice(0, 5),
+      bad: /NaN|undefined|\[object Object\]/.test(document.body.innerText),
+      pwa: !!document.querySelector('link[rel="manifest"]'),
       imgs: [...document.images].filter(i => i.complete && i.naturalWidth === 0 && vis(i)).map(i => i.getAttribute("src")).slice(0, 5),
     };
   }, T).catch(e => ({ title: "", err: e.message }));
@@ -80,6 +84,9 @@ async function one(ctx, site, p) {
   if (info.bg && !okBg.test(info.bg)) prob.push("背景が白でない " + info.bg);
   if (info.oldN) prob.push("終わった日付が" + info.oldN + "件見えている（" + info.old.join("／") + "）");
   if (info.beige && info.beige.length) prob.push("ベージュっぽい色: " + info.beige.join("、"));
+  if (info.zero && info.zero.length) prob.push("数が0か空のまま: " + info.zero.join("／"));
+  if (info.bad) prob.push("NaN・undefined の文字が見えている");
+  if (info.pwa === false) prob.push("ホーム画面に置けない（manifest がない）");
   if (info.imgs && info.imgs.length) prob.push("出ない画像: " + info.imgs.join(" "));
   errs.slice(0, 3).forEach(e => prob.push(e));
   bad.slice(0, 3).forEach(e => prob.push("読めない: " + e));
