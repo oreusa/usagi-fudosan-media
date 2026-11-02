@@ -125,7 +125,7 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 .hv:after{{content:" →"}}
 .none{{display:none;text-align:center;font-size:13px;color:#8C7B6E;padding:40px 0}}
 .note{{font-size:12px;line-height:1.9;color:#7A6E66;background:#F5F5F5;padding:14px 16px;margin-top:30px}}
-.back{{display:block;width:max-content;margin:28px auto 0;color:#2B2622;text-decoration:none;font-size:13px;letter-spacing:.1em;border-bottom:1px solid #2B2622;padding-bottom:2px}}
+.also{{margin:30px auto 0;text-align:center}}.also small{{display:block;font-size:11px;letter-spacing:.2em;color:#8A7F76;margin-bottom:10px}}.also a{{display:inline-block;margin:0 9px 8px;color:#2B2622;text-decoration:none;font-size:13px;letter-spacing:.1em;border-bottom:1px solid #2B2622;padding-bottom:2px}}.also+.back{{margin-top:14px}}.back{{display:block;width:max-content;margin:28px auto 0;color:#2B2622;text-decoration:none;font-size:13px;letter-spacing:.1em;border-bottom:1px solid #2B2622;padding-bottom:2px}}
 .ft{{text-align:center;font-size:10px;letter-spacing:.04em;color:#8C7B6E;margin-top:30px}}
 </style><script src="assets/night.js?v=9"></script><script src="assets/menu.js?v=10" defer></script><script src="assets/v2sub.js?v=8" defer></script></head><body><div class="wrap">
 <div class="head"><img src="assets/logo-s.png?v=2" width="60" height="60" alt="ロゴ"><div class="en">STAY &amp; GO</div>
@@ -137,8 +137,9 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 {"".join(secs)}
 <div class="none" id="none">この週末に開いている所はありません。</div>
 <div class="note">おでかけの日にちや時間は、出かける前に必ず公式ページで確かめてください。宿の空きや値段は楽天トラベルでご確認ください。</div>
+<nav class="also" aria-label="あわせて見る"><small>あわせて見る</small><a href="/illumination" data-k="あわせて：関西イルミネーション">関西イルミネーション</a><a href="/ima" data-k="あわせて：いまから行けるおでかけ">いまから行けるおでかけ</a></nav>
 <a class="back" href="/odekake">関西おでかけリストへ戻る</a>
-<div class="ft">ぴょんと街しらべ│関西おでかけリスト</div></div>
+<div class="ft">TOWN NOTE│関西おでかけリスト</div></div>
 <script>(function(){{
 var B=document.querySelectorAll("#flt button"),S=document.querySelectorAll(".ps"),wk=document.getElementById("wk"),P="すべて",W=false;
 function we(){{var n=new Date(Date.now()+9*36e5),d=n.getUTCDay(),sat=new Date(n);sat.setUTCDate(n.getUTCDate()+((6-d+7)%7));if(d===0)sat.setUTCDate(n.getUTCDate()-1);var sun=new Date(sat);sun.setUTCDate(sat.getUTCDate()+1);return [sat.toISOString().slice(0,10),sun.toISOString().slice(0,10)];}}
