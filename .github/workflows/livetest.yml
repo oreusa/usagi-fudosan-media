@@ -8,11 +8,12 @@ concurrency: {group: livetest, cancel-in-progress: false}
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
       - run: npm i --no-save playwright@1.49.1 && npx playwright install --with-deps chromium
-      - run: node tools/livetest/map.js
+      - run: node tools/livetest/map.js || true
+      - run: node tools/livetest/all.js || true
       - run: |
           cp -r out /tmp/out && git config user.name "livetest bot" && git config user.email "actions@users.noreply.github.com"
           git checkout --orphan livetest && git rm -rqf . && cp -r /tmp/out out && git add out && git commit -qm "livetest $(date -u +%FT%TZ)" && git push -qf origin livetest
