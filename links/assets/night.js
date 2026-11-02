@@ -24,7 +24,7 @@
     "html.night .head{background:radial-gradient(1.2px 1.2px at 12% 18%,#000 98%,transparent),radial-gradient(1px 1px at 27% 42%,#000 98%,transparent),radial-gradient(1.4px 1.4px at 44% 9%,#000 98%,transparent),radial-gradient(1px 1px at 63% 31%,#000 98%,transparent),radial-gradient(1.2px 1.2px at 78% 14%,#000 98%,transparent),radial-gradient(1px 1px at 88% 46%,#000 98%,transparent),radial-gradient(1px 1px at 8% 58%,#000 98%,transparent),radial-gradient(1.3px 1.3px at 92% 72%,#000 98%,transparent),radial-gradient(1px 1px at 35% 70%,#000 98%,transparent)!important}"+
     /* 入口の関西の地図：夜は街あかりのように、府県の線が光る。
        11/2 20:14 オーナー「星と月以外オシャレに見えない」→ 府県の塗りをやめて紺の陸地に、府県の色は光る線だけ（星座の図のように） */
-    "html.night .kmap .pf{stroke-width:1.6}"+
+    "html.night .kmap .pf{stroke-width:3.2}"+
     "html.night .kmap .pf path{fill-opacity:1}"+
     "html.night .kmap .pf path[data-p='大阪']{stroke:#F2A788;fill:#182139;filter:drop-shadow(0 0 2.5px rgba(242,167,136,.85))}"+
     "html.night .kmap .pf path[data-p='京都']{stroke:#C3A6E0;fill:#182139;filter:drop-shadow(0 0 2.5px rgba(195,166,224,.85))}"+
@@ -143,3 +143,9 @@
 })();
 /* 11/2 ホーム画面に置けるように（PWA）。どのページでも読むので、ここで sw.js を登録する。 */
 if("serviceWorker" in navigator&&location.protocol==="https:")window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});
+/* 11/3 オーナー「大阪のオレンジは所々色変わる、この不規則さは？」→ となり合う府県の線が同じ境目で重なり、後に描いた色が上に来ていた。
+   夜は各府県の色を自分の内側だけに出す（線を太くして外側を切る）。境目では2色がきれいに並ぶ */
+(function(){function mk(){document.querySelectorAll("svg.kmap").forEach(function(svg){if(svg.__clip)return;svg.__clip=1;var NS="http://www.w3.org/2000/svg",df=document.createElementNS(NS,"defs");svg.insertBefore(df,svg.firstChild);
+ svg.querySelectorAll(".pf path").forEach(function(pa,i){var c=document.createElementNS(NS,"clipPath"),q=document.createElementNS(NS,"path");c.id="kc"+i;q.setAttribute("d",pa.getAttribute("d"));c.appendChild(q);df.appendChild(c);pa.classList.add("kcl");pa.style.setProperty("--kc","url(#kc"+i+")")});});}
+ var st=document.createElement("style");st.textContent="html.night .kmap .pf path.kcl{clip-path:var(--kc)}";document.head.appendChild(st);
+ if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",mk);else mk();})();
