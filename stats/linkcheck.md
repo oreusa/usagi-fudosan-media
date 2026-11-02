@@ -1,10 +1,10 @@
-# リンクの確かめ（2026-11-02 10:02 JST・191件）
+# リンクの確かめ（2026-11-02 11:40 JST・191件）
 
 ## 開けない（直す）
 - ✗ 天理市 光の祭典（links/illumination-nara.html）404 https://www.city.tenri.nara.jp/kakuka/shichoukoushitsu/sougouseisakuka/teijyujirituken/teijujiritsukenibentojoho/15242.html
 - ✗ 馬見クリスマス きらめきマルシェ（links/illumination-nara.html）URLError https://www.pref.nara.jp/67882.htm
 - ✗ 徐福公園ライトアップ（links/illumination-wakayama.html）404 https://www.shinguu.jp/spots/detail/A0005
-- ✗ 仮面ライダー×自然のチカラ展（links/index.html）404 https://kobe-maritime-museum.com/exhibition/790/
+- ✗ 仮面ライダー×自然のチカラ展（links/index.html）503 https://kobe-maritime-museum.com/exhibition/790/
 - ✗ 百済寺と近江の仏教美術（links/index.html）URLError https://www.miho.or.jp/
 - ✗ 和歌山城 光と幻想の夜（links/index.html）522 https://wakayamajo.jp/
 - ✗ しみずふるさとまつり（links/index.html）404 https://www.town.aridagawa.lg.jp/top/kakuka/shimizu/sangyoshinko/tourism/calendar/7671.html
