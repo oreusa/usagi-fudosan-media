@@ -175,7 +175,7 @@ svg.querySelectorAll(".pf path").forEach(function(el){{el.addEventListener("clic
  svg.classList.add("sel");svg.querySelectorAll(".pf path").forEach(function(x){{x.classList.toggle("on",x.getAttribute("data-p")===p)}});
  var od=OD.filter(function(x){{return x.p===p}}),nw=od.filter(function(x){{return x.now}}),tw=TW.filter(function(x){{return x.p===p}}),up=tw.filter(function(x){{return x.r8>0}}),tp=tw.slice().sort(function(a,b){{return b.r8-a.r8}})[0];
  pp.style.setProperty("--pc",PC[p]);pp.hidden=false;
- pp.innerHTML='<h3>'+p+'<small>'+EN[p]+'</small></h3><div class="g"><a href="/odekake" data-k="入口の地図｜おでかけ｜'+p+'"><span>おでかけ（開催中）</span><b>'+nw.length+'<small style="font-size:12px">件</small></b><em>'+(nw[0]?esc(nw[0].t):"これから足します")+'</em></a><a href="/chika-kansai#'+ID[p]+'" data-k="入口の地図｜地価｜'+p+'"><span>上がった街</span><b>'+up.length+'<small style="font-size:12px">／'+tw.length+'</small></b><em>'+(tp?"1位 "+esc(tp.n)+" "+pct(tp.r8):"")+'</em></a></div>';
+ pp.innerHTML='<h3>'+p+'<small>'+EN[p]+'</small></h3><div class="g"><a href="/odekake?pref='+encodeURIComponent(p)+'" data-k="入口の地図｜おでかけ｜'+p+'"><span>おでかけ（開催中）</span><b>'+nw.length+'<small style="font-size:12px">件</small></b><em>'+(nw[0]?esc(nw[0].t):"これから足します")+'</em></a><a href="/chika-kansai#'+ID[p]+'" data-k="入口の地図｜地価｜'+p+'"><span>上がった街</span><b>'+up.length+'<small style="font-size:12px">／'+tw.length+'</small></b><em>'+(tp?"1位 "+esc(tp.n)+" "+pct(tp.r8):"")+'</em></a></div>';
  c("入口の地図："+p);}});}});}});
 // あなたの街：おでかけと地価をまとめて
 var q=document.getElementById("q"),res=document.getElementById("res"),tq;
