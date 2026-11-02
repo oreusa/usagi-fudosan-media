@@ -591,7 +591,7 @@ function apply(){var pb=F.querySelector("button.on"),pf=pb?pb.textContent:"す�
   b.querySelectorAll(".it").forEach(function(w){var ok=(pf=="すべて"||w.getAttribute("data-pref")==pf);if(ok&&mode!="すべて")ok=cov(w.querySelector(".card"),we);w.style.display=ok?"":"none";if(ok){k++;if(main)v++;}});
   if(main)b.classList.toggle("hid",!k);});
  var n=document.getElementById("none");if(n){n.textContent=mode=="すべて"?"この府県のおでかけは、これから増やしていきます":"今週末に行けるおでかけは、これから増やしていきます";n.style.display=v?"none":"";}}
-F.addEventListener("click",function(){setTimeout(apply,0);});
+F.addEventListener("click",function(){apply();});/* 11/3 オーナー「大阪おしたら一瞬動作バグる」→ 押した時の作り直しを同じ瞬間にまとめる（間に画面が出て一瞬ちぢんでいた） */
 var c=document.querySelector(".cnt span");if(c)c.innerHTML="開催中<b>"+N.length+"</b>件";
 })();
 </script>
@@ -610,7 +610,7 @@ function cap(){document.querySelectorAll(".paper .blk").forEach(function(b,i){if
  var m=document.createElement("button");m.className="cmore";m.textContent="もっと見る（あと"+r.length+"件）";
  m.onclick=function(){open[i]=1;r.forEach(function(w){w.classList.remove("cap");});m.remove();};
  var last=it[it.length-1];last.parentNode.insertBefore(m,last.nextSibling);});}
-cap();document.addEventListener("click",function(e){if(e.target.closest("#flt,.dflt")){open={};setTimeout(cap,30);}});})();
+cap();document.addEventListener("click",function(e){if(e.target.closest("#flt,.dflt")){open={};cap();}});})();
 </script>
 <style>
 /* 10/26 オーナー「スッキリさせたいけど工夫したい」→ 案D：開催中・これから・もうすぐ・できた をタブで切り替え */
@@ -642,9 +642,9 @@ function n(i){var x=B[i];if(!x||x.classList.contains("hid"))return 0;return [].f
 function show(i){cur=i;B.forEach(function(x,j){if(x)x.classList.toggle("toff",j!=i);});[].forEach.call(bar.children,function(b,j){b.classList.toggle("on",j==i);});if(B[i])B[i].insertBefore(bar,B[i].firstChild);}
 function upd(){var first=-1;[].forEach.call(bar.children,function(b,j){var k=n(j);b.querySelector("i").textContent=k;b.classList.toggle("z",!k);if(k&&first<0)first=j;});
  if(cur<0||!n(cur))show(first<0?0:first);else show(cur);}
-upd();document.addEventListener("click",function(e){if(e.target.closest("#flt,.dflt"))setTimeout(upd,60);});})();
+upd();document.addEventListener("click",function(e){if(e.target.closest("#flt,.dflt"))upd();});})();
 </script>
-<script src="/townnotes/map.js?v=5d9217c3" defer></script><style>
+<script src="/townnotes/map.js?v=f6ce4d5e" defer></script><style>
 .yk[hidden],.ykl[hidden]{display:none}
 .yk{display:flex;justify-content:flex-end;gap:12px;margin:-4px 2px 12px;font-size:11.5px;letter-spacing:.04em}
 .yk a{color:#8C6A55;text-decoration:none;border:1px solid #D9C7B8;background:#fff;border-radius:99px;padding:6px 12px}
