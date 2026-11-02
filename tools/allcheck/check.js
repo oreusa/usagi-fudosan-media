@@ -10,7 +10,7 @@ const SITES = [
   { key: "tsuki", name: "月", base: process.env.TSUKI_BASE || "https://townnote.pages.dev",
     extra: ["/odekake", "/ima", "/fudosan", "/fudosan-list", "/chika-kansai", "/chika-osaka", "/uru", "/gyosha", "/machi/osaka-01", "/machi/kyoto-01"] },
   { key: "akari", name: "燈", base: process.env.AKARI_BASE || "https://usagi-life-notes.pages.dev",
-    extra: ["/ima", "/nesage", "/kaimawari", "/tanka", "/furusato", "/tomari"] },
+    extra: ["/odekake", "/okaimono", "/ima", "/nesage", "/kaimawari", "/tanka", "/furusato", "/tomari"] },
 ];
 const T = new Date(Date.now() + 9 * 36e5).toISOString().slice(0, 10);
 
