@@ -34,3 +34,8 @@ bar.classList.add("on");document.documentElement.classList.add("v2bar-on");
 var q=(location.search.match(/[?&]v2t=([^&]+)/)||[])[1];if(q){var qb=bar.querySelector(q==="map"?'[data-a="map"]':'[data-t="'+q+'"]');if(qb)setTimeout(function(){qb.click()},300);history.replaceState(null,"",location.pathname+location.hash);}
 if(tabs)tabs.addEventListener("click",function(){setTimeout(syncBar,30)});
 })();
+/* 11/2 オーナー「大阪で押したのにおでかけ先が大阪に繋がらない」→ 入口の地図から ?pref=大阪 で来たら、その府県にしぼって見せる */
+(function(){var m=location.search.match(/[?&]pref=([^&]+)/);if(!m)return;var p;try{p=decodeURIComponent(m[1]);}catch(e){return;}
+var F=document.getElementById("flt");if(!F)return;var b=[].filter.call(F.querySelectorAll("button"),function(x){return x.textContent.trim()===p;})[0];
+if(b){b.click();setTimeout(function(){var y=F.getBoundingClientRect().top+scrollY-80;scrollTo(0,Math.max(0,y));},350);}
+try{history.replaceState(null,"",location.pathname+location.search.replace(/([?&])pref=[^&]*&?/,"$1").replace(/[?&]$/,"")+location.hash);}catch(e){}})();
