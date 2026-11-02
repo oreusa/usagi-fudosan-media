@@ -83,6 +83,11 @@ ITEMS = [
  ("奈良","たかのはらイルミネーション","奈良市｜サンタウンプラザすずらん館前広場周辺",None,None,True,"https://takanohara-nigiwai.jp/event/takanohara-illumination25-26/","12/5〜2/14"),
  ("滋賀","Lighting Bell in NOTOGAWA","東近江市｜林中央公園","2026-12-12","2026-12-20",True,"http://notomatikyo.com/",None),
  ("滋賀","みんなdeつなご 草津まちイルミ","草津市｜草津駅周辺・草津川跡地公園",None,None,True,"https://www.city.kusatsu.shiga.jp/","11/8〜2/14"),
+ # 11/2 夜 抜けゼロ2回目で追加
+ ("兵庫","南京町ランターンフェア","神戸市中央区｜南京町","2026-11-28","2026-12-25",True,"https://www.nankinmachi.or.jp/",None),
+ ("兵庫","ひかりの森～夜の芸術散歩～（神戸六甲ミーツ・アート）","神戸市灘区｜ROKKO森の音ミュージアム・六甲高山植物園","2026-09-19","2026-11-29",False,"https://rokkomeetsart.jp/hikarinomori/",None),
+ ("大阪","竹あかりと紅葉のライトアップ","河内長野市｜大阪府立花の文化園","2026-11-28","2026-12-06",False,"https://hanabun-osaka.witc-pm.jp/event/2026momiji/",None),
+ ("大阪","阪急うめだ本店 ミラーボールツリー","大阪市北区｜阪急うめだ本店 9階 祝祭広場","2026-11-18","2026-12-25",True,"https://www.hankyu-dept.co.jp/honten/event/",None),
 ]
 
 # 関西の紅葉ライトアップ2026（11/2 確認。全部 公式ページで日程・時間・料金を確かめた物。公式に書いていない所は書かない）
