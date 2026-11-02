@@ -52,7 +52,7 @@ ld = {"@context": "https://schema.org", "@type": "WebSite", "name": "TOWN NOTE",
 
 CHIPS = ["梅田", "吹田", "京都市", "宇治", "神戸", "西宮", "奈良市", "生駒", "大津", "草津", "和歌山市", "白浜"]
 
-page = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+page = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="google-site-verification" content="VdNVMVF15cEGulZ_syxp2iotl_CHYHhzys9rJ4hjkOk"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>TOWN NOTE（タウンノート）｜関西おでかけリスト・関西不動産リスト</title>
 <meta name="description" content="{E(desc)}">{'' if live else '<meta name="robots" content="noindex">'}{f'<link rel="canonical" href="{BASE}/">' if live else ''}
 <meta property="og:type" content="website"><meta property="og:url" content="{BASE}/"><meta property="og:title" content="TOWN NOTE"><meta property="og:description" content="{E(desc)}">
