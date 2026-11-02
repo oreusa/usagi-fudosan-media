@@ -139,7 +139,7 @@ html body .card .d{{font-size:13px;font-weight:500;color:#6B6058}}
 html body .card .t{{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:16.5px;line-height:1.5;letter-spacing:0;color:#1C1C1C;margin:4px 0 6px}}
 html body .card .go{{right:12px;top:auto;bottom:10px;transform:none;width:38px;height:38px;border-radius:50%;background:var(--c);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:300}}
 html body .it .mp{{left:18px;bottom:21px}}html body .it>.yk{{left:72px;bottom:21px}}
-</style><script src="assets/night.js?v=6"></script><script src="assets/menu.js?v=10" defer></script><script src="assets/v2sub.js?v=8" defer></script></head><body><div class="wrap">
+</style><script src="assets/night.js?v=7"></script><script src="assets/menu.js?v=10" defer></script><script src="assets/v2sub.js?v=8" defer></script></head><body><div class="wrap">
 <div class="head"><img src="assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">{en}</div>
 <h1>{h1a}<span>{h1b}</span></h1>
 <p class="sub">{sub}</p>

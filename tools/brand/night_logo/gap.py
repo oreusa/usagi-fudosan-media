@@ -26,6 +26,14 @@ gap=tr&~ext&P&~face
 lab2,n2=nd.label(gap);sz=nd.sum(gap,lab2,range(1,n2+1))
 for i,s in enumerate(sz):
     if s<3: gap[lab2==i+1]=0
+# 顔に接するすき間（おでこ・首）は白にしない＝顔と同じ銀のまま（11/2 オーナー「消して」）
+if __import__('os').environ.get('KEEPFACE')!='1':
+    TH=float(__import__('os').environ.get('TH','3'))
+    near=nd.binary_dilation(face&P&tr,iterations=10)
+    dt=nd.distance_transform_edt(gap)
+    core=(dt>=TH)&near
+    kill=nd.binary_dilation(core,iterations=int(TH)+2)&gap
+    gap&=~kill
 m=np.array(Image.fromarray((gap*255).astype(np.uint8)).filter(ImageFilter.GaussianBlur(float(__import__("os").environ.get("GB","0.6"))))).astype(float)/255
 col=(250,248,246);out=A.copy();na=np.maximum(a,m*255)
 for i,c in enumerate(col): out[...,i]=(A[...,i]*a/255*(1-m)+c*m)/np.maximum(na/255,1e-3)
