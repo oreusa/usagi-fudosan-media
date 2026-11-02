@@ -21,6 +21,8 @@ async function pages(site) {
     const x = await r.text();
     for (const m of x.matchAll(/<loc>([^<]+)<\/loc>/g)) list.push(new URL(m[1]).pathname);
   } catch (e) { console.log("sitemap NG", site.base, e.message); }
+  // 11/2 町のページ（/machi/…）は200以上あって20分で終わらない → 形が同じなので extra の見本だけ見る
+  list = list.filter(p => !/^\/machi\//.test(p));
   list = list.concat(site.extra).map(p => p.replace(/\.html$/, ""));
   return [...new Set(list)];
 }
@@ -73,7 +75,9 @@ async function one(ctx, site, p) {
   if (info.over > 1) prob.push("横にはみ出し " + info.over + "px");
   if (!info.bar) prob.push("下のバーがない");
   if (!info.menu) prob.push("メニューがない");
-  if (info.bg && !/^rgba?\(255, 255, 255(, 1)?\)$|rgba\(0, 0, 0, 0\)/.test(info.bg)) prob.push("背景が白でない " + info.bg);
+  // 夜は body を紺 #141A28 にして画面のふちの白いもやを消している（usagi #330 / akari #369）ので、それも正しい
+  const okBg = process.env.THEME === "night" ? /^rgba?\(255, 255, 255(, 1)?\)$|rgba\(0, 0, 0, 0\)|^rgb\(20, 26, 40\)$/ : /^rgba?\(255, 255, 255(, 1)?\)$|rgba\(0, 0, 0, 0\)/;
+  if (info.bg && !okBg.test(info.bg)) prob.push("背景が白でない " + info.bg);
   if (info.oldN) prob.push("終わった日付が" + info.oldN + "件見えている（" + info.old.join("／") + "）");
   if (info.beige && info.beige.length) prob.push("ベージュっぽい色: " + info.beige.join("、"));
   if (info.imgs && info.imgs.length) prob.push("出ない画像: " + info.imgs.join(" "));
