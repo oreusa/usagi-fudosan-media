@@ -3,7 +3,7 @@ GitHub Actions で動かす（作業環境からは地図の検索サービス�
 結果: links/townnotes/geo.json {カード名: [lat, lon, "どの検索で取れたか"]}
 """
 import json, re, time, urllib.parse, urllib.request, html, os
-SRC = ['links/index.html', 'links/illumination.html']; OUT = 'links/townnotes/geo.json'
+SRC = ['links/index.html', 'links/illumination.html', 'links/koyo.html']; OUT = 'links/townnotes/geo.json'
 BOX = {'大阪': (34.2, 35.1, 135.0, 135.8), '京都': (34.7, 35.8, 134.8, 136.1), '兵庫': (34.1, 35.7, 134.2, 135.5),
        '奈良': (33.8, 34.8, 135.5, 136.3), '滋賀': (34.7, 35.7, 135.7, 136.5), '和歌山': (33.4, 34.4, 135.0, 136.1)}
 UA = {'User-Agent': 'usagi-town-notes-proto/0.1 (github.com/oreusa)'}
