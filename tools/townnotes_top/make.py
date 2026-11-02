@@ -57,7 +57,7 @@ page = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name
 <meta name="description" content="{E(desc)}">{'' if live else '<meta name="robots" content="noindex">'}{f'<link rel="canonical" href="{BASE}/">' if live else ''}
 <meta property="og:type" content="website"><meta property="og:url" content="{BASE}/"><meta property="og:title" content="TOWN NOTE"><meta property="og:description" content="{E(desc)}">
 <meta property="og:image" content="{BASE}/assets/ogp.png"><meta name="twitter:card" content="summary">
-<link rel="icon" href="/assets/ogp.png"><link rel="apple-touch-icon" href="/assets/ogp.png">
+<link rel="icon" href="/assets/ogp.png"><link rel="apple-touch-icon" href="/assets/icon-180.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 <style>

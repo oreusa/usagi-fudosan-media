@@ -77,7 +77,7 @@ page = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name
 {'' if live else '<meta name="robots" content="noindex">'}{'<link rel="canonical" href="' + URL + '">' if live else ''}
 <meta property="og:type" content="article"><meta property="og:url" content="{URL}"><meta property="og:title" content="大阪市24区 地価ランキング2026"><meta property="og:description" content="{E(desc)}">
 <meta property="og:image" content="https://townnote.pages.dev/assets/ogp.png"><meta name="twitter:card" content="summary">
-<link rel="icon" href="assets/ogp.png"><link rel="apple-touch-icon" href="assets/ogp.png">
+<link rel="icon" href="assets/ogp.png"><link rel="apple-touch-icon" href="/assets/icon-180.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
 <style>

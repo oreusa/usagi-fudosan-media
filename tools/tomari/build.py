@@ -81,7 +81,7 @@ MAPJS = f'<script src="townnotes/map-tomari.js?v={hashlib.sha1(open(_mj, "rb").r
 out = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>泊まりで行く関西のおでかけ｜近くの宿つき</title><meta name="description" content="関西の少し遠いおでかけ{n_all}か所と、近くの評価の高い宿をまとめました。大阪・京都・兵庫・奈良・滋賀・和歌山。">
 <link rel="canonical" href="{BASE}tomari"><meta property="og:title" content="泊まりで行く関西のおでかけ"><meta property="og:image" content="{BASE}assets/ogp.png">
-<link rel="icon" href="assets/ogp.png"><link rel="apple-touch-icon" href="assets/ogp.png">
+<link rel="icon" href="assets/ogp.png"><link rel="apple-touch-icon" href="/assets/icon-180.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
 <style>
 body{{margin:0;background:#FFFFFF;font-family:"Zen Kaku Gothic New";color:#2B2622}}
