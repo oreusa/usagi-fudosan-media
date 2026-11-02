@@ -53,7 +53,7 @@ for(const s of SITES){const pages=await list(s);L(`## ${s.nm} ${pages.length}ペ
     const bl=await checkLinks(s.base,hrefs);if(bl.length)R.badLinks=bl;
    }
    // 地図
-   const hasMap=await p.evaluate(()=>!!document.querySelector('.tn'));
+   const hasMap=await p.evaluate(()=>!!document.querySelector('div.tn'));
    const isOpen=()=>p.evaluate(()=>!!document.querySelector('.tn.fs'));
    if(hasMap){let open=await isOpen();
      if(!open){const bb=await p.evaluate(()=>{const v=x=>!!(x.offsetParent||x.getClientRects().length);const e=[...document.querySelectorAll('.tnbtn')].find(v)||[...document.querySelectorAll('button,a')].find(x=>/地図で見る/.test(x.textContent)&&x.offsetParent&&!x.closest('#upan'));if(!e)return null;e.scrollIntoView({block:'center'});const q=e.getBoundingClientRect();return [q.x+q.width/2,q.y+q.height/2]});
