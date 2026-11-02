@@ -2,7 +2,7 @@
 python3 tools/illumi/build.py → links/illumination.html"""
 import datetime, html, json, sys, os, re, urllib.parse, hashlib
 sys.path.insert(0, os.path.dirname(__file__))
-from data import ITEMS
+from data import ITEMS, KOYO
 TODAY = datetime.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else datetime.date.today()
 PREFS = ["大阪","京都","兵庫","奈良","滋賀","和歌山"]
 PC = {"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"}
@@ -38,6 +38,38 @@ for it in sorted(ITEMS, key=key):
         if e: ev["endDate"] = e
         if free: ev["isAccessibleForFree"] = True
         ld.append(ev); lds[p].append(ev)
+# 11/2 紅葉ライトアップ（オーナー「イルミに入れておけばいい」「見やすい使いやすいは絶対」）。時間・料金も同じカードに
+HOL = {"2026-11-03","2026-11-23"}
+kcards = {p: [] for p in PREFS}; kld = {p: [] for p in PREFS}; kev = {p: [] for p in PREFS}
+for it in sorted(KOYO, key=key):
+    p, n, m, s, e, days, tm, fee, url, nt = it
+    lab, cls = state(s, e)
+    if cls == "end": continue
+    if not s: lab, cls = "日程は公式で", "pre"
+    d = (f"{md(s)}〜{md(e)}" if e else f"{md(s)}〜{nt or ''}") if s else f"2026年の日程は公式ページで（{nt}）"
+    tags = f'<span class="st {cls}">{lab}</span>' + ('<span class="fr">土日祝のみ</span>' if days == "we" else '<span class="fr">開く日だけ</span>' if days else '') + '<span class="tn8" hidden>今夜やっています</span>'
+    if days and days != "we":
+        ds = sorted(datetime.date.fromisoformat(x) for x in days.split(",")); gr = []
+        for x in ds:
+            if gr and (x - gr[-1][1]).days == 1: gr[-1][1] = x
+            else: gr.append([x, x])
+        pm = None; out = []
+        for a0, b0 in gr:
+            f0 = (f"{a0.month}/" if a0.month != pm else "") + str(a0.day); pm = a0.month
+            if b0 != a0: f0 += "〜" + (f"{b0.month}/" if b0.month != pm else "") + str(b0.day); pm = b0.month
+            out.append(f0)
+        d = "開く日：" + "・".join(out)
+    rows = (f'<div class="kv"><span>時間</span>{html.escape(tm)}</div>' if tm else '') + (f'<div class="kv"><span>料金</span>{html.escape(fee)}</div>' if fee else '')
+    if s and not (tm and fee): rows += '<div class="kv"><span>時間</span>時間・料金は公式ページで</div>' if not tm and not fee else ''
+    city, spot = m.split("｜")[0], re.sub(r"（.*?）", "", m.split("｜")[-1]).strip()
+    q = f"{spot} {city}"
+    gm = "https://www.google.com/maps/search/?api=1&query=" + urllib.parse.quote(q)
+    kcards[p].append(f'<div class="it" data-pref="{p}"><a class="card ky" data-pref="{p}" data-map="{html.escape(q)}" data-s="{s or ""}" data-e="{e or ""}" data-days="{days or ""}" href="{url}" target="_blank" rel="noopener"><div class="tg">{tags}</div><div class="d">{html.escape(d)}</div><div class="t">{html.escape(n)}</div><div class="m">{html.escape(m)}</div>{rows}<div class="go">→</div></a><a class="mp" href="{gm}" target="_blank" rel="noopener" data-k="地図｜{html.escape(n)}">地図</a></div>')
+    kev[p].append((n, m, s, e, days, tm, fee))
+    if s:
+        ev = {"@type":"Event","name":n,"startDate":s,"location":{"@type":"Place","name":m.split("｜")[-1],"address":f"{p}{'府' if p in ('大阪','京都') else '県'}{m.split('｜')[0]}"},"url":url,"eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled"}
+        if e: ev["endDate"] = e
+        kld[p].append(ev)
 SLUG = {"大阪":"osaka","京都":"kyoto","兵庫":"hyogo","奈良":"nara","滋賀":"shiga","和歌山":"wakayama"}
 def fu(p): return p + ("府" if p in ("大阪","京都") else "県")
 BASE = "https://townnote.pages.dev/"
@@ -72,14 +104,38 @@ def faq(sel):
     h = '<section class="faq"><h2 class="fq">よくある質問</h2>' + "".join(f'<details><summary>{html.escape(q)}</summary><p>{html.escape(a)}</p></details>' for q, a in qa) + '</section>'
     j = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q, a in qa]}
     return h, j
-def render(sel, fname, title, desc, ogt, en, h1a, h1b, sub, links, crumb):
-    secs = ""
+KNOTE = "日程・時間・料金は、各公式ページで確かめてのせています。名前を押すと公式のページ、「地図」を押すと場所が開きます。「今夜やっています」は、今日が開く日の所です。「日程は公式で」は、2026年の日程をここでまだ確かめられていない所で、分かりしだい書き足します。紅葉の色づきは年によってずれるので、お出かけ前にリンク先でご確認ください。"
+def kfaq(sel):
+    """紅葉のよくある質問（データから作る。書いた事は一覧と同じ）"""
+    it = [x for p in sel for x in kev[p] if x[2]]
+    qa = []
+    lt = [x for x in it if x[5] and "21:" in x[5]]
+    if lt:
+        qa.append(("関西で夜遅くまで見られる紅葉ライトアップは？", "21時ごろまで見られるのは、" + "、".join(f"{x[0]}（{x[5]}）" for x in lt) + "です。"))
+    lg = sorted([x for x in it if x[3] and x[3] >= "2026-12-06"], key=lambda x: x[3], reverse=True)
+    if lg:
+        qa.append(("12月に入っても見られる紅葉ライトアップは？", "、".join(f"{x[0]}（{jd(x[3])}まで）" for x in lg[:5]) + "です。"))
+    we = [x for x in it if x[4]]
+    if we:
+        qa.append(("毎日ではない所はありますか？", "、".join(x[0] for x in we) + "は、開く日が決まっています。カードの「土日祝のみ」「開く日だけ」を見てください。"))
+    h = '<section class="faq"><h2 class="fq">よくある質問</h2>' + "".join(f'<details><summary>{html.escape(q)}</summary><p>{html.escape(a)}</p></details>' for q, a in qa) + '</section>' if qa else ''
+    j = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q, a in qa]}
+    return h, j
+def render(sel, fname, title, desc, ogt, en, h1a, h1b, sub, links, crumb, kind="il"):
+    secs = ""; KO = kind == "ko"; LB = "紅葉ライトアップ" if KO else "イルミネーション"
     for p in sel:
+        if KO:
+            secs += f'<section id="{p}" class="ps" style="--c:{PC[p]}"><h2>{fu(p)}の紅葉ライトアップ<small>{len(kcards[p])}件</small></h2>' + "".join(kcards[p]) + '</section>'
+            continue
         secs += f'<section id="{p}" class="ps" style="--c:{PC[p]}"><h2>{fu(p)}のイルミネーション<small>{len(cards[p])}件</small></h2>' + "".join(cards[p]) + '</section>'
+        if len(sel) == 1 and kcards[p]:
+            secs += f'<section id="{p}-koyo" class="ps" style="--c:{PC[p]}"><h2>{fu(p)}の紅葉ライトアップ<small>{len(kcards[p])}件</small></h2>' + "".join(kcards[p]) + '<a class="kmore" href="/koyo" data-k="紅葉ライトアップを関西ぜんぶ見る">関西ぜんぶの紅葉ライトアップを見る →</a></section>'
+    sw = f'<nav class="sw" aria-label="見るもの"><a href="{"/illumination" if len(sel) > 1 or KO else "/illumination-" + SLUG[sel[0]]}"{"" if KO else " aria-current=page"}>イルミネーション</a><a href="/koyo"{" aria-current=page" if KO else ""}>紅葉ライトアップ</a></nav>'
     nav = ('<div class="flt" id="flt"><button class="on" data-p="すべて">すべて</button>' + "".join(f'<button data-p="{p}" style="--pc:{PC[p]}">{p}</button>' for p in PREFS) + '</div>') if len(sel) > 1 else ""
-    fh, fj = faq(sel)
+    if KO: nav += '<div class="tnb"><button id="tnb" aria-pressed="false">今夜やっている所だけ</button></div>'
+    fh, fj = kfaq(sel) if KO else faq(sel)
     url = BASE + fname.replace(".html", "")  # workers.dev は .html を外したアドレスへ転送するので、正しいアドレスはこちら
-    l = [x for p in sel for x in lds[p]]
+    l = [x for p in sel for x in (kld if KO else lds)[p]]
     ldj = [{"@context":"https://schema.org","@type":"ItemList","name":ogt,"itemListElement":[{"@type":"ListItem","position":i+1,"item":ev} for i,ev in enumerate(l)]}, fj,
            {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":i+1,"name":n,"item":BASE+u.replace(".html","")} for i,(n,u) in enumerate(crumb)]}]
     lds_html = "".join(f'<script type="application/ld+json">{json.dumps(x, ensure_ascii=False)}</script>' for x in ldj)
@@ -139,21 +195,34 @@ html body .card .d{{font-size:13px;font-weight:500;color:#6B6058}}
 html body .card .t{{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:16.5px;line-height:1.5;letter-spacing:0;color:#1C1C1C;margin:4px 0 6px}}
 html body .card .go{{right:12px;top:auto;bottom:10px;transform:none;width:38px;height:38px;border-radius:50%;background:var(--c);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:300}}
 html body .it .mp{{left:18px;bottom:21px}}html body .it>.yk{{left:72px;bottom:21px}}
-</style><script src="assets/night.js?v=9"></script><script src="assets/menu.js?v=10" defer></script><script src="assets/v2sub.js?v=8" defer></script></head><body><div class="wrap">
+/* 11/2 紅葉ライトアップ：イルミと紅葉を切りかえる2つのボタン・時間と料金の行・今夜の札 */
+.sw{{display:flex;margin:20px 0 0;border:1px solid #D4D4D4;border-radius:99px;padding:3px;background:#fff}}
+.sw a{{flex:1;text-align:center;padding:9px 0;border-radius:99px;font-size:13.5px;font-weight:700;letter-spacing:.06em;color:#6B6058;text-decoration:none}}
+.sw a[aria-current]{{background:#2B2622;color:#fff}}
+.card .kv{{display:flex;gap:10px;font-size:13px;line-height:1.6;color:#3A3A3A;margin-top:3px}}
+.card .kv span{{flex:none;width:4.6em;font-size:11px;color:#8C7B6E;letter-spacing:.06em;padding-top:1px}}
+html body .card .tn8{{border-radius:99px;padding:4px 10px;font-size:11px;font-weight:700;line-height:1.2;background:#2B2622;color:#fff}}
+.tnb{{text-align:center;margin:12px 0 0}}.tnb button{{font-family:"Zen Kaku Gothic New";font-size:13px;font-weight:700;letter-spacing:.06em;color:#2B2622;background:#fff;border:1px solid #2B2622;border-radius:99px;padding:8px 18px;cursor:pointer}}
+.tnb button[aria-pressed=true]{{background:#2B2622;color:#fff}}
+.kmore{{display:block;text-align:right;font-size:12.5px;color:#2B2622;text-decoration:none;margin-top:2px}}
+.none8{{text-align:center;font-size:13px;color:#7A6E66;margin:24px 0}}
+</style><script src="assets/night.js?v=9"></script><script src="assets/menu.js?v=10" defer></script><script src="assets/v2sub.js?v=8" defer></script></head><body{' data-kind="紅葉ライトアップ"' if KO else ""}><div class="wrap">
 <div class="head"><img src="assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">{en}</div>
 <h1>{h1a}<span>{h1b}</span></h1>
 <p class="sub">{sub}</p>
 <div class="upd">{upd} 更新</div></div>
+{sw}
 {nav}
 {secs}
+<p class="none8" id="none8" hidden>今夜やっている所は、ありません。ボタンをもう一度押すと全部出ます。</p>
 {fh}
-<p class="note">日程は各公式の発表をもとにしています。名前を押すと公式のページ、「地図」を押すと場所が開きます。「発表前」は、2026年の日程がまだ出ていない所です（昨年の期間を目安にのせています）。発表されしだい書き足します。点灯時間や料金は変わることがあるので、お出かけ前にリンク先でご確認ください。</p>
-<nav class="pl" aria-label="府県ごとのイルミネーション">{links}</nav>
-<nav class="also" aria-label="あわせて見る"><small>あわせて見る</small><a href="/tomari" data-k="あわせて：泊まりで行くおでかけ">泊まりで行くおでかけ</a><a href="/ima" data-k="あわせて：いまから行けるおでかけ">いまから行けるおでかけ</a></nav>
+<p class="note">{KNOTE if KO else "日程は各公式の発表をもとにしています。名前を押すと公式のページ、「地図」を押すと場所が開きます。「発表前」は、2026年の日程がまだ出ていない所です（昨年の期間を目安にのせています）。発表されしだい書き足します。点灯時間や料金は変わることがあるので、お出かけ前にリンク先でご確認ください。"}</p>
+{"" if KO else '<nav class="pl" aria-label="府県ごとのイルミネーション">' + links + '</nav>'}
+<nav class="also" aria-label="あわせて見る"><small>あわせて見る</small>{'<a href="/illumination" data-k="あわせて：関西イルミネーション">関西イルミネーション</a>' if KO else '<a href="/koyo" data-k="あわせて：紅葉ライトアップ">紅葉ライトアップ</a>'}<a href="/tomari" data-k="あわせて：泊まりで行くおでかけ">泊まりで行くおでかけ</a><a href="/ima" data-k="あわせて：いまから行けるおでかけ">いまから行けるおでかけ</a></nav>
 <a class="back" href="/odekake">関西おでかけリストを見る</a>
 <div class="ft">TOWN NOTE</div></div>
-<script>(function(){{var t=new Date(Date.now()+9*36e5).toISOString().slice(0,10);document.querySelectorAll(".card").forEach(function(c){{var s=c.dataset.s,e=c.dataset.e,st=c.querySelector(".st");if(!s)return;if(e&&e<t){{(c.closest(".it")||c).remove();return;}}if(s<=t){{st.textContent="開催中";st.className="st on";}}else{{st.textContent="これから";st.className="st soon";}}}});document.querySelectorAll(".ps").forEach(function(x){{x.querySelector("small").textContent=x.querySelectorAll(".card").length+"件";if(!x.querySelector(".card"))x.style.display="none";}});var F=document.getElementById("flt");if(F)F.querySelectorAll("button").forEach(function(b){{b.onclick=function(){{F.querySelectorAll("button").forEach(function(x){{x.classList.remove("on");}});b.classList.add("on");var p=b.dataset.p;document.querySelectorAll(".ps").forEach(function(x){{x.style.display=((p=="すべて"||x.id==p)&&x.querySelector(".card"))?"":"none";}});try{{navigator.sendBeacon("/c",JSON.stringify({{k:"絞り込み：イルミネーション｜"+p}}));}}catch(e){{}}}};}});}})();</script>
-<script>(function(){{var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function s(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}s("表示：イルミネーション"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":""));document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;var t=a.querySelector(".t"),n=a.getAttribute("data-k");s("クリック：イルミネーション｜"+(n||(t?t.textContent:a.textContent)));}},true);}})();</script>
+<script>(function(){{var t=new Date(Date.now()+9*36e5).toISOString().slice(0,10);document.querySelectorAll(".card").forEach(function(c){{var s=c.dataset.s,e=c.dataset.e,st=c.querySelector(".st");if(!s)return;if(e&&e<t){{(c.closest(".it")||c).remove();return;}}if(s<=t){{st.textContent="開催中";st.className="st on";}}else{{st.textContent="これから";st.className="st soon";}}if(c.classList.contains("ky")){{var dy=c.dataset.days||"",w=new Date(Date.now()+9*36e5).getUTCDay(),H=["2026-11-03","2026-11-23"],ok=s<=t&&(!dy||(dy=="we"?(w==0||w==6||H.indexOf(t)>=0):dy.split(",").indexOf(t)>=0));if(ok){{c.querySelector(".tn8").hidden=false;c.classList.add("tn");}}}}}});document.querySelectorAll(".ps").forEach(function(x){{x.querySelector("small").textContent=x.querySelectorAll(".card").length+"件";if(!x.querySelector(".card"))x.style.display="none";}});var P="すべて",N=false,TB=document.getElementById("tnb");function ap(){{document.querySelectorAll(".ps").forEach(function(x){{var v=0;x.querySelectorAll(".it").forEach(function(i){{var c=i.querySelector(".card"),on=!N||c.classList.contains("tn");i.style.display=on?"":"none";if(on)v++;}});x.style.display=((P=="すべて"||x.id==P)&&v)?"":"none";var sm=x.querySelector("small");if(sm)sm.textContent=v+"件";}});var z=document.getElementById("none8");if(z)z.hidden=!![].some.call(document.querySelectorAll(".ps"),function(x){{return x.style.display!="none";}});}}if(TB)TB.onclick=function(){{N=!N;TB.setAttribute("aria-pressed",N);ap();try{{navigator.sendBeacon("/c",JSON.stringify({{k:"絞り込み：紅葉｜今夜"+(N?"だけ":"解除")}}));}}catch(e){{}}}};var F=document.getElementById("flt");if(F)F.querySelectorAll("button").forEach(function(b){{b.onclick=function(){{F.querySelectorAll("button").forEach(function(x){{x.classList.remove("on");}});b.classList.add("on");P=b.dataset.p;ap();try{{navigator.sendBeacon("/c",JSON.stringify({{k:"絞り込み：{LB}｜"+P}}));}}catch(e){{}}}};}});}})();</script>
+<script>(function(){{var O=(function(){{try{{return localStorage.getItem("usagi_owner")==="1";}}catch(e){{return false;}}}})();function s(k){{if(O)return;try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}s("表示：{LB}"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":""));document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;var t=a.querySelector(".t"),n=a.getAttribute("data-k");s("クリック：{LB}｜"+(n||(t?t.textContent:a.textContent)));}},true);}})();</script>
 {mapjs}<script src="assets/yado.js?v={YV}" defer></script>
 </body></html>'''
 OUT = os.path.join(os.path.dirname(__file__), "../../links/")
@@ -176,6 +245,13 @@ for p in PREFS:
         f"{p}のイルミネーション2026-2027 日程一覧", f"{SLUG[p].upper()} ILLUMINATION", f"{p}のイルミネーション", "2026 - 2027 日程一覧",
         f"{fu(p)}の{n}か所を、日程・場所・<br>無料かどうかでまとめました。", plinks(p),
         [("関西おでかけリスト", "odekake"), ("関西イルミネーション2026-2027", "illumination.html"), (f"{p}のイルミネーション", f"illumination-{SLUG[p]}.html")])
+kc = sum(len(v) for v in kcards.values())
+pages["koyo.html"] = render(PREFS, "koyo.html",
+    "関西の紅葉ライトアップ2026｜京都・大阪・兵庫・奈良・滋賀・和歌山の日程・時間・料金",
+    f"関西の紅葉ライトアップ{kc}か所を、府県ごとに日程・時間・料金で一覧にしました。永観堂、高台寺、北野天満宮、石山寺など。今夜やっている所だけも見られます。{upd}更新。",
+    "関西の紅葉ライトアップ2026 日程・時間・料金", "KANSAI AUTUMN LIGHT-UP", "関西の紅葉ライトアップ", "2026 日程・時間・料金",
+    f"京都・大阪・兵庫・奈良・滋賀・和歌山の{kc}か所を、<br>日程・時間・料金でまとめました。", plinks(None),
+    [("関西おでかけリスト", "odekake"), ("関西の紅葉ライトアップ2026", "koyo.html")], kind="ko")
 for f, h in pages.items():
     open(OUT + f, "w").write(h)
 sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", "odekake", *pages, "tomari.html", "ima.html", "fudosan-list", "chika-kansai", "chika-osaka", *sorted("machi/" + x for x in os.listdir(OUT + "machi") if x.endswith(".html"))])

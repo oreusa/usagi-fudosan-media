@@ -137,7 +137,7 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 {"".join(secs)}
 <div class="none" id="none">この週末に開いている所はありません。</div>
 <div class="note">おでかけの日にちや時間は、出かける前に必ず公式ページで確かめてください。宿の空きや値段は楽天トラベルでご確認ください。</div>
-<nav class="also" aria-label="あわせて見る"><small>あわせて見る</small><a href="/illumination" data-k="あわせて：関西イルミネーション">関西イルミネーション</a><a href="/ima" data-k="あわせて：いまから行けるおでかけ">いまから行けるおでかけ</a></nav>
+<nav class="also" aria-label="あわせて見る"><small>あわせて見る</small><a href="/illumination" data-k="あわせて：関西イルミネーション">関西イルミネーション</a><a href="/koyo" data-k="あわせて：紅葉ライトアップ">紅葉ライトアップ</a><a href="/ima" data-k="あわせて：いまから行けるおでかけ">いまから行けるおでかけ</a></nav>
 <a class="back" href="/odekake">関西おでかけリストへ戻る</a>
 <div class="ft">TOWN NOTE│関西おでかけリスト</div></div>
 <script>(function(){{
