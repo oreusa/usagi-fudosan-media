@@ -89,7 +89,7 @@ def render(sel, fname, title, desc, ogt, en, h1a, h1b, sub, links, crumb):
 <meta property="og:type" content="article"><meta property="og:url" content="{url}"><meta property="og:title" content="{ogt}"><meta property="og:description" content="{desc}">
 <meta property="og:image" content="https://townnote.pages.dev/assets/ogp.png"><meta name="twitter:card" content="summary">
 <meta property="article:modified_time" content="{TODAY.isoformat()}T07:00:00+09:00">
-<link rel="icon" href="assets/ogp.png"><link rel="apple-touch-icon" href="assets/ogp.png">
+<link rel="icon" href="assets/ogp.png"><link rel="apple-touch-icon" href="/assets/icon-180.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
 {lds_html}
 <style>

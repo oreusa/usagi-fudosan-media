@@ -241,7 +241,7 @@ def head(title, desc, url, ld=None):
             + ('' if live else '<meta name="robots" content="noindex">') + (f'<link rel="canonical" href="{url}">' if live else '')
             + f'<meta property="og:type" content="article"><meta property="og:url" content="{url}"><meta property="og:title" content="{E(title)}"><meta property="og:description" content="{E(desc)}">'
             f'<meta property="og:image" content="{BASE}/assets/ogp.png"><meta name="twitter:card" content="summary">'
-            f'<link rel="icon" href="/assets/ogp.png"><link rel="apple-touch-icon" href="/assets/ogp.png">{FONTS}'
+            f'<link rel="icon" href="/assets/ogp.png"><link rel="apple-touch-icon" href="/assets/icon-180.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#FFFFFF">{FONTS}'
             + (f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>' if ld else ''))
 
 

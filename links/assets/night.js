@@ -88,3 +88,5 @@
   document.addEventListener("usagi-theme",function(){if(document.readyState!=="loading")go();});
   window.usagiTheme={get:function(){return d.classList.contains("night")?"night":"day"},set:function(v){set(v,true)}};
 })();
+/* 11/2 ホーム画面に置けるように（PWA）。どのページでも読むので、ここで sw.js を登録する。 */
+if("serviceWorker" in navigator&&location.protocol==="https:")window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js").catch(function(){});});
