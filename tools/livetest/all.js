@@ -39,12 +39,13 @@ for(const s of SITES){const pages=await list(s);L(`## ${s.nm} ${pages.length}ペ
    if(th==='day'){
     // ボタンを全部押す（メニュー・地図の中・送信ボタン以外）。押したあと中身が空にならないか
     const cnt=await p.evaluate(()=>{const v=e=>!!(e.offsetParent||e.getClientRects().length);window.__B=[...document.querySelectorAll('main button,.wrap button,body > button,[role=tab],.flt button,#flt button,.tabs button,#cats button')].filter(e=>v(e)&&!e.closest('#upan,.tn,form,#umap-s')&&e.id!=='umenu'&&e.id!=='utheme');return window.__B.length});
-    R.buttons=cnt;const empty=[];
+    R.buttons=cnt;const empty=[];const base0=await p.evaluate(()=>[...document.querySelectorAll('a.card,.card,.it,li,tr,.kc,.row')].filter(e=>e.offsetParent&&!e.closest('#upan,#v2bar,nav,header,footer')).length);
     for(let i=0;i<Math.min(cnt,40);i++){const t=await p.evaluate(i=>{const e=window.__B[i];if(!e||!(e.offsetParent||e.getClientRects().length))return null;e.scrollIntoView({block:'center'});e.click();return (e.textContent||'').trim().slice(0,12)},i);
       if(t===null)continue;await p.waitForTimeout(250);
       if(p.url().replace(/[?#].*/,'')!==(s.base+path).replace(/[?#].*/,'')){await p.goBack().catch(()=>{});await p.waitForTimeout(800);await p.evaluate(()=>{const v=e=>!!(e.offsetParent||e.getClientRects().length);window.__B=[...document.querySelectorAll('main button,.wrap button,body > button,[role=tab],.flt button,#flt button,.tabs button,#cats button')].filter(e=>v(e)&&!e.closest('#upan,.tn,form,#umap-s')&&e.id!=='umenu'&&e.id!=='utheme')});continue;}
-      const vis=await p.evaluate(()=>[...document.querySelectorAll('a.card,.card,.it,li.k,.kc,.row')].filter(e=>e.offsetParent).length);
-      if(vis===0)empty.push(t);}
+      // 中身（カード・行）が0件で、「ありません」の案内も出ていない時だけ NG
+      const vis=await p.evaluate(()=>{const n=[...document.querySelectorAll('a.card,.card,.it,li,tr,.kc,.row')].filter(e=>e.offsetParent&&!e.closest('#upan,#v2bar,nav,header,footer')).length;const msg=[...document.querySelectorAll('p,div')].some(e=>e.offsetParent&&/ありません|これから増やして/.test(e.textContent)&&e.children.length<3);return n>0||msg?1:0});
+      if(base0>0&&vis===0)empty.push(t);}
     if(empty.length)R.emptyAfter=empty;
     await p.goto(s.base+path,{waitUntil:'load'});await p.waitForTimeout(1200);
     // 中のリンク
@@ -53,10 +54,11 @@ for(const s of SITES){const pages=await list(s);L(`## ${s.nm} ${pages.length}ペ
    }
    // 地図
    const hasMap=await p.evaluate(()=>!!document.querySelector('.tn'));
-   if(hasMap){let open=await p.evaluate(()=>document.querySelector('.tn').classList.contains('fs'));
-     if(!open){const bb=await p.evaluate(()=>{const e=document.querySelector('.tnbtn')||[...document.querySelectorAll('button,a')].find(x=>/地図で見る/.test(x.textContent)&&x.offsetParent&&!x.closest('#upan'));if(!e)return null;e.scrollIntoView({block:'center'});const q=e.getBoundingClientRect();return [q.x+q.width/2,q.y+q.height/2]});
+   const isOpen=()=>p.evaluate(()=>!!document.querySelector('.tn.fs'));
+   if(hasMap){let open=await isOpen();
+     if(!open){const bb=await p.evaluate(()=>{const v=x=>!!(x.offsetParent||x.getClientRects().length);const e=[...document.querySelectorAll('.tnbtn')].find(v)||[...document.querySelectorAll('button,a')].find(x=>/地図で見る/.test(x.textContent)&&x.offsetParent&&!x.closest('#upan'));if(!e)return null;e.scrollIntoView({block:'center'});const q=e.getBoundingClientRect();return [q.x+q.width/2,q.y+q.height/2]});
        if(bb){await p.waitForTimeout(300);await p.touchscreen.tap(bb[0],bb[1]);await p.waitForTimeout(1800);}
-       open=await p.evaluate(()=>document.querySelector('.tn').classList.contains('fs'));}
+       open=await isOpen();}
      R.mapOpen=open;
      if(open){const vb=()=>p.evaluate(()=>{const e=document.querySelector('.tn.fs svg');return e&&e.getAttribute('viewBox')});const v0=await vb();
        const pf=await p.evaluate(()=>{let best=null,a=0;for(const e of document.querySelectorAll('.tn.fs svg .pf[data-p]:not(.off)')){const q=e.getBoundingClientRect();if(q.width*q.height>a){a=q.width*q.height;best=[q.x+q.width/2,q.y+q.height/2]}}return best});
