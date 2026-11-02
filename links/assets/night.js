@@ -42,7 +42,7 @@
     "html.night .mp.nofilt{filter:none;border-color:#fff}"+
     "html.night .rq{background:#121826}"+
     /* 地図で見る（全画面の地図）：夜は暗すぎたので、少し明るく・色をはっきり */
-    "html.night .tn svg.m{filter:brightness(.74) saturate(1.5)}"+
+    
     "html.night #mpL path{fill-opacity:.42;stroke:rgba(255,255,255,.1)}"+
     "html.night #mpL path[fill=none]{stroke:rgba(255,255,255,.35)}"+
     "html.night .rd .mn{fill:#8F9AB3}"+
@@ -87,7 +87,7 @@
         if(!pth.isPointInFill||!pth.isPointInFill(pt))continue;got++;var q=r2();
         out+='<circle cx="'+pt.x.toFixed(1)+'" cy="'+pt.y.toFixed(1)+'" r="'+(q<.1?2.2:q<.4?1.5:1).toFixed(1)+'"'+(q>.8?' class="t"':q>.62?' class="u"':'')+' opacity="'+(.55+r2()*.45).toFixed(2)+'"/>';}});
     g.innerHTML=out;var lb=m.querySelector(".lb");m.insertBefore(g,lb);}
-  function logo(){var n=d.classList.contains("night"),im=document.querySelectorAll('.head img[src*="logo-s"]');
+  function logo(){var n=d.classList.contains("night"),im=document.querySelectorAll('.head img[src*="logo-s"],.uh img[src*="logo-s"]');
     for(var i=0;i<im.length;i++){var s0=im[i].getAttribute("src");im[i].setAttribute("src",n?s0.replace(/logo-s(-night)?\.png(\?v=\d+)?/,"logo-s-night.png?v=5"):s0.replace(/logo-s-night\.png(\?v=\d+)?/,"logo-s.png?v=2"));}}
   function go(){logo();if(d.classList.contains("night"))deco();}
   if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",go);else go();

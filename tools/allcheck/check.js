@@ -8,7 +8,7 @@ const fs = require("fs"), path = require("path");
 const OUT = process.argv[2] || "out";
 const SITES = [
   { key: "tsuki", name: "月", base: process.env.TSUKI_BASE || "https://townnote.pages.dev",
-    extra: ["/odekake", "/ima", "/fudosan", "/fudosan-list", "/chika-kansai", "/chika-osaka", "/uru", "/gyosha", "/machi/osaka-01", "/machi/kyoto-01"] },
+    extra: ["/odekake", "/ima", "/fudosan", "/fudosan-list", "/chika-kansai", "/chika-osaka", "/uru", "/gyosha", "/machi/osaka-01", "/machi/kyoto-01", "/koe"] },
   { key: "akari", name: "燈", base: process.env.AKARI_BASE || "https://usagi-life-notes.pages.dev",
     extra: ["/odekake", "/okaimono", "/ima", "/nesage", "/kaimawari", "/tanka", "/furusato", "/tomari", "/koyo", "/privacy", "/koe"] },
 ];
