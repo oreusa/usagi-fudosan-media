@@ -37,11 +37,11 @@ M=Image.fromarray((m*255).astype(np.uint8))
 M=M.filter(ImageFilter.MaxFilter(3)).filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(0.7))
 # glow halo
 for rad,col,k in ((5,(255,180,80),0.8),(1.6,(255,214,140),1.0)):
-    g_=M.filter(ImageFilter.GaussianBlur(rad*SC)); ga=np.clip(np.array(g_).astype(float)*k*1.6,0,255)
+    g_=M.filter(ImageFilter.GaussianBlur(rad*SC)); ga=np.clip(np.array(g_).astype(float)*k*float(os.environ.get("GK","1.6")),0,255)
     L=Image.new('RGBA',(W,H),col+(0,)); L.putalpha(Image.fromarray(ga.astype(np.uint8)))
     base.alpha_composite(L)
 # bright frame on top
-F=Image.new('RGBA',(W,H),(255,236,190,0));F.putalpha(M);base.alpha_composite(F)
+F=Image.new("RGBA",(W,H),tuple(int(v) for v in os.environ.get("CORE","255,236,190").split(","))+(0,));F.putalpha(M);base.alpha_composite(F)
 # clip to disc + glow allowed slightly outside: keep disc clip for cleanliness
 out=Image.new('RGBA',(W,H),(0,0,0,0));out.paste(base,(0,0),disc)
 out.save(dst)
