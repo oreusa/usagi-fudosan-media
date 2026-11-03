@@ -7,7 +7,8 @@ await p.goto(url,{waitUntil:'networkidle'});await p.waitForTimeout(1500);
 await p.screenshot({path:`${out}/0.png`,fullPage:true});
 const log=[];
 if(tabs){const n=(await p.$$(tabs)).length;
- for(let i=0;i<n;i++){const el=(await p.$$(tabs))[i];const t=(await el.textContent()).trim();await el.click();await p.waitForTimeout(1500);
+ for(let i=0;i<n;i++){if(i){await p.goto(url,{waitUntil:'networkidle'});await p.waitForTimeout(800);} // 押すと形が変わるページ（聞く欄など）があるので毎回開き直す
+  const el=(await p.$$(tabs))[i];const t=(await el.textContent()).trim();await el.click();await p.waitForTimeout(1500);
   await p.evaluate(async()=>{for(let y=0;y<document.body.scrollHeight;y+=600){scrollTo(0,y);await new Promise(r=>setTimeout(r,150))}scrollTo(0,0)});
   await p.waitForTimeout(800);
   const imgs=await p.evaluate(()=>[...document.querySelectorAll('img.ph')].filter(i=>i.offsetParent).map(i=>i.naturalWidth>0?'ok':'broken'));
