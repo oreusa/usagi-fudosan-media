@@ -38,14 +38,14 @@ for c in cards:
         fn = page_image(n); r = info(fn) if fn else None; seen[n] = r if r and "src" in r else None
         if r and "src" in r: got = r; break
         if r: log.append(f"ライセンス外 {n}: {r['skip']}")
-    if got: data[t] = got
+    if got: data[re.sub(r"\s+","",t)] = got
     log.append(f"{'○' if got else '－'} {t}｜{venue}")
 inj = """<style>
 .card .ph{display:block;width:calc(100% + 72px);margin:-14px -56px 12px -16px;height:150px;object-fit:cover;border-radius:7px 7px 0 0;background:#F1F2F4}
 .card .cr{position:absolute;left:16px;bottom:8px;right:56px;font-size:9.5px;line-height:1.3;color:#8a8f98;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card .phw{position:relative}
 </style><script>
-(function(){var D=__D__;function go(){document.querySelectorAll("a.card").forEach(function(a){if(a.querySelector(".ph"))return;var t=a.querySelector(".t");if(!t)return;var d=D[t.textContent.trim()];if(!d)return;
+(function(){var D=__D__;function go(){document.querySelectorAll("a.card").forEach(function(a){if(a.querySelector(".ph"))return;var t=a.querySelector(".t");if(!t)return;var d=D[t.textContent.replace(/\s+/g,"")];if(!d)return;
 var i=document.createElement("img");i.className="ph";i.alt="";i.src=d.src;a.insertBefore(i,a.firstChild);
 var c=document.createElement("div");c.className="cr";c.textContent="写真："+d.by+"／"+d.lic+"（ウィキメディア・コモンズ）";a.appendChild(c);});}
 document.addEventListener("DOMContentLoaded",function(){go();setTimeout(go,500);setTimeout(go,1500);});})();
