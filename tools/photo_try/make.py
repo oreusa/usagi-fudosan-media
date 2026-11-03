@@ -41,13 +41,13 @@ for c in cards:
     if got: data[re.sub(r"\s+","",t)] = got
     log.append(f"{'○' if got else '－'} {t}｜{venue}")
 inj = """<style>
-.card .ph{display:block;width:calc(100% + 72px);margin:-14px -56px 12px -16px;height:150px;object-fit:cover;border-radius:7px 7px 0 0;background:#F1F2F4}
-.card .cr{position:absolute;left:16px;bottom:8px;right:56px;font-size:9.5px;line-height:1.3;color:#8a8f98;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card .ph{display:block;width:calc(100% + 72px);margin:-14px -56px 12px -16px;max-width:none;height:150px;object-fit:cover;border-radius:7px 7px 0 0;background:#F1F2F4}
+.card .cr{display:block;margin:-8px 0 10px;font-size:9.5px;line-height:1.3;color:#8a8f98;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card .phw{position:relative}
 </style><script>
 (function(){var D=__D__;function go(){document.querySelectorAll("a.card").forEach(function(a){if(a.querySelector(".ph"))return;var t=a.querySelector(".t");if(!t)return;var d=D[t.textContent.replace(/\s+/g,"")];if(!d)return;
-var i=document.createElement("img");i.className="ph";i.alt="";i.src=d.src;a.insertBefore(i,a.firstChild);
-var c=document.createElement("div");c.className="cr";c.textContent="写真："+d.by+"／"+d.lic+"（ウィキメディア・コモンズ）";a.appendChild(c);});}
+var i=document.createElement("img");i.className="ph";i.alt="";i.src=d.src;var b=a.querySelector(".bd")||a;b.insertBefore(i,b.firstChild);
+var c=document.createElement("div");c.className="cr";c.textContent="写真："+d.by+"／"+d.lic+"（ウィキメディア・コモンズ）";i.insertAdjacentElement("afterend",c);});}
 document.addEventListener("DOMContentLoaded",function(){go();setTimeout(go,500);setTimeout(go,1500);});})();
 </script>""".replace("__D__", json.dumps(data, ensure_ascii=False))
 out = src.replace("</body>", inj + "</body>", 1).replace('<link rel="canonical"', '<meta name="robots" content="noindex"><link rel="canonical"', 1)
