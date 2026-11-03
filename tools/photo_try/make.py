@@ -41,7 +41,7 @@ for c in cards:
     if got: data[re.sub(r"\s+","",t)] = got
     log.append(f"{'○' if got else '－'} {t}｜{venue}")
 inj = """<style>
-.card .ph{display:block;width:calc(100% + 72px);margin:-14px -56px 12px -16px;max-width:none;height:150px;object-fit:cover;border-radius:7px 7px 0 0;background:#F1F2F4}
+.card .ph{display:block;width:calc(100% + 102px);margin:-14px -86px 12px -16px;max-width:none;height:150px;object-fit:cover;border-radius:7px 7px 0 0;background:#F1F2F4}
 .card .cr{display:block;margin:-8px 0 10px;font-size:9.5px;line-height:1.3;color:#8a8f98;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .card .phw{position:relative}
 </style><script>
