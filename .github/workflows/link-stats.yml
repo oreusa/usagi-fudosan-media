@@ -27,7 +27,9 @@ jobs:
         run: python3 tools/odekake_ld.py "$(TZ=Asia/Tokyo date +%F)"
       - name: list pages per prefecture (for search)
         # 11/4 府県ごとのページ（/odekake-osaka など6つ）をリストから作り直す。検索の「大阪 イベント」などに合わせる
-        run: python3 tools/odekake_pref.py "$(TZ=Asia/Tokyo date +%F)"
+        run: |
+          python3 tools/odekake_pref.py "$(TZ=Asia/Tokyo date +%F)"
+          python3 tools/odekake_spot.py "$(TZ=Asia/Tokyo date +%F)"
       - name: near hotels (from 燈's site, for the 近くの宿 buttons)
         # 10/31 宿の一覧を月のページと同じ場所に置く（見るたびに燈のサイトから読むと遅いため）。取れない日は前のまま
         run: curl -fsS "https://usagi-life-notes.pages.dev/kansai-yado.json" -o links/kansai-yado.json || true
@@ -41,5 +43,5 @@ jobs:
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/link.json stats/link-30.json links/illumination*.html links/koyo.html links/index.html links/odekake-*.html links/sitemap.xml links/kansai-yado.json links/tomari.html stats/linkcheck.md
+          git add stats/link.json stats/link-30.json links/illumination*.html links/koyo.html links/index.html links/odekake-*.html links/o links/sitemap.xml links/kansai-yado.json links/tomari.html stats/linkcheck.md
           git diff --cached --quiet || (git commit -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)" && git pull --rebase -q && git push)
