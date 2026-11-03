@@ -105,9 +105,10 @@ function pct(v){return (v>0?"+":v<0?"−":"±")+Math.abs(v).toFixed(1)+"%"}
 var today=new Date(Date.now()+9*36e5).toISOString().slice(0,10);
 // おでかけ：今のリストを読んで、開催中・これからを数える（終わった物は数えない）
 var OD=[],TW=[],FA=0;
-var pO=fetch("/odekake").then(function(r){return r.text()}).then(function(t){var d=new DOMParser().parseFromString(t,"text/html");
- d.querySelectorAll(".paper a.card").forEach(function(a){var e=a.getAttribute("data-e")||"",s=a.getAttribute("data-s")||"",tt=a.querySelector(".t"),m=a.querySelector(".m");if(e&&e<today)return;if(!tt)return;
-  OD.push({t:tt.textContent.trim(),m:m?m.textContent.trim():"",p:a.getAttribute("data-pref")||"",h:a.getAttribute("href"),f:/無料/.test(a.getAttribute("data-tag")||""),now:!!(s&&s<=today&&(!e||e>=today)),up:!!(s&&s>today)});});
+// 11/3 リストの「開催中」と同じ数え方にする（「これから」の見出しの下のカード：始まりが今日まで＝開催中、始まりの日が無い物も開催中）。入口118件・リスト131件と食い違っていた
+var pO=fetch("/odekake").then(function(r){return r.text()}).then(function(t){var d=new DOMParser().parseFromString(t,"text/html"),cur="";
+ d.querySelectorAll(".paper .wk, .paper a.card").forEach(function(a){if(a.classList.contains("wk")){cur=a.textContent;return}var e=a.getAttribute("data-e")||"",s=a.getAttribute("data-s")||"",tt=a.querySelector(".t"),m=a.querySelector(".m");if(e&&e<today)return;if(!tt)return;var ev=cur.indexOf("これから")===0;
+  OD.push({t:tt.textContent.trim(),m:m?m.textContent.trim():"",p:a.getAttribute("data-pref")||"",h:a.getAttribute("href"),f:/無料/.test(a.getAttribute("data-tag")||""),now:ev&&!(s&&s>today),up:ev&&!!(s&&s>today)});});
  var n1=OD.filter(function(x){return x.now}).length,n2=OD.filter(function(x){return x.up}).length;document.getElementById("o1").innerHTML=n1+'<small style="font-size:12px">件</small>';document.getElementById("o2").innerHTML=n2+'<small style="font-size:12px">件</small>';
  var n3=OD.filter(function(x){return x.f}).length;document.getElementById("o3").innerHTML=n3+'<small style="font-size:12px">件</small>';
  var pv=OD.filter(function(x){return x.now}).slice(0,3);document.getElementById("opv").innerHTML=pv.map(function(x){return '<div><i style="color:'+(PC[x.p]||"#8C7B6E")+'">'+esc(x.p)+'</i>'+esc(x.t)+'</div>'}).join("");}).catch(function(){});
