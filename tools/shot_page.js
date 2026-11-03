@@ -3,7 +3,7 @@
 const {chromium}=require('playwright');const fs=require('fs');
 (async()=>{const [url,out,tabs]=process.argv.slice(2);fs.mkdirSync(out,{recursive:true});
 const b=await chromium.launch();const p=await b.newPage({viewport:{width:390,height:844},deviceScaleFactor:2});
-await p.goto(url,{waitUntil:'networkidle'});await p.waitForTimeout(1500);
+await p.goto(url,{waitUntil:'networkidle'});await p.waitForTimeout(1500);try{const r=await p.request.get(url);fs.writeFileSync(`${out}/page.html`,await r.text());}catch(e){} // 11/3 元のHTMLも残す（手元で試すため）
 await p.screenshot({path:`${out}/0.png`,fullPage:true});
 const log=[];
 if(tabs){const n=(await p.$$(tabs)).length;
