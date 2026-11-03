@@ -114,4 +114,4 @@ jobs:
           OLD=$(TZ=Asia/Tokyo date -d '14 days ago' +%F)
           for f in media/reels/*.mp4; do b=$(basename "$f"); [ "${b:0:10}" \< "$OLD" ] && git rm -q "$f" || true; done
           git add ig/posts
-          git diff --cached --quiet || (git commit -m "ig: リール投稿の記録" && git pull --rebase -q && git push)
+          git diff --cached --quiet || (git commit -m "[CF-Pages-Skip] ig: リール投稿の記録" && git pull --rebase -q && git push)
