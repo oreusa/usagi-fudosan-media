@@ -11,17 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: {fetch-depth: 0}
-      - run: git fetch -q origin main && git restore --source origin/main --worktree links tools/shot_page.js && mkdir -p shots && python3 tools/photo_try/make.py
+        with: {ref: main}
+      - run: |
+          git fetch -q --depth 1 origin claude/project-thread-90bnes
+          git checkout FETCH_HEAD -- tools/photo_try
+          mkdir -p shots && python3 tools/photo_try/make.py
       - run: npm i --no-save playwright@1.49.1 && npx playwright install --with-deps chromium
       - run: |
           cd links && (python3 -m http.server 8080 >/dev/null 2>&1 &) && sleep 2 && cd ..
-          mkdir -p shots/page
-          node tools/shot_page.js "http://localhost:8080/preview-photo.html" "shots/page/photo-try" ""
-          node tools/shot_page.js "http://localhost:8080/index.html" "shots/page/photo-now" ""
+          node tools/shot_page.js "http://localhost:8080/preview-photo.html" "/tmp/out/photo-try" ""
+          node tools/shot_page.js "http://localhost:8080/index.html" "/tmp/out/photo-now" ""
+          cp shots/photo_try_log.txt /tmp/out/
+          rm -f /tmp/out/*/page.html
       - run: |
           git config user.name "photo-try bot"
           git config user.email "actions@users.noreply.github.com"
-          rm -f shots/page/*/page.html
-          git add shots links/preview-photo.html
-          git commit -m "[CF-Pages-Skip] photo-try: 見本と写真" && git push
+          git reset -q --hard && git clean -fdq
+          git checkout -q -B tmp FETCH_HEAD
+          mkdir -p shots/photo_try && cp -r /tmp/out/* shots/photo_try/
+          git add shots/photo_try
+          git commit -qm "[CF-Pages-Skip] photo-try: 見本と写真" && git push origin tmp:claude/project-thread-90bnes
