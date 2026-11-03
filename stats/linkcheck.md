@@ -1,4 +1,4 @@
-# リンクの確かめ（2026-11-03 09:23 JST・277件）
+# リンクの確かめ（2026-11-04 07:57 JST・289件）
 
 ## 開けない（直す）
 - ✗ 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
@@ -13,12 +13,13 @@
 - ✗ 仮面ライダー×自然のチカラ展（links/index.html）404 https://kobe-maritime-museum.com/exhibition/790/
 - ✗ 百済寺と近江の仏教美術（links/index.html）URLError https://www.miho.or.jp/
 - ✗ 和歌山城 光と幻想の夜（links/index.html）522 https://wakayamajo.jp/
-- ✗ 微わかる展2＋小さいすぎるよ展（links/index.html）503 https://kyoto.aeonmall.jp/event/8e1f32a3-1ece-4425-bd22-07ba62ea72f8
+- ✗ JAFファンフェスタ in 梅小路公園（links/index.html）404 https://jaf.link/47mCYM5
 - ✗ 好古園 紅葉会（links/index.html）404 https://www.himeji-machishin.jp/ryokka/kokoen/
 - ✗ 壺阪寺 光の巡礼（links/index.html）404 https://www.tsubosaka1300.or.jp/news130.html
 - ✗ 市堀川イルミネーション（links/index.html）404 https://www.wakayama-kanko.or.jp/spots/NIGHTLIFE007/
+- ✗ 芳養八幡神社 秋祭（links/index.html）404 https://www.wakayama-kanko.or.jp/events/detail_2967.html
+- ✗ 長野八幡神社例祭（住吉踊）（links/index.html）404 https://www.wakayama-kanko.or.jp/events/detail_2966.html
 - ✗ 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
-- ✗ 東条湖おもちゃ王国 トミカ・プラレールランド（links/index.html）URLError https://www.omochaoukoku.com/tojoko/
 
 ## 別の催しに同じURL（どちらかが違うページかも）
 - links/index.html：談山神社 けまり祭 ／ 談山神社 紅葉ライトアップ → https://www.tanzan.or.jp/
