@@ -150,10 +150,11 @@ def pref_svg(pf, hi):
     pin_s = ""
     if (pf, hi) in LAB:
         cx, cy = proj(*LAB[(pf, hi)], b)
-        # 11/4 オーナーが選んだ「絵入りしずく」：街の場所は、府県の色のしずくに家の絵
-        pin_s = (f'<g transform="translate({cx:.0f},{cy:.0f}) scale(.8)" style="filter:drop-shadow(0 1.5px 1.5px rgba(0,0,0,.25))"><ellipse cx="0" cy="1" rx="6" ry="2.2" fill="#2B2622" opacity=".2"/>'
-                  f'<path d="M0 0C-3-7-12-12-12-22a12 12 0 0 1 24 0C12-12 3-7 0 0Z" fill="{col}" stroke="#fff" stroke-width="2.2"/><circle cx="0" cy="-22" r="8" fill="#fff"/>'
-                  f'<path d="M-4.6 -21.2L0 -25.4L4.6 -21.2V-17.4H-4.6Z" fill="none" stroke="{col}" stroke-width="1.5" stroke-linejoin="round"/><path d="M-1.3 -17.4V-20H1.3V-17.4" fill="none" stroke="{col}" stroke-width="1.3"/></g>')
+        # 11/4 オーナーが20案から選んだ「ネオン」：線だけのしずくに家の絵。夜は明るい線が光る（night.js）
+        nl = "#" + "".join("%02x" % round(int(col[i:i + 2], 16) * .5 + 255 * .5) for i in (1, 3, 5))
+        pin_s = (f'<g class="neo" transform="translate({cx:.0f},{cy:.0f}) scale(.8)" style="color:{col};--nl:{nl};filter:drop-shadow(0 1.5px 1.5px rgba(0,0,0,.2))"><ellipse class="nsh" cx="0" cy="1" rx="6" ry="2.2" fill="#2B2622" opacity=".2"/>'
+                  f'<path class="nb" d="M0 0C-3-7-12-12-12-22a12 12 0 0 1 24 0C12-12 3-7 0 0Z" fill="#fff" stroke="{col}" stroke-width="2.4" stroke-linejoin="round"/>'
+                  f'<path class="ni" d="M-4.6 -21.2L0 -25.4L4.6 -21.2V-17.4H-4.6Z" fill="none" stroke="{col}" stroke-width="1.6" stroke-linejoin="round"/><path class="ni" d="M-1.3 -17.4V-20H1.3V-17.4" fill="none" stroke="{col}" stroke-width="1.3"/></g>')
     # 11/1 オーナー「地図はちゃんと地名まで入れる」→ まわりの街の名前も、重ならない所に置く
     area = {}
     for k in keys:
@@ -229,7 +230,7 @@ h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spa
 .ft{text-align:center;font-size:10px;letter-spacing:.04em;color:#8C7B6E;margin-top:30px}"""
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">'
-SCRIPTS = '<script src="/assets/night.js?v=20"></script><script src="/assets/menu.js?v=15" defer></script><script src="/assets/v2sub.js?v=9" defer></script>'
+SCRIPTS = '<script src="/assets/night.js?v=21"></script><script src="/assets/menu.js?v=15" defer></script><script src="/assets/v2sub.js?v=9" defer></script>'
 
 
 def beacon(name):
