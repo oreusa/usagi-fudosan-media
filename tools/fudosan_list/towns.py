@@ -147,9 +147,13 @@ def pref_svg(pf, hi):
     # 色をつけた街を最後に描く（線が上に来るように）
     ps.sort(key=lambda s: col in s)
     # 小さい街でも場所がわかるように、街の中心に輪をつける
+    pin_s = ""
     if (pf, hi) in LAB:
         cx, cy = proj(*LAB[(pf, hi)], b)
-        ps.append(f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="9" fill="none" stroke="#2B2622" stroke-width="1.6"/><circle cx="{cx:.0f}" cy="{cy:.0f}" r="2.4" fill="#2B2622"/>')
+        # 11/4 オーナーが選んだ「絵入りしずく」：街の場所は、府県の色のしずくに家の絵
+        pin_s = (f'<g transform="translate({cx:.0f},{cy:.0f}) scale(.8)" style="filter:drop-shadow(0 1.5px 1.5px rgba(0,0,0,.25))"><ellipse cx="0" cy="1" rx="6" ry="2.2" fill="#2B2622" opacity=".2"/>'
+                  f'<path d="M0 0C-3-7-12-12-12-22a12 12 0 0 1 24 0C12-12 3-7 0 0Z" fill="{col}" stroke="#fff" stroke-width="2.2"/><circle cx="0" cy="-22" r="8" fill="#fff"/>'
+                  f'<path d="M-4.6 -21.2L0 -25.4L4.6 -21.2V-17.4H-4.6Z" fill="none" stroke="{col}" stroke-width="1.5" stroke-linejoin="round"/><path d="M-1.3 -17.4V-20H1.3V-17.4" fill="none" stroke="{col}" stroke-width="1.3"/></g>')
     # 11/1 オーナー「地図はちゃんと地名まで入れる」→ まわりの街の名前も、重ならない所に置く
     area = {}
     for k in keys:
@@ -175,7 +179,7 @@ def pref_svg(pf, hi):
     for _, x, y, nm, on in labs:
         fs = 15 if on else 10.5
         w, h = len(nm) * fs * 1.02, fs * 1.2
-        for dx, dy in ([(0, -16), (0, 18), (w * .6 + 8, 0), (-w * .6 - 8, 0), (w * .6 + 8, -14), (-w * .6 - 8, -14)] if on else [(0, 0), (0, -h), (0, h)]):
+        for dx, dy in ([(0, 19), (0, -30), (w * .6 + 8, 0), (-w * .6 - 8, 0), (w * .6 + 8, -14), (-w * .6 - 8, -14)] if on else [(0, 0), (0, -h), (0, h)]):
             bx = (x + dx - w / 2, y + dy - h / 2, x + dx + w / 2, y + dy + h / 2)
             if bx[0] < -4 or bx[2] > W + 4 or bx[1] < -4 or bx[3] > H + 4:
                 continue
@@ -190,6 +194,7 @@ def pref_svg(pf, hi):
                 cy2 = min(max(y - 16, h / 2), H - h / 2)
                 tx.append(f'<text x="{cx2:.0f}" y="{cy2:.0f}" font-size="{fs}" font-weight="700" fill="#2B2622">{E(nm)}</text>')
     ps.append('<g style="font-family:\'Zen Kaku Gothic New\',sans-serif;paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round;text-anchor:middle;dominant-baseline:central">' + "".join(tx) + '</g>')
+    ps.append(pin_s)  # しずくは名前より上に描く
     return f'<svg viewBox="-4 -4 {W + 8:.0f} {H + 8:.0f}" role="img" aria-label="{E(PI[pf][6])}の地図。{E(hi)}の場所">{"".join(ps)}</svg>'
 
 
