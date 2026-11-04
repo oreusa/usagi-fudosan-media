@@ -96,7 +96,7 @@ CSS += """.act{display:grid;gap:8px;margin:22px 0 0}.act a{display:block;text-al
 .yl{list-style:none;margin:0;padding:0}.yl li{border-bottom:1px solid #ECECEC}.yl a{display:flex;justify-content:space-between;gap:10px;padding:12px 2px;text-decoration:none;color:#2B2622;font-size:13.5px;font-weight:700}
 .yl a span{font-size:11.5px;color:#8C7B6E;font-weight:500;white-space:nowrap}.pr{font-size:11px;color:#8C7B6E;margin:6px 0 0}.wrap{padding-bottom:120px}
 .tmap{margin:14px 0 0;border-radius:18px;overflow:hidden;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.06);background:#fff}
-.tmap svg{display:block;width:100%;height:auto}.tmap p{margin:0;padding:10px 14px 12px;text-align:center;font-size:11.5px;letter-spacing:.06em;color:#8C7B6E}"""
+.tmap svg{display:block;width:100%;height:auto}.tmap p{margin:0;padding:10px 14px 12px;text-align:center;font-size:11.5px;letter-spacing:.06em;color:#8C7B6E}""" + spot_map.night_css()
 
 os.makedirs("links/o", exist_ok=True)
 for f in glob.glob("links/o/*.html"): os.remove(f)
