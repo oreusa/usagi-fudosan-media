@@ -121,6 +121,7 @@ function kindT(t){t=t||'';for(var i=0;i<R.length;i++)if(R[i][0].test(t))return R
 /* 11/4 オーナー「地図下選択のロゴも変わるよね？」→ 地図の下のカードの絵も、カードと同じ絵と形にする（map.js から呼ぶ） */
 window.cmIcon=function(t){return I[kindT(t)]};
 window.cmTile=function(t,pc){var k=kindT(t);return '<div class="cmt" style="--pc:'+(pc||'#8a8f98')+'"><svg viewBox="0 0 24 24">'+I[k]+'</svg></div>';};
+try{document.dispatchEvent(new CustomEvent('cm-ready'))}catch(e){}
 window.addEventListener('load',go);
 try{new MutationObserver(later).observe(document.documentElement,{childList:true,subtree:true});}catch(e){}
 })();
