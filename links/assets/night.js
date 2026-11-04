@@ -45,7 +45,8 @@
     "html.night .mpw path[fill='#F4F4F4']{fill:#232B4C}html.night .mpw path[fill='#E2E2E2']{fill:#2E3758}html.night .mpw path[fill='#CFCFCF']{fill:#3A4470}"+
     "html.night .mpw .lbl{stroke:rgba(20,26,48,.85)!important;stroke-width:6px!important}html.night .mpw .lbl text[fill='#2B2622'],html.night .mpw .lbl text[fill='#5C5048']{fill:#E8ECF6}html.night .mpw text[letter-spacing]{filter:brightness(1.8) saturate(.8)}"+
     "html.night .mpw~.lg span:nth-child(2):before{background:#b4bff0}html.night .mpw~.lg span:nth-child(3):before{background:#c5cff4}html.night .mpw~.lg span:nth-child(4):before{background:#d3dcff}"+
-    "html.night .mp.nofilt p{color:#AEB6CB}html.night .mp.nofilt path[fill='#F1F2F4']{fill:#2A3358;stroke:#4A558A}html.night .mp.nofilt g[style*=paint-order]{stroke:#1E2646!important}"+
+    "html.night .mp.nofilt .neo{filter:drop-shadow(0 0 1.5px currentColor) drop-shadow(0 0 4px currentColor)!important}html.night .mp.nofilt .neo .nb{fill:#1A2140;stroke:var(--nl)}html.night .mp.nofilt .neo .ni{stroke:var(--nl)}html.night .mp.nofilt .neo .nsh{display:none}"+
+"html.night .mp.nofilt p{color:#AEB6CB}html.night .mp.nofilt path[fill='#F1F2F4']{fill:#2A3358;stroke:#4A558A}html.night .mp.nofilt g[style*=paint-order]{stroke:#1E2646!important}"+
     "html.night .mp.nofilt text[fill='#5C5048']{fill:#C9D0E2}html.night .mp.nofilt text[fill='#2B2622']{fill:#fff}"+
     "html.night .rq{background:#121826}"+
     /* 地図で見る（全画面の地図）：夜は暗すぎたので、少し明るく・色をはっきり */
