@@ -39,3 +39,6 @@ if(tabs)tabs.addEventListener("click",function(){setTimeout(syncBar,30)});
 var F=document.getElementById("flt");if(!F)return;var b=[].filter.call(F.querySelectorAll("button"),function(x){return x.textContent.trim()===p;})[0];
 if(b){b.click();setTimeout(function(){var y=F.getBoundingClientRect().top+scrollY-80;scrollTo(0,Math.max(0,y));},350);}
 try{history.replaceState(null,"",location.pathname+location.search.replace(/([?&])pref=[^&]*&?/,"$1").replace(/[?&]$/,"")+location.hash);}catch(e){}})();
+
+/* 11/4 カードの日付と絵（cardmark.js）を読み込む */
+(function(){if(document.querySelector('script[src*="cardmark.js"]'))return;var s=document.createElement("script");s.src="/assets/cardmark.js?v=1";s.defer=true;document.head.appendChild(s);})();
