@@ -40,7 +40,9 @@
     /* 11/2 オーナー「他のページまだ白モヤ」→ いまから行ける の地図も入口と同じ夜の地図に（白っぽい灰色をやめる） */
     "html.night .rd svg>rect{fill:#141A28}"+
     /* 街のページ（machi）の小さな地図：白い箱になっていたので、夜は全体と同じ紺に */
-    "html.night .mp.nofilt{filter:none;border-color:#fff}"+
+    "html.night .mp.nofilt{filter:invert(1) hue-rotate(180deg);background:linear-gradient(180deg,#1E2646,#141A30);border-color:#2A3358}"+
+    "html.night .mp.nofilt p{color:#AEB6CB}html.night .mp.nofilt path[fill='#F1F2F4']{fill:#2A3358;stroke:#4A558A}html.night .mp.nofilt g[style*=paint-order]{stroke:#1E2646!important}"+
+    "html.night .mp.nofilt text[fill='#5C5048']{fill:#C9D0E2}html.night .mp.nofilt text[fill='#2B2622']{fill:#fff}"+
     "html.night .rq{background:#121826}"+
     /* 地図で見る（全画面の地図）：夜は暗すぎたので、少し明るく・色をはっきり */
     
