@@ -18,6 +18,10 @@ on:
       spec:
         description: "投稿内容のJSONファイル（repo内のパス。空なら今日の ig/reels）"
         required: false
+      force:
+        description: "記録があっても出す（出し直しはオーナーの許可を取ってから）"
+        required: false
+        default: "false"
 permissions:
   contents: write
 jobs:
@@ -31,6 +35,7 @@ jobs:
         env:
           APP_SECRET: ${{ secrets.META_APP_SECRET }}
           SPEC: ${{ github.event.inputs.spec }}
+          FORCE: ${{ github.event.inputs.force }}
         run: |
           set -eu
           mkdir -p ig/posts
@@ -43,6 +48,8 @@ jobs:
             [ -f "$SPEC" ] || { echo "no reel for $D"; exit 0; }
             if grep -lq "\"$SPEC\"" ig/posts/*.json 2>/dev/null && grep -l "\"$SPEC\"" ig/posts/*.json | xargs grep -q permalink; then echo "already posted"; exit 0; fi
           fi
+          # 11/4 手で動かした時も、記録があれば出さない（9:20 に朝の分を2回出した。7:57 の記録が push に失敗して残っていなかった）
+          if [ "${FORCE:-}" != "true" ] && grep -lq "\"$SPEC\"" ig/posts/*.json 2>/dev/null && grep -l "\"$SPEC\"" ig/posts/*.json | xargs grep -q permalink; then echo "already posted"; exit 0; fi
           export SPEC
           PT=$(openssl enc -d -aes-256-cbc -pbkdf2 -a -pass env:APP_SECRET -in ig/page_token.enc)
           export PT
@@ -72,6 +79,12 @@ jobs:
               except urllib.error.HTTPError as e:
                   return {"error": json.loads(e.read().decode() or "{}").get("error", {"code": e.code})}
           log = {"spec": os.environ["SPEC"], "at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())}
+          # 11/4 記録が残っていなくても、インスタの最近の5本に同じ説明文があれば出さない（2回出しを防ぐ）
+          if os.environ.get("FORCE") != "true":
+              rec = call("GET", f"{ig}/media", fields="caption,permalink,timestamp", limit="5").get("data", [])
+              same = [m for m in rec if (m.get("caption") or "").strip() == (spec.get("caption") or "").strip()]
+              if same:
+                  print("already on instagram:", same[0].get("permalink")); raise SystemExit(0)
           q = dict(media_type="REELS", video_url=spec["video_url"], caption=spec.get("caption", ""), share_to_feed="true")
           if spec.get("audio_id"):
               ac = {"audio_id": spec["audio_id"]}
@@ -114,4 +127,6 @@ jobs:
           OLD=$(TZ=Asia/Tokyo date -d '14 days ago' +%F)
           for f in media/reels/*.mp4; do b=$(basename "$f"); [ "${b:0:10}" \< "$OLD" ] && git rm -q "$f" || true; done
           git add ig/posts
-          git diff --cached --quiet || (git commit -m "[CF-Pages-Skip] ig: リール投稿の記録" && git pull --rebase -q && git push)
+          git diff --cached --quiet || git commit -m "[CF-Pages-Skip] ig: リール投稿の記録"
+          # 11/4 ほかの係と同時に push すると断られて記録が残らなかった → 5回までやり直す
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep $((i*5)); done
