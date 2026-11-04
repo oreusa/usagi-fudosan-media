@@ -19,14 +19,14 @@ play:'<circle cx="12" cy="10" r="6"/><path d="M12 4v12M6 10h12M7.8 5.8l8.4 8.4M1
 shop:'<path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>',
 spot:'<path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/>'};
 var LB={fes:'MATSURI',koyo:'KOYO',light:'LIGHT',art:'ART',food:'FOOD',flower:'FLOWER',hallo:'HALLOWEEN',xmas:'XMAS',quest:'NAZOTOKI',animal:'ANIMAL',play:'PLAY',shop:'MARKET',spot:'SPOT'};
-var R=[[/ENLIGHTENMENT|Superblue|イマーシブ|ミュージアム|美術館|博物館/i,'art'],[/ハロウィン|HALLOWEEN|ゾンビ|仮装/i,'hallo'],[/クリスマス|CHRISTMAS|Xmas|サンタ|ツリー/i,'xmas'],[/紅葉|もみじ|錦秋/,'koyo'],
-[/謎|なぞ|脱出|スタンプラリー/,'quest'],
-[/イルミ|ILLUMI|ライト|LIGHT|灯|光|ナイト|NIGHT|夜|ルミナ|NAKED|チームラボ|teamLab|ホタル|ランタ[ー]?ン|プロジェクション|瑠璃絵|Twilight|花火/i,'light'],
-[/いきもの|生き物|動物|水族館|ニフレル|アニタッチ|アドベンチャーワールド|ペンギン|PINGU|牧場|ふれあい/i,'animal'],
-[/展|美術|博物|ミュージアム|アート|ギャラリー|芸術|博覧会|北斎|文化財|文化館|映画|ミュシャ|ジュエリー|Superblue|イマーシブ|ENLIGHTENMENT|大河ドラマ館/i,'art'],
-[/グルメ|食|ラーメン|麺|肉|MEAT|やきいも|焼|酒|ビール|BEER|カレー|マルシェ|パン|スイーツ|COFFEE|コーヒー|味覚|バイキング|キッチンカー|収穫|みかん|ぶどう|いちご|りんご/i,'food'],
+var R=[[/ENLIGHTENMENT|Superblue|イマーシブ|ミュージアム|美術館|博物館/i,'art'],[/ハロウィ[ンー]|HALLOWEEN|ゾンビ|仮装/i,'hallo'],[/クリスマス|CHRISTMAS|Xmas|サンタ|ツリー/i,'xmas'],[/紅葉|もみじ|錦秋|イチョウ|銀杏/,'koyo'],
+[/謎|なぞ|脱出|スタンプラリー|リサーチ|探査|めぐり|回遊/,'quest'],
+[/イルミ|ILLUMI|ライト|LIGHT|灯|光|ナイト|NIGHT|夜|ルミナ|NAKED|チームラボ|teamLab|ホタル|ランタ[ー]?ン|プロジェクション|瑠璃絵|Twilight|花火|あかり|ヒカリ|Sparkl|SPARKLE|Neon|ルミ|SNOW|snow|WINTER|Winter|青の洞窟|宝石|Crystal|MIRAGE|雲海|KITTE|LuCe/i,'light'],
+[/いきもの|生き物|動物|水族館|ニフレル|アニタッチ|アドベンチャーワールド|ペンギン|PINGU|牧場|ふれあい|シーパラ|水族/i,'animal'],
+[/展|美術|博物|ミュージアム|アート|ギャラリー|芸術|博覧会|北斎|文化財|文化館|映画|ミュシャ|ジュエリー|Superblue|イマーシブ|ENLIGHTENMENT|大河ドラマ館|コレクション|浮世絵|モネ|広重|若冲|能装束|人形|標本|ガウディ|アントワネット|エリック・カール|三島由紀夫|MOMAS|太郎|物語|HEADLINERS|アンソロジー/i,'art'],
+[/グルメ|食|ラーメン|麺|肉|MEAT|やきいも|焼|酒|ビール|BEER|カレー|マルシェ|パン|スイーツ|COFFEE|コーヒー|味覚|バイキング|キッチンカー|収穫|みかん|ぶどう|いちご|りんご|珈琲|ワイン|鍋|ふるまい|ラー1/i,'food'],
 [/花|コスモス|菊|バラ|ばら|ダリア|植物|緑化|フラワー|ガーデン|森/,'flower'],
-[/おもちゃ|アスレチック|サーカス|遊園|ランド|ドライブ|ライド|サイクル|ペダル|体験|ツアー|ウォーキング|キャラクター|コナン|ムーミン|USJ|ユニバーサル/i,'play'],
+[/おもちゃ|アスレチック|サーカス|遊園|ランド|ドライブ|ライド|サイクル|ペダル|体験|ツアー|ウォーキング|キャラクター|コナン|ムーミン|USJ|ユニバーサル|パーク|PARK|運動会|ワークショップ|こびと|ウルトラ|ROBOT|SLパレオ|鉄道|プラネタリウム|オビツ/i,'play'],
 [/祭|まつり|フェス|Festa|Festival|FES|カーニバル|パレード/i,'fes'],
 [/マーケット|セール|フリマ|蚤の市|昼市|朝市|マルシェ/,'shop']];
 var MO=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'],WE=['SUN','MON','TUE','WED','THU','FRI','SAT'];
@@ -34,12 +34,12 @@ var T0=new Date(Date.now()+9*36e5).toISOString().slice(0,10),TY=+T0.slice(0,4),T
 function days(a,b){return Math.round((new Date(b+'T00:00:00Z')-new Date(a+'T00:00:00Z'))/864e5)}
 function iso(m,d){var y=TY;if(m<TM-3)y++;else if(m>TM+8)y--;return y+'-'+('0'+m).slice(-2)+'-'+('0'+d).slice(-2)}
 function fromText(x){ /* 「11/21（土）まで」「10/1（木）〜1/31（日）」「11/14（土）〜」など */
-  if(!x||/発表前|未発表|昨年|公式/.test(x))return{};var m=x.match(/(\d{1,2})[\/.](\d{1,2})/g)||[];
-  var p=m.map(function(v){var q=v.split(/[\/.]/);return iso(+q[0],+q[1])});
+  if(!x||/発表前|未発表|昨年|公式/.test(x))return{};var m=x.match(/(\d{1,2})(?:[\/.]|月)(\d{1,2})/g)||[];
+  var p=m.map(function(v){var q=v.split(/[\/.]|月/);return iso(+q[0],+q[1])});
   if(p.length>=2)return{s:p[0],e:p[1]};if(p.length==1){if(/まで/.test(x))return{e:p[0]};if(/〜\s*$|から/.test(x))return{s:p[0]};return{s:p[0],e:p[0]};}return{};}
 var css=
-'html body a.card.cm.cm.cm{position:relative;padding-left:98px!important;min-height:150px;box-sizing:border-box}'+
-'html body a.card.cm.cmh .v2d,html body a.card.cm.cmh>.d,html body a.card.cm.cmh .bd>.d{display:none!important}'+'html body .paper .it.cmp>a.mp,html body .cmp.cmp>a.mp{left:98px!important}html body .cmp.cmp>.rt{padding-left:98px}html body .paper .it.cmp>.yk,html body .cmp.cmp>.yk{left:160px!important}'+
+'html body .cm.cm.cm{position:relative;padding-left:98px!important;min-height:150px;box-sizing:border-box}'+
+'html body a.card.cm.cmh .v2d,html body a.card.cm.cmh>.d,html body a.card.cm.cmh .bd>.d,html body .cm.cmh .when,html body .cm.cmh .v2d,html body a.cd.cm.cmh>.dt,html body a.fc.cm.cmh>span{display:none!important}'+'html body .paper .it.cmp>a.mp,html body .cmp.cmp>a.mp{left:98px!important}html body .cmp.cmp>.rt{padding-left:98px}html body .paper .it.cmp>.yk,html body .cmp.cmp>.yk{left:160px!important}'+
 '.cmb{position:absolute;left:15px;top:15px;width:68px;text-align:center;line-height:1;pointer-events:none}'+
 '.cmb .ib{position:relative;width:66px;height:66px;margin:0 auto;border-radius:22px;background:linear-gradient(150deg,color-mix(in srgb,var(--pc,#8a8f98) 7%,#fff) 0%,color-mix(in srgb,var(--pc,#8a8f98) 24%,#fff) 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 8px 16px -10px color-mix(in srgb,var(--pc,#8a8f98) 70%,transparent);display:grid;place-items:center;color:var(--pc,#8a8f98);overflow:hidden}'+
 '.cmb .ib::before{content:"";position:absolute;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.55);left:-10px;top:-14px}'+
@@ -55,33 +55,40 @@ var css=
 '.cmb .cd{display:inline-block;margin-top:5px;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:9.5px;color:var(--pc,#8a8f98);letter-spacing:.06em;white-space:nowrap}'+
 '.cmb .cd.hot{background:var(--pc,#8a8f98);color:#fff;border-radius:999px;padding:3px 7px 2px}';
 var st=document.createElement('style');st.textContent=css;(document.head||document.documentElement).appendChild(st);
-function kind(a){var t=(a.querySelector('.t')||{}).textContent||'';var m=(a.querySelector('.m')||{}).textContent||'';
+function kind(a,ad){var t=(a.querySelector(ad.t)||{}).textContent||'';var m=(a.querySelector('.m,.pl,small')||{}).textContent||'';
   for(var i=0;i<R.length;i++)if(R[i][0].test(t))return R[i][1];
   for(i=0;i<R.length;i++)if(R[i][0].test(m))return R[i][1];
   var b=document.body&&document.body.getAttribute('data-kind')||'';if(/紅葉/.test(b))return 'koyo';if(/イルミ/.test(b)||/illumination/.test(location.pathname))return 'light';
   return 'spot';}
-function one(a){
-  if(a.dataset.cm||a.dataset.cat||!a.querySelector('.t'))return;a.dataset.cm=1;
-  var s=a.dataset.s||'',e=a.dataset.e||'',o=a.dataset.open||'';
-  if(!a.hasAttribute('data-s')&&!a.hasAttribute('data-e')){var dt=a.querySelector('.v2d,.d');var r=fromText(dt&&dt.textContent);s=r.s||'';e=r.e||'';}
+/* カードの形ごとの読み方：card=カード, t=名前, d=日付の行, box=データ(data-s/e)のある所 */
+var AD=[
+ {q:'a.card',t:'.t',d:'.v2d,.d'},                       /* 月の全ページ・燈のいまから */
+ {q:'div.card.it',t:'.t',d:'.when'},                    /* 燈のおでかけリスト */
+ {q:'li.it>.cw>a.cd',t:'.nm',d:'.dt',box:'li.it'},      /* 燈のイルミ・紅葉 */
+ {q:'a.fc',t:'b',d:'span'}];                            /* 1件ページの「ほかのおでかけ」・燈の都県ページ */
+function one(a,ad){
+  if(a.dataset.cm||a.dataset.cat||a.classList.contains('kc')||!a.querySelector(ad.t))return;a.dataset.cm=1;
+  var bx=ad.box?a.closest(ad.box):a;
+  var s=bx.dataset.s||'',e=bx.dataset.e||'',o=bx.dataset.open||'';
+  if(!bx.hasAttribute('data-s')&&!bx.hasAttribute('data-e')){var dt=a.querySelector(ad.d);var r=fromText(dt&&dt.textContent);s=r.s||'';e=r.e||'';}
+  if(!getComputedStyle(a).getPropertyValue('--pc').trim()){var bc=getComputedStyle(a).borderLeftColor;if(bc&&!/rgba\(0, 0, 0, 0\)/.test(bc))a.style.setProperty('--pc',bc);}
   var d,w,n=-1;
   if(o){d=o;w='オープン'}else if(s&&s>T0){d=s;w='から'}else if(e){d=e;w='まで'}else if(s){d=s;w='から'}
-  var k=kind(a),pill='',cd='';
+  var k=kind(a,ad),pill='',cd='';
   if(d){var y=new Date(d+'T00:00:00Z');pill='<div class="dd"><b>'+(y.getUTCMonth()+1)+'.'+y.getUTCDate()+'</b><small>'+WE[y.getUTCDay()]+'</small></div>';
     if(w==='まで'){n=days(T0,d);cd=n<=0?'<span class="cd hot">今日まで</span>':n<=7?'<span class="cd hot">あと'+n+'日</span>':'<span class="cd">あと'+n+'日</span>';}
+    else if(w==='から'&&e===s){n=days(T0,d);cd=n<=7?'<span class="cd hot">'+n+'日後</span>':'<span class="cd">'+n+'日後</span>';}
     else if(w==='から'){n=days(T0,d);cd=n<=0?'<span class="cd">から開催中</span>':n<=7?'<span class="cd hot">'+n+'日後から</span>':'<span class="cd">'+n+'日後から</span>';}
     else cd='<span class="cd">'+w+'</span>';}
-  
   var c=document.createElement('div');c.className='cmb';c.setAttribute('aria-hidden','true');
   c.innerHTML='<div class="ib"><svg viewBox="0 0 24 24">'+I[k]+'</svg><span class="lb">'+LB[k]+'</span></div>'+pill+cd;
   a.insertBefore(c,a.firstChild);a.classList.add('cm');
   /* 日付の行は「まで」の時だけ隠す（札と同じ内容）。期間・開く日・発表前などは残す */
-  var dl=a.querySelector('.v2d')||a.querySelector('.d');var dx=dl?dl.textContent:'';
-  if(w==='まで'&&!/開く日|〜\s*\d|発表前|公式/.test(dx))a.classList.add('cmh');
-  }
-function go(){var L=document.querySelectorAll('a.card');for(var i=0;i<L.length;i++)one(L[i]);
+  var dl=a.querySelector(ad.d);var dx=dl?dl.textContent:'';
+  if(w==='まで'&&!/開く日|〜\s*\d|発表前|公式/.test(dx))a.classList.add('cmh');}
+function go(){for(var j=0;j<AD.length;j++){var L=document.querySelectorAll(AD[j].q);for(var i=0;i<L.length;i++)one(L[i],AD[j]);}var i;
   /* 「地図」の小さなリンクがカードの左下にある形（リスト）は、絵のタイルと重ならないよう右へ */
-  var M=document.querySelectorAll('a.card.cm~a.mp,a.card.cm~.rt');for(i=0;i<M.length;i++)M[i].parentElement.classList.add('cmp');}
+  var M=document.querySelectorAll('a.card.cm~a.mp,a.card.cm~.rt,a.cd.cm~a.mp');for(i=0;i<M.length;i++)M[i].parentElement.classList.add('cmp');}
 var tm;function later(){clearTimeout(tm);tm=setTimeout(go,60)}
 if(document.readyState!=='loading')go();else document.addEventListener('DOMContentLoaded',go);
 window.addEventListener('load',go);

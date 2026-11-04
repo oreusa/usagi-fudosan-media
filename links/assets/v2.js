@@ -41,4 +41,4 @@ if(b){b.click();setTimeout(function(){var y=F.getBoundingClientRect().top+scroll
 try{history.replaceState(null,"",location.pathname+location.search.replace(/([?&])pref=[^&]*&?/,"$1").replace(/[?&]$/,"")+location.hash);}catch(e){}})();
 
 /* 11/4 カードの日付と絵（cardmark.js）を読み込む */
-(function(){if(document.querySelector('script[src*="cardmark.js"]'))return;var s=document.createElement("script");s.src="/assets/cardmark.js?v=1";s.defer=true;document.head.appendChild(s);})();
+(function(){if(document.querySelector('script[src*="cardmark.js"]'))return;var s=document.createElement("script");s.src="/assets/cardmark.js?v=2";s.defer=true;document.head.appendChild(s);})();
