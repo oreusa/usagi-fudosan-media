@@ -4,6 +4,8 @@
 毎朝 link-stats.yml で odekake_pref.py のあとに作り直す（終わった物のページは消す）。
 python3 tools/odekake_spot.py [YYYY-MM-DD]"""
 import re, json, html, sys, datetime, hashlib, os, glob
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import spot_map
 TODAY = sys.argv[1] if len(sys.argv) > 1 else datetime.date.today().isoformat()
 BASE = "https://townnote.pages.dev"
 FU = {"大阪": "大阪府", "京都": "京都府", "兵庫": "兵庫県", "奈良": "奈良県", "滋賀": "滋賀県", "和歌山": "和歌山県"}
@@ -20,11 +22,46 @@ yado = {re.sub(r"\s+", "", k): v for k, v in yado.items()}
 yjs = open("links/assets/yado.js", encoding="utf-8").read()
 m = re.search(r"var T=(\{.*?\]\]\});", yjs, re.S)
 TK = json.loads(m.group(1)) if m else {}
-# 街のページ（地価）: 市区町村の名前 → /machi/xxx
-MACHI = {}
+# 街のページ（地価）: 市区町村の名前 → /machi/xxx。場所の地図もそこから借りる（市区町村に色とピンがついた府県の地図）
+MACHI, MAPS = {}, {}
 for f in glob.glob("links/machi/*.html"):
-    t = re.search(r"<title>(.*?)の地価", open(f, encoding="utf-8").read())
-    if t: MACHI[t.group(1)] = "/machi/" + os.path.basename(f)[:-5]
+    h = open(f, encoding="utf-8").read()
+    t = re.search(r"<title>(.*?)の地価", h)
+    if t:
+        MACHI[t.group(1)] = "/machi/" + os.path.basename(f)[:-5]
+        mp = re.search(r'<div class="mp nofilt">(<svg.*?</svg>)', h, re.S)
+        if mp: MAPS[t.group(1)] = mp.group(1)
+
+
+def tint(h, a):  # 府県の色を白に寄せる（a=白の割合）
+    r, g, b = (int(h[i:i + 2], 16) for i in (1, 3, 5))
+    return "#%02X%02X%02X" % tuple(round(x + (255 - x) * a) for x in (r, g, b))
+
+
+def nice_map(svg, pc, label):
+    """街のページの地図を、TOWN NOTE の絵地図ふうに（11/4 オーナー「地図もうちょいオシャレに」）。
+    まわりの市区町村は府県の色をうすく、会場の市区だけ濃く浮かせる。小さい地名は消して、会場の名前だけ札にする。ピンはしずく形。"""
+    c = re.search(r'<circle cx="([\d.]+)" cy="([\d.]+)"', svg)
+    cx, cy = (float(c.group(1)), float(c.group(2))) if c else (150, 150)
+    svg = re.sub(r"<g style=.*?</g>", "", svg, flags=re.S)
+    svg = re.sub(r"<circle[^>]*/>", "", svg)
+    svg = svg.replace('fill="#F1F2F4" stroke="#fff" stroke-width="0.8"', f'fill="{tint(pc, .82)}" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"')
+    svg = re.sub(r'fill="#[0-9A-Fa-f]{6}" stroke="#fff" stroke-width="1.2"', f'fill="{pc}" stroke="#fff" stroke-width="2" stroke-linejoin="round" filter="url(#sh)"', svg)
+    defs = '<defs><filter id="sh" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#2B2622" flood-opacity=".22"/></filter></defs>'
+    svg = re.sub(r"(<svg[^>]*>)", r"\1" + defs, svg, count=1)
+    w = 14 * len(label) + 26; lx = min(max(cx - w / 2, -2), 300 - w); ly = cy - 72
+    if ly < -2: ly = cy + 16
+    pin = (f'<g transform="translate({cx},{cy})"><ellipse cx="0" cy="1" rx="6" ry="2.2" fill="#2B2622" opacity=".2"/>'
+           f'<path d="M0 0C-3-7-11-12-11-21a11 11 0 0 1 22 0C11-12 3-7 0 0Z" fill="#2B2622" stroke="#fff" stroke-width="2"/>'
+           f'<circle cx="0" cy="-21" r="4.2" fill="#fff"/></g>')
+    tag = (f'<g><rect x="{lx}" y="{ly}" width="{w}" height="28" rx="14" fill="#fff" filter="url(#sh)"/>'
+           f'<text x="{lx + w / 2}" y="{ly + 15}" text-anchor="middle" dominant-baseline="central" '
+           f'style="font-family:\'Shippori Mincho\',serif;font-weight:700;font-size:14px;letter-spacing:.12em" fill="#2B2622">{html.escape(label)}</text></g>')
+    return svg.replace("</svg>", pin + tag + "</svg>")
+
+
+def town(c):  # 「兵庫県姫路市」「橋本市ほか」→「姫路市」「橋本市」
+    return re.sub(r"ほか$", "", re.sub(r"^(大阪府|京都府|兵庫県|奈良県|滋賀県|和歌山県)", "", c)).strip()
 
 
 def txt(x): return html.unescape(re.sub("<[^>]+>", "", x)).strip()
@@ -47,7 +84,7 @@ for m in re.finditer(r'<a class="card"([^>]*)>(.*?)</a>', s, re.S):
     mm = re.search(r'class="m">(.*?)</div>', b, re.S); dd = re.search(r'class="d">(.*?)</div>', b, re.S)
     parts = txt(mm.group(1)).split("｜") if mm else [""]
     spots.append(dict(name=name, key=key, pref=a["data-pref"], st=st, en=en, url=a.get("href", ""), free="無料" in a.get("data-tag", ""),
-                      city=(lambda c, r: r if len(r) > 1 else c)(parts[0].strip(), re.sub(r"^(大阪府|京都府|兵庫県|奈良県|滋賀県|和歌山県)", "", parts[0].strip())), place=parts[-1].strip() if len(parts) > 1 else "", dline=txt(dd.group(1)) if dd else "",
+                      city=(lambda c, r: r if len(r) > 1 else c)(parts[0].strip(), re.sub(r"^(大阪府|京都府|兵庫県|奈良県|滋賀県|和歌山県)", "", parts[0].strip())), place=re.split(r"[。、]", parts[-1].strip())[0] if len(parts) > 1 else "", dline=txt(dd.group(1)) if dd else "",
                       map=a.get("data-map", ""), id=hashlib.md5(key.encode()).hexdigest()[:8]))
 
 d0 = datetime.date.fromisoformat(TODAY); upd = f"{d0.year}年{d0.month}月{d0.day}日"
@@ -57,7 +94,9 @@ CSS += """.act{display:grid;gap:8px;margin:22px 0 0}.act a{display:block;text-al
 .act .o{background:#3A2F28;color:#fff}.act .g{border:1px solid #D5D8DD;color:#2B2622;background:#fff}
 .lead{font-size:14px;line-height:2;color:#3A3330;margin:22px 0 0}
 .yl{list-style:none;margin:0;padding:0}.yl li{border-bottom:1px solid #ECECEC}.yl a{display:flex;justify-content:space-between;gap:10px;padding:12px 2px;text-decoration:none;color:#2B2622;font-size:13.5px;font-weight:700}
-.yl a span{font-size:11.5px;color:#8C7B6E;font-weight:500;white-space:nowrap}.pr{font-size:11px;color:#8C7B6E;margin:6px 0 0}.wrap{padding-bottom:120px}"""
+.yl a span{font-size:11.5px;color:#8C7B6E;font-weight:500;white-space:nowrap}.pr{font-size:11px;color:#8C7B6E;margin:6px 0 0}.wrap{padding-bottom:120px}
+.tmap{margin:14px 0 0;border-radius:18px;overflow:hidden;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.06);background:#fff}
+.tmap svg{display:block;width:100%;height:auto}.tmap p{margin:0;padding:10px 14px 12px;text-align:center;font-size:11.5px;letter-spacing:.06em;color:#8C7B6E}"""
 
 os.makedirs("links/o", exist_ok=True)
 for f in glob.glob("links/o/*.html"): os.remove(f)
@@ -106,6 +145,10 @@ for sp in spots:
     near = [o for o in spots if o is not sp and o["pref"] == p and o["city"] == sp["city"]][:4]
     near += [o for o in spots if o is not sp and o["pref"] == p and o not in near][:6 - len(near)]
     nh = "".join(f'<a class="fc" href="/o/{o["id"]}"><small>{e(o["city"])}{"｜" + e(o["place"]) if o["place"] else ""}</small><b>{e(o["name"])}</b><span>{e(jd(o["st"]) + ("〜" + jd(o["en"]) if o["en"] and o["en"] != o["st"] else "") if o["st"] else o["dline"])}</span></a>' for o in near)
+    tw = town(sp["city"])
+    lbl = sp["place"] if sp["place"] and len(sp["place"]) < 16 else tw
+    msvg = spot_map.render(p, nm, sp["city"], lbl)
+    mapd = f'<div class="tmap">{msvg}<p>{e(lbl if lbl != tw else "会場")}は、{e(tw)}のあたり</p></div>' if msvg else ""
     mh = f'<a class="fc" href="{MACHI[sp["city"]]}"><small>街のこと</small><b>{e(sp["city"])}の地価 2026</b><span>国の地価公示の数字で、住宅地の1年の動きを見ます。</span></a>' if sp["city"] in MACHI else ""
     page = f"""<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -117,7 +160,7 @@ for sp in spots:
 <script src="/assets/night.js?v=18"></script><script src="/assets/menu.js?v=14" defer></script><script src="/assets/v2sub.js?v=9" defer></script></head>
 <body style="--pc:{pc}"><div class="wrap"><div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ">
 <div class="en">{SLUG[p].upper()} ─ ODEKAKE</div><h1>{e(nm)}<span>{yr} 日程・場所</span></h1><p class="sub">{e(where if where.startswith(fu) else fu + where)}</p><div class="upd">{upd} 確認</div></div>
-<div class="big">{big}</div><p class="lead">{e(lead)}</p><div class="act">{act}</div>{yh}
+<div class="big">{big}</div>{mapd}<p class="lead">{e(lead)}</p><div class="act">{act}</div>{yh}
 <h2>{e(p)}のほかのおでかけ</h2>{nh}{mh}
 <a class="back" href="/odekake-{SLUG[p]}">{e(p)}おでかけリストへ</a><a class="back" href="/odekake" style="margin-top:14px">関西おでかけリストへ</a>
 <div class="note">日程や料金は変わることがあります。出かける前に、必ず公式ページで確かめてください。{"<br>「前売り券」「近くの宿」のリンクは広告です。" if ads else ""}</div>
