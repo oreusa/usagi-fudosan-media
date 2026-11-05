@@ -23,6 +23,9 @@ async function pages(site) {
   } catch (e) { console.log("sitemap NG", site.base, e.message); }
   // 11/2 町のページ（/machi/…）は200以上あって20分で終わらない → 形が同じなので extra の見本だけ見る
   list = list.filter(p => !/^\/machi\//.test(p));
+  // 11/5 おでかけ1件ずつのページ（/o/…）が増えて20分で終わらず2日続けて止まった → 形が同じなので最初の2つだけ見る
+  const o = list.filter(p => /^\/o\//.test(p)).slice(0, 2);
+  list = list.filter(p => !/^\/o\//.test(p)).concat(o);
   list = list.concat(site.extra).map(p => p.replace(/\.html$/, ""));
   return [...new Set(list)];
 }
