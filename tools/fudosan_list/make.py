@@ -27,8 +27,8 @@ def drop(pat):
 
 
 # ---- head
-h = re.sub(r"<title>[^<]*</title>", "<title>関西不動産リスト｜地価・人口・できる物・制度を公式の数字で</title>", h, count=1)  # 11/2 おでかけの題名が変わっても必ず置きかえる
-desc = "大阪・京都・兵庫・奈良・滋賀・和歌山の地価、人口、駅の乗る人、新しくできる物、住まいの制度を、公式の資料つきでまとめました。"
+h = re.sub(r"<title>[^<]*</title>", "<title>関西不動産リスト｜地価・人口・新しい施設・制度を公式の数字で</title>", h, count=1)  # 11/2 おでかけの題名が変わっても必ず置きかえる
+desc = "大阪・京都・兵庫・奈良・滋賀・和歌山の地価、人口、駅の乗る人、新しい施設、住まいの制度を、公式の資料つきでまとめました。"
 h = re.sub(r'<meta name="description"[^>]*>', f'<meta name="description" content="{desc}">' + ("" if live else '<meta name="robots" content="noindex">'), h, count=1)
 h = h.replace('content="https://townnote.pages.dev/odekake"', f'content="{URL}"')
 h = h.replace('<link rel="canonical" href="https://townnote.pages.dev/odekake">', f'<link rel="canonical" href="{URL}">')
@@ -167,7 +167,7 @@ items = re.findall(r'<a class="co" data-en="[^"]*" href="[^"]*">.*?</a>', FD, fl
 assert len(items) == 3, items
 h = re.sub(r'<div class="cos">.*?</div>', lambda m: '<div class="cos">' + "\n".join(items) + '</div>', h, count=1, flags=re.S)
 # 11/1 オーナー「上の切り替えはやめて、1番下にもう一方のリスト。完全に分ける」
-TNX_OLD = '<a class="tnx" href="fudosan-list" data-k="下の入口｜関西不動産リスト"><small>関連サイト</small><b>関西不動産リスト<span>→</span></b><i>地価・人口・できる物・制度を、公式の数字で</i></a>'
+TNX_OLD = '<a class="tnx" href="fudosan-list" data-k="下の入口｜関西不動産リスト"><small>関連サイト</small><b>関西不動産リスト<span>→</span></b><i>地価・人口・新しい施設・制度を、公式の数字で</i></a>'
 assert TNX_OLD in h
 h = h.replace(TNX_OLD, '<a class="tnx" href="/odekake" data-k="下の入口｜関西おでかけリスト"><small>関連サイト</small><b>関西おでかけリスト<span>→</span></b><i>関西のイベント・新しいお店や施設を、公式ページつきで</i></a>')
 

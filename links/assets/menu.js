@@ -28,7 +28,7 @@
   ];
   /* 11/1 オーナー「完全に分ける。メニューもそうだ」→ 関西不動産リストのページは不動産だけのメニュー */
   if(FU)L=[
-    ["LIST","flist","/fudosan-list","関西不動産リスト","地価・人口・できる物・制度を、公式の数字で"],
+    ["LIST","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],
     ["SEARCH","fq","/fudosan-list?fq=q","街で探す","市・区・町の名前で、その街の地価を"],
     ["MAP","fmap","/fudosan-list?fq=map","地図で見る","上がった街・下がった街を、色で"],
     ["RANKING","chika","/chika-kansai","関西 地価ランキング","6府県・205の市区町村の住宅地"],
@@ -44,10 +44,10 @@
     ["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],
     ["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]
   ];
-  else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・できる物・制度を、公式の数字で"],["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]]);
+  else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]]);
   /* TOWN NOTE の入口ページは、2つのリストとご相談だけ */
   // 11/4 オーナー「売る前にと売却は不動産だけ」「1番最初だし」→ 入口のメニューからは外す（不動産のページには残す）
-  if(/^\/(town-notes)?$/.test(P))L=[["-","TOWN NOTE"],["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・できる物・制度を、公式の数字で"],["-","CONTACT"],["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],["LISTING","listing","https://ig.me/m/fudousan_ai_si","おでかけ掲載","新しいお店やイベントのご紹介"]];
+  if(/^\/(town-notes)?$/.test(P))L=[["-","TOWN NOTE"],["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["-","CONTACT"],["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],["LISTING","listing","https://ig.me/m/fudousan_ai_si","おでかけ掲載","新しいお店やイベントのご紹介"]];
   var css=
   "#umenu{position:fixed;top:12px;right:12px;z-index:9990;width:42px;height:42px;border-radius:50%;border:1px solid #DADADA;background:rgba(255,255,255,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.07);-webkit-tap-highlight-color:transparent}"+
 "#utheme{position:fixed;top:12px;right:62px;z-index:9990;width:76px;height:42px;border-radius:99px;border:1px solid #DADADA;background:rgba(255,255,255,.94);padding:0;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.07);-webkit-tap-highlight-color:transparent;transition:opacity .25s,transform .25s}"+
@@ -88,6 +88,8 @@
   "#upan a.tl em{font-style:normal;font-size:10.5px;color:#7A6E66;line-height:1.4}"+
   "#upan a.sm{display:flex;align-items:center;gap:8px;padding:11px 10px;border-radius:12px;background:#F6F6F7;font-size:12px;font-weight:700;line-height:1.35}"+
   "#upan a.sm i{display:block;width:17px;height:17px;flex:none}"+
+  /* 11/6 オーナー「関連サイトがもう少しだけ大きくてもいい」→ 関連サイトの2つだけ少し大きく */
+  "#upan .urel a.sm{padding:15px 10px;font-size:13px;gap:8px;white-space:nowrap}#upan .urel a.sm i{width:20px;height:20px}"+
   "#upan a.sm em{display:none}"+
   "#upan a.ui svg{width:100%;height:100%;fill:none;stroke:#3A2F28;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}"+
   "#upan a.sm svg{stroke:#8C7B6E}"+
@@ -108,11 +110,11 @@
   "#upan .sw[aria-checked=true]:after{transform:translateX(20px)}"+
   "#upan .us{display:flex;gap:22px;justify-content:center;padding:14px 20px calc(18px + env(safe-area-inset-bottom));border-top:1px solid #EDEDED}"+
   "#upan .us a{font-family:Jost,sans-serif;font-size:13px;letter-spacing:.06em;color:#2B2622;text-decoration:none;border-bottom:1px solid #2B2622;padding:6px 0 2px}"+
-  "#upan .ush{margin:6px 16px 4px;padding:14px 16px;border-radius:16px;background:linear-gradient(135deg,#FBEEE8,#EEF2FB);display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px}"+
-  "#upan .ush>svg{width:24px;height:24px;fill:none;stroke:#2B2622;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}"+
-  "#upan .ush .ust{flex:1;min-width:0}#upan .ush .ust b{display:block;font-size:15px;font-weight:700;letter-spacing:.08em;color:#2B2622}#upan .ush .ust small{display:block;font-size:12px;color:#857A70;letter-spacing:.02em}"+
-  "#upan .ush .ub{width:100%;display:flex;gap:8px}"+
-  "#upan .ush button{flex:1;height:40px;border-radius:999px;border:1px solid #DDD;background:#fff;color:#2B2622;font:700 13px sans-serif;letter-spacing:.04em;cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent}"+
+  "#upan .ush{margin:4px 16px 2px;padding:8px 10px 8px 14px;border-radius:14px;background:linear-gradient(135deg,#FBEEE8,#EEF2FB);display:flex;flex-wrap:nowrap;align-items:center;gap:8px}"+
+  "#upan .ush>svg{width:18px;height:18px;fill:none;stroke:#2B2622;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}"+
+  "#upan .ush .ust{flex:1;min-width:0}#upan .ush .ust b{display:block;font-size:12.5px;white-space:nowrap;font-weight:700;letter-spacing:.08em;color:#2B2622}#upan .ush .ust small{display:none}"+
+  "#upan .ush .ub{display:flex;gap:5px;flex:none}"+
+  "#upan .ush button{flex:none;height:30px;padding:0 10px;border-radius:999px;border:1px solid #DDD;background:#fff;color:#2B2622;font:700 11.5px sans-serif;letter-spacing:.04em;cursor:pointer;white-space:nowrap;-webkit-tap-highlight-color:transparent}"+
   "#upan .ush button[data-s=share]{background:#2B2622;border-color:#2B2622;color:#fff}#upan .ush button[data-s=line]{background:#06C755;border-color:#06C755;color:#fff}"+
   "html.night #upan .ush{background:linear-gradient(135deg,#dbe1ff,#e6eaff);box-shadow:inset 0 0 0 1px #d4dbff}html.night #upan .ush button{background:#f4f6ff;border-color:#d4dbff}html.night #upan .ush button[data-s=share]{background:#2B2622;border-color:#2B2622}html.night #upan .ush button[data-s=line]{background:#06C755;border-color:#06C755}"+
   "html.umenu-open,html.umenu-open body{overflow:hidden}"+
@@ -156,10 +158,10 @@
     var pan=document.createElement("div");pan.id="upan";pan.setAttribute("role","dialog");pan.setAttribute("aria-modal","true");pan.setAttribute("aria-label","メニュー");pan.setAttribute("aria-hidden","true");
     var h='<div class="uh"><a class="uhl" href="/" aria-label="TOWN NOTEの入口へ"><img src="'+(document.documentElement.classList.contains("night")?"/assets/logo-s-night.png?v=5":"/assets/logo-s.png?v=2")+'" alt=""><b>TOWN NOTE</b></a><button class="ux" type="button" aria-label="メニューを閉じる">×</button></div><nav>'+(/^\/(town-notes)?$/.test(P)?"":ug(FU?"KANSAI REAL ESTATE":"KANSAI ODEKAKE"));
     /* 最初のまとまり＝タイル、あとのまとまり＝小さいボタン */
-    var tiled=false,openG="";
+    var tiled=false,openG="",rel=false;
     L.forEach(function(x){
-      if(x[0]==="-"){if(openG){h+='</div>';openG="";}h+=ug(x[1]);return;}
-      if(!openG){openG=tiled?"usm":"utg";tiled=true;h+='<div class="'+openG+'">';}
+      if(x[0]==="-"){if(openG){h+='</div>';openG="";}h+=ug(x[1]);rel=x[1]==="関連サイト";return;}
+      if(!openG){openG=tiled?"usm":"utg";tiled=true;h+='<div class="'+openG+(rel?" urel":"")+'">';}
       h+=item(x,openG==="utg");
     });
     if(openG)h+='</div>';
