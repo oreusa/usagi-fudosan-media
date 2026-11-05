@@ -340,8 +340,10 @@ for t in towns:
     open(os.path.join(ROOT, "links/machi", t["id"] + ".html"), "w", encoding="utf-8").write(town_page(t))
 
 # ================= 検索・地図用のデータ
+# 11/6 夜「すいた・にしのみや とひらがなで探すと見つからない」→ 読み（kana.json：Code for FUKUI localgovjp の citykana）を k に入れる
+KANA = json.load(open(os.path.join(ROOT, "tools/fudosan_list/kana.json"), encoding="utf-8"))
 json.dump([{"id": t["id"], "p": t["p"], "n": t["n"], "s": short(t["n"]), "r7": t["r7"], "r8": t["r8"], "rk": t["rank"], "of": t["of"],
-            "la": round(t["lat"], 4), "lo": round(t["lon"], 4)} for t in towns],
+            "la": round(t["lat"], 4), "lo": round(t["lon"], 4), "k": KANA.get(t["n"], "").replace(" ", "")} for t in towns],
           open(os.path.join(ROOT, "links/assets/towns.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 # ================= 関西ランキング
