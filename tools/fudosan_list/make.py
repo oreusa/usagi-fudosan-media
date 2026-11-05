@@ -67,7 +67,7 @@ h = h.replace("この府県のおでかけは、これから増やしていき�
 TABS = [("chika", "b-now", "LAND PRICE", "地価", "地価の数字"),
         ("souba", "b-old", "MARKET", "売り買い", "売り買いの相場（売れた値段）"),
         ("jinko", "b-up", "PEOPLE", "人口・駅", "人口と駅の数字"),
-        ("dekiru", "b-new", "NEW", "できる", "できる・できた"),
+        ("dekiru", "b-new", "NEW", "新しい施設", "これからできる・最近できた施設（再開発・駅・お店）"),
         ("seido", "b-done", "MONEY", "制度", "住まいの制度とお金")]
 ORDER = ["大阪", "京都", "兵庫", "奈良", "滋賀", "和歌山"]
 # 売り買いはオーナーの OK まで見本だけ（--try で links/fudosan-list-try.html に出す）。OK が出たら SOUBA_LIVE = True
@@ -174,7 +174,7 @@ h = h.replace(TNX_OLD, '<a class="tnx" href="/odekake" data-k="下の入口｜�
 # ---- 府県の絞り込み・カードの包み・数え（index の仕組みを不動産用に短くしたもの）
 main_js = r'''<script>(function(){
 var O=(function(){try{return localStorage.getItem("usagi_owner")==="1";}catch(e){return false;}})();function c(k){if(O)return;try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
-var PC={"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"},CAT={chika:"地価",souba:"売り買い",jinko:"人口・駅",dekiru:"できる",seido:"制度"};
+var PC={"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"},CAT={chika:"地価",souba:"売り買い",jinko:"人口・駅",dekiru:"新しい施設",seido:"制度"};
 document.querySelectorAll(".paper a.card").forEach(function(a){var w=document.createElement("div");w.className="it";var pf=a.getAttribute("data-pref");w.setAttribute("data-pref",pf);if(PC[pf])w.style.setProperty("--pc",PC[pf]);a.parentNode.insertBefore(w,a);w.appendChild(a);
  var bd=a.querySelector(".bd"),d=a.querySelector(".d"),cx=document.createElement("div");cx.className="v2c";cx.innerHTML='<span class="p" data-p="'+pf+'">'+pf+'</span><span>'+CAT[a.getAttribute("data-cat")]+'</span>';
  var dt=document.createElement("div");dt.className="v2d";dt.textContent=d.textContent;bd.insertBefore(dt,bd.firstChild);bd.insertBefore(cx,dt);});

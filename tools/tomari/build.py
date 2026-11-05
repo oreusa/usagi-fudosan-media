@@ -137,7 +137,7 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 <div class="cnt"><span>おでかけ<b>{n_all}</b>か所</span><span>宿<b>{n_inn}</b>軒</span></div><div class="upd" style="font-size:11px;color:#8C7B6E;margin-top:6px">{upd} 更新</div></div>
 <div class="flt" id="flt">{btns}</div>
 <div class="wk"><button type="button" id="wk" aria-pressed="false">この週末に開いている所だけ</button></div>
-<p class="pr">宿は楽天トラベルの評価3.5以上・口コミ10件以上から、近い順に3軒。<br>値段は1泊の最安の目安で、日や人数で変わります。宿のリンクは広告（PR）です。</p>
+<p class="pr">載せているのは、梅田・なんば・京都駅・三宮から20km以上はなれた、泊まりで行きたいおでかけです（京都の多くは京都駅から20km以内なので、いまは京都のタブがありません）。<br>宿は楽天トラベルの評価3.5以上・口コミ10件以上から、近い順に3軒。★と口コミの数・値段は、楽天トラベルで7日ごとに見直している物です。開いた時に変わっていることがあります。値段は1泊の最安の目安で、日や人数で変わります。宿のリンクは広告（PR）です。</p>
 {"".join(secs)}
 <div class="none" id="none">この週末に開いている所はありません。</div>
 <div class="note">おでかけの日にちや時間は、出かける前に必ず公式ページで確かめてください。宿の空きや値段は楽天トラベルでご確認ください。</div>
