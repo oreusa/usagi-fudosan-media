@@ -29,7 +29,7 @@ for page in ("links/index.html", "links/illumination.html"):
         k = re.sub(r"\s+", "", t)
         if not t or k not in Y or k in cards:
             continue
-        cards[k] = dict(t=t, p=g("data-pref"), s=g("data-s"), e=g("data-e"), map=html.unescape(g("data-map")), href=html.unescape(g("href")),
+        cards[k] = dict(t=t, p=g("data-pref"), s=g("data-s"), e=g("data-e"), days=g("data-days"), map=html.unescape(g("data-map")), href=html.unescape(g("href")),
                         d=txt((re.search(r'<div class="d">(.*?)</div>', body, re.S) or [None, ""])[1]),
                         m=txt((re.search(r'<div class="m">(.*?)</div>', body, re.S) or [None, ""])[1]), free="無料" in body)
 
@@ -41,11 +41,13 @@ T = TODAY.isoformat()
 for k, c in cards.items():
     if c["p"] not in items or (c["e"] and c["e"] < T):
         continue
-    c["on"] = (not c["s"]) or c["s"] <= T
+    # 11/6 夜「日程が発表前なのに『開催中』『この週末』に出る」→ 日程の無い物は「日程は発表前」にして、開催中・週末に入れない
+    c["on"] = bool(c["s"]) and c["s"] <= T
+    c["pre"] = not c["s"]
     c["k"] = k
     items[c["p"]].append(c)
 for p in PREFS:
-    items[p].sort(key=lambda c: (0, c["e"] or "9") if c["on"] else (1, c["s"]))
+    items[p].sort(key=lambda c: (0, c["e"] or "9") if c["on"] else (2, "") if c["pre"] else (1, c["s"]))
 n_all = sum(len(v) for v in items.values())
 n_inn = sum(len(Y[c["k"]][:3]) for v in items.values() for c in v)
 
@@ -63,10 +65,12 @@ for p in PREFS:
         continue
     rows = []
     for c in items[p]:
-        tag = f'<span class="st {"on" if c["on"] else "soon"}">{"開催中" if c["on"] else "これから"}</span>' + ('<span class="fr">無料</span>' if c["free"] else "")
+        lab, cl = ("開催中", "on") if c["on"] else ("日程は発表前", "pre") if c["pre"] else ("これから", "soon")
+        tag = f'<span class="st {cl}">{lab}</span>' + ('<span class="fr">無料</span>' if c["free"] else "")
         gm = "https://www.google.com/maps/search/?api=1&query=" + urllib.parse.quote(c["map"] or c["t"])
-        hs = "".join(hotel(c, h, i) for i, h in enumerate(Y[c["k"]][:3]))
-        rows.append(f'<article class="it" data-s="{E(c["s"])}" data-e="{E(c["e"])}"><a class="card" href="{E(c["href"])}" target="_blank" rel="noopener" data-k="公式｜{E(c["t"])}">'
+        # 11/6 夜「近い順に3軒なのに 2.5→2.5→2.1km」→ 選んだ3軒を近い順に並べて出す
+        hs = "".join(hotel(c, h, i) for i, h in enumerate(sorted(Y[c["k"]][:3], key=lambda h: h.get("km", 99))))
+        rows.append(f'<article class="it" data-s="{E(c["s"])}" data-e="{E(c["e"])}" data-days="{E(c.get("days") or "")}"><a class="card" href="{E(c["href"])}" target="_blank" rel="noopener" data-k="公式｜{E(c["t"])}">'
                     f'<div class="tg">{tag}</div><div class="d">{E(c["d"])}</div><div class="t">{E(c["t"])}</div><div class="m">{E(c["m"])}</div><div class="go">公式 →</div></a>'
                     f'<div class="inn"><div class="ih"><span>近くの宿</span><a class="mp" href="{E(gm)}" target="_blank" rel="noopener" data-k="地図｜{E(c["t"])}">地図</a></div><ul>{hs}</ul></div></article>')
     secs.append(f'<section class="ps" id="p-{p}" data-p="{p}" style="--c:{PC[p]}"><h2>{p}<small>{len(items[p])}か所</small></h2>{"".join(rows)}</section>')
@@ -106,7 +110,7 @@ h2 small{{font-family:"Zen Kaku Gothic New";font-size:11px;color:#8C7B6E;letter-
 .card{{display:block;position:relative;text-decoration:none;color:inherit;padding:14px 64px 12px 16px}}
 .tg{{display:flex;gap:6px;margin-bottom:6px}}
 .st,.fr{{font-size:10.5px;letter-spacing:.06em;padding:1px 7px;border:1px solid;line-height:1.7}}
-.st.on{{color:#fff;background:var(--c);border-color:var(--c)}}.st.soon{{color:var(--c)}}.fr{{color:#6F8A5F}}
+.st.on{{color:#fff;background:var(--c);border-color:var(--c)}}.st.soon{{color:var(--c)}}.st.pre{{color:#8A8A8A;border-color:#CFCFCF}}.fr{{color:#6F8A5F}}
 .d{{font-size:13px;color:var(--c);font-weight:700;letter-spacing:.02em}}
 .t{{font-family:"Shippori Mincho",serif;font-weight:600;font-size:16px;line-height:1.5;margin:4px 0}}
 .m{{font-size:12px;color:#7A6E66;line-height:1.6}}
@@ -145,7 +149,7 @@ var B=document.querySelectorAll("#flt button"),S=document.querySelectorAll(".ps"
 function we(){{var n=new Date(Date.now()+9*36e5),d=n.getUTCDay(),sat=new Date(n);sat.setUTCDate(n.getUTCDate()+((6-d+7)%7));if(d===0)sat.setUTCDate(n.getUTCDate()-1);var sun=new Date(sat);sun.setUTCDate(sat.getUTCDate()+1);return [sat.toISOString().slice(0,10),sun.toISOString().slice(0,10)];}}
 var WE=we();
 var TD=new Date(Date.now()+9*36e5).toISOString().slice(0,10);/* 11/2 終わった日を過ぎたら、作り直し前でも出さない */
-function draw(){{var any=0;S.forEach(function(s){{var on=P==="すべて"||s.dataset.p===P,c=0;s.querySelectorAll(".it").forEach(function(it){{var a=it.dataset.s||"0000",e=it.dataset.e||"9999",ok=e>=TD&&(!W||(a<=WE[1]&&e>=WE[0]));it.hidden=!ok;if(ok)c++;}});var h=s.querySelector("h2 small");if(h)h.textContent=c+"か所";s.hidden=!on||!c;if(on&&c)any++;}});document.getElementById("none").style.display=any?"none":"block";}}
+function draw(){{var any=0;S.forEach(function(s){{var on=P==="すべて"||s.dataset.p===P,c=0;s.querySelectorAll(".it").forEach(function(it){{var a=it.dataset.s,e=it.dataset.e||"9999",dy=(it.dataset.days||"").split(","),ok=e>=TD&&(!W||(a&&a<=WE[1]&&e>=WE[0]&&dy[0]!=="?"&&(!dy[0]||dy.indexOf("we")>=0||dy.indexOf(WE[0])>=0||dy.indexOf(WE[1])>=0)));/* 11/6 日程の無い物・開く日が週末に無い物は「この週末」に入れない */it.hidden=!ok;if(ok)c++;}});var h=s.querySelector("h2 small");if(h)h.textContent=c+"か所";s.hidden=!on||!c;if(on&&c)any++;}});document.getElementById("none").style.display=any?"none":"block";}}
 B.forEach(function(b){{b.addEventListener("click",function(){{B.forEach(function(x){{x.classList.toggle("on",x===b)}});P=b.dataset.p;draw();ck("泊まり｜絞り込み："+P);var t=document.querySelector(".flt").getBoundingClientRect().top+scrollY;if(scrollY>t)scrollTo({{top:t,behavior:"smooth"}});}});}});
 wk.addEventListener("click",function(){{W=!W;wk.setAttribute("aria-pressed",W);draw();ck("泊まり｜この週末");}});
 function ck(k){{try{{if(localStorage.getItem("usagi_owner")==="1")return;}}catch(e){{}}try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}

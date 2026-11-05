@@ -210,11 +210,14 @@ function load(){Promise.all([
   fetch("/odekake",{cache:"no-store"}).then(function(r){return r.text()}),
   fetch("townnotes/geo.json",{cache:"no-store"}).then(function(r){return r.json()}).catch(function(){return{}})
 ]).then(function(v){var doc=new DOMParser().parseFromString(v[0],"text/html"),G=v[1],seen={};
-  doc.querySelectorAll("a.card[data-pref]").forEach(function(a){var t=(a.querySelector(".t")||{}).textContent||"",g=G[t];if(!g||g[0]==null||seen[t])return;seen[t]=1;
+  doc.querySelectorAll("a.card[data-pref]").forEach(function(a){var t=(a.querySelector(".t")||{}).textContent||"",g=G[t];if(!g||g[0]==null||g[2]==="recheck"||seen[t])return;seen[t]=1;/* 11/6 場所を確かめ直し中の物は出さない */
     var s=a.dataset.s||"",e=a.dataset.e||"",op=a.dataset.open||"",m=(a.querySelector(".m")||{}).textContent||"",d=(a.querySelector(".d")||{}).textContent||"";
     var open=e?(s<=T&&T<=e):(op?op<=T:!/予定|準備中|オープン前/.test(d));  /* 日付の無い「12月オープン予定」などは、まだ行けないので出さない */
+    /* 11/6 夜「日曜だけ・決まった日だけの催しが金曜の『きょう開いている』に出る」→ 開く日（data-days：日付・we＝土日祝・sun＝日曜）を見る */
+    var dy=(a.dataset.days||"").split(","),wd=new Date(T+"T12:00:00+09:00").getDay(),HD=["2026-11-03","2026-11-23","2027-01-01","2027-01-11","2027-02-11","2027-02-23","2027-03-22"];
+    if(open&&dy[0]&&!(dy.indexOf(T)>=0||(dy.indexOf("we")>=0&&(wd===0||wd===6||HD.indexOf(T)>=0))||(dy.indexOf("sun")>=0&&wd===0)||(dy.indexOf("sat")>=0&&wd===6)))open=false;
     if(!open)return;
-    ITEMS.push({t:t,p:a.dataset.pref,s:s,e:e,op:op,free:a.dataset.tag==="無料",m:m.replace(/^[^｜]*｜/,""),place:m.split("｜")[0],d:d,href:a.getAttribute("href"),la:+g[0],lo:+g[1],
+    ITEMS.push({t:t,p:a.dataset.pref,s:s,e:e,op:op,free:a.dataset.tag==="無料",m:m.replace(/^[^｜]*｜/,""),place:m.split("｜")[0],d:d,href:a.getAttribute("href"),la:+g[0],lo:+g[1],q:a.dataset.map||t,ex:g[2]!=="city",
       inside:/美術館|博物館|ミュージアム|展$|展[　 （(]|展覧|水族館|ホール|アリーナ|ドーム|百貨店|ハルカス|プラネタリウム|シアター|館/.test(t+" "+m)});});
   document.getElementById("nOpen").textContent=ITEMS.length;draw();ck("表示：いまから行けるおでかけ");
 }).catch(function(){document.getElementById("list").innerHTML='<div class="ld">リストを読めませんでした。少しして開き直してください。</div>';});}
@@ -255,7 +258,7 @@ function draw(){if(!O||!ITEMS.length)return;
       h+='<div class="bd2">'+(BD[bi]>1e8?"3時間より遠く":(BD[bi]<60?BD[bi]+"分":Math.floor(BD[bi]/60)+"時間"+(BD[bi]%60?BD[bi]%60+"分":""))+"以内")+'<small>'+n+'か所</small></div>';}}
     var st=x.e&&x.e===T?'<span class="ls">きょうまで</span>':(x.e&&dd(T,x.e)<=3?'<span class="ls">あと'+dd(T,x.e)+'日</span>':(x.e?'<span class="on">開催中</span>':""));
     var dt=x.e?fd(x.e)+" まで":(x.d.replace(/\s+/g," ").trim());
-    var route="https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(dir)+"&destination="+x.la+","+x.lo+"&travelmode=transit";
+    var route="https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(dir)+"&destination="+(x.ex?x.la+","+x.lo:encodeURIComponent(x.q))+"&travelmode=transit";/* 11/6 夜「行き方の目的地が別の施設」→ 場所が市の中心までしか分からない物は、会場の名前で案内する */
     h+='<article class="it" id="i-'+esc(x.t)+'" style="--pc:'+PC[x.p]+'"><a class="card" href="'+esc(x.href)+'" target="_blank" rel="noopener" data-k="公式｜'+esc(x.t)+'"><div class="v2c"><span class="p">'+x.p+'</span>'+st+(x.free?'<span class="f">無料</span>':"")+'</div><div class="v2d">'+esc(dt)+'</div><div class="t">'+esc(x.t)+'</div><div class="m">'+esc(x.place+(x.m?"｜"+x.m:""))+'</div><div class="tt"><small>約</small>'+tmin(x.min)+'<i>'+(x.k<10?x.k.toFixed(1):Math.round(x.k))+' km</i></div><div class="go">→</div></a><div class="rt"><a href="'+route+'" target="_blank" rel="noopener" data-k="行き方｜'+esc(x.t)+'">行き方</a></div></article>';});
   document.getElementById("list").innerHTML=h;document.getElementById("none").style.display=show.length?"none":"block";}
 /* レーダーの点を押す → その所へ */
