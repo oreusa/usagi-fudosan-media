@@ -2,12 +2,12 @@
 11/1 12:54 オーナー「TOWNNOTEを作れ。項目は2種類。1番最初の入口だ」「最初の入口はかなり手を入れろ」
 → 関西おでかけリスト と 関西不動産リスト の2つの入口。上に関西の絵地図、まんなかに「あなたの街」を両方まとめて探せる窓。
   数（開催中・これから・街・数字）はページを開いた時に両方のリストから読むので、手で直さなくても毎日合う。
-使い方: python3 tools/townnotes_top/make.py [--live]
+使い方: python3 tools/townnotes_top/make.py [--try]
 """
 import html, json, math, os, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-live = "--live" in sys.argv
+live = "--try" not in sys.argv  # 11/6 入口は本番なので、ふだんは検索に出す形（見本だけ --try）
 E = html.escape
 BASE = "https://townnote.pages.dev"
 K = json.load(open(os.path.join(ROOT, "links/townnotes/kansai.json"), encoding="utf-8"))
@@ -47,7 +47,7 @@ SVG = (f'<svg class="kmap" viewBox="-10 -10 {W + 20:.0f} {H + 20:.0f}" role="img
        f'<g class="pf" stroke="#fff" stroke-width="2.4" stroke-linejoin="round">{"".join(paths)}</g>'
        f'<g class="lb">{"".join(labels)}</g></svg>')
 
-desc = "関西の不動産屋が、街を調査して見つけたことを、ノートにまとめています。イベントや新しいお店・施設の「関西おでかけリスト」と、地価・人口・できる物を公式の数字で見る「関西不動産リスト」。"
+desc = "関西の不動産屋が、街を調査して見つけたことを、ノートにまとめています。イベントや新しいお店・施設の「関西おでかけリスト」と、地価・人口・新しい施設を公式の数字で見る「関西不動産リスト」。"
 ld = {"@context": "https://schema.org", "@type": "WebSite", "name": "TOWN NOTE", "url": f"{BASE}/", "description": desc}
 
 CHIPS = ["梅田", "吹田", "京都市", "宇治", "神戸", "西宮", "奈良市", "生駒", "大津", "草津", "和歌山市", "白浜"]
@@ -123,7 +123,7 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 .sns{{margin:30px 0 0;text-align:center}}.sns h2{{font-family:Jost;font-weight:400;font-size:10.5px;letter-spacing:.42em;color:#8C7B6E;margin:0 0 12px}}
 .sns a{{display:inline-block;margin:0 10px;color:#2B2622;text-decoration:none;font-family:Jost;font-size:14px;letter-spacing:.06em;border-bottom:1px solid #2B2622;padding-bottom:2px}}
 .ft{{text-align:center;font-size:10.5px;letter-spacing:.06em;color:#8C7B6E;margin-top:30px}}
-</style><script src="/assets/night.js?v=22"></script><script src="/assets/menu.js?v=19" defer></script><script src="/assets/v2sub.js?v=9" defer></script></head><body><div class="wrap">
+</style><script src="/assets/night.js?v=22"></script><script src="/assets/menu.js?v=20" defer></script><script src="/assets/v2sub.js?v=9" defer></script></head><body><div class="wrap">
 <header class="head"><img src="/assets/logo-s.png?v=2" width="74" height="74" alt="TOWN NOTE のロゴ">
 <h1>TOWN NOTE</h1><div class="kana">タウンノート</div>
 <p class="sub">関西の不動産屋が、街を調査して見つけたことを、<br>公式の情報つきで、このノートに書きとめています。</p>
@@ -141,7 +141,7 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 <div class="st"><div><span>開催中</span><b id="o1">―</b></div><div><span>これから</span><b id="o2">―</b></div><div><span>入場無料</span><b id="o3">―</b></div></div>
 <div class="pv" id="opv"></div><div class="go">おでかけリストを開く<span>→</span></div></a>
 <a class="ls" href="/fudosan-list" data-k="入口｜関西不動産リスト" style="--ac:#4F6681;--bg:#EEF3FA;--c:#4F6681"><div class="no"><small>PAGE</small>02</div><div class="en">KANSAI REAL ESTATE</div><h3>関西不動産リスト</h3>
-<p>地価・人口・できる物・制度を、公式の数字で。<br>あなたの街が、1年でどう動いたかがわかります。</p>
+<p>地価・人口・新しい施設・制度を、公式の数字で。<br>あなたの街が、1年でどう動いたかがわかります。</p>
 <div class="st"><div><span>関西の街</span><b id="f1">―</b></div><div><span>上がった街</span><b id="f2">―</b></div><div><span>調べた数字</span><b id="f3">―</b></div></div>
 <div class="pv" id="fpv"></div><div class="go">不動産リストを開く<span>→</span></div></a></section>
 
