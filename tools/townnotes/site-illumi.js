@@ -3,7 +3,7 @@
 function curPref(){var b=$("#flt button.on");return b&&b.dataset.p!=="すべて"?b.dataset.p:""}
 function curTab(){return document.body.getAttribute("data-kind")||"イルミネーション"}
 function items(){var pf=curPref(),seen={},out=[];
- $$(".ps .it").forEach(function(w){var p=w.getAttribute("data-pref")||"";if(pf&&p!==pf)return;var a=$(".card",w);if(!a)return;var tt=$(".t",a),k=key(tt&&tt.textContent);if(!k||seen[k])return;seen[k]=1;
+ $$(".ps .it").forEach(function(w){var p=w.getAttribute("data-pref")||"";if(pf&&p!==pf)return;if(w.style.display==="none")return;/* 11/6 夜：「今夜やっている所だけ」で消えたカードは地図にも出さない */var a=$(".card",w);if(!a)return;var tt=$(".t",a),k=key(tt&&tt.textContent);if(!k||seen[k])return;seen[k]=1;
   var g=GEO[k],d=$(".d",a),mp=$(".mp",w),tags=$$(".fr",a).map(function(e){return e.textContent});
   out.push({w:w,a:a,k:k,t:tt.textContent,pref:p,d:d?d.textContent:"",tags:tags,href:a.getAttribute("href"),map:mp?mp.href:"",lat:g&&g[0],lon:g&&g[1],soon:false})});
  return out}
@@ -15,5 +15,5 @@ function mount(){var f=$("#flt");if(!f)return;if(f.nextSibling!==mb)f.parentNode
 function tabList(){return[]}
 function prefList(){return $$("#flt button").map(function(b){return {el:b,name:b.textContent,on:b.classList.contains("on")}})}
 function tabCount(){return String(items().length)}
-var ZONE="#flt";
+var ZONE="#flt,.tnb";/* 11/6 今夜だけのボタンを押した時も、地図と件数を作り直す */
 function cnt1(k){try{if(localStorage.getItem("usagi_owner")==="1")return;var b=JSON.stringify({k:curTab()+"｜"+k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true})}catch(e){}}

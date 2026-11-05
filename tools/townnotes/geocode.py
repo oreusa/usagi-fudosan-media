@@ -30,7 +30,7 @@ for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', src, re.S):
     if not t: continue
     title = html.unescape(re.sub('<[^>]+>', '', t.group(1))).strip()
     if title in res: continue
-    if title in old and old[title][2] not in ('pref', 'city', 'none'): res[title] = old[title]; continue
+    if title in old and old[title][2] not in ('pref', 'city', 'none', 'recheck'): res[title] = old[title]; continue
     pref = a.get('pref', ''); place = html.unescape(a.get('map', ''))
     city, spot = '', ''
     if mm:
@@ -40,10 +40,19 @@ for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', src, re.S):
              ('spot', nomi, (spot + ' ' + pf).strip() if spot else ''), ('spot', nomi, spot), ('place', nomi, place.split(' ')[0] + ' ' + pf if place else ''),
              ('spot', gsi, spot), ('city', gsi, city), ('city', nomi, city)]
     got = None
+    # 11/6 夜「淡路島のおでかけが三宮から0.9km」→ 府県の中なら何でも受けていたので、神戸の事務所などが取れていた。
+    # 市町村の場所を先に取り、そこから25km以上はなれた答えは別の場所とみなして次を試す
+    cen = gsi(city) if city else None
+    def near(r):
+        if not cen: return True
+        import math
+        dy = (r[0] - cen[0]) * 111; dx = (r[1] - cen[1]) * 111 * math.cos(math.radians(r[0]))
+        return (dx * dx + dy * dy) ** .5 <= 25
     for kind, fn, q in tries:
         if not q: continue
         r = fn(q)
-        if r and ok(pref, *r): got = [round(r[0], 5), round(r[1], 5), kind]; break
+        if r and ok(pref, *r) and (kind == 'city' or near(r)): got = [round(r[0], 5), round(r[1], 5), kind]; break
+        if r and ok(pref, *r): print('遠すぎて外した', title, q, r)
     res[title] = got or [None, None, 'none']
     print(title, res[title])
 os.makedirs(os.path.dirname(OUT), exist_ok=True)

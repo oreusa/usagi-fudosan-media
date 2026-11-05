@@ -25,7 +25,7 @@ ITEMS = [
  ("兵庫","ネスタリゾート神戸 NESTA ILLUMINA","三木市｜ネスタリゾート神戸","2026-11-14","2027-02-28",False,"https://nesta.co.jp/event/580/",None),
  ("兵庫","Lightscape in Rokko しょくぶつのあかり","神戸市灘区｜六甲ガーデンテラス","2026-08-29","2026-11-29",False,"https://www.rokkosan.com/top/facility/gt/",None),
  ("兵庫","TOTTEI PARK イルミナイト","神戸市中央区｜TOTTEI PARK","2026-09-01","2026-11-30",True,"https://www.totteikobe.jp/news/article/29950",None),
- ("兵庫","神戸ルミナリエ","神戸市中央区｜旧外国人居留地ほか",None,None,True,"https://kobe-luminarie.jp/","1/30〜2/8（一部有料）"),
+ ("兵庫","神戸ルミナリエ","神戸市中央区｜旧外国人居留地・東遊園地・メリケンパーク","2027-01-29","2027-02-07",False,"https://www.city.kobe.lg.jp/a64051/284690987078.html",None),  # 11/6 夜の指摘→神戸市の発表（5/29）で確認
  ("奈良","天理市 光の祭典","天理市｜田井庄池公園",None,None,True,"https://www.city.tenri.nara.jp/kakuka/shichoukoushitsu/sougouseisakuka/teijyujirituken/teijujiritsukenibentojoho/15242.html","11/16〜1/17"),
  ("奈良","桜井イルミネーション","桜井市｜桜井駅 南口・北口",None,None,True,"https://www.city.sakurai.lg.jp/","11/21〜1/24"),
  ("奈良","イルミネーション in かしはら","橿原市｜大和八木駅・畝傍駅",None,None,True,"https://www.city.kashihara.nara.jp/soshiki/1027/gyomu/2/1/3615.html","12/6〜1/31"),
@@ -85,7 +85,7 @@ ITEMS = [
  ("滋賀","みんなdeつなご 草津まちイルミ","草津市｜草津駅周辺・草津川跡地公園",None,None,True,"https://www.city.kusatsu.shiga.jp/","11/8〜2/14"),
  # 11/2 夜 抜けゼロ2回目で追加
  ("兵庫","南京町ランターンフェア","神戸市中央区｜南京町","2026-11-28","2026-12-25",True,"https://www.nankinmachi.or.jp/",None),
- ("兵庫","ひかりの森～夜の芸術散歩～（神戸六甲ミーツ・アート）","神戸市灘区｜ROKKO森の音ミュージアム・六甲高山植物園","2026-09-19","2026-11-29",False,"https://rokkomeetsart.jp/hikarinomori/",None),
+ ("兵庫","ひかりの森～夜の芸術散歩～（神戸六甲ミーツ・アート）","神戸市灘区｜ROKKO森の音ミュージアム・六甲高山植物園","2026-09-19","2026-11-29",False,"https://rokkomeetsart.jp/hikarinomori/",None,"we,2026-11-09,2026-11-10,2026-11-11,2026-11-12,2026-11-13"),  # 11/6 夜：公式は土日祝＋追加開催11/9〜13
  ("大阪","竹あかりと紅葉のライトアップ","河内長野市｜大阪府立花の文化園","2026-11-28","2026-12-06",False,"https://hanabun-osaka.witc-pm.jp/event/2026momiji/",None),
  ("大阪","阪急うめだ本店 ミラーボールツリー","大阪市北区｜阪急うめだ本店 9階 祝祭広場","2026-11-18","2026-12-25",True,"https://www.hankyu-dept.co.jp/honten/event/",None),
 ]
