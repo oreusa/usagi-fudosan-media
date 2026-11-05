@@ -41,7 +41,7 @@ drop(r'終わった日を過ぎたカード')            # 終わった物を隠
 drop(r'var M=\["JAN"')                      # 今週のおすすめ・件数
 drop(r'var P=document.querySelector\("\.paper"\),cur=null')  # 見出しから欄を作る（欄は下で直接書く）
 drop(r'document.querySelectorAll\("\.it \.d"\)')            # 日付の文字の整え
-drop(r"var p=document.querySelector\('\.past'\)")          # 終わったおでかけ
+drop(r"終わったおでかけに『もっと見る』が2つ")          # 終わったおでかけ
 drop(r'開催中 / これから split')             # 開催中・これからの振り分け
 drop(r'"開催中":\["NOW ON"')                 # 欄の見出しの英字（下で直接書く）
 drop(r'近くの宿：')                          # 近くの宿
@@ -98,7 +98,13 @@ def card(o):
         return sb_card(o)
     return (f'<a class="card" data-pref="{o["pref"]}" data-cat="{o["tab"]}" data-date="{o["date"]}" href="{E(o["url"])}">'
             f'<div class="bd"><div class="d">{E(o["src"])}</div><div class="t">{E(o["t"]).replace("｜", "<br>" if o["tab"] == "souba" else "　")}</div>'
-            f'<div class="m">{E(o["m"])}</div></div><div class="go">→</div></a>')
+            f'<div class="m">{E(o["m"])}</div>{lk(o["url"])}</div><div class="go">→</div></a>')
+
+
+# 11/6 夜「押すと府県のPDFへ飛ぶのか街の説明へ行くのか分からない」→ カードの下に行き先を書く
+def lk(u):
+    pdf = u.lower().split("?")[0].endswith(".pdf")
+    return f'<div class="lk">{"公式資料（PDF）が開きます" if pdf else "元のページが開きます"}</div>'
 
 
 blocks = []
@@ -215,7 +221,7 @@ if any(t[0] == "souba" for t in TABS):
 from collections import Counter
 # 府県が偏らないように、6府県からよく探されそうな街を選ぶ（11/1 全部の街を入れたので、候補は入口だけ）
 PLACES = ["北区", "吹田市", "豊中市", "中京区", "宇治市", "神戸市中央区", "西宮市", "姫路市", "奈良市", "生駒市", "大津市", "草津市", "和歌山市", "田辺市"]
-FQ = r"""<style>#fq{display:none;margin:6px 0 24px}html.fq-on #fq.paper{animation:fqin .24s ease-out}@keyframes fqin{from{opacity:0;transform:translateY(8px)}}@media (prefers-reduced-motion:reduce){html.fq-on #fq.paper{animation:none}}html.fq-on .paper:not(#fq){display:none}#fq.paper{display:none}html.fq-on #fq.paper{display:block}
+FQ = r"""<style>html body .paper .it .card .lk{display:block!important;font-family:"Zen Kaku Gothic New",sans-serif!important;font-size:11.5px!important;font-weight:500!important;line-height:1.5!important;color:#6B6058!important;margin:8px 0 0!important;letter-spacing:.02em!important}#fq{display:none;margin:6px 0 24px}html.fq-on #fq.paper{animation:fqin .24s ease-out}@keyframes fqin{from{opacity:0;transform:translateY(8px)}}@media (prefers-reduced-motion:reduce){html.fq-on #fq.paper{animation:none}}html.fq-on .paper:not(#fq){display:none}#fq.paper{display:none}html.fq-on #fq.paper{display:block}
 #fq .fh{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 12px;padding:0 2px 8px;border-bottom:1px solid #CECECE}
 #fq .fh b{font-family:"Shippori Mincho",serif;font-size:17px;font-weight:600;color:#2B2622;letter-spacing:.06em}
 #fq .fh button{border:0;background:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;font-weight:700;color:#8C7B6E;cursor:pointer;padding:4px 0}
@@ -248,9 +254,11 @@ function esc(s){return String(s).replace(/[&<>"]/g,function(x){return{"&":"&amp;
 function twRow(t){return '<a class="tw" style="--pc:'+PC[t.p]+'" href="/machi/'+t.id+'" data-k="街｜'+esc(t.n)+'"><i>'+t.p+'</i><b>'+esc(t.n)+'<small>住宅地 1年の動き・'+t.p+'で'+t.rk+'位／'+t.of+'</small></b><em style="color:'+(t.r8>0?PC[t.p]:"#7A6E66")+'">'+pct(t.r8)+'</em></a>'}
 function find(q){q=q.replace(/\s/g,"");var r=box.querySelector(".fr"),fn=box.querySelector(".fn");r.className="fr blk";r.innerHTML="";
  if(!q){fn.textContent="市・区・町の名前を入れるか、下から選んでください（関西 "+(TW?TW.length:"")+" の街）";return;}
- var qq=q.replace(/(市|区|町|村|駅)$/,"");
- var tw=(TW||[]).filter(function(t){return t.n.indexOf(qq)>=0||t.s.indexOf(qq)>=0||(q.length>=3&&q.indexOf(t.s.replace(/(市|町|村)$/,""))>=0&&t.s.replace(/(市|町|村)$/,"").length>=2)}).slice(0,20);
- var hit=all.filter(function(w){return w.textContent.replace(/\s/g,"").indexOf(qq)>=0});
+ var qq=q.replace(/(市|区|町|村|駅)$/,"");if(qq.length<2)qq=q;/* 11/6 夜：「北区」で上北山村・北山村が出ないよう、1文字では探さない */
+ var kn=/^[\u3041-\u3096\u30a1-\u30fcー]+$/.test(q)?q.replace(/[\u30a1-\u30f6]/g,function(c){return String.fromCharCode(c.charCodeAt(0)-96)}):"";/* 11/6 夜：ひらがな・カタカナでも探せる */
+ var tw=(TW||[]).filter(function(t){return t.n.indexOf(qq)>=0||t.s.indexOf(qq)>=0||(kn.length>=2&&(t.k||"").indexOf(kn)>=0)||(q.length>=3&&q.indexOf(t.s.replace(/(市|町|村)$/,""))>=0&&t.s.replace(/(市|町|村)$/,"").length>=2)});
+ var ex=tw.filter(function(t){return t.n===q});if(ex.length&&q.length>=4)tw=ex;/* 11/6 夜：「大阪市北区」と正式な名前で探したら、その街だけ */tw=tw.slice(0,20);
+ var hit=all.filter(function(w){var x=w.textContent.replace(/\s/g,"");return x.indexOf(qq)>=0||(ex.length&&x.indexOf(ex[0].s)>=0&&x.indexOf(ex[0].n.replace(ex[0].s,""))>=0)||tw.some(function(t){return kn&&x.indexOf(t.s)>=0})});
  fn.textContent=tw.length||hit.length?"「"+q+"」　街 "+tw.length+"・調べた数字 "+hit.length+"件":"「"+q+"」はまだありません。";
  if(tw.length){r.insertAdjacentHTML("beforeend",'<div class="sec">TOWN　街の地価</div>'+tw.map(twRow).join(""));}
  if(hit.length){r.insertAdjacentHTML("beforeend",'<div class="sec">NUMBERS　調べた数字</div>');hit.forEach(function(w){r.appendChild(w.cloneNode(true))});}
@@ -292,11 +300,12 @@ function drawMap(pf,city){var w=box.querySelector(".mpw"),info=box.querySelector
    if(!ok&&l.pf)ok={o:[0,0],b:b0,ln:lines};
    if(!ok)return;boxes.push(ok.b);var cx=l.x+ok.o[0],cy=(ok.b[1]+ok.b[3])/2,n=ok.ln.length,ht=l.fs*1.12;
    if(ok.o[0]||ok.o[1])out+='<line x1="'+l.x.toFixed(0)+'" y1="'+l.y.toFixed(0)+'" x2="'+cx.toFixed(0)+'" y2="'+cy.toFixed(0)+'" stroke="#8C7B6E" stroke-width="1.4" vector-effect="non-scaling-stroke"/><circle cx="'+l.x.toFixed(0)+'" cy="'+l.y.toFixed(0)+'" r="'+(l.fs*.14).toFixed(1)+'" fill="#8C7B6E"/>';
-   ok.ln.forEach(function(t,i){var y=cy-(n-1)*ht/2+i*ht;out+='<text x="'+cx.toFixed(0)+'" y="'+y.toFixed(0)+'" font-size="'+(i?l.fs*.82:l.fs).toFixed(0)+'" fill="'+(i?l.c:l.pf?l.c:"#2B2622")+'" font-weight="'+(l.pf||l.bold||!i?700:500)+'"'+(l.pf?' letter-spacing=".12em"':'')+(i?' font-family="Jost,sans-serif"':'')+'>'+esc(t)+'</text>'});});
+   if(l.n)out+='<g data-ln="'+esc(l.n)+'" style="pointer-events:auto;cursor:pointer">';/* 11/6 夜「吹田市の文字を押すと東淀川区が選ばれる」→ 名前の文字を押したら、その街を選ぶ */
+   ok.ln.forEach(function(t,i){var y=cy-(n-1)*ht/2+i*ht;out+='<text x="'+cx.toFixed(0)+'" y="'+y.toFixed(0)+'" font-size="'+(i?l.fs*.82:l.fs).toFixed(0)+'" fill="'+(i?l.c:l.pf?l.c:"#2B2622")+'" font-weight="'+(l.pf||l.bold||!i?700:500)+'"'+(l.pf?' letter-spacing=".12em"':'')+(i?' font-family="Jost,sans-serif"':'')+'>'+esc(t)+'</text>'});if(l.n)out+='</g>';});
   h+='<g class="lbl" style="pointer-events:none;font-family:\'Zen Kaku Gothic New\',sans-serif;paint-order:stroke;stroke:#fff;stroke-width:'+(8.5).toFixed(1)+'px;stroke-linejoin:round;text-anchor:middle;dominant-baseline:central">'+out+'</g>';
   w.innerHTML=h+'</svg>';info.innerHTML='<p class="fn">'+(all?"府県を選ぶと、市・区・町の名前と数字が出ます。":"街を押すと、その街の数字が出ます。")+'</p>';
   var cb=box.querySelector(".mpc");cb.innerHTML="";if(pf&&CITY[pf]){[pf+"ぜんぶ"].concat(CITY[pf]).forEach(function(cn,i){var b=document.createElement("button");b.type="button";b.textContent=i?cn+"の"+KU[cn]+"区":cn;if((i&&cn===city)||(!i&&!city))b.className="on";b.onclick=function(){drawMap(pf,i?cn:"");c("地図：市 "+cn);};cb.appendChild(b);});}
-  w.querySelector("svg").addEventListener("click",function(e){var pth=e.target.closest("path");if(!pth)return;w.querySelectorAll("path.sel").forEach(function(x){x.classList.remove("sel")});pth.classList.add("sel");pth.parentNode.insertBefore(pth,w.querySelector("g.lbl"));
+  w.querySelector("svg").addEventListener("click",function(e){var lb=e.target.closest("[data-ln]"),pth=lb?[].filter.call(w.querySelectorAll("path[data-n]"),function(x){return x.dataset.n===lb.dataset.ln})[0]:e.target.closest("path");if(!pth)return;w.querySelectorAll("path.sel").forEach(function(x){x.classList.remove("sel")});pth.classList.add("sel");pth.parentNode.insertBefore(pth,w.querySelector("g.lbl"));
    var t=by[pth.dataset.p+"|"+pth.dataset.n];info.innerHTML=t?twRow(t):'<p class="fn">'+esc(pth.dataset.n)+'は、府県の資料に住宅地の平均がありません。</p><button type="button" class="frq">'+esc(pth.dataset.n)+'を調べてほしい</button>';
    var rb=info.querySelector(".frq");if(rb)rb.onclick=function(){c("調べてほしい："+pth.dataset.n);rb.disabled=true;rb.textContent="受け付けました。調べて、このリストに足します";};c("地図｜"+pth.dataset.n);});
  });}

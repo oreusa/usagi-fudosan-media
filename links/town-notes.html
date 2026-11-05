@@ -126,10 +126,14 @@ svg.querySelectorAll(".pf path").forEach(function(el){el.addEventListener("click
  c("入口の地図："+p);});});});
 // あなたの街：おでかけと地価をまとめて
 var q=document.getElementById("q"),res=document.getElementById("res"),tq;
-function find(v){v=v.replace(/\s/g,"");if(!v){res.innerHTML="";return;}var vv=v.replace(/(市|区|町|村|駅)$/,"");
- var tw=TW.filter(function(t){return t.n.indexOf(vv)>=0||t.s.indexOf(vv)>=0}).slice(0,6);
- var od=OD.filter(function(x){return (x.t+x.m).replace(/\s/g,"").indexOf(vv)>=0}).slice(0,6);
- var h="";if(tw.length)h+='<div class="sec">LAND PRICE　街の地価</div>'+tw.map(function(t){return '<a href="/machi/'+t.id+'" style="--pc:'+PC[t.p]+'" data-k="入口の検索｜地価｜'+esc(t.n)+'"><i>'+t.p+'</i><b>'+esc(t.n)+'<small>住宅地 1年の動き・'+t.p+'で'+t.rk+'位／'+t.of+'</small></b><em style="color:'+(t.r8>0?PC[t.p]:"#7A6E66")+'">'+pct(t.r8)+'</em></a>'}).join("");
+/* 11/6 夜：ひらがな（すいた）でも探せる・「梅田」のような駅名は街（大阪市北区）も出す・「大阪市北区」は北区4つでなくその街だけ */
+var AL={"梅田":"大阪市北区","うめだ":"大阪市北区","三宮":"神戸市中央区","さんのみや":"神戸市中央区","天王寺":"大阪市天王寺区","てんのうじ":"大阪市天王寺区"};
+function hira(x){return x.replace(/[ァ-ヶ]/g,function(c){return String.fromCharCode(c.charCodeAt(0)-96)})}
+function find(v){v=v.replace(/\s/g,"");if(!v){res.innerHTML="";return;}var vv=v.replace(/(市|区|町|村|駅)$/,""),kn=/^[ぁ-ゖァ-ーー]+$/.test(v)?hira(v):"",al=AL[v]||AL[vv]||"";
+ var tw=TW.filter(function(t){return t.n.indexOf(vv)>=0||t.s.indexOf(vv)>=0||(kn&&kn.length>=2&&(t.k||"").indexOf(kn)>=0)||(al&&t.n===al)});
+ var ex=tw.filter(function(t){return t.n===v||t.n===al});if(ex.length&&v.length>=4)tw=ex;tw=tw.slice(0,6);
+ var od=OD.filter(function(x){return (x.t+x.m).replace(/\s/g,"").indexOf(vv)>=0||(al&&(x.t+x.m).replace(/\s/g,"").indexOf(al)>=0)}).slice(0,6);
+ var h="";if(al)h+='<div class="none" style="padding:8px 2px;text-align:left">「'+esc(v)+'」の辺りは'+esc(al)+'です。'+esc(al)+'の掲載もいっしょに出しています。</div>';if(tw.length)h+='<div class="sec">LAND PRICE　街の地価</div>'+tw.map(function(t){return '<a href="/machi/'+t.id+'" style="--pc:'+PC[t.p]+'" data-k="入口の検索｜地価｜'+esc(t.n)+'"><i>'+t.p+'</i><b>'+esc(t.n)+'<small>住宅地 1年の動き・'+t.p+'で'+t.rk+'位／'+t.of+'</small></b><em style="color:'+(t.r8>0?PC[t.p]:"#7A6E66")+'">'+pct(t.r8)+'</em></a>'}).join("");
  if(od.length)h+='<div class="sec">ODEKAKE　おでかけ</div>'+od.map(function(x){return '<a href="'+esc(x.h)+'" style="--pc:'+(PC[x.p]||"#8C7B6E")+'" data-k="入口の検索｜おでかけ｜'+esc(x.t.slice(0,20))+'"><i>'+esc(x.p)+'</i><b>'+esc(x.t)+'<small>'+esc(x.m.split("｜")[0])+(x.now?"・開催中":x.up?"・これから":"")+'</small></b><em style="color:#9C8775">→</em></a>'}).join("");
  res.innerHTML=h||'<div class="none">「'+esc(v)+'」はまだありません。調べて、リストに足していきます。</div>';}
 q.oninput=function(){Promise.all([pO,pF]).then(function(){find(q.value)});clearTimeout(tq);tq=setTimeout(function(){if(q.value.trim())c("入口で探す："+q.value.trim())},1500);};
