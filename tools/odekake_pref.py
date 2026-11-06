@@ -34,6 +34,8 @@ for p, slug, fu in PREFS:
     out = out.replace('<link rel="canonical" href="https://townnote.pages.dev/odekake">', f'<link rel="canonical" href="https://townnote.pages.dev/odekake-{slug}">', 1)
     out = re.sub(r'(<meta property="og:(?:title|description)" content=")[^"]*', lambda m: m.group(1) + html.escape(title if "title" in m.group(0) else desc), out)
     out = out.replace("<h1>関西おでかけリスト</h1>", f"<h1>{p}おでかけリスト</h1>", 1)
+    # 11/6 府県ページの見られた数を、関西のリストと分けて数える
+    out = out.replace('c("表示：おでかけリスト");', f'c("表示：{p}おでかけリスト"+(document.referrer&&document.referrer.indexOf(location.host)<0?"（外から）":""));', 1)
     # 検索用のイベント情報も、その府県の物だけにする
     m = re.search(r'<script type="application/ld\+json" id="ev-ld">(.*?)</script>', out, re.S)
     if m:
