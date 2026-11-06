@@ -114,6 +114,7 @@ for sp in spots:
     where = (sp["city"] + ("の" + sp["place"] if sp["place"] and sp["place"] != sp["city"] else "")) or fu
     lead = f"{nm}は、{'' if where.startswith(fu) else fu}{where}で" + (f"、{jd(sp['st'])}から{jd(sp['en'])}まで開かれます。" if sp["st"] and sp["en"] and sp["en"] != sp["st"] else (f"、{jd(sp['st'])}に開かれます。" if sp["st"] else "楽しめます。"))
     if sp["free"]: lead += "入場は無料です（一部有料の所があります）。" if sp.get("part") else "入場は無料です。"
+    jn = json.dumps(nm, ensure_ascii=False).replace("</", "<\\/")
     title = f"{nm if yr in nm else nm + " " + yr}｜日程・場所・{'入場無料' if sp['free'] else 'アクセス'}（{sp['city'] if sp['city'].startswith(fu) else fu + sp['city']}）｜TOWN NOTE"
     desc = f"{nm}（{fu}{where}）の{yr}年の日程は{when}。{'入場無料。' if sp['free'] else ''}公式ページ、地図、近くの宿をまとめました。{upd}確認。"
     canon = f"{BASE}/o/{sp['id']}"
@@ -164,7 +165,8 @@ for sp in spots:
 <h2>{e(p)}のほかのおでかけ</h2>{nh}{mh}
 <a class="back" href="/odekake-{SLUG[p]}">{e(p)}おでかけリストへ</a><a class="back" href="/odekake" style="margin-top:14px">関西おでかけリストへ</a>
 <div class="note">日程や料金は変わることがあります。出かける前に、必ず公式ページで確かめてください。{"<br>「前売り券」「近くの宿」のリンクは広告です。" if ads else ""}</div>
-<div class="ft">TOWN NOTE ─ 関西おでかけリスト</div></div></body></html>
+<div class="ft">TOWN NOTE ─ 関西おでかけリスト</div></div>
+<script>(function(){{/* 11/6 1件ずつのページの見られた数（オーナーの分は数えない） */try{{if(localStorage.getItem("usagi_owner")==="1")return;}}catch(e){{}}var r=document.referrer,x=r&&r.indexOf(location.host)<0?"（外から）":"";function c(k){{try{{var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}c("表示：1件ページ"+x);c("表示：1件ページ｜"+{jn});}})();</script></body></html>
 """
     open(f"links/o/{sp['id']}.html", "w", encoding="utf-8").write(page)
 
