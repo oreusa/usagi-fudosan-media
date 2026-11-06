@@ -42,12 +42,13 @@
     ["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],
     ["-","関連サイト"],
     ["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],
+    ["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono","くらべたおかいものリスト","日用品を1個あたりの値段でくらべて、いちばん安い所へ"],
     ["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]
   ];
-  else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]]);
+  else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono","くらべたおかいものリスト","日用品を1個あたりの値段でくらべて、いちばん安い所へ"],["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]]);
   /* TOWN NOTE の入口ページは、2つのリストとご相談だけ */
   // 11/4 オーナー「売る前にと売却は不動産だけ」「1番最初だし」→ 入口のメニューからは外す（不動産のページには残す）
-  if(/^\/(town-notes)?$/.test(P))L=[["-","TOWN NOTE"],["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["-","CONTACT"],["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],["LISTING","listing","https://ig.me/m/fudousan_ai_si","おでかけ掲載","新しいお店やイベントのご紹介"]];
+  if(/^\/(town-notes)?$/.test(P))L=[["-","TOWN NOTE"],["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono","くらべたおかいものリスト","日用品を1個あたりの値段でくらべて、いちばん安い所へ"],["-","CONTACT"],["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],["LISTING","listing","https://ig.me/m/fudousan_ai_si","おでかけ掲載","新しいお店やイベントのご紹介"]];
   var css=
   "#umenu{position:fixed;top:12px;right:12px;z-index:9990;width:42px;height:42px;border-radius:50%;border:1px solid #DADADA;background:rgba(255,255,255,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.07);-webkit-tap-highlight-color:transparent}"+
 "#utheme{position:fixed;top:12px;right:62px;z-index:9990;width:76px;height:42px;border-radius:99px;border:1px solid #DADADA;background:rgba(255,255,255,.94);padding:0;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.07);-webkit-tap-highlight-color:transparent;transition:opacity .25s,transform .25s}"+
@@ -142,12 +143,13 @@
     fnew:'<path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6-5.3-3-5.3 3 1.2-6L3.4 9.3l6-.7z"/>',
     uru:'<path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/>',
     satei:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/>',
-    gyosha:'<path d="M3 12l4-4 4 3 3-3 7 6"/><path d="M7 15l3 3M11 14l3 3M14 13l2 2"/>'
+    gyosha:'<path d="M3 12l4-4 4 3 3-3 7 6"/><path d="M7 15l3 3M11 14l3 3M14 13l2 2"/>',
+    okai:'<path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>'
   };
   var ST={list:"おでかけリスト",ima:"いま行ける",illumi:"イルミネーション",koyo:"紅葉ライトアップ",tomari:"泊まりで行く",flist:"不動産リスト",chika:"地価ランキング",chikao:"大阪市24区",
-    uru:"売る前に大事なこと",satei:"売却・査定のご相談"};
+    uru:"売る前に大事なこと",satei:"売却・査定のご相談",okai:"おかいものリスト"};
   var SS={list:"開催中・これから",map:"近くをさがす",ima:"近い順・きょう開く所",illumi:"日程・無料の所",koyo:"夜の時間・料金",tomari:"遠くのおでかけと宿",
-    flist:"地価・人口・制度",fq:"市区町村の名前で",fmap:"上がった街を色で",chika:"関西205の街",chikao:"24区の上がり幅",fnew:"最近足した数字"};
+    flist:"地価・人口・制度",fq:"市区町村の名前で",fmap:"上がった街を色で",chika:"関西205の街",chikao:"24区の上がり幅",fnew:"最近足した数字",okai:"1個あたりで最安"};
   function item(x,tile){var cur=x[1]===here,ext=/^https?:/.test(x[2]);
     return '<a class="ui '+(tile?"tl":"sm")+(cur?" cur":"")+'" data-k="'+x[1]+'" href="'+x[2]+'"'+(ext?' target="_blank" rel="noopener"':"")+(cur?' aria-current="page"':"")+'>'+(cur&&tile?'<u>いま</u>':'')+'<i><svg viewBox="0 0 24 24" aria-hidden="true">'+(IC[x[1]]||IC.list)+'</svg></i><span data-n="'+esc(x[3])+'">'+esc(ST[x[1]]||x[3])+'</span><em>'+esc(tile?(SS[x[1]]||x[4]):x[4])+'</em>'+(cur&&!tile?'<u>いま</u>':'')+'</a>';}
   function openMap(){var n=0;(function t(){var b=document.querySelector(".tnbtn");if(b){b.click();return;}if(++n<40)setTimeout(t,100);})();}
