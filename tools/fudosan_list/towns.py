@@ -405,7 +405,7 @@ rk = head(f"関西 地価ランキング2026｜{len(towns)}の市区町村の住
 <div class="upd">2026年1月1日時点の数字（{TODAY} 作成）</div></div>
 <div class="sum"><div><span>関西の1位</span><em>{E(top["n"])}</em><b>{pct(top["r8"])}</b></div><div><span>上がった街</span><em>{len(towns)}の街のうち</em><b>{ups}</b></div></div>
 <nav class="flt">''' + "".join(f'<button data-p="{k}" style="--pc:{PI[pf][3] if pf in PI else "#2B2622"}"{" class=\"on\"" if k == "all" else ""}>{"すべて" if k == "all" else pf}</button>' for k, pf, _, _, _ in panes) + '</nav>' + \
-    "".join(f'<section class="pane{" on" if k == "all" else ""}" id="{k}"><h2 style="--pc:{PI[pf][3] if pf in PI else "#B97A62"}">{E(nm)}の住宅地</h2><p class="cap">街の中の調査地点の平均の、1年の動き。押すと、その街のページが開きます。</p><ol>{rk_list(ts, sp)}</ol>'
+    "".join(f'<section class="pane{" on" if k == "all" else ""}" id="{k}"><h2 style="--pc:{PI[pf][3] if pf in PI else "#B97A62"}">{E(nm)}の住宅地</h2><p class="cap">上がり幅の順です（値段の順ではありません）。押すと、その街のページが開きます。</p><ol>{rk_list(ts, sp)}</ol>'
             + ('<a class="ilk" href="/chika-osaka" data-k="大阪市24区の商業地も">大阪市24区は、商業地のランキングも →</a>' if k == "osaka" else '') + '</section>' for k, pf, nm, ts, sp in panes) + f'''
 <section class="faq"><h2>よくある質問</h2>
 {"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in faq)}
