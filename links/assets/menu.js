@@ -37,7 +37,7 @@
     ["-","CONTACT"],
     /* 11/1 12:54 オーナー「メニューまた忘れてるぞ」→ ご相談ページ・リストの下と同じ3つをそのまま */
     ["BEFORE YOU SELL","uru","/uru.html","お家を売る前に大事なこと","ご相談の前に、ぜひご覧ください"],
-    ["FOR OWNERS","satei","https://e-infi.com/#contact","お家の売却・査定のご相談","無料でお受けしております（お問い合わせフォーム）"],
+    ["FOR OWNERS","satei","#ml","お家の売却・査定のご相談","無料でお受けしております（メール）"],
     ["FOR AGENTS","gyosha","/gyosha.html","業者さまへ","物件のご紹介・ご相談はこちら"],
     ["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],
     ["-","関連サイト"],
@@ -278,3 +278,5 @@ document.addEventListener("click",function(e){var b=e.target.closest&&e.target.c
  setTimeout(back,0);setTimeout(back,120);},true);
 try{new MutationObserver(later).observe(document.documentElement,{childList:true,subtree:true});}catch(e){}
 })();
+/* 11/6 オーナー「問い合わせ先は infinity.daikoku のメールに。インフィニティのHP経由はなし」→ href="#ml" をメールに */
+(function(){function ml(){var u="Infinity.daikoku",d="gmail.com",b="\n\n\n\n※売却・査定をご希望のお家の場所（市区町村まで）と、ご連絡先をお書きください。\n",h="mailto:"+u+"@"+d+"?subject="+encodeURIComponent("お家の売却・査定のご相談")+"&body="+encodeURIComponent(b);document.querySelectorAll('a[href="#ml"]').forEach(function(a){a.href=h;});}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",ml);else ml();document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href="#ml"]');if(a){ml();}},true);})();
