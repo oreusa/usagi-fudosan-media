@@ -29,7 +29,7 @@
   /* 11/1 オーナー「完全に分ける。メニューもそうだ」→ 関西不動産リストのページは不動産だけのメニュー */
   if(FU)L=[
     ["LIST","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],
-    ["SEARCH","fq","/fudosan-list?fq=q","街で探す","市・区・町の名前で、その街の地価を"],
+    ["SEARCH","fq","/fudosan-list?fq=q","街で探す","市・区・町の名前で、その街の地価と売れた家の値段を"],
     ["MAP","fmap","/fudosan-list?fq=map","地図で見る","上がった街・下がった街を、色で"],
     ["RANKING","chika","/chika-kansai","関西 地価ランキング","6府県・205の市区町村の住宅地"],
     ["OSAKA CITY","chikao","/chika-osaka","大阪市24区 地価ランキング","住宅地・商業地の上がり幅"],
@@ -42,13 +42,13 @@
     ["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],
     ["-","関連サイト"],
     ["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],
-    ["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono","くらべたおかいものリスト","日用品を1個あたりの値段でくらべて、いちばん安い所へ"],
+    ["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono?from=tn","くらべたおかいものリスト","日用品を1個あたりの値段でくらべて、いちばん安い所へ"],
     ["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]
   ];
-  else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono","くらべたおかいものリスト","日用品を1個あたりの値段でくらべて、いちばん安い所へ"],["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]]);
+  else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono?from=tn","くらべたおかいものリスト","日用品を1個あたりの値段でくらべて、いちばん安い所へ"],["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]]);
   /* TOWN NOTE の入口ページは、2つのリストとご相談だけ */
   // 11/4 オーナー「売る前にと売却は不動産だけ」「1番最初だし」→ 入口のメニューからは外す（不動産のページには残す）
-  if(/^\/(town-notes)?$/.test(P))L=[["-","TOWN NOTE"],["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono","くらべたおかいものリスト","日用品を1個あたりの値段でくらべて、いちばん安い所へ"],["-","CONTACT"],["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],["LISTING","listing","https://ig.me/m/fudousan_ai_si","おでかけ掲載","新しいお店やイベントのご紹介"]];
+  if(/^\/(town-notes)?$/.test(P))L=[["-","TOWN NOTE"],["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono?from=tn","くらべたおかいものリスト","日用品を1個あたりの値段でくらべて、いちばん安い所へ"],["-","CONTACT"],["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],["LISTING","listing","https://ig.me/m/fudousan_ai_si","おでかけ掲載","新しいお店やイベントのご紹介"]];
   var css=
   "#umenu{position:fixed;top:12px;right:12px;z-index:9990;width:42px;height:42px;border-radius:50%;border:1px solid #DADADA;background:rgba(255,255,255,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.07);-webkit-tap-highlight-color:transparent}"+
 "#utheme{position:fixed;top:12px;right:62px;z-index:9990;width:76px;height:42px;border-radius:99px;border:1px solid #DADADA;background:rgba(255,255,255,.94);padding:0;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.07);-webkit-tap-highlight-color:transparent;transition:opacity .25s,transform .25s}"+
