@@ -83,7 +83,7 @@ for m in re.finditer(r'<a class="card"([^>]*)>(.*?)</a>', s, re.S):
     seen.add(key)
     mm = re.search(r'class="m">(.*?)</div>', b, re.S); dd = re.search(r'class="d">(.*?)</div>', b, re.S)
     parts = txt(mm.group(1)).split("｜") if mm else [""]
-    spots.append(dict(name=name, key=key, pref=a["data-pref"], st=st, en=en, url=a.get("href", ""), free="無料" in a.get("data-tag", ""),
+    spots.append(dict(name=name, key=key, pref=a["data-pref"], st=st, en=en, url=a.get("href", ""), free="無料" in a.get("data-tag", ""), part="一部有料" in b,
                       city=(lambda c, r: r if len(r) > 1 else c)(parts[0].strip(), re.sub(r"^(大阪府|京都府|兵庫県|奈良県|滋賀県|和歌山県)", "", parts[0].strip())), place=re.split(r"[。、]", parts[-1].strip())[0] if len(parts) > 1 else "", dline=txt(dd.group(1)) if dd else "",
                       map=a.get("data-map", ""), id=hashlib.md5(key.encode()).hexdigest()[:8]))
 
@@ -113,7 +113,7 @@ for sp in spots:
     when = when or sp["dline"] or "公式ページで"
     where = (sp["city"] + ("の" + sp["place"] if sp["place"] and sp["place"] != sp["city"] else "")) or fu
     lead = f"{nm}は、{'' if where.startswith(fu) else fu}{where}で" + (f"、{jd(sp['st'])}から{jd(sp['en'])}まで開かれます。" if sp["st"] and sp["en"] and sp["en"] != sp["st"] else (f"、{jd(sp['st'])}に開かれます。" if sp["st"] else "楽しめます。"))
-    if sp["free"]: lead += "入場は無料です。"
+    if sp["free"]: lead += "入場は無料です（一部有料の所があります）。" if sp.get("part") else "入場は無料です。"
     title = f"{nm if yr in nm else nm + " " + yr}｜日程・場所・{'入場無料' if sp['free'] else 'アクセス'}（{sp['city'] if sp['city'].startswith(fu) else fu + sp['city']}）｜TOWN NOTE"
     desc = f"{nm}（{fu}{where}）の{yr}年の日程は{when}。{'入場無料。' if sp['free'] else ''}公式ページ、地図、近くの宿をまとめました。{upd}確認。"
     canon = f"{BASE}/o/{sp['id']}"
@@ -129,7 +129,7 @@ for sp in spots:
     ld = json.dumps({"@context": "https://schema.org", "@graph": [ev, bc]}, ensure_ascii=False).replace("</", "<\\/")
     big = f'<div class="w"><span>日程</span><b>{e(when)}</b></div>'
     big += f'<div><span>いまは</span><b style="color:{pc};font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700">{e(stat or "公式ページで")}</b></div>'
-    big += f'<div><span>入場</span><b style="color:#2B2622;font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700">{"無料" if sp["free"] else "公式ページで"}</b></div>'
+    big += f'<div><span>入場</span><b style="color:#2B2622;font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700">{("無料（一部有料）" if sp.get("part") else "無料") if sp["free"] else "公式ページで"}</b></div>'
     big += f'<div class="w"><span>場所</span><b>{e(where if where.startswith(fu) else fu + where)}</b></div>'
     q = sp["map"] or (sp["place"] + " " + sp["city"])
     act = f'<a class="o" href="{e(sp["url"])}" target="_blank" rel="noopener">公式ページで最新の情報を見る</a>'

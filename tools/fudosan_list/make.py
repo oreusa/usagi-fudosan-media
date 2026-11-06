@@ -98,7 +98,26 @@ def card(o):
         return sb_card(o)
     return (f'<a class="card" data-pref="{o["pref"]}" data-cat="{o["tab"]}" data-date="{o["date"]}" href="{E(o["url"])}">'
             f'<div class="bd"><div class="d">{E(o["src"])}</div><div class="t">{E(o["t"]).replace("｜", "<br>" if o["tab"] == "souba" else "　")}</div>'
-            f'<div class="m">{E(o["m"])}</div>{lk(o["url"])}</div><div class="go">→</div></a>')
+            f'<div class="m">{E(o["m"])}</div>{spec(o)}{lk(o["url"])}</div><div class="go">→</div></a>')
+
+
+# 11/6 夜#61「区の平均・1地点・件数・人数が同じ形で並び、同じ“街の伸び”に読める」→ 何の数字か・範囲・時点をカードごとに同じ順で書く
+def spec(o):
+    t, src = o["t"], o["src"]
+    if "㎡" in t:
+        k = "1地点の値段（1㎡あたり）"
+    elif "%" in t and re.search(r"区|市|町|村", t):
+        k = "住宅地の変動率（" + ("区" if "区" in t else "市町") + "ごとの平均）"
+    elif re.search(r"\d[\d,]*人", t) and re.search(r"駅|乗", t):
+        k = "1日に乗る人の数"
+    elif re.search(r"\d[\d,]*件", t):
+        k = "件数"
+    elif "人口" in t:
+        k = "人口"
+    else:
+        return ""
+    when = "1月1日時点" if "地価公示" in src else "7月1日時点" if "地価調査" in src else ""
+    return f'<div class="spc">数字：{E(k)}{"・" + when if when else ""}</div>'
 
 
 # 11/6 夜「押すと府県のPDFへ飛ぶのか街の説明へ行くのか分からない」→ カードの下に行き先を書く
@@ -221,7 +240,7 @@ if any(t[0] == "souba" for t in TABS):
 from collections import Counter
 # 府県が偏らないように、6府県からよく探されそうな街を選ぶ（11/1 全部の街を入れたので、候補は入口だけ）
 PLACES = ["北区", "吹田市", "豊中市", "中京区", "宇治市", "神戸市中央区", "西宮市", "姫路市", "奈良市", "生駒市", "大津市", "草津市", "和歌山市", "田辺市"]
-FQ = r"""<style>html body .paper .it .card .lk{display:block!important;font-family:"Zen Kaku Gothic New",sans-serif!important;font-size:11.5px!important;font-weight:500!important;line-height:1.5!important;color:#6B6058!important;margin:8px 0 0!important;letter-spacing:.02em!important}#fq{display:none;margin:6px 0 24px}html.fq-on #fq.paper{animation:fqin .24s ease-out}@keyframes fqin{from{opacity:0;transform:translateY(8px)}}@media (prefers-reduced-motion:reduce){html.fq-on #fq.paper{animation:none}}html.fq-on .paper:not(#fq){display:none}#fq.paper{display:none}html.fq-on #fq.paper{display:block}
+FQ = r"""<style>html body .paper .it .card .spc{display:block!important;font-size:11.5px!important;line-height:1.5!important;color:#6E6E6E!important;margin:4px 0 0!important}html body .paper .it .card .lk{display:block!important;font-family:"Zen Kaku Gothic New",sans-serif!important;font-size:11.5px!important;font-weight:500!important;line-height:1.5!important;color:#6B6058!important;margin:8px 0 0!important;letter-spacing:.02em!important}#fq{display:none;margin:6px 0 24px}html.fq-on #fq.paper{animation:fqin .24s ease-out}@keyframes fqin{from{opacity:0;transform:translateY(8px)}}@media (prefers-reduced-motion:reduce){html.fq-on #fq.paper{animation:none}}html.fq-on .paper:not(#fq){display:none}#fq.paper{display:none}html.fq-on #fq.paper{display:block}
 #fq .fh{display:flex;align-items:baseline;justify-content:space-between;margin:0 0 12px;padding:0 2px 8px;border-bottom:1px solid #CECECE}
 #fq .fh b{font-family:"Shippori Mincho",serif;font-size:17px;font-weight:600;color:#2B2622;letter-spacing:.06em}
 #fq .fh button{border:0;background:none;font-family:"Zen Kaku Gothic New",sans-serif;font-size:12px;font-weight:700;color:#8C7B6E;cursor:pointer;padding:4px 0}
