@@ -42,13 +42,13 @@
     ["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],
     ["-","関連サイト"],
     ["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],
-    ["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono?from=tn","くらべたおかいものリスト","日用品を1個あたりの値段でくらべて、いちばん安い所へ"],
+    ["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono?from=tn","くらべたおかいものリスト","日用品を1個あたりでくらべて最安へ（姉妹サイト LIFE NOTE で開きます）"],
     ["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]
   ];
-  else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono?from=tn","くらべたおかいものリスト","日用品を1個あたりの値段でくらべて、いちばん安い所へ"],["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]]);
+  else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono?from=tn","くらべたおかいものリスト","日用品を1個あたりでくらべて最安へ（姉妹サイト LIFE NOTE で開きます）"],["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]]);
   /* TOWN NOTE の入口ページは、2つのリストとご相談だけ */
   // 11/4 オーナー「売る前にと売却は不動産だけ」「1番最初だし」→ 入口のメニューからは外す（不動産のページには残す）
-  if(/^\/(town-notes)?$/.test(P))L=[["-","TOWN NOTE"],["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono?from=tn","くらべたおかいものリスト","日用品を1個あたりの値段でくらべて、いちばん安い所へ"],["-","CONTACT"],["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],["LISTING","listing","https://ig.me/m/fudousan_ai_si","おでかけ掲載","新しいお店やイベントのご紹介"]];
+  if(/^\/(town-notes)?$/.test(P))L=[["-","TOWN NOTE"],["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono?from=tn","くらべたおかいものリスト","日用品を1個あたりでくらべて最安へ（姉妹サイト LIFE NOTE で開きます）"],["-","CONTACT"],["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],["LISTING","listing","https://ig.me/m/fudousan_ai_si","おでかけ掲載","新しいお店やイベントのご紹介"]];
   var css=
   "#umenu{position:fixed;top:12px;right:12px;z-index:9990;width:42px;height:42px;border-radius:50%;border:1px solid #DADADA;background:rgba(255,255,255,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.07);-webkit-tap-highlight-color:transparent}"+
 "#utheme{position:fixed;top:12px;right:62px;z-index:9990;width:76px;height:42px;border-radius:99px;border:1px solid #DADADA;background:rgba(255,255,255,.94);padding:0;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.07);-webkit-tap-highlight-color:transparent;transition:opacity .25s,transform .25s}"+
