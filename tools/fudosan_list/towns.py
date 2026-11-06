@@ -257,6 +257,36 @@ def head(title, desc, url, ld=None):
 from urllib.parse import quote as _q
 YAHOO_RE = "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3786315&pid=892742459&vc_url=" + _q("https://realestate.yahoo.co.jp/", safe="")
 
+# ---- 売れた家の値段（近畿レインズ 年刊市況レポート 2025年度 表19・表20 市区町村別成約状況）
+REINS_URL = "https://www.kinkireins.or.jp/webkanri/kanri/wp-content/uploads/2026/09/4aa7279bc826c2683d1525bd813d9696.pdf"
+REINS_URL2 = "https://www.kinkireins.or.jp/webkanri/kanri/wp-content/uploads/2026/09/120a1802d9600c553a3dfbfc913812fd.pdf"
+REINS_NAME = "近畿レインズ「2025年度 年刊市況レポート」表19 中古マンション・表20 中古戸建住宅の市区町村別成約状況"
+PFULL = {"大阪": "大阪府", "京都": "京都府", "兵庫": "兵庫県", "奈良": "奈良県", "滋賀": "滋賀県", "和歌山": "和歌山県"}
+ALIAS = {("兵庫県", "丹波篠山市"): ("兵庫県", "篠山市")}  # 表では旧名「篠山市」
+SOLD, SOLD_PREF = {}, {}
+import csv as _csv
+for _k, _fn in (("m", "mansion_2025"), ("k", "kodate_2025")):
+    for _r in _csv.DictReader(open(os.path.join(T, "../reins", _fn + ".csv"), encoding="utf-8")):
+        _nm = _r["市区町村"]
+        if _nm == "合計" and not _r["地域見出し"]:
+            SOLD_PREF.setdefault(_r["府県"], {})[_k] = _r
+            continue
+        if not _nm or _nm == "合計":
+            continue
+        if _r["地域見出し"] in ("大阪市", "京都市", "神戸市"):
+            _nm = _r["地域見出し"] + _nm
+        SOLD.setdefault((_r["府県"], _nm), {})[_k] = _r
+
+
+def sold_of(t):
+    key = (PFULL[t["p"]], t["n"])
+    return SOLD.get(ALIAS.get(key, key), {})
+
+
+def man(v):
+    v = int(round(float(v)))
+    return f"{v // 10000}億{v % 10000:,}万円" if v >= 10000 else f"{v:,}万円"
+
 # ================= 街ごとのページ
 TOWN_CSS = """.big{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0 0}
 .big div{background:#F5F5F5;padding:12px 14px}.big b{display:block;font-family:Jost;font-size:24px;font-weight:500;color:var(--pc)}.big span{font-size:11px;color:#7A6E66;letter-spacing:.04em}
@@ -268,6 +298,12 @@ TOWN_CSS = """.big{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20
 .nb a b{font-family:Jost;font-weight:500;font-size:15px}.nb a small{font-size:11px;color:#8C7B6E;font-weight:500;margin-left:6px}
 .fc{display:block;text-decoration:none;color:#2B2622;background:#fff;border-left:3px solid var(--pc);box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);padding:12px 14px;margin-bottom:10px}
 .fc small{display:block;font-size:11px;color:#8C7B6E}.fc b{display:block;font-size:14.5px;line-height:1.6;margin:3px 0}.fc span{font-size:12.5px;color:#5E544D;line-height:1.7}
+.sold{display:grid;grid-template-columns:1fr 1fr;gap:10px}.sold>div{background:#fff;border:1px solid #ECECEC;border-top:3px solid var(--pc);padding:12px 14px}
+.sold .k{font-size:11.5px;color:#7A6E66;font-weight:700}.sold b{display:block;font-family:Jost,"Zen Kaku Gothic New";font-size:23px;font-weight:500;color:#2B2622;margin:2px 0 4px;line-height:1.3}
+.sold ul{list-style:none;margin:0;padding:0;font-size:12px;color:#5E544D;line-height:1.75}.sold .vs{font-size:11.5px;color:#7A6E66;margin-top:4px}.sold .few{font-size:11px;color:#B26A00;margin-top:4px}
+.sold .no{font-size:12.5px;color:#7A6E66;line-height:1.7}
+@media(max-width:380px){.sold{grid-template-columns:1fr}}
+.sell{display:block;text-decoration:none;color:#fff;background:#3A2F28;border-radius:12px;padding:14px 16px;margin:12px 0 0}.sell small{display:block;font-size:11.5px;opacity:.8}.sell b{display:block;font-size:15px;margin-top:2px}
 .rq{display:block;width:100%;margin:10px 0 0;padding:13px;border:0;border-radius:12px;background:#3A2F28;color:#fff;font-family:"Zen Kaku Gothic New",sans-serif;font-size:13.5px;font-weight:700;cursor:pointer}.rq:disabled{background:#8C7B6E}"""
 
 
@@ -307,6 +343,31 @@ def town_page(t):
            + (f'<div><span>前の年（令和7年）</span><b style="color:#6B6058">{pct(t["r7"])}</b></div>' if t["r7"] is not None else '')
            + (f'<div><span>住宅地の平均価格（1㎡）</span><b style="color:#6B6058">{t["price"] / 10000:.2f}万円</b></div>' if t["price"] else '')
            + (f'<div class="w"><b>{E(trend)}。</b></div>' if trend else '') + '</div>')
+
+    sd = sold_of(t)
+    sp = SOLD_PREF.get(PFULL[t["p"]], {})
+
+    def card(kind, label):
+        r = sd.get(kind)
+        if not r or not r["価格万円"]:
+            msg = f"2025年度に売れたのは{r['件数']}件だけのため、平均の値段は出ていません。" if r else "2025年度は、売れた記録がありません。"
+            return f'<div><div class="k">{label}</div><p class="no">{msg}</p></div>'
+        pr, pp = float(r["価格万円"]), sp.get(kind)
+        vs = ""
+        if pp and pp["価格万円"]:
+            d = pr - float(pp["価格万円"])
+            vs = f'{E(PFULL[t["p"]])}の平均（{man(pp["価格万円"])}）より{man(abs(d))}{"高い" if d > 0 else "安い"}' if abs(d) >= 1 else f'{E(PFULL[t["p"]])}の平均と同じくらい'
+        if kind == "m":
+            li = f'<li>1㎡あたり {float(r["㎡単価万円"]):.1f}万円</li><li>広さ {float(r["専有面積"]):.0f}㎡・築{float(r["築年"]):.0f}年</li>'
+        else:
+            li = f'<li>土地 {float(r["土地面積"]):.0f}㎡・建物 {float(r["建物面積"]):.0f}㎡</li><li>築{float(r["築年"]):.0f}年</li>'
+        few = '<div class="few">売れた数が少ないので目安です</div>' if int(r["件数"]) < 10 else ""
+        return (f'<div><div class="k">{label}</div><div class="vs">{int(r["件数"]):,}件の平均</div><b>{man(pr)}</b><ul>{li}</ul>'
+                + (f'<div class="vs">{vs}</div>' if vs else '') + few + '</div>')
+
+    sold_h = (f'<h2>この街で売れた家の値段</h2><p class="cap">2025年度に{E(n)}で実際に売れた（成約した）中古の家の平均です。不動産会社が登録する「レインズ」の数字です。</p>'
+              f'<div class="sold">{card("m", "中古マンション")}{card("k", "中古の一戸建て")}</div>'
+              f'<a class="sell" href="/uru.html" data-k="売るか考えている方へ｜{E(n)}"><small>売るか考えている方へ</small><b>わが家の値段を、無料で聞いてみる</b></a>')
     rel_h = ""
     if rel:
         rel_h = '<h2>この街で調べた数字</h2>' + "".join(
@@ -320,6 +381,7 @@ def town_page(t):
 <div class="upd">2026年1月1日時点の数字（{TODAY} 作成）</div></div>
 {big}
 <div class="mp nofilt">{pref_svg(t["p"], n)}<p>{E(scope_name(t))}の中の{E(short(n) if scope_name(t) != pfull else n)}</p></div>
+{sold_h}
 {rel_h}
 {nb_h}
 <a class="back" href="/chika-kansai#{fn}" data-k="{E(pfull)}のランキング" style="margin-top:18px">{E(pfull)}の街をランキングで見る</a>
@@ -330,7 +392,7 @@ def town_page(t):
 </section>
 <a class="uru buy" href="{E(YAHOO_RE)}" rel="nofollow sponsored" target="_blank" data-k="家を探す｜Yahoo!不動産｜{E(n)}"><div class="k">この街で家を探している方へ</div><div class="t">Yahoo!不動産で物件を見る</div><div class="m">中古マンション・一戸建て・新築を、<br>駅や広さの条件で探せます。</div><div class="ad">広告</div></a>
 <a class="uru" href="/uru.html" data-k="お家を売る前に大事なこと"><div class="k">お家を売る・持ち続ける前に</div><div class="t">お家を売る前に大事なこと</div><div class="m">売るか、持ち続けるか。<br>迷ったときに読むページです。</div></a>
-<p class="note">出典：{E(sname)}（価格時点 2026年1月1日）<br><a href="{E(surl)}" data-k="出典">{E(surl)}</a><br>数字は街の中の調査地点の平均の変動率で、1軒ずつの値段ではありません。</p>
+<p class="note">出典：{E(sname)}（価格時点 2026年1月1日）<br><a href="{E(surl)}" data-k="出典">{E(surl)}</a><br>数字は街の中の調査地点の平均の変動率で、1軒ずつの値段ではありません。<br>売れた家の値段：{E(REINS_NAME)}<br>表19 <a href="{REINS_URL}" data-k="出典｜レインズ">{REINS_URL}</a><br>表20 <a href="{REINS_URL2}" data-k="出典｜レインズ">{REINS_URL2}</a><br>平均の値段で、1軒ずつの値段ではありません。広さ・築年数・駅からの近さで大きく変わります。</p>
 <a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
 <div class="ft">TOWN NOTE</div></div>
 <script>(function(){{var b=document.querySelector(".rq");if(!b)return;b.onclick=function(){{try{{if(localStorage.getItem("usagi_owner")!=="1"){{var d=JSON.stringify({{k:"調べてほしい："+b.dataset.n}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",d)))fetch("/c",{{method:"POST",body:d,keepalive:true}});}}}}catch(e){{}}b.disabled=true;b.textContent="受け付けました。調べて、このリストに足します";}};}})();</script>
