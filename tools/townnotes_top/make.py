@@ -123,7 +123,7 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 .sns{{margin:30px 0 0;text-align:center}}.sns h2{{font-family:Jost;font-weight:400;font-size:10.5px;letter-spacing:.42em;color:#8C7B6E;margin:0 0 12px}}
 .sns a{{display:inline-block;margin:0 10px;color:#2B2622;text-decoration:none;font-family:Jost;font-size:14px;letter-spacing:.06em;border-bottom:1px solid #2B2622;padding-bottom:2px}}
 .ft{{text-align:center;font-size:10.5px;letter-spacing:.06em;color:#8C7B6E;margin-top:30px}}
-</style><script src="/assets/night.js?v=22"></script><script src="/assets/menu.js?v=20" defer></script><script src="/assets/v2sub.js?v=9" defer></script></head><body><div class="wrap">
+</style><script src="/assets/night.js?v=22"></script><script src="/assets/menu.js?v=21" defer></script><script src="/assets/v2sub.js?v=9" defer></script></head><body><div class="wrap">
 <header class="head"><img src="/assets/logo-s.png?v=2" width="74" height="74" alt="TOWN NOTE のロゴ">
 <h1>TOWN NOTE</h1><div class="kana">タウンノート</div>
 <p class="sub">関西の不動産屋が、街を調査して見つけたことを、<br>公式の情報つきで、このノートに書きとめています。</p>
@@ -143,7 +143,10 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 <a class="ls" href="/fudosan-list" data-k="入口｜関西不動産リスト" style="--ac:#4F6681;--bg:#EEF3FA;--c:#4F6681"><div class="no"><small>PAGE</small>02</div><div class="en">KANSAI REAL ESTATE</div><h3>関西不動産リスト</h3>
 <p>地価・人口・新しい施設・制度を、公式の数字で。<br>あなたの街が、1年でどう動いたかがわかります。</p>
 <div class="st"><div><span>関西の街</span><b id="f1">―</b></div><div><span>上がった街</span><b id="f2">―</b></div><div><span>調べた数字</span><b id="f3">―</b></div></div>
-<div class="pv" id="fpv"></div><div class="go">不動産リストを開く<span>→</span></div></a></section>
+<div class="pv" id="fpv"></div><div class="go">不動産リストを開く<span>→</span></div></a>
+<a class="ls" href="https://usagi-life-notes.pages.dev/okaimono" data-k="入口｜くらべたおかいものリスト" style="--ac:#C2703F;--bg:#FBEEE6;--c:#C2703F"><div class="no"><small>PAGE</small>03</div><div class="en">OKAIMONO LIST</div><h3>くらべたおかいものリスト</h3>
+<p>トイレットペーパーや洗剤などの日用品を、<br>1個あたりの値段でくらべて、いちばん安い所へ。</p>
+<div class="go">おかいものリストを開く<span>→</span></div></a></section>
 
 <section class="prom"><h2>NOTE RULES　─　書きかたの約束</h2><ol><li><b>公式だけ</b>公式ページ・<br>公式の数字だけ</li><li><b>6府県</b>どの府県も<br>同じように</li><li><b>毎日ふえる</b>見つけたら、<br>その日に足します</li></ol></section>
 
