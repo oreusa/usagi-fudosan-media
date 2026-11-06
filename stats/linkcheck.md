@@ -1,4 +1,4 @@
-# リンクの確かめ（2026-11-06 12:32 JST・276件）
+# リンクの確かめ（2026-11-07 07:57 JST・276件）
 
 ## 開けない（直す）
 - ✗ 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
