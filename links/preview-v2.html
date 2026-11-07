@@ -682,7 +682,7 @@ function ck(k){try{if(localStorage.getItem("usagi_owner")==="1")return;}catch(e)
 function vis(e){for(;e&&e!==document.body;e=e.parentElement){if(e.hidden||getComputedStyle(e).display=="none")return false;}return true;}
 function sync(){document.querySelectorAll(".yk,.ykl").forEach(function(x){if(x.className=="ykl"&&!x._c)x._c=x.previousElementSibling&&x.previousElementSibling._c;var on=x._c&&vis(x._c);x.hidden=!on||(x.className=="ykl"&&!x.dataset.op);});}
 var P=fetch("/kansai-yado.json").then(function(r){return r.ok?r.json():{}}).then(function(j){Y={};for(var k in (j||{}))Y[k.replace(/\s+/g,"")]=j[k];}).catch(function(){});
-window.addEventListener("load",function(){P.then(function(){run();sync();setTimeout(function(){run();sync();},800);});});
+window.ykRun=function(){P.then(function(){run();sync();});};window.addEventListener("load",function(){P.then(function(){run();sync();setTimeout(function(){run();sync();},800);});});
 document.addEventListener("click",function(){P.then(function(){setTimeout(function(){run();sync();},80);});},true);
 })();
 </script>
