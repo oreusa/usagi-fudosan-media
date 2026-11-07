@@ -46,7 +46,7 @@
     ["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]
   ];
   else L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono?from=tn","くらべたおかいものリスト","日用品を1個あたりでくらべて最安へ（姉妹サイト LIFE NOTE で開きます）"],["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]]);
-  /* TOWN NOTE の入口ページは、2つのリストとご相談だけ */
+  /* TOWN NOTE の入口ページは、3つのリストとご相談だけ（11/7 夜のミス帳 #98） */
   // 11/4 オーナー「売る前にと売却は不動産だけ」「1番最初だし」→ 入口のメニューからは外す（不動産のページには残す）
   if(/^\/(town-notes)?$/.test(P))L=[["-","TOWN NOTE"],["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["OKAIMONO LIST","okai","https://usagi-life-notes.pages.dev/okaimono?from=tn","くらべたおかいものリスト","日用品を1個あたりでくらべて最安へ（姉妹サイト LIFE NOTE で開きます）"],["-","CONTACT"],["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],["LISTING","listing","https://ig.me/m/fudousan_ai_si","おでかけ掲載","新しいお店やイベントのご紹介"]];
   var css=
@@ -123,7 +123,7 @@
   function ck(k){try{if(localStorage.getItem("usagi_owner")==="1")return;}catch(e){}try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
   var SUN='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.3M12 19.1v2.3M2.6 12h2.3M19.1 12h2.3M5.35 5.35l1.6 1.6M17.05 17.05l1.6 1.6M5.35 18.65l1.6-1.6M17.05 6.95l1.6-1.6"/></svg>',MOON='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 14.6A8 8 0 0 1 9.4 4.4a8 8 0 1 0 10.2 10.2z"/><path class="sp" d="M17.2 3.4v2.8M15.8 4.8h2.8"/></svg>',MK="メニュー｜";
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-  var GJ={"KANSAI ODEKAKE":"おでかけ","KANSAI REAL ESTATE":"不動産の数字","TOWN NOTE":"2つのリスト","CONTACT":"ご相談・お問い合わせ"};
+  var GJ={"KANSAI ODEKAKE":"おでかけ","KANSAI REAL ESTATE":"不動産の数字","TOWN NOTE":"3つのリスト","CONTACT":"ご相談・お問い合わせ"};
   function ug(k){return '<div class="ug">'+esc(GJ[k]||k)+(GJ[k]?'<small>'+k+'</small>':"")+'</div>';}
   var IC={
     list:'<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 12.5h8M8 16h5"/>',
