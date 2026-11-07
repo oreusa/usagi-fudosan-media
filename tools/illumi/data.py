@@ -8,7 +8,7 @@ ITEMS = [
  ("大阪","梅田スカイビル クリスマス2026","大阪市北区｜新梅田シティ","2026-11-13","2026-12-25",True,"https://www.skybldg.co.jp/event/xmas/",None),
  ("大阪","フェスティバルイルミネーション2026","大阪市北区｜中之島フェスティバルタワー","2026-11-01","2027-02-28",True,"https://www.festival-city.jp/",None),
  ("大阪","中之島ウエスト・冬ものがたり2026","大阪市福島区｜中之島ウエスト","2026-11-03","2026-12-25",True,"https://nakanoshima-west.jp/information/fuyumonogatari/",None),
- ("大阪","大阪城イルミナージュ","大阪市中央区｜大阪城 西の丸庭園","2026-11-20","2027-02-14",False,"https://osaka-castle.jp/event/osaka-castle-illuminage",None),
+ ("大阪","大阪城イルミナージュ","大阪市中央区｜大阪城 西の丸庭園","2026-11-20","2027-02-14",False,"https://illuminagegroup.com/ja/events/osaka",None),  # 11/7 夜#124 個人ガイドの去年の記事だった→主催
  ("大阪","ハーベストの丘 Wonder Night Hill","堺市南区｜ハーベストの丘（開く日のみ）","2026-10-30","2027-02-14",False,"https://farm.or.jp/illumination_2026",None),
  ("京都","アグネス・イルミネーション2026","京都市上京区｜平安女学院","2026-11-20","2026-12-25",True,"https://www.heian.ac.jp/topics/event",None),
  ("京都","ホテルオークラ京都 ウインターイルミネーション","京都市中京区｜ホテルオークラ京都","2026-11-13","2027-01-11",True,"https://www.hotel.kyoto/okura/event/",None),
@@ -47,7 +47,7 @@ ITEMS = [
  ("大阪","クリスマスマーケットin大阪 てんしば 2026","大阪市天王寺区｜天王寺公園 てんしば・てんしばi:na","2026-11-20","2026-12-25",True,"https://osaka-christmasmarket.com/",None),
  ("大阪","あべのハルカス 天空のイルミネーション2026","大阪市阿倍野区｜あべのハルカス","2026-11-02","2027-02-28",False,"https://www.abenoharukas-300.jp/",None),
  ("大阪","長居植物園 チームラボ ボタニカルガーデン 大阪","大阪市東住吉区｜長居植物園","2026-10-01","2027-01-31",False,"https://www.teamlab.art/jp/e/botanicalgarden/",None),
- ("大阪","なんば光旅","大阪市中央区｜なんばパークス・なんばCITY・なんばカーニバルモール・スカイオほか",None,None,True,"https://nambamarutto.com/hikaritabi/","11/7〜2/15"),
+ ("大阪","なんば光旅","大阪市中央区｜なんばパークス・なんばCITY・なんばカーニバルモール・スカイオほか","2026-11-13","2027-02-14",True,"https://www.nankai.co.jp/news/261030.html",None),  # 11/7 夜#91 南海の発表（10/30）17〜24時・無料
  ("大阪","ENLIGHTENMENT JAPAN 2026","大阪市天王寺区｜大阪市立美術館","2026-10-10","2027-01-11",False,"https://enlightenment-immersive.jp/",None),
  ("大阪","ひらかたパーク 光の遊園地","枚方市｜ひらかたパーク（開く日のみ）","2026-10-31","2027-04-04",False,"https://www.hirakatapark.co.jp/attractions/illumination/",None),
  ("大阪","海遊館イルミネーション","大阪市港区｜海遊館周辺",None,None,True,"https://www.kaiyukan.com/","11月中旬〜2月下旬"),
