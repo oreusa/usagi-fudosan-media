@@ -123,17 +123,26 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 .sns{{margin:30px 0 0;text-align:center}}.sns h2{{font-family:Jost;font-weight:400;font-size:10.5px;letter-spacing:.42em;color:#8C7B6E;margin:0 0 12px}}
 .sns a{{display:inline-block;margin:0 10px;color:#2B2622;text-decoration:none;font-family:Jost;font-size:14px;letter-spacing:.06em;border-bottom:1px solid #2B2622;padding-bottom:2px}}
 .ft{{text-align:center;font-size:10.5px;letter-spacing:.06em;color:#8C7B6E;margin-top:30px}}
+.head{{padding:16px 96px 4px 16px!important;display:block;text-align:left!important}}.head .pur,.head .q3{{margin-right:-80px}}
+.head img{{width:40px!important;height:40px!important;vertical-align:middle}}
+.head h1{{display:inline-block;font-size:22px!important;margin:0 0 0 8px!important;vertical-align:middle;letter-spacing:.14em}}
+.head .kana{{display:none}}
+.pur{{font-family:"Shippori Mincho",serif;font-weight:600;font-size:15px;line-height:1.8;letter-spacing:.04em;margin:10px 0 0;color:#2B2622}}.pur b{{color:#B97A62}}
+.q3{{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0 0}}.q3 a{{display:block;text-decoration:none;color:#2B2622;border:1px solid #DADADA;border-radius:12px;padding:8px 4px 9px;font-weight:700;font-size:14px;background:#fff;text-align:center}}.q3 small{{display:block;font-family:Jost;font-weight:400;font-size:9px;letter-spacing:.2em;color:#9C8775;margin-bottom:2px}}
+.find{{margin:14px 0 0!important;padding:14px 14px 12px!important}}.find h2{{font-size:16px!important}}.find h2 small{{display:none}}.find p{{margin:6px 0 10px!important}}
+.exl{{font-size:11.5px;color:#8C7B6E;margin:10px 2px 0}}
+.mapsec{{margin:30px 0 0;text-align:center}}.mapsec h2{{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spacing:.12em;margin:0}}.mapsec h2 small{{display:block;font-family:Jost;font-weight:400;font-size:10px;letter-spacing:.34em;color:#9C8775;margin-bottom:6px}}
 </style><script src="/assets/night.js?v=22"></script><script src="/assets/menu.js?v=27" defer></script><script src="/assets/v2sub.js?v=9" defer></script></head><body><div class="wrap">
 <header class="head"><img src="/assets/logo-s.png?v=2" width="74" height="74" alt="TOWN NOTE のロゴ">
 <h1>TOWN NOTE</h1><div class="kana">タウンノート</div>
-<p class="sub">関西の不動産屋が、街を調査して見つけたことを、<br>公式の情報つきで、このノートに書きとめています。</p>
-<div class="nofilt">{SVG}</div><div class="mapcap">府県を押すと、その府県の数が出ます</div><div class="pp" id="pp" hidden></div></header>
+<p class="pur">関西の<b>おでかけ</b>・<b>街の地価</b>・<b>日用品の最安</b>を、<br>公式の情報でしらべるノート</p>
+<nav class="q3"><a href="/odekake" data-k="入口の上｜おでかけ"><small>PAGE 01</small>おでかけ</a><a href="/fudosan-list" data-k="入口の上｜街の地価"><small>PAGE 02</small>街の地価</a><a href="/okaimono" data-k="入口の上｜おかいもの"><small>PAGE 03</small>おかいもの</a></nav></header>
 
 <section class="find"><h2><small>YOUR TOWN</small>あなたの街を探す</h2>
-<p>街の名前を入れると、その街の<b>おでかけ</b>と<b>地価</b>が<br>まとめて出ます。</p>
+<p>街の名前を入れると、その街の<b>おでかけ</b>と<b>地価</b>がまとめて出ます。</p>
 <input class="fi" id="q" type="search" placeholder="例：吹田、西宮、草津" enterkeyhint="search" aria-label="街の名前">
 <div class="chips">{"".join(f'<button type="button">{c}</button>' for c in CHIPS)}</div>
-<div class="res" id="res"></div></section>
+<div class="exl" id="exl">例：「吹田」で探すと ↓</div><div class="res" id="res"></div></section>
 
 <section class="lists"><h2>IN THIS NOTE　─　このノートの中身</h2>
 <a class="ls" href="/odekake" data-k="入口｜関西おでかけリスト" style="--ac:#B97A62;--bg:#FBEEE8;--c:#B97A62"><div class="no"><small>PAGE</small>01</div><div class="en">KANSAI ODEKAKE</div><h3>関西おでかけリスト</h3>
@@ -147,6 +156,8 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 <a class="ls" href="/okaimono" data-k="入口｜くらべたおかいものリスト" style="--ac:#C2703F;--bg:#FBEEE6;--c:#C2703F"><div class="no"><small>PAGE</small>03</div><div class="en">OKAIMONO LIST</div><h3>くらべたおかいものリスト</h3>
 <p>トイレットペーパーや洗剤などの日用品を、<br>1個あたりの値段でくらべて、いちばん安い所へ。</p>
 <div class="go">おかいものリストを開く<span>→</span></div></a></section>
+
+<section class="mapsec"><h2><small>MAP</small>地図から探す</h2><div class="nofilt">{SVG}</div><div class="mapcap">府県を押すと、その府県の数が出ます</div><div class="pp" id="pp" hidden></div></section>
 
 <section class="prom"><h2>NOTE RULES　─　書きかたの約束</h2><ol><li><b>公式だけ</b>公式ページ・<br>公式の数字だけ</li><li><b>6府県</b>どの府県も<br>同じように</li><li><b>毎日ふえる</b>見つけたら、<br>その日に足します</li></ol></section>
 
@@ -193,8 +204,9 @@ function find(v){{v=v.replace(/\\s/g,"");if(!v){{res.innerHTML="";return;}}var v
  var h="";if(al)h+='<div class="none" style="padding:8px 2px;text-align:left">「'+esc(v)+'」の辺りは'+esc(al)+'です。'+esc(al)+'の掲載もいっしょに出しています。</div>';if(tw.length)h+='<div class="sec">LAND PRICE　街の地価</div>'+tw.map(function(t){{return '<a href="/machi/'+t.id+'" style="--pc:'+PC[t.p]+'" data-k="入口の検索｜地価｜'+esc(t.n)+'"><i>'+t.p+'</i><b>'+esc(t.n)+'<small>住宅地 1年の動き・'+t.p+'で'+t.rk+'位／'+t.of+'</small></b><em style="color:'+(t.r8>0?PC[t.p]:"#7A6E66")+'">'+pct(t.r8)+'</em></a>'}}).join("");
  if(od.length)h+='<div class="sec">ODEKAKE　おでかけ</div>'+od.map(function(x){{return '<a href="'+esc(x.h)+'" style="--pc:'+(PC[x.p]||"#8C7B6E")+'" data-k="入口の検索｜おでかけ｜'+esc(x.t.slice(0,20))+'"><i>'+esc(x.p)+'</i><b>'+esc(x.t)+'<small>'+esc(x.m.split("｜")[0])+(x.now?"・開催中":x.up?"・これから":"")+'</small></b><em style="color:#9C8775">→</em></a>'}}).join("");
  res.innerHTML=h||'<div class="none">「'+esc(v)+'」はまだありません。調べて、リストに足していきます。</div>';}}
-q.oninput=function(){{Promise.all([pO,pF]).then(function(){{find(q.value)}});clearTimeout(tq);tq=setTimeout(function(){{if(q.value.trim())c("入口で探す："+q.value.trim())}},1500);}};
-document.querySelectorAll(".chips button").forEach(function(b){{b.onclick=function(){{q.value=b.textContent;Promise.all([pO,pF]).then(function(){{find(b.textContent)}});c("入口で探す："+b.textContent);}}}});
+q.oninput=function(){{var ex=document.getElementById("exl");if(ex)ex.style.display="none";Promise.all([pO,pF]).then(function(){{find(q.value)}});clearTimeout(tq);tq=setTimeout(function(){{if(q.value.trim())c("入口で探す："+q.value.trim())}},1500);}};
+document.querySelectorAll(".chips button").forEach(function(b){{b.onclick=function(){{var ex=document.getElementById("exl");if(ex)ex.style.display="none";q.value=b.textContent;Promise.all([pO,pF]).then(function(){{find(b.textContent)}});c("入口で探す："+b.textContent);}}}});
+Promise.all([pO,pF]).then(function(){{if(!q.value.trim())find("吹田")}});
 c("表示：TOWN NOTE 入口"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":""));
 document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;c("クリック：TOWN NOTE 入口｜"+(a.getAttribute("data-k")||a.textContent.trim().slice(0,30)));}},true);
 }})();</script></body></html>'''

@@ -51,7 +51,10 @@ h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v
 # ---- 見出し
 h = h.replace('<h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p>',
               '<h1>関西不動産リスト</h1><p class="sub">関西の街を調査して見つけた数字を、<br>公式の資料つきで紹介しています</p>')
+h = re.sub(r'<p class="adn"[^>]*>.*?</p>\n?', '', h, count=1)  # 券・宿の広告の1行はおでかけ側だけ
 h = re.sub(r'<div class="sea" id="sea">.*?</div><svg class="yr" id="yr".*?</svg>', "", h, count=1, flags=re.S)
+# 11/7 入口の上に「何ができるか」の1行・街の検索・吹田市の例（tools/fudosan_list/head.html）
+h = re.sub(r'<div class="head">.*?</p></div>', lambda _m: open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "head.html"), encoding="utf-8").read(), h, count=1, flags=re.S)
 SW = ('<nav class="tnsw" aria-label="TOWN NOTE のリスト"><a href="/odekake" data-k="切り替え｜おでかけ">関西おでかけリスト</a>'
       '<a href="fudosan-list" class="on" aria-current="page">関西不動産リスト</a></nav>')
 h = h.replace('<a class="ilk" href="illumination">関西イルミネーション 2026 日程一覧<span>→</span></a>',
