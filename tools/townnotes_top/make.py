@@ -131,11 +131,12 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 .q3{{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0 0}}.q3 a{{display:block;text-decoration:none;color:#2B2622;border:1px solid #DADADA;border-radius:12px;padding:8px 4px 9px;font-weight:700;font-size:14px;background:#fff;text-align:center}}.q3 small{{display:block;font-family:Jost;font-weight:400;font-size:9px;letter-spacing:.2em;color:#9C8775;margin-bottom:2px}}
 .find{{margin:14px 0 0!important;padding:14px 14px 12px!important}}.find h2{{font-size:16px!important}}.find h2 small{{display:none}}.find p{{margin:6px 0 10px!important}}
 .exl{{font-size:11.5px;color:#8C7B6E;margin:10px 2px 0}}
-.mapsec{{margin:30px 0 0;text-align:center}}.mapsec h2{{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spacing:.12em;margin:0}}.mapsec h2 small{{display:block;font-family:Jost;font-weight:400;font-size:10px;letter-spacing:.34em;color:#9C8775;margin-bottom:6px}}
+/* 11/8 オーナー「地図は1番上だろ お洒落に見やすく」→ 地図を名前と1行のすぐ下に。白い台紙に乗せる */.head .mapsec{{margin:14px -80px 0 0;background:#fff;border:1px solid #E8E8EA;border-radius:20px;padding:12px 10px 6px;box-shadow:0 6px 22px rgba(43,38,34,.07)}}.mtag{{display:flex;align-items:center;gap:8px;font-size:11.5px;color:#8C7B6E;margin:0 4px}}.mtag span{{font-family:Jost;font-weight:500;font-size:9.5px;letter-spacing:.32em;color:#fff;background:#2B2622;border-radius:99px;padding:3px 9px 3px 12px}}.head .kmap{{margin:4px 0 0}}.head .pp{{margin:4px 2px 8px;border-radius:12px}}
 </style><script src="/assets/night.js?v=22"></script><script src="/assets/menu.js?v=27" defer></script><script src="/assets/v2sub.js?v=9" defer></script></head><body><div class="wrap">
 <header class="head"><img src="/assets/logo-s.png?v=2" width="74" height="74" alt="TOWN NOTE のロゴ">
 <h1>TOWN NOTE</h1><div class="kana">タウンノート</div>
 <p class="pur">関西の<b>おでかけ</b>・<b>街の地価</b>・<b>日用品の最安</b>を、<br>公式の情報でしらべるノート</p>
+<section class="mapsec" aria-label="地図から探す"><div class="mtag"><span>MAP</span>府県を押すと、その府県の数が出ます</div><div class="nofilt">{SVG}</div><div class="pp" id="pp" hidden></div></section>
 <nav class="q3"><a href="/odekake" data-k="入口の上｜おでかけ"><small>PAGE 01</small>おでかけ</a><a href="/fudosan-list" data-k="入口の上｜街の地価"><small>PAGE 02</small>街の地価</a><a href="/okaimono" data-k="入口の上｜おかいもの"><small>PAGE 03</small>おかいもの</a></nav></header>
 
 <section class="find"><h2><small>YOUR TOWN</small>あなたの街を探す</h2>
@@ -156,8 +157,6 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 <a class="ls" href="/okaimono" data-k="入口｜くらべたおかいものリスト" style="--ac:#C2703F;--bg:#FBEEE6;--c:#C2703F"><div class="no"><small>PAGE</small>03</div><div class="en">OKAIMONO LIST</div><h3>くらべたおかいものリスト</h3>
 <p>トイレットペーパーや洗剤などの日用品を、<br>1個あたりの値段でくらべて、いちばん安い所へ。</p>
 <div class="go">おかいものリストを開く<span>→</span></div></a></section>
-
-<section class="mapsec"><h2><small>MAP</small>地図から探す</h2><div class="nofilt">{SVG}</div><div class="mapcap">府県を押すと、その府県の数が出ます</div><div class="pp" id="pp" hidden></div></section>
 
 <section class="prom"><h2>NOTE RULES　─　書きかたの約束</h2><ol><li><b>公式だけ</b>公式ページ・<br>公式の数字だけ</li><li><b>6府県</b>どの府県も<br>同じように</li><li><b>毎日ふえる</b>見つけたら、<br>その日に足します</li></ol></section>
 
