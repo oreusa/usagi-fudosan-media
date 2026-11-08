@@ -96,8 +96,9 @@ h1{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-hei
 <div class="st"><div><span>関西の街</span><b id="f1">―</b></div><div><span>上がった街</span><b id="f2">―</b></div><div><span>調べた数字</span><b id="f3">―</b></div></div>
 <div class="pv" id="fpv"></div><div class="go">不動産リストを開く<span>→</span></div></a>
 <a class="ls" href="/okaimono" data-k="入口｜くらべたおかいものリスト" style="--ac:#C2703F;--bg:#FBEEE6;--c:#C2703F"><div class="no"><small>PAGE</small>03</div><div class="en">OKAIMONO LIST</div><h3>くらべたおかいものリスト</h3>
-<p>トイレットペーパーや洗剤などの日用品を、<br>1個あたりの値段でくらべて、いちばん安い所へ。</p>
-<div class="go">おかいものリストを開く<span>→</span></div></a></section>
+<p>3つ以上を数字で比べて選んだ、暮らしの物。<br>本当に値下がりした物と、お得な日も。</p>
+<div class="st"><div><span>比べた物</span><b id="k1">―</b></div><div><span>今だけのお得</span><b id="k2">―</b></div><div><span>比べた種類</span><b id="k3">―</b></div></div>
+<div class="pv" id="kpv"></div><div class="go">おかいものリストを開く<span>→</span></div></a></section>
 <p style="font-size:10.5px;color:#8C7B6E;text-align:center;margin:-6px 0 0">おでかけの券・宿と、おかいものリストのリンクには広告（PR）があります</p>
 
 <section class="prom"><h2>NOTE RULES　─　書きかたの約束</h2><ol><li><b>公式だけ</b>公式ページ・<br>公式の数字だけ</li><li><b>6府県</b>どの府県も<br>同じように</li><li><b>毎日ふえる</b>見つけたら、<br>その日に足します</li></ol></section>
@@ -125,6 +126,13 @@ var pF=fetch("/assets/towns.json").then(function(r){return r.json()}).then(funct
  var top=d.slice().sort(function(a,b){return b.r8-a.r8});var pv=[top[0]].concat(["京都","兵庫","奈良","滋賀","和歌山"].map(function(p){return top.filter(function(t){return t.p===p})[0]})).slice(0,3);
  document.getElementById("fpv").innerHTML=pv.map(function(t){return '<div><i style="color:'+PC[t.p]+'">'+t.p+'</i>'+esc(t.n)+'　住宅地 '+pct(t.r8)+'（'+t.p+'で1位）</div>'}).join("");}).catch(function(){});
 fetch("/fudosan-list").then(function(r){return r.text()}).then(function(t){var m=t.match(/class="card"/g);document.getElementById("f3").innerHTML=(m?m.length:0)+'<small style="font-size:12px">件</small>';}).catch(function(){});
+// 11/9 オーナー「これが関西の方では出てないな？」→ PAGE 03 も燈（LIFE）と同じに：比べた物・今だけのお得・比べた種類・最安3つ
+fetch("/okaimono").then(function(r){return r.text()}).then(function(t){var d=new DOMParser().parseFromString(t,"text/html"),u='<small style="font-size:12px">件</small>',rows=[],V=null;
+ try{V=JSON.parse((d.getElementById("v4d")||{}).textContent||"null");}catch(e){}
+ if(!V||!V.cats)return;var sh=0;V.cats.forEach(function(c){sh+=(c.o||[]).length;});document.getElementById("k1").innerHTML=sh+u;document.getElementById("k3").innerHTML=V.cats.length+'<small style="font-size:12px">種類</small>';
+ V.cats.slice(0,3).forEach(function(c){var o=(c.o||[]).slice().sort(function(x,y){return x.u-y.u})[0];if(o)rows.push(["最安",c.nm+"｜"+(o.n||"")]);});
+ document.getElementById("kpv").innerHTML=rows.map(function(r){return '<div><i style="color:#C2703F">'+r[0]+'</i>'+esc(r[1].slice(0,40))+'</div>'}).join("");
+ fetch("/kaimawari").then(function(r){return r.ok?r.text():""}).then(function(t2){var n=(t2.match(/<li class="it"/g)||[]).length;document.getElementById("k2").innerHTML=n+u;}).catch(function(){});}).catch(function(){});
 // 地図：府県を押すと、その府県のおでかけと街の数
 var ID={"大阪": "osaka", "京都": "kyoto", "兵庫": "hyogo", "奈良": "nara", "滋賀": "shiga", "和歌山": "wakayama"},EN={"大阪": "OSAKA", "京都": "KYOTO", "兵庫": "HYOGO", "奈良": "NARA", "滋賀": "SHIGA", "和歌山": "WAKAYAMA"},svg=document.querySelector(".kmap"),pp=document.getElementById("pp");
 svg.querySelectorAll(".pf path").forEach(function(el){el.addEventListener("click",function(){var p=el.getAttribute("data-p");Promise.all([pO,pF]).then(function(){
