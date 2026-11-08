@@ -45,7 +45,8 @@ for p, slug, fu in PREFS:
         ld["itemListElement"] = items; ld["name"] = f"{p}のおでかけリスト 開催中・これからのイベント"
         tag = '<script type="application/ld+json" id="ev-ld">' + json.dumps(ld, ensure_ascii=False).replace("</", "<\\/") + "</script>"
         out = out[:m.start()] + tag + out[m.end():]
-    # ほかの府県のページへの入口（一番下の注意書きの前）
+    # ほかの府県のページへの入口（一番下の注意書きの前）。関西すべてのリストに置いた入口（<!--pn-->）は消してから付ける
+    out = re.sub(r'<!--pn-->.*?<!--/pn-->', '', out, flags=re.S)
     nav = '<nav class="prefnav" aria-label="府県ごとに見る"><div class="plh">府県ごとに見る</div>' + \
           '<a href="/odekake">関西すべて</a>' + "".join(
               f'<a href="/odekake-{sl}"{" aria-current=page" if sl == slug else ""}>{q}</a>' for q, sl, _ in PREFS) + "</nav>"
