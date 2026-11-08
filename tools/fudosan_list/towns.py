@@ -227,7 +227,7 @@ h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spa
 .note{font-size:12px;line-height:1.9;color:#7A6E66;background:#F5F5F5;padding:14px 16px;margin-top:30px;word-break:break-all}.note a{color:#7A6E66}
 .uru{display:block;text-decoration:none;color:#2B2622;border:1px solid #2B2622;padding:16px;margin-top:30px;text-align:center}
 .uru .k{font-size:11px;letter-spacing:.2em;color:#8C7B6E}.uru .t{font-family:"Shippori Mincho",serif;font-weight:600;font-size:16px;letter-spacing:.08em;margin:6px 0 4px}.uru .m{font-size:12px;color:#6B6058;line-height:1.8}
-.uru.buy{position:relative;margin-top:18px}.uru .ad{position:absolute;top:6px;right:8px;font-size:10px;color:#8C7B6E}
+.uru.buy{position:relative;margin-top:18px;padding:16px 14px 6px}.uru .bx{display:block;text-decoration:none;color:#2B2622;border-top:1px solid #E4E5E8;padding:12px 2px;text-align:left}.uru .k+.ad+.bx{margin-top:10px}.uru .bx b{display:block;font-family:"Shippori Mincho",serif;font-size:15px;font-weight:600}.uru .bx b:after{content:" →";color:#B5735A}.uru .bx span{display:block;font-size:11.5px;color:#6B6058;line-height:1.7;margin-top:3px}.uru .ad{position:absolute;top:6px;right:8px;font-size:10px;color:#8C7B6E}
 .back{display:block;width:max-content;margin:28px auto 0;color:#2B2622;text-decoration:none;font-size:13px;letter-spacing:.1em;border-bottom:1px solid #2B2622;padding-bottom:2px}
 .ft{text-align:center;font-size:10px;letter-spacing:.04em;color:#8C7B6E;margin-top:30px}"""
 
@@ -256,6 +256,9 @@ def head(title, desc, url, ld=None):
 # 家を探す方へ（バリューコマース Yahoo!不動産 流通領域・関西おでかけリスト sid 3786315 で提携済み）
 from urllib.parse import quote as _q
 YAHOO_RE = "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3786315&pid=892742459&vc_url=" + _q("https://realestate.yahoo.co.jp/", safe="")
+# 11/8 オーナー「アフェリエイト通った全部」→ タウンライフ不動産購入・住まいサーフィン（同じ sid の自由テキスト）
+TOWNLIFE_RE = "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3786315&pid=892742460"
+SUMAI_RE = "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3786315&pid=892742461"
 
 # ---- 売れた家の値段（近畿レインズ 年刊市況レポート 2025年度 表19・表20 市区町村別成約状況）
 REINS_URL = "https://www.kinkireins.or.jp/webkanri/kanri/wp-content/uploads/2026/09/4aa7279bc826c2683d1525bd813d9696.pdf"
@@ -390,7 +393,10 @@ def town_page(t):
 <section class="faq"><h2>よくある質問</h2>
 {"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in faq)}
 </section>
-<a class="uru buy" href="{E(YAHOO_RE)}" rel="nofollow sponsored" target="_blank" data-k="家を探す｜Yahoo!不動産｜{E(n)}"><div class="k">この街で家を探している方へ</div><div class="t">Yahoo!不動産で物件を見る</div><div class="m">中古マンション・一戸建て・新築を、<br>駅や広さの条件で探せます。</div><div class="ad">広告</div></a>
+<div class="uru buy"><div class="k">この街で家を探している方へ</div><div class="ad">広告</div>
+<a class="bx" href="{E(TOWNLIFE_RE)}" rel="nofollow sponsored" target="_blank" data-k="家を探す｜タウンライフ｜{E(n)}"><b>希望を1回送って、物件を提案してもらう</b><span>タウンライフ不動産。予算や駅を送ると、何社かから物件のご提案が届きます（無料）</span></a>
+<a class="bx" href="{E(YAHOO_RE)}" rel="nofollow sponsored" target="_blank" data-k="家を探す｜Yahoo!不動産｜{E(n)}"><b>自分で物件を探す</b><span>Yahoo!不動産。中古マンション・一戸建て・新築を、駅や広さで</span></a>
+<a class="bx" href="{E(SUMAI_RE)}" rel="nofollow sponsored" target="_blank" data-k="家を探す｜住まいサーフィン｜{E(n)}"><b>新築マンションが割高か調べる</b><span>住まいサーフィン。値段が割高か割安かを、無料の会員登録で</span></a></div>
 <a class="uru" href="/uru.html" data-k="お家を売る前に大事なこと"><div class="k">お家を売る・持ち続ける前に</div><div class="t">お家を売る前に大事なこと</div><div class="m">売るか、持ち続けるか。<br>迷ったときに読むページです。</div></a>
 <p class="note">出典：{E(sname)}（価格時点 2026年1月1日）<br><a href="{E(surl)}" data-k="出典">{E(surl)}</a><br>数字は街の中の調査地点の平均の変動率で、1軒ずつの値段ではありません。<br>売れた家の値段：{E(REINS_NAME)}<br>表19 <a href="{REINS_URL}" data-k="出典｜レインズ">{REINS_URL}</a><br>表20 <a href="{REINS_URL2}" data-k="出典｜レインズ">{REINS_URL2}</a><br>平均の値段で、1軒ずつの値段ではありません。広さ・築年数・駅からの近さで大きく変わります。</p>
 <a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
