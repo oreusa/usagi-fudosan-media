@@ -177,3 +177,20 @@ add = "".join(f"<url><loc>{BASE}/o/{sp['id']}</loc><lastmod>{TODAY}</lastmod></u
 sm = sm.replace("</urlset>", add + "</urlset>")
 open("links/sitemap.xml", "w", encoding="utf-8").write(sm)
 print(len(spots), "spot pages")
+
+# 11/8 オーナー「本気でやれよ」（Google にまだ載っていない）→ 1件ページはサイトマップにしか無く、どのページからもリンクされていなかった。
+# 府県ページ（/odekake-osaka など）の「府県ごとに見る」の上に、その府県の1件ページへの一覧（たたんだ形）を足して、Google がたどれるようにする。
+for p, sl in SLUG.items():
+    f = f"links/odekake-{sl}.html"
+    if not os.path.exists(f): continue
+    h = open(f, encoding="utf-8").read()
+    h = re.sub(r'<!--o-list-->.*?<!--/o-list-->', "", h, flags=re.S)
+    ps = sorted([o for o in spots if o["pref"] == p], key=lambda o: o["st"] or "9999")
+    if not ps: continue
+    li = "".join(f'<li><a href="/o/{o["id"]}">{e(o["name"])}<span>{e(jd(o["st"]) if o["st"] else o["dline"])}</span></a></li>' for o in ps)
+    blk = ('<!--o-list--><style>.olist{margin:18px 0 6px;border-top:1px solid #E4E5E8;border-bottom:1px solid #E4E5E8}.olist summary{cursor:pointer;list-style:none;padding:12px 2px;font-size:13px;font-weight:700;color:#5E544D;text-align:center}'
+           '.olist summary::-webkit-details-marker{display:none}.olist ul{list-style:none;margin:0;padding:0 0 10px}.olist li a{display:flex;justify-content:space-between;gap:10px;padding:8px 4px;border-top:1px solid #F1F2F4;color:#2B2622;text-decoration:none;font-size:13px;line-height:1.5}'
+           '.olist li a span{flex:none;color:#8C7B6E;font-size:11.5px}</style>'
+           f'<details class="olist"><summary>{e(p)}のおでかけを1件ずつ見る（日程・アクセス・{len(ps)}件）</summary><ul>{li}</ul></details><!--/o-list-->')
+    h = h.replace('<div class="tip"><nav class="prefnav"', blk + '<div class="tip"><nav class="prefnav"', 1)
+    open(f, "w", encoding="utf-8").write(h)
