@@ -139,11 +139,6 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 <section class="mapsec" aria-label="地図から探す"><div class="nofilt">{SVG}</div><div class="pp" id="pp" hidden></div></section>
 <nav class="q3"><a href="/odekake" data-k="入口の上｜おでかけ"><small>PAGE 01</small>おでかけ</a><a href="/fudosan-list" data-k="入口の上｜街の地価"><small>PAGE 02</small>街の地価</a><a href="/okaimono" data-k="入口の上｜おかいもの"><small>PAGE 03</small>おかいもの</a></nav></header>
 
-<section hidden style="display:none" class="find"><h2><small>YOUR TOWN</small>あなたの街を探す</h2>
-<p style="text-wrap:balance">街の名前を入れると、その街の<b>おでかけ</b>と<b>地価</b>がまとめて出ます。</p>
-<input class="fi" id="q" type="search" placeholder="例：吹田、西宮、草津" enterkeyhint="search" aria-label="街の名前">
-<div class="chips">{"".join(f'<button type="button">{c}</button>' for c in CHIPS)}</div>
-<div class="exl" id="exl">例：「吹田」で探すと ↓</div><div class="res" id="res"></div></section>
 
 <section class="lists"><h2>IN THIS NOTE　─　このノートの中身</h2>
 <a class="ls" href="/odekake" data-k="入口｜関西おでかけリスト" style="--ac:#B97A62;--bg:#FBEEE8;--c:#B97A62"><div class="no"><small>PAGE</small>01</div><div class="en">KANSAI ODEKAKE</div><h3>関西おでかけリスト</h3>
@@ -204,9 +199,9 @@ function find(v){{v=v.replace(/\\s/g,"");if(!v){{res.innerHTML="";return;}}var v
  var h="";if(al)h+='<div class="none" style="padding:8px 2px;text-align:left">「'+esc(v)+'」の辺りは'+esc(al)+'です。'+esc(al)+'の掲載もいっしょに出しています。</div>';if(tw.length)h+='<div class="sec">LAND PRICE　街の地価</div>'+tw.map(function(t){{return '<a href="/machi/'+t.id+'" style="--pc:'+PC[t.p]+'" data-k="入口の検索｜地価｜'+esc(t.n)+'"><i>'+t.p+'</i><b>'+esc(t.n)+'<small>住宅地 1年の動き・'+t.p+'で'+t.rk+'位／'+t.of+'</small></b><em style="color:'+(t.r8>0?PC[t.p]:"#7A6E66")+'">'+pct(t.r8)+'</em></a>'}}).join("");
  if(od.length)h+='<div class="sec">ODEKAKE　おでかけ</div>'+od.map(function(x){{return '<a href="'+esc(x.h)+'" style="--pc:'+(PC[x.p]||"#8C7B6E")+'" data-k="入口の検索｜おでかけ｜'+esc(x.t.slice(0,20))+'"><i>'+esc(x.p)+'</i><b>'+esc(x.t)+'<small>'+esc(x.m.split("｜")[0])+(x.now?"・開催中":x.up?"・これから":"")+'</small></b><em style="color:#9C8775">→</em></a>'}}).join("");
  res.innerHTML=h||'<div class="none">「'+esc(v)+'」はまだありません。調べて、リストに足していきます。</div>';}}
-q.oninput=function(){{var ex=document.getElementById("exl");if(ex)ex.style.display="none";Promise.all([pO,pF]).then(function(){{find(q.value)}});clearTimeout(tq);tq=setTimeout(function(){{if(q.value.trim())c("入口で探す："+q.value.trim())}},1500);}};
+if(q)q.oninput=function(){{var ex=document.getElementById("exl");if(ex)ex.style.display="none";Promise.all([pO,pF]).then(function(){{find(q.value)}});clearTimeout(tq);tq=setTimeout(function(){{if(q.value.trim())c("入口で探す："+q.value.trim())}},1500);}};
 document.querySelectorAll(".chips button").forEach(function(b){{b.onclick=function(){{var ex=document.getElementById("exl");if(ex)ex.style.display="none";q.value=b.textContent;Promise.all([pO,pF]).then(function(){{find(b.textContent)}});c("入口で探す："+b.textContent);}}}});
-Promise.all([pO,pF]).then(function(){{if(!q.value.trim())find("吹田")}});
+if(q)Promise.all([pO,pF]).then(function(){{if(!q.value.trim())find("吹田")}});
 c("表示：TOWN NOTE 入口"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":""));
 document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;c("クリック：TOWN NOTE 入口｜"+(a.getAttribute("data-k")||a.textContent.trim().slice(0,30)));}},true);
 }})();</script></body></html>'''
