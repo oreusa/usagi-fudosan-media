@@ -131,16 +131,16 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 .q3{{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0 0}}.q3 a{{display:block;text-decoration:none;color:#2B2622;border:1px solid #DADADA;border-radius:12px;padding:8px 4px 9px;font-weight:700;font-size:14px;background:#fff;text-align:center}}.q3 small{{display:block;font-family:Jost;font-weight:400;font-size:9px;letter-spacing:.2em;color:#9C8775;margin-bottom:2px}}
 .find{{margin:14px 0 0!important;padding:14px 14px 12px!important}}.find h2{{font-size:16px!important}}.find h2 small{{display:none}}.find p{{margin:6px 0 10px!important}}
 .exl{{font-size:11.5px;color:#8C7B6E;margin:10px 2px 0}}
-/* 11/8 オーナー「地図は1番上だろ お洒落に見やすく」→ 地図を名前と1行のすぐ下に。白い台紙に乗せる */.head .mapsec{{margin:14px -80px 0 0;background:#fff;border:1px solid #E8E8EA;border-radius:20px;padding:12px 10px 6px;box-shadow:0 6px 22px rgba(43,38,34,.07)}}.mtag{{display:flex;align-items:center;gap:8px;font-size:11.5px;color:#8C7B6E;margin:0 4px}}.mtag span{{font-family:Jost;font-weight:500;font-size:9.5px;letter-spacing:.32em;color:#fff;background:#2B2622;border-radius:99px;padding:3px 9px 3px 12px}}.head .kmap{{margin:4px 0 0}}.head .pp{{margin:4px 2px 8px;border-radius:12px}}
+/* 11/8 オーナー「地図は1番上だろ お洒落に見やすく」→ 地図を名前と1行のすぐ下に。11/8 9:47 オーナー「枠いらない 前みたいに違和感なく」→ 台紙・枠・MAP札なし */.head .mapsec{{margin:14px -80px 0 0;}}.mtag{{display:flex;align-items:center;gap:8px;font-size:11.5px;color:#8C7B6E;margin:0 4px}}.mtag span{{font-family:Jost;font-weight:500;font-size:9.5px;letter-spacing:.32em;color:#fff;background:#2B2622;border-radius:99px;padding:3px 9px 3px 12px}}.head .kmap{{margin:4px 0 0}}.head .pp{{margin:4px 2px 8px;border-radius:12px}}
 </style><script src="/assets/night.js?v=22"></script><script src="/assets/menu.js?v=27" defer></script><script src="/assets/v2sub.js?v=9" defer></script></head><body><div class="wrap">
 <header class="head"><img src="/assets/logo-s.png?v=2" width="74" height="74" alt="TOWN NOTE のロゴ">
 <h1>TOWN NOTE</h1><div class="kana">タウンノート</div>
 <p class="pur">関西の<b>おでかけ</b>・<b>街の地価</b>・<b>日用品の最安</b>を、<br>公式の情報でしらべるノート</p>
-<section class="mapsec" aria-label="地図から探す"><div class="mtag"><span>MAP</span>府県を押すと、その府県の数が出ます</div><div class="nofilt">{SVG}</div><div class="pp" id="pp" hidden></div></section>
+<section class="mapsec" aria-label="地図から探す"><div class="nofilt">{SVG}</div><div class="pp" id="pp" hidden></div></section>
 <nav class="q3"><a href="/odekake" data-k="入口の上｜おでかけ"><small>PAGE 01</small>おでかけ</a><a href="/fudosan-list" data-k="入口の上｜街の地価"><small>PAGE 02</small>街の地価</a><a href="/okaimono" data-k="入口の上｜おかいもの"><small>PAGE 03</small>おかいもの</a></nav></header>
 
 <section class="find"><h2><small>YOUR TOWN</small>あなたの街を探す</h2>
-<p>街の名前を入れると、その街の<b>おでかけ</b>と<b>地価</b>がまとめて出ます。</p>
+<p style="text-wrap:balance">街の名前を入れると、その街の<b>おでかけ</b>と<b>地価</b>がまとめて出ます。</p>
 <input class="fi" id="q" type="search" placeholder="例：吹田、西宮、草津" enterkeyhint="search" aria-label="街の名前">
 <div class="chips">{"".join(f'<button type="button">{c}</button>' for c in CHIPS)}</div>
 <div class="exl" id="exl">例：「吹田」で探すと ↓</div><div class="res" id="res"></div></section>
@@ -157,12 +157,13 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 <a class="ls" href="/okaimono" data-k="入口｜くらべたおかいものリスト" style="--ac:#C2703F;--bg:#FBEEE6;--c:#C2703F"><div class="no"><small>PAGE</small>03</div><div class="en">OKAIMONO LIST</div><h3>くらべたおかいものリスト</h3>
 <p>トイレットペーパーや洗剤などの日用品を、<br>1個あたりの値段でくらべて、いちばん安い所へ。</p>
 <div class="go">おかいものリストを開く<span>→</span></div></a></section>
+<p style="font-size:10.5px;color:#8C7B6E;text-align:center;margin:-6px 0 0">おでかけの券・宿と、おかいものリストのリンクには広告（PR）があります</p>
 
 <section class="prom"><h2>NOTE RULES　─　書きかたの約束</h2><ol><li><b>公式だけ</b>公式ページ・<br>公式の数字だけ</li><li><b>6府県</b>どの府県も<br>同じように</li><li><b>毎日ふえる</b>見つけたら、<br>その日に足します</li></ol></section>
 
 <nav class="cos"><a href="/fudosan.html" data-k="入口｜不動産のご相談"><small>REAL ESTATE</small><b>不動産のご相談</b><span>売却・査定、お家を売る前に大事なこと</span></a><a href="https://ig.me/m/fudousan_ai_si" data-k="入口｜おでかけ掲載"><small>LISTING</small><b>おでかけ掲載</b><span>新しいお店や、毎年のイベントのご紹介</span></a></nav>
 <div class="sns"><h2>FOLLOW</h2><a href="https://www.instagram.com/fudousan_ai_si/">Instagram</a><a href="https://www.threads.com/@fudousan_ai_si">Threads</a><a href="https://x.com/fudosan_ai_si">X</a></div>
-<div class="ft">ぴょんと街しらべ│TOWN NOTE</div></div>
+<a href="/privacy" style="display:block;text-align:center;font-size:11px;color:#8C7B6E;margin:18px 0 0">プライバシーポリシーと広告について</a><div class="ft">ぴょんと街しらべ│TOWN NOTE</div></div>
 <script>(function(){{
 var PC={json.dumps(PC, ensure_ascii=False)};
 try{{var oq=new URLSearchParams(location.search).get("owner");if(oq==="1")localStorage.setItem("usagi_owner","1");if(oq==="0")localStorage.removeItem("usagi_owner");if(oq!==null)history.replaceState(null,"",location.pathname+location.hash);}}catch(e){{}}
