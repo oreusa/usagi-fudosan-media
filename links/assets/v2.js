@@ -41,7 +41,7 @@ if(b){b.click();setTimeout(function(){var y=F.getBoundingClientRect().top+scroll
 try{history.replaceState(null,"",location.pathname+location.search.replace(/([?&])pref=[^&]*&?/,"$1").replace(/[?&]$/,"")+location.hash);}catch(e){}})();
 
 /* 11/4 カードの日付と絵（cardmark.js）を読み込む */
-(function(){if(document.querySelector('script[src*="cardmark.js"]'))return;var s=document.createElement("script");s.src="/assets/cardmark.js?v=13";s.defer=true;document.head.appendChild(s);})();
+(function(){if(document.querySelector('script[src*="cardmark.js"]'))return;var s=document.createElement("script");s.src="/assets/cardmark.js?v=14";s.defer=true;document.head.appendChild(s);})();
 
 /* 11/6 オーナーOK：日付4つ＋しぼりこむ（when.js。月と燈で同じ物） */
 (function(){if(document.querySelector('script[src*="when.js"]'))return;var s=document.createElement("script");s.src="/assets/when.js?v=4";document.head.appendChild(s);})();
