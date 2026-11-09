@@ -239,7 +239,7 @@ html body .card .tn8{{border-radius:99px;padding:4px 10px;font-size:11px;font-we
 .tnb button[aria-pressed=true]{{background:#2B2622;color:#fff}}
 .kmore{{display:block;text-align:right;font-size:12.5px;color:#2B2622;text-decoration:none;margin-top:2px}}
 .none8{{text-align:center;font-size:13px;color:#7A6E66;margin:24px 0}}
-</style><script src="assets/night.js?v=23"></script><script src="assets/menu.js?v=41" defer></script><script src="assets/v2sub.js?v=10" defer></script></head><body{' data-kind="紅葉ライトアップ"' if KO else ""}><div class="wrap">
+</style><script src="assets/night.js?v=23"></script><script src="assets/menu.js?v=44" defer></script><script src="assets/v2sub.js?v=12" defer></script></head><body{' data-kind="紅葉ライトアップ"' if KO else ""}><div class="wrap">
 <div class="head"><img src="assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">{en}</div>
 <h1>{h1a}<span>{h1b}</span></h1>
 <p class="sub">{sub}</p>
@@ -305,6 +305,6 @@ for p in PREFS:
         [("関西おでかけリスト", "odekake"), ("関西の紅葉2026", "koyo.html"), (h1a, f"koyo-{SLUG[p]}.html")], kind="ko")
 for f, h in pages.items():
     open(OUT + f, "w").write(h)
-sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", "odekake", *pages, "tomari.html", "ima.html", *(["hatsumode.html"] if os.path.exists(OUT + "hatsumode.html") else []), "fudosan-list", "chika-kansai", "chika-osaka", "uru", "sagasu", *sorted(x[:-5] for x in os.listdir(OUT) if x.startswith("gyosha") and x.endswith(".html")), *sorted("machi/" + x for x in os.listdir(OUT + "machi") if x.endswith(".html"))])
+sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", "odekake", *pages, "tomari.html", "ima.html", *(["hatsumode.html"] if os.path.exists(OUT + "hatsumode.html") else []), "fudosan-list", "chika-kansai", "chika-osaka", "uru", "sagasu", "jikka/", *sorted(x[:-5] for x in os.listdir(OUT) if x.startswith("gyosha") and x.endswith(".html")), *sorted("machi/" + x for x in os.listdir(OUT + "machi") if x.endswith(".html")), *sorted("jikka/" + x for x in os.listdir(OUT + "jikka") if x.endswith(".html") and x != "index.html")])
 open(OUT + "sitemap.xml", "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{sm}</urlset>\n')
 print(cnt, {p: len(v) for p, v in cards.items()}, len(pages), "pages")

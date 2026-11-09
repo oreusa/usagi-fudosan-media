@@ -8,7 +8,7 @@ const fs = require("fs"), path = require("path");
 const OUT = process.argv[2] || "out";
 const SITES = [
   { key: "tsuki", name: "月", base: process.env.TSUKI_BASE || "https://townnote.pages.dev",
-    extra: ["/odekake", "/ima", "/fudosan", "/fudosan-list", "/chika-kansai", "/chika-osaka", "/uru", "/gyosha", "/machi/osaka-01", "/machi/kyoto-01", "/koe"] },
+    extra: ["/odekake", "/ima", "/fudosan", "/fudosan-list", "/chika-kansai", "/chika-osaka", "/uru", "/gyosha", "/machi/osaka-01", "/machi/kyoto-01", "/jikka/", "/jikka/osaka-01", "/koe"] },
   { key: "akari", name: "燈", base: process.env.AKARI_BASE || "https://lifenote-kanto.pages.dev",
     extra: ["/odekake", "/okaimono", "/ima", "/nesage", "/kaimawari", "/tanka", "/furusato", "/tomari", "/koyo", "/privacy", "/koe"] },
 ];
@@ -30,9 +30,9 @@ async function pages(site) {
   // 11/2 町のページ（/machi/…）は200以上あって20分で終わらない → 形が同じなので extra の見本だけ見る
   // 11/9 夜#154：見本の2街だけでは、草津ほか24街の NaN を見逃した → 街と1件ページは、毎日ちがう 1/10 ずつ回して10日で全部見る
   const day = Math.floor(Date.now() / 864e5), rot = (q, i) => i % 10 === day % 10;
-  const mc = list.filter(p => /^\/machi\//.test(p)).filter(rot);
+  const mc = list.filter(p => /^\/(machi|jikka)\/./.test(p)).filter(rot);
   const o = list.filter(p => /^\/o\//.test(p)).filter(rot);
-  list = list.filter(p => !/^\/(machi|o)\//.test(p)).concat(mc, o);
+  list = list.filter(p => !/^\/(machi\/|o\/|jikka\/.)/.test(p)).concat(mc, o);
   list = list.concat(site.extra).map(p => p.replace(/\.html$/, ""));
   return [...new Set(list)];
 }

@@ -235,7 +235,7 @@ h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spa
 .ft{text-align:center;font-size:10px;letter-spacing:.04em;color:#8C7B6E;margin-top:30px}"""
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">'
-SCRIPTS = '<script src="/assets/night.js?v=23"></script><script src="/assets/menu.js?v=41" defer></script><script src="/assets/v2sub.js?v=10" defer></script>'
+SCRIPTS = '<script src="/assets/night.js?v=23"></script><script src="/assets/menu.js?v=44" defer></script><script src="/assets/v2sub.js?v=12" defer></script>'
 
 
 def beacon(name, kind="地価ランキング"):
@@ -402,7 +402,7 @@ def town_page(t):
     itt = (f'<section class="itt" id="itt"><div class="en2">IN THIS TOWN</div><h2>{E(n)}で</h2><div class="itg">'
            f'<a class="itc" href="/uru.html" data-k="この街で｜売りたい｜{E(n)}"><b>売りたい</b><span>いくらで売れそうか、相場から順に（無料）</span><i>手順を見る →</i></a>'
            f'' + buy_card(t["p"], n) + f''
-           f'</div><a class="itg2" href="/gyosha" data-k="この街で｜困りごとの相談｜{E(n)}">相続した家・古い家・再建築不可などのご相談 <i>→</i></a>'
+           f'</div>' + (f'<a class="itg2" href="/jikka/{t["id"]}" data-k="この街で｜実家・空き家｜{E(n)}">相続した実家・空き家なら（売る・片付け・解体） <i>→</i></a>' if any(sold_of(t).get(k) for k in ("k", "m")) else '') + f'<a class="itg2" href="/gyosha" data-k="この街で｜困りごとの相談｜{E(n)}">相続した家・古い家・再建築不可などのご相談 <i>→</i></a>'
            f'<p class="itn">「買いたい」の3つは広告です（Yahoo!不動産のこの街の一覧が開きます）。</p></section>')
     rel_h = ""
     if rel:
@@ -524,3 +524,117 @@ document.querySelectorAll(".flt button").forEach(function(b){{b.onclick=function
 {beacon("地価ランキング関西")}</body></html>'''
 open(os.path.join(ROOT, "links/chika-kansai.html"), "w", encoding="utf-8").write(rk)
 print("ok", len(towns), "towns", "live" if live else "noindex", "rel:", sum(1 for t in towns if related(t)))
+
+# ================= 実家・空き家ノート（11/9 オーナー「つくれ」：提案スレッドの見本 jikka-neyagawa をもとに）
+# 相続した家・空き家の持ち主へ：この街で売れた値段・地価 → 迷ったときの順番（公式の出典つき）→ 売却・片付け・解体はオーナーにお申し込み（関西のみ・広告ではない）
+J_SRC = [
+    ("相続登記を確かめる", "2024年4月1日から、相続を知った日から3年以内の相続登記が義務になりました。それより前の相続も対象で、2027年3月31日までに登記が必要です。",
+     "法務省「相続登記の申請義務化」", "https://www.moj.go.jp/MINJI/souzokutouki-gimuka/index.html"),
+    ("家財を片付ける", "遠方の実家なら、片付け・遺品整理の見積りを先に取ると、売る時期を決めやすくなります。見積りは作業の中身と追加料金を確かめてから頼みましょう。",
+     "国民生活センター「遺品整理を頼むときは、事業者選びは慎重に」", "https://www.kokusen.go.jp/mimamori/mj_mailmag/mj-shinsen525.html"),
+    ("売るか、解体するか", "古い家は「そのまま売る」「更地にして売る」で値段も費用も変わります。手入れされず市から勧告を受けた空き家は、土地の固定資産税の軽減（住宅用地特例）が外れます。",
+     "国土交通省「空家等対策の推進に関する特別措置法の一部を改正する法律」概要", "https://www.mlit.go.jp/jutakukentiku/house/content/001621960.pdf"),
+    ("税金の特例を確かめる", "相続した空き家（1981年5月31日以前に建てた家など）を2027年12月31日までに売ると、最高3,000万円の特別控除があります（相続人が3人以上なら2,000万円まで・条件あり）。くわしくは税務署・税理士へ。",
+     "国税庁 タックスアンサー No.3306", "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3306.htm"),
+]
+J_CSS = """.jn{display:grid;grid-template-columns:1fr 1fr;gap:10px}.jn>div{background:#F4F4F6;border-radius:12px;padding:12px 14px}
+.jn b{display:block;font-family:Jost,"Zen Kaku Gothic New";font-weight:400;font-size:24px;color:#2B2622;line-height:1.3}.jn b small{font-size:12px}.jn span{display:block;font-size:11.5px;color:#7A6E66;margin-top:2px;line-height:1.6}.jn .no{font-size:12px;color:#7A6E66;line-height:1.7}
+.src{font-size:11px;color:#8C7B6E;line-height:1.7;margin:8px 0 0}.src a{color:#8C7B6E}
+.mk3{font-family:Jost,sans-serif;font-size:10.5px;letter-spacing:.3em;color:#9C8775;margin:30px 0 0}.jh{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spacing:.1em;margin:4px 0 12px;padding:0;border:0}
+.st{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid #ECECEC}.st:last-of-type{border-bottom:1px solid #ECECEC}.st i{font-style:normal;font-family:Jost,sans-serif;font-weight:300;font-size:20px;color:var(--pc);width:26px;flex:none;line-height:1.3}
+.st b{display:block;font-size:14.5px}.st p{margin:3px 0 0;font-size:13px;line-height:1.8;color:#4E453F}.st a{display:inline-block;font-size:11px;color:#8C7B6E;margin-top:4px}
+.jb{display:block;text-align:center;border-radius:12px;padding:14px 12px;font-size:14.5px;font-weight:700;margin-top:10px;text-decoration:none;color:#2B2622;border:1px solid #2B2622;background:#fff}.jb small{display:block;font-size:11px;font-weight:500;color:#857A70;margin-top:2px}
+.jb.b1{background:#2B2622;color:#fff;border-color:#2B2622}.jb.b1 small{color:#D9D2CC}.jp{font-size:11.5px;color:#8C7B6E;text-align:center;margin:8px 0 0;line-height:1.7}
+.jl{display:flex;justify-content:space-between;margin:14px 0 0;padding:12px 4px;border-top:1px solid #E6E6E6;border-bottom:1px solid #E6E6E6;text-decoration:none;color:#5E544D;font-size:13px}.jl i{font-style:normal;font-family:Jost;color:#9C8775}"""
+
+
+def has_sold(t):
+    sd = sold_of(t)
+    return any(sd.get(k) for k in ("k", "m"))
+
+
+def jikka_page(t):
+    pf, fn, en, col, sname, surl, pfull = PI[t["p"]]
+    n = t["n"]
+    sd = sold_of(t)
+
+    def box(k, lb):
+        r = sd.get(k)
+        if not r or not r["価格万円"]:
+            return f'<div><span>{lb}</span><p class="no">' + (f'2025年度に売れたのは{r["件数"]}件だけのため、平均は出ていません。' if r else '2025年度は、売れた記録がありません。') + '</p></div>'
+        few = "・少ないので目安" if int(r["件数"]) < 10 else ""
+        return f'<div><b>{int(round(float(r["価格万円"]))):,}<small>万円</small></b><span>{lb}の平均（{int(r["件数"]):,}件{few}）</span></div>'
+    sl = [f"{lb}{man(sd[k]['価格万円'])}" for k, lb in (("k", "中古一戸建て"), ("m", "中古マンション")) if sd.get(k) and sd[k]["価格万円"] and int(sd[k]["件数"]) >= 10]
+    title = f"{n}の実家・空き家｜売る・片付け・解体の前に（売れた相場と順番）"
+    desc = (f"{pfull}{n}で親の家を相続した・空き家のままの方へ。" + (f"2025年度に売れた平均は{'・'.join(sl)}（レインズ）。" if sl else "")
+            + "相続登記の義務、片付け、売るか解体するか、3,000万円の特別控除まで、公式の出典つきで順番に。")
+    url = f"{BASE}/jikka/{t['id']}"
+    ld = {"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "関西不動産リスト", "item": f"{BASE}/fudosan-list"},
+        {"@type": "ListItem", "position": 2, "name": "実家・空き家ノート", "item": f"{BASE}/jikka/"},
+        {"@type": "ListItem", "position": 3, "name": f"{n}の実家・空き家", "item": url}]}]}
+    steps = "".join(f'<div class="st"><i>{i:02d}</i><div><b>{E(h)}</b><p>{E(p)}</p><a href="{E(u)}" target="_blank" rel="noopener" data-k="実家｜出典｜{i:02d}">出典：{E(s)}</a></div></div>'
+                    for i, (h, p, s, u) in enumerate(J_SRC, 1))
+    body = f'''<style>{HEAD_CSS}{J_CSS}</style>{SCRIPTS}</head><body style="--pc:{col}"><div class="wrap">
+<div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">{en} ─ JIKKA NOTE</div>
+<h1>{E(n)}の実家・空き家ノート<span>売る・片付ける・解体する前に</span></h1>
+<p class="sub">親の家を相続した・空き家のままになっている。<br>この街で決めるための数字と順番です。</p>
+<div class="upd">2026年11月 更新</div></div>
+<p class="mk3">SOLD 2025</p><h2 class="jh">この街で、去年売れた家</h2>
+<div class="jn">{box("k", "中古一戸建て")}{box("m", "中古マンション")}</div>
+<p class="src">出典：近畿レインズ 2025年度 市区町村別の成約（平均）。住宅地の地価は前の年から{pct(t["r8"])}（令和8年地価公示・{E(pfull)}{t["of"]}市区町村で{t["rank"]}位）。<a href="/machi/{t["id"]}" data-k="実家｜街ページ">この街の数字をくわしく →</a></p>
+<p class="mk3">STEPS</p><h2 class="jh">迷ったら、この順で</h2>
+{steps}
+<p class="mk3">NEXT</p><h2 class="jh">次にできること</h2>
+<a class="jb b1" href="/moushikomi?machi={t["id"]}&amp;want={_q("相続した家のこと")}" data-k="実家｜売却の相談｜{E(n)}">この家の売却を相談する<small>無料・約1分</small></a>
+<a class="jb" href="/moushikomi?machi={t["id"]}&amp;want={_q("片付け・遺品整理の見積り")}" data-k="実家｜片付けの見積り｜{E(n)}">片付け・遺品整理の見積りを頼む<small>無料・約1分</small></a>
+<a class="jb" href="/moushikomi?machi={t["id"]}&amp;want={_q("解体の見積り")}" data-k="実家｜解体の見積り｜{E(n)}">解体費用の見積りを頼む<small>無料・約1分</small></a>
+<p class="jp">どれも同じお申し込みページです。内容を見て、メールでご連絡します。</p>
+<a class="jl" href="/jikka/#{fn}" data-k="実家｜一覧">ほかの街の実家・空き家ノート <i>→</i></a>
+<a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
+<div class="ft">TOWN NOTE</div></div>
+{beacon("実家｜" + n, "実家ノート")}</body></html>'''
+    return head(title, desc, url, ld) + body
+
+
+JT = [t for t in towns if has_sold(t)]
+os.makedirs(os.path.join(ROOT, "links/jikka"), exist_ok=True)
+for f in os.listdir(os.path.join(ROOT, "links/jikka")):
+    if f.endswith(".html"):
+        os.remove(os.path.join(ROOT, "links/jikka", f))  # index.html（一覧）も作り直す
+for t in JT:
+    open(os.path.join(ROOT, "links/jikka", t["id"] + ".html"), "w", encoding="utf-8").write(jikka_page(t))
+
+# 一覧（府県のタブ）
+JL_CSS = """.flt{display:flex;flex-wrap:nowrap;justify-content:center;gap:0 13px;margin:24px 0 8px;padding:10px 0;border-top:1px solid #D4D4D4;border-bottom:1px solid #D4D4D4;overflow-x:auto}
+.flt button{flex:none;border:none;background:none;padding:4px 0;font-family:"Zen Kaku Gothic New";font-size:14px;font-weight:700;letter-spacing:.04em;color:var(--pc,#8C7B6E);border-bottom:1px solid transparent;cursor:pointer;opacity:.85}
+.flt button.on{opacity:1;border-bottom-color:currentColor}.pane{display:none}.pane.on{display:block}
+.jli{list-style:none;margin:0;padding:0}.jli li{border-bottom:1px solid #ECECEC}.jli a{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 2px;text-decoration:none;color:#2B2622;font-weight:700;font-size:14px}
+.jli a small{font-size:11.5px;color:#7A6E66;font-weight:500;text-align:right}"""
+
+
+def jl_li(t):
+    sd = sold_of(t)
+    r = sd.get("k")
+    s = f'一戸建て {int(round(float(r["価格万円"]))):,}万円' if r and r["価格万円"] else ""
+    return f'<li><a href="/jikka/{t["id"]}" data-k="実家一覧｜{E(t["n"])}">{E(t["n"])}<small>{s}</small></a></li>'
+
+
+jpanes = [(fn, pf, [t for t in JT if t["p"] == pf]) for pf, fn, *_ in PREFS]
+jdesc = (f"関西6府県・{len(JT)}の市区町村ごとに、相続した実家・空き家を「売る・片付ける・解体する」前に見る数字と順番。"
+         "2025年度に売れた家の平均（レインズ）、相続登記の義務、3,000万円の特別控除を公式の出典つきで。")
+jl = head(f"関西の実家・空き家ノート｜{len(JT)}の街の売れた相場と、売る・片付け・解体の順番", jdesc, f"{BASE}/jikka/") + f'''<style>{HEAD_CSS}{JL_CSS}</style>{SCRIPTS}</head><body><div class="wrap">
+<div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">KANSAI ─ JIKKA NOTE</div>
+<h1>実家・空き家ノート<span>関西 {len(JT)}の街</span></h1>
+<p class="sub">親の家を相続した・空き家のままの方へ。<br>街を選ぶと、売れた相場と順番が見られます。</p>
+<div class="upd">2026年11月 更新</div></div>
+<nav class="flt">''' + "".join(f'<button data-p="{k}" style="--pc:{PI[pf][3]}"{" class=\"on\"" if i == 0 else ""}>{pf}</button>' for i, (k, pf, _) in enumerate(jpanes)) + '</nav>' + \
+    "".join(f'<section class="pane{" on" if i == 0 else ""}" id="{k}"><ul class="jli">{"".join(jl_li(t) for t in ts)}</ul></section>' for i, (k, pf, ts) in enumerate(jpanes)) + f'''
+<p class="note">金額は近畿レインズ「2025年度 年刊市況レポート」の中古一戸建ての成約の平均です。1軒ずつの値段ではありません。</p>
+<a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
+<div class="ft">TOWN NOTE</div></div>
+<script>(function(){{function go(k){{var b=document.querySelector('.flt button[data-p="'+k+'"]');if(!b)return;document.querySelectorAll(".flt button,.pane").forEach(function(x){{x.classList.remove("on")}});b.classList.add("on");document.getElementById(k).classList.add("on");}}
+document.querySelectorAll(".flt button").forEach(function(b){{b.onclick=function(){{go(b.dataset.p);history.replaceState(null,"","#"+b.dataset.p);}}}});if(location.hash)go(location.hash.slice(1));}})();</script>
+{beacon("実家一覧", "実家ノート")}</body></html>'''
+open(os.path.join(ROOT, "links/jikka/index.html"), "w", encoding="utf-8").write(jl)
+print("jikka", len(JT), "towns")

@@ -53,6 +53,6 @@ a = s.index('<section id="'); b = s.index('<section class="faq">'); e = s.index(
 s = s[:a] + secs + faq + s[e:]
 s = re.sub(r'<p class="note">.*?</p>', '<p class="note">時間・交通規制・駐車場は、各神社の公式ページの案内をのせています。2027年の案内が出ていない所は、昨年・例年の内容です。名前を押すと公式のページ、「地図」を押すと場所が開きます。お出かけ前にリンク先でご確認ください。</p>', s, count=1, flags=re.S)
 s = re.sub(r'<nav class="also".*?</nav>', '<nav class="also" aria-label="あわせて見る"><small>あわせて見る</small><a href="/illumination" data-k="あわせて：関西イルミネーション">関西イルミネーション</a><a href="/tomari" data-k="あわせて：泊まりで行くおでかけ">泊まりで行くおでかけ</a><a href="/odekake" data-k="あわせて：関西おでかけリスト">関西おでかけリスト</a></nav>', s, count=1, flags=re.S)
-s = s.replace("v2sub.js?v=10", "v2sub.js?v=11").replace("紅葉ライトアップ", "初詣")
+s = s.replace("v2sub.js?v=12", "v2sub.js?v=12").replace("紅葉ライトアップ", "初詣")
 open(os.path.join(ROOT, "links", "hatsumode.html"), "w", encoding="utf-8").write(s)
 print("hatsumode", N, "places")
