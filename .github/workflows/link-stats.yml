@@ -21,7 +21,9 @@ jobs:
           python3 -c "import json;d=json.load(open('stats/link.json'));print(d['days'],len(d['by_day']))"
       - name: rebuild illumination pages
         # 10/31 毎朝作り直して「更新日」と終わった物・よくある質問を新しくする（検索で新しいページと見てもらうため）
-        run: python3 tools/illumi/build.py "$(TZ=Asia/Tokyo date +%F)"
+        run: |
+          python3 tools/illumi/build.py "$(TZ=Asia/Tokyo date +%F)"
+          python3 tools/hatsumode/build.py "$(TZ=Asia/Tokyo date +%F)"
       - name: event info for search on the list
         # 11/2 おでかけリストのカードから Event の構造化データを作り直す（終わった物は外す）
         run: python3 tools/odekake_ld.py "$(TZ=Asia/Tokyo date +%F)"
@@ -51,5 +53,5 @@ jobs:
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/link.json stats/link-30.json links/illumination*.html links/koyo*.html links/index.html links/odekake-*.html links/o links/sitemap.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md
+          git add stats/link.json stats/link-30.json links/illumination*.html links/koyo*.html links/hatsumode.html links/index.html links/odekake-*.html links/o links/sitemap.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md
           git diff --cached --quiet || (git commit -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)" && git pull --rebase -q && git push)

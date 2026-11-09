@@ -6,6 +6,7 @@
 if(window.__cardmark)return;window.__cardmark=1;
 var I={
 fes:'<path d="M9.5 3.5h5v2h-5zM9.5 18.5h5v2h-5z"/><ellipse cx="12" cy="12" rx="6.2" ry="6.6"/><path d="M6.2 9.6h11.6M5.8 12h12.4M6.2 14.4h11.6"/>',
+hatsu:'<path d="M3.5 5.2c3.4 1 13.6 1 17 0"/><path d="M5.2 9h13.6"/><path d="M7 6.4V20.5M17 6.4V20.5"/><path d="M12 6.6V9"/>',
 koyo:'<path d="M12 3l1.6 3.8 3-1.6-.6 3.6 3.6-.4-2 3 2.6 1.6-4 1 .6 2.4-3-1.2-1.8 3-1.8-3-3 1.2.6-2.4-4-1 2.6-1.6-2-3 3.6.4-.6-3.6 3 1.6z"/><path d="M12 15.5V21"/>',
 light:'<path d="M10 3C10.6 7.5 11.5 8.4 16 9C11.5 9.6 10.6 10.5 10 15C9.4 10.5 8.5 9.6 4 9C8.5 8.4 9.4 7.5 10 3Z"/><path d="M17.5 13.2c.3 2 .7 2.4 2.5 2.7c-1.8.3-2.2.7-2.5 2.7c-.3-2-.7-2.4-2.5-2.7c1.8-.3 2.2-.7 2.5-2.7Z"/><circle cx="6.5" cy="18.5" r="1"/>',
 art:'<rect x="3.5" y="4.5" width="17" height="14" rx="1"/><rect x="6.5" y="7.5" width="11" height="8"/><path d="M6.5 15.5l3.3-3.3 2.4 2.2 2-1.8 3.3 2.9"/><circle cx="14.6" cy="9.8" r=".9"/>',
@@ -18,7 +19,7 @@ animal:'<path d="M12 12.5c-2.8 0-5 2.4-5 4.6 0 1.6 1.3 2.4 2.6 2.4 1 0 1.6-.5 2.
 play:'<circle cx="12" cy="10" r="6.5"/><path d="M12 3.5v13M5.5 10h13M7.4 5.4l9.2 9.2M16.6 5.4l-9.2 9.2"/><circle cx="12" cy="3.5" r="1.2"/><circle cx="18.5" cy="10" r="1.2"/><circle cx="5.5" cy="10" r="1.2"/><circle cx="12" cy="16.5" r="1.2"/><path d="M8.5 21l3.5-5 3.5 5"/>',
 shop:'<path d="M4 9l2-4.5h12L20 9"/><path d="M4 9a2 2 0 0 0 4 0a2 2 0 0 0 4 0a2 2 0 0 0 4 0a2 2 0 0 0 4 0"/><path d="M5.5 11v9h13v-9"/><path d="M9.5 20v-5h5v5"/>',
 spot:'<path d="M12 21s-6-5.5-6-11a6 6 0 0 1 12 0c0 5.5-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/>'};
-var LB={fes:'MATSURI',koyo:'KOYO',light:'LIGHT',art:'ART',food:'FOOD',flower:'FLOWER',hallo:'HALLOWEEN',xmas:'XMAS',quest:'NAZOTOKI',animal:'ANIMAL',play:'PLAY',shop:'MARKET',spot:'SPOT'};
+var LB={hatsu:'HATSUMODE',fes:'MATSURI',koyo:'KOYO',light:'LIGHT',art:'ART',food:'FOOD',flower:'FLOWER',hallo:'HALLOWEEN',xmas:'XMAS',quest:'NAZOTOKI',animal:'ANIMAL',play:'PLAY',shop:'MARKET',spot:'SPOT'};
 var R=[[/ENLIGHTENMENT|Superblue|イマーシブ|ミュージアム|美術館|博物館/i,'art'],[/ハロウィ[ンー]|HALLOWEEN|ゾンビ|仮装/i,'hallo'],[/クリスマス|CHRISTMAS|Xmas|サンタ|ツリー/i,'xmas'],[/紅葉|もみじ|錦秋|イチョウ|銀杏/,'koyo'],
 [/謎|なぞ|脱出|スタンプラリー|リサーチ|探査|めぐり|回遊/,'quest'],
 [/イルミ|ILLUMI|ライト|LIGHT|灯|光|ナイト|NIGHT|夜|ルミナ|NAKED|チームラボ|teamLab|ホタル|ランタ[ー]?ン|プロジェクション|瑠璃絵|Twilight|花火|あかり|ヒカリ|Sparkl|SPARKLE|Neon|ルミ|SNOW|snow|WINTER|Winter|青の洞窟|宝石|Crystal|MIRAGE|雲海|KITTE|LuCe/i,'light'],
@@ -77,7 +78,7 @@ var css=
 'html.night .cmb .cdn.hot{background:linear-gradient(180deg,var(--pl),var(--pc,#8a8f98));color:#141A28;box-shadow:0 0 10px -2px var(--pc,#8a8f98)}'+
 '@media (prefers-reduced-motion:reduce){html.night .cmb .ib::after{animation:none!important}}';
 var st=document.createElement('style');st.textContent=css;(document.head||document.documentElement).appendChild(st);
-function kind(a,ad){var t=(a.querySelector(ad.t)||{}).textContent||'';var m=(a.querySelector('.m,.pl,small')||{}).textContent||'';
+function kind(a,ad){if(/hatsumode/.test(location.pathname))return 'hatsu';var t=(a.querySelector(ad.t)||{}).textContent||'';var m=(a.querySelector('.m,.pl,small')||{}).textContent||'';
   for(var i=0;i<R.length;i++)if(R[i][0].test(t))return R[i][1];
   for(i=0;i<R.length;i++)if(R[i][0].test(m))return R[i][1];
   var b=document.body&&document.body.getAttribute('data-kind')||'';if(/紅葉/.test(b))return 'koyo';if(/イルミ/.test(b)||/illumination/.test(location.pathname))return 'light';
