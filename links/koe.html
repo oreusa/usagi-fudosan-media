@@ -75,7 +75,7 @@ function ok(){go.disabled=!(kind()&&tx.value.trim().length>=5);document.getEleme
 f.addEventListener("change",function(){sw.hidden=kind()!=="review";ok();});tx.addEventListener("input",ok);
 var q=new URLSearchParams(location.search),from=(q.get("from")||document.referrer.replace(/^https?:\/\/[^/]+/,"")||"").slice(0,40);
 f.addEventListener("submit",function(e){e.preventDefault();if(go.disabled)return;go.disabled=true;msg.textContent="送っています…";
-fetch("https://usagi-life-notes.pages.dev/koe-send",{method:"POST",headers:{"content-type":"text/plain"},body:JSON.stringify({site:"月",kind:kind(),text:tx.value,name:document.getElementById("nm").value,star:star,page:from,hp:document.getElementById("hp").value})})
+fetch("https://lifenote-kanto.pages.dev/koe-send",{method:"POST",headers:{"content-type":"text/plain"},body:JSON.stringify({site:"月",kind:kind(),text:tx.value,name:document.getElementById("nm").value,star:star,page:from,hp:document.getElementById("hp").value})})
 .then(function(r){return r.json();}).then(function(j){if(j.ok){f.hidden=true;document.getElementById("done").hidden=false;scrollTo(0,0);}else{msg.textContent=j.msg||"送れませんでした";go.disabled=false;}})
 .catch(function(){msg.textContent="送れませんでした。電波のよい所でもう一度お試しください。";go.disabled=false;});});
 fetch("/koe-public.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():[];}).then(function(a){if(!a||!a.length)return;var ul=document.getElementById("vl");

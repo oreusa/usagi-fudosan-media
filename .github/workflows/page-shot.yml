@@ -3,7 +3,7 @@ name: page-shot
 on:
   workflow_dispatch:
     inputs:
-      url: {description: "撮るページ", required: true, default: "https://usagi-life-notes.pages.dev/"}
+      url: {description: "撮るページ", required: true, default: "https://lifenote-kanto.pages.dev/"}
       tabs: {description: "タブのセレクタ（任意）", required: false, default: "#cats button"}
       name: {description: "保存するフォルダ名", required: true, default: "akari"}
 permissions:

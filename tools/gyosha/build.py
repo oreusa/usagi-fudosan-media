@@ -111,7 +111,7 @@ def form(pre=""):
 </section>"""
 
 JS = r"""<script>(function(){
-var SITE="TOWN NOTE 業者さま",KV="https://usagi-life-notes.pages.dev/moushikomi-send",MAIL="https://formsubmit.co/ajax/"+["Infinity.daikoku","gmail.com"].join("@");
+var SITE="TOWN NOTE 業者さま",KV="https://lifenote-kanto.pages.dev/moushikomi-send",MAIL="https://formsubmit.co/ajax/"+["Infinity.daikoku","gmail.com"].join("@");
 var f=document.getElementById("mf"),er=document.getElementById("er"),sb=document.getElementById("sb");
 f.addEventListener("change",function(e){var l=e.target.closest("label");if(l&&e.target.type==="checkbox"&&l.parentNode.className==="ch")l.className=e.target.checked?"on":""});
 function v(n){var e=f.querySelector('[name="'+n+'"]:checked')||f.elements[n];return e&&e.value?String(e.value).trim():""}

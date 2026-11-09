@@ -11,7 +11,7 @@ SITES = [
       full={"大阪": "大阪府", "京都": "京都府", "兵庫": "兵庫県", "奈良": "奈良県", "滋賀": "滋賀県", "和歌山": "和歌山県"},
       js='<script src="assets/night.js?v=23"></script><script src="assets/menu.js?v=41" defer></script><script src="assets/v2sub.js?v=11" defer></script>',
       logo="assets/logo-s.png?v=2", back="fudosan-list", backn="関西不動産リスト", brand="TOWN NOTE"),
- dict(out=AK + "site/sagasu.html", a="/assets/", area="関東", n="329", base="https://usagi-life-notes.pages.dev",
+ dict(out=AK + "site/sagasu.html", a="/assets/", area="関東", n="329", base="https://lifenote-kanto.pages.dev",
       order=["東京", "神奈川", "埼玉", "千葉", "茨城", "栃木", "群馬"],
       col={"東京": "#4F86C6", "神奈川": "#3FA3B5", "埼玉": "#E09A3E", "千葉": "#D9775A", "茨城": "#5FA06A", "栃木": "#D2697E", "群馬": "#9C7BB8"},
       full={"東京": "東京都", "神奈川": "神奈川県", "埼玉": "埼玉県", "千葉": "千葉県", "茨城": "茨城県", "栃木": "栃木県", "群馬": "群馬県"},
