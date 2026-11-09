@@ -13,7 +13,7 @@
    ページを足すときは L に1行足すだけ。押された数は /c に「メニュー｜名前」で数える。 */
 (function(){
   var P=location.pathname.replace(/^\/townnotes\//,"/"),FU=/^\/(fudosan|uru|moushikomi|gyosha|chika-|machi\/)/.test(P),here=
-    /^\/fudosan-list/.test(P)?"flist":/^\/chika-kansai/.test(P)?"chika":/^\/chika-osaka/.test(P)?"chikao":/^\/(odekake|index\.html)$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/koyo/.test(P)?"koyo":/^\/koe/.test(P)?"koe":/^\/tomari/.test(P)?"tomari":/^\/ima/.test(P)?"ima":/^\/(town-notes)?$/.test(P)?"tn":/^\/uru/.test(P)?"uru":/^\/gyosha/.test(P)?"gyosha":/^\/(fudosan|gyosha)/.test(P)?"fudosan":"";
+    /^\/fudosan-list/.test(P)?"flist":/^\/chika-kansai/.test(P)?"chika":/^\/chika-osaka/.test(P)?"chikao":/^\/(odekake|index\.html)$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/koyo/.test(P)?"koyo":/^\/koe/.test(P)?"koe":/^\/tomari/.test(P)?"tomari":/^\/ima/.test(P)?"ima":/^\/(town-notes)?$/.test(P)?"tn":/^\/uru/.test(P)?"uru":/^\/gyosha/.test(P)?"gyosha":/^\/moushikomi/.test(P)?"satei":/^\/(fudosan|gyosha)/.test(P)?"fudosan":"";
   var L=[
     ["LIST","list","/odekake","関西おでかけリスト","開催中・これからのおでかけ"],
     ["MAP","map","/odekake#map","地図で見る","関西の地図から、近くのおでかけを"],
@@ -43,18 +43,21 @@
     ["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],
     ["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]
   ];
-  /* 11/9 オーナーOK（見本4）：不動産のメニューは7つ。さがす／したいこと／ほかのリスト、下に小さい文字で3つ */
+  /* 11/9 オーナーOK（見本4）→ 11/9 12:54 オーナー「不動産だけメニューも色々ちがくない？」→ おでかけと同じ形（タイル6つ／ご相談・お問い合わせ／関連サイト） */
   if(FU)L=[
-    ["-","さがす"],
-    ["SEARCH","fq","/fudosan-list?fq=q","街の名前で探す","市・区・町の名前で、その街の地価と売れた家の値段を"],
-    ["MAP","fmap","/fudosan-list?fq=map","地図で見る","上がった街・下がった街を、色で"],
-    ["RANKING","chika","/chika-kansai","地価ランキング（関西・大阪市24区）","6府県・205の街と、大阪市24区"],
-    ["-","したいこと"],
-    ["SELL","uru","/uru.html","家を売りたい方へ","いくらで売れそうか、相場から順に"],
-    ["BUY","fbuy","/fudosan-list?fq=q","家を買いたい方へ","住む街を選ぶと、値段と売り出し中の物件へ"],
-    ["-","ほかのリスト"],
-    ["ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],
-    ["OKAIMONO","okai","/okaimono","くらべたおかいものリスト","日用品を1個あたりでくらべて最安へ"]
+    ["LIST","flist","/fudosan-list","関西不動産リスト","地価・人口・制度"],
+    ["SEARCH","fq","/fudosan-list?fq=q","街の名前で探す","市区町村の名前で"],
+    ["MAP","fmap","/fudosan-list?fq=map","地図で見る","上がった街を色で"],
+    ["RANKING","chika","/chika-kansai","地価ランキング","関西205の街"],
+    ["SELL","uru","/uru.html","家を売りたい方へ","相場から順に"],
+    ["BUY","fbuy","/fudosan-list?fq=q","家を買いたい方へ","住む街の値段と物件"],
+    ["-","CONTACT"],
+    ["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],
+    ["APPLY","satei","/moushikomi","売却のお申し込み","無料・約1分"],
+    ["-","関連サイト"],
+    ["KANSAI ODEKAKE","list","/odekake","関西おでかけリスト","関西のイベント・新しいお店や施設"],
+    ["OKAIMONO LIST","okai","/okaimono","くらべたおかいものリスト","日用品を1個あたりでくらべて最安へ"],
+    ["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]
   ];
   else if(!SHP)L=L.concat([["-","関連サイト"],["KANSAI REAL ESTATE","flist","/fudosan-list","関西不動産リスト","地価・人口・新しい施設・制度を、公式の数字で"],["OKAIMONO LIST","okai","/okaimono","くらべたおかいものリスト","日用品を1個あたりでくらべて最安へ"],["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]]);
   /* TOWN NOTE の入口ページは、3つのリストとご相談だけ（11/7 夜のミス帳 #98） */
@@ -136,7 +139,7 @@
   function ck(k){try{if(localStorage.getItem("usagi_owner")==="1")return;}catch(e){}try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
   var SUN='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.3M12 19.1v2.3M2.6 12h2.3M19.1 12h2.3M5.35 5.35l1.6 1.6M17.05 17.05l1.6 1.6M5.35 18.65l1.6-1.6M17.05 6.95l1.6-1.6"/></svg>',MOON='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.6 14.6A8 8 0 0 1 9.4 4.4a8 8 0 1 0 10.2 10.2z"/><path class="sp" d="M17.2 3.4v2.8M15.8 4.8h2.8"/></svg>',MK="メニュー｜";
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-  var GJ={"KANSAI ODEKAKE":"おでかけ","OKAIMONO LIST":"くらべたおかいもの","KANSAI REAL ESTATE":"不動産の数字","TOWN NOTE":"3つのリスト","CONTACT":"ご相談・お問い合わせ"};
+  var GJ={"KANSAI ODEKAKE":"おでかけ","OKAIMONO LIST":"くらべたおかいもの","KANSAI REAL ESTATE":"不動産","TOWN NOTE":"3つのリスト","CONTACT":"ご相談・お問い合わせ"};
   function ug(k){return '<div class="ug">'+esc(GJ[k]||k)+(GJ[k]?'<small>'+k+'</small>':"")+'</div>';}
   var IC={
     list:'<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 9h8M8 12.5h8M8 16h5"/>',
@@ -161,21 +164,20 @@
     okai:'<path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>'
   };
   var ST={list:"おでかけリスト",ima:"いま行ける",illumi:"イルミネーション",koyo:"紅葉ライトアップ",tomari:"泊まりで行く",flist:"不動産リスト",chika:"地価ランキング",chikao:"大阪市24区",
-    uru:"売る前に大事なこと",satei:"売却・査定のご相談",okai:"おかいものリスト"};
+    uru:"家を売りたい方へ",satei:"売却のお申し込み",okai:"おかいものリスト"};
   var SS={list:"開催中・これから",map:"近くをさがす",ima:"近い順・きょう開く所",illumi:"日程・無料の所",koyo:"夜の時間・料金",tomari:"遠くのおでかけと宿",
     flist:"地価・人口・制度",fq:"市区町村の名前で",fmap:"上がった街を色で",chika:"関西205の街",chikao:"24区の上がり幅",fnew:"最近足した数字",okai:"1個あたりで最安"};
   function item(x,tile){var cur=x[1]===here,ext=/^https?:/.test(x[2]);
-    return '<a class="ui '+(tile?"tl":"sm")+(cur?" cur":"")+'" data-k="'+x[1]+'" href="'+x[2]+'"'+(ext?' target="_blank" rel="noopener"':"")+(cur?' aria-current="page"':"")+'>'+(cur&&tile?'<u>いま</u>':'')+'<i><svg viewBox="0 0 24 24" aria-hidden="true">'+(IC[x[1]]||IC.list)+'</svg></i><span data-n="'+esc(x[3])+'">'+esc((FU?0:ST[x[1]])||x[3])+'</span><em>'+esc(tile&&!FU?(SS[x[1]]||x[4]):x[4])+'</em>'+(cur&&!tile?'<u>いま</u>':'')+'</a>';}
+    return '<a class="ui '+(tile?"tl":"sm")+(cur?" cur":"")+'" data-k="'+x[1]+'" href="'+x[2]+'"'+(ext?' target="_blank" rel="noopener"':"")+(cur?' aria-current="page"':"")+'>'+(cur&&tile?'<u>いま</u>':'')+'<i><svg viewBox="0 0 24 24" aria-hidden="true">'+(IC[x[1]]||IC.list)+'</svg></i><span data-n="'+esc(x[3])+'">'+esc(ST[x[1]]||x[3])+'</span><em>'+esc(tile?(SS[x[1]]||x[4]):x[4])+'</em>'+(cur&&!tile?'<u>いま</u>':'')+'</a>';}
   function openMap(){var n=0;(function t(){var b=document.querySelector(".tnbtn");if(b){b.click();return;}if(++n<40)setTimeout(t,100);})();}
   function build(){
     var st=document.createElement("style");st.textContent=css;document.head.appendChild(st);
     var btn=document.createElement("button");btn.id="umenu";btn.type="button";btn.setAttribute("aria-label","メニューを開く");btn.setAttribute("aria-expanded","false");btn.setAttribute("aria-controls","upan");btn.innerHTML="<i></i><i></i><i></i>";
     var mask=document.createElement("div");mask.id="umask";
     var pan=document.createElement("div");pan.id="upan";pan.setAttribute("role","dialog");pan.setAttribute("aria-modal","true");pan.setAttribute("aria-label","メニュー");pan.setAttribute("aria-hidden","true");
-    var h='<div class="uh"><a class="uhl" href="/" aria-label="TOWN NOTEの入口へ"><img src="'+(document.documentElement.classList.contains("night")?"/assets/logo-s-night.png?v=5":"/assets/logo-s.png?v=2")+'" alt=""><b>TOWN NOTE</b></a><button class="ux" type="button" aria-label="メニューを閉じる">×</button></div><nav>'+(/^\/(town-notes)?$/.test(P)||SHP?"":(FU?"":ug("KANSAI ODEKAKE")));
+    var h='<div class="uh"><a class="uhl" href="/" aria-label="TOWN NOTEの入口へ"><img src="'+(document.documentElement.classList.contains("night")?"/assets/logo-s-night.png?v=5":"/assets/logo-s.png?v=2")+'" alt=""><b>TOWN NOTE</b></a><button class="ux" type="button" aria-label="メニューを閉じる">×</button></div><nav>'+(/^\/(town-notes)?$/.test(P)||SHP?"":ug(FU?"KANSAI REAL ESTATE":"KANSAI ODEKAKE"));
     /* 最初のまとまり＝タイル、あとのまとまり＝小さいボタン */
     var tiled=false,openG="",rel=false;
-    if(FU){h+='<div class="fml"><div class="fmt"><small>MENU</small><b>関西不動産リスト</b></div>';L.forEach(function(x){if(x[0]==="-"){h+='<div class="fmg">'+esc(x[1])+'</div>';return;}var cur=x[1]===here;h+='<a class="fmr'+(cur?' cur':'')+'" data-k="'+x[1]+'" href="'+x[2]+'"'+(cur?' aria-current="page"':'')+'><small>'+esc(x[0])+'</small><b>'+esc(x[3])+'</b></a>';});h+='</div>';L=[];}
     L.forEach(function(x){
       if(x[0]==="-"){if(openG){h+='</div>';openG="";}h+=ug(x[1]);rel=x[1]==="関連サイト"||x[1]==="ほかのリスト";return;}
       if(!openG){openG=tiled?"usm":"utg";tiled=true;h+='<div class="'+openG+(rel?" urel":"")+'">';}
@@ -184,7 +186,6 @@
     if(openG)h+='</div>';
     /* 10/31 オーナー「夜の見た目？なにこれ」→ 切り替えは右上の太陽と月のマークだけにした */
     /* 11/4 オーナー「hp共有を入れよう アプリにしたら誰かに送れない」「cだけで良いかも」→ 11/4「もう少し分かりやすくても良かった、さっきの感じで下の方でよい」→ C の箱をメニューの下に */
-    if(FU)h+='<p class="ufx"><a href="/koe" data-k="koe">リクエスト・感想</a>／<a href="/gyosha.html" data-k="gyosha">業者さまへ</a>／<a href="/privacy" data-k="privacy">プライバシー</a></p>';
     h+='</nav>'+
       '<div class="ush"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3"/><path d="M7.5 7.5L12 3l4.5 4.5"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/></svg><div class="ust"><b>友だちに送る</b><small>このページを LINE などで送れます</small></div><div class="ub">'+(navigator.share?'<button type="button" data-s="share">送る</button>':'')+'<button type="button" class="nofilt" data-s="line">LINE</button><button type="button" data-s="copy">コピー</button></div></div>'+
       '<div class="us"><a href="https://www.instagram.com/fudousan_ai_si/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.com/@fudousan_ai_si" target="_blank" rel="noopener">Threads</a><a href="https://x.com/fudosan_ai_si" target="_blank" rel="noopener">X</a></div>';
