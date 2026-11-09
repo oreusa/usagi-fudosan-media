@@ -144,4 +144,15 @@ f.addEventListener("submit",function(e){e.preventDefault();er.textContent="";
    try{if(localStorage.getItem("usagi_owner")!=="1"){var b=JSON.stringify({k:"申し込み｜送信"});navigator.sendBeacon&&navigator.sendBeacon("/c",b)}}catch(x){}}
   else{sb.disabled=false;sb.textContent="送信する";er.textContent="送れませんでした。時間をおいて、もう一度お試しください"}});
 });})();</script>
+<script>/* 11/9 お申し込みページ：来た数・書きはじめた数を数える（送信は上で数える）／見た街を「お家の場所」に先に入れる */
+(function(){var O=false;try{O=localStorage.getItem("usagi_owner")==="1";}catch(e){}
+function c(k){if(O)return;try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
+c("表示：お申し込み"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":""));
+var f=document.getElementById("mf"),st=false;if(f)f.addEventListener("focusin",function(){if(st)return;st=true;c("申し込み｜書きはじめ");});
+var id="";try{id=new URLSearchParams(location.search).get("machi")||sessionStorage.getItem("tn_machi")||"";}catch(e){}
+if(!/^[a-z]+-\d+$/.test(id))return;
+var PF={"大阪":"大阪府","京都":"京都府","兵庫":"兵庫県","奈良":"奈良県","滋賀":"滋賀県","和歌山":"和歌山県"};
+fetch("assets/towns.json").then(function(r){return r.json()}).then(function(d){var T=d.towns||d,pl=document.getElementById("pl");if(!pl||pl.value)return;
+ for(var i=0;i<T.length;i++)if(T[i].id===id){pl.value=(PF[T[i].p]||T[i].p)+T[i].n;c("申し込み｜街を入れた");break;}}).catch(function(){});
+})();</script>
 </body></html>

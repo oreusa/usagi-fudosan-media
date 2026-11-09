@@ -299,3 +299,5 @@ try{new MutationObserver(later).observe(document.documentElement,{childList:true
 })();
 /* 11/9 オーナー「申し込みページ作れないの？ hpで送信、俺にメールが届く」→ href="#ml" はお申し込みページ /moushikomi へ（メールソフトは開かない） */
 (function(){function ml(){document.querySelectorAll('a[href="#ml"]').forEach(function(a){a.href="/moushikomi";});}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",ml);else ml();document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest('a[href="#ml"]');if(a){ml();}},true);})();
+/* 11/9 不動産：見た街を覚えておき、お申し込みページの「お家の場所」に先に入れる（入力を1つ減らす） */
+(function(){try{var m=location.pathname.match(/^\/(?:townnotes\/)?machi\/([a-z]+-\d+)/);if(m)sessionStorage.setItem("tn_machi",m[1]);}catch(e){}})();
