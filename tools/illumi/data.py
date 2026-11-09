@@ -40,7 +40,7 @@ ITEMS = [
  ("和歌山","SHIRARAHAMA Light Parade","白浜町｜白良浜","2026-10-29","2027-03-14",True,"https://www.nankishirahama.jp/news/19718/",None),
  ("和歌山","けやきライトパレード","和歌山市｜JR和歌山駅〜和歌山城〜県庁前（約3.5km）","2026-11-21","2027-02-28",True,"https://keyaki-light-parade.jp/",None),
  ("和歌山","貴志川イルミネーション","紀の川市｜平池緑地公園",None,None,True,"https://www.wakayama-kanko.or.jp/features/detail_236.html","12/6〜1/30"),
- ("和歌山","徐福公園ライトアップ","新宮市｜徐福公園",None,None,True,"https://www.shinguu.jp/spots/detail/A0005","12/1〜1/31"),
+ ("和歌山","徐福公園イルミネーション","新宮市｜徐福公園",None,None,True,"https://www.wakayama-kanko.or.jp/features/detail_750.html","12月初旬〜1月末"),
  ("大阪","ほしだ園地 星のブランコ 光の架け橋","交野市｜大阪府民の森 ほしだ園地","2026-10-18","2027-01-11",False,"https://o-wonderforest.com/hoshida/",None),
  # 11/2 夜 抜けゼロの確認で追加（ウォーカープラス関西100件＋ジョルダン府県別73件と照合）
  ("大阪","大阪ステーションシティ Twilight Fantasy 2026 MIRACLE CHRISTMAS","大阪市北区｜大阪ステーションシティ","2026-11-02","2026-12-25",True,"https://osakastationcity.com/event/6459/",None),
