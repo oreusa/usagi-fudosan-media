@@ -209,7 +209,7 @@ html body .card .tn8{{border-radius:99px;padding:4px 10px;font-size:11px;font-we
 .tnb button[aria-pressed=true]{{background:#2B2622;color:#fff}}
 .kmore{{display:block;text-align:right;font-size:12.5px;color:#2B2622;text-decoration:none;margin-top:2px}}
 .none8{{text-align:center;font-size:13px;color:#7A6E66;margin:24px 0}}
-</style><script src="assets/night.js?v=22"></script><script src="assets/menu.js?v=29" defer></script><script src="assets/v2sub.js?v=9" defer></script></head><body{' data-kind="紅葉ライトアップ"' if KO else ""}><div class="wrap">
+</style><script src="assets/night.js?v=22"></script><script src="assets/menu.js?v=30" defer></script><script src="assets/v2sub.js?v=9" defer></script></head><body{' data-kind="紅葉ライトアップ"' if KO else ""}><div class="wrap">
 <div class="head"><img src="assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">{en}</div>
 <h1>{h1a}<span>{h1b}</span></h1>
 <p class="sub">{sub}</p>
