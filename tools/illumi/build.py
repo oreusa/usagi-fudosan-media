@@ -62,7 +62,7 @@ for it in sorted(KOYO, key=key):
             if b0 != a0: f0 += "〜" + (f"{b0.month}/" if b0.month != pm else "") + str(b0.day); pm = b0.month
             out.append(f0)
         d = "開く日：" + "・".join(out)
-    rows = (f'<div class="kv"><span>時間</span>{html.escape(tm)}</div>' if tm else '') + (f'<div class="kv"><span>料金</span>{html.escape(fee)}</div>' if fee else '')
+    rows = (f'<div class="kv"><span>時間</span>{html.escape(tm)}</div>' if tm else '') + (f'<div class="kv"><span>休み</span>{html.escape(nt)}</div>' if nt and e else '') + (f'<div class="kv"><span>料金</span>{html.escape(fee)}</div>' if fee else '')
     if s and not (tm and fee): rows += '<div class="kv"><span>時間</span>時間・料金は公式ページで</div>' if not tm and not fee else ''
     city, spot = m.split("｜")[0], re.sub(r"（.*?）", "", m.split("｜")[-1]).strip()
     q = f"{spot} {city}"
@@ -257,6 +257,6 @@ pages["koyo.html"] = render(PREFS, "koyo.html",
     [("関西おでかけリスト", "odekake"), ("関西の紅葉ライトアップ2026", "koyo.html")], kind="ko")
 for f, h in pages.items():
     open(OUT + f, "w").write(h)
-sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", "odekake", *pages, "tomari.html", "ima.html", "fudosan-list", "chika-kansai", "chika-osaka", *sorted("machi/" + x for x in os.listdir(OUT + "machi") if x.endswith(".html"))])
+sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", "odekake", *pages, "tomari.html", "ima.html", "fudosan-list", "chika-kansai", "chika-osaka", "uru", *sorted("machi/" + x for x in os.listdir(OUT + "machi") if x.endswith(".html"))])
 open(OUT + "sitemap.xml", "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{sm}</urlset>\n')
 print(cnt, {p: len(v) for p, v in cards.items()}, len(pages), "pages")

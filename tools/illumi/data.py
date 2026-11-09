@@ -32,7 +32,7 @@ ITEMS = [
  ("奈良","馬見クリスマス きらめきマルシェ","河合町｜馬見丘陵公園",None,None,True,"https://www.pref.nara.jp/67882.htm","12/20〜12/25"),
  ("奈良","しあわせ回廊 なら瑠璃絵","奈良市｜奈良公園一帯",None,None,True,"https://rurie.jp/","2/8〜2/14（一部有料）"),
  ("滋賀","HIKARIUM 冬のファンタジーガーデン","米原市｜ローザンベリー多和田","2026-10-09","2027-02-14",False,"https://www.illumi.rb-tawada.com/",None),
- ("滋賀","もりやま冬ホタル","守山市｜守山駅前緑地公園ほか",None,None,True,"https://moriyama-cci.or.jp/2025/10/16/fuyuhotaru2025/","11/7〜1/16"),
+ ("滋賀","もりやま冬ホタル","守山市｜守山駅前広場ほか","2026-11-27","2027-01-29",True,"https://moriyama-cci.or.jp/2026/10/22/huyuhotaru2026/",None),  # 11/9 夜#133 公式 17:30〜22:00
  ("滋賀","East Rainbow","東近江市｜八日市駅前ほか",None,None,True,"https://www.higashiomi.net/media/annual_events/eastrainbow","12/20〜2/20"),
  ("滋賀","びわ湖大津館 イルミネーション","大津市｜びわ湖大津館",None,None,False,"https://www.biwako-otsukan.jp/","12/6〜2/1"),
  ("滋賀","ブルーメの丘 ライトアップガーデン","日野町｜滋賀農業公園ブルーメの丘",None,None,False,"https://www.blumenooka.jp/","12/5〜2/23"),
