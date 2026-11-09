@@ -58,8 +58,10 @@ tiles:function(pre){var o=this,h="";o.L.forEach(function(x){if(x[0]===o.cur)retu
     ["TOWN NOTE","tn","/","TOWN NOTE","関西の街のノート"]
   ];
   /* 11/9 オーナーOK（見本4）→ 11/9 12:54 オーナー「不動産だけメニューも色々ちがくない？」→ おでかけと同じ形（タイル6つ／ご相談・お問い合わせ／関連サイト） */
+  /* 11/9 オーナー「これ売る前と業者のやつどこ？」→ 不動産メニューに「家を売る前に」 */
   if(FU)L=[
     ["LIST","flist","/fudosan-list","関西不動産リスト","地価・人口・制度"],
+    ["SELL","uru","/uru","家を売る前に","相場・売り出し価格・大事なこと"],
     ["BUY","fbuy","/sagasu","家を買いたい方へ","住む街の値段と物件"],
     ["FOR PROFESSIONALS","gyosha","/gyosha","業者さま・士業の先生方へ","動かしにくい不動産のご相談"],
     ["-","CONTACT"],
