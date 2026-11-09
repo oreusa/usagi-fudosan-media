@@ -361,6 +361,17 @@ h = h.replace("</body>", FQ + "</body>", 1)
 # 11/6 オーナーOKの見本：2つの街をくらべる
 h = h.replace("</body>", '<script src="/assets/kurabe.js?v=2" defer></script></body>', 1)
 
+# 11/9 20:30 オーナー「何個も同じやつ」「下のやつ見にくくない？」→ 下は「売る人向けの1ブロック（見出し＋ボタン2つ）→ 業者さまは小さな1行 → 関連サイト → FOLLOW と注意書き」。箱の枠はやめて細い線と余白で区切る
+m = re.search(r'<div class="sns"><h2>FOLLOW</h2>(.*?)<div class="cos">.*?</div>\s*</div>\s*(<div class="ft">.*?</div>)(<a class="tnx".*?</a>)', h, flags=re.S)
+assert m, "下の欄が見つからない"
+SELL = ('<section class="sell2"><small>FOR OWNERS</small><h2>お家を売るときに</h2>'
+        '<p>売るか決めていなくても大丈夫です。まず読んで、迷ったらご相談ください。</p>'
+        '<div class="b2"><a href="uru.html" data-k="下｜売る前に読む">売る前に読む<span>相場と大事なこと</span></a>'
+        '<a class="pri" href="moushikomi" data-k="下｜相談する">相談する<span>無料・約1分</span></a></div>'
+        '<a class="gy" href="gyosha" data-k="下｜業者さま・士業の先生方へ">業者さま・士業の先生方へ →</a></section>')
+h = h[:m.start()] + SELL + m.group(3) + '<div class="sns"><h2>FOLLOW</h2>' + m.group(1) + '</div>' + m.group(2) + h[m.end():]
+h = h.replace("</style>", ".sell2{margin:40px 0 0;padding:26px 4px 0;border-top:1px solid #D6D9DE;text-align:center}.sell2 small{font-family:Jost,sans-serif;font-size:10px;letter-spacing:.32em;color:#9C8775}.sell2 h2{font-family:'Shippori Mincho',serif;font-weight:600;font-size:20px;letter-spacing:.1em;margin:6px 0 0;color:#2B2622}.sell2 p{font-size:12.5px;color:#6B6058;line-height:1.8;margin:8px 0 0}.sell2 .b2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:16px 0 0}.sell2 .b2 a{display:flex;flex-direction:column;justify-content:center;min-height:56px;text-decoration:none;font-weight:700;font-size:15px;color:#2B2622;border:1px solid #2B2622;border-radius:10px}.sell2 .b2 a span{font-weight:400;font-size:11px;color:#857A70;margin-top:2px}.sell2 .b2 a.pri{background:#2B2622;color:#fff}.sell2 .b2 a.pri span{color:#D9D2CC}.sell2 a.gy{display:inline-block;margin:16px 0 0;font-size:12.5px;color:#6B6058;text-decoration:underline;text-underline-offset:3px}.sell2+.tnx{margin-top:34px;border:0!important;border-top:1px solid #D6D9DE!important;border-radius:0!important;box-shadow:none!important}\n</style>", 1)
+
 h = h.replace("__NT__", str(len(json.load(open(os.path.join(ROOT, "links/assets/towns.json"), encoding="utf-8")))))
 open(OUT, "w", encoding="utf-8").write(h)
 print("ok", "live" if live else "preview(noindex)", len(FACTS), "cards", len(h), "bytes")
