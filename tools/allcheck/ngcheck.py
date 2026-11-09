@@ -74,7 +74,12 @@ OK_SAME = {"https://hikari-kyoen.com/core/renaissance", "https://www.tsubosaka13
 for f in [os.path.join(root, "index.html")] + sorted(glob.glob(os.path.join(root, "illumination*.html"))) + sorted(glob.glob(os.path.join(root, "koyo*.html"))):
     if not os.path.exists(f):
         continue
-    hs = re.findall(r'<a class="card[^"]*"[^>]*?href="([^"]+)"', open(f, errors="ignore").read())
+    _t = open(f, errors="ignore").read()
+    # 紅葉の名所（card ms）は出典の一覧ページを共有することがあり、昼の名所と夜のライトアップで同じ寺も出るので、名所どうしの名前の重なりだけ見る
+    hs = re.findall(r'<a class="card(?![^"]* ms)[^"]*"[^>]*?href="([^"]+)"', _t)
+    for u, n in __import__("collections").Counter(re.findall(r'<a class="card[^"]* ms"[^>]*?data-map="([^"]+)"', _t)).items():
+        if n > 1:
+            bad.append(f"{os.path.relpath(f, root)}：同じ名所が{n}枚：{u}")
     for u, n in __import__("collections").Counter(hs).items():
         if n > 1 and u not in OK_SAME:
             bad.append(f"{os.path.relpath(f, root)}：同じ催しが{n}枚：{u}")

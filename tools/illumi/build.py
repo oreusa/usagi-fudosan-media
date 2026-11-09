@@ -2,7 +2,7 @@
 python3 tools/illumi/build.py → links/illumination.html"""
 import datetime, html, json, sys, os, re, urllib.parse, hashlib
 sys.path.insert(0, os.path.dirname(__file__))
-from data import ITEMS, KOYO
+from data import ITEMS, KOYO, MEISHO
 TODAY = datetime.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else datetime.date.today()
 PREFS = ["大阪","京都","兵庫","奈良","滋賀","和歌山"]
 PC = {"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"}
@@ -73,6 +73,30 @@ for it in sorted(KOYO, key=key):
         ev = {"@type":"Event","name":n,"startDate":s,"location":{"@type":"Place","name":m.split("｜")[-1],"address":f"{p}{'府' if p in ('大阪','京都') else '県'}{m.split('｜')[0]}"},"url":url,"eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled"}
         if e: ev["endDate"] = e
         kld[p].append(ev)
+# 11/9 紅葉の名所（昼）。見頃の目安から「見頃の時期です／あと◯日」を毎日つけ直す
+def prange(t):
+    m = re.findall(r"(\d+)月(上旬|初旬|中旬|下旬|末)", t)
+    if not m: return None
+    def d(mo, k, end):
+        mo = int(mo); y = TODAY.year if mo >= 6 or TODAY.month < 6 else TODAY.year + 1
+        a, b = {"上旬":(1,10),"初旬":(1,10),"中旬":(11,20),"下旬":(21,0),"末":(21,0)}[k]
+        if end and b == 0: return (datetime.date(y + mo // 12, mo % 12 + 1, 1) - datetime.timedelta(days=1))
+        return datetime.date(y, mo, b if end else a)
+    return d(*m[0], False), d(*m[-1], True)
+mcards = {p: [] for p in PREFS}; mev = {p: [] for p in PREFS}
+for p, n, city, peak, fee, url, note in sorted(MEISHO, key=lambda x: (prange(x[3]) or (datetime.date(2099,1,1),))[0]):
+    r = prange(peak)
+    if r and r[1] < TODAY: continue  # 見頃が過ぎた所は外す（来年また出す）
+    if r and r[0] <= TODAY: tg = '<span class="st on">見頃の時期です</span>'
+    elif r: tg = f'<span class="st soon">見頃の時期まで あと{(r[0] - TODAY).days}日</span>'
+    else: tg = '<span class="st pre">見頃は公式で</span>'
+    if fee.startswith("無料"): tg += '<span class="fr">無料</span>'
+    rows = f'<div class="kv"><span>見頃</span>{html.escape(peak)}</div>' + (f'<div class="kv"><span>料金</span>{html.escape(fee)}</div>' if fee and not fee.startswith("無料") else "") + (f'<div class="kv"><span>メモ</span>{html.escape(note)}</div>' if note else "")
+    q = f"{re.sub(r'（.*?）', '', n)} {city}"
+    gm = "https://www.google.com/maps/search/?api=1&query=" + urllib.parse.quote(q)
+    mcards[p].append(f'<div class="it" data-pref="{p}"><a class="card ky ms" data-pref="{p}" data-map="{html.escape(q)}" href="{url}" target="_blank" rel="noopener"><div class="tg">{tg}</div><div class="t">{html.escape(n)}</div><div class="m">{html.escape(city)}</div>{rows}<div class="go">→</div></a><a class="mp" href="{gm}" target="_blank" rel="noopener" data-k="地図｜{html.escape(n)}">地図</a></div>')
+    mev[p].append(n)
+MNOTE = '<p class="mnote">見頃は各公式ページ（施設・市・観光協会）の目安です。色づきは年によってずれるので、お出かけ前にリンク先でご確認ください。</p>'
 SLUG = {"大阪":"osaka","京都":"kyoto","兵庫":"hyogo","奈良":"nara","滋賀":"shiga","和歌山":"wakayama"}
 def fu(p): return p + ("府" if p in ("大阪","京都") else "県")
 BASE = "https://townnote.pages.dev/"
@@ -128,13 +152,18 @@ def render(sel, fname, title, desc, ogt, en, h1a, h1b, sub, links, crumb, kind="
     secs = ""; KO = kind == "ko"; LB = "紅葉ライトアップ" if KO else "イルミネーション"
     for p in sel:
         if KO:
+            if mcards[p]:
+                secs += f'<section id="{p}-meisho" class="ps" style="--c:{PC[p]}"><h2>{fu(p)}の紅葉の名所<small>{len(mcards[p])}か所</small></h2>' + (MNOTE if len(sel) == 1 or p == sel[0] else "") + "".join(mcards[p]) + '</section>'
+            if not kcards[p]: continue
             secs += f'<section id="{p}" class="ps" style="--c:{PC[p]}"><h2>{fu(p)}の紅葉ライトアップ<small>{len(kcards[p])}件</small></h2>' + "".join(kcards[p]) + '</section>'
             continue
         secs += f'<section id="{p}" class="ps" style="--c:{PC[p]}"><h2>{fu(p)}のイルミネーション<small>{len(cards[p])}件</small></h2>' + "".join(cards[p]) + '</section>'
         if len(sel) == 1 and kcards[p]:
             secs += f'<section id="{p}-koyo" class="ps" style="--c:{PC[p]}"><h2>{fu(p)}の紅葉ライトアップ<small>{len(kcards[p])}件</small></h2>' + "".join(kcards[p]) + '<a class="kmore" href="/koyo" data-k="紅葉ライトアップを関西ぜんぶ見る">関西ぜんぶの紅葉ライトアップを見る →</a></section>'
-    sw = f'<nav class="sw" aria-label="見るもの"><a href="{"/illumination" if len(sel) > 1 else "/illumination-" + SLUG[sel[0]]}"{"" if KO else " aria-current=page"}>イルミネーション</a><a href="{"/koyo" if len(sel) > 1 or not kcards[sel[0]] else "/koyo-" + SLUG[sel[0]]}"{" aria-current=page" if KO else ""}>紅葉ライトアップ</a></nav>'
+    sw = f'<nav class="sw" aria-label="見るもの"><a href="{"/illumination" if len(sel) > 1 else "/illumination-" + SLUG[sel[0]]}"{"" if KO else " aria-current=page"}>イルミネーション</a><a href="{"/koyo" if len(sel) > 1 or not kcards[sel[0]] else "/koyo-" + SLUG[sel[0]]}"{" aria-current=page" if KO else ""}>紅葉</a></nav>'
     nav = ('<div class="flt" id="flt"><button class="on" data-p="すべて">すべて</button>' + "".join(f'<button data-p="{p}" style="--pc:{PC[p]}">{p}</button>' for p in PREFS) + '</div>') if len(sel) > 1 else ""
+    if KO and len(sel) == 1 and mcards[sel[0]] and kcards[sel[0]]:
+        nav += f'<nav class="sw" aria-label="昼と夜"><a href="#{sel[0]}-meisho" data-k="昼の名所">昼の名所 {len(mcards[sel[0]])}</a><a href="#{sel[0]}" data-k="夜のライトアップ">夜のライトアップ {len(kcards[sel[0]])}</a></nav>'
     nav += '<div class="tnb"><button id="tnb" aria-pressed="false">今夜やっている所だけ</button></div>'
     fh, fj = kfaq(sel) if KO else faq(sel)
     url = BASE + fname.replace(".html", "")  # workers.dev は .html を外したアドレスへ転送するので、正しいアドレスはこちら
@@ -202,6 +231,7 @@ html body .it .mp{{left:18px;bottom:21px}}html body .it>.yk{{left:72px;bottom:21
 .sw{{display:flex;margin:20px 0 0;border:1px solid #D4D4D4;border-radius:99px;padding:3px;background:#fff}}
 .sw a{{flex:1;text-align:center;padding:9px 0;border-radius:99px;font-size:13.5px;font-weight:700;letter-spacing:.06em;color:#6B6058;text-decoration:none}}
 .sw a[aria-current]{{background:#2B2622;color:#fff}}
+.mnote{{font-size:12px;line-height:1.8;color:#6E655E;margin:-2px 4px 12px}}
 .card .kv{{display:flex;gap:10px;font-size:13px;line-height:1.6;color:#3A3A3A;margin-top:3px}}
 .card .kv span{{flex:none;width:4.6em;font-size:11px;color:#8C7B6E;letter-spacing:.06em;padding-top:1px}}
 html body .card .tn8{{border-radius:99px;padding:4px 10px;font-size:11px;font-weight:700;line-height:1.2;background:#2B2622;color:#fff}}
@@ -248,24 +278,31 @@ for p in PREFS:
         f"{p}のイルミネーション2026-2027 日程一覧", f"{SLUG[p].upper()} ILLUMINATION", f"{p}のイルミネーション", "2026 - 2027 日程一覧",
         f"{fu(p)}の{n}か所を、日程・場所・<br>無料かどうかでまとめました。", plinks(p),
         [("関西おでかけリスト", "odekake"), ("関西イルミネーション2026-2027", "illumination.html"), (f"{p}のイルミネーション", f"illumination-{SLUG[p]}.html")])
-kc = sum(len(v) for v in kcards.values())
+kc = sum(len(v) for v in kcards.values()); mc = sum(len(v) for v in mcards.values())
 pages["koyo.html"] = render(PREFS, "koyo.html",
-    "関西の紅葉ライトアップ2026｜京都・大阪・兵庫・奈良・滋賀・和歌山の日程・時間・料金",
-    f"関西の紅葉ライトアップ{kc}か所を、府県ごとに日程・時間・料金で一覧にしました。永観堂、高台寺、北野天満宮、石山寺など。今夜やっている所だけも見られます。{upd}更新。",
-    "関西の紅葉ライトアップ2026 日程・時間・料金", "KANSAI AUTUMN LIGHT-UP", "関西の紅葉ライトアップ", "2026 日程・時間・料金",
-    f"京都・大阪・兵庫・奈良・滋賀・和歌山の{kc}か所を、<br>日程・時間・料金でまとめました。", plinks(None, "koyo"),
-    [("関西おでかけリスト", "odekake"), ("関西の紅葉ライトアップ2026", "koyo.html")], kind="ko")
+    f"関西の紅葉2026｜名所{mc}か所の見頃とライトアップ{kc}か所（京都・大阪・兵庫・奈良・滋賀・和歌山）",
+    f"関西の紅葉の名所{mc}か所の見頃と、紅葉ライトアップ{kc}か所の日程・時間・料金を府県ごとに一覧にしました。永観堂、高台寺、北野天満宮、石山寺など。今夜やっている所だけも見られます。{upd}更新。",
+    "関西の紅葉2026 名所の見頃とライトアップ", "KANSAI AUTUMN LEAVES", "関西の紅葉", "2026 名所の見頃とライトアップ",
+    f"京都・大阪・兵庫・奈良・滋賀・和歌山の名所{mc}か所と、<br>夜のライトアップ{kc}か所をまとめました。", plinks(None, "koyo"),
+    [("関西おでかけリスト", "odekake"), ("関西の紅葉2026", "koyo.html")], kind="ko")
 # 11/9 収益化：「京都 紅葉 ライトアップ」など府県で探す人が多いので、府県ごとの紅葉ページも作る（件数0の府県は作らない）
 for p in PREFS:
-    n = len(kcards[p])
-    if not n: continue
-    nm = "、".join(x[0] for x in kev[p][:3])
-    pages[f"koyo-{SLUG[p]}.html"] = render([p], f"koyo-{SLUG[p]}.html",
-        f"{p}の紅葉ライトアップ2026｜日程・時間・料金の{n}か所一覧",
-        f"{fu(p)}の紅葉ライトアップ{n}か所を、日程・時間・料金で一覧にしました。{nm}など。今夜やっている所だけも見られます。{upd}更新。",
-        f"{p}の紅葉ライトアップ2026 日程・時間・料金", f"{SLUG[p].upper()} AUTUMN LIGHT-UP", f"{p}の紅葉ライトアップ", "2026 日程・時間・料金",
-        f"{fu(p)}の{n}か所を、日程・時間・<br>料金でまとめました。", plinks(p, "koyo"),
-        [("関西おでかけリスト", "odekake"), ("関西の紅葉ライトアップ2026", "koyo.html"), (f"{p}の紅葉ライトアップ", f"koyo-{SLUG[p]}.html")], kind="ko")
+    n = len(kcards[p]); mn = len(mcards[p])
+    if not n and not mn: continue
+    nm = "、".join((mev[p] + [x[0] for x in kev[p]])[:3])
+    if mn:  # 11/9 名所がある府県は「紅葉」で探す人に向けたタイトル
+        t1 = f"{p}の紅葉2026｜名所{mn}か所の見頃" + (f"とライトアップ{n}か所" if n else "")
+        d1 = f"{fu(p)}の紅葉の名所{mn}か所を見頃の近い順に、" + (f"夜の紅葉ライトアップ{n}か所を日程・時間・料金で" if n else "") + f"まとめました。{nm}など。見頃は各公式ページの目安です。{upd}更新。"
+        h1a, h1b = f"{p}の紅葉", "2026 名所の見頃" + ("とライトアップ" if n else "")
+        sb = f"{fu(p)}の紅葉の名所{mn}か所" + (f"と、<br>夜のライトアップ{n}か所" if n else "を、<br>見頃の近い順に") + "をまとめました。"
+    else:
+        t1 = f"{p}の紅葉ライトアップ2026｜日程・時間・料金の{n}か所一覧"
+        d1 = f"{fu(p)}の紅葉ライトアップ{n}か所を、日程・時間・料金で一覧にしました。{nm}など。今夜やっている所だけも見られます。{upd}更新。"
+        h1a, h1b = f"{p}の紅葉ライトアップ", "2026 日程・時間・料金"
+        sb = f"{fu(p)}の{n}か所を、日程・時間・<br>料金でまとめました。"
+    pages[f"koyo-{SLUG[p]}.html"] = render([p], f"koyo-{SLUG[p]}.html", t1, d1,
+        t1.replace("｜", " "), f"{SLUG[p].upper()} AUTUMN LEAVES" if mn else f"{SLUG[p].upper()} AUTUMN LIGHT-UP", h1a, h1b, sb, plinks(p, "koyo"),
+        [("関西おでかけリスト", "odekake"), ("関西の紅葉2026", "koyo.html"), (h1a, f"koyo-{SLUG[p]}.html")], kind="ko")
 for f, h in pages.items():
     open(OUT + f, "w").write(h)
 sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", "odekake", *pages, "tomari.html", "ima.html", "fudosan-list", "chika-kansai", "chika-osaka", "uru", "sagasu", *sorted(x[:-5] for x in os.listdir(OUT) if x.startswith("gyosha") and x.endswith(".html")), *sorted("machi/" + x for x in os.listdir(OUT + "machi") if x.endswith(".html"))])

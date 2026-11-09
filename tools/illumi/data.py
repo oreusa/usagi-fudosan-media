@@ -134,3 +134,32 @@ KOYO = [
  ("奈良","吉野山 紅葉ライトアップ","吉野町｜吉野山（下千本公園・金峯山寺ほか）","2026-10-23","2026-11-30",None,"16:30〜22:00","公式で確認","https://yoshino-kankou.jp/autumn-foliage/","料金は公式に記載なし"),
  ("大阪","箕面の森の夜さんぽ（箕面公園 滝道ライトアップ）","箕面市｜明治の森箕面国定公園 滝道",None,None,None,"日程は公式で","公式で確認","https://www.city.minoh.lg.jp/brandsenryaku/event/momijimatsuri2025.html","昨年 11/15〜12/7・2026年は未発表"),
 ]
+
+# 11/9 オーナー OK「紅葉を名所と見頃に広げる」：昼に見る紅葉の名所。見頃は公式ページ（施設・市・大阪観光局など）の書き方のまま。
+# 他サイト（ウォーカープラス・tenki.jp など）の値は写さない。(府県, 名前, 市区町村, 見頃, 料金, 公式URL, メモ)
+MEISHO = [
+ ("大阪","箕面公園（箕面大滝）","箕面市","11月中旬〜12月初旬","","https://www.mino-park.jp/koyo/","園内に駐車場なし。周りの道は混みやすい"),
+ ("大阪","勝尾寺","箕面市","11月上旬〜12月上旬","高校生以上500円・小中学生400円","https://osaka-info.jp/special/events-maple-autumn/","夜のライトアップもあり"),
+ ("大阪","万博記念公園","吹田市","11月中旬〜11月下旬","大人450円・中学生以下無料","https://www.expo70-park.jp/event/77753/","紅葉まつり 11/7〜11/29"),
+ ("大阪","大阪城公園（西ノ丸・モミジ谷）","大阪市中央区","11月中旬〜11月下旬","","https://www.osakacastlepark.jp/autumnfes/map/","イチョウは11月下旬〜12月上旬"),
+ ("大阪","摂津峡（もみじ谷）","高槻市","11月中旬","","https://www.citybus.city.takatsuki.osaka.jp/event/detail/2018112701003/",""),
+ ("大阪","牛滝山 大威徳寺","岸和田市","11月中旬〜11月下旬","無料","https://osaka-info.jp/special/events-maple-autumn/",""),
+ ("大阪","大仙公園 日本庭園","堺市堺区","11月中旬〜12月上旬","大人200円・小中学生100円","https://www.sakai-tcb.or.jp/spot/detail/125","夜の特別開園「紅葉の灯」もあり"),
+ ("大阪","ほしだ園地","交野市","11月中旬〜12月上旬","無料","https://osaka-info.jp/special/events-maple-autumn/","吊り橋「星のブランコ」"),
+ ("大阪","観心寺","河内長野市","11月中旬〜11月下旬","大人300円・小中学生100円","https://osaka-info.jp/special/events-maple-autumn/","国宝の金堂"),
+ ("大阪","服部緑地","豊中市","11月下旬〜12月中旬","無料（植物園は大人220円）","https://osaka-info.jp/special/events-maple-autumn/",""),
+ ("滋賀","永源寺","東近江市","11月上旬〜下旬（中旬が一番）","大人600円","https://eigenji-t.jp/contact/","夜のライトアップもあり"),
+ ("滋賀","百済寺（湖東三山）","東近江市","11月上旬〜12月上旬","","https://www.hyakusaiji.jp/",""),
+ ("滋賀","石山寺","大津市","11月中旬〜12月上旬","大人600円","https://www.ishiyamadera.or.jp/flower/autumn","夜の「あたら夜もみじ」11/13〜11/29"),
+("京都","東福寺","京都市東山区","11月中旬〜11月下旬","通天橋 大人1,000円（11/14〜12/6）","https://tofukuji.jp/guide/","通天橋の紅葉"),
+ ("京都","永観堂（禅林寺）","京都市左京区","11月中旬〜11月下旬","","https://www.eikando.or.jp/lp/2026/index.html","夜間拝観 11/20〜12/6"),
+ ("京都","清水寺","京都市東山区","11月下旬〜12月上旬","","https://www.kiyomizudera.or.jp/",""),
+ ("京都","天龍寺","京都市右京区","11月中旬〜12月上旬","","https://www.tenryuji.com/","嵐山"),
+ ("京都","南禅寺","京都市左京区","11月中旬〜12月上旬","","https://nanzenji.or.jp/",""),
+ ("京都","北野天満宮 もみじ苑","京都市上京区","11月中旬〜12月上旬","","https://kitanotenmangu.or.jp/","夜のライトアップもあり"),
+ ("京都","高台寺","京都市東山区","11月中旬〜12月上旬","","https://www.kodaiji.com/","秋の夜間拝観あり"),
+ ("京都","毘沙門堂","京都市山科区","11月中旬〜12月上旬","","https://www.kyoto-kankou.or.jp/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Mzg1NzAsInB1ciI6ImJsb2JfaWQifX0=--397e7cc41940b4193b458ec691899f40a63f5cb5/%E7%B4%85%E8%91%89%E3%81%A0%E3%82%88%E3%82%8A.pdf",""),
+ ("京都","光明寺","長岡京市","11月中旬〜12月初旬","大人1,000円（特別拝観の期間）","https://www.kyoto-kankou.or.jp/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Mzg1NzAsInB1ciI6ImJsb2JfaWQifX0=--397e7cc41940b4193b458ec691899f40a63f5cb5/%E7%B4%85%E8%91%89%E3%81%A0%E3%82%88%E3%82%8A.pdf",""),
+ ("京都","貴船神社","京都市左京区","11月上旬〜11月下旬","","https://kifunejinja.jp/",""),
+
+]
