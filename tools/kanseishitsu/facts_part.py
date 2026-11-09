@@ -45,6 +45,11 @@ function factsHTML(rep,todayStr){
     const lc=f[k];if(!lc)continue;
     if(!lc.links){out.push(row(nm,'<span class="ng">記録なし</span>'));continue}
     out.push(row(nm,`${lc.ng&&lc.ng.length?`<span class="ng">開けない ${lc.ng.length}件</span>`:'<span class="ok">全部開けた</span>'}　<span class="num">${lc.links}</span>件　${fresh(lc.at)?`<span class="sub">${E(lc.at)}</span>`:`<span class="ng">点検日 ${E(lc.at||"不明")}</span>`}`,lc.ng))}
+  const tk=f.toko;
+  if(tk&&tk.threads){
+    const one=c=>{if(!c||c.week==null)return "";const dn=c.prev!=null&&c.week<c.prev;return `${E(c.name)}：この7日 <span class="num ${dn?"ng":"ok"}">${c.week}</span>（前の7日 ${c.prev??"—"}${dn?" ↓":" ↑"}）・学んだ型を使った投稿 <span class="num">${c.kata??"—"}</span> / 使わない投稿 <span class="num">${c.other??"—"}</span>`};
+    out.push(row("投稿の学習（関西）",`${one(tk.threads)}<br>${one(tk.twitter)}<br><span class="sub">1本あたりの閲覧の真ん中（${E(tk.day)}まで・${tk.n}本）</span>`));
+  } else out.push(row("投稿の学習（関西）",'<span class="ng">記録なし</span>'));
   const g=f.gakushu||{};const rows=g.rows||[];
   out.push(row("学習",rows.length?`ミス <span class="num">${rows.length}</span>件 → 仕組みにした <span class="num ${g.open?"":"ok"}">${g.made}</span>件・まだ <span class="num ${g.open?"ng":""}">${g.open}</span>件`:'<span class="ng">帳面が空です</span>'));
   if(rows.length)out.push(`<details class="fmore"><summary>ミス → 仕組みの帳面（直近7日）</summary><ul class="gk">${rows.slice().reverse().map(r=>`<li><span class="w">${E(r.date)}　${E(r.site)}　${E(r.what)}</span><span class="m">直したこと：${E(r.fix)}</span><span class="m">次から：${E(r.how||"")}</span><span class="c ${r.check?"y":"n"}">${r.check?"機械で点検："+E(r.check):"まだ仕組みになっていません"}</span></li>`).join("")}</ul></details>`);
