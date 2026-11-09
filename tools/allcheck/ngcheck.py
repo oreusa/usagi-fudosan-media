@@ -68,6 +68,16 @@ if _aspf:
             if key and key not in seen:
                 seen.add(key)
                 bad.append(key)
+# 11/9 おでかけ「高照らすみやこ」が名前違いで2枚あった（リンク点検では見つかっていたのに残った）
+# → 1つのページで、同じURLのカードが2枚以上ある物は赤にする（合同の催しは OK_SAME に足す）。
+OK_SAME = {"https://hikari-kyoen.com/core/renaissance", "https://www.tsubosaka1300.or.jp/news130.html"}
+for f in [os.path.join(root, "index.html")] + sorted(glob.glob(os.path.join(root, "illumination*.html"))) + sorted(glob.glob(os.path.join(root, "koyo*.html"))):
+    if not os.path.exists(f):
+        continue
+    hs = re.findall(r'<a class="card[^"]*"[^>]*?href="([^"]+)"', open(f, errors="ignore").read())
+    for u, n in __import__("collections").Counter(hs).items():
+        if n > 1 and u not in OK_SAME:
+            bad.append(f"{os.path.relpath(f, root)}：同じ催しが{n}枚：{u}")
 for b in bad[:80]:
     print("×", b)
 print(f"ngcheck: {len(bad)} 件" if bad else "ngcheck: なし")
