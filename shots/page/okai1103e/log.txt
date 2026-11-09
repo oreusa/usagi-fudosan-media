@@ -1,4 +1,0 @@
-0 くらべた物 imgs=0 broken=0
-1 1個あたり imgs=0 broken=0
-2 値下がり imgs=0 broken=0
-3 セール imgs=0 broken=0
