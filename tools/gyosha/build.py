@@ -155,7 +155,7 @@ f.addEventListener("submit",function(e){e.preventDefault();er.textContent="";
    try{if(localStorage.getItem("usagi_owner")!=="1"){navigator.sendBeacon&&navigator.sendBeacon("/c",JSON.stringify({k:"業者さま｜送信"}))}}catch(x){}}
   else{sb.disabled=false;sb.textContent="送信する";er.textContent="送れませんでした。時間をおいて、もう一度お試しください"}});
 });
-try{if(localStorage.getItem("usagi_owner")!=="1")navigator.sendBeacon&&navigator.sendBeacon("/c",JSON.stringify({k:"表示："+document.title.split("｜")[0]}))}catch(x){}
+try{if(localStorage.getItem("usagi_owner")!=="1")navigator.sendBeacon&&(navigator.sendBeacon("/c",JSON.stringify({k:"表示："+document.title.split("｜")[0]+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":"")})),navigator.sendBeacon("/c",JSON.stringify({k:"表示：業者さまページ"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":"")})))}catch(x){}
 })();</script>""".replace("__REINS__", REINS_NAME)
 
 PROMISE = """<section class="s3"><div class="sn">OUR PROMISE</div><h2>ご紹介くださる方へのお約束</h2><ul class="gl">

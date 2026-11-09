@@ -38,6 +38,9 @@ jobs:
       - name: rebuild 泊まりで行くおでかけ
         # 10/31 宿とカードの新しい一覧で毎朝作り直す（終わったおでかけは消える）
         run: python3 tools/tomari/build.py "$(TZ=Asia/Tokyo date +%F)"
+      - name: sitemap dates
+        # 11/9 lastmod を「中身が変わった日」に（毎日すべて今日だと Google が日付を信じなくなる）
+        run: python3 tools/sitemap_dates.py "$(TZ=Asia/Tokyo date +%F)"
       - name: link check
         # 10/31 毎朝、リストとイルミのカードのリンクが開けるか・別の催しに同じURLが付いていないかを stats/linkcheck.md に（19:47 の点検が直す）
         run: python3 tools/linkcheck.py || true
@@ -45,5 +48,5 @@ jobs:
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/link.json stats/link-30.json links/illumination*.html links/koyo*.html links/index.html links/odekake-*.html links/o links/sitemap.xml links/kansai-yado.json links/tomari.html stats/linkcheck.md
+          git add stats/link.json stats/link-30.json links/illumination*.html links/koyo*.html links/index.html links/odekake-*.html links/o links/sitemap.xml stats/sitemap-dates.json links/kansai-yado.json links/tomari.html stats/linkcheck.md
           git diff --cached --quiet || (git commit -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)" && git pull --rebase -q && git push)

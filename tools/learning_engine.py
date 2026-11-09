@@ -19,7 +19,9 @@
   まだ試していない new は、楽観的な事前分布で抽出し、明日試す2つ（policy.ideas_try）を選ぶ。新しいものほど一度は必ず試される。
 
 点数の決め方:
-  score = log((reach + 1) / (その媒体の中央値 + 1))   0 が「ふつう」、+0.69 で2倍、-0.69 で半分
+  score = log((サイトに来た数 + 1) / (その媒体の中央値 + 1))   0 が「ふつう」、+0.69 で2倍、-0.69 で半分
+    （11/9〜 rows の ref＝投稿URLの ?f= の印。stats/link-30.json の「来訪：SNS｜印」から数える。
+      印のある投稿が4本未満の媒体は、今までどおり reach（閲覧）で点数を付ける。閲覧の点数は reach_score に残す）
   X は表示（impressions）、Threads は閲覧（views）。送信から24時間たっていない投稿は使わない。
   事前分布 N(0, 0.5^2)。分散は観測値から（最低0.2）。P(良い)＝ふつうより上である確率。
 """
@@ -38,6 +40,17 @@ OSAKA_AREAS = ["大阪市北区", "大阪市都島区", "大阪市福島区", "�
                "大阪市平野区", "大阪市西成区", "堺市", "豊中市", "吹田市", "高槻市", "茨木市", "枚方市", "寝屋川市", "東大阪市", "八尾市",
                "岸和田市", "和泉市", "箕面市", "池田市", "守口市", "門真市", "摂津市", "松原市", "羽曳野市", "富田林市", "河内長野市",
                "泉佐野市", "大東市", "交野市", "藤井寺市", "高石市", "泉大津市"]
+
+
+def site_visits(path=None):
+    """stats/link-30.json の「来訪：SNS｜<印>」を {印: 数} に（無ければ空）"""
+    import os
+    path = path or os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "stats", "link-30.json")
+    try:
+        t = json.load(open(path, encoding="utf-8")).get("total", {})
+    except Exception:
+        return {}
+    return {k.split("｜", 1)[1]: v for k, v in t.items() if k.startswith("来訪：SNS｜")}
 
 
 def lenb(n):
@@ -121,12 +134,27 @@ def judge_ideas(rows, ideas, today, rnd):
 def run(rows, hyps, today, ideas=None):
     now = datetime.datetime.strptime(today, "%Y-%m-%d") + datetime.timedelta(hours=1)
     rows = prepare(rows, now)
-    med = {}
+    # 11/9 オーナー「どんどん良くしないと人が来ない」→ 点数の元を「閲覧」から「サイトに来た数」に。
+    # 投稿のURLに ?f=<投稿の印> を付け、ページが「来訪：SNS｜<印>」を数える。印のある投稿が4本以上ある媒体はそれで点数、
+    # 無い媒体は今までどおり閲覧で。閲覧の点数は reach_score として参考に残す
+    visits = site_visits()
+    for r in rows:
+        if r.get("ref"):
+            r["visits"] = visits.get(str(r["ref"]), 0)
+    med, basis = {}, {}
     for ch in ("twitter", "threads"):
         v = [r["reach"] for r in rows if r["ch"] == ch]
         med[ch] = statistics.median(v) if v else 0
+        vv = [r["visits"] for r in rows if r["ch"] == ch and "visits" in r]
+        basis[ch] = "サイトに来た数" if len(vv) >= 4 else "閲覧"
+        med[ch + "_visits"] = statistics.median(vv) if vv else 0
     for r in rows:
-        r["score"] = math.log((r["reach"] + 1) / (med[r["ch"]] + 1))
+        r["reach_score"] = math.log((r["reach"] + 1) / (med[r["ch"]] + 1))
+        if basis[r["ch"]] == "サイトに来た数":
+            r["score"] = math.log((r.get("visits", 0) + 1) / (med[r["ch"] + "_visits"] + 1)) if "visits" in r else None
+        else:
+            r["score"] = r["reach_score"]
+    rows = [r for r in rows if r["score"] is not None]
 
     arms = []
     for ch in ("all", "twitter", "threads"):
@@ -208,7 +236,7 @@ def run(rows, hyps, today, ideas=None):
     ideas_out, try_ids = judge_ideas(rows, ideas or [], today, rnd)
     policy["ideas_try"] = try_ids
     policy["ideas_adopted"] = [i["id"] for i in ideas_out if i.get("status") == "adopted"]
-    return {"median": med, "n": len(rows), "arms": arms, "policy": policy, "hypotheses": judged, "ideas": ideas_out}
+    return {"median": med, "basis": basis, "n": len(rows), "arms": arms, "policy": policy, "hypotheses": judged, "ideas": ideas_out}
 
 
 if __name__ == "__main__":
