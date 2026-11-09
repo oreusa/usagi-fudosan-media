@@ -145,6 +145,15 @@ def gakushu(days=7):
     return {"rows": rows[-30:], "made": made, "open": len(rows) - made}
 
 
+def hp():
+    """stats/hp-learning.json（ページ型ごとの外から来た数・増やす型・直す型）"""
+    p = os.path.join(ROOT, "stats", "hp-learning.json")
+    try:
+        return json.load(open(p, encoding="utf-8"))
+    except Exception:
+        return {}
+
+
 def main():
     import argparse
     ap = argparse.ArgumentParser()
@@ -153,7 +162,7 @@ def main():
     a = ap.parse_args()
     now = datetime.datetime.now(JST)
     facts = {"made_at": now.strftime("%Y-%m-%dT%H:%M+09:00"), "allcheck": allcheck(), "linkcheck": linkcheck(), "linkcheck_life": linkcheck_life(),
-             "gakushu": gakushu(), "toko": toko(a.days, a.engine)}
+             "gakushu": gakushu(), "toko": toko(a.days, a.engine), "hp": hp()}
     json.dump({"date": now.date().isoformat(), "facts": facts}, sys.stdout, ensure_ascii=False, indent=1)
 
 
