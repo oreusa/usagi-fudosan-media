@@ -45,5 +45,5 @@ jobs:
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/link.json stats/link-30.json links/illumination*.html links/koyo.html links/index.html links/odekake-*.html links/o links/sitemap.xml links/kansai-yado.json links/tomari.html stats/linkcheck.md
+          git add stats/link.json stats/link-30.json links/illumination*.html links/koyo*.html links/index.html links/odekake-*.html links/o links/sitemap.xml links/kansai-yado.json links/tomari.html stats/linkcheck.md
           git diff --cached --quiet || (git commit -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)" && git pull --rebase -q && git push)

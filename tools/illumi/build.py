@@ -133,7 +133,7 @@ def render(sel, fname, title, desc, ogt, en, h1a, h1b, sub, links, crumb, kind="
         secs += f'<section id="{p}" class="ps" style="--c:{PC[p]}"><h2>{fu(p)}のイルミネーション<small>{len(cards[p])}件</small></h2>' + "".join(cards[p]) + '</section>'
         if len(sel) == 1 and kcards[p]:
             secs += f'<section id="{p}-koyo" class="ps" style="--c:{PC[p]}"><h2>{fu(p)}の紅葉ライトアップ<small>{len(kcards[p])}件</small></h2>' + "".join(kcards[p]) + '<a class="kmore" href="/koyo" data-k="紅葉ライトアップを関西ぜんぶ見る">関西ぜんぶの紅葉ライトアップを見る →</a></section>'
-    sw = f'<nav class="sw" aria-label="見るもの"><a href="{"/illumination" if len(sel) > 1 or KO else "/illumination-" + SLUG[sel[0]]}"{"" if KO else " aria-current=page"}>イルミネーション</a><a href="/koyo"{" aria-current=page" if KO else ""}>紅葉ライトアップ</a></nav>'
+    sw = f'<nav class="sw" aria-label="見るもの"><a href="{"/illumination" if len(sel) > 1 else "/illumination-" + SLUG[sel[0]]}"{"" if KO else " aria-current=page"}>イルミネーション</a><a href="{"/koyo" if len(sel) > 1 or not kcards[sel[0]] else "/koyo-" + SLUG[sel[0]]}"{" aria-current=page" if KO else ""}>紅葉ライトアップ</a></nav>'
     nav = ('<div class="flt" id="flt"><button class="on" data-p="すべて">すべて</button>' + "".join(f'<button data-p="{p}" style="--pc:{PC[p]}">{p}</button>' for p in PREFS) + '</div>') if len(sel) > 1 else ""
     nav += '<div class="tnb"><button id="tnb" aria-pressed="false">今夜やっている所だけ</button></div>'
     fh, fj = kfaq(sel) if KO else faq(sel)
@@ -230,9 +230,9 @@ html body .card .tn8{{border-radius:99px;padding:4px 10px;font-size:11px;font-we
 </body></html>'''
 OUT = os.path.join(os.path.dirname(__file__), "../../links/")
 cnt = sum(len(v) for v in cards.values())
-def plinks(cur):
-    a = [f'<a href="illumination">関西ぜんぶ</a>'] if cur else []
-    return '<div class="plh">府県ごとに見る</div>' + "".join(a) + "".join(f'<a href="illumination-{SLUG[p]}" style="--pc:{PC[p]}"{" aria-current=page" if p == cur else ""}>{fu(p)}</a>' for p in PREFS)
+def plinks(cur, b="illumination"):
+    a = [f'<a href="{b}">関西ぜんぶ</a>'] if cur else []
+    return '<div class="plh">府県ごとに見る</div>' + "".join(a) + "".join(f'<a href="{b}-{SLUG[p]}" style="--pc:{PC[p]}"{" aria-current=page" if p == cur else ""}>{fu(p)}</a>' for p in PREFS if b == "illumination" or kcards[p])
 pages = {"illumination.html": render(PREFS, "illumination.html",
     "関西イルミネーション2026-2027｜大阪・京都・兵庫・奈良・滋賀・和歌山の日程一覧",
     f"関西6府県のイルミネーション{cnt}か所を、府県ごとに日程・場所・無料かどうかで一覧にしました。御堂筋イルミネーション、神戸イルミナージュ、姫路城イルミネーションなど。{upd}更新。",
@@ -253,8 +253,19 @@ pages["koyo.html"] = render(PREFS, "koyo.html",
     "関西の紅葉ライトアップ2026｜京都・大阪・兵庫・奈良・滋賀・和歌山の日程・時間・料金",
     f"関西の紅葉ライトアップ{kc}か所を、府県ごとに日程・時間・料金で一覧にしました。永観堂、高台寺、北野天満宮、石山寺など。今夜やっている所だけも見られます。{upd}更新。",
     "関西の紅葉ライトアップ2026 日程・時間・料金", "KANSAI AUTUMN LIGHT-UP", "関西の紅葉ライトアップ", "2026 日程・時間・料金",
-    f"京都・大阪・兵庫・奈良・滋賀・和歌山の{kc}か所を、<br>日程・時間・料金でまとめました。", plinks(None),
+    f"京都・大阪・兵庫・奈良・滋賀・和歌山の{kc}か所を、<br>日程・時間・料金でまとめました。", plinks(None, "koyo"),
     [("関西おでかけリスト", "odekake"), ("関西の紅葉ライトアップ2026", "koyo.html")], kind="ko")
+# 11/9 収益化：「京都 紅葉 ライトアップ」など府県で探す人が多いので、府県ごとの紅葉ページも作る（件数0の府県は作らない）
+for p in PREFS:
+    n = len(kcards[p])
+    if not n: continue
+    nm = "、".join(x[0] for x in kev[p][:3])
+    pages[f"koyo-{SLUG[p]}.html"] = render([p], f"koyo-{SLUG[p]}.html",
+        f"{p}の紅葉ライトアップ2026｜日程・時間・料金の{n}か所一覧",
+        f"{fu(p)}の紅葉ライトアップ{n}か所を、日程・時間・料金で一覧にしました。{nm}など。今夜やっている所だけも見られます。{upd}更新。",
+        f"{p}の紅葉ライトアップ2026 日程・時間・料金", f"{SLUG[p].upper()} AUTUMN LIGHT-UP", f"{p}の紅葉ライトアップ", "2026 日程・時間・料金",
+        f"{fu(p)}の{n}か所を、日程・時間・<br>料金でまとめました。", plinks(p, "koyo"),
+        [("関西おでかけリスト", "odekake"), ("関西の紅葉ライトアップ2026", "koyo.html"), (f"{p}の紅葉ライトアップ", f"koyo-{SLUG[p]}.html")], kind="ko")
 for f, h in pages.items():
     open(OUT + f, "w").write(h)
 sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", "odekake", *pages, "tomari.html", "ima.html", "fudosan-list", "chika-kansai", "chika-osaka", "uru", *sorted("machi/" + x for x in os.listdir(OUT + "machi") if x.endswith(".html"))])
