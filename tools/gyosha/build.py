@@ -52,6 +52,7 @@ P = [  # slug, ボタンの名前, ページの題, 1行, よくあるご相談,
   ["売りに出して半年以上、問い合わせがほとんどない", "値段を下げても決まらない", "古家付き・傾斜地・駅から遠いなど、条件が難しい", "このまま待つか、買取も考えるか迷っている"],
   ["市区町村・町名", "売り出してからの期間と、いまの値段", "物件の種類と、広さ・築年数"], "売りに出しても売れない"),
 ]
+A = {'jikka': [('先に、相続登記を済ませる', '家を売るには、まず相続した人の名前に登記を移します。2024年4月1日から相続登記は義務になり、相続を知った日から3年以内に登記が必要です。正当な理由なく行わないと、10万円以下の過料になることがあります。登記は司法書士の先生にご相談ください。', '法務省「相続登記の義務化」', 'https://www.moj.go.jp/MINJI/souzokutouki-gimuka/index.html'), ('家財を残したまま、買取を相談する', '遠方で片付けに通えない場合は、家財が残ったまま買い取る形を相談できます。片付けの費用と手間がなくなる分、値段は通常の売却より低くなることが多いです。片付けてから売る場合と、両方の目安を並べてお返しします。', '', ''), ('税金の特例は、売る前に確かめる', '相続した空き家を売ったときに、税金が軽くなる特例があります。建てた年や売る時期などの条件があるため、売る前に税理士の先生や税務署にご確認ください。', '国税庁「タックスアンサー」', 'https://www.nta.go.jp/taxes/shiraberu/taxanswer/index2.htm')], 'saikenchiku': [('前の道の種類を、役所で確かめる', '建て替えには、幅4m以上の道路に2m以上接していることが必要です（建築基準法43条）。幅4m未満でも、役所が指定した道（42条2項の道）なら、道の中心から2m下がる（セットバック）ことで建て替えられる場合があります。まず役所の建築指導の窓口で、前の道の種類を確かめます。', '建築基準法（e-Gov法令検索）', 'https://laws.e-gov.go.jp/law/325AC0000000201'), ('例外の許可が出るか調べる', '接道の条件を満たさなくても、まわりに広い空き地があるなど、安全上の支障がないと認められれば、許可を受けて建てられる場合があります（建築基準法43条2項）。許可が出るかは土地ごとに違うため、役所への確認が先です。', '建築基準法（e-Gov法令検索）', 'https://laws.e-gov.go.jp/law/325AC0000000201'), ('隣の方に売る・買取を相談する', '建て替えができない土地でも、隣の方が買うと、隣の土地が広がって使いやすくなることがあります。隣の方とのお話が難しい場合は、再建築不可を扱う業者の買取も選べます。どちらが合うか、目安を並べてお返しします。', '', '')], 'kyoyu': [('自分の持分だけを売る', '共有の不動産でも、ご自身の持分だけなら、ほかの共有者の同意がなくても売ることができます。ただし持分だけを買う人は限られるため、値段は全体を売る場合より低くなることが多いです。', '', ''), ('共有者みんなで、まとめて売る', '全体を売るには、共有者全員の同意が必要です。全員がそろえば、通常の売却と同じ形で売れて、値段も持分だけより高くなりやすいです。話し合いの順番や、遠方の方とのやり取りの進め方もご相談いただけます。', '', ''), ('連絡がとれない共有者がいるとき', '共有者の一部と連絡がとれない場合に、裁判所の手続きで進める制度が、2023年4月の民法の改正で設けられました。使えるかどうかは弁護士・司法書士の先生にご確認ください。', '法務省「所有者不明土地の解消に向けた民事基本法制の見直し」', 'https://www.moj.go.jp/MINJI/minji05_00343.html')], 'shakuchi': [('地主さんの承諾をもらって売る', '借地権を売るには、地主さんの承諾が必要です。承諾の際に、承諾料を求められることが多いです。まず契約書と地代の記録をそろえ、地主さんとのお話の進め方をご相談ください。', '借地借家法（e-Gov法令検索）', 'https://laws.e-gov.go.jp/law/403AC0000000090'), ('承諾が得られないとき', '地主さんが承諾しない場合でも、地主さんに不利になるおそれがなければ、裁判所が承諾に代わる許可を出せる仕組みがあります（借地借家法19条）。手続きは弁護士の先生にご相談ください。', '借地借家法（e-Gov法令検索）', 'https://laws.e-gov.go.jp/law/403AC0000000090'), ('地主さんと借地人で、まとめる', '借地権を地主さんに買ってもらう、底地を借地人さんに買ってもらう、両方をまとめて第三者に売る、という形もあります。まとめると、別々に売るより値段がつきやすくなることがあります。', '', '')], 'urenokori': [('値段を、実際に売れた値段とくらべる', '売り出しの値段が、その街で実際に売れた値段より高いと、問い合わせが来にくくなります。TOWN NOTE の街のページで、2025年度に売れた家の平均（近畿レインズ）を見られます。', 'TOWN NOTE 住む街をさがす', '/sagasu'), ('頼んでいる会社を見直す', '専任媒介・専属専任媒介の契約は、3か月を超えて結べません（宅地建物取引業法34条の2）。期間が終わるときに、売り方や頼む会社を見直すことができます。', '宅地建物取引業法（e-Gov法令検索）', 'https://laws.e-gov.go.jp/law/327AC1000000176'), ('買取に切り替える・並べてくらべる', '早く現金にしたい場合は、業者の買取も選べます。値段は通常の売却より低くなることが多い一方、売れるまで待つ時間と、内覧の手間がなくなります。売却を続ける場合と並べて、目安をお返しします。', '', '')]}
 STATES = ["残置物あり", "空き家", "再建築不可・接道が狭い", "共有持分", "借地権・底地", "売りに出しても売れない", "入居者あり", "その他"]
 
 HEAD = open(L + "moushikomi.html", encoding="utf-8").read()
@@ -75,8 +76,14 @@ CSS = """<style>
 .sd .r{display:flex;justify-content:space-between;gap:10px;border-top:1px solid #EFEFEF;padding:10px 0;font-size:14px}.sd .r:first-of-type{border-top:0}
 .sd .r em{font-style:normal;font-weight:700;font-size:16px}.sd p{font-size:12.5px!important;line-height:1.8!important;color:#857A70!important;margin:8px 0 0!important}
 .mf div.fl em{font-style:normal;font-size:11px;color:#B5735A;margin-left:6px;font-weight:400}
+.ga{border-top:1px solid #EFEFEF;padding:14px 0}.ga:first-of-type{border-top:0;padding-top:4px}.ga b{display:flex;gap:10px;align-items:baseline;font-family:"Shippori Mincho",serif;font-size:16px;line-height:1.6}.ga b i{font-style:normal;font-family:Jost;font-weight:300;color:#9C8775;font-size:13px}.ga p{font-size:14px!important;line-height:1.9!important;color:#3A332E!important;margin:6px 0 0!important}.ga small{display:block;font-size:11.5px;color:#857A70;margin-top:6px}.ga small a{color:#857A70}
 .gt{font-size:13px;color:#857A70;margin:20px 0 0;line-height:1.8}.gt a{color:#2B2622}
 </style>"""
+
+def ans(s):
+    h = "".join(f'<div class="ga"><b><i>{i+1}</i>{t}</b><p>{b}</p>' + (f'<small>出典：<a href="{u}" target="_blank" rel="noopener">{n}</a></small>' if u else "") + "</div>" for i, (t, b, n, u) in enumerate(A[s]))
+    return f'<section class="s3"><div class="sn">ANSWER</div><h2>考えられる3つの道</h2>{h}<p class="gt">どの道が合うかは、物件と事情で変わります。概要を送っていただければ、目安を並べてお返しします。</p></section>'
+
 
 def form(pre=""):
     st = "".join(f'<label{" class=on" if s == pre else ""}><input type="checkbox" name="st" value="{s}"{" checked" if s == pre else ""}>{s}</label>' for s in STATES)
@@ -154,7 +161,7 @@ try{if(localStorage.getItem("usagi_owner")!=="1")navigator.sendBeacon&&navigator
 PROMISE = """<section class="s3"><div class="sn">OUR PROMISE</div><h2>ご紹介くださる方へのお約束</h2><ul class="gl">
 <li>ご了解なく、所有者さまに直接ご連絡することはしません。</li><li>進み具合を、段階ごとにご報告します。</li><li>お受けできない場合も、理由と次の道をお返しします。</li></ul></section>"""
 FLOW = """<section class="s3"><div class="sn">FLOW</div><h2>ご相談の進め方</h2><ol class="gf">
-<li>このページから、物件の概要を送っていただきます。</li><li>買取・売却それぞれの考え方と、おおよその目安をお返しします。</li><li>所有者さまのご了解をいただいてから、資料の確認と現地の確認に進みます。</li><li>正式な条件をお出しします。お受けできない場合も、理由をお伝えします。</li></ol></section>"""
+<li>このページから、物件の概要を送っていただきます。</li><li>概要をいただいてから3営業日を目安に、買取・売却それぞれの考え方と、おおよその目安をお返しします。</li><li>所有者さまのご了解をいただいてから、資料の確認と現地の確認に進みます。</li><li>正式な条件をお出しします。お受けできない場合も、理由をお伝えします。</li></ol></section>"""
 
 def page(fn, title, desc, h1, en, body, canon):
     h = f"""<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -188,8 +195,9 @@ page("gyosha.html", "業者さま・士業の先生方へ｜関西の動かし�
 # ---- 困りごと5ページ
 for s, b, t, one, cases, need, pre in P:
     oth = "".join(f'<a href="gyosha-{s2}"><span>{b2}</span></a>' for s2, b2, *_ in P if s2 != s)
-    body = f"""<p class="g1">{one}<small>関西（大阪・京都・兵庫・奈良・滋賀・和歌山）の物件が対象です。業者さま・士業の先生方からのご紹介も、所有者さまご本人からのご相談もお受けしています。</small></p>
+    body = f"""<p class="g1">{one}<small>持ち主さまご本人からのご相談も、業者さま・士業の先生方からのご紹介もお受けしています。関西（大阪・京都・兵庫・奈良・滋賀・和歌山）の物件が対象です。</small></p>
 <section class="s3"><div class="sn">CASE</div><h2>よくあるご相談</h2><ul class="gl">{"".join(f"<li>{c}</li>" for c in cases)}</ul></section>
+{ans(s)}
 <section class="s3"><div class="sn">FIRST STEP</div><h2>最初にお送りいただきたいこと</h2><ul class="gl">{"".join(f"<li>{c}</li>" for c in need)}</ul><p class="gt" style="margin-top:10px">分からないところは空けたままで大丈夫です。</p></section>
 {FLOW}
 {PROMISE}
@@ -197,7 +205,7 @@ for s, b, t, one, cases, need, pre in P:
 <section class="s3"><div class="sn">OTHER CASES</div><h2>ほかの困りごと</h2><div class="gq">{oth}<a href="gyosha"><span>業者さま・士業の先生方へ（入口）</span></a></div></section>"""
     page(f"gyosha-{s}.html", f"{t}（関西）｜TOWN NOTE",
          f"関西（大阪・京都・兵庫・奈良・滋賀・和歌山）の{t.replace('のご相談','')}について、概要だけでもご相談いただけます。業者さま・士業の先生方からのご紹介もお受けしています。",
-         t.replace("のご相談", ""), "FOR PROFESSIONALS", body, f"gyosha-{s}")
+         t.replace("のご相談", ""), "CONSULTATION", body, f"gyosha-{s}")
 
 # ---- サイトマップ（毎日の作り直しでも消えないよう、ここで足す）
 sm = open(L + "sitemap.xml", encoding="utf-8").read()
