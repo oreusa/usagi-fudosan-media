@@ -356,7 +356,7 @@ var q=(location.search.match(/[?&]fq=(q|new|map)/)||[])[1];if(q){history.replace
 })();</script>""".replace("__PLACES__", json.dumps(PLACES, ensure_ascii=False))
 h = h.replace("</body>", FQ + "</body>", 1)
 # 11/6 オーナーOKの見本：2つの街をくらべる
-h = h.replace("</body>", '<script src="/assets/kurabe.js?v=1" defer></script></body>', 1)
+h = h.replace("</body>", '<script src="/assets/kurabe.js?v=2" defer></script></body>', 1)
 
 h = h.replace("__NT__", str(len(json.load(open(os.path.join(ROOT, "links/assets/towns.json"), encoding="utf-8")))))
 open(OUT, "w", encoding="utf-8").write(h)
