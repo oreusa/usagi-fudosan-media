@@ -95,7 +95,7 @@ def form(pre=""):
 <div class="ch"><label><input type="radio" name="kind" value="戸建て">戸建て</label><label><input type="radio" name="kind" value="土地">土地</label><label><input type="radio" name="kind" value="マンション">マンション</label><label><input type="radio" name="kind" value="アパート・ビル">アパート・ビル</label><label><input type="radio" name="kind" value="その他">その他</label></div>
 <div class="fl" style="font-size:13px;font-weight:700;color:#5E544D;margin:16px 0 6px">③ いまの状態<em>いくつでも</em></div>
 <div class="ch">{st}</div>
-<textarea id="tx" name="text" maxlength="600" style="margin-top:8px;min-height:84px" placeholder="分かる範囲で（広さ・築年数・前の道の幅・共有者の人数 など）"></textarea>
+<textarea id="tx" name="text" maxlength="2000" style="margin-top:8px;min-height:84px" placeholder="分かる範囲で（広さ・築年数・前の道の幅・共有者の人数 など）"></textarea>
 <div class="fl" style="font-size:13px;font-weight:700;color:#5E544D;margin:16px 0 6px">④ ご希望</div>
 <div class="ch"><label><input type="radio" name="want" value="買取">買取</label><label><input type="radio" name="want" value="売却（仲介）">売却</label><label><input type="radio" name="want" value="まだ分からない">まだ分からない</label></div>
 <label class="fl" for="nm">⑤ ご連絡先　お名前・会社名・事務所名<em>必須</em></label><input type="text" id="nm" name="name" autocomplete="organization" maxlength="40" placeholder="例：〇〇不動産 山田" required>
