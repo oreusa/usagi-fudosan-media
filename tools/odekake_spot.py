@@ -111,6 +111,14 @@ for sp in spots:
             stat = "きょうまで" if left == 0 else f"開催中・あと{left}日"
         else: stat = "開催中"
     when = when or sp["dline"] or "公式ページで"
+    # 11/9 夜「開催日が違う」→ リストの日付の文にある「◯◯のみ」「月曜休館」などを1件ページにも出す（はじめと終わりだけだと毎日やっているように読める）
+    dl = re.sub(r"　.*", "", sp["dline"])
+    if re.search(r"のみ|だけ", dl) and not re.search(r"（[^）]*(のみ|だけ)[^）]*）", dl):
+        when = dl
+    else:
+        for x in re.findall(r"（[^）]*(?:休|のみ|だけ|ごろ|見ごろ)[^）]*）", dl):
+            if x not in when:
+                when += x
     where = (sp["city"] + ("の" + sp["place"] if sp["place"] and sp["place"] != sp["city"] else "")) or fu
     lead = f"{nm}は、{'' if where.startswith(fu) else fu}{where}で" + (f"、{jd(sp['st'])}から{jd(sp['en'])}まで開かれます。" if sp["st"] and sp["en"] and sp["en"] != sp["st"] else (f"、{jd(sp['st'])}に開かれます。" if sp["st"] else "楽しめます。"))
     if sp["free"]: lead += "入場は無料です（一部有料の所があります）。" if sp.get("part") else "入場は無料です。"
