@@ -1,6 +1,6 @@
 /* 11/9 ほかのリスト（ページの下とメニューで同じ名前・同じタイル）。cur＝いま見ているリスト（出さない） */
 window.TN_OL=(function(){var life=/usagi-life|lifenote|life-note/.test(location.host),p=location.pathname;
-return {life:life,cur:/^\/(koe|privacy)/.test(p)?"":/fudosan|machi|uru|sagasu|chika|gyosha|moushikomi/.test(p)?"fu":/okaimono|otoku|tanka|nesage|furusato|kaimawari/.test(p)?"ok":"od",
+return {life:life,cur:/^\/(koe|privacy)/.test(p)?"":/fudosan|machi|uru|sagasu|chika|gyosha|moushikomi|jikka/.test(p)?"fu":/okaimono|otoku|tanka|nesage|furusato|kaimawari/.test(p)?"ok":"od",
 I:{od:'<path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/>',
 fu:'<path d="M4 11l8-6 8 6"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/>',
 ok:'<path d="M6 8h12l-1 12H7z"/><path d="M9 8a3 3 0 0 1 6 0"/>'},
@@ -26,8 +26,8 @@ tiles:function(pre){var o=this,h="";o.L.forEach(function(x){if(x[0]===o.cur)retu
    全ページ共通のメニュー（11/3 テスターの声「メニューが見にくい」→ 項目はゴシックの太字・英字の小見出しなし・説明を濃く）。右上の三本線 → 右から出る紙。昼と夜の切り替えもここ（night.js）。
    ページを足すときは L に1行足すだけ。押された数は /c に「メニュー｜名前」で数える。 */
 (function(){
-  var P=location.pathname.replace(/^\/townnotes\//,"/"),FU=/^\/(fudosan|uru|moushikomi|gyosha|sagasu|chika-|machi\/)/.test(P),here=
-    /^\/sagasu/.test(P)?"fbuy":/^\/fudosan-list/.test(P)?"flist":/^\/chika-kansai/.test(P)?"chika":/^\/chika-osaka/.test(P)?"chikao":/^\/(odekake|index\.html)$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/koyo/.test(P)?"koyo":/^\/koe/.test(P)?"koe":/^\/tomari/.test(P)?"tomari":/^\/ima/.test(P)?"ima":/^\/(town-notes)?$/.test(P)?"tn":/^\/uru/.test(P)?"uru":/^\/gyosha/.test(P)?"gyosha":/^\/moushikomi/.test(P)?"satei":/^\/(fudosan|gyosha)/.test(P)?"fudosan":"";
+  var P=location.pathname.replace(/^\/townnotes\//,"/"),FU=/^\/(fudosan|uru|moushikomi|gyosha|sagasu|chika-|machi\/|jikka)/.test(P),here=
+    /^\/sagasu/.test(P)?"fbuy":/^\/fudosan-list/.test(P)?"flist":/^\/chika-kansai/.test(P)?"chika":/^\/chika-osaka/.test(P)?"chikao":/^\/(odekake|index\.html)$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/koyo/.test(P)?"koyo":/^\/koe/.test(P)?"koe":/^\/tomari/.test(P)?"tomari":/^\/ima/.test(P)?"ima":/^\/(town-notes)?$/.test(P)?"tn":/^\/uru/.test(P)?"uru":/^\/gyosha/.test(P)?"gyosha":/^\/jikka/.test(P)?"jikka":/^\/moushikomi/.test(P)?"satei":/^\/(fudosan|gyosha)/.test(P)?"fudosan":"";
   var L=[
     ["LIST","list","/odekake","関西おでかけリスト","開催中・これからのおでかけ"],
     ["MAP","map","/odekake#map","地図で見る","関西の地図から、近くのおでかけを"],
@@ -63,6 +63,7 @@ tiles:function(pre){var o=this,h="";o.L.forEach(function(x){if(x[0]===o.cur)retu
     ["LIST","flist","/fudosan-list","関西不動産リスト","地価・人口・制度"],
     ["SELL","uru","/uru","家を売る前に","相場・売り出し価格・大事なこと"],
     ["BUY","fbuy","/sagasu","家を買いたい方へ","住む街の値段と物件"],
+    ["JIKKA NOTE","jikka","/jikka/","実家・空き家ノート","相続した家を売る・片付ける・解体する前に"],
     ["FOR PROFESSIONALS","gyosha","/gyosha","業者さま・士業の先生方へ","動かしにくい不動産のご相談"],
     ["-","CONTACT"],
     ["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],
@@ -177,10 +178,11 @@ tiles:function(pre){var o=this,h="";o.L.forEach(function(x){if(x[0]===o.cur)retu
     satei:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/>',
     gyosha:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"/>',
     gyosha:'<path d="M3 12l4-4 4 3 3-3 7 6"/><path d="M7 15l3 3M11 14l3 3M14 13l2 2"/>',
-    okai:'<path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>'
+    okai:'<path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>',
+    jikka:'<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M9 20v-4a3 3 0 0 1 6 0v4"/>'
   };
   var ST={list:"おでかけリスト",ima:"いま行ける",illumi:"イルミネーション",koyo:"紅葉ライトアップ",tomari:"泊まりで行く",flist:"不動産リスト",chika:"地価ランキング",chikao:"大阪市24区",
-    uru:"家を売りたい方へ",satei:"売却のお申し込み",gyosha:"業者さま・士業の先生方へ",okai:"おかいものリスト"};
+    uru:"家を売りたい方へ",satei:"売却のお申し込み",gyosha:"業者さま・士業の先生方へ",okai:"おかいものリスト",jikka:"実家・空き家ノート"};
   var SS={list:"開催中・これから",map:"近くをさがす",ima:"近い順・きょう開く所",illumi:"日程・無料の所",koyo:"夜の時間・料金",tomari:"遠くのおでかけと宿",
     flist:"地価・人口・制度",fq:"市区町村の名前で",fmap:"上がった街を色で",chika:"関西205の街",chikao:"24区の上がり幅",fnew:"最近足した数字",okai:"1個あたりで最安"};
   function item(x,tile){var cur=x[1]===here,ext=/^https?:/.test(x[2]);

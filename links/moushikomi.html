@@ -74,7 +74,7 @@ details p a{color:#2B2622}
 .fix.on{display:block}
 .fix a{display:block;max-width:520px;margin:0 auto;text-align:center;text-decoration:none;background:#8C6A55;color:#fff;padding:13px 0;border-radius:2px;font-family:"Shippori Mincho",serif;font-size:15px;font-weight:600;letter-spacing:.12em}
 body{padding-bottom:76px}
-</style><script src="assets/night.js?v=23"></script><script src="assets/menu.js?v=43" defer></script><script src="assets/v2sub.js?v=10" defer></script><style>.s3h{display:flex;align-items:center;gap:12px;padding:26px 0 0}.s3h .en{font-family:Jost,sans-serif;font-size:11.5px;letter-spacing:.32em;color:#9C8775}.s3h h1{font-family:"Shippori Mincho",serif;font-size:26px;font-weight:600;letter-spacing:.12em;margin:2px 0 0;color:#2B2622}
+</style><script src="assets/night.js?v=23"></script><script src="assets/menu.js?v=44" defer></script><script src="assets/v2sub.js?v=12" defer></script><style>.s3h{display:flex;align-items:center;gap:12px;padding:26px 0 0}.s3h .en{font-family:Jost,sans-serif;font-size:11.5px;letter-spacing:.32em;color:#9C8775}.s3h h1{font-family:"Shippori Mincho",serif;font-size:26px;font-weight:600;letter-spacing:.12em;margin:2px 0 0;color:#2B2622}
 .s3l{font-family:"Shippori Mincho",serif;font-size:15.5px;color:#2B2622;margin:16px 0 18px}
 .s3{border:1px solid #E3E3E3;border-radius:22px;padding:20px 18px 18px;margin:0 0 16px;background:#fff}.s3 .sn{font-family:Jost,sans-serif;font-size:11.5px;letter-spacing:.3em;color:#9C8775}.s3 h2{font-family:"Shippori Mincho",serif;font-size:20px;font-weight:700;margin:8px 0 6px;color:#2B2622;text-align:left}.s3>p{font-size:14px;line-height:1.8;color:#5E544D;margin:0 0 12px}
 .s3 .tqs{position:relative}.s3 #tq{width:100%;box-sizing:border-box;font-size:16px;padding:14px 16px;border:1.5px solid #CFC6BD;border-radius:14px;background:#fff;color:#2B2622}#tqo{position:absolute;left:0;right:0;top:100%;background:#fff;border:1px solid #ddd;border-radius:10px;z-index:9}#tqo a{display:block;padding:11px 14px;color:#2B2622;text-decoration:none;border-bottom:1px solid #eee;font-size:14px}#tqo:empty{display:none}
@@ -149,6 +149,11 @@ f.addEventListener("submit",function(e){e.preventDefault();er.textContent="";
 function c(k){if(O)return;try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
 c("表示：お申し込み"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":""));
 var f=document.getElementById("mf"),st=false;if(f)f.addEventListener("focusin",function(){if(st)return;st=true;c("申し込み｜書きはじめ");});
+/* 11/9 実家・空き家ノートから：?want= でご希望を先に選ぶ（片付け・解体の見積りは選んだ時だけ出す） */
+try{var W=new URLSearchParams(location.search).get("want")||"",XW=["片付け・遺品整理の見積り","解体の見積り"],rs=document.querySelectorAll('input[name="want"]'),hit=null;
+ for(var j=0;j<rs.length;j++)if(rs[j].value===W)hit=rs[j];
+ if(!hit&&XW.indexOf(W)>=0&&rs.length){var lb=document.createElement("label");lb.innerHTML='<input type="radio" name="want">';hit=lb.firstChild;hit.value=W;lb.appendChild(document.createTextNode(W));rs[0].parentNode.parentNode.insertBefore(lb,rs[0].parentNode);}
+ if(hit){hit.checked=true;c("申し込み｜ご希望を入れた｜"+W);}}catch(e){}
 var id="";try{id=new URLSearchParams(location.search).get("machi")||sessionStorage.getItem("tn_machi")||"";}catch(e){}
 if(!/^[a-z]+-\d+$/.test(id))return;
 var PF={"大阪":"大阪府","京都":"京都府","兵庫":"兵庫県","奈良":"奈良県","滋賀":"滋賀県","和歌山":"和歌山県"};
