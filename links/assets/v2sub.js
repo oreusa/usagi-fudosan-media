@@ -32,7 +32,9 @@ if(/^\/(town-notes)?$/.test(location.pathname))return goT();
 if(/^\/(fudosan|uru|moushikomi|gyosha|chika-|machi\/)/.test(location.pathname))return goF();
 var bar=document.createElement("nav");bar.id="v2bar";bar.setAttribute("aria-label","すぐ移動");
 var inn=/\/tomari/.test(location.pathname);
-bar.innerHTML='<a data-h="/odekake?v2t=0">'+I.now+'<span>開催中</span></a><a data-h="/odekake?v2t=1">'+I.up+'<span>これから</span></a><a data-h="/odekake?v2t=map">'+I.map+'<span>地図</span></a><a data-h="/tomari.html"'+(inn?' class="cur"':'')+'>'+I.inn+'<span>泊まり</span></a><button class="mn" type="button"><i></i>MENU</button>';
+/* 11/9 オーナーOK（見本⑤）：開催中・これから → さがす・行きたい（☆の数） */
+var fvn=0;try{fvn=(JSON.parse(localStorage.getItem("tn_fav")||"[]")||[]).length;}catch(e){}
+bar.innerHTML='<a data-h="/odekake">'+'<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>'+'<span>さがす</span></a><a data-h="/odekake?d=all&f=fav" style="position:relative">'+'<svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg>'+'<span>行きたい</span>'+(fvn?'<b style="position:absolute;top:4px;left:56%;font:500 9.5px Jost,sans-serif;background:#B0705A;color:#fff;border-radius:999px;padding:1px 5px;line-height:1.3">'+fvn+'</b>':'')+'</a><a data-h="/odekake?v2t=map">'+I.map+'<span>地図</span></a><a data-h="/tomari.html"'+(inn?' class="cur"':'')+'>'+I.inn+'<span>泊まり</span></a><button class="mn" type="button"><i></i>MENU</button>';
 bar.querySelectorAll("a").forEach(function(a){a.href=a.dataset.h;a.setAttribute("data-k","下のバー｜"+a.textContent);});
 bar.querySelector(".mn").onclick=function(){var m=document.getElementById("umenu");if(m)m.click();};
 document.body.appendChild(bar);bar.classList.add("on");document.documentElement.classList.add("v2bar-on");

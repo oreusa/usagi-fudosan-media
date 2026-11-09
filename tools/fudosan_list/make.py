@@ -46,7 +46,7 @@ drop(r'開催中 / これから split')             # 開催中・これから�
 drop(r'"開催中":\["NOW ON"')                 # 欄の見出しの英字（下で直接書く）
 drop(r'近くの宿：')                          # 近くの宿
 h = re.sub(r'<script src="/townnotes/map\.js[^"]*" defer></script>', "", h)
-h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v2sub.js?v=9" defer></script>', h)
+h = re.sub(r'<script src="assets/v2\.js[^"]*"></script>', '<script src="assets/v2sub.js?v=10" defer></script>', h)
 
 # ---- 見出し
 h = h.replace('<h1>関西おでかけリスト</h1><p class="sub">関西の街を調査して見つけた魅力を、<br>おでかけ先として紹介しています</p>',
