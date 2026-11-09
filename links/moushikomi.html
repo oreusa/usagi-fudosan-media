@@ -135,7 +135,7 @@ f.addEventListener("submit",function(e){e.preventDefault();er.textContent="";
  "③ 種類":d.kind||"未選択",
  "④ ご希望":d.want||"未選択",
  "⑤ 内容":d.text||"なし",
- "⑥ 電話":d.tel||"なし",
+ "⑥ 電話":d.tel||"なし（メールで返信してください）",
  "⑦ メール":d.email,
  "◆ 次にすること":"このメールに「返信」すると、そのまま "+d.name+" 様に届きます（電話がある場合はお電話でも可）"};
  var p2=fetch(MAIL,{method:"POST",headers:{"content-type":"application/json","accept":"application/json"},body:JSON.stringify(m)}).then(function(r){return r.ok}).catch(function(){return false});
