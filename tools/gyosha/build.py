@@ -102,7 +102,7 @@ def form(pre=""):
 <label class="fl" for="em">メールアドレス<em>必須</em></label><input type="email" id="em" name="email" autocomplete="email" maxlength="80" required>
 <label class="fl" for="tl">電話番号<em>任意・あるとご連絡が早くなります</em></label><input type="tel" id="tl" name="tel" autocomplete="tel" inputmode="tel" maxlength="20">
 <div class="hp" aria-hidden="true"><input type="text" name="hp" id="hp" tabindex="-1" autocomplete="off"></div>
-<label class="ag"><input type="checkbox" id="ag"><span><a href="/privacy" target="_blank" rel="noopener">プライバシーポリシー</a>を読んで、同意します</span></label>
+<label class="ag"><input type="checkbox" id="ag"><span><a href="/privacy" target="_blank" rel="noopener">プライバシーポリシー</a>を読み、ご相談内容を提携する不動産会社にお伝えすることに同意します</span></label>
 <button type="submit" id="sb">送信する</button>
 <p class="er" id="er" role="alert"></p>
 </form>
