@@ -259,6 +259,8 @@ YAHOO_RE = "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3786315&pid=
 # 11/8 オーナー「アフェリエイト通った全部」→ タウンライフ不動産購入・住まいサーフィン（同じ sid の自由テキスト）
 TOWNLIFE_RE = "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3786315&pid=892742460"
 SUMAI_RE = "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3786315&pid=892742461"
+# 11/9 夜の試験：タウンライフ・住まいサーフィンのリンクは「無効の広告」ページに進む（ミス帳#134・#135）→ 使えると確かめるまで出さない
+VC_EXTRA_ON = False
 
 # ---- 売れた家の値段（近畿レインズ 年刊市況レポート 2025年度 表19・表20 市区町村別成約状況）
 REINS_URL = "https://www.kinkireins.or.jp/webkanri/kanri/wp-content/uploads/2026/09/4aa7279bc826c2683d1525bd813d9696.pdf"
@@ -377,6 +379,8 @@ def town_page(t):
             f'<a class="fc" href="{E(o["url"])}" data-k="関連｜{E(o["t"][:20])}"><small>{E(o["src"])}</small><b>{E(o["t"].replace("｜", "　"))}</b><span>{E(o["m"])}</span></a>' for o in rel)
     nb_h = '<h2>近くの街</h2><ul class="nb">' + "".join(
         f'<li><a href="/machi/{a["id"]}" data-k="近くの街｜{E(a["n"])}">{E(a["n"])}<small>{E(a["p"])}</small><b style="color:{PI[a["p"]][3]}">{pct(a["r8"])}</b></a></li>' for a in nb) + '</ul>'
+    tl_a = (f'<a class="bx" href="{E(TOWNLIFE_RE)}" rel="nofollow sponsored" target="_blank" data-k="家を探す｜タウンライフ｜{E(n)}"><b>希望を1回送って、物件を提案してもらう</b><span>タウンライフ不動産。予算や駅を送ると、何社かから物件のご提案が届きます（無料）</span></a>' if VC_EXTRA_ON else '')
+    su_a = (f'<a class="bx" href="{E(SUMAI_RE)}" rel="nofollow sponsored" target="_blank" data-k="家を探す｜住まいサーフィン｜{E(n)}"><b>新築マンションが割高か調べる</b><span>住まいサーフィン。値段が割高か割安かを、無料の会員登録で</span></a>' if VC_EXTRA_ON else '')
     body = f'''<style>{HEAD_CSS}{TOWN_CSS}</style>{SCRIPTS}</head><body style="--pc:{col}"><div class="wrap">
 <div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">{en} ─ LAND PRICE</div>
 <h1>{E(n)}の地価<span>2026 住宅地の1年の動き</span></h1>
@@ -394,9 +398,9 @@ def town_page(t):
 {"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in faq)}
 </section>
 <div class="uru buy"><div class="k">この街で家を探している方へ</div><div class="ad">広告</div>
-<a class="bx" href="{E(TOWNLIFE_RE)}" rel="nofollow sponsored" target="_blank" data-k="家を探す｜タウンライフ｜{E(n)}"><b>希望を1回送って、物件を提案してもらう</b><span>タウンライフ不動産。予算や駅を送ると、何社かから物件のご提案が届きます（無料）</span></a>
+{tl_a}
 <a class="bx" href="{E(YAHOO_RE)}" rel="nofollow sponsored" target="_blank" data-k="家を探す｜Yahoo!不動産｜{E(n)}"><b>自分で物件を探す</b><span>Yahoo!不動産。中古マンション・一戸建て・新築を、駅や広さで</span></a>
-<a class="bx" href="{E(SUMAI_RE)}" rel="nofollow sponsored" target="_blank" data-k="家を探す｜住まいサーフィン｜{E(n)}"><b>新築マンションが割高か調べる</b><span>住まいサーフィン。値段が割高か割安かを、無料の会員登録で</span></a></div>
+{su_a}</div>
 <a class="uru" href="/uru.html" data-k="お家を売る前に大事なこと"><div class="k">お家を売る・持ち続ける前に</div><div class="t">お家を売る前に大事なこと</div><div class="m">売るか、持ち続けるか。<br>迷ったときに読むページです。</div></a>
 <p class="note">出典：{E(sname)}（価格時点 2026年1月1日）<br><a href="{E(surl)}" data-k="出典">{E(surl)}</a><br>数字は街の中の調査地点の平均の変動率で、1軒ずつの値段ではありません。<br>売れた家の値段：{E(REINS_NAME)}<br>表19 <a href="{REINS_URL}" data-k="出典｜レインズ">{REINS_URL}</a><br>表20 <a href="{REINS_URL2}" data-k="出典｜レインズ">{REINS_URL2}</a><br>平均の値段で、1軒ずつの値段ではありません。広さ・築年数・駅からの近さで大きく変わります。</p>
 <a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
