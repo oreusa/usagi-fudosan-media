@@ -129,8 +129,9 @@ for sp in spots:
         {"@type": "ListItem", "position": 3, "name": nm, "item": canon}]}
     ld = json.dumps({"@context": "https://schema.org", "@graph": [ev, bc]}, ensure_ascii=False).replace("</", "<\\/")
     big = f'<div class="w"><span>日程</span><b>{e(when)}</b></div>'
-    big += f'<div><span>いまは</span><b style="color:{pc};font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700">{e(stat or "公式ページで")}</b></div>'
-    big += f'<div><span>入場</span><b style="color:#2B2622;font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700">{("無料（一部有料）" if sp.get("part") else "無料") if sp["free"] else "公式ページで"}</b></div>'
+    # 11/9 全文点検：「いまは／公式ページで」は意味が通らない → 開催の状態が分かる時だけ出す
+    if stat: big += f'<div><span>いまは</span><b style="color:{pc};font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700">{e(stat)}</b></div>'
+    big += f'<div><span>入場</span><b style="color:#2B2622;font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700">{("無料（一部有料）" if sp.get("part") else "無料") if sp["free"] else "公式で確認"}</b></div>'
     big += f'<div class="w"><span>場所</span><b>{e(where if where.startswith(fu) else fu + where)}</b></div>'
     q = sp["map"] or (sp["place"] + " " + sp["city"])
     act = f'<a class="o" href="{e(sp["url"])}" target="_blank" rel="noopener">公式ページで最新の情報を見る</a>'
@@ -149,7 +150,7 @@ for sp in spots:
     tw = town(sp["city"])
     lbl = sp["place"] if sp["place"] and len(sp["place"]) < 16 else tw
     msvg = spot_map.render(p, nm, sp["city"], lbl)
-    mapd = f'<div class="tmap">{msvg}<p>{e(lbl if lbl != tw else "会場")}は、{e(tw)}のあたり</p></div>' if msvg else ""
+    mapd = f'<div class="tmap">{msvg}<p>会場は、{e(tw)}のこのあたりです</p></div>' if msvg else ""
     mh = f'<a class="fc" href="{MACHI[sp["city"]]}"><small>街のこと</small><b>{e(sp["city"])}の地価 2026</b><span>国の地価公示の数字で、住宅地の1年の動きを見ます。</span></a>' if sp["city"] in MACHI else ""
     page = f"""<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
