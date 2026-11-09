@@ -179,6 +179,9 @@ paper = ('<div class="paper">' + "\n".join(blocks) +
          '<div class="tip">数字は公式の資料の時点のものです。家ごとの値段は、場所・広さ・築年数などで変わります。</div></div>')
 h = re.sub(r'<div class="paper">.*?<div class="tip">.*?</div></div>', lambda m: paper, h, count=1, flags=re.S)
 h = h.replace("ぴょんと街しらべ│過去のおでかけも、このページに残していきます", "ぴょんと街しらべ│調べた数字は、このページに残していきます")
+# 11/9 全文点検：不動産のページに「券・宿のリンクは広告」は合わない → 物件のリンクの広告に。売却のご相談はメールでなく申し込みページ
+h = h.replace("券の購入・近くの宿のリンクは広告です（アソビュー・楽天トラベル）", "「物件を探す」のリンクは広告です（Yahoo!不動産）")
+h = h.replace('href="#ml">お家の売却・査定のご相談<span>無料・メールだけでお受けしています。<br>', 'href="moushikomi">お家の売却・査定のご相談<span>無料・このページから約1分でお申し込みできます。<br>')
 # 下の箱の「おでかけ掲載」は、不動産リストでは「売る前に大事なこと」に（完全に分ける）
 OLD_LS = '<a class="co" data-en="LISTING" href="https://ig.me/m/fudousan_ai_si">おでかけ掲載<span>新しいお店や、毎年のイベント。<br>うさぎがご紹介します。ご相談はこちら</span></a>'
 assert OLD_LS in h
