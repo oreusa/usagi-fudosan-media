@@ -1,5 +1,5 @@
 /* 11/1 オーナー「毎日不安で寝れない…HPのミスをずっと確認できてない」→ 月と燈の全ページを毎朝スマホの幅で開いて確かめる。
-   本番（townnote.pages.dev と usagi-life-notes.pages.dev）を開き、ページごとに
+   本番（townnote.pages.dev と lifenote-kanto.pages.dev）を開き、ページごとに
    ①画面のエラー ②横にはみ出し ③下のバーとメニューがあるか ④終わった日付のカードが見えていないか ⑤ベージュっぽい色 ⑥開けない画像や読み物
    を調べ、全ページを撮る。結果は out/report.md と out/shots/*.jpg（allcheck ブランチに1日分だけ置く）。
    使い方: node tools/allcheck/check.js out */
@@ -9,7 +9,7 @@ const OUT = process.argv[2] || "out";
 const SITES = [
   { key: "tsuki", name: "月", base: process.env.TSUKI_BASE || "https://townnote.pages.dev",
     extra: ["/odekake", "/ima", "/fudosan", "/fudosan-list", "/chika-kansai", "/chika-osaka", "/uru", "/gyosha", "/machi/osaka-01", "/machi/kyoto-01", "/koe"] },
-  { key: "akari", name: "燈", base: process.env.AKARI_BASE || "https://usagi-life-notes.pages.dev",
+  { key: "akari", name: "燈", base: process.env.AKARI_BASE || "https://lifenote-kanto.pages.dev",
     extra: ["/odekake", "/okaimono", "/ima", "/nesage", "/kaimawari", "/tanka", "/furusato", "/tomari", "/koyo", "/privacy", "/koe"] },
 ];
 // 11/9 オーナー「燈？」「なんか対策ないの」→ 画面に出た文（JSで出る物も）に、見せてはいけない言葉が無いかも毎朝見る。文は text/ に残す
@@ -122,7 +122,7 @@ async function one(ctx, site, p) {
   await ctx.addInitScript(() => { try { localStorage.setItem("usagi_owner", "1"); } catch (e) {} });
   // 11/2 オーナー「他のページまだ白モヤ…統一してない」→ 夜の見た目も毎朝撮る（THEME=night で夜にして開く）
   if (process.env.THEME === "night") await ctx.addInitScript(() => { try { localStorage.setItem("usagi_theme", "night"); } catch (e) {} });
-  await ctx.addCookies([{ name: "me", value: "1", domain: "usagi-life-notes.pages.dev", path: "/", secure: true }]);
+  await ctx.addCookies([{ name: "me", value: "1", domain: "lifenote-kanto.pages.dev", path: "/", secure: true }]);
   const rows = [];
   for (const s of SITES) for (const p of await pages(s)) { const r = await one(ctx, s, p); rows.push(r); console.log(r.site, r.p, r.prob.length ? r.prob.join(" / ") : "OK"); }
   await b.close();

@@ -36,7 +36,7 @@ jobs:
           pip install -q cairosvg pillow && python3 tools/spot_og.py || echo "og images skipped"
       - name: near hotels (from 燈's site, for the 近くの宿 buttons)
         # 10/31 宿の一覧を月のページと同じ場所に置く（見るたびに燈のサイトから読むと遅いため）。取れない日は前のまま
-        run: curl -fsS "https://usagi-life-notes.pages.dev/kansai-yado.json" -o links/kansai-yado.json || true
+        run: curl -fsS "https://lifenote-kanto.pages.dev/kansai-yado.json" -o links/kansai-yado.json || true
       - name: rebuild 泊まりで行くおでかけ
         # 10/31 宿とカードの新しい一覧で毎朝作り直す（終わったおでかけは消える）
         run: python3 tools/tomari/build.py "$(TZ=Asia/Tokyo date +%F)"
