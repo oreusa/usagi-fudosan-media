@@ -1,7 +1,7 @@
 /* 11/9 投稿から来た人を数える（URLの ?f=<投稿の印>。学習エンジンが「サイトに来た数」で投稿に点数を付ける。1回の訪問で1回だけ） */
 (function(){try{var f=new URLSearchParams(location.search).get("f");if(!f||!/^[A-Za-z0-9_-]{1,32}$/.test(f))return;if(localStorage.getItem("usagi_owner")==="1")return;if(sessionStorage.getItem("tn_f")===f)return;sessionStorage.setItem("tn_f",f);var b=JSON.stringify({k:"来訪：SNS｜"+f});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}})();
 /* 11/9 色（見本4）を全ページに */
-(function(){try{if(document.getElementById("iro-css"))return;var l=document.createElement("link");l.id="iro-css";l.rel="stylesheet";l.href="/assets/iro.css?v=10";(document.head||document.documentElement).appendChild(l);}catch(e){}})();
+(function(){try{if(document.getElementById("iro-css"))return;var l=document.createElement("link");l.id="iro-css";l.rel="stylesheet";l.href="/assets/iro.css?v=11";(document.head||document.documentElement).appendChild(l);}catch(e){}})();
 /* 11/3 オーナー「下にスライドしたら、すぐ閉じちゃう」（アプリの中で開いたページが、下に引くとページごと閉じる）。
    ページが一番上にぴったり居ると、下に引く動きをアプリが「閉じる」に使う。指を置いた時・一番上に戻った時は 1px だけ下げておく（見た目は変わらない） */
 (function(){
