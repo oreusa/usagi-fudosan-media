@@ -158,7 +158,7 @@ for sp in spots:
 <meta property="og:image" content="{BASE}/assets/ogp.png"><meta name="twitter:card" content="summary"><link rel="icon" href="/assets/ogp.png"><link rel="apple-touch-icon" href="/assets/icon-180.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">{ld}</script><style>{CSS}</style>
-<script src="/assets/night.js?v=22"></script><script src="/assets/menu.js?v=33" defer></script><script src="/assets/v2sub.js?v=10" defer></script></head>
+<script src="/assets/night.js?v=22"></script><script src="/assets/menu.js?v=34" defer></script><script src="/assets/v2sub.js?v=10" defer></script></head>
 <body style="--pc:{pc}"><div class="wrap"><div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ">
 <div class="en">{SLUG[p].upper()} ─ ODEKAKE</div><h1>{e(nm)}<span>{yr} 日程・場所</span></h1><p class="sub">{e(where if where.startswith(fu) else fu + where)}</p><div class="upd">{upd} 確認</div></div>
 <div class="big">{big}</div>{mapd}<p class="lead">{e(lead)}</p><div class="act">{act}</div>{yh}
