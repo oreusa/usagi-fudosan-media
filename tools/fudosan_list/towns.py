@@ -225,6 +225,7 @@ h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spa
 .faq details{background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);margin-bottom:8px;padding:12px 16px}
 .faq summary{font-weight:700;font-size:14px;line-height:1.6;cursor:pointer}.faq p{font-size:13px;line-height:1.9;color:#5E544D;margin:8px 0 0}
 .note{font-size:12px;line-height:1.9;color:#7A6E66;background:#F5F5F5;padding:14px 16px;margin-top:30px;word-break:break-all}.note a{color:#7A6E66}
+.itt{margin:30px 0 6px;text-align:center}.itt .en2{font-family:Jost,sans-serif;font-size:11px;letter-spacing:.32em;color:#9C8775}.itt h2{margin:6px 0 14px;padding-left:0;border-left:0;font-size:20px}.itg{display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:left}.itc{display:flex;flex-direction:column;text-decoration:none;color:#2B2622;border:1px solid #E3E3E3;border-radius:18px;padding:16px 14px;background:#fff}.itc b{font-family:"Shippori Mincho",serif;font-size:17px;font-weight:700;letter-spacing:.06em}.itc span{font-size:12.5px;line-height:1.75;color:#6B6058;margin:8px 0 12px;flex:1}.itc i{font-style:normal;font-weight:700;font-size:13.5px;color:#B5735A}.itn{font-size:11.5px;color:#8C7B6E;text-align:left;margin:8px 2px 0}html.night .itc{background:#1E1B19;border-color:#3A3430;color:#EDE6DF}
 .uru{display:block;text-decoration:none;color:#2B2622;border:1px solid #2B2622;padding:16px;margin-top:30px;text-align:center}
 .uru .k{font-size:11px;letter-spacing:.2em;color:#8C7B6E}.uru .t{font-family:"Shippori Mincho",serif;font-weight:600;font-size:16px;letter-spacing:.08em;margin:6px 0 4px}.uru .m{font-size:12px;color:#6B6058;line-height:1.8}
 .uru.buy{position:relative;margin-top:18px;padding:16px 14px 6px}.uru .bx{display:block;text-decoration:none;color:#2B2622;border-top:1px solid #E4E5E8;padding:12px 2px;text-align:left}.uru .k+.ad+.bx{margin-top:10px}.uru .bx b{display:block;font-family:"Shippori Mincho",serif;font-size:15px;font-weight:600}.uru .bx b:after{content:" →";color:#B5735A}.uru .bx span{display:block;font-size:11.5px;color:#6B6058;line-height:1.7;margin-top:3px}.uru .ad{position:absolute;top:6px;right:8px;font-size:10px;color:#8C7B6E}
@@ -371,8 +372,12 @@ def town_page(t):
                 + (f'<div class="vs">{vs}</div>' if vs else '') + few + '</div>')
 
     sold_h = (f'<h2>この街で売れた家の値段</h2><p class="cap">2025年度に{E(n)}で実際に売れた（成約した）中古の家の平均です。不動産会社が登録する「レインズ」の数字です。</p>'
-              f'<div class="sold">{card("m", "中古マンション")}{card("k", "中古の一戸建て")}</div>'
-              f'<a class="sell" href="/uru.html" data-k="売るか考えている方へ｜{E(n)}"><small>売るか考えている方へ</small><b>わが家の値段を、無料で聞いてみる</b></a>')
+              f'<div class="sold">{card("m", "中古マンション")}{card("k", "中古の一戸建て")}</div>')
+    # 11/9 オーナーOK（見本3）：街ページの下は「売りたい・買いたい」の2つだけ（売る前に・Yahoo!の箱はここにまとめた）
+    itt = (f'<section class="itt"><div class="en2">IN THIS TOWN</div><h2>{E(n)}で</h2><div class="itg">'
+           f'<a class="itc" href="/uru.html" data-k="この街で｜売りたい｜{E(n)}"><b>売りたい</b><span>いくらで売れそうか、相場から順に（無料）</span><i>手順を見る →</i></a>'
+           f'<a class="itc" href="{E(YAHOO_RE)}" rel="nofollow sponsored" target="_blank" data-k="家を探す｜Yahoo!不動産｜{E(n)}"><b>買いたい</b><span>{E(n)}で、いま売り出し中の家を見る</span><i>物件を見る →</i></a>'
+           f'</div><p class="itn">「物件を見る」は広告です。</p></section>')
     rel_h = ""
     if rel:
         rel_h = '<h2>この街で調べた数字</h2>' + "".join(
@@ -389,6 +394,7 @@ def town_page(t):
 {big}
 <div class="mp nofilt">{pref_svg(t["p"], n)}<p>{E(scope_name(t))}の中の{E(short(n) if scope_name(t) != pfull else n)}</p></div>
 {sold_h}
+{itt}
 {rel_h}
 {nb_h}
 <a class="back" href="/chika-kansai#{fn}" data-k="{E(pfull)}のランキング" style="margin-top:18px">{E(pfull)}の街をランキングで見る</a>
@@ -397,11 +403,6 @@ def town_page(t):
 <section class="faq"><h2>よくある質問</h2>
 {"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in faq)}
 </section>
-<div class="uru buy"><div class="k">この街で家を探している方へ</div><div class="ad">広告</div>
-{tl_a}
-<a class="bx" href="{E(YAHOO_RE)}" rel="nofollow sponsored" target="_blank" data-k="家を探す｜Yahoo!不動産｜{E(n)}"><b>自分で物件を探す</b><span>Yahoo!不動産。中古マンション・一戸建て・新築を、駅や広さで</span></a>
-{su_a}</div>
-<a class="uru" href="/uru.html" data-k="お家を売る前に大事なこと"><div class="k">お家を売る・持ち続ける前に</div><div class="t">お家を売る前に大事なこと</div><div class="m">売るか、持ち続けるか。<br>迷ったときに読むページです。</div></a>
 <p class="note">出典：{E(sname)}（価格時点 2026年1月1日）<br><a href="{E(surl)}" data-k="出典">{E(surl)}</a><br>数字は街の中の調査地点の平均の変動率で、1軒ずつの値段ではありません。<br>売れた家の値段：{E(REINS_NAME)}<br>表19 <a href="{REINS_URL}" data-k="出典｜レインズ">{REINS_URL}</a><br>表20 <a href="{REINS_URL2}" data-k="出典｜レインズ">{REINS_URL2}</a><br>平均の値段で、1軒ずつの値段ではありません。広さ・築年数・駅からの近さで大きく変わります。</p>
 <a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
 <div class="ft">TOWN NOTE</div></div>
