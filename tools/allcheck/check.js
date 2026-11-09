@@ -28,10 +28,11 @@ async function pages(site) {
     for (const m of x.matchAll(/<loc>([^<]+)<\/loc>/g)) list.push(new URL(m[1]).pathname);
   } catch (e) { console.log("sitemap NG", site.base, e.message); }
   // 11/2 町のページ（/machi/…）は200以上あって20分で終わらない → 形が同じなので extra の見本だけ見る
-  list = list.filter(p => !/^\/machi\//.test(p));
-  // 11/5 おでかけ1件ずつのページ（/o/…）が増えて20分で終わらず2日続けて止まった → 形が同じなので最初の2つだけ見る
-  const o = list.filter(p => /^\/o\//.test(p)).slice(0, 2);
-  list = list.filter(p => !/^\/o\//.test(p)).concat(o);
+  // 11/9 夜#154：見本の2街だけでは、草津ほか24街の NaN を見逃した → 街と1件ページは、毎日ちがう 1/10 ずつ回して10日で全部見る
+  const day = Math.floor(Date.now() / 864e5), rot = (q, i) => i % 10 === day % 10;
+  const mc = list.filter(p => /^\/machi\//.test(p)).filter(rot);
+  const o = list.filter(p => /^\/o\//.test(p)).filter(rot);
+  list = list.filter(p => !/^\/(machi|o)\//.test(p)).concat(mc, o);
   list = list.concat(site.extra).map(p => p.replace(/\.html$/, ""));
   return [...new Set(list)];
 }
@@ -76,6 +77,9 @@ async function one(ctx, site, p) {
       // 11/2 燈の入口で「比べた物 0件」が出ていたのを見逃した → 数の欄が 0件・―・NaN・undefined のままなら問題にする
       zero: [...document.querySelectorAll("b,strong,.n,.num")].filter(e => vis(e) && /^(0(件|つ|軒|か所)?|―|-|NaN.*|undefined.*)$/.test(e.textContent.trim())).map(e => ((e.parentElement && e.parentElement.textContent) || "").trim().replace(/\s+/g, " ").slice(0, 20)).slice(0, 5),
       bad: /NaN|undefined|\[object Object\]/.test(document.body.innerText),
+      // 11/9 夜#157：開催中なのに「249日後」→ 日付の札が半年より先なら問題にする／#159：LIFE のページの下が TOWN NOTE
+      far: [...document.querySelectorAll(".cmb")].map(e => e.textContent.replace(/\s+/g, " ").trim()).filter(t => { const m = t.match(/(\d+)日後/); return m && +m[1] > 150; }).slice(0, 3),
+      brand: /lifenote|life-note|usagi-life/.test(location.host) ? [...document.querySelectorAll(".ft")].some(e => /TOWN NOTE/.test(e.textContent)) : [...document.querySelectorAll(".ft")].some(e => /LIFE NOTE/.test(e.textContent) && !/TOWN NOTE/.test(e.textContent)),
       text: document.body.innerText,
       links: [...new Set([...document.querySelectorAll("a[href^='http']")].map(a => a.href))],
       pwa: !!document.querySelector('link[rel="manifest"]'),
@@ -101,6 +105,8 @@ async function one(ctx, site, p) {
   if (info.beige && info.beige.length) prob.push("ベージュっぽい色: " + info.beige.join("、"));
   if (info.zero && info.zero.length) prob.push("数が0か空のまま: " + info.zero.join("／"));
   if (info.bad) prob.push("NaN・undefined の文字が見えている");
+  if (info.far && info.far.length) prob.push("日付の札が半年より先（年のまちがい？）: " + info.far.join("／"));
+  if (info.brand) prob.push("ページの下のサイト名がちがう（TOWN と LIFE）");
   if (info.pwa === false) prob.push("ホーム画面に置けない（manifest がない）");
   if (info.imgs && info.imgs.length) prob.push("出ない画像: " + info.imgs.join(" "));
   if (info.text) {
