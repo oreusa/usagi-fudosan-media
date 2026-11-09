@@ -5,7 +5,8 @@
 
 使い方（usagi-fudosan-media で）:
   git fetch origin allcheck
-  python3 tools/kanseishitsu/facts.py > /tmp/facts.json
+  （投稿の学習も出すとき）管制室 DB の days を直近21日・engine/state を ArtifactData の out_dir で保存しておく
+  python3 tools/kanseishitsu/facts.py [--days DIR/days] [--engine DIR/engine/state.json] > /tmp/facts.json
 """
 import datetime
 import json
@@ -77,6 +78,61 @@ def linkcheck_life():
     return {"at": m.group(1) if m else "", "links": int(m.group(2)) if m else 0, "ng": bad}
 
 
+def _rows(path):
+    import glob
+    out = []
+    for f in sorted(glob.glob(os.path.join(path, "*.json"))):
+        d = json.load(open(f, encoding="utf-8"))
+        d = d.get("data", d)
+        for p in d.get("posts", []):
+            if p.get("reach") is not None and p.get("ch") in ("threads", "twitter"):
+                out.append({**p, "day": d.get("date", "")})
+    return out
+
+
+def toko(days_dir, engine_path):
+    """投稿の学習（11/9 オーナー「投稿も学習できてるんだろうな？」）。
+    ①この7日と前の7日の、1本あたりの閲覧の真ん中　②この7日で、エンジンが「効く」とした型を使った投稿と使わない投稿の真ん中。"""
+    import statistics
+    if not days_dir or not os.path.isdir(days_dir):
+        return {}
+    rows = _rows(days_dir)
+    if not rows:
+        return {}
+    from collections import Counter
+    cnt = Counter(r["day"] for r in rows if r["ch"] == "threads")
+    full = [d for d, c in cnt.items() if c >= 5]   # 数字がまだ入りきっていない日（前日など）は使わない
+    last = max(full) if full else max(r["day"] for r in rows)
+    rows = [r for r in rows if r["day"] <= last]
+    d0 = datetime.date.fromisoformat(last)
+    a = (d0 - datetime.timedelta(days=6)).isoformat()
+    b = (d0 - datetime.timedelta(days=13)).isoformat()
+    up = {}
+    if engine_path and os.path.exists(engine_path):
+        import ast
+        st = json.load(open(engine_path, encoding="utf-8"))
+        st = st.get("data", st)
+        pol = st.get("policy")
+        pol = ast.literal_eval(pol) if isinstance(pol, str) else (pol or {})
+        for dim, v in (pol.get("dims") or {}).items():
+            up[dim] = set(v.get("up") or [])
+    med = lambda xs: round(statistics.median(xs)) if xs else None
+    out = {"day": last, "n": len(rows)}
+    for ch, nm in (("threads", "Threads"), ("twitter", "X")):
+        now = [r["reach"] for r in rows if r["ch"] == ch and r["day"] >= a]
+        pre = [r["reach"] for r in rows if r["ch"] == ch and b <= r["day"] < a]
+        use, non = [], []
+        for r in rows:
+            if r["ch"] != ch or r["day"] < a:
+                continue
+            tg = r.get("tags") or {}
+            hit = sum(1 for dim, s in up.items() if tg.get(dim) in s)
+            (use if hit >= 2 else non).append(r["reach"])
+        out[ch] = {"name": nm, "week": med(now), "prev": med(pre), "n_week": len(now),
+                   "kata": med(use), "n_kata": len(use), "other": med(non), "n_other": len(non)}
+    return out
+
+
 def gakushu(days=7):
     """notes/gakushu.json（ミス → 仕組みの帳面）の直近の分。"""
     p = os.path.join(ROOT, "notes", "gakushu.json")
@@ -90,8 +146,14 @@ def gakushu(days=7):
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--days")
+    ap.add_argument("--engine")
+    a = ap.parse_args()
     now = datetime.datetime.now(JST)
-    facts = {"made_at": now.strftime("%Y-%m-%dT%H:%M+09:00"), "allcheck": allcheck(), "linkcheck": linkcheck(), "linkcheck_life": linkcheck_life(), "gakushu": gakushu()}
+    facts = {"made_at": now.strftime("%Y-%m-%dT%H:%M+09:00"), "allcheck": allcheck(), "linkcheck": linkcheck(), "linkcheck_life": linkcheck_life(),
+             "gakushu": gakushu(), "toko": toko(a.days, a.engine)}
     json.dump({"date": now.date().isoformat(), "facts": facts}, sys.stdout, ensure_ascii=False, indent=1)
 
 
