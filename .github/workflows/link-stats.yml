@@ -38,6 +38,9 @@ jobs:
       - name: rebuild 泊まりで行くおでかけ
         # 10/31 宿とカードの新しい一覧で毎朝作り直す（終わったおでかけは消える）
         run: python3 tools/tomari/build.py "$(TZ=Asia/Tokyo date +%F)"
+      - name: HP page-type learning
+        # 11/9 ページ型ごとの「外から来た数」この7日／前の7日 → 増やす型・直す型（朝の報告に1行）
+        run: python3 tools/hp_learning.py || true
       - name: sitemap dates
         # 11/9 lastmod を「中身が変わった日」に（毎日すべて今日だと Google が日付を信じなくなる）
         run: python3 tools/sitemap_dates.py "$(TZ=Asia/Tokyo date +%F)"
@@ -48,5 +51,5 @@ jobs:
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/link.json stats/link-30.json links/illumination*.html links/koyo*.html links/index.html links/odekake-*.html links/o links/sitemap.xml stats/sitemap-dates.json links/kansai-yado.json links/tomari.html stats/linkcheck.md
+          git add stats/link.json stats/link-30.json links/illumination*.html links/koyo*.html links/index.html links/odekake-*.html links/o links/sitemap.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md
           git diff --cached --quiet || (git commit -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)" && git pull --rebase -q && git push)
