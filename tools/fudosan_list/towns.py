@@ -225,6 +225,7 @@ h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spa
 .faq details{background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);margin-bottom:8px;padding:12px 16px}
 .faq summary{font-weight:700;font-size:14px;line-height:1.6;cursor:pointer}.faq p{font-size:13px;line-height:1.9;color:#5E544D;margin:8px 0 0}
 .note{font-size:12px;line-height:1.9;color:#7A6E66;background:#F5F5F5;padding:14px 16px;margin-top:30px;word-break:break-all}.note a{color:#7A6E66}
+.itg2{display:flex;justify-content:space-between;margin:10px 0 0;padding:11px 14px;border-top:1px solid #E6E6E6;border-bottom:1px solid #E6E6E6;text-decoration:none;color:#5E544D;font-size:13px;text-align:left}.itg2 i{font-style:normal;font-family:Jost;color:#9C8775}
 .jmp{display:flex;justify-content:space-between;align-items:center;margin:12px 0 0;padding:13px 16px;border:1px solid #E3E3E3;border-radius:14px;text-decoration:none;color:#2B2622;font-weight:700;font-size:14px;background:#fff}.jmp i{font-style:normal;font-family:Jost;color:#9C8775}.itt{scroll-margin-top:12px}
 .itt{margin:30px 0 6px;text-align:center}.itt .en2{font-family:Jost,sans-serif;font-size:11px;letter-spacing:.32em;color:#9C8775}.itt h2{margin:6px 0 14px;padding-left:0;border-left:0;font-size:20px}.itg{display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:left}.itc{display:flex;flex-direction:column;text-decoration:none;color:#2B2622;border:1px solid #E3E3E3;border-radius:18px;padding:16px 14px;background:#fff}.itc b{font-family:"Shippori Mincho",serif;font-size:17px;font-weight:700;letter-spacing:.06em}.itc span{font-size:12.5px;line-height:1.75;color:#6B6058;margin:8px 0 12px;flex:1}.itc i{font-style:normal;font-weight:700;font-size:13.5px;color:#B5735A}.itn{font-size:11.5px;color:#8C7B6E;text-align:left;margin:8px 2px 0}
 .uru{display:block;text-decoration:none;color:#2B2622;border:1px solid #2B2622;padding:16px;margin-top:30px;text-align:center}
@@ -380,7 +381,8 @@ def town_page(t):
     itt = (f'<section class="itt" id="itt"><div class="en2">IN THIS TOWN</div><h2>{E(n)}で</h2><div class="itg">'
            f'<a class="itc" href="/uru.html" data-k="この街で｜売りたい｜{E(n)}"><b>売りたい</b><span>いくらで売れそうか、相場から順に（無料）</span><i>手順を見る →</i></a>'
            f'<a class="itc" href="{E(YAHOO_RE)}" rel="nofollow sponsored" target="_blank" data-k="家を探す｜Yahoo!不動産｜{E(n)}"><b>買いたい</b><span>Yahoo!不動産で地域を選んで、売り出し中の家を見る</span><i>物件を探す →</i></a>'
-           f'</div><p class="itn">「物件を探す」は広告です（Yahoo!不動産のトップが開きます）。</p></section>')
+           f'</div><a class="itg2" href="/gyosha" data-k="この街で｜困りごとの相談｜{E(n)}">相続した家・古い家・再建築不可などのご相談 <i>→</i></a>'
+           f'<p class="itn">「物件を探す」は広告です（Yahoo!不動産のトップが開きます）。</p></section>')
     rel_h = ""
     if rel:
         rel_h = '<h2>この街で調べた数字</h2>' + "".join(
