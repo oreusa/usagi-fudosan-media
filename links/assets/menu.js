@@ -14,8 +14,8 @@
    全ページ共通のメニュー（11/3 テスターの声「メニューが見にくい」→ 項目はゴシックの太字・英字の小見出しなし・説明を濃く）。右上の三本線 → 右から出る紙。昼と夜の切り替えもここ（night.js）。
    ページを足すときは L に1行足すだけ。押された数は /c に「メニュー｜名前」で数える。 */
 (function(){
-  var P=location.pathname.replace(/^\/townnotes\//,"/"),FU=/^\/(fudosan|uru|moushikomi|gyosha|chika-|machi\/)/.test(P),here=
-    /^\/fudosan-list/.test(P)?"flist":/^\/chika-kansai/.test(P)?"chika":/^\/chika-osaka/.test(P)?"chikao":/^\/(odekake|index\.html)$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/koyo/.test(P)?"koyo":/^\/koe/.test(P)?"koe":/^\/tomari/.test(P)?"tomari":/^\/ima/.test(P)?"ima":/^\/(town-notes)?$/.test(P)?"tn":/^\/uru/.test(P)?"uru":/^\/gyosha/.test(P)?"gyosha":/^\/moushikomi/.test(P)?"satei":/^\/(fudosan|gyosha)/.test(P)?"fudosan":"";
+  var P=location.pathname.replace(/^\/townnotes\//,"/"),FU=/^\/(fudosan|uru|moushikomi|gyosha|sagasu|chika-|machi\/)/.test(P),here=
+    /^\/sagasu/.test(P)?"fbuy":/^\/fudosan-list/.test(P)?"flist":/^\/chika-kansai/.test(P)?"chika":/^\/chika-osaka/.test(P)?"chikao":/^\/(odekake|index\.html)$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/koyo/.test(P)?"koyo":/^\/koe/.test(P)?"koe":/^\/tomari/.test(P)?"tomari":/^\/ima/.test(P)?"ima":/^\/(town-notes)?$/.test(P)?"tn":/^\/uru/.test(P)?"uru":/^\/gyosha/.test(P)?"gyosha":/^\/moushikomi/.test(P)?"satei":/^\/(fudosan|gyosha)/.test(P)?"fudosan":"";
   var L=[
     ["LIST","list","/odekake","関西おでかけリスト","開催中・これからのおでかけ"],
     ["MAP","map","/odekake#map","地図で見る","関西の地図から、近くのおでかけを"],
@@ -52,7 +52,7 @@
     ["MAP","fmap","/fudosan-list?fq=map","地図で見る","上がった街を色で"],
     ["RANKING","chika","/chika-kansai","地価ランキング","関西205の街"],
     ["SELL","uru","/uru.html","家を売りたい方へ","相場から順に"],
-    ["BUY","fbuy","/fudosan-list?fq=q","家を買いたい方へ","住む街の値段と物件"],
+    ["BUY","fbuy","/sagasu","家を買いたい方へ","住む街の値段と物件"],
     ["-","CONTACT"],
     ["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],
     ["APPLY","satei","/moushikomi","売却のお申し込み","無料・約1分"],
