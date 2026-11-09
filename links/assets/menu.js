@@ -34,7 +34,7 @@
   if(SHP)L=[
     ["-","OKAIMONO LIST"],
     ["COMPARE","okai","/okaimono","くらべる","日用品21種類の最安とおすすめ"],
-    ["PRICE DOWN","nesage","/nesage","買い時","本当に値下がりした物"],
+    ["PRICE DOWN","nesage","/nesage","買い時","ふだんより安い物"],
     ["SALE","kaimawari","/kaimawari","セール","買いまわりの1,000円ぽっきり"],
     ["FURUSATO","furusato","/furusato","ふるさと納税","寄付1万円あたりの量で・12/31まで"],
     ["DEALS","otoku","/otoku","お得まとめ・AIに聞く","セール・ふるさと・宿をまとめて"],
