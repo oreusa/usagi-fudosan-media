@@ -1,0 +1,17 @@
+name: ngcheck（お客さんに見せてはいけない言葉が無いか）
+# 11/9 オーナー「燈？」「本当に値下がりってタイトル変すぎ」「毎回ミスしたら考え直せ…なんか対策ないの」
+# → PR と main への push のたびに links/ の全ページと assets の JS の文を調べる。1つでもあれば赤にする（月は赤のPRをマージしない）。
+# 言葉は tools/allcheck/ngwords.json（燈の scripts/ngwords.json と同じ物）。ミスが出たら同じ種類をそこに足す。
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  ng:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/allcheck/ngcheck.py links

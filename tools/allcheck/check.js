@@ -12,6 +12,8 @@ const SITES = [
   { key: "akari", name: "燈", base: process.env.AKARI_BASE || "https://usagi-life-notes.pages.dev",
     extra: ["/odekake", "/okaimono", "/ima", "/nesage", "/kaimawari", "/tanka", "/furusato", "/tomari", "/koyo", "/privacy", "/koe"] },
 ];
+// 11/9 オーナー「燈？」「なんか対策ないの」→ 画面に出た文（JSで出る物も）に、見せてはいけない言葉が無いかも毎朝見る。文は text/ に残す
+const NG = (() => { try { const d = JSON.parse(fs.readFileSync(path.join(__dirname, "ngwords.json"), "utf8")); return { w: d.words.map(([rx, why]) => [new RegExp(rx), why]), allow: d.allow || [] }; } catch (e) { return { w: [], allow: [] }; } })();
 const T = new Date(Date.now() + 9 * 36e5).toISOString().slice(0, 10);
 
 async function pages(site) {
@@ -70,11 +72,16 @@ async function one(ctx, site, p) {
       // 11/2 燈の入口で「比べた物 0件」が出ていたのを見逃した → 数の欄が 0件・―・NaN・undefined のままなら問題にする
       zero: [...document.querySelectorAll("b,strong,.n,.num")].filter(e => vis(e) && /^(0(件|つ|軒|か所)?|―|-|NaN.*|undefined.*)$/.test(e.textContent.trim())).map(e => ((e.parentElement && e.parentElement.textContent) || "").trim().replace(/\s+/g, " ").slice(0, 20)).slice(0, 5),
       bad: /NaN|undefined|\[object Object\]/.test(document.body.innerText),
+      text: document.body.innerText,
       pwa: !!document.querySelector('link[rel="manifest"]'),
       imgs: [...document.images].filter(i => i.complete && i.naturalWidth === 0 && vis(i)).map(i => i.getAttribute("src")).slice(0, 5),
     };
   }, T).catch(e => ({ title: "", err: e.message }));
   const slug = site.key + "-" + (p.replace(/^\/|\/$/g, "").replace(/[\/]/g, "_") || "top");
+  if (info.text) {
+    fs.mkdirSync(path.join(OUT, "text"), { recursive: true });
+    fs.writeFileSync(path.join(OUT, "text", slug + ".txt"), info.title + "\n\n" + info.text);
+  }
   try { await pg.screenshot({ path: path.join(OUT, "shots", slug + ".jpg"), fullPage: true, type: "jpeg", quality: 55 }); } catch (e) {}
   await pg.close();
   const prob = [];
@@ -91,6 +98,10 @@ async function one(ctx, site, p) {
   if (info.bad) prob.push("NaN・undefined の文字が見えている");
   if (info.pwa === false) prob.push("ホーム画面に置けない（manifest がない）");
   if (info.imgs && info.imgs.length) prob.push("出ない画像: " + info.imgs.join(" "));
+  if (info.text) {
+    let tx = info.text; for (const a of NG.allow) tx = tx.split(a).join("");
+    for (const [rx, why] of NG.w) { const m = tx.match(rx); if (m) prob.push("言葉: " + why + "（…" + tx.slice(Math.max(0, m.index - 12), m.index + m[0].length + 12).replace(/\s+/g, " ") + "…）"); }
+  }
   errs.slice(0, 3).forEach(e => prob.push(e));
   bad.slice(0, 3).forEach(e => prob.push("読めない: " + e));
   return { site: site.name, p, slug, title: info.title, h: info.h, prob };
