@@ -35,7 +35,7 @@ async function pages(site) {
 async function one(ctx, site, p) {
   const pg = await ctx.newPage();
   const errs = [], bad = [];
-  pg.on("pageerror", e => errs.push("JS: " + e.message.slice(0, 120)));
+  pg.on("pageerror", e => errs.push("JS: " + e.message.slice(0, 120) + ((e.stack || "").split("\n").slice(1, 2).join("").replace(site.base, "").trim().replace(/^at /, " @ ").slice(0, 120))));  // 11/9 どのファイルの何行目かも残す
   pg.on("console", m => { if (m.type() === "error") errs.push("console: " + m.text().slice(0, 120)); });
   pg.on("response", r => { const u = r.url(); if (r.status() >= 400 && !/\/c(\?|$)|google|doubleclick|rakuten/.test(u)) bad.push(r.status() + " " + u.replace(site.base, "")); });
   let status = 0;
