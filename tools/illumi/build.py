@@ -268,6 +268,6 @@ for p in PREFS:
         [("関西おでかけリスト", "odekake"), ("関西の紅葉ライトアップ2026", "koyo.html"), (f"{p}の紅葉ライトアップ", f"koyo-{SLUG[p]}.html")], kind="ko")
 for f, h in pages.items():
     open(OUT + f, "w").write(h)
-sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", "odekake", *pages, "tomari.html", "ima.html", "fudosan-list", "chika-kansai", "chika-osaka", "uru", *sorted("machi/" + x for x in os.listdir(OUT + "machi") if x.endswith(".html"))])
+sm = "".join(f'<url><loc>{BASE}{f.replace(".html", "")}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n' for f in ["", "odekake", *pages, "tomari.html", "ima.html", "fudosan-list", "chika-kansai", "chika-osaka", "uru", *sorted(x[:-5] for x in os.listdir(OUT) if x.startswith("gyosha") and x.endswith(".html")), *sorted("machi/" + x for x in os.listdir(OUT + "machi") if x.endswith(".html"))])
 open(OUT + "sitemap.xml", "w").write(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{sm}</urlset>\n')
 print(cnt, {p: len(v) for p, v in cards.items()}, len(pages), "pages")
