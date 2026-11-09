@@ -29,7 +29,7 @@ document.body.appendChild(bar);bar.classList.add("on");document.documentElement.
 }
 function go(){
 if(/^\/(town-notes)?$/.test(location.pathname))return goT();
-if(/^\/(fudosan|uru|gyosha|chika-|machi\/)/.test(location.pathname))return goF();
+if(/^\/(fudosan|uru|moushikomi|gyosha|chika-|machi\/)/.test(location.pathname))return goF();
 var bar=document.createElement("nav");bar.id="v2bar";bar.setAttribute("aria-label","すぐ移動");
 var inn=/\/tomari/.test(location.pathname);
 bar.innerHTML='<a data-h="/odekake?v2t=0">'+I.now+'<span>開催中</span></a><a data-h="/odekake?v2t=1">'+I.up+'<span>これから</span></a><a data-h="/odekake?v2t=map">'+I.map+'<span>地図</span></a><a data-h="/tomari.html"'+(inn?' class="cur"':'')+'>'+I.inn+'<span>泊まり</span></a><button class="mn" type="button"><i></i>MENU</button>';
