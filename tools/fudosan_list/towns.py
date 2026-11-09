@@ -238,10 +238,11 @@ FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="p
 SCRIPTS = '<script src="/assets/night.js?v=22"></script><script src="/assets/menu.js?v=36" defer></script><script src="/assets/v2sub.js?v=10" defer></script>'
 
 
-def beacon(name):
+def beacon(name, kind="地価ランキング"):
     return ('<script>(function(){var O=(function(){try{return localStorage.getItem("usagi_owner")==="1";}catch(e){return false;}})();'
             'function s(k){if(O)return;try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}'
             f's({json.dumps("表示：" + name, ensure_ascii=False)});'
+            's("表示：'+kind+'"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":""));'
             'document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a");if(!a)return;'
             f's({json.dumps("クリック：" + name + "｜", ensure_ascii=False)}+(a.getAttribute("data-k")||a.textContent.trim().slice(0,30)));}},true);}})();</script>')
 
@@ -412,7 +413,7 @@ def town_page(t):
 <a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
 <div class="ft">TOWN NOTE</div></div>
 <script>(function(){{var b=document.querySelector(".rq");if(!b)return;b.onclick=function(){{try{{if(localStorage.getItem("usagi_owner")!=="1"){{var d=JSON.stringify({{k:"調べてほしい："+b.dataset.n}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",d)))fetch("/c",{{method:"POST",body:d,keepalive:true}});}}}}catch(e){{}}b.disabled=true;b.textContent="受け付けました。調べて、このリストに足します";}};}})();</script>
-{beacon("街｜" + n)}</body></html>'''
+{beacon("街｜" + n, "街ページ")}</body></html>'''
     return head(title, desc, url, ld) + body
 
 

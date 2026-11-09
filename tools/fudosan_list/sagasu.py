@@ -66,7 +66,7 @@ function show(p,save){{[].forEach.call(tb.children,function(b){{b.className=b.da
  if(save)try{{history.replaceState(null,"","?p="+encodeURIComponent(p))}}catch(e){{}}}}
 tb.addEventListener("click",function(e){{var b=e.target.closest("button");if(b){{show(b.dataset.p,1);window.scrollTo(0,tb.offsetTop-0)}}}});
 fetch("{S['a']}towns.json").then(function(r){{return r.json()}}).then(function(d){{T=d.towns||d;var q=new URLSearchParams(location.search).get("p");show(FULL[q]?q:tb.children[0].dataset.p)}});
-try{{if(localStorage.getItem("usagi_owner")!=="1")navigator.sendBeacon&&navigator.sendBeacon("/c",JSON.stringify({{k:"表示：住む街をさがす"}}))}}catch(x){{}}
+try{{if(localStorage.getItem("usagi_owner")!=="1")navigator.sendBeacon&&navigator.sendBeacon("/c",JSON.stringify({{k:"表示：住む街をさがす"+(document.referrer&&document.referrer.indexOf(location.host)<0?"（外から）":"")}}))}}catch(x){{}}
 }})();</script>
 </body></html>
 """
