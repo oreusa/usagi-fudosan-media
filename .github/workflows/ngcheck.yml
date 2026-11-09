@@ -15,3 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python3 tools/allcheck/ngcheck.py links
+      - name: 公開の記録にメールアドレス・電話番号が無いか（11/9 オーナー「GitHubだと他人に見られない？」）
+        run: |
+          if grep -rnIE "[A-Za-z0-9._%+-]+@(gmail|yahoo|icloud|outlook|hotmail|privaterelay|docomo|ezweb|softbank)\.[a-z.]+|0[789]0-?[0-9]{4}-?[0-9]{4}" notes docs 2>/dev/null; then echo "公開の記録に個人の連絡先があります。消してください"; exit 1; fi
