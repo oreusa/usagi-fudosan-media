@@ -224,6 +224,9 @@ function load(){Promise.all([
     /* 11/6 夜「日曜だけ・決まった日だけの催しが金曜の『きょう開いている』に出る」→ 開く日（data-days：日付・we＝土日祝・sun＝日曜）を見る */
     var dy=(a.dataset.days||"").split(","),wd=new Date(T+"T12:00:00+09:00").getDay(),HD=["2026-11-03","2026-11-23","2027-01-01","2027-01-11","2027-02-11","2027-02-23","2027-03-22"];
     if(open&&dy[0]&&!(dy.indexOf(T)>=0||(dy.indexOf("we")>=0&&(wd===0||wd===6||HD.indexOf(T)>=0))||(dy.indexOf("sun")>=0&&wd===0)||(dy.indexOf("sat")>=0&&wd===6)))open=false;
+    /* 11/9 夜#137「月曜休館の美術館が月曜の『きょう開いている』に出る」→ 休みの曜日（data-cl：sun〜sat・-日付＝休み・+日付＝開く）を見る */
+    var cl=(a.dataset.cl||"").split(",").filter(Boolean),WN=["sun","mon","tue","wed","thu","fri","sat"];
+    if(open&&cl.length&&cl.indexOf("+"+T)<0&&(cl.indexOf(WN[wd])>=0||cl.indexOf("-"+T)>=0))open=false;
     if(!open)return;
     ITEMS.push({t:t,p:a.dataset.pref,s:s,e:e,op:op,free:a.dataset.tag==="無料",m:m.replace(/^[^｜]*｜/,""),place:m.split("｜")[0],d:d,href:a.getAttribute("href"),la:+g[0],lo:+g[1],q:a.dataset.map||t,ex:g[2]!=="city",
       inside:/美術館|博物館|ミュージアム|展$|展[　 （(]|展覧|水族館|ホール|アリーナ|ドーム|百貨店|ハルカス|プラネタリウム|シアター|館/.test(t+" "+m)});});
