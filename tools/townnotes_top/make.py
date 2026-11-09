@@ -150,7 +150,7 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 <div class="st"><div><span>関西の街</span><b id="f1">―</b></div><div><span>上がった街</span><b id="f2">―</b></div><div><span>調べた数字</span><b id="f3">―</b></div></div>
 <div class="pv" id="fpv"></div><div class="go">不動産リストを開く<span>→</span></div></a>
 <a class="ls" href="/okaimono" data-k="入口｜くらべたおかいものリスト" style="--ac:#C2703F;--bg:#FBEEE6;--c:#C2703F"><div class="no"><small>PAGE</small>03</div><div class="en">OKAIMONO LIST</div><h3>くらべたおかいものリスト</h3>
-<p>3つ以上を数字で比べて選んだ、暮らしの物。<br>本当に値下がりした物と、お得な日も。</p>
+<p>3つ以上を数字で比べて選んだ、暮らしの物。<br>いまが買い時の物と、お得な日も。</p>
 <div class="st"><div><span>比べた物</span><b id="k1">―</b></div><div><span>今だけのお得</span><b id="k2">―</b></div><div><span>比べた種類</span><b id="k3">―</b></div></div>
 <div class="pv" id="kpv"></div><div class="go">おかいものリストを開く<span>→</span></div></a></section>
 <p style="font-size:10.5px;color:#8C7B6E;text-align:center;margin:-6px 0 0">おでかけの券・宿と、おかいものリストのリンクには広告（PR）があります</p>
