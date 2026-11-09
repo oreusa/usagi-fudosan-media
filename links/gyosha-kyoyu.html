@@ -184,7 +184,7 @@ f.addEventListener("submit",function(e){e.preventDefault();er.textContent="";
  "⑧ くわしく":v("text")||"なし",
  "⑨ 送られたページ":location.pathname,
  "◆ 次にすること":"このメールに「返信」すると、そのまま "+d.name+" 様に届きます"};
- var p2=fetch(MAIL,{method:"POST",headers:{"content-type":"application/json","accept":"application/json"},body:JSON.stringify(m)}).then(function(r){return r.ok}).catch(function(){return false});
+ var p2=fetch(MAIL,{method:"POST",headers:{"content-type":"application/json","accept":"application/json"},body:JSON.stringify(m)}).then(function(r){return r.json()}).then(function(j){return !!j&&String(j.success)==="true"}).catch(function(){return false});
  Promise.all([p1,p2]).then(function(a){
   if(a[0]||a[1]){f.style.display="none";document.getElementById("done").style.display="block";document.getElementById("form").scrollIntoView();sold(d.place);
    try{if(localStorage.getItem("usagi_owner")!=="1"){navigator.sendBeacon&&navigator.sendBeacon("/c",JSON.stringify({k:"業者さま｜送信"}))}}catch(x){}}
