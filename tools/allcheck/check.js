@@ -14,6 +14,10 @@ const SITES = [
 ];
 // 11/9 オーナー「燈？」「なんか対策ないの」→ 画面に出た文（JSで出る物も）に、見せてはいけない言葉が無いかも毎朝見る。文は text/ に残す
 const NG = (() => { try { const d = JSON.parse(fs.readFileSync(path.join(__dirname, "ngwords.json"), "utf8")); return { w: d.words.map(([rx, why]) => [new RegExp(rx), why]), allow: d.allow || [] }; } catch (e) { return { w: [], allow: [] }; } })();
+// 11/9 オーナー「レントラックス登録してないよな？」→ 画面のお金のリンクのASP・IDが台帳（tools/asp.json）に無ければ問題にする
+const ASP = (() => { try { const d = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "asp.json"), "utf8")); const reg = {}, nreg = {}; d.asp.forEach(a => a.domains.forEach(h => reg[h] = a)); (d.not_registered || []).forEach(a => a.domains.forEach(h => nreg[h] = a)); return { reg, nreg }; } catch (e) { return null; } })();
+const IDP = { "ck.jp.ap.valuecommerce.com": /[?&]sid=(\d+)/, "af.moshimo.com": /[?&]a_id=(\d+)/, "px.a8.net": /a8mat=([A-Z0-9]+)/, "hb.afl.rakuten.co.jp": /\/h[gc]c\/([0-9a-f.]+)/, "www.amazon.co.jp": /[?&]tag=([A-Za-z0-9-]+)/ };
+function aspCheck(links) { const out = new Set(); if (!ASP) return []; for (const u of links) { let x; try { x = new URL(u); } catch (e) { continue; } const h = x.hostname.toLowerCase(); const nr = ASP.nreg[h] || Object.entries(ASP.nreg).find(([d]) => h.endsWith("." + d))?.[1]; if (nr) { out.add("台帳に無いASP（" + nr.name + "）"); continue; } const a = ASP.reg[h], rx = IDP[h]; if (a && rx) { const m = u.match(rx); if (m && !(a.ids || []).includes(m[1])) out.add("台帳に無いID（" + a.name + " " + m[1] + "）"); } } return [...out].slice(0, 3); }
 const T = new Date(Date.now() + 9 * 36e5).toISOString().slice(0, 10);
 
 async function pages(site) {
@@ -73,6 +77,7 @@ async function one(ctx, site, p) {
       zero: [...document.querySelectorAll("b,strong,.n,.num")].filter(e => vis(e) && /^(0(件|つ|軒|か所)?|―|-|NaN.*|undefined.*)$/.test(e.textContent.trim())).map(e => ((e.parentElement && e.parentElement.textContent) || "").trim().replace(/\s+/g, " ").slice(0, 20)).slice(0, 5),
       bad: /NaN|undefined|\[object Object\]/.test(document.body.innerText),
       text: document.body.innerText,
+      links: [...new Set([...document.querySelectorAll("a[href^='http']")].map(a => a.href))],
       pwa: !!document.querySelector('link[rel="manifest"]'),
       imgs: [...document.images].filter(i => i.complete && i.naturalWidth === 0 && vis(i)).map(i => i.getAttribute("src")).slice(0, 5),
     };
@@ -102,6 +107,7 @@ async function one(ctx, site, p) {
     let tx = info.text; for (const a of NG.allow) tx = tx.split(a).join("");
     for (const [rx, why] of NG.w) { const m = tx.match(rx); if (m) prob.push("言葉: " + why + "（…" + tx.slice(Math.max(0, m.index - 12), m.index + m[0].length + 12).replace(/\s+/g, " ") + "…）"); }
   }
+  if (info.links) aspCheck(info.links).forEach(e => prob.push("お金のリンク: " + e));
   errs.slice(0, 3).forEach(e => prob.push(e));
   bad.slice(0, 3).forEach(e => prob.push("読めない: " + e));
   return { site: site.name, p, slug, title: info.title, h: info.h, prob };
