@@ -1,7 +1,7 @@
 /* 11/9 投稿から来た人を数える（URLの ?f=<投稿の印>。学習エンジンが「サイトに来た数」で投稿に点数を付ける。1回の訪問で1回だけ） */
 (function(){try{var f=new URLSearchParams(location.search).get("f");if(!f||!/^[A-Za-z0-9_-]{1,32}$/.test(f))return;if(localStorage.getItem("usagi_owner")==="1")return;if(sessionStorage.getItem("tn_f")===f)return;sessionStorage.setItem("tn_f",f);var b=JSON.stringify({k:"来訪：SNS｜"+f});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}})();
 /* 11/9 色（見本4）を全ページに */
-(function(){try{if(document.getElementById("iro-css"))return;var l=document.createElement("link");l.id="iro-css";l.rel="stylesheet";l.href="/assets/iro.css?v=11";(document.head||document.documentElement).appendChild(l);}catch(e){}})();
+(function(){try{if(document.getElementById("iro-css"))return;var l=document.createElement("link");l.id="iro-css";l.rel="stylesheet";l.href="/assets/iro.css?v=12";(document.head||document.documentElement).appendChild(l);}catch(e){}})();
 /* 11/3 オーナー「下にスライドしたら、すぐ閉じちゃう」（アプリの中で開いたページが、下に引くとページごと閉じる）。
    ページが一番上にぴったり居ると、下に引く動きをアプリが「閉じる」に使う。指を置いた時・一番上に戻った時は 1px だけ下げておく（見た目は変わらない） */
 (function(){
@@ -50,11 +50,8 @@
   /* 11/9 オーナーOK（見本4）→ 11/9 12:54 オーナー「不動産だけメニューも色々ちがくない？」→ おでかけと同じ形（タイル6つ／ご相談・お問い合わせ／関連サイト） */
   if(FU)L=[
     ["LIST","flist","/fudosan-list","関西不動産リスト","地価・人口・制度"],
-    ["SEARCH","fq","/fudosan-list?fq=q","街の名前で探す","市区町村の名前で"],
-    ["MAP","fmap","/fudosan-list?fq=map","地図で見る","上がった街を色で"],
-    ["RANKING","chika","/chika-kansai","地価ランキング","関西205の街"],
-    ["SELL","uru","/uru.html","家を売りたい方へ","相場から順に"],
     ["BUY","fbuy","/sagasu","家を買いたい方へ","住む街の値段と物件"],
+    ["FOR PROFESSIONALS","gyosha","/gyosha","業者さま・士業の先生方へ","動かしにくい不動産のご相談"],
     ["-","CONTACT"],
     ["REQUEST","koe","/koe","リクエスト・感想","増やしてほしい・これがほしい・使ってみた感想"],
     ["APPLY","satei","/moushikomi","売却のお申し込み","無料・約1分"],
@@ -164,11 +161,12 @@
     fnew:'<path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6-5.3-3-5.3 3 1.2-6L3.4 9.3l6-.7z"/>',
     uru:'<path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/>',
     satei:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/>',
+    gyosha:'<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M3 13h18"/>',
     gyosha:'<path d="M3 12l4-4 4 3 3-3 7 6"/><path d="M7 15l3 3M11 14l3 3M14 13l2 2"/>',
     okai:'<path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/>'
   };
   var ST={list:"おでかけリスト",ima:"いま行ける",illumi:"イルミネーション",koyo:"紅葉ライトアップ",tomari:"泊まりで行く",flist:"不動産リスト",chika:"地価ランキング",chikao:"大阪市24区",
-    uru:"家を売りたい方へ",satei:"売却のお申し込み",okai:"おかいものリスト"};
+    uru:"家を売りたい方へ",satei:"売却のお申し込み",gyosha:"業者さま・士業の先生方へ",okai:"おかいものリスト"};
   var SS={list:"開催中・これから",map:"近くをさがす",ima:"近い順・きょう開く所",illumi:"日程・無料の所",koyo:"夜の時間・料金",tomari:"遠くのおでかけと宿",
     flist:"地価・人口・制度",fq:"市区町村の名前で",fmap:"上がった街を色で",chika:"関西205の街",chikao:"24区の上がり幅",fnew:"最近足した数字",okai:"1個あたりで最安"};
   function item(x,tile){var cur=x[1]===here,ext=/^https?:/.test(x[2]);
