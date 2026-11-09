@@ -53,6 +53,30 @@ def linkcheck():
     return {"at": m.group(1) if m else "", "links": int(m.group(2)) if m else 0, "ng": bad}
 
 
+def linkcheck_life():
+    """関東（akari-auto の notes/linkcheck.md）。隣に akari-auto があれば読む。開かない物だけを数える（重い・新しい画面で開く は数えない）。"""
+    ak = os.path.join(os.path.dirname(ROOT), "akari-auto")
+    if not os.path.isdir(ak):
+        return {}
+    subprocess.run(["git", "-C", ak, "fetch", "-q", "origin", "main"], capture_output=True)
+    try:
+        t = subprocess.run(["git", "-C", ak, "show", "origin/main:notes/linkcheck.md"], capture_output=True, text=True, check=True).stdout
+    except subprocess.CalledProcessError:
+        return {}
+    m = re.search(r"確かめた時刻：(\S+ \S+)｜.*?リンク (\d+)本", t)
+    bad = []
+    sec = t.split("## 直す所", 1)[-1].split("\n## ", 1)[0]
+    for ln in sec.split("\n"):
+        f = ln[2:].split("｜")
+        if not ln.startswith("- ") or len(f) < 3 or not re.search(r"開かない|ページがない|404|見つからない", f[1]):
+            continue
+        # 載せる前に止めた物（hold）と、楽天が機械を断る 503 は、お客さまの画面では開くので数えない
+        if "hold・" in f[0] or ("rakuten" in f[2] and "503" in f[1]):
+            continue
+        bad.append(f[0] + "：" + f[1])
+    return {"at": m.group(1) if m else "", "links": int(m.group(2)) if m else 0, "ng": bad}
+
+
 def gakushu(days=7):
     """notes/gakushu.json（ミス → 仕組みの帳面）の直近の分。"""
     p = os.path.join(ROOT, "notes", "gakushu.json")
@@ -67,7 +91,7 @@ def gakushu(days=7):
 
 def main():
     now = datetime.datetime.now(JST)
-    facts = {"made_at": now.strftime("%Y-%m-%dT%H:%M+09:00"), "allcheck": allcheck(), "linkcheck": linkcheck(), "gakushu": gakushu()}
+    facts = {"made_at": now.strftime("%Y-%m-%dT%H:%M+09:00"), "allcheck": allcheck(), "linkcheck": linkcheck(), "linkcheck_life": linkcheck_life(), "gakushu": gakushu()}
     json.dump({"date": now.date().isoformat(), "facts": facts}, sys.stdout, ensure_ascii=False, indent=1)
 
 
