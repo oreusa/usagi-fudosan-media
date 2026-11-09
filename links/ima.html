@@ -223,7 +223,7 @@ function load(){Promise.all([
     var open=e?(s<=T&&T<=e):(op?op<=T:!/予定|準備中|オープン前/.test(d));  /* 日付の無い「12月オープン予定」などは、まだ行けないので出さない */
     /* 11/6 夜「日曜だけ・決まった日だけの催しが金曜の『きょう開いている』に出る」→ 開く日（data-days：日付・we＝土日祝・sun＝日曜）を見る */
     var dy=(a.dataset.days||"").split(","),wd=new Date(T+"T12:00:00+09:00").getDay(),HD=["2026-11-03","2026-11-23","2027-01-01","2027-01-11","2027-02-11","2027-02-23","2027-03-22"];
-    if(open&&dy[0]&&!(dy.indexOf(T)>=0||(dy.indexOf("we")>=0&&(wd===0||wd===6||HD.indexOf(T)>=0))||(dy.indexOf("sun")>=0&&wd===0)||(dy.indexOf("sat")>=0&&wd===6)))open=false;
+    if(open&&dy[0]&&!(dy.indexOf(T)>=0||(dy.indexOf("we")>=0&&(wd===0||wd===6||HD.indexOf(T)>=0))||(dy.indexOf("sun")>=0&&wd===0)||(dy.indexOf("sat")>=0&&wd===6)||(dy[0].indexOf("wd:")===0&&((dy[0].indexOf("h")>0&&HD.indexOf(T)>=0)||dy[0].slice(3).indexOf(String(wd))>=0))))open=false;/* 11/9 wd:開く曜日（休館日を外す） */
     /* 11/9 夜#137「月曜休館の美術館が月曜の『きょう開いている』に出る」→ 休みの曜日（data-cl：sun〜sat・-日付＝休み・+日付＝開く）を見る */
     var cl=(a.dataset.cl||"").split(",").filter(Boolean),WN=["sun","mon","tue","wed","thu","fri","sat"];
     if(open&&cl.length&&cl.indexOf("+"+T)<0&&(cl.indexOf(WN[wd])>=0||cl.indexOf("-"+T)>=0))open=false;
