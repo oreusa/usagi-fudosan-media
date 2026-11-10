@@ -1,10 +1,9 @@
-# リンクの確かめ（2026-11-10 07:58 JST・263件）
+# リンクの確かめ（2026-11-10 13:44 JST・263件）
 
 ## 開けない（直す）
 - ✗ 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
 - ✗ 宝厳院 紅葉ライトアップ（links/illumination-kyoto.html）URLError https://hogonin.jp/
 - ✗ 天理市 光の祭典（links/illumination-nara.html）404 https://www.city.tenri.nara.jp/kakuka/shichoukoushitsu/sougouseisakuka/teijyujirituken/teijujiritsukenibentojoho/15242.html
-- ✗ しあわせ回廊 なら瑠璃絵（links/illumination-nara.html）TimeoutError https://rurie.jp/
 - ✗ HERBIS CHRISTMAS（links/illumination-osaka.html）URLError https://www.herbis.jp/
 - ✗ HEP FIVE クリスマスイルミネーション（links/illumination-osaka.html）URLError https://www.hepfive.jp/
 - ✗ 大阪梅田ツインタワーズ・ノース クリスマスイルミネーション（links/illumination-osaka.html）URLError https://www.hhp.co.jp/
@@ -12,7 +11,6 @@
 - ✗ 勝尾寺 錦秋の宵詣り2026（links/illumination-osaka.html）URLError https://katsuo-ji-temple.or.jp/autumn/
 - ✗ 和歌山城 西之丸庭園（紅葉渓庭園）ライトアップ（links/illumination-wakayama.html）522 https://wakayamajo.jp/
 - ✗ 魯山人の宇宙 魂を刳る美がほしい（links/index.html）TimeoutError https://www.mistore.jp/store/kyoto/museum/event_list/event21.html
-- ✗ 百済寺と近江の仏教美術（links/index.html）URLError https://www.miho.or.jp/
 - ✗ 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
 
 ## 別の催しに同じURL（どちらかが違うページかも）
