@@ -47,7 +47,10 @@ for f in glob.glob(AK + "data/kanto_chika/*.csv"):
             price[(k, r[0])] = int(r[3])
 JK = json.load(open(AK + "scripts/jis_kanto.json", encoding="utf-8"))
 L = json.load(open(AK + "site/assets/towns.json", encoding="utf-8")); L = L.get("towns", L) if isinstance(L, dict) else L
-life = [{"id": t["id"], "p": t["p"], "n": t["n"], "c": JK.get(t["p"] + "|" + t["n"], ""), "l": round(price[(t["p"], t["n"])] * 100 / 10000) if (t["p"], t["n"]) in price else None, "r": t["r8"]} for t in L]
+life = [{"id": t["id"], "p": t["p"], "n": t["n"], "c": JK.get(t["p"] + "|" + t["n"], ""), "l": round(price[(t["p"], t["n"])] * 100 / 10000) if (t["p"], t["n"]) in price else None,
+         # 11/10 オーナー「目安でいいよ」: 新築一戸建ての目安＝地価公示×115㎡（フラット35利用者調査2025年度 首都圏 建売の敷地の中央値115.1㎡）＋建物 約2,000万円
+         # 建物＝近畿レインズ表21で実際に売れた新築一戸建てから土地の分（地価公示×平均の敷地）を引いた値（滋賀・和歌山の15件以上の街の中央値 約2,000万）
+         "w": round(price[(t["p"], t["n"])] * 115 / 10000) + 2000 if (t["p"], t["n"]) in price else None, "r": t["r8"]} for t in L]
 
 
 # ---- いま開催のおでかけ（終わりの日つき）
@@ -83,14 +86,14 @@ SITES = [
  dict(D=life, out=AK + "site/sagasu.html", area="関東", n="329", brand="LIFE NOTE", base="https://usagi-life-notes.pages.dev",
       js='<script src="/assets/night.js?v=18"></script><script src="/assets/menu.js?v=43" defer></script><script src="/assets/v2sub.js?v=16" defer></script>',
       order=["東京", "神奈川", "埼玉", "千葉", "茨城", "栃木", "群馬"], col={"東京": "#4F86C6", "神奈川": "#3FA3B5", "埼玉": "#E09A3E", "千葉": "#D9775A", "茨城": "#5FA06A", "栃木": "#D2697E", "群馬": "#9C7BB8"},
-      sid="3786665", pid="892742457", ar="03", kinds=[("l", "土地（100㎡・約30坪）", "land")], bud=[1000, 2000, 3000, 4000, 5000, 7000], b0=3000,
-      unit="土地100㎡の目安", usp="<b>国の地価公示</b>の住宅地の平均から、土地100㎡（約30坪）の目安で選べます。",
-      src="令和8年地価公示の住宅地の平均価格×100㎡（建物は別）"),
+      sid="3786665", pid="892742457", ar="03", kinds=[("l", "土地（100㎡・約30坪）", "land"), ("w", "新築一戸建て（目安）", "new/house")], units={"l": "土地100㎡の目安", "w": "新築一戸建ての目安"}, bud=[1000, 2000, 3000, 4000, 5000, 7000], b0=3000,
+      unit="土地100㎡の目安", usp="<b>国の地価公示</b>の住宅地の平均から、土地と新築一戸建ての目安で選べます。",
+      src="土地＝令和8年地価公示の住宅地の平均価格×100㎡（建物は別）。新築一戸建て＝地価公示の住宅地の平均価格×115㎡＋建物 約2,000万円の目安（115㎡は住宅金融支援機構「2025年度 フラット35利用者調査」の首都圏の建売住宅の敷地の中央値。建物の分は、近畿レインズで実際に売れた新築一戸建ての値段から土地の分を引いた目安）。実際に売れた値段ではありません"),
 ]
 E = html.escape
 for S in SITES:
     title = f"家を買いたい｜その予算で、どの街に住める？{S['area']}{S['n']}の街【2026年】｜{S['brand']}"
-    desc = (f"{S['area']}の街を、予算から探せます。" + ("売り出し価格ではなく、実際に売れた中古マンション・中古一戸建て・新築一戸建て・土地の平均（近畿レインズ）で、予算に届く街がすぐわかります。" if S["ar"] == "06" else "国の地価公示から出した土地100㎡の目安で、予算に届く街がすぐわかります。")
+    desc = (f"{S['area']}の街を、予算から探せます。" + ("売り出し価格ではなく、実際に売れた中古マンション・中古一戸建て・新築一戸建て・土地の平均（近畿レインズ）で、予算に届く街がすぐわかります。" if S["ar"] == "06" else "国の地価公示から出した土地100㎡と新築一戸建ての目安で、予算に届く街がすぐわかります。")
             + "街を押すと、その街で売り出し中の物件が見られます。")
     kt = "".join(f'<button type="button" data-k="{k}" data-y="{y}"{" class=\"on\"" if i == 0 else ""}>{lb}</button>' for i, (k, lb, y) in enumerate(S["kinds"]))
     D = [{k: v for k, v in t.items() if v not in (None, [], "") or k in ("id", "p", "n", "r")} for t in S["D"]]
@@ -128,12 +131,12 @@ body{{margin:0;background:#fff;font-family:"Zen Kaku Gothic New";color:#2B2622;p
 <p class="res" id="res"></p>
 <div class="pf" id="pf"></div>
 <div class="so" id="so"><button type="button" data-s="up" class="on">値上がり順</button><button type="button" data-s="cheap">安い順</button><button type="button" data-s="od">いま開催が多い順</button></div>
-<div class="lh"><span>押すと、その街で売り出し中の家（広告）</span><span>{S["unit"]}</span></div>
+<div class="lh"><span>押すと、その街で売り出し中の家（広告）</span><span id="unit">{S["unit"]}</span></div>
 <div id="tl"></div>
 <p class="nt">値段：{S["src"]}。1軒ずつの値段ではありません。「いま開催」は、このサイトのおでかけリストから（終わった物は出しません）。街を押すと Yahoo!不動産 のその街の一覧が開きます（広告）。</p>
 <div class="ft" style="text-align:center;font-size:10px;color:#8C7B6E;margin-top:24px">{S["brand"]}</div></div>
 <script>(function(){{
-var D={json.dumps(D, ensure_ascii=False, separators=(",", ":"))},ORD={json.dumps(S["order"], ensure_ascii=False)},COL={json.dumps(S["col"], ensure_ascii=False)},BUD={json.dumps(S["bud"])},UNIT="{S["unit"]}";
+var D={json.dumps(D, ensure_ascii=False, separators=(",", ":"))},ORD={json.dumps(S["order"], ensure_ascii=False)},COL={json.dumps(S["col"], ensure_ascii=False)},BUD={json.dumps(S["bud"])},UNIT="{S["unit"]}",UNITS={json.dumps(S.get("units", {}), ensure_ascii=False)};
 var TD=new Date(Date.now()+9*3600e3).toISOString().slice(0,10),st={{k:"{S["kinds"][0][0]}",y:"{S["kinds"][0][2]}",b:{S["b0"]},p:"",s:"up",n:30}};
 D.forEach(function(t){{t.o=(t.o||[]).filter(function(x){{return x[1]>=TD}})}});
 var O=false;try{{O=localStorage.getItem("usagi_owner")==="1"}}catch(e){{}}
@@ -152,7 +155,7 @@ function draw(){{
  L.sort(st.s=="up"?function(a,b){{return b.r-a.r}}:st.s=="cheap"?function(a,b){{return a[st.k]-b[st.k]}}:function(a,b){{return b.o.length-a.o.length||b.r-a.r}});
  tl.innerHTML=L.length?L.slice(0,st.n).map(function(t){{return '<a class="rw" style="--c:'+COL[t.p]+'" href="'+E(yu(t))+'" rel="nofollow sponsored" target="_blank" data-k="家を探す｜Yahoo!不動産｜'+E(t.n)+'"><div class="a"><b>'+E(t.n)+'</b><small>'+t.p+(st.k==="l"&&t.la?'・平均'+t.la+'㎡':'')+'</small>'+(t.o.length?'<span>いま開催：'+E(t.o[0][0])+(t.o.length>1?' ほか'+(t.o.length-1):'')+'</span>':'')+'</div><div class="b"><b>'+man(t[st.k])+'</b><span>地価 '+(t.r>0?"+":"")+t.r.toFixed(1)+'%'+(t.r>0?" ↑":"")+'</span></div></a>'}}).join("")+(L.length>st.n?'<button type="button" class="kmore" id="kmore">あと'+(L.length-st.n)+'の街を見る</button>':''):'<p class="em">この予算では、まだ届く街がありません。<br>予算を少し上げてみてください。</p>'}}
 bc.addEventListener("click",function(e){{var b=e.target.closest("button");if(!b)return;st.b=+b.dataset.b;st.n=30;c("家を買いたい｜予算｜"+st.b);draw()}});
-document.getElementById("kd").addEventListener("click",function(e){{var b=e.target.closest("button");if(!b)return;st.k=b.dataset.k;st.y=b.dataset.y;st.n=30;c("家を買いたい｜種類｜"+b.textContent);[].forEach.call(this.children,function(x){{x.classList.toggle("on",x===b)}});draw()}});
+document.getElementById("kd").addEventListener("click",function(e){{var b=e.target.closest("button");if(!b)return;st.k=b.dataset.k;st.y=b.dataset.y;st.n=30;document.getElementById("unit").textContent=UNITS[st.k]||UNIT;c("家を買いたい｜種類｜"+b.textContent);[].forEach.call(this.children,function(x){{x.classList.toggle("on",x===b)}});draw()}});
 document.getElementById("pf").addEventListener("click",function(e){{var b=e.target.closest("button");if(!b)return;st.p=b.dataset.p;st.n=30;draw()}});
 document.getElementById("so").addEventListener("click",function(e){{var b=e.target.closest("button");if(!b)return;st.s=b.dataset.s;[].forEach.call(this.children,function(x){{x.classList.toggle("on",x===b)}});draw()}});
 tl.addEventListener("click",function(e){{if(e.target.id==="kmore"){{st.n+=60;draw();return}}var a=e.target.closest("a.rw");if(a)c("クリック：住む街をさがす｜"+a.getAttribute("data-k"))}});
