@@ -97,6 +97,13 @@ for f in sorted(glob.glob(os.path.join(root, "**", "*.html"), recursive=True)):
             continue
         bad.append(f"{os.path.relpath(f, root)}：昼/夜ボタンと同じクラス名 .{m.group(1)}（名前を変える）")
         break
+# 11/10 夜 #150：おでかけの場所が、書いてある市区町村・府県の形から外れていたら赤（geocheck.py）
+try:
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import geocheck
+    bad += geocheck.check(root)
+except Exception as _ex:
+    print("geocheck skipped", _ex)
 for b in bad[:80]:
     print("×", b)
 print(f"ngcheck: {len(bad)} 件" if bad else "ngcheck: なし")
