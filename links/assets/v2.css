@@ -50,3 +50,8 @@ html body .paper .it .card{box-shadow:inset 4px 0 0 var(--pc)!important}
 /* 10/31 オーナー「場所変だよ」→ 三本線を隠したので、太陽と月のマークを右の角へ */
 html.v2bar-on #utheme{right:12px}
 html body .paper .it .yk a+a{margin-left:14px!important}
+
+/* 11/10 オーナー「おでかけリスト押したら一瞬バグる」→ 古い並びが一瞬見えてから新しい形に変わっていた。when.js が形を作るまで一覧を隠し、ふわっと出す（1.5秒で必ず出す） */
+html:not(.whd) .paper:has(>#wkd){opacity:0;animation:tnIn 0s 1.5s forwards}
+html.whd .paper:has(>#wkd){animation:tnFade .18s ease-out}
+@keyframes tnIn{to{opacity:1}}@keyframes tnFade{from{opacity:0}to{opacity:1}}
