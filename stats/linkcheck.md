@@ -1,4 +1,4 @@
-# リンクの確かめ（2026-11-10 13:44 JST・263件）
+# リンクの確かめ（2026-11-10 23:13 JST・262件）
 
 ## 開けない（直す）
 - ✗ 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
@@ -11,6 +11,8 @@
 - ✗ 勝尾寺 錦秋の宵詣り2026（links/illumination-osaka.html）URLError https://katsuo-ji-temple.or.jp/autumn/
 - ✗ 和歌山城 西之丸庭園（紅葉渓庭園）ライトアップ（links/illumination-wakayama.html）522 https://wakayamajo.jp/
 - ✗ 魯山人の宇宙 魂を刳る美がほしい（links/index.html）TimeoutError https://www.mistore.jp/store/kyoto/museum/event_list/event21.html
+- ✗ アドベンチャーワールド LIGHT PARKS（links/index.html）503 https://www.aws-s.com/lightparks&nightsafari/lightparks/
+- ✗ アニタッチ OSAKA なんば（links/index.html）404 https://www.afpbb.com/articles/-/3648165
 - ✗ 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
 
 ## 別の催しに同じURL（どちらかが違うページかも）
