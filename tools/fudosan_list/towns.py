@@ -537,6 +537,25 @@ J_SRC = [
     ("税金の特例を確かめる", "相続した空き家（1981年5月31日以前に建てた家など）を2027年12月31日までに売ると、最高3,000万円の特別控除があります（相続人が3人以上なら2,000万円まで・条件あり）。くわしくは税務署・税理士へ。",
      "国税庁 タックスアンサー No.3306", "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3306.htm"),
 ]
+# 11/10 市の補助（夜が公式ページで確かめた物・2026/11/10 時点）。受付は変わるので「確認日」と公式URLを必ず出す
+J_CITY = [
+    ("寝屋川市", [("空き家の解体の補助", "解体費の4/5・上限50万円（1年以上空き家の木造住宅など・条件あり）。受付は2027年2月26日まで（予算がなくなりしだい終了）。", "受付中", "https://www.city.neyagawa.osaka.jp/kurashi/sumai_kenchiku/akiyacategory/13013.html"),
+                  ("空き家・空き地バンク", "市の空き家バンクがあります。", "", "https://www.city.neyagawa.osaka.jp/kurashi/sumai_kenchiku/akiyabanku/15123.html")]),
+    ("大東市", [("古く危ない空き家の解体の補助", "解体費などの4/5・戸建は上限80万円（木造・1年以上空き家などの条件あり）。事前調査は11月30日まで、申し込みは12月28日まで。交付が決まる前に契約・着工しないこと。", "受付中", "https://www.city.daito.lg.jp/site/iju/60868.html")]),
+    ("堺市", [("木造住宅の解体の補助", "2026年11月9日に予算に達し、受付が止まりました。", "受付停止", "https://www.city.sakai.lg.jp/kurashi/jutaku/kenchiku/anzen/taishinkaishu/26taisinkaisyuu.html"),
+              ("耐震改修の補助（空き家も対象）", "一般の受付は2027年1月29日まで（予算がなくなりしだい終了）。", "受付中", "https://www.city.sakai.lg.jp/kurashi/jutaku/kenchiku/anzen/taishinkaishu/jyuutakuhojyo.html")]),
+    ("大阪市", [("耐震性が足りない住宅の解体の補助", "費用の1/3・上限70万円/戸。受付は12月28日まで。", "受付中", "https://www.city.osaka.lg.jp/toshiseibi/page/0000370839.html")]),
+    ("東大阪市", [("危険な空き家の解体の補助", "上限50万円/棟（所得などの条件で100万円）。交付が決まる前の着工は対象外。", "受付中", "https://www.city.higashiosaka.lg.jp/0000022525.html")]),
+]
+
+
+def city_of_town(n):
+    for c, rows in J_CITY:
+        if n == c or n.startswith(c):
+            return c, rows
+    return None, None
+
+
 J_CSS = """.jn{display:grid;grid-template-columns:1fr 1fr;gap:10px}.jn>div{background:#F4F4F6;border-radius:12px;padding:12px 14px}
 .jn b{display:block;font-family:Jost,"Zen Kaku Gothic New";font-weight:400;font-size:24px;color:#2B2622;line-height:1.3}.jn b small{font-size:12px}.jn span{display:block;font-size:11.5px;color:#7A6E66;margin-top:2px;line-height:1.6}.jn .no{font-size:12px;color:#7A6E66;line-height:1.7}
 .src{font-size:11px;color:#8C7B6E;line-height:1.7;margin:8px 0 0}.src a{color:#8C7B6E}
@@ -545,6 +564,7 @@ J_CSS = """.jn{display:grid;grid-template-columns:1fr 1fr;gap:10px}.jn>div{backg
 .st b{display:block;font-size:14.5px}.st p{margin:3px 0 0;font-size:13px;line-height:1.8;color:#4E453F}.st a{display:inline-block;font-size:11px;color:#8C7B6E;margin-top:4px}
 .jb{display:block;text-align:center;border-radius:12px;padding:14px 12px;font-size:14.5px;font-weight:700;margin-top:10px;text-decoration:none;color:#2B2622;border:1px solid #2B2622;background:#fff}.jb small{display:block;font-size:11px;font-weight:500;color:#857A70;margin-top:2px}
 .jb.b1{background:#2B2622;color:#fff;border-color:#2B2622}.jb.b1 small{color:#D9D2CC}.jp{font-size:11.5px;color:#8C7B6E;text-align:center;margin:8px 0 0;line-height:1.7}
+.cy{border-top:1px solid #ECECEC;padding:12px 0}.cy b{font-size:14px}.cy em{font-style:normal;font-size:11px;font-weight:700;margin-left:6px;padding:1px 8px;border-radius:10px;background:#EEF3EC;color:#3F6B3A}.cy em.x{background:#F6EDEA;color:#9A4A33}.cy p{margin:4px 0 0;font-size:13px;line-height:1.8;color:#4E453F}.cy a{font-size:11px;color:#8C7B6E}
 .jl{display:flex;justify-content:space-between;margin:14px 0 0;padding:12px 4px;border-top:1px solid #E6E6E6;border-bottom:1px solid #E6E6E6;text-decoration:none;color:#5E544D;font-size:13px}.jl i{font-style:normal;font-family:Jost;color:#9C8775}"""
 
 
@@ -575,6 +595,12 @@ def jikka_page(t):
         {"@type": "ListItem", "position": 3, "name": f"{n}の実家・空き家", "item": url}]}]}
     steps = "".join(f'<div class="st"><i>{i:02d}</i><div><b>{E(h)}</b><p>{E(p)}</p><a href="{E(u)}" target="_blank" rel="noopener" data-k="実家｜出典｜{i:02d}">出典：{E(s)}</a></div></div>'
                     for i, (h, p, s, u) in enumerate(J_SRC, 1))
+    cn, crows = city_of_town(n)
+    city_h = ""
+    if crows:
+        city_h = (f'<p class="mk3">CITY</p><h2 class="jh">{E(cn)}の補助・空き家バンク</h2>' + "".join(
+            f'<div class="cy"><b>{E(h)}</b>' + (f'<em class="{"x" if st == "受付停止" else ""}">{st}</em>' if st else '') + f'<p>{E(tx)}</p><a href="{E(u)}" target="_blank" rel="noopener" data-k="実家｜市の補助｜{E(cn)}">{E(cn)}の公式ページ →</a></div>' for h, tx, st, u in crows)
+            + '<p class="src">2026年11月10日に市の公式ページで確かめた内容です。受付・条件・上限は変わるので、申し込む前に必ず公式ページで確かめてください。</p>')
     body = f'''<style>{HEAD_CSS}{J_CSS}</style>{SCRIPTS}</head><body style="--pc:{col}"><div class="wrap">
 <div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">{en} ─ JIKKA NOTE</div>
 <h1>{E(n)}の実家・空き家ノート<span>売る・片付ける・解体する前に</span></h1>
@@ -585,7 +611,7 @@ def jikka_page(t):
 <p class="src">出典：近畿レインズ 2025年度 市区町村別の成約（平均）。住宅地の地価は前の年から{pct(t["r8"])}（令和8年地価公示・{E(pfull)}{t["of"]}市区町村で{t["rank"]}位）。<a href="/machi/{t["id"]}" data-k="実家｜街ページ">この街の数字をくわしく →</a></p>
 <p class="mk3">STEPS</p><h2 class="jh">迷ったら、この順で</h2>
 {steps}
-<p class="mk3">NEXT</p><h2 class="jh">次にできること</h2>
+{city_h}<p class="mk3">NEXT</p><h2 class="jh">次にできること</h2>
 <a class="jb b1" href="/moushikomi?machi={t["id"]}&amp;want={_q("相続した家のこと")}" data-k="実家｜売却の相談｜{E(n)}">この家の売却を相談する<small>無料・約1分</small></a>
 <a class="jb" href="/moushikomi?machi={t["id"]}&amp;want={_q("片付け・遺品整理の見積り")}" data-k="実家｜片付けの見積り｜{E(n)}">片付け・遺品整理の見積りを頼む<small>無料・約1分</small></a>
 <a class="jb" href="/moushikomi?machi={t["id"]}&amp;want={_q("解体の見積り")}" data-k="実家｜解体の見積り｜{E(n)}">解体費用の見積りを頼む<small>無料・約1分</small></a>
