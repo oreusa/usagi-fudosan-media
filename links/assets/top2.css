@@ -14,3 +14,8 @@ html.top2 .tabs button{font-size:0!important;letter-spacing:0!important;padding:
 html.top2 .tabs button b{display:block!important;font-family:"Zen Kaku Gothic New",sans-serif!important;font-size:13.5px!important;font-weight:700!important;letter-spacing:.02em!important;margin:0!important;white-space:nowrap}
 html.top2 .tabs button b i{display:block!important;font-family:Jost,sans-serif!important;font-style:normal!important;font-size:11px!important;font-weight:400!important;color:#8C7B6E!important;margin-top:3px!important}
 html.top2 .qk b.ln{font-size:11.5px;letter-spacing:0}
+
+/* 11/10 一瞬古い並びが見えるのを止める（v2.css は body の最後で読むので、頭で読むここにも置く） */
+html:not(.whd) .paper:has(>#wkd){opacity:0;animation:tnIn 0s 1.5s forwards}
+html.whd .paper:has(>#wkd){animation:tnFade .18s ease-out}
+@keyframes tnIn{to{opacity:1}}@keyframes tnFade{from{opacity:0}to{opacity:1}}
