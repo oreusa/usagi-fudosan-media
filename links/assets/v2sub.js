@@ -18,6 +18,17 @@ bar.querySelector(".mn").onclick=function(){var m=document.getElementById("umenu
 document.body.appendChild(bar);bar.classList.add("on");document.documentElement.classList.add("v2bar-on");
 window.V2BAR=bar;
 }
+function goJ(){
+/* 11/10 オーナー「実家のやつは不動産リストと完全別に…そのページしか触らない人も多い」→ 実家ノートだけの下のバー（不動産の項目は出さない）。
+   街をさがす（実家ノートの一覧）・この順で（街のページの4つの順番）・相談する（TOWN だけ。LIFE は相談なし）・MENU */
+var J={q:'<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>',st:'<svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.2"/><circle cx="4.5" cy="12" r="1.2"/><circle cx="4.5" cy="18" r="1.2"/></svg>',ml:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>'};
+var life=/life|kanto/.test(location.hostname),idx=/^\/jikka\/?(index(\.html)?)?$/.test(location.pathname),m=location.pathname.match(/^\/jikka\/([a-z]+-\d+)/);
+var bar=document.createElement("nav");bar.id="v2bar";bar.setAttribute("aria-label","すぐ移動");
+bar.innerHTML='<a data-h="/jikka/"'+(idx?' class="cur"':'')+'>'+J.q+'<span>街をさがす</span></a>'+(idx?'':'<a data-h="#steps">'+J.st+'<span>この順で</span></a>')+(life?'':'<a data-h="/moushikomi'+(m?'?machi='+m[1]+'&want='+encodeURIComponent("相続した家のこと"):'?want='+encodeURIComponent("相続した家のこと"))+'">'+J.ml+'<span>相談する</span></a>')+'<button class="mn" type="button"><i></i>MENU</button>';
+bar.querySelectorAll("a").forEach(function(a){a.href=a.dataset.h;a.setAttribute("data-k","下のバー｜実家｜"+a.textContent);});
+bar.querySelector(".mn").onclick=function(){var m=document.getElementById("umenu");if(m)m.click();};
+document.body.appendChild(bar);bar.classList.add("on");document.documentElement.classList.add("v2bar-on");
+}
 function goT(){
 /* TOWN NOTE の入口ページ：2つのリストとご相談 */
 var I2={od:'<svg viewBox="0 0 24 24"><path d="M12 21s-6-5.3-6-10a6 6 0 0 1 12 0c0 4.7-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>',fd:'<svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V5M16 20v-7M22 20H2"/></svg>',sd:'<svg viewBox="0 0 24 24"><path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/></svg>'};
@@ -29,7 +40,8 @@ document.body.appendChild(bar);bar.classList.add("on");document.documentElement.
 }
 function go(){
 if(/^\/(town-notes)?$/.test(location.pathname))return goT();
-if(/^\/(fudosan|uru|moushikomi|gyosha|sagasu|chika-|machi\/|jikka)/.test(location.pathname))return goF();
+if(/^\/jikka/.test(location.pathname))return goJ();
+if(/^\/(fudosan|uru|moushikomi|gyosha|sagasu|chika-|machi\/)/.test(location.pathname))return goF();
 var bar=document.createElement("nav");bar.id="v2bar";bar.setAttribute("aria-label","すぐ移動");
 var inn=/\/tomari/.test(location.pathname);
 /* 11/9 オーナーOK（見本⑤）：開催中・これから → さがす・行きたい（☆の数） */

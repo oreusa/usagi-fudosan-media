@@ -398,11 +398,12 @@ def town_page(t):
 
     sold_h = (f'<h2>この街で売れた家の値段</h2><p class="cap">2025年度に{E(n)}で実際に売れた（成約した）中古の家の平均です。不動産会社が登録する「レインズ」の数字です。</p>'
               f'<div class="sold">{card("m", "中古マンション")}{card("k", "中古の一戸建て")}</div>')
+    # 11/10 オーナー「実家のやつは不動産リストと完全別に」→ 街ページ⇔実家ノートのリンクは置かない（行き来は MENU のタブだけ）
     # 11/9 オーナーOK（見本3）：街ページの下は「売りたい・買いたい」の2つだけ（売る前に・Yahoo!の箱はここにまとめた）
     itt = (f'<section class="itt" id="itt"><div class="en2">IN THIS TOWN</div><h2>{E(n)}で</h2><div class="itg">'
            f'<a class="itc" href="/uru.html" data-k="この街で｜売りたい｜{E(n)}"><b>売りたい</b><span>いくらで売れそうか、相場から順に（無料）</span><i>手順を見る →</i></a>'
            f'' + buy_card(t["p"], n) + f''
-           f'</div>' + (f'<a class="itg2" href="/jikka/{t["id"]}" data-k="この街で｜実家・空き家｜{E(n)}">相続した実家・空き家なら（売る・片付け・解体） <i>→</i></a>' if any(sold_of(t).get(k) for k in ("k", "m")) else '') + f'<a class="itg2" href="/gyosha" data-k="この街で｜困りごとの相談｜{E(n)}">相続した家・古い家・再建築不可などのご相談 <i>→</i></a>'
+           f'</div>' + f'<a class="itg2" href="/gyosha" data-k="この街で｜困りごとの相談｜{E(n)}">相続した家・古い家・再建築不可などのご相談 <i>→</i></a>'
            f'<p class="itn">「買いたい」の3つは広告です（Yahoo!不動産のこの街の一覧が開きます）。</p></section>')
     rel_h = ""
     if rel:
@@ -590,7 +591,7 @@ def jikka_page(t):
             + "相続登記の義務、片付け、売るか解体するか、3,000万円の特別控除まで、公式の出典つきで順番に。")
     url = f"{BASE}/jikka/{t['id']}"
     ld = {"@context": "https://schema.org", "@graph": [{"@type": "BreadcrumbList", "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "関西不動産リスト", "item": f"{BASE}/fudosan-list"},
+        {"@type": "ListItem", "position": 1, "name": "TOWN NOTE", "item": f"{BASE}/"},
         {"@type": "ListItem", "position": 2, "name": "実家・空き家ノート", "item": f"{BASE}/jikka/"},
         {"@type": "ListItem", "position": 3, "name": f"{n}の実家・空き家", "item": url}]}]}
     steps = "".join(f'<div class="st"><i>{i:02d}</i><div><b>{E(h)}</b><p>{E(p)}</p><a href="{E(u)}" target="_blank" rel="noopener" data-k="実家｜出典｜{i:02d}">出典：{E(s)}</a></div></div>'
@@ -608,8 +609,8 @@ def jikka_page(t):
 <div class="upd">2026年11月 更新</div></div>
 <p class="mk3">SOLD 2025</p><h2 class="jh">この街で、去年売れた家</h2>
 <div class="jn">{box("k", "中古一戸建て")}{box("m", "中古マンション")}</div>
-<p class="src">出典：近畿レインズ 2025年度 市区町村別の成約（平均）。住宅地の地価は前の年から{pct(t["r8"])}（令和8年地価公示・{E(pfull)}{t["of"]}市区町村で{t["rank"]}位）。<a href="/machi/{t["id"]}" data-k="実家｜街ページ">この街の数字をくわしく →</a></p>
-<p class="mk3">STEPS</p><h2 class="jh">迷ったら、この順で</h2>
+<p class="src">出典：近畿レインズ 2025年度 市区町村別の成約（平均）。住宅地の地価は前の年から{pct(t["r8"])}（令和8年地価公示・{E(pfull)}{t["of"]}市区町村で{t["rank"]}位）。</p>
+<p class="mk3" id="steps">STEPS</p><h2 class="jh">迷ったら、この順で</h2>
 {steps}
 {city_h}<p class="mk3">NEXT</p><h2 class="jh">次にできること</h2>
 <a class="jb b1" href="/moushikomi?machi={t["id"]}&amp;want={_q("相続した家のこと")}" data-k="実家｜売却の相談｜{E(n)}">この家の売却を相談する<small>無料・約1分</small></a>
@@ -617,7 +618,6 @@ def jikka_page(t):
 <a class="jb" href="/moushikomi?machi={t["id"]}&amp;want={_q("解体の見積り")}" data-k="実家｜解体の見積り｜{E(n)}">解体費用の見積りを頼む<small>無料・約1分</small></a>
 <p class="jp">どれも同じお申し込みページです。内容を見て、メールでご連絡します。</p>
 <a class="jl" href="/jikka/#{fn}" data-k="実家｜一覧">ほかの街の実家・空き家ノート <i>→</i></a>
-<a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
 <div class="ft">TOWN NOTE</div></div>
 {beacon("実家｜" + n, "実家ノート")}</body></html>'''
     return head(title, desc, url, ld) + body
@@ -657,7 +657,6 @@ jl = head(f"関西の実家・空き家ノート｜{len(JT)}の街の売れた�
 <nav class="flt">''' + "".join(f'<button data-p="{k}" style="--pc:{PI[pf][3]}"{" class=\"on\"" if i == 0 else ""}>{pf}</button>' for i, (k, pf, _) in enumerate(jpanes)) + '</nav>' + \
     "".join(f'<section class="pane{" on" if i == 0 else ""}" id="{k}"><ul class="jli">{"".join(jl_li(t) for t in ts)}</ul></section>' for i, (k, pf, ts) in enumerate(jpanes)) + f'''
 <p class="note">金額は近畿レインズ「2025年度 年刊市況レポート」の中古一戸建ての成約の平均です。1軒ずつの値段ではありません。</p>
-<a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
 <div class="ft">TOWN NOTE</div></div>
 <script>(function(){{function go(k){{var b=document.querySelector('.flt button[data-p="'+k+'"]');if(!b)return;document.querySelectorAll(".flt button,.pane").forEach(function(x){{x.classList.remove("on")}});b.classList.add("on");document.getElementById(k).classList.add("on");}}
 document.querySelectorAll(".flt button").forEach(function(b){{b.onclick=function(){{go(b.dataset.p);history.replaceState(null,"","#"+b.dataset.p);}}}});if(location.hash)go(location.hash.slice(1));}})();</script>
