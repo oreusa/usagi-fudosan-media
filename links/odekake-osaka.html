@@ -572,7 +572,7 @@ var w=c.closest(".it")||c;d._c=c;
 if(H){var b=document.createElement("a");b.href="#";b.className="inn";b.textContent="近くの宿";b.appendChild(pr());d.appendChild(b);
 var u=document.createElement("ul");u.className="ykl";u.hidden=true;H.forEach(function(h){var li=document.createElement("li");var a=document.createElement("a");a.href=h.u;a.target="_blank";a.rel="noopener sponsored";a.addEventListener("click",function(){ck("宿｜"+t.textContent.trim()+"｜"+h.n);});
 var m=document.createElement("span");m.className="nm";m.textContent=h.n;a.appendChild(m);var s2=document.createElement("span");s2.className="mt";s2.textContent=(h.km<0.1?"すぐそば":h.km+"km")+(h.r?"・★"+h.r:"")+(h.min?"・"+Number(h.min).toLocaleString()+"円〜":"");a.appendChild(s2);li.appendChild(a);u.appendChild(li);});
-var li=document.createElement("li");li.className="src";li.textContent="楽天トラベルの評価3.5以上・ここからの近さ（PR）";u.appendChild(li);
+var li=document.createElement("li");li.className="src";li.textContent="楽天トラベルの評価3.5以上・ここからの近さ";u.appendChild(li);
 b.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();if(!u.dataset.op)ck("宿を開く｜"+t.textContent.trim());u.dataset.op=u.dataset.op?"":"1";b.classList.toggle("op",!!u.dataset.op);sync();});
 w.insertAdjacentElement("afterend",d);d.insertAdjacentElement("afterend",u);}else w.insertAdjacentElement("afterend",d);});}
 function ck(k){try{if(localStorage.getItem("usagi_owner")==="1")return;}catch(e){}try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}
