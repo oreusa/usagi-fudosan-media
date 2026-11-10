@@ -14,6 +14,8 @@ export async function onRequestGet({ request }) {
       area: w.area.name,
       w: (w.weathers && w.weathers[0] || "").replace(/　+/g, " ").split(" ").slice(0, 3).join(" "),
       pops: p.timeDefines.map((t, i) => ({ t, v: p.areas[0].pops[i] })),
+      // 11/10 おでかけの「ノートの一文」：週末の雨を先に知らせる（気象庁の週間予報。日付ごとの降水確率と天気の番号）
+      wk: (() => { try { const t = j[1].timeSeries[0], a = t.areas[0]; return t.timeDefines.map((d, i) => ({ d: d.slice(0, 10), pop: a.pops[i], c: a.weatherCodes[i] })).filter(x => x.pop !== ""); } catch (e) { return []; } })(),
       src: "気象庁",
     };
     return new Response(JSON.stringify(out), { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "public, max-age=1800" } });

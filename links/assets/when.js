@@ -110,6 +110,14 @@ var css=document.createElement("style");css.textContent=
 '.pr5 .n{font:400 20px/1 Jost,sans-serif;width:18px;text-align:center;color:#C0584A}.pr5 .ti{flex:0 0 40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--pc,#999) 14%,#fff)}'+
 '.pr5 .ti svg{width:22px;height:22px;fill:none;stroke:var(--pc,#777);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.pr5 .tx{flex:1;min-width:0}'+
 '.pr5 .tx b{display:block;font:700 13.5px "Zen Kaku Gothic New",sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pr5 .tx span{font-size:11px;color:#6E6E6E}.pr5 .tx i{font-style:normal;font-weight:700;color:var(--pc,#777)}'+
+'html .wq>*:not(.wq1):not(.wq2),html.top2 .tn-top.wq>.flt{display:none!important}html .wq[data-op=p]>.flt,html.top2 .tn-top.wq[data-op=p]>.flt{display:flex!important}.wq2[hidden]{display:none!important}html .wq[data-op=d]>.wn,html .wq[data-op=k]>.wn{display:block!important}'+
+'.wq[data-op=d] .wn>*:not(.wd),.wq[data-op=k] .wn>*:not(.wkd){display:none!important}.wq .wn .wd,.wq .wn .wkd{margin:8px 0 2px!important;animation:wqin .18s ease-out}@keyframes wqin{from{opacity:0;transform:translateY(-4px)}}'+
+'.wq1{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;padding:6px 2px 8px;font:500 15px/1.9 "Shippori Mincho",serif;color:#2B2622;background:repeating-linear-gradient(transparent 0 33px,#ECE6DF 33px 34px)}'+
+'.wq1 .s{display:inline-flex;align-items:baseline;gap:4px;white-space:nowrap}'+
+'.wq1 button{font:700 17px "Zen Kaku Gothic New",sans-serif;color:#2B2622;background:none;border:0;border-bottom:2px solid #C0584A;padding:0 2px 1px;margin:0 2px;cursor:pointer;border-radius:0}'+
+'.wq1 button i{font-style:normal;font-size:10px;margin-left:3px;color:#C0584A;display:inline-block;transition:transform .15s}.wq1 button.on i{transform:rotate(180deg)}'+
+'.wq1 em{font:300 26px/1 Jost,sans-serif;font-style:normal;margin-left:6px;color:#2B2622}'+
+'.wq2{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;margin:2px 0 4px;font-size:12px;color:#55505A}.wq2 button{border:1px solid #2B2622;background:#fff;border-radius:999px;padding:5px 12px;font:700 12px "Zen Kaku Gothic New",sans-serif;color:#2B2622;cursor:pointer}.wq2 b{font-size:12px;color:#3E6FA8}'+
 '.wfw>.fold1{display:none}.wfw.fold>*:not(.fold1){display:none!important}.wfw.fold>.fold1{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 4px;font-size:13px;color:#55505A;cursor:pointer}.wfw.fold .fold1 b{color:#2B2622}.wfw.fold .fold1 em{font-style:normal;font-family:Jost,sans-serif;font-size:16px;color:#2B2622;margin-left:4px}.wfw.fold .fold1 span:last-child{border:1px solid #D9D9DE;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:700;color:#2B2622;background:#fff}'+
 '.tn-top .fold1{display:none}.tn-top.fold>*:not(.fold1){display:none!important}.tn-top.fold .fold1{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 14px;font-size:13px;color:#55505A;cursor:pointer}'+
 '.tn-top.fold .fold1 b{color:#2B2622}.tn-top.fold .fold1 em{font-style:normal;font-family:Jost,sans-serif;font-size:16px;color:#2B2622;margin-left:4px}.tn-top.fold .fold1 span:last-child{border:1px solid #D9D9DE;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:700;color:#2B2622;background:#fff}'+
@@ -163,7 +171,7 @@ function render(){setTimeout(function(){if(window.ykRun)window.ykRun();},0);var 
    Object.keys(st.f).forEach(function(k){var f2={};for(var x in st.f)if(x!==k)f2[x]=1;var n=count(st.d,f2,pf);if(n){h+='<button type="button" data-zf="'+k+'">「'+FL[k]+'」を外す（'+n+'件）</button>';any=1;}});
    if(pf){var n2=count(st.d,st.f,"");if(n2){h+='<button type="button" data-zp="1">府県を「すべて」にする（'+n2+'件）</button>';any=1;}}
    if(!any)h+='<button type="button" data-zd="all">日付で選ばずに見る</button>';
-   z.innerHTML=h;sec.appendChild(z);syncUrl();return;}
+   z.innerHTML=h;sec.appendChild(z);syncUrl();if(window.__wfold)window.__wfold();return;}
   if(st.d==="we"&&!st.k&&!nf()&&L.length>5){var P5=L.slice().sort(function(a,b){return ((a.free?0:1)-(b.free?0:1))||byE(a,b);}),pk=[],UP={},UK={};
    P5.forEach(function(o){if(pk.length<5&&!UP[o.pref]&&!UK[kindOf(o)]){UP[o.pref]=UK[kindOf(o)]=1;pk.push(o);}});P5.forEach(function(o){if(pk.length<5&&pk.indexOf(o)<0&&!UP[o.pref]){UP[o.pref]=1;pk.push(o);}});P5.forEach(function(o){if(pk.length<5&&pk.indexOf(o)<0)pk.push(o);});
    var bx=document.createElement("div");bx.className="pr5";var hh='<div class="h"><b>今週末のおすすめ5</b><small>毎日更新</small></div>';
@@ -192,15 +200,33 @@ F.addEventListener("click",function(e){var pb=e.target.closest&&e.target.closest
 function up(){var tp=box.closest(".tn-top"),y=sec.getBoundingClientRect().top+scrollY-(tp?tp.offsetHeight:0)-8;if(scrollY>y+4)scrollTo({top:Math.max(0,y),behavior:"smooth"});}
 try{var sp=localStorage.getItem("tn_pref"+(AK?"_k":""));if(sp&&sp!=="すべて")[].forEach.call(F.querySelectorAll("button"),function(b){if(b.textContent.trim()===sp&&!b.classList.contains("on"))setTimeout(function(){b.click();},0);});}catch(e){}
 window.addEventListener("load",function(){setTimeout(function(){if(!sheetOpen)render();},400);});
-/* 11/10 オーナー「初めから出てるんじゃなくてスッキリ」：選ぶ欄は最初たたんで1行。押すと開く。開いた後も下に読むとまたたたむ */
-(function(){var tp=box.closest(".tn-top");if(!tp){tp=document.createElement("div");tp.className="wfw";box.parentNode.insertBefore(tp,box);tp.appendChild(box);}var f1=document.createElement("div");f1.className="fold1";tp.appendChild(f1);var ly=scrollY,oy=0;
- function lab(){var pf=curPref()||(AK?"関東":"関西"),c0=box.querySelector(".wc b"),fl=Object.keys(st.f).map(function(k){return FL[k];});if(st.k)fl.unshift(KN[st.k]);
-  f1.innerHTML='<span><b>'+pf+'・'+(st.d==="all"?"☆":D[st.d].l)+(fl.length?"・"+fl.join("・"):"")+'</b><em>'+(c0?c0.textContent:"")+'</em></span><span>えらぶ ▾</span>';}
- function fold(){lab();tp.classList.add("fold");}
- window.__wfoldNow=fold;window.__wfold=function(){if(tp.classList.contains("fold"))lab();};
- fold();
- addEventListener("scroll",function(){var y=scrollY;if(!tp.classList.contains("fold")&&y>oy+240&&y>ly+4)fold();ly=y;},{passive:true});
- f1.addEventListener("click",function(){tp.classList.remove("fold");oy=scrollY;});})();
+/* 11/10 オーナー「工夫しろ、その辺のHPと同じなら負ける」→ ノートの一文で選ぶ。
+   最初は「この週末に、関西で なんでも 121件」の一文だけ。下線の言葉を押すと、その言葉の選び肢だけが1列出る（押したら閉じる）。
+   その下に気象庁の予報から一言（雨なら「屋内だけにする」を1回で）。 */
+(function(){var tp=box.closest(".tn-top");if(!tp){tp=document.createElement("div");tp.className="wfw";box.parentNode.insertBefore(tp,box);tp.appendChild(box);}
+ var inP=tp.contains(F),q=document.createElement("div");q.className="wq1";tp.insertBefore(q,tp.firstChild);tp.classList.add("wq");tp.dataset.op="";
+ var hint=document.createElement("div");hint.className="wq2";hint.hidden=true;q.after(hint);
+ var WXA=AK?{"東京":"130000","神奈川":"140000","埼玉":"110000","千葉":"120000","茨城":"080000","栃木":"090000","群馬":"100000"}:{"大阪":"270000","京都":"260000","兵庫":"280000","奈良":"290000","滋賀":"250000","和歌山":"300000"},HOMEP=AK?"東京":"大阪",WXC={};
+ function sent(){var pf=curPref(),c0=box.querySelector(".wc b"),fl=Object.keys(st.f).map(function(k){return FL[k];});if(st.k)fl.unshift(KN[st.k]);
+  var op=tp.dataset.op,w=function(k,t){return '<button type="button" data-op="'+k+'"'+(op===k?' class="on"':'')+'>'+t+'<i>▾</i></button>';};
+  q.innerHTML='<span class="s">'+w("d",st.d==="all"?"☆の所":D[st.d].l)+'に、'+w("p",pf||(AK?"関東":"関西"))+'で</span><span class="s">'+w("k",fl.length?fl.join("・"):"なんでも")+'<em>'+(c0?c0.textContent.replace("件",""):"")+'</em>件</span>';
+  if(!inP)F.classList.toggle("wqh",false);}
+ function wx(){var pf=curPref(),P=WXA[pf]?pf:HOMEP,a=WXA[P];if(!a||st.d==="all"){hint.hidden=true;return;}
+  var go=function(j){var ds=D[st.d].d.filter(function(d){return d>=T;}),mx=-1,bad="";(j.wk||[]).forEach(function(x){if(ds.indexOf(x.d)>=0&&+x.pop>mx){mx=+x.pop;bad=x.d;}});
+   if(mx<0){hint.hidden=true;return;}
+   if(mx>=50){var f2={};for(var x in st.f)f2[x]=1;f2.rain=1;var n=count(st.d,f2,curPref());hint.innerHTML='<span>☂ '+W[dw(bad)]+'曜の'+P+'は雨の予報（'+mx+'%）</span>'+(st.f.rain?'<b>屋内だけ表示中</b>':'<button type="button" data-f="rain">屋内だけにする（'+n+'件）</button>');}
+   else hint.innerHTML='<span>'+(mx<=20?"☀":"☁")+' '+P+'の'+(ds.length>1?"土日":W[dw(ds[0])]+"曜")+'は'+(mx<=20?"晴れそう":"くもり")+'（雨'+mx+'%）。外のおでかけ日和です</span>';
+   hint.hidden=false;};
+  if(WXC[a])return go(WXC[a]);fetch("/wx?a="+a).then(function(r){return r.json();}).then(function(j){WXC[a]=j;go(j);}).catch(function(){hint.hidden=true;});}
+ hint.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;st.f.rain=1;if(st.d==="all")st.d="we";more={};render();up();});
+ window.__wfoldNow=function(){tp.dataset.op="";sent();};window.__wfold=function(){sent();wx();};
+ q.addEventListener("click",function(e){var b=e.target.closest("button[data-op]");if(!b)return;var k=b.dataset.op;
+  if(k==="p"&&!inP){F.scrollIntoView({behavior:"smooth",block:"center"});return;}
+  tp.dataset.op=tp.dataset.op===k?"":k;sent();});
+ /* 選んだら閉じる（種類と条件は続けて押せるよう開いたまま） */
+ box.addEventListener("click",function(e){var b=e.target.closest("button");if(b&&b.dataset.d){tp.dataset.op="";setTimeout(sent,0);}},true);
+ F.addEventListener("click",function(){if(inP){tp.dataset.op="";setTimeout(sent,30);}});
+ sent();})();
 /* 下のバーの「開催中」「これから」は、日付で選ばない一覧（タブ）にもどす */
 document.addEventListener("click",function(e){var b=e.target.closest&&e.target.closest("#v2bar button[data-t]");if(b&&st.d!=="all"){st.d="all";render();}},true);
 /* 11/9 オーナーOK（見本⑤）：下のバーの「開催中」「これから」→「さがす」「行きたい（☆の数）」 */
