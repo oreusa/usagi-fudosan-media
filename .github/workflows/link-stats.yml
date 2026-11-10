@@ -40,6 +40,9 @@ jobs:
       - name: rebuild 泊まりで行くおでかけ
         # 10/31 宿とカードの新しい一覧で毎朝作り直す（終わったおでかけは消える）
         run: python3 tools/tomari/build.py "$(TZ=Asia/Tokyo date +%F)"
+      - name: cover data (表紙の地図の数字)
+        # 11/10 表紙 v3：府県ごとの開催中・地価の上がり幅・戸建の売れた平均を3KBの cover.json に（表紙は毎回リスト全体を読まない）
+        run: pip install -q beautifulsoup4 && python3 tools/cover/make.py || true
       - name: HP page-type learning
         # 11/9 ページ型ごとの「外から来た数」この7日／前の7日 → 増やす型・直す型（朝の報告に1行）
         run: python3 tools/hp_learning.py || true
@@ -53,5 +56,5 @@ jobs:
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/link.json stats/link-30.json links/illumination*.html links/koyo*.html links/hatsumode.html links/index.html links/odekake-*.html links/o links/sitemap.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md
+          git add stats/link.json stats/link-30.json links/illumination*.html links/koyo*.html links/hatsumode.html links/index.html links/odekake-*.html links/o links/sitemap.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md links/assets/cover.json
           git diff --cached --quiet || (git commit -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)" && git pull --rebase -q && git push)

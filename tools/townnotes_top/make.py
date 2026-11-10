@@ -132,7 +132,7 @@ h1{{font-family:Jost;font-weight:300;font-size:40px;letter-spacing:.16em;line-he
 .find{{margin:14px 0 0!important;padding:14px 14px 12px!important}}.find h2{{font-size:16px!important}}.find h2 small{{display:none}}.find p{{margin:6px 0 10px!important}}
 .exl{{font-size:11.5px;color:#8C7B6E;margin:10px 2px 0}}
 /* 11/8 オーナー「地図は1番上だろ お洒落に見やすく」→ 地図を名前と1行のすぐ下に。11/8 9:47 オーナー「枠いらない 前みたいに違和感なく」→ 台紙・枠・MAP札なし */.head .mapsec{{margin:14px -80px 0 0;}}.mtag{{display:flex;align-items:center;gap:8px;font-size:11.5px;color:#8C7B6E;margin:0 4px}}.mtag span{{font-family:Jost;font-weight:500;font-size:9.5px;letter-spacing:.32em;color:#fff;background:#2B2622;border-radius:99px;padding:3px 9px 3px 12px}}.head .kmap{{margin:4px 0 0}}.head .pp{{margin:4px 2px 8px;border-radius:12px}}
-</style><script src="/assets/night.js?v=23"></script><script src="/assets/menu.js?v=45" defer></script><script src="/assets/v2sub.js?v=12" defer></script></head><body><div class="wrap">
+</style><script src="/assets/night.js?v=23"></script><script src="/assets/menu.js?v=46" defer></script><script src="/assets/v2sub.js?v=12" defer></script></head><body><div class="wrap">
 <header class="head"><img src="/assets/logo-s.png?v=2" width="74" height="74" alt="TOWN NOTE のロゴ">
 <h1>TOWN NOTE</h1><div class="kana">タウンノート</div>
 <p class="pur">関西の<b>おでかけ</b>・<b>街の地価</b>・<b>日用品の最安</b>を、<br>公式の情報でしらべるノート</p>
@@ -213,5 +213,9 @@ if(q)Promise.all([pO,pF]).then(function(){{if(!q.value.trim())find("吹田")}});
 c("表示：TOWN NOTE 入口"+(document.referrer&&!/usagi-odekake|townnote.pages/.test(document.referrer)?"（外から）":""));
 document.addEventListener("click",function(e){{var a=e.target.closest&&e.target.closest("a");if(!a)return;c("クリック：TOWN NOTE 入口｜"+(a.getAttribute("data-k")||a.textContent.trim().slice(0,30)));}},true);
 }})();</script></body></html>'''
+# 11/10 表紙 v3（地図の切り替え・府県の「きょう」）を当てる
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import cover_v3
+page = cover_v3.apply(page)
 open(os.path.join(ROOT, "links/town-notes.html"), "w", encoding="utf-8").write(page)
 print("ok", len(page))
