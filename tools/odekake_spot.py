@@ -154,7 +154,7 @@ for sp in spots:
         yh = f'<h2>近くの宿</h2><p class="cap">楽天トラベルの評価3.5以上を、ここからの近さで選びました（PR）</p><ul class="yl">{li}</ul>'
     near = [o for o in spots if o is not sp and o["pref"] == p and o["city"] == sp["city"]][:4]
     near += [o for o in spots if o is not sp and o["pref"] == p and o not in near][:6 - len(near)]
-    nh = "".join(f'<a class="fc" href="/o/{o["id"]}"><small>{e(o["city"])}{"｜" + e(o["place"]) if o["place"] else ""}</small><b>{e(o["name"])}</b><span>{e(jd(o["st"]) + ("〜" + jd(o["en"]) if o["en"] and o["en"] != o["st"] else "") if o["st"] else o["dline"])}</span></a>' for o in near)
+    nh = "".join(f'<a class="fc" href="/o/{o["id"]}"' + (f' data-s="{o["st"]}" data-e="{o["en"] or o["st"]}"' if o["st"] else "") + f'><small>{e(o["city"])}{"｜" + e(o["place"]) if o["place"] else ""}</small><b>{e(o["name"])}</b><span>{e(jd(o["st"]) + ("〜" + jd(o["en"]) if o["en"] and o["en"] != o["st"] else "") if o["st"] else o["dline"])}</span></a>' for o in near)
     tw = town(sp["city"])
     lbl = sp["place"] if sp["place"] and len(sp["place"]) < 16 else tw
     msvg = spot_map.render(p, nm, sp["city"], lbl)
