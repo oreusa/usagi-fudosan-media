@@ -20,7 +20,7 @@ var K={
 "豊臣兄弟！大和郡山大河ドラマ館":"i","北斎・広重づくし":"i","夜の海遊館":"ik","微わかる展2＋小さいすぎるよ展":"i","企画展「あっちもこっちもスズキさん」":"ik","虎屋所蔵品展「心なごむ動物たち」":"i",
 "ジュエリーは、誰を夢みる":"i","びっくり構図展":"i","酒にのまれ展":"i","企画展「ふれる×れきはく」":"ik","斑鳩文化財センター秋季特別展「華麗なる王族」":"i","特別展「高照らすみやこ」":"i","没後25年上村松篁展":"i",
 "丸木スマ展73歳からのアーティスト":"i","いい福展":"i",
-"クラフトパーク秋の日曜体験":"k","怪々YOKAI祭2026":"k","淡路島秋のカーニバル2026":"k","みきUMAフェス2026":"k","PINGUmeetsアドベンチャーワールド":"k","アドベンチャーワールドLIGHTPARKS":"k","国城観光農園みかん狩り":"k",
+"クラフトパーク秋の日曜体験":"k","なにわのよくばりクラフト祭り":"ik","怪々YOKAI祭2026":"k","淡路島秋のカーニバル2026":"k","みきUMAフェス2026":"k","PINGUmeetsアドベンチャーワールド":"k","アドベンチャーワールドLIGHTPARKS":"k","国城観光農園みかん狩り":"k",
 "万博の森どんぐりフェス":"k","ナゾトキイベント「ぐわ兵衛とアソビ帝国」":"k","南大阪リアル謎解きゲームきくなーれのなぞとき大冒険":"k","おもしろ科学まつり和歌山大会":"k","50万本のコスモス":"k","ブルーメの丘秋の味覚バイキング":"k","ROKKO森の音ミュージアムハロウィンフェア":"k",
 /* 燈（関東） */
 "こども＋おとな＋秋の美術館":"ik","特別展「豊臣兄弟！」":"i","闇の魔術のハロウィーン":"ik","Re:ホラーにふれる展－映画美術の世界－":"i","鉄道広告展いろいろ、とりどり。":"i","糸が織りなす数学アートの世界":"i",
@@ -170,7 +170,9 @@ function render(){setTimeout(function(){if(window.ykRun)window.ykRun();},0);var 
    pk.forEach(function(o,i){var sv=o.w.querySelector(".ib svg"),dd=o.w.querySelector(".dd"),pc=(o.w.getAttribute("style")||"").match(/--pc:\s*([^;]+)/);
     hh+='<a href="'+o.href+'" target="_blank" rel="noopener"'+(pc?' style="--pc:'+pc[1]+'"':'')+'><span class="n">'+(i+1)+'</span><span class="ti">'+(sv?sv.outerHTML:"")+'</span><span class="tx"><b>'+title(o.w)+'</b><span><i>'+(o.pref||"")+'</i>・'+(dd?dd.textContent.trim():mdw(o.e||T))+'</span></span></a>';});
    bx.innerHTML=hh;sec.appendChild(bx);}
-  var S=L.filter(isShort).sort(byE),G=L.filter(function(o){return !isShort(o);}).sort(byE);
+  /* 11/10 夜 #83：選んだ日のうち片方しか開いていない所（決まった日曜だけ等）は「長く開いている所／どちらの日でも」に入れない */
+  var R0=D[st.d].d.filter(function(d){return d>=T;}),part=function(o){return R0.length>1&&R0.filter(function(d){return openOn(o,d);}).length<R0.length;},sh=function(o){return isShort(o)||part(o);};
+  var S=L.filter(sh).sort(byE),G=L.filter(function(o){return !sh(o);}).sort(byE);
   group(S,"s","日にちの決まった催し",lab+"に開催。期間が短いので、先に見ておくと行きのがしません",st.d,true);
   group(G,"g","長く開いている所","紅葉・イルミ・展覧会など。"+(D[st.d].d.length>1?"どちらの日でも行けます":"この日も開いています"),st.d,false);
   syncUrl();if(window.__wfold)window.__wfold();}
