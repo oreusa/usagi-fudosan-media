@@ -1,7 +1,7 @@
 """表紙 v3（11/10 オーナーOK）を links/town-notes.html に当てる。make.py の最後でも呼ぶ（作り直しても消えない）。
 見た目と動きは links/assets/cover.css・cover.js、数字は links/assets/cover.json（tools/cover/make.py）。"""
 import re, sys, os
-V = "2"
+V = "3"
 def apply(s):
     if 'id="cover3"' in s:
         return s
