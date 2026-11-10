@@ -106,7 +106,7 @@ for D, d in ((town, R + "links/o"), (life, AK + "site/o")):
 
 SITES = [
  dict(D=town, out=R + "links/sagasu.html", area="関西", n="205", brand="TOWN NOTE", base="https://townnote.pages.dev",
-      js='<script src="assets/night.js?v=23"></script><script src="assets/menu.js?v=47" defer></script><script src="assets/v2sub.js?v=12" defer></script>',
+      js='<script src="assets/night.js?v=23"></script><script src="assets/menu.js?v=48" defer></script><script src="assets/v2sub.js?v=12" defer></script>',
       order=["大阪", "京都", "兵庫", "奈良", "滋賀", "和歌山"], col={"大阪": "#B97A62", "京都": "#8A7495", "兵庫": "#4F6681", "奈良": "#6F8C68", "滋賀": "#5F8F98", "和歌山": "#C4925A"},
       sid="3786315", pid="892742459", ar="06", kinds=[("m", "中古マンション", "used/mansion"), ("h", "中古一戸建て", "used/house"), ("w", "新築一戸建て", "new/house"), ("l", "土地", "land")], bud=[1000, 2000, 3000, 4000, 5000, 7000], b0=3000,
       unit="実際に売れた平均", usp="売り出し価格ではなく、<b>実際に売れた値段</b>で選べます。",

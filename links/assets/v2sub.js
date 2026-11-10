@@ -20,7 +20,7 @@ window.V2BAR=bar;
 }
 function goJ(){
 /* 11/10 オーナー「実家のやつは不動産リストと完全別に…そのページしか触らない人も多い」→ 実家ノートだけの下のバー（不動産の項目は出さない）。
-   街をさがす（実家ノートの一覧）・この順で（街のページの4つの順番）・相談する（TOWN だけ。LIFE は相談なし）・MENU */
+   街をさがす（実家ノートの一覧）・この順で（街のページの4つの順番）・相談する（11/10 LIFE も同じ）・MENU */
 var J={q:'<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg>',st:'<svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1.2"/><circle cx="4.5" cy="12" r="1.2"/><circle cx="4.5" cy="18" r="1.2"/></svg>',ml:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>'};
 var life=/life|kanto/.test(location.hostname),idx=/^\/jikka\/?(index(\.html)?)?$/.test(location.pathname),m=location.pathname.match(/^\/jikka\/([a-z]+-\d+)/);
 var bar=document.createElement("nav");bar.id="v2bar";bar.setAttribute("aria-label","すぐ移動");

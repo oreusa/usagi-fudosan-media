@@ -235,7 +235,7 @@ h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:18px;letter-spa
 .ft{text-align:center;font-size:10px;letter-spacing:.04em;color:#8C7B6E;margin-top:30px}"""
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">'
-SCRIPTS = '<script src="/assets/night.js?v=23"></script><script src="/assets/menu.js?v=47" defer></script><script src="/assets/v2sub.js?v=12" defer></script>'
+SCRIPTS = '<script src="/assets/night.js?v=23"></script><script src="/assets/menu.js?v=48" defer></script><script src="/assets/v2sub.js?v=12" defer></script>'
 
 
 def beacon(name, kind="地価ランキング"):
@@ -654,12 +654,13 @@ jl = head(f"関西の実家・空き家ノート｜{len(JT)}の街の売れた�
 <h1>実家・空き家ノート<span>関西 {len(JT)}の街</span></h1>
 <p class="sub">親の家を相続した・空き家のままの方へ。<br>街を選ぶと、売れた相場と順番が見られます。</p>
 <div class="upd">2026年11月 更新</div></div>
-<nav class="flt">''' + "".join(f'<button data-p="{k}" style="--pc:{PI[pf][3]}"{" class=\"on\"" if i == 0 else ""}>{pf}</button>' for i, (k, pf, _) in enumerate(jpanes)) + '</nav>' + \
+<style>.jq{{margin:24px 0 6px;padding:14px 16px 16px;background:#F5F4F2;border:1px solid #ECEAE6;border-radius:16px;text-align:center}}.jq b{{display:block;font-size:13px;letter-spacing:.08em;color:#2B2622;margin-bottom:10px}}.jq input{{width:100%;box-sizing:border-box;font:500 16px "Zen Kaku Gothic New",sans-serif;padding:12px 16px;border:1.5px solid #CFC6BC;border-radius:12px;background:#fff;color:#2B2622;-webkit-appearance:none;appearance:none}}.jq input:focus{{outline:none;border-color:#8C7B6E}}#jres{{display:none}}#jres.on{{display:block}}#jres p{{font-size:13px;color:#7A6E66;margin:14px 2px}}html.jq-on .flt,html.jq-on .pane{{display:none!important}}</style><div class="jq"><b>街の名前で探す</b><input id="jqi" type="search" placeholder="例：吹田市・西宮市・草津市" enterkeyhint="search" autocomplete="off"></div><div id="jres"></div><nav class="flt">''' + "".join(f'<button data-p="{k}" style="--pc:{PI[pf][3]}"{" class=\"on\"" if i == 0 else ""}>{pf}</button>' for i, (k, pf, _) in enumerate(jpanes)) + '</nav>' + \
     "".join(f'<section class="pane{" on" if i == 0 else ""}" id="{k}"><ul class="jli">{"".join(jl_li(t) for t in ts)}</ul></section>' for i, (k, pf, ts) in enumerate(jpanes)) + f'''
 <p class="note">金額は近畿レインズ「2025年度 年刊市況レポート」の中古一戸建ての成約の平均です。1軒ずつの値段ではありません。</p>
 <div class="ft">TOWN NOTE</div></div>
 <script>(function(){{function go(k){{var b=document.querySelector('.flt button[data-p="'+k+'"]');if(!b)return;document.querySelectorAll(".flt button,.pane").forEach(function(x){{x.classList.remove("on")}});b.classList.add("on");document.getElementById(k).classList.add("on");}}
 document.querySelectorAll(".flt button").forEach(function(b){{b.onclick=function(){{go(b.dataset.p);history.replaceState(null,"","#"+b.dataset.p);}}}});if(location.hash)go(location.hash.slice(1));}})();</script>
+<script>(function(){{var i=document.getElementById("jqi"),r=document.getElementById("jres"),all=[].slice.call(document.querySelectorAll(".pane .jli li")),tq;function n(s){{return s.replace(/\\s/g,"").replace(/[市区町村]$/,"")}}i.oninput=function(){{var q=n(i.value);r.innerHTML="";document.documentElement.classList.toggle("jq-on",!!q);r.classList.toggle("on",!!q);if(!q)return;var u=document.createElement("ul");u.className="jli";all.forEach(function(li){{if(li.querySelector("a").firstChild.textContent.replace(/\\s/g,"").indexOf(q)>=0)u.appendChild(li.cloneNode(true))}});if(u.children.length)r.appendChild(u);else r.innerHTML="<p>「"+i.value.trim()+"」は見つかりませんでした。府県から選んでください。</p>";clearTimeout(tq);tq=setTimeout(function(){{try{{var b=JSON.stringify({{k:"実家一覧｜検索："+i.value.trim()}});navigator.sendBeacon&&navigator.sendBeacon("/c",b)}}catch(e){{}}}},1500);}};}})();</script>
 {beacon("実家一覧", "実家ノート")}</body></html>'''
 open(os.path.join(ROOT, "links/jikka/index.html"), "w", encoding="utf-8").write(jl)
 print("jikka", len(JT), "towns")
