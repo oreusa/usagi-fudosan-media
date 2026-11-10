@@ -7,6 +7,22 @@ R = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 L = os.path.join(R, "links")
 PREF = ["大阪", "京都", "兵庫", "奈良", "滋賀", "和歌山"]
 today = (datetime.datetime.now(datetime.timezone.utc).replace(tzinfo=None) + datetime.timedelta(hours=9)).strftime("%Y-%m-%d")
+
+# 11/10 夜 #165：表紙の「きょう◯件」と一覧の「きょう」の件数がちがった（休館日を見ていなかった）→ when.js の openOn と同じ数え方
+HOL = {"2026-11-03", "2026-11-23", "2027-01-01", "2027-01-11", "2027-02-11", "2027-02-23", "2027-03-21", "2027-03-22"}
+def open_on(days, d):
+    if not days:
+        return True
+    w = (datetime.date.fromisoformat(d).weekday() + 1) % 7  # 0=日〜6=土
+    if days.startswith("wd:"):
+        return ("h" in days[3:] and d in HOL) or str(w) in days[3:]
+    if days == "sat":
+        return w == 6
+    if days == "sun":
+        return w == 0
+    if days == "we":
+        return w in (0, 6) or d in HOL
+    return d in days.split(",")
 soup = BeautifulSoup(open(os.path.join(L, "index.html"), encoding="utf-8").read(), "html.parser")
 od = {p: [] for p in PREF}; up = 0
 cur = ""
@@ -19,6 +35,7 @@ for a in paper.select(".wk, a.card"):
     if (e and e < today) or not t or p not in od: continue
     if not cur.startswith("これから"): continue
     if s and s > today: up += 1; continue
+    if not open_on(a.get("data-days") or "", today): continue
     m = a.select_one(".m")
     od[p].append({"t": t.get_text(strip=True), "m": m.get_text(strip=True) if m else "", "h": a.get("href"), "f": "無料" in (a.get("data-tag") or "")})
 towns = json.load(open(os.path.join(L, "assets", "towns.json"), encoding="utf-8"))
