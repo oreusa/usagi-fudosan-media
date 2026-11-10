@@ -160,4 +160,8 @@ var PF={"大阪":"大阪府","京都":"京都府","兵庫":"兵庫県","奈良":
 fetch("assets/towns.json").then(function(r){return r.json()}).then(function(d){var T=d.towns||d,pl=document.getElementById("pl");if(!pl||pl.value)return;
  for(var i=0;i<T.length;i++)if(T[i].id===id){pl.value=(PF[T[i].p]||T[i].p)+T[i].n;c("申し込み｜街を入れた");break;}}).catch(function(){});
 })();</script>
+<script>/* 11/10 夜の点検：片付け・解体で来た人に「売却・査定のお申し込み」「売るか決めていなくても」と出ていた → 選んだ目的に合わせた見出しと説明にする */
+(function(){try{var W=new URLSearchParams(location.search).get("want")||"",H={"片付け・遺品整理の見積り":["片付け・遺品整理の見積り","無料です。見積りだけでも大丈夫です。"],"解体の見積り":["解体費用の見積り","無料です。見積りだけでも大丈夫です。"],"相続した家のこと":["相続した家のご相談","無料です。売るか決めていなくても大丈夫です。"]}[W];if(!H)return;
+var h=document.querySelector(".s3h h1"),l=document.querySelector(".s3l");if(h)h.textContent=H[0]+"のお申し込み";document.title=H[0]+"のお申し込み｜TOWN NOTE";
+if(l&&l.firstChild&&l.firstChild.nodeType===3)l.firstChild.nodeValue=H[1];}catch(e){}})();</script>
 </body></html>
