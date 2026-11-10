@@ -110,6 +110,7 @@ var css=document.createElement("style");css.textContent=
 '.pr5 .n{font:400 20px/1 Jost,sans-serif;width:18px;text-align:center;color:#C0584A}.pr5 .ti{flex:0 0 40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:color-mix(in srgb,var(--pc,#999) 14%,#fff)}'+
 '.pr5 .ti svg{width:22px;height:22px;fill:none;stroke:var(--pc,#777);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.pr5 .tx{flex:1;min-width:0}'+
 '.pr5 .tx b{display:block;font:700 13.5px "Zen Kaku Gothic New",sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.pr5 .tx span{font-size:11px;color:#6E6E6E}.pr5 .tx i{font-style:normal;font-weight:700;color:var(--pc,#777)}'+
+'.wfw>.fold1{display:none}.wfw.fold>*:not(.fold1){display:none!important}.wfw.fold>.fold1{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 4px;font-size:13px;color:#55505A;cursor:pointer}.wfw.fold .fold1 b{color:#2B2622}.wfw.fold .fold1 em{font-style:normal;font-family:Jost,sans-serif;font-size:16px;color:#2B2622;margin-left:4px}.wfw.fold .fold1 span:last-child{border:1px solid #D9D9DE;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:700;color:#2B2622;background:#fff}'+
 '.tn-top .fold1{display:none}.tn-top.fold>*:not(.fold1){display:none!important}.tn-top.fold .fold1{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 14px;font-size:13px;color:#55505A;cursor:pointer}'+
 '.tn-top.fold .fold1 b{color:#2B2622}.tn-top.fold .fold1 em{font-style:normal;font-family:Jost,sans-serif;font-size:16px;color:#2B2622;margin-left:4px}.tn-top.fold .fold1 span:last-child{border:1px solid #D9D9DE;border-radius:999px;padding:4px 12px;font-size:12px;font-weight:700;color:#2B2622;background:#fff}'+
 'html.wmode .paper .blk.tb:not(:has(#wn)),html.wmode #none,html.wmode #odekake,html.wmode .v2tabs{display:none!important}'+
@@ -126,7 +127,7 @@ function btns(){var pf=curPref(),h='<div class="wl">いつ行く？</div><div cl
   h+='</div><div class="wkd"><button type="button" class="wff'+(st.f.free?' on':'')+'" data-f="free">無料</button><button type="button" class="wff'+(st.f.rain?' on':'')+'" data-f="rain">雨でもOK</button><button type="button" class="wff'+(st.f.kid?' on':'')+'" data-f="kid">子どもと</button><span class="wks"></span><button type="button" data-k=""'+(st.k?'':' class="on"')+'>すべての種類</button>';
   var kc={},ki={};ALL.forEach(function(o){var x=kindOf(o);if(!x)return;var k0=st.k;st.k="";if(pass(o,st.d,st.f,pf))kc[x]=1;st.k=k0;if(!ki[x]){var sv=o.w.querySelector(".ib svg");if(sv)ki[x]=sv.innerHTML;}});
   KO.forEach(function(x){if(!kc[x]&&st.k!==x)return;h+='<button type="button" data-k="'+x+'"'+(st.k===x?' class="on"':'')+'><svg viewBox="0 0 24 24">'+(ki[x]||"")+'</svg>'+KN[x]+'</button>';});
-  h+='</div><div class="wr"><span class="wc"></span>'+(nf()||st.k?'<button type="button" class="wx">外す</button>':'')+(box.closest(".tn-top")?'<button type="button" class="wcl">とじる ▴</button>':'')+'</div>';
+  h+='</div><div class="wr"><span class="wc"></span>'+(nf()||st.k?'<button type="button" class="wx">外す</button>':'')+'<button type="button" class="wcl">とじる ▴</button>'+'</div>';
   box.innerHTML=h;}
 function stateLine(o,dk,short){var R=D[dk].d.filter(function(d){return d>=T;}),od=R.filter(function(d){return openOn(o,d);});
   if(o.s&&o.s===o.e)return mdw(o.s)+"の1日だけ";
@@ -192,7 +193,7 @@ function up(){var tp=box.closest(".tn-top"),y=sec.getBoundingClientRect().top+sc
 try{var sp=localStorage.getItem("tn_pref"+(AK?"_k":""));if(sp&&sp!=="すべて")[].forEach.call(F.querySelectorAll("button"),function(b){if(b.textContent.trim()===sp&&!b.classList.contains("on"))setTimeout(function(){b.click();},0);});}catch(e){}
 window.addEventListener("load",function(){setTimeout(function(){if(!sheetOpen)render();},400);});
 /* 11/10 オーナー「初めから出てるんじゃなくてスッキリ」：選ぶ欄は最初たたんで1行。押すと開く。開いた後も下に読むとまたたたむ */
-(function(){var tp=box.closest(".tn-top");if(!tp)return;var f1=document.createElement("div");f1.className="fold1";tp.appendChild(f1);var ly=scrollY,oy=0;
+(function(){var tp=box.closest(".tn-top");if(!tp){tp=document.createElement("div");tp.className="wfw";box.parentNode.insertBefore(tp,box);tp.appendChild(box);}var f1=document.createElement("div");f1.className="fold1";tp.appendChild(f1);var ly=scrollY,oy=0;
  function lab(){var pf=curPref()||(AK?"関東":"関西"),c0=box.querySelector(".wc b"),fl=Object.keys(st.f).map(function(k){return FL[k];});if(st.k)fl.unshift(KN[st.k]);
   f1.innerHTML='<span><b>'+pf+'・'+(st.d==="all"?"☆":D[st.d].l)+(fl.length?"・"+fl.join("・"):"")+'</b><em>'+(c0?c0.textContent:"")+'</em></span><span>えらぶ ▾</span>';}
  function fold(){lab();tp.classList.add("fold");}
