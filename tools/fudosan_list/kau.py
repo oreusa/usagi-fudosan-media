@@ -46,11 +46,39 @@ for f in glob.glob(AK + "data/kanto_chika/*.csv"):
         if k and len(r) >= 4 and r[3].strip().isdigit():
             price[(k, r[0])] = int(r[3])
 JK = json.load(open(AK + "scripts/jis_kanto.json", encoding="utf-8"))
+# 11/10 オーナー「目安でいい アフェリエイトリンクか問い合わせ取るためだけ」→ 関東の中古も目安で出す。
+# 関西（近畿レインズ表19/20/22、20件以上の街）で「土地の㎡単価」と「中古マンションの㎡単価・中古一戸建ての値段」の関係を出し、
+# 関東の地価公示に当てる。関東は関西より高いので、都県ごとに東京カンテイ2025年の中古マンション70㎡の平均（売り出し）に合わせて補正。
+import math
+def _ld(fn):
+    o = {}
+    for r in csv.DictReader(open(R + "tools/fudosan_list/reins/" + fn + ".csv", encoding="utf-8")):
+        if r["市区町村"] not in ("", "合計") and r["価格万円"] and int(r["件数"]) >= 20:
+            o[(r["府県"], r["地域見出し"], r["市区町村"])] = r
+    return o
+def _fit(pairs):
+    xs = [math.log(a) for a, b in pairs]; ys = [math.log(b) for a, b in pairs]; mx = sum(xs) / len(xs); my = sum(ys) / len(ys)
+    k = sum((x - mx) * (y - my) for x, y in zip(xs, ys)) / sum((x - mx) ** 2 for x in xs)
+    return math.exp(my - k * mx), k
+_L, _M, _K = _ld("tochi_2025"), _ld("mansion_2025"), _ld("kodate_2025")
+FM = _fit([(float(_L[k]["㎡単価万円"]), float(_M[k]["㎡単価万円"])) for k in _L if k in _M])
+FK = _fit([(float(_L[k]["㎡単価万円"]), float(_K[k]["価格万円"])) for k in _L if k in _K])
+KANTEI = {"東京": 8846, "神奈川": 3958, "埼玉": 3006, "千葉": 2790}  # 東京カンテイ 2025年 中古マンション70㎡換算の平均
+ADJ = {}
+for _p, _v in KANTEI.items():
+    _xs = [v / 10000 for (pp, n), v in price.items() if pp == _p]
+    ADJ[_p] = _v / (sum(FM[0] * x ** FM[1] * 70 * x for x in _xs) / sum(_xs))
+def est(p, x):  # x = 地価（円/㎡）
+    x = x / 10000; a = ADJ.get(p, 1.0)
+    return round(FM[0] * x ** FM[1] * 70 * a), round(FK[0] * x ** FK[1] * a)
 L = json.load(open(AK + "site/assets/towns.json", encoding="utf-8")); L = L.get("towns", L) if isinstance(L, dict) else L
 life = [{"id": t["id"], "p": t["p"], "n": t["n"], "c": JK.get(t["p"] + "|" + t["n"], ""), "l": round(price[(t["p"], t["n"])] * 100 / 10000) if (t["p"], t["n"]) in price else None,
          # 11/10 オーナー「目安でいいよ」: 新築一戸建ての目安＝地価公示×115㎡（フラット35利用者調査2025年度 首都圏 建売の敷地の中央値115.1㎡）＋建物 約2,000万円
          # 建物＝近畿レインズ表21で実際に売れた新築一戸建てから土地の分（地価公示×平均の敷地）を引いた値（滋賀・和歌山の15件以上の街の中央値 約2,000万）
          "w": round(price[(t["p"], t["n"])] * 115 / 10000) + 2000 if (t["p"], t["n"]) in price else None, "r": t["r8"]} for t in L]
+for t in life:
+    if (t["p"], t["n"]) in price:
+        t["m"], t["h"] = est(t["p"], price[(t["p"], t["n"])])
 
 
 # ---- いま開催のおでかけ（終わりの日つき）
@@ -86,14 +114,14 @@ SITES = [
  dict(D=life, out=AK + "site/sagasu.html", area="関東", n="329", brand="LIFE NOTE", base="https://usagi-life-notes.pages.dev",
       js='<script src="/assets/night.js?v=18"></script><script src="/assets/menu.js?v=43" defer></script><script src="/assets/v2sub.js?v=16" defer></script>',
       order=["東京", "神奈川", "埼玉", "千葉", "茨城", "栃木", "群馬"], col={"東京": "#4F86C6", "神奈川": "#3FA3B5", "埼玉": "#E09A3E", "千葉": "#D9775A", "茨城": "#5FA06A", "栃木": "#D2697E", "群馬": "#9C7BB8"},
-      sid="3786665", pid="892742457", ar="03", kinds=[("l", "土地（100㎡・約30坪）", "land"), ("w", "新築一戸建て（目安）", "new/house")], units={"l": "土地100㎡の目安", "w": "新築一戸建ての目安"}, bud=[1000, 2000, 3000, 4000, 5000, 7000], b0=3000,
-      unit="土地100㎡の目安", usp="<b>国の地価公示</b>の住宅地の平均から、土地と新築一戸建ての目安で選べます。",
-      src="土地＝令和8年地価公示の住宅地の平均価格×100㎡（建物は別）。新築一戸建て＝地価公示の住宅地の平均価格×115㎡＋建物 約2,000万円の目安（115㎡は住宅金融支援機構「2025年度 フラット35利用者調査」の首都圏の建売住宅の敷地の中央値。建物の分は、近畿レインズで実際に売れた新築一戸建ての値段から土地の分を引いた目安）。実際に売れた値段ではありません"),
+      sid="3786665", pid="892742457", ar="03", kinds=[("m", "中古マンション", "used/mansion"), ("h", "中古一戸建て", "used/house"), ("w", "新築一戸建て", "new/house"), ("l", "土地（100㎡）", "land")], units={"m": "中古マンション70㎡の目安", "h": "中古一戸建ての目安", "w": "新築一戸建ての目安", "l": "土地100㎡の目安"}, bud=[1000, 2000, 3000, 4000, 5000, 7000], b0=3000,
+      unit="中古マンション70㎡の目安", usp="<b>国の地価公示</b>の住宅地の平均から出した、街ごとの値段の目安で選べます。",
+      src="土地＝令和8年地価公示の住宅地の平均価格×100㎡（建物は別）。新築一戸建て＝地価公示の住宅地の平均価格×115㎡＋建物 約2,000万円の目安（115㎡は住宅金融支援機構「2025年度 フラット35利用者調査」の首都圏の建売住宅の敷地の中央値。建物の分は、近畿レインズで実際に売れた新築一戸建ての値段から土地の分を引いた目安）。中古マンション（70㎡）・中古一戸建て＝近畿レインズ「2025年度 年刊市況レポート」表19・20・22で、土地の㎡単価と実際に売れた値段の関係を出し、その街の地価公示に当てた目安。関東は都県ごとに、東京カンテイ「2025年 中古マンション70㎡換算価格」の平均に合わせて直しています（茨城・栃木はそのまま）。どれも実際に売れた値段ではなく、目安です"),
 ]
 E = html.escape
 for S in SITES:
     title = f"家を買いたい｜その予算で、どの街に住める？{S['area']}{S['n']}の街【2026年】｜{S['brand']}"
-    desc = (f"{S['area']}の街を、予算から探せます。" + ("売り出し価格ではなく、実際に売れた中古マンション・中古一戸建て・新築一戸建て・土地の平均（近畿レインズ）で、予算に届く街がすぐわかります。" if S["ar"] == "06" else "国の地価公示から出した土地100㎡と新築一戸建ての目安で、予算に届く街がすぐわかります。")
+    desc = (f"{S['area']}の街を、予算から探せます。" + ("売り出し価格ではなく、実際に売れた中古マンション・中古一戸建て・新築一戸建て・土地の平均（近畿レインズ）で、予算に届く街がすぐわかります。" if S["ar"] == "06" else "国の地価公示から出した中古マンション・中古一戸建て・新築一戸建て・土地の目安で、予算に届く街がすぐわかります。")
             + "街を押すと、その街で売り出し中の物件が見られます。")
     kt = "".join(f'<button type="button" data-k="{k}" data-y="{y}"{" class=\"on\"" if i == 0 else ""}>{lb}</button>' for i, (k, lb, y) in enumerate(S["kinds"]))
     D = [{k: v for k, v in t.items() if v not in (None, [], "") or k in ("id", "p", "n", "r")} for t in S["D"]]
