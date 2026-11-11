@@ -82,6 +82,10 @@ for svc, nm in (("threads", "Threads"), ("x", "X")):
     if len(sm) >= 3 and sm[-1][1] * 3 < sm[0][1]: order("投稿の回", "view-" + svc, f"{nm} の {sm[-1][0]} の枠（中央値 {sm[-1][1]}）をやめ、その1本を {sm[0][0]} の前後30分（中央値 {sm[0][1]}）に移す。本数は増やさない", "弱い枠は強い枠の3分の1より下")
     top3 = sorted(now_, key=lambda r: -int(r.get("views") or 0))[:3]
     if old_ and mn <= mo and top3: order("投稿の回", "view-" + svc, f"{nm} の中央値が前の週より下。いちばん見られた3本（" + "／".join(f"{r.get('day', '')[5:]} {r.get('slot', '')} {r.get('type', '')} {r.get('views')}" for r in top3) + "）の1行目の作りを、あすの同じ枠で別の街・別の数字で作る", f"中央値 {mo}→{mn}")
+    # 大当たり（14日の中央値の10倍より上）は「形」ごと増やす。11/12：学習エンジン（毎晩の回）の仕事をここに移した
+    all14 = [r for r in trows if r.get("svc") == svc and r.get("day", "") > d14]; m14 = _med([int(r.get("views") or 0) for r in all14])
+    big = sorted([r for r in all14 if m14 and int(r.get("views") or 0) >= m14 * 10], key=lambda r: -int(r.get("views") or 0))[:3]
+    if big: order("投稿の回", "view-" + svc, f"{nm} の大当たり（ふつうの10倍より上）：" + "／".join(f"{r.get('day', '')[5:]} {r.get('slot', '')}「{r.get('type', '')}」{r.get('views')}" for r in big) + "。この題の形（何の順位か・数字の出し方・1行目）を、別の路線・別の街で今週3本作る。同じ街・同じ数字はくり返さない", f"ふつうは {m14}")
 if not trows: order("投稿の回", "view-threads", "投稿の点検の回（20:33）で、きょう出た投稿の閲覧・いいねとフォロワー数を Buffer から取り、stats/toukou.json に足す（形はファイルの about のとおり）", "投稿の閲覧が未確認のまま", "数字")
 
 # 4 市ごとの補助ページ
