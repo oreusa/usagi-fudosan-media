@@ -618,6 +618,7 @@ def jikka_page(t):
 <a class="jb" href="/moushikomi?machi={t["id"]}&amp;want={_q("片付け・遺品整理の見積り")}" data-k="実家｜片付けの見積り｜{E(n)}">片付け・遺品整理の見積りを頼む<small>無料・約1分</small></a>
 <a class="jb" href="/moushikomi?machi={t["id"]}&amp;want={_q("解体の見積り")}" data-k="実家｜解体の見積り｜{E(n)}">解体費用の見積りを頼む<small>無料・約1分</small></a>
 <p class="jp">どれも同じお申し込みページです。内容を見て、メールでご連絡します。</p>
+<a class="jl" href="/kaitai" data-k="実家｜費用の目安">先に、解体・片付けの費用の目安を見る <i>→</i></a>
 <a class="jl" href="/jikka/#{fn}" data-k="実家｜一覧">ほかの街の実家・空き家ノート <i>→</i></a>
 <div class="ft">TOWN NOTE</div></div>
 {beacon("実家｜" + n, "実家ノート")}</body></html>'''
