@@ -20,7 +20,9 @@ jobs:
           curl -fsS "https://usagi-odekake.usagi-fudosan.workers.dev/stats?days=30" -o stats/link-30.json
           python3 -c "import json;d=json.load(open('stats/link.json'));print(d['days'],len(d['by_day']))"
       - name: funnel (反響までの道)
-        run: python3 tools/funnel/build.py "$(TZ=Asia/Tokyo date +%F)" || true
+        run: |
+          python3 tools/funnel/build.py "$(TZ=Asia/Tokyo date +%F)" || true
+          python3 tools/seichou/build.py "$(TZ=Asia/Tokyo date +%F)" || true
       - name: rebuild illumination pages
         # 10/31 毎朝作り直して「更新日」と終わった物・よくある質問を新しくする（検索で新しいページと見てもらうため）
         run: |
@@ -60,5 +62,5 @@ jobs:
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/link.json stats/link-30.json stats/funnel.md stats/funnel.json links/illumination*.html links/koyo*.html links/hatsumode.html links/ranking.html links/kaitai.html links/index.html links/odekake-*.html links/o links/sitemap.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md links/assets/cover.json
+          git add stats/link.json stats/link-30.json stats/funnel.md stats/funnel.json stats/seichou.md stats/seichou.json links/illumination*.html links/koyo*.html links/hatsumode.html links/ranking.html links/kaitai.html links/index.html links/odekake-*.html links/o links/sitemap.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md links/assets/cover.json
           git diff --cached --quiet || (git commit -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)" && git pull --rebase -q && git push)
