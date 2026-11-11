@@ -1,0 +1,5 @@
+0 残り5か所を見る ▾ imgs=0 broken=0
+1 残り4か所を見る ▾ imgs=0 broken=0
+2 残り21か所を見る ▾ imgs=0 broken=0
+3 残り19か所を見る ▾ imgs=0 broken=0
+4 残り19か所を見る ▾ imgs=0 broken=0
