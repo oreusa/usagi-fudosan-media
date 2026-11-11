@@ -43,6 +43,10 @@ html = r"""<!doctype html><meta charset="utf-8"><style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 #desk{position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 42%,#5a463a 0%,#3a2c25 55%,#211813 100%)}
+#tint{position:absolute;inset:0;opacity:0}
+#pat{position:absolute;inset:0;width:1080px;height:1920px;opacity:.16}
+#bk circle{filter:blur(14px)}
+#deco{position:absolute;inset:0;width:1080px;height:1920px;pointer-events:none}
 #grain{position:absolute;inset:0;opacity:.35;mix-blend-mode:overlay;pointer-events:none}
 #top{position:absolute;left:0;right:0;top:92px;text-align:center;font:500 25px J;letter-spacing:.42em;color:#d9c39a}
 #top b{display:block;font:500 30px M;letter-spacing:.3em;margin-top:10px;color:#efe2c6}
@@ -75,10 +79,13 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 .row{position:absolute;left:150px;right:120px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(110,80,60,.35);padding-bottom:16px;font:500 40px M;color:#4a3328;letter-spacing:.12em;opacity:0}
 .row b{font:500 46px M;letter-spacing:.06em}
 </style>
-<div id="desk"></div>
+<div id="desk"></div><div id="tint"></div>
+<svg id="pat" viewBox="0 0 1080 1920"><defs><pattern id="sp" width="96" height="96" patternUnits="userSpaceOnUse"><g fill="none" stroke="#e3c88c" stroke-width="1.6"><circle cx="48" cy="48" r="48"/><circle cx="0" cy="0" r="48"/><circle cx="96" cy="0" r="48"/><circle cx="0" cy="96" r="48"/><circle cx="96" cy="96" r="48"/></g></pattern>
+<radialGradient id="pm" cx=".5" cy=".47" r=".75"><stop offset=".35" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#fff" stop-opacity="1"/></radialGradient><mask id="pmk"><rect width="1080" height="1920" fill="url(#pm)"/></mask></defs><rect width="1080" height="1920" fill="url(#sp)" mask="url(#pmk)"/></svg>
+<svg id="bk" style="position:absolute;inset:0;width:1080px;height:1920px" viewBox="0 0 1080 1920"></svg>
 <div id="top">KANSAI ─ ODEKAKE<b>関西おでかけリスト</b></div>
 <div id="cam"><div id="book"><div id="shadow"></div><div id="ribbon"></div><div id="block"></div><div id="pages"></div></div></div>
-<div id="pg"></div><div id="lamp"></div>
+<svg id="deco" viewBox="0 0 1080 1920"></svg><div id="pg"></div><div id="lamp"></div>
 <svg id="grain"><filter id="gn"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .55 0"/></filter><rect width="100%" height="100%" filter="url(#gn)"/></svg>
 <script>
 const P=%PAGE%,ST=%ST%,OPEN=%OPEN%,TURN=%TURN%,TOTAL=%TOTAL%,N=5;
@@ -170,6 +177,11 @@ function build(){
    <div id="nt" style="position:absolute;left:150px;right:110px;top:${340+P.info.length*112+6}px;font:500 28px M;letter-spacing:.1em;line-height:1.8;color:#7a5b4a;opacity:0">${P.note}</div>
    <div id="end" style="position:absolute;left:0;right:0;top:925px;text-align:center;opacity:0"><div style="font:500 44px M;letter-spacing:.24em;color:#3d2a22">つづきは、</div><div style="font:700 50px MB;letter-spacing:.2em;color:#a5332a;margin-top:18px">プロフィールのリンクから</div></div></div>`);
   $('#pages').innerHTML=pages.map((f,i)=>`<div class="pg" id="p${i}" style="z-index:${20-i}">${f}<div class="face back"></div>${i?'<div class="gut"></div>':''}<div class="shade"></div><div class="sheen"></div></div>`).reverse().join('');
+  // まわりの飾り：もみじと光の粒
+  {const r=rng(77),cols=['#c9402b','#e8862e','#f0b23a','#d4552d','#b5332a'];let s='<defs><filter id="ds" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="5" dy="9" stdDeviation="7" flood-color="#000" flood-opacity=".45"/></filter></defs>';
+   const spots=[[70,150,58,-28],[168,96,34,40],[985,128,50,24],[905,70,30,-50],[52,1700,44,62],[150,1790,64,-18],[262,1850,32,30],[1010,1690,56,-36],[905,1800,40,18],[790,1862,30,-64],[1040,930,34,80],[30,1000,30,-80]];
+   spots.forEach((q,i)=>{s+=`<g class="dl" data-i="${i}" data-x="${q[0]}" data-y="${q[1]}" data-z="${q[2]}" data-r="${q[3]}" filter="url(#ds)"><path d="${LP}" fill="${cols[i%5]}"/><path d="M0,.9 L0,-.8 M0,.2 L-.5,-.35 M0,.2 L.5,-.35" stroke="rgba(90,30,15,.45)" stroke-width=".035" fill="none"/></g>`});
+   $('#deco').innerHTML=s;let b='';for(let i=0;i<16;i++)b+=`<circle data-x="${(r()*1080).toFixed(0)}" data-y="${(r()*1920).toFixed(0)}" data-p="${(r()*6).toFixed(2)}" r="${(10+r()*26).toFixed(0)}" fill="#ffdc9a"/>`;$('#bk').innerHTML=b}
   // 葉
   document.querySelectorAll('.lv').forEach((g,gi)=>{const r=rng(100+gi);let s='';const cols=['#c9402b','#e8862e','#f0b23a','#d4552d','#b5332a'];
     for(let i=0;i<16;i++)s+=`<g class="lf" data-x="${(r()*920).toFixed(0)}" data-s="${(.05+r()*.07).toFixed(3)}" data-p="${r().toFixed(3)}" data-z="${(14+r()*20).toFixed(0)}" data-w="${(r()*6).toFixed(2)}"><path d="${LP}" fill="${cols[i%5]}" opacity=".9"/></g>`;g.innerHTML=s});
@@ -188,6 +200,11 @@ function render(t){
   // カメラ
   const z=t<OPEN?1.0+.05*eio(sm(t,0,OPEN)):1.05+.012*Math.sin(t*.5);
   $('#cam').style.transform=`scale(${z}) translateY(${t<OPEN?(1-eio(sm(t,0,OPEN)))*10:0}px) rotate(${(-.9+1.5*sm(t,0,TOTAL)).toFixed(3)}deg)`;$('#foil').style.backgroundPosition=(120-170*sm(t,.3,1.7))+'% 0';$('#ribbon').style.transform=`rotate(${(2.2*Math.sin(t*1.3)).toFixed(2)}deg)`;
+  document.querySelectorAll('.dl').forEach(l=>{const d=l.dataset,i=+d.i,k=eo(sm(t,.15+i*.07,1.1+i*.07));
+    l.setAttribute('transform',`translate(${(+d.x+Math.sin(t*.6+i)*3).toFixed(1)},${(+d.y-(1-k)*120+Math.cos(t*.5+i*2)*2).toFixed(1)}) rotate(${(+d.r+(1-k)*90+Math.sin(t*.7+i)*3).toFixed(1)}) scale(${d.z})`);l.style.opacity=k});
+  document.querySelectorAll('#bk circle').forEach(c=>{const d=c.dataset;c.setAttribute('cx',(+d.x+Math.sin(t*.25+ +d.p)*40).toFixed(1));c.setAttribute('cy',(((+d.y-t*14)%1920+1920)%1920).toFixed(1));c.style.opacity=(.07+.07*Math.sin(t*.8+d.p*3)).toFixed(3)});
+  {const tn=$('#tint');const a=sm(t,ST[1]-TURN,ST[1]),b=sm(t,ST[2]-TURN,ST[2]),c=sm(t,ST[3]-TURN,ST[3]),e=sm(t,ST[4]-TURN,ST[4]);
+   if(c>0&&e<1){tn.style.background='radial-gradient(120% 80% at 50% 42%,#2b3463,#121630)';tn.style.opacity=.85*c*(1-e)}else{tn.style.background='radial-gradient(120% 80% at 50% 42%,#7a3524,#3a1712)';tn.style.opacity=.6*a*(1-b)}}
   chars('ct',t,.25,.06);$('#top').style.opacity=1-.75*sm(t,OPEN-1.2,OPEN);
   // ページごと
   let cur=-1;for(let i=0;i<N;i++)if(t>=ST[i]-TURN*.5)cur=i;
