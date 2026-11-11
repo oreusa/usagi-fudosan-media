@@ -80,7 +80,7 @@ CSS = ("<style>.rk{background:#fff;border-radius:2px;box-shadow:0 1px 2px rgba(4
        ".rk-d{grid-column:2;font-size:11px;color:#8A7F76}.rk-b{padding:0 16px 16px;font-size:13.5px;line-height:1.95;color:#3A332E}"
        ".rk-b h4{margin:14px 0 4px;font-size:13px;letter-spacing:.06em;color:var(--c)}.rk-b ul{margin:0;padding-left:1.2em}.rk-b p{margin:10px 0 0}"
        ".rk-l{font-weight:700}.rk-n,.rk-s{font-size:12px;color:#7A6E66}.rk-s a{color:inherit}.rk-sub{font-size:12px;color:#7A6E66;margin:-6px 0 12px}"
-       ".rk-m{margin-top:14px;padding-top:12px;border-top:1px solid #EEE9E4}.rk-m small{display:block;font-size:11px;letter-spacing:.14em;color:#8A7F76;margin-bottom:6px}"
+       ".rk-m{margin-top:14px;padding-top:12px;border-top:1px solid #E6E7EA}.rk-m small{display:block;font-size:11px;letter-spacing:.14em;color:#8A7F76;margin-bottom:6px}"
        ".rk-m a{display:inline-block;margin:0 8px 8px 0;padding:6px 12px;border:1px solid #D9D2CB;border-radius:99px;color:#2B2622;text-decoration:none;font-size:12.5px}"
        "</style>")
 s = s.replace("</head>", CSS + "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in ld) + "</head>", 1)
