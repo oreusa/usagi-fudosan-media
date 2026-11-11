@@ -1793,6 +1793,20 @@
    "label": "関西まちランキング",
    "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/rank-r24.jpg?v=8ae43f967fec",
    "made": "2026-11-12"
+  },
+  "odekake-koyo-kyoto": {
+   "hash": "3c07fcbfe76b",
+   "page": "/koyo-kyoto",
+   "label": "関西おでかけリスト",
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/odekake-koyo-kyoto.jpg?v=3c07fcbfe76b",
+   "made": "2026-11-12"
+  },
+  "odekake-illumination-osaka": {
+   "hash": "daa1abedbeeb",
+   "page": "/illumination-osaka",
+   "label": "関西おでかけリスト",
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/odekake-illumination-osaka.jpg?v=daa1abedbeeb",
+   "made": "2026-11-12"
   }
  }
 }
