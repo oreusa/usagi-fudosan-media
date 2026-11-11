@@ -82,7 +82,7 @@ CSS = ("<style>.rk{background:#fff;border-radius:2px;box-shadow:0 1px 2px rgba(4
        ".rk-l{font-weight:700}.rk-n,.rk-s{font-size:12px;color:#7A6E66}.rk-s a{color:inherit}.rk-sub{font-size:12px;color:#7A6E66;margin:-6px 0 12px}"
        ".rk-m{margin-top:14px;padding-top:12px;border-top:1px solid #EEE9E4}.rk-m small{display:block;font-size:11px;letter-spacing:.14em;color:#8A7F76;margin-bottom:6px}"
        ".rk-m a{display:inline-block;margin:0 8px 8px 0;padding:6px 12px;border:1px solid #D9D2CB;border-radius:99px;color:#2B2622;text-decoration:none;font-size:12.5px}"
-       "html.night .rk{background:#26221F}html.night .rk-b{color:#E6DFD8}html.night .rk-m{border-top-color:#3A342F}html.night .rk-m a{color:#EDE7E0;border-color:#4A433D}</style>")
+       "</style>")
 s = s.replace("</head>", CSS + "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in ld) + "</head>", 1)
 s = re.sub(r"<title>.*?</title>", f"<title>{E(title)}</title>", s, count=1)
 for prop in ('<meta name="description" content="', '<meta property="og:description" content="'):
@@ -115,6 +115,8 @@ JS = ('<script>(function(){var O=false;try{O=localStorage.getItem("usagi_owner")
       'else{document.querySelectorAll("section.ps").forEach(function(s){var d=s.querySelector("details.rk");if(d)d.open=true;});}})();</script>')
 s = s.replace("</body>", JS + "</body>", 1)
 s = re.sub(r"/\*.*?\*/", lambda m: "" if "初詣" in m.group(0) else m.group(0), s, flags=re.S)
+# 夜の画面は night.js が全体の色を反転して作る。ページ側で html.night の色を書くと二重に反転して読めなくなる
+assert "html.night .rk" not in s, "ページ側に夜の色を書かない"
 assert "初詣" not in s, "初詣の言葉が残っている: " + s[max(0, s.index("初詣") - 80):s.index("初詣") + 60]
 open(os.path.join(ROOT, "links", "ranking.html"), "w", encoding="utf-8").write(s)
 print("ranking", N, "items", {k: len(v) for k, v in groups.items()})
