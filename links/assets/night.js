@@ -6,7 +6,7 @@
   var K="usagi_theme",d=document.documentElement;
   /* 10/31 オーナー「初めは昼にしといて」→ 時間では変えない。太陽と月のマークで選んだ時だけ夜 */
   /* 11/11 ページの種類（頭の飾りを変える）と、満月の前後1日の印 */
-  try{var pn=location.pathname,pg=/^\/ranking/.test(pn)?"rank":/^\/(illumination|hatsumode)/.test(pn)?"hikari":/^\/(fudosan-list|machi\/|chika-|jikka|sagasu)/.test(pn)?"ie":"";if(pg)d.setAttribute("data-pg",pg);
+  try{var pn=location.pathname,pg=/^\/ranking/.test(pn)?"rank":/^\/(illumination|hatsumode)/.test(pn)?"hikari":/^\/(fudosan-list|machi\/|chika-|jikka|sagasu|kaitai)/.test(pn)?"ie":"";if(pg)d.setAttribute("data-pg",pg);
     var ag=((Date.now()-947182440000)/86400000)%29.530588853;if(Math.abs(ag-14.765)<1)d.classList.add("mfull");}catch(e){}
   function pick(){try{var v=localStorage.getItem(K);if(v==="day"||v==="night")return v;}catch(e){}return "day";}
   function set(v,save){d.classList.toggle("night",v==="night");if(save)try{localStorage.setItem(K,v);}catch(e){}

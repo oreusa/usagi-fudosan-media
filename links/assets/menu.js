@@ -365,7 +365,7 @@ var NB=[
  {k:"fu",t:"不動産",nm:A.site+"不動産リスト",en:"REAL ESTATE",c:"#4F7BA8",lead:A.site+"の街の値段を、公式の数字で。",rows:[
   ["/fudosan-list","不動産リスト","地価・制度",/^\/fudosan-list/],["/uru","家を売りたい","相場と大事なこと",/^\/uru/],
   ["/sagasu","家を買いたい","住む街をさがす",/^\/sagasu/],[LF?"/chika-kanto":"/chika-kansai","地価ランキング",LF?"関東の街":"関西205の街",/^\/chika-/]]
-  .concat(LF?[]:[["/ranking","まちランキング","駅・地価・人口の順位",/^\/ranking/],["/gyosha","業者・士業の方","窓口",/^\/gyosha/]]),
+  .concat(LF?[]:[["/kaitai","解体・片付けの費用","30秒で目安",/^\/kaitai/],["/ranking","まちランキング","駅・地価・人口の順位",/^\/ranking/],["/gyosha","業者・士業の方","窓口",/^\/gyosha/]]),
   /* 11/10 オーナー「関東も問い合わせ…関西と同じで俺に問い合わせでいい」 */sub:[["/moushikomi","売却のお申し込み"],["/koe","リクエスト・感想"]]},
  {k:"jk",t:"実家",nm:"実家・空き家ノート",en:"JIKKA NOTE",c:"#5E9E6E",lead:"実家・空き家、何から始める？",nw:1,rows:[
   ["/jikka/shindan/","3問診断","30秒・次にやること",/^\/jikka\/shindan/],["/jikka/","実家・空き家ノート","街の相場",/^\/jikka\/(?!shindan)/],["/moushikomi","売却・片付け・解体","ご相談",/^$/]],
