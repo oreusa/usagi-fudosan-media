@@ -1,5 +1,5 @@
 {
- "about": "投稿そのものの数字。投稿の点検の回（20:33）が毎晩足す。rows＝1投稿1行 {day:'YYYY-MM-DD', svc:'threads'か'x', slot:'07:00', type:リンクの印の型（rank・kaitai・jikka・hitoeki・odekake など。無ければ''）, pic:画像つきなら true, views:閲覧, likes:いいね}。同じ day・svc・slot の行は数字を上書き（きのう・おとといの分も取り直す）。followers＝1日1行 {day, threads:人数, x:人数}（取れない方は書かない）。60日より前の行は消してよい",
+ "about": "投稿そのものの数字。投稿の点検の回（20:33）が毎晩足す。rows＝1投稿1行 {day:'YYYY-MM-DD', svc:'threads'か'x', slot:'07:00', type:リンクの印の型（rank・kaitai・jikka・hitoeki・odekake など。無ければ''）, pic:画像つきなら true, head:1本目の1行目（【】の見出し。11/12〜。gakushu.py が型に分ける）, kata:惹きつける型の名前（gakushu.py の KATA と同じ名前。点検の回が head から付ける）, views:閲覧, likes:いいね}。同じ day・svc・slot の行は数字を上書き（きのう・おとといの分も取り直す）。followers＝1日1行 {day, threads:人数, x:人数}（取れない方は書かない）。60日より前の行は消してよい。kata_count＝1日1つ {\"YYYY-MM-DD\": {\"Threads\": {型: 本数}}}（その日に出した本数。点検の回が毎晩書く）",
  "rows": [
   {
    "day": "2026-10-29",
@@ -2567,5 +2567,6 @@
    "likes": 0
   }
  ],
- "followers": []
+ "followers": [],
+ "kata_count": {}
 }

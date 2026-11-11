@@ -100,7 +100,7 @@ def kata(t):
     return "そのほか"
 _kt = {}
 for r in trows:
-    if r.get("svc") == "threads" and r.get("day", "") > d14 and r.get("views") is not None: _kt.setdefault(kata(r.get("type", "")), []).append(int(r["views"]))
+    if r.get("svc") == "threads" and r.get("day", "") > d14 and r.get("views") is not None: _kt.setdefault(r.get("kata") or kata(r.get("head") or r.get("type", "")), []).append(int(r["views"]))
 if _kt:
     _all = _med([v for vs in _kt.values() for v in vs])
     _ks = sorted(((k, _med(v), len(v), max(v)) for k, v in _kt.items()), key=lambda x: -x[1])
