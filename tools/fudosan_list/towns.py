@@ -552,9 +552,15 @@ J_CITY = [
     # 11/11 月が市の公式の手引き・要綱で確かめた物
     ("神戸市", [("古い空き家の解体の補助", "建物の広さで決まる定額で、20万〜60万円（1986年以前に建った、傷みのある空き家など・条件あり）。受付は2027年1月12日まで（予算がなくなりしだい終了）。交付が決まる前の契約・着工は対象外。", "受付中", "https://www.city.kobe.lg.jp/documents/25370/r8_9rokyutebiki.pdf")]),
     ("奈良市", [("特定空家等の解体の補助", "費用の1/2・上限30万円。市が「特定空家等」と判断した建物だけが対象です。受付の期間は、市にお問い合わせください。", "", "https://www.city.nara.lg.jp/uploaded/attachment/192957.pdf")]),
+    ("姫路市", [("老朽空家の解体の補助", "個人は工事費の1/3・上限50万円。令和8年度の受付は2026年6月11日に終わりました。来年度に向けた現地調査（対象かどうかの確認）は、いつでも受け付けています。", "受付終了", "https://www.city.himeji.lg.jp/kurashi/0000006739.html")]),
+    ("尼崎市", [("特殊空家の解体の補助", "費用の2/3・上限50万円。借地の上の長屋か、道に接していない土地の空き家だけが対象です（世帯の所得900万円以下など）。受付は2026年12月28日まで（予算がなくなりしだい終了）。", "受付中", "https://www.city.amagasaki.hyogo.jp/kurashi/sumai/1021364/1024803.html")]),
+    ("和歌山市", [("不良空家の解体の補助", "費用の2/3・上限50万円。先に市の「不良空家」の認定が要ります（1年以上だれも住んでいない等）。予定の件数に達すると締め切りです。", "", "https://www.city.wakayama.wakayama.jp/kurashi/sumai_jyougesuidou/1001110/1010373/1001893.html")]),
+    ("豊中市", [("木造住宅の解体の補助（震災対策）", "上限40万円。1981年5月31日以前に建った、耐震性が足りない木造住宅（2階建てまで）が対象です（所得などの条件あり）。契約・着工の前に手続きが要ります。予算に達すると終了です。", "", "https://www.city.toyonaka.osaka.jp/machi/kenchiku_kaihatsu/taisin/jokyaku.html")]),
+    ("高槻市", [("木造住宅の解体の補助", "一戸建ては定額40万円（1981年5月31日以前に建った家は45万円）。耐震性が足りない木造住宅が対象です（所得などの条件あり）。申請はその年度の1月末まで、契約・着工の前に。予算に達すると中止です。", "", "https://www.city.takatsuki.osaka.jp/soshiki/49/5868.html")]),
+    ("枚方市", [("住宅の解体の補助", "上限20万円/棟。1981年5月31日以前に建った、耐震性が足りない住宅が対象です（世帯の所得256万8千円以下など）。事前相談は12月14日まで、申し込みは12月28日まで（先着順）。", "受付中", "https://www.city.hirakata.osaka.jp/0000002407.html")]),
 ]
 
-J_DATE = {"神戸市": "2026年11月11日", "奈良市": "2026年11月11日"}  # 書いていない市は 2026年11月10日
+J_DATE = {c: "2026年11月11日" for c in ("神戸市", "奈良市", "姫路市", "尼崎市", "和歌山市", "豊中市", "高槻市", "枚方市")}  # 書いていない市は 2026年11月10日
 
 
 def city_of_town(n):
@@ -607,7 +613,7 @@ def jikka_page(t):
     city_h = ""
     if crows:
         city_h = (f'<p class="mk3">CITY</p><h2 class="jh">{E(cn)}の補助・空き家バンク</h2>' + "".join(
-            f'<div class="cy"><b>{E(h)}</b>' + (f'<em class="{"x" if st == "受付停止" else ""}">{st}</em>' if st else '') + f'<p>{E(tx)}</p><a href="{E(u)}" target="_blank" rel="noopener" data-k="実家｜市の補助｜{E(cn)}">{E(cn)}の公式ページ →</a></div>' for h, tx, st, u in crows)
+            f'<div class="cy"><b>{E(h)}</b>' + (f'<em class="{"x" if st in ("受付停止", "受付終了") else ""}">{st}</em>' if st else '') + f'<p>{E(tx)}</p><a href="{E(u)}" target="_blank" rel="noopener" data-k="実家｜市の補助｜{E(cn)}">{E(cn)}の公式ページ →</a></div>' for h, tx, st, u in crows)
             + f'<p class="src">{J_DATE.get(cn, "2026年11月10日")}に市の公式ページで確かめた内容です。受付・条件・上限は変わるので、申し込む前に必ず公式ページで確かめてください。</p>')
     body = f'''<style>{HEAD_CSS}{J_CSS}</style>{SCRIPTS}</head><body style="--pc:{col}"><div class="wrap">
 <div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">{en} ─ JIKKA NOTE</div>
