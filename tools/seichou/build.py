@@ -41,6 +41,16 @@ L = [f"# 成長の帳面（{today.isoformat()} 朝）", "",
 
 # ② 週の実験の答え合わせ
 L += ["## 週の実験（答え合わせ）", "", "| 実験 | 合格の線 | 今の数 | 結果 |", "|---|---|---|---|"]
+# 投稿の型：?f= の印ごとに、HPへ来た人
+sns = {}
+for r in rows:
+    k, n, day = r.get("k", ""), int(r.get("n", 0) or 0), r.get("day", "")
+    if k.startswith("来訪：SNS｜"):
+        t = sns.setdefault("-".join(k.split("｜", 1)[1].split("-")[:2]), [0, 0])  # th-rank-1111a → th-rank
+        if day > d7: t[0] += n
+        elif day > d14: t[1] += n
+def smark(a, b): return "伸びている" if a >= 5 and a > b * 1.3 else ("落ちた" if b >= 5 and a < b * 0.7 else ("0" if a == 0 else "横ばい"))
+SNS_ROWS = [f"| {f}{'' if '-' in f else '（型なし）'} | {a} | {b} | {smark(a, b)} |" for f, (a, b) in sorted(sns.items(), key=lambda x: -x[1][0]) if a or b] or ["| （まだありません） | 0 | 0 | |"]
 res = []
 for it in jk["items"]:
     s = date.fromisoformat(it["start"]); e = s + timedelta(days=it["days"])
@@ -78,8 +88,12 @@ for n, p in tbl:
     if p["v7"] == 0 and p["v30"] < 5: continue
     L.append(f"| {n} | {p['v7']} | {p['e7']} | {p['e_prev']} | {p['ask7']} | {mark(p)} |")
 L += ["", f"数え始めた日：{first}（それより前は数がありません）", "",
-      "## 投稿の型", "", "投稿の伸びた型・落ちた型は、投稿の担当が月曜に1行で台帳へ書きます（フォロワーの増えた数・見られた数の中央値・上と下の型）。伸びた型の投稿の行き先は、上の「伸びている」ページに向けます。", ""]
+      "## 投稿の型（投稿からHPに来た人）", "",
+      "投稿の2本目のリンクに付けた印（?f=媒体-型-日付と枠。例 th-rank-1111a・x-kaitai-1111b）を、媒体と型でまとめて、機械が数えます。印が媒体だけ（th・x）の物は「型なし」です。", "",
+      "| 印 | この7日 | 前の7日 | 印 |", "|---|---|---|---|"] + SNS_ROWS + ["",
+      "- 決まり：投稿からHPへのリンクには必ず「媒体-型-日付と枠」の印を付ける（型は th-rank／th-jikka／th-kaitai／th-odekake／th-hitoeki、X は x-、インスタは ig-）。",
+      "- 月曜：いちばん多い型の枠を1つ増やし、2週つづけて0の型は、題と行き先を変えるか、やめる。増やした・やめたを1行で台帳へ。", ""]
 open(os.path.join(ROOT, "stats", "seichou.md"), "w", encoding="utf-8").write("\n".join(L))
-json.dump({"day": today.isoformat(), "weak": weak, "ext7": ext7, "ext_prev7": extp, "experiments": res, "grow": grow, "ext0": dead, "no_ask": noask,
+json.dump({"day": today.isoformat(), "weak": weak, "ext7": ext7, "ext_prev7": extp, "experiments": res, "grow": grow, "ext0": dead, "no_ask": noask, "sns": {f: {"d7": a, "prev7": b} for f, (a, b) in sns.items()},
            "pages": {n: p | {"mark": mark(p)} for n, p in tbl}}, open(os.path.join(ROOT, "stats", "seichou.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("\n".join(L[:60]))
