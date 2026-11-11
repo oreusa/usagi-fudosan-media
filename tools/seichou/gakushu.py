@@ -112,6 +112,8 @@ if yado[0] < yado[1] * 0.7 and yado[1] >= 10: order("月の朝", "aff", "宿が�
 
 # 7 申し込みまでの道
 st = {s["name"]: s["n"] for s in sei.get("steps", [])}
+_n2 = tot(lambda k: k.startswith("申し込み｜次へ｜2")) + tot(lambda k: k == "申し込み｜かんたん｜表示")  # 連絡先を書く所まで来た人（かんたん相談は最初から連絡先が見える）
+if st: st = {k2: v2 for k, v in st.items() for k2, v2 in ([("連絡先の画面まで進んだ", max(_n2, v)), (k, v)] if k == "送信した（反響）" else [(k, v)])}
 sent = st.get("送信した（反響）", 0); sent_old = ago("lead_sent")
 ln = rung(sent, [1, 3, 10, 20, 40])
 item("lead", "申し込み（反響）", "・".join(f"{k} {v}" for k, v in st.items()) or "未確認", f"次の段：送信 {ln}件（その先 月40件＝500万円の線）", "当たり" if sent >= 1 and sent > (sent_old or 0) else "外れ", "テストは stats/tests.json で引いた後の数", sent * 100 + st.get("書きはじめた", 0))
@@ -124,6 +126,7 @@ for x, y in zip(names, names[1:]):
         if drop is None or rate < drop[2]: drop = (x, y, rate)
 FIX = {"申し込みページを開いた": "外から来た人がいちばん多いページ（成長の帳面の上位3つ）の、最初の画面の中に「相談する」への道を1つ置く。言葉はそのページの悩み（売る・解体・片付け）に合わせる",
        "書きはじめた": "申し込みページの最初の画面を「選ぶだけの質問1つ」から始める形にする（名前・電話は最後）。開いてすぐ見える所に「無料・しつこい連絡なし・複数の会社をくらべられる」を1行。スマホ幅で、開く→1つ目を押すまでを通しで確かめる",
+       "連絡先の画面まで進んだ": "「お家について」（場所・内容）の画面で止まっている。来たページの市の名前を、場所の欄に先に入れておく。内容は書かなくても進めると分かる言葉にする。次へのボタンを、指の届く下に固定する",
        "送信した（反響）": "どの質問でやめたかを測る印（質問ごとの「答えた」）を足す。いちばん落ちる質問を、任意にするか後ろへ回す。送信の直前に「このあと何が起きるか」を3行で書く"}
 if drop:
     order("月の朝", "lead", f"「{drop[0]}」{st[drop[0]]}人 →「{drop[1]}」{st[drop[1]]}人（{drop[2] * 100:.0f}%）が、いちばん人が落ちている段。" + FIX.get(drop[1], "この段の画面を、スマホ幅で通しで見て、迷う所を1つ直す") + "。関西と関東の両方", "お金にいちばん近い段。ここが動かないと、来る人を増やしても反響は0のまま")
@@ -181,14 +184,18 @@ same_day = prev.get("day") == today.isoformat()
 for o in orders:
     d = old.get((o["to"], o["item"], o["order"][:24]))
     o["days"] = (d if same_day else d + 1) if d else 1
+    _w = [y["what"] for y in yatta["rows"] if "result" not in y and y.get("item") == o["item"]]
+    if _w: o["wait"] = _w[-3:]
     if ng.get(o["item"]): o["ng"] = ng[o["item"]][-3:]
     if ok.get(o["item"]): o["ok"] = ok[o["item"]][-3:]
 orders.sort(key=lambda o: (o["kind"] != "作る", PRI.index(o["item"]) if o["item"] in PRI else 99))
-first = next((o for o in orders if o["to"] == "月の朝" and o["kind"] == "作る"), None)
+_c = [o for o in orders if o["to"] == "月の朝" and o["kind"] == "作る"]
+first = next((o for o in _c if len(o.get("wait", [])) < 2), _c[0] if _c else None)  # 同じ所に答え待ちの手が2つあれば、答えが出るまで次の項目を先に（重ねて変えると、どの手が効いたか分からなくなる）
 if first: first["first"] = True
 def line(o):
     t = ("【きょうの1つ】" if o.get("first") else ("【数字を入れる】" if o["kind"] == "数字" else "")) + o["order"] + f"（理由：{o['why']}）"
     if o["days"] >= 3: t += f" ！{o['days']}日つづけて出ている＝まだやられていない"
+    if o.get("wait"): t += "／答え待ちの手（同じ所を重ねて変えない。足りない所だけ足す）：" + "・".join(o["wait"])
     if o.get("ng"): t += "／前に効かなかった手（くり返さない）：" + "・".join(o["ng"])
     if o.get("ok"): t += "／前に効いた手（同じ型を増やす）：" + "・".join(o["ok"])
     return "- " + t
