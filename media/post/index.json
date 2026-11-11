@@ -1,6 +1,6 @@
 {
  "about": "投稿に付ける画像。投稿の2本目で送るページ（page）と同じ行の url を、1本目の画像に付ける。tools/post_img/make.js が毎朝作る",
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "items": {
   "rank-r21": {
    "hash": "708276f9d757",
@@ -1758,6 +1758,41 @@
    "label": "関西おでかけリスト",
    "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/odekake-hatsumode.jpg?v=384b4879fad5",
    "made": "2026-11-11"
+  },
+  "jikka-shindan": {
+   "hash": "4ca051eb2282",
+   "page": "/jikka/shindan/",
+   "label": "実家・空き家ノート",
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/jikka-shindan.jpg?v=4ca051eb2282",
+   "made": "2026-11-12"
+  },
+  "jikka-nara-01": {
+   "hash": "368de52c6058",
+   "page": "/jikka/nara-01",
+   "label": "実家・空き家ノート",
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/jikka-nara-01.jpg?v=368de52c6058",
+   "made": "2026-11-12"
+  },
+  "odekake-koyo-nara": {
+   "hash": "71fa1c1c0cc5",
+   "page": "/koyo-nara",
+   "label": "関西おでかけリスト",
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/odekake-koyo-nara.jpg?v=71fa1c1c0cc5",
+   "made": "2026-11-12"
+  },
+  "odekake-koyo-shiga": {
+   "hash": "863baeb92527",
+   "page": "/koyo-shiga",
+   "label": "関西おでかけリスト",
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/odekake-koyo-shiga.jpg?v=863baeb92527",
+   "made": "2026-11-12"
+  },
+  "rank-r24": {
+   "hash": "8ae43f967fec",
+   "page": "/ranking#r24",
+   "label": "関西まちランキング",
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/rank-r24.jpg?v=8ae43f967fec",
+   "made": "2026-11-12"
   }
  }
 }
