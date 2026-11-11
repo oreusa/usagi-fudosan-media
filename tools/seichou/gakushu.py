@@ -187,6 +187,36 @@ if drop:
 else:
     order("月の朝", "lead", "申し込みまでの段の数字が10人に届いていない。先に「外から来る人」を増やす指令（市のページ・HPのページ）をやる", "段をくらべる数がまだ無い")
 
+# 7b 未来予想（11/12 オーナー「未来予想もして収益化本格的に」）。機械が毎朝「このままだと30日で相談が何件か」を出し、7日後に自分の予想を答え合わせして、外れた分だけ次の予想を直す
+yo = load(S("yosou.json"), {"about": "未来予想の帳面。機械が毎朝1行足し、7日たった行に答え（actual）と外れ具合（err）を付ける。bias は、これまでの 答え÷予想 の真ん中の値で、次の予想に掛ける", "rows": []})
+_e7, _ep = sei.get("ext7") or 0, sei.get("ext_prev7") or 0
+_op, _wr, _cn = st.get("申し込みページを開いた", 0), st.get("書きはじめた", 0), st.get("連絡先の画面まで進んだ", 0)
+for r_ in yo["rows"]:
+    if "actual" not in r_ and r_.get("for", "9") <= today.isoformat():
+        r_["actual"] = {"ext7": _e7, "sent": sent}; r_["err"] = round(_e7 / r_["pred"]["ext7"], 2) if r_["pred"].get("ext7") else None
+        manabi["rows"].append({"day": today.isoformat(), "kind": "手の答え", "item": "未来予想", "what": f"{r_['day']} の予想（外から 週{r_['pred']['ext7']}人・相談 {r_['pred']['sent30']}件/30日）", "result": "当たり" if r_["err"] and 0.7 <= r_["err"] <= 1.3 else "外れ（予想の掛け算を直した）", "before": r_["pred"]["ext7"], "after": _e7})
+_errs = sorted(r_["err"] for r_ in yo["rows"] if r_.get("err"))
+bias = _errs[len(_errs) // 2] if _errs else 1.0
+_tr = min(2.0, max(0.5, _e7 / _ep)) if _ep else 1.0
+p_ext = round(_e7 * _tr * bias)                      # 来週 外から来る人
+r_op = min(1.0, _op / _e7) if _e7 else 0             # 外から → 申し込みを開く
+r_wr = _wr / _op if _op else 0                       # 開く → 書きはじめる
+r_sd = (sent / _wr) if _wr and sent else None        # 書きはじめる → 送信（まだ0件なら未確認）
+SD0 = 0.5                                            # 送信の率がまだ測れない間の仮の値（書きはじめた人の半分）。1件でも送信が出たら実測に替わる
+def sim(ext, op, wr, sd=None): return ext * 30 / 7 * op * wr * (sd if sd is not None else (r_sd if r_sd is not None else SD0))
+now30 = sim(p_ext, r_op, r_wr)
+LEV = [("外から来る人を2倍にする（市のページ・検索・投稿の2本目）", sim(p_ext * 2, r_op, r_wr), "city"),
+       ("書きはじめる人を、開いた人の3割にする（申し込みページの最初の画面）", sim(p_ext, r_op, max(r_wr, 0.3)), "lead"),
+       ("家のページから申し込みを開く人を増やす（開く率を1.5倍）", sim(p_ext, min(1.0, r_op * 1.5), r_wr), "michi")]
+LEV.sort(key=lambda x: -x[1]); top = LEV[0]
+need = round(40 / (30 / 7 * r_op * r_wr * (r_sd if r_sd is not None else SD0))) if r_op and r_wr else None
+item("yosou", "未来予想（30日）", f"このままだと 相談 {now30:.1f}件/30日（紹介料の見込み 約{now30 * 1:.0f}万円・毎月の出費 10万円）。来週 外から {p_ext}人の予想。いちばん効く手：{top[0]} → {top[1]:.1f}件" + ("。送信の率は未確認（仮に半分）" if r_sd is None else ""), f"30日で {rung(now30, [1, 3, 10, 20, 40])}件（月40件に要る 外から来る人：週{need if need else '未確認'}人）", "当たり" if now30 >= 10 else "外れ", f"予想の当たり具合：これまで {len(_errs)}回 答え合わせ・掛け算 {bias}", round(now30, 1))
+order("月の朝", "yosou", f"未来予想でいちばん効く手は「{top[0]}」（30日の相談 {now30:.1f}件 → {top[1]:.1f}件）。きょうの1つは、この手に当たる指令（{top[2]}）から選ぶ。2番目は「{LEV[1][0]}」→ {LEV[1][1]:.1f}件", "同じ手間なら、相談がいちばん増える所から", "数字")
+if not any(r_["day"] == today.isoformat() for r_ in yo["rows"]):
+    yo["rows"].append({"day": today.isoformat(), "for": (today + timedelta(days=7)).isoformat(), "pred": {"ext7": p_ext, "sent30": round(now30, 1), "top": top[0]}, "rates": {"open": round(r_op, 2), "write": round(r_wr, 2), "send": r_sd}})
+yo["bias"] = bias; yo["rows"] = yo["rows"][-120:]
+json.dump(yo, open(S("yosou.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
 # 8 担当（汐・凪・雫・夜）— 朝の回が stats/tantou.json に、きのう出た物を1行入れる
 # 11/12 担当の出来は、燈が毎晩 notes/gpt-runs.md（akari-auto・公開）に書く ○× の行を機械が読む（人が写す手間を無くす）。夜だけは stats/tantou.json
 _gr = os.environ.get("GPT_RUNS", os.path.join(ROOT, "..", "akari-auto", "notes", "gpt-runs.md"))
@@ -265,7 +295,7 @@ def _michi(root):
 _bad = _michi(os.path.join(ROOT, "links"))
 item("michi", "申し込みへの道", f"家のページで道が無い {len(_bad)}枚" + (f"（例 {_bad[0]}）" if _bad else ""), "合格の線：0枚", "当たり" if not _bad else "外れ", "家・土地のページは、どれも申し込みへ1回で行ける事", val=len(_bad))
 if _bad: order("月の朝", "michi", f"申し込みへの道が無い家のページが {len(_bad)}枚（{'・'.join(_bad[:3])}）。そのページを作る機械に、街の名前入りの「いくらで売れるか無料で聞く」を足す", "見られても反響にならない")
-PRI = ["lead", "michi", "search-kansai", "search-kanto", "city", "hp", "post", "view-threads", "view-x", "pic", "reel", "aff", "gpt", "room"]
+PRI = ["yosou", "lead", "michi", "search-kansai", "search-kanto", "city", "hp", "post", "view-threads", "view-x", "pic", "reel", "aff", "gpt", "room"]
 old = {(o["to"], o["item"], o["order"][:24]): o.get("days", 1) for o in prev.get("orders", [])}
 same_day = prev.get("day") == today.isoformat()
 for o in orders:
