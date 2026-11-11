@@ -6,16 +6,10 @@ name: ig-post-reel
 # 朝（8時台）に ig/reels/<今日>.json があれば、media/reels/<今日>.mp4 を曲つきで投稿する（10/28〜 インスタのリールはこれだけ）
 on:
   schedule:
-    # GitHub の定時はこのリポジトリで1〜2時間おくれて動く（link-stats は 08:30 指定が 10:20〜11:15 に動いた）。
-    # なので早めに置く。朝：06:30 指定（実際は8時台）＋予備 08:20、夜：16:40 指定（実際は18時台）＋予備 18:10。
-    # 出していれば何もしない。15時より前は朝の分、15時から夜の分。
-    - cron: "30 21 * * *"
-    - cron: "20 23 * * *"
-    - cron: "40 7 * * *"
-    - cron: "10 9 * * *"
-    # 11/10 夕方の定時が2回とも動かず、20:34 まで出なかった → 夜の予備をもう2つ（出していれば何もしない・22時以降は出さない）
-    - cron: "50 9 * * *"
-    - cron: "35 10 * * *"
+    # 11/11 作り替え：GitHub の定時はこのリポジトリで5〜8時間おくれる日がある（11/11 朝の分は 10:22、夕方の分は 19:12 まで出なかった）。
+    # 定時の時刻をあてにせず、毎時1回動かして「次に出す時刻（朝 08:00・夜 18:00）まで中で待ってから出す」形にした。
+    # 待つのは最大5時間40分。出していれば何もしない。同時に待つのは1本だけ（下の concurrency）。
+    - cron: "17 * * * *"
   workflow_dispatch:
     inputs:
       spec:
@@ -27,6 +21,9 @@ on:
         default: "false"
 permissions:
   contents: write
+concurrency:
+  group: ig-post-reel-${{ github.event_name }}
+  cancel-in-progress: false
 jobs:
   post:
     runs-on: ubuntu-latest
@@ -43,13 +40,34 @@ jobs:
           set -eu
           mkdir -p ig/posts
           if [ -z "${SPEC:-}" ]; then
-            H=$(TZ=Asia/Tokyo date +%H)
-            # 定時が大きく遅れて夜中に動いたときは出さない（10/28 夕方の定時が 10/29 00:58 に動き、朝の分を夜中に出した）
-            if [ "$H" -lt 7 ] || [ "$H" -ge 22 ]; then echo "too late/early ($H時)"; exit 0; fi
-            D=$(TZ=Asia/Tokyo date +%F); SPEC="ig/reels/$D.json"
-            [ "$(TZ=Asia/Tokyo date +%H)" -ge 15 ] && SPEC="ig/reels/$D-pm.json"
-            [ -f "$SPEC" ] || { echo "no reel for $D"; exit 0; }
-            if grep -lq "\"$SPEC\"" ig/posts/*.json 2>/dev/null && grep -l "\"$SPEC\"" ig/posts/*.json | xargs grep -q permalink; then echo "already posted"; exit 0; fi
+            # 次に出す物と、待つ秒数を決める（朝 08:00 ／ 夜 18:00。過ぎていても朝は15時前・夜は22時前なら今すぐ出す）
+            OUT=$(TZ=Asia/Tokyo python3 - <<'PY'
+          import datetime as dt, glob, os
+          now = dt.datetime.fromisoformat(os.environ["NOW"]) if os.environ.get("NOW") else dt.datetime.now()
+          D = now.date().isoformat()
+          done = set()
+          for f in glob.glob("ig/posts/*.json"):
+              x = open(f, encoding="utf-8").read()
+              if "permalink" in x:
+                  done |= {s for s in (f"ig/reels/{D}.json", f"ig/reels/{D}-pm.json") if f'"{s}"' in x}
+          for spec, hh, end in ((f"ig/reels/{D}.json", 8, 15), (f"ig/reels/{D}-pm.json", 18, 22)):
+              t = now.replace(hour=hh, minute=0, second=0, microsecond=0)
+              wait = int((t - now).total_seconds())
+              if spec in done or not os.path.exists(spec) or now.hour >= end or wait > 20400:
+                  continue
+              print(spec, max(wait, 0)); break
+          PY
+            )
+            [ -n "$OUT" ] || { echo "いま出す物・待つ物は無い（出し終わり／台本なし／5時間40分より先）"; exit 0; }
+            SPEC=${OUT% *}; WAIT=${OUT#* }
+            posted() { grep -lq "\"$SPEC\"" ig/posts/*.json 2>/dev/null && grep -l "\"$SPEC\"" ig/posts/*.json | xargs grep -q permalink; }
+            if posted; then echo "already posted"; exit 0; fi
+            if [ "$WAIT" -gt 0 ]; then
+              echo "$SPEC を出す時刻まで ${WAIT} 秒待つ"; sleep "$WAIT"
+              git pull -q --rebase || true   # 待っている間に直された台本・ほかの回の記録を取り込む
+              if posted; then echo "already posted"; exit 0; fi
+            fi
+            [ -f "$SPEC" ] || { echo "no reel: $SPEC"; exit 0; }
           fi
           # 11/4 手で動かした時も、記録があれば出さない（9:20 に朝の分を2回出した。7:57 の記録が push に失敗して残っていなかった）
           if [ "${FORCE:-}" != "true" ] && grep -lq "\"$SPEC\"" ig/posts/*.json 2>/dev/null && grep -l "\"$SPEC\"" ig/posts/*.json | xargs grep -q permalink; then echo "already posted"; exit 0; fi
@@ -122,6 +140,15 @@ jobs:
           json.dump(log, open(f"ig/posts/{name}.json", "w"), ensure_ascii=False, indent=1)
           print(json.dumps({k: log.get(k) for k in ("permalink",)}, ensure_ascii=False))
           PY
+      - name: reel stats
+        # 11/11 リールの数字を毎日とる（それまで再生の数を測っていなかった）。6時間に1回だけ。しっぱいしても投稿は止めない。
+        if: always()
+        continue-on-error: true
+        env:
+          APP_SECRET: ${{ secrets.META_APP_SECRET }}
+        run: |
+          PT=$(openssl enc -d -aes-256-cbc -pbkdf2 -a -pass env:APP_SECRET -in ig/page_token.enc); export PT
+          python3 tools/reel_stats.py
       - name: commit
         run: |
           git config user.name "ig-post bot"
@@ -129,7 +156,7 @@ jobs:
           # 出し終わって14日たった動画は消す（容量を増やしすぎない）
           OLD=$(TZ=Asia/Tokyo date -d '14 days ago' +%F)
           for f in media/reels/*.mp4; do b=$(basename "$f"); [ "${b:0:10}" \< "$OLD" ] && git rm -q "$f" || true; done
-          git add ig/posts
+          git add ig/posts stats/reels.json stats/reels.md 2>/dev/null || git add ig/posts
           git diff --cached --quiet || git commit -m "[CF-Pages-Skip] ig: リール投稿の記録"
           # 11/4 ほかの係と同時に push すると断られて記録が残らなかった → 5回までやり直す
           for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep $((i*5)); done
