@@ -1,0 +1,76 @@
+name: outing-reel（関西のおでかけリールを声つきで作って置く）
+# 11/11 オーナー「毎回変わる。月と燈にしっかり渡せる仕組みに」。
+# 夜の回は ig/reels/<名前>.json（"voice" に声の台本4行、"video_url" に置き場）を main に入れるだけ。
+# この機械が VOICEVOX で声を作り、tools/outing_reel/make.py で動画を作って media/reels/ に置く。
+# 作るのは「video_url のファイルがまだ無い spec」だけ。作り直す時は video_url のファイル名を新しくする（-v2 など）。
+on:
+  push:
+    branches: [main]
+    paths: ["ig/reels/*.json"]
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "作る spec の名前（例 2026-11-12-pm。空なら、まだ動画が無い分を全部）"
+        required: false
+permissions:
+  contents: write
+concurrency:
+  group: outing-reel
+  cancel-in-progress: false
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    services:
+      vv:
+        image: voicevox/voicevox_engine:cpu-latest
+        ports:
+          - 50021:50021
+    steps:
+      - uses: actions/checkout@v4
+      - name: 作る物を決める
+        id: todo
+        env:
+          ONLY: ${{ github.event.inputs.name }}
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import glob, json, os
+          only = os.environ.get("ONLY", "").strip(); todo = []
+          for p in sorted(glob.glob("ig/reels/*.json")):
+              n = os.path.basename(p)[:-5]
+              if only and n != only: continue
+              d = json.load(open(p))
+              if not d.get("voice") or not d.get("video_url"): continue
+              out = "media/reels/" + d["video_url"].rsplit("/", 1)[-1]
+              if not os.path.exists(out): todo.append(n)
+          print("todo=" + " ".join(todo))
+          PY
+      - name: 道具（ffmpeg・Chromium）
+        if: steps.todo.outputs.todo != ''
+        run: |
+          command -v ffmpeg || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg)
+          mkdir -p /tmp/pw && cd /tmp/pw && npm init -y -q >/dev/null && npm i -q playwright@1.47.2 && npx playwright install chromium
+      - name: 動画を作る
+        if: steps.todo.outputs.todo != ''
+        env:
+          NODE_PATH: /tmp/pw/node_modules
+          VOICE_URL: http://127.0.0.1:50021
+          TODO: ${{ steps.todo.outputs.todo }}
+        run: |
+          set -u
+          fail=0
+          for n in $TODO; do
+            out=$(python3 -c "import json,sys;print('media/reels/'+json.load(open(f'ig/reels/{sys.argv[1]}.json'))['video_url'].rsplit('/',1)[-1])" "$n")
+            if python3 tools/outing_reel/make.py "ig/reels/$n.json" "$out"; then echo "できた $out"; else echo "::error::$n の動画を作れない"; fail=1; fi
+          done
+          exit $fail
+      - name: 保存
+        if: always() && steps.todo.outputs.todo != ''
+        run: |
+          git config user.name "reel bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add media/reels
+          git diff --cached --quiet && exit 0
+          git commit -q -m "おでかけリールの動画を置いた"
+          for i in 1 2 3 4 5; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep $((i*5)); done
+          exit 1
