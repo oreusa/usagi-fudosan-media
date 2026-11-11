@@ -13,7 +13,8 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-      - run: npm i --no-save playwright@1.49.1 && npx playwright install --with-deps chromium
+      # --with-deps は付けない（11/11 Ubuntu の置き場に届かず10分止まった。字は Google Fonts を読むので要らない）
+      - run: npm i --no-save playwright@1.49.1 && npx playwright install chromium
       - run: node tools/post_img/make.js
       - run: |
           git config user.name "post-img bot"
