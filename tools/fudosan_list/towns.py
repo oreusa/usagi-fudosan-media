@@ -442,6 +442,8 @@ os.makedirs(os.path.join(ROOT, "links/machi"), exist_ok=True)
 for f in os.listdir(os.path.join(ROOT, "links/machi")):
     if f.endswith(".html"):
         os.remove(os.path.join(ROOT, "links/machi", f))
+import collections
+_DUP = collections.Counter(t['n'] for t in towns)
 for t in towns:
     open(os.path.join(ROOT, "links/machi", t["id"] + ".html"), "w", encoding="utf-8").write(town_page(t))
 
@@ -586,7 +588,7 @@ def jikka_page(t):
         few = "・少ないので目安" if int(r["件数"]) < 10 else ""
         return f'<div><b>{int(round(float(r["価格万円"]))):,}<small>万円</small></b><span>{lb}の平均（{int(r["件数"]):,}件{few}）</span></div>'
     sl = [f"{lb}{man(sd[k]['価格万円'])}" for k, lb in (("k", "中古一戸建て"), ("m", "中古マンション")) if sd.get(k) and sd[k]["価格万円"] and int(sd[k]["件数"]) >= 10]
-    title = f"{n}の実家・空き家｜売る・片付け・解体の前に（売れた相場と順番）"
+    title = f"{n}{f'（{pfull}）' if _DUP.get(n, 0) > 1 else ''}の実家・空き家｜売る・片付け・解体の前に（売れた相場と順番）"  # 11/11 同じ名前の街（太子町）は府県を付けて題名を分ける
     desc = (f"{pfull}{n}で親の家を相続した・空き家のままの方へ。" + (f"2025年度に売れた平均は{'・'.join(sl)}（レインズ）。" if sl else "")
             + "相続登記の義務、片付け、売るか解体するか、3,000万円の特別控除まで、公式の出典つきで順番に。")
     url = f"{BASE}/jikka/{t['id']}"
