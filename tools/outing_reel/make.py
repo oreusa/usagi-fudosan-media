@@ -1,27 +1,48 @@
-"""おでかけリール（11/11 型：地図 → 縦書きの題と線画 → 声は4か所）を作る。
+"""おでかけリール（11/11 型：地図 → 縦書きの題と線画 → 声は4か所）を作る。関西・関東で同じファイル。
 使い方: python3 tools/outing_reel/make.py spec.json out.mp4 [静止画の時刻,…]
-spec の欄は README.md。声は spec の "voice"（4行）を tools/voice で先に作って shots/voice/reel-<specの名前>/ に置く。
-声のファイルが無ければ、声なし（曲だけ）で作る。前の型は make_old.py。
+  - spec の欄は README.md（"voice" に声の台本4行：始まり・日付・見どころ・最後の案内）。
+  - 声は VOICEVOX（環境変数 VOICE_URL。.github/workflows/outing-reel.yml の中で動く）で作る。
+    VOICE_URL が無い所では、先に作った声（shots/voice/reel-<specの名前>/）を使う。
+  - spec に "voice" があるのに声を作れない時は止まる（声なしの動画を本番に出さないため）。
+    見た目だけ確かめたい時は、静止画の時刻を付けるか NOVOICE=1 を付ける。
+  - 場所ごとの違い（表紙の2行・さし色・地図・リストの画面・曲）は region.py。前の型は make_old.py。
 """
-import json, os, subprocess, sys, shutil, tempfile, wave, datetime, re
+import json, os, subprocess, sys, shutil, tempfile, wave, datetime, re, time, urllib.request, urllib.parse
 D = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.abspath(os.path.join(D, '..', '..'))
-spec = json.load(open(sys.argv[1])); OUT = os.path.abspath(sys.argv[2])
+sys.path.insert(0, D); import region
+spec = json.load(open(sys.argv[1])); OUT = os.path.abspath(sys.argv[2]); STILL = sys.argv[3] if len(sys.argv) > 3 else ''
 NAME = os.path.splitext(os.path.basename(sys.argv[1]))[0]
-V = os.path.join(ROOT, spec.get('voice_dir', f'shots/voice/reel-{NAME}')); SP = str(spec.get('voice_speaker', 20))
+V = os.path.join(ROOT, spec.get('voice_dir', f'shots/voice/reel-{NAME}')); SP = '20'
+VOICE = dict(speedScale=1.0, intonationScale=1.2, pitchScale=-0.03, pauseLengthScale=0.8, prePhonemeLength=0.05, postPhonemeLength=0.1)   # 11/11 オーナーが選んだ声（落ち着いた大人の女性を少しだけ低く）
 t = spec['text']
-px = 19.72 * spec['lon'] - 2438.3; py = 255.75 + (35.67 - spec['lat']) * 23.36
+px, py = region.xy(spec['lat'], spec['lon'])
 W = tempfile.mkdtemp()
 for f in ('grain.png', 'logo.png'): shutil.copy(f'{D}/{f}', W)
-shot = f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:390,height:844}},deviceScaleFactor:2}});
-await p.route('**/c',r=>r.fulfill({{status:204}}));await p.goto('file://{ROOT}/links/index.html');await p.waitForTimeout(1200);
-for(const x of await p.$$('button')){{if((await x.textContent()).trim()=='{spec['tab']}'){{await x.click();break;}}}}
-await p.waitForTimeout(600);await p.screenshot({{path:'{W}/list.png',fullPage:true}});await b.close()}})();"""
-open(f'{W}/shot.js', 'w').write(shot); subprocess.run(['node', f'{W}/shot.js'], check=True)
+open(f'{W}/shot.js', 'w').write(region.shot_js(ROOT, spec, W)); subprocess.run(['node', f'{W}/shot.js'], check=True)
+
+# 声を作る（VOICE_URL がある時）
+VU = os.environ.get('VOICE_URL', '')
+lines = spec.get('voice') or []
+if lines and len(lines) != 4: sys.exit('voice は4行（始まり・日付・見どころ・最後の案内）')
+if lines and VU:
+    def vreq(path, data=None):
+        r = urllib.request.Request(VU + path, data=data, method='POST' if data is not None else 'GET', headers={'Content-Type': 'application/json'})
+        return urllib.request.urlopen(r, timeout=120).read()
+    for i in range(150):
+        try: vreq('/version'); break
+        except Exception: time.sleep(2)
+    V = f'{W}/voice'; os.makedirs(V); kana = []
+    for n, line in enumerate(lines):
+        q = json.loads(vreq(f'/audio_query?speaker={SP}&text=' + urllib.parse.quote(line), b'')); q.update(VOICE); kana.append(q.get('kana', ''))
+        open(f'{V}/{SP}-{n:02d}.wav', 'wb').write(vreq(f'/synthesis?speaker={SP}', json.dumps(q).encode()))
+    print('声の読み', kana)
 
 # 声の長さ → 場面の長さ
 def dur(n):
     w = wave.open(f'{V}/{SP}-{n:02d}.wav'); return w.getnframes() / w.getframerate()
-HASV = all(os.path.exists(f'{V}/{SP}-{n:02d}.wav') for n in range(4))
+HASV = bool(lines) and all(os.path.exists(f'{V}/{SP}-{n:02d}.wav') for n in range(4))
+if lines and not HASV and not STILL and not os.environ.get('NOVOICE'):
+    sys.exit('声を作れない：この動画は .github/workflows/outing-reel.yml が作る（spec を main に入れるだけ）。手元で試すなら NOVOICE=1')
 VMAP = {0: 0, 2: 1, 3: 2, 5: 3}   # 場面 → 声の行（声の無い場面は画面と曲だけ）
 VD = [dur(VMAP[n]) if HASV and n in VMAP else 0 for n in range(7)]
 LEAD = 0.5; TAIL = 0.5
@@ -154,7 +175,7 @@ mid = f"""<!-- 2 date -->
 
 """
 h = h[:a] + mid + h[b:]
-KICKER = ('関西の不動産屋が', '街の調査で見つけた、おでかけリスト')
+KICKER = region.KICKER
 rep = dict(CORNER=t['corner'], K1=KICKER[0], K2=KICKER[1], A1=t['title'][0], A2=t['title'][1], A3=t['place'],
            MT1=t['map_tag'][0], MT2=t['map_tag'][1], MT3=t['map_tag'][2], MC1=t['map_caption'],
            E2=t['list_caption'], LISTPNG='list.png', FONTS=f'{ROOT}/tools/fonts')
@@ -190,7 +211,7 @@ function render(T){
  [...$('rings').children].forEach((c,i)=>{const Lc=2*Math.PI*(330+i*70);c.setAttribute('stroke-dasharray',Lc);c.setAttribute('stroke-dashoffset',Lc*(1-seg(t,.2+i*.12,1.6+i*.12)));c.setAttribute('transform',`rotate(${-90+t*6*(i%%2?1:-1)} 540 900)`);});
  // 地図
  {const a=0,u=L(1),t=u,PX=%s,PY=%s;
-  ['osaka','kyoto','hyogo','nara','shiga','wakayama'].forEach((k,i)=>{const e=$('m_'+k);e.style.opacity=so(t,a+.05+i*.08,a+.7+i*.08);});
+  %s.forEach((k,i)=>{const e=$('m_'+k);e.style.opacity=so(t,a+.05+i*.08,a+.7+i*.08);});
   $('mb').style.clipPath=`circle(${8+70*so(t,a,a+1.1)}%% at 50%% 50%%)`;$('m_%s').style.fill=`rgba(181,83,47,${.14*seg(t,a+.8,a+1.2)})`;
   document.querySelectorAll('.mo').forEach(e=>e.style.opacity=so(t,a,a+.8));
   const z=seg(t,a+.2,a+1.2), Wv=(80-(80-42)*z)*(1-.07*cl((u-1.2)/3)), cx=225+(PX-1.5-225)*z, cy=267.6+(PY+1.2-267.6)*z;
@@ -240,7 +261,7 @@ function render(T){
  // おわり
  t=L(6); $('f0').style.opacity=so(t,.2,.8);$('f0').style.transform=`translateY(${30*(1-so(t,.2,.8))}px)`;up('f1',so(t,.4,1.0));$('f2').style.opacity=so(t,.8,1.3);$('f3').style.opacity=so(t,1.1,1.6);
 }
-""" % (json.dumps(ST), json.dumps(LEN), f'{px:.2f}', f'{py:.2f}', spec['pref'])
+""" % (json.dumps(ST), json.dumps(LEN), f'{px:.2f}', f'{py:.2f}', json.dumps(region.PREFS), region.pref(spec))
 h = h[:a] + js + h[b:]
 # 絵柄：text.motif = tahoto（多宝塔）/ tou13・tou5 など（重ねた塔）/ tsuki（月。書かなければこれ）
 def tou(n):
@@ -258,6 +279,10 @@ if mt != 'tahoto':
     h = re.sub(r'<g id="pgd2">.*?</g>', '<g id="pgd2">' + g + '</g>', h, count=1, flags=re.S)
 fall = t.get('fall', 'leaf' if re.search('もみじ|紅葉', json.dumps(t, ensure_ascii=False)) else 'none')
 if fall != 'leaf': h = h.replace('<div id="leaves">', '<div id="leaves" style="display:none">')
+if region.ACC.upper() != '#B5532F':   # さし色を場所の色に
+    r_, g_, b_ = (int(region.ACC[i:i + 2], 16) for i in (1, 3, 5))
+    h = h.replace('rgba(${43+138*v},${38+45*v},${34+13*v}', 'rgba(${43+%d*v},${38+%d*v},${34+%d*v}' % (r_ - 43, g_ - 38, b_ - 34))
+    h = h.replace('#B5532F', region.ACC).replace('181,83,47', f'{r_},{g_},{b_}')
 left = re.findall(r'__[A-Z0-9]+__', h); assert not left, left
 open(f'{W}/reel.html', 'w').write(h)
 rec = f"""const {{chromium}}=require('playwright');const fs=require('fs');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:1080,height:1920}}}});
@@ -267,10 +292,10 @@ const only=process.argv[2];if(only){{for(const t of only.split(',')){{await p.ev
 for(let i=0;i<30*{TOTAL:.3f};i++){{await p.evaluate(t=>render(t),i/30);await p.screenshot({{path:'{W}/fr/'+String(i).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}});}}await b.close()}})();"""
 open(f'{W}/rec.js', 'w').write(rec)
 print('場面', [round(x, 2) for x in ST], '全体', round(TOTAL, 1), '声', [round(x, 2) for x in VD])
-if len(sys.argv) > 3:
-    subprocess.run(['node', f'{W}/rec.js', sys.argv[3]], check=True); print(W); sys.exit()
+if STILL:
+    subprocess.run(['node', f'{W}/rec.js', STILL], check=True); print(W); sys.exit()
 subprocess.run(['node', f'{W}/rec.js'], check=True)
-subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-ss', '0.2', '-i', f'{ROOT}/tools/brand/reel_bgm.m4a', '-t', f'{TOTAL + 1:.2f}', '-af', 'loudnorm=I=-17:TP=-1.5:LRA=11', '-ar', '48000', f'{W}/bgm.wav'], check=True)
+subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-ss', '0.2', '-i', f'{ROOT}/{region.BGM}', '-t', f'{TOTAL + 1:.2f}', '-af', 'loudnorm=I=-17:TP=-1.5:LRA=11', '-ar', '48000', f'{W}/bgm.wav'], check=True)
 ins = []; flt = []
 if not HASV:
     subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-framerate', '30', '-i', f'{W}/fr/%04d.jpg', '-i', f'{W}/bgm.wav', '-map', '0:v', '-map', '1:a', '-af', f'afade=t=in:d=0.4,afade=t=out:st={TOTAL-2.2}:d=2.2', '-t', f'{TOTAL:.2f}',
