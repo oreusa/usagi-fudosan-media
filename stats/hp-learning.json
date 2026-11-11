@@ -1,17 +1,17 @@
 {
- "day": "2026-11-11",
+ "day": "2026-11-12",
  "types": [
   {
    "type": "入口",
-   "ext7": 11,
-   "ext_prev7": 46,
-   "views7": 215
+   "ext7": 9,
+   "ext_prev7": 48,
+   "views7": 196
   },
   {
    "type": "おでかけ",
    "ext7": 0,
    "ext_prev7": 0,
-   "views7": 181
+   "views7": 164
   },
   {
    "type": "1件ページ",
@@ -23,7 +23,7 @@
    "type": "イルミ",
    "ext7": 6,
    "ext_prev7": 0,
-   "views7": 50
+   "views7": 51
   },
   {
    "type": "紅葉",
@@ -35,13 +35,13 @@
    "type": "不動産リスト",
    "ext7": 2,
    "ext_prev7": 0,
-   "views7": 132
+   "views7": 130
   },
   {
    "type": "地価ランキング",
-   "ext7": 7,
+   "ext7": 8,
    "ext_prev7": 0,
-   "views7": 19
+   "views7": 20
   },
   {
    "type": "街ページ",
