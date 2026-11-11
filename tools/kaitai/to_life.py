@@ -22,8 +22,19 @@ PAIRS = (
     ("関西の無料", "関東の無料"),
     ("（関西）", "（関東）"),
 )
-# 市の補助の表は関西の市だけ → 関東の写しからは外す（関東の市を公式で確かめたら、関東用の表を別に入れる）
-s, _n = re.subn(r"<!--hojo-->.*?<!--/hojo-->", "", s, flags=re.S)
+# 市の補助の表：関西の市の段を外し、関東の市区（tools/kaitai/kanto_hojo.tsv。公式ページで月が確かめた行だけ）があれば、同じ形で入れる
+import html as _h
+_kp = os.path.join(HERE, "kanto_hojo.tsv")
+_rows = [l.rstrip("\n").split("\t") for l in open(_kp, encoding="utf-8") if l.strip() and not l.startswith("#")] if os.path.exists(_kp) else []
+_rows = [r for r in _rows if len(r) == 5]
+_E = _h.escape
+_kh = ""
+if _rows:
+    _kh = ('<section id="hojo" class="ps" style="--c:#4F7BA8"><h2>解体の補助がある市区</h2><p class="rk-sub">公式ページで確かめられた市区だけ・順に足します</p>'
+           + "".join(f'<div class="kt-hj"><b>{_E(c)}</b>' + (f'<em class="{"x" if st in ("受付停止", "受付終了") else ""}">{_E(st)}</em>' if st else "")
+                     + f'<p>{_E(tx)}</p><a href="{_E(u)}" target="_blank" rel="noopener" data-k="費用｜市の補助｜{_E(c)}">{_E(c)}の公式ページ（{_E(d)}に確認） →</a></div>' for c, tx, st, u, d in _rows)
+           + '<p class="kt-n">受付・条件・上限は変わります。交付が決まる前に契約や工事を始めると、対象外になる市区が多いので、見積りの前に公式ページで確かめてください。ここに無い市区も、役所の「空き家」の窓口で聞けます。</p></section>')
+s, _n = re.subn(r"<!--hojo-->.*?<!--/hojo-->", lambda m: _kh, s, flags=re.S)
 if _n != 1:
     sys.exit("市の補助の段が見つかりません（to_life.py を直す）")
 for a, b in PAIRS:
