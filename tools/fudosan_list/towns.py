@@ -406,7 +406,7 @@ def town_page(t):
            f'' + buy_card(t["p"], n) + f''
            f'</div>'
            # 11/12 台帳：街ページは外から一番来るのに（7日247回・外から30人）相談へ0回。入口が「手順を見る」と業者さま向けページだけだった → 街の名前入りで、申し込みの2つ目の画面（場所が入った状態）へ直接
-           + f'<a class="itg2 itq" href="/moushikomi?machi={t["id"]}&amp;want={_q("査定してほしい")}" data-k="この街で｜いくらで売れそうか聞く｜{E(n)}">{E(short(n))}の家、いくらで売れるか無料で聞く <i>→</i></a>'
+           + f'<a class="itg2 itq" href="/moushikomi?lite=1&amp;machi={t["id"]}&amp;want={_q("査定してほしい")}" data-k="この街で｜いくらで売れそうか聞く｜{E(n)}">{E(short(n))}の家、いくらで売れるか無料で聞く <i>→</i></a>'
            + f'<p class="itn" style="text-align:center;margin-top:6px">無料・売るか決めていなくても大丈夫です。メールかお電話、ご希望の方でお返事します。</p>'
            + f'<a class="itg2" href="/moushikomi?machi={t["id"]}&amp;want={_q("相続した家のこと")}" data-k="この街で｜困りごとの相談｜{E(n)}">相続した家・古い家・再建築不可などのご相談 <i>→</i></a>'
            f'<p class="itn">「買いたい」の3つは広告です（Yahoo!不動産のこの街の一覧が開きます）。</p></section>')
@@ -525,7 +525,7 @@ rk = head(f"関西 地価ランキング2026｜{len(towns)}の市区町村の住
 </section>
 <a class="uru" href="/uru.html" data-k="お家を売る前に大事なこと"><div class="k">お家を売る・持ち続ける前に</div><div class="t">お家を売る前に大事なこと</div><div class="m">売るか、持ち続けるか。<br>迷ったときに読むページです。</div></a>
 <p class="note">出典（価格時点 2026年1月1日）<br>{srcs}<br>数字は街の中の調査地点の平均の変動率で、1軒ずつの値段ではありません。</p>
-<a class="back" href="/moushikomi?want=%E6%9F%BB%E5%AE%9A%E3%81%97%E3%81%A6%E3%81%BB%E3%81%97%E3%81%84" data-k="地価ランキング｜いくらで売れるか聞く" style="display:block;background:#3A332E;color:#fff;border:0;border-radius:12px;padding:15px 16px;margin:18px 0 14px;text-align:center;text-decoration:none;font-weight:700;font-size:15px">お家がいくらで売れるか、無料で聞く</a><a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
+<a class="back" href="/moushikomi?lite=1&amp;want=%E6%9F%BB%E5%AE%9A%E3%81%97%E3%81%A6%E3%81%BB%E3%81%97%E3%81%84" data-k="地価ランキング｜いくらで売れるか聞く" style="display:block;background:#3A332E;color:#fff;border:0;border-radius:12px;padding:15px 16px;margin:18px 0 14px;text-align:center;text-decoration:none;font-weight:700;font-size:15px">お家がいくらで売れるか、無料で聞く</a><a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
 <div class="ft">TOWN NOTE</div></div>
 <script>(function(){{function go(k){{var b=document.querySelector('.flt button[data-p="'+k+'"]');if(!b)return;document.querySelectorAll(".flt button,.pane").forEach(function(x){{x.classList.remove("on")}});b.classList.add("on");document.getElementById(k).classList.add("on");}}
 document.querySelectorAll(".flt button").forEach(function(b){{b.onclick=function(){{go(b.dataset.p);history.replaceState(null,"","#"+b.dataset.p);}}}});if(location.hash)go(location.hash.slice(1));}})();</script>
