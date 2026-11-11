@@ -1,0 +1,31 @@
+name: voice
+# 読み上げの声を作る（リールの見本・本番用）。手で動かす。結果は shots/voice/<name>/ に置く。
+on:
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: "読み上げの台本 JSON（repo内のパス）"
+        required: true
+permissions:
+  contents: write
+jobs:
+  voice:
+    runs-on: ubuntu-latest
+    services:
+      vv:
+        image: voicevox/voicevox_engine:cpu-latest
+        ports:
+          - 50021:50021
+    steps:
+      - uses: actions/checkout@v4
+      - name: make
+        env:
+          SPEC: ${{ github.event.inputs.spec }}
+        run: python3 tools/voice/make.py "$SPEC"
+      - name: commit
+        run: |
+          git config user.name "voice bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add shots/voice
+          git diff --cached --quiet || git commit -m "[CF-Pages-Skip] voice: 読み上げの声"
+          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep $((i*5)); done
