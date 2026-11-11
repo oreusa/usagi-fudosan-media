@@ -57,7 +57,7 @@ for it in jk["items"]:
     got = sum(int(r.get("n", 0) or 0) for r in rows if s.isoformat() <= r.get("day", "") < e.isoformat() and any(r.get("k", "").startswith(k) for k in it["keys"]))
     left = (e - today).days
     st = "合格" if got >= it["pass"] else (f"計測中（あと{left}日）" if left > 0 else "不合格")
-    res.append({"id": it["id"], "got": got, "pass": it["pass"], "status": st})
+    res.append({"id": it["id"], "what": it["what"], "days": it["days"], "got": got, "pass": it["pass"], "status": st})
     L.append(f"| {it['what']} | {it['days']}日で{it['pass']} | {got} | {st} |")
 L += ["", "- 合格：同じ型をもう1つ増やす（次の実験を1行足す）。", "- 不合格：理由を1行書いて、直すかやめるかを日曜の会議で決める。直すなら新しい実験として1行足す。", "- 計測中の実験が4つある時は、新しい実験を足さない（どれが効いたか分からなくなるため）。", ""]
 
@@ -94,6 +94,6 @@ L += ["", f"数え始めた日：{first}（それより前は数がありませ�
       "- 決まり：投稿からHPへのリンクには必ず「媒体-型-日付と枠」の印を付ける（型は th-rank／th-jikka／th-kaitai／th-odekake／th-hitoeki、X は x-、インスタは ig-）。",
       "- 月曜：いちばん多い型の枠を1つ増やし、2週つづけて0の型は、題と行き先を変えるか、やめる。増やした・やめたを1行で台帳へ。", ""]
 open(os.path.join(ROOT, "stats", "seichou.md"), "w", encoding="utf-8").write("\n".join(L))
-json.dump({"day": today.isoformat(), "weak": weak, "ext7": ext7, "ext_prev7": extp, "experiments": res, "grow": grow, "ext0": dead, "no_ask": noask, "sns": {f: {"d7": a, "prev7": b} for f, (a, b) in sns.items()},
+json.dump({"day": today.isoformat(), "weak": weak, "play": PLAY[weak], "steps": [{"name": n, "n": v} for n, v in steps], "ext7": ext7, "ext_prev7": extp, "experiments": res, "grow": grow, "ext0": dead, "no_ask": noask, "sns": {f: {"d7": a, "prev7": b} for f, (a, b) in sns.items()},
            "pages": {n: p | {"mark": mark(p)} for n, p in tbl}}, open(os.path.join(ROOT, "stats", "seichou.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("\n".join(L[:60]))
