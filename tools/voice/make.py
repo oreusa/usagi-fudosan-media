@@ -32,9 +32,20 @@ def main():
                     open(os.path.join(out, f"catalog-{srt}-{pg}.err"), "w").write(repr(e) + getattr(e, "read", lambda: b"")().decode("utf-8", "ignore")[:2000])
     for u in spec.get("install", []):   # 声のモデルを足す（AivisHub の uuid）
         try:
-            req("/aivm_models/" + u + "/install", b"", "POST")
+            bd = "----voicetool"
+            body = (f'--{bd}\r\nContent-Disposition: form-data; name="url"\r\n\r\n'
+                    f'https://api.aivis-project.com/v1/aivm-models/{u}/download?model_type=AIVMX\r\n--{bd}--\r\n').encode()
+            r = urllib.request.Request(B + "/aivm_models/install", data=body, method="POST", headers={"Content-Type": f"multipart/form-data; boundary={bd}"})
+            urllib.request.urlopen(r, timeout=900).read()
         except Exception as e:
             open(os.path.join(out, f"install-{u}.err"), "w").write(repr(e) + getattr(e, "read", lambda: b"")().decode("utf-8", "ignore")[:2000])
+    if spec.get("install"):
+        try:
+            api = json.loads(req("/openapi.json"))
+            json.dump({k: {m: [p.get("name") for p in v[m].get("parameters", [])] + [str(v[m].get("requestBody", ""))[:300]] for m in v} for k, v in api["paths"].items() if "aivm" in k},
+                      open(os.path.join(out, "api.json"), "w"), ensure_ascii=False, indent=0)
+        except Exception as e:
+            open(os.path.join(out, "api.err"), "w").write(repr(e))
     sp = json.loads(req("/speakers"))
     json.dump([{"name": s["name"], "styles": [{"name": x["name"], "id": x["id"]} for x in s["styles"]]} for s in sp],
               open(os.path.join(out, "speakers.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
