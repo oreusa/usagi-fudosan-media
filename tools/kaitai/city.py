@@ -100,7 +100,7 @@ def page(base, city, rows, date, others):
     s = re.sub(r'<p class="sub">.*?</p>', f'<p class="sub">{pref}{E(city)}の、家の解体に使える補助を、<br>市の公式ページで確かめてまとめました。</p>', s, count=1, flags=re.S)
     s = re.sub(r'<nav class="also".*?</nav>', '<nav class="also" aria-label="あわせて見る"><small>あわせて見る</small><a href="/kaitai" data-k="あわせて：解体・片付けの費用">解体・片付けの費用（関西）</a>'
                '<a href="/jikka/" data-k="あわせて：実家・空き家ノート">実家・空き家ノート</a><a href="/uru" data-k="あわせて：家を売りたい">家を売りたい</a></nav>', s, count=1, flags=re.S)
-    s = s.replace('c("表示：解体・片付けの費用"+', 'c("表示：市の解体補助"+', 1).replace('c("クリック：解体・片付けの費用｜"+', f'c("クリック：市の解体補助｜{city}｜"+', 1)
+    s = s.replace('c("表示：解体・片付けの費用"+', f'c("表示：市の解体補助 {city}"+', 1).replace('c("クリック：解体・片付けの費用｜"+', f'c("クリック：市の解体補助｜{city}｜"+', 1)
     s = s.replace('"&memo="+encodeURIComponent(l+" "+v)', f'"&memo="+encodeURIComponent("{city} "+l+" "+v)', 1)
     for bad in ('id="hojo"', 'id="katazuke"x'):
         assert bad not in s, bad
