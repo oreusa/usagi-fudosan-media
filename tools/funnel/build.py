@@ -8,6 +8,12 @@ from datetime import date, timedelta
 ROOT = os.path.join(os.path.dirname(__file__), "..", "..")
 today = date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else date.today()
 rows = json.load(open(os.path.join(ROOT, "stats", "link-30.json"), encoding="utf-8")).get("by_day", [])
+# 11/11 自分たちのテスト（stats/tests.json）を引く。お客さんの数と混ぜない
+try:
+    TESTS = json.load(open(os.path.join(ROOT, "stats", "tests.json"), encoding="utf-8")).get("rows", [])
+except Exception:
+    TESTS = []
+rows = rows + [{"day": t["day"], "k": t["k"], "n": -int(t.get("n", 0))} for t in TESTS]
 
 STEPS = [
     ("外から来た人", lambda k: k.startswith("表示：") and "（外から）" in k),
@@ -50,6 +56,17 @@ weak = "申し込みページを開いた人が書きはじめない" if c7["申
     "申し込みページまで来る人が少ない" if c7["申し込みページを開いた"] < 5 else "書きはじめた人が送信しない")
 res["いちばん細い所"] = weak
 lines += [f"**いちばん細い所（この7日）：{weak}**", ""]
+if TESTS:
+    lines += ["引いたテスト：" + "・".join(f'{t["day"][5:]} {t["k"]} {t["n"]}（{t.get("who", "")}）' for t in TESTS), ""]
+# 11/11 お金の段階（オーナー：クリックを売上と混ぜない。費用は毎月10万円）
+try:
+    asp = json.load(open(os.path.join(ROOT, "tools", "asp.json"), encoding="utf-8")).get("asp", [])
+except Exception:
+    asp = []
+lines += ["## お金の段階", "", "毎月の費用：10万円（毎月10日）。成果・確定・入金は ASP の画面の数字だけを書く（無ければ未確認。クリックは売上ではない）。", "",
+          "| ASP | 状態 | 使い道 |", "|---|---|---|"]
+lines += [f'| {a.get("name", "")} | {a.get("state", "")} | {a.get("use", "")} |' for a in asp]
+lines += ["", "| 段 | 数 |", "|---|---|", "| 成果（発生） | 未確認 |", "| 確定 | 未確認 |", "| 入金 | 未確認 |", ""]
 open(os.path.join(ROOT, "stats", "funnel.md"), "w", encoding="utf-8").write("\n".join(lines))
 json.dump(res, open(os.path.join(ROOT, "stats", "funnel.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("\n".join(lines))
