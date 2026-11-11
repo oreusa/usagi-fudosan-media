@@ -58,7 +58,9 @@ jobs:
         run: python3 tools/sitemap_dates.py "$(TZ=Asia/Tokyo date +%F)"
       - name: learning ledger (学習の台帳・きょうの指令)
         # 11/11 取り組み全部の答え合わせと、各回への指令を作る（月の朝・投稿・リールの回は動く前に stats/shirei.json を読む）
-        run: python3 tools/seichou/gakushu.py "$(TZ=Asia/Tokyo date +%F)" || true
+        run: |
+          curl -fsSL --max-time 20 https://raw.githubusercontent.com/oreusa/akari-auto/main/notes/gpt-runs.md -o /tmp/gpt-runs.md || true
+          GPT_RUNS=/tmp/gpt-runs.md python3 tools/seichou/gakushu.py "$(TZ=Asia/Tokyo date +%F)" || true
       - name: link check
         # 10/31 毎朝、リストとイルミのカードのリンクが開けるか・別の催しに同じURLが付いていないかを stats/linkcheck.md に（19:47 の点検が直す）
         run: python3 tools/linkcheck.py || true

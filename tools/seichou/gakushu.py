@@ -134,13 +134,27 @@ else:
     order("月の朝", "lead", "申し込みまでの段の数字が10人に届いていない。先に「外から来る人」を増やす指令（市のページ・HPのページ）をやる", "段をくらべる数がまだ無い")
 
 # 8 担当（汐・凪・雫・夜）— 朝の回が stats/tantou.json に、きのう出た物を1行入れる
+# 11/12 担当の出来は、燈が毎晩 notes/gpt-runs.md（akari-auto・公開）に書く ○× の行を機械が読む（人が写す手間を無くす）。夜だけは stats/tantou.json
+_gr = os.environ.get("GPT_RUNS", os.path.join(ROOT, "..", "akari-auto", "notes", "gpt-runs.md"))
+_rows = {r.get("day"): dict(r) for r in tantou.get("rows", [])}
+try:
+    for l_ in open(_gr, encoding="utf-8"):
+        m_ = re.match(r"- (\d{4}-\d\d-\d\d) (.+)", l_)
+        if not m_: continue
+        r_ = _rows.setdefault(m_.group(1), {"day": m_.group(1)})
+        for seg in m_.group(2).split("｜"):
+            for who in ("汐", "凪", "雫"):
+                if seg.startswith(who): r_.setdefault(who, seg.count("○"))
+except Exception: pass
+tantou = {"rows": sorted(_rows.values(), key=lambda r: r.get("day", ""))}
+WHO = [w for w in ("汐", "凪", "雫", "夜") if any(w in r for r in tantou["rows"])]
 tr = [r for r in tantou.get("rows", []) if r.get("day", "") > d7]
 if tr:
     miss = {}
     for r in tr:
-        for who in ("汐", "凪", "雫", "夜"):
+        for who in WHO:
             if not r.get(who): miss[who] = miss.get(who, 0) + 1
-    item("gpt", "担当（汐・凪・雫・夜）", f"{len(tr)}日のうち、出なかった日：" + ("・".join(f"{w} {n}日" for w, n in miss.items()) or "なし"), "出なかった日 0", "当たり" if not miss else "外れ", "指示書どおりに毎日の物が出たか", -sum(miss.values()))
+    item("gpt", "担当（" + "・".join(WHO) + "）", f"{len(tr)}日のうち、出なかった日：" + ("・".join(f"{w} {n}日" for w, n in miss.items()) or "なし"), "出なかった日 0", "当たり" if not miss else "外れ", "指示書どおりに毎日の物が出たか", -sum(miss.values()))
     for w, n in miss.items():
         if n >= 2: order("月の朝", "gpt", f"{w}が{n}日出していない。指示書を半分の長さにして、やる事を1つに絞る。次の週も出なければ、その仕事を機械に移す", "出ない指示書は長すぎるか、難しすぎる")
 else:
