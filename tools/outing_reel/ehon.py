@@ -157,8 +157,9 @@ function build(){
    <div class="gold" style="position:absolute;left:0;right:0;top:138px;text-align:center;font:400 24px J;letter-spacing:.5em">${P.corner}</div>
    ${vtext(P.title,372,250,82,'font-family:MB;color:#e8cf96;line-height:1.75;letter-spacing:.16em','ct')}
    <svg viewBox="0 0 920 1380" style="opacity:.92"><g transform="translate(300,1210)" fill="#e3c88c">${tower(0,0,.5,false).replace(/fill="#[0-9a-f]{6}"/g,'fill="#e3c88c"').replace(/stroke="#[0-9a-f]{3,6}"/g,'stroke="#7c2a22"')}</g>
-   <g transform="translate(640,1120) scale(34) rotate(18)"><path d="${LP}" fill="#e3c88c" opacity=".9"/></g><g transform="translate(700,1040) scale(20) rotate(-30)"><path d="${LP}" fill="#e3c88c" opacity=".7"/></g></svg>
-   <div class="gold" style="position:absolute;left:0;right:0;bottom:118px;text-align:center;font:500 30px M;letter-spacing:.42em">おでかけの絵本</div><div id="foil"></div></div>`);
+   <g transform="translate(250,1010) scale(22) rotate(18)"><path d="${LP}" fill="#e3c88c" opacity=".8"/></g></svg>
+   <div style="position:absolute;right:108px;bottom:200px;width:216px;height:216px;border-radius:50%;background:#f6efdf;box-shadow:0 0 0 3px #d8b874,0 0 0 10px rgba(216,184,116,.28),0 6px 18px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center"><img src="file://%LOGO%" style="width:166px;height:166px"></div>
+   <div class="gold" style="position:absolute;left:0;right:0;bottom:118px;text-align:center;font:500 30px M;letter-spacing:.16em;font-size:23px;line-height:1.7;bottom:104px">関西の不動産屋が、街の調査で見つけた<br>おでかけリスト</div><div id="foil"></div></div>`);
   pages.push(`<div class="face">${scene(0)}${vtext(P.t1,84,120,58,'','t0')}</div>`);
   pages.push(`<div class="face">${scene(1)}${vtext(P.t2,84,120,58,'','t1')}</div>`);
   // 日付
@@ -200,12 +201,12 @@ function render(t){
   // カメラ
   const z=t<OPEN?1.0+.05*eio(sm(t,0,OPEN)):1.05+.012*Math.sin(t*.5);
   $('#cam').style.transform=`scale(${z}) translateY(${t<OPEN?(1-eio(sm(t,0,OPEN)))*10:0}px) rotate(${(-.9+1.5*sm(t,0,TOTAL)).toFixed(3)}deg)`;$('#foil').style.backgroundPosition=(120-170*sm(t,.3,1.7))+'% 0';$('#ribbon').style.transform=`rotate(${(2.2*Math.sin(t*1.3)).toFixed(2)}deg)`;
-  document.querySelectorAll('.dl').forEach(l=>{const d=l.dataset,i=+d.i,k=eo(sm(t,.15+i*.07,1.1+i*.07));
+  document.querySelectorAll('.dl').forEach(l=>{const d=l.dataset,i=+d.i,k=1;
     l.setAttribute('transform',`translate(${(+d.x+Math.sin(t*.6+i)*3).toFixed(1)},${(+d.y-(1-k)*120+Math.cos(t*.5+i*2)*2).toFixed(1)}) rotate(${(+d.r+(1-k)*90+Math.sin(t*.7+i)*3).toFixed(1)}) scale(${d.z})`);l.style.opacity=k});
   document.querySelectorAll('#bk circle').forEach(c=>{const d=c.dataset;c.setAttribute('cx',(+d.x+Math.sin(t*.25+ +d.p)*40).toFixed(1));c.setAttribute('cy',(((+d.y-t*14)%1920+1920)%1920).toFixed(1));c.style.opacity=(.07+.07*Math.sin(t*.8+d.p*3)).toFixed(3)});
   {const tn=$('#tint');const a=sm(t,ST[1]-TURN,ST[1]),b=sm(t,ST[2]-TURN,ST[2]),c=sm(t,ST[3]-TURN,ST[3]),e=sm(t,ST[4]-TURN,ST[4]);
    if(c>0&&e<1){tn.style.background='radial-gradient(120% 80% at 50% 42%,#2b3463,#121630)';tn.style.opacity=.85*c*(1-e)}else{tn.style.background='radial-gradient(120% 80% at 50% 42%,#7a3524,#3a1712)';tn.style.opacity=.6*a*(1-b)}}
-  chars('ct',t,.25,.06);$('#top').style.opacity=1-.75*sm(t,OPEN-1.2,OPEN);
+  chars('ct',t,-9,.0);$('#top').style.opacity=1-.75*sm(t,OPEN-1.2,OPEN);
   // ページごと
   let cur=-1;for(let i=0;i<N;i++)if(t>=ST[i]-TURN*.5)cur=i;
   $('#pg').textContent=cur<0?'':NUMS[cur]+'　／　'+NUMS[N-1];
@@ -229,7 +230,7 @@ function render(t){
 }
 build();render(0);
 </script>"""
-html = (html.replace('%F%', F).replace('%PAGE%', json.dumps(PAGE, ensure_ascii=False)).replace('%ST%', json.dumps(ST))
+html = (html.replace('%F%', F).replace('%LOGO%', ROOT + '/tools/brand/logo.png').replace('%PAGE%', json.dumps(PAGE, ensure_ascii=False)).replace('%ST%', json.dumps(ST))
         .replace('%OPEN%', str(OPEN)).replace('%TURN%', str(TURN)).replace('%TOTAL%', f'{TOTAL:.3f}'))
 open(f'{W}/ehon.html', 'w').write(html)
 open(f'{W}/rec.js', 'w').write(f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:1080,height:1920}}}});
