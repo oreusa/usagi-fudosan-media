@@ -27,10 +27,12 @@ secs = (
  '<input id="kt-tsubo" type="number" inputmode="numeric" min="5" max="300" value="30" aria-label="広さ（坪）"></div>'
  '<div id="kt-t" hidden><label for="kt-ma">間取り</label><select id="kt-ma">' + "".join(f'<option value="{k}"{" selected" if k == "d" else ""}>{n}</option>' for k, n, _, _, _ in KATA) + '</select></div>'
  '<div class="kt-o" aria-live="polite"><small id="kt-ol">木造30坪の解体の目安</small><b id="kt-ov">90万〜150万円</b><span>建物だけの目安です。塀・庭木・家の中の荷物は別にかかります。</span></div>'
- '<a class="kt-b" id="kt-go" href="/moushikomi?want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A" data-k="見積りを相談">無料で見積りを相談する</a>'
- '<ul class="kt-a"><li><b>ご相談・お見積りは無料です</b>見積りだけで終わっても、費用はかかりません。</li>'
- '<li><b>くらべて決められます</b>1社に決めていない窓口です。2〜3社の見積りをくらべられます。</li>'
- '<li><b>断っても大丈夫です</b>合わなければ、お断りいただいて構いません。</li></ul>'
+ '<a class="kt-b" id="kt-go" href="/moushikomi?lite=1&amp;want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A" data-k="見積りを相談">名前なしで、うちの場合の概算を聞く<small>無料・書くのは3つだけ</small></a>'
+ '<ul class="kt-a"><li><b>お返事は、メールかお電話で</b>ご希望の方で、2営業日以内にお返事します。</li>'
+ '<li><b>ご紹介は、ご希望があった時だけ</b>会社のご紹介は、お話をうかがって、ご希望があった時だけです。</li>'
+ '<li><b>費用はかかりません</b>見積りだけで終わっても、費用はかかりません。</li></ul>'
+ '<button type="button" class="kt-k" id="kt-keep" data-k="結果を自分に送る">この結果を自分に送る（LINE・メモ）</button><p class="kt-n" id="kt-kn" role="status" hidden></p>'
+ '<p class="kt-n">高いと感じた時は、壊さずに「そのまま売る」道もあります。<a href="/jikka/shindan/" data-k="3問診断へ">3問で、次にやることを見る</a></p>'
  '<p class="kt-n">ご紹介した会社から、紹介料をいただく場合があります。</p></div></section>'
  '<section id="kaitai" class="ps" style="--c:#4F7BA8"><h2>解体の費用の目安</h2><p class="rk-sub">建物を壊して更地にするまで</p>'
  '<div class="kt-w"><table class="kt"><thead><tr><th>建物</th><th>1坪あたり</th><th>30坪なら</th></tr></thead><tbody>' + rk + '</tbody></table></div>' + src(SRC_K) +
@@ -66,7 +68,8 @@ CSS = ("<style>.kt-c{background:#fff;border-radius:2px;box-shadow:0 1px 2px rgba
        ".kt-o b{display:block;font-family:Jost,sans-serif;font-weight:500;font-size:30px;line-height:1.3;letter-spacing:.01em;color:#2B2622}.kt-o span{display:block;font-size:12px;color:#6E625A;line-height:1.7;margin-top:4px}"
        ".kt-b{display:block;text-align:center;background:#2B2622;color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:15px;border-radius:2px}"
        ".kt-a{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}.kt-a li{font-size:12.5px;line-height:1.75;color:#5C5048;padding-left:12px;border-left:2px solid #D9D2CB}.kt-a b{display:block;font-size:13px;color:#2B2622}"
-       ".kt-n{font-size:12px;color:#7A6E66;line-height:1.8;margin:10px 0 0}.kt-s{font-size:11.5px;color:#7A6E66;margin:8px 0 0}.kt-s a{color:inherit}"
+       ".kt-b small{display:block;font-size:11.5px;font-weight:400;opacity:.85;margin-top:2px}.kt-k{display:block;width:100%;margin:12px 0 0;padding:11px;border:1.5px solid #CFC6BD;border-radius:12px;background:#fff;color:#3A2E28;font:inherit;font-size:13.5px;font-weight:700;cursor:pointer}.kt-n a{color:inherit}"
+      ".kt-n{font-size:12px;color:#7A6E66;line-height:1.8;margin:10px 0 0}.kt-s{font-size:11.5px;color:#7A6E66;margin:8px 0 0}.kt-s a{color:inherit}"
        ".kt-w{overflow-x:auto;background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05)}table.kt{border-collapse:collapse;width:100%;font-size:13.5px}"
        ".kt th,.kt td{padding:12px;text-align:left;border-bottom:1px solid #EEE9E4;vertical-align:top}.kt thead th{font-size:11.5px;font-weight:500;color:#8A7F76}.kt tbody th{font-weight:700}.kt td{white-space:nowrap}.kt tr:last-child th,.kt tr:last-child td{border-bottom:0}"
        ".kt-h{font-size:14px;margin:20px 0 8px}.kt-l{margin:0;padding-left:1.3em;font-size:13.5px;line-height:1.95}"
@@ -100,17 +103,17 @@ JS = ('<script>(function(){var O=false;try{O=localStorage.getItem("usagi_owner")
       'function c(k){if(O)return;try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}'
       'c("表示：解体・片付けの費用"+(document.referrer&&!/townnote\\.pages/.test(document.referrer)?"（外から）":""));'
       'document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest("[data-k]"):null;if(a)c("クリック：解体・片付けの費用｜"+a.getAttribute("data-k"));});'
-      'var R=' + json.dumps(R, ensure_ascii=False) + ',K=' + json.dumps(K, ensure_ascii=False) + ',$=function(i){return document.getElementById(i)},mode="k",used=false;'
+      'var R=' + json.dumps(R, ensure_ascii=False) + ',K=' + json.dumps(K, ensure_ascii=False) + ',$=function(i){return document.getElementById(i)},mode="k",used=false,cur="";'
       'function show(){var l,v,w;if(mode==="k"){var r=R[$("kt-kind").value],t=Math.max(5,Math.min(300,Math.round(+$("kt-tsubo").value||0)));'
       'l=r[2]+t+"坪の解体の目安";v=(r[0]*t)+"万〜"+(r[1]*t)+"万円";w="解体の見積り";}'
       'else{var k=K[$("kt-ma").value];l=k[2]+"の片付けの目安";v=k[0]+"万〜"+k[1]+"万円"+k[3];w="片付け・遺品整理の見積り";}'
-      '$("kt-ol").textContent=l;$("kt-ov").textContent=v;$("kt-go").href="/moushikomi?want="+encodeURIComponent(w);'
+      '$("kt-ol").textContent=l;$("kt-ov").textContent=v;$("kt-go").href="/moushikomi?lite=1&want="+encodeURIComponent(w)+"&memo="+encodeURIComponent(l+" "+v);cur=mode==="k"?"k."+$("kt-kind").value+"."+t:"t."+$("kt-ma").value;'
       'document.querySelector(".kt-o span").textContent=mode==="k"?"建物だけの目安です。塀・庭木・家の中の荷物は別にかかります。":"荷物の量や階段の有無で変わります。";}'
-      'function use(){if(!used){used=true;c("解体・片付けの費用｜計算した｜"+(mode==="k"?"解体":"片付け"));}show();}'
+      'function use(){setTimeout(function(){try{localStorage.setItem("tn_kt",cur);}catch(e){}},0);if(!used){used=true;c("解体・片付けの費用｜計算した｜"+(mode==="k"?"解体":"片付け"));}show();}'
       '["kt-kind","kt-tsubo","kt-ma"].forEach(function(i){$(i).addEventListener("input",function(){if(i==="kt-tsubo")document.querySelectorAll(".kt-q button").forEach(function(b){b.classList.toggle("on",b.getAttribute("data-v")===$("kt-tsubo").value);});use();});});'
       'document.querySelectorAll(".kt-q button").forEach(function(b){b.addEventListener("click",function(){$("kt-tsubo").value=b.getAttribute("data-v");document.querySelectorAll(".kt-q button").forEach(function(x){x.classList.toggle("on",x===b);});use();});});'
       'document.querySelectorAll(".kt-tab button").forEach(function(b){b.addEventListener("click",function(){mode=b.getAttribute("data-t");document.querySelectorAll(".kt-tab button").forEach(function(x){var on=x===b;x.classList.toggle("on",on);x.setAttribute("aria-selected",on);});$("kt-k").hidden=mode!=="k";$("kt-t").hidden=mode!=="t";used=false;use();});});'
-      'if(location.hash==="#katazuke-keisan"){document.querySelector(\'.kt-tab button[data-t="t"]\').click();}show();})();</script>')
+      'try{var S=(new URLSearchParams(location.search).get("s")||localStorage.getItem("tn_kt")||"").split(".");if(S[0]==="k"&&R[S[1]]){$("kt-kind").value=S[1];if(+S[2])$("kt-tsubo").value=+S[2];}if(S[0]==="t"&&K[S[1]]){$("kt-ma").value=S[1];document.querySelector(\'.kt-tab button[data-t="t"]\').click();}}catch(e){}$("kt-keep").addEventListener("click",function(){var u=location.origin+"/kaitai?s="+cur,tx=$("kt-ol").textContent+" "+$("kt-ov").textContent,n=$("kt-kn"),ok=function(m){n.hidden=false;n.textContent=m;};if(navigator.share){navigator.share({title:"解体・片付けの費用の目安",text:tx,url:u}).catch(function(){});return;}try{navigator.clipboard.writeText(tx+"\\n"+u).then(function(){ok("コピーしました。メモやLINEに貼ると、あとで同じ結果を開けます。");},function(){ok("このページをブックマークすると、あとで開けます。");});}catch(e){ok("このページをブックマークすると、あとで開けます。");}});if(location.hash==="#katazuke-keisan"){document.querySelector(\'.kt-tab button[data-t="t"]\').click();}show();})();</script>')
 s = s.replace("</body>", JS + "</body>", 1)
 assert "html.night" not in CSS, "ページ側に夜の色を書かない"
 for w in ("ランキング", "順位"):
