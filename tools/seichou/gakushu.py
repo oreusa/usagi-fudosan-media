@@ -62,6 +62,28 @@ else: pans = "当たり" if pa > na * 1.3 else ("外れ" if pa < na * 0.8 else "
 item("pic", "画像つき投稿", f"画像つき {pn}本で {pic['p'][0]}人（1本 {pa:.1f}）・文字だけ {nn}本で {pic['n'][0]}人（1本 {na:.1f}）", "画像つきが文字だけの1.3倍", pans, "media/post/index.json の画像を付けた投稿は、印の最後に p", round(pa, 2))
 order("投稿の回", "pic", {"当たり": "全部の枠に画像を付ける", "外れ": "画像をやめ、画像の枠を「いちばん来た型」に回す", "差なし": "画像は朝7時だけ残す（作る手間を減らす）"}.get(pans, "朝7時と夜8時の投稿の1本目に、送り先のページと同じ行の画像（media/post/index.json の url）を付け、2本目のリンクの印の最後に p を付ける。ほかの枠は文字だけのまま（くらべるため）"), "画像あり・なしをくらべる")
 
+# 3b 投稿そのものの数字（閲覧・フォロワー）。11/12：投稿の点検の回（20:33）が Buffer の数字を stats/toukou.json に毎晩足す
+#   rows: {day, svc: "threads"|"x", slot: "07:00", type: "kaitai", pic: true|false, views, likes}／followers: {day, threads, x}
+tk = load(S("toukou.json"), {}); trows = tk.get("rows", []); tfol = tk.get("followers", [])
+import statistics as _st
+_med = lambda xs: int(_st.median(xs)) if xs else 0
+for svc, nm in (("threads", "Threads"), ("x", "X")):
+    now_ = [r for r in trows if r.get("svc") == svc and r.get("day", "") > d7]; old_ = [r for r in trows if r.get("svc") == svc and d14 < r.get("day", "") <= d7]
+    if not now_:
+        item("view-" + svc, f"投稿の閲覧（{nm}）", "未確認", "1本の中央値が前の7日より上", "未確認", "stats/toukou.json に行が無い")
+        continue
+    bs = {}
+    for r in now_: bs.setdefault(r.get("slot", ""), []).append(int(r.get("views") or 0))
+    sm = sorted(((k, _med(v)) for k, v in bs.items() if len(v) >= 3), key=lambda x: -x[1])
+    mn, mo = _med([int(r.get("views") or 0) for r in now_]), _med([int(r.get("views") or 0) for r in old_])
+    f_now = [f.get(svc) for f in tfol if f.get("day", "") > d7 and f.get(svc) is not None]; f_old = [f.get(svc) for f in tfol if f.get("day", "") <= d7 and f.get(svc) is not None]
+    fd = (f_now[-1] - (f_old[-1] if f_old else f_now[0])) if f_now else None
+    item("view-" + svc, f"投稿の閲覧（{nm}）", f"1本の中央値 {mn}（前の7日 {mo if old_ else '未確認'}）・フォロワー {f_now[-1] if f_now else '未確認'}人（7日で {('+' if fd >= 0 else '') + str(fd) if fd is not None else '未確認'}）・強い枠 " + ("・".join(f"{k} {v}" for k, v in sm[:2]) or "まだ数が足りない") + (f"・弱い枠 {sm[-1][0]} {sm[-1][1]}" if len(sm) >= 3 else ""), "1本の中央値が前の7日より上", "計測中" if not old_ else ("当たり" if mn > mo else "外れ"), "見られないと、HPにも来ない", mn)
+    if len(sm) >= 3 and sm[-1][1] * 3 < sm[0][1]: order("投稿の回", "view-" + svc, f"{nm} の {sm[-1][0]} の枠（中央値 {sm[-1][1]}）をやめ、その1本を {sm[0][0]} の前後30分（中央値 {sm[0][1]}）に移す。本数は増やさない", "弱い枠は強い枠の3分の1より下")
+    top3 = sorted(now_, key=lambda r: -int(r.get("views") or 0))[:3]
+    if old_ and mn <= mo and top3: order("投稿の回", "view-" + svc, f"{nm} の中央値が前の週より下。いちばん見られた3本（" + "／".join(f"{r.get('day', '')[5:]} {r.get('slot', '')} {r.get('type', '')} {r.get('views')}" for r in top3) + "）の1行目の作りを、あすの同じ枠で別の街・別の数字で作る", f"中央値 {mo}→{mn}")
+if not trows: order("投稿の回", "view-threads", "投稿の点検の回（20:33）で、きょう出た投稿の閲覧・いいねとフォロワー数を Buffer から取り、stats/toukou.json に足す（形はファイルの about のとおり）", "投稿の閲覧が未確認のまま", "数字")
+
 # 4 市ごとの補助ページ
 city = {}
 for r in rows:
@@ -106,6 +128,18 @@ if tb: order("リールの回", "reel", f"題材は「{tb[0]}」を先に（1本
 yado = two(lambda k: k.startswith("宿を開く") or k.startswith("泊まり") or "近くの宿" in k)
 sk = seika.get("rows", [])
 last = sk[-1] if sk else None
+# 11/12 楽天の成果は燈と同じIDなので、燈が毎朝書く notes/sales-board.md（akari-auto・公開）の「- M/D 朝：成果N」を機械が読む
+_sbp = os.environ.get("SALES_BOARD", os.path.join(ROOT, "..", "akari-auto", "notes", "sales-board.md")); _sb7 = {}
+try:
+    for l_ in open(_sbp, encoding="utf-8"):
+        m_ = re.match(r"- (\d+)/(\d+) 朝：成果(\d+)", l_)
+        if m_:
+            dd = date(today.year, int(m_.group(1)), int(m_.group(2)))
+            if dd > today: dd = date(today.year - 1, dd.month, dd.day)
+            if dd.isoformat() > d7: _sb7[dd.isoformat()] = int(m_.group(3))
+except Exception: pass
+if _sb7 and not (last and (today - date.fromisoformat(last["day"])).days <= 8):
+    last = {"day": max(_sb7), "hassei": sum(_sb7.values()), "kakutei": "未確認", "nyukin": "未確認"}
 item("aff", "宿・アフィリエイト", f"押された {yado[0]}回（前の7日 {yado[1]}）・成果 {last['hassei'] if last else '未確認'}・確定 {last['kakutei'] if last else '未確認'}・入金 {last['nyukin'] if last else '未確認'}", "成果 月1件", ("当たり" if last and int(last.get("hassei") or 0) > 0 else "外れ") if last else "未確認", "クリックは売上ではない。成果は ASP の画面の数字だけ", yado[0])
 if not last or (today - date.fromisoformat(last["day"])).days > 8: order("月の朝", "aff", "月曜に汐が写した楽天・A8・バリューコマースの成果（発生・確定・入金）を stats/seika.json に1行入れる。無ければ汐の指示書に1行足す", "成果が未確認のまま", "数字")
 if yado[0] < yado[1] * 0.7 and yado[1] >= 10: order("月の朝", "aff", "宿が押される数が落ちた。いちばん見られているおでかけページの「近くの宿」の位置を、カードのすぐ下に戻す", f"{yado[1]}→{yado[0]}")
@@ -148,13 +182,16 @@ try:
 except Exception: pass
 tantou = {"rows": sorted(_rows.values(), key=lambda r: r.get("day", ""))}
 WHO = [w for w in ("汐", "凪", "雫", "夜") if any(w in r for r in tantou["rows"])]
+_yoru = [r["day"] for r in tantou["rows"] if "夜" in r]
+if not _yoru or (today - date.fromisoformat(max(_yoru))).days > 2:
+    order("月の朝", "gpt", "Drive の「夜の結果 きのうの日付」に【道】【止まった所】【ミス帳】の3行があるかを見て、stats/tantou.json の rows に {day, 夜: 行の数（無ければ0）, 夜_naoshi: その行から直した数} を1行足す", "夜（テスター）の出来を測る数字が無い", "数字")
 tr = [r for r in tantou.get("rows", []) if r.get("day", "") > d7]
 if tr:
     miss = {}
     for r in tr:
         for who in WHO:
             if not r.get(who): miss[who] = miss.get(who, 0) + 1
-    item("gpt", "担当（" + "・".join(WHO) + "）", f"{len(tr)}日のうち、出なかった日：" + ("・".join(f"{w} {n}日" for w, n in miss.items()) or "なし"), "出なかった日 0", "当たり" if not miss else "外れ", "指示書どおりに毎日の物が出たか", -sum(miss.values()))
+    item("gpt", "担当（" + "・".join(WHO) + "）", f"{len(tr)}日のうち、出なかった日：" + ("・".join(f"{w} {n}日" for w, n in miss.items()) or "なし") + (f"・夜の指摘から直した {sum(int(r.get('夜_naoshi') or 0) for r in tr)}件" if any("夜_naoshi" in r for r in tr) else ""), "出なかった日 0", "当たり" if not miss else "外れ", "指示書どおりに毎日の物が出たか", -sum(miss.values()))
     for w, n in miss.items():
         if n >= 2: order("月の朝", "gpt", f"{w}が{n}日出していない。指示書を半分の長さにして、やる事を1つに絞る。次の週も出なければ、その仕事を機械に移す", "出ない指示書は長すぎるか、難しすぎる")
 else:
@@ -192,7 +229,7 @@ ng = {}; ok = {}
 for m in manabi["rows"]:
     if m.get("kind") == "手の答え": (ok if m["result"] == "効いた" else ng).setdefault(m["id"], []).append(m["what"])
 # 指令の並び：お金に近い順。同じ指令が何日続けて出ているか（＝やられていない日数）を数える。月の朝の「作る」は1日1つなので、1番に印
-PRI = ["lead", "city", "hp", "post", "pic", "reel", "aff", "gpt", "room"]
+PRI = ["lead", "city", "hp", "post", "view-threads", "view-x", "pic", "reel", "aff", "gpt", "room"]
 old = {(o["to"], o["item"], o["order"][:24]): o.get("days", 1) for o in prev.get("orders", [])}
 same_day = prev.get("day") == today.isoformat()
 for o in orders:

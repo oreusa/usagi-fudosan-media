@@ -1,0 +1,5 @@
+{
+ "about": "投稿そのものの数字。投稿の点検の回（20:33）が毎晩足す。rows＝1投稿1行 {day:'YYYY-MM-DD', svc:'threads'か'x', slot:'07:00', type:リンクの印の型（rank・kaitai・jikka・hitoeki・odekake など。無ければ''）, pic:画像つきなら true, views:閲覧, likes:いいね}。同じ day・svc・slot の行は数字を上書き（きのう・おとといの分も取り直す）。followers＝1日1行 {day, threads:人数, x:人数}（取れない方は書かない）。60日より前の行は消してよい",
+ "rows": [],
+ "followers": []
+}
