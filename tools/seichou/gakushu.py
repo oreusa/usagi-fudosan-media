@@ -229,7 +229,23 @@ ng = {}; ok = {}
 for m in manabi["rows"]:
     if m.get("kind") == "手の答え": (ok if m["result"] == "効いた" else ng).setdefault(m["id"], []).append(m["what"])
 # 指令の並び：お金に近い順。同じ指令が何日続けて出ているか（＝やられていない日数）を数える。月の朝の「作る」は1日1つなので、1番に印
-PRI = ["lead", "city", "hp", "post", "view-threads", "view-x", "pic", "reel", "aff", "gpt", "room"]
+# 11/12 owner「なんでそれが抜けてるのか理解できない。大問題だろ」：関東の街ページ329枚に申し込みへの道が無かった（見られた1195→申し込み0）。人の目ではなく、機械が毎日「家のページなのに申し込みへ行けないページ」を数える
+def _michi(root):
+    import re as _re
+    bad = []
+    for d, _, fs in os.walk(root):
+        for f in fs:
+            if not f.endswith(".html"): continue
+            rel = os.path.relpath(os.path.join(d, f), root)
+            if not _re.match(r"(machi/|jikka/[^/]+\.html|kaitai|ranking|chika|uru|fudosan-list)", rel) or rel == "jikka/index.html": continue
+            s = open(os.path.join(d, f), encoding="utf-8", errors="ignore").read()
+            if 'http-equiv="refresh"' in s: continue
+            if "moushikomi" not in _re.sub(r"<nav.*?</nav>", "", s, flags=_re.S): bad.append(rel)
+    return sorted(bad)
+_bad = _michi(os.path.join(ROOT, "links"))
+item("michi", "申し込みへの道", f"家のページで道が無い {len(_bad)}枚" + (f"（例 {_bad[0]}）" if _bad else ""), "合格の線：0枚", "当たり" if not _bad else "外れ", "家・土地のページは、どれも申し込みへ1回で行ける事", val=len(_bad))
+if _bad: order("月の朝", "michi", f"申し込みへの道が無い家のページが {len(_bad)}枚（{'・'.join(_bad[:3])}）。そのページを作る機械に、街の名前入りの「いくらで売れるか無料で聞く」を足す", "見られても反響にならない")
+PRI = ["lead", "michi", "city", "hp", "post", "view-threads", "view-x", "pic", "reel", "aff", "gpt", "room"]
 old = {(o["to"], o["item"], o["order"][:24]): o.get("days", 1) for o in prev.get("orders", [])}
 same_day = prev.get("day") == today.isoformat()
 for o in orders:

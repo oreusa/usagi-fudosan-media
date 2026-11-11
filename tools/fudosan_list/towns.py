@@ -525,7 +525,7 @@ rk = head(f"関西 地価ランキング2026｜{len(towns)}の市区町村の住
 </section>
 <a class="uru" href="/uru.html" data-k="お家を売る前に大事なこと"><div class="k">お家を売る・持ち続ける前に</div><div class="t">お家を売る前に大事なこと</div><div class="m">売るか、持ち続けるか。<br>迷ったときに読むページです。</div></a>
 <p class="note">出典（価格時点 2026年1月1日）<br>{srcs}<br>数字は街の中の調査地点の平均の変動率で、1軒ずつの値段ではありません。</p>
-<a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
+<a class="back" href="/moushikomi?want=%E6%9F%BB%E5%AE%9A%E3%81%97%E3%81%A6%E3%81%BB%E3%81%97%E3%81%84" data-k="地価ランキング｜いくらで売れるか聞く" style="display:block;background:#3A332E;color:#fff;border:0;border-radius:12px;padding:15px 16px;margin:18px 0 14px;text-align:center;text-decoration:none;font-weight:700;font-size:15px">お家がいくらで売れるか、無料で聞く</a><a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
 <div class="ft">TOWN NOTE</div></div>
 <script>(function(){{function go(k){{var b=document.querySelector('.flt button[data-p="'+k+'"]');if(!b)return;document.querySelectorAll(".flt button,.pane").forEach(function(x){{x.classList.remove("on")}});b.classList.add("on");document.getElementById(k).classList.add("on");}}
 document.querySelectorAll(".flt button").forEach(function(b){{b.onclick=function(){{go(b.dataset.p);history.replaceState(null,"","#"+b.dataset.p);}}}});if(location.hash)go(location.hash.slice(1));}})();</script>
