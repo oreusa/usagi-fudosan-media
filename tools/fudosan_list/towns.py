@@ -409,6 +409,8 @@ def town_page(t):
            + f'<a class="itg2 itq" href="/moushikomi?lite=1&amp;machi={t["id"]}&amp;want={_q("査定してほしい")}" data-k="この街で｜いくらで売れそうか聞く｜{E(n)}">{E(short(n))}の家、いくらで売れるか無料で聞く <i>→</i></a>'
            + f'<p class="itn" style="text-align:center;margin-top:6px">無料・売るか決めていなくても大丈夫です。メールかお電話、ご希望の方でお返事します。</p>'
            + f'<a class="itg2" href="/moushikomi?machi={t["id"]}&amp;want={_q("相続した家のこと")}" data-k="この街で｜困りごとの相談｜{E(n)}">相続した家・古い家・再建築不可などのご相談 <i>→</i></a>'
+           # 11/12 台帳：/kaitai（30秒の目安）は7日で9回しか見られていない。入口が実家ノートにしか無かった → いちばん見られている街ページから1行
+           + f'<a class="itg2" href="/kaitai" data-k="この街で｜解体・片付けの費用｜{E(n)}">解体・片付けの費用を、30秒で目安を出す <i>→</i></a>'
            f'<p class="itn">「買いたい」の3つは広告です（Yahoo!不動産のこの街の一覧が開きます）。</p></section>')
     rel_h = ""
     if rel:
