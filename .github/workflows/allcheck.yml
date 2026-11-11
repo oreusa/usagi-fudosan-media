@@ -22,7 +22,7 @@ jobs:
       - name: ブラウザを入れる
         run: |
           mkdir -p /tmp/pw && cd /tmp/pw && npm init -y >/dev/null && npm i playwright@1.48.2 >/dev/null
-          npx playwright install --with-deps chromium >/dev/null
+          (timeout 150 npx playwright install --with-deps chromium || npx playwright install chromium) >/dev/null
       - name: 全ページを開いて確かめる
         run: NODE_PATH=/tmp/pw/node_modules node tools/allcheck/check.js /tmp/out
       - name: 夜の見た目でも全ページを開く（night/ に置く）

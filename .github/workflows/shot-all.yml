@@ -16,7 +16,7 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-      - run: npm i --no-save playwright@1.49.1 && npx playwright install --with-deps chromium
+      - run: npm i --no-save playwright@1.49.1 && (timeout 150 npx playwright install --with-deps chromium || npx playwright install chromium)
       - env:
           SHOT_NAME: ${{ inputs.name }}
           SHOT_TECH: ${{ inputs.tech }}
