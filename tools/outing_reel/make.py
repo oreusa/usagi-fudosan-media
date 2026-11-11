@@ -103,12 +103,14 @@ css = """
 """
 h = h.replace('</style>', css + '</style>')
 a = h.index('<!-- 2 date -->'); b = h.index('<!-- 5 list -->')
-TR = r'^(\d+)時(半)?[〜～~](\d+)時(半)?$'
-ti = next((i for i, r in enumerate(t['info']) if re.match(TR, r[1])), None)
+def tparse(v):   # 「17時半〜21時」「17:00〜20:30」「17時ごろ〜20時ごろ」→ ('17:30', '21:00')
+    m = re.match(r'^(\d{1,2})(?:時(半)?|:(\d{2}))(?:ごろ)?[〜～~](\d{1,2})(?:時(半)?|:(\d{2}))(?:ごろ)?$', v)
+    return (f"{m.group(1)}:{'30' if m.group(2) else m.group(3) or '00'}", f"{m.group(4)}:{'30' if m.group(5) else m.group(6) or '00'}") if m else None
+ti = next((i for i, r in enumerate(t['info']) if tparse(r[1])), None)
 fi = ti if ti is not None else 3
 rows = [r for i, r in enumerate(t['info']) if i != fi]; feat = t['info'][fi]
-tm = re.match(TR, feat[1])
-tmh = (f'<div class="ln"><span id="tm" style="display:flex"><span id="tma">{tm.group(1)}:{"30" if tm.group(2) else "00"}</span><u id="tml"></u><span id="tmb">{tm.group(3)}:{"30" if tm.group(4) else "00"}</span></span></div>'
+tm = tparse(feat[1])
+tmh = (f'<div class="ln"><span id="tm" style="display:flex"><span id="tma">{tm[0]}</span><u id="tml"></u><span id="tmb">{tm[1]}</span></span></div>'
        if tm else f'<div class="ln"><span id="tm" class="h" style="display:block;font-size:{min(84, int(760 / max(1, len(feat[1]))))}px;font-family:Min;line-height:1.5">{feat[1]}</span></div>')
 def val(v):
     m = re.match(r'^([\d,]+)円$', v)
