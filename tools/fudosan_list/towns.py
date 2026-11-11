@@ -541,6 +541,10 @@ J_SRC = [
      "国税庁 タックスアンサー No.3306", "https://www.nta.go.jp/taxes/shiraberu/taxanswer/joto/3306.htm"),
 ]
 # 11/10 市の補助（夜が公式ページで確かめた物・2026/11/10 時点）。受付は変わるので「確認日」と公式URLを必ず出す
+# 市ごとの「解体の補助金」ページのローマ字（正本は tools/kaitai/city.py の CITY）
+import ast as _ast_k, os as _os_k
+_kc = open(_os_k.path.join(_os_k.path.dirname(_os_k.path.abspath(__file__)), "..", "kaitai", "city.py"), encoding="utf-8").read()
+_ka = _kc.index("CITY = {"); K_SLUG = {k: v[0] for k, v in _ast_k.literal_eval(_kc[_ka + 7:_kc.index("\n}\n", _ka) + 2]).items()}
 J_CITY = [
     ("寝屋川市", [("空き家の解体の補助", "解体費の4/5・上限50万円（1年以上空き家の木造住宅など・条件あり）。受付は2027年2月26日まで（予算がなくなりしだい終了）。", "受付中", "https://www.city.neyagawa.osaka.jp/kurashi/sumai_kenchiku/akiyacategory/13013.html"),
                   ("空き家・空き地バンク", "市の空き家バンクがあります。", "", "https://www.city.neyagawa.osaka.jp/kurashi/sumai_kenchiku/akiyabanku/15123.html")]),
@@ -619,6 +623,8 @@ def jikka_page(t):
         city_h = (f'<p class="mk3">CITY</p><h2 class="jh">{E(cn)}の補助・空き家バンク</h2>' + "".join(
             f'<div class="cy"><b>{E(h)}</b>' + (f'<em class="{"x" if st in ("受付停止", "受付終了") else ""}">{st}</em>' if st else '') + f'<p>{E(tx)}</p><a href="{E(u)}" target="_blank" rel="noopener" data-k="実家｜市の補助｜{E(cn)}">{E(cn)}の公式ページ →</a></div>' for h, tx, st, u in crows)
             + f'<p class="src">{J_DATE.get(cn, "2026年11月10日")}に市の公式ページで確かめた内容です。受付・条件・上限は変わるので、申し込む前に必ず公式ページで確かめてください。</p>')
+        if cn in K_SLUG and any("解体" in h for h, *_ in crows):  # 11/11 市ごとの「解体の補助金」ページ（tools/kaitai/city.py）へ
+            city_h += f'<a class="jb2" href="/kaitai-{K_SLUG[cn]}" data-k="実家｜市の解体補助ページ｜{E(cn)}" style="display:block;margin:10px 0 0;font-size:13.5px;font-weight:700;color:inherit">{E(cn)}の解体の補助を、自分で払う目安つきで見る →</a>'
     body = f'''<style>{HEAD_CSS}{J_CSS}</style>{SCRIPTS}</head><body style="--pc:{col}"><div class="wrap">
 <div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">{en} ─ JIKKA NOTE</div>
 <h1>{E(n)}の実家・空き家ノート<span>売る・片付ける・解体する前に</span></h1>
