@@ -9,7 +9,7 @@ B = os.environ.get("VOICE_URL", "http://127.0.0.1:50021")   # AivisSpeech は ht
 
 def req(path, data=None, method="GET"):
     r = urllib.request.Request(B + path, data=data, method=method, headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(r, timeout=120) as f:
+    with urllib.request.urlopen(r, timeout=600) as f:
         return f.read()
 
 
@@ -21,6 +21,31 @@ def main():
         except Exception:
             time.sleep(2)
     out = os.path.join("shots", "voice", spec["name"]); os.makedirs(out, exist_ok=True)
+    if spec.get("catalog"):   # AivisHub の声の一覧を取る（どの声を入れるか選ぶ用）
+        H = "https://api.aivis-project.com/v1/aivm-models/search?"
+        for pg in (1, 2, 3):
+            for srt in ("download", "like"):
+                try:
+                    r = urllib.request.Request(H + f"sort={srt}&page={pg}&limit=30", headers={"User-Agent": "voice-tool"})
+                    open(os.path.join(out, f"catalog-{srt}-{pg}.json"), "wb").write(urllib.request.urlopen(r, timeout=60).read())
+                except Exception as e:
+                    open(os.path.join(out, f"catalog-{srt}-{pg}.err"), "w").write(repr(e) + getattr(e, "read", lambda: b"")().decode("utf-8", "ignore")[:2000])
+    for u in spec.get("install", []):   # 声のモデルを足す（AivisHub の uuid）
+        try:
+            bd = "----voicetool"
+            body = (f'--{bd}\r\nContent-Disposition: form-data; name="url"\r\n\r\n'
+                    f'https://api.aivis-project.com/v1/aivm-models/{u}/download?model_type=AIVMX\r\n--{bd}--\r\n').encode()
+            r = urllib.request.Request(B + "/aivm_models/install", data=body, method="POST", headers={"Content-Type": f"multipart/form-data; boundary={bd}"})
+            urllib.request.urlopen(r, timeout=900).read()
+        except Exception as e:
+            open(os.path.join(out, f"install-{u}.err"), "w").write(repr(e) + getattr(e, "read", lambda: b"")().decode("utf-8", "ignore")[:2000])
+    if spec.get("install"):
+        try:
+            api = json.loads(req("/openapi.json"))
+            json.dump({k: {m: [p.get("name") for p in v[m].get("parameters", [])] + [str(v[m].get("requestBody", ""))[:300]] for m in v} for k, v in api["paths"].items() if "aivm" in k},
+                      open(os.path.join(out, "api.json"), "w"), ensure_ascii=False, indent=0)
+        except Exception as e:
+            open(os.path.join(out, "api.err"), "w").write(repr(e))
     sp = json.loads(req("/speakers"))
     json.dump([{"name": s["name"], "styles": [{"name": x["name"], "id": x["id"]} for x in s["styles"]]} for s in sp],
               open(os.path.join(out, "speakers.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
