@@ -19,6 +19,15 @@ SRC_A = ("アットホーム「家の解体費用」（2025年5月）", "https:/
 rk = "".join(f"<tr><th>{n}</th><td>{lo}万〜{hi}万円</td><td>{lo*30}万〜{hi*30}万円</td></tr>" for _, n, lo, hi in RATES)
 rt = "".join(f"<tr><th>{n}</th><td>{lo}万〜{hi}万円{x}</td></tr>" for _, n, lo, hi, x in KATA)
 src = lambda s: f'<p class="kt-s">出どころ：<a href="{s[1]}" target="_blank" rel="noopener" data-k="出どころ">{E(s[0])}</a></p>'
+# 11/11 市ごとの解体の補助（正本は tools/fudosan_list/towns.py の J_CITY。公式で確かめた市だけ。関東の写しには入れない）
+import ast as _ast
+_t = open(os.path.join(ROOT, "tools", "fudosan_list", "towns.py"), encoding="utf-8").read()
+_a = _t.index("J_CITY = ["); J_CITY = _ast.literal_eval(_t[_a + 9:_t.index("\n]\n", _a) + 2])
+J_DATE = _ast.literal_eval(re.search(r"J_DATE = (\{.*?\})", _t).group(1))
+_hj = [(c, h, tx, st, u) for c, rows in J_CITY for h, tx, st, u in rows if "解体" in h]
+hojo = ('<!--hojo--><section id="hojo" class="ps" style="--c:#4F7BA8"><h2>解体の補助がある市</h2><p class="rk-sub">公式ページで確かめられた市だけ・順に足します</p>'
+        + "".join(f'<div class="kt-hj"><b>{E(c)}</b>' + (f'<em class="{"x" if st == "受付停止" else ""}">{st}</em>' if st else "") + f'<p>{E(tx)}</p><a href="{E(u)}" target="_blank" rel="noopener" data-k="費用｜市の補助｜{E(c)}">{E(c)}の公式ページ（{J_DATE.get(c, "2026年11月10日")}に確認） →</a></div>' for c, h, tx, st, u in _hj)
+        + '<p class="kt-n">受付・条件・上限は変わります。交付が決まる前に契約や工事を始めると、対象外になる市が多いので、見積りの前に公式ページで確かめてください。ここに無い市も、市役所の「空き家」の窓口で聞けます。</p></section><!--/hojo-->')
 secs = (
  '<section id="keisan" class="ps" style="--c:#4F7BA8"><h2>30秒で目安を出す</h2>'
  '<div class="kt-c"><div class="kt-tab" role="tablist"><button type="button" class="on" data-t="k" role="tab" aria-selected="true">解体</button><button type="button" data-t="t" role="tab" aria-selected="false">片付け</button></div>'
@@ -36,7 +45,7 @@ secs = (
  '<p class="kt-n">ご紹介した会社から、紹介料をいただく場合があります。</p></div></section>'
  '<section id="kaitai" class="ps" style="--c:#4F7BA8"><h2>解体の費用の目安</h2><p class="rk-sub">建物を壊して更地にするまで</p>'
  '<div class="kt-w"><table class="kt"><thead><tr><th>建物</th><th>1坪あたり</th><th>30坪なら</th></tr></thead><tbody>' + rk + '</tbody></table></div>' + src(SRC_K) +
- '<h3 class="kt-h">別にかかる事がある物</h3><ul class="kt-l"><li>ブロック塀・庭木・物置・土間コンクリートの撤去</li><li>家の中に残った荷物の処分</li><li>アスベストの調査（約20万〜50万円）と、見つかった時の除去</li><li>道が狭くて重機が入らない時の手作業</li><li>地中から古い基礎や浄化槽が出た時</li></ul>' + src(SRC_A) + '</section>'
+ '<h3 class="kt-h">別にかかる事がある物</h3><ul class="kt-l"><li>ブロック塀・庭木・物置・土間コンクリートの撤去</li><li>家の中に残った荷物の処分</li><li>アスベストの調査（約20万〜50万円）と、見つかった時の除去</li><li>道が狭くて重機が入らない時の手作業</li><li>地中から古い基礎や浄化槽が出た時</li></ul>' + src(SRC_A) + '</section>' + hojo +
  '<section id="katazuke" class="ps" style="--c:#4F7BA8"><h2>片付け・遺品整理の費用の目安</h2><p class="rk-sub">分別・運び出し・処分まで</p>'
  '<div class="kt-w"><table class="kt"><thead><tr><th>間取り</th><th>目安</th></tr></thead><tbody>' + rt + '</tbody></table></div>' + src(SRC_T) +
  '<p class="kt-n">荷物の量、階段の有無、トラックを家の前に止められるかで変わります。</p></section>'
@@ -58,7 +67,8 @@ desc = f"家の解体は木造で1坪{RATES[0][2]}万〜{RATES[0][3]}万円、30
 ld = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]},
       {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "関西不動産リスト", "item": BASE + "fudosan-list"}, {"@type": "ListItem", "position": 2, "name": "解体・片付けの費用", "item": BASE + "kaitai"}]}]
 s = re.sub(r'<script type="application/ld\+json">.*?</script>', "", s, flags=re.S)
-CSS = ("<style>.kt-c{background:#fff;border-radius:2px;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);padding:16px}"
+CSS = ("<style>.kt-hj{background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);padding:14px 16px;margin:0 0 10px}.kt-hj b{font-size:15px}.kt-hj em{font-style:normal;font-size:11px;margin-left:8px;padding:2px 8px;border-radius:99px;background:#E8F3EA;color:#2F6B3F}.kt-hj em.x{background:#F1ECE7;color:#8A7F76}.kt-hj p{margin:6px 0 8px;font-size:13.5px;line-height:1.8}.kt-hj a{font-size:12.5px;color:#4F7BA8}"
+       ".kt-c{background:#fff;border-radius:2px;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);padding:16px}"
        ".kt-tab{display:grid;grid-template-columns:1fr 1fr;border:1px solid #2B2622;border-radius:99px;overflow:hidden;margin-bottom:14px}"
        ".kt-tab button{font:inherit;font-size:14px;font-weight:700;padding:10px;border:0;background:#fff;color:#2B2622;cursor:pointer}.kt-tab button.on{background:#2B2622;color:#fff}"
        ".kt-c label{display:block;font-size:12.5px;font-weight:700;margin:12px 0 6px}.kt-c label small{font-weight:500;color:#8A7F76;margin-left:8px}"

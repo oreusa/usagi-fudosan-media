@@ -22,11 +22,15 @@ PAIRS = (
     ("関西の無料", "関東の無料"),
     ("（関西）", "（関東）"),
 )
+# 市の補助の表は関西の市だけ → 関東の写しからは外す（関東の市を公式で確かめたら、関東用の表を別に入れる）
+s, _n = re.subn(r"<!--hojo-->.*?<!--/hojo-->", "", s, flags=re.S)
+if _n != 1:
+    sys.exit("市の補助の段が見つかりません（to_life.py を直す）")
 for a, b in PAIRS:
     if a not in s:
         sys.exit("元のページに見つかりません（to_life.py を直す）: " + a)
     s = s.replace(a, b)
-bad = re.findall(r"[^\n]{0,12}(?:関西|近畿|townnote|TOWN|assets/ogp|\"assets/)[^\n]{0,12}", s)
+bad = re.findall(r"[^\n]{0,12}(?:関西|近畿|大阪|神戸|townnote|TOWN|assets/ogp|\"assets/)[^\n]{0,12}", s)
 if bad:
     sys.exit("関西の言葉・部品が残っています: " + " / ".join(bad[:5]))
 open(dst, "w", encoding="utf-8").write(s)

@@ -549,7 +549,12 @@ J_CITY = [
               ("耐震改修の補助（空き家も対象）", "一般の受付は2027年1月29日まで（予算がなくなりしだい終了）。", "受付中", "https://www.city.sakai.lg.jp/kurashi/jutaku/kenchiku/anzen/taishinkaishu/jyuutakuhojyo.html")]),
     ("大阪市", [("耐震性が足りない住宅の解体の補助", "費用の1/3・上限70万円/戸。受付は12月28日まで。", "受付中", "https://www.city.osaka.lg.jp/toshiseibi/page/0000370839.html")]),
     ("東大阪市", [("危険な空き家の解体の補助", "上限50万円/棟（所得などの条件で100万円）。交付が決まる前の着工は対象外。", "受付中", "https://www.city.higashiosaka.lg.jp/0000022525.html")]),
+    # 11/11 月が市の公式の手引き・要綱で確かめた物
+    ("神戸市", [("古い空き家の解体の補助", "建物の広さで決まる定額で、20万〜60万円（1986年以前に建った、傷みのある空き家など・条件あり）。受付は2027年1月12日まで（予算がなくなりしだい終了）。交付が決まる前の契約・着工は対象外。", "受付中", "https://www.city.kobe.lg.jp/documents/25370/r8_9rokyutebiki.pdf")]),
+    ("奈良市", [("特定空家等の解体の補助", "費用の1/2・上限30万円。市が「特定空家等」と判断した建物だけが対象です。受付の期間は、市にお問い合わせください。", "", "https://www.city.nara.lg.jp/uploaded/attachment/192957.pdf")]),
 ]
+
+J_DATE = {"神戸市": "2026年11月11日", "奈良市": "2026年11月11日"}  # 書いていない市は 2026年11月10日
 
 
 def city_of_town(n):
@@ -603,7 +608,7 @@ def jikka_page(t):
     if crows:
         city_h = (f'<p class="mk3">CITY</p><h2 class="jh">{E(cn)}の補助・空き家バンク</h2>' + "".join(
             f'<div class="cy"><b>{E(h)}</b>' + (f'<em class="{"x" if st == "受付停止" else ""}">{st}</em>' if st else '') + f'<p>{E(tx)}</p><a href="{E(u)}" target="_blank" rel="noopener" data-k="実家｜市の補助｜{E(cn)}">{E(cn)}の公式ページ →</a></div>' for h, tx, st, u in crows)
-            + '<p class="src">2026年11月10日に市の公式ページで確かめた内容です。受付・条件・上限は変わるので、申し込む前に必ず公式ページで確かめてください。</p>')
+            + f'<p class="src">{J_DATE.get(cn, "2026年11月10日")}に市の公式ページで確かめた内容です。受付・条件・上限は変わるので、申し込む前に必ず公式ページで確かめてください。</p>')
     body = f'''<style>{HEAD_CSS}{J_CSS}</style>{SCRIPTS}</head><body style="--pc:{col}"><div class="wrap">
 <div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">{en} ─ JIKKA NOTE</div>
 <h1>{E(n)}の実家・空き家ノート<span>売る・片付ける・解体する前に</span></h1>
