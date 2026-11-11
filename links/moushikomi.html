@@ -199,6 +199,6 @@ tl.parentNode.insertBefore(tt,tl.nextSibling);tl.addEventListener("input",functi
 var ag=f.querySelector(".ag span");if(ag)ag.innerHTML='<a href="/privacy" target="_blank" rel="noopener">プライバシーポリシー</a>を読み、同意します（会社へのご紹介は、ご希望があった時だけです）';
 $("sb").textContent="この内容で聞く（無料）";
 var dn=$("done");if(dn){var b=dn.querySelector("b"),p=dn.querySelector("p");if(b)b.textContent="受け付けました";if(p)p.innerHTML="2営業日以内に、メールかお電話でお返事します。<br>しばらくお待ちください。";}
-var bk=document.querySelector("a.back");if(bk){bk.href="/kaitai";bk.textContent="費用の目安にもどる";}
+var bk=document.querySelector("a.back");if(bk){bk.href="/kaitai";bk.textContent=/\/kaitai/.test(document.referrer)?"費用の目安にもどる":"先に、費用の目安を見る";}
 }catch(e){}})();</script>
 </body></html>
