@@ -67,7 +67,7 @@ desc = f"家の解体は木造で1坪{RATES[0][2]}万〜{RATES[0][3]}万円、30
 ld = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]},
       {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "関西不動産リスト", "item": BASE + "fudosan-list"}, {"@type": "ListItem", "position": 2, "name": "解体・片付けの費用", "item": BASE + "kaitai"}]}]
 s = re.sub(r'<script type="application/ld\+json">.*?</script>', "", s, flags=re.S)
-CSS = ("<style>.kt-hj{background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);padding:14px 16px;margin:0 0 10px}.kt-hj b{font-size:15px}.kt-hj em{font-style:normal;font-size:11px;margin-left:8px;padding:2px 8px;border-radius:99px;background:#E8F3EA;color:#2F6B3F}.kt-hj em.x{background:#F1ECE7;color:#8A7F76}.kt-hj p{margin:6px 0 8px;font-size:13.5px;line-height:1.8}.kt-hj a{font-size:12.5px;color:#4F7BA8}"
+CSS = ("<style>.kt-hj{background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);padding:14px 16px;margin:0 0 10px}.kt-hj b{font-size:15px}.kt-hj em{font-style:normal;font-size:11px;margin-left:8px;padding:2px 8px;border-radius:99px;background:#E8F3EA;color:#2F6B3F}.kt-hj em.x{background:#EEEFF1;color:#8A7F76}.kt-hj p{margin:6px 0 8px;font-size:13.5px;line-height:1.8}.kt-hj a{font-size:12.5px;color:#4F7BA8}"
        ".kt-c{background:#fff;border-radius:2px;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);padding:16px}"
        ".kt-tab{display:grid;grid-template-columns:1fr 1fr;border:1px solid #2B2622;border-radius:99px;overflow:hidden;margin-bottom:14px}"
        ".kt-tab button{font:inherit;font-size:14px;font-weight:700;padding:10px;border:0;background:#fff;color:#2B2622;cursor:pointer}.kt-tab button.on{background:#2B2622;color:#fff}"
@@ -81,10 +81,10 @@ CSS = ("<style>.kt-hj{background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05),0 
        ".kt-b small{display:block;font-size:11.5px;font-weight:400;opacity:.85;margin-top:2px}.kt-k{display:block;width:100%;margin:12px 0 0;padding:11px;border:1.5px solid #CFC6BD;border-radius:12px;background:#fff;color:#3A2E28;font:inherit;font-size:13.5px;font-weight:700;cursor:pointer}.kt-n a{color:inherit}"
       ".kt-n{font-size:12px;color:#7A6E66;line-height:1.8;margin:10px 0 0}.kt-s{font-size:11.5px;color:#7A6E66;margin:8px 0 0}.kt-s a{color:inherit}"
        ".kt-w{overflow-x:auto;background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05)}table.kt{border-collapse:collapse;width:100%;font-size:13.5px}"
-       ".kt th,.kt td{padding:12px;text-align:left;border-bottom:1px solid #EEE9E4;vertical-align:top}.kt thead th{font-size:11.5px;font-weight:500;color:#8A7F76}.kt tbody th{font-weight:700}.kt td{white-space:nowrap}.kt tr:last-child th,.kt tr:last-child td{border-bottom:0}"
+       ".kt th,.kt td{padding:12px;text-align:left;border-bottom:1px solid #E6E7EA;vertical-align:top}.kt thead th{font-size:11.5px;font-weight:500;color:#8A7F76}.kt tbody th{font-weight:700}.kt td{white-space:nowrap}.kt tr:last-child th,.kt tr:last-child td{border-bottom:0}"
        ".kt-h{font-size:14px;margin:20px 0 8px}.kt-l{margin:0;padding-left:1.3em;font-size:13.5px;line-height:1.95}"
        ".kt-st{margin:0;padding:0;list-style:none;counter-reset:k;background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05)}"
-       ".kt-st li{counter-increment:k;display:grid;grid-template-columns:30px 1fr;gap:2px 10px;padding:13px 14px;border-bottom:1px solid #EEE9E4}.kt-st li:last-child{border-bottom:0}"
+       ".kt-st li{counter-increment:k;display:grid;grid-template-columns:30px 1fr;gap:2px 10px;padding:13px 14px;border-bottom:1px solid #E6E7EA}.kt-st li:last-child{border-bottom:0}"
        ".kt-st li::before{content:counter(k);grid-row:1/3;font-family:Jost,sans-serif;font-size:22px;color:var(--c);line-height:1.2}.kt-st b{font-size:14px}.kt-st span{font-size:12.5px;color:#6E625A;line-height:1.8}"
        "</style>")
 s = re.sub(r"<style>\.rk\{.*?</style>", "", s, count=1, flags=re.S)
