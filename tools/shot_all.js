@@ -40,6 +40,8 @@ for(const [w,h,tag] of [[390,844,'sp'],[1280,800,'pc']]){
    small:[...document.querySelectorAll('a,button')].filter(e=>{if(!e.offsetParent)return false;const r=e.getBoundingClientRect();return r.width>0&&(r.height<28)&&e.textContent.trim().length>0}).length,
    empty:[...document.querySelectorAll('section,.sec,.box,ul,ol')].filter(e=>e.offsetParent&&e.getBoundingClientRect().height>40&&!e.textContent.trim()&&!e.querySelector('img,svg,canvas,iframe,input')).length,
    more:[...document.querySelectorAll('.fx-more')].length,tk:document.documentElement.className}))}catch(e){errs.push('eval '+String(e.message).slice(0,80))}
+  // 全体写真では、スクロールで出てくる動きが「まだ出ていない」状態で写るので、撮る時だけ動きを止める（見えない物の点検は上で済んでいる）
+  try{await p.addStyleTag({content:'*,*::before,*::after{animation:none!important;transition:none!important}'});await p.waitForTimeout(150)}catch(e){}
   try{await p.screenshot({path:`${out}/${tag}-${n}.jpg`,type:'jpeg',quality:52,fullPage:true,clip:undefined})}catch(e){try{await p.screenshot({path:`${out}/${tag}-${n}.jpg`,type:'jpeg',quality:52})}catch(_){}}
   if(tag==='sp'){try{fs.writeFileSync(`${out}/${n}.html`,await p.content())}catch(e){}}
   rep.push(Object.assign({n,tag,u,st,errs,bad:bad.slice(0,6),inv:[...new Set(inv)].slice(0,6)},m));console.log(tag,n,st,m.screens,errs.length,bad.length);
