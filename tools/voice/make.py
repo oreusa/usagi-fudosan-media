@@ -4,7 +4,7 @@
 結果: shots/voice/<name>/<話者の番号>-<行の番号>.wav と speakers.json（話者の名前の一覧）"""
 import json, os, sys, time, urllib.request, urllib.parse
 
-B = "http://127.0.0.1:50021"
+B = os.environ.get("VOICE_URL", "http://127.0.0.1:50021")   # AivisSpeech は http://127.0.0.1:10101（voice-aivis.yml）
 
 
 def req(path, data=None, method="GET"):
@@ -15,7 +15,7 @@ def req(path, data=None, method="GET"):
 
 def main():
     spec = json.load(open(sys.argv[1], encoding="utf-8"))
-    for i in range(90):
+    for i in range(400):   # AivisSpeech は最初にモデルを取りに行くので数分かかる
         try:
             req("/version"); break
         except Exception:
@@ -25,17 +25,19 @@ def main():
     json.dump([{"name": s["name"], "styles": [{"name": x["name"], "id": x["id"]} for x in s["styles"]]} for s in sp],
               open(os.path.join(out, "speakers.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     kana = {}
-    for s in spec["speakers"]:
+    ids = [x["id"] for s in sp for x in s["styles"]] if spec["speakers"] == "all" else spec["speakers"]
+    for s in ids:
         for n, line in enumerate(spec["lines"]):
             q = json.loads(req(f"/audio_query?speaker={s}&text=" + urllib.parse.quote(line), b"", "POST"))
             q["speedScale"] = spec.get("speed", 1.0); q["prePhonemeLength"] = 0.05; q["postPhonemeLength"] = 0.1
             q["intonationScale"] = spec.get("intonation", 1.0); q["pitchScale"] = spec.get("pitch", 0.0)
             if "pause" in spec: q["pauseLengthScale"] = spec["pause"]
+            if "tempo" in spec: q["tempoDynamicsScale"] = spec["tempo"]
             kana[f"{s}-{n:02d}"] = q.get("kana", "")
             wav = req(f"/synthesis?speaker={s}", json.dumps(q).encode(), "POST")
             open(os.path.join(out, f"{s}-{n:02d}.wav"), "wb").write(wav)
     json.dump(kana, open(os.path.join(out, "kana.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
-    print("voice", spec["name"], len(spec["speakers"]), "話者", len(spec["lines"]), "行")
+    print("voice", spec["name"], len(ids), "話者", len(spec["lines"]), "行")
 
 
 if __name__ == "__main__":
