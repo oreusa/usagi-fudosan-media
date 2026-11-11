@@ -28,7 +28,10 @@ secs = (
  '<div id="kt-t" hidden><label for="kt-ma">間取り</label><select id="kt-ma">' + "".join(f'<option value="{k}"{" selected" if k == "d" else ""}>{n}</option>' for k, n, _, _, _ in KATA) + '</select></div>'
  '<div class="kt-o" aria-live="polite"><small id="kt-ol">木造30坪の解体の目安</small><b id="kt-ov">90万〜150万円</b><span>建物だけの目安です。塀・庭木・家の中の荷物は別にかかります。</span></div>'
  '<a class="kt-b" id="kt-go" href="/moushikomi?want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A" data-k="見積りを相談">無料で見積りを相談する</a>'
- '<p class="kt-n">1社に決めていない窓口です。内容に合わせて、複数の会社をご紹介できます。見積りだけでも大丈夫です。</p></div></section>'
+ '<ul class="kt-a"><li><b>付き合いのある会社だけ</b>関西の不動産屋が、ふだんから仕事で付き合いのある解体・片付けの会社をご紹介します。</li>'
+ '<li><b>ご相談・ご紹介は無料</b>お客さまから費用はいただきません。</li>'
+ '<li><b>くらべて決められる</b>1社に決めていない窓口です。2〜3社の見積りをくらべられ、断っても大丈夫です。</li></ul>'
+ '<p class="kt-n">ご紹介した会社から、紹介料をいただくことがあります。見積りの金額は、会社から直接お受け取りください。</p></div></section>'
  '<section id="kaitai" class="ps" style="--c:#4F7BA8"><h2>解体の費用の目安</h2><p class="rk-sub">建物を壊して更地にするまで</p>'
  '<div class="kt-w"><table class="kt"><thead><tr><th>建物</th><th>1坪あたり</th><th>30坪なら</th></tr></thead><tbody>' + rk + '</tbody></table></div>' + src(SRC_K) +
  '<h3 class="kt-h">別にかかる事がある物</h3><ul class="kt-l"><li>ブロック塀・庭木・物置・土間コンクリートの撤去</li><li>家の中に残った荷物の処分</li><li>アスベストの調査（約20万〜50万円）と、見つかった時の除去</li><li>道が狭くて重機が入らない時の手作業</li><li>地中から古い基礎や浄化槽が出た時</li></ul>' + src(SRC_A) + '</section>'
@@ -62,6 +65,7 @@ CSS = ("<style>.kt-c{background:#fff;border-radius:2px;box-shadow:0 1px 2px rgba
        ".kt-o{margin:16px 0 14px;padding:14px 16px;background:#F4F1EE;border-left:3px solid var(--c)}.kt-o small{display:block;font-size:12px;color:#6E625A}"
        ".kt-o b{display:block;font-family:Jost,sans-serif;font-weight:500;font-size:30px;line-height:1.3;letter-spacing:.01em;color:#2B2622}.kt-o span{display:block;font-size:12px;color:#6E625A;line-height:1.7;margin-top:4px}"
        ".kt-b{display:block;text-align:center;background:#2B2622;color:#fff;text-decoration:none;font-weight:700;font-size:15px;padding:15px;border-radius:2px}"
+       ".kt-a{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}.kt-a li{font-size:12.5px;line-height:1.75;color:#5C5048;padding-left:12px;border-left:2px solid #D9D2CB}.kt-a b{display:block;font-size:13px;color:#2B2622}"
        ".kt-n{font-size:12px;color:#7A6E66;line-height:1.8;margin:10px 0 0}.kt-s{font-size:11.5px;color:#7A6E66;margin:8px 0 0}.kt-s a{color:inherit}"
        ".kt-w{overflow-x:auto;background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05)}table.kt{border-collapse:collapse;width:100%;font-size:13.5px}"
        ".kt th,.kt td{padding:12px;text-align:left;border-bottom:1px solid #EEE9E4;vertical-align:top}.kt thead th{font-size:11.5px;font-weight:500;color:#8A7F76}.kt tbody th{font-weight:700}.kt td{white-space:nowrap}.kt tr:last-child th,.kt tr:last-child td{border-bottom:0}"
