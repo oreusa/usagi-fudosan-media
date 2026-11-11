@@ -88,6 +88,27 @@ for svc, nm in (("threads", "Threads"), ("x", "X")):
     if big: order("投稿の回", "view-" + svc, f"{nm} の大当たり（ふつうの10倍より上）：" + "／".join(f"{r.get('day', '')[5:]} {r.get('slot', '')}「{r.get('type', '')}」{r.get('views')}" for r in big) + "。この題の形（何の順位か・数字の出し方・1行目）を、別の路線・別の街で今週3本作る。同じ街・同じ数字はくり返さない", f"ふつうは {m14}")
 if not trows: order("投稿の回", "view-threads", "投稿の点検の回（20:33）で、きょう出た投稿の閲覧・いいねとフォロワー数を Buffer から取り、stats/toukou.json に足す（形はファイルの about のとおり）", "投稿の閲覧が未確認のまま", "数字")
 
+# 3b2 惹きつける型（11/12 オーナー「人を惹きつけることはファブルなら可能じゃない？投稿の仕方とかも」）
+#   それまでは1本ずつの題で数えていたので「どの型が人を集めるか」を機械が覚えられなかった。題を型に分け、型ごとの中央値で、あすの枠の割り当てを機械が決める
+import re as _r2
+KATA = [("駅・路線の順位", r"駅|線|乗|rank"), ("日付つきの催し", r"^\d+/\d+|^あす|^あした|^今夜|odekake|見頃|まで｜"), ("できる・開く（新駅・開業・完成）", r"開通|完成|オープン|新駅|開業|202[7-9]年|新規|新しい"),
+        ("市ごとの地価・家の値段", r"住宅地|地価|土地|㎡|の家、|基準"), ("人口・世帯の増え方", r"人口|世帯|人は|[+＋]\d+人|国勢"), ("ひと駅しらべ", r"hitoeki|→"),
+        ("実家・お金の知識", r"jikka|kaitai|親の|名義|金利|フラット"), ("防犯・火事の数字", r"詐欺|盗|侵入|火"), ("街の豆知識・クイズ", r"読|村｜|町の名|どこ？|市｜「"), ("HPの紹介・お礼", r"TOWN NOT|いつも見て|続き")]
+def kata(t):
+    for nm_, pat in KATA:
+        if _r2.search(pat, t or ""): return nm_
+    return "そのほか"
+_kt = {}
+for r in trows:
+    if r.get("svc") == "threads" and r.get("day", "") > d14 and r.get("views") is not None: _kt.setdefault(kata(r.get("type", "")), []).append(int(r["views"]))
+if _kt:
+    _all = _med([v for vs in _kt.values() for v in vs])
+    _ks = sorted(((k, _med(v), len(v), max(v)) for k, v in _kt.items()), key=lambda x: -x[1])
+    _good = [x for x in _ks if x[2] >= 3 and x[1] >= _all * 2]; _bad = [x for x in _ks if x[2] >= 3 and x[1] * 2 <= _all]
+    item("kata", "惹きつける型（Threads・14日）", "・".join(f"{k} {m}（{n}本・最高{mx}）" for k, m, n, mx in _ks) + f"／全部の中央値 {_all}", "いちばん強い型を、強い枠（朝7時・夜8時）に毎日置く", "当たり" if _good else "計測中", "型は題から機械が分ける。3本より少ない型は判断しない", _good[0][1] if _good else 0)
+    if _good: order("投稿の回", "kata", f"あすの朝7時は「{_good[0][0]}」（中央値 {_good[0][1]}・ふつうは {_all}）で作る。まだ出していない路線・市・駅を選び、1行目に「その場所の名前＋順位か数字」を入れる。" + (f"夜8時は「{_good[1][0]}」（中央値 {_good[1][1]}）。" if len(_good) > 1 else "") + "同じ場所・同じ数字はくり返さない", "強い型はふつうの2倍より上")
+    for k, m, n, mx in _bad[:3]: order("投稿の回", "kata", f"「{k}」の型は中央値 {m}（{n}本）で、ふつう（{_all}）の半分より下。あすからこの型の枠を「{_good[0][0] if _good else _ks[0][0]}」に替える。出すなら週1本まで、1行目を地名＋数字に変えて", "弱い型に枠を使わない")
+
 # 3c 検索で打たれた言葉（Search Console）。11/12 owner「GPTの使い道を増やして欲しい」→ 汐が毎朝写す → 月の朝が stats/kensaku.json へ → 機械が「題に入れる言葉」を選ぶ
 ks = load(S("kensaku.json"), {}).get("rows", [])
 for site, nm in (("kansai", "関西"), ("kanto", "関東")):
@@ -295,7 +316,7 @@ def _michi(root):
 _bad = _michi(os.path.join(ROOT, "links"))
 item("michi", "申し込みへの道", f"家のページで道が無い {len(_bad)}枚" + (f"（例 {_bad[0]}）" if _bad else ""), "合格の線：0枚", "当たり" if not _bad else "外れ", "家・土地のページは、どれも申し込みへ1回で行ける事", val=len(_bad))
 if _bad: order("月の朝", "michi", f"申し込みへの道が無い家のページが {len(_bad)}枚（{'・'.join(_bad[:3])}）。そのページを作る機械に、街の名前入りの「いくらで売れるか無料で聞く」を足す", "見られても反響にならない")
-PRI = ["yosou", "lead", "michi", "search-kansai", "search-kanto", "city", "hp", "post", "view-threads", "view-x", "pic", "reel", "aff", "gpt", "room"]
+PRI = ["yosou", "lead", "michi", "search-kansai", "search-kanto", "city", "hp", "post", "kata", "view-threads", "view-x", "pic", "reel", "aff", "gpt", "room"]
 old = {(o["to"], o["item"], o["order"][:24]): o.get("days", 1) for o in prev.get("orders", [])}
 same_day = prev.get("day") == today.isoformat()
 for o in orders:
