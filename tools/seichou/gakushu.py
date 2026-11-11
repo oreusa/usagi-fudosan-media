@@ -86,8 +86,12 @@ for r in rl[:40]:
 tb = max(th.items(), key=lambda x: x[1][0] / max(1, x[1][1]), default=None)
 fol = list((reels.get("followers") or {}).values())[-1:] if isinstance(reels, dict) else []
 ig = two(lambda k: k.startswith("来訪：SNS｜ig"))
-item("reel", "リール（インスタ）", f"再生 {'未確認' if not views else sum(views)}・この14本のいいね {likes}・フォロワー {fol[0] if fol else '未確認'}人・HPへ {ig[0]}人（前 {ig[1]}）", "1本の再生 300回・HPへ週5人", "未確認" if not views else ("当たり" if sum(views) / len(views) >= 300 else "外れ"), "声つきの型（11/12〜）を前の型とくらべる")
-if not views: order("月の朝", "reel", "再生数の権限（instagram_manage_insights）が無い。オーナーへの「今やること」に、権限を付け直す手順とURLを出す", "再生が見えないと、型の当たり外れが分からない")
+# 11/12 オーナー「meta だるいからなし」→ 再生数の権限は頼まない。取れている数字（いいね・HPに来た人）で判定する
+l_now = sum(int(r.get("likes") or 0) for r in rl[:14]); l_old = sum(int(r.get("likes") or 0) for r in rl[14:28])
+per = l_now / max(1, len(rl[:14]))
+rans = "計測中" if len(rl) < 28 else ("当たり" if (per >= 1 and l_now > l_old) or ig[0] >= 5 else "外れ")
+item("reel", "リール（インスタ）", f"この14本のいいね {l_now}（前の14本 {l_old}）・1本あたり {per:.1f}・フォロワー {fol[0] if fol else '未確認'}人・HPへ {ig[0]}人（前 {ig[1]}）", "1本あたり いいね1 で前より上、か HPへ週5人", rans, "再生数は取らない（11/12 オーナー）。声つきの型（11/12〜）を前の型とくらべる")
+if rans == "外れ": order("リールの回", "reel", "いいねが前の14本より下。出だしの1枚（題の言葉と数字）を、いいねの多かった回の形に寄せる。キャプションの最初の行に、HPのその催しのページへの道（プロフィールのリンク）を書く", f"いいね {l_old}→{l_now}")
 if tb: order("リールの回", "reel", f"題材は「{tb[0]}」を先に（1本あたりのいいね {tb[1][0] / max(1, tb[1][1]):.1f}）。同じ題材が3本続いたら次の題材へ", "いいねの多かった題材")
 
 # 6 宿・アフィリエイト（押された数は機械・成果は汐が月曜に写す stats/seika.json）
