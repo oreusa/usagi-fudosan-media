@@ -1,10 +1,9 @@
-# リンクの確かめ（2026-11-11 11:55 JST・262件）
+# リンクの確かめ（2026-11-11 20:44 JST・262件）
 
 ## 開けない（直す）
 - ✗ 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
 - ✗ 宝厳院 紅葉ライトアップ（links/illumination-kyoto.html）URLError https://hogonin.jp/
 - ✗ 天理市 光の祭典（links/illumination-nara.html）404 https://www.city.tenri.nara.jp/kakuka/shichoukoushitsu/sougouseisakuka/teijyujirituken/teijujiritsukenibentojoho/15242.html
-- ✗ しあわせ回廊 なら瑠璃絵（links/illumination-nara.html）TimeoutError https://rurie.jp/
 - ✗ HERBIS CHRISTMAS（links/illumination-osaka.html）URLError https://www.herbis.jp/
 - ✗ HEP FIVE クリスマスイルミネーション（links/illumination-osaka.html）URLError https://www.hepfive.jp/
 - ✗ 大阪梅田ツインタワーズ・ノース クリスマスイルミネーション（links/illumination-osaka.html）URLError https://www.hhp.co.jp/

@@ -5,13 +5,13 @@
    "type": "入口",
    "ext7": 11,
    "ext_prev7": 46,
-   "views7": 195
+   "views7": 214
   },
   {
    "type": "おでかけ",
    "ext7": 0,
    "ext_prev7": 0,
-   "views7": 178
+   "views7": 181
   },
   {
    "type": "1件ページ",
@@ -27,27 +27,27 @@
   },
   {
    "type": "紅葉",
-   "ext7": 25,
+   "ext7": 27,
    "ext_prev7": 0,
-   "views7": 50
+   "views7": 52
   },
   {
    "type": "不動産リスト",
    "ext7": 2,
    "ext_prev7": 0,
-   "views7": 124
+   "views7": 132
   },
   {
    "type": "地価ランキング",
-   "ext7": 2,
+   "ext7": 5,
    "ext_prev7": 0,
-   "views7": 12
+   "views7": 17
   },
   {
    "type": "街ページ",
-   "ext7": 17,
+   "ext7": 22,
    "ext_prev7": 0,
-   "views7": 263
+   "views7": 269
   },
   {
    "type": "困りごと",
