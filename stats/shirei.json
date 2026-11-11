@@ -126,6 +126,14 @@
   },
   {
    "to": "月の朝",
+   "item": "search-kansai",
+   "order": "Drive の「検索の帳面」（汐が毎朝写す）に【検索】【言葉】【ページ】の行があれば、stats/kensaku.json の rows に足す（形は about のとおり）。「見られない」の行なら、オーナーに Search Console の権限の事を1行で伝える",
+   "why": "検索の数字が未確認のまま",
+   "kind": "数字",
+   "days": 1
+  },
+  {
+   "to": "月の朝",
    "item": "gpt",
    "order": "Drive の「夜の結果 きのうの日付」に【道】【止まった所】【ミス帳】の3行があるかを見て、stats/tantou.json の rows に {day, 夜: 行の数（無ければ0）, 夜_naoshi: その行から直した数} を1行足す",
    "why": "夜（テスター）の出来を測る数字が無い",
