@@ -59,11 +59,6 @@ jobs:
       - name: learning ledger (学習の台帳・きょうの指令)
         # 11/11 取り組み全部の答え合わせと、各回への指令を作る（月の朝・投稿・リールの回は動く前に stats/shirei.json を読む）
         run: python3 tools/seichou/gakushu.py "$(TZ=Asia/Tokyo date +%F)" || true
-      - name: post images (投稿に付けるHPの画面)
-        # 11/11 HPの画面を 1080×1350 の画像に（中身が変わった物だけ作り直す）。media/post/index.json に url
-        run: |
-          npm i --no-save playwright@1.49.1 >/dev/null 2>&1 && npx playwright install --with-deps chromium >/dev/null 2>&1
-          node tools/post_img/make.js || echo "post images skipped"
       - name: link check
         # 10/31 毎朝、リストとイルミのカードのリンクが開けるか・別の催しに同じURLが付いていないかを stats/linkcheck.md に（19:47 の点検が直す）
         run: python3 tools/linkcheck.py || true
@@ -71,5 +66,5 @@ jobs:
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/link.json stats/link-30.json stats/funnel.md stats/funnel.json stats/seichou.md stats/seichou.json links/illumination*.html links/koyo*.html links/hatsumode.html links/ranking.html links/kaitai.html links/kaitai-*.html links/index.html links/odekake-*.html links/o links/sitemap.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md links/assets/cover.json stats/gakushu.md stats/gakushu.json stats/shirei.json stats/manabi.json media/post
+          git add stats/link.json stats/link-30.json stats/funnel.md stats/funnel.json stats/seichou.md stats/seichou.json links/illumination*.html links/koyo*.html links/hatsumode.html links/ranking.html links/kaitai.html links/kaitai-*.html links/index.html links/odekake-*.html links/o links/sitemap.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md links/assets/cover.json stats/gakushu.md stats/gakushu.json stats/shirei.json stats/manabi.json
           git diff --cached --quiet || (git commit -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)" && git pull --rebase -q && git push)
