@@ -1,0 +1,4 @@
+{
+ "about": "検索で打たれた言葉（Google Search Console）。汐（GPT）が毎朝 Drive の「検索の帳面」に写し、月の朝の回がここへ足す。rows: {day, site:'kansai'|'kanto', clicks, imps, pos, words:[{w,c,i,p}], pages:[{u,c,i}]}。同じ day・site は上書き。60日より前は消す",
+ "rows": []
+}

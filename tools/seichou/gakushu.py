@@ -88,6 +88,22 @@ for svc, nm in (("threads", "Threads"), ("x", "X")):
     if big: order("投稿の回", "view-" + svc, f"{nm} の大当たり（ふつうの10倍より上）：" + "／".join(f"{r.get('day', '')[5:]} {r.get('slot', '')}「{r.get('type', '')}」{r.get('views')}" for r in big) + "。この題の形（何の順位か・数字の出し方・1行目）を、別の路線・別の街で今週3本作る。同じ街・同じ数字はくり返さない", f"ふつうは {m14}")
 if not trows: order("投稿の回", "view-threads", "投稿の点検の回（20:33）で、きょう出た投稿の閲覧・いいねとフォロワー数を Buffer から取り、stats/toukou.json に足す（形はファイルの about のとおり）", "投稿の閲覧が未確認のまま", "数字")
 
+# 3c 検索で打たれた言葉（Search Console）。11/12 owner「GPTの使い道を増やして欲しい」→ 汐が毎朝写す → 月の朝が stats/kensaku.json へ → 機械が「題に入れる言葉」を選ぶ
+ks = load(S("kensaku.json"), {}).get("rows", [])
+for site, nm in (("kansai", "関西"), ("kanto", "関東")):
+    kr = sorted([r for r in ks if r.get("site") == site], key=lambda r: r.get("day", ""))
+    if not kr:
+        item("search-" + site, f"検索（{nm}）", "未確認", "クリックが前の週より上", "未確認", "stats/kensaku.json に行が無い")
+        continue
+    cur_, prev_ = kr[-1], ([r for r in kr if r.get("day", "") <= (date.fromisoformat(kr[-1]["day"]) - timedelta(days=7)).isoformat()] or [None])[-1]
+    item("search-" + site, f"検索（{nm}）", f"7日でクリック {cur_.get('clicks')}・表示 {cur_.get('imps')}・平均 {cur_.get('pos')}位（{cur_.get('day')}）" + (f"・前の週 クリック {prev_.get('clicks')}" if prev_ else ""), "クリックが前の週より上", "計測中" if not prev_ else ("当たり" if (cur_.get("clicks") or 0) > (prev_.get("clicks") or 0) else "外れ"), "検索から来る人が、いちばん相談に近い", cur_.get("clicks"))
+    ws = cur_.get("words", [])
+    near = sorted([w for w in ws if (w.get("i") or 0) >= 10 and 5 <= (w.get("p") or 99) <= 20], key=lambda w: -(w.get("i") or 0))[:3]
+    seen0 = sorted([w for w in ws if (w.get("i") or 0) >= 20 and not (w.get("c") or 0) and (w.get("p") or 99) < 10], key=lambda w: -(w.get("i") or 0))[:2]
+    if near: order("月の朝", "search-" + site, f"{nm}：あと少しで1ページ目の言葉（" + "／".join(f"「{w['w']}」表示{w['i']}・{w['p']}位" for w in near) + "）。その言葉で出ているページの題と最初の見出しに、その言葉をそのまま入れ、答え（数字）をページのいちばん上に置く", "5〜20位は、題を直すと上がりやすい")
+    if seen0: order("月の朝", "search-" + site, f"{nm}：見られているのに押されない言葉（" + "／".join(f"「{w['w']}」表示{w['i']}・クリック0" for w in seen0) + "）。そのページの題と説明文を「◯◯はいくら」「◯◯の順位」のように答えが分かる形に直す", "10位より上なのにクリック0")
+if not ks: order("月の朝", "search-kansai", "Drive の「検索の帳面」（汐が毎朝写す）に【検索】【言葉】【ページ】の行があれば、stats/kensaku.json の rows に足す（形は about のとおり）。「見られない」の行なら、オーナーに Search Console の権限の事を1行で伝える", "検索の数字が未確認のまま", "数字")
+
 # 4 市ごとの補助ページ
 city = {}
 for r in rows:
@@ -249,7 +265,7 @@ def _michi(root):
 _bad = _michi(os.path.join(ROOT, "links"))
 item("michi", "申し込みへの道", f"家のページで道が無い {len(_bad)}枚" + (f"（例 {_bad[0]}）" if _bad else ""), "合格の線：0枚", "当たり" if not _bad else "外れ", "家・土地のページは、どれも申し込みへ1回で行ける事", val=len(_bad))
 if _bad: order("月の朝", "michi", f"申し込みへの道が無い家のページが {len(_bad)}枚（{'・'.join(_bad[:3])}）。そのページを作る機械に、街の名前入りの「いくらで売れるか無料で聞く」を足す", "見られても反響にならない")
-PRI = ["lead", "michi", "city", "hp", "post", "view-threads", "view-x", "pic", "reel", "aff", "gpt", "room"]
+PRI = ["lead", "michi", "search-kansai", "search-kanto", "city", "hp", "post", "view-threads", "view-x", "pic", "reel", "aff", "gpt", "room"]
 old = {(o["to"], o["item"], o["order"][:24]): o.get("days", 1) for o in prev.get("orders", [])}
 same_day = prev.get("day") == today.isoformat()
 for o in orders:

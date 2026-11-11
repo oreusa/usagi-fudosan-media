@@ -47,6 +47,24 @@
    "val": 48
   },
   {
+   "id": "search-kansai",
+   "name": "検索（関西）",
+   "num": "未確認",
+   "line": "クリックが前の週より上",
+   "ans": "未確認",
+   "why": "stats/kensaku.json に行が無い",
+   "val": null
+  },
+  {
+   "id": "search-kanto",
+   "name": "検索（関東）",
+   "num": "未確認",
+   "line": "クリックが前の週より上",
+   "ans": "未確認",
+   "why": "stats/kensaku.json に行が無い",
+   "val": null
+  },
+  {
    "id": "city",
    "name": "市ごとの解体補助ページ",
    "num": "17市・外から 0人・上位 まだ無し",
@@ -232,6 +250,14 @@
    "wait": [
     "リールを声つきの新しい型（縦書き・声4か所）に替えた"
    ]
+  },
+  {
+   "to": "月の朝",
+   "item": "search-kansai",
+   "order": "Drive の「検索の帳面」（汐が毎朝写す）に【検索】【言葉】【ページ】の行があれば、stats/kensaku.json の rows に足す（形は about のとおり）。「見られない」の行なら、オーナーに Search Console の権限の事を1行で伝える",
+   "why": "検索の数字が未確認のまま",
+   "kind": "数字",
+   "days": 1
   },
   {
    "to": "月の朝",
