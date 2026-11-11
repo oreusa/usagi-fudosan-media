@@ -1,0 +1,22 @@
+name: post-img
+# 投稿に付ける画像（HPの画面を 1080×1350 に）を media/post/ に作る。中身が変わった物だけ作り直す。
+# 11/11 オーナー「投稿にHPの一部を載せる。今ずっと文字だけ」。link-stats（08:30）の後に動く。失敗しても他の機械を止めないよう別にした。
+on:
+  schedule:
+    - cron: "10 0 * * *"   # 09:10 JST
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm i --no-save playwright@1.49.1 && npx playwright install --with-deps chromium
+      - run: node tools/post_img/make.js
+      - run: |
+          git config user.name "post-img bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add media/post
+          git diff --cached --quiet || (git commit -m "[CF-Pages-Skip] post-img: $(TZ=Asia/Tokyo date +%F)" && git pull --rebase -q && git push)
