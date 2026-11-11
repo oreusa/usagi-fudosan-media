@@ -1,0 +1,4 @@
+0 01おでかけ imgs=0 broken=0
+1 02街の地価 imgs=0 broken=0
+2 03実家 imgs=0 broken=0
+3 04おかいもの imgs=0 broken=0
