@@ -10,9 +10,10 @@ spec に書く物（前の型の欄に足す）：
 - `text.ehon1`・`ehon2`・`ehon4`: 絵のページの縦書き（3行ずつ。1行8字くらいまで）。1＝場所、2＝季節、4＝夜。
 - `text.ehon_night`: 夜のページの数字 `["11.14", "SAT", "から", "日没〜20時半"]`（4つ目は7字まで。長いと折れて重なる）
 - `text.motif`: 絵。`tou13`・`tou5`（重ねた塔。数字は層）／`tahoto`（多宝塔）／`shrine`（神社と鳥居）／`temple`（お堂）／`yama`（建物なし）
+- `text.scene`: 景色。書かなければ山と木。`umi`＝海と砂浜（昼は青い海、2ページ目は夕焼け、夜は砂浜に色の光。もみじの代わりに光のきらめき）。海の時は `motif` を `yama`、`seal` を「光」等に。見本 ig/reels/2026-11-13-pm.json（白良浜）
 - `text.seal`（判子の2文字。書かなければ「紅葉」）、`text.peaks: 1`（遠くに2つの峰の山）、`text.ehon5`（最後のページの3行）
 - 前の型と同じ：`text.title`・`corner`・`place`・`date`・`date_title`・`info`（4行まで）・`info_note`、`video_url`（作り直す時は名前を変える）
-確かめ方：入れて約15分後に Actions の outing-reel が緑か。赤の時は記録の最後に理由（読みの違い・足りない欄）が出る。
+確かめ方：入れて約10分後に media/reels に動画が有るか。作れなかった時は理由（読みの違い・足りない欄）が stats/reel-fail/<名前>.txt に残る（作れたら消える）。直したら outing-reel.yml を name=<名前> で動かす。
 見た目だけ手元で見る：`WORK=/tmp/w python3 tools/outing_reel/ehon.py <spec> /tmp/x.mp4 "1.5,5,9.5,14.5,19,23"`（静止画）。
 出す時の落とし穴：動画を main に入れてから GitHub Pages に出るまで約1分半かかる。その前にインスタへ渡すと失敗する（11/12 エラー 2207076）。
 
