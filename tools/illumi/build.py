@@ -262,7 +262,7 @@ OUT = os.path.join(os.path.dirname(__file__), "../../links/")
 cnt = sum(len(v) for v in cards.values())
 def plinks(cur, b="illumination"):
     a = [f'<a href="{b}">関西ぜんぶ</a>'] if cur else []
-    return '<div class="plh">府県ごとに見る</div>' + "".join(a) + "".join(f'<a href="{b}-{SLUG[p]}" style="--pc:{PC[p]}"{" aria-current=page" if p == cur else ""}>{fu(p)}</a>' for p in PREFS if b == "illumination" or kcards[p])
+    return '<div class="plh">府県ごとに見る</div>' + "".join(a) + "".join(f'<a href="{b}-{SLUG[p]}" style="--pc:{PC[p]}"{" aria-current=page" if p == cur else ""}>{fu(p)}</a>' for p in PREFS if b == "illumination" or kcards[p]) + (f'<a href="illumination-muryo" style="--pc:#3A2F28" data-k="無料のイルミネーションだけ見る"{" aria-current=page" if cur == "無料" else ""}>無料だけ</a>' if b == "illumination" else "")
 pages = {"illumination.html": render(PREFS, "illumination.html",
     "関西イルミネーション2026-2027｜大阪・京都・兵庫・奈良・滋賀・和歌山の日程一覧",
     f"関西6府県のイルミネーション{cnt}か所を、府県ごとに日程・場所・無料かどうかで一覧にしました。御堂筋イルミネーション、神戸イルミナージュ、姫路城イルミネーションなど。{upd}更新。",
@@ -278,6 +278,19 @@ for p in PREFS:
         f"{p}のイルミネーション2026-2027 日程一覧", f"{SLUG[p].upper()} ILLUMINATION", f"{p}のイルミネーション", "2026 - 2027 日程一覧",
         f"{fu(p)}の{n}か所を、日程・場所・<br>無料かどうかでまとめました。", plinks(p),
         [("関西おでかけリスト", "odekake"), ("関西イルミネーション2026-2027", "illumination.html"), (f"{p}のイルミネーション", f"illumination-{SLUG[p]}.html")])
+# 11/12 台帳の指令「伸びている型（季節の一覧）と同じ型を足す」→「関西 イルミネーション 無料」で探す人の入口。データは同じ表から（無料の所だけ）
+_c, _e, _l = cards, evs, lds
+FR = '<span class="fr">無料</span>'
+cards = {p: [c for c in _c[p] if FR in c] for p in PREFS}; evs = {p: [x for x in _e[p] if x[4]] for p in PREFS}; lds = {p: [x for x in _l[p] if x.get("isAccessibleForFree")] for p in PREFS}
+fcnt = sum(len(v) for v in cards.values()); fnm = "、".join(x[0] for p in PREFS for x in evs[p][:1])
+pages["illumination-muryo.html"] = render([p for p in PREFS if cards[p]], "illumination-muryo.html",
+    f"関西の無料イルミネーション2026-2027｜入場無料の{fcnt}か所を府県ごとに一覧",
+    f"関西6府県の、入場無料で見られるイルミネーション{fcnt}か所を、府県ごとに日程・場所で一覧にしました。{fnm}など。点灯期間は各公式の発表どおり。{upd}更新。",
+    "関西の無料イルミネーション2026-2027 一覧", "KANSAI FREE ILLUMINATION", "関西の無料イルミネーション", "2026 - 2027 入場無料の一覧",
+    f"大阪・京都・兵庫・奈良・滋賀・和歌山の、<br>入場無料で見られる{fcnt}か所をまとめました。", plinks("無料"),
+    [("関西おでかけリスト", "odekake"), ("関西イルミネーション2026-2027", "illumination.html"), ("無料のイルミネーション", "illumination-muryo.html")])
+pages["illumination-muryo.html"] = pages["illumination-muryo.html"].replace('s("表示：イルミネーション"', 's("表示：無料イルミネーション"')  # 台帳がこのページだけの数を数えられるように
+cards, evs, lds = _c, _e, _l
 kc = sum(len(v) for v in kcards.values()); mc = sum(len(v) for v in mcards.values())
 pages["koyo.html"] = render(PREFS, "koyo.html",
     f"関西の紅葉2026｜名所{mc}か所の見頃とライトアップ{kc}か所（京都・大阪・兵庫・奈良・滋賀・和歌山）",

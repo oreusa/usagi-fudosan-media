@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url><loc>https://townnote.pages.dev/</loc><lastmod>2026-11-12</lastmod></url>
-<url><loc>https://townnote.pages.dev/odekake-osaka</loc><lastmod>2026-11-12</lastmod></url>
-<url><loc>https://townnote.pages.dev/odekake-kyoto</loc><lastmod>2026-11-12</lastmod></url>
-<url><loc>https://townnote.pages.dev/odekake-hyogo</loc><lastmod>2026-11-12</lastmod></url>
-<url><loc>https://townnote.pages.dev/odekake-nara</loc><lastmod>2026-11-12</lastmod></url>
-<url><loc>https://townnote.pages.dev/odekake-shiga</loc><lastmod>2026-11-12</lastmod></url>
-<url><loc>https://townnote.pages.dev/odekake-wakayama</loc><lastmod>2026-11-12</lastmod></url>
 <url><loc>https://townnote.pages.dev/odekake</loc><lastmod>2026-11-12</lastmod></url>
 <url><loc>https://townnote.pages.dev/illumination</loc><lastmod>2026-11-12</lastmod></url>
 <url><loc>https://townnote.pages.dev/illumination-osaka</loc><lastmod>2026-11-12</lastmod></url>
@@ -15,6 +9,7 @@
 <url><loc>https://townnote.pages.dev/illumination-nara</loc><lastmod>2026-11-12</lastmod></url>
 <url><loc>https://townnote.pages.dev/illumination-shiga</loc><lastmod>2026-11-12</lastmod></url>
 <url><loc>https://townnote.pages.dev/illumination-wakayama</loc><lastmod>2026-11-12</lastmod></url>
+<url><loc>https://townnote.pages.dev/illumination-muryo</loc><lastmod>2026-11-12</lastmod></url>
 <url><loc>https://townnote.pages.dev/koyo</loc><lastmod>2026-11-12</lastmod></url>
 <url><loc>https://townnote.pages.dev/koyo-osaka</loc><lastmod>2026-11-12</lastmod></url>
 <url><loc>https://townnote.pages.dev/koyo-kyoto</loc><lastmod>2026-11-12</lastmod></url>
