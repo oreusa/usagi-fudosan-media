@@ -67,3 +67,42 @@ k = base
 for city, *_ in rows:
     k = k.replace(f'<div class="kt-hj"><b>{E(city)}</b>', f'<div class="kt-hj"><b><a href="/kaitai-{SLUG[city][0]}" data-k="費用｜市ごとのページ｜{E(city)}" style="color:inherit">{E(city)}</a></b>', 1)
 open(os.path.join(AK, "site", "kaitai.html"), "w", encoding="utf-8").write(k)
+# 11/12 月：関東の「解体の補助金 上限ランキング」（関西の city.py ranking と同じ型。金額は本文の「上限・最大◯万円」のいちばん大きい数）
+def _capof(tx):
+    return max([int(x.replace(",", "")) for x in re.findall(r"(?:上限|最大)[はが]?\s*([\d,]+)万円", tx) + re.findall(r"[（(][^）)]*?は\s*([\d,]+)万円[）)]", tx) if int(x.replace(",", "")) <= 500] or [0])
+items = sorted([(_capof(tx), city, SLUG[city][0], SLUG[city][1], st) for city, tx, st, u, d in rows if _capof(tx)], key=lambda x: (-x[0], x[1]))
+if len(items) >= 5:
+    tr = ""; rank = 0; prev = None
+    for i, (cap, c, slug, pref, st) in enumerate(items, 1):
+        if cap != prev: rank = i; prev = cap
+        tr += (f'<tr><th>{rank}位</th><td><a href="/kaitai-{slug}" data-k="補助ランキング｜{E(c)}">{E(c)}</a><small style="display:block;font-size:11px;color:#8A7F76">{pref}'
+               + (f'・{st}' if st in END else "") + f'</small></td><td><b>最大{cap}万円</b></td></tr>')
+    top = items[0]; s = k
+    sec = (f'<section id="rank" class="ps" style="--c:#4F7BA8"><h2>解体の補助金 上限ランキング（関東 {len(items)}市区）</h2><p class="rk-sub">市区の公式ページで確かめた、いちばん多く出る場合の額・高い順</p>'
+           '<div class="kt-w"><table class="kt"><thead><tr><th>順位</th><th>市区</th><th>上限</th></tr></thead><tbody>' + tr + '</tbody></table></div>'
+           '<p class="kt-n">額は、いちばん多く出る場合です。建った年・場所（地区）・所得などの条件で変わり、対象の地区が決まっている市区もあります。名前を押すと、条件と受付の状況、公式ページへ進めます。'
+           '載っていない市区は、公式ページで確かめられた順に足しています。</p></section>')
+    a = s.index('<section id="keisan"'); s = s[:a] + sec + s[a:]
+    title = f"解体の補助金 上限ランキング 関東{len(items)}市区｜1位は{top[1]}の最大{top[0]}万円【2026年度】"
+    desc = f"東京・神奈川・埼玉・千葉の{len(items)}市区の、家の解体に使える補助金の上限額を高い順にまとめました。1位は{top[1]}の最大{top[0]}万円。市区の公式ページで確かめた額だけを載せています。"
+    ld = {"@context": "https://schema.org", "@type": "ItemList", "name": "関東の解体補助金 上限ランキング", "itemListElement": [
+        {"@type": "ListItem", "position": i, "name": f"{c} 最大{cap}万円", "url": BASE + "kaitai-" + slug} for i, (cap, c, slug, pref, st) in enumerate(items, 1)]}
+    s = re.sub(r'<script type="application/ld\+json">.*?</script>', "", s, flags=re.S)
+    s = s.replace("</head>", f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head>', 1)
+    s = re.sub(r"<title>.*?</title>", f"<title>{E(title)}</title>", s, count=1)
+    for prop in ('<meta name="description" content="', '<meta property="og:description" content="'):
+        s = re.sub("(" + re.escape(prop) + ')[^"]*', lambda m: m.group(1) + E(desc), s, count=1)
+    s = re.sub(r'(<meta property="og:title" content=")[^"]*', lambda m: m.group(1) + E(f"解体の補助金 上限ランキング 関東{len(items)}市区"), s, count=1)
+    s = s.replace(BASE + 'kaitai"', BASE + 'kaitai-ranking"')
+    s = re.sub(r"<h1>.*?</h1>", "<h1>解体の補助金 上限ランキング<span>関東の市区ごとに、いくらまで出るか</span></h1>", s, count=1, flags=re.S)
+    s = re.sub(r'<p class="sub">.*?</p>', '<p class="sub">家の解体に使える補助の上限を、<br>市区の公式ページで確かめて、高い順にならべました。</p>', s, count=1, flags=re.S)
+    s = s.replace('c("表示：解体・片付けの費用"+', 'c("表示：解体補助ランキング"+', 1).replace('c("クリック：解体・片付けの費用｜"+', 'c("クリック：解体補助ランキング｜"+', 1)
+    assert s.count("<h1>") == 1
+    open(os.path.join(AK, "site", "kaitai-ranking.html"), "w", encoding="utf-8").write(s)
+    # 費用ページから入れる道
+    k2 = open(os.path.join(AK, "site", "kaitai.html"), encoding="utf-8").read(); h = k2.find('<section id="hojo"')
+    if "/kaitai-ranking" not in k2 and h >= 0:
+        e = k2.index("</h2>", h) + 5
+        k2 = k2[:e] + '<p style="margin:0 0 12px"><a href="/kaitai-ranking" data-k="費用｜補助ランキング" style="font-weight:700">上限の高い順に見る（補助金ランキング）</a></p>' + k2[e:]
+        open(os.path.join(AK, "site", "kaitai.html"), "w", encoding="utf-8").write(k2)
+    print("作った site/kaitai-ranking.html", len(items), "市区", top[1], top[0])
