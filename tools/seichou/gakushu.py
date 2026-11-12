@@ -285,6 +285,18 @@ if drop:
 else:
     order("月の朝", "lead", "申し込みまでの段の数字が10人に届いていない。先に「外から来る人」を増やす指令（市のページ・HPのページ）をやる", "段をくらべる数がまだ無い")
 
+# 7a' 市を足す列（11/12）。写しを待たずに、毎日 関西2・関東3 を列の上から足す。列が減ったら足せと出す
+_rq = load(os.path.join(ROOT, "tools", "kaitai", "retsu.json"), {})
+if _rq:
+    _kz = set(re.findall(r'"([^"]+[市区町])"\s*:', open(os.path.join(ROOT, "tools", "kaitai", "city.py"), encoding="utf-8").read()))
+    _kt = set(l.split("\t")[0] for l in open(os.path.join(ROOT, "tools", "kaitai", "kanto_hojo.tsv"), encoding="utf-8") if l.strip() and not l.startswith("#"))
+    _dn = set(_rq.get("done", {})) | _kz | _kt
+    _nk = [c for c in _rq.get("kansai", []) if c not in _dn]; _nt = [c for c in _rq.get("kanto", []) if c not in _dn]
+    _ty = [y for y in load(S("yatta.json"), {}).get("rows", []) if y.get("item") in ("city", "city-tasu") and y.get("day") == today.isoformat()]
+    item("city-retsu", "市を足す列（待たずに毎日）", f"ページ 関西 {len(_kz)}市・関東 {len(_kt)}市区／列の残り 関西 {len(_nk)}・関東 {len(_nt)}／きょう足した {'あり' if _ty else 'まだ'}", "毎日 関西2・関東3 を確かめる。列の残り10以上", "当たり" if _ty and len(_nk) >= 10 and len(_nt) >= 10 else ("外れ" if len(_nk) < 10 or len(_nt) < 10 else "計測中"), "入口は毎日足す。人の写しを待つと止まる", len(_kz) + len(_kt))
+    if _nk or _nt: order("月の朝", "city-retsu", "市の列の上から確かめて足す：関西 " + "・".join(_nk[:2]) + "／関東 " + "・".join(_nt[:3]) + "（公式ページだけ。制度が無ければ retsu.json の done に「なし」と理由。あればページにして yatta に item city の1行）", "入口の数")
+    if len(_nk) < 10 or len(_nt) < 10: order("月の朝", "city-retsu", "市の列が残り少ない。tools/kaitai/retsu.json に、まだ無い市を人口の多い順に30足す", "列が切れると止まる")
+
 # 7b 未来予想（11/12 オーナー「未来予想もして収益化本格的に」）。機械が毎朝「このままだと30日で相談が何件か」を出し、7日後に自分の予想を答え合わせして、外れた分だけ次の予想を直す
 yo = load(S("yosou.json"), {"about": "未来予想の帳面。機械が毎朝1行足し、7日たった行に答え（actual）と外れ具合（err）を付ける。bias は、これまでの 答え÷予想 の真ん中の値で、次の予想に掛ける", "rows": []})
 _e7, _ep = sei.get("ext7") or 0, sei.get("ext_prev7") or 0
@@ -429,7 +441,7 @@ if fc:
     if _old_fc and not _ng: order("月の朝", "form", "申し込みの通し確かめ（formcheck.yml）が2日止まっている。Actions を見て動かす", "見張りが止まっている")
 else:
     item("form", "申し込みが送れるか", "未確認（stats/formcheck.json が無い）", "だめ 0・毎日確かめている", "未確認", "壊れていても、相談0のままでは気づけない")
-PRI = ["form", "yosou", "lead", "michi", "search-kansai", "search-kanto", "city-tasu", "city", "hp", "kata-tasu", "spot-more", "post", "kata", "view-threads", "view-x", "pic", "reel", "reel-ehon", "aff", "gpt", "room"]
+PRI = ["form", "yosou", "lead", "michi", "indexnow", "search-kansai", "search-kanto", "city-retsu", "city-tasu", "city", "hp", "kata-tasu", "spot-more", "post", "kata", "view-threads", "view-x", "pic", "reel", "reel-ehon", "aff", "gpt", "room"]
 old = {(o["to"], o["item"], o["order"][:24]): o.get("days", 1) for o in prev.get("orders", [])}
 same_day = prev.get("day") == today.isoformat()
 for o in orders:
