@@ -38,7 +38,18 @@ try: _bf = [l.strip() for l in open(S("build-fail.txt"), encoding="utf-8") if l.
 except Exception: _bf = []
 if _bf: order("月の朝", "hp", "【きょうの1つより先】ページを作る機械が止まっている：" + "／".join(_bf) + "。手元で同じ命令を回して原因を直す（止まったページは古いまま出ている）", "止まった仕組みはその日に直す")
 item("hp", "HPのページ", f"外から {sei.get('ext7', '未確認')}人（前の7日 {sei.get('ext_prev7', '未確認')}人）・伸びているページ {len(grow)}", f"前の週の次の段（週{rung(sei.get('ext_prev7', 0) or 0, [50, 100, 150, 300, 600, 1200])}人）を越える。その次は 週{rung(sei.get('ext7', 0) or 0, [50, 100, 150, 300, 600, 1200])}人（最後は 週1200人＝月40件の相談に要る数）", "当たり" if sei.get("ext7", 0) >= rung(sei.get("ext_prev7", 0) or 0, [50, 100, 150, 300, 600, 1200]) else "外れ", sei.get("weak", ""), sei.get("ext7"))
-if grow: order("月の朝", "hp", f"伸びているページ「{grow[0]}」と同じ型のページを1つ足す", "外から来る人が前の週より増えた型")
+# 足した型の答え合わせ（tools/seichou/tashita.json）。7日で答え。答え待ちが2つある間は、新しく足さない（どれが効いたか分からなくなる）
+_ts = load(os.path.join(ROOT, "tools", "seichou", "tashita.json"), {}).get("rows", [])
+_tw, _ta, _tx = [], [], []
+for _r in _ts:
+    _age = (today - date.fromisoformat(_r["day"])).days
+    _e = sum(int(r.get("n", 0) or 0) for r in rows if r.get("day", "") > _r["day"] and r.get("k", "") == "表示：" + _r["name"] + "（外から）")
+    (_tw if _age < 7 else (_ta if _e >= 3 else _tx)).append((_r, _e, _age))
+if _ts:
+    item("kata-tasu", "足した型のページ", "・".join(f"{r['name']} 外から{e}人（{a}日目）" for r, e, a in _tw + _ta + _tx), "足して7日で 外から3人", "当たり" if _ta else ("外れ" if _tx and not _tw else "計測中"), "伸びた型をまねて足し、効いた作りだけ増やす", sum(e for _, e, _ in _tw + _ta + _tx))
+    for r, e, a in _ta[:1]: order("月の朝", "kata-tasu", f"足したページ「{r['name']}」に外から {e}人。同じ作り（同じ表から、探す言葉で切り出す）をもう1つ足し、tools/seichou/tashita.json に1行", "当たり：まねた作りが効いた")
+    for r, e, a in _tx[:1]: order("月の朝", "kata-tasu", f"足したページ「{r['name']}」は7日で外から {e}人。この作りはもう足さない。別の伸びている型（{'・'.join(grow[:3])}）から、ちがう切り出し方で1つ足す", "外れ：作りを変える")
+if grow and len(_tw) < 2: order("月の朝", "hp", f"伸びているページ「{grow[0]}」と同じ型のページを1つ足し、tools/seichou/tashita.json に1行（答え待ち {len(_tw)}）", "外から来る人が前の週より増えた型")
 # 1件ページの中身（11/12：題はもう探す人の言葉。足りないのは時間・料金・駐車場＝公式から1日5件足す。tools/odekake_more.json）
 _mr = load(os.path.join(ROOT, "tools", "odekake_more.json"), {}).get("rows", {})
 _sp = []
@@ -375,7 +386,7 @@ if fc:
     if _old_fc and not _ng: order("月の朝", "form", "申し込みの通し確かめ（formcheck.yml）が2日止まっている。Actions を見て動かす", "見張りが止まっている")
 else:
     item("form", "申し込みが送れるか", "未確認（stats/formcheck.json が無い）", "だめ 0・毎日確かめている", "未確認", "壊れていても、相談0のままでは気づけない")
-PRI = ["form", "yosou", "lead", "michi", "search-kansai", "search-kanto", "city-tasu", "city", "hp", "spot-more", "post", "kata", "view-threads", "view-x", "pic", "reel", "reel-ehon", "aff", "gpt", "room"]
+PRI = ["form", "yosou", "lead", "michi", "search-kansai", "search-kanto", "city-tasu", "city", "hp", "kata-tasu", "spot-more", "post", "kata", "view-threads", "view-x", "pic", "reel", "reel-ehon", "aff", "gpt", "room"]
 old = {(o["to"], o["item"], o["order"][:24]): o.get("days", 1) for o in prev.get("orders", [])}
 same_day = prev.get("day") == today.isoformat()
 for o in orders:
