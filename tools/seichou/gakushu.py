@@ -330,9 +330,22 @@ else:
     order("月の朝", "gpt", "きのう 汐・凪・雫・夜 が出した物（行の数・絵・結果の文書）を確かめ、stats/tantou.json の rows に {day, 汐, 凪, 雫, 夜}（出た＝数、出なかった＝0）を1行足す", "担当の出来を測る数字がまだ無い", "数字")
 
 # 9 楽天ROOM
-rm = [r for r in sk if "room" in r]
-item("room", "楽天ROOM", f"押された {rm[-1]['room'] if rm else '未確認'}・売れた {rm[-1].get('room_uri', '未確認') if rm else '未確認'}", "週に1つ売れる", "未確認" if not rm else ("当たり" if int(rm[-1].get("room_uri") or 0) > 0 else "外れ"), "機械は毎日20件の台本を出している。結果の数字が無い", int(rm[-1].get("room_uri") or 0) if rm else None)
-if not rm: order("月の朝", "room", "汐の月曜の回に「ROOM のクリック数・売上件数」を写す1行を足し、stats/seika.json の同じ行に room・room_uri で入れる", "ROOM の結果が未確認のまま", "数字")
+# 11/12 作り替え：人に写させず、機械が公開ページから毎朝写す（tools/room/kazu.py → stats/room.json）。売れた数は楽天の成果（燈と同じID・sales-board）
+rm = load(S("room.json"), {}).get("rows", [])
+try: _rf = open(S("room-fail.txt"), encoding="utf-8").read().strip()
+except Exception: _rf = ""
+if rm:
+    _r0 = rm[-1]; _r7 = next((r for r in reversed(rm) if r["day"] <= d7), None); _r1 = rm[-2] if len(rm) > 1 else None
+    _df = _r0["follower"] - _r7["follower"] if _r7 else None; _di = _r0["items"] - _r1["items"] if _r1 else None
+    _uri = sum(_sb7.values()) if _sb7 else None
+    _stale = (today - date.fromisoformat(_r0["day"])).days >= 2
+    item("room", "楽天ROOM", f"フォロワー {_r0['follower']}（7日で {'未確認' if _df is None else ('+' if _df >= 0 else '') + str(_df)}）・載っている商品 {_r0['items']}（きのうから {'未確認' if _di is None else ('+' if _di >= 0 else '') + str(_di)}）・楽天の成果 7日 {'未確認' if _uri is None else _uri}件", "商品が毎日ふえる・フォロワー 週+10・週に1つ売れる", "外れ" if _stale or (_di is not None and _di <= 0) else ("当たり" if (_uri or 0) > 0 or (_df or 0) >= 10 else ("計測中" if _df is None else "外れ")), "台本を出しても、載っていなければ0。載っても、見る人（フォロワー）が増えなければ売れない", _r0["follower"])
+    if _stale or _rf: order("月の朝", "room", "ROOM の数字が写せていない：" + (_rf or "stats/room.json が2日止まっている") + "。tools/room/kazu.py を直す", "見張りが止まっている", "数字")
+    elif _di is not None and _di <= 0: order("月の朝", "room", f"ROOM の商品がきのうから増えていない（{_r0['items']}件）。雫・凪の報告（燈への報告の【雫】の行）で、載せた番号と止まった文言を見て、台本か指示書の止まる所を直す", "台本を出しても載っていない")
+    elif _df is not None and _df < 10 and not (_uri or 0): order("月の朝", "room", f"ROOM のフォロワーが7日で {_df:+d}。台本の題材を、いま売れる季節の物（akari の room-daihon の上位）に寄せ、コレクションの名前を探す言葉にする。1つだけ変えて7日見る", "載っているのに見る人が増えていない")
+else:
+    item("room", "楽天ROOM", "未確認" + ("（" + _rf[:80] + "）" if _rf else ""), "商品が毎日ふえる・フォロワー 週+10・週に1つ売れる", "未確認", "機械が毎朝、公開ページから写す")
+    order("月の朝", "room", "ROOM の数字が写せていない：" + (_rf or "stats/room.json がまだ無い") + "。tools/room/kazu.py を直す", "ROOM の結果が未確認のまま", "数字")
 
 # 学び：答えが変わった項目を帳面に足す
 pa_ = {i["id"]: i for i in prev.get("items", [])}
