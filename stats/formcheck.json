@@ -1,0 +1,54 @@
+{
+ "at": "2026-11-12 13:12",
+ "sites": {
+  "kansai": {
+   "base": "https://townnote.pages.dev",
+   "ok": true,
+   "rows": [
+    {
+     "name": "ふつうの申し込み（3つの画面）",
+     "path": "/moushikomi",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "name": "かんたん相談（1つの画面）",
+     "path": "/moushikomi?lite=1",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "name": "ご希望を選んで来た人（2つ目の画面から）",
+     "path": "/moushikomi?want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  },
+  "kanto": {
+   "base": "https://lifenote-kanto.pages.dev",
+   "ok": true,
+   "rows": [
+    {
+     "name": "ふつうの申し込み（3つの画面）",
+     "path": "/moushikomi",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "name": "かんたん相談（1つの画面）",
+     "path": "/moushikomi?lite=1",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "name": "ご希望を選んで来た人（2つ目の画面から）",
+     "path": "/moushikomi?want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A",
+     "ok": true,
+     "why": ""
+    }
+   ]
+  }
+ },
+ "ok": true
+}
