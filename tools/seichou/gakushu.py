@@ -143,6 +143,23 @@ if _kt:
     if _good: order("投稿の回", "kata", f"あすの朝7時は「{_good[0][0]}」（中央値 {_good[0][1]}・ふつうは {_all}）で作る。まだ出していない路線・市・駅を選び、1行目に「その場所の名前＋順位か数字」を入れる。" + (f"夜8時は「{_good[1][0]}」（中央値 {_good[1][1]}）。" if len(_good) > 1 else "") + "同じ場所・同じ数字はくり返さない", "強い型はふつうの2倍より上")
     for k, m, n, mx in _bad[:3]: order("投稿の回", "kata", f"「{k}」の型は中央値 {m}（{n}本）で、ふつう（{_all}）の半分より下。あすからこの型の枠を「{_good[0][0] if _good else _ks[0][0]}」に替える。出すなら週1本まで、1行目を地名＋数字に変えて", "弱い型に枠を使わない")
 
+# 3b' 来た元（11/12）。外から来た人の中身。検索が0のまま「外から98人」とだけ出ていて、載っていない事に半月気づけなかった
+_src = {}
+for r in rows:
+    if r.get("day", "") > d7 and r.get("k", "").startswith("来た元："): _src[r["k"][4:]] = _src.get(r["k"][4:], 0) + int(r.get("n", 0) or 0)
+if _src:
+    _kn = sum(v for k, v in _src.items() if k in ("Google", "Yahoo", "Bing", "AI"))
+    item("src", "来た元（どこから来たか）", "・".join(f"{k} {v}" for k, v in sorted(_src.items(), key=lambda x: -x[1])[:8]), "検索（Google・Yahoo・Bing・AI）から 週30人", "当たり" if _kn >= 30 else ("計測中" if sum(_src.values()) < 30 else "外れ"), "投稿は出した日しか来ない。検索は毎日来る", _kn)
+else:
+    item("src", "来た元（どこから来たか）", "まだ数が無い（11/12 に入れた）", "検索から 週30人", "計測中", "外から来た人の中身を見る")
+
+# 3b'' 検索のロボットが見に来た数（11/12）。載る前に、まず見に来る。Google と Bing が来ているかを毎日見る
+_bot = {}
+for r in rows:
+    if r.get("day", "") > d7 and r.get("k", "").startswith("機械："): _bot[r["k"][3:]] = _bot.get(r["k"][3:], 0) + int(r.get("n", 0) or 0)
+_gb = sum(v for k, v in _bot.items() if k.lower().startswith("google")); _bb = sum(v for k, v in _bot.items() if k.lower().startswith("bing"))
+item("crawl", "検索のロボットが見に来た", ("・".join(f"{k} {v}" for k, v in sorted(_bot.items(), key=lambda x: -x[1])[:6]) or "まだ数が無い（11/12 に入れた）"), "Google と Bing が、どちらも週100ページ", "当たり" if _gb >= 100 and _bb >= 100 else ("計測中" if not _bot else "外れ"), "見に来ないページは載らない", _gb)
+
 # 3c 検索で打たれた言葉（Search Console）。11/12 owner「GPTの使い道を増やして欲しい」→ 汐が毎朝写す → 月の朝が stats/kensaku.json へ → 機械が「題に入れる言葉」を選ぶ
 ks = load(S("kensaku.json"), {}).get("rows", [])
 for site, nm in (("kansai", "関西"), ("kanto", "関東")):
