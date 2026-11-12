@@ -23,7 +23,7 @@ rows = [r for r in rows if len(r) == 5 and r[0] in SLUG]
 base = open(os.path.join(AK, "site", "kaitai.html"), encoding="utf-8").read()
 for city, tx, st, u, d in rows:
     slug, pref = SLUG[city]; ended = st in END; s = base
-    sec = (f'<section id="shi" class="ps" style="--c:#4F7BA8"><h2>{E(city)}の解体の補助</h2><p class="rk-sub">市の公式ページを {E(d)} に確かめました</p>'
+    sec = (f'<section id="shi" class="ps" style="--c:#4F7BA8"><h2>{E(city)}の解体の補助</h2><p class="kt-tr"><span>公式ページで確認 {re.sub(r"^\d+年", "", d)}</span><span>受付の状況を毎週見直し</span><span>関東{len(rows)}市区を掲載</span></p>'
            f'<div class="kt-hj"><b>解体の補助</b>' + (f'<em class="{"x" if ended else ""}">{E(st)}</em>' if st else "") + f'<p>{E(tx)}</p>'
            f'<a href="{E(u)}" target="_blank" rel="noopener" data-k="市の補助｜公式ページ｜{E(city)}">{E(city)}の公式ページで確かめる</a></div>'
            '<p class="kt-n">受付・条件・上限は変わります。交付が決まる前に契約や工事を始めると、対象外になる市区が多いので、見積りの前に公式ページでご確認ください。</p></section>')
@@ -58,7 +58,7 @@ for city, tx, st, u, d in rows:
               {"@type": "ListItem", "position": 1, "name": "解体・片付けの費用", "item": BASE + "kaitai"},
               {"@type": "ListItem", "position": 2, "name": f"{city}の解体の補助金", "item": BASE + "kaitai-" + slug}]}]
     s = re.sub(r'<script type="application/ld\+json">.*?</script>', "", s, flags=re.S)
-    s = s.replace("</head>", '<style>.kt-big{display:flex;align-items:baseline;gap:12px;margin:2px 0 10px}.kt-big b{font-size:30px;letter-spacing:.02em;line-height:1.2}.kt-big b small{font-size:15px;margin-left:2px}.kt-big b i{font-style:normal;font-size:13px;font-weight:500;margin-right:6px}.kt-big span{font-size:12px;padding:3px 10px;border-radius:99px;background:#E6F2E8;color:#2F6B3F;font-weight:700}.kt-big span.x{background:#EEE;color:#777}.kt td a,.kt-hj>a{display:inline-block;padding:8px 0}.kt-ci{display:flex;flex-wrap:wrap;gap:8px;margin:0}.kt-ci a{font-size:13px;padding:7px 12px;border:1px solid #D9D2CB;border-radius:99px;background:#fff;color:inherit;text-decoration:none}</style>'
+    s = s.replace("</head>", '<style>.kt-tr{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.kt-tr span{font-size:11.5px;padding:4px 10px;border:1px solid #A9BFD8;border-radius:99px;color:#2F5F8F;background:#F1F6FB;font-weight:700}.kt-tr span::before{content:"✓ "}.kt-big{display:flex;align-items:baseline;gap:12px;margin:2px 0 10px}.kt-big b{font-size:30px;letter-spacing:.02em;line-height:1.2}.kt-big b small{font-size:15px;margin-left:2px}.kt-big b i{font-style:normal;font-size:13px;font-weight:500;margin-right:6px}.kt-big span{font-size:12px;padding:3px 10px;border-radius:99px;background:#E6F2E8;color:#2F6B3F;font-weight:700}.kt-big span.x{background:#EEE;color:#777}.kt td a,.kt-hj>a{display:inline-block;padding:8px 0}.kt-ci{display:flex;flex-wrap:wrap;gap:8px;margin:0}.kt-ci a{font-size:13px;padding:7px 12px;border:1px solid #D9D2CB;border-radius:99px;background:#fff;color:inherit;text-decoration:none}</style>'
                   + "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in ld) + "</head>", 1)
     # 11/12 最初の画面で、いちばん知りたい数字（上限・受付の状況）を大きく見せる
     if _cap:
@@ -88,10 +88,11 @@ if len(items) >= 5:
     tr = ""; rank = 0; prev = None
     for i, (cap, c, slug, pref, st) in enumerate(items, 1):
         if cap != prev: rank = i; prev = cap
-        tr += (f'<tr><th>{rank}位</th><td><a href="/kaitai-{slug}" data-k="補助ランキング｜{E(c)}">{E(c)}</a><small style="display:block;font-size:11px;color:#8A7F76">{pref}'
+        tr += (f'<tr data-p="{pref}"><th>{rank}位</th><td><a href="/kaitai-{slug}" data-k="補助ランキング｜{E(c)}">{E(c)}</a><small style="display:block;font-size:11px;color:#8A7F76">{pref}'
                + (f'・{st}' if st in END else "") + f'</small></td><td><b>最大{cap}万円</b></td></tr>')
     top = items[0]; s = k
     sec = (f'<section id="rank" class="ps" style="--c:#4F7BA8"><h2>解体の補助金 上限ランキング（関東 {len(items)}市区）</h2><p class="rk-sub">市区の公式ページで確かめた、いちばん多く出る場合の額・高い順</p>'
+           '<div class="kt-f"><button type="button" class="on" data-p="">すべて</button>' + "".join(f'<button type="button" data-p="{q}">{q[:-1]}</button>' for q in dict.fromkeys(x[3] for x in items)) + '</div>'
            '<div class="kt-w"><table class="kt"><thead><tr><th>順位</th><th>市区</th><th>上限</th></tr></thead><tbody>' + tr + '</tbody></table></div>'
            '<p class="kt-n">額は、いちばん多く出る場合です。建った年・場所（地区）・所得などの条件で変わり、対象の地区が決まっている市区もあります。名前を押すと、条件と受付の状況、公式ページへ進めます。'
            '載っていない市区は、公式ページで確かめられた順に足しています。</p></section>')
@@ -102,6 +103,7 @@ if len(items) >= 5:
         {"@type": "ListItem", "position": i, "name": f"{c} 最大{cap}万円", "url": BASE + "kaitai-" + slug} for i, (cap, c, slug, pref, st) in enumerate(items, 1)]}
     s = re.sub(r'<script type="application/ld\+json">.*?</script>', "", s, flags=re.S)
     s = s.replace("</head>", f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script></head>', 1)
+    s = s.replace("</head>", '<style>.kt-f{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}.kt-f button{font:inherit;font-size:13px;padding:8px 14px;border:1px solid #D9D2CB;border-radius:99px;background:#fff;color:inherit;cursor:pointer}.kt-f button.on{background:#2B2622;color:#fff;border-color:#2B2622}.kt td a{display:inline-block;padding:9px 0;font-weight:700}</style><script>document.addEventListener("DOMContentLoaded",function(){var f=document.querySelector(".kt-f");if(!f)return;f.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var p=b.getAttribute("data-p");[].forEach.call(f.querySelectorAll("button"),function(x){x.classList.toggle("on",x===b)});[].forEach.call(document.querySelectorAll("#rank tbody tr"),function(r){r.style.display=(!p||r.getAttribute("data-p")===p)?"":"none"})})});</script></head>', 1)
     s = re.sub(r"<title>.*?</title>", f"<title>{E(title)}</title>", s, count=1)
     for prop in ('<meta name="description" content="', '<meta property="og:description" content="'):
         s = re.sub("(" + re.escape(prop) + ')[^"]*', lambda m: m.group(1) + E(desc), s, count=1)
