@@ -326,9 +326,9 @@ if _ch:
     _last_pg = max([r["day"] for r in _pg] or [""]); _last_any = max(r["day"] for r in _ch)
     _gap = (today - date.fromisoformat(_last_pg)).days if _last_pg else 99; _gap_c = (today - date.fromisoformat(_last_any)).days
     _old = [r for r in _mt if (today - date.fromisoformat(r["day"])).days >= 1]
-    item("city-tasu", "市を足す仕組み（汐の写し→月が確かめる→ページ）", f"ページにした {len(_pg)}市（最後 {_last_pg[5:]}）・待ち {len(_mt)}市・持ち越し {len(_mo)}市・帳が最後に動いた日 {_last_any[5:]}", "待ちを次の日に残さない・2日つづけて0市にしない", "外れ" if _old or _gap >= 2 or _gap_c >= 2 else "当たり", "入口の数は、毎日足さないと増えない", len(_pg))
+    item("city-tasu", "市を足す仕組み（汐の写し→月が確かめる→ページ）", f"ページにした {len(_pg)}市（最後 {_last_pg[5:]}）・待ち {len(_mt)}市・持ち越し {len(_mo)}市・帳が最後に動いた日 {_last_any[5:]}", "待ちを次の日に残さない・2日つづけて0市にしない", "外れ" if _old or _gap >= 2 else "当たり", "入口の数は、毎日足さないと増えない", len(_pg))
     if _old: order("月の朝", "city-tasu", "帳で待っている市を、きょう全部ページにする：" + "・".join(r["city"] for r in _old[:10]) + "（公式で確かめ、tools/kaitai/chou.json の state を直す）", "待ちが1日を越えた")
-    elif _gap_c >= 2: order("月の朝", "city-tasu", f"汐の写しが {_gap_c}日 止まっている。月が帳の順番の次の3市を自分で公式から確かめてページにし、オーナーに汐の回が動いているかを1行で聞く", "写しが止まると入口が増えない")
+    # 11/12 汐の補助の写しはやめた（指示_汐を短くし、検索の数字と登録のリクエストを先にした）。写しが止まった指令は出さない。市は月が列（retsu.json）から足す
     elif _gap >= 2: order("月の朝", "city-tasu", f"{_gap}日 新しい市が出ていない。持ち越しの市（" + "・".join(r["city"] for r in _mo[:5]) + "）を、PDF・別の公式ページから確かめ直して出す", "2日つづけて0市")
     if len(_mo) >= 5: order("月の朝", "city-tasu", f"持ち越しが {len(_mo)}市たまっている。機械で開けない市は、凪の【確かめ】「合う」を待って出す形に切り替える", "確かめきれない市が溜まっている")
 # 11/12 作り替え：送信（反響）の実績が0の間は、相談の件数の予想を出さない（仮の率で「30件」と出て、本当は0なのに順調に見えた）。1件出たら実測の率で出す
