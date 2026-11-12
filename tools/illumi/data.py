@@ -35,6 +35,7 @@ ITEMS = [
  ("滋賀","もりやま冬ホタル","守山市｜守山駅前広場ほか","2026-11-27","2027-01-29",True,"https://moriyama-cci.or.jp/2026/10/22/huyuhotaru2026/",None),  # 11/9 夜#133 公式 17:30〜22:00
  ("滋賀","East Rainbow","東近江市｜八日市駅前ほか",None,None,True,"https://www.higashiomi.net/media/annual_events/eastrainbow","12/20〜2/20"),
  ("滋賀","びわ湖大津館 イルミネーション","大津市｜びわ湖大津館",None,None,False,"https://www.biwako-otsukan.jp/","12/6〜2/1"),
+ ("滋賀","豊郷小学校旧校舎群ライトアップ＆イルミネーション2026","豊郷町｜豊郷小学校旧校舎群","2026-11-14","2026-12-25",False,"https://toyosato-kanko.jp/event/event-3859/",None),  # 11/12 木曜の照合 公式（観光協会）17時〜22時
  ("滋賀","ブルーメの丘 ライトアップガーデン","日野町｜滋賀農業公園ブルーメの丘",None,None,False,"https://www.blumenooka.jp/","12/5〜2/23"),
  ("和歌山","フェスタ・ルーチェ in 和歌山マリーナシティ","和歌山市｜ポルトヨーロッパ","2026-10-31","2027-02-14",False,"https://festaluce.jp/",None),
  ("和歌山","SHIRARAHAMA Light Parade","白浜町｜白良浜","2026-10-29","2027-03-14",True,"https://www.nankishirahama.jp/news/19718/",None),
