@@ -19,7 +19,7 @@ CITY = {
     "枚方市": ("hirakata", "大阪府", 20, None), "八尾市": ("yao", "大阪府", 40, None), "加古川市": ("kakogawa", "兵庫県", 25, "1/5"),
     "宇治市": ("uji", "京都府", 30, "1/3"), "橿原市": ("kashihara", "奈良県", 50, "4/5"),
     "和泉市": ("izumi", "大阪府", 20, "4/5"),
-    "茨木市": ("ibaraki", "大阪府", 40, None), "岸和田市": ("kishiwada", "大阪府", None, None), "富田林市": ("tondabayashi", "大阪府", 30, None), "松原市": ("matsubara", "大阪府", 40, None), "伊丹市": ("itami", "兵庫県", 60, None), "草津市": ("kusatsu", "滋賀県", 50, "4/5"), "生駒市": ("ikoma", "奈良県", 50, None),
+    "茨木市": ("ibaraki", "大阪府", 40, None), "岸和田市": ("kishiwada", "大阪府", None, None), "富田林市": ("tondabayashi", "大阪府", 30, None), "松原市": ("matsubara", "大阪府", 40, None), "伊丹市": ("itami", "兵庫県", 60, None), "草津市": ("kusatsu", "滋賀県", 50, "4/5"), "生駒市": ("ikoma", "奈良県", 50, None), "河内長野市": ("kawachinagano", "大阪府", 25, "1/2"),
 }
 END = ("受付停止", "受付終了")
 
