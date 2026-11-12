@@ -104,8 +104,11 @@ def page(base, city, rows, date, others):
               {"@type": "ListItem", "position": 2, "name": "解体・片付けの費用", "item": BASE + "kaitai"},
               {"@type": "ListItem", "position": 3, "name": f"{city}の解体の補助金", "item": BASE + "kaitai-" + slug}]}]
     s = re.sub(r'<script type="application/ld\+json">.*?</script>', "", s, flags=re.S)
-    s = s.replace("</head>", '<style>.kt-ci{display:flex;flex-wrap:wrap;gap:8px;margin:0}.kt-ci a{font-size:13px;padding:7px 12px;border:1px solid #D9D2CB;border-radius:99px;background:#fff;color:inherit;text-decoration:none}.kt th small{display:block;font-weight:500;font-size:11px;color:#8A7F76;white-space:nowrap;margin-top:2px}</style>'
+    s = s.replace("</head>", '<style>.kt-big{display:flex;align-items:baseline;gap:12px;margin:2px 0 10px}.kt-big b{font-size:30px;letter-spacing:.02em;line-height:1.2}.kt-big b small{font-size:15px;margin-left:2px}.kt-big b i{font-style:normal;font-size:13px;font-weight:500;margin-right:6px}.kt-big span{font-size:12px;padding:3px 10px;border-radius:99px;background:#E6F2E8;color:#2F6B3F;font-weight:700}.kt-big span.x{background:#EEE;color:#777}.kt td a,.kt-hj>a{display:inline-block;padding:8px 0}.kt-ci{display:flex;flex-wrap:wrap;gap:8px;margin:0}.kt-ci a{font-size:13px;padding:7px 12px;border:1px solid #D9D2CB;border-radius:99px;background:#fff;color:inherit;text-decoration:none}.kt th small{display:block;font-weight:500;font-size:11px;color:#8A7F76;white-space:nowrap;margin-top:2px}</style>'
                   + "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in ld) + "</head>", 1)
+    # 11/12 最初の画面で、いちばん知りたい数字（上限・受付の状況）を大きく見せる
+    if cap:
+        s = re.sub(r'(<section id="shi"[^>]*><h2>[^<]*</h2>)', lambda m: m.group(1) + f'<p class="kt-big"><b><i>上限</i>{cap}<small>万円</small></b>' + (f'<span class="{"x" if st0 in END else ""}">{st0}</span>' if st0 else "") + '</p>', s, count=1)
     s = re.sub(r"<title>.*?</title>", f"<title>{E(title)}</title>", s, count=1)
     for prop in ('<meta name="description" content="', '<meta property="og:description" content="'):
         s = re.sub("(" + re.escape(prop) + ')[^"]*', lambda m: m.group(1) + E(desc), s, count=1)
@@ -154,6 +157,7 @@ def ranking(base, have, J, J_DATE):
         {"@type": "ListItem", "position": i, "name": f"{c} 上限{cap}万円", "url": BASE + "kaitai-" + slug} for i, (cap, c, slug, pref, ratio, st) in enumerate(items, 1)]}]
     s = re.sub(r'<script type="application/ld\+json">.*?</script>', "", s, flags=re.S)
     s = s.replace("</head>", "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in ld) + "</head>", 1)
+    s = s.replace("</head>", "<style>.kt td a{display:inline-block;padding:9px 0;font-weight:700}</style></head>", 1)
     s = re.sub(r"<title>.*?</title>", f"<title>{E(title)}</title>", s, count=1)
     for prop in ('<meta name="description" content="', '<meta property="og:description" content="'):
         s = re.sub("(" + re.escape(prop) + ')[^"]*', lambda m: m.group(1) + E(desc), s, count=1)
