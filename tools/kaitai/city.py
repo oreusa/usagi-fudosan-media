@@ -111,6 +111,46 @@ def page(base, city, rows, date, others):
     return s
 
 
+def ranking(base, have, J, J_DATE):
+    """/kaitai-ranking：関西の市ごとの解体補助の上限を、高い順に1枚で（11/12 月。当たり型＝地元の順位＋数字 を、お金のページへつなぐ）。"""
+    rows = dict(J); s = base
+    items = []
+    for c in have:
+        slug, pref, cap, ratio = CITY[c]
+        if not cap: continue
+        st = [r for r in rows[c] if "解体" in r[0]][0][2]
+        items.append((cap, c, slug, pref, ratio, st))
+    items.sort(key=lambda x: (-x[0], x[1]))
+    tr = ""; rank = 0; prev = None
+    for i, (cap, c, slug, pref, ratio, st) in enumerate(items, 1):
+        if cap != prev: rank = i; prev = cap
+        tr += (f'<tr><th>{rank}位</th><td><a href="/kaitai-{slug}" data-k="補助ランキング｜{E(c)}">{E(c)}</a><small style="display:block;font-size:11px;color:#8A7F76">{pref}'
+               + (f'・{st}' if st in END else "") + f'</small></td><td><b>{cap}万円</b>' + (f'<small style="display:block;font-size:11px;color:#8A7F76">費用の{ratio}まで</small>' if ratio else "") + '</td></tr>')
+    top = items[0]
+    sec = (f'<section id="rank" class="ps" style="--c:#4F7BA8"><h2>解体の補助金 上限ランキング（関西 {len(items)}市）</h2><p class="rk-sub">市の公式ページで確かめた上限額・高い順</p>'
+           '<div class="kt-w"><table class="kt"><thead><tr><th>順位</th><th>市</th><th>上限</th></tr></thead><tbody>' + tr + '</tbody></table></div>'
+           '<p class="kt-n">上限は、いちばん多く出る場合の額です。建った年・空き家の期間・所得・場所などの条件で変わります。市の名前を押すと、条件と受付の状況、公式ページへ進めます。'
+           '載っていない市は、公式ページで確かめられた順に足しています。</p></section>')
+    a = s.index('<section id="keisan"')
+    s = s[:a] + sec + s[a:]
+    title = f"解体の補助金 上限ランキング 関西{len(items)}市｜1位は{top[1]}の{top[0]}万円【2026年度】"
+    desc = f"大阪・兵庫・京都・奈良・滋賀・和歌山の{len(items)}市の、家の解体に使える補助金の上限額を高い順にまとめました。1位は{top[1]}の上限{top[0]}万円。市の公式ページで確かめた額だけを載せています。"
+    ld = [{"@context": "https://schema.org", "@type": "ItemList", "name": "関西の解体補助金 上限ランキング", "itemListElement": [
+        {"@type": "ListItem", "position": i, "name": f"{c} 上限{cap}万円", "url": BASE + "kaitai-" + slug} for i, (cap, c, slug, pref, ratio, st) in enumerate(items, 1)]}]
+    s = re.sub(r'<script type="application/ld\+json">.*?</script>', "", s, flags=re.S)
+    s = s.replace("</head>", "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in ld) + "</head>", 1)
+    s = re.sub(r"<title>.*?</title>", f"<title>{E(title)}</title>", s, count=1)
+    for prop in ('<meta name="description" content="', '<meta property="og:description" content="'):
+        s = re.sub("(" + re.escape(prop) + ')[^"]*', lambda m: m.group(1) + E(desc), s, count=1)
+    s = re.sub(r'(<meta property="og:title" content=")[^"]*', lambda m: m.group(1) + E(f"解体の補助金 上限ランキング 関西{len(items)}市"), s, count=1)
+    s = s.replace(BASE + 'kaitai"', BASE + 'kaitai-ranking"')
+    s = re.sub(r"<h1>.*?</h1>", "<h1>解体の補助金 上限ランキング<span>関西の市ごとに、いくらまで出るか</span></h1>", s, count=1, flags=re.S)
+    s = re.sub(r'<p class="sub">.*?</p>', '<p class="sub">家の解体に使える補助の上限を、<br>市の公式ページで確かめて、高い順にならべました。</p>', s, count=1, flags=re.S)
+    s = s.replace('c("表示：解体・片付けの費用"+', 'c("表示：解体補助ランキング"+', 1).replace('c("クリック：解体・片付けの費用｜"+', 'c("クリック：解体補助ランキング｜"+', 1)
+    assert s.count("<h1>") == 1 and "kaitai-ranking" in s
+    return s, len(items), top
+
+
 # 11/12 作り替え：市の補助ページ → 同じ市の街ページ・実家ページへの道（中のリンクを同じ市でつなぐ）。街ページの題から 市の名前 → id を作る
 MID = {}
 for _f in sorted(os.listdir(os.path.join(ROOT, "links", "machi"))):
@@ -125,16 +165,20 @@ def main():
     for c, rows in J:
         if c in have:
             open(os.path.join(ROOT, "links", f"kaitai-{CITY[c][0]}.html"), "w", encoding="utf-8").write(page(base, c, rows, J_DATE.get(c, "2026年11月10日"), have))
+    rk, n, top = ranking(base, have, J, J_DATE)
+    open(os.path.join(ROOT, "links", "kaitai-ranking.html"), "w", encoding="utf-8").write(rk)
     # /kaitai の「解体の補助がある市」に、市ごとのページへの道を足す
     row = ('<style>.kt-ci{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}.kt-ci a{font-size:13px;padding:7px 12px;border:1px solid #D9D2CB;border-radius:99px;background:#fff;color:inherit;text-decoration:none}</style>'
            '<p class="kt-ci">' + "".join(f'<a href="/kaitai-{CITY[c][0]}" data-k="費用｜市ごとのページ｜{E(c)}">{E(c)}</a>' for c in have) + "</p>")
     k = '<p class="rk-sub">公式ページで確かめられた市だけ・順に足します</p>'
     if k in base and 'class="kt-ci"' not in base:
         open(os.path.join(ROOT, "links", "kaitai.html"), "w", encoding="utf-8").write(base.replace(k, k + row, 1))
+    b2 = open(os.path.join(ROOT, "links", "kaitai.html"), encoding="utf-8").read()
+    if "/kaitai-ranking" not in b2 and '<p class="kt-ci">' in b2:
+        open(os.path.join(ROOT, "links", "kaitai.html"), "w", encoding="utf-8").write(b2.replace('<p class="kt-ci">', '<p style="margin:0 0 12px"><a href="/kaitai-ranking" data-k="費用｜補助ランキング" style="font-weight:700">上限の高い順に見る（補助金ランキング）</a></p><p class="kt-ci">', 1))
     # サイトマップ
     p = os.path.join(ROOT, "links", "sitemap.xml"); sm = open(p, encoding="utf-8").read()
-    for c in have:
-        loc = f"{BASE}kaitai-{CITY[c][0]}"
+    for loc in [f"{BASE}kaitai-{CITY[c][0]}" for c in have] + [BASE + "kaitai-ranking"]:
         if f"<loc>{loc}</loc>" not in sm:
             sm = sm.replace("</urlset>", f"<url><loc>{loc}</loc><lastmod>{TODAY.isoformat()}</lastmod></url>\n</urlset>")
     open(p, "w", encoding="utf-8").write(sm)
