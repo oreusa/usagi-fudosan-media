@@ -1,6 +1,6 @@
 {
  "about": "投稿に付ける画像。投稿の2本目で送るページ（page）と同じ行の url を、1本目の画像に付ける。tools/post_img/make.js が毎朝作る",
- "updated": "2026-11-12",
+ "updated": "2026-11-13",
  "items": {
   "rank-r21": {
    "hash": "7ed0e1bcb4ef",
@@ -3354,6 +3354,13 @@
    "label": "解体の補助金ランキング",
    "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/kaitai-ranking.jpg?v=914209079a81",
    "made": "2026-11-12"
+  },
+  "rank-r25": {
+   "hash": "d9ece003f76e",
+   "page": "/ranking#r25",
+   "label": "関西まちランキング",
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/rank-r25.jpg?v=d9ece003f76e",
+   "made": "2026-11-13"
   }
  }
 }
