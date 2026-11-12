@@ -2,6 +2,7 @@ name: outing-reel（関西のおでかけリールを声つきで作って置く
 # 11/11 オーナー「毎回変わる。月と燈にしっかり渡せる仕組みに」。
 # 夜の回は ig/reels/<名前>.json（"voice" に声の台本4行、"video_url" に置き場）を main に入れるだけ。
 # この機械が VOICEVOX で声を作り、tools/outing_reel/make.py で動画を作って media/reels/ に置く。
+# 11/12〜 spec に "kata": "ehon" があれば、絵本を開く型（tools/outing_reel/ehon.py。声6行＋読みの答え合わせ voice_yomi）で作る。
 # 作るのは「video_url のファイルがまだ無い spec」だけ。作り直す時は video_url のファイル名を新しくする（-v2 など）。
 on:
   push:
@@ -20,7 +21,7 @@ concurrency:
 jobs:
   make:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 50
     services:
       vv:
         image: voicevox/voicevox_engine:cpu-latest
@@ -61,7 +62,9 @@ jobs:
           fail=0
           for n in $TODO; do
             out=$(python3 -c "import json,sys;print('media/reels/'+json.load(open(f'ig/reels/{sys.argv[1]}.json'))['video_url'].rsplit('/',1)[-1])" "$n")
-            if python3 tools/outing_reel/make.py "ig/reels/$n.json" "$out"; then echo "できた $out"; else echo "::error::$n の動画を作れない"; fail=1; fi
+            kata=$(python3 -c "import json,sys;print(json.load(open(f'ig/reels/{sys.argv[1]}.json')).get('kata',''))" "$n")
+            tool=tools/outing_reel/make.py; [ "$kata" = "ehon" ] && tool=tools/outing_reel/ehon.py   # 11/12〜 絵本を開く型（"kata": "ehon"）
+            if WORK=/tmp/reel-$n python3 $tool "ig/reels/$n.json" "$out"; then echo "できた $out"; else echo "::error::$n の動画を作れない"; fail=1; fi
           done
           exit $fail
       - name: 保存
