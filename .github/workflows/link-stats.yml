@@ -56,7 +56,7 @@ jobs:
         run: python3 tools/hp_learning.py || true
       - name: sitemap dates
         # 11/9 lastmod を「中身が変わった日」に（毎日すべて今日だと Google が日付を信じなくなる）
-        run: python3 tools/sitemap_dates.py "$(TZ=Asia/Tokyo date +%F)"
+        run: python3 tools/sitemap_dates.py "$(TZ=Asia/Tokyo date +%F)" && cp links/sitemap.xml links/sitemap-all.xml
       - name: learning ledger (学習の台帳・きょうの指令)
         # 11/11 取り組み全部の答え合わせと、各回への指令を作る（月の朝・投稿・リールの回は動く前に stats/shirei.json を読む）
         run: |
@@ -71,7 +71,7 @@ jobs:
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/build-fail.txt stats/link.json stats/link-30.json stats/funnel.md stats/funnel.json stats/seichou.md stats/seichou.json links/illumination*.html links/koyo*.html links/hatsumode.html links/ranking.html links/kaitai.html links/kaitai-*.html links/index.html links/odekake-*.html links/o links/sitemap.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md links/assets/cover.json stats/room.json stats/room-fail.txt stats/gakushu.md stats/gakushu.json stats/shirei.json stats/manabi.json stats/yatta.json
+          git add stats/build-fail.txt stats/link.json stats/link-30.json stats/funnel.md stats/funnel.json stats/seichou.md stats/seichou.json links/illumination*.html links/koyo*.html links/hatsumode.html links/ranking.html links/kaitai.html links/kaitai-*.html links/index.html links/odekake-*.html links/o links/sitemap.xml links/sitemap-all.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md links/assets/cover.json stats/room.json stats/room-fail.txt stats/gakushu.md stats/gakushu.json stats/shirei.json stats/manabi.json stats/yatta.json
           git diff --cached --quiet && exit 0
           git commit -q -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)"
           # 11/12 ほかの保存と重なると push が断られ、その日の数字と台帳がまるごと消えていた → やり直す（ぶつかった所は、いま作った物を残す）
