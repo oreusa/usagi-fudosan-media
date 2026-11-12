@@ -1,0 +1,21 @@
+{
+ "about": "IndexNow（Bing など）へ送った数。rows: {day, site, n, code}。code 200/202 が成功",
+ "rows": [
+  {
+   "day": "2026-11-12",
+   "site": "kansai",
+   "n": 603,
+   "code": 403,
+   "all": 603,
+   "err": "{\"errorCode\":\"SiteVerificationNotCompleted\",\"message\":\"Site Verification is not completed. Please wait for some time for the verification to complete and try again.\",\"details\":null}"
+  },
+  {
+   "day": "2026-11-12",
+   "site": "kanto",
+   "n": 888,
+   "code": 403,
+   "all": 888,
+   "err": "{\"errorCode\":\"SiteVerificationNotCompleted\",\"message\":\"Site Verification is not completed. Please wait for some time for the verification to complete and try again.\",\"details\":null}"
+  }
+ ]
+}
