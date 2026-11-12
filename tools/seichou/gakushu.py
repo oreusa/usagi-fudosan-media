@@ -450,6 +450,17 @@ if fc:
     if _old_fc and not _ng: order("月の朝", "form", "申し込みの通し確かめ（formcheck.yml）が2日止まっている。Actions を見て動かす", "見張りが止まっている")
 else:
     item("form", "申し込みが送れるか", "未確認（stats/formcheck.json が無い）", "だめ 0・毎日確かめている", "未確認", "壊れていても、相談0のままでは気づけない")
+# 11/12 ミス→機械の点検：月が towns.py を --live なしで回し、街ページ205枚・実家ページ201枚が noindex（Google に「載せるな」）のまま半日 本番に出た。サイトマップに入っているのに noindex のページを毎朝数える
+_sm = re.findall(r"<loc>https://townnote\.pages\.dev/([^<]*)</loc>", open(os.path.join(ROOT, "links", "sitemap.xml"), encoding="utf-8").read())
+_ni = []
+for _u in _sm:
+    for _f in (_u + ".html", os.path.join(_u, "index.html") if _u else "index.html"):
+        _fp = os.path.join(ROOT, "links", _f)
+        if os.path.isfile(_fp):
+            if re.search(r'<meta name="robots"[^>]*noindex', open(_fp, encoding="utf-8").read(4000)): _ni.append(_u)
+            break
+item("noindex", "載せるなの印（noindex）が付いたページ", f"サイトマップ {len(_sm)}枚のうち {len(_ni)}枚" + (f"（{'・'.join(_ni[:3])}）" if _ni else ""), "0枚", "当たり" if not _ni else "外れ", "付いていると、Google は絶対に載せない")
+if _ni: order("月の朝", "form", f"【きょうの1つより先】サイトマップに入っているのに noindex のページが {len(_ni)}枚（{'・'.join(_ni[:3])}）。作る機械を本番の形で回し直す（towns.py は --mihon を付けない）", "載る段のいちばん元が壊れている")
 PRI = ["form", "yosou", "lead", "michi", "indexnow", "search-kansai", "search-kanto", "city-retsu", "city-tasu", "city", "hp", "kata-tasu", "spot-more", "post", "kata", "view-threads", "view-x", "pic", "reel", "reel-ehon", "aff", "gpt", "room"]
 old = {(o["to"], o["item"], o["order"][:24]): o.get("days", 1) for o in prev.get("orders", [])}
 same_day = prev.get("day") == today.isoformat()
