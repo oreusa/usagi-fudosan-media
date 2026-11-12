@@ -19,6 +19,7 @@ for p in FU:
     if m: PC[p] = m.group(1)
 yado = json.load(open("links/kansai-yado.json", encoding="utf-8")) if os.path.exists("links/kansai-yado.json") else {}
 yado = {re.sub(r"\s+", "", k): v for k, v in yado.items()}
+MORE = {re.sub(r"\s+", "", k): v for k, v in json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "odekake_more.json"), encoding="utf-8"))["rows"].items()}
 yjs = open("links/assets/yado.js", encoding="utf-8").read()
 m = re.search(r"var T=(\{.*?\]\]\});", yjs, re.S)
 TK = json.loads(m.group(1)) if m else {}
@@ -122,9 +123,14 @@ for sp in spots:
     where = (sp["city"] + ("の" + sp["place"] if sp["place"] and sp["place"] != sp["city"] else "")) or fu
     lead = f"{nm}は、{'' if where.startswith(fu) else fu}{where}で" + (f"、{jd(sp['st'])}から{jd(sp['en'])}まで開かれます。" if sp["st"] and sp["en"] and sp["en"] != sp["st"] else (f"、{jd(sp['st'])}に開かれます。" if sp["st"] else "楽しめます。"))
     if sp["free"]: lead += "入場は無料です（一部有料の所があります）。" if sp.get("part") else "入場は無料です。"
+    mo = MORE.get(sp["key"], {}); has = [x for x, k in (("時間", "time"), ("料金", "price"), ("駐車場", "park")) if mo.get(k)]
+    if mo.get("time"): lead += f"時間は{mo['time']}です。"
+    if mo.get("price"): lead += f"料金は{mo['price']}です。"
+    if mo.get("park"): lead += f"駐車場は{mo['park']}です。"
+    if mo.get("note"): lead += mo["note"]
     jn = json.dumps(nm, ensure_ascii=False).replace("</", "<\\/")
-    title = f"{nm if yr in nm else nm + " " + yr}｜日程・場所・{'入場無料' if sp['free'] else 'アクセス'}（{sp['city'] if sp['city'].startswith(fu) else fu + sp['city']}）｜TOWN NOTE"
-    desc = f"{nm}（{fu}{where}）の{yr}年の日程は{when}。{'入場無料。' if sp['free'] else ''}公式ページ、地図、近くの宿をまとめました。{upd}確認。"
+    title = f"{nm if yr in nm else nm + " " + yr}｜{'・'.join(has) + '・' if has else ''}日程・場所{'' if len(has) > 1 else ('・入場無料' if sp['free'] else '・アクセス')}（{sp['city'] if sp['city'].startswith(fu) else fu + sp['city']}）｜TOWN NOTE"
+    desc = f"{nm}（{fu}{where}）の{yr}年の日程は{when}。{'入場無料。' if sp['free'] else ''}{('時間は' + mo['time'] + '。') if mo.get('time') else ''}{('料金は' + mo['price'] + '。') if mo.get('price') else ''}公式ページ、地図、近くの宿をまとめました。{upd}確認。"
     canon = f"{BASE}/o/{sp['id']}"
     ev = {"@type": "Event", "name": nm, "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode", "eventStatus": "https://schema.org/EventScheduled",
           "location": {"@type": "Place", "name": sp["place"] or sp["city"], "address": fu + sp["city"]}, "url": sp["url"]}
@@ -140,6 +146,8 @@ for sp in spots:
     # 11/9 全文点検：「いまは／公式ページで」は意味が通らない → 開催の状態が分かる時だけ出す
     if stat: big += f'<div><span>いまは</span><b style="color:{pc};font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700">{e(stat)}</b></div>'
     big += f'<div><span>入場</span><b style="color:#2B2622;font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700">{("無料（一部有料）" if sp.get("part") else "無料") if sp["free"] else "公式で確認"}</b></div>'
+    for lb, k in (("時間", "time"), ("料金", "price"), ("駐車場", "park")):
+        if mo.get(k): big += f'<div class="w"><span>{lb}</span><b style="font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700;line-height:1.7">{e(mo[k])}</b></div>'
     big += f'<div class="w"><span>場所</span><b>{e(where if where.startswith(fu) else fu + where)}</b></div>'
     q = sp["map"] or (sp["place"] + " " + sp["city"])
     act = f'<a class="o" href="{e(sp["url"])}" target="_blank" rel="noopener">公式ページで最新の情報を見る</a>'
