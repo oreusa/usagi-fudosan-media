@@ -1,0 +1,43 @@
+name: formcheck（申し込みが本番で最後まで送れるかを確かめる）
+# 11/12 オーナー「一つ一つ完璧な仕組みにしろ」。申し込みが壊れていても、相談が0のままでは誰も気づけない。
+# 毎朝と、申し込みのページ・動きのファイルを直した時に、関西・関東の本番で 押す→書く→送信 まで通す（本当には送らない）。
+# 結果は stats/formcheck.json。台帳がだめを見つけたら、月の朝の1番目の指令になる。
+on:
+  schedule:
+    - cron: "40 22 * * *"   # 7:40（台帳を作る回より前）
+    - cron: "40 6 * * *"    # 15:40
+  push:
+    branches: [main]
+    paths: ["links/moushikomi.html", "links/assets/tech.js", "links/assets/night.js", "tools/formcheck/**"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: formcheck
+  cancel-in-progress: false
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: ブラウザを入れる
+        run: |
+          mkdir -p /tmp/pw && cd /tmp/pw && npm init -y >/dev/null && npm i playwright@1.48.2 >/dev/null
+          (timeout 150 npx playwright install --with-deps chromium || npx playwright install chromium) >/dev/null
+      - name: 直した物が本番に出るのを待つ（push の時だけ）
+        if: github.event_name == 'push'
+        run: sleep 150
+      - name: 本番で通す
+        run: NODE_PATH=/tmp/pw/node_modules node tools/formcheck/check.js stats/formcheck.json
+      - name: 保存
+        run: |
+          git config user.name "formcheck"; git config user.email "actions@users.noreply.github.com"
+          git add stats/formcheck.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "[CF-Pages-Skip] 申し込みの通し確かめ"
+          for i in 1 2 3 4; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; git rebase --abort 2>/dev/null; sleep $((i*5)); done
+          exit 1

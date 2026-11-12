@@ -334,7 +334,17 @@ def _michi(root):
 _bad = _michi(os.path.join(ROOT, "links"))
 item("michi", "申し込みへの道", f"家のページで道が無い {len(_bad)}枚" + (f"（例 {_bad[0]}）" if _bad else ""), "合格の線：0枚", "当たり" if not _bad else "外れ", "家・土地のページは、どれも申し込みへ1回で行ける事", val=len(_bad))
 if _bad: order("月の朝", "michi", f"申し込みへの道が無い家のページが {len(_bad)}枚（{'・'.join(_bad[:3])}）。そのページを作る機械に、街の名前入りの「いくらで売れるか無料で聞く」を足す", "見られても反響にならない")
-PRI = ["yosou", "lead", "michi", "search-kansai", "search-kanto", "city", "hp", "post", "kata", "view-threads", "view-x", "pic", "reel", "reel-ehon", "aff", "gpt", "room"]
+# 申し込みが本番で送れるか（tools/formcheck/check.js が毎朝と直した時に通す。stats/formcheck.json）
+fc = load(S("formcheck.json"), {})
+if fc:
+    _ng = [f"{'関西' if k == 'kansai' else '関東'}「{r['name']}」{r['why']}" for k, v in (fc.get("sites") or {}).items() for r in v.get("rows", []) if not r.get("ok")]
+    _old_fc = fc.get("at", "")[:10] < (today - __import__("datetime").timedelta(days=1)).isoformat()
+    item("form", "申し込みが送れるか", f"{fc.get('at', '')} に本番で通した：関西・関東 各3つの道のうち、だめ {len(_ng)}" + (f"（{_ng[0]}）" if _ng else "") + ("・確かめが2日止まっている" if _old_fc else ""), "だめ 0・毎日確かめている", "外れ" if _ng or _old_fc else "当たり", "壊れていても、相談0のままでは気づけない", len(_ng))
+    if _ng: order("月の朝", "form", "申し込みが本番で最後まで送れない：" + "／".join(_ng[:3]) + "。ほかの何より先に直し、formcheck.yml を動かして「だめ 0」を確かめる", "反響の出口が壊れている")
+    if _old_fc and not _ng: order("月の朝", "form", "申し込みの通し確かめ（formcheck.yml）が2日止まっている。Actions を見て動かす", "見張りが止まっている")
+else:
+    item("form", "申し込みが送れるか", "未確認（stats/formcheck.json が無い）", "だめ 0・毎日確かめている", "未確認", "壊れていても、相談0のままでは気づけない")
+PRI = ["form", "yosou", "lead", "michi", "search-kansai", "search-kanto", "city", "hp", "post", "kata", "view-threads", "view-x", "pic", "reel", "reel-ehon", "aff", "gpt", "room"]
 old = {(o["to"], o["item"], o["order"][:24]): o.get("days", 1) for o in prev.get("orders", [])}
 same_day = prev.get("day") == today.isoformat()
 for o in orders:
