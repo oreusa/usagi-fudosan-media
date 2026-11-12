@@ -64,7 +64,9 @@ jobs:
             out=$(python3 -c "import json,sys;print('media/reels/'+json.load(open(f'ig/reels/{sys.argv[1]}.json'))['video_url'].rsplit('/',1)[-1])" "$n")
             kata=$(python3 -c "import json,sys;print(json.load(open(f'ig/reels/{sys.argv[1]}.json')).get('kata',''))" "$n")
             tool=tools/outing_reel/make.py; [ "$kata" = "ehon" ] && tool=tools/outing_reel/ehon.py   # 11/12〜 絵本を開く型（"kata": "ehon"）
-            if WORK=/tmp/reel-$n python3 $tool "ig/reels/$n.json" "$out"; then echo "できた $out"; else echo "::error::$n の動画を作れない"; fail=1; fi
+            # 作れなかった時は、理由（声の読みの違い等）を stats/reel-fail/<名前>.txt に残す（記録を開かなくても分かるように）
+            mkdir -p stats/reel-fail
+            if WORK=/tmp/reel-$n python3 $tool "ig/reels/$n.json" "$out" 2>&1 | tee /tmp/reel-$n.log; [ "${PIPESTATUS[0]}" = 0 ]; then echo "できた $out"; rm -f "stats/reel-fail/$n.txt"; else echo "::error::$n の動画を作れない"; tail -n 40 /tmp/reel-$n.log > "stats/reel-fail/$n.txt"; fail=1; fi
           done
           exit $fail
       - name: 保存
@@ -72,8 +74,8 @@ jobs:
         run: |
           git config user.name "reel bot"
           git config user.email "actions@users.noreply.github.com"
-          git add media/reels
+          git add -A media/reels stats/reel-fail 2>/dev/null || git add media/reels
           git diff --cached --quiet && exit 0
           git commit -q -m "おでかけリールの動画を置いた"
-          for i in 1 2 3 4 5; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; sleep $((i*5)); done
+          for i in 1 2 3 4 5; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; git rebase --abort 2>/dev/null; sleep $((i*5)); done
           exit 1
