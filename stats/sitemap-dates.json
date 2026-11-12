@@ -880,91 +880,95 @@
 "2026-11-12"
 ],
 "kaitai": [
-"5bb04c68e9ac518a",
+"fbbb4549e69cb40a",
 "2026-11-12"
 ],
 "kaitai-amagasaki": [
-"cc0393ab06ceb6ed",
+"d8d4f0d77535154d",
 "2026-11-12"
 ],
 "kaitai-daito": [
-"bbf389f32c0efcb7",
+"c8c59b621b0a8616",
 "2026-11-12"
 ],
 "kaitai-higashiosaka": [
-"259d829956b5c0c1",
+"4483c90363358c13",
 "2026-11-12"
 ],
 "kaitai-himeji": [
-"828b73d54f591c71",
+"5065fdafa71d1c37",
 "2026-11-12"
 ],
 "kaitai-hirakata": [
-"a9dab5db86aa2abc",
+"c780f21246b04fba",
 "2026-11-12"
 ],
 "kaitai-ibaraki": [
-"26e754bbcf370b02",
+"462d4e77c11304c6",
 "2026-11-12"
 ],
 "kaitai-izumi": [
-"9fcbae7a84ef509d",
+"695e43c983bb942a",
 "2026-11-12"
 ],
 "kaitai-kakogawa": [
-"02d8e664931b7944",
+"14cf4452be0e0c0a",
 "2026-11-12"
 ],
 "kaitai-kashihara": [
-"3e3b2c4ada78ffe3",
+"1eeb4c246b58e924",
 "2026-11-12"
 ],
 "kaitai-kishiwada": [
-"aba7b77a1c50961a",
+"bb63955719ec41ef",
 "2026-11-12"
 ],
 "kaitai-kobe": [
-"81eed9eda7830b47",
+"ac51d9486fa75f68",
+"2026-11-12"
+],
+"kaitai-matsubara": [
+"2c5d58c6b0fcca77",
 "2026-11-12"
 ],
 "kaitai-nara": [
-"db97ad50157ac496",
+"45ed7003789d5e26",
 "2026-11-12"
 ],
 "kaitai-neyagawa": [
-"8b899257ff0657d3",
+"34aab4a8e8f8fe2e",
 "2026-11-12"
 ],
 "kaitai-osaka": [
-"1c6a962818fcb811",
+"18dca70a53543afd",
 "2026-11-12"
 ],
 "kaitai-sakai": [
-"8aa17e5ded56e70d",
+"e1a707bad666cdbc",
 "2026-11-12"
 ],
 "kaitai-takatsuki": [
-"cbf35c5eafdd6dce",
+"a11a4522e0b0cea6",
 "2026-11-12"
 ],
 "kaitai-tondabayashi": [
-"3ffb939243412107",
+"98bd1e7dee3df3f2",
 "2026-11-12"
 ],
 "kaitai-toyonaka": [
-"53ac43aac4e026b3",
+"af07b45ad83164d8",
 "2026-11-12"
 ],
 "kaitai-uji": [
-"60dda1805764ca4e",
+"64b4993ee346487f",
 "2026-11-12"
 ],
 "kaitai-wakayama": [
-"f5736a94a19cf697",
+"77ea5bd0c103537d",
 "2026-11-12"
 ],
 "kaitai-yao": [
-"155f98742b8841a6",
+"d2eda8e45c7a32c6",
 "2026-11-12"
 ],
 "koyo": [
@@ -1828,7 +1832,7 @@
 "2026-11-12"
 ],
 "o/070f6601": [
-"a80628f4f2324a5c",
+"2ba7356735581fe7",
 "2026-11-12"
 ],
 "o/080c01f2": [
@@ -1896,7 +1900,7 @@
 "2026-11-12"
 ],
 "o/2154b5e0": [
-"336e56cfcc6dfd64",
+"9cf954961d98c3b6",
 "2026-11-12"
 ],
 "o/2170572a": [
@@ -2020,7 +2024,7 @@
 "2026-11-12"
 ],
 "o/4db675ef": [
-"6b3a86cca0afd33f",
+"41414283b58c04f2",
 "2026-11-12"
 ],
 "o/513e44e5": [
@@ -2064,7 +2068,7 @@
 "2026-11-12"
 ],
 "o/605f92cc": [
-"9cc59e62dbfd0544",
+"cefd8dbb8f1b9854",
 "2026-11-12"
 ],
 "o/6193e69b": [

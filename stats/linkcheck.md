@@ -1,4 +1,4 @@
-# リンクの確かめ（2026-11-12 13:27 JST・262件）
+# リンクの確かめ（2026-11-12 13:52 JST・262件）
 
 ## 開けない（直す）
 - ✗ 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
@@ -13,7 +13,6 @@
 - ✗ 魯山人の宇宙 魂を刳る美がほしい（links/index.html）TimeoutError https://www.mistore.jp/store/kyoto/museum/event_list/event21.html
 - ✗ アニタッチ OSAKA なんば（links/index.html）404 https://www.afpbb.com/articles/-/3648165
 - ✗ 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
-- ✗ 東条湖おもちゃ王国 トミカ・プラレールランド（links/index.html）URLError https://www.omochaoukoku.com/tojoko/
 
 ## 別の催しに同じURL（どちらかが違うページかも）
 - なし
