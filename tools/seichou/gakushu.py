@@ -393,6 +393,7 @@ if rm:
     _stale = (today - date.fromisoformat(_r0["day"])).days >= 2
     item("room", "楽天ROOM", f"フォロワー {_r0['follower']}（7日で {'未確認' if _df is None else ('+' if _df >= 0 else '') + str(_df)}）・載っている商品 {_r0['items']}（きのうから {'未確認' if _di is None else ('+' if _di >= 0 else '') + str(_di)}）・楽天の成果 7日 {'未確認' if _uri is None else _uri}件", "商品が1日10件ふえる・フォロワー 週+10・週に1つ売れる", "外れ" if _stale or (_di is not None and _di < 10) else ("当たり" if (_uri or 0) > 0 or (_df or 0) >= 10 else ("計測中" if _df is None else "外れ")), "台本を出しても、載っていなければ0。載っても、見る人（フォロワー）が増えなければ売れない", _r0["follower"])
     if _stale or _rf: order("月の朝", "room", "ROOM の数字が写せていない：" + (_rf or "stats/room.json が2日止まっている") + "。tools/room/kazu.py を直す", "見張りが止まっている", "数字")
+    elif _di is not None and _di <= 0: order("月の朝", "room", f"【きょうの1つより先】ROOM に載った商品がきのうから {_di:+d}件＝毎日回るはずの仕事が止まっている（11/11・11/12 は GPT のブラウザに楽天市場が「緊急メンテナンス」と出て0件だった）。燈への報告の【雫】【凪】の行の止まった文言を読み、その日のうちに指示書の道を替える（ROOMの中の検索 → だめなら台本を5件に絞ってオーナーに相談）。オーナーへの朝の報告の1行目に書く", "毎日回る仕事が止まっている")
     elif _di is not None and _di < 10: order("月の朝", "room", f"ROOM に載った商品がきのうから {_di:+d}件（線は1日10件。いま {_r0['items']}件。11/12 に分かった事：台本20件に対して載るのは1日2件ほどだった）。雫・凪の報告（燈への報告の【雫】の行）で、載せた番号と止まった文言を見て、台本か指示書の止まる所を直す", "台本を出しても載っていない")
     elif _df is not None and _df < 10 and not (_uri or 0): order("月の朝", "room", f"ROOM のフォロワーが7日で {_df:+d}。台本の題材を、いま売れる季節の物（akari の room-daihon の上位）に寄せ、コレクションの名前を探す言葉にする。1つだけ変えて7日見る", "載っているのに見る人が増えていない")
 else:
@@ -497,7 +498,7 @@ DSEN = ["Google に 関西100枚・関東100枚", "人だけで 週300人", "送
 DS = {"search-kansai": 0, "search-kanto": 0, "indexnow": 0, "city-retsu": 0, "city-tasu": 0, "city": 1, "hp": 1, "kata-tasu": 1, "spot-more": 1, "post": 1, "kata": 1, "view-threads": 1, "view-x": 1, "pic": 1, "reel": 1, "reel-ehon": 1, "gpt": 1, "lead": 2, "michi": 2, "aff": 3, "room": 3, "yosou": 3}
 _n = {}; hikae = []; _act = []
 for o in orders:
-    _alert = o["item"] == "form" or o["order"].startswith("【きょうの1つより先】") or "見張りが止まっている" in o["why"]
+    _alert = o["item"] == "form" or o["order"].startswith("【きょうの1つより先】") or "見張りが止まっている" in o["why"] or "仕事が止まっている" in o["why"]
     if not _alert and DS.get(o["item"], 1) > dan + 1: o["hold"] = f"いまの段は「{DAN[dan]}」。この指令は「{DAN[DS.get(o['item'], 1)]}」の段なので、前の段が線を越えるまで出さない"
     elif not _alert and _n.get(o["to"], 0) >= 3: o["hold"] = "1日3本まで"
     if o.get("hold"): hikae.append(o)
