@@ -6,10 +6,12 @@ const T='https://townnote.pages.dev',L='https://lifenote-kanto.pages.dev';
 const PAGES=[
  ['t-top',T+'/'],['t-odekake',T+'/odekake'],['t-ima',T+'/ima'],['t-illumi',T+'/illumination'],['t-koyo',T+'/koyo'],['t-tomari',T+'/tomari'],['t-hatsumode',T+'/hatsumode'],['t-odekake-osaka',T+'/odekake-osaka'],
  ['t-fudosan',T+'/fudosan-list'],['t-uru',T+'/uru'],['t-sagasu',T+'/sagasu'],['t-chika',T+'/chika-kansai'],['t-machi',T+'/machi/osaka-01'],['t-gyosha',T+'/gyosha'],['t-moushikomi',T+'/moushikomi'],
+ ['t-kaitai',T+'/kaitai'],['t-kaitai-rank',T+'/kaitai-ranking'],['t-kaitai-city',T+'/kaitai-neyagawa'],['t-ranking',T+'/ranking'],
  ['t-jikka',T+'/jikka/'],['t-jikka-town',T+'/jikka/osaka-01'],['t-shindan',T+'/jikka/shindan/?machi=osaka-42&w=A&d=1'],
  ['t-okaimono',T+'/okaimono'],['t-nesage',T+'/nesage'],['t-kaimawari',T+'/kaimawari'],['t-furusato',T+'/furusato'],['t-otoku',T+'/otoku'],['t-koe',T+'/koe'],['t-privacy',T+'/privacy'],
  ['l-top',L+'/'],['l-odekake',L+'/odekake'],['l-ima',L+'/ima'],['l-illumi',L+'/illumination'],['l-koyo',L+'/koyo'],['l-tomari',L+'/tomari'],['l-odekake-tokyo',L+'/odekake-tokyo'],
  ['l-fudosan',L+'/fudosan-list'],['l-uru',L+'/uru'],['l-sagasu',L+'/sagasu'],['l-chika',L+'/chika-kanto'],['l-machi',L+'/machi/chiba-01'],['l-moushikomi',L+'/moushikomi'],
+ ['l-kaitai',L+'/kaitai'],['l-kaitai-rank',L+'/kaitai-ranking'],['l-kaitai-city',L+'/kaitai-yokohama'],
  ['l-jikka',L+'/jikka/'],['l-jikka-town',L+'/jikka/chiba-01'],
  ['l-okaimono',L+'/okaimono'],['l-nesage',L+'/nesage'],['l-kaimawari',L+'/kaimawari'],['l-furusato',L+'/furusato'],['l-otoku',L+'/otoku'],['l-koe',L+'/koe'],['l-privacy',L+'/privacy']
 ];
@@ -39,7 +41,10 @@ for(const [w,h,tag] of [[390,844,'sp'],[1280,800,'pc']]){
    h:[...document.querySelectorAll('h1,h2')].filter(x=>x.offsetParent).map(x=>x.textContent.trim().replace(/\s+/g,' ').slice(0,24)).slice(0,14),
    small:[...document.querySelectorAll('a,button')].filter(e=>{if(!e.offsetParent)return false;const r=e.getBoundingClientRect();return r.width>0&&(r.height<28)&&e.textContent.trim().length>0}).length,
    empty:[...document.querySelectorAll('section,.sec,.box,ul,ol')].filter(e=>e.offsetParent&&e.getBoundingClientRect().height>40&&!e.textContent.trim()&&!e.querySelector('img,svg,canvas,iframe,input')).length,
-   more:[...document.querySelectorAll('.fx-more')].length,tk:document.documentElement.className}))}catch(e){errs.push('eval '+String(e.message).slice(0,80))}
+   more:[...document.querySelectorAll('.fx-more')].length,ms:(()=>{try{const t=performance.getEntriesByType('navigation')[0];return Math.round(t.loadEventEnd)}catch(e){return 0}})(),kb:(()=>{try{return Math.round(performance.getEntriesByType('resource').reduce((a,r)=>a+(r.transferSize||0),performance.getEntriesByType('navigation')[0].transferSize||0)/1024)}catch(e){return 0}})(),req:performance.getEntriesByType('resource').length,
+   tiny:[...document.querySelectorAll('main *,.wrap *,body>*')].filter(e=>e.offsetParent&&e.childElementCount===0&&e.textContent.trim().length>3&&parseFloat(getComputedStyle(e).fontSize)<11).length,
+   first:[...document.querySelectorAll('a[href],button')].filter(e=>{if(!e.offsetParent||e.closest('#v2bar,.tnbar,header,nav'))return false;const r=e.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight&&r.height>=36}).map(e=>e.textContent.trim().replace(/\s+/g,' ').slice(0,18)).slice(0,5),
+   alt:[...document.querySelectorAll('img')].filter(i=>i.offsetParent&&!i.getAttribute('alt')).length,desc:(document.querySelector('meta[name=description]')||{}).content?1:0,tk:document.documentElement.className}))}catch(e){errs.push('eval '+String(e.message).slice(0,80))}
   // 全体写真では、スクロールで出てくる動きが「まだ出ていない」状態で写るので、撮る時だけ動きを止める（見えない物の点検は上で済んでいる）
   try{await p.addStyleTag({content:'*,*::before,*::after{animation:none!important;transition:none!important}'});await p.waitForTimeout(150)}catch(e){}
   try{await p.screenshot({path:`${out}/${tag}-${n}.jpg`,type:'jpeg',quality:52,fullPage:true,clip:undefined})}catch(e){try{await p.screenshot({path:`${out}/${tag}-${n}.jpg`,type:'jpeg',quality:52})}catch(_){}}
