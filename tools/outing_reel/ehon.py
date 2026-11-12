@@ -35,6 +35,12 @@ PAGE = dict(
     fes=T.get('date_title', '紅葉まつり'), place=T.get('place', ''), d=d, night=T.get('ehon_night', ['11.14', 'SAT', 'から', '日没〜20時半']),
     info=info, note=T.get('info_note', ''), title=T['title'], corner=T.get('corner', ''),
 )
+# 関西・関東で変わる所と、絵の種類（spec の text.ehon_brand で上書き。書かなければ関西・塔）
+BR = dict(top_en='KANSAI ─ ODEKAKE', top_jp='関西おでかけリスト', cover_sub='関西の不動産屋が、街の調査で見つけた<br>おでかけリスト', hp_en='TOWN NOTE', hp_jp='関西おでかけリスト',
+          t5=['日付でさがせる', '地図でさがせる', '紅葉もイルミも'], seal='紅葉', motif='tou13', peaks=0,
+          logo=ROOT + '/tools/brand/logo.png', hp1=ROOT + '/tools/outing_reel/ehon-hp1.jpg', hp2=ROOT + '/tools/outing_reel/ehon-hp2.jpg')
+BR.update(T.get('ehon_brand', {}))
+PAGE.update({k: BR[k] for k in ('top_en', 'top_jp', 'cover_sub', 'hp_en', 'hp_jp', 't5', 'seal', 'motif', 'peaks')})
 html = r"""<!doctype html><meta charset="utf-8"><style>
 @font-face{font-family:M;src:url(file://%F%/ShipporiMincho-Medium.ttf)}
 @font-face{font-family:MB;src:url(file://%F%/ShipporiMincho-Bold.ttf)}
@@ -83,7 +89,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 <svg id="pat" viewBox="0 0 1080 1920"><defs><pattern id="sp" width="96" height="96" patternUnits="userSpaceOnUse"><g fill="none" stroke="#e3c88c" stroke-width="1.6"><circle cx="48" cy="48" r="48"/><circle cx="0" cy="0" r="48"/><circle cx="96" cy="0" r="48"/><circle cx="0" cy="96" r="48"/><circle cx="96" cy="96" r="48"/></g></pattern>
 <radialGradient id="pm" cx=".5" cy=".47" r=".75"><stop offset=".35" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#fff" stop-opacity="1"/></radialGradient><mask id="pmk"><rect width="1080" height="1920" fill="url(#pm)"/></mask></defs><rect width="1080" height="1920" fill="url(#sp)" mask="url(#pmk)"/></svg>
 <svg id="bk" style="position:absolute;inset:0;width:1080px;height:1920px" viewBox="0 0 1080 1920"></svg>
-<div id="top">KANSAI ─ ODEKAKE<b>関西おでかけリスト</b></div>
+<div id="top"></div>
 <div id="cam"><div id="book"><div id="shadow"></div><div id="ribbon"></div><div id="block"></div><div id="pages"></div></div></div>
 <svg id="deco" viewBox="0 0 1080 1920"></svg><div id="pg"></div><div id="lamp"></div>
 <svg id="grain"><filter id="gn"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .55 0"/></filter><rect width="100%" height="100%" filter="url(#gn)"/></svg>
@@ -125,6 +131,26 @@ function tower(cx,by,k,night){let s='';const roof=night?'#15121c':'#3b2a24',body
   s+=`<line x1="${cx}" y1="${y}" x2="${cx}" y2="${y-74*k}" stroke="${night?'#c9a45a':'#5b4a2c'}" stroke-width="${5*k}"/>`;
   for(let j=0;j<5;j++)s+=`<ellipse cx="${cx}" cy="${y-12*k-j*11*k}" rx="${(13-j*1.6)*k}" ry="${3.2*k}" fill="${night?'#c9a45a':'#5b4a2c'}"/>`;
   return s}
+// 神社（拝殿と鳥居）。塔と同じ引数
+function shrine(cx,by,k,night){let s='';const roof=night?'#15121c':'#3b2a24',body=night?'#3a2420':'#8a4a33',lit='#ffd27a',st=night?'#22202c':'#8d857a';
+  s+=`<path d="M${cx-210*k},${by} L${cx+210*k},${by} L${cx+190*k},${by-30*k} L${cx-190*k},${by-30*k}Z" fill="${st}"/>`;
+  for(let j=0;j<3;j++)s+=`<rect x="${cx-(70-j*8)*k}" y="${by-(12+j*10)*k}" width="${(140-j*16)*k}" height="${10*k}" fill="${night?'#2c2a38':'#a39b90'}"/>`;
+  const y0=by-30*k,h=120*k,w=330*k;
+  s+=`<rect x="${cx-w/2}" y="${y0-h}" width="${w}" height="${h}" fill="${body}"/>`;
+  for(let j=0;j<5;j++){const x=cx-w/2+10*k+j*(w-20*k)/5;s+=`<rect x="${x+5*k}" y="${y0-h+22*k}" width="${(w-20*k)/5-10*k}" height="${h-22*k}" fill="${night?lit:'#5a3526'}" opacity="${night?.92:.75}"/>`}
+  s+=`<rect x="${cx-w/2-8*k}" y="${y0-h-6*k}" width="${w+16*k}" height="${14*k}" fill="${night?'#4a2c26':'#a8392c'}"/>`;
+  const ry=y0-h-6*k,rw=470*k,rh=150*k;
+  s+=`<path d="M${cx-rw/2-16*k},${ry-4*k} Q${cx-rw/2+30*k},${ry+6*k} ${cx-rw*.3},${ry-rh*.55} Q${cx-rw*.16},${ry-rh*.95} ${cx-rw*.1},${ry-rh} L${cx+rw*.1},${ry-rh} Q${cx+rw*.16},${ry-rh*.95} ${cx+rw*.3},${ry-rh*.55} Q${cx+rw/2-30*k},${ry+6*k} ${cx+rw/2+16*k},${ry-4*k} Q${cx+rw/2-20*k},${ry+16*k} ${cx+rw*.34},${ry+12*k} L${cx-rw*.34},${ry+12*k} Q${cx-rw/2+20*k},${ry+16*k} ${cx-rw/2-16*k},${ry-4*k}Z" fill="${roof}"/>`;
+  s+=`<rect x="${cx-rw*.13}" y="${ry-rh-12*k}" width="${rw*.26}" height="${14*k}" rx="${4*k}" fill="${night?'#c9a45a':'#5b4a2c'}"/>`;
+  if(!night)s+=`<path d="M${cx-rw*.3},${ry-rh*.42} L${cx+rw*.3},${ry-rh*.42}" stroke="#fff" stroke-width="${2*k}" opacity="${.14}"/>`;
+  // 鳥居（手前・右）
+  const tx=cx+250*k,ty=by+4*k,tk=k*.9,tc=night?'#6a2a22':'#b5332a';
+  s+=`<rect x="${tx-62*tk}" y="${ty-190*tk}" width="${14*tk}" height="${190*tk}" fill="${tc}"/><rect x="${tx+48*tk}" y="${ty-190*tk}" width="${14*tk}" height="${190*tk}" fill="${tc}"/>`;
+  s+=`<rect x="${tx-78*tk}" y="${ty-150*tk}" width="${156*tk}" height="${11*tk}" fill="${tc}"/><path d="M${tx-104*tk},${ty-206*tk} Q${tx},${ty-190*tk} ${tx+104*tk},${ty-206*tk} L${tx+98*tk},${ty-186*tk} Q${tx},${ty-172*tk} ${tx-98*tk},${ty-186*tk}Z" fill="${night?'#3a1a18':'#7c2a22'}"/>`;
+  return s}
+function motif(cx,by,k,night){return P.motif=='shrine'?shrine(cx,by-10*k,k*.92,night):tower(cx,by,k,night)}
+// 2つの峰の山（筑波山など）
+function peaks(col){return `<path d="M-40,1400 L-40,700 Q120,640 250,520 Q330,430 400,470 Q470,520 540,470 Q620,390 700,480 Q820,620 960,690 L960,1400Z" fill="${col}"/>`}
 function leafPath(R){const L=[1,.9,.7,.42],pts=[];const P=(r,d)=>{const a=(d-90)*Math.PI/180;pts.push((Math.cos(a)*r*R).toFixed(3)+','+(Math.sin(a)*r*R+.12*R).toFixed(3))};
   for(let k=-3;k<=3;k++){const c=k*40,l=L[Math.abs(k)];P(.2,c-20);P(l*.5,c-7);P(l*.62,c-13);P(l*.8,c-4);P(l,c);P(l*.8,c+4);P(l*.62,c+13);P(l*.5,c+7)}
   P(.2,140);P(.1,172);P(.62,177);P(.62,183);P(.1,188);return 'M'+pts.join('L')+'Z'}
@@ -141,10 +167,10 @@ function scene(mode){ // 0 昼 1 秋 2 夜
   if(mode==2){const r=rng(5);for(let i=0;i<70;i++)s+=`<circle class="star" cx="${(r()*920).toFixed(0)}" cy="${(r()*640).toFixed(0)}" r="${(1+r()*2.2).toFixed(1)}" fill="#fff6dc" opacity="${(.35+r()*.6).toFixed(2)}"/>`;
     s+=`<circle cx="235" cy="250" r="150" fill="#fff3c9" opacity=".12" filter="url(#bl)"/><circle cx="235" cy="250" r="62" fill="#fff1c4"/><circle cx="262" cy="236" r="58" fill="#1b2147" opacity=".0"/>`}
   else s+=`<circle cx="225" cy="270" r="${mode?92:78}" fill="${mode?'#f3a65a':'#fbe7b0'}" opacity="${mode?.6:.85}" filter="url(#wc2)"/>`;
-  s+=`<g class="ly" data-a="6"><g filter="url(#wc)"><path d="${hill(760,90,3)}" fill="${far}" opacity=".8"/></g></g><g class="ly" data-a="14"><g filter="url(#wc)"><path d="${hill(880,60,21)}" fill="${mid}"/></g>`;
+  s+=`<g class="ly" data-a="6"><g filter="url(#wc)">${P.peaks?peaks(far):`<path d="${hill(760,90,3)}" fill="${far}"/>`}</g></g><g class="ly" data-a="14"><g filter="url(#wc)"><path d="${hill(880,60,21)}" fill="${mid}"/></g>`;
   s+=`<g filter="url(#wc2)">${trees(40+mode,16,-10,930,x=>fy(x)+26,96,tc,.9)}</g></g><rect x="-40" y="770" width="1000" height="260" fill="url(#ms${mode})"/>`;
   if(mode==2)s+=`<ellipse class="glow" cx="390" cy="800" rx="360" ry="420" fill="url(#gl2)" opacity=".55"/>`;
-  s+=`<g class="ly" data-a="22"><g class="tw pop" data-d=".15" data-slow="1">${tower(390,980,1.06,mode==2)}</g></g>`;
+  s+=`<g class="ly" data-a="22"><g class="tw pop" data-d=".15" data-slow="1">${motif(390,980,1.06,mode==2)}</g></g>`;
   s+=`<g class="ly" data-a="38"><g filter="url(#wc)"><path d="${hill(1120,46,33)}" fill="${near}"/></g>`;
   s+=`<g filter="url(#wc2)">${trees(60+mode,7,-20,330,x=>ny(x)-60,170,tc)}${trees(70+mode,7,600,940,x=>ny(x)-60,170,tc)}${trees(80+mode,12,-20,940,x=>ny(x)+70,150,tc)}</g>`;
   if(mode==2){for(let i=0;i<5;i++){const x=120+i*170;s+=`<path class="beam" d="M${x-10},1250 L${x-90},820 L${x+90},820 L${x+10},1250Z" fill="#ffc97a" opacity=".0" filter="url(#bl2)"/>`}for(let i=0;i<9;i++){const x=70+i*98,y=1262+Math.sin(i*1.7)*16;s+=`<circle class="lan" cx="${x}" cy="${y}" r="46" fill="url(#gl2)" opacity=".8"/><rect x="${x-7}" y="${y-10}" width="14" height="20" rx="3" fill="#ffe2a0"/>`}}
@@ -156,10 +182,10 @@ function build(){
   pages.push(`<div class="face cover"><div class="spine"></div><div class="fr1"></div><div class="fr2"></div>
    <div class="gold" style="position:absolute;left:0;right:0;top:138px;text-align:center;font:400 24px J;letter-spacing:.5em">${P.corner}</div>
    ${vtext(P.title,372,250,82,'font-family:MB;color:#e8cf96;line-height:1.75;letter-spacing:.16em','ct')}
-   <svg viewBox="0 0 920 1380" style="opacity:.92"><g transform="translate(300,1168) scale(.86)" fill="#e3c88c">${tower(0,0,.5,false).replace(/fill="#[0-9a-f]{6}"/g,'fill="#e3c88c"').replace(/stroke="#[0-9a-f]{3,6}"/g,'stroke="#7c2a22"')}</g>
+   <svg viewBox="0 0 920 1380" style="opacity:.92"><g transform="translate(300,1168) scale(.86)" fill="#e3c88c">${motif(0,0,.5,false).replace(/fill="#[0-9a-f]{6}"/g,'fill="#e3c88c"').replace(/stroke="#[0-9a-f]{3,6}"/g,'stroke="#7c2a22"')}</g>
    <g transform="translate(236,960) scale(22) rotate(18)"><path d="${LP}" fill="#e3c88c" opacity=".8"/></g></svg>
    <div style="position:absolute;right:108px;bottom:200px;width:216px;height:216px;border-radius:50%;background:#f6efdf;box-shadow:0 0 0 3px #d8b874,0 0 0 10px rgba(216,184,116,.28),0 6px 18px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center"><img src="file://%LOGO%" style="width:166px;height:166px"></div>
-   <div class="gold" style="position:absolute;left:0;right:0;bottom:118px;text-align:center;font:500 30px M;letter-spacing:.16em;font-size:23px;line-height:1.7;bottom:104px">関西の不動産屋が、街の調査で見つけた<br>おでかけリスト</div><div id="foil"></div></div>`);
+   <div class="gold" style="position:absolute;left:0;right:0;bottom:118px;text-align:center;font:500 30px M;letter-spacing:.16em;font-size:23px;line-height:1.7;bottom:104px">${P.cover_sub}</div><div id="foil"></div></div>`);
   pages.push(`<div class="face">${scene(0)}${vtext(P.t1,84,120,58,'','t0')}</div>`);
   pages.push(`<div class="face">${scene(1)}${vtext(P.t2,84,120,58,'','t1')}</div>`);
   // 日付
@@ -167,20 +193,20 @@ function build(){
    ${vtext([P.fes],96,120,96,'font-family:MB;letter-spacing:.24em','t2')}
    <div id="d1" style="position:absolute;left:96px;top:150px;color:#4a3328;opacity:0"><div class="num" style="font-size:60px;letter-spacing:.06em;color:#8a6a55">${P.d[0]} <span style="font-size:30px;letter-spacing:.3em">${P.d[1]}</span></div><div style="width:2px;height:70px;background:#8a6a55;margin:22px 0 10px 60px"></div></div>
    <div id="d2" style="position:absolute;left:84px;top:330px;color:#3d2a22;opacity:0"><div class="num" style="font-size:230px;line-height:1">${P.d[2]}</div><div style="font:500 44px M;letter-spacing:.3em;margin:18px 0 0 10px"><span class="num" style="font-size:44px;letter-spacing:.3em">${P.d[3]}</span>　まで</div></div>
-   <div id="seal">紅葉</div><div id="d3" style="position:absolute;left:96px;top:700px;font:500 38px M;letter-spacing:.22em;color:#6b4a3a;opacity:0">${P.place}</div></div>`);
+   <div id="seal">${P.seal}</div><div id="d3" style="position:absolute;left:96px;top:700px;font:500 38px M;letter-spacing:.22em;color:#6b4a3a;opacity:0">${P.place}</div></div>`);
   pages.push(`<div class="face">${scene(2)}${vtext(P.t4,84,120,58,'color:#f4e6c4','t3')}
    <div id="n1" style="position:absolute;left:560px;top:560px;color:#f4e6c4;opacity:0"><div class="num" style="font-size:92px;line-height:1">${P.night[0]}</div><div style="font:500 34px M;letter-spacing:.3em;margin-top:14px"><span class="num" style="font-size:34px;letter-spacing:.3em">${P.night[1]}</span>　${P.night[2]}</div><div style="font:500 40px M;letter-spacing:.2em;margin-top:26px">${P.night[3]}</div></div></div>`);
   // 案内
-  pages.push(`<div class="face" style="background:#f6efdf"><svg viewBox="0 0 920 1380">${DEFS}<g filter="url(#wc3)" opacity=".9"><g transform="translate(760,170) scale(70) rotate(20)"><path d="${LP}" fill="#d4552d" opacity=".85"/></g><g transform="translate(660,120) scale(40) rotate(-40)"><path d="${LP}" fill="#f0b23a" opacity=".85"/></g></g><g transform="translate(460,1310)" opacity=".85">${tower(0,0,.5,false)}</g><g class="lv"></g>${PAPER}</svg>
+  pages.push(`<div class="face" style="background:#f6efdf"><svg viewBox="0 0 920 1380">${DEFS}<g filter="url(#wc3)" opacity=".9"><g transform="translate(760,170) scale(70) rotate(20)"><path d="${LP}" fill="#d4552d" opacity=".85"/></g><g transform="translate(660,120) scale(40) rotate(-40)"><path d="${LP}" fill="#f0b23a" opacity=".85"/></g></g><g transform="translate(460,1310)" opacity=".85">${motif(0,0,.5,false)}</g><g class="lv"></g>${PAPER}</svg>
    <div style="position:absolute;left:150px;top:150px;font:500 30px J;letter-spacing:.42em;color:#8a6a55">INFORMATION</div>
    <div style="position:absolute;left:150px;top:206px;font:700 62px MB;letter-spacing:.16em;color:#3d2a22" id="it">${P.place.split('｜')[0]}</div>
    ${P.info.map((r,i)=>`<div class="row" id="r${i}" style="top:${340+i*112}px"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('')}
    <div id="nt" style="position:absolute;left:150px;right:110px;top:${340+P.info.length*112+6}px;font:500 28px M;letter-spacing:.1em;line-height:1.8;color:#7a5b4a;opacity:0">${P.note}</div>
    </div>`);
   pages.push(`<div class="face" style="background:#f6efdf"><svg viewBox="0 0 920 1380">${DEFS}<g filter="url(#wc3)" opacity=".9"><g transform="translate(790,1180) scale(84) rotate(-24)"><path d="${LP}" fill="#d4552d" opacity=".85"/></g><g transform="translate(690,1270) scale(46) rotate(36)"><path d="${LP}" fill="#f0b23a" opacity=".85"/></g></g><g class="lv"></g>${PAPER}</svg>
-   <div id="h0" style="position:absolute;left:0;right:0;top:92px;text-align:center;opacity:0"><div style="font:500 26px J;letter-spacing:.42em;color:#8a6a55">TOWN NOTE</div><div style="font:700 66px MB;letter-spacing:.14em;color:#3d2a22;margin-top:14px">関西おでかけリスト</div></div>
+   <div id="h0" style="position:absolute;left:0;right:0;top:92px;text-align:center;opacity:0"><div style="font:500 26px J;letter-spacing:.42em;color:#8a6a55">${P.hp_en}</div><div style="font:700 66px MB;letter-spacing:.14em;color:#3d2a22;margin-top:14px">${P.hp_jp}</div></div>
    <div id="ph" style="position:absolute;left:92px;top:300px;width:400px;height:800px;border-radius:54px;background:#2b211c;padding:14px;box-shadow:0 26px 50px rgba(60,35,20,.35);opacity:0"><div style="width:100%;height:100%;border-radius:42px;overflow:hidden;position:relative;background:#fff"><img id="ph1" src="file://%HP1%" style="position:absolute;left:0;top:0;width:100%"><img id="ph2" src="file://%HP2%" style="position:absolute;left:0;top:0;width:100%;opacity:0"></div></div>
-   ${vtext(['日付でさがせる','地図でさがせる','紅葉もイルミも'],110,330,50,'line-height:2.3;letter-spacing:.22em','t5')}
+   ${vtext(P.t5,110,330,50,'line-height:2.3;letter-spacing:.22em','t5')}
    <div id="h1" style="position:absolute;right:86px;top:860px;width:300px;text-align:center;font:500 30px M;letter-spacing:.2em;line-height:1.9;color:#6b4a3a;opacity:0">無料・登録なし<br>毎日更新</div>
    <div id="end" style="position:absolute;left:0;right:0;top:1160px;text-align:center;opacity:0"><div style="display:inline-block;font:700 50px MB;letter-spacing:.16em;color:#f8ecd8;background:#a5332a;border-radius:999px;padding:22px 54px">プロフィールのリンクから</div></div></div>`);
   $('#pages').innerHTML=pages.map((f,i)=>`<div class="pg" id="p${i}" style="z-index:${20-i}">${f}<div class="face back"></div>${i?'<div class="gut"></div>':''}<div class="shade"></div><div class="sheen"></div></div>`).reverse().join('');
@@ -235,9 +261,9 @@ function render(t){
     if(i==4){P.info.forEach((r,j)=>fade('r'+j,t,ST[i]+.05+j*.22,.6,14));fade('nt',t,ST[i]+1.1)}
     if(i==5){fade('h0',t,ST[i]-.1);fade('ph',t,ST[i]+.2,.8,60);chars('t5',t,ST[i]+.7,.06);fade('h1',t,ST[i]+2.4);fade('end',t,ST[i]+3.2,.7,20);const q=eio(sm(t,ST[i]+2.2,ST[i]+3.0));document.getElementById('ph2').style.opacity=q;document.getElementById('ph1').style.transform=`translateY(${-q*40}px)`;const pe=document.getElementById('end');if(t>ST[i]+3.9)pe.style.transform=`scale(${(1+.03*Math.sin((t-ST[i]-3.9)*5)).toFixed(3)})`}}
 }
-build();render(0);
+$('#top').innerHTML=P.top_en+'<b>'+P.top_jp+'</b>';build();render(0);
 </script>"""
-html = (html.replace('%F%', F).replace('%LOGO%', ROOT + '/tools/brand/logo.png').replace('%HP1%', ROOT + '/tools/outing_reel/ehon-hp1.jpg').replace('%HP2%', ROOT + '/tools/outing_reel/ehon-hp2.jpg').replace('%PAGE%', json.dumps(PAGE, ensure_ascii=False)).replace('%ST%', json.dumps(ST))
+html = (html.replace('%F%', F).replace('%LOGO%', BR['logo']).replace('%HP1%', BR['hp1']).replace('%HP2%', BR['hp2']).replace('%PAGE%', json.dumps(PAGE, ensure_ascii=False)).replace('%ST%', json.dumps(ST))
         .replace('%OPEN%', str(OPEN)).replace('%TURN%', str(TURN)).replace('%TOTAL%', f'{TOTAL:.3f}'))
 open(f'{W}/ehon.html', 'w').write(html)
 open(f'{W}/rec.js', 'w').write(f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:1080,height:1920}}}});
