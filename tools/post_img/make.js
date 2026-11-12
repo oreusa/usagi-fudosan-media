@@ -16,7 +16,7 @@ const srv=http.createServer((q,s)=>{let u=decodeURIComponent(q.url.split('?')[0]
 function targets(){const T=[];const rk=fs.readFileSync(path.join(SITE,'ranking.html'),'utf8');
  for(const m of rk.matchAll(/<details class="rk" id="(r\d+)"/g))T.push({name:'rank-'+m[1],page:'/ranking',hash:'#'+m[1],sel:'#'+m[1],open:true,label:'関西まちランキング'});
  T.push({name:'kaitai-hiyo',page:'/kaitai',hash:'#kaitai',sel:'#kaitai',label:'解体の費用の目安'},{name:'kaitai-katazuke',page:'/kaitai',hash:'#katazuke',sel:'#katazuke',label:'片付けの費用の目安'},{name:'kaitai-hojo',page:'/kaitai',hash:'#hojo',sel:'#hojo',label:'解体の補助がある市'});
- for(const f of fs.readdirSync(SITE))if(/^kaitai-.+\.html$/.test(f)){const c=f.slice(7,-5);T.push({name:'kaitai-'+c,page:'/kaitai-'+c,hash:'',sel:'#shi',label:'市の解体の補助'})}
+ for(const f of fs.readdirSync(SITE))if(/^kaitai-.+\.html$/.test(f)){const c=f.slice(7,-5);T.push(c==='ranking'?{name:'kaitai-ranking',page:'/kaitai-ranking',hash:'',sel:'#rank',label:'解体の補助金ランキング'}:{name:'kaitai-'+c,page:'/kaitai-'+c,hash:'',sel:'#shi',label:'市の解体の補助'})}
  for(const f of fs.readdirSync(path.join(SITE,'machi')))if(f.endsWith('.html')&&f!=='index.html'){const c=f.slice(0,-5);T.push({name:'machi-'+c,page:'/machi/'+c,hash:'',sel:'main, body',top:true,label:'街の相場'})}
  for(const p of ['koyo','illumination','hatsumode'])if(fs.existsSync(path.join(SITE,p+'.html')))T.push({name:'odekake-'+p,page:'/'+p,hash:'',sel:'main, body',top:true,label:'関西おでかけリスト'});
  // 11/12 府県ごとのおでかけ（koyo-nara 等）と実家ノート（jikka/*・診断）も撮る。昼の投稿の2本目がここへ送るため
