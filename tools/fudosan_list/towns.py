@@ -332,6 +332,17 @@ TOWN_CSS = """.big{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20
 .rq{display:block;width:100%;margin:10px 0 0;padding:13px;border:0;border-radius:12px;background:#3A2F28;color:#fff;font-family:"Zen Kaku Gothic New",sans-serif;font-size:13.5px;font-weight:700;cursor:pointer}.rq:disabled{background:#8C7B6E}"""
 
 
+_KS = None
+def _kslug(n):
+    """街の名前 → (市, 市の解体補助ページのローマ字)。tools/kaitai/city.py の CITY を読む（街ページは K_SLUG より前に作るので、ここで自分で読む）"""
+    global _KS
+    if _KS is None:
+        import ast, os
+        kc = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "kaitai", "city.py"), encoding="utf-8").read()
+        a = kc.index("CITY = {"); _KS = {k: v[0] for k, v in ast.literal_eval(kc[a + 7:kc.index("\n}\n", a) + 2]).items()}
+    for c in _KS:
+        if n == c or n.startswith(c): return c, _KS[c]
+    return None, None
 def town_page(t):
     pf, fn, en, col, sname, surl, pfull = PI[t["p"]]
     n = t["n"]
@@ -410,6 +421,8 @@ def town_page(t):
            + f'<p class="itn" style="text-align:center;margin-top:6px">無料・売るか決めていなくても大丈夫です。メールかお電話、ご希望の方でお返事します。</p>'
            + f'<a class="itg2" href="/moushikomi?machi={t["id"]}&amp;want={_q("相続した家のこと")}" data-k="この街で｜困りごとの相談｜{E(n)}">相続した家・古い家・再建築不可などのご相談 <i>→</i></a>'
            # 11/12 台帳：/kaitai（30秒の目安）は7日で9回しか見られていない。入口が実家ノートにしか無かった → いちばん見られている街ページから1行
+           # 11/12 作り替え：街ページ → その市の解体補助ページへの道が1本も無かった（中のリンクを、同じ市のページどうしでつなぐ）
+           + (f'<a class="itg2" href="/kaitai-{_kslug(n)[1]}" data-k="この街で｜市の解体補助ページ｜{E(n)}">{E(_kslug(n)[0])}の解体の補助金（いくら出るか・受付の状況） <i>→</i></a>' if _kslug(n)[0] else "")
            + f'<a class="itg2" href="/kaitai" data-k="この街で｜解体・片付けの費用｜{E(n)}">解体・片付けの費用を、30秒で目安を出す <i>→</i></a>'
            f'<p class="itn">「買いたい」の3つは広告です（Yahoo!不動産のこの街の一覧が開きます）。</p></section>')
     rel_h = ""
