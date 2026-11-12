@@ -244,6 +244,18 @@ r_sd = (sent / _wr) if _wr and sent else None        # 書きはじめる → �
 SD0 = 0.5                                            # 送信の率がまだ測れない間の仮の値（書きはじめた人の半分）。1件でも送信が出たら実測に替わる
 def sim(ext, op, wr, sd=None): return ext * 30 / 7 * op * wr * (sd if sd is not None else (r_sd if r_sd is not None else SD0))
 now30 = sim(p_ext, r_op, r_wr)
+# 市を足す仕組み（tools/kaitai/chou.json＝Drive「関西の解体補助金帳」の写し。朝の回がそろえる）
+_ch = load(os.path.join(ROOT, "tools", "kaitai", "chou.json"), {}).get("rows", [])
+if _ch:
+    _mt = [r for r in _ch if r["state"] == "待ち"]; _mo = [r for r in _ch if r["state"] == "持ち越し"]; _pg = [r for r in _ch if r["state"] == "ページ"]
+    _last_pg = max([r["day"] for r in _pg] or [""]); _last_any = max(r["day"] for r in _ch)
+    _gap = (today - date.fromisoformat(_last_pg)).days if _last_pg else 99; _gap_c = (today - date.fromisoformat(_last_any)).days
+    _old = [r for r in _mt if (today - date.fromisoformat(r["day"])).days >= 1]
+    item("city-tasu", "市を足す仕組み（汐の写し→月が確かめる→ページ）", f"ページにした {len(_pg)}市（最後 {_last_pg[5:]}）・待ち {len(_mt)}市・持ち越し {len(_mo)}市・帳が最後に動いた日 {_last_any[5:]}", "待ちを次の日に残さない・2日つづけて0市にしない", "外れ" if _old or _gap >= 2 or _gap_c >= 2 else "当たり", "入口の数は、毎日足さないと増えない", len(_pg))
+    if _old: order("月の朝", "city-tasu", "帳で待っている市を、きょう全部ページにする：" + "・".join(r["city"] for r in _old[:10]) + "（公式で確かめ、tools/kaitai/chou.json の state を直す）", "待ちが1日を越えた")
+    elif _gap_c >= 2: order("月の朝", "city-tasu", f"汐の写しが {_gap_c}日 止まっている。月が帳の順番の次の3市を自分で公式から確かめてページにし、オーナーに汐の回が動いているかを1行で聞く", "写しが止まると入口が増えない")
+    elif _gap >= 2: order("月の朝", "city-tasu", f"{_gap}日 新しい市が出ていない。持ち越しの市（" + "・".join(r["city"] for r in _mo[:5]) + "）を、PDF・別の公式ページから確かめ直して出す", "2日つづけて0市")
+    if len(_mo) >= 5: order("月の朝", "city-tasu", f"持ち越しが {len(_mo)}市たまっている。機械で開けない市は、凪の【確かめ】「合う」を待って出す形に切り替える", "確かめきれない市が溜まっている")
 LEV = [("外から来る人を2倍にする（市のページ・検索・投稿の2本目）", sim(p_ext * 2, r_op, r_wr), "city"),
        ("書きはじめる人を、開いた人の3割にする（申し込みページの最初の画面）", sim(p_ext, r_op, max(r_wr, 0.3)), "lead"),
        ("家のページから申し込みを開く人を増やす（開く率を1.5倍）", sim(p_ext, min(1.0, r_op * 1.5), r_wr), "michi")]
@@ -344,7 +356,7 @@ if fc:
     if _old_fc and not _ng: order("月の朝", "form", "申し込みの通し確かめ（formcheck.yml）が2日止まっている。Actions を見て動かす", "見張りが止まっている")
 else:
     item("form", "申し込みが送れるか", "未確認（stats/formcheck.json が無い）", "だめ 0・毎日確かめている", "未確認", "壊れていても、相談0のままでは気づけない")
-PRI = ["form", "yosou", "lead", "michi", "search-kansai", "search-kanto", "city", "hp", "post", "kata", "view-threads", "view-x", "pic", "reel", "reel-ehon", "aff", "gpt", "room"]
+PRI = ["form", "yosou", "lead", "michi", "search-kansai", "search-kanto", "city-tasu", "city", "hp", "post", "kata", "view-threads", "view-x", "pic", "reel", "reel-ehon", "aff", "gpt", "room"]
 old = {(o["to"], o["item"], o["order"][:24]): o.get("days", 1) for o in prev.get("orders", [])}
 same_day = prev.get("day") == today.isoformat()
 for o in orders:
