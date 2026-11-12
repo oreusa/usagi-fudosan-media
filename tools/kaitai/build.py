@@ -36,7 +36,7 @@ secs = (
  '<input id="kt-tsubo" type="number" inputmode="numeric" min="5" max="300" value="30" aria-label="広さ（坪）"></div>'
  '<div id="kt-t" hidden><label for="kt-ma">間取り</label><select id="kt-ma">' + "".join(f'<option value="{k}"{" selected" if k == "d" else ""}>{n}</option>' for k, n, _, _, _ in KATA) + '</select></div>'
  '<div class="kt-o" aria-live="polite"><small id="kt-ol">木造30坪の解体の目安</small><b id="kt-ov">90万〜150万円</b><span>建物だけの目安です。塀・庭木・家の中の荷物は別にかかります。</span></div>'
- '<a class="kt-b" id="kt-go" href="/moushikomi?lite=1&amp;want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A" data-k="見積りを相談">名前なしで、うちの場合の概算を聞く<small>無料・書くのは3つだけ</small></a>'
+ '<a class="kt-b" id="kt-go" href="/moushikomi?lite=1&amp;want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A" data-k="見積りを相談">無料で、うちの場合の概算を聞く<small>無料・書くのは3つだけ</small></a>'
  '<ul class="kt-a"><li><b>お返事は、メールかお電話で</b>ご希望の方で、2営業日以内にお返事します。</li>'
  '<li><b>ご紹介は、ご希望があった時だけ</b>会社のご紹介は、お話をうかがって、ご希望があった時だけです。</li>'
  '<li><b>費用はかかりません</b>見積りだけで終わっても、費用はかかりません。</li></ul>'
