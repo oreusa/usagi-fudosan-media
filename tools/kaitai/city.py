@@ -53,7 +53,7 @@ def page(base, city, rows, date, others):
     s = base
     card = lambda h, tx, st, u: (f'<div class="kt-hj"><b>{E(h)}</b>' + (f'<em class="{"x" if st in END else ""}">{st}</em>' if st else "") + f'<p>{E(tx)}</p>'
                                  f'<a href="{E(u)}" target="_blank" rel="noopener" data-k="市の補助｜公式ページ｜{E(city)}">{E(city)}の公式ページで確かめる</a></div>')
-    sec = (f'<section id="shi" class="ps" style="--c:#4F7BA8"><h2>{E(city)}の解体の補助</h2><p class="rk-sub">市の公式ページを {date} に確かめました</p>'
+    sec = (f'<section id="shi" class="ps" style="--c:#4F7BA8"><h2>{E(city)}の解体の補助</h2><p class="kt-tr"><span>公式ページで確認 {re.sub(r"^\d+年", "", date)}</span><span>受付の状況を毎週見直し</span><span>関西{len(others)}市を掲載</span></p>'
            + "".join(card(*r) for r in kai)
            + ('<h3 class="kt-h">ほかの制度</h3>' + "".join(card(*r) for r in etc) if etc else "")
            + '<p class="kt-n">受付・条件・上限は変わります。交付が決まる前に契約や工事を始めると、対象外になる市が多いので、見積りの前に公式ページでご確認ください。</p></section>')
@@ -104,7 +104,7 @@ def page(base, city, rows, date, others):
               {"@type": "ListItem", "position": 2, "name": "解体・片付けの費用", "item": BASE + "kaitai"},
               {"@type": "ListItem", "position": 3, "name": f"{city}の解体の補助金", "item": BASE + "kaitai-" + slug}]}]
     s = re.sub(r'<script type="application/ld\+json">.*?</script>', "", s, flags=re.S)
-    s = s.replace("</head>", '<style>.kt-big{display:flex;align-items:baseline;gap:12px;margin:2px 0 10px}.kt-big b{font-size:30px;letter-spacing:.02em;line-height:1.2}.kt-big b small{font-size:15px;margin-left:2px}.kt-big b i{font-style:normal;font-size:13px;font-weight:500;margin-right:6px}.kt-big span{font-size:12px;padding:3px 10px;border-radius:99px;background:#E6F2E8;color:#2F6B3F;font-weight:700}.kt-big span.x{background:#EEE;color:#777}.kt td a,.kt-hj>a{display:inline-block;padding:8px 0}.kt-ci{display:flex;flex-wrap:wrap;gap:8px;margin:0}.kt-ci a{font-size:13px;padding:7px 12px;border:1px solid #D9D2CB;border-radius:99px;background:#fff;color:inherit;text-decoration:none}.kt th small{display:block;font-weight:500;font-size:11px;color:#8A7F76;white-space:nowrap;margin-top:2px}</style>'
+    s = s.replace("</head>", '<style>.kt-tr{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.kt-tr span{font-size:11.5px;padding:4px 10px;border:1px solid #A9BFD8;border-radius:99px;color:#2F5F8F;background:#F1F6FB;font-weight:700}.kt-tr span::before{content:"✓ "}.kt-big{display:flex;align-items:baseline;gap:12px;margin:2px 0 10px}.kt-big b{font-size:30px;letter-spacing:.02em;line-height:1.2}.kt-big b small{font-size:15px;margin-left:2px}.kt-big b i{font-style:normal;font-size:13px;font-weight:500;margin-right:6px}.kt-big span{font-size:12px;padding:3px 10px;border-radius:99px;background:#E6F2E8;color:#2F6B3F;font-weight:700}.kt-big span.x{background:#EEE;color:#777}.kt td a,.kt-hj>a{display:inline-block;padding:8px 0}.kt-ci{display:flex;flex-wrap:wrap;gap:8px;margin:0}.kt-ci a{font-size:13px;padding:7px 12px;border:1px solid #D9D2CB;border-radius:99px;background:#fff;color:inherit;text-decoration:none}.kt th small{display:block;font-weight:500;font-size:11px;color:#8A7F76;white-space:nowrap;margin-top:2px}</style>'
                   + "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in ld) + "</head>", 1)
     # 11/12 最初の画面で、いちばん知りたい数字（上限・受付の状況）を大きく見せる
     if cap:
@@ -140,10 +140,11 @@ def ranking(base, have, J, J_DATE):
     tr = ""; rank = 0; prev = None
     for i, (cap, c, slug, pref, ratio, st) in enumerate(items, 1):
         if cap != prev: rank = i; prev = cap
-        tr += (f'<tr><th>{rank}位</th><td><a href="/kaitai-{slug}" data-k="補助ランキング｜{E(c)}">{E(c)}</a><small style="display:block;font-size:11px;color:#8A7F76">{pref}'
+        tr += (f'<tr data-p="{pref}"><th>{rank}位</th><td><a href="/kaitai-{slug}" data-k="補助ランキング｜{E(c)}">{E(c)}</a><small style="display:block;font-size:11px;color:#8A7F76">{pref}'
                + (f'・{st}' if st in END else "") + f'</small></td><td><b>{cap}万円</b>' + (f'<small style="display:block;font-size:11px;color:#8A7F76">費用の{ratio}まで</small>' if ratio else "") + '</td></tr>')
     top = items[0]
     sec = (f'<section id="rank" class="ps" style="--c:#4F7BA8"><h2>解体の補助金 上限ランキング（関西 {len(items)}市）</h2><p class="rk-sub">市の公式ページで確かめた上限額・高い順</p>'
+           '<div class="kt-f"><button type="button" class="on" data-p="">すべて</button>' + "".join(f'<button type="button" data-p="{q}">{q[:-1]}</button>' for q in dict.fromkeys(x[3] for x in items)) + '</div>'
            '<div class="kt-w"><table class="kt"><thead><tr><th>順位</th><th>市</th><th>上限</th></tr></thead><tbody>' + tr + '</tbody></table></div>'
            '<p class="kt-n">上限は、いちばん多く出る場合の額です。建った年・空き家の期間・所得・場所などの条件で変わります。市の名前を押すと、条件と受付の状況、公式ページへ進めます。'
            '載っていない市は、公式ページで確かめられた順に足しています。</p>'
@@ -157,7 +158,7 @@ def ranking(base, have, J, J_DATE):
         {"@type": "ListItem", "position": i, "name": f"{c} 上限{cap}万円", "url": BASE + "kaitai-" + slug} for i, (cap, c, slug, pref, ratio, st) in enumerate(items, 1)]}]
     s = re.sub(r'<script type="application/ld\+json">.*?</script>', "", s, flags=re.S)
     s = s.replace("</head>", "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in ld) + "</head>", 1)
-    s = s.replace("</head>", "<style>.kt td a{display:inline-block;padding:9px 0;font-weight:700}</style></head>", 1)
+    s = s.replace("</head>", '<style>.kt-f{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}.kt-f button{font:inherit;font-size:13px;padding:8px 14px;border:1px solid #D9D2CB;border-radius:99px;background:#fff;color:inherit;cursor:pointer}.kt-f button.on{background:#2B2622;color:#fff;border-color:#2B2622}.kt td a{display:inline-block;padding:9px 0;font-weight:700}</style><script>document.addEventListener("DOMContentLoaded",function(){var f=document.querySelector(".kt-f");if(!f)return;f.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var p=b.getAttribute("data-p");[].forEach.call(f.querySelectorAll("button"),function(x){x.classList.toggle("on",x===b)});[].forEach.call(document.querySelectorAll("#rank tbody tr"),function(r){r.style.display=(!p||r.getAttribute("data-p")===p)?"":"none"})})});</script></head>', 1)
     s = re.sub(r"<title>.*?</title>", f"<title>{E(title)}</title>", s, count=1)
     for prop in ('<meta name="description" content="', '<meta property="og:description" content="'):
         s = re.sub("(" + re.escape(prop) + ')[^"]*', lambda m: m.group(1) + E(desc), s, count=1)
