@@ -210,7 +210,7 @@
    "page": "/kaitai-himeji",
    "label": "市の解体の補助",
    "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/kaitai-himeji.jpg?v=24322901d2a2",
-   "made": "2026-11-11"
+   "made": "2026-11-12"
   },
   "kaitai-hirakata": {
    "hash": "8c8db11af4be",
@@ -1795,10 +1795,10 @@
    "made": "2026-11-12"
   },
   "odekake-koyo-kyoto": {
-   "hash": "96eb6fd75e67",
+   "hash": "3c07fcbfe76b",
    "page": "/koyo-kyoto",
    "label": "関西おでかけリスト",
-   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/odekake-koyo-kyoto.jpg?v=96eb6fd75e67",
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/odekake-koyo-kyoto.jpg?v=3c07fcbfe76b",
    "made": "2026-11-12"
   },
   "odekake-illumination-osaka": {
