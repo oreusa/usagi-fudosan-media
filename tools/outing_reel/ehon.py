@@ -156,8 +156,8 @@ function build(){
   pages.push(`<div class="face cover"><div class="spine"></div><div class="fr1"></div><div class="fr2"></div>
    <div class="gold" style="position:absolute;left:0;right:0;top:138px;text-align:center;font:400 24px J;letter-spacing:.5em">${P.corner}</div>
    ${vtext(P.title,372,250,82,'font-family:MB;color:#e8cf96;line-height:1.75;letter-spacing:.16em','ct')}
-   <svg viewBox="0 0 920 1380" style="opacity:.92"><g transform="translate(300,1210)" fill="#e3c88c">${tower(0,0,.5,false).replace(/fill="#[0-9a-f]{6}"/g,'fill="#e3c88c"').replace(/stroke="#[0-9a-f]{3,6}"/g,'stroke="#7c2a22"')}</g>
-   <g transform="translate(250,1010) scale(22) rotate(18)"><path d="${LP}" fill="#e3c88c" opacity=".8"/></g></svg>
+   <svg viewBox="0 0 920 1380" style="opacity:.92"><g transform="translate(300,1168) scale(.86)" fill="#e3c88c">${tower(0,0,.5,false).replace(/fill="#[0-9a-f]{6}"/g,'fill="#e3c88c"').replace(/stroke="#[0-9a-f]{3,6}"/g,'stroke="#7c2a22"')}</g>
+   <g transform="translate(236,960) scale(22) rotate(18)"><path d="${LP}" fill="#e3c88c" opacity=".8"/></g></svg>
    <div style="position:absolute;right:108px;bottom:200px;width:216px;height:216px;border-radius:50%;background:#f6efdf;box-shadow:0 0 0 3px #d8b874,0 0 0 10px rgba(216,184,116,.28),0 6px 18px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center"><img src="file://%LOGO%" style="width:166px;height:166px"></div>
    <div class="gold" style="position:absolute;left:0;right:0;bottom:118px;text-align:center;font:500 30px M;letter-spacing:.16em;font-size:23px;line-height:1.7;bottom:104px">関西の不動産屋が、街の調査で見つけた<br>おでかけリスト</div><div id="foil"></div></div>`);
   pages.push(`<div class="face">${scene(0)}${vtext(P.t1,84,120,58,'','t0')}</div>`);
@@ -206,7 +206,7 @@ function render(t){
     if(i<N){const q=document.getElementById('p'+(i+1));const sh=q.querySelector('.shade');if(a>0&&a<178&&ang[i+1]==0)sh.style.opacity=.32*(1-a/178)}}
   // カメラ
   const z=t<OPEN?1.0+.05*eio(sm(t,0,OPEN)):1.05+.012*Math.sin(t*.5);
-  $('#cam').style.transform=`scale(${z}) translateY(${t<OPEN?(1-eio(sm(t,0,OPEN)))*10:0}px) rotate(${(-.9+1.5*sm(t,0,TOTAL)).toFixed(3)}deg)`;$('#foil').style.backgroundPosition=(120-170*sm(t,.3,1.7))+'% 0';$('#ribbon').style.transform=`rotate(${(2.2*Math.sin(t*1.3)).toFixed(2)}deg)`;
+  $('#cam').style.transform=`scale(${z}) translateY(${t<OPEN?(1-eio(sm(t,0,OPEN)))*10:0}px)`;$('#foil').style.backgroundPosition=(120-170*sm(t,.3,1.7))+'% 0';$('#ribbon').style.transform=`rotate(${(2.2*Math.sin(t*1.3)).toFixed(2)}deg)`;
   document.querySelectorAll('.dl').forEach(l=>{const d=l.dataset,i=+d.i,k=1;
     l.setAttribute('transform',`translate(${(+d.x+Math.sin(t*.6+i)*3).toFixed(1)},${(+d.y-(1-k)*120+Math.cos(t*.5+i*2)*2).toFixed(1)}) rotate(${(+d.r+(1-k)*90+Math.sin(t*.7+i)*3).toFixed(1)}) scale(${d.z})`);l.style.opacity=k});
   document.querySelectorAll('#bk circle').forEach(c=>{const d=c.dataset;c.setAttribute('cx',(+d.x+Math.sin(t*.25+ +d.p)*40).toFixed(1));c.setAttribute('cy',(((+d.y-t*14)%1920+1920)%1920).toFixed(1));c.style.opacity=(.07+.07*Math.sin(t*.8+d.p*3)).toFixed(3)});
@@ -243,7 +243,7 @@ open(f'{W}/ehon.html', 'w').write(html)
 open(f'{W}/rec.js', 'w').write(f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:1080,height:1920}}}});
 p.on('pageerror',e=>console.log('ERR',e.message));await p.goto('file://{W}/ehon.html');await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(400);
 const only=process.argv[2];if(only){{for(const t of only.split(',')){{await p.evaluate(t=>render(t),+t);await p.screenshot({{path:'{W}/c-'+t+'.jpg',type:'jpeg',quality:85}});}}await b.close();return}}
-for(let i=0;i<30*{TOTAL:.3f};i++){{await p.evaluate(t=>render(t),i/30);await p.screenshot({{path:'{W}/fr/'+String(i).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}});}}await b.close()}})();""")
+const fs=require('fs');const A=+(process.env.FR0||0),B=+(process.env.FR1||1e9);for(let i=A;i<30*{TOTAL:.3f}&&i<B;i++){{if(fs.existsSync('{W}/fr/'+String(i).padStart(4,'0')+'.jpg'))continue;await p.evaluate(t=>render(t),i/30);await p.screenshot({{path:'{W}/fr/'+String(i).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}});}}await b.close()}})();""")
 print('場面', [round(x, 2) for x in ST], '全体', round(TOTAL, 1), '声', [round(x, 2) for x in VD])
 if STILL:
     subprocess.run(['node', f'{W}/rec.js', STILL], check=True); sys.exit()
