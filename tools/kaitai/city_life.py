@@ -7,7 +7,8 @@ from urllib.parse import quote
 def cut(tx, n=88):
     """説明文に入れる時、文の途中で切らない（関西の city.py と同じ）。"""
     if len(tx) <= n: return tx
-    t = tx[:n]; i = max(t.rfind("。"), t.rfind("）"))
+    t = tx[:n]; i = t.rfind("。")
+    if i < 30: i = t.rfind("）")
     return t[:i + 1] if i >= 30 else t.rstrip("、・（(") + "…"
 
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", "..")
