@@ -40,6 +40,50 @@ def cut(tx, n=88):
     return t[:i + 1] if i >= 30 else t.rstrip("、・（(") + "…"
 
 
+FV_CSS = ('.head{padding:18px 16px 16px!important}.head img{width:44px;height:44px}.head .en{margin-top:6px}'
+          '.fv{margin:12px auto 0;max-width:340px}.fv .n{display:flex;justify-content:center;align-items:baseline;gap:10px;flex-wrap:wrap}.fv .n b{font-size:34px;line-height:1.1}.fv .n b.t{font-size:20px;line-height:1.5}'
+          '.fv .n b i{font-style:normal;font-size:13px;font-weight:500;margin-right:6px}.fv .n b small{font-size:16px;margin-left:2px}'
+          '.fv .n span{font-size:12px;padding:3px 10px;border-radius:99px;background:#E6F2E8;color:#2F6B3F;font-weight:700}.fv .n span.x{background:#EEE;color:#777}'
+          '.fv .d{font-size:12px;line-height:1.7;color:#6B6058;margin:6px 0 12px}.fv .bt{display:flex;gap:8px}.fv .bt a{flex:1;text-align:center;font-weight:700;font-size:14px;line-height:1.4;padding:13px 6px;border-radius:2px;text-decoration:none}'
+          '.fv .bt a.k{background:#2B2622;color:#fff}.fv .bt a.w{border:1px solid #2B2622;color:#2B2622;background:#fff}'
+          '.toc{display:flex;gap:8px;overflow-x:auto;margin:0 -16px;padding:10px 16px;background:#fff;border-top:1px solid #EEE9E4;border-bottom:1px solid #EEE9E4;white-space:nowrap;-webkit-overflow-scrolling:touch}'
+          '.toc a{font-size:12.5px;padding:8px 12px;border:1px solid #D9D2CB;border-radius:99px;color:inherit;text-decoration:none;flex:none}')
+TOC = (("shi", "補助の中身"), ("hiku", "自分で払う目安"), ("keisan", "30秒で計算"), ("tejun", "使う順番"), ("kaitai", "解体の費用"), ("hoka", "ほかの市"))
+
+
+def first_view(s, city, word, cap, st, ended, tx, date):
+    """11/13 最初の画面に、上限・受付の状況・締め切り・ボタン2つ・目次を入れる（オーナーOK。ロゴ・英字・題・後ろの絵は残す）。"""
+    E_ = html.escape
+    num = (f'<b><i>{word}</i>{cap}<small>万円</small></b>' if cap else '<b class="t">広さなどで決まる額</b>')
+    stt = (f'<span class="{"x" if ended else ""}">{E_(st)}</span>' if st else "")
+    m = re.search(r"受付は([^（(。、]{2,22}?まで)", tx or "")
+    dl = (f'受付は{E_(m.group(1))}・' if (m and not ended) else "")
+    md = re.sub(r"^\d+年", "", date)
+    want = quote("解体の見積り")
+    b1 = "来年度に向けて見積りを頼む" if ended else "見積りを無料で頼む"
+    fv = (f'<div class="fv"><div class="n">{num}{stt}</div><div class="d">{dl}市の公式ページで{md}に確認</div><div class="bt">'
+          f'<a class="k" href="/moushikomi?lite=1&amp;want={want}&amp;memo={quote(city + " 最初の画面")}" data-k="見積りを相談｜最初の画面">{b1}</a>'
+          '<a class="w" href="#keisan" data-k="最初の画面｜30秒で目安">30秒で目安を出す</a></div></div>')
+    s, n = re.subn(r'<p class="sub">.*?</p>', lambda _m: fv, s, count=1, flags=re.S)
+    assert n == 1, city
+    toc = '<nav class="toc" aria-label="このページの目次">' + "".join(f'<a href="#{i}" data-k="目次｜{t}">{t}</a>' for i, t in TOC if f'<section id="{i}"' in s) + '</nav>'
+    s = s.replace('<section id="shi"', toc + '<section id="shi"', 1)
+    return s.replace("</head>", "<style>" + FV_CSS + "</style></head>", 1)
+
+
+
+def rank_view(s, name, cap, n, word, unit):
+    """11/13 ランキングの最初の画面：1位と数、ボタン2つ、目次（市のページと同じ形）。"""
+    fv = (f'<div class="fv"><div class="n"><b class="t"><i>1位</i>{html.escape(name)}　{word}{cap}<small>万円</small></b></div>'
+          f'<div class="d">{n}{unit}を、公式ページで確かめた額の高い順にならべました</div><div class="bt">'
+          '<a class="k" href="#rank" data-k="最初の画面｜ランキングを見る">ランキングを見る</a><a class="w" href="#keisan" data-k="最初の画面｜30秒で目安">30秒で目安を出す</a></div></div>')
+    s, k = re.subn(r'<p class="sub">.*?</p>', lambda _m: fv, s, count=1, flags=re.S)
+    assert k == 1
+    toc = '<nav class="toc" aria-label="このページの目次">' + "".join(f'<a href="#{i}" data-k="目次｜{t}">{t}</a>' for i, t in (("rank", "ランキング"), ("keisan", "30秒で計算"), ("kaitai", "解体の費用"), ("hojo", "補助の中身"), ("katazuke", "片付けの費用"), ("junban", "順番")) if f'<section id="{i}"' in s) + '</nav>'
+    s = s.replace('<section id="rank"', toc + '<section id="rank"', 1)
+    return s.replace("</head>", "<style>" + FV_CSS + "</style></head>", 1)
+
+
 def man(v):
     v = round(v)
     return f"{v}万円"
@@ -106,9 +150,6 @@ def page(base, city, rows, date, others):
     s = re.sub(r'<script type="application/ld\+json">.*?</script>', "", s, flags=re.S)
     s = s.replace("</head>", '<style>.kt-tr{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}.kt-tr span{font-size:11.5px;padding:4px 10px;border:1px solid #A9BFD8;border-radius:99px;color:#2F5F8F;background:#F1F6FB;font-weight:700}.kt-tr span::before{content:"✓ "}.kt-big{display:flex;align-items:baseline;gap:12px;margin:2px 0 10px}.kt-big b{font-size:30px;letter-spacing:.02em;line-height:1.2}.kt-big b small{font-size:15px;margin-left:2px}.kt-big b i{font-style:normal;font-size:13px;font-weight:500;margin-right:6px}.kt-big span{font-size:12px;padding:3px 10px;border-radius:99px;background:#E6F2E8;color:#2F6B3F;font-weight:700}.kt-big span.x{background:#EEE;color:#777}.kt td a,.kt-hj>a{display:inline-block;padding:8px 0}.kt-ci{display:flex;flex-wrap:wrap;gap:8px;margin:0}.kt-ci a{font-size:13px;padding:7px 12px;border:1px solid #D9D2CB;border-radius:99px;background:#fff;color:inherit;text-decoration:none}.kt th small{display:block;font-weight:500;font-size:11px;color:#8A7F76;white-space:nowrap;margin-top:2px}</style>'
                   + "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in ld) + "</head>", 1)
-    # 11/12 最初の画面で、いちばん知りたい数字（上限・受付の状況）を大きく見せる
-    if cap:
-        s = re.sub(r'(<section id="shi"[^>]*><h2>[^<]*</h2>)', lambda m: m.group(1) + f'<p class="kt-big"><b><i>上限</i>{cap}<small>万円</small></b>' + (f'<span class="{"x" if st0 in END else ""}">{st0}</span>' if st0 else "") + '</p>', s, count=1)
     s = re.sub(r"<title>.*?</title>", f"<title>{E(title)}</title>", s, count=1)
     for prop in ('<meta name="description" content="', '<meta property="og:description" content="'):
         s = re.sub("(" + re.escape(prop) + ')[^"]*', lambda m: m.group(1) + E(desc), s, count=1)
@@ -116,6 +157,7 @@ def page(base, city, rows, date, others):
     s = s.replace(BASE + 'kaitai"', BASE + f'kaitai-{slug}"')
     s = re.sub(r"<h1>.*?</h1>", f"<h1>{E(city)}の解体の補助金<span>いくら出るか・条件・受付の状況</span></h1>", s, count=1, flags=re.S)
     s = re.sub(r'<p class="sub">.*?</p>', f'<p class="sub">{pref}{E(city)}の、家の解体に使える補助を、<br>市の公式ページで確かめてまとめました。</p>', s, count=1, flags=re.S)
+    s = first_view(s, city, "上限", cap, st0, ended, tx0, date)
     s = re.sub(r'<nav class="also".*?</nav>', '<nav class="also" aria-label="あわせて見る"><small>あわせて見る</small><a href="/kaitai" data-k="あわせて：解体・片付けの費用">解体・片付けの費用（関西）</a>'
                + (f'<a href="/machi/{MID[city]}" data-k="あわせて：この市の地価｜{E(city)}">{E(city)}の地価・土地の相場</a><a href="/jikka/{MID[city]}" data-k="あわせて：この市の実家ノート｜{E(city)}">{E(city)}の実家・空き家（売れた相場）</a>' if city in MID and os.path.exists(os.path.join(ROOT, "links", "jikka", MID[city] + ".html")) else (f'<a href="/machi/{MID[city]}" data-k="あわせて：この市の地価｜{E(city)}">{E(city)}の地価・土地の相場</a>' if city in MID else ""))
                + '<a href="/jikka/" data-k="あわせて：実家・空き家ノート">実家・空き家ノート</a><a href="/uru" data-k="あわせて：家を売りたい">家を売りたい</a></nav>', s, count=1, flags=re.S)
@@ -167,6 +209,7 @@ def ranking(base, have, J, J_DATE):
     s = re.sub(r"<h1>.*?</h1>", "<h1>解体の補助金 上限ランキング<span>関西の市ごとに、いくらまで出るか</span></h1>", s, count=1, flags=re.S)
     s = re.sub(r'<p class="sub">.*?</p>', '<p class="sub">家の解体に使える補助の上限を、<br>市の公式ページで確かめて、高い順にならべました。</p>', s, count=1, flags=re.S)
     s = s.replace('c("表示：解体・片付けの費用"+', 'c("表示：解体補助ランキング"+', 1).replace('c("クリック：解体・片付けの費用｜"+', 'c("クリック：解体補助ランキング｜"+', 1)
+    s = rank_view(s, top[1], top[0], len(items), "上限", "市")
     assert s.count("<h1>") == 1 and "kaitai-ranking" in s
     return s, len(items), top
 
