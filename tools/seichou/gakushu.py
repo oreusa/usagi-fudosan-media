@@ -163,6 +163,14 @@ for site, nm in (("kansai", "関西"), ("kanto", "関東")):
     if seen0: order("月の朝", "search-" + site, f"{nm}：見られているのに押されない言葉（" + "／".join(f"「{w['w']}」表示{w['i']}・クリック0" for w in seen0) + "）。そのページの題と説明文を「◯◯はいくら」「◯◯の順位」のように答えが分かる形に直す", "10位より上なのにクリック0")
 if not ks: order("月の朝", "search-kansai", "Drive の「検索の帳面」（汐が毎朝写す）に【検索】【言葉】【ページ】の行があれば、stats/kensaku.json の rows に足す（形は about のとおり）。「見られない」の行なら、オーナーに Search Console の権限の事を1行で伝える", "検索の数字が未確認のまま", "数字")
 
+# 3d Bing など（IndexNow）へ知らせたか。11/12：Google は人の手でしか頼めないので、機械で送れる所は毎朝送る
+_in = load(S("indexnow.json"), {}).get("rows", [])
+if _in:
+    _il = {s_: ([r for r in _in if r.get("site") == s_] or [{}])[-1] for s_ in ("kansai", "kanto")}
+    _bad = [n_ for s_, n_ in (("kansai", "関西"), ("kanto", "関東")) if _il[s_].get("code") not in (0, 200, 202) or _il[s_].get("day", "") < (today - timedelta(days=1)).isoformat()]
+    item("indexnow", "Bing などへ知らせる", "・".join(f"{n_} {_il[s_].get('n', 0)}枚（{_il[s_].get('code')}・{_il[s_].get('day', '未')}）" for s_, n_ in (("kansai", "関西"), ("kanto", "関東"))), "毎朝送れている（200か202）", "外れ" if _bad else "当たり", "機械で送れる検索には毎朝送る")
+    if _bad: order("月の朝", "indexnow", "IndexNow が送れていない（" + "・".join(_bad) + "）。stats/indexnow.json の code・err を見て tools/seo/indexnow.py か鍵のファイル（/<鍵>.txt）を直す", "見張りが止まっている", "数字")
+
 # 4 市ごとの補助ページ
 city = {}
 for r in rows:

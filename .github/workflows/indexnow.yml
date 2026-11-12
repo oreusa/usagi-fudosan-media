@@ -1,0 +1,26 @@
+name: indexnow
+# 11/12 月：Bing など（IndexNow）へ、変わったページを毎朝知らせる（関西・関東）。結果は stats/indexnow.json → 台帳
+on:
+  schedule:
+    - cron: "20 23 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/seo/indexnow.py "$(TZ=Asia/Tokyo date +%F)"
+      - name: commit
+        run: |
+          git config user.name "indexnow bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add stats/indexnow.json
+          git diff --cached --quiet && exit 0
+          git commit -q -m "indexnow: $(TZ=Asia/Tokyo date +%F)"
+          for i in 1 2 3 4 5; do
+            git pull --rebase -q -X theirs origin main && git push -q origin HEAD:main && exit 0
+            git rebase --abort 2>/dev/null || true; sleep $((i*7))
+          done
+          exit 1
