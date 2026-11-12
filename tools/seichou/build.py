@@ -54,7 +54,7 @@ SNS_ROWS = [f"| {f}{'' if '-' in f else '（型なし）'} | {a} | {b} | {smark(
 res = []
 for it in jk["items"]:
     s = date.fromisoformat(it["start"]); e = s + timedelta(days=it["days"])
-    got = sum(int(r.get("n", 0) or 0) for r in rows if s.isoformat() <= r.get("day", "") < e.isoformat() and any(r.get("k", "").startswith(k) for k in it["keys"]))
+    got = sum(int(r.get("n", 0) or 0) for r in rows if s.isoformat() <= r.get("day", "") < e.isoformat() and any(r.get("k", "").startswith(k) for k in it["keys"]) and r.get("k", "").endswith(it.get("ends", "")))
     left = (e - today).days
     st = "合格" if got >= it["pass"] else (f"計測中（あと{left}日）" if left > 0 else "不合格")
     res.append({"id": it["id"], "what": it["what"], "days": it["days"], "got": got, "pass": it["pass"], "status": st})
