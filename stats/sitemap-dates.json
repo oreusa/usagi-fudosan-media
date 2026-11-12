@@ -388,7 +388,7 @@
 "2026-11-12"
 ],
 "jikka/nara-01": [
-"df65b5662d3fd1e3",
+"8de6699977ff21b4",
 "2026-11-12"
 ],
 "jikka/nara-02": [
@@ -584,7 +584,7 @@
 "2026-11-12"
 ],
 "jikka/osaka-38": [
-"6a2358738c86d265",
+"2671f0d855c30645",
 "2026-11-12"
 ],
 "jikka/osaka-39": [
@@ -648,7 +648,7 @@
 "2026-11-12"
 ],
 "jikka/osaka-54": [
-"82ca1ba3af49d768",
+"eb017d8a7a2eebf7",
 "2026-11-12"
 ],
 "jikka/osaka-55": [
@@ -660,7 +660,7 @@
 "2026-11-12"
 ],
 "jikka/osaka-57": [
-"ac89649d3b618662",
+"9c666f640e1a0eb7",
 "2026-11-12"
 ],
 "jikka/osaka-58": [
@@ -700,7 +700,7 @@
 "2026-11-12"
 ],
 "jikka/osaka-67": [
-"89dc446578f46b46",
+"3c0edadfbf75604d",
 "2026-11-12"
 ],
 "jikka/osaka-68": [
@@ -740,7 +740,7 @@
 "2026-11-12"
 ],
 "jikka/shiga-05": [
-"f519abdf27cfcd0e",
+"52070bcaed59614f",
 "2026-11-12"
 ],
 "jikka/shiga-06": [
@@ -880,99 +880,123 @@
 "2026-11-12"
 ],
 "kaitai": [
-"8ed82b4a617c538e",
+"ac646f07be699172",
 "2026-11-12"
 ],
 "kaitai-amagasaki": [
-"c30f155f4b5a55ce",
+"b67b0fc49b3445aa",
 "2026-11-12"
 ],
 "kaitai-daito": [
-"7772cf16776a971f",
+"31f52336f9ca05a1",
+"2026-11-12"
+],
+"kaitai-habikino": [
+"a2cd2a789fcb0612",
 "2026-11-12"
 ],
 "kaitai-higashiosaka": [
-"a88e99a6a85819fa",
+"a19c44028bf3b6a4",
 "2026-11-12"
 ],
 "kaitai-himeji": [
-"b8fc70fd553eb4b6",
+"2697ac589f2eeaad",
 "2026-11-12"
 ],
 "kaitai-hirakata": [
-"5a332a15be55e53b",
+"f6a81af03aeec1ae",
 "2026-11-12"
 ],
 "kaitai-ibaraki": [
-"1b3c1c23315f2049",
+"f2ff15d07cf2a20c",
+"2026-11-12"
+],
+"kaitai-ikoma": [
+"fcfa04c30ef266e8",
 "2026-11-12"
 ],
 "kaitai-itami": [
-"b5bd4f7bb4728cc6",
+"1a251730095e5ddd",
 "2026-11-12"
 ],
 "kaitai-izumi": [
-"f5570dc33eb96af1",
+"a5e8ac88fdbddb9a",
+"2026-11-12"
+],
+"kaitai-izumisano": [
+"7cde4596c9861e10",
 "2026-11-12"
 ],
 "kaitai-kakogawa": [
-"18696f7110f615a6",
+"7af573ec3263189a",
 "2026-11-12"
 ],
 "kaitai-kashihara": [
-"1585c482b571b1b0",
+"4f5f8c1ae6ea4ff1",
+"2026-11-12"
+],
+"kaitai-kawachinagano": [
+"cd7d9b96e703fced",
 "2026-11-12"
 ],
 "kaitai-kishiwada": [
-"16aad86075308dd4",
+"e5f5befee8faf458",
 "2026-11-12"
 ],
 "kaitai-kobe": [
-"02d80a8907ec1c71",
+"d22d5ee8a741cc70",
+"2026-11-12"
+],
+"kaitai-kusatsu": [
+"c6ce60522cbad775",
 "2026-11-12"
 ],
 "kaitai-matsubara": [
-"0fba448c8fb48b38",
+"03e74342918e94c8",
 "2026-11-12"
 ],
 "kaitai-nara": [
-"44a2f6e0f5edb1c8",
+"1fc5d39baf9be3b8",
 "2026-11-12"
 ],
 "kaitai-neyagawa": [
-"1728f8335100afcd",
+"56c4e9cf5e2b6208",
 "2026-11-12"
 ],
 "kaitai-osaka": [
-"7bb4d4f425f9e078",
+"4dd459acb3d7de25",
 "2026-11-12"
 ],
 "kaitai-sakai": [
-"9671f3fa25859065",
+"7479230084b05312",
+"2026-11-12"
+],
+"kaitai-settsu": [
+"4b9e2f788a3ec468",
 "2026-11-12"
 ],
 "kaitai-takatsuki": [
-"9616038e2c036b3d",
+"f60224bf363138d7",
 "2026-11-12"
 ],
 "kaitai-tondabayashi": [
-"529cc999794caf9c",
+"a668995f6896790e",
 "2026-11-12"
 ],
 "kaitai-toyonaka": [
-"a2c13927da116eff",
+"8cc19d94ba5607b1",
 "2026-11-12"
 ],
 "kaitai-uji": [
-"25af06e67ff1bc48",
+"2c10b32e4fc7aa5b",
 "2026-11-12"
 ],
 "kaitai-wakayama": [
-"3df7c4f1304342e3",
+"6cc9013fc58143d9",
 "2026-11-12"
 ],
 "kaitai-yao": [
-"d307e86b6a561d4d",
+"f3b6c5bd1204ebc8",
 "2026-11-12"
 ],
 "koyo": [
@@ -1888,7 +1912,7 @@
 "2026-11-09"
 ],
 "o/19325cf4": [
-"2fba9e16e9b0a73d",
+"06666c45c5675dde",
 "2026-11-12"
 ],
 "o/1a882f81": [
