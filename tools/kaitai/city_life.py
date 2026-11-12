@@ -4,8 +4,12 @@
 使い方：python3 tools/kaitai/to_life.py ../akari-auto のあとに  python3 tools/kaitai/city_life.py ../akari-auto"""
 import html, json, os, re, sys
 from urllib.parse import quote
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from city import cut
+def cut(tx, n=88):
+    """説明文に入れる時、文の途中で切らない（関西の city.py と同じ）。"""
+    if len(tx) <= n: return tx
+    t = tx[:n]; i = max(t.rfind("。"), t.rfind("）"))
+    return t[:i + 1] if i >= 30 else t.rstrip("、・（(") + "…"
+
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", "..")
 AK = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "..", "akari-auto")
 BASE = "https://lifenote-kanto.pages.dev/"; E = html.escape
