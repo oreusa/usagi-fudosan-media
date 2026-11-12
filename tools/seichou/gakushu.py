@@ -68,7 +68,11 @@ if _sp:
     _e1 = (sei.get("pages", {}).get("1件ページ", {}) or {}).get("e7", 0)
     item("spot-more", "1件ページの中身（時間・料金・駐車場）", f"{len(_sp)}件のうち 時間か料金つき {len(_done)}件・まだ調べていない {len(_todo)}件・最後に足した日 {_lastm[5:] or 'なし'}・外から {_e1}人/週", "1日5件足す・外から 週10人", "当たり" if _e1 >= 10 else ("外れ" if _gm >= 2 and _todo else "計測中"), "題は探す人の言葉になっている。足りないのは、探す人が知りたい中身", len(_done))
     if _todo: order("月の朝", "spot-more", "1件ページに、公式ページの通りの 時間・料金・駐車場 を足す（tools/odekake_more.json）。きょうの5件：" + "・".join(x[1] for x in _hot) + "。公式に無ければ nashi:true で残す", "中では見られているのに外から0。題は直っている" + ("。！" + str(_gm) + "日 足していない" if _gm >= 2 else ""))
-if ext0 and ext0[0] != "1件ページ": order("月の朝", "hp", f"「{ext0[0]}」の題と説明文を、探す人の言葉に直す", "中では見られているのに外から0")
+# 11/12 学び：外から0の原因は題ではなく「Google に載っていない」だった（関西 表示8）。検索の表示が週50を越えるまでは、題を直す指令は出さない（効かない手を毎日出さない）
+_kr0 = sorted([r for r in load(S("kensaku.json"), {}).get("rows", []) if r.get("site") == "kansai"], key=lambda r: r.get("day", ""))
+_noidx = bool(_kr0) and (_kr0[-1].get("imps") or 0) < 50
+if _noidx: pass
+elif ext0 and ext0[0] != "1件ページ": order("月の朝", "hp", f"「{ext0[0]}」の題と説明文を、探す人の言葉に直す", "中では見られているのに外から0")
 elif len(ext0) > 1: order("月の朝", "hp", f"「{ext0[1]}」の題と説明文を、探す人の言葉に直す", "中では見られているのに外から0")
 if sei.get("play"): order("月の朝", "hp", sei["play"], "いちばん弱い所：" + sei.get("weak", ""))
 
