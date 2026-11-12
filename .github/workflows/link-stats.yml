@@ -72,4 +72,11 @@ jobs:
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
           git add stats/build-fail.txt stats/link.json stats/link-30.json stats/funnel.md stats/funnel.json stats/seichou.md stats/seichou.json links/illumination*.html links/koyo*.html links/hatsumode.html links/ranking.html links/kaitai.html links/kaitai-*.html links/index.html links/odekake-*.html links/o links/sitemap.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md links/assets/cover.json stats/room.json stats/room-fail.txt stats/gakushu.md stats/gakushu.json stats/shirei.json stats/manabi.json stats/yatta.json
-          git diff --cached --quiet || (git commit -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)" && git pull --rebase -q && git push)
+          git diff --cached --quiet && exit 0
+          git commit -q -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)"
+          # 11/12 ほかの保存と重なると push が断られ、その日の数字と台帳がまるごと消えていた → やり直す（ぶつかった所は、いま作った物を残す）
+          for i in 1 2 3 4 5; do
+            git pull --rebase -q -X theirs origin main && git push -q origin HEAD:main && exit 0
+            git rebase --abort 2>/dev/null || true; sleep $((i*7))
+          done
+          exit 1

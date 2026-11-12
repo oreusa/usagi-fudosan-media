@@ -20,4 +20,4 @@ jobs:
           git config user.name "post-img bot"
           git config user.email "actions@users.noreply.github.com"
           git add media/post
-          git diff --cached --quiet || (git commit -m "[CF-Pages-Skip] post-img: $(TZ=Asia/Tokyo date +%F)" && git pull --rebase -q && git push)
+          git diff --cached --quiet || (git commit -m "[CF-Pages-Skip] post-img: $(TZ=Asia/Tokyo date +%F)" && for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep $((i*5)); done)
