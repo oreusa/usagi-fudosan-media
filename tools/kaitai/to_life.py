@@ -11,9 +11,6 @@ PAIRS = (
     ("https://townnote.pages.dev/assets/ogp.png", "https://lifenote-kanto.pages.dev/og-v10.png"),
     ('href="assets/ogp.png"', 'href="/logo-s.png"'),
     ('src="assets/logo-s.png?v=2"', 'src="/logo-s.png"'),
-    ('src="assets/night.js?v=29"', 'src="/assets/night.js?v=18"'),
-    ('src="assets/menu.js?v=49"', 'src="/assets/menu.js?v=46"'),
-    ('src="assets/v2sub.js?v=12"', 'src="/assets/v2sub.js?v=17"'),
     ("townnote\\.pages", "lifenote-kanto\\.pages"),
     ("townnote.pages.dev", "lifenote-kanto.pages.dev"),
     ("TOWN NOTE", "LIFE NOTE"),
@@ -34,6 +31,13 @@ if _rows:
            + "".join(f'<div class="kt-hj"><b>{_E(c)}</b>' + (f'<em class="{"x" if st in ("受付停止", "受付終了") else ""}">{_E(st)}</em>' if st else "")
                      + f'<p>{_E(tx)}</p><a href="{_E(u)}" target="_blank" rel="noopener" data-k="費用｜市の補助｜{_E(c)}">{_E(c)}の公式ページ（{_E(d)}に確認） →</a></div>' for c, tx, st, u, d in _rows)
            + '<p class="kt-n">受付・条件・上限は変わります。交付が決まる前に契約や工事を始めると、対象外になる市区が多いので、見積りの前に公式ページで確かめてください。ここに無い市区も、役所の「空き家」の窓口で聞けます。</p></section>')
+# 部品の版：関西の側の数字は何でもよく、関東の側は akari-auto site/moushikomi.html の今の版に合わせる（11/12 古い版の数字に戻してしまう穴を塞いだ）
+_mo = open(os.path.join(os.path.dirname(dst), "moushikomi.html"), encoding="utf-8").read()
+for _js in ("night", "menu", "v2sub"):
+    _v = re.search(r'src="/assets/' + _js + r'\.js\?v=(\d+)"', _mo)
+    if not _v: sys.exit("関東の申し込みページに部品の版が見つかりません: " + _js)
+    s, _k = re.subn(r'src="assets/' + _js + r'\.js\?v=\d+"', f'src="/assets/{_js}.js?v={_v.group(1)}"', s)
+    if _k != 1: sys.exit("元のページに部品が見つかりません: " + _js)
 s, _n = re.subn(r"<!--hojo-->.*?<!--/hojo-->", lambda m: _kh, s, flags=re.S)
 if _n != 1:
     sys.exit("市の補助の段が見つかりません（to_life.py を直す）")
