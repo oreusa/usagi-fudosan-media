@@ -2,7 +2,7 @@
 11/1 オーナー「今のお出かけの派生だからな。バーとかその他もろもろ崩さないように」
 → index.html の head（CSS）・見出し・府県の絞り込み・タブ・カード・下の欄をそのまま使い、
   中のカードと言葉だけを tools/fudosan_list/facts.json（事実確認ずみの投稿の数字と公式ページ）に入れかえる。
-使い方: python3 tools/fudosan_list/make.py [--live]   （--live が無いと noindex の見本）
+使い方: python3 tools/fudosan_list/make.py [--mihon]   （--mihon を付けた時だけ noindex の見本。11/12 から逆にした）
 """
 import html, json, re, sys, os
 
@@ -11,7 +11,7 @@ SRC = os.path.join(ROOT, "links/index.html")
 OUT = os.path.join(ROOT, "links/fudosan-list.html")
 FACTS = json.load(open(os.path.join(ROOT, "tools/fudosan_list/facts.json"), encoding="utf-8"))
 URL = "https://townnote.pages.dev/fudosan-list"
-live = "--live" in sys.argv
+live = "--mihon" not in sys.argv
 E = html.escape
 
 h = open(SRC, encoding="utf-8").read()
