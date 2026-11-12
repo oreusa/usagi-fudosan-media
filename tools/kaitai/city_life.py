@@ -39,7 +39,9 @@ for city, tx, st, u, d in rows:
     a = s.index('<section id="keisan"'); k1 = s.index('<section id="kaitai"'); h1 = s.index('<section id="hojo"'); hj_end = s.index("</section>", h1) + len("</section>")
     f1 = s.index('<section class="faq">'); f2 = s.index("</section>", f1) + len("</section>")
     s = s[:a] + sec + s[a:k1] + jun + s[k1:h1] + s[hj_end:f1] + oth + fq + s[f2:]
-    title = f"{city}の解体の補助金 2026年度｜条件と受付の状況、費用の目安"
+    # 11/12 関西の題と同じく、金額を題に入れる（本文の「上限・最大◯万円」のいちばん大きい数。500万円より大きい物・見つからない物は入れない）
+    _cap = max([int(x.replace(",", "")) for x in re.findall(r"(?:上限|最大)[はが]?\s*([\d,]+)万円", tx) + re.findall(r"[（(][^）)]*?は\s*([\d,]+)万円[）)]", tx) if int(x.replace(",", "")) <= 500] or [0])
+    title = f"{city}の解体の補助金 2026年度｜" + (f"最大{_cap}万円・" if _cap else "") + "条件と受付の状況、費用の目安"
     desc = f"{pref}{city}の解体の補助：{tx[:88]} 木造30坪の解体は90万〜150万円が目安（全国）。市の公式ページを{d}に確認。無料の見積り相談もできます。"
     ld = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": x}} for q, x in faq]},
           {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
