@@ -2,14 +2,14 @@
 11/1 オーナー「街少なすぎだろ」「俺に言われそうな事全部先立ってやれよ」→ 全部の街を入れる。
 数字は各府県・国土交通省が出した令和8年地価公示（2026年1月1日時点）の「住宅地の対前年平均変動率」。
 元の数字: tools/fudosan_list/towns/*.csv（名前,R7,R8[,平均価格]）
-使い方: python3 tools/fudosan_list/towns.py [--live]
+使い方: python3 tools/fudosan_list/towns.py [--mihon]（--mihon を付けた時だけ noindex の見本）
 出力: links/assets/towns.json（検索・地図用）, links/machi/<id>.html（街ごとのページ）, links/chika-kansai.html（ランキング）
 """
 import html, json, math, os, re, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 T = os.path.join(ROOT, "tools/fudosan_list/towns")
-live = "--live" in sys.argv
+live = "--mihon" not in sys.argv  # 11/12 ミス：--live を付け忘れて回し、街ページ205枚と実家ページ201枚が noindex のまま本番に出た（#724〜#736）。付け忘れても本番の形になるよう、逆にした（見本の時だけ --mihon）
 E = html.escape
 BASE = "https://townnote.pages.dev"
 TODAY = "2026年11月1日"
