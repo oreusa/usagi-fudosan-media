@@ -152,6 +152,10 @@ for site, nm in (("kansai", "関西"), ("kanto", "関東")):
         continue
     cur_, prev_ = kr[-1], ([r for r in kr if r.get("day", "") <= (date.fromisoformat(kr[-1]["day"]) - timedelta(days=7)).isoformat()] or [None])[-1]
     item("search-" + site, f"検索（{nm}）", f"7日でクリック {cur_.get('clicks')}・表示 {cur_.get('imps')}・平均 {cur_.get('pos')}位（{cur_.get('day')}）" + (f"・前の週 クリック {prev_.get('clicks')}" if prev_ else ""), "クリックが前の週より上", "計測中" if not prev_ else ("当たり" if (cur_.get("clicks") or 0) > (prev_.get("clicks") or 0) else "外れ"), "検索から来る人が、いちばん相談に近い", cur_.get("clicks"))
+    # 11/12 はじめて数字が入った：関西 表示8・関東 表示0。題を直す前に「Googleに載っているか」が先。載った枚数は汐が帳面に【登録】で写す → rows の idx / noidx
+    if (cur_.get("imps") or 0) < 50:
+        _ix = cur_.get("idx")
+        order("月の朝", "search-" + site, f"{nm}：Google の表示が7日で {cur_.get('imps')} 回しか無い（題より前に、載っていない）。" + (f"載っているページ {_ix} 枚・載っていない {cur_.get('noidx')} 枚。載っていない理由のいちばん多い物から直す（サイトマップ・重複・リンクが無い）" if _ix is not None else "汐の帳面の【登録】の行（載っている枚数・載っていない理由）を stats/kensaku.json の idx・noidx・why に入れ、理由のいちばん多い物から直す"), "検索から人が来ない元の原因")
     ws = cur_.get("words", [])
     near = sorted([w for w in ws if (w.get("i") or 0) >= 10 and 5 <= (w.get("p") or 99) <= 20], key=lambda w: -(w.get("i") or 0))[:3]
     seen0 = sorted([w for w in ws if (w.get("i") or 0) >= 20 and not (w.get("c") or 0) and (w.get("p") or 99) < 10], key=lambda w: -(w.get("i") or 0))[:2]

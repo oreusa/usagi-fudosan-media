@@ -1,4 +1,54 @@
 {
  "about": "検索で打たれた言葉（Google Search Console）。汐（GPT）が毎朝 Drive の「検索の帳面」に写し、月の朝の回がここへ足す。rows: {day, site:'kansai'|'kanto', clicks, imps, pos, words:[{w,c,i,p}], pages:[{u,c,i}]}。同じ day・site は上書き。60日より前は消す",
- "rows": []
+ "rows": [
+  {
+   "day": "2026-11-12",
+   "site": "kansai",
+   "clicks": 0,
+   "imps": 8,
+   "pos": 30.6,
+   "words": [],
+   "pages": [
+    {
+     "u": "/odekake",
+     "c": 0,
+     "i": 4
+    },
+    {
+     "u": "/",
+     "c": 0,
+     "i": 4
+    },
+    {
+     "u": "/ima",
+     "c": 0,
+     "i": 2
+    },
+    {
+     "u": "/chika-kansai",
+     "c": 0,
+     "i": 2
+    },
+    {
+     "u": "/machi/osaka-43",
+     "c": 0,
+     "i": 2
+    },
+    {
+     "u": "/fudosan-list",
+     "c": 0,
+     "i": 2
+    }
+   ]
+  },
+  {
+   "day": "2026-11-12",
+   "site": "kanto",
+   "clicks": 0,
+   "imps": 0,
+   "pos": 0,
+   "words": [],
+   "pages": []
+  }
+ ]
 }
