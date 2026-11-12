@@ -27,7 +27,8 @@ for city, tx, st, u, d in rows:
              ("工事が終わったら報告して、補助を受け取る", "報告の期限があります。")]
     jun = ('<section id="tejun" class="ps" style="--c:#4F7BA8"><h2>補助を使う時の順番</h2><ol class="kt-st">' + "".join(f"<li><b>{a}</b><span>{b}</span></li>" for a, b in steps)
            + f'</ol><p class="kt-n">順番や書類は市区ごとに違います。{E(city)}の手続きは、上の公式ページでご確認ください。</p></section>')
-    oth = ('<section id="hoka" class="ps" style="--c:#4F7BA8"><h2>ほかの市区の補助</h2><p class="kt-ci">'
+    oth = ('<section id="hoka" class="ps" style="--c:#4F7BA8"><h2>ほかの市区の補助</h2>'
+           f'<p style="margin:0 0 12px;font-size:13.5px"><a href="/kaitai-ranking" data-k="市の補助｜補助ランキング｜{E(city)}" style="font-weight:700">上限の高い順に見る（補助金ランキング）</a></p><p class="kt-ci">'
            + "".join(f'<a href="/kaitai-{SLUG[c][0]}" data-k="市の補助｜ほかの市｜{E(c)}">{E(c)}</a>' for c, *_ in rows if c != city) + '</p></section>')
     q2 = ("いまは受付中です。締め切りと残りの予算は、市の公式ページでご確認ください。" if st == "受付中" else
           f"今年度の受付は{'止まっています' if st == '受付停止' else '終わっています'}。来年度の受付は、市の公式ページでご確認ください。" if ended else

@@ -69,7 +69,10 @@ def page(base, city, rows, date, others):
     jun = ('<section id="tejun" class="ps" style="--c:#4F7BA8"><h2>補助を使う時の順番</h2><ol class="kt-st">' + "".join(f"<li><b>{a}</b><span>{b}</span></li>" for a, b in steps)
            + f'</ol><p class="kt-n">順番や書類は市ごとに違います。{E(city)}の手続きは、上の公式ページでご確認ください。</p></section>')
     same = [c for c in others if CITY[c][1] == pref and c != city]; rest = [c for c in others if CITY[c][1] != pref]
-    oth = ('<section id="hoka" class="ps" style="--c:#4F7BA8"><h2>ほかの市の補助</h2><p class="kt-ci">'
+    _rk = sorted([CITY[c][2] for c in others if CITY[c][2]], reverse=True)
+    _pos = (f'{E(city)}の上限{cap}万円は、関西{len(_rk)}市の中で{_rk.index(cap) + 1}位です。' if cap else '')
+    oth = ('<section id="hoka" class="ps" style="--c:#4F7BA8"><h2>ほかの市の補助</h2>'
+           f'<p style="margin:0 0 12px;font-size:13.5px">{_pos}<a href="/kaitai-ranking" data-k="市の補助｜補助ランキング｜{E(city)}" style="font-weight:700">上限の高い順に見る（補助金ランキング）</a></p><p class="kt-ci">'
            + "".join(f'<a href="/kaitai-{CITY[c][0]}" data-k="市の補助｜ほかの市｜{E(c)}">{E(c)}</a>' for c in same + rest) + '</p></section>')
     a = s.index('<section id="keisan"'); k1 = s.index('<section id="kaitai"'); h1 = s.index('<section id="hojo"')
     f1 = s.index('<section class="faq">'); f2 = s.index("</section>", f1) + len("</section>")
