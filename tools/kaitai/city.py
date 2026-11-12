@@ -5,6 +5,7 @@
 使い方: python3 tools/kaitai/city.py 2026-11-11   （build.py のあとに動かす）"""
 import ast, datetime, html, json, os, re, sys
 from fractions import Fraction
+from urllib.parse import quote
 
 TODAY = datetime.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else datetime.date.today()
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", "..")
@@ -29,6 +30,13 @@ def load():
     a = t.index("J_CITY = ["); J = ast.literal_eval(t[a + 9:t.index("\n]\n", a) + 2])
     ns = {}; exec(re.search(r"^J_DATE = .*$", t, re.M).group(0), ns)
     return J, ns["J_DATE"]
+
+
+def cut(tx, n=88):
+    """説明文に入れる時、文の途中で切らない（11/12 関東の説明が途中で切れていた）。"""
+    if len(tx) <= n: return tx
+    t = tx[:n]; i = max(t.rfind("。"), t.rfind("）"))
+    return t[:i + 1] if i >= 30 else t.rstrip("、・（(") + "…"
 
 
 def man(v):
@@ -67,7 +75,8 @@ def page(base, city, rows, date, others):
              ("市に申請して、交付の決定を待つ", "決定の前に契約や工事を始めると、対象外になります。"), ("決定のあとで、契約・工事", "工事の前後の写真が要る市もあります。"),
              ("工事が終わったら報告して、補助を受け取る", "報告の期限があります。")]
     jun = ('<section id="tejun" class="ps" style="--c:#4F7BA8"><h2>補助を使う時の順番</h2><ol class="kt-st">' + "".join(f"<li><b>{a}</b><span>{b}</span></li>" for a, b in steps)
-           + f'</ol><p class="kt-n">順番や書類は市ごとに違います。{E(city)}の手続きは、上の公式ページでご確認ください。</p></section>')
+           + f'</ol><p class="kt-n">順番や書類は市ごとに違います。{E(city)}の手続きは、上の公式ページでご確認ください。</p>'
+           + f'<a class="kt-b" href="/moushikomi?lite=1&amp;want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A&amp;memo={quote(city + " 申請に使う見積り")}" data-k="見積りを相談｜順番の下">申請に使う見積りを、無料で頼む</a><p class="kt-n" style="text-align:center">無料・書くのは4つだけ・見積りだけでも大丈夫です</p></section>')
     same = [c for c in others if CITY[c][1] == pref and c != city]; rest = [c for c in others if CITY[c][1] != pref]
     _rk = sorted([CITY[c][2] for c in others if CITY[c][2]], reverse=True)
     _pos = (f'{E(city)}の上限{cap}万円は、関西{len(_rk)}市の中で{_rk.index(cap) + 1}位です。' if cap else '')
@@ -87,7 +96,7 @@ def page(base, city, rows, date, others):
     fq = '<section class="faq"><h2>よくある質問</h2>' + "".join(f"<details><summary>{E(q)}</summary><p>{E(x)}</p></details>" for q, x in faq) + "</section>"
     s = s[:a] + sec + s[a:k1] + jun + s[k1:h1].replace("<!--hojo-->", "") + oth + fq + s[f2:]
     title = f"{city}の解体の補助金 2026年度｜" + (f"上限{cap}万円・" if cap else "") + "条件と受付の状況、費用の目安"
-    desc = f"{pref}{city}の{h0}：{tx0[:88]} 木造30坪の解体は90万〜150万円が目安（全国）。市の公式ページを{date}に確認。無料の見積り相談もできます。"
+    desc = f"{pref}{city}の{h0}：{cut(tx0)} 木造30坪の解体は90万〜150万円が目安（全国）。市の公式ページを{date}に確認。無料の見積り相談もできます。"
     ld = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": x}} for q, x in faq]},
           {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
               {"@type": "ListItem", "position": 1, "name": "関西不動産リスト", "item": BASE + "fudosan-list"},
@@ -133,7 +142,9 @@ def ranking(base, have, J, J_DATE):
     sec = (f'<section id="rank" class="ps" style="--c:#4F7BA8"><h2>解体の補助金 上限ランキング（関西 {len(items)}市）</h2><p class="rk-sub">市の公式ページで確かめた上限額・高い順</p>'
            '<div class="kt-w"><table class="kt"><thead><tr><th>順位</th><th>市</th><th>上限</th></tr></thead><tbody>' + tr + '</tbody></table></div>'
            '<p class="kt-n">上限は、いちばん多く出る場合の額です。建った年・空き家の期間・所得・場所などの条件で変わります。市の名前を押すと、条件と受付の状況、公式ページへ進めます。'
-           '載っていない市は、公式ページで確かめられた順に足しています。</p></section>')
+           '載っていない市は、公式ページで確かめられた順に足しています。</p>'
+           + (lambda nc: ('<p class="kt-n">上限が1つの額で決まらない市（広さなどで変わる）：' + "・".join(f'<a href="/kaitai-{CITY[c][0]}" data-k="補助ランキング｜{E(c)}">{E(c)}</a>' for c in nc) + '。額は市のページでご確認ください。</p>') if nc else "")([c for c in have if not CITY[c][2]])
+           + '</section>')
     a = s.index('<section id="keisan"')
     s = s[:a] + sec + s[a:]
     title = f"解体の補助金 上限ランキング 関西{len(items)}市｜1位は{top[1]}の{top[0]}万円【2026年度】"
