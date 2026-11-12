@@ -321,6 +321,7 @@ if tr:
     miss = {}
     for r in tr:
         for who in WHO:
+            if who == "夜" and (not _yoru or r.get("day", "") < min(_yoru)): continue  # 夜は、数え始めた日より前を「出なかった」にしない
             if not r.get(who): miss[who] = miss.get(who, 0) + 1
     item("gpt", "担当（" + "・".join(WHO) + "）", f"{len(tr)}日のうち、出なかった日：" + ("・".join(f"{w} {n}日" for w, n in miss.items()) or "なし") + (f"・夜の指摘から直した {sum(int(r.get('夜_naoshi') or 0) for r in tr)}件" if any("夜_naoshi" in r for r in tr) else ""), "出なかった日 0", "当たり" if not miss else "外れ", "指示書どおりに毎日の物が出たか", -sum(miss.values()))
     for w, n in miss.items():
