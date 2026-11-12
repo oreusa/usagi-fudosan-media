@@ -67,6 +67,8 @@ desc = f"家の解体は木造で1坪{RATES[0][2]}万〜{RATES[0][3]}万円、30
 ld = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq]},
       {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "関西不動産リスト", "item": BASE + "fudosan-list"}, {"@type": "ListItem", "position": 2, "name": "解体・片付けの費用", "item": BASE + "kaitai"}]}]
 s = re.sub(r'<script type="application/ld\+json">.*?</script>', "", s, flags=re.S)
+# 11/12 /ranking の下に足した「いくらで売れるか聞く」は借りない（このページの入口は見積り相談。残ると下の点検で止まり、link-stats ごと止まった）
+s = re.sub(r'<a class="back"[^>]*data-k="ランキング｜[^"]*"[^>]*>.*?</a>', "", s, flags=re.S)
 CSS = ("<style>.kt-hj{background:#fff;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);padding:14px 16px;margin:0 0 10px}.kt-hj b{font-size:15px}.kt-hj em{font-style:normal;font-size:11px;margin-left:8px;padding:2px 8px;border-radius:99px;background:#E8F3EA;color:#2F6B3F}.kt-hj em.x{background:#EEEFF1;color:#8A7F76}.kt-hj p{margin:6px 0 8px;font-size:13.5px;line-height:1.8}.kt-hj a{font-size:12.5px;color:#4F7BA8}"
        ".kt-c{background:#fff;border-radius:2px;box-shadow:0 1px 2px rgba(43,38,34,.05),0 6px 18px rgba(43,38,34,.05);padding:16px}"
        ".kt-tab{display:grid;grid-template-columns:1fr 1fr;border:1px solid #2B2622;border-radius:99px;overflow:hidden;margin-bottom:14px}"
