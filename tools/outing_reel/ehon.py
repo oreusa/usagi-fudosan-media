@@ -255,7 +255,7 @@ function build(){
    ${vtext([P.fes],96,120,96,'font-family:MB;letter-spacing:.24em','t2')}
    <div id="d1" style="position:absolute;left:96px;top:150px;color:#4a3328;opacity:0"><div class="num" style="font-size:60px;letter-spacing:.06em;color:#8a6a55">${P.d[0]} <span style="font-size:30px;letter-spacing:.3em">${P.d[1]}</span></div><div style="width:2px;height:70px;background:#8a6a55;margin:22px 0 10px 60px"></div></div>
    <div id="d2" style="position:absolute;left:84px;top:330px;color:#3d2a22;opacity:0"><div class="num" style="font-size:230px;line-height:1">${P.d[2]}</div><div style="font:500 44px M;letter-spacing:.3em;margin:18px 0 0 10px"><span class="num" style="font-size:44px;letter-spacing:.3em">${P.d[3]}</span>　まで</div></div>
-   <div id="seal">${P.seal}</div><div id="d3" style="position:absolute;left:96px;top:700px;font:500 38px M;letter-spacing:.22em;color:#6b4a3a;opacity:0">${P.place.replace(/｜/g,"　")}</div></div>`);
+   <div id="seal">${P.seal}</div><div id="d3" style="position:absolute;left:96px;top:700px;font:500 38px M;letter-spacing:${P.place.length>11?".06em":".22em"};color:#6b4a3a;opacity:0">${P.place.replace(/｜/g,"　")}</div></div>`);
   pages.push(`<div class="face">${scene(2)}${vtext(P.t4,84,120,58,'color:#f4e6c4','t3')}
    <div id="n1" style="position:absolute;left:560px;top:560px;color:#f4e6c4;opacity:0"><div class="num" style="font-size:92px;line-height:1">${P.night[0]}</div><div style="font:500 34px M;letter-spacing:.3em;margin-top:14px"><span class="num" style="font-size:34px;letter-spacing:.3em">${P.night[1]}</span>　${P.night[2]}</div><div style="font:500 40px M;letter-spacing:.2em;margin-top:26px">${P.night[3]}</div></div></div>`);
   // 案内
