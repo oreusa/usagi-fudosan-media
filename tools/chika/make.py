@@ -1,6 +1,6 @@
 """大阪市24区 地価ランキングのページ（links/chika-osaka.html）を作る。
 数字は大阪府「令和8年地価公示」報道資料 p.5 市区町村別対前年平均変動率表（1月1日時点）のまま。
-使い方: python3 tools/chika/make.py [--live]   （--live が無いと noindex の見本）
+使い方: python3 tools/chika/make.py [--mihon]   （--mihon を付けた時だけ noindex の見本。11/12 から逆にした）
 """
 import html, json, sys
 
@@ -19,7 +19,7 @@ D = {
 AVG = (5.8, 6.5, 11.6, 12.7)
 assert len(D) == 24
 URL = "https://townnote.pages.dev/chika-osaka"
-live = "--live" in sys.argv
+live = "--mihon" not in sys.argv
 
 
 def rank(i_now, i_prev):
