@@ -116,6 +116,12 @@
    "item": "kata-tasu",
    "what": "足した型のページの答え合わせを入れた（tools/seichou/tashita.json）",
    "before": 0
+  },
+  {
+   "day": "2026-11-12",
+   "item": "room",
+   "what": "ROOM の数字（フォロワー・商品の数）を、人に写させず機械が毎朝公開ページから写す形にした（tools/room/kazu.py）。商品が増えない日・フォロワーが増えない週は指令が出る",
+   "before": 204
   }
  ]
 }

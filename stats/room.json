@@ -1,0 +1,4 @@
+{
+ "about": "楽天ROOM の数字。tools/room/kazu.py が毎朝、公開ページから写す。rows: {day, follower, items, collections}。同じ日は上書き・120日より前は消す",
+ "rows": []
+}
