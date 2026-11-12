@@ -63,7 +63,7 @@ PAGE = dict(
 )
 # 関西・関東で変わる所と、絵の種類（spec の text.ehon_brand で上書き。書かなければ関西・塔）
 BR = dict(top_en='KANSAI ─ ODEKAKE', top_jp='関西おでかけリスト', cover_sub='関西の不動産屋が、街の調査で見つけた<br>おでかけリスト', hp_en='TOWN NOTE', hp_jp='関西おでかけリスト',
-          t5=['日付でさがせる', '地図でさがせる', '紅葉もイルミも'], seal='紅葉', motif='tou13', peaks=0,
+          t5=['日付でさがせる', '地図でさがせる', '紅葉もイルミも'], seal='紅葉', motif='tou13', peaks=0, scene='',
           logo=ROOT + '/tools/brand/logo.png', hp1=ROOT + '/tools/outing_reel/ehon-hp1.jpg', hp2=ROOT + '/tools/outing_reel/ehon-hp2.jpg')
 KANTO = dict(top_en='KANTO ─ ODEKAKE', top_jp='関東おでかけリスト', cover_sub='街の調査で見つけた<br>関東おでかけリスト', hp_en='LIFE NOTE', hp_jp='関東おでかけリスト',
              logo=ROOT + '/tools/outing_reel/kanto/logo.png', hp1=ROOT + '/tools/outing_reel/kanto/hp1.jpg', hp2=ROOT + '/tools/outing_reel/kanto/hp2.jpg')
@@ -72,8 +72,9 @@ if T.get('motif'): BR['motif'] = T['motif']          # 絵：tou13・tou5（重�
 if T.get('seal'): BR['seal'] = T['seal']              # 日付のページの判子（2文字）
 if T.get('peaks'): BR['peaks'] = 1                    # 遠くに2つの峰の山
 if T.get('ehon5'): BR['t5'] = T['ehon5']
+if T.get('scene'): BR['scene'] = T['scene']          # 景色：書かなければ山と木。'umi'＝海と砂浜（夜は色の光）。建物なしにする時は motif を yama に
 BR.update(T.get('ehon_brand', {}))
-PAGE.update({k: BR[k] for k in ('top_en', 'top_jp', 'cover_sub', 'hp_en', 'hp_jp', 't5', 'seal', 'motif', 'peaks')})
+PAGE.update({k: BR[k] for k in ('top_en', 'top_jp', 'cover_sub', 'hp_en', 'hp_jp', 't5', 'seal', 'motif', 'peaks', 'scene')})
 html = r"""<!doctype html><meta charset="utf-8"><style>
 @font-face{font-family:M;src:url(file://%F%/ShipporiMincho-Medium.ttf)}
 @font-face{font-family:MB;src:url(file://%F%/ShipporiMincho-Bold.ttf)}
@@ -193,7 +194,9 @@ function peaks(col){return `<path d="M-40,1400 L-40,700 Q120,640 250,520 Q330,43
 function leafPath(R){const L=[1,.9,.7,.42],pts=[];const P=(r,d)=>{const a=(d-90)*Math.PI/180;pts.push((Math.cos(a)*r*R).toFixed(3)+','+(Math.sin(a)*r*R+.12*R).toFixed(3))};
   for(let k=-3;k<=3;k++){const c=k*40,l=L[Math.abs(k)];P(.2,c-20);P(l*.5,c-7);P(l*.62,c-13);P(l*.8,c-4);P(l,c);P(l*.8,c+4);P(l*.62,c+13);P(l*.5,c+7)}
   P(.2,140);P(.1,172);P(.62,177);P(.62,183);P(.1,188);return 'M'+pts.join('L')+'Z'}
-const LP=leafPath(1);
+// 海の景色（scene: 'umi'）では、もみじの代わりに光のきらめき
+const UMI=P.scene=='umi',HK=['#8fd0ff','#ffd27a','#ff8fb8','#b9a0ff','#8fffd0'];
+const LP=UMI?'M0,-1Q.1,-.1 1,0Q.1,.1 0,1Q-.1,.1 -1,0Q-.1,-.1 0,-1Z':leafPath(1);
 function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>[...l].map(c=>`<span>${c}</span>`).join('')).join('<br>')+`</div>`}
 function scene(mode){ // 0 昼 1 秋 2 夜
   const sky=[['#f7f0df','#f3e3bf'],['#fbeede','#f6cfa0'],['#10152f','#343a6c']][mode];
@@ -206,6 +209,7 @@ function scene(mode){ // 0 昼 1 秋 2 夜
   if(mode==2){const r=rng(5);for(let i=0;i<70;i++)s+=`<circle class="star" cx="${(r()*920).toFixed(0)}" cy="${(r()*640).toFixed(0)}" r="${(1+r()*2.2).toFixed(1)}" fill="#fff6dc" opacity="${(.35+r()*.6).toFixed(2)}"/>`;
     s+=`<circle cx="235" cy="250" r="150" fill="#fff3c9" opacity=".12" filter="url(#bl)"/><circle cx="235" cy="250" r="62" fill="#fff1c4"/><circle cx="262" cy="236" r="58" fill="#1b2147" opacity=".0"/>`}
   else s+=`<circle cx="225" cy="270" r="${mode?92:78}" fill="${mode?'#f3a65a':'#fbe7b0'}" opacity="${mode?.6:.85}" filter="url(#wc2)"/>`;
+  if(P.scene=='umi')return s+umi(mode,far,tc);
   s+=`<g class="ly" data-a="6"><g filter="url(#wc)">${P.peaks?peaks(far):`<path d="${hill(760,90,3)}" fill="${far}"/>`}</g></g><g class="ly" data-a="14"><g filter="url(#wc)"><path d="${hill(880,60,21)}" fill="${mid}"/></g>`;
   s+=`<g filter="url(#wc2)">${trees(40+mode,16,-10,930,x=>fy(x)+26,96,tc,.9)}</g></g><rect x="-40" y="770" width="1000" height="260" fill="url(#ms${mode})"/>`;
   if(mode==2)s+=`<ellipse class="glow" cx="390" cy="800" rx="360" ry="420" fill="url(#gl2)" opacity=".55"/>`;
@@ -214,6 +218,25 @@ function scene(mode){ // 0 昼 1 秋 2 夜
   s+=`<g filter="url(#wc2)">${trees(60+mode,7,-20,330,x=>ny(x)-60,170,tc)}${trees(70+mode,7,600,940,x=>ny(x)-60,170,tc)}${trees(80+mode,12,-20,940,x=>ny(x)+70,150,tc)}</g>`;
   if(mode==2){for(let i=0;i<5;i++){const x=120+i*170;s+=`<path class="beam" d="M${x-10},1250 L${x-90},820 L${x+90},820 L${x+10},1250Z" fill="#ffc97a" opacity=".0" filter="url(#bl2)"/>`}for(let i=0;i<9;i++){const x=70+i*98,y=1262+Math.sin(i*1.7)*16;s+=`<circle class="lan" cx="${x}" cy="${y}" r="46" fill="url(#gl2)" opacity=".8"/><rect x="${x-7}" y="${y-10}" width="14" height="20" rx="3" fill="#ffe2a0"/>`}}
   s+=`</g><g class="lv"></g>${PAPER}</svg>`;return s}
+// 海と砂浜の景色（scene: 'umi'）。昼＝青い海、秋＝夕焼けの海、夜＝砂浜に色の光
+function umi(mode,far,tc){
+  const sea=[['#a9d3d6','#6fa9b8'],['#f1bf8f','#c9806a'],['#131c44','#0d1230']][mode],sand=['#f4ecd8','#f3d9b6','#2b2d4c'][mode],sand2=['#e9dcc0','#e6c39a','#222440'][mode];
+  const pine=mode==2?['#141a2c','#1a2236','#10151f']:mode==1?['#4f5a3a','#62683f','#3f4a34']:['#4f7a52','#6a9160','#3f6a4a'];
+  let s=`<defs><linearGradient id="se${mode}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${sea[0]}"/><stop offset="1" stop-color="${sea[1]}"/></linearGradient></defs>`;
+  s+=`<g class="ly" data-a="6"><g filter="url(#wc)"><path d="M-40,790 Q120,700 300,742 Q420,768 520,790 L-40,790Z" fill="${far}"/><path d="M560,790 Q700,730 960,716 L960,790Z" fill="${far}" opacity=".8"/></g></g>`;
+  s+=`<g class="ly" data-a="12"><rect x="-40" y="786" width="1000" height="330" fill="url(#se${mode})"/>`;
+  const r=rng(31+mode);for(let i=0;i<26;i++){const x=r()*900,y=806+r()*250,w=40+r()*120;s+=`<path d="M${x.toFixed(0)},${y.toFixed(0)} q${(w/4).toFixed(0)},-7 ${(w/2).toFixed(0)},0 t${(w/2).toFixed(0)},0" stroke="${mode==2?'#8fa0e0':'#ffffff'}" stroke-width="${(2+r()*2).toFixed(1)}" fill="none" opacity="${(mode==2?.16:.34)+r()*.2}"/>`}
+  if(mode==1)s+=`<ellipse cx="225" cy="900" rx="70" ry="120" fill="#ffd9a0" opacity=".35" filter="url(#bl)"/>`;
+  if(mode==2)s+=`<ellipse cx="235" cy="900" rx="46" ry="110" fill="#fff1c4" opacity=".2" filter="url(#bl)"/>`;
+  s+=`</g><rect x="-40" y="770" width="1000" height="200" fill="url(#ms${mode})"/>`;
+  if(mode==2)s+=`<ellipse class="glow" cx="460" cy="1080" rx="520" ry="300" fill="url(#gl2)" opacity=".4"/>`;
+  s+=`<g class="ly" data-a="30"><g filter="url(#wc)"><path d="M-40,1400 L-40,1090 Q200,1040 470,1076 Q720,1108 960,1050 L960,1400Z" fill="${sand}"/><path d="M-40,1400 L-40,1230 Q260,1180 520,1226 Q760,1262 960,1210 L960,1400Z" fill="${sand2}"/></g>`;
+  s+=`<path d="M-40,1094 Q200,1044 470,1080 Q720,1112 960,1054" stroke="#fff" stroke-width="7" fill="none" opacity="${mode==2?.25:.7}"/>`;
+  s+=`<g filter="url(#wc2)">${trees(60+mode,5,-30,150,x=>1130,190,pine)}${trees(70+mode,5,770,950,x=>1110,190,pine)}</g>`;
+  if(mode==2){const cols=['#ff8fb8','#8fd0ff','#ffd27a','#b9a0ff','#8fffd0','#ff8fb8','#8fd0ff'];
+    for(let i=0;i<7;i++){const x=90+i*124;s+=`<path class="beam" d="M${x-8},1240 L${x-110+i*8},700 L${x+60+i*8},700 L${x+8},1240Z" fill="${cols[i]}" opacity=".0" filter="url(#bl2)"/>`}
+    for(let i=0;i<11;i++){const x=50+i*82,y=1200+Math.sin(i*1.3)*26;s+=`<circle class="lan" cx="${x}" cy="${y}" r="40" fill="${cols[i%7]}" opacity=".55" filter="url(#bl)"/><circle cx="${x}" cy="${y}" r="6" fill="#fff"/>`}}
+  return s+`</g><g class="lv"></g>${PAPER}</svg>`}
 const NUMS=['一','二','三','四','五','六'];
 function build(){
   const pages=[];
@@ -255,8 +278,10 @@ function build(){
    spots.forEach((q,i)=>{s+=`<g class="dl" data-i="${i}" data-x="${q[0]}" data-y="${q[1]}" data-z="${q[2]}" data-r="${q[3]}" filter="url(#ds)"><path d="${LP}" fill="${cols[i%5]}"/><path d="M0,.9 L0,-.8 M0,.2 L-.5,-.35 M0,.2 L.5,-.35" stroke="rgba(90,30,15,.45)" stroke-width=".035" fill="none"/></g>`});
    $('#deco').innerHTML=s;let b='';for(let i=0;i<16;i++)b+=`<circle data-x="${(r()*1080).toFixed(0)}" data-y="${(r()*1920).toFixed(0)}" data-p="${(r()*6).toFixed(2)}" r="${(10+r()*26).toFixed(0)}" fill="#ffdc9a"/>`;$('#bk').innerHTML=b}
   // 葉
-  document.querySelectorAll('.lv').forEach((g,gi)=>{const r=rng(100+gi);let s='';const cols=['#c9402b','#e8862e','#f0b23a','#d4552d','#b5332a'];
+  document.querySelectorAll('.lv').forEach((g,gi)=>{const r=rng(100+gi);let s='';const cols=UMI?HK:['#c9402b','#e8862e','#f0b23a','#d4552d','#b5332a'];
     for(let i=0;i<16;i++)s+=`<g class="lf" data-x="${(r()*920).toFixed(0)}" data-s="${(.05+r()*.07).toFixed(3)}" data-p="${r().toFixed(3)}" data-z="${(14+r()*20).toFixed(0)}" data-w="${(r()*6).toFixed(2)}"><path d="${LP}" fill="${cols[i%5]}" opacity=".9"/></g>`;g.innerHTML=s});
+  if(UMI)document.querySelectorAll('.face:not(.cover) path').forEach((e,i)=>{if(e.getAttribute('d')==LP&&!e.closest('.lv'))e.setAttribute('fill',HK[i%5])});
+  if(UMI)document.querySelectorAll('path').forEach(e=>{if(e.getAttribute('d')==LP&&!e.closest('.face'))e.setAttribute('fill','#e3c88c')});
 }
 function chars(id,t,t0,step=.07){const el=document.getElementById(id);if(!el)return;el.querySelectorAll('span').forEach((c,i)=>{const k=eo(sm(t,t0+i*step,t0+i*step+.45));c.style.opacity=k;c.style.transform=`translateY(${(1-k)*14}px)`})}
 function fade(id,t,t0,d=.6,dy=18){const el=document.getElementById(id);if(!el)return;const k=eo(sm(t,t0,t0+d));el.style.opacity=k;el.style.transform=`translateY(${(1-k)*dy}px)`}
