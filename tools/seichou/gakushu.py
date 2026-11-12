@@ -424,7 +424,7 @@ for y in yatta["rows"]:
         manabi["rows"].append({"day": today.isoformat(), "item": name_of.get(y["item"], y["item"]), "id": y["item"], "kind": "手の答え", "what": y["what"], "before": y["before"], "after": y["after"], "result": y["result"]})
 ng = {}; ok = {}
 for m in manabi["rows"]:
-    if m.get("kind") == "手の答え": (ok if m["result"] == "効いた" else ng).setdefault(m["id"], []).append(m["what"])
+    if m.get("kind") == "手の答え": (ok if m["result"] == "効いた" else ng).setdefault(m.get("id", m.get("item")), []).append(m["what"])
 # 指令の並び：お金に近い順。同じ指令が何日続けて出ているか（＝やられていない日数）を数える。月の朝の「作る」は1日1つなので、1番に印
 # 11/12 owner「なんでそれが抜けてるのか理解できない。大問題だろ」：関東の街ページ329枚に申し込みへの道が無かった（見られた1195→申し込み0）。人の目ではなく、機械が毎日「家のページなのに申し込みへ行けないページ」を数える
 def _michi(root):
@@ -463,6 +463,38 @@ for _u in _sm:
             break
 item("noindex", "載せるなの印（noindex）が付いたページ", f"サイトマップ {len(_sm)}枚のうち {len(_ni)}枚" + (f"（{'・'.join(_ni[:3])}）" if _ni else ""), "0枚", "当たり" if not _ni else "外れ", "付いていると、Google は絶対に載せない")
 if _ni: order("月の朝", "form", f"【きょうの1つより先】サイトマップに入っているのに noindex のページが {len(_ni)}枚（{'・'.join(_ni[:3])}）。作る機械を本番の形で回し直す（towns.py は --mihon を付けない）", "載る段のいちばん元が壊れている")
+# 見回り（11/13 オーナー「そんなの俺が聞かなくても…Systemがよく回ってない証拠」「見回り、学習、成長を自動的にする仕組みに」）。
+# 毎日回るはずの仕事を1つずつ、最後に動いた日で見る。止まっていたら、段に関係なく一番上に出す（ROOM が2晩0件でも、指令が「お金の段」として控えに回り、誰も言わなかった）。
+# 仕事を足したら、ここに1行足す（名前・最後に動いた日・何日まで待つか・止まった時の最初の手）。足していない仕事は、見回りに入らない＝止まっても分からない
+def _mx(xs): return max([x for x in xs if x] or [""])
+def _akari(path):
+    try:
+        import urllib.request
+        return json.loads(urllib.request.urlopen("https://raw.githubusercontent.com/oreusa/akari-auto/main/" + path, timeout=20).read().decode("utf-8"))
+    except Exception: return None
+_tk = load(S("toukou.json"), {}).get("rows", []); _ks = load(S("kensaku.json"), {}).get("rows", []); _ag = _akari("data/gakushu.json")
+MIMAWARI = [
+    ("数字の機械（link-stats）", _mx(r.get("day", "") for r in rows), 1, "Actions の link-stats を見て、止まった段を直す（stats/build-fail.txt）"),
+    ("投稿の数字（Threads）", _mx(r.get("day", "") for r in _tk if r.get("svc") == "threads"), 2, "Buffer で、きのうの関西の Threads が出たかを見る。出ていなければ投稿の回を動かし、出ていれば点検の回（20:33）が数字を足していない"),
+    ("投稿の数字（X）", _mx(r.get("day", "") for r in _tk if r.get("svc") == "x"), 2, "Buffer で、きのうの関西の X が出たかを見る。出ていなければ投稿の回を動かす"),
+    ("リール（インスタ）", _mx(str(r.get("at", ""))[:10] for r in reels.get("reels", [])), 2, "リールの回が出したか・Buffer の失敗を見る（決まりは ehon-reel-machine）"),
+    ("検索の帳面（汐）", _mx(r.get("day", "") for r in _ks), 2, "Drive「検索の帳面」と「燈への報告」の【汐】の行を読む。ログアウトなら、オーナーに Search Console へのログインを1行で頼む"),
+    ("楽天ROOMの数字", _mx(r.get("day", "") for r in rm), 1, "tools/room/kazu.py と stats/room-fail.txt を見る"),
+    ("担当の出来の写し", _mx(r.get("day", "") for r in tantou.get("rows", [])), 2, "朝の回が stats/tantou.json に1行足す"),
+    ("やった手の帳面", _mx(y.get("day", "") for y in load(S("yatta.json"), {}).get("rows", [])), 2, "月が2日、指令の手を1つもやっていない。きょうの1つをやって1行足す"),
+    ("関東の台帳（燈）", (_ag or {}).get("day", "") if _ag is not None else None, 1, "akari の page.yml（公開の機械）が止まっている。Actions を見て直す"),
+]
+_tp = prev.get("tomari", {}); tomari = {}
+for _nm, _ld, _mxd, _te in MIMAWARI:
+    if _ld is None: continue   # 読めなかった（網の都合）＝止まったとは言わない
+    _age = (today - date.fromisoformat(_ld)).days if _ld else 999
+    if _age > _mxd:
+        tomari[_nm] = {"since": _tp.get(_nm, {}).get("since", today.isoformat()), "last": _ld or "無い", "te": _te}
+        order("月の朝", "form", f"【きょうの1つより先】{_nm} が止まっている（最後に動いた日 {_ld or '無い'}・{_tp.get(_nm, {}).get('since', today.isoformat())} から）。{_te}。直したら、オーナーへの朝の報告の1行目に 何が・なぜ・何を替えたか を書く", "毎日回る仕事が止まっている")
+for _nm in _tp:
+    if _nm not in tomari: manabi["rows"].append({"day": today.isoformat(), "kind": "止まり", "item": _nm, "what": f"{_tp[_nm].get('since')} から止まっていた → 戻った", "result": "戻った"})
+for _nm in tomari:
+    if _nm not in _tp: manabi["rows"].append({"day": today.isoformat(), "kind": "止まり", "item": _nm, "what": f"止まった（最後に動いた日 {tomari[_nm]['last']}）", "result": "止まった"})
 PRI = ["form", "yosou", "lead", "michi", "indexnow", "search-kansai", "search-kanto", "city-retsu", "city-tasu", "city", "hp", "kata-tasu", "spot-more", "post", "kata", "view-threads", "view-x", "pic", "reel", "reel-ehon", "aff", "gpt", "room"]
 old = {(o["to"], o["item"], o["order"][:24]): o.get("days", 1) for o in prev.get("orders", [])}
 same_day = prev.get("day") == today.isoformat()
@@ -497,11 +529,14 @@ dan = 0 if (_ik or 0) < 100 or (_it or 0) < 100 else (1 if (_hito or 0) < 300 el
 DSEN = ["Google に 関西100枚・関東100枚", "人だけで 週300人", "送信 週1件", "紹介料 月1件"]
 DS = {"search-kansai": 0, "search-kanto": 0, "indexnow": 0, "city-retsu": 0, "city-tasu": 0, "city": 1, "hp": 1, "kata-tasu": 1, "spot-more": 1, "post": 1, "kata": 1, "view-threads": 1, "view-x": 1, "pic": 1, "reel": 1, "reel-ehon": 1, "gpt": 1, "lead": 2, "michi": 2, "aff": 3, "room": 3, "yosou": 3}
 _n = {}; hikae = []; _act = []
+# 控えの繰り上げ（11/13）：「1日3本まで」で5日つづけて控えに回った指令は、1日に1本だけ4本目として出す（控えに入ったまま、だれも見ない指令を作らない）
+_hd = {(o["to"], o["item"], o["order"].replace("【控えから繰り上げ：5日つづけて出番が無かった】", "")[:24]): o.get("hdays", 0) for o in prev.get("hikae", []) if o.get("hold") == "1日3本まで"}; _up = {}
 for o in orders:
     _alert = o["item"] == "form" or o["order"].startswith("【きょうの1つより先】") or "見張りが止まっている" in o["why"] or "仕事が止まっている" in o["why"]
     if not _alert and DS.get(o["item"], 1) > dan + 1: o["hold"] = f"いまの段は「{DAN[dan]}」。この指令は「{DAN[DS.get(o['item'], 1)]}」の段なので、前の段が線を越えるまで出さない"
-    elif not _alert and _n.get(o["to"], 0) >= 3: o["hold"] = "1日3本まで"
-    if o.get("hold"): hikae.append(o)
+    elif not _alert and _n.get(o["to"], 0) >= 3 and not (_hd.get((o["to"], o["item"], o["order"][:24]), 0) >= 5 and not _up.get(o["to"])): o["hold"] = "1日3本まで"
+    elif not _alert and _n.get(o["to"], 0) >= 3: _up[o["to"]] = True; o["order"] = "【控えから繰り上げ：5日つづけて出番が無かった】" + o["order"]
+    if o.get("hold"): o["hdays"] = _hd.get((o["to"], o["item"], o["order"][:24]), 0) + (0 if same_day and (o["to"], o["item"], o["order"][:24]) in _hd else 1); hikae.append(o)
     else:
         _act.append(o)
         if not _alert: _n[o["to"]] = _n.get(o["to"], 0) + 1
@@ -531,6 +566,7 @@ def line(o):
 MARK = {"当たり": "◎", "外れ": "×", "未確認": "？", "計測中": "…", "差なし": "△"}
 L = [f"# 学習の台帳（{today.isoformat()} 朝）", "", "機械が毎朝作ります。数字が取れない物は「未確認」。直しただけの物は、ここで「当たり」になるまで済みではありません。", "",
      "## いちばん上の3つ（この3つが動かなければ、ほかが当たりでも進んでいない）", ""] + [f"- {t['name']}：**{t['num'] if t['num'] is not None else '未確認'}**（線 {t['line']}）" + (f"　{t['note']}" if t["note"] else "") for t in top3] + ["", f"いまの段：**{DAN[dan]}**（越える線：{DSEN[dan]}）。段は 載る → 来る → 申し込む → お金。2つ先の段の指令は出しません。", "",
+     "## 止まっている物（毎日回るはずの仕事の見回り。オーナーへの報告の1行目に書く）", ""] + ([f"- **{k}**：最後に動いた日 {v['last']}・{v['since']} から。{v['te']}" for k, v in tomari.items()] or [f"- なし（{len(MIMAWARI)}つの仕事を見た）"]) + ["",
      "## 項目ごと", "", "| | 項目 | 機械が測った数字 | 合格の線 | 答え |", "|---|---|---|---|---|"]
 L += [f"| {MARK.get(i['ans'], '')} | {i['name']} | {i['num']} | {i['line']} | {i['ans']} |" for i in items]
 L += ["", "## きょうの指令（動く前に、自分あての行を必ず読む）", ""]
@@ -538,6 +574,8 @@ for to in ("月の朝", "投稿の回", "リールの回", "燈"):
     xs = [o for o in orders if o["to"] == to]
     if xs: L += [f"### {to}"] + [line(o) for o in xs] + [""]
 def mline(m):
+    if m.get("kind") == "止まり": return f"- {m['day']} 見回り「{m['item']}」：{m['what']}"
+    if "from" not in m and m.get("kind") != "手の答え": return f"- {m.get('day')} {m.get('item')}：{m.get('what', '')} {m.get('result', '')}"
     if m.get("kind") == "手の答え": return f"- {m['day']} {m['item']}：やった手「{m['what']}」→ {m['result']}（{m['before']}→{m['after']}）"
     return f"- {m['day']} {m['item']}：{m['from']}→{m['to']}（{m['num']}）。その前に出ていた指令：{'／'.join(m['did']) or '記録なし'}"
 wait = [y for y in yatta["rows"] if "result" not in y]
@@ -546,7 +584,7 @@ L += ["## 答え待ちの手（やってから7日で、機械が答えを付け
 L += ["## 学び（手の答え・答えが変わった日）", ""] + ([mline(m) for m in manabi["rows"][-12:]] or ["- まだありません"]) + [""]
 open(S("gakushu.md"), "w", encoding="utf-8").write("\n".join(L))
 json.dump(yatta, open(S("yatta.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-json.dump({"day": today.isoformat(), "first_item": (first or {}).get("item"), "dan": DAN[dan], "top3": top3, "items": items, "orders": orders, "hikae": hikae, "sum": {"sent": sent, "seika": (int(last.get("hassei") or 0) if last else None), "cost": 100000}, "hist": hist}, open(S("gakushu.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump({"day": today.isoformat(), "first_item": (first or {}).get("item"), "dan": DAN[dan], "top3": top3, "items": items, "orders": orders, "hikae": hikae, "tomari": tomari, "sum": {"sent": sent, "seika": (int(last.get("hassei") or 0) if last else None), "cost": 100000}, "hist": hist}, open(S("gakushu.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 json.dump({"day": today.isoformat(), "about": "きょうの指令。to が自分の行を、動く前に読んでそのままやる。やったら stats/yatta.json の rows に {day, item, what} を1行足す（同じ item の指令が2つ以上ある時は order に指令の最初の24字も書く。書かないと「手が無い」と数えられる）（7日後に機械が効いた・効かなかったを付ける）。ng の手はくり返さない", "orders": orders}, open(S("shirei.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 json.dump(manabi, open(S("manabi.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("\n".join(L))
