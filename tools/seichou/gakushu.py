@@ -39,7 +39,26 @@ except Exception: _bf = []
 if _bf: order("月の朝", "hp", "【きょうの1つより先】ページを作る機械が止まっている：" + "／".join(_bf) + "。手元で同じ命令を回して原因を直す（止まったページは古いまま出ている）", "止まった仕組みはその日に直す")
 item("hp", "HPのページ", f"外から {sei.get('ext7', '未確認')}人（前の7日 {sei.get('ext_prev7', '未確認')}人）・伸びているページ {len(grow)}", f"前の週の次の段（週{rung(sei.get('ext_prev7', 0) or 0, [50, 100, 150, 300, 600, 1200])}人）を越える。その次は 週{rung(sei.get('ext7', 0) or 0, [50, 100, 150, 300, 600, 1200])}人（最後は 週1200人＝月40件の相談に要る数）", "当たり" if sei.get("ext7", 0) >= rung(sei.get("ext_prev7", 0) or 0, [50, 100, 150, 300, 600, 1200]) else "外れ", sei.get("weak", ""), sei.get("ext7"))
 if grow: order("月の朝", "hp", f"伸びているページ「{grow[0]}」と同じ型のページを1つ足す", "外から来る人が前の週より増えた型")
-if ext0: order("月の朝", "hp", f"「{ext0[0]}」の題と説明文を、探す人の言葉に直す", "中では見られているのに外から0")
+# 1件ページの中身（11/12：題はもう探す人の言葉。足りないのは時間・料金・駐車場＝公式から1日5件足す。tools/odekake_more.json）
+_mr = load(os.path.join(ROOT, "tools", "odekake_more.json"), {}).get("rows", {})
+_sp = []
+try:
+    for _f in sorted(os.listdir(os.path.join(ROOT, "links", "o"))):
+        _h = open(os.path.join(ROOT, "links", "o", _f), encoding="utf-8").read()
+        _m = re.search(r"<h1>(.*?)<span>", _h)
+        if _m: _sp.append((re.sub(r"\s+", "", _m.group(1)), _m.group(1), "<span>時間</span>" in _h or "<span>料金</span>" in _h))
+except Exception: pass
+if _sp:
+    _done = [x for x in _sp if x[2]]; _seen = {re.sub(r"\s+", "", k) for k in _mr}
+    _todo = [x for x in _sp if x[0] not in _seen]
+    _hot = sorted(_todo, key=lambda x: (0 if re.search("イルミ|ライトアップ|紅葉|初詣|光", x[1]) else 1, -tot(lambda k, n=x[1]: k == "表示：1件ページ｜" + n)))[:5]
+    _lastm = max([v.get("day", "") for v in _mr.values()] or [""])
+    _gm = (today - date.fromisoformat(_lastm)).days if _lastm else 99
+    _e1 = (sei.get("pages", {}).get("1件ページ", {}) or {}).get("e7", 0)
+    item("spot-more", "1件ページの中身（時間・料金・駐車場）", f"{len(_sp)}件のうち 時間か料金つき {len(_done)}件・まだ調べていない {len(_todo)}件・最後に足した日 {_lastm[5:] or 'なし'}・外から {_e1}人/週", "1日5件足す・外から 週10人", "当たり" if _e1 >= 10 else ("外れ" if _gm >= 2 and _todo else "計測中"), "題は探す人の言葉になっている。足りないのは、探す人が知りたい中身", len(_done))
+    if _todo: order("月の朝", "spot-more", "1件ページに、公式ページの通りの 時間・料金・駐車場 を足す（tools/odekake_more.json）。きょうの5件：" + "・".join(x[1] for x in _hot) + "。公式に無ければ nashi:true で残す", "中では見られているのに外から0。題は直っている" + ("。！" + str(_gm) + "日 足していない" if _gm >= 2 else ""))
+if ext0 and ext0[0] != "1件ページ": order("月の朝", "hp", f"「{ext0[0]}」の題と説明文を、探す人の言葉に直す", "中では見られているのに外から0")
+elif len(ext0) > 1: order("月の朝", "hp", f"「{ext0[1]}」の題と説明文を、探す人の言葉に直す", "中では見られているのに外から0")
 if sei.get("play"): order("月の朝", "hp", sei["play"], "いちばん弱い所：" + sei.get("weak", ""))
 
 # 2 投稿の型（?f=媒体-型-日付と枠）と、3 画像つき（枠の最後に p）
@@ -356,7 +375,7 @@ if fc:
     if _old_fc and not _ng: order("月の朝", "form", "申し込みの通し確かめ（formcheck.yml）が2日止まっている。Actions を見て動かす", "見張りが止まっている")
 else:
     item("form", "申し込みが送れるか", "未確認（stats/formcheck.json が無い）", "だめ 0・毎日確かめている", "未確認", "壊れていても、相談0のままでは気づけない")
-PRI = ["form", "yosou", "lead", "michi", "search-kansai", "search-kanto", "city-tasu", "city", "hp", "post", "kata", "view-threads", "view-x", "pic", "reel", "reel-ehon", "aff", "gpt", "room"]
+PRI = ["form", "yosou", "lead", "michi", "search-kansai", "search-kanto", "city-tasu", "city", "hp", "spot-more", "post", "kata", "view-threads", "view-x", "pic", "reel", "reel-ehon", "aff", "gpt", "room"]
 old = {(o["to"], o["item"], o["order"][:24]): o.get("days", 1) for o in prev.get("orders", [])}
 same_day = prev.get("day") == today.isoformat()
 for o in orders:
