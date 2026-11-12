@@ -33,6 +33,10 @@ def ago(id, days=7):
 
 # 1 HP：ページの型（成長の帳面の採点をそのまま使う）
 grow, ext0 = sei.get("grow", []), sei.get("ext0", [])
+# 作る機械が止まっていないか（11/12 /kaitai の作り直しが点検で止まり、link-stats ごと止まって数字が1日入らなかった）
+try: _bf = [l.strip() for l in open(S("build-fail.txt"), encoding="utf-8") if l.strip()]
+except Exception: _bf = []
+if _bf: order("月の朝", "hp", "【きょうの1つより先】ページを作る機械が止まっている：" + "／".join(_bf) + "。手元で同じ命令を回して原因を直す（止まったページは古いまま出ている）", "止まった仕組みはその日に直す")
 item("hp", "HPのページ", f"外から {sei.get('ext7', '未確認')}人（前の7日 {sei.get('ext_prev7', '未確認')}人）・伸びているページ {len(grow)}", f"前の週の次の段（週{rung(sei.get('ext_prev7', 0) or 0, [50, 100, 150, 300, 600, 1200])}人）を越える。その次は 週{rung(sei.get('ext7', 0) or 0, [50, 100, 150, 300, 600, 1200])}人（最後は 週1200人＝月40件の相談に要る数）", "当たり" if sei.get("ext7", 0) >= rung(sei.get("ext_prev7", 0) or 0, [50, 100, 150, 300, 600, 1200]) else "外れ", sei.get("weak", ""), sei.get("ext7"))
 if grow: order("月の朝", "hp", f"伸びているページ「{grow[0]}」と同じ型のページを1つ足す", "外から来る人が前の週より増えた型")
 if ext0: order("月の朝", "hp", f"「{ext0[0]}」の題と説明文を、探す人の言葉に直す", "中では見られているのに外から0")
