@@ -10,7 +10,7 @@ SITES = [
       order=["大阪", "京都", "兵庫", "奈良", "滋賀", "和歌山"],
       col={"大阪": "#B97A62", "京都": "#8A7495", "兵庫": "#4F6681", "奈良": "#6F8C68", "滋賀": "#5F8F98", "和歌山": "#C4925A"},
       full={"大阪": "大阪府", "京都": "京都府", "兵庫": "兵庫県", "奈良": "奈良県", "滋賀": "滋賀県", "和歌山": "和歌山県"},
-      js='<script src="assets/night.js?v=25"></script><script src="assets/menu.js?v=49" defer></script><script src="assets/v2sub.js?v=12" defer></script>',
+      js='<script src="assets/night.js?v=26"></script><script src="assets/menu.js?v=49" defer></script><script src="assets/v2sub.js?v=12" defer></script>',
       logo="assets/logo-s.png?v=2", back="fudosan-list", backn="関西不動産リスト", brand="TOWN NOTE"),
  dict(out=AK + "site/sagasu.html", a="/assets/", area="関東", n="329", base="https://lifenote-kanto.pages.dev",
       order=["東京", "神奈川", "埼玉", "千葉", "茨城", "栃木", "群馬"],
