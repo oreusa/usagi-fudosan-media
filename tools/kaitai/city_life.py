@@ -6,7 +6,8 @@ import html, json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", "..")
 AK = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "..", "akari-auto")
 BASE = "https://lifenote-kanto.pages.dev/"; E = html.escape
-SLUG = {"横浜市": ("yokohama", "神奈川県"), "川崎市": ("kawasaki", "神奈川県"), "八王子市": ("hachioji", "東京都"), "千葉市": ("chiba", "千葉県")}
+SLUG = {"横浜市": ("yokohama", "神奈川県"), "川崎市": ("kawasaki", "神奈川県"), "八王子市": ("hachioji", "東京都"), "千葉市": ("chiba", "千葉県"),
+        "町田市": ("machida", "東京都"), "足立区": ("adachi", "東京都"), "葛飾区": ("katsushika", "東京都")}
 END = ("受付停止", "受付終了")
 rows = [l.rstrip("\n").split("\t") for l in open(os.path.join(HERE, "kanto_hojo.tsv"), encoding="utf-8") if l.strip() and not l.startswith("#")]
 rows = [r for r in rows if len(r) == 5 and r[0] in SLUG]
