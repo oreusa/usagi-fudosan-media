@@ -167,6 +167,20 @@ per = l_now / max(1, len(rl[:14]))
 rans = "計測中" if len(rl) < 28 else ("当たり" if (per >= 1 and l_now > l_old) or ig[0] >= 5 else "外れ")
 item("reel", "リール（インスタ）", f"この14本のいいね {l_now}（前の14本 {l_old}）・1本あたり {per:.1f}・フォロワー {fol[0] if fol else '未確認'}人・HPへ {ig[0]}人（前 {ig[1]}）", "1本あたり いいね1 で前より上、か HPへ週5人", rans, "再生数は取らない（11/12 オーナー）。声つきの型（11/12〜）を前の型とくらべる", l_now)
 if rans == "外れ": order("リールの回", "reel", "いいねが前の14本より下。出だしの1枚（題の言葉と数字）を、いいねの多かった回の形に寄せる。キャプションの最初の行に、HPのその催しのページへの道（プロフィールのリンク）を書く", f"いいね {l_old}→{l_now}")
+# 5b 絵本を開く型（11/12〜）と前の型のくらべ。ig/posts/*.json（出した記録）の spec から、絵本の型で出したリールを見分ける
+import glob as _g
+eh_urls = set()
+for pp in _g.glob(os.path.join(ROOT, "ig/posts/*.json")):
+    try:
+        pj = json.load(open(pp)); sp = json.load(open(os.path.join(ROOT, pj.get("spec", ""))))
+        if (sp.get("kata") == "ehon" or "ehon" in sp.get("video_url", "")) and pj.get("permalink"): eh_urls.add(pj["permalink"].rstrip("/"))
+    except Exception: pass
+eh = [r for r in rl if r.get("url", "").rstrip("/") in eh_urls]; old = [r for r in rl if r.get("url", "").rstrip("/") not in eh_urls][:14]
+ea = sum(int(r.get("likes") or 0) for r in eh) / max(1, len(eh)); oa = sum(int(r.get("likes") or 0) for r in old) / max(1, len(old))
+eans = "計測中" if len(eh) < 6 else ("当たり" if ea > oa else "外れ")
+item("reel-ehon", "リールの絵本の型", f"絵本の型 {len(eh)}本・1本あたり いいね {ea:.1f}（前の型の直近14本 {oa:.1f}）", "6本たまったら、前の型より上か", eans, "11/12 オーナー「リールは絵本を開く型」。6本で答えを出す", round(ea * 10))
+if eans == "外れ": order("リールの回", "reel-ehon", "絵本の型のいいねが前の型より下。表紙の題（1コマ目）を、いいねの多かった回の言葉に寄せ、絵（motif・scene）を変えて3本ためす。型をやめる・戻すはオーナーに聞く", f"いいね 絵本 {ea:.1f}・前 {oa:.1f}")
+if eans == "当たり": order("リールの回", "reel-ehon", "絵本の型が前の型より上。このまま続け、いいねの多かった絵（motif・scene）を先に使う", f"いいね 絵本 {ea:.1f}・前 {oa:.1f}")
 if tb: order("リールの回", "reel", f"題材は「{tb[0]}」を先に（1本あたりのいいね {tb[1][0] / max(1, tb[1][1]):.1f}）。同じ題材が3本続いたら次の題材へ", "いいねの多かった題材")
 
 # 6 宿・アフィリエイト（押された数は機械・成果は汐が月曜に写す stats/seika.json）
@@ -320,7 +334,7 @@ def _michi(root):
 _bad = _michi(os.path.join(ROOT, "links"))
 item("michi", "申し込みへの道", f"家のページで道が無い {len(_bad)}枚" + (f"（例 {_bad[0]}）" if _bad else ""), "合格の線：0枚", "当たり" if not _bad else "外れ", "家・土地のページは、どれも申し込みへ1回で行ける事", val=len(_bad))
 if _bad: order("月の朝", "michi", f"申し込みへの道が無い家のページが {len(_bad)}枚（{'・'.join(_bad[:3])}）。そのページを作る機械に、街の名前入りの「いくらで売れるか無料で聞く」を足す", "見られても反響にならない")
-PRI = ["yosou", "lead", "michi", "search-kansai", "search-kanto", "city", "hp", "post", "kata", "view-threads", "view-x", "pic", "reel", "aff", "gpt", "room"]
+PRI = ["yosou", "lead", "michi", "search-kansai", "search-kanto", "city", "hp", "post", "kata", "view-threads", "view-x", "pic", "reel", "reel-ehon", "aff", "gpt", "room"]
 old = {(o["to"], o["item"], o["order"][:24]): o.get("days", 1) for o in prev.get("orders", [])}
 same_day = prev.get("day") == today.isoformat()
 for o in orders:
