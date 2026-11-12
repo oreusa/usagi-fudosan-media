@@ -331,13 +331,18 @@ if _ch:
     elif _gap_c >= 2: order("月の朝", "city-tasu", f"汐の写しが {_gap_c}日 止まっている。月が帳の順番の次の3市を自分で公式から確かめてページにし、オーナーに汐の回が動いているかを1行で聞く", "写しが止まると入口が増えない")
     elif _gap >= 2: order("月の朝", "city-tasu", f"{_gap}日 新しい市が出ていない。持ち越しの市（" + "・".join(r["city"] for r in _mo[:5]) + "）を、PDF・別の公式ページから確かめ直して出す", "2日つづけて0市")
     if len(_mo) >= 5: order("月の朝", "city-tasu", f"持ち越しが {len(_mo)}市たまっている。機械で開けない市は、凪の【確かめ】「合う」を待って出す形に切り替える", "確かめきれない市が溜まっている")
-LEV = [("外から来る人を2倍にする（市のページ・検索・投稿の2本目）", sim(p_ext * 2, r_op, r_wr), "city"),
-       ("書きはじめる人を、開いた人の3割にする（申し込みページの最初の画面）", sim(p_ext, r_op, max(r_wr, 0.3)), "lead"),
-       ("家のページから申し込みを開く人を増やす（開く率を1.5倍）", sim(p_ext, min(1.0, r_op * 1.5), r_wr), "michi")]
-LEV.sort(key=lambda x: -x[1]); top = LEV[0]
-need = round(40 / (30 / 7 * r_op * r_wr * (r_sd if r_sd is not None else SD0))) if r_op and r_wr else None
-item("yosou", "未来予想（30日）", f"このままだと 相談 {now30:.1f}件/30日（紹介料の見込み 約{now30 * 1:.0f}万円・毎月の出費 10万円）。来週 外から {p_ext}人の予想。いちばん効く手：{top[0]} → {top[1]:.1f}件" + ("。送信の率は未確認（仮に半分）" if r_sd is None else ""), f"30日で {rung(now30, [1, 3, 10, 20, 40])}件（月40件に要る 外から来る人：週{need if need else '未確認'}人）", "当たり" if now30 >= 10 else "外れ", f"予想の当たり具合：これまで {len(_errs)}回 答え合わせ・掛け算 {bias}", round(now30, 1))
-order("月の朝", "yosou", f"未来予想でいちばん効く手は「{top[0]}」（30日の相談 {now30:.1f}件 → {top[1]:.1f}件）。きょうの1つは、この手に当たる指令（{top[2]}）から選ぶ。2番目は「{LEV[1][0]}」→ {LEV[1][1]:.1f}件", "同じ手間なら、相談がいちばん増える所から", "数字")
+# 11/12 作り替え：送信（反響）の実績が0の間は、相談の件数の予想を出さない（仮の率で「30件」と出て、本当は0なのに順調に見えた）。1件出たら実測の率で出す
+if sent >= 1:
+    LEV = [("外から来る人を2倍にする（市のページ・検索・投稿の2本目）", sim(p_ext * 2, r_op, r_wr), "city"),
+           ("書きはじめる人を、開いた人の3割にする（申し込みページの最初の画面）", sim(p_ext, r_op, max(r_wr, 0.3)), "lead"),
+           ("家のページから申し込みを開く人を増やす（開く率を1.5倍）", sim(p_ext, min(1.0, r_op * 1.5), r_wr), "michi")]
+    LEV.sort(key=lambda x: -x[1]); top = LEV[0]
+    need = round(40 / (30 / 7 * r_op * r_wr * (r_sd if r_sd is not None else SD0))) if r_op and r_wr else None
+    item("yosou", "未来予想（30日）", f"このままだと 相談 {now30:.1f}件/30日（紹介料の見込み 約{now30 * 1:.0f}万円・毎月の出費 10万円）。来週 外から {p_ext}人の予想。いちばん効く手：{top[0]} → {top[1]:.1f}件" + ("。送信の率は未確認（仮に半分）" if r_sd is None else ""), f"30日で {rung(now30, [1, 3, 10, 20, 40])}件（月40件に要る 外から来る人：週{need if need else '未確認'}人）", "当たり" if now30 >= 10 else "外れ", f"予想の当たり具合：これまで {len(_errs)}回 答え合わせ・掛け算 {bias}", round(now30, 1))
+    order("月の朝", "yosou", f"未来予想でいちばん効く手は「{top[0]}」（30日の相談 {now30:.1f}件 → {top[1]:.1f}件）。きょうの1つは、この手に当たる指令（{top[2]}）から選ぶ。2番目は「{LEV[1][0]}」→ {LEV[1][1]:.1f}件", "同じ手間なら、相談がいちばん増える所から", "数字")
+else:
+    top = ("（実績0の間は出さない）", 0, "")
+    item("yosou", "未来予想（30日）", f"出していません（送信の実績が0の間は、仮の率の予想は当てにならない）。来週 外から {p_ext}人の見込みだけ控える", "送信が1件出たら、実測の率で出す", "計測中", f"外から来る人の予想の当たり具合：これまで {len(_errs)}回 答え合わせ・掛け算 {bias}", 0)
 if not any(r_["day"] == today.isoformat() for r_ in yo["rows"]):
     yo["rows"].append({"day": today.isoformat(), "for": (today + timedelta(days=7)).isoformat(), "pred": {"ext7": p_ext, "sent30": round(now30, 1), "top": top[0]}, "rates": {"open": round(r_op, 2), "write": round(r_wr, 2), "send": r_sd}})
 yo["bias"] = bias; yo["rows"] = yo["rows"][-120:]
@@ -466,6 +471,32 @@ for o in orders:
     lt = _last(o); st = (today - _dt.timedelta(days=o["days"] - 1)).isoformat()
     o["idle"] = o["days"] if lt < st else max(0, (today - _dt.date.fromisoformat(lt)).days)   # 指令が出てから手が無い日数（手を打った日からは数え直す）
 orders.sort(key=lambda o: (o["kind"] != "作る", PRI.index(o["item"]) if o["item"] in PRI else 99))
+# 11/12 作り替え（オーナー「無駄な仕組みになってないか」）：段を1つずつ越える。載る → 来る → 申し込む → お金。
+# 前の段が線を越えるまで、2つ先の段の指令は出さない（人が来ていないのに中を直し続けて、1か月 数字が動かなかった）。指令は回ごとに1日3本まで。残りは控え（hikae）に回す
+_kr1 = sorted(load(S("kensaku.json"), {}).get("rows", []), key=lambda r: r.get("day", ""))
+def _idx(site):
+    xs = [r["idx"] for r in _kr1 if r.get("site") == site and r.get("idx") is not None]
+    return xs[-1] if xs else None
+_ik, _it = _idx("kansai"), _idx("kanto")
+_hito = sum(_src.values()) if _src else None   # 人だけ（来た元の印は、機械と申し込みの点検を除いた後に付く）
+DAN = ["載る", "来る", "申し込む", "お金"]
+dan = 0 if (_ik or 0) < 100 or (_it or 0) < 100 else (1 if (_hito or 0) < 300 else (2 if sent < 1 else 3))
+DSEN = ["Google に 関西100枚・関東100枚", "人だけで 週300人", "送信 週1件", "紹介料 月1件"]
+DS = {"search-kansai": 0, "search-kanto": 0, "indexnow": 0, "city-retsu": 0, "city-tasu": 0, "city": 1, "hp": 1, "kata-tasu": 1, "spot-more": 1, "post": 1, "kata": 1, "view-threads": 1, "view-x": 1, "pic": 1, "reel": 1, "reel-ehon": 1, "gpt": 1, "lead": 2, "michi": 2, "aff": 3, "room": 3, "yosou": 3}
+_n = {}; hikae = []; _act = []
+for o in orders:
+    _alert = o["item"] == "form" or o["order"].startswith("【きょうの1つより先】") or "見張りが止まっている" in o["why"]
+    if not _alert and DS.get(o["item"], 1) > dan + 1: o["hold"] = f"いまの段は「{DAN[dan]}」。この指令は「{DAN[DS.get(o['item'], 1)]}」の段なので、前の段が線を越えるまで出さない"
+    elif not _alert and _n.get(o["to"], 0) >= 3: o["hold"] = "1日3本まで"
+    if o.get("hold"): hikae.append(o)
+    else:
+        _act.append(o)
+        if not _alert: _n[o["to"]] = _n.get(o["to"], 0) + 1
+orders = _act
+top3 = [{"name": "来た人（人だけ・7日）", "num": _hito, "line": "週300人", "note": "" if _src else "数えはじめ 11/12。それまでの「外から」は機械まじり"},
+        {"name": "Google に載った枚数", "num": f"関西 {_ik if _ik is not None else '未確認'}・関東 {_it if _it is not None else '未確認'}", "line": "関西100・関東100", "note": ""},
+        {"name": "反響（送信・7日）", "num": sent, "line": "週1件", "note": ""}]
+hist.setdefault("hito", []).append([today.isoformat(), _hito]); hist.setdefault("idx", []).append([today.isoformat(), (_ik or 0) + (_it or 0)])
 _c = [o for o in orders if o["to"] == "月の朝" and o["kind"] == "作る"]
 first = next((o for o in _c if len(o.get("wait", [])) < 2), _c[0] if _c else None)  # 同じ所に答え待ちの手が2つあれば、答えが出るまで次の項目を先に（重ねて変えると、どの手が効いたか分からなくなる）
 if first: first["first"] = True
@@ -486,7 +517,8 @@ def line(o):
     return "- " + t
 MARK = {"当たり": "◎", "外れ": "×", "未確認": "？", "計測中": "…", "差なし": "△"}
 L = [f"# 学習の台帳（{today.isoformat()} 朝）", "", "機械が毎朝作ります。数字が取れない物は「未確認」。直しただけの物は、ここで「当たり」になるまで済みではありません。", "",
-     "| | 項目 | 機械が測った数字 | 合格の線 | 答え |", "|---|---|---|---|---|"]
+     "## いちばん上の3つ（この3つが動かなければ、ほかが当たりでも進んでいない）", ""] + [f"- {t['name']}：**{t['num'] if t['num'] is not None else '未確認'}**（線 {t['line']}）" + (f"　{t['note']}" if t["note"] else "") for t in top3] + ["", f"いまの段：**{DAN[dan]}**（越える線：{DSEN[dan]}）。段は 載る → 来る → 申し込む → お金。2つ先の段の指令は出しません。", "",
+     "## 項目ごと", "", "| | 項目 | 機械が測った数字 | 合格の線 | 答え |", "|---|---|---|---|---|"]
 L += [f"| {MARK.get(i['ans'], '')} | {i['name']} | {i['num']} | {i['line']} | {i['ans']} |" for i in items]
 L += ["", "## きょうの指令（動く前に、自分あての行を必ず読む）", ""]
 for to in ("月の朝", "投稿の回", "リールの回", "燈"):
@@ -496,11 +528,12 @@ def mline(m):
     if m.get("kind") == "手の答え": return f"- {m['day']} {m['item']}：やった手「{m['what']}」→ {m['result']}（{m['before']}→{m['after']}）"
     return f"- {m['day']} {m['item']}：{m['from']}→{m['to']}（{m['num']}）。その前に出ていた指令：{'／'.join(m['did']) or '記録なし'}"
 wait = [y for y in yatta["rows"] if "result" not in y]
+if hikae: L += [f"控え（きょうは出さない指令）{len(hikae)}本：" + "・".join(sorted(set(name_of.get(o["item"], o["item"]) for o in hikae))), ""]
 L += ["## 答え待ちの手（やってから7日で、機械が答えを付ける）", ""] + ([f"- {y['day']} {name_of.get(y['item'], y['item'])}：{y['what']}（やる前 {y.get('before')}）" for y in wait] or ["- ありません（指令をやった回が stats/yatta.json に1行足します）"]) + [""]
 L += ["## 学び（手の答え・答えが変わった日）", ""] + ([mline(m) for m in manabi["rows"][-12:]] or ["- まだありません"]) + [""]
 open(S("gakushu.md"), "w", encoding="utf-8").write("\n".join(L))
 json.dump(yatta, open(S("yatta.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-json.dump({"day": today.isoformat(), "first_item": (first or {}).get("item"), "items": items, "orders": orders, "sum": {"sent": sent, "seika": (int(last.get("hassei") or 0) if last else None), "cost": 100000}, "hist": hist}, open(S("gakushu.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump({"day": today.isoformat(), "first_item": (first or {}).get("item"), "dan": DAN[dan], "top3": top3, "items": items, "orders": orders, "hikae": hikae, "sum": {"sent": sent, "seika": (int(last.get("hassei") or 0) if last else None), "cost": 100000}, "hist": hist}, open(S("gakushu.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 json.dump({"day": today.isoformat(), "about": "きょうの指令。to が自分の行を、動く前に読んでそのままやる。やったら stats/yatta.json の rows に {day, item, what} を1行足す（同じ item の指令が2つ以上ある時は order に指令の最初の24字も書く。書かないと「手が無い」と数えられる）（7日後に機械が効いた・効かなかったを付ける）。ng の手はくり返さない", "orders": orders}, open(S("shirei.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 json.dump(manabi, open(S("manabi.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("\n".join(L))
