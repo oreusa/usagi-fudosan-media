@@ -1,14 +1,40 @@
-"""絵本を開く型のリール見本（11/12 月）。
-使い方: python3 ehon.py spec.json out.mp4 [静止画の時刻 "1,3,8"]   声: VDIR=shots/voice/<name> SP=20（無ければ声なし）
+"""絵本を開く型のリール（11/12 月。オーナー「リールは絵本を開く型」）。
+使い方: python3 ehon.py spec.json out.mp4 [静止画の時刻 "1,3,8"]
+台本（spec）に書く物は README.md の「絵本の型」。機械（outing-reel.yml）の中では VOICE_URL があり、声を作って読みを答え合わせしてから動画にする。
+手元で試す時: VDIR=shots/voice/<name> SP=20（先に作った声）。無ければ声なし。
 1080x1920・30fps。render(t) で1コマずつ描いて ffmpeg でつなぐ（tools/outing_reel/make.py と同じ流れ）。"""
-import json, os, subprocess, sys, wave
+import json, os, subprocess, sys, time, urllib.parse, urllib.request, wave
 
-ROOT = os.environ.get('ROOT', '/home/user/usagi-fudosan-media')
+ROOT = os.environ.get('ROOT') or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, ROOT + '/tools/outing_reel')
+import yomi
 spec = json.load(open(sys.argv[1])); OUT = os.path.abspath(sys.argv[2]); STILL = sys.argv[3] if len(sys.argv) > 3 else ''
 W = os.path.abspath(os.environ.get('WORK', 'ehon-work')); os.makedirs(W + '/fr', exist_ok=True)
 VDIR = os.environ.get('VDIR', ''); SP = os.environ.get('SP', '20')
 T = spec['text']
 N = 6
+# 絵本の型に要る物が台本に無ければ、作らずに止まる（前は談山神社の文が勝手に入った）
+need = [k for k in ('ehon1', 'ehon2', 'ehon4', 'ehon_night', 'date', 'title') if not T.get(k)]
+if os.environ.get('EHON_SAMPLE') != '1' and need: sys.exit('絵本の型：台本の text に ' + '・'.join(need) + ' が無い（tools/outing_reel/README.md）')
+# 声を作る（機械の中）。先に読み間違いの辞書を当て、作った声の読みを voice_yomi と答え合わせする
+VU = os.environ.get('VOICE_URL', '')
+if VU and not STILL:
+    lines = [yomi.fix(l) for l in (spec.get('voice') or [])]
+    if len(lines) != N: sys.exit(f'絵本の型：voice は {N} 行（1山の話・2季節・3いつまで・4夜や見どころ・5料金や行き方・6最後の案内）')
+    def vreq(path, data=None):
+        r = urllib.request.Request(VU + path, data=data, method='POST' if data is not None else 'GET', headers={'Content-Type': 'application/json'})
+        return urllib.request.urlopen(r, timeout=120).read()
+    for i in range(150):
+        try: vreq('/version'); break
+        except Exception: time.sleep(2)
+    VDIR = W + '/voice'; os.makedirs(VDIR, exist_ok=True); kana = []
+    for n, line in enumerate(lines):
+        q = json.loads(vreq(f'/audio_query?speaker={SP}&text=' + urllib.parse.quote(line), b''))
+        q.update(speedScale=1.0, intonationScale=1.15, pitchScale=-0.03, pauseLengthScale=0.7, prePhonemeLength=0.05, postPhonemeLength=0.1); kana.append(q.get('kana', ''))
+        open(f'{VDIR}/{SP}-{n:02d}.wav', 'wb').write(vreq(f'/synthesis?speaker={SP}', json.dumps(q).encode()))
+    print('声の読み', json.dumps(kana, ensure_ascii=False))
+    bad = yomi.check(lines, spec.get('voice_yomi') or [], kana)
+    if bad: sys.exit('声の読みの答え合わせで止めた（動画は作っていない）\n' + '\n'.join(bad))
 
 
 def dur(n):
@@ -39,6 +65,13 @@ PAGE = dict(
 BR = dict(top_en='KANSAI ─ ODEKAKE', top_jp='関西おでかけリスト', cover_sub='関西の不動産屋が、街の調査で見つけた<br>おでかけリスト', hp_en='TOWN NOTE', hp_jp='関西おでかけリスト',
           t5=['日付でさがせる', '地図でさがせる', '紅葉もイルミも'], seal='紅葉', motif='tou13', peaks=0,
           logo=ROOT + '/tools/brand/logo.png', hp1=ROOT + '/tools/outing_reel/ehon-hp1.jpg', hp2=ROOT + '/tools/outing_reel/ehon-hp2.jpg')
+KANTO = dict(top_en='KANTO ─ ODEKAKE', top_jp='関東おでかけリスト', cover_sub='街の調査で見つけた<br>関東おでかけリスト', hp_en='LIFE NOTE', hp_jp='関東おでかけリスト',
+             logo=ROOT + '/tools/outing_reel/kanto/logo.png', hp1=ROOT + '/tools/outing_reel/kanto/hp1.jpg', hp2=ROOT + '/tools/outing_reel/kanto/hp2.jpg')
+if spec.get('brand') == 'kanto': BR.update(KANTO)
+if T.get('motif'): BR['motif'] = T['motif']          # 絵：tou13・tou5（重ねた塔。数字は層）／tahoto（多宝塔）／shrine（神社と鳥居）／temple（お堂）／yama（建物なし）
+if T.get('seal'): BR['seal'] = T['seal']              # 日付のページの判子（2文字）
+if T.get('peaks'): BR['peaks'] = 1                    # 遠くに2つの峰の山
+if T.get('ehon5'): BR['t5'] = T['ehon5']
 BR.update(T.get('ehon_brand', {}))
 PAGE.update({k: BR[k] for k in ('top_en', 'top_jp', 'cover_sub', 'hp_en', 'hp_jp', 't5', 'seal', 'motif', 'peaks')})
 html = r"""<!doctype html><meta charset="utf-8"><style>
@@ -116,10 +149,10 @@ function trees(seed,n,x0,x1,yf,sz,cols,op=.92){const r=rng(seed);let s='';const 
     for(let k=0;k<5;k++){const a=k*1.3+q*6,rr=z*(.32+.12*((k*37%10)/10));s+=`<ellipse cx="${(x+Math.cos(a)*z*.3).toFixed(1)}" cy="${(y-z*.55+Math.sin(a)*z*.22).toFixed(1)}" rx="${rr.toFixed(1)}" ry="${(rr*.82).toFixed(1)}" fill="${c}" opacity=".78"/>`}
     s+=`<ellipse cx="${x-z*.12}" cy="${y-z*.72}" rx="${z*.2}" ry="${z*.13}" fill="#fff" opacity=".13"/></g>`}
   return s}
-function tower(cx,by,k,night){let s='';const roof=night?'#15121c':'#3b2a24',body=night?'#3a2420':'#7b4a33',lit='#ffd27a';
+function tower(cx,by,k,night,NT=13){let s='';const roof=night?'#15121c':'#3b2a24',body=night?'#3a2420':'#7b4a33',lit='#ffd27a';
   s+=`<path d="M${cx-150*k},${by} L${cx+150*k},${by} L${cx+132*k},${by-26*k} L${cx-132*k},${by-26*k}Z" fill="${night?'#22202c':'#8d857a'}"/>`;
   let y=by-26*k;
-  for(let i=0;i<13;i++){const w=(i==0?300:262-i*13)*k,h=(i==0?64:15)*k,bw=(i==0?150:(92-i*4.2))*k,rh=(i==0?26:19)*k;
+  const few=NT<=5,dw=few?34:13,db=few?13:4.2;for(let i=0;i<NT;i++){const w=(i==0?300:262-i*dw)*k,h=(i==0?64:(few?44:15))*k,bw=(i==0?150:(92-i*db+(few?24:0)))*k,rh=(i==0?26:(few?30:19))*k;
     s+=`<rect x="${cx-bw/2}" y="${y-h}" width="${bw}" height="${h}" fill="${body}"/>`;
     if(i==0){s+=`<rect x="${cx-bw/2+14*k}" y="${y-h+12*k}" width="${bw-28*k}" height="${h-12*k}" fill="${night?lit:'#5a3526'}" opacity="${night?.95:.8}"/>`;
       for(let j=1;j<4;j++)s+=`<line x1="${cx-bw/2+14*k+(bw-28*k)*j/4}" y1="${y-h+12*k}" x2="${cx-bw/2+14*k+(bw-28*k)*j/4}" y2="${y}" stroke="${body}" stroke-width="${3*k}"/>`}
@@ -132,7 +165,7 @@ function tower(cx,by,k,night){let s='';const roof=night?'#15121c':'#3b2a24',body
   for(let j=0;j<5;j++)s+=`<ellipse cx="${cx}" cy="${y-12*k-j*11*k}" rx="${(13-j*1.6)*k}" ry="${3.2*k}" fill="${night?'#c9a45a':'#5b4a2c'}"/>`;
   return s}
 // 神社（拝殿と鳥居）。塔と同じ引数
-function shrine(cx,by,k,night){let s='';const roof=night?'#15121c':'#3b2a24',body=night?'#3a2420':'#8a4a33',lit='#ffd27a',st=night?'#22202c':'#8d857a';
+function shrine(cx,by,k,night,torii=true){let s='';const roof=night?'#15121c':'#3b2a24',body=night?'#3a2420':'#8a4a33',lit='#ffd27a',st=night?'#22202c':'#8d857a';
   s+=`<path d="M${cx-210*k},${by} L${cx+210*k},${by} L${cx+190*k},${by-30*k} L${cx-190*k},${by-30*k}Z" fill="${st}"/>`;
   for(let j=0;j<3;j++)s+=`<rect x="${cx-(70-j*8)*k}" y="${by-(12+j*10)*k}" width="${(140-j*16)*k}" height="${10*k}" fill="${night?'#2c2a38':'#a39b90'}"/>`;
   const y0=by-30*k,h=120*k,w=330*k;
@@ -143,12 +176,18 @@ function shrine(cx,by,k,night){let s='';const roof=night?'#15121c':'#3b2a24',bod
   s+=`<path d="M${cx-rw/2-16*k},${ry-4*k} Q${cx-rw/2+30*k},${ry+6*k} ${cx-rw*.3},${ry-rh*.55} Q${cx-rw*.16},${ry-rh*.95} ${cx-rw*.1},${ry-rh} L${cx+rw*.1},${ry-rh} Q${cx+rw*.16},${ry-rh*.95} ${cx+rw*.3},${ry-rh*.55} Q${cx+rw/2-30*k},${ry+6*k} ${cx+rw/2+16*k},${ry-4*k} Q${cx+rw/2-20*k},${ry+16*k} ${cx+rw*.34},${ry+12*k} L${cx-rw*.34},${ry+12*k} Q${cx-rw/2+20*k},${ry+16*k} ${cx-rw/2-16*k},${ry-4*k}Z" fill="${roof}"/>`;
   s+=`<rect x="${cx-rw*.13}" y="${ry-rh-12*k}" width="${rw*.26}" height="${14*k}" rx="${4*k}" fill="${night?'#c9a45a':'#5b4a2c'}"/>`;
   if(!night)s+=`<path d="M${cx-rw*.3},${ry-rh*.42} L${cx+rw*.3},${ry-rh*.42}" stroke="#fff" stroke-width="${2*k}" opacity="${.14}"/>`;
+  if(!torii)return s;
   // 鳥居（手前・右）
   const tx=cx+250*k,ty=by+4*k,tk=k*.9,tc=night?'#6a2a22':'#b5332a';
   s+=`<rect x="${tx-62*tk}" y="${ty-190*tk}" width="${14*tk}" height="${190*tk}" fill="${tc}"/><rect x="${tx+48*tk}" y="${ty-190*tk}" width="${14*tk}" height="${190*tk}" fill="${tc}"/>`;
   s+=`<rect x="${tx-78*tk}" y="${ty-150*tk}" width="${156*tk}" height="${11*tk}" fill="${tc}"/><path d="M${tx-104*tk},${ty-206*tk} Q${tx},${ty-190*tk} ${tx+104*tk},${ty-206*tk} L${tx+98*tk},${ty-186*tk} Q${tx},${ty-172*tk} ${tx-98*tk},${ty-186*tk}Z" fill="${night?'#3a1a18':'#7c2a22'}"/>`;
   return s}
-function motif(cx,by,k,night){return P.motif=='shrine'?shrine(cx,by-10*k,k*.92,night):tower(cx,by,k,night)}
+function motif(cx,by,k,night){const m=P.motif||'tou13';
+  if(m=='yama')return '';
+  if(m=='shrine')return shrine(cx,by-10*k,k*.92,night,true);
+  if(m=='temple')return shrine(cx,by-10*k,k*.92,night,false);
+  if(m=='tahoto')return tower(cx,by,k*1.25,night,2);
+  const n=+(m.replace('tou',''))||13;return tower(cx,by,n<=5?k*1.2:k,night,n)}
 // 2つの峰の山（筑波山など）
 function peaks(col){return `<path d="M-40,1400 L-40,700 Q120,640 250,520 Q330,430 400,470 Q470,520 540,470 Q620,390 700,480 Q820,620 960,690 L960,1400Z" fill="${col}"/>`}
 function leafPath(R){const L=[1,.9,.7,.42],pts=[];const P=(r,d)=>{const a=(d-90)*Math.PI/180;pts.push((Math.cos(a)*r*R).toFixed(3)+','+(Math.sin(a)*r*R+.12*R).toFixed(3))};
@@ -273,7 +312,10 @@ const fs=require('fs');const A=+(process.env.FR0||0),B=+(process.env.FR1||1e9);f
 print('場面', [round(x, 2) for x in ST], '全体', round(TOTAL, 1), '声', [round(x, 2) for x in VD])
 if STILL:
     subprocess.run(['node', f'{W}/rec.js', STILL], check=True); sys.exit()
-subprocess.run(['node', f'{W}/rec.js'], check=True)
+NF = int(30 * TOTAL) + 1; K = int(os.environ.get('EHON_WORKERS', '3')); ps = []
+for i in range(K):
+    ps.append(subprocess.Popen(['node', f'{W}/rec.js'], env=dict(os.environ, FR0=str(NF * i // K), FR1=str(NF * (i + 1) // K))))
+if any(p.wait() for p in ps): sys.exit('コマを撮れない')
 subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-ss', '0.2', '-i', f'{ROOT}/tools/brand/reel_bgm.m4a', '-t', f'{TOTAL + 1:.2f}', '-af', 'loudnorm=I=-17:TP=-1.5:LRA=11', '-ar', '48000', f'{W}/bgm.wav'], check=True)
 enc = ['-c:v', 'libx264', '-preset', 'medium', '-pix_fmt', 'yuv420p', '-crf', '20', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', OUT]
 if not (VDIR and os.path.exists(f'{VDIR}/{SP}-00.wav')):
