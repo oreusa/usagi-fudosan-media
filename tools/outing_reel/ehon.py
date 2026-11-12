@@ -256,7 +256,7 @@ if not (VDIR and os.path.exists(f'{VDIR}/{SP}-00.wav')):
 ins = []; flt = []
 for n in range(N):
     ins += ['-i', f'{VDIR}/{SP}-{n:02d}.wav']; flt.append(f'[{n+2}:a]aresample=48000,adelay={int((ST[n]+LEAD)*1000)}:all=1[v{n}]')
-flt.append(''.join(f'[v{n}]' for n in range(N)) + f'amix=inputs={N}:normalize=0:duration=longest,volume={os.environ.get("VVOL", "1.7")},asplit=2[vo][sc]')
+flt.append(''.join(f'[v{n}]' for n in range(N)) + f'amix=inputs={N}:normalize=0:duration=longest,volume={os.environ.get("VVOL", "1.7")},apad=whole_dur={TOTAL + 1:.2f},asplit=2[vo][sc]')  # 声が終わった後も曲を最後まで流す（声の長さで曲が切れていた）
 flt.append(f'[1:a]afade=t=in:d=0.4,afade=t=out:st={TOTAL-2.2}:d=2.2[bg0]')
 flt.append('[bg0][sc]sidechaincompress=threshold=0.02:ratio=5:attack=40:release=600:makeup=1[bg]')
 flt.append('[bg][vo]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.95[a]')
