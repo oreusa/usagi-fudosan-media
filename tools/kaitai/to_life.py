@@ -11,7 +11,7 @@ PAIRS = (
     ("https://townnote.pages.dev/assets/ogp.png", "https://lifenote-kanto.pages.dev/og-v10.png"),
     ('href="assets/ogp.png"', 'href="/logo-s.png"'),
     ('src="assets/logo-s.png?v=2"', 'src="/logo-s.png"'),
-    ('src="assets/night.js?v=24"', 'src="/assets/night.js?v=18"'),
+    ('src="assets/night.js?v=25"', 'src="/assets/night.js?v=18"'),
     ('src="assets/menu.js?v=49"', 'src="/assets/menu.js?v=46"'),
     ('src="assets/v2sub.js?v=12"', 'src="/assets/v2sub.js?v=17"'),
     ("townnote\\.pages", "lifenote-kanto\\.pages"),
