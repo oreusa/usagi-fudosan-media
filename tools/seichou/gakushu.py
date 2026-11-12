@@ -153,6 +153,13 @@ if _src:
 else:
     item("src", "来た元（どこから来たか）", "まだ数が無い（11/12 に入れた）", "検索から 週30人", "計測中", "外から来た人の中身を見る")
 
+# 3b'' 検索のロボットが見に来た数（11/12）。載る前に、まず見に来る。Google と Bing が来ているかを毎日見る
+_bot = {}
+for r in rows:
+    if r.get("day", "") > d7 and r.get("k", "").startswith("機械："): _bot[r["k"][3:]] = _bot.get(r["k"][3:], 0) + int(r.get("n", 0) or 0)
+_gb = sum(v for k, v in _bot.items() if k.lower().startswith("google")); _bb = sum(v for k, v in _bot.items() if k.lower().startswith("bing"))
+item("crawl", "検索のロボットが見に来た", ("・".join(f"{k} {v}" for k, v in sorted(_bot.items(), key=lambda x: -x[1])[:6]) or "まだ数が無い（11/12 に入れた）"), "Google と Bing が、どちらも週100ページ", "当たり" if _gb >= 100 and _bb >= 100 else ("計測中" if not _bot else "外れ"), "見に来ないページは載らない", _gb)
+
 # 3c 検索で打たれた言葉（Search Console）。11/12 owner「GPTの使い道を増やして欲しい」→ 汐が毎朝写す → 月の朝が stats/kensaku.json へ → 機械が「題に入れる言葉」を選ぶ
 ks = load(S("kensaku.json"), {}).get("rows", [])
 for site, nm in (("kansai", "関西"), ("kanto", "関東")):
