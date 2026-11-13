@@ -1,0 +1,168 @@
+{
+ "date": "2026-11-14",
+ "bad": 8,
+ "slots": {
+  "x07": {
+   "ok": true,
+   "time": "07:00",
+   "head": "京都河原町にグラニフ京都、11/19（木）オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "f26e2925f2a07e75",
+   "x": true,
+   "th": false
+  },
+  "x09": {
+   "ok": true,
+   "time": "09:00",
+   "head": "神戸市西区にラーメン魁力屋 神戸森友店、11/17（火）オープン",
+   "bad": [],
+   "warn": [
+    "絵が無い（文字だけで出る）"
+   ],
+   "digest": "927dc28e56e69c0d",
+   "x": true,
+   "th": false
+  },
+  "x12": {
+   "ok": true,
+   "time": "12:00",
+   "head": "滋賀県にスーパー万代が初めて出店、12月上旬に2店同時オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "a4445c865827ac47",
+   "x": true,
+   "th": false
+  },
+  "x15": {
+   "ok": true,
+   "time": "15:00",
+   "head": "橿原市に天下一品 橿原曲川店、11/13（金）オープン",
+   "bad": [],
+   "warn": [
+    "絵が無い（文字だけで出る）"
+   ],
+   "digest": "2fac73f232f477f7",
+   "x": true,
+   "th": false
+  },
+  "x18": {
+   "ok": true,
+   "time": "18:00",
+   "head": "心斎橋にトミー ヒルフィガー心斎橋店、11/12（木）オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "2b91cd43c50d00c8",
+   "x": true,
+   "th": false
+  },
+  "x21": {
+   "ok": true,
+   "time": "21:00",
+   "head": "東大阪にアップガレージライダース ナップス東大阪店、11/28（土）オープン",
+   "bad": [],
+   "warn": [
+    "絵が無い（文字だけで出る）"
+   ],
+   "digest": "aac36e96a5e8cba6",
+   "x": true,
+   "th": false
+  },
+  "n1": {
+   "ok": false,
+   "time": "07:00",
+   "head": "",
+   "bad": [
+    "下書きが無い（抜け）"
+   ],
+   "warn": [],
+   "digest": "",
+   "x": false,
+   "th": true
+  },
+  "S1": {
+   "ok": false,
+   "time": "08:00",
+   "head": "",
+   "bad": [
+    "下書きが無い（抜け）"
+   ],
+   "warn": [],
+   "digest": "",
+   "x": false,
+   "th": true
+  },
+  "n2": {
+   "ok": false,
+   "time": "09:00",
+   "head": "",
+   "bad": [
+    "下書きが無い（抜け）"
+   ],
+   "warn": [],
+   "digest": "",
+   "x": false,
+   "th": true
+  },
+  "n3": {
+   "ok": false,
+   "time": "12:00",
+   "head": "",
+   "bad": [
+    "下書きが無い（抜け）"
+   ],
+   "warn": [],
+   "digest": "",
+   "x": false,
+   "th": true
+  },
+  "n8": {
+   "ok": false,
+   "time": "13:00",
+   "head": "",
+   "bad": [
+    "下書きが無い（抜け）"
+   ],
+   "warn": [],
+   "digest": "",
+   "x": false,
+   "th": true
+  },
+  "n5": {
+   "ok": false,
+   "time": "15:00",
+   "head": "",
+   "bad": [
+    "下書きが無い（抜け）"
+   ],
+   "warn": [],
+   "digest": "",
+   "x": false,
+   "th": true
+  },
+  "n6": {
+   "ok": false,
+   "time": "18:00",
+   "head": "",
+   "bad": [
+    "下書きが無い（抜け）"
+   ],
+   "warn": [],
+   "digest": "",
+   "x": false,
+   "th": true
+  },
+  "n7": {
+   "ok": false,
+   "time": "21:00",
+   "head": "",
+   "bad": [
+    "下書きが無い（抜け）"
+   ],
+   "warn": [],
+   "digest": "",
+   "x": false,
+   "th": true
+  }
+ }
+}
