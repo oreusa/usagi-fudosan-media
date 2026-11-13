@@ -90,12 +90,13 @@ for r in rows:
         g = pic["p" if parts[2].endswith("p") else "n"]; g[0] += n; g[1].add(f)
 best = max(typ.items(), key=lambda x: x[1][0], default=None)
 zero = [t for t, (a, b) in typ.items() if a == 0 and b == 0]
-item("post", "投稿の型", "・".join(f"{t} {a}人（前 {b}）" for t, (a, b) in sorted(typ.items(), key=lambda x: -x[1][0])) or "印つきの来訪 0", "1つの型で週10人", "当たり" if best and best[1][0] >= 10 else ("計測中" if not typ else "外れ"), "投稿の2本目からHPに来た人", best[1][0] if best else 0)
+item("post", "投稿の型", "・".join(f"{t} {a}人（前 {b}）" for t, (a, b) in sorted(typ.items(), key=lambda x: -x[1][0])) or "印つきの来訪 0", "1つの型で週30人（11/13 オーナー「まだそんな多くないのに」→ 10人台は当たりと言わない）", "当たり" if best and best[1][0] >= 30 else ("計測中" if not typ or (best and best[1][0] >= 10) else "外れ"), "投稿の2本目からHPに来た人", best[1][0] if best else 0)
 if best and best[1][0] >= 5: order("投稿の回", "post", f"いちばん来た型「{best[0]}」の枠を1つ増やし、いちばん来なかった型の枠と入れ替える（本数は増やさない）", f"この7日 {best[1][0]}人")
 for t in zero: order("投稿の回", "post", f"型「{t}」は2週つづけて0人。題の付け方と行き先を変える。次の週も0ならやめる", "2週0人")
 pn, nn = len(pic["p"][1]), len(pic["n"][1])
 pa = pic["p"][0] / pn if pn else 0; na = pic["n"][0] / nn if nn else 0
 if pn < 5: pans = "計測中"
+elif pn < 7 or nn < 7: pans = "計測中"  # 11/13 どちらかが7本より少ない間は、くらべない（文字だけ2本で「当たり」と出ていた）
 else: pans = "当たり" if pa > na * 1.3 else ("外れ" if pa < na * 0.8 else "差なし")
 item("pic", "画像つき投稿", f"画像つき {pn}本で {pic['p'][0]}人（1本 {pa:.1f}）・文字だけ {nn}本で {pic['n'][0]}人（1本 {na:.1f}）", "画像つきが文字だけの1.3倍", pans, "media/post/index.json の画像を付けた投稿は、印の最後に p", round(pa, 2))
 order("投稿の回", "pic", {"当たり": "全部の枠に画像を付ける", "外れ": "画像をやめ、画像の枠を「いちばん来た型」に回す", "差なし": "画像は朝7時だけ残す（作る手間を減らす）"}.get(pans, "朝7時と夜8時の投稿の1本目に、送り先のページと同じ行の画像（media/post/index.json の url）を付け、2本目のリンクの印の最後に p を付ける。ほかの枠は文字だけのまま（くらべるため）"), "画像あり・なしをくらべる")
