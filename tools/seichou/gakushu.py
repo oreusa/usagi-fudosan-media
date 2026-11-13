@@ -487,6 +487,12 @@ MIMAWARI = [
     ("関東のきょうの予定表（燈）", (today.isoformat() if _akari("schedule/" + today.isoformat() + ".json") is not None else (today - timedelta(days=1)).isoformat()) if _ag is not None else None, 0, "akari schedule/きょう.json が無い＝関東の投稿が出ない。燈の夜の回（22:11）が書けていない。連絡帳に1行書き、docs/nightly-prompt.md のとおり月が書く"),
     ("関東の台帳（燈）", (_ag or {}).get("day", "") if _ag is not None else None, 1, "akari の page.yml（公開の機械）が止まっている。Actions を見て直す"),
 ]
+_kim = load(S("kimari.json"), {}) if os.path.exists(S("kimari.json")) else {}
+if _kim.get("day") != today.isoformat():
+    _kim = {}
+for _r in _kim.get("rows", []):
+    if _r.get("ok") is False:
+        order("月の朝", "form", f"【決まりと違う】{_r['name']}：{_r['detail']}。{_r['te']}（決まり：{_r['kimari']}）", "仕組みが目的・決まりからずれている")
 _tp = prev.get("tomari", {}); tomari = {}
 for _nm, _ld, _mxd, _te in MIMAWARI:
     if _ld is None: continue   # 読めなかった（網の都合）＝止まったとは言わない
@@ -570,6 +576,9 @@ MARK = {"当たり": "◎", "外れ": "×", "未確認": "？", "計測中": "�
 L = [f"# 学習の台帳（{today.isoformat()} 朝）", "", "機械が毎朝作ります。数字が取れない物は「未確認」。直しただけの物は、ここで「当たり」になるまで済みではありません。", "",
      "## いちばん上の3つ（この3つが動かなければ、ほかが当たりでも進んでいない）", ""] + [f"- {t['name']}：**{t['num'] if t['num'] is not None else '未確認'}**（線 {t['line']}）" + (f"　{t['note']}" if t["note"] else "") for t in top3] + ["", f"いまの段：**{DAN[dan]}**（越える線：{DSEN[dan]}）。段は 載る → 来る → 申し込む → お金。2つ先の段の指令は出しません。", "",
      "## 止まっている物（毎日回るはずの仕事の見回り。オーナーへの報告の1行目に書く）", ""] + ([f"- **{k}**：最後に動いた日 {v['last']}・{v['since']} から。{v['te']}" for k, v in tomari.items()] or [f"- なし（{len(MIMAWARI)}件の仕事を見た）"]) + ["",
+     "## 決まりと違う物（仕組みごとの目的とオーナーの決まりの見回り。stats/kimari.json・tools/allcheck/kimari.py。止まっている物の次に報告する）", ""] + (
+     [f"- **{r['name']}**：{r['detail']}（決まり：{r['kimari']}）。{r['te']}" for r in _kim.get("rows", []) if r.get("ok") is False]
+     or [f"- なし（{len(_kim.get('rows', []))}件の仕組みを見た）" if _kim else "- 見回りの結果が無い（kimari.py が動いていない）"]) + ["",
      "## 項目ごと", "", "| | 項目 | 機械が測った数字 | 合格の線 | 答え |", "|---|---|---|---|---|"]
 L += [f"| {MARK.get(i['ans'], '')} | {i['name']} | {i['num']} | {i['line']} | {i['ans']} |" for i in items]
 # 関東（燈）の台帳を、同じ1枚に載せる（11/13 オーナーがカードで「月と燈の見回りと台帳を1つにまとめる」）。数字と指令は akari の機械（data/gakushu.json）が作った物をそのまま写す。月の朝の回は、この1枚だけ読めば関西も関東も分かる
