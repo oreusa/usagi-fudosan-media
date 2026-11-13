@@ -1,0 +1,31 @@
+name: metrics（関西の投稿の数字係）
+# 11/13〜：Claude の夜の回が手で取っていた投稿の数字を、機械が毎日2回取る（stats/toukou.json）
+on:
+  schedule:
+    - cron: "17 11 * * *"   # 20:17（日本時間）＝夜の点検 20:33 の前
+    - cron: "47 21 * * *"   # 06:47（日本時間）＝朝の台帳の前に、きのうの夜の分を取り直す
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: townnote-book
+  cancel-in-progress: false
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - name: 数字を取る
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: python3 tools/book/metrics.py
+      - name: 保存
+        run: |
+          git config user.name "townnote-book"
+          git config user.email "townnote-book@users.noreply.github.com"
+          git add stats/toukou.json
+          if git diff --cached --quiet; then echo "変更なし"; exit 0; fi
+          git commit -qm "[CF-Pages-Skip] 投稿の数字（機械）"
+          for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep $((i*5)); done
+          exit 1
