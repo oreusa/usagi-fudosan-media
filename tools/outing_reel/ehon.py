@@ -9,6 +9,13 @@ ROOT = os.environ.get('ROOT') or os.path.dirname(os.path.dirname(os.path.dirname
 sys.path.insert(0, ROOT + '/tools/outing_reel')
 import yomi
 spec = json.load(open(sys.argv[1])); OUT = os.path.abspath(sys.argv[2]); STILL = sys.argv[3] if len(sys.argv) > 3 else ''
+# 11/13 字が重なる・はみ出す長さは、作る前に止める（表紙の「園」が下の文に重なった・夜のページの1行目が日付の数字に重なった）。長さは縦に並ぶ字の数
+_t = spec.get('text', {})
+_bad = [f'表紙の題の{i + 1}行目「{l}」は{len(l)}字（{m}字まで）' for i, (l, m) in enumerate(zip(_t.get('title', []), (10, 9))) if len(l) > m]
+_bad += [f'夜のページ ehon4「{l}」は{len(l)}字（7字まで）' for l in _t.get('ehon4', []) if len(l) > 7]
+_bad += [f'{k}「{l}」は{len(l)}字（10字まで）' for k in ('ehon1', 'ehon2', 'ehon5') for l in _t.get(k, []) if len(l) > 10]
+_bad += [f'ehon_night の4つ目「{l}」は{len(l)}字（7字まで）' for l in _t.get('ehon_night', [])[3:4] if len(l) > 7]
+if _bad: sys.exit('字が長すぎて重なります：' + '／'.join(_bad))
 W = os.path.abspath(os.environ.get('WORK', 'ehon-work')); os.makedirs(W + '/fr', exist_ok=True)
 VDIR = os.environ.get('VDIR', ''); SP = os.environ.get('SP', '20')
 T = spec['text']
