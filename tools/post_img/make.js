@@ -20,7 +20,7 @@ function targets(){const T=[];const rk=fs.readFileSync(path.join(SITE,'ranking.h
  for(const f of fs.readdirSync(path.join(SITE,'machi')))if(f.endsWith('.html')&&f!=='index.html'){const c=f.slice(0,-5);T.push({name:'machi-'+c,page:'/machi/'+c,hash:'',sel:'main, body',top:true,label:'街の相場'})}
  for(const p of ['koyo','illumination','hatsumode'])if(fs.existsSync(path.join(SITE,p+'.html')))T.push({name:'odekake-'+p,page:'/'+p,hash:'',sel:'main, body',top:true,label:'関西おでかけリスト'});
  // 11/12 府県ごとのおでかけ（koyo-nara 等）と実家ノート（jikka/*・診断）も撮る。昼の投稿の2本目がここへ送るため
- for(const f of fs.readdirSync(SITE))if(/^(koyo|illumination|hatsumode)-[a-z]+\.html$/.test(f)){const c=f.slice(0,-5);T.push({name:'odekake-'+c,page:'/'+c,hash:'',sel:'main, body',top:true,label:'関西おでかけリスト'})}
+ for(const f of fs.readdirSync(SITE))if(/^(koyo|illumination|hatsumode|odekake)-[a-z]+\.html$/.test(f)){const c=f.slice(0,-5);T.push({name:'odekake-'+c,page:'/'+c,hash:'',sel:'main, body',top:true,label:'関西おでかけリスト'})}
  const JK=path.join(SITE,'jikka');if(fs.existsSync(JK)){for(const f of fs.readdirSync(JK))if(f.endsWith('.html')&&f!=='index.html'){const c=f.slice(0,-5);T.push({name:'jikka-'+c,page:'/jikka/'+c,hash:'',sel:'main, body',top:true,label:'実家・空き家ノート'})}
   if(fs.existsSync(path.join(JK,'shindan','index.html')))T.push({name:'jikka-shindan',page:'/jikka/shindan/',hash:'',sel:'main, body',top:true,label:'実家・空き家ノート'})}
  return T.filter(t=>t.name.startsWith(only))}
