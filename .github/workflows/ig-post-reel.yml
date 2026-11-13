@@ -7,7 +7,7 @@ name: ig-post-reel
 on:
   schedule:
     # 11/11 作り替え：GitHub の定時はこのリポジトリで5〜8時間おくれる日がある（11/11 朝の分は 10:22、夕方の分は 19:12 まで出なかった）。
-    # 定時の時刻をあてにせず、毎時1回動かして「次に出す時刻（朝 08:00・夜 18:00）まで中で待ってから出す」形にした。
+    # 定時の時刻をあてにせず、毎時1回動かして「次に出す時刻（朝 07:30・夜 18:00）まで中で待ってから出す」形にした。
     # 待つのは最大5時間40分。出していれば何もしない。同時に待つのは1本だけ（下の concurrency）。
     - cron: "17 * * * *"
   workflow_dispatch:
@@ -40,7 +40,7 @@ jobs:
           set -eu
           mkdir -p ig/posts
           if [ -z "${SPEC:-}" ]; then
-            # 次に出す物と、待つ秒数を決める（朝 08:00 ／ 夜 18:00。過ぎていても朝は15時前・夜は22時前なら今すぐ出す）
+            # 次に出す物と、待つ秒数を決める（朝 07:30 ／ 夜 18:00。11/13 owner「なんでリールの時間とかバラバラなの？」→ 関東と同じ 07:30 に。過ぎていても朝は15時前・夜は22時前なら今すぐ出す）
             OUT=$(TZ=Asia/Tokyo python3 - <<'PY'
           import datetime as dt, glob, os
           now = dt.datetime.fromisoformat(os.environ["NOW"]) if os.environ.get("NOW") else dt.datetime.now()
@@ -50,8 +50,8 @@ jobs:
               x = open(f, encoding="utf-8").read()
               if "permalink" in x:
                   done |= {s for s in (f"ig/reels/{D}.json", f"ig/reels/{D}-pm.json") if f'"{s}"' in x}
-          for spec, hh, end in ((f"ig/reels/{D}.json", 8, 15), (f"ig/reels/{D}-pm.json", 18, 22)):
-              t = now.replace(hour=hh, minute=0, second=0, microsecond=0)
+          for spec, hh, mm, end in ((f"ig/reels/{D}.json", 7, 30, 15), (f"ig/reels/{D}-pm.json", 18, 0, 22)):
+              t = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
               wait = int((t - now).total_seconds())
               if spec in done or not os.path.exists(spec) or now.hour >= end or wait > 20400:
                   continue
