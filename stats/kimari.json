@@ -1,6 +1,6 @@
 {
  "day": "2026-11-13",
- "at": "2026-11-13T21:03:06+09:00",
+ "at": "2026-11-13T21:22:12+09:00",
  "bad": 0,
  "rows": [
   {
@@ -74,6 +74,14 @@
    "ok": true,
    "detail": "0枚",
    "te": "tools/allcheck/ngcheck.py links で場所を出して直す"
+  },
+  {
+   "name": "予定の読み先",
+   "purpose": "消した入れ物を読んで止まらない",
+   "kimari": "消したアーチファクトの URL を使わない（今の入れ物は うさぎ DB SmAVzdH8ZArs1H6HwC2S9L）",
+   "ok": true,
+   "detail": "0か所",
+   "te": "その URL を うさぎ DB に書き換える。一覧 /mnt/project-files/kanri/ichiran.md"
   }
  ]
 }

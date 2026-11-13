@@ -159,6 +159,23 @@ def main(day):
     rule("お客さんの画面の言葉", "中の事情を見せない", "中の名前・使わない言葉をお客さんのページに出さない", not hit, f"{len(hit)}枚" + (f"（{', '.join(hit[:3])}）" if hit else ""),
          "tools/allcheck/ngcheck.py links で場所を出して直す")
 
+    # 10 消したアーチファクトを読まない（11/13 月が決まりの入れ物を消した。オーナー「管理と整理を徹底しろ」）
+    DEAD = ["G3YkTxDtUtWkmfA9ukbRL7", "YCv8oT9jVjqc72GcePNj9H", "1qLboYHRT4iH1uVrpeUZv6", "17eEAbX55zQfmn5pywuTUY",
+            "K23ff3srnbLVfJU8paRYp7", "3ZJvMdc3CNxaLfmRBuEnx8", "Sam66vYywK2Z6TbTgLhMV7", "5KdQgKF1nDNtXXwmJDkKkB", "3BS1kPG7CCtMtjyzXVMBB9"]
+    dead_hit = []
+    for pat in ("tools/**/*.py", "tools/**/*.json", "tools/**/*.md", ".github/workflows/*.yml", "notes/*.md", "stats/*.md"):
+        for f in glob.glob(R(pat), recursive=True):
+            if f.endswith("kimari.py"):
+                continue
+            try:
+                t = open(f, encoding="utf-8").read()
+            except Exception:
+                continue
+            if any(x in t for x in DEAD):
+                dead_hit.append(os.path.relpath(f, ROOT))
+    rule("予定の読み先", "消した入れ物を読んで止まらない", "消したアーチファクトの URL を使わない（今の入れ物は うさぎ DB SmAVzdH8ZArs1H6HwC2S9L）", not dead_hit,
+         f"{len(dead_hit)}か所" + (f"（{', '.join(dead_hit[:3])}）" if dead_hit else ""), "その URL を うさぎ DB に書き換える。一覧 /mnt/project-files/kanri/ichiran.md")
+
     out = {"day": day, "at": now.isoformat(timespec="seconds"), "bad": sum(1 for r in ROWS if r["ok"] is False), "rows": ROWS}
     json.dump(out, open(R("stats", "kimari.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     for r in ROWS:
