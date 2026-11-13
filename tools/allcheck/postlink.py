@@ -16,11 +16,11 @@ import sys
 # 型ごとに、リンクしてよいページの頭（townnote.pages.dev の後ろ）
 OK = {
     "rank": ("/ranking",),
-    "kata": ("/ranking", "/illumination", "/kaitai-", "/machi/"),
+    "kata": ("/ranking", "/illumination", "/kaitai", "/machi/"),
     "hitoeki": ("/machi/",),
-    "jikka": ("/jikka/", "/machi/", "/kaitai-"),
-    "kaitai": ("/kaitai-", "/hojo"),
-    "hojo": ("/hojo", "/kaitai-"),
+    "jikka": ("/jikka/", "/machi/", "/kaitai"),
+    "kaitai": ("/kaitai", "/hojo"),
+    "hojo": ("/hojo", "/kaitai"),
     "odekake": ("/koyo", "/illumination", "/hatsumode", "/odekake", "/o/", "/ima"),
     "dekiru": ("/odekake", "/ima", "/koyo", "/illumination", "/hatsumode", "/o/", "/machi/"),
 }
@@ -38,7 +38,7 @@ WORDS = [
 PIC = [
     ("odekake-odekake-", "/odekake"), ("odekake-koyo", "/koyo"), ("odekake-illumination", "/illumination"),
     ("odekake-hatsumode", "/hatsumode"), ("rank-", "/ranking"), ("machi-", "/machi/"),
-    ("jikka-", "/jikka/"), ("kaitai-ranking", "/kaitai-ranking"), ("kaitai-", "/kaitai-"),
+    ("jikka-", "/jikka/"), ("kaitai-ranking", "/kaitai-ranking"), ("kaitai-", "/kaitai"),
 ]
 
 NG = ("名前なしでも", "お名前は要りません", "名前は要りません")

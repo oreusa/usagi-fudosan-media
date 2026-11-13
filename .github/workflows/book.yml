@@ -1,0 +1,37 @@
+name: book（関西の投稿の門と機械の予約係）
+# 11/13 オーナー「甘い。もっと本格的に作らないと」：予約の前の点検を人の手でなく機械で必ず通す。
+# schedule/D.json が変わった時と30分おきに、門（tools/book/gate.py）を通して state/gate/D.json を書く。
+# BUFFER_API_KEY（関西の Buffer）と config.json の machine_booking:true がそろった時だけ、○ の枠を予約する。
+on:
+  push:
+    branches: [main]
+    paths: ["schedule/**", "tools/book/**", "tools/allcheck/postlink.py", "tools/allcheck/ngwords.json"]
+  schedule:
+    - cron: "11,41 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: townnote-book
+  cancel-in-progress: false
+jobs:
+  book:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: 門の自分の点検（11/13 に出た間違いを止められるか）
+        run: python3 tools/book/selftest.py
+      - name: 門と予約
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: python3 tools/book/book.py
+      - name: 結果を保存
+        run: |
+          git config user.name "townnote-book"
+          git config user.email "townnote-book@users.noreply.github.com"
+          git add -A state/gate state/booked state/buffer_after.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo "変更なし"; exit 0; fi
+          git commit -qm "門と予約係の記録"
+          for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep $((i*5)); done
+          exit 1
