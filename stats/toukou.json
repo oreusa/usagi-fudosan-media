@@ -2845,7 +2845,15 @@
    "likes": 0
   }
  ],
- "followers": [],
+ "followers": [
+  {
+   "day": "2026-11-13",
+   "threads": 43,
+   "x": 17,
+   "ig": 2,
+   "kanto_x": 9
+  }
+ ],
  "kata_count": {
   "2026-11-10": {
    "Threads": {

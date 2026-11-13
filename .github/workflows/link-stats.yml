@@ -76,7 +76,7 @@ jobs:
           git commit -q -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)"
           # 11/12 ほかの保存と重なると push が断られ、その日の数字と台帳がまるごと消えていた → やり直す（ぶつかった所は、いま作った物を残す）
           for i in 1 2 3 4 5; do
-            git pull --rebase -q -X theirs origin main && git push -q origin HEAD:main && exit 0
+            git pull --rebase --autostash -q -X theirs origin main && git push -q origin HEAD:main && exit 0
             git rebase --abort 2>/dev/null || true; sleep $((i*7))
           done
           exit 1

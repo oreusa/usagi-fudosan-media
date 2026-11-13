@@ -39,5 +39,5 @@ jobs:
           git add stats/formcheck.json
           git diff --cached --quiet && exit 0
           git commit -q -m "[CF-Pages-Skip] 申し込みの通し確かめ"
-          for i in 1 2 3 4; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; git rebase --abort 2>/dev/null; sleep $((i*5)); done
+          for i in 1 2 3 4; do git pull --rebase --autostash -q origin main && git push -q origin HEAD:main && exit 0; git rebase --abort 2>/dev/null; sleep $((i*5)); done
           exit 1
