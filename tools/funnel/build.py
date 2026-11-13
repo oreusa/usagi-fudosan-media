@@ -55,7 +55,16 @@ c7 = res["7"]
 weak = "申し込みページを開いた人が書きはじめない" if c7["申し込みページを開いた"] >= 5 and c7["書きはじめた"] * 5 < c7["申し込みページを開いた"] else (
     "申し込みページまで来る人が少ない" if c7["申し込みページを開いた"] < 5 else "書きはじめた人が送信しない")
 res["いちばん細い所"] = weak
+# 11/13 どの欄で止まるか（moushikomi.html の 欄・止まった・離れた・送信を押した。7日）
+_since = (today - timedelta(days=7)).isoformat()
+_f = {}
+for r in rows:
+    k = r.get("k", "")
+    if r.get("day", "") > _since and (k.startswith("申し込み｜欄｜") or k.startswith("申し込み｜止まった｜") or k.startswith("申し込み｜離れた｜") or k == "申し込み｜送信を押した"):
+        _f[k.replace("申し込み｜", "")] = _f.get(k.replace("申し込み｜", ""), 0) + int(r.get("n", 0) or 0)
+res["欄ごと"] = _f
 lines += [f"**いちばん細い所（この7日）：{weak}**", ""]
+lines += ["どの欄で止まるか（7日・11/13 から測る）：" + ("・".join(f"{k} {n}" for k, n in sorted(_f.items(), key=lambda x: -x[1])[:12]) or "まだ数が無い"), ""]
 if TESTS:
     lines += ["引いたテスト：" + "・".join(f'{t["day"][5:]} {t["k"]} {t["n"]}（{t.get("who", "")}）' for t in TESTS), ""]
 # 11/11 お金の段階（オーナー：クリックを売上と混ぜない。費用は毎月10万円）
