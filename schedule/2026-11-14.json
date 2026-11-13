@@ -15,6 +15,22 @@
  },
  {
   "date": "2026-11-14",
+  "slot": "n1",
+  "time": "07:00",
+  "type": "rank",
+  "threads_text": "【関西まちランキング No.26｜近鉄橿原線・奈良県内16駅、3位は橿原神宮前🚃】\n◎ 橿原神宮前駅は、近鉄郡山駅より371人多くて3位でした！\n\n✦ 近鉄橿原線・奈良県内16駅の1日の乗降人員\n　⊹ 大和西大寺〜橿原神宮前（八木西口は数字が出ていないので除く）\n　⊹ 近鉄の交通調査（2025年11月11日・火曜）の数字\n\n✦ 1位 大和西大寺 45,137人\n✦ 2位 大和八木 34,056人\n✦ 3位 橿原神宮前 16,300人\n✦ 4位 近鉄郡山 15,929人\n\n✦ いちばん少ないのは、ファミリー公園前の473人\n\n✧ 大和西大寺と大和八木は、ほかの線に乗りかえる駅です\n\nあなたの最寄り駅は何位でしたか？\nあすの朝7時は京阪本線。\n毎朝7時と昼1時に、関西の街の数字を出しています。",
+  "threads_thread": [
+   "出典：近畿日本鉄道「交通調査結果のお知らせ」（調査日 2025年11月11日・火曜）\nhttps://www.kintetsu.co.jp/tetsudo/2604_ekibetsujyokou.pdf\n\n近鉄橿原線16駅の全部の順位と、あなたの駅は\nhttps://townnote.pages.dev/ranking?f=th-rank-1114ap#r26"
+  ],
+  "x_text": "",
+  "x_thread": [],
+  "threads_topic": "奈良",
+  "image_url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-r26.jpg?v=mwfhm0y5",
+  "image_alt": "近鉄橿原線 奈良県内16駅の乗降人員ランキング 橿原神宮前が3位",
+  "booked": {}
+ },
+ {
+  "date": "2026-11-14",
   "slot": "x09",
   "time": "09:00",
   "type": "sokuhou",
