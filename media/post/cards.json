@@ -1,0 +1,17 @@
+{
+ "about": "投稿の表紙の絵（card.js が作る）。投稿の image_url に url を使う",
+ "items": {
+  "card-open-1114-x07": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1114-x07.jpg?v=mwfhk0jp",
+   "made": "2026-11-14"
+  },
+  "card-open-1114-x12": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1114-x12.jpg?v=mwfhk1fx",
+   "made": "2026-11-14"
+  },
+  "card-open-1114-x18": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1114-x18.jpg?v=mwfhk5xh",
+   "made": "2026-11-14"
+  }
+ }
+}
