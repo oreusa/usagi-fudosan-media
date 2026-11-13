@@ -269,6 +269,17 @@ VC_EXTRA_ON = False
 
 # 11/9 オーナー「動線悪すぎ、Yahoo飛んでまた地名から調べるんだろ？」→ 街ごとの売り出し中の一覧へ直接（全国地方公共団体コード：jis.json、geolonia/japanese-addresses から作成）
 JIS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "jis.json"), encoding="utf-8"))
+# 11/13 検索の作り替え：街ごとの人口・世帯・65歳以上・空き家（国の統計）。数字は toukei.json、文は machi_toukei.py
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import machi_toukei as MT
+TK = MT.load(os.path.join(os.path.dirname(os.path.abspath(__file__)), "toukei.json"))
+def tk_of(t):
+    c = JIS.get(t["p"] + "|" + t["n"], "")
+    return MT.calc(TK.get(c, {})), MT.calc(TK.get(c[:2] + "000", {})) if c else {}
+_TKL = [{"n": t["n"], "p": t["p"], "code": JIS.get(t["p"] + "|" + t["n"], "")} for t in towns]
+TK_RP = MT.ranks(_TKL, TK, "pg")
+TK_RV = MT.ranks(_TKL, TK, "vr")
+IKURA = os.path.exists(os.path.join(ROOT, "links/ikura.html"))
 YKIND = [("中古マンション", "used/mansion"), ("中古の一戸建て", "used/house"), ("土地", "land")]
 
 
@@ -365,12 +376,15 @@ def town_page(t):
         desc = desc.replace("家を売る前・買う前に、", "2025年度に売れた平均は" + "・".join(_sl) + "（レインズ）。家を売る前・買う前に、")
     rel = related(t)
     nb = near(t)
+    tc, tp = tk_of(t)
+    desc += MT.desc_add(n, tc)
     faq = [(f"{n}の住宅地の地価は上がっていますか？",
             f"令和8年地価公示（2026年1月1日時点）で、{n}の住宅地は前の年から平均{pct(t['r8'])}{'で' if True else ''}、{word}。" + (f"前の年（令和7年）は{pct(t['r7'])}でした。" if t["r7"] is not None else "")),
            (f"{n}は{pfull}で何位ですか？",
             f"住宅地の上がり幅で、{pfull}の{t['of']}の市区町村のうち{t['rank']}位です（このページで比べた市区町村の中での順位）。"),
            ("この数字で、わが家の値段がわかりますか？",
             "わかりません。街の中の調査地点の平均の動きで、1軒ずつの値段ではありません。家の値段は、場所・広さ・築年数などで大きく変わります。")]
+    faq[2:2] = MT.faq(n, pfull, tc, tp)
     url = f"{BASE}/machi/{t['id']}"
     ld = {"@context": "https://schema.org", "@graph": [
         {"@type": "Dataset", "name": f"{n}の住宅地の地価の変動率（令和8年地価公示）", "description": desc, "isBasedOn": surl,
@@ -419,6 +433,8 @@ def town_page(t):
            # 11/12 台帳：街ページは外から一番来るのに（7日247回・外から30人）相談へ0回。入口が「手順を見る」と業者さま向けページだけだった → 街の名前入りで、申し込みの2つ目の画面（場所が入った状態）へ直接
            + f'<a class="itg2 itq" href="/moushikomi?lite=1&amp;machi={t["id"]}&amp;want={_q("査定してほしい")}" data-k="この街で｜いくらで売れそうか聞く｜{E(n)}">{E(short(n))}の家、いくらで売れるか無料で聞く <i>→</i></a>'
            + f'<p class="itn" style="text-align:center;margin-top:6px">無料・売るか決めていなくても大丈夫です。メールかお電話、ご希望の方でお返事します。</p>'
+           # 11/13 基本スレッドの /ikura（売れた値段から目安）ができたら、街の名前入りで1行（ファイルが無い間は出さない＝切れたリンクを作らない）
+           + (f'<a class="itg2" href="/ikura?machi={t["id"]}" data-k="この街で｜いくらで売れるか目安｜{E(n)}">{E(short(n))}でいくらで売れるか、売れた値段から目安を見る <i>→</i></a>' if IKURA else "")
            + f'<a class="itg2" href="/moushikomi?machi={t["id"]}&amp;want={_q("相続した家のこと")}" data-k="この街で｜困りごとの相談｜{E(n)}">相続した家・古い家・再建築不可などのご相談 <i>→</i></a>'
            # 11/12 台帳：/kaitai（30秒の目安）は7日で9回しか見られていない。入口が実家ノートにしか無かった → いちばん見られている街ページから1行
            # 11/12 作り替え：街ページ → その市の解体補助ページへの道が1本も無かった（中のリンクを、同じ市のページどうしでつなぐ）
@@ -442,6 +458,7 @@ def town_page(t):
 <div class="mp nofilt">{pref_svg(t["p"], n)}<p>{E(scope_name(t))}の中の{E(short(n) if scope_name(t) != pfull else n)}</p></div>
 {sold_h}
 {itt}
+{MT.machi_block(n, short(n), pfull, tc, tp, TK_RP.get((t["p"], n)), TK_RV.get((t["p"], n)), "/akiya-ranking#" + fn)}
 {rel_h}
 {nb_h}
 <a class="back" href="/chika-kansai#{fn}" data-k="{E(pfull)}のランキング" style="margin-top:18px">{E(pfull)}の街をランキングで見る</a>
@@ -450,7 +467,7 @@ def town_page(t):
 <section class="faq"><h2>よくある質問</h2>
 {"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in faq)}
 </section>
-<p class="note">出典：{E(sname)}（価格時点 2026年1月1日）<br><a href="{E(surl)}" data-k="出典">{E(surl)}</a><br>数字は街の中の調査地点の平均の変動率で、1軒ずつの値段ではありません。<br>売れた家の値段：{E(REINS_NAME)}<br>表19 <a href="{REINS_URL}" data-k="出典｜レインズ">{REINS_URL}</a><br>表20 <a href="{REINS_URL2}" data-k="出典｜レインズ">{REINS_URL2}</a><br>平均の値段で、1軒ずつの値段ではありません。広さ・築年数・駅からの近さで大きく変わります。</p>
+<p class="note">出典：{E(sname)}（価格時点 2026年1月1日）<br><a href="{E(surl)}" data-k="出典">{E(surl)}</a><br>数字は街の中の調査地点の平均の変動率で、1軒ずつの値段ではありません。<br>売れた家の値段：{E(REINS_NAME)}<br>表19 <a href="{REINS_URL}" data-k="出典｜レインズ">{REINS_URL}</a><br>表20 <a href="{REINS_URL2}" data-k="出典｜レインズ">{REINS_URL2}</a><br>平均の値段で、1軒ずつの値段ではありません。広さ・築年数・駅からの近さで大きく変わります。{("<br>" + E(MT.note(tc))) if MT.note(tc) else ""}</p>
 <a class="back" href="/fudosan-list" data-k="関西不動産リストへ">関西不動産リストを見る</a>
 <div class="ft">TOWN NOTE</div></div>
 <script>(function(){{var b=document.querySelector(".rq");if(!b)return;b.onclick=function(){{try{{if(localStorage.getItem("usagi_owner")!=="1"){{var d=JSON.stringify({{k:"調べてほしい："+b.dataset.n}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",d)))fetch("/c",{{method:"POST",body:d,keepalive:true}});}}}}catch(e){{}}b.disabled=true;b.textContent="受け付けました。調べて、このリストに足します";}};}})();</script>
@@ -666,6 +683,13 @@ def jikka_page(t):
         {"@type": "ListItem", "position": 3, "name": f"{n}の実家・空き家", "item": url}]}]}
     steps = "".join(f'<div class="st"><i>{i:02d}</i><div><b>{E(h)}</b><p>{E(p)}</p><a href="{E(u)}" target="_blank" rel="noopener" data-k="実家｜出典｜{i:02d}">出典：{E(s)}</a></div></div>'
                     for i, (h, p, s, u) in enumerate(J_SRC, 1))
+    tc, tp = tk_of(t)
+    if tc.get("vr") is not None:
+        desc = desc.replace("相続登記の義務、", f"空き家は{int(tc['a23']):,}戸（住宅の{tc['vr']:.1f}%・2023年）。相続登記の義務、")
+    tk_h = MT.jikka_block(n, pfull, tc, tp, TK_RV.get((t["p"], n)), "/akiya-ranking#" + fn)
+    jn = sorted([a for a in JT if a is not t], key=lambda a: (a["lat"] - t["lat"]) ** 2 + ((a["lon"] - t["lon"]) * 0.82) ** 2)[:6]
+    jn_h = ('<p class="mk3">NEAR</p><h2 class="jh">近くの街の実家・空き家ノート</h2>' + "".join(
+        f'<a class="jl" href="/jikka/{a["id"]}" data-k="実家｜近くの街｜{E(a["n"])}" style="margin-top:0;border-top:0">{E(a["n"])}<i>→</i></a>' for a in jn)) if jn else ""
     cn, crows = city_of_town(n)
     city_h = ""
     if crows:
@@ -685,12 +709,14 @@ def jikka_page(t):
 <a href="/jikka/shindan/?machi={t["id"]}" data-k="実家｜3問診断へ" style="display:block;margin:22px 0 0;padding:14px 16px;border:1.5px solid #2F7D5B;border-radius:14px;text-decoration:none;color:#231E1B;font-weight:700;font-size:15px;text-align:left">うちの場合は？ 3問でわかる診断へ →<small style="display:block;font-weight:500;font-size:12px;color:#6B6058;margin-top:2px">約30秒・無料・お名前は要りません</small></a>
 <p class="mk3" id="steps">STEPS</p><h2 class="jh">迷ったら、この順で</h2>
 {steps}
+{tk_h}
 {city_h}<p class="mk3">NEXT</p><h2 class="jh">次にできること</h2>
 <a class="jb b1" href="/moushikomi?machi={t["id"]}&amp;want={_q("相続した家のこと")}" data-k="実家｜売却の相談｜{E(n)}">この家の売却を相談する<small>無料・約1分</small></a>{(chr(10) + _a8k(A8_ZAKU_K, f"実家｜AI査定｜{E(n)}", "この家がいくらで売れそうか、AIで見る", "無料・電話ラッシュなし（ざっくりAI査定＋）")) if A8_ZAKU_K else ""}
 {_a8k(A8_POI_K, f"実家｜片付けの一括見積り｜{E(n)}", "片付け・不用品回収の見積りをくらべる", "無料・まとめて見積り（ぽいみつ）") if A8_POI_K else f'<a class="jb" href="/moushikomi?lite=1&amp;machi={t["id"]}&amp;want={_q("片付け・遺品整理の見積り")}" data-k="実家｜片付けの見積り｜{E(n)}">片付け・遺品整理の見積りを頼む<small>無料・約1分</small></a>'}
 <a class="jb" href="/moushikomi?lite=1&amp;machi={t["id"]}&amp;want={_q("解体の見積り")}" data-k="実家｜解体の見積り｜{E(n)}">解体費用の見積りを頼む<small>無料・約1分</small></a>
 <p class="jp">{"このページのリンクの一部は広告（PR）です。お申し込みページのボタンは、内容を見てメールでご連絡します。" if (A8_ZAKU_K or A8_POI_K) else "どれも同じお申し込みページです。内容を見て、メールでご連絡します。"}</p>
 <a class="jl" href="/kaitai" data-k="実家｜費用の目安">先に、解体・片付けの費用の目安を見る <i>→</i></a>
+{jn_h}
 <a class="jl" href="/jikka/#{fn}" data-k="実家｜一覧">ほかの街の実家・空き家ノート <i>→</i></a>
 <div class="ft">TOWN NOTE</div></div>
 {beacon("実家｜" + n, "実家ノート")}</body></html>'''
@@ -730,7 +756,7 @@ jl = head(f"関西の実家・空き家ノート｜{len(JT)}の街の売れた�
 <div class="upd">2026年11月 更新</div></div>
 <style>.jq{{margin:24px 0 6px;padding:14px 16px 16px;background:#F5F4F2;border:1px solid #ECEAE6;border-radius:16px;text-align:center}}.jq b{{display:block;font-size:13px;letter-spacing:.08em;color:#2B2622;margin-bottom:10px}}.jq input{{width:100%;box-sizing:border-box;font:500 16px "Zen Kaku Gothic New",sans-serif;padding:12px 16px;border:1.5px solid #CFC6BC;border-radius:12px;background:#fff;color:#2B2622;-webkit-appearance:none;appearance:none}}.jq input:focus{{outline:none;border-color:#8C7B6E}}#jres{{display:none}}#jres.on{{display:block}}#jres p{{font-size:13px;color:#7A6E66;margin:14px 2px}}html.jq-on .flt,html.jq-on .pane{{display:none!important}}</style><a href="/jikka/shindan/" data-k="実家｜一覧｜3問診断へ" style="display:block;margin:22px 0 0;padding:14px 16px;border:1.5px solid #2F7D5B;border-radius:14px;text-decoration:none;color:#231E1B;font-weight:700;font-size:15px;text-align:left">何から始める？ 3問でわかる診断へ →<small style="display:block;font-weight:500;font-size:12px;color:#6B6058;margin-top:2px">約30秒・無料・お名前は要りません</small></a><div class="jq"><b>街の名前で探す</b><input id="jqi" type="search" placeholder="例：吹田市・西宮市・草津市" enterkeyhint="search" autocomplete="off"></div><div id="jres"></div><nav class="flt">''' + "".join(f'<button data-p="{k}" style="--pc:{PI[pf][3]}"{" class=\"on\"" if i == 0 else ""}>{pf}</button>' for i, (k, pf, _) in enumerate(jpanes)) + '</nav>' + \
     "".join(f'<section class="pane{" on" if i == 0 else ""}" id="{k}"><ul class="jli">{"".join(jl_li(t) for t in ts)}</ul></section>' for i, (k, pf, ts) in enumerate(jpanes)) + f'''
-<p class="note">金額は近畿レインズ「2025年度 年刊市況レポート」の中古一戸建ての成約の平均です。1軒ずつの値段ではありません。<br>古い家を解体する時の補助金は、<a href="/kaitai-ranking" data-k="実家｜一覧｜解体の補助金ランキング">市ごとの解体の補助金ランキング</a>で見られます。</p>
+<p class="note">金額は近畿レインズ「2025年度 年刊市況レポート」の中古一戸建ての成約の平均です。1軒ずつの値段ではありません。<br>街ごとの空き家の割合は、<a href="/akiya-ranking" data-k="実家｜一覧｜空き家ランキング">空き家の割合ランキング</a>で見られます。<br>古い家を解体する時の補助金は、<a href="/kaitai-ranking" data-k="実家｜一覧｜解体の補助金ランキング">市ごとの解体の補助金ランキング</a>で見られます。</p>
 <div class="ft">TOWN NOTE</div></div>
 <script>(function(){{function go(k){{var b=document.querySelector('.flt button[data-p="'+k+'"]');if(!b)return;document.querySelectorAll(".flt button,.pane").forEach(function(x){{x.classList.remove("on")}});b.classList.add("on");document.getElementById(k).classList.add("on");}}
 document.querySelectorAll(".flt button").forEach(function(b){{b.onclick=function(){{go(b.dataset.p);history.replaceState(null,"","#"+b.dataset.p);}}}});if(location.hash)go(location.hash.slice(1));}})();</script>
@@ -738,3 +764,23 @@ document.querySelectorAll(".flt button").forEach(function(b){{b.onclick=function
 {beacon("実家一覧", "実家ノート")}</body></html>'''
 open(os.path.join(ROOT, "links/jikka/index.html"), "w", encoding="utf-8").write(jl)
 print("jikka", len(JT), "towns")
+
+# ================= 11/13 空き家の割合ランキング（/akiya-ranking）。国の統計（住宅・土地統計調査 2023）。押すと実家ノート（無い街は街ページ）
+_JIDS = {t["id"] for t in JT}
+_AK = MT.akiya_items([{"id": t["id"], "n": t["n"], "p": t["p"], "code": JIS.get(t["p"] + "|" + t["n"], ""),
+                       "href": f"/jikka/{t['id']}" if t["id"] in _JIDS else f"/machi/{t['id']}"} for t in towns], TK)
+if _AK:
+    open(os.path.join(ROOT, "links/akiya-ranking.html"), "w", encoding="utf-8").write(MT.akiya_page(
+        "関西", "KANSAI", "TOWN NOTE", "/assets/logo-s.png?v=2", _AK, [(p[1], p[0], p[6]) for p in PREFS],
+        head, HEAD_CSS + RK_CSS, SCRIPTS, beacon("空き家ランキング関西", "実家ノート"), BASE, lambda pf: PI[pf][3], "/jikka/", "実家・空き家ノートを見る"))
+    print("akiya-ranking", len(_AK))
+    for _sm in ("sitemap.xml", "sitemap-all.xml"):
+        _p = os.path.join(ROOT, "links", _sm)
+        if live and os.path.exists(_p):
+            _x = open(_p, encoding="utf-8").read()
+            for _pg in (["/akiya-ranking"] + (["/ikura"] if IKURA else [])):
+                if f"{BASE}{_pg}<" not in _x:
+                    _x = _x.replace("</urlset>", f"<url><loc>{BASE}{_pg}</loc><lastmod>{MT.LASTMOD}</lastmod></url>\n</urlset>", 1)
+                    open(_p, "w", encoding="utf-8").write(_x)
+            if False:
+                open(_p, "w", encoding="utf-8").write(_x.replace("</urlset>", f"<url><loc>{BASE}/akiya-ranking</loc><lastmod>{MT.LASTMOD}</lastmod></url>\n</urlset>", 1))
