@@ -9,6 +9,11 @@ on:
   schedule:
     - cron: "11,41 * * * *"
   workflow_dispatch:
+    inputs:
+      test:
+        description: "1 にすると、予約せず Buffer に下書きを1本だけ作る（鍵と形の確かめ。作った下書きは消す）"
+        required: false
+        default: "0"
 permissions:
   contents: write
 concurrency:
@@ -25,12 +30,12 @@ jobs:
       - name: 門と予約
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
-        run: python3 tools/book/book.py
+        run: if [ "${{ github.event.inputs.test }}" = "1" ]; then python3 tools/book/book.py --test; else python3 tools/book/book.py; fi
       - name: 結果を保存
         run: |
           git config user.name "townnote-book"
           git config user.email "townnote-book@users.noreply.github.com"
-          git add -A state/gate state/booked state/buffer_after.json 2>/dev/null || true
+          for p in state/gate state/booked state/buffer_after.json; do [ -e "$p" ] && git add -A "$p"; done; true
           if git diff --cached --quiet; then echo "変更なし"; exit 0; fi
           git commit -qm "門と予約係の記録"
           for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep $((i*5)); done

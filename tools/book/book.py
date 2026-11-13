@@ -52,7 +52,7 @@ def gql(query, variables):
     raise RuntimeError(f"Buffer に届かない：{last}")
 
 
-def create(svc, texts, due_utc, topic=None, image=None, alt=""):
+def create(svc, texts, due_utc, topic=None, image=None, alt="", draft=False):
     items = [{"text": t} for t in texts]
     asset = [{"image": {"url": image, "metadata": {"altText": alt or "HPの画面"}}}] if image else None
     meta = {}
@@ -72,6 +72,8 @@ def create(svc, texts, due_utc, topic=None, image=None, alt=""):
         inp["metadata"] = meta
     if asset:
         inp["assets"] = asset
+    if draft:
+        inp["saveToDraft"] = True
     res = gql(CREATE, {"input": inp})["createPost"]
     if res["__typename"] != "PostActionSuccess":
         raise RuntimeError(f"{res['__typename']}: {res.get('message', '')}")
@@ -133,8 +135,22 @@ def after(now):
     print(f"Buffer：{out['count']}")
 
 
+def test(now):
+    """鍵と形の確かめ：Threads と X に下書き（出ない）を1本ずつ作る。作った下書きは人が消す"""
+    due = (now + timedelta(days=2)).replace(hour=4, minute=0, second=0, microsecond=0)
+    due_utc = due.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
+    img = "https://oreusa.github.io/usagi-fudosan-media/media/post/kaitai-ranking.jpg"
+    for svc in ("threads", "twitter"):
+        texts = ["【予約係の試し】これは出ない下書きです", "2本目の試し https://townnote.pages.dev/?f=th-test-0000a"]
+        p = create(svc, texts, due_utc, topic="大阪" if svc == "threads" else None, image=img, alt="試し", draft=True)
+        print(f"試しの下書き {svc}: {p}")
+
+
 if __name__ == "__main__":
     now = datetime.now(JST)
+    if "--test" in sys.argv:
+        test(now)
+        sys.exit(0)
     for d in (now.date(), now.date() + timedelta(days=1)):
         book_day(d.isoformat(), now)
     try:
