@@ -111,6 +111,17 @@ def main():
                 b[r.get("kata") or "そのほか"] = b.get(r.get("kata") or "そのほか", 0) + 1
         data.setdefault("kata_count", {})[day] = kc
         print(f"{day}：{len(new)}本 Threads 閲覧 {sum(r['views'] for r in new if r['svc'] == 'threads')}・X {sum(r['views'] for r in new if r['svc'] == 'x')}")
+    # 型の無い行（10/29〜 手で取った頃の行など）にも、台帳と同じ分け方で型を付ける（型が None だと学びの数に入らない）
+    for r in rows:
+        if not r.get("kata"):
+            r["kata"] = kata(r.get("head") or r.get("type") or "")
+    for day in {r.get("day") for r in rows}:
+        kc = {"Threads": {}, "X": {}}
+        for r in rows:
+            if r.get("day") == day:
+                b = kc["Threads" if r["svc"] == "threads" else "X"]
+                b[r["kata"]] = b.get(r["kata"], 0) + 1
+        data.setdefault("kata_count", {})[day] = kc
     lim = (today - timedelta(days=60)).isoformat()
     data["rows"] = sorted([r for r in rows if r.get("day", "") >= lim], key=lambda r: (r["day"], r.get("slot", ""), r["svc"]))
     data["kata_count"] = {k: v for k, v in data.get("kata_count", {}).items() if k >= lim}
