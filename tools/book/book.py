@@ -91,27 +91,41 @@ def book_day(d, now):
     code, slots = gate.run(d, write=True)
     if slots is None or not CFG.get("machine_booking") or not os.environ.get("BUFFER_API_KEY"):
         return
+    if d < CFG.get("machine_from", "9999"):
+        return
+    # 二重の予約をしない：その日に Buffer にもう入っている（人の予約係が入れた）時刻と媒体は飛ばす
+    s0 = datetime.fromisoformat(f"{d}T00:00:00+09:00").astimezone(timezone.utc)
+    z = lambda t: t.isoformat().replace("+00:00", "Z")
+    have = {(r["channelService"], r["dueAt"][:16]) for r in
+            (x["node"] for x in gql(POSTS, {"o": CFG["organizationId"], "ch": list(CFG["channels"].values()),
+                                            "s": z(s0), "e": z(s0 + timedelta(days=1))})["posts"]["edges"] or [])}
     rows = {r.get("slot"): r for r in load(os.path.join(ROOT, "schedule", d + ".json"), []) if r.get("date") == d}
     bp = os.path.join(ROOT, "state", "booked", d + ".json")
     booked = load(bp, {})
     for slot, g in slots.items():
         dr = rows.get(slot)
-        if not g["ok"] or not dr or slot in booked or (dr.get("booked") or {}):
+        if not g["ok"] or not dr or (slot in booked and "error" not in booked[slot]) or (dr.get("booked") or {}):
             continue
         due = datetime.fromisoformat(f"{d}T{dr['time']}:00+09:00")
         if not (now + timedelta(minutes=5) < due <= now + timedelta(minutes=CFG.get("lead_min", 720))):
             continue
         due_utc = due.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
         rec = {"time": dr["time"], "digest": g["digest"], "at": now.isoformat(timespec="seconds")}
+        key = due_utc[:16]
         try:
             th = gate.parts(dr, "threads")
-            rec["threads"] = create("threads", [t for t in th if t.strip()], due_utc, dr.get("threads_topic"),
+            if ("threads", key) in have:
+                rec["threads"] = "もうある"
+            else:
+                rec["threads"] = create("threads", [t for t in th if t.strip()], due_utc, dr.get("threads_topic"),
                                     dr.get("image_url"), dr.get("image_alt"))["id"]
             xs = [t for t in gate.parts(dr, "x") if t.strip()]
-            if g.get("x") and xs:
+            if g.get("x") and xs and ("twitter", key) in have:
+                rec["twitter"] = "もうある"
+            elif g.get("x") and xs:
                 rec["twitter"] = create("twitter", xs, due_utc, image=dr.get("image_url"), alt=dr.get("image_alt"))["id"]
         except Exception as e:
-            rec["error"] = str(e)[:300]
+            rec["error"] = str(e)[:300]  # 次の回（30分後）にもう一度試す。「もうある」で二重にはならない
         booked[slot] = rec
         print(f"予約 {d} {slot} {dr['time']}：{rec}")
     os.makedirs(os.path.dirname(bp), exist_ok=True)

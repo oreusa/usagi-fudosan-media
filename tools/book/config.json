@@ -166,5 +166,7 @@
     "x": false
    }
   }
- }
+ },
+ "machine_booking": true,
+ "machine_from": "2026-11-14"
 }
