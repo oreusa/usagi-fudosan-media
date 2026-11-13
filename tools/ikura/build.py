@@ -107,9 +107,9 @@ $("rb").innerHTML=man(est*0.85)+"〜"+man(est*1.15)+"<small>万円</small>";
 $("ru").innerHTML=u.map(function(s){{return"<li>"+s+"</li>"}}).join("");
 var memo=nm+"・"+LB[ty][2]+"・"+Math.round(a)+"㎡・目安"+man(est*0.85)+"〜"+man(est*1.15)+"万円";
 $("go").href="/moushikomi?lite=1&want="+encodeURIComponent("査定してほしい")+(D[k].id?"&machi="+D[k].id:"")+"&memo="+encodeURIComponent(memo);
-r.style.display="block";c("いくら｜出した｜"+ty+"｜"+nm)}}
+var first=r.style.display!=="block";r.style.display="block";if(first&&window.__ikU)setTimeout(function(){{r.scrollIntoView({{behavior:"smooth",block:"center"}})}},60);c("いくら｜出した｜"+ty+"｜"+nm)}}
 $("ty").addEventListener("click",function(e){{var b=e.target.closest("button");if(!b)return;ty=b.dataset.v;[].forEach.call($("ty").children,function(x){{x.setAttribute("aria-pressed",x===b)}});fill();calc()}});
-ci.addEventListener("change",calc);ar.addEventListener("input",calc);
+ci.addEventListener("change",function(){{window.__ikU=1;calc()}});ar.addEventListener("input",calc);
 document.addEventListener("click",function(e){{var a=e.target.closest("[data-k]");if(a)c("クリック："+a.getAttribute("data-k"))}});
 try{{var id=new URLSearchParams(location.search).get("machi")||sessionStorage.getItem("tn_machi")||"";if(id)Object.keys(D).forEach(function(k){{if(D[k].id===id)ci.dataset.want=k}})}}catch(e){{}}
 fill();if(ci.dataset.want&&D[ci.dataset.want][ty]){{ci.value=ci.dataset.want;calc()}}}})();</script>
