@@ -2,9 +2,9 @@
  "x07": {
   "time": "07:00",
   "digest": "f26e2925f2a07e75",
-  "at": "2026-11-14T06:27:56+09:00",
+  "at": "2026-11-14T06:30:46+09:00",
   "threads": "X だけの枠",
-  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+  "twitter": "6af781889257ce3398112324"
  },
  "x09": {
   "time": "09:00",
@@ -16,9 +16,9 @@
  "x12": {
   "time": "12:00",
   "digest": "a4445c865827ac47",
-  "at": "2026-11-14T06:27:56+09:00",
+  "at": "2026-11-14T06:30:46+09:00",
   "threads": "X だけの枠",
-  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+  "twitter": "6af7818981e1228421c61c7a"
  },
  "x15": {
   "time": "15:00",
@@ -30,14 +30,50 @@
  "x18": {
   "time": "18:00",
   "digest": "2b91cd43c50d00c8",
-  "at": "2026-11-14T06:27:56+09:00",
+  "at": "2026-11-14T06:30:46+09:00",
   "threads": "X だけの枠",
-  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+  "twitter": "6af7818bbb36d00909cca415"
  },
  "n1": {
   "time": "07:00",
-  "digest": "cec125273b975ca7",
-  "at": "2026-11-14T06:27:56+09:00",
+  "digest": "e135eb86c7e06fc6",
+  "at": "2026-11-14T06:30:46+09:00",
+  "threads": "6af7818778196a0a9720d6d1"
+ },
+ "S1": {
+  "time": "08:00",
+  "digest": "300c8f2906ccb51f",
+  "at": "2026-11-14T06:30:46+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n2": {
+  "time": "09:00",
+  "digest": "a5d122b338deffb0",
+  "at": "2026-11-14T06:30:46+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n3": {
+  "time": "12:00",
+  "digest": "16cc01ee47d82d94",
+  "at": "2026-11-14T06:30:46+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n8": {
+  "time": "13:00",
+  "digest": "2615fc3fcd1f5f50",
+  "at": "2026-11-14T06:30:46+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n5": {
+  "time": "15:00",
+  "digest": "df2a8db39b2ed0fa",
+  "at": "2026-11-14T06:30:46+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n6": {
+  "time": "18:00",
+  "digest": "8f262fe0f5f75bd2",
+  "at": "2026-11-14T06:30:46+09:00",
   "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
  }
 }

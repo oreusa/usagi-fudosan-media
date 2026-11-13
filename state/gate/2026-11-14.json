@@ -1,7 +1,17 @@
 {
  "date": "2026-11-14",
- "bad": 7,
+ "bad": 0,
  "slots": {
+  "n1": {
+   "ok": true,
+   "time": "07:00",
+   "head": "【関西まちランキング No.26｜近鉄橿原線、3位と4位は371人差🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "e135eb86c7e06fc6",
+   "x": false,
+   "th": true
+  },
   "x07": {
    "ok": true,
    "time": "07:00",
@@ -12,13 +22,23 @@
    "x": true,
    "th": false
   },
-  "n1": {
+  "S1": {
    "ok": true,
-   "time": "07:00",
-   "head": "【関西まちランキング No.26｜近鉄橿原線・奈良県内16駅、3位は橿原神宮前🚃】",
+   "time": "08:00",
+   "head": "【実家が和歌山市なら｜昨年度の平均は1,003万円🏠】",
    "bad": [],
    "warn": [],
-   "digest": "cec125273b975ca7",
+   "digest": "300c8f2906ccb51f",
+   "x": false,
+   "th": true
+  },
+  "n2": {
+   "ok": true,
+   "time": "09:00",
+   "head": "【11/14（土）から｜京都・東福寺の通天橋、特別拝観が始まります🍁】",
+   "bad": [],
+   "warn": [],
+   "digest": "a5d122b338deffb0",
    "x": false,
    "th": true
   },
@@ -34,6 +54,16 @@
    "x": true,
    "th": false
   },
+  "n3": {
+   "ok": true,
+   "time": "12:00",
+   "head": "【11/16（月）京都駅八条東口から徒歩3分｜270室のホテルが開業🏨】",
+   "bad": [],
+   "warn": [],
+   "digest": "16cc01ee47d82d94",
+   "x": false,
+   "th": true
+  },
   "x12": {
    "ok": true,
    "time": "12:00",
@@ -43,6 +73,26 @@
    "digest": "a4445c865827ac47",
    "x": true,
    "th": false
+  },
+  "n8": {
+   "ok": true,
+   "time": "13:00",
+   "head": "【関西まちランキング No.27｜JR琵琶湖線、守山が瀬田に75人差🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "2615fc3fcd1f5f50",
+   "x": false,
+   "th": true
+  },
+  "n5": {
+   "ok": true,
+   "time": "15:00",
+   "head": "【今夜も17時から｜大阪・御堂筋とJR大阪駅の光、12月まで✨】",
+   "bad": [],
+   "warn": [],
+   "digest": "df2a8db39b2ed0fa",
+   "x": false,
+   "th": true
   },
   "x15": {
    "ok": true,
@@ -56,6 +106,16 @@
    "x": true,
    "th": false
   },
+  "n6": {
+   "ok": true,
+   "time": "18:00",
+   "head": "【11/27（金）神戸・三宮｜BYREDOが神戸BALに神戸初出店🛍️】",
+   "bad": [],
+   "warn": [],
+   "digest": "8f262fe0f5f75bd2",
+   "x": false,
+   "th": true
+  },
   "x18": {
    "ok": true,
    "time": "18:00",
@@ -65,6 +125,16 @@
    "digest": "2b91cd43c50d00c8",
    "x": true,
    "th": false
+  },
+  "n7": {
+   "ok": true,
+   "time": "21:00",
+   "head": "【ひと駅しらべ その22｜南草津駅🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "c05ead7cb0d360a6",
+   "x": false,
+   "th": true
   },
   "x21": {
    "ok": true,
@@ -77,90 +147,6 @@
    "digest": "aac36e96a5e8cba6",
    "x": true,
    "th": false
-  },
-  "S1": {
-   "ok": false,
-   "time": "08:00",
-   "head": "",
-   "bad": [
-    "下書きが無い（抜け）"
-   ],
-   "warn": [],
-   "digest": "",
-   "x": false,
-   "th": true
-  },
-  "n2": {
-   "ok": false,
-   "time": "09:00",
-   "head": "",
-   "bad": [
-    "下書きが無い（抜け）"
-   ],
-   "warn": [],
-   "digest": "",
-   "x": false,
-   "th": true
-  },
-  "n3": {
-   "ok": false,
-   "time": "12:00",
-   "head": "",
-   "bad": [
-    "下書きが無い（抜け）"
-   ],
-   "warn": [],
-   "digest": "",
-   "x": false,
-   "th": true
-  },
-  "n8": {
-   "ok": false,
-   "time": "13:00",
-   "head": "",
-   "bad": [
-    "下書きが無い（抜け）"
-   ],
-   "warn": [],
-   "digest": "",
-   "x": false,
-   "th": true
-  },
-  "n5": {
-   "ok": false,
-   "time": "15:00",
-   "head": "",
-   "bad": [
-    "下書きが無い（抜け）"
-   ],
-   "warn": [],
-   "digest": "",
-   "x": false,
-   "th": true
-  },
-  "n6": {
-   "ok": false,
-   "time": "18:00",
-   "head": "",
-   "bad": [
-    "下書きが無い（抜け）"
-   ],
-   "warn": [],
-   "digest": "",
-   "x": false,
-   "th": true
-  },
-  "n7": {
-   "ok": false,
-   "time": "21:00",
-   "head": "",
-   "bad": [
-    "下書きが無い（抜け）"
-   ],
-   "warn": [],
-   "digest": "",
-   "x": false,
-   "th": true
   }
  }
 }
