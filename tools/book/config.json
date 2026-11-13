@@ -1,0 +1,172 @@
+{
+ "about": "関西の投稿の枠の表（DB rules/content ■3 と同じにする。変えた日は両方を直す）。機械の予約係（tools/book/book.py）と門（gate.py）が読む",
+ "organizationId": "6abc12178b9205c62577e619",
+ "channels": {
+  "threads": "6abd20b0ea19ca0bde33e43f",
+  "twitter": "6abc1276ea19ca0bde27aa42"
+ },
+ "lead_min": 720,
+ "last_line": "毎朝7時と昼1時に、関西の街の数字を出しています。",
+ "old_last_lines": [
+  "毎朝7時と夜8時に、関西の街の数字を出しています。"
+ ],
+ "tables": [
+  {
+   "from": "2026-11-13",
+   "to": "2026-11-13",
+   "last_line_override": "毎朝7時と夜8時に、関西の街の数字を出しています。",
+   "slots": {
+    "n1": {
+     "time": "07:00",
+     "type": [
+      "rank"
+     ],
+     "x": true
+    },
+    "S1": {
+     "time": "08:00",
+     "type": [
+      "jikka",
+      "kaitai"
+     ],
+     "x": false
+    },
+    "n2": {
+     "time": "09:00",
+     "type": [
+      "odekake"
+     ],
+     "x": false
+    },
+    "n3": {
+     "time": "12:00",
+     "type": [
+      "dekiru"
+     ],
+     "x": false
+    },
+    "n8": {
+     "time": "20:00",
+     "type": [
+      "kata",
+      "kaitai",
+      "jikka",
+      "rank",
+      "dekiru",
+      "hojo"
+     ],
+     "x": true
+    },
+    "n7": {
+     "time": "21:00",
+     "type": [
+      "hitoeki"
+     ],
+     "x": false
+    }
+   }
+  },
+  {
+   "from": "2026-11-14",
+   "to": "2026-11-20",
+   "slots": {
+    "n1": {
+     "time": "07:00",
+     "type": [
+      "rank"
+     ],
+     "x": true
+    },
+    "S1": {
+     "time": "08:00",
+     "type": [
+      "jikka",
+      "kaitai"
+     ],
+     "x": false
+    },
+    "n2": {
+     "time": "09:00",
+     "type": [
+      "odekake"
+     ],
+     "x": true
+    },
+    "n3": {
+     "time": "12:00",
+     "type": [
+      "dekiru"
+     ],
+     "x": false
+    },
+    "n8": {
+     "time": "13:00",
+     "type": [
+      "rank"
+     ],
+     "x": true
+    },
+    "n7": {
+     "time": "21:00",
+     "type": [
+      "hitoeki"
+     ],
+     "x": true
+    }
+   }
+  }
+ ],
+ "base": {
+  "slots": {
+   "n1": {
+    "time": "07:00",
+    "type": [
+     "rank"
+    ],
+    "x": true
+   },
+   "S1": {
+    "time": "08:00",
+    "type": [
+     "jikka",
+     "kaitai"
+    ],
+    "x": false
+   },
+   "n2": {
+    "time": "09:00",
+    "type": [
+     "odekake"
+    ],
+    "x": false
+   },
+   "n3": {
+    "time": "12:00",
+    "type": [
+     "dekiru"
+    ],
+    "x": false
+   },
+   "n8": {
+    "time": "13:00",
+    "type": [
+     "rank",
+     "kata",
+     "kaitai",
+     "jikka",
+     "dekiru"
+    ],
+    "x": true
+   },
+   "n7": {
+    "time": "21:00",
+    "type": [
+     "hitoeki"
+    ],
+    "x": false
+   }
+  }
+ },
+ "machine_booking": true,
+ "machine_from": "2026-11-14"
+}

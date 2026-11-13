@@ -63,6 +63,7 @@ jobs:
           curl -fsSL --max-time 20 https://raw.githubusercontent.com/oreusa/akari-auto/main/notes/gpt-runs.md -o /tmp/gpt-runs.md || true
           curl -fsSL --max-time 20 https://raw.githubusercontent.com/oreusa/akari-auto/main/notes/sales-board.md -o /tmp/sales-board.md || true
           python3 tools/room/kazu.py "$(TZ=Asia/Tokyo date +%F)" || true
+          python3 tools/allcheck/kimari.py "$(TZ=Asia/Tokyo date +%F)" || true
           GPT_RUNS=/tmp/gpt-runs.md SALES_BOARD=/tmp/sales-board.md python3 tools/seichou/gakushu.py "$(TZ=Asia/Tokyo date +%F)" || true
       - name: link check
         # 10/31 毎朝、リストとイルミのカードのリンクが開けるか・別の催しに同じURLが付いていないかを stats/linkcheck.md に（19:47 の点検が直す）
@@ -71,7 +72,7 @@ jobs:
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/build-fail.txt stats/link.json stats/link-30.json stats/funnel.md stats/funnel.json stats/seichou.md stats/seichou.json links/illumination*.html links/koyo*.html links/hatsumode.html links/ranking.html links/kaitai.html links/kaitai-*.html links/index.html links/odekake-*.html links/o links/sitemap.xml links/sitemap-all.xml links/sitemap-main.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md links/assets/cover.json stats/room.json stats/room-fail.txt stats/gakushu.md stats/gakushu.json stats/shirei.json stats/manabi.json stats/yatta.json
+          git add stats/build-fail.txt stats/link.json stats/link-30.json stats/funnel.md stats/funnel.json stats/seichou.md stats/seichou.json links/illumination*.html links/koyo*.html links/hatsumode.html links/ranking.html links/kaitai.html links/kaitai-*.html links/index.html links/odekake-*.html links/o links/sitemap.xml links/sitemap-all.xml links/sitemap-main.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md links/assets/cover.json stats/room.json stats/room-fail.txt stats/gakushu.md stats/gakushu.json stats/kimari.json stats/shirei.json stats/manabi.json stats/yatta.json
           git diff --cached --quiet && exit 0
           git commit -q -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)"
           # 11/12 ほかの保存と重なると push が断られ、その日の数字と台帳がまるごと消えていた → やり直す（ぶつかった所は、いま作った物を残す）

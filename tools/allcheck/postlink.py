@@ -16,11 +16,11 @@ import sys
 # 型ごとに、リンクしてよいページの頭（townnote.pages.dev の後ろ）
 OK = {
     "rank": ("/ranking",),
-    "kata": ("/ranking", "/illumination", "/kaitai-", "/machi/"),
+    "kata": ("/ranking", "/illumination", "/kaitai", "/machi/"),
     "hitoeki": ("/machi/",),
-    "jikka": ("/jikka/", "/machi/", "/kaitai-"),
-    "kaitai": ("/kaitai-", "/hojo"),
-    "hojo": ("/hojo", "/kaitai-"),
+    "jikka": ("/jikka/", "/machi/", "/kaitai"),
+    "kaitai": ("/kaitai", "/hojo"),
+    "hojo": ("/hojo", "/kaitai"),
     "odekake": ("/koyo", "/illumination", "/hatsumode", "/odekake", "/o/", "/ima"),
     "dekiru": ("/odekake", "/ima", "/koyo", "/illumination", "/hatsumode", "/o/", "/machi/"),
 }
@@ -38,8 +38,10 @@ WORDS = [
 PIC = [
     ("odekake-odekake-", "/odekake"), ("odekake-koyo", "/koyo"), ("odekake-illumination", "/illumination"),
     ("odekake-hatsumode", "/hatsumode"), ("rank-", "/ranking"), ("machi-", "/machi/"),
-    ("jikka-", "/jikka/"), ("kaitai-ranking", "/kaitai-ranking"), ("kaitai-", "/kaitai-"),
+    ("jikka-", "/jikka/"), ("kaitai-ranking", "/kaitai-ranking"), ("kaitai-", "/kaitai"),
 ]
+
+NG = ("名前なしでも", "お名前は要りません", "名前は要りません")
 
 LINK_RE = re.compile(r"https://townnote\.pages\.dev(/[^\s?#]*)")
 
@@ -73,6 +75,10 @@ def check(d):
         if re.search(pat, head) and links and not any(p.startswith(ok) for p in links):
             bad.append(f"見出しは{what}なのに、リンク先が {', '.join(links)}（{' / '.join(ok)} のどれかへ）")
             break
+    for t in texts_of(d):
+        for w in NG:
+            if w in t:
+                bad.append(f"使わない言葉「{w}」（11/12 オーナー：申し込みは必ずお名前をもらう）")
     img = d.get("image_url") or ""
     m = re.search(r"/media/post/([a-z0-9-]+)\.jpg", img)
     if m and links:
