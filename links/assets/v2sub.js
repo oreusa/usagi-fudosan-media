@@ -41,7 +41,7 @@ document.body.appendChild(bar);bar.classList.add("on");document.documentElement.
 function go(){
 if(/^\/(town-notes)?$/.test(location.pathname))return goT();
 if(/^\/jikka/.test(location.pathname))return goJ();
-if(/^\/(fudosan|uru|moushikomi|gyosha|sagasu|chika-|ranking|kaitai|machi\/)/.test(location.pathname))return goF();
+if(/^\/(fudosan|uru|ikura|moushikomi|gyosha|sagasu|chika-|ranking|kaitai|machi\/)/.test(location.pathname))return goF();
 var bar=document.createElement("nav");bar.id="v2bar";bar.setAttribute("aria-label","すぐ移動");
 var inn=/\/tomari/.test(location.pathname);
 /* 11/9 オーナーOK（見本⑤）：開催中・これから → さがす・行きたい（☆の数） */
