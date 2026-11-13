@@ -1,4 +1,4 @@
-# リンクの確かめ（2026-11-13 09:29 JST・262件）
+# リンクの確かめ（2026-11-13 12:31 JST・262件）
 
 ## 開けない（直す）
 - ✗ 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
@@ -9,12 +9,11 @@
 - ✗ UMEDA MEETS HEART（links/illumination-muryo.html）URLError https://umedameetsheart.com/
 - ✗ 天理市 光の祭典（links/illumination-muryo.html）404 https://www.city.tenri.nara.jp/kakuka/shichoukoushitsu/sougouseisakuka/teijyujirituken/teijujiritsukenibentojoho/15242.html
 - ✗ 勝尾寺 錦秋の宵詣り2026（links/illumination-osaka.html）URLError https://katsuo-ji-temple.or.jp/autumn/
+- ✗ 箕面の森の夜さんぽ（箕面公園 滝道ライトアップ）（links/illumination-osaka.html）404 https://www.city.minoh.lg.jp/brandsenryaku/event/momijimatsuri2025.html
 - ✗ 和歌山城 西之丸庭園（紅葉渓庭園）ライトアップ（links/illumination-wakayama.html）522 https://wakayamajo.jp/
 - ✗ 魯山人の宇宙 魂を刳る美がほしい（links/index.html）TimeoutError https://www.mistore.jp/store/kyoto/museum/event_list/event21.html
-- ✗ 怪々YOKAI祭 2026（links/index.html）URLError https://eigamura.com/feature/yokai2026/
 - ✗ アニタッチ OSAKA なんば（links/index.html）404 https://www.afpbb.com/articles/-/3648165
 - ✗ 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
-- ✗ 太秦映画村（links/index.html）URLError https://eigamura.com/
 
 ## 別の催しに同じURL（どちらかが違うページかも）
 - なし
