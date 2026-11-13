@@ -659,7 +659,7 @@ def jikka_page(t):
     if crows:
         city_h = (f'<p class="mk3">CITY</p><h2 class="jh">{E(cn)}の補助・空き家バンク</h2>' + "".join(
             f'<div class="cy"><b>{E(h)}</b>' + (f'<em class="{"x" if st in ("受付停止", "受付終了") else ""}">{st}</em>' if st else '') + f'<p>{E(tx)}</p><a href="{E(u)}" target="_blank" rel="noopener" data-k="実家｜市の補助｜{E(cn)}">{E(cn)}の公式ページ →</a></div>' for h, tx, st, u in crows)
-            + f'<p class="src">{J_DATE.get(cn, "2026年11月10日")}に市の公式ページで確かめた内容です。受付・条件・上限は変わるので、申し込む前に必ず公式ページで確かめてください。</p>')
+            + f'<p class="src">{J_DATE.get(cn, "2026年11月10日")}に市の公式ページで確かめた内容です。もらえるかどうかと金額は役所の審査で決まり、受付・条件・上限は変わるので、申し込む前に必ず公式ページで確かめてください。</p>')
         if cn in K_SLUG and any("解体" in h for h, *_ in crows):  # 11/11 市ごとの「解体の補助金」ページ（tools/kaitai/city.py）へ
             city_h += f'<a class="jb2" href="/kaitai-{K_SLUG[cn]}" data-k="実家｜市の解体補助ページ｜{E(cn)}" style="display:block;margin:10px 0 0;font-size:13.5px;font-weight:700;color:inherit">{E(cn)}の解体の補助を、自分で払う目安つきで見る →</a>'
     body = f'''<style>{HEAD_CSS}{J_CSS}</style>{SCRIPTS}</head><body style="--pc:{col}"><div class="wrap">
