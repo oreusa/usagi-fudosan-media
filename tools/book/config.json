@@ -75,7 +75,7 @@
      "type": [
       "rank"
      ],
-     "x": true
+     "x": false
     },
     "S1": {
      "time": "08:00",
@@ -90,7 +90,7 @@
      "type": [
       "odekake"
      ],
-     "x": true
+     "x": false
     },
     "n3": {
      "time": "12:00",
@@ -104,16 +104,105 @@
      "type": [
       "rank"
      ],
-     "x": true
+     "x": false
     },
     "n7": {
      "time": "21:00",
      "type": [
       "hitoeki"
      ],
-     "x": true
+     "x": false
+    },
+    "x07": {
+     "time": "07:00",
+     "type": [
+      "sokuhou",
+      "rank",
+      "odekake"
+     ],
+     "x": true,
+     "th": false,
+     "link": false
+    },
+    "x09": {
+     "time": "09:00",
+     "type": [
+      "sokuhou",
+      "rank",
+      "odekake"
+     ],
+     "x": true,
+     "th": false,
+     "link": false
+    },
+    "x11": {
+     "time": "11:00",
+     "type": [
+      "sokuhou",
+      "rank",
+      "odekake"
+     ],
+     "x": true,
+     "th": false,
+     "link": false
+    },
+    "x13": {
+     "time": "13:00",
+     "type": [
+      "sokuhou",
+      "rank",
+      "odekake"
+     ],
+     "x": true,
+     "th": false,
+     "link": false
+    },
+    "x15": {
+     "time": "15:00",
+     "type": [
+      "sokuhou",
+      "rank",
+      "odekake"
+     ],
+     "x": true,
+     "th": false,
+     "link": false
+    },
+    "x17": {
+     "time": "17:00",
+     "type": [
+      "sokuhou",
+      "rank",
+      "odekake"
+     ],
+     "x": true,
+     "th": false,
+     "link": false
+    },
+    "x19": {
+     "time": "19:00",
+     "type": [
+      "sokuhou",
+      "rank",
+      "odekake"
+     ],
+     "x": true,
+     "th": false,
+     "link": false
+    },
+    "x21": {
+     "time": "21:00",
+     "type": [
+      "sokuhou",
+      "rank",
+      "odekake"
+     ],
+     "x": true,
+     "th": false,
+     "link": false
     }
-   }
+   },
+   "about_x": "11/13 owner「X も利用しろ」：X は Threads と別に1日8本（2時間おき）。主役は関西6府県の開店・閉店・新駅・工事・再開発の速報（公式発表で確かめた物）。本文にリンクなし・ハッシュタグは市と駅の2つまで。足りない日は路線の順位・催しで埋める。答え合わせ 11/21 朝（フォロワーの差）"
   }
  ],
  "base": {

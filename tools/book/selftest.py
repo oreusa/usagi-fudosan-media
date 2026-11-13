@@ -20,12 +20,21 @@ ok = [post("n1", "07:00", "rank", "【京阪本線｜大阪府内の駅で1位�
            x="【南海本線】 https://townnote.pages.dev/ranking?f=x-rank-1114e#r31"),
       post("n7", "21:00", "hitoeki", "【ひと駅しらべ その22｜南草津駅】", "https://townnote.pages.dev/machi/shiga-03?f=th-hitoeki-1114f1",
            x="【ひと駅しらべ】 https://townnote.pages.dev/machi/shiga-03?f=x-hitoeki-1114f")]
+for p_ in ok: p_.update(x_text="", x_thread=[])  # 11/14〜 Threads の枠は X に出さない（X は x07〜x21 の別枠）
+def xpost(h, text):
+    return {"date": D, "slot": "x" + h, "time": h + ":00", "type": "sokuhou", "threads_text": "", "threads_thread": [],
+            "x_text": text, "x_thread": [], "image_url": ""}
+ok += [xpost(h, f"【{h}時｜草津市】駅前に新しい店が11/20開店\n草津駅から歩いて3分\n#草津市 #草津駅") for h in ("07", "09", "11", "13", "15", "17", "19", "21")]
 CASES = [  # (直す枠, 直し方, × に入るはずの言葉)
     ("S1", lambda p: p.update(threads_text=p["threads_text"].replace("/jikka/settsu", "/kaitai-settsu")), "売れた値段"),
     ("n3", lambda p: p.update(threads_text=p["threads_text"].replace("/odekake-osaka", "/machi/osaka-19")), "開業"),
     ("n8", lambda p: p.update(threads_text=p["threads_text"] + "\nお名前なしでも大丈夫"), "名前なしでも"),
     ("n7", lambda p: p.update(threads_text=p["threads_text"].replace(LAST, "毎朝7時と夜8時に、関西の街の数字を出しています。")), "最後の行"),
-    ("n2", lambda p: p.update(x_text=""), "x_text が空"),
+    ("x09", lambda p: p.update(x_text=""), "x_text が空"),
+    ("x11", lambda p: p.update(x_text=p["x_text"] + "\nhttps://townnote.pages.dev/?f=x-sokuhou-1114a"), "リンクがある"),
+    ("x13", lambda p: p.update(x_text=p["x_text"] + " #関西 #開店"), "ハッシュタグ"),
+    ("x15", lambda p: p.update(threads_text="Threads の文"), "X だけ"),
+    ("x17", lambda p: p.update(type="jikka"), "型が"),
     ("n1", lambda p: p.update(time="20:00"), "時刻"),
     ("n2", lambda p: p.update(threads_text=p["threads_text"].replace("f=th-odekake-1114c", "f=x-odekake-1113c")), "印"),
     ("n3", lambda p: p.update(threads_text=p["threads_text"].replace("townnote.pages.dev", "oreusa.github.io")), "お客さんに見せない"),
@@ -43,7 +52,7 @@ def run(rows):
 fail = 0
 code, out = run(ok)
 if code != 0:
-    fail += 1; print("× 正しい6枠が通らない：", {k: v["bad"] for k, v in out.items() if v["bad"]})
+    fail += 1; print("× 正しい枠が通らない：", {k: v["bad"] for k, v in out.items() if v["bad"]})
 for slot, fix, word in CASES:
     rows = json.loads(json.dumps(ok)); fix(next(r for r in rows if r["slot"] == slot))
     code, out = run(rows)
