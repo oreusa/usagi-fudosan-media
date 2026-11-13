@@ -100,7 +100,7 @@ def page(base, city, rows, date, others):
     sec = (f'<section id="shi" class="ps" style="--c:#4F7BA8"><h2>{E(city)}の解体の補助</h2><p class="kt-tr"><span>公式ページで確認 {re.sub(r"^\d+年", "", date)}</span><span>受付の状況を毎週見直し</span><span>関西{len(others)}市を掲載</span></p>'
            + "".join(card(*r) for r in kai)
            + ('<h3 class="kt-h">ほかの制度</h3>' + "".join(card(*r) for r in etc) if etc else "")
-           + '<p class="kt-n">受付・条件・上限は変わります。交付が決まる前に契約や工事を始めると、対象外になる市が多いので、見積りの前に公式ページでご確認ください。</p></section>')
+           + '<p class="kt-n">もらえるかどうかと金額は、役所の審査で決まります（このページは、確かめた日の公式の内容をまとめた物で、受け取りを約束するものではありません）。受付・条件・上限は変わります。交付が決まる前に契約や工事を始めると、対象外になる市が多いので、見積りの前に公式ページでご確認ください。</p></section>')
     if cap and not ended:
         fr = Fraction(ratio) if ratio else None
         tr = ""

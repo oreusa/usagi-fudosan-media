@@ -30,7 +30,7 @@ if _rows:
     _kh = ('<section id="hojo" class="ps" style="--c:#4F7BA8"><h2>解体の補助がある市区</h2><p class="rk-sub">公式ページで確かめられた市区だけ・順に足します</p>'
            + "".join(f'<div class="kt-hj"><b>{_E(c)}</b>' + (f'<em class="{"x" if st in ("受付停止", "受付終了") else ""}">{_E(st)}</em>' if st else "")
                      + f'<p>{_E(tx)}</p><a href="{_E(u)}" target="_blank" rel="noopener" data-k="費用｜市の補助｜{_E(c)}">{_E(c)}の公式ページ（{_E(d)}に確認） →</a></div>' for c, tx, st, u, d in _rows)
-           + '<p class="kt-n">受付・条件・上限は変わります。交付が決まる前に契約や工事を始めると、対象外になる市区が多いので、見積りの前に公式ページで確かめてください。ここに無い市区も、役所の「空き家」の窓口で聞けます。</p></section>')
+           + '<p class="kt-n">もらえるかどうかと金額は、役所の審査で決まります（このページは、確かめた日の公式の内容をまとめた物で、受け取りを約束するものではありません）。受付・条件・上限は変わります。交付が決まる前に契約や工事を始めると、対象外になる市区が多いので、見積りの前に公式ページで確かめてください。ここに無い市区も、役所の「空き家」の窓口で聞けます。</p></section>')
 # 部品の版：関西の側の数字は何でもよく、関東の側は akari-auto site/moushikomi.html の今の版に合わせる（11/12 古い版の数字に戻してしまう穴を塞いだ）
 _mo = open(os.path.join(os.path.dirname(dst), "moushikomi.html"), encoding="utf-8").read()
 for _js in ("night", "menu", "v2sub"):

@@ -58,7 +58,7 @@ for city, tx, st, u, d in rows:
     sec = (f'<section id="shi" class="ps" style="--c:#4F7BA8"><h2>{E(city)}の解体の補助</h2><p class="kt-tr"><span>公式ページで確認 {re.sub(r"^\d+年", "", d)}</span><span>受付の状況を毎週見直し</span><span>関東{len(rows)}市区を掲載</span></p>'
            f'<div class="kt-hj"><b>解体の補助</b>' + (f'<em class="{"x" if ended else ""}">{E(st)}</em>' if st else "") + f'<p>{E(tx)}</p>'
            f'<a href="{E(u)}" target="_blank" rel="noopener" data-k="市の補助｜公式ページ｜{E(city)}">{E(city)}の公式ページで確かめる</a></div>'
-           '<p class="kt-n">受付・条件・上限は変わります。交付が決まる前に契約や工事を始めると、対象外になる市区が多いので、見積りの前に公式ページでご確認ください。</p></section>')
+           '<p class="kt-n">もらえるかどうかと金額は、役所の審査で決まります（このページは、確かめた日の公式の内容をまとめた物で、受け取りを約束するものではありません）。受付・条件・上限は変わります。交付が決まる前に契約や工事を始めると、対象外になる市区が多いので、見積りの前に公式ページでご確認ください。</p></section>')
     if ended:
         sec += (f'<section id="hiku" class="ps" style="--c:#4F7BA8"><h2>今年度の受付について</h2><p class="kt-n" style="font-size:13.5px;color:inherit">{E(city)}の今年度の受付は、'
                 f'{"止まっています" if st == "受付停止" else "終わっています"}。来年度の受付は、市の公式ページでご確認ください。見積りは、受付が始まる前に取っておくと、申し込みが早く進みます。</p></section>')
