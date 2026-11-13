@@ -105,7 +105,7 @@ def main(day):
     xs = {k: v for k, v in tab.get("slots", {}).items() if v.get("th") is False}
     if xs and g is not None:
         xok = sum(1 for k in xs if (g.get("slots", {}).get(k) or {}).get("ok"))
-        rule("X の速報（関西）", "X の人の多さを入口にする", "X は Threads と別に1日8本（開店・閉店・新駅・工事の速報が主役・本文にリンクなし）", xok == len(xs),
+        rule("X の速報（関西）", "X の人の多さを入口にする", "X は Threads と別に1日6本（開店・閉店・新駅・工事の速報が主役・本文にリンクなし）", xok == len(xs),
              f"○ {xok}／{len(xs)} 枠", "06:23 の回で速報を10件集める。足りない日は路線の順位・催しで埋める")
 
     # 5 機械の予約：失敗0・二重0

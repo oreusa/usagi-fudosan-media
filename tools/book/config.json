@@ -77,6 +77,17 @@
      ],
      "x": false
     },
+    "x07": {
+     "time": "07:00",
+     "type": [
+      "sokuhou",
+      "rank",
+      "odekake"
+     ],
+     "x": true,
+     "th": false,
+     "link": false
+    },
     "S1": {
      "time": "08:00",
      "type": [
@@ -92,38 +103,6 @@
      ],
      "x": false
     },
-    "n3": {
-     "time": "12:00",
-     "type": [
-      "dekiru"
-     ],
-     "x": false
-    },
-    "n8": {
-     "time": "13:00",
-     "type": [
-      "rank"
-     ],
-     "x": false
-    },
-    "n7": {
-     "time": "21:00",
-     "type": [
-      "hitoeki"
-     ],
-     "x": false
-    },
-    "x07": {
-     "time": "07:00",
-     "type": [
-      "sokuhou",
-      "rank",
-      "odekake"
-     ],
-     "x": true,
-     "th": false,
-     "link": false
-    },
     "x09": {
      "time": "09:00",
      "type": [
@@ -135,8 +114,15 @@
      "th": false,
      "link": false
     },
-    "x11": {
-     "time": "11:00",
+    "n3": {
+     "time": "12:00",
+     "type": [
+      "dekiru"
+     ],
+     "x": false
+    },
+    "x12": {
+     "time": "12:00",
      "type": [
       "sokuhou",
       "rank",
@@ -146,16 +132,19 @@
      "th": false,
      "link": false
     },
-    "x13": {
+    "n8": {
      "time": "13:00",
      "type": [
-      "sokuhou",
-      "rank",
+      "rank"
+     ],
+     "x": false
+    },
+    "n5": {
+     "time": "15:00",
+     "type": [
       "odekake"
      ],
-     "x": true,
-     "th": false,
-     "link": false
+     "x": false
     },
     "x15": {
      "time": "15:00",
@@ -168,8 +157,15 @@
      "th": false,
      "link": false
     },
-    "x17": {
-     "time": "17:00",
+    "n6": {
+     "time": "18:00",
+     "type": [
+      "dekiru"
+     ],
+     "x": false
+    },
+    "x18": {
+     "time": "18:00",
      "type": [
       "sokuhou",
       "rank",
@@ -179,16 +175,12 @@
      "th": false,
      "link": false
     },
-    "x19": {
-     "time": "19:00",
+    "n7": {
+     "time": "21:00",
      "type": [
-      "sokuhou",
-      "rank",
-      "odekake"
+      "hitoeki"
      ],
-     "x": true,
-     "th": false,
-     "link": false
+     "x": false
     },
     "x21": {
      "time": "21:00",
@@ -202,7 +194,8 @@
      "link": false
     }
    },
-   "about_x": "11/13 owner「X も利用しろ」：X は Threads と別に1日8本（2時間おき）。主役は関西6府県の開店・閉店・新駅・工事・再開発の速報（公式発表で確かめた物）。本文にリンクなし・ハッシュタグは市と駅の2つまで。足りない日は路線の順位・催しで埋める。答え合わせ 11/21 朝（フォロワーの差）"
+   "about_x": "11/13 owner「X も利用しろ」：X は Threads と別に1日6本（07・09・12・15・18・21）。主役は関西6府県の開店・閉店・新駅・工事・再開発の速報（公式発表で確かめた物）。本文にリンクなし・ハッシュタグは市と駅の2つまで。足りない日は路線の順位・催しで埋める。答え合わせ 11/21 朝（フォロワーの差）",
+   "note": "11/13 21:01 owner「xの投稿は6で良い」「Threadsの時間開きすぎてるところに1投稿づつ」→ X は 07・09・12・15・18・21 の6本、Threads に 15:00 おでかけ・18:00 できる を足して8本（関東も同じ）"
   }
  ],
  "base": {
