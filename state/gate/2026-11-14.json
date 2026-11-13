@@ -1,6 +1,6 @@
 {
  "date": "2026-11-14",
- "bad": 8,
+ "bad": 7,
  "slots": {
   "x07": {
    "ok": true,
@@ -11,6 +11,16 @@
    "digest": "f26e2925f2a07e75",
    "x": true,
    "th": false
+  },
+  "n1": {
+   "ok": true,
+   "time": "07:00",
+   "head": "【関西まちランキング No.26｜近鉄橿原線・奈良県内16駅、3位は橿原神宮前🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "cec125273b975ca7",
+   "x": false,
+   "th": true
   },
   "x09": {
    "ok": true,
@@ -67,18 +77,6 @@
    "digest": "aac36e96a5e8cba6",
    "x": true,
    "th": false
-  },
-  "n1": {
-   "ok": false,
-   "time": "07:00",
-   "head": "",
-   "bad": [
-    "下書きが無い（抜け）"
-   ],
-   "warn": [],
-   "digest": "",
-   "x": false,
-   "th": true
   },
   "S1": {
    "ok": false,
