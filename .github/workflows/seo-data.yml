@@ -1,0 +1,27 @@
+name: seo-data（街ページの公式の数字を取りに行く）
+# 11/13 検索の作り替え。この作業場からは役所のサイトが開けないので、GitHub の機械で取って tools/seo_data/out に写す
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/project-thread-tvu6yt]
+    paths: ["tools/seo_data/*.py", "tools/seo_data/urls.txt", ".github/workflows/seo-data.yml"]
+permissions:
+  contents: write
+jobs:
+  get:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q openpyxl xlrd pandas
+      - name: 取る
+        run: |
+          mkdir -p tools/seo_data/out
+          for f in tools/seo_data/run_*.py; do [ -f "$f" ] && python3 "$f" || true; done
+          python3 tools/seo_data/find.py || true
+      - name: 保存
+        run: |
+          git config user.name "seo-data bot"; git config user.email "actions@users.noreply.github.com"
+          git add tools/seo_data/out; git diff --cached --quiet && exit 0
+          git commit -q -m "[CF-Pages-Skip] seo-data: 取った数字"
+          for i in 1 2 3 4 5; do git pull --rebase -q origin ${GITHUB_REF_NAME} && git push -q origin HEAD:${GITHUB_REF_NAME} && exit 0; sleep $((i*5)); done; exit 1
