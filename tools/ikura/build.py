@@ -20,6 +20,10 @@ def rows(fn):
         if r["府県"] not in PF or not r["市区町村"]:
             continue
         name = r["市区町村"]
+        if "合計" in name:  # 府県・市の合計の行は選ぶ物ではない
+            continue
+        if name == "篠山市":
+            name = "丹波篠山市"
         big = r["地域見出し"]
         if big and big.endswith("市") and not name.startswith(big):  # 大阪市 都島区 → 大阪市都島区
             name = big + name
@@ -106,7 +110,7 @@ $("rl").textContent=nm+"の"+LB[ty][2]+"（"+Math.round(a)+"㎡）";
 $("rb").innerHTML=man(est*0.85)+"〜"+man(est*1.15)+"<small>万円</small>";
 $("ru").innerHTML=u.map(function(s){{return"<li>"+s+"</li>"}}).join("");
 var memo=nm+"・"+LB[ty][2]+"・"+Math.round(a)+"㎡・目安"+man(est*0.85)+"〜"+man(est*1.15)+"万円";
-$("go").href="/moushikomi?lite=1&want="+encodeURIComponent("査定してほしい")+(D[k].id?"&machi="+D[k].id:"")+"&memo="+encodeURIComponent(memo);
+$("go").href="/moushikomi?lite=1&want="+encodeURIComponent("査定してほしい")+(D[k].id?"&machi="+D[k].id:"&pl="+encodeURIComponent(({{"大阪":"大阪府","京都":"京都府","兵庫":"兵庫県","奈良":"奈良県","滋賀":"滋賀県","和歌山":"和歌山県"}}[k.split("|")[0]]||"")+nm))+"&memo="+encodeURIComponent(memo);
 var first=r.style.display!=="block";r.style.display="block";if(first&&window.__ikU)setTimeout(function(){{r.scrollIntoView({{behavior:"smooth",block:"center"}})}},60);c("いくら｜出した｜"+ty+"｜"+nm)}}
 $("ty").addEventListener("click",function(e){{var b=e.target.closest("button");if(!b)return;ty=b.dataset.v;[].forEach.call($("ty").children,function(x){{x.setAttribute("aria-pressed",x===b)}});fill();calc()}});
 ci.addEventListener("change",function(){{window.__ikU=1;calc()}});ar.addEventListener("input",calc);
