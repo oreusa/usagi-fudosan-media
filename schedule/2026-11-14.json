@@ -1,6 +1,23 @@
 [
  {
   "date": "2026-11-14",
+  "slot": "n1",
+  "time": "07:00",
+  "type": "rank",
+  "threads_text": "【関西まちランキング No.26｜近鉄橿原線、3位と4位は371人差🚃】\n◎ 奈良県内16駅、橿原神宮前と近鉄郡山が大接戦！\n\n✦ 近鉄橿原線・奈良県内16駅の1日の乗降人員\n　⊹ 大和西大寺〜橿原神宮前（八木西口は表に無し）\n　⊹ 近鉄の調査（2025年11月11日）\n\n✦ 1位 大和西大寺 45,137人\n✦ 2位 大和八木 34,056人\n✦ 3位 橿原神宮前 16,300人\n\n✦ 4位の近鉄郡山は15,929人\n　⊹ 3位との差は、わずか371人\n\n✧ 4位より下と、あなたの駅の順位は、このあとの返信のリンクで見られます\n\nあなたの最寄り駅は何位でしたか？\nあすの朝7時は和歌山電鐵貴志川線。\n毎朝7時と昼1時に、関西の街の数字を出しています。",
+  "threads_thread": [
+   "出典：近鉄「交通調査結果のお知らせ」駅別乗降人員（令和7年11月11日調査）\nhttps://www.kintetsu.co.jp/tetsudo/2604_ekibetsujyokou.pdf\n\n大和西大寺・大和八木・橿原神宮前は、ほかの線と同じ駅の数字です。",
+   "近鉄橿原線16駅の全部の順位と、あなたの駅は\nhttps://townnote.pages.dev/ranking?f=th-rank-1114ap#r26"
+  ],
+  "x_text": "",
+  "x_thread": [],
+  "threads_topic": "奈良",
+  "image_url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-r26.jpg?v=mwfhm0y5",
+  "image_alt": "近鉄橿原線 奈良県内16駅の乗降人員ランキング 3位と4位は371人差",
+  "booked": {}
+ },
+ {
+  "date": "2026-11-14",
   "slot": "x07",
   "time": "07:00",
   "type": "sokuhou",
@@ -15,18 +32,36 @@
  },
  {
   "date": "2026-11-14",
-  "slot": "n1",
-  "time": "07:00",
-  "type": "rank",
-  "threads_text": "【関西まちランキング No.26｜近鉄橿原線・奈良県内16駅、3位は橿原神宮前🚃】\n◎ 橿原神宮前駅は、近鉄郡山駅より371人多くて3位でした！\n\n✦ 近鉄橿原線・奈良県内16駅の1日の乗降人員\n　⊹ 大和西大寺〜橿原神宮前（八木西口は数字が出ていないので除く）\n　⊹ 近鉄の交通調査（2025年11月11日・火曜）の数字\n\n✦ 1位 大和西大寺 45,137人\n✦ 2位 大和八木 34,056人\n✦ 3位 橿原神宮前 16,300人\n✦ 4位 近鉄郡山 15,929人\n\n✦ いちばん少ないのは、ファミリー公園前の473人\n\n✧ 大和西大寺と大和八木は、ほかの線に乗りかえる駅です\n\nあなたの最寄り駅は何位でしたか？\nあすの朝7時は京阪本線。\n毎朝7時と昼1時に、関西の街の数字を出しています。",
+  "slot": "S1",
+  "time": "08:00",
+  "type": "jikka",
+  "threads_text": "【実家が和歌山市なら｜昨年度の平均は1,003万円🏠】\n◎ となりの岩出市は900万円、紀の川市は674万円でした！\n\n2025年度（2025年4月〜2026年3月）に\nレインズ（不動産会社どうしの登録）で成約した\n中古一戸建ての平均です。\n\n✦ 和歌山市：1,003万円（383件）\n✦ 岩出市：900万円（71件）\n✦ 紀の川市：674万円（67件）\n\n✦ 3市の差\n　⊹ 和歌山市と岩出市は103万円\n　⊹ 和歌山市と紀の川市は329万円\n\n✧ 市の平均の目安で、物件により異なります\n\nご実家の市は、どの数字に近いですか？\n毎朝7時と昼1時に、関西の街の数字を出しています。",
   "threads_thread": [
-   "出典：近畿日本鉄道「交通調査結果のお知らせ」（調査日 2025年11月11日・火曜）\nhttps://www.kintetsu.co.jp/tetsudo/2604_ekibetsujyokou.pdf\n\n近鉄橿原線16駅の全部の順位と、あなたの駅は\nhttps://townnote.pages.dev/ranking?f=th-rank-1114ap#r26"
+   "出典：近畿レインズ 2025年度（2025年4月〜2026年3月）市区町村別の成約（中古一戸建て）",
+   "和歌山市で去年売れた家の相場と、売る前の順番は\nhttps://townnote.pages.dev/jikka/wakayama-01?f=th-jikka-1114ap\n\n関西のお家なら、無料の見積りのご相談・会社のご紹介もできます。"
   ],
   "x_text": "",
   "x_thread": [],
-  "threads_topic": "奈良",
-  "image_url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-r26.jpg?v=mwfhm0y5",
-  "image_alt": "近鉄橿原線 奈良県内16駅の乗降人員ランキング 橿原神宮前が3位",
+  "threads_topic": "和歌山",
+  "image_url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-jikka-1114-wakayama.jpg?v=mwfhp1vu",
+  "image_alt": "実家が和歌山市なら 昨年度の中古一戸建ての平均は1,003万円",
+  "booked": {}
+ },
+ {
+  "date": "2026-11-14",
+  "slot": "n2",
+  "time": "09:00",
+  "type": "odekake",
+  "threads_text": "【11/14（土）から｜京都・東福寺の通天橋、特別拝観が始まります🍁】\n◎ 今週末、京都の紅葉の名所が3か所そろって見られます！\n\n✦ 東福寺（京都市東山区）\n　⊹ 通天橋・開山堂の特別拝観 11/14（土）〜12/6（日）\n　⊹ 9:00〜16:00受付（期間中は8:30から）・大人1,000円\n\n✦ 永観堂（禅林寺）\n　⊹ 秋の寺宝展 11/11〜12/6、9:00〜16:00受付\n　⊹ 大人1,500円。夜の拝観は11/20から\n\n✦ 南禅寺 天授庵\n　⊹ 9:00〜16:30受付・大人500円\n\n✧ 色づきは年で変わります。出かける前に公式で確かめてください\n\n今週末、紅葉を見に行く予定はありますか？\n毎朝7時と昼1時に、関西の街の数字を出しています。",
+  "threads_thread": [
+   "出典：京阪電車「京都の紅葉2026」各スポットのページ（2026年11月13日に確認）\nhttps://www.keihan.co.jp/momiji/kyoto/spot/toufukuji.html\nhttps://www.keihan.co.jp/momiji/kyoto/spot/eikandou.html\nhttps://www.keihan.co.jp/momiji/kyoto/spot/tenjuan.html",
+   "京都の紅葉の名所と見ごろは\nhttps://townnote.pages.dev/koyo-kyoto?f=th-odekake-1114ap"
+  ],
+  "x_text": "",
+  "x_thread": [],
+  "threads_topic": "京都",
+  "image_url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-odekake-1114-n2.jpg?v=mwfhpcpa",
+  "image_alt": "東福寺の通天橋 特別拝観 11月14日から",
   "booked": {}
  },
  {
@@ -45,6 +80,20 @@
  },
  {
   "date": "2026-11-14",
+  "slot": "n3",
+  "time": "12:00",
+  "type": "dekiru",
+  "threads_text": "【11/16（月）京都駅八条東口から徒歩3分｜270室のホテルが開業🏨】\n◎ コートヤード・バイ・マリオット京都駅が、あさって開業します！\n\n✦ 場所：京都市南区東九条東山王町\n　⊹ 京都駅 八条東口から徒歩約3分\n✦ 客室は270室\n✦ 1階にオールデイダイニング「The 8th Gate」\n\n✧ 出典：JR東海ホテルズの発表（2026年10月21日）\nhttps://prtimes.jp/main/html/rd/p/000000286.000076395.html\n\n京都駅の南側、最近よく行きますか？\n\n京都の今行けるおでかけ先は、こちら。\nhttps://townnote.pages.dev/odekake-kyoto?f=th-dekiru-1114ap1\n毎朝7時と昼1時に、関西の街の数字を出しています。",
+  "threads_thread": [],
+  "x_text": "",
+  "x_thread": [],
+  "threads_topic": "京都",
+  "image_url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1114-n3.jpg?v=mwfhpdhx",
+  "image_alt": "京都駅の南に270室のホテル 11月16日開業",
+  "booked": {}
+ },
+ {
+  "date": "2026-11-14",
   "slot": "x12",
   "time": "12:00",
   "type": "sokuhou",
@@ -55,6 +104,40 @@
   "threads_topic": "",
   "image_url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1114-x12.jpg?v=mwfhk1fx",
   "image_alt": "スーパー万代が滋賀に初出店 2店",
+  "booked": {}
+ },
+ {
+  "date": "2026-11-14",
+  "slot": "n8",
+  "time": "13:00",
+  "type": "rank",
+  "threads_text": "【関西まちランキング No.27｜JR琵琶湖線、守山が瀬田に75人差🚃】\n◎ 滋賀県内18駅、4位と5位の差が290人→75人に！\n\n✦ JR琵琶湖線・滋賀県内18駅の1日の乗車人員\n　⊹ 大津〜米原（米原は在来線の数字）\n　⊹ 滋賀県統計書の駅ごとの表\n\n✦ 1位 草津 29,535人\n✦ 2位 南草津 26,858人\n✦ 3位 石山 21,029人\n\n✦ 4位 瀬田と5位 守山\n　⊹ 前の版：瀬田17,147人・守山16,857人（差290人）\n　⊹ 今：瀬田17,429人・守山17,354人（差75人）\n\n✧ 6位より下と、あなたの駅の順位は、このあとの返信のリンクで見られます\n\nあなたの最寄り駅は何位でしたか？\nあすの朝7時は和歌山電鐵貴志川線。\n毎朝7時と昼1時に、関西の街の数字を出しています。",
+  "threads_thread": [
+   "出典：滋賀県統計書「JR運輸状況」一日平均旅客乗車人員\n令和6年度版 https://www.pref.shiga.lg.jp/documents/23292/5593187.pdf\n前の版（令和5年度版） https://www.pref.shiga.lg.jp/documents/11143/5523602_1.pdf\n\n米原は在来線の数字です。",
+   "琵琶湖線18駅の全部の順位と、あなたの駅は\nhttps://townnote.pages.dev/ranking?f=th-rank-1114bp#r27"
+  ],
+  "x_text": "",
+  "x_thread": [],
+  "threads_topic": "滋賀",
+  "image_url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-r27.jpg?v=mwfhpejd",
+  "image_alt": "JR琵琶湖線 滋賀県内18駅の乗車人員ランキング 守山が瀬田に75人差",
+  "booked": {}
+ },
+ {
+  "date": "2026-11-14",
+  "slot": "n5",
+  "time": "15:00",
+  "type": "odekake",
+  "threads_text": "【今夜も17時から｜大阪・御堂筋とJR大阪駅の光、12月まで✨】\n◎ 夕方から梅田〜なんばで、光のイベントが3つ見られます！\n\n✦ 御堂筋イルミネーション\n　⊹ 11/3〜12/31、17:00ごろ〜25:00\n　⊹ 阪神前交差点〜難波西口交差点の約4km\n\n✦ Twilight Fantasy 2026（大阪ステーションシティ）\n　⊹ 11/11〜12/25、17:00〜23:00\n　⊹ 5階「時空の広場」ほか\n\n✦ THE STARLIGHT TOWN（梅田スカイビル）\n　⊹ 11/13〜12/25\n　⊹ 1階「ワンダースクエア」ほか\n\n✧ 御堂筋の演出は11/17〜24はお休み。くわしくは公式で\n\n今週末、どこから見に行きますか？\n毎朝7時と昼1時に、関西の街の数字を出しています。",
+  "threads_thread": [
+   "出典（2026年11月13日に確認）\n大阪・光の饗宴2026 御堂筋イルミネーション https://hikari-kyoen.com/core/midosuji\nJR西日本 11/2発表 https://www.westjr.co.jp/press/article/2026/11/02/page_31178.html\n梅田スカイビル 9/18発表 https://prtimes.jp/main/html/rd/p/000000215.000063228.html",
+   "大阪のイルミネーションと点灯の時間は\nhttps://townnote.pages.dev/illumination-osaka?f=th-odekake-1114bp"
+  ],
+  "x_text": "",
+  "x_thread": [],
+  "threads_topic": "大阪",
+  "image_url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-illumi-1114-n5.jpg?v=mwfhp5kw",
+  "image_alt": "御堂筋と大阪駅の光 3か所",
   "booked": {}
  },
  {
@@ -73,6 +156,23 @@
  },
  {
   "date": "2026-11-14",
+  "slot": "n6",
+  "time": "18:00",
+  "type": "dekiru",
+  "threads_text": "【11/27（金）神戸・三宮｜BYREDOが神戸BALに神戸初出店🛍️】\n◎ 11/13発表、スウェーデン発のフレグランスの店が三宮にできます！\n\n✦ BYREDO 神戸BAL\n　⊹ 場所：神戸市中央区三宮町3-6-1 神戸BAL本館1階\n　⊹ 開店：11/27（金）\n　⊹ 神戸で初めての店\n\n✧ 出典：中澤ホールディングスの発表（2026年11月13日）\n\n三宮の新しい店、気になりますか？\n毎朝7時と昼1時に、関西の街の数字を出しています。",
+  "threads_thread": [
+   "出典：中澤ホールディングス 2026年11月13日の発表\nhttps://prtimes.jp/main/html/rd/p/000000052.000120926.html",
+   "兵庫の今行けるおでかけ先は\nhttps://townnote.pages.dev/odekake-hyogo?f=th-dekiru-1114bp"
+  ],
+  "x_text": "",
+  "x_thread": [],
+  "threads_topic": "兵庫",
+  "image_url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1114-n6.jpg?v=mwfhp6dt",
+  "image_alt": "BYREDOが神戸に初出店 11月27日",
+  "booked": {}
+ },
+ {
+  "date": "2026-11-14",
   "slot": "x18",
   "time": "18:00",
   "type": "sokuhou",
@@ -83,6 +183,20 @@
   "threads_topic": "",
   "image_url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1114-x18.jpg?v=mwfhk5xh",
   "image_alt": "トミー ヒルフィガー心斎橋店 11月12日オープン",
+  "booked": {}
+ },
+ {
+  "date": "2026-11-14",
+  "slot": "n7",
+  "time": "21:00",
+  "type": "hitoeki",
+  "threads_text": "【ひと駅しらべ その22｜南草津駅🚃】\n◎ 駅の南の南草津1丁目は、滋賀の住宅地で14年続けていちばん高い地点！\n\n今夜は滋賀県草津市の南草津駅へ。\nその4以来、新しい数字で見に来ました。\n\n✦ JRの1日の乗車人員（2025年度）\n　⊹ 南草津：27,671人\n　⊹ となりの草津：30,648人\n　⊹ 南草津は草津の約9割\n\n✦ 草津市の公示地（1㎡の価格・2026年1月1日）\n　⊹ 南草津1丁目（住宅地）：369,000円（+9.5%）\n　⊹ 野路1丁目（商業地）：441,000円（+10.0%）\n\n✧ 出典はJR西日本と滋賀県の公表資料\n\n調べてほしい駅があれば、コメントで教えてください。\n次回のひと駅しらべは、六甲道駅（神戸市灘区）。\n\n草津市の土地相場と地価の動きは、こちら。\nhttps://townnote.pages.dev/machi/shiga-05?f=th-hitoeki-1114ap1\n毎朝7時と昼1時に、関西の街の数字を出しています。",
+  "threads_thread": [],
+  "x_text": "",
+  "x_thread": [],
+  "threads_topic": "滋賀",
+  "image_url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-hitoeki-22.jpg?v=mwfhp76k",
+  "image_alt": "ひと駅しらべ その22 南草津駅",
   "booked": {}
  },
  {
