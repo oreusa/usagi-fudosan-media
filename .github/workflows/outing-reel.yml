@@ -7,7 +7,7 @@ name: outing-reel（関西のおでかけリールを声つきで作って置く
 on:
   push:
     branches: [main]
-    paths: ["ig/reels/*.json"]
+    paths: ["ig/reels/*.json", "tools/outing_reel/ehon.py"]   # 11/13 道具を直したら、まだ出していない動画を作り直す（数字の向きを直す前の動画が、そのまま出た）
   workflow_dispatch:
     inputs:
       name:
@@ -29,21 +29,34 @@ jobs:
           - 50021:50021
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: 作る物を決める
         id: todo
         env:
           ONLY: ${{ github.event.inputs.name }}
         run: |
           python3 - <<'PY' >> "$GITHUB_OUTPUT"
-          import glob, json, os
+          import glob, json, os, subprocess, datetime
           only = os.environ.get("ONLY", "").strip(); todo = []
+          today = (datetime.datetime.utcnow() + datetime.timedelta(hours=9)).date().isoformat()
+          posted = set()
+          for f in glob.glob("ig/posts/*.json"):
+              x = open(f, encoding="utf-8").read()
+              if "permalink" in x:
+                  try: posted.add(json.loads(x).get("spec", ""))
+                  except Exception: pass
           for p in sorted(glob.glob("ig/reels/*.json")):
               n = os.path.basename(p)[:-5]
               if only and n != only: continue
               d = json.load(open(p))
               if not d.get("voice") or not d.get("video_url"): continue
               out = "media/reels/" + d["video_url"].rsplit("/", 1)[-1]
-              if not os.path.exists(out): todo.append(n)
+              if not os.path.exists(out): todo.append(n); continue
+              # 11/13 まだ出していない絵本の型の動画が、道具（ehon.py）より古ければ作り直す。出した物には触らない
+              if d.get("kata") == "ehon" and n[:10] >= today and f"ig/reels/{n}.json" not in posted:
+                  ct = lambda f: int(subprocess.run(["git", "log", "-1", "--format=%ct", "--", f], capture_output=True, text=True).stdout.strip() or 0)
+                  if ct(out) < ct("tools/outing_reel/ehon.py"): todo.append(n)
           print("todo=" + " ".join(todo))
           PY
       - name: 道具（ffmpeg・Chromium）
