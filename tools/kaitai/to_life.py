@@ -45,6 +45,17 @@ for a, b in PAIRS:
     if a not in s:
         sys.exit("元のページに見つかりません（to_life.py を直す）: " + a)
     s = s.replace(a, b)
+# 11/13 関東はアフィリエイトが本来（オーナー 11/9）。解体そのものの提携先は無いので、解体の前の片付けに A8 ぽいみつ（11/13 提携）を1つ。広告の断りはページの上と下だけ。
+_POI = "4BGK80+84BWCI+5Y1K+5YZ76"
+_KATA = ('<a class="kt-b" href="https://px.a8.net/svt/ejp?a8mat=' + _POI + '" rel="nofollow sponsored noopener" target="_blank" data-k="片付けの一括見積り" style="margin-top:12px">'
+         '解体の前に、家の中の片付けの見積りをくらべる<small>無料・不用品回収をまとめて見積り（ぽいみつ）</small></a>'
+         '<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=' + _POI + '" alt="" style="position:absolute;width:1px;height:1px;opacity:0">')
+for _a, _b in (('</li></ul><button type="button" class="kt-k"', '</li></ul>' + _KATA + '<button type="button" class="kt-k"'),
+               ('更新</div></div>', '更新・広告（PR）を含みます</div></div>'),
+               ('<a class="back" href="/fudosan-list">', '<p class="kt-n" style="text-align:center;margin:18px 0">このページのリンクの一部は広告（PR）です</p><a class="back" href="/fudosan-list">')):
+    if s.count(_a) != 1:
+        sys.exit("広告の段の目印が見つかりません（to_life.py を直す）: " + _a)
+    s = s.replace(_a, _b, 1)
 bad = re.findall(r"[^\n]{0,12}(?:関西|近畿|大阪|神戸|townnote|TOWN|assets/ogp|\"assets/)[^\n]{0,12}", s)
 if bad:
     sys.exit("関西の言葉・部品が残っています: " + " / ".join(bad[:5]))
