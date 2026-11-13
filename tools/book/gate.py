@@ -147,6 +147,13 @@ def check_one(dr, d, tab, seen_heads):
         bad.append(f"絵 media/post/{m.group(1)}.jpg がリポジトリに無い")
     if not img:
         warn.append("絵が無い（文字だけで出る）")
+    # 11/13 owner「訳分からん投稿」：「下のリンク」「こちら。」と書いたのに、その本にも次の本にもリンクが無い
+    for svc, ps in (("Threads", th), ("X", xs)):
+        for i, t in enumerate(ps):
+            if re.search(r"下のリンク|リンクで見られ|リンクから見られ|は、こちら。", t):
+                nxt = ps[i + 1] if i + 1 < len(ps) else ""
+                if not (LINK_RE.search(t) or LINK_RE.search(nxt)):
+                    bad.append(f"{svc} の{i + 1}本目に「下のリンク・こちら」と書いたのにリンクが無い")
     # 同じ日に同じ見出し
     head = th[0].strip().splitlines()[0] if th[0].strip() else ""
     if head and head in seen_heads:

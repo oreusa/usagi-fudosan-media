@@ -30,6 +30,7 @@ CASES = [  # (直す枠, 直し方, × に入るはずの言葉)
     ("n2", lambda p: p.update(threads_text=p["threads_text"].replace("f=th-odekake-1114c", "f=x-odekake-1113c")), "印"),
     ("n3", lambda p: p.update(threads_text=p["threads_text"].replace("townnote.pages.dev", "oreusa.github.io")), "お客さんに見せない"),
     ("n7", lambda p: p.update(image_url="https://x/media/post/nai-e.jpg"), "リポジトリに無い"),
+    ("n1", lambda p: p.update(threads_text=p["threads_text"].replace("https://townnote.pages.dev/ranking?f=th-rank-1114ap#r30", "4位より下は、下のリンクで見られます")), "下のリンク"),
 ]
 tmp = tempfile.mkdtemp(); real = gate.ROOT
 os.makedirs(os.path.join(tmp, "schedule")); os.makedirs(os.path.join(tmp, "media", "post"))
