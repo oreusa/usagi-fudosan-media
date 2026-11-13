@@ -1,0 +1,37 @@
+name: headcheck（Google から サイトマップ・robots・ページが どう見えるか）
+# 11/13 Search Console でサイトマップが「取得できませんでした」のまま。本番が外へ返している物（状態・種類・載せるなの印）を、そのまま stats/headcheck.txt に写す。
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "20 23 * * *"   # 8:20（朝の回の前）
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: 見る
+        run: |
+          out=stats/headcheck.txt; : > $out
+          echo "見た時刻 $(TZ=Asia/Tokyo date '+%F %H:%M')" >> $out
+          G="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+          for site in https://townnote.pages.dev https://lifenote-kanto.pages.dev; do
+            for p in /robots.txt /sitemap.xml /sitemap-all.xml /sitemap-main.xml / /kaitai-ranking /odekake; do
+              for ua in "ふつう" "Googlebot"; do
+                a="Mozilla/5.0"; [ "$ua" = "Googlebot" ] && a="$G"
+                h=$(curl -s -m 20 -D - -o /tmp/body -A "$a" "$site$p" | tr -d '\r')
+                st=$(echo "$h" | head -1); ct=$(echo "$h" | grep -i '^content-type:' | head -1); xr=$(echo "$h" | grep -i '^x-robots-tag:' | head -1); loc=$(echo "$h" | grep -i '^location:' | head -1)
+                sz=$(wc -c < /tmp/body); first=$(head -c 60 /tmp/body | tr '\n' ' '); meta=$(grep -io '<meta name="robots"[^>]*>' /tmp/body | head -1)
+                echo "$site$p｜$ua｜$st｜$ct｜${xr:-x-robots-tag なし}｜${loc:-}｜${sz}字｜$first｜${meta:-}" >> $out
+              done
+            done
+          done
+          cat $out
+      - name: 保存
+        run: |
+          git config user.name "headcheck bot"; git config user.email "actions@users.noreply.github.com"
+          git add stats/headcheck.txt; git diff --cached --quiet && exit 0
+          git commit -q -m "[CF-Pages-Skip] headcheck: $(TZ=Asia/Tokyo date +%F)"
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q origin main && git push -q origin HEAD:main && exit 0; sleep $((i*5)); done; exit 1
