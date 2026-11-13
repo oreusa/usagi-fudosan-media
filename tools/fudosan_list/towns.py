@@ -632,6 +632,18 @@ def has_sold(t):
     return any(sd.get(k) for k in ("k", "m"))
 
 
+# 11/13 オーナー「まじで売上ないのが辛すぎる」→ 関東（LIFE）と同じ A8 のボタンを関西にも。A8 のサイト登録が関東だけなので、
+# 関西（townnote.pages.dev）をサイトに足して提携が通ったら、ここに a8mat を入れる（空のうちは何も出さない＝今の見た目のまま）。
+# 関西は相談がオーナーの仕事につながるので、売却の相談ボタンはそのまま一番上に残し、AI査定はその下に足す。
+A8_ZAKU_K = ""   # ざっくりAI査定＋（新規WEB査定申込 3,400円）。関西サイトで提携したら入れる
+A8_POI_K = ""    # ぽいみつ（不用品回収の一括見積り 5,000円）。関西サイトで提携したら入れる
+
+
+def _a8k(mat, k, label, sm, cls="jb"):
+    return (f'<a class="{cls}" href="https://px.a8.net/svt/ejp?a8mat={mat}" rel="nofollow sponsored noopener" target="_blank" data-k="{k}">{label}<small>{sm}</small></a>'
+            f'<img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat={mat}" alt="" style="position:absolute;width:1px;height:1px;opacity:0">')
+
+
 def jikka_page(t):
     pf, fn, en, col, sname, surl, pfull = PI[t["p"]]
     n = t["n"]
@@ -666,7 +678,7 @@ def jikka_page(t):
 <div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ"><div class="en">{en} ─ JIKKA NOTE</div>
 <h1>{E(n)}の実家・空き家ノート<span>売る・片付ける・解体する前に</span></h1>
 <p class="sub">親の家を相続した・空き家のままになっている。<br>この街で決めるための数字と順番です。</p>
-<div class="upd">2026年11月 更新</div></div>
+<div class="upd">2026年11月 更新{"・広告（PR）を含みます" if (A8_ZAKU_K or A8_POI_K) else ""}</div></div>
 <p class="mk3">SOLD 2025年度</p><h2 class="jh">この街で、2025年度（2025年4月〜2026年3月）に売れた家</h2>
 <div class="jn">{box("k", "中古一戸建て")}{box("m", "中古マンション")}</div>
 <p class="src">出典：近畿レインズ 2025年度（2025年4月〜2026年3月）市区町村別の成約（平均）。住宅地の地価は前の年から{pct(t["r8"])}（令和8年地価公示・{E(pfull)}{t["of"]}市区町村で{t["rank"]}位）。</p>
@@ -674,10 +686,10 @@ def jikka_page(t):
 <p class="mk3" id="steps">STEPS</p><h2 class="jh">迷ったら、この順で</h2>
 {steps}
 {city_h}<p class="mk3">NEXT</p><h2 class="jh">次にできること</h2>
-<a class="jb b1" href="/moushikomi?machi={t["id"]}&amp;want={_q("相続した家のこと")}" data-k="実家｜売却の相談｜{E(n)}">この家の売却を相談する<small>無料・約1分</small></a>
-<a class="jb" href="/moushikomi?lite=1&amp;machi={t["id"]}&amp;want={_q("片付け・遺品整理の見積り")}" data-k="実家｜片付けの見積り｜{E(n)}">片付け・遺品整理の見積りを頼む<small>無料・約1分</small></a>
+<a class="jb b1" href="/moushikomi?machi={t["id"]}&amp;want={_q("相続した家のこと")}" data-k="実家｜売却の相談｜{E(n)}">この家の売却を相談する<small>無料・約1分</small></a>{(chr(10) + _a8k(A8_ZAKU_K, f"実家｜AI査定｜{E(n)}", "この家がいくらで売れそうか、AIで見る", "無料・電話ラッシュなし（ざっくりAI査定＋）")) if A8_ZAKU_K else ""}
+{_a8k(A8_POI_K, f"実家｜片付けの一括見積り｜{E(n)}", "片付け・不用品回収の見積りをくらべる", "無料・まとめて見積り（ぽいみつ）") if A8_POI_K else f'<a class="jb" href="/moushikomi?lite=1&amp;machi={t["id"]}&amp;want={_q("片付け・遺品整理の見積り")}" data-k="実家｜片付けの見積り｜{E(n)}">片付け・遺品整理の見積りを頼む<small>無料・約1分</small></a>'}
 <a class="jb" href="/moushikomi?lite=1&amp;machi={t["id"]}&amp;want={_q("解体の見積り")}" data-k="実家｜解体の見積り｜{E(n)}">解体費用の見積りを頼む<small>無料・約1分</small></a>
-<p class="jp">どれも同じお申し込みページです。内容を見て、メールでご連絡します。</p>
+<p class="jp">{"このページのリンクの一部は広告（PR）です。お申し込みページのボタンは、内容を見てメールでご連絡します。" if (A8_ZAKU_K or A8_POI_K) else "どれも同じお申し込みページです。内容を見て、メールでご連絡します。"}</p>
 <a class="jl" href="/kaitai" data-k="実家｜費用の目安">先に、解体・片付けの費用の目安を見る <i>→</i></a>
 <a class="jl" href="/jikka/#{fn}" data-k="実家｜一覧">ほかの街の実家・空き家ノート <i>→</i></a>
 <div class="ft">TOWN NOTE</div></div>
