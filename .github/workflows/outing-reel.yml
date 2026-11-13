@@ -77,5 +77,5 @@ jobs:
           git add -A media/reels stats/reel-fail 2>/dev/null || git add media/reels
           git diff --cached --quiet && exit 0
           git commit -q -m "おでかけリールの動画を置いた"
-          for i in 1 2 3 4 5; do git pull --rebase -q origin main && git push -q origin HEAD:main && exit 0; git rebase --abort 2>/dev/null; sleep $((i*5)); done
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q origin main && git push -q origin HEAD:main && exit 0; git rebase --abort 2>/dev/null; sleep $((i*5)); done
           exit 1

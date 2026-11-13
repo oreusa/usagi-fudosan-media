@@ -159,4 +159,4 @@ jobs:
           git add ig/posts stats/reels.json stats/reels.md 2>/dev/null || git add ig/posts
           git diff --cached --quiet || git commit -m "[CF-Pages-Skip] ig: リール投稿の記録"
           # 11/4 ほかの係と同時に push すると断られて記録が残らなかった → 5回までやり直す
-          for i in 1 2 3 4 5; do git pull --rebase -q && git push && break; sleep $((i*5)); done
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q && git push && break; sleep $((i*5)); done

@@ -20,7 +20,7 @@ jobs:
           git diff --cached --quiet && exit 0
           git commit -q -m "indexnow: $(TZ=Asia/Tokyo date +%F)"
           for i in 1 2 3 4 5; do
-            git pull --rebase -q -X theirs origin main && git push -q origin HEAD:main && exit 0
+            git pull --rebase --autostash -q -X theirs origin main && git push -q origin HEAD:main && exit 0
             git rebase --abort 2>/dev/null || true; sleep $((i*7))
           done
           exit 1
