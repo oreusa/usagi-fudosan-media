@@ -173,6 +173,11 @@ def main(day):
                 continue
             if any(x in t for x in DEAD):
                 dead_hit.append(os.path.relpath(f, ROOT))
+    # 燈の手順書も見る（11/13 夜、燈の夜の回が消した記録ページ2つを読んで書けなかった）
+    for ap in ("docs/nightly-prompt.md", "docs/asa-mimawari.md", "docs/koma4-prompt.md", "docs/handoff.md", "docs/tebiki.md"):
+        t = akari(ap)
+        if t and any(x in t for x in DEAD):
+            dead_hit.append("akari " + ap)
     rule("予定の読み先", "消した入れ物を読んで止まらない", "消したアーチファクトの URL を使わない（今の入れ物は うさぎ DB SmAVzdH8ZArs1H6HwC2S9L）", not dead_hit,
          f"{len(dead_hit)}か所" + (f"（{', '.join(dead_hit[:3])}）" if dead_hit else ""), "その URL を うさぎ DB に書き換える。一覧 /mnt/project-files/kanri/ichiran.md")
 
