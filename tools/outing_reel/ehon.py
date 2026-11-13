@@ -101,7 +101,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 .face svg{position:absolute;inset:0;width:100%;height:100%}
 .gut{position:absolute;left:0;top:0;bottom:0;width:70px;background:linear-gradient(90deg,rgba(60,35,20,.34),rgba(60,35,20,0));pointer-events:none}
 .shade{position:absolute;inset:0;background:#1a0f0a;opacity:0;pointer-events:none}
-.vt{position:absolute;writing-mode:vertical-rl;font-family:M;color:#4a3328;letter-spacing:.2em;line-height:1.9;white-space:nowrap}
+.vt{position:absolute;writing-mode:vertical-rl;font-family:M;color:#4a3328;letter-spacing:.2em;line-height:1.9;white-space:nowrap;text-orientation:upright}
 .vt span{display:inline-block;opacity:0}
 .cover{background:linear-gradient(100deg,#5d1f1b,#7c2a22 18%,#742620 70%,#5a1c18);border-radius:4px 12px 12px 4px}
 .cover:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 5px),repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 2px,transparent 2px 5px)}
