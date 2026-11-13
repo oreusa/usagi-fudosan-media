@@ -76,7 +76,7 @@ def main(day):
     # 3 関西と関東の投稿は同じ型・同じ本数（関東は＋PR1本）
     cfg = load(R("tools", "book", "config.json"), {})
     tab = next((t for t in cfg.get("tables", []) if t.get("from", "0") <= day <= t.get("to", "9")), cfg.get("base", {}))
-    kansai_n = len(tab.get("slots", {}))
+    kansai_n = len([k for k, v in tab.get("slots", {}).items() if v.get("th") is not False])  # X だけの枠（x07〜）は別に数える
     ks = akari(f"schedule/{day}.json")
     if ks is None:
         rule("投稿の本数（関西と関東）", "両方で同じ型を回して、くらべて学ぶ", "関東は関西と同じ型・同じ本数＋PR1本（11/13 オーナー「一緒で、ってお願いしたはず」）", None, "関東の予定表が読めない", "akari schedule/きょう.json を見る")
@@ -100,6 +100,13 @@ def main(day):
         gok, gd = g.get("bad", 1) == 0, f"× {g.get('bad')} 枠"
     rule("関西の門（予約の前の点検）", "変な投稿を出さない", "門で ○ の枠だけを予約する（11/13 オーナー「甘い」「ガチれ」）", gok, gd,
          "06:23 の回（投稿スレッド）が動いたか。× の枠は drafts を直して schedule/D.json を書き直す")
+
+    # 4b X の速報（11/13 owner「X も利用しろ、人口はめちゃくちゃ多い」）
+    xs = {k: v for k, v in tab.get("slots", {}).items() if v.get("th") is False}
+    if xs and g is not None:
+        xok = sum(1 for k in xs if (g.get("slots", {}).get(k) or {}).get("ok"))
+        rule("X の速報（関西）", "X の人の多さを入口にする", "X は Threads と別に1日8本（開店・閉店・新駅・工事の速報が主役・本文にリンクなし）", xok == len(xs),
+             f"○ {xok}／{len(xs)} 枠", "06:23 の回で速報を10件集める。足りない日は路線の順位・催しで埋める")
 
     # 5 機械の予約：失敗0・二重0
     bk = load(R("state", "booked", day + ".json"), {})

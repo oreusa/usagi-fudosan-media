@@ -114,7 +114,9 @@ def book_day(d, now):
         key = due_utc[:16]
         try:
             th = gate.parts(dr, "threads")
-            if ("threads", key) in have:
+            if not g.get("th", True):
+                rec["threads"] = "X だけの枠"
+            elif ("threads", key) in have:
                 rec["threads"] = "もうある"
             else:
                 rec["threads"] = create("threads", [t for t in th if t.strip()], due_utc, dr.get("threads_topic"),

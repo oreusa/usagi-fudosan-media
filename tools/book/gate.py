@@ -83,9 +83,15 @@ def check_one(dr, d, tab, seen_heads):
         if want.get("type") and dr.get("type") not in want["type"]:
             bad.append(f"型が {dr.get('type')}（表では {' か '.join(want['type'])}）")
     th = parts(dr, "threads")
-    if not th[0].strip():
+    # 11/13 owner「X も利用しろ」：X だけの枠（th:false）は Threads を見ない。本文にリンクを入れない（link:false）
+    th_on = not (want and want.get("th") is False)
+    if not th_on:
+        if any(t.strip() for t in th):
+            bad.append("この枠は X だけなのに Threads の文がある（Threads は別の枠に）")
+        th = [""]
+    elif not th[0].strip():
         bad.append("Threads の1本目が空")
-    if not (dr.get("threads_topic") or "").strip():
+    if th_on and not (dr.get("threads_topic") or "").strip():
         bad.append("Threads のトピック（threads_topic）が無い")
     for i, t in enumerate(th):
         if len(t) > 500:
@@ -102,7 +108,7 @@ def check_one(dr, d, tab, seen_heads):
     bad += pl_bad
     # 1本目の最後の行（決まりの1行）
     line = tab.get("last_line_override") or CFG.get("last_line")
-    if want and line:
+    if want and line and th_on:
         body = th[0].rstrip()
         last = body.splitlines()[-1] if body else ""
         for old in CFG.get("old_last_lines", []):
@@ -135,6 +141,12 @@ def check_one(dr, d, tab, seen_heads):
                     bad.append(f"印の日付が {mk.group(3)}（{mmdd} にする）")
     if want and want.get("link", True) and not links:
         bad.append("HP（townnote.pages.dev）へのリンクが無い")
+    if want and want.get("link") is False and LINK_RE.search(xs[0]):
+        bad.append("X の1本目にリンクがある（この枠は本文にリンクを入れない。要るなら返信の2本目に）")
+    if want and want.get("x") and xs[0].strip():
+        tags = re.findall(r"#\S+", xs[0])
+        if len(tags) > 2:
+            bad.append(f"X のハッシュタグが {len(tags)} 個（2つまで：市の名前と駅の名前）")
     # 使わない言葉
     for t in th + xs:
         bad += ng_words(t)
@@ -155,7 +167,8 @@ def check_one(dr, d, tab, seen_heads):
                 if not (LINK_RE.search(t) or LINK_RE.search(nxt)):
                     bad.append(f"{svc} の{i + 1}本目に「下のリンク・こちら」と書いたのにリンクが無い")
     # 同じ日に同じ見出し
-    head = th[0].strip().splitlines()[0] if th[0].strip() else ""
+    first = th[0] if th[0].strip() else xs[0]
+    head = first.strip().splitlines()[0] if first.strip() else ""
     if head and head in seen_heads:
         bad.append(f"同じ見出しが {seen_heads[head]} にもある")
     seen_heads.setdefault(head, slot)
@@ -182,7 +195,8 @@ def run(d, write=False):
         head, bad, warn = check_one(dr, d, tab, seen)
         slot = dr.get("slot") or "?"
         out[slot] = {"ok": not bad, "time": dr.get("time"), "head": head[:60], "bad": bad, "warn": warn,
-                     "digest": digest(dr), "x": bool(tab["slots"].get(slot, {}).get("x"))}
+                     "digest": digest(dr), "x": bool(tab["slots"].get(slot, {}).get("x")),
+                     "th": tab["slots"].get(slot, {}).get("th") is not False}
         n_bad += bool(bad)
         print(f"{'○' if not bad else '×'} {slot} {dr.get('time')}｜{head[:40]}")
         for b in bad:
@@ -193,7 +207,7 @@ def run(d, write=False):
         if slot not in out:
             n_bad += 1
             out[slot] = {"ok": False, "time": w["time"], "head": "", "bad": ["下書きが無い（抜け）"], "warn": [],
-                         "digest": "", "x": bool(w.get("x"))}
+                         "digest": "", "x": bool(w.get("x")), "th": w.get("th") is not False}
             print(f"× {slot} {w['time']}｜下書きが無い（抜け）")
     print(f"× {n_bad} 枠（全部で {len(out)} 枠）")
     if write:
