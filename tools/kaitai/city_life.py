@@ -16,7 +16,7 @@ AK = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "..", "akari-auto"
 BASE = "https://lifenote-kanto.pages.dev/"; E = html.escape
 SLUG = {"横浜市": ("yokohama", "神奈川県"), "川崎市": ("kawasaki", "神奈川県"), "八王子市": ("hachioji", "東京都"), "千葉市": ("chiba", "千葉県"),
         "町田市": ("machida", "東京都"), "足立区": ("adachi", "東京都"), "葛飾区": ("katsushika", "東京都"),
-        "江戸川区": ("edogawa", "東京都"), "相模原市": ("sagamihara", "神奈川県"), "船橋市": ("funabashi", "千葉県"), "横須賀市": ("yokosuka", "神奈川県"), "大田区": ("ota", "東京都"), "江東区": ("koto", "東京都"), "練馬区": ("nerima", "東京都"), "板橋区": ("itabashi", "東京都"), "川口市": ("kawaguchi", "埼玉県"), "さいたま市": ("saitama", "埼玉県"), "杉並区": ("suginami", "東京都"), "松戸市": ("matsudo", "千葉県"), "市川市": ("ichikawa", "千葉県"), "北区": ("kita", "東京都"), "品川区": ("shinagawa", "東京都"), "中野区": ("nakano", "東京都"), "墨田区": ("sumida", "東京都"), "荒川区": ("arakawa", "東京都"), "目黒区": ("meguro", "東京都"), "文京区": ("bunkyo", "東京都")}
+        "江戸川区": ("edogawa", "東京都"), "相模原市": ("sagamihara", "神奈川県"), "船橋市": ("funabashi", "千葉県"), "横須賀市": ("yokosuka", "神奈川県"), "大田区": ("ota", "東京都"), "江東区": ("koto", "東京都"), "練馬区": ("nerima", "東京都"), "板橋区": ("itabashi", "東京都"), "川口市": ("kawaguchi", "埼玉県"), "さいたま市": ("saitama", "埼玉県"), "杉並区": ("suginami", "東京都"), "松戸市": ("matsudo", "千葉県"), "市川市": ("ichikawa", "千葉県"), "北区": ("kita", "東京都"), "品川区": ("shinagawa", "東京都"), "中野区": ("nakano", "東京都"), "墨田区": ("sumida", "東京都"), "荒川区": ("arakawa", "東京都"), "目黒区": ("meguro", "東京都"), "文京区": ("bunkyo", "東京都"), "台東区": ("taito", "東京都")}
 END = ("受付停止", "受付終了")
 
 FV_CSS = ('.head{padding:18px 16px 16px!important}.head img{width:44px;height:44px}.head .en{margin-top:6px}'
