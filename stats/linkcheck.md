@@ -1,4 +1,4 @@
-# リンクの確かめ（2026-11-13 12:41 JST・262件）
+# リンクの確かめ（2026-11-14 09:24 JST・262件）
 
 ## 開けない（直す）
 - ✗ 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
@@ -12,6 +12,8 @@
 - ✗ 箕面の森の夜さんぽ（箕面公園 滝道ライトアップ）（links/illumination-osaka.html）404 https://www.city.minoh.lg.jp/brandsenryaku/event/momijimatsuri2025.html
 - ✗ 和歌山城 西之丸庭園（紅葉渓庭園）ライトアップ（links/illumination-wakayama.html）522 https://wakayamajo.jp/
 - ✗ 魯山人の宇宙 魂を刳る美がほしい（links/index.html）TimeoutError https://www.mistore.jp/store/kyoto/museum/event_list/event21.html
+- ✗ 大阪ステーションシティ×ドラマチック謎解きゲーム（links/index.html）URLError https://osakastationcity-nazo.com/
+- ✗ 第14回 印南かえるのフェスティバル（links/index.html）404 https://www.town.wakayama-inami.lg.jp/0000001029.html
 - ✗ アニタッチ OSAKA なんば（links/index.html）404 https://www.afpbb.com/articles/-/3648165
 - ✗ 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
 - ✗ 東条湖おもちゃ王国 トミカ・プラレールランド（links/index.html）URLError https://www.omochaoukoku.com/tojoko/
