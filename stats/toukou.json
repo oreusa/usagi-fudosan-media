@@ -3596,5 +3596,21 @@
    "reposts",
    "views"
   ]
+ },
+ "yesterday": {
+  "day": "2026-11-13",
+  "atari": [
+   "駅・路線の順位（Threads 07:00 515・X 07:00 740）"
+  ],
+  "hazure": [
+   "市の補助金の順位（X 20:00 22）"
+  ],
+  "threads_median": 384,
+  "kita": {
+   "kansai": 18,
+   "kanto": 2,
+   "line": 125
+  },
+  "note": "11/14 20:33：11/14 の数字は Buffer がまだ0（17:33Z に更新）なので、数字のそろった 11/13 で答え合わせ。線 Threads 208・X 46。来た人＝関西 stats/seichou.md 投稿の型の7日127÷7、関東 akari notes/gakushu.md 7日13÷7"
  }
 }
