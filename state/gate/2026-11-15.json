@@ -1,0 +1,152 @@
+{
+ "date": "2026-11-15",
+ "bad": 0,
+ "slots": {
+  "n1": {
+   "ok": true,
+   "time": "07:00",
+   "head": "【関西まちランキング No.28｜貴志川線、伊太祈曽が竃山を抜いて5位🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "889c56b8e47a238d",
+   "x": false,
+   "th": true
+  },
+  "x07": {
+   "ok": true,
+   "time": "07:00",
+   "head": "神戸市北区にスノーピーク 神戸三田プレミアム・アウトレット、11/20（金）オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "aa53fa04b5022e33",
+   "x": true,
+   "th": false
+  },
+  "S1": {
+   "ok": true,
+   "time": "08:00",
+   "head": "【実家が神戸市灘区なら｜昨年度の平均は4,338万円🏠】",
+   "bad": [],
+   "warn": [],
+   "digest": "8e6aed313f4aed83",
+   "x": false,
+   "th": true
+  },
+  "n2": {
+   "ok": true,
+   "time": "09:00",
+   "head": "【11/15（日）は21時まで｜神戸・布引ハーブ園でクリスマスマーケット🎄】",
+   "bad": [],
+   "warn": [],
+   "digest": "51f87cd3419e1a34",
+   "x": false,
+   "th": true
+  },
+  "x09": {
+   "ok": true,
+   "time": "09:00",
+   "head": "姫路・野里に「ロ -RO オーベルジュ姫路-」、11/15（日）オープン",
+   "bad": [],
+   "warn": [
+    "絵が無い（文字だけで出る）"
+   ],
+   "digest": "b4c0bb841063170a",
+   "x": true,
+   "th": false
+  },
+  "n3": {
+   "ok": true,
+   "time": "12:00",
+   "head": "【11/20（金）神戸三田プレミアム・アウトレット｜スノーピークの店が開店🏕️】",
+   "bad": [],
+   "warn": [],
+   "digest": "18e1ffcb9992eb8b",
+   "x": false,
+   "th": true
+  },
+  "x12": {
+   "ok": true,
+   "time": "12:00",
+   "head": "和歌山の貴志川線、伊太祈曽が竃山を抜いて5位",
+   "bad": [],
+   "warn": [],
+   "digest": "46524df762db6ded",
+   "x": true,
+   "th": false
+  },
+  "n8": {
+   "ok": true,
+   "time": "13:00",
+   "head": "【関西まちランキング No.29｜阪急神戸線、武庫之荘が塚口を3,037人上回る🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "204f957ab9e127f4",
+   "x": false,
+   "th": true
+  },
+  "n5": {
+   "ok": true,
+   "time": "15:00",
+   "head": "【11/23（月・祝）まで｜あべのハルカス近鉄本店でパンの博覧会🥐】",
+   "bad": [],
+   "warn": [],
+   "digest": "5e42afb91388559e",
+   "x": false,
+   "th": true
+  },
+  "x15": {
+   "ok": true,
+   "time": "15:00",
+   "head": "梅田・HEP FIVEに韓国発「MUSE M（ミューズエム）梅田店」、11/18（水）オープン",
+   "bad": [],
+   "warn": [
+    "絵が無い（文字だけで出る）"
+   ],
+   "digest": "b17378e02e06e0b6",
+   "x": true,
+   "th": false
+  },
+  "n6": {
+   "ok": true,
+   "time": "18:00",
+   "head": "【11/27（金）京都駅から徒歩5分｜イオンモールKYOTOにロフトが開店🛍️】",
+   "bad": [],
+   "warn": [],
+   "digest": "921e1cdf221b1461",
+   "x": false,
+   "th": true
+  },
+  "x18": {
+   "ok": true,
+   "time": "18:00",
+   "head": "阪急神戸線、武庫之荘がとなりの塚口を3,037人上回る",
+   "bad": [],
+   "warn": [],
+   "digest": "01a2525bbef8923c",
+   "x": true,
+   "th": false
+  },
+  "n7": {
+   "ok": true,
+   "time": "21:00",
+   "head": "【ひと駅しらべ その23｜六甲道駅🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "6cf6109eadf3a1b1",
+   "x": false,
+   "th": true
+  },
+  "x21": {
+   "ok": true,
+   "time": "21:00",
+   "head": "神戸・布引ハーブ園で神戸クリスマスマーケット、12/28まで",
+   "bad": [],
+   "warn": [
+    "絵が無い（文字だけで出る）"
+   ],
+   "digest": "bfeb2707217b18cc",
+   "x": true,
+   "th": false
+  }
+ }
+}
