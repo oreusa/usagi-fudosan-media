@@ -3,15 +3,15 @@
  "types": [
   {
    "type": "入口",
-   "ext7": 3,
+   "ext7": 4,
    "ext_prev7": 54,
-   "views7": 183
+   "views7": 186
   },
   {
    "type": "おでかけ",
-   "ext7": 2,
+   "ext7": 3,
    "ext_prev7": 0,
-   "views7": 157
+   "views7": 158
   },
   {
    "type": "1件ページ",
@@ -27,9 +27,9 @@
   },
   {
    "type": "紅葉",
-   "ext7": 41,
+   "ext7": 44,
    "ext_prev7": 0,
-   "views7": 67
+   "views7": 70
   },
   {
    "type": "不動産リスト",
@@ -45,9 +45,9 @@
   },
   {
    "type": "街ページ",
-   "ext7": 49,
+   "ext7": 50,
    "ext_prev7": 0,
-   "views7": 512
+   "views7": 513
   },
   {
    "type": "困りごと",
