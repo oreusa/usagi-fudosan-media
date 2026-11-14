@@ -85,6 +85,7 @@ def main(day):
             kp = json.loads(ks).get("posts", [])
         except Exception:
             kp = []
+        kp = [p for p in kp if not p.get("threads_off")]  # X だけの枠（threads_off）は関西と同じく別に数える（11/14 関西8・関東15 と数え違えた）
         rule("投稿の本数（関西と関東）", "両方で同じ型を回して、くらべて学ぶ", "関東は関西と同じ型・同じ本数＋PR1本（11/13 オーナー「一緒で、ってお願いしたはず」）",
              len(kp) == kansai_n + 1, f"関西 {kansai_n}本・関東 {len(kp)}本（線：関東＝関西＋1）", "少ない側の予定表を直す。本数を変える時は両方同時（config.json と akari docs/nightly-prompt.md）")
 
