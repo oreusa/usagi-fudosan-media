@@ -41,7 +41,7 @@ def first_view(s, city, word, cap, st, ended, tx, date):
     want = quote("解体の見積り")
     b1 = "来年度に向けて見積りを頼む" if ended else "見積りを無料で頼む"
     fv = (f'<div class="fv"><div class="n">{num}{stt}</div><div class="d">{dl}市の公式ページで{md}に確認</div><div class="bt">'
-          f'<a class="k" href="/moushikomi?lite=1&amp;want={want}&amp;memo={quote(city + " 最初の画面")}" data-k="見積りを相談｜最初の画面">{b1}</a>'
+          f'<a class="k" href="/moushikomi?lite=1&amp;want={want}&amp;memo={quote(city + " 最初の画面")}&amp;pl={quote(SLUG[city][1] + city)}" data-k="見積りを相談｜最初の画面">{b1}</a>'
           '<a class="w" href="#keisan" data-k="最初の画面｜30秒で目安">30秒で目安を出す</a></div></div>')
     s, n = re.subn(r'<p class="sub">.*?</p>', lambda _m: fv, s, count=1, flags=re.S)
     assert n == 1, city
@@ -67,7 +67,7 @@ for city, tx, st, u, d in rows:
              ("工事が終わったら報告して、補助を受け取る", "報告の期限があります。")]
     jun = ('<section id="tejun" class="ps" style="--c:#4F7BA8"><h2>補助を使う時の順番</h2><ol class="kt-st">' + "".join(f"<li><b>{a}</b><span>{b}</span></li>" for a, b in steps)
            + f'</ol><p class="kt-n">順番や書類は市区ごとに違います。{E(city)}の手続きは、上の公式ページでご確認ください。</p>'
-           + f'<a class="kt-b" href="/moushikomi?lite=1&amp;want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A&amp;memo={quote(city + " 申請に使う見積り")}" data-k="見積りを相談｜順番の下">申請に使う見積りを、無料で頼む</a><p class="kt-n" style="text-align:center">無料・書くのは4つだけ・見積りだけでも大丈夫です</p></section>')
+           + f'<a class="kt-b" href="/moushikomi?lite=1&amp;want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A&amp;memo={quote(city + " 申請に使う見積り")}&amp;pl={quote(pref + city)}" data-k="見積りを相談｜順番の下">申請に使う見積りを、無料で頼む</a><p class="kt-n" style="text-align:center">無料・書くのは4つだけ・見積りだけでも大丈夫です</p></section>')
     oth = ('<section id="hoka" class="ps" style="--c:#4F7BA8"><h2>ほかの市区の補助</h2>'
            f'<p style="margin:0 0 12px;font-size:13.5px"><a href="/kaitai-ranking" data-k="市の補助｜補助ランキング｜{E(city)}" style="font-weight:700">上限の高い順に見る（補助金ランキング）</a></p><p class="kt-ci">'
            + "".join(f'<a href="/kaitai-{SLUG[c][0]}" data-k="市の補助｜ほかの市｜{E(c)}">{E(c)}</a>' for c, *_ in rows if c != city) + '</p></section>')
