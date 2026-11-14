@@ -52,6 +52,7 @@ TOC = (("shi", "補助の中身"), ("hiku", "自分で払う目安"), ("keisan",
 
 
 def first_view(s, city, word, cap, st, ended, tx, date):
+    # 11/14 夜「大阪市からの相談は場所の再入力が残る」→ 申し込みの「お家の場所」に 府県＋市 を先に入れる（pl=）
     """11/13 最初の画面に、上限・受付の状況・締め切り・ボタン2つ・目次を入れる（オーナーOK。ロゴ・英字・題・後ろの絵は残す）。"""
     E_ = html.escape
     num = (f'<b><i>{word}</i>{cap}<small>万円</small></b>' if cap else '<b class="t">広さなどで決まる額</b>')
@@ -62,7 +63,7 @@ def first_view(s, city, word, cap, st, ended, tx, date):
     want = quote("解体の見積り")
     b1 = "来年度に向けて見積りを頼む" if ended else "見積りを無料で頼む"
     fv = (f'<div class="fv"><div class="n">{num}{stt}</div><div class="d">{dl}市の公式ページで{md}に確認</div><div class="bt">'
-          f'<a class="k" href="/moushikomi?lite=1&amp;want={want}&amp;memo={quote(city + " 最初の画面")}" data-k="見積りを相談｜最初の画面">{b1}</a>'
+          f'<a class="k" href="/moushikomi?lite=1&amp;want={want}&amp;memo={quote(city + " 最初の画面")}&amp;pl={quote(CITY[city][1] + city)}" data-k="見積りを相談｜最初の画面">{b1}</a>'
           '<a class="w" href="#keisan" data-k="最初の画面｜30秒で目安">30秒で目安を出す</a></div></div>')
     s, n = re.subn(r'<p class="sub">.*?</p>', lambda _m: fv, s, count=1, flags=re.S)
     assert n == 1, city
@@ -121,7 +122,7 @@ def page(base, city, rows, date, others):
              ("工事が終わったら報告して、補助を受け取る", "報告の期限があります。")]
     jun = ('<section id="tejun" class="ps" style="--c:#4F7BA8"><h2>補助を使う時の順番</h2><ol class="kt-st">' + "".join(f"<li><b>{a}</b><span>{b}</span></li>" for a, b in steps)
            + f'</ol><p class="kt-n">順番や書類は市ごとに違います。{E(city)}の手続きは、上の公式ページでご確認ください。</p>'
-           + f'<a class="kt-b" href="/moushikomi?lite=1&amp;want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A&amp;memo={quote(city + " 申請に使う見積り")}" data-k="見積りを相談｜順番の下">申請に使う見積りを、無料で頼む</a><p class="kt-n" style="text-align:center">無料・書くのは4つだけ・見積りだけでも大丈夫です</p></section>')
+           + f'<a class="kt-b" href="/moushikomi?lite=1&amp;want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A&amp;memo={quote(city + " 申請に使う見積り")}&amp;pl={quote(pref + city)}" data-k="見積りを相談｜順番の下">申請に使う見積りを、無料で頼む</a><p class="kt-n" style="text-align:center">無料・書くのは4つだけ・見積りだけでも大丈夫です</p></section>')
     same = [c for c in others if CITY[c][1] == pref and c != city]; rest = [c for c in others if CITY[c][1] != pref]
     _rk = sorted([CITY[c][2] for c in others if CITY[c][2]], reverse=True)
     _pos = (f'{E(city)}の上限{cap}万円は、関西{len(_rk)}市の中で{_rk.index(cap) + 1}位です。' if cap else '')
