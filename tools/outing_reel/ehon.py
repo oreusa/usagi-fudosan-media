@@ -85,7 +85,7 @@ if T.get('motif'): BR['motif'] = T['motif']          # 絵：tou13・tou5（重�
 if T.get('seal'): BR['seal'] = T['seal']              # 日付のページの判子（2文字）
 if T.get('peaks'): BR['peaks'] = 1                    # 遠くに2つの峰の山
 if T.get('ehon5'): BR['t5'] = T['ehon5']
-if T.get('scene'): BR['scene'] = T['scene']          # 景色：書かなければ山と木。'umi'＝海と砂浜（夜は色の光）。建物なしにする時は motif を yama に
+if T.get('scene'): BR['scene'] = T['scene']          # 景色：書かなければ山と木。'umi'＝海と砂浜（夜は色の光）。'xmas'＝赤レンガとクリスマスツリー（11/15）。建物なしにする時は motif を yama に
 BR.update(T.get('ehon_brand', {}))
 PAGE.update({k: BR[k] for k in ('top_en', 'top_jp', 'cover_sub', 'hp_en', 'hp_jp', 't5', 'seal', 'motif', 'peaks', 'scene')})
 html = r"""<!doctype html><meta charset="utf-8"><style>
@@ -114,6 +114,13 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 .face svg{position:absolute;inset:0;width:100%;height:100%}
 .gut{position:absolute;left:0;top:0;bottom:0;width:70px;background:linear-gradient(90deg,rgba(60,35,20,.34),rgba(60,35,20,0));pointer-events:none}
 .shade{position:absolute;inset:0;background:#1a0f0a;opacity:0;pointer-events:none}
+/* 11/15 紙がしなってめくれる（ページの絵を細い帯に分け、帯ごとに少しずつ角度を変える） */
+.curl{position:absolute;inset:0;transform-style:preserve-3d;visibility:hidden;pointer-events:none}
+.st{position:absolute;top:0;height:1380px;transform-origin:0 50%;transform-style:preserve-3d}
+.st>.f,.st>.b{position:absolute;inset:0;backface-visibility:hidden;background-repeat:no-repeat;background-size:920px 1380px;overflow:hidden}
+.st>.b{transform:rotateY(180deg);background-image:linear-gradient(90deg,#e6dcc6,#f7f1e3 30%,#efe6d2 80%,#e2d6bd)}
+.cs{position:absolute;top:0;height:1380px;width:150px;left:0;background:linear-gradient(90deg,rgba(30,15,8,.42),rgba(30,15,8,.16) 35%,rgba(30,15,8,0));opacity:0}
+.st i{position:absolute;inset:0;background:#2a1a10;opacity:0}.st u{position:absolute;inset:0;background:#fff8ea;opacity:0}
 .vt{position:absolute;writing-mode:vertical-rl;font-family:M;color:#4a3328;letter-spacing:.2em;line-height:1.9;white-space:nowrap;text-orientation:upright}
 .vt span{display:inline-block;opacity:0}
 .vt .tcy{text-combine-upright:all;letter-spacing:0}
@@ -143,6 +150,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 <svg id="deco" viewBox="0 0 1080 1920"></svg><div id="pg"></div><div id="lamp"></div>
 <svg id="grain"><filter id="gn"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .55 0"/></filter><rect width="100%" height="100%" filter="url(#gn)"/></svg>
 <script>
+%XMAS%
 const P=%PAGE%,ST=%ST%,OPEN=%OPEN%,TURN=%TURN%,TOTAL=%TOTAL%,N=6;
 const $=s=>document.querySelector(s);
 function rng(a){return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
@@ -210,10 +218,12 @@ function leafPath(R){const L=[1,.9,.7,.42],pts=[];const P=(r,d)=>{const a=(d-90)
   for(let k=-3;k<=3;k++){const c=k*40,l=L[Math.abs(k)];P(.2,c-20);P(l*.5,c-7);P(l*.62,c-13);P(l*.8,c-4);P(l,c);P(l*.8,c+4);P(l*.62,c+13);P(l*.5,c+7)}
   P(.2,140);P(.1,172);P(.62,177);P(.62,183);P(.1,188);return 'M'+pts.join('L')+'Z'}
 // 海の景色（scene: 'umi'）では、もみじの代わりに光のきらめき
-const UMI=P.scene=='umi',HK=['#8fd0ff','#ffd27a','#ff8fb8','#b9a0ff','#8fffd0'];
-const LP=UMI?'M0,-1Q.1,-.1 1,0Q.1,.1 0,1Q-.1,.1 -1,0Q-.1,-.1 0,-1Z':leafPath(1);
+const XM=P.scene=='xmas',XHK=['#e2b84a','#c0392b','#f6d36b','#2e6b4a','#f4ead8'],UMI=P.scene=='umi',HK=['#8fd0ff','#ffd27a','#ff8fb8','#b9a0ff','#8fffd0'];
+const LP=(UMI||XM)?'M0,-1Q.1,-.1 1,0Q.1,.1 0,1Q-.1,.1 -1,0Q-.1,-.1 0,-1Z':leafPath(1);
 function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>(l.match(/[0-9A-Za-z][0-9A-Za-z.,:]*|./gu)||[]).map(c=>c.length==2?`<span class="tcy">${c}</span>`:c.length>2?`<span class="yoko">${c}</span>`:`<span>${c}</span>`).join('')).join('<br>')+`</div>`}
 function scene(mode){ // 0 昼 1 秋 2 夜
+  // 11/15 クリスマスの絵（tools/outing_reel/xmas.js）。電球は毎コマまたたく
+  if(XM)return `<svg viewBox="0 0 920 1380">${DEFS}<image class="xmi" data-m="${mode}" href="${xmPage(mode,0)}" width="920" height="1380"/><g class="lv"></g>${PAPER}</svg>`;
   const sky=[['#f7f0df','#f3e3bf'],['#fbeede','#f6cfa0'],['#10152f','#343a6c']][mode];
   const far=['#c3cfc0','#e0b08c','#1b2142'][mode],mid=['#9db794','#cf7f55','#171a36'][mode],near=['#7c9f6c','#b9513a','#11132a'][mode];
   const tc=[['#5f8a55','#7da35f','#93b068','#b8bf6a','#55794f'],['#b5332a','#d4552d','#e8862e','#f0b23a','#c9402b','#9e2a2a'],['#7c2622','#a8382a','#c4552b','#8f2d2a','#d9772e']][mode];
@@ -287,14 +297,18 @@ function build(){
    <div id="h1" style="position:absolute;right:86px;top:860px;width:300px;text-align:center;font:500 30px M;letter-spacing:.2em;line-height:1.9;color:#6b4a3a;opacity:0">無料・登録なし<br>毎日更新</div>
    <div id="end" style="position:absolute;left:0;right:0;top:1160px;text-align:center;opacity:0"><div style="display:inline-block;font:700 50px MB;letter-spacing:.16em;color:#f8ecd8;background:#a5332a;border-radius:999px;padding:22px 54px">プロフィールのリンクから</div></div></div>`);
   $('#pages').innerHTML=pages.map((f,i)=>`<div class="pg" id="p${i}" style="z-index:${20-i}">${f}<div class="face back"></div>${i?'<div class="gut"></div>':''}<div class="shade"></div><div class="sheen"></div></div>`).reverse().join('');
+  {const SN=32,SW=920/SN;for(let i=1;i<N;i++){let h='';for(let k=SN-1;k>=0;k--)h=`<div class="st" style="left:${k?SW:0}px;width:${(SW+.8).toFixed(2)}px"><div class="f" style="background-position:${(-k*SW).toFixed(2)}px 0"><i></i><u></u></div><div class="b" style="background-position:${(-(SN-1-k)*SW).toFixed(2)}px 0"><i></i></div>${h}</div>`;
+   const c=document.createElement('div');c.className='curl';c.id='c'+i;c.style.zIndex=20-i;c.innerHTML='<div class="cs"></div>'+h;$('#pages').appendChild(c)}}
   // まわりの飾り：もみじと光の粒
   {const r=rng(77),cols=['#c9402b','#e8862e','#f0b23a','#d4552d','#b5332a'];let s='<defs><filter id="ds" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="5" dy="9" stdDeviation="7" flood-color="#000" flood-opacity=".45"/></filter></defs>';
    const spots=[[70,150,58,-28],[168,96,34,40],[985,128,50,24],[905,70,30,-50],[52,1700,44,62],[150,1790,64,-18],[262,1850,32,30],[1010,1690,56,-36],[905,1800,40,18],[790,1862,30,-64],[1040,930,34,80],[30,1000,30,-80]];
    spots.forEach((q,i)=>{s+=`<g class="dl" data-i="${i}" data-x="${q[0]}" data-y="${q[1]}" data-z="${q[2]}" data-r="${q[3]}" filter="url(#ds)"><path d="${LP}" fill="${cols[i%5]}"/><path d="M0,.9 L0,-.8 M0,.2 L-.5,-.35 M0,.2 L.5,-.35" stroke="rgba(90,30,15,.45)" stroke-width=".035" fill="none"/></g>`});
    $('#deco').innerHTML=s;let b='';for(let i=0;i<16;i++)b+=`<circle data-x="${(r()*1080).toFixed(0)}" data-y="${(r()*1920).toFixed(0)}" data-p="${(r()*6).toFixed(2)}" r="${(10+r()*26).toFixed(0)}" fill="#ffdc9a"/>`;$('#bk').innerHTML=b}
   // 葉
-  document.querySelectorAll('.lv').forEach((g,gi)=>{const r=rng(100+gi);let s='';const cols=UMI?HK:['#c9402b','#e8862e','#f0b23a','#d4552d','#b5332a'];
+  document.querySelectorAll('.lv').forEach((g,gi)=>{const r=rng(100+gi);let s='';const cols=XM?XHK:UMI?HK:['#c9402b','#e8862e','#f0b23a','#d4552d','#b5332a'];
     for(let i=0;i<16;i++)s+=`<g class="lf" data-x="${(r()*920).toFixed(0)}" data-s="${(.05+r()*.07).toFixed(3)}" data-p="${r().toFixed(3)}" data-z="${(14+r()*20).toFixed(0)}" data-w="${(r()*6).toFixed(2)}"><path d="${LP}" fill="${cols[i%5]}" opacity=".9"/></g>`;g.innerHTML=s});
+  if(XM)document.querySelectorAll('.face:not(.cover) path').forEach((e,i)=>{if(e.getAttribute('d')==LP&&!e.closest('.lv'))e.setAttribute('fill',XHK[i%5])});
+  if(XM)document.querySelectorAll('path').forEach(e=>{if(e.getAttribute('d')==LP&&!e.closest('.face'))e.setAttribute('fill','#e3c88c')});
   if(UMI)document.querySelectorAll('.face:not(.cover) path').forEach((e,i)=>{if(e.getAttribute('d')==LP&&!e.closest('.lv'))e.setAttribute('fill',HK[i%5])});
   if(UMI)document.querySelectorAll('path').forEach(e=>{if(e.getAttribute('d')==LP&&!e.closest('.face'))e.setAttribute('fill','#e3c88c')});
 }
@@ -309,6 +323,16 @@ function render(t){
     p.querySelector('.shade').style.opacity=a>0&&a<178?.28*Math.sin(a/178*Math.PI):0;p.querySelector('.sheen').style.opacity=a>0&&a<90?.75*Math.sin(a/90*Math.PI):0;
     // 下のページに落ちる影
     if(i<N){const q=document.getElementById('p'+(i+1));const sh=q.querySelector('.shade');if(a>0&&a<178&&ang[i+1]==0)sh.style.opacity=.32*(1-a/178)}}
+  // 紙のしなり：先の方から持ち上がり、帯ごとに角度が少しずつ遅れて付いてくる。光は左手前から
+  for(let i=1;i<N;i++){const c=document.getElementById('c'+i);const q=sm(t,ST[i]-TURN,ST[i]);const on=(XM||P.curl)&&q>0&&q<1&&window.SNAP&&SNAP[i];
+    c.style.visibility=on?'visible':'hidden';if(!on)continue;document.getElementById('p'+i).style.visibility='hidden';
+    if(c.dataset.s!='1'){c.querySelectorAll('.f').forEach(f=>f.style.backgroundImage=`url(${SNAP[i]})`);c.dataset.s='1'}
+    const SN=32;let prev=0,k=0,st=c.children[1],xe=0;
+    while(st){const u=(k+.5)/SN;const th=Math.min(179.5,178*eio(q)+46*Math.sin(Math.PI*Math.pow(q,.8))*Math.pow(u,1.6));st.style.transform=`rotateY(${(-(th-prev)).toFixed(3)}deg)`;prev=th;
+      const r=th*Math.PI/180,bf=Math.cos(r-.55),bb=Math.cos(Math.PI-r-.55);const f=st.children[0],bk=st.children[1];
+      f.children[0].style.opacity=cl((1-bf)*.55,0,.55).toFixed(3);f.children[1].style.opacity=cl((bf-.9)*3,0,.2).toFixed(3);bk.children[0].style.opacity=cl((1-bb)*.5,0,.5).toFixed(3);
+      xe+=920/SN*Math.cos(r);st=st.children[2];k++}
+    const cs=c.children[0];cs.style.left=Math.max(0,xe).toFixed(1)+'px';cs.style.opacity=(xe>0?Math.sin(Math.PI*q)*1.1:0).toFixed(3)}
   // カメラ
   const z=t<OPEN?1.0+.05*eio(sm(t,0,OPEN)):1.05+.012*Math.sin(t*.5);
   $('#cam').style.transform=`scale(${z}) translateY(${t<OPEN?(1-eio(sm(t,0,OPEN)))*10:0}px)`;$('#foil').style.backgroundPosition=(120-170*sm(t,.3,1.7))+'% 0';$('#ribbon').style.transform=`rotate(${(2.2*Math.sin(t*1.3)).toFixed(2)}deg)`;
@@ -323,6 +347,7 @@ function render(t){
   $('#pg').textContent=cur<0?'':NUMS[cur]+'　／　'+NUMS[N-1];
   for(let i=0;i<N;i++){const u=t-ST[i]+TURN*.55;const pg=document.getElementById('p'+(i+1));
     const svg=pg.querySelector('svg');const end=i<N-1?ST[i+1]:TOTAL;const k=sm(t,ST[i]-TURN,end);
+    {const xi=pg.querySelector('.xmi');if(xi&&t>ST[i]-TURN-.05&&t<end+.05)xi.setAttribute('href',xmPage(+xi.dataset.m,t))}
     if(svg)svg.style.transform=`scale(${1.05-.03*k})`;
     pg.querySelectorAll('.ly').forEach(l=>l.setAttribute('transform',`translate(${((k-.5)*-l.dataset.a).toFixed(2)},0)`));
     pg.querySelectorAll('.pop').forEach(e=>{const d=+e.dataset.d,sl=e.dataset.slow?1.1:.65,x=sm(u,d,d+sl),c1=1.4,kk=x<=0?0:1+(c1+1)*Math.pow(x-1,3)+c1*Math.pow(x-1,2);e.style.transform=`scale(${(.92+.08*kk).toFixed(3)},${Math.max(0,kk).toFixed(3)})`});
@@ -342,11 +367,13 @@ function render(t){
 }
 $('#top').innerHTML=P.top_en+'<b>'+P.top_jp+'</b>';build();render(0);
 </script>"""
-html = (html.replace('%F%', F).replace('%LOGO%', BR['logo']).replace('%HP1%', BR['hp1']).replace('%HP2%', BR['hp2']).replace('%PAGE%', json.dumps(PAGE, ensure_ascii=False)).replace('%ST%', json.dumps(ST))
+html = (html.replace('%XMAS%', open(ROOT + '/tools/outing_reel/xmas.js').read()).replace('%F%', F).replace('%LOGO%', BR['logo']).replace('%HP1%', BR['hp1']).replace('%HP2%', BR['hp2']).replace('%PAGE%', json.dumps(PAGE, ensure_ascii=False)).replace('%ST%', json.dumps(ST))
         .replace('%OPEN%', str(OPEN)).replace('%TURN%', str(TURN)).replace('%TOTAL%', f'{TOTAL:.3f}'))
 open(f'{W}/ehon.html', 'w').write(html)
 open(f'{W}/rec.js', 'w').write(f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:1080,height:1920}}}});
 p.on('pageerror',e=>console.log('ERR',e.message));await p.goto('file://{W}/ehon.html');await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(400);
+for(let i=1;i<6;i++){{const t=await p.evaluate(i=>ST[i]-TURN-0.001,i);await p.evaluate(t=>{{render(t);document.querySelectorAll('#deco,#lamp,#pg,#bk,#top').forEach(e=>e.style.visibility='hidden');document.getElementById('cam').style.transform='none'}},t);
+ const buf=await p.locator('#p'+i).screenshot({{type:'jpeg',quality:94}});await p.evaluate(a=>{{(window.SNAP=window.SNAP||{{}})[a[0]]=a[1];document.querySelectorAll('#deco,#lamp,#pg,#bk,#top').forEach(e=>e.style.visibility='')}},[i,'data:image/jpeg;base64,'+buf.toString('base64')])}}
 const only=process.argv[2];if(only){{for(const t of only.split(',')){{await p.evaluate(t=>render(t),+t);await p.screenshot({{path:'{W}/c-'+t+'.jpg',type:'jpeg',quality:85}});}}await b.close();return}}
 const fs=require('fs');const A=+(process.env.FR0||0),B=+(process.env.FR1||1e9);for(let i=A;i<30*{TOTAL:.3f}&&i<B;i++){{if(fs.existsSync('{W}/fr/'+String(i).padStart(4,'0')+'.jpg'))continue;await p.evaluate(t=>render(t),i/30);await p.screenshot({{path:'{W}/fr/'+String(i).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}});}}await b.close()}})();""")
 print('場面', [round(x, 2) for x in ST], '全体', round(TOTAL, 1), '声', [round(x, 2) for x in VD])
