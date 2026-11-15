@@ -125,11 +125,15 @@ function mgPre(){if(window.MGP)return MGP;const r=XR(4242);const P={bok:[],dust:
  for(let i=0;i<11;i++){const side=i%2;P.bok.push({x:side?900+r()*240:-60+r()*240,y:r()*1920,R:30+r()*70,v:6+r()*12,p:r()*7,c:cols[i%4],a:.05+r()*.07})}
  for(let i=0;i<70;i++)P.dust.push({x:BX+120+r()*(BW-240),y:BY+200+r()*1000,p:r()*7,v:6+r()*16,s:.8+r()*1.6});
  for(let i=0;i<9;i++)P.rays.push({a:-Math.PI/2+(i-4)*.2+(r()-.5)*.08,w:.05+r()*.07,l:900+r()*500,p:r()*7,al:.5+r()*.5});
+ const spots=[[70,150,15],[168,96,9],[985,128,14],[905,70,8],[52,1700,12],[150,1790,16],[262,1850,8],[1010,1690,15],[905,1800,10],[790,1862,8],[1040,930,9],[30,1000,8],[40,520,7],[1050,420,7]];
+ P.tw=spots.map(q=>({x:q[0],y:q[1],s:q[2]*1.4,p:r()*7,sp:1.2+r()*1.4}));
  window.MGP=P;return P}
 function mgEdge(t,k){const a0=k==0?OPEN-1.25:ST[k]-TURN,a1=k==0?OPEN:ST[k];const q=sm(t,a0,a1);return{q,x:BX+BW*Math.cos(eio(q)*178*Math.PI/180)}}
 function mgDraw(t){const cv=document.getElementById('mg');if(!cv)return;const c=cv.getContext('2d');c.setTransform(1,0,0,1,0,0);c.globalAlpha=1;c.filter='none';c.clearRect(0,0,1080,1920);const P=mgPre();c.globalCompositeOperation='lighter';
  // 机のまわり：手前のぼけ玉（少しだけ、ゆっくり）
  for(const b of P.bok){const y=((b.y-t*b.v)%2100+2100)%2100-90;mgBokeh(c,b.x+Math.sin(t*.3+b.p)*20,y,b.R,b.c,b.a*(.75+.25*Math.sin(t*.7+b.p)))}
+ // 本のまわりの金の星（またたく）
+ for(const w of P.tw){const k=.55+.45*Math.sin(t*w.sp+w.p);mgSpark(c,w.x,w.y,w.s*(.7+.3*k),.35+.6*k,.3*Math.sin(t*.4+w.p))}
  // 表紙が開く時：ページから光の筋がさし、その中にほこりが光る
  const og=mgBump(t,1.5,2.7,4.6);if(og>0){const ox=544,oy=1180;c.save();c.filter='blur(9px)';
   for(const ry of P.rays){const a=ry.a+Math.sin(t*.4+ry.p)*.03,L=ry.l*(.6+.4*og);const g=c.createLinearGradient(ox,oy,ox+Math.cos(a)*L,oy+Math.sin(a)*L);g.addColorStop(0,`rgba(255,226,170,${.0})`);g.addColorStop(.12,`rgba(255,226,170,${.42*og*ry.al})`);g.addColorStop(1,'rgba(255,210,150,0)');
