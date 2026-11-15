@@ -35,9 +35,10 @@ def main():
     if fol is None or itm is None:
         i = t.find("フォロワー")
         open(FAIL, "w", encoding="utf-8").write(f"{DAY} ROOM の数字が読めない（フォロワー {fol}・商品 {itm}）。ページの文：{t[max(0, i - 120):i + 160] if i >= 0 else t[:280]}\n"); print("room: 読めない"); return
+    last = re.search(r'"last_collect"\s*:\s*"([^"]+)"', raw)  # 11/16 最後に載せた時刻（止まった日が分かる）
     d = json.load(open(OUT, encoding="utf-8")) if os.path.exists(OUT) else {"about": ABOUT, "rows": []}
     lim = (datetime.date.fromisoformat(DAY) - datetime.timedelta(days=120)).isoformat()
-    d["rows"] = sorted([r for r in d["rows"] if r["day"] != DAY and r["day"] >= lim] + [{"day": DAY, "follower": fol, "items": itm, "collections": col}], key=lambda r: r["day"])
+    d["rows"] = sorted([r for r in d["rows"] if r["day"] != DAY and r["day"] >= lim] + [{"day": DAY, "follower": fol, "items": itm, "collections": col, "last": last.group(1) if last else None}], key=lambda r: r["day"])
     json.dump(d, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     open(FAIL, "w").write("")
     print("room:", DAY, "フォロワー", fol, "商品", itm, "コレクション", col)

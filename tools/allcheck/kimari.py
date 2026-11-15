@@ -135,6 +135,21 @@ def main(day):
         rule("楽天ROOM（台本）", "夜（GPT）が毎日たくさん載せる", "台本は毎日・40件より多く（11/13 オーナー「100倍楽天roomやれ」）", okr,
              f"台本の日付 {up.group(1) if up else '無い'}・{n.group(1) if n else '?'}件", "akari scripts/room_auto.py と page.yml を見る")
 
+        # 7b 11/16 オーナー「roomは？」：台本が出し済みの商品ばかりで0件だった → 毎日ランキングから新しい商品が20件以上入っているか
+        nw = re.search(r"新しい商品 (\d+)件", rd)
+        rule("楽天ROOM（新しい商品）", "載せられる新しい商品が毎日ある", "台本に前の14日に出していない商品が毎日20件以上（11/16 台本が出し済みばかりで0件になった）",
+             bool(nw and int(nw.group(1)) >= 20), f"新しい商品 {nw.group(1) if nw else '?'}件",
+             "akari data/room-rank.json の日付（ranking.yml が毎晩）と scripts/room_auto.py の rank_cands を見る")
+    # 7c ROOM に本当に載ったか（usagi stats/room.json＝公開ページの商品の数。毎朝 kazu.py）
+    rr = sorted((load(R("stats", "room.json"), {}) or {}).get("rows", []), key=lambda r: r["day"])
+    if len(rr) >= 2 and rr[-1]["day"] >= (today - timedelta(days=1)).isoformat():
+        inc = rr[-1]["items"] - rr[-2]["items"]
+        rule("楽天ROOM（載った数）", "毎日ROOMに商品が増える", "1日10件以上載る（台帳の線）", inc >= 10,
+             f"{rr[-2]['day']}→{rr[-1]['day']} で +{inc}件（{rr[-1]['items']}件）" + (f"・最後に載せた時刻 {rr[-1].get('last')}" if rr[-1].get("last") else ""),
+             "雫・凪の報告の「見送り・飛ばした理由」を見て、台本（akari scripts/room_auto.py の■載せ方）を直す")
+    else:
+        rule("楽天ROOM（載った数）", "毎日ROOMに商品が増える", "1日10件以上載る（台帳の線）", None, "stats/room.json が2日分ない", "tools/room/kazu.py を見る")
+
     # 8 広告の断り：アフィリエイトのあるページは上下に「広告（PR）」
     miss = []
     for f, t in html_texts("links/**/*.html"):
