@@ -11,10 +11,16 @@ import yomi
 spec = json.load(open(sys.argv[1])); OUT = os.path.abspath(sys.argv[2]); STILL = sys.argv[3] if len(sys.argv) > 3 else ''
 # 11/13 字が重なる・はみ出す長さは、作る前に止める（表紙の「園」が下の文に重なった・夜のページの1行目が日付の数字に重なった）。長さは縦に並ぶ字の数
 _t = spec.get('text', {})
+# 11/15 owner「。の使い方変じゃない？」：表紙の題は本の題なので「。」「、」で終えない（2行とも「。」で終わり、縦書きで字の下に浮いた）
+if _t.get('title'): _t['title'] = [l.rstrip('。、．，. ') for l in _t['title']]
 _bad = [f'表紙の題の{i + 1}行目「{l}」は{len(l)}字（{m}字まで）' for i, (l, m) in enumerate(zip(_t.get('title', []), (10, 9))) if len(l) > m]
 _bad += [f'夜のページ ehon4「{l}」は{len(l)}字（7字まで）' for l in _t.get('ehon4', []) if len(l) > 7]
 _bad += [f'{k}「{l}」は{len(l)}字（10字まで）' for k in ('ehon1', 'ehon2', 'ehon5') for l in _t.get(k, []) if len(l) > 10]
 _bad += [f'ehon_night の4つ目「{l}」は{len(l)}字（7字まで）' for l in _t.get('ehon_night', [])[3:4] if len(l) > 7]
+import re as _re
+# 11/15 date_title が英語（Christmas Market）で、縦書きの1字ずつに割れた。日付ページの大きな縦書きは日本語8字まで
+_dt = _t.get('date_title', '')
+if _re.search(r'[A-Za-z]{4,}', _dt) or len(_dt) > 8: _bad.append(f'date_title「{_dt}」は日本語8字まで（英語は縦に割れる）')
 if _bad: sys.exit('字が長すぎて重なります：' + '／'.join(_bad))
 W = os.path.abspath(os.environ.get('WORK', 'ehon-work')); os.makedirs(W + '/fr', exist_ok=True)
 VDIR = os.environ.get('VDIR', ''); SP = os.environ.get('SP', '20')
@@ -110,6 +116,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 .shade{position:absolute;inset:0;background:#1a0f0a;opacity:0;pointer-events:none}
 .vt{position:absolute;writing-mode:vertical-rl;font-family:M;color:#4a3328;letter-spacing:.2em;line-height:1.9;white-space:nowrap;text-orientation:upright}
 .vt span{display:inline-block;opacity:0}
+.vt .tcy{text-combine-upright:all;letter-spacing:0}
+.vt .yoko{text-orientation:mixed;letter-spacing:.04em}
 .cover{background:linear-gradient(100deg,#5d1f1b,#7c2a22 18%,#742620 70%,#5a1c18);border-radius:4px 12px 12px 4px}
 .cover:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 5px),repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 2px,transparent 2px 5px)}
 .cover .spine{position:absolute;left:0;top:0;bottom:0;width:46px;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,0))}
@@ -204,7 +212,7 @@ function leafPath(R){const L=[1,.9,.7,.42],pts=[];const P=(r,d)=>{const a=(d-90)
 // 海の景色（scene: 'umi'）では、もみじの代わりに光のきらめき
 const UMI=P.scene=='umi',HK=['#8fd0ff','#ffd27a','#ff8fb8','#b9a0ff','#8fffd0'];
 const LP=UMI?'M0,-1Q.1,-.1 1,0Q.1,.1 0,1Q-.1,.1 -1,0Q-.1,-.1 0,-1Z':leafPath(1);
-function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>[...l].map(c=>`<span>${c}</span>`).join('')).join('<br>')+`</div>`}
+function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>(l.match(/[0-9A-Za-z][0-9A-Za-z.,:]*|./gu)||[]).map(c=>c.length==2?`<span class="tcy">${c}</span>`:c.length>2?`<span class="yoko">${c}</span>`:`<span>${c}</span>`).join('')).join('<br>')+`</div>`}
 function scene(mode){ // 0 昼 1 秋 2 夜
   const sky=[['#f7f0df','#f3e3bf'],['#fbeede','#f6cfa0'],['#10152f','#343a6c']][mode];
   const far=['#c3cfc0','#e0b08c','#1b2142'][mode],mid=['#9db794','#cf7f55','#171a36'][mode],near=['#7c9f6c','#b9513a','#11132a'][mode];
