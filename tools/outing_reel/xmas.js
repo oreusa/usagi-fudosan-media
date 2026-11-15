@@ -184,7 +184,7 @@ function xmBase(mode){if(XBASE[mode])return;const cv=xmCanvas(XW,XH),c=cv.getCon
   xmPerson(c,820,1300,110,'#3e3a5e',1,36);xmPerson(c,852,1306,96,'#a8543a',1,37);
   c.save();c.globalCompositeOperation='multiply';c.fillStyle='rgba(110,70,120,.16)';c.fillRect(0,0,XW,XH);c.restore();
  }else{
-  xmStars(c,8);xmMoon(c,180,210,42);
+  xmStars(c,8);xmMoon(c,210,250,60);
   xmWheel(c,120,700,118,2,L);xmSea(c,792,882,2);
   c.save();c.globalCompositeOperation='lighter';const r=XR(31);for(let i=0;i<70;i++){const x=r()*XW,y=800+r()*78;c.fillStyle=`rgba(255,200,120,${.1+r()*.25})`;c.fillRect(x,y,6+r()*26,1.6)}c.restore();
   xmWarehouse(c,-30,1025,560,205,2,11,L);xmWarehouse(c,520,995,450,165,2,12,L);
@@ -203,8 +203,8 @@ function xmBase(mode){if(XBASE[mode])return;const cv=xmCanvas(XW,XH),c=cv.getCon
  c.save();c.globalCompositeOperation='multiply';c.globalAlpha=mode==2?.1:.1;c.drawImage(xmNoise(),0,0);c.restore();
  XBASE[mode]=cv;XLIGHTS[mode]=L}
 const XOUT=xmCanvas(XW,XH),XO=XOUT.getContext('2d');
-function xmPage(mode,t){xmBase(mode);t=t||0;const c=XO;c.globalCompositeOperation='source-over';c.drawImage(XBASE[mode],0,0);
+function xmPage(mode,t,u){xmBase(mode);t=t||0;const c=XO;c.globalCompositeOperation='source-over';c.drawImage(XBASE[mode],0,0);
  c.globalCompositeOperation='lighter';
  for(const l of XLIGHTS[mode]){const tw=l.soft?.85+.15*Math.sin(t*l.sp+l.p):.55+.45*Math.sin(t*l.sp+l.p);glow(c,l.x,l.y,l.r,l.c,l.a*tw);
   if(l.dot){c.fillStyle=`rgba(255,250,230,${(.55+.45*tw).toFixed(3)})`;c.beginPath();c.arc(l.x,l.y,l.dot,0,7);c.fill()}}
- c.globalCompositeOperation='source-over';return XOUT.toDataURL('image/jpeg',.92)}
+ c.globalCompositeOperation='source-over';if(typeof MG!='undefined'&&MG)xmFx(c,mode,t,u||0);return XOUT.toDataURL('image/jpeg',.92)}
