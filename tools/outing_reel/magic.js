@@ -144,3 +144,25 @@ function mgDraw(t){const cv=document.getElementById('mg');if(!cv)return;const c=
  const te=ST[5]+3.2;if(t>te){const a=Math.min(1,(t-te)/.6);const g=c.createRadialGradient(544,1442,40,544,1442,420);g.addColorStop(0,`rgba(255,200,150,${.22*a})`);g.addColorStop(1,'rgba(255,200,150,0)');c.fillStyle=g;c.fillRect(0,1000,1080,900);
   const sw=((t-te-.6)%2.4)/1.1;if(sw>0&&sw<1){c.save();c.beginPath();c.roundRect?c.roundRect(84+142,232+1160,636,104,52):c.rect(84+142,232+1160,636,104);c.clip();const x=84+142-120+sw*(636+240);const q=c.createLinearGradient(x-60,0,x+60,0);q.addColorStop(0,'rgba(255,255,255,0)');q.addColorStop(.5,'rgba(255,245,225,.38)');q.addColorStop(1,'rgba(255,255,255,0)');c.fillStyle=q;c.fillRect(x-60,1380,120,140);c.restore()}}
  c.globalAlpha=1;c.globalCompositeOperation='source-over';c.filter='none'}
+// ---------- 11/16 もみじ・浜の紙のページ：丸窓（夜の景色がのぞく）と、昼の景色の小さな水彩 ----------
+function mgComposite(mode,lights,t){const X=xmBase(mode);const cv=xmCanvas(XW,XH),c=cv.getContext('2d');c.drawImage(X.B.cv,0,0);c.drawImage(X.T.cv,0,0);c.drawImage(X.F.cv,0,0);
+ if(lights){c.globalCompositeOperation='lighter';for(const Ly of[X.B,X.T,X.F])for(const l of Ly.L){const tw=l.soft?.88+.12*Math.sin(t*l.sp+l.p):.6+.4*Math.sin(t*l.sp+l.p);if(l.ell){xmEll(c,l,l.a*tw);continue}glow(c,l.x,l.y,l.r*.8,l.c,l.a*tw);if(l.dot){c.fillStyle='rgba(255,250,232,.9)';c.beginPath();c.arc(l.x,l.y,l.dot,0,7);c.fill()}}c.globalCompositeOperation='source-over'}
+ return cv}
+let RW=null;const ROUT=xmCanvas(GW,GH),RO=ROUT.getContext('2d');
+function mgRound(t,u){const hama=P.scene=='hama';if(!RW){RW=xmCanvas(GW,GH);const f=RW.getContext('2d');
+  f.save();f.filter='blur(12px)';f.fillStyle='rgba(60,35,20,.35)';f.beginPath();f.ellipse(GX,GY+GR+30,GR*.9,18,0,0,7);f.fill();f.restore();
+  // わく：もみじ＝木の丸窓、浜＝真ちゅうの丸窓
+  const ring=f.createRadialGradient(GX-60,GY-60,GR*.6,GX,GY,GR+26);if(hama){ring.addColorStop(0,'#f6dc98');ring.addColorStop(.5,'#c99a45');ring.addColorStop(1,'#6e4e1c')}else{ring.addColorStop(0,'#8a5a3a');ring.addColorStop(.6,'#5a3622');ring.addColorStop(1,'#2a160c')}
+  f.fillStyle=ring;f.beginPath();f.arc(GX,GY,GR+24,0,7);f.arc(GX,GY,GR,0,7,true);f.fill('evenodd');
+  f.strokeStyle=hama?'rgba(255,240,200,.8)':'#c9a24e';f.lineWidth=2;f.beginPath();f.arc(GX,GY,GR+2,0,7);f.stroke();
+  if(hama){for(let i=0;i<10;i++){const a=i/10*Math.PI*2;const x=GX+Math.cos(a)*(GR+12),y=GY+Math.sin(a)*(GR+12);const g=f.createRadialGradient(x-2,y-2,.5,x,y,6);g.addColorStop(0,'#fff4cc');g.addColorStop(1,'#8a6526');f.fillStyle=g;f.beginPath();f.arc(x,y,5.5,0,7);f.fill()}}
+  else{const r=XR(3);f.strokeStyle='rgba(30,15,8,.35)';f.lineWidth=1;for(let i=0;i<40;i++){const a=r()*7,rr=GR+4+r()*18;f.beginPath();f.arc(GX,GY,rr,a,a+.3+r()*.6);f.stroke()}}}
+ const c=RO;c.clearRect(0,0,GW,GH);c.drawImage(RW,0,0);c.save();c.beginPath();c.arc(GX,GY,GR,0,7);c.clip();
+ const src=mgComposite(2,true,t);const k=.52,cx=460,cy=hama?1000:900;c.drawImage(src,cx-GR/k,cy-GR/k,GR*2/k,GR*2/k,GX-GR,GY-GR,GR*2,GR*2);
+ if(P.scene=='momiji')mjFx(c,2,t,u);
+ // ガラスの光
+ c.fillStyle='rgba(255,255,255,.12)';c.beginPath();c.ellipse(GX-80,GY-90,40,90,.7,0,7);c.fill();c.restore();
+ const v=c.createRadialGradient(GX,GY,GR*.7,GX,GY,GR);v.addColorStop(0,'rgba(0,0,0,0)');v.addColorStop(1,'rgba(0,0,0,.35)');c.fillStyle=v;c.beginPath();c.arc(GX,GY,GR,0,7);c.fill();
+ return ROUT.toDataURL('image/png')}
+function mgVig(){const src=mgComposite(0,false,0);const c=xmCanvas(XW,420),g=c.getContext('2d');const k=.62,sh=420/k;g.drawImage(src,0,1340-sh,XW,sh,(XW-XW*k)/2,0,XW*k,420);
+ g.globalCompositeOperation='destination-in';g.save();g.translate(460,230);g.scale(1,.6);const m=g.createRadialGradient(0,0,160,0,0,380);m.addColorStop(0,'rgba(0,0,0,1)');m.addColorStop(1,'rgba(0,0,0,0)');g.fillStyle=m;g.fillRect(-460,-400,920,800);g.restore();return c.toDataURL('image/png')}

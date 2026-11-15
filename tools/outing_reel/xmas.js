@@ -215,7 +215,7 @@ function xmMoon(c,x,y,R){c.save();c.globalCompositeOperation='screen';glow(c,x,y
 const XBASE={};
 function xmLayer(){const cv=xmCanvas(XW,XH);return{cv,c:cv.getContext('2d'),L:[]}}
 function xmShadowOf(cv){const s=xmCanvas(XW,XH),g=s.getContext('2d');g.filter='brightness(0) blur(7px)';g.drawImage(cv,0,0);return s}
-function xmBase(mode){if(XBASE[mode])return XBASE[mode];const B=xmLayer(),T=xmLayer(),F=xmLayer();let c=B.c,L=B.L;
+function xmBase(mode){if(XBASE[mode])return XBASE[mode];if(typeof P!='undefined'&&P.scene=='momiji')return XBASE[mode]=mjBuild(mode);if(typeof P!='undefined'&&P.scene=='hama')return XBASE[mode]=hmBuild(mode);const B=xmLayer(),T=xmLayer(),F=xmLayer();let c=B.c,L=B.L;
  xmSky(c,mode);
  if(mode==0){
   c.save();c.globalCompositeOperation='screen';glow(c,250,560,460,'255,220,170',.5);c.restore();
@@ -284,6 +284,6 @@ function xmPage(mode,t,u){const X=xmBase(mode);t=t||0;u=u||0;const c=XO;const k=
  // 夜：ぬれた石だたみに光が映る
  if(mode==2){const gy=X.gy;c.save();c.beginPath();c.rect(0,gy,XW,XH-gy);c.clip();c.globalAlpha=.42;c.filter='blur(4px)';c.translate(0,gy*2+40);c.scale(1,-1);c.drawImage(XB1,0,0,XW,XH);c.restore()}
  c.globalCompositeOperation='source-over';c.globalAlpha=1;c.filter='none';
- if(typeof MG!='undefined'&&MG)xmFx(c,mode,t,u);
+ if(typeof MG!='undefined'&&MG){if(P.scene=='momiji')mjFx(c,mode,t,u);else if(P.scene=='hama')hmFx(c,mode,t,u);else xmFx(c,mode,t,u)}
  c.drawImage(X.V,0,0);c.save();c.globalCompositeOperation='multiply';c.globalAlpha=.08;c.drawImage(xmNoise(),0,0);c.restore();
  return XOUT.toDataURL('image/jpeg',.92)}
