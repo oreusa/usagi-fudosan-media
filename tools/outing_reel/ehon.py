@@ -124,7 +124,6 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 .vt{position:absolute;writing-mode:vertical-rl;font-family:M;color:#4a3328;letter-spacing:.2em;line-height:1.9;white-space:nowrap;text-orientation:upright}
 .vt span{display:inline-block;opacity:0}
 .vt .tcy{text-combine-upright:all;letter-spacing:0}
-.vt .yoko{text-orientation:mixed;letter-spacing:.04em}
 .cover{background:linear-gradient(100deg,#5d1f1b,#7c2a22 18%,#742620 70%,#5a1c18);border-radius:4px 12px 12px 4px}
 .cover:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 5px),repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 2px,transparent 2px 5px)}
 .cover .spine{position:absolute;left:0;top:0;bottom:0;width:46px;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,0))}
@@ -220,7 +219,7 @@ function leafPath(R){const L=[1,.9,.7,.42],pts=[];const P=(r,d)=>{const a=(d-90)
 // 海の景色（scene: 'umi'）では、もみじの代わりに光のきらめき
 const XM=P.scene=='xmas',XHK=['#e2b84a','#c0392b','#f6d36b','#2e6b4a','#f4ead8'],UMI=P.scene=='umi',HK=['#8fd0ff','#ffd27a','#ff8fb8','#b9a0ff','#8fffd0'];
 const LP=(UMI||XM)?'M0,-1Q.1,-.1 1,0Q.1,.1 0,1Q-.1,.1 -1,0Q-.1,-.1 0,-1Z':leafPath(1);
-function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>(l.match(/[0-9A-Za-z][0-9A-Za-z.,:]*|./gu)||[]).map(c=>c.length==2?`<span class="tcy">${c}</span>`:c.length>2?`<span class="yoko">${c}</span>`:`<span>${c}</span>`).join('')).join('<br>')+`</div>`}
+function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>(l.match(/(?<![0-9])[0-9]{2}(?![0-9])|./gu)||[]).map(c=>c.length==2?`<span class="tcy">${c}</span>`:`<span>${/[!-~]/.test(c)?String.fromCharCode(c.charCodeAt(0)+65248):c}</span>`).join('')).join('<br>')+`</div>`}
 function scene(mode){ // 0 昼 1 秋 2 夜
   // 11/15 クリスマスの絵（tools/outing_reel/xmas.js）。電球は毎コマまたたく
   if(XM)return `<svg viewBox="0 0 920 1380">${DEFS}<image class="xmi" data-m="${mode}" href="${xmPage(mode,0)}" width="920" height="1380"/><g class="lv"></g>${PAPER}</svg>`;
