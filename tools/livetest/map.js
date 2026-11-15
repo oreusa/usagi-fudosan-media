@@ -2,8 +2,8 @@
 // 地図を開く → 府県を押す → 近づくか → 戻る／＋−／カードの › → 地図リンク（Google/Apple を選ぶ画面）を、昼と夜で見る
 const {chromium}=require('playwright');const fs=require('fs');
 const OUT='out';fs.mkdirSync(OUT,{recursive:true});const log=[];const L=(...a)=>{const s=a.join(' ');console.log(s);log.push(s)};
-const SITES=[['月',process.env.B1||'https://townnote.pages.dev',['/illumination','/koyo','/tomari','/odekake?v2t=map','/illumination-kyoto']],
-             ['燈',process.env.B2||'https://lifenote-kanto.pages.dev',['/illumination','/koyo','/tomari','/odekake?v2t=map','/illumination-tokyo']]];
+const SITES=[['月',process.env.B1||'https://kansai.townnote.app',['/illumination','/koyo','/tomari','/odekake?v2t=map','/illumination-kyoto']],
+             ['燈',process.env.B2||'https://kanto.townnote.app',['/illumination','/koyo','/tomari','/odekake?v2t=map','/illumination-tokyo']]];
 (async()=>{const b=await chromium.launch();let bad=0;
 for(const [nm,base,paths] of SITES)for(const path of paths)for(const th of ['day','night']){
   const c=await b.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true,deviceScaleFactor:2,userAgent:'Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1 livetest'});

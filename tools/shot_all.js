@@ -2,7 +2,7 @@
 // node tools/shot_all.js <出力フォルダ> [tech=2 を付けるなら "2"]
 // 1ページごとに：上から下までの写真（jpg）・画面の枚数・横はみ出し・エラー・こわれた絵・見えない物・リンクの数を report.json に残す
 const {chromium}=require('playwright');const fs=require('fs');
-const T='https://townnote.pages.dev',L='https://lifenote-kanto.pages.dev';
+const T='https://kansai.townnote.app',L='https://kanto.townnote.app';
 const PAGES=[
  ['t-top',T+'/'],['t-odekake',T+'/odekake'],['t-ima',T+'/ima'],['t-illumi',T+'/illumination'],['t-koyo',T+'/koyo'],['t-tomari',T+'/tomari'],['t-hatsumode',T+'/hatsumode'],['t-odekake-osaka',T+'/odekake-osaka'],
  ['t-fudosan',T+'/fudosan-list'],['t-uru',T+'/uru'],['t-sagasu',T+'/sagasu'],['t-chika',T+'/chika-kansai'],['t-machi',T+'/machi/osaka-01'],['t-gyosha',T+'/gyosha'],['t-moushikomi',T+'/moushikomi'],

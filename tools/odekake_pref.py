@@ -31,7 +31,7 @@ for p, slug, fu in PREFS:
     desc = f"{fu}で開催中・これからのイベントとおでかけ先{len(now)}件（入場無料{free}件）を、日程・場所・公式ページつきで一覧にしました。{names}など。{upd}。"
     out = re.sub(r"<title>.*?</title>", lambda _: f"<title>{html.escape(title)}</title>", out, count=1, flags=re.S)
     out = re.sub(r'<meta name="description" content="[^"]*">', lambda _: f'<meta name="description" content="{html.escape(desc)}">', out, count=1)
-    out = out.replace('<link rel="canonical" href="https://townnote.pages.dev/odekake">', f'<link rel="canonical" href="https://townnote.pages.dev/odekake-{slug}">', 1)
+    out = out.replace('<link rel="canonical" href="https://kansai.townnote.app/odekake">', f'<link rel="canonical" href="https://kansai.townnote.app/odekake-{slug}">', 1)
     out = re.sub(r'(<meta property="og:(?:title|description)" content=")[^"]*', lambda m: m.group(1) + html.escape(title if "title" in m.group(0) else desc), out)
     out = out.replace("<h1>関西おでかけリスト</h1>", f"<h1>{p}おでかけリスト</h1>", 1)
     # 11/6 府県ページの見られた数を、関西のリストと分けて数える
@@ -57,15 +57,15 @@ for p, slug, fu in PREFS:
     out = out.replace("</head>", '<style>.wk[style*="b9ada2"],.past,.past+*{display:none!important}</style></head>', 1)
     out = out.replace("出かける前に、必ず公式ページで", nav + "出かける前に、必ず公式ページで", 1) if "出かける前に、必ず公式ページで" in out else out.replace("</body>", nav + "</body>", 1)
     open(f"links/odekake-{slug}.html", "w", encoding="utf-8").write(out)
-    sm_add.append(f"https://townnote.pages.dev/odekake-{slug}")
+    sm_add.append(f"https://kansai.townnote.app/odekake-{slug}")
     print(slug, len(cards), "cards,", len(now), "now")
 
 # サイトの地図に足す（無ければ）
 sm = open("links/sitemap.xml", encoding="utf-8").read()
 for u in sm_add:
     if f"<loc>{u}</loc>" not in sm:
-        sm = sm.replace("<url><loc>https://townnote.pages.dev/odekake</loc>",
-                        f"<url><loc>{u}</loc><lastmod>{TODAY}</lastmod></url>\n<url><loc>https://townnote.pages.dev/odekake</loc>", 1) \
-            if "<url><loc>https://townnote.pages.dev/odekake</loc>" in sm else sm.replace("</urlset>", f"<url><loc>{u}</loc><lastmod>{TODAY}</lastmod></url>\n</urlset>")
+        sm = sm.replace("<url><loc>https://kansai.townnote.app/odekake</loc>",
+                        f"<url><loc>{u}</loc><lastmod>{TODAY}</lastmod></url>\n<url><loc>https://kansai.townnote.app/odekake</loc>", 1) \
+            if "<url><loc>https://kansai.townnote.app/odekake</loc>" in sm else sm.replace("</urlset>", f"<url><loc>{u}</loc><lastmod>{TODAY}</lastmod></url>\n</urlset>")
     sm = re.sub(rf"(<loc>{re.escape(u)}</loc><lastmod>)[^<]*", rf"\g<1>{TODAY}", sm)
 open("links/sitemap.xml", "w", encoding="utf-8").write(sm)

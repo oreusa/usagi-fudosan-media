@@ -20,7 +20,7 @@ MIN_S = ImageFont.truetype(os.path.join(FD, "ShipporiMincho-SemiBold.ttf"), 46)
 GO = ImageFont.truetype(os.path.join(FD, "ZenKakuGothicNew-Bold.ttf"), 30)
 GO_S = ImageFont.truetype(os.path.join(FD, "ZenKakuGothicNew-Medium.ttf"), 24)
 JO = ImageFont.truetype(os.path.join(FD, "Jost-VF.ttf"), 22)
-BASE = "https://townnote.pages.dev"
+BASE = "https://kansai.townnote.app"
 
 
 def wrap(d, text, font, width, lines):

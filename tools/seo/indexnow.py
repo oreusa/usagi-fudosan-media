@@ -7,7 +7,7 @@ KEY = "e38dec9c8189c4506a483aa2fd97fcfb"
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = os.path.join(ROOT, "stats", "indexnow.json")
 day = sys.argv[1] if len(sys.argv) > 1 else datetime.date.today().isoformat()
-SITES = [("kansai", "townnote.pages.dev"), ("kanto", "lifenote-kanto.pages.dev")]
+SITES = [("kansai", "kansai.townnote.app"), ("kanto", "kanto.townnote.app")]
 try: st = json.load(open(OUT, encoding="utf-8"))
 except Exception: st = {"about": "IndexNow（Bing など）へ送った数。rows: {day, site, n, code}。code 200/202 が成功", "rows": []}
 monday = datetime.date.fromisoformat(day).weekday() == 0

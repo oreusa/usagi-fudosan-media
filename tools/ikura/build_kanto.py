@@ -29,7 +29,7 @@ n = len(keys)
 page = f"""<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>お家はいくらで売れる？ 関東{n}の市区の地価から目安｜LIFE NOTE</title>
 <meta name="description" content="関東{n}の市区町村で、国の地価公示（令和8年）から、マンション・一戸建ての土地・土地の売れそうな値段の目安を30秒で出せます。無料・名前も要りません。">
-<link rel="canonical" href="https://lifenote-kanto.pages.dev/ikura">
+<link rel="canonical" href="https://kanto.townnote.app/ikura">
 <link rel="icon" href="/logo-s.png"><meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
 <style>

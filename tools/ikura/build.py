@@ -50,7 +50,7 @@ robots = "" if LIVE else '<meta name="robots" content="noindex">'
 page = f"""<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">{robots}
 <title>お家はいくらで売れる？ 関西の街の実際に売れた値段で目安｜TOWN NOTE</title>
 <meta name="description" content="関西{len(keys)}の市区で、2025年度に実際に売れた中古マンション・中古一戸建て・土地の値段（近畿レインズ）から、お家の目安を30秒で出せます。無料・名前も要りません。">
-<link rel="canonical" href="https://townnote.pages.dev/ikura">
+<link rel="canonical" href="https://kansai.townnote.app/ikura">
 <link rel="icon" href="assets/ogp.png"><link rel="apple-touch-icon" href="/assets/icon-180.png"><meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
 <style>
@@ -96,7 +96,7 @@ select,input{{font:inherit;font-size:16px;width:100%;box-sizing:border-box;paddi
 <script>var D={data};
 (function(){{var $=function(i){{return document.getElementById(i)}},ty="m",ci=$("ci"),ar=$("ar");
 function c(k){{try{{if(localStorage.getItem("usagi_owner")==="1")return;var b=JSON.stringify({{k:k}});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{{method:"POST",body:b,keepalive:true}});}}catch(e){{}}}}
-c("表示：いくら"+(document.referrer&&!/townnote\\.pages/.test(document.referrer)?"（外から）":""));
+c("表示：いくら"+(document.referrer&&!/townnote\\.(pages|app)/.test(document.referrer)?"（外から）":""));
 var LB={{m:["専有面積","例 70","マンション"],k:["土地の広さ","例 100","一戸建て"],t:["土地の広さ","例 120","土地"]}};
 function fill(){{var cur=ci.value;ci.innerHTML='<option value="">市区を選んでください</option>';var pp="";Object.keys(D).forEach(function(k){{if(!D[k][ty])return;var p=k.split("|")[0];if(p!==pp){{var g=document.createElement("optgroup");g.label=p;ci.appendChild(g);pp=p;}}var o=document.createElement("option");o.value=k;o.textContent=k.split("|")[1];ci.lastChild.appendChild(o);}});if(cur&&D[cur]&&D[cur][ty])ci.value=cur;}}
 function man(n){{return n>=10000?(Math.floor(n/1000)/10)+"億":Math.round(n).toLocaleString()}}

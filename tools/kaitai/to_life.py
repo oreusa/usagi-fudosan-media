@@ -8,11 +8,11 @@ dst = os.path.join(sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, ".."
 s = open(os.path.join(ROOT, "links", "kaitai.html"), encoding="utf-8").read()
 PAIRS = (
     # 関東の側の部品の名前と版（akari-auto site/moushikomi.html と同じ）
-    ("https://townnote.pages.dev/assets/ogp.png", "https://lifenote-kanto.pages.dev/og-v10.png"),
+    ("https://kansai.townnote.app/assets/ogp.png", "https://kanto.townnote.app/og-v10.png"),
     ('href="assets/ogp.png"', 'href="/logo-s.png"'),
     ('src="assets/logo-s.png?v=2"', 'src="/logo-s.png"'),
-    ("townnote\\.pages", "lifenote-kanto\\.pages"),
-    ("townnote.pages.dev", "lifenote-kanto.pages.dev"),
+    ("townnote\\.(pages|app)", "(lifenote-kanto\\.pages|kanto\\.townnote)"),
+    ("kansai.townnote.app", "kanto.townnote.app"),
     ("TOWN NOTE", "LIFE NOTE"),
     ("関西（大阪・京都・兵庫・奈良・滋賀・和歌山）", "関東（東京・神奈川・埼玉・千葉・茨城・栃木・群馬）"),
     ("関西不動産リスト", "関東不動産リスト"),
