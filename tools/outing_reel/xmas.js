@@ -28,10 +28,10 @@ function wob(g,pts,amp,seed){const r=XR(seed||1);g.moveTo(pts[0][0]+(r()-.5)*amp
 function glow(c,x,y,r,rgb,a){if(a<=0)return;const g=c.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,`rgba(${rgb},${a})`);g.addColorStop(.3,`rgba(${rgb},${a*.4})`);g.addColorStop(1,`rgba(${rgb},0)`);c.fillStyle=g;c.fillRect(x-r,y-r,r*2,r*2)}
 
 // ---------- 空 ----------
-function xmSky(c,mode){const P=[['#bcd3e2','#e9ece6','#f7ead8'],['#4d4785','#b26e98','#f2a985'],['#060a20','#141d48','#2b2b5c']][mode];
+function xmSky(c,mode){const P=[['#a9c8de','#e6eef0','#fbeedb'],['#4d4785','#b26e98','#f2a985'],['#060a20','#141d48','#2b2b5c']][mode];
  const g=c.createLinearGradient(0,0,0,980);g.addColorStop(0,P[0]);g.addColorStop(.55,P[1]);g.addColorStop(1,P[2]);c.fillStyle=g;c.fillRect(0,0,XW,XH);
  // むら（水をたっぷり含んだ空）
- c.save();c.globalCompositeOperation=mode==2?'screen':'multiply';c.globalAlpha=mode==2?.06:.18;c.drawImage(xmNoise(),0,0);c.restore();
+ c.save();c.globalCompositeOperation=mode==2?'screen':'multiply';c.globalAlpha=mode==2?.05:.07;c.drawImage(xmNoise(),0,0);c.restore();
  const r=XR(3+mode);c.save();c.filter='blur(18px)';
  for(let i=0;i<(mode==2?3:9);i++){const x=r()*XW,y=90+r()*(mode==1?520:430),w=140+r()*260;
   c.globalAlpha=mode==2?.05:mode==1?.32:.55;c.fillStyle=mode==1?(i%2?'#ffd5bd':'#e7a3b5'):'#ffffff';c.beginPath();c.ellipse(x,y,w,w*.16,(r()-.5)*.1,0,7);c.fill();
@@ -200,7 +200,7 @@ function xmBase(mode){if(XBASE[mode])return;const cv=xmCanvas(XW,XH),c=cv.getCon
  }
  // 絵本の紙：ふちを少し暗く
  const vg=c.createRadialGradient(460,660,320,460,700,1020);vg.addColorStop(0,'rgba(0,0,0,0)');vg.addColorStop(1,mode==2?'rgba(0,0,0,.42)':'rgba(80,50,30,.2)');c.fillStyle=vg;c.fillRect(0,0,XW,XH);
- c.save();c.globalCompositeOperation='multiply';c.globalAlpha=mode==2?.12:.2;c.drawImage(xmNoise(),0,0);c.restore();
+ c.save();c.globalCompositeOperation='multiply';c.globalAlpha=mode==2?.1:.1;c.drawImage(xmNoise(),0,0);c.restore();
  XBASE[mode]=cv;XLIGHTS[mode]=L}
 const XOUT=xmCanvas(XW,XH),XO=XOUT.getContext('2d');
 function xmPage(mode,t){xmBase(mode);t=t||0;const c=XO;c.globalCompositeOperation='source-over';c.drawImage(XBASE[mode],0,0);

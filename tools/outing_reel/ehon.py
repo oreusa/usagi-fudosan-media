@@ -306,6 +306,8 @@ function build(){
   // 葉
   document.querySelectorAll('.lv').forEach((g,gi)=>{const r=rng(100+gi);let s='';const cols=XM?XHK:UMI?HK:['#c9402b','#e8862e','#f0b23a','#d4552d','#b5332a'];
     for(let i=0;i<16;i++)s+=`<g class="lf" data-x="${(r()*920).toFixed(0)}" data-s="${(.05+r()*.07).toFixed(3)}" data-p="${r().toFixed(3)}" data-z="${(14+r()*20).toFixed(0)}" data-w="${(r()*6).toFixed(2)}"><path d="${LP}" fill="${cols[i%5]}" opacity=".9"/></g>`;g.innerHTML=s});
+  // 11/15 星の飾り：葉の筋と水彩のゆがみを外す（溶けた葉のように見えた）
+  if(XM){document.querySelectorAll('.dl path:nth-child(2)').forEach(e=>e.remove());document.querySelectorAll('[filter="url(#wc3)"]').forEach(e=>e.removeAttribute('filter'))}
   if(XM)document.querySelectorAll('.face:not(.cover) path').forEach((e,i)=>{if(e.getAttribute('d')==LP&&!e.closest('.lv'))e.setAttribute('fill',XHK[i%5])});
   if(XM)document.querySelectorAll('path').forEach(e=>{if(e.getAttribute('d')==LP&&!e.closest('.face'))e.setAttribute('fill','#e3c88c')});
   if(UMI)document.querySelectorAll('.face:not(.cover) path').forEach((e,i)=>{if(e.getAttribute('d')==LP&&!e.closest('.lv'))e.setAttribute('fill',HK[i%5])});
@@ -362,7 +364,7 @@ function render(t){
     if(i==1)chars('t1',t,ST[i]-.15,.075);
     if(i==2){chars('t2',t,ST[i]-.15,.11);fade('d1',t,ST[i]+.25);fade('d2',t,ST[i]+.6,.8,26);fade('d3',t,ST[i]+1.3);const sl=document.getElementById('seal'),sk=sm(t,ST[i]+1.9,ST[i]+2.15);sl.style.opacity=sk;sl.style.transform=`rotate(-6deg) scale(${1.5-.5*eo(sk)})`}
     if(i==4){P.info.forEach((r,j)=>fade('r'+j,t,ST[i]+.05+j*.22,.6,14));fade('nt',t,ST[i]+1.1)}
-    if(i==5){fade('h0',t,ST[i]-.1);fade('ph',t,ST[i]+.2,.8,60);chars('t5',t,ST[i]+.7,.06);fade('h1',t,ST[i]+2.4);fade('end',t,ST[i]+3.2,.7,20);const q=eio(sm(t,ST[i]+2.2,ST[i]+3.0));document.getElementById('ph2').style.opacity=q;document.getElementById('ph1').style.transform=`translateY(${-q*40}px)`;const pe=document.getElementById('end');if(t>ST[i]+3.9)pe.style.transform=`scale(${(1+.03*Math.sin((t-ST[i]-3.9)*5)).toFixed(3)})`}}
+    if(i==5){fade('h0',t,ST[i]-.1);fade('ph',t,ST[i]+.2,.8,60);chars('t5',t,ST[i]+.7,.06);fade('h1',t,ST[i]+2.4);fade('end',t,ST[i]+3.2,.7,20);const q=eio(sm(t,ST[i]+2.2,ST[i]+3.0));document.getElementById('ph2').style.opacity=XM?0:q;document.getElementById('ph1').style.transform=`translateY(${-q*40}px)`;const pe=document.getElementById('end');if(t>ST[i]+3.9)pe.style.transform=`scale(${(1+.03*Math.sin((t-ST[i]-3.9)*5)).toFixed(3)})`}}
 }
 $('#top').innerHTML=P.top_en+'<b>'+P.top_jp+'</b>';build();render(0);
 </script>"""
