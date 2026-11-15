@@ -13,7 +13,10 @@ spec = json.load(open(sys.argv[1])); OUT = os.path.abspath(sys.argv[2]); STILL =
 _t = spec.get('text', {})
 # 11/15 owner「。の使い方変じゃない？」：表紙の題は本の題なので「。」「、」で終えない（2行とも「。」で終わり、縦書きで字の下に浮いた）
 if _t.get('title'): _t['title'] = [l.rstrip('。、．，. ') for l in _t['title']]
-_bad = [f'表紙の題の{i + 1}行目「{l}」は{len(l)}字（{m}字まで）' for i, (l, m) in enumerate(zip(_t.get('title', []), (10, 9))) if len(l) > m]
+_bad = [f'表紙の題の{i + 1}行目「{l}」は{len(l)}字（{m}字まで）' for i, (l, m) in enumerate(zip(_t.get('title', []), (9, 9))) if len(l) > m]
+# 11/16 表紙の1行目が10字（クリスマスマーケット）で下のロゴに重なった。日付ページの大きな題が6字以上で、場所の行（｜の前）が8字以上だと字が重なった
+_pl = _t.get('place', '').split('｜')[0]
+if len(_t.get('date_title', '')) > 5 and len(_pl) > 7: _bad.append(f'date_title「{_t.get("date_title")}」と場所「{_pl}」が重なる（題を5字までか、場所を7字まで）')
 _bad += [f'夜のページ ehon4「{l}」は{len(l)}字（7字まで）' for l in _t.get('ehon4', []) if len(l) > 7]
 _bad += [f'{k}「{l}」は{len(l)}字（10字まで）' for k in ('ehon1', 'ehon2', 'ehon5') for l in _t.get(k, []) if len(l) > 10]
 _bad += [f'ehon_night の4つ目「{l}」は{len(l)}字（7字まで）' for l in _t.get('ehon_night', [])[3:4] if len(l) > 7]
