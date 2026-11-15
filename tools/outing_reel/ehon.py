@@ -88,7 +88,7 @@ if T.get('ehon5'): BR['t5'] = T['ehon5']
 if T.get('scene'): BR['scene'] = T['scene']          # 景色：書かなければ山と木。'umi'＝海と砂浜（夜は色の光）。'xmas'＝赤レンガとクリスマスツリー（11/15）。建物なしにする時は motif を yama に
 BR.update(T.get('ehon_brand', {}))
 PAGE['globe'] = T.get('globe', '')   # スノードームの台の文字（英字）
-PAGE['magic'] = bool(T.get('magic')) or BR['scene'] == 'xmas'   # 11/15 魔法の絵本（光の粒・雪・そり・スノードーム）
+PAGE['magic'] = bool(T.get('magic')) or BR['scene'] in ('xmas', 'momiji', 'hama')   # 11/15 魔法の絵本（光の粒・雪・そり・スノードーム）
 PAGE.update({k: BR[k] for k in ('top_en', 'top_jp', 'cover_sub', 'hp_en', 'hp_jp', 't5', 'seal', 'motif', 'peaks', 'scene')})
 html = r"""<!doctype html><meta charset="utf-8"><style>
 @font-face{font-family:M;src:url(file://%F%/ShipporiMincho-Medium.ttf)}
@@ -220,12 +220,12 @@ function leafPath(R){const L=[1,.9,.7,.42],pts=[];const P=(r,d)=>{const a=(d-90)
   for(let k=-3;k<=3;k++){const c=k*40,l=L[Math.abs(k)];P(.2,c-20);P(l*.5,c-7);P(l*.62,c-13);P(l*.8,c-4);P(l,c);P(l*.8,c+4);P(l*.62,c+13);P(l*.5,c+7)}
   P(.2,140);P(.1,172);P(.62,177);P(.62,183);P(.1,188);return 'M'+pts.join('L')+'Z'}
 // 海の景色（scene: 'umi'）では、もみじの代わりに光のきらめき
-const MG=!!P.magic,XM=P.scene=='xmas',XHK=['#e2b84a','#c0392b','#f6d36b','#2e6b4a','#f4ead8'],UMI=P.scene=='umi',HK=['#8fd0ff','#ffd27a','#ff8fb8','#b9a0ff','#8fffd0'];
-const LP=(UMI||XM)?'M0,-1Q.1,-.1 1,0Q.1,.1 0,1Q-.1,.1 -1,0Q-.1,-.1 0,-1Z':leafPath(1);
+const MG=!!P.magic,XM=P.scene=='xmas',CVS=['xmas','momiji','hama'].includes(P.scene),XHK=['#e2b84a','#c0392b','#f6d36b','#2e6b4a','#f4ead8'],UMI=P.scene=='umi',HK=['#8fd0ff','#ffd27a','#ff8fb8','#b9a0ff','#8fffd0'];
+const LP=(UMI||XM||P.scene=='hama')?'M0,-1Q.1,-.1 1,0Q.1,.1 0,1Q-.1,.1 -1,0Q-.1,-.1 0,-1Z':leafPath(1);
 function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>(l.match(/(?<![0-9])[0-9]{2}(?![0-9])|./gu)||[]).map(c=>c.length==2?`<span class="tcy">${c}</span>`:`<span>${/[!-~]/.test(c)?String.fromCharCode(c.charCodeAt(0)+65248):c}</span>`).join('')).join('<br>')+`</div>`}
 function scene(mode){ // 0 昼 1 秋 2 夜
   // 11/15 クリスマスの絵（tools/outing_reel/xmas.js）。電球は毎コマまたたく
-  if(XM)return `<svg viewBox="0 0 920 1380">${DEFS}<image class="xmi" data-m="${mode}" href="${xmPage(mode,0)}" width="920" height="1380"/><g class="lv"></g>${PAPER}</svg>`;
+  if(CVS)return `<svg viewBox="0 0 920 1380">${DEFS}<image class="xmi" data-m="${mode}" href="${xmPage(mode,0)}" width="920" height="1380"/><g class="lv"></g>${PAPER}</svg>`;
   const sky=[['#f7f0df','#f3e3bf'],['#fbeede','#f6cfa0'],['#10152f','#343a6c']][mode];
   const far=['#c3cfc0','#e0b08c','#1b2142'][mode],mid=['#9db794','#cf7f55','#171a36'][mode],near=['#7c9f6c','#b9513a','#11132a'][mode];
   const tc=[['#5f8a55','#7da35f','#93b068','#b8bf6a','#55794f'],['#b5332a','#d4552d','#e8862e','#f0b23a','#c9402b','#9e2a2a'],['#7c2622','#a8382a','#c4552b','#8f2d2a','#d9772e']][mode];
@@ -278,7 +278,7 @@ function build(){
   pages.push(`<div class="face">${scene(0)}${vtext(P.t1,84,120,58,'','t0')}</div>`);
   pages.push(`<div class="face">${scene(1)}${vtext(P.t2,84,120,58,'','t1')}</div>`);
   // 日付
-  pages.push(`<div class="face" style="background:#f6efdf"><svg viewBox="0 0 920 1380">${DEFS}${MG&&XM?`<image class="xgl" x="34" y="760" width="460" height="600" href=""/>`:`<g filter="url(#wc3)"><g transform="translate(270,1010) scale(250) rotate(-16)"><path d="${LP}" fill="#d4552d" opacity=".82"/></g><g transform="translate(470,1150) scale(130) rotate(24)"><path d="${LP}" fill="#e8862e" opacity=".8"/></g><g transform="translate(130,1230) scale(86) rotate(60)"><path d="${LP}" fill="#f0b23a" opacity=".8"/></g></g>`}${MG?mgFrame():''}<g class="lv"></g>${PAPER}</svg>
+  pages.push(`<div class="face" style="background:#f6efdf"><svg viewBox="0 0 920 1380">${DEFS}${MG&&CVS?`<image class="xgl" x="34" y="760" width="460" height="600" href=""/>`:`<g filter="url(#wc3)"><g transform="translate(270,1010) scale(250) rotate(-16)"><path d="${LP}" fill="#d4552d" opacity=".82"/></g><g transform="translate(470,1150) scale(130) rotate(24)"><path d="${LP}" fill="#e8862e" opacity=".8"/></g><g transform="translate(130,1230) scale(86) rotate(60)"><path d="${LP}" fill="#f0b23a" opacity=".8"/></g></g>`}${MG?mgFrame():''}<g class="lv"></g>${PAPER}</svg>
    ${vtext([P.fes],96,120,96,'font-family:MB;letter-spacing:.24em','t2')}
    <div id="d1" style="position:absolute;left:96px;top:150px;color:#4a3328;opacity:0"><div class="num" style="font-size:60px;letter-spacing:.06em;color:#8a6a55">${P.d[0]} <span style="font-size:30px;letter-spacing:.3em">${P.d[1]}</span></div><div style="width:2px;height:70px;background:#8a6a55;margin:22px 0 10px 60px"></div></div>
    <div id="d2" style="position:absolute;left:84px;top:330px;color:#3d2a22;opacity:0"><div class="num" style="font-size:230px;line-height:1">${P.d[2]}</div><div style="font:500 44px M;letter-spacing:.3em;margin:18px 0 0 10px"><span class="num" style="font-size:44px;letter-spacing:.3em">${P.d[3]}</span>　まで</div></div>
@@ -286,13 +286,13 @@ function build(){
   pages.push(`<div class="face">${scene(2)}${vtext(P.t4,84,120,58,'color:#f4e6c4','t3')}
    <div id="n1" style="position:absolute;left:560px;top:560px;color:#f4e6c4;opacity:0"><div class="num" style="font-size:92px;line-height:1">${P.night[0]}</div><div style="font:500 34px M;letter-spacing:.3em;margin-top:14px"><span class="num" style="font-size:34px;letter-spacing:.3em">${P.night[1]}</span>　${P.night[2]}</div><div style="font:500 40px M;letter-spacing:.2em;margin-top:26px">${P.night[3]}</div></div></div>`);
   // 案内
-  pages.push(`<div class="face" style="background:#f6efdf"><svg viewBox="0 0 920 1380">${DEFS}${MG&&XM?`<image x="664" y="52" width="210" height="151" href="${HOLLY}"/><image x="0" y="900" width="920" height="420" href="${mgMarket()}" opacity=".92"/>`:`<g filter="url(#wc3)" opacity=".9"><g transform="translate(760,170) scale(70) rotate(20)"><path d="${LP}" fill="#d4552d" opacity=".85"/></g><g transform="translate(660,120) scale(40) rotate(-40)"><path d="${LP}" fill="#f0b23a" opacity=".85"/></g></g>`}${MG?mgFrame():''}<g transform="translate(460,1310)" opacity=".85">${motif(0,0,.5,false)}</g><g class="lv"></g>${PAPER}</svg>
+  pages.push(`<div class="face" style="background:#f6efdf"><svg viewBox="0 0 920 1380">${DEFS}${MG&&CVS?`${XM?`<image x="664" y="52" width="210" height="151" href="${HOLLY}"/>`:''}<image x="0" y="900" width="920" height="420" href="${XM?mgMarket():mgVig()}" opacity=".95"/>`:`<g filter="url(#wc3)" opacity=".9"><g transform="translate(760,170) scale(70) rotate(20)"><path d="${LP}" fill="#d4552d" opacity=".85"/></g><g transform="translate(660,120) scale(40) rotate(-40)"><path d="${LP}" fill="#f0b23a" opacity=".85"/></g></g>`}${MG?mgFrame():''}<g transform="translate(460,1310)" opacity=".85">${motif(0,0,.5,false)}</g><g class="lv"></g>${PAPER}</svg>
    <div style="position:absolute;left:150px;top:150px;font:500 30px J;letter-spacing:.42em;color:#8a6a55">INFORMATION</div>
    <div style="position:absolute;left:150px;top:206px;font:700 62px MB;letter-spacing:.16em;color:#3d2a22" id="it">${P.place.split('｜')[0]}</div>
    ${P.info.map((r,i)=>`<div class="row" id="r${i}" style="top:${340+i*112}px"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('')}
    <div id="nt" style="position:absolute;left:150px;right:110px;top:${340+P.info.length*112+6}px;font:500 28px M;letter-spacing:.1em;line-height:1.8;color:#7a5b4a;opacity:0">${P.note}</div>
    </div>`);
-  pages.push(`<div class="face" style="background:#f6efdf"><svg viewBox="0 0 920 1380">${DEFS}${MG&&XM?`<image x="40" y="1186" width="230" height="166" href="${HOLLY}" transform="rotate(-8 155 1270)"/>`:`<g filter="url(#wc3)" opacity=".9"><g transform="translate(790,1180) scale(84) rotate(-24)"><path d="${LP}" fill="#d4552d" opacity=".85"/></g><g transform="translate(690,1270) scale(46) rotate(36)"><path d="${LP}" fill="#f0b23a" opacity=".85"/></g></g>`}${MG?mgFrame():''}<g class="lv"></g>${PAPER}</svg>
+  pages.push(`<div class="face" style="background:#f6efdf"><svg viewBox="0 0 920 1380">${DEFS}${MG&&CVS?(XM?`<image x="40" y="1186" width="230" height="166" href="${HOLLY}" transform="rotate(-8 155 1270)"/>`:''):`<g filter="url(#wc3)" opacity=".9"><g transform="translate(790,1180) scale(84) rotate(-24)"><path d="${LP}" fill="#d4552d" opacity=".85"/></g><g transform="translate(690,1270) scale(46) rotate(36)"><path d="${LP}" fill="#f0b23a" opacity=".85"/></g></g>`}${MG?mgFrame():''}<g class="lv"></g>${PAPER}</svg>
    <div id="h0" style="position:absolute;left:0;right:0;top:92px;text-align:center;opacity:0"><div style="font:500 26px J;letter-spacing:.42em;color:#8a6a55">${P.hp_en}</div><div style="font:700 66px MB;letter-spacing:.14em;color:#3d2a22;margin-top:14px">${P.hp_jp}</div></div>
    <div id="ph" style="position:absolute;left:92px;top:300px;width:400px;height:800px;border-radius:54px;background:#2b211c;padding:14px;box-shadow:0 26px 50px rgba(60,35,20,.35);opacity:0"><div style="width:100%;height:100%;border-radius:42px;overflow:hidden;position:relative;background:#fff"><img id="ph1" src="file://%HP1%" style="position:absolute;left:0;top:0;width:100%"><img id="ph2" src="file://%HP2%" style="position:absolute;left:0;top:0;width:100%;opacity:0"></div></div>
    ${vtext(P.t5,110,330,50,'line-height:2.3;letter-spacing:.22em','t5')}
@@ -330,7 +330,7 @@ function render(t){
     // 下のページに落ちる影
     if(i<N){const q=document.getElementById('p'+(i+1));const sh=q.querySelector('.shade');if(a>0&&a<178&&ang[i+1]==0)sh.style.opacity=.32*(1-a/178)}}
   // 紙のしなり：先の方から持ち上がり、帯ごとに角度が少しずつ遅れて付いてくる。光は左手前から
-  for(let i=1;i<N;i++){const c=document.getElementById('c'+i);const q=sm(t,ST[i]-TURN,ST[i]);const on=(XM||P.curl)&&q>0&&q<1&&window.SNAP&&SNAP[i];
+  for(let i=1;i<N;i++){const c=document.getElementById('c'+i);const q=sm(t,ST[i]-TURN,ST[i]);const on=(CVS||P.curl)&&q>0&&q<1&&window.SNAP&&SNAP[i];
     c.style.visibility=on?'visible':'hidden';if(!on)continue;document.getElementById('p'+i).style.visibility='hidden';
     if(c.dataset.s!='1'){c.querySelectorAll('.f').forEach(f=>f.style.backgroundImage=`url(${SNAP[i]})`);c.dataset.s='1'}
     const SN=32;let prev=0,k=0,st=c.children[1],xe=0;
@@ -367,14 +367,14 @@ function render(t){
       chars('t3',t,ST[i]-.1,.075);fade('n1',t,ST[i]+1.7,.7)}
     if(i==0)chars('t0',t,ST[i]-.15,.075);
     if(i==1)chars('t1',t,ST[i]-.15,.075);
-    if(i==2&&MG){const gl=pg.querySelector('.xgl');if(gl&&t>ST[i]-TURN-.05&&t<end+.05)gl.setAttribute('href',mgGlobe(t,t-ST[i]))}
+    if(i==2&&MG){const gl=pg.querySelector('.xgl');if(gl&&t>ST[i]-TURN-.05&&t<end+.05)gl.setAttribute('href',XM?mgGlobe(t,t-ST[i]):mgRound(t,t-ST[i]))}
     if(i==2){chars('t2',t,ST[i]-.15,.11);fade('d1',t,ST[i]+.25);fade('d2',t,ST[i]+.6,.8,26);fade('d3',t,ST[i]+1.3);const sl=document.getElementById('seal'),sk=sm(t,ST[i]+1.9,ST[i]+2.15);sl.style.opacity=sk;sl.style.transform=`rotate(-6deg) scale(${1.5-.5*eo(sk)})`}
     if(i==4){P.info.forEach((r,j)=>fade('r'+j,t,ST[i]+.05+j*.22,.6,14));fade('nt',t,ST[i]+1.1)}
     if(i==5){fade('h0',t,ST[i]-.1);fade('ph',t,ST[i]+.2,.8,60);chars('t5',t,ST[i]+.7,.06);fade('h1',t,ST[i]+2.4);fade('end',t,ST[i]+3.2,.7,20);const q=eio(sm(t,ST[i]+2.2,ST[i]+3.0));document.getElementById('ph2').style.opacity=XM?0:q;document.getElementById('ph1').style.transform=`translateY(${-q*40}px)`;const pe=document.getElementById('end');if(t>ST[i]+3.9)pe.style.transform=`scale(${(1+.03*Math.sin((t-ST[i]-3.9)*5)).toFixed(3)})`}}
 }
 $('#top').innerHTML=P.top_en+'<b>'+P.top_jp+'</b>';build();render(0);
 </script>"""
-html = (html.replace('%XMAS%', open(ROOT + '/tools/outing_reel/xmas.js').read()).replace('%MAGIC%', open(ROOT + '/tools/outing_reel/magic.js').read()).replace('%F%', F).replace('%LOGO%', BR['logo']).replace('%HP1%', BR['hp1']).replace('%HP2%', BR['hp2']).replace('%PAGE%', json.dumps(PAGE, ensure_ascii=False)).replace('%ST%', json.dumps(ST))
+html = (html.replace('%XMAS%', open(ROOT + '/tools/outing_reel/xmas.js').read() + '\n' + open(ROOT + '/tools/outing_reel/scenes.js').read()).replace('%MAGIC%', open(ROOT + '/tools/outing_reel/magic.js').read()).replace('%F%', F).replace('%LOGO%', BR['logo']).replace('%HP1%', BR['hp1']).replace('%HP2%', BR['hp2']).replace('%PAGE%', json.dumps(PAGE, ensure_ascii=False)).replace('%ST%', json.dumps(ST))
         .replace('%OPEN%', str(OPEN)).replace('%TURN%', str(TURN)).replace('%TOTAL%', f'{TOTAL:.3f}'))
 open(f'{W}/ehon.html', 'w').write(html)
 open(f'{W}/rec.js', 'w').write(f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:1080,height:1920}}}});
