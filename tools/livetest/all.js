@@ -5,8 +5,8 @@
 // /koe は送信まで（隠し欄に字を入れて、保存されない形で）確かめる。結果は out/all.txt と out/all/*.jpg
 const {chromium}=require('playwright');const fs=require('fs');
 const OUT='out';fs.mkdirSync(OUT+'/all',{recursive:true});const log=[];const L=s=>{console.log(s);log.push(s)};
-const SITES=[{nm:'月',base:process.env.B1||'https://townnote.pages.dev',extra:['/odekake','/ima','/fudosan','/fudosan-list','/chika-kansai','/chika-osaka','/uru','/gyosha','/machi/osaka-01','/koe','/koyo','/tomari']},
-             {nm:'燈',base:process.env.B2||'https://lifenote-kanto.pages.dev',extra:['/odekake','/okaimono','/ima','/nesage','/kaimawari','/tanka','/furusato','/tomari','/koyo','/privacy','/koe']}];
+const SITES=[{nm:'月',base:process.env.B1||'https://kansai.townnote.app',extra:['/odekake','/ima','/fudosan','/fudosan-list','/chika-kansai','/chika-osaka','/uru','/gyosha','/machi/osaka-01','/koe','/koyo','/tomari']},
+             {nm:'燈',base:process.env.B2||'https://kanto.townnote.app',extra:['/odekake','/okaimono','/ima','/nesage','/kaimawari','/tanka','/furusato','/tomari','/koyo','/privacy','/koe']}];
 const UA='Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1 livetest';
 async function list(s){let l=['/'];try{if(!API)API=await require('playwright').request.newContext();const x=await (await API.get(s.base+'/sitemap.xml')).text();for(const m of x.matchAll(/<loc>([^<]+)<\/loc>/g))l.push(new URL(m[1]).pathname);}catch(e){}
   l=l.filter(p=>!/^\/machi\//.test(p)).concat(s.extra).map(p=>p.replace(/\.html$/,''));return [...new Set(l)];}

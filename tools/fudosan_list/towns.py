@@ -11,7 +11,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 T = os.path.join(ROOT, "tools/fudosan_list/towns")
 live = "--mihon" not in sys.argv  # 11/12 ミス：--live を付け忘れて回し、街ページ205枚と実家ページ201枚が noindex のまま本番に出た（#724〜#736）。付け忘れても本番の形になるよう、逆にした（見本の時だけ --mihon）
 E = html.escape
-BASE = "https://townnote.pages.dev"
+BASE = "https://kansai.townnote.app"
 TODAY = "2026年11月1日"
 
 PREFS = [  # (府県, csv, 英字, 色, 出典の名前, 出典URL, 府県の言い方)
@@ -650,7 +650,7 @@ def has_sold(t):
 
 
 # 11/13 オーナー「まじで売上ないのが辛すぎる」→ 関東（LIFE）と同じ A8 のボタンを関西にも。A8 のサイト登録が関東だけなので、
-# 関西（townnote.pages.dev）をサイトに足して提携が通ったら、ここに a8mat を入れる（空のうちは何も出さない＝今の見た目のまま）。
+# 関西（kansai.townnote.app）をサイトに足して提携が通ったら、ここに a8mat を入れる（空のうちは何も出さない＝今の見た目のまま）。
 # 関西は相談がオーナーの仕事につながるので、売却の相談ボタンはそのまま一番上に残し、AI査定はその下に足す。
 A8_ZAKU_K = ""   # ざっくりAI査定＋（新規WEB査定申込 3,400円）。関西サイトで提携したら入れる
 A8_POI_K = ""    # ぽいみつ（不用品回収の一括見積り 5,000円）。関西サイトで提携したら入れる

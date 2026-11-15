@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://townnote.pages.dev/sitemap.xml
-Sitemap: https://townnote.pages.dev/sitemap-all.xml
-Sitemap: https://townnote.pages.dev/sitemap-main.xml
+Sitemap: https://kansai.townnote.app/sitemap.xml
+Sitemap: https://kansai.townnote.app/sitemap-all.xml
+Sitemap: https://kansai.townnote.app/sitemap-main.xml

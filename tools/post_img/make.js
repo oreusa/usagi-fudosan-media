@@ -32,7 +32,7 @@ const CARD=(img,label,page)=>`<!doctype html><meta charset="utf-8"><link href="h
 .ph{position:absolute;left:40px;top:168px;width:1000px;height:1026px;border-radius:44px;overflow:hidden;background:#fff;box-shadow:0 24px 60px rgba(90,70,50,.18),0 0 0 1px #E4DACD}
 .ph img{width:1040px;display:block}.ph:after{content:"";position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(rgba(255,255,255,0),#fff)}
 .ft{position:absolute;left:0;right:0;bottom:62px;text-align:center;font-size:34px;letter-spacing:.12em;color:#6B5F55}</style>
-<div class="hd"><b>${label}</b><i>TOWN NOTE</i></div><div class="ph"><img src="${img}"></div><div class="ft">つづきは townnote.pages.dev${page}</div>`;
+<div class="hd"><b>${label}</b><i>TOWN NOTE</i></div><div class="ph"><img src="${img}"></div><div class="ft">つづきは kansai.townnote.app${page}</div>`;
 (async()=>{fs.mkdirSync(OUT,{recursive:true});const idxf=path.join(OUT,'index.json');let idx={};try{idx=JSON.parse(fs.readFileSync(idxf,'utf8')).items||{}}catch(e){}
  await new Promise(r=>srv.listen(0,r));const port=srv.address().port;const b=await chromium.launch();
  const ctx=await b.newContext({viewport:{width:390,height:844},deviceScaleFactor:3,timezoneId:'Asia/Tokyo',colorScheme:'light'});const p=await ctx.newPage();await p.clock.setFixedTime(new Date('2026-11-11T03:00:00Z')); // 昼の見た目で撮る（夜は night.js が色を変える）

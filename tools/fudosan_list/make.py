@@ -10,7 +10,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 SRC = os.path.join(ROOT, "links/index.html")
 OUT = os.path.join(ROOT, "links/fudosan-list.html")
 FACTS = json.load(open(os.path.join(ROOT, "tools/fudosan_list/facts.json"), encoding="utf-8"))
-URL = "https://townnote.pages.dev/fudosan-list"
+URL = "https://kansai.townnote.app/fudosan-list"
 live = "--mihon" not in sys.argv
 E = html.escape
 
@@ -30,8 +30,8 @@ def drop(pat):
 h = re.sub(r"<title>[^<]*</title>", "<title>関西不動産リスト｜地価・人口・新しい施設・制度を公式の数字で</title>", h, count=1)  # 11/2 おでかけの題名が変わっても必ず置きかえる
 desc = "大阪・京都・兵庫・奈良・滋賀・和歌山の地価、人口、駅の乗る人、新しい施設、住まいの制度を、公式の資料つきでまとめました。"
 h = re.sub(r'<meta name="description"[^>]*>', f'<meta name="description" content="{desc}">' + ("" if live else '<meta name="robots" content="noindex">'), h, count=1)
-h = h.replace('content="https://townnote.pages.dev/odekake"', f'content="{URL}"')
-h = h.replace('<link rel="canonical" href="https://townnote.pages.dev/odekake">', f'<link rel="canonical" href="{URL}">')
+h = h.replace('content="https://kansai.townnote.app/odekake"', f'content="{URL}"')
+h = h.replace('<link rel="canonical" href="https://kansai.townnote.app/odekake">', f'<link rel="canonical" href="{URL}">')
 h = h.replace('<meta property="og:title" content="関西おでかけリスト">', '<meta property="og:title" content="関西不動産リスト">')
 h = re.sub(r'<meta property="og:description"[^>]*>', f'<meta property="og:description" content="{desc}">', h, count=1)
 

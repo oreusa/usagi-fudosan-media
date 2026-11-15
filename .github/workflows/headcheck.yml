@@ -17,7 +17,7 @@ jobs:
           out=stats/headcheck.txt; : > $out
           echo "見た時刻 $(TZ=Asia/Tokyo date '+%F %H:%M')" >> $out
           G="Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
-          for site in https://townnote.pages.dev https://lifenote-kanto.pages.dev; do
+          for site in https://kansai.townnote.app https://kanto.townnote.app; do
             for p in /robots.txt /sitemap.xml /sitemap-all.xml /sitemap-main.xml / /kaitai-ranking /odekake; do
               for ua in "ふつう" "Googlebot"; do
                 a="Mozilla/5.0"; [ "$ua" = "Googlebot" ] && a="$G"

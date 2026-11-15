@@ -47,12 +47,12 @@ export default {
       const sorted = Object.fromEntries(Object.entries(total).sort((a, b) => b[1] - a[1]));
       return Response.json({ days, total: sorted, by_day: rows }, { headers: { "cache-control": "no-store" } });
     }
-    // 11/1 URLを TOWN NOTE（townnote.pages.dev）へ引っ越し。古いURLのページは新しいURLへ自動で飛ばす。
+    // 11/1 URLを TOWN NOTE（kansai.townnote.app）へ引っ越し。古いURLのページは新しいURLへ自動で飛ばす。
     // /c と /stats は、新しいURLからも数を送ってくるので、ここで今まで通り数え続ける。
     if (req.method === "GET" || req.method === "HEAD") {
       // 古いURLの一番上はおでかけリストだったので、/odekake へ（過去の投稿・プロフィールのリンクの意味を変えない）
       const path = url.pathname === "/" || url.pathname === "/index.html" ? "/odekake" : url.pathname;
-      return Response.redirect("https://townnote.pages.dev" + path + url.search, 301);
+      return Response.redirect("https://kansai.townnote.app" + path + url.search, 301);
     }
     return env.ASSETS.fetch(req);
   },

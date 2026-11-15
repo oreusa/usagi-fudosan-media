@@ -4,7 +4,7 @@
 import datetime, html, json, os, re, sys, urllib.parse
 TODAY = datetime.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else datetime.date.today()
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", "..")
-BASE = "https://townnote.pages.dev/"
+BASE = "https://kansai.townnote.app/"
 PREFS = ["大阪", "京都", "兵庫", "奈良", "滋賀", "和歌山"]
 s = open(os.path.join(ROOT, "links", "koyo.html"), encoding="utf-8").read()
 PC = dict(re.findall(r'data-p="(\S+?)" style="--pc:(#[0-9A-Fa-f]+)"', s))

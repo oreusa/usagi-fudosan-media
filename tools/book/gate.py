@@ -29,7 +29,7 @@ NG_W = [(re.compile(rx), why) for rx, why in NG["words"]]
 NG_ALLOW = NG.get("allow", [])
 
 LINK_RE = re.compile(r"https?://[^\s　）)」]+")
-TOWN_RE = re.compile(r"https://townnote\.pages\.dev(/[^\s?#]*)?(\?[^\s#]*)?")
+TOWN_RE = re.compile(r"https://kansai\.townnote\.app(/[^\s?#]*)?(\?[^\s#]*)?")
 MARK_RE = re.compile(r"^(th|x|ig)-([a-z0-9]+)-(\d{4})([a-z]+\d*)$")
 
 
@@ -124,7 +124,7 @@ def check_one(dr, d, tab, seen_heads):
             for m in LINK_RE.finditer(t):
                 u = m.group(0)
                 if "github.io" in u or "oreusa" in u or "workers.dev" in u:
-                    bad.append(f"お客さんに見せないアドレス {u[:60]}（HPは https://townnote.pages.dev/）")
+                    bad.append(f"お客さんに見せないアドレス {u[:60]}（HPは https://kansai.townnote.app/）")
             for m in TOWN_RE.finditer(t):
                 q = m.group(2) or ""
                 f = re.search(r"[?&]f=([^&#\s]+)", q)
@@ -140,7 +140,7 @@ def check_one(dr, d, tab, seen_heads):
                 if mk.group(3) != mmdd:
                     bad.append(f"印の日付が {mk.group(3)}（{mmdd} にする）")
     if want and want.get("link", True) and not links:
-        bad.append("HP（townnote.pages.dev）へのリンクが無い")
+        bad.append("HP（kansai.townnote.app）へのリンクが無い")
     if want and want.get("link") is False and LINK_RE.search(xs[0]):
         bad.append("X の1本目にリンクがある（この枠は本文にリンクを入れない。要るなら返信の2本目に）")
     if want and want.get("x") and xs[0].strip():

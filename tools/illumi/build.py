@@ -99,7 +99,7 @@ for p, n, city, peak, fee, url, note in sorted(MEISHO, key=lambda x: (prange(x[3
 MNOTE = '<p class="mnote">見頃は各公式ページ（施設・市・観光協会）の目安です。色づきは年によってずれるので、お出かけ前にリンク先でご確認ください。</p>'
 SLUG = {"大阪":"osaka","京都":"kyoto","兵庫":"hyogo","奈良":"nara","滋賀":"shiga","和歌山":"wakayama"}
 def fu(p): return p + ("府" if p in ("大阪","京都") else "県")
-BASE = "https://townnote.pages.dev/"
+BASE = "https://kansai.townnote.app/"
 upd = f"{TODAY.year}年{TODAY.month}月{TODAY.day}日"
 _mj = os.path.join(os.path.dirname(__file__), "../../links/townnotes/map-illumi.js")
 _yj = os.path.join(os.path.dirname(__file__), "../../links/assets/yado.js")
@@ -175,7 +175,7 @@ def render(sel, fname, title, desc, ogt, en, h1a, h1b, sub, links, crumb, kind="
     return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{title}</title><meta name="description" content="{desc}"><link rel="canonical" href="{url}">
 <meta property="og:type" content="article"><meta property="og:url" content="{url}"><meta property="og:title" content="{ogt}"><meta property="og:description" content="{desc}">
-<meta property="og:image" content="https://townnote.pages.dev/assets/ogp.png"><meta name="twitter:card" content="summary">
+<meta property="og:image" content="https://kansai.townnote.app/assets/ogp.png"><meta name="twitter:card" content="summary">
 <meta property="article:modified_time" content="{TODAY.isoformat()}T07:00:00+09:00">
 <link rel="icon" href="assets/ogp.png"><link rel="apple-touch-icon" href="/assets/icon-180.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#FFFFFF">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">

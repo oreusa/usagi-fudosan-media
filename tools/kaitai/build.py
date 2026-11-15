@@ -5,7 +5,7 @@
 import datetime, html, json, os, re, sys
 TODAY = datetime.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else datetime.date.today()
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", "..")
-BASE = "https://townnote.pages.dev/"
+BASE = "https://kansai.townnote.app/"
 E = html.escape
 # 解体：1坪あたり（万円）。三井のリハウス「解体費用の相場」2025.05.14（11/11 に開いて確認）
 SRC_K = ("三井のリハウス「家の解体費用の相場」（2025年5月）", "https://www.rehouse.co.jp/relifemode/column/at/at_0059/")
@@ -116,7 +116,7 @@ s = re.sub(r"<script([^>]*)>(.*?)</script>", _sc, s, flags=re.S)
 R = {k: [lo, hi, n] for k, n, lo, hi in RATES}; K = {k: [lo, hi, n, x] for k, n, lo, hi, x in KATA}
 JS = ('<script>(function(){var O=false;try{O=localStorage.getItem("usagi_owner")==="1";}catch(e){}'
       'function c(k){if(O)return;try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}'
-      'c("表示：解体・片付けの費用"+(document.referrer&&!/townnote\\.pages/.test(document.referrer)?"（外から）":""));'
+      'c("表示：解体・片付けの費用"+(document.referrer&&!/townnote\\.(pages|app)/.test(document.referrer)?"（外から）":""));'
       'document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest("[data-k]"):null;if(a)c("クリック：解体・片付けの費用｜"+a.getAttribute("data-k"));});'
       'var R=' + json.dumps(R, ensure_ascii=False) + ',K=' + json.dumps(K, ensure_ascii=False) + ',$=function(i){return document.getElementById(i)},mode="k",used=false,cur="";'
       'function show(){var l,v,w;if(mode==="k"){var r=R[$("kt-kind").value],t=Math.max(5,Math.min(300,Math.round(+$("kt-tsubo").value||0)));'

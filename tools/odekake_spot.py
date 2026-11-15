@@ -7,7 +7,7 @@ import re, json, html, sys, datetime, hashlib, os, glob
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import spot_map
 TODAY = sys.argv[1] if len(sys.argv) > 1 else datetime.date.today().isoformat()
-BASE = "https://townnote.pages.dev"
+BASE = "https://kansai.townnote.app"
 FU = {"大阪": "大阪府", "京都": "京都府", "兵庫": "兵庫県", "奈良": "奈良県", "滋賀": "滋賀県", "和歌山": "和歌山県"}
 SLUG = {"大阪": "osaka", "京都": "kyoto", "兵庫": "hyogo", "奈良": "nara", "滋賀": "shiga", "和歌山": "wakayama"}
 PC = {"大阪": "#B97A62", "京都": "#8E7CA8", "兵庫": "#5E8CA8", "奈良": "#7E9A6A", "滋賀": "#5A9A9A", "和歌山": "#C29A4E"}
@@ -189,7 +189,7 @@ for sp in spots:
 
 # サイトの地図：/o/ を全部入れかえる
 sm = open("links/sitemap.xml", encoding="utf-8").read()
-sm = re.sub(r"<url><loc>https://townnote\.pages\.dev/o/[^<]*</loc>.*?</url>\n?", "", sm)
+sm = re.sub(r"<url><loc>https://kansai\.townnote\.app/o/[^<]*</loc>.*?</url>\n?", "", sm)
 add = "".join(f"<url><loc>{BASE}/o/{sp['id']}</loc><lastmod>{TODAY}</lastmod></url>\n" for sp in spots)
 sm = sm.replace("</urlset>", add + "</urlset>")
 open("links/sitemap.xml", "w", encoding="utf-8").write(sm)

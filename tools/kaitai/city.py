@@ -9,7 +9,7 @@ from urllib.parse import quote
 
 TODAY = datetime.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else datetime.date.today()
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", "..")
-BASE = "https://townnote.pages.dev/"
+BASE = "https://kansai.townnote.app/"
 E = html.escape
 # 市：(ローマ字, 府県, 上限の万円（表を出さない市は None）, 割合（定額・上限だけの市は None）)
 CITY = {

@@ -111,7 +111,7 @@ def form(pre=""):
 </section>"""
 
 JS = r"""<script>(function(){
-var SITE="TOWN NOTE 業者さま",KV="https://lifenote-kanto.pages.dev/moushikomi-send",MAIL="https://formsubmit.co/ajax/"+["Infinity.daikoku","gmail.com"].join("@");
+var SITE="TOWN NOTE 業者さま",KV="https://kanto.townnote.app/moushikomi-send",MAIL="https://formsubmit.co/ajax/"+["Infinity.daikoku","gmail.com"].join("@");
 var f=document.getElementById("mf"),er=document.getElementById("er"),sb=document.getElementById("sb");
 f.addEventListener("change",function(e){var l=e.target.closest("label");if(l&&e.target.type==="checkbox"&&l.parentNode.className==="ch")l.className=e.target.checked?"on":""});
 function v(n){var e=f.querySelector('[name="'+n+'"]:checked')||f.elements[n];return e&&e.value?String(e.value).trim():""}
@@ -167,8 +167,8 @@ def page(fn, title, desc, h1, en, body, canon):
     h = f"""<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="{desc}">
 <link rel="icon" href="assets/ogp.png"><link rel="apple-touch-icon" href="/assets/icon-180.png"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#FFFFFF">
-<title>{title}</title><link rel="canonical" href="https://townnote.pages.dev/{canon}">
-<meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="https://townnote.pages.dev/assets/ogp.png">
+<title>{title}</title><link rel="canonical" href="https://kansai.townnote.app/{canon}">
+<meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="https://kansai.townnote.app/assets/ogp.png">
 {HEAD}{CSS}
 </head><body><div class="wrap">
 <div class="s3h"><img src="assets/logo-s.png?v=2" width="52" height="52" alt="ロゴ"><div><div class="en">{en}</div><h1>{h1}</h1></div></div>
@@ -210,7 +210,7 @@ for s, b, t, one, cases, need, pre in P:
 # ---- サイトマップ（毎日の作り直しでも消えないよう、ここで足す）
 sm = open(L + "sitemap.xml", encoding="utf-8").read()
 for u in ["gyosha"] + [f"gyosha-{p[0]}" for p in P]:
-    loc = f"<url><loc>https://townnote.pages.dev/{u}</loc>"
+    loc = f"<url><loc>https://kansai.townnote.app/{u}</loc>"
     if loc not in sm:
         sm = sm.replace("</urlset>", f"{loc}<lastmod>2026-11-09</lastmod></url>\n</urlset>")
 open(L + "sitemap.xml", "w", encoding="utf-8").write(sm)

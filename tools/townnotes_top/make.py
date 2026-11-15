@@ -9,7 +9,7 @@ import html, json, math, os, sys
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 live = "--try" not in sys.argv  # 11/6 入口は本番なので、ふだんは検索に出す形（見本だけ --try）
 E = html.escape
-BASE = "https://townnote.pages.dev"
+BASE = "https://kansai.townnote.app"
 K = json.load(open(os.path.join(ROOT, "links/townnotes/kansai.json"), encoding="utf-8"))
 PC = {"大阪": "#B97A62", "京都": "#8A7495", "兵庫": "#4F6681", "奈良": "#6F8C68", "滋賀": "#5F8F98", "和歌山": "#C4925A"}
 FILL = {"大阪": "#F7D9CC", "京都": "#E6DBF1", "兵庫": "#D6E4F5", "奈良": "#D8ECD4", "滋賀": "#D0EBEF", "和歌山": "#F8E4C4"}

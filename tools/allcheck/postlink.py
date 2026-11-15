@@ -13,7 +13,7 @@ import json
 import re
 import sys
 
-# 型ごとに、リンクしてよいページの頭（townnote.pages.dev の後ろ）
+# 型ごとに、リンクしてよいページの頭（kansai.townnote.app の後ろ）
 OK = {
     "rank": ("/ranking",),
     "kata": ("/ranking", "/illumination", "/kaitai", "/machi/"),
@@ -43,7 +43,7 @@ PIC = [
 
 NG = ("名前なしでも", "お名前は要りません", "名前は要りません")
 
-LINK_RE = re.compile(r"https://townnote\.pages\.dev(/[^\s?#]*)")
+LINK_RE = re.compile(r"https://kansai\.townnote\.app(/[^\s?#]*)")
 
 
 def texts_of(d):

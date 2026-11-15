@@ -4,7 +4,7 @@
    使い方: node tools/formcheck/check.js [out.json] [関西のURL] [関東のURL]（手元の確かめは URL に http://localhost:... を渡す） */
 const { chromium } = require('playwright'); const fs = require('fs');
 const OUT = process.argv[2] || 'stats/formcheck.json';
-const SITES = [['kansai', process.argv[3] || 'https://townnote.pages.dev'], ['kanto', process.argv[4] || 'https://lifenote-kanto.pages.dev']];
+const SITES = [['kansai', process.argv[3] || 'https://kansai.townnote.app'], ['kanto', process.argv[4] || 'https://kanto.townnote.app']];
 const step = p => p.evaluate(() => { const b = document.querySelector('.tkst b'); return b ? b.textContent : ''; });
 async function run(b, base, name, path, fn) {
   const ctx = await b.newContext({ viewport: { width: 390, height: 844 }, userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1' });

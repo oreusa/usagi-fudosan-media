@@ -454,7 +454,7 @@ if fc:
 else:
     item("form", "申し込みが送れるか", "未確認（stats/formcheck.json が無い）", "だめ 0・毎日確かめている", "未確認", "壊れていても、相談0のままでは気づけない")
 # 11/12 ミス→機械の点検：月が towns.py を --live なしで回し、街ページ205枚・実家ページ201枚が noindex（Google に「載せるな」）のまま半日 本番に出た。サイトマップに入っているのに noindex のページを毎朝数える
-_sm = re.findall(r"<loc>https://townnote\.pages\.dev/([^<]*)</loc>", open(os.path.join(ROOT, "links", "sitemap.xml"), encoding="utf-8").read())
+_sm = re.findall(r"<loc>https://kansai\.townnote\.app/([^<]*)</loc>", open(os.path.join(ROOT, "links", "sitemap.xml"), encoding="utf-8").read())
 _ni = []
 for _u in _sm:
     for _f in (_u + ".html", os.path.join(_u, "index.html") if _u else "index.html"):

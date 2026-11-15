@@ -1,5 +1,5 @@
 {
-  // 関西おでかけリンク集の古いURL。11/1 から townnote.pages.dev（Cloudflare Pages）へ自動で飛ばし、/c と /stats の数だけ受け持つ
+  // 関西おでかけリンク集の古いURL。11/1 から kansai.townnote.app（Cloudflare Pages）へ自動で飛ばし、/c と /stats の数だけ受け持つ
   // worker/index.js は表示とクリックの数を数えるだけ（/c と /stats）。ほかは links/ のファイルをそのまま返す
   "name": "usagi-odekake",
   "compatibility_date": "2026-10-01",

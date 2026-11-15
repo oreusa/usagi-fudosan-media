@@ -157,7 +157,7 @@ def test(now):
     due_utc = due.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
     img = "https://oreusa.github.io/usagi-fudosan-media/media/post/kaitai-ranking.jpg"
     for svc in ("threads", "twitter"):
-        texts = ["【予約係の試し】これは出ない下書きです", "2本目の試し https://townnote.pages.dev/?f=th-test-0000a"]
+        texts = ["【予約係の試し】これは出ない下書きです", "2本目の試し https://kansai.townnote.app/?f=th-test-0000a"]
         p = create(svc, texts, due_utc, topic="大阪" if svc == "threads" else None, image=img, alt="試し", draft=True)
         print(f"試しの下書き {svc}: {p}")
 

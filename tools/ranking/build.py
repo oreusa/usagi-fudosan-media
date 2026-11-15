@@ -5,7 +5,7 @@ HPで全部読める場所にする（投稿の2本目の行き先・連載の�
 import datetime, html, json, os, re, sys
 TODAY = datetime.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else datetime.date.today()
 HERE = os.path.dirname(os.path.abspath(__file__)); ROOT = os.path.join(HERE, "..", "..")
-BASE = "https://townnote.pages.dev/"
+BASE = "https://kansai.townnote.app/"
 E = html.escape
 items = json.load(open(os.path.join(HERE, "data.json"), encoding="utf-8"))["items"]
 towns = json.load(open(os.path.join(ROOT, "links", "assets", "towns.json"), encoding="utf-8"))
@@ -108,7 +108,7 @@ def _sc(m):
 s = re.sub(r"<script([^>]*)>(.*?)</script>", _sc, s, flags=re.S)
 JS = ('<script>(function(){var O=false;try{O=localStorage.getItem("usagi_owner")==="1";}catch(e){}'
       'function c(k){if(O)return;try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}'
-      'c("表示：関西まちランキング"+(document.referrer&&!/townnote\\.pages/.test(document.referrer)?"（外から）":""));'
+      'c("表示：関西まちランキング"+(document.referrer&&!/townnote\\.(pages|app)/.test(document.referrer)?"（外から）":""));'
       'document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest("[data-k]"):null;if(a)c("クリック：関西まちランキング｜"+a.getAttribute("data-k"));});'
       'document.querySelectorAll("details.rk").forEach(function(d){d.addEventListener("toggle",function(){if(d.open)c("ランキング｜開いた｜"+d.id);});});'
       'var h=location.hash.slice(1),t=h&&document.getElementById(h);if(t&&t.tagName==="DETAILS"){t.open=true;t.scrollIntoView();}'
