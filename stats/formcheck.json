@@ -1,8 +1,8 @@
 {
- "at": "2026-11-15 11:08",
+ "at": "2026-11-15 21:17",
  "sites": {
   "kansai": {
-   "base": "https://townnote.pages.dev",
+   "base": "https://kansai.townnote.app",
    "ok": true,
    "rows": [
     {
@@ -26,7 +26,7 @@
    ]
   },
   "kanto": {
-   "base": "https://lifenote-kanto.pages.dev",
+   "base": "https://kanto.townnote.app",
    "ok": true,
    "rows": [
     {
