@@ -131,12 +131,13 @@ function mgPre(){if(window.MGP)return MGP;const r=XR(4242);const P={bok:[],dust:
 function mgEdge(t,k){const a0=k==0?OPEN-1.25:ST[k]-TURN,a1=k==0?OPEN:ST[k];const q=sm(t,a0,a1);return{q,x:BX+BW*Math.cos(eio(q)*178*Math.PI/180)}}
 function mgDraw(t){const cv=document.getElementById('mg');if(!cv)return;const c=cv.getContext('2d');c.setTransform(1,0,0,1,0,0);c.globalAlpha=1;c.filter='none';c.clearRect(0,0,1080,1920);const P=mgPre();c.globalCompositeOperation='lighter';
  // 机のまわり：手前のぼけ玉（少しだけ、ゆっくり）
- for(const b of P.bok){const y=((b.y-t*b.v)%2100+2100)%2100-90;mgBokeh(c,b.x+Math.sin(t*.3+b.p)*20,y,b.R,b.c,b.a*(.75+.25*Math.sin(t*.7+b.p)))}
+ const bk=Math.max(0,Math.min(1,(t-2.9)/1.4));if(bk>0)for(const b of P.bok){const y=((b.y-t*b.v)%2100+2100)%2100-90;mgBokeh(c,b.x+Math.sin(t*.3+b.p)*20,y,b.R,b.c,b.a*bk*(.75+.25*Math.sin(t*.7+b.p)))}
  // 本のまわりの金の星（またたく）
  for(const w of P.tw){const k=.55+.45*Math.sin(t*w.sp+w.p);mgSpark(c,w.x,w.y,w.s*(.7+.3*k),.35+.6*k,.3*Math.sin(t*.4+w.p))}
  // 表紙が開く時：ページから光の筋がさし、その中にほこりが光る
- const og=mgBump(t,1.5,2.7,4.6);if(og>0){const ox=544,oy=1180;c.save();c.filter='blur(9px)';
-  for(const ry of P.rays){const a=ry.a+Math.sin(t*.4+ry.p)*.03,L=ry.l*(.6+.4*og);const g=c.createLinearGradient(ox,oy,ox+Math.cos(a)*L,oy+Math.sin(a)*L);g.addColorStop(0,`rgba(255,226,170,${.0})`);g.addColorStop(.12,`rgba(255,226,170,${.42*og*ry.al})`);g.addColorStop(1,'rgba(255,210,150,0)');
+ // 11/16 owner「開く前から光が出てる？」「昼間だけど」→ 光の筋はやめ、開く瞬間だけページの奥がふわっと明るくなる
+ const og=mgBump(t,1.7,2.3,3.0)*.6;if(og>0){const ox=544,oy=1180;c.save();c.filter='blur(9px)';
+  if(false)for(const ry of P.rays){const a=ry.a+Math.sin(t*.4+ry.p)*.03,L=ry.l*(.6+.4*og);const g=c.createLinearGradient(ox,oy,ox+Math.cos(a)*L,oy+Math.sin(a)*L);g.addColorStop(0,`rgba(255,226,170,${.0})`);g.addColorStop(.12,`rgba(255,226,170,${.42*og*ry.al})`);g.addColorStop(1,'rgba(255,210,150,0)');
    c.fillStyle=g;c.beginPath();c.moveTo(ox,oy);c.lineTo(ox+Math.cos(a-ry.w)*L,oy+Math.sin(a-ry.w)*L);c.lineTo(ox+Math.cos(a+ry.w)*L,oy+Math.sin(a+ry.w)*L);c.closePath();c.fill()}
   c.filter='none';const g=c.createRadialGradient(ox,oy-200,30,ox,oy-200,700);g.addColorStop(0,`rgba(255,228,180,${.32*og})`);g.addColorStop(1,'rgba(255,200,140,0)');c.fillStyle=g;c.fillRect(0,0,1080,1920);
   for(const d of P.dust){const y=d.y-((t-1.5)*d.v),x=d.x+Math.sin(t*.8+d.p)*12;const tw=.5+.5*Math.sin(t*2+d.p*3);mgDot(c,MG_WARM,x,y,d.s*2.2,og*.55*tw)}c.restore()}
