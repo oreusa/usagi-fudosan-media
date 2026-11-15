@@ -25,8 +25,11 @@ _t = open(os.path.join(ROOT, "tools", "fudosan_list", "towns.py"), encoding="utf
 _a = _t.index("J_CITY = ["); J_CITY = _ast.literal_eval(_t[_a + 9:_t.index("\n]\n", _a) + 2])
 _ns = {}; exec(re.search(r"^J_DATE = .*$", _t, re.M).group(0), _ns); J_DATE = _ns["J_DATE"]
 _hj = [(c, h, tx, st, u) for c, rows in J_CITY for h, tx, st, u in rows if "解体" in h]
+# 11/15 同じ市に制度が2つある時は、見出しに制度の名前を足す（重なって見えないように）
+_hn = {}
+for _c, *_ in _hj: _hn[_c] = _hn.get(_c, 0) + 1
 hojo = ('<!--hojo--><section id="hojo" class="ps" style="--c:#4F7BA8"><h2>解体の補助がある市</h2><p class="rk-sub">公式ページで確かめられた市だけ・順に足します</p>'
-        + "".join(f'<div class="kt-hj"><b>{E(c)}</b>' + (f'<em class="{"x" if st in ("受付停止", "受付終了") else ""}">{st}</em>' if st else "") + f'<p>{E(tx)}</p><a href="{E(u)}" target="_blank" rel="noopener" data-k="費用｜市の補助｜{E(c)}">{E(c)}の公式ページ（{J_DATE.get(c, "2026年11月10日")}に確認） →</a></div>' for c, h, tx, st, u in _hj)
+        + "".join(f'<div class="kt-hj"><b>{E(c)}</b>' + (f'<span style="font-size:13px;margin-left:6px">{E(h)}</span>' if _hn[c] > 1 else "") + (f'<em class="{"x" if st in ("受付停止", "受付終了") else ""}">{st}</em>' if st else "") + f'<p>{E(tx)}</p><a href="{E(u)}" target="_blank" rel="noopener" data-k="費用｜市の補助｜{E(c)}">{E(c)}の公式ページ（{J_DATE.get(c, "2026年11月10日")}に確認） →</a></div>' for c, h, tx, st, u in _hj)
         + '<p class="kt-n">もらえるかどうかと金額は、役所の審査で決まります（このページは、確かめた日の公式の内容をまとめた物で、受け取りを約束するものではありません）。受付・条件・上限は変わります。交付が決まる前に契約や工事を始めると、対象外になる市が多いので、見積りの前に公式ページで確かめてください。ここに無い市も、市役所の「空き家」の窓口で聞けます。</p></section><!--/hojo-->')
 secs = (
  '<section id="keisan" class="ps" style="--c:#4F7BA8"><h2>30秒で目安を出す</h2>'
