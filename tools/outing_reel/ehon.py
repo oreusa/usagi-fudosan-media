@@ -381,7 +381,7 @@ html = (html.replace('%XMAS%', open(ROOT + '/tools/outing_reel/xmas.js').read() 
         .replace('%OPEN%', str(OPEN)).replace('%TURN%', str(TURN)).replace('%TOTAL%', f'{TOTAL:.3f}'))
 open(f'{W}/ehon.html', 'w').write(html)
 open(f'{W}/rec.js', 'w').write(f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:1080,height:1920}}}});
-p.on('pageerror',e=>console.log('ERR',e.message));await p.goto('file://{W}/ehon.html');await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(400);
+p.setDefaultTimeout(240000);p.on('pageerror',e=>console.log('ERR',e.message));await p.goto('file://{W}/ehon.html',{{timeout:240000}});await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(400);
 for(let i=1;i<6;i++){{const t=await p.evaluate(i=>ST[i]-TURN-0.001,i);await p.evaluate(t=>{{render(t);document.querySelectorAll('#deco,#lamp,#pg,#bk,#top,#mg').forEach(e=>e.style.visibility='hidden');document.getElementById('cam').style.transform='none'}},t);
  const buf=await p.locator('#p'+i).screenshot({{type:'jpeg',quality:94}});await p.evaluate(a=>{{(window.SNAP=window.SNAP||{{}})[a[0]]=a[1];document.querySelectorAll('#deco,#lamp,#pg,#bk,#top,#mg').forEach(e=>e.style.visibility='')}},[i,'data:image/jpeg;base64,'+buf.toString('base64')])}}
 const only=process.argv[2];if(only){{for(const t of only.split(',')){{await p.evaluate(t=>render(t),+t);await p.screenshot({{path:'{W}/c-'+t+'.jpg',type:'jpeg',quality:85}});}}await b.close();return}}

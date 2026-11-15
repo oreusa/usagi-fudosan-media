@@ -1,3 +1,4 @@
+let SCB=null;function scBlur(c,px,fn){if(!SCB)SCB=xmCanvas(XW,XH);const g=SCB.getContext('2d');g.setTransform(1,0,0,1,0,0);g.globalAlpha=1;g.filter='none';g.globalCompositeOperation='source-over';g.clearRect(0,0,XW,XH);fn(g);c.save();c.filter=`blur(${px}px)`;c.drawImage(SCB,0,0);c.restore()}
 // 11/16 絵本の景色（canvas・3層でページから立ち上がる）。xmas.js の道具（wash・wob・glow・xmPerson など）を使う。
 // scene 'momiji'＝社ともみじの苑（昼の楼門／もみじの谷と朱の橋とお茶の席／夜のライトアップ）
 // scene 'hama'＝白い砂浜と海（昼の浜／夕焼けと円い穴の島／夜の光のパレード）
@@ -176,8 +177,8 @@ function mjTree(c,cx,by,h,mode,seed,L,o){o=o||{};const r=XR(seed);const night=mo
  const cl=[];const N=o.cl||30;for(let i=0;i<N;i++){const a=r()*6.283,rr=Math.sqrt(r())*.8;cl.push([ccx+Math.cos(a)*rr*rx,ccy+Math.sin(a)*rr*ry*.9-ry*.05,h*(.075+r()*.05)])}
  for(let a=-Math.PI;a<Math.PI;a+=.32+r()*.12){if(a>.5&&a<2.6)continue;cl.push([ccx+Math.cos(a)*rx*.92,ccy+Math.sin(a)*ry*.95,h*(.055+r()*.04)])}
  const vis=cl.filter(([x,y])=>!(o.zone&&SC_ZONE(x,y)));
- c.save();c.filter='blur(6px)';for(const[x,y,R]of vis){c.globalAlpha=.75;c.fillStyle=pal.X;c.beginPath();c.ellipse(x+R*.1,y+R*.25,R*1.05,R*.9,0,0,7);c.fill()}c.restore();
- c.save();c.filter='blur(2.5px)';const ly=night?.5:-.45,lx=night?0:-.35;for(const[x,y,R]of vis)scBlob(c,x,y,R,pal.L,pal.M,pal.D,lx,ly,.85);c.restore();
+ scBlur(c,6,g=>{g.globalAlpha=.75;g.fillStyle=pal.X;for(const[x,y,R]of vis){g.beginPath();g.ellipse(x+R*.1,y+R*.25,R*1.05,R*.9,0,0,7);g.fill()}});
+ const ly=night?.5:-.45,lx=night?0:-.35;scBlur(c,2.5,g=>{for(const[x,y,R]of vis)scBlob(g,x,y,R,pal.L,pal.M,pal.D,lx,ly,.85)});
  // 葉：かたまりの外側ほど大きめで、ふちがギザギザに見える
  const per=Math.round((o.n||1300)/Math.max(1,cl.length));
  for(const[x,y,R]of vis){for(let i=0;i<per;i++){const a=r()*6.283,d=Math.pow(r(),.55)*R*1.15;const px=x+Math.cos(a)*d,py=y+Math.sin(a)*d*.85;if(o.zone&&SC_ZONE(px,py))continue;
@@ -193,11 +194,11 @@ function mjForest(c,y0,y1,mode,seed,haze,L){const r=XR(seed);const night=mode==2
  for(let row=0;row<4;row++){const k=row/3,y=y0+(y1-y0)*k*.85,R=14+row*11,hz=(1-k)*(haze==null?.5:haze);const sky=mode==0?'#dfe6e8':'#efd8c0';
   // 杉の木（ところどころ）
   for(let x=r()*200;x<XW;x+=160+r()*260){const hh=R*3.2;c.fillStyle=night?EG:xmMix(EG,sky,hz);c.beginPath();c.moveTo(x,y-hh);c.lineTo(x+R*.9,y+R*.4);c.lineTo(x-R*.9,y+R*.4);c.closePath();c.fill()}
-  c.save();c.filter=`blur(${row<2?2.4:1.2}px)`;
+  scBlur(c,row<2?2.4:1.2,g=>{
   for(let x=-30;x<XW+40;x+=R*(.55+r()*.35)){const yy=y+(r()-.5)*R*.9+Math.sin(x*.012+row*2)*12;const base=P[Math.floor(r()*P.length)];
    const col=night?base:xmMix(base,sky,hz);const RR=R*(.75+r()*.6);
-   scBlob(c,x,yy,RR,xmMix(col,night?'#ff9a50':'#fff0c8',night?.18:.28),col,xmMix(col,'#000000',.28),night?0:-.3,night?.5:-.4,.96)}
-  c.restore();
+   scBlob(g,x,yy,RR,xmMix(col,night?'#ff9a50':'#fff0c8',night?.18:.28),col,xmMix(col,'#000000',.28),night?0:-.3,night?.5:-.4,.96)}
+});
   if(row>=1){const nl=row*260;for(let i=0;i<nl;i++){const x=r()*XW,yy=y+(r()-.5)*R*1.6+Math.sin(x*.012+row*2)*12;const col=night?P[i%P.length]:xmMix(P[i%P.length],sky,hz*.8);c.fillStyle=xmMix(col,i%3?'#ffd890':'#3a0c08',night?.1:.22);c.globalAlpha=.8;mjLeaf(c,x,yy,3+row*1.6,r()*6)}c.globalAlpha=1}
   if(night&&L&&row>=1)for(let x=40;x<XW;x+=140+r()*80)L.push({x,y:y+R*.6,r:R*3.4,c:'255,120,60',a:.08+row*.025,p:r()*6,sp:.3,soft:1})}}
 // 楼門（本格版）：組物・瓦の線・額・金具
