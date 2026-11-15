@@ -14,12 +14,13 @@ function xmSnow(c,mode,t){const n=[46,70,96][mode],r=XR(700+mode);c.save();c.glo
  for(let i=0;i<n;i++){const x0=r()*XW,sp=28+r()*70,sz=1.2+r()*r()*5,ph=r()*7,y0=r()*(XH+60);
   const y=((y0+t*sp*(.6+sz/6))%(XH+60))-30,x=x0+Math.sin(t*.8+ph)*16*(sz/3+.4);
   mgDot(c,MG_SNOW,x,y,sz*1.6,(mode==0?.7:mode==1?.8:.85)*(.55+.45*Math.min(1,sz/3)))}
+ for(let i=0;i<7;i++){const x0=r()*XW,sp=150+r()*90,sz=7+r()*7,ph=r()*7,y0=r()*(XH+200);const y=((y0+t*sp)%(XH+200))-100,x=x0+Math.sin(t*.6+ph)*30;mgDot(c,MG_SNOW,x,y,sz*1.8,mode==0?.28:.35)}
  c.restore()}
 // ---------- 夕方：流れ星と、ツリーの星からのぼる光 ----------
 function xmShoot(c,u){const k=(u-1.1)/.55;if(k<=0||k>=1.6)return;const e=Math.min(1,k),x=470-330*e,y=70+190*e;const a=k<1?1:1-(k-1)/.6;
  c.save();c.globalCompositeOperation='lighter';const L=170,dx=330/Math.hypot(330,190)*L,dy=190/Math.hypot(330,190)*L;
- const g=c.createLinearGradient(x,y,x+dx,y-dy);g.addColorStop(0,`rgba(255,240,200,${.95*a})`);g.addColorStop(1,'rgba(255,240,200,0)');c.strokeStyle=g;c.lineWidth=2.6;c.lineCap='round';c.beginPath();c.moveTo(x,y);c.lineTo(x+dx,y-dy);c.stroke();
- mgDot(c,MG_WARM,x,y,16,a);c.restore()}
+ for(const[w,al,bl]of[[7,.25,4],[2.2,.9,0]]){const g=c.createLinearGradient(x,y,x+dx,y-dy);g.addColorStop(0,`rgba(255,244,214,${al*a})`);g.addColorStop(1,'rgba(255,244,214,0)');c.strokeStyle=g;c.lineWidth=w;c.lineCap='round';c.filter=bl?`blur(${bl}px)`:'none';c.beginPath();c.moveTo(x,y);c.lineTo(x+dx,y-dy);c.stroke()}c.filter='none';
+ mgDot(c,MG_WARM,x,y,22,a*.9);c.restore()}
 function xmRise(c,x,y,t,seed,n){const r=XR(seed);c.save();c.globalCompositeOperation='lighter';
  for(let i=0;i<n;i++){const T=2.6+r()*1.6,p=((t/T+r())%1),vx=(r()-.5)*220,s=1.2+r()*2.6;const px=x+vx*p+Math.sin(t*1.3+i)*10,py=y-p*(260+r()*200);mgDot(c,MG_GOLD,px,py,s*3,Math.sin(Math.PI*p)*.9)}c.restore()}
 // ---------- 夜：月の前をそりが横切る ----------
@@ -37,19 +38,22 @@ function mgSleighShape(c,x,y,k){c.save();c.translate(x,y);c.scale(k,k);
  c.beginPath();c.arc(4,-24,8,0,7);c.fill();c.beginPath();c.arc(4,-35,4.6,0,7);c.fill();c.beginPath();c.moveTo(0,-38);c.quadraticCurveTo(-4,-46,-9,-44);c.lineTo(-8,-40);c.quadraticCurveTo(-3,-41,8,-37);c.fill();   // サンタ
  c.beginPath();c.ellipse(19,-25,7,9,.3,0,7);c.fill();c.restore()}   // 袋
 function mgPath(s){return[980-1110*s,58+190*Math.pow(1.4416*Math.max(0,s),3)]}   // 右上の文字の上を通って、月の前へ
-function xmSleigh(c,u){const s=(u-.45)/3.4;if(s<=0||s>1.35)return;c.save();c.globalCompositeOperation='lighter';
- // 光の粉のあと
- const r=XR(808);for(let j=0;j<120;j++){const sb=s-j*.0045-r()*.004;if(sb<0||sb>1)continue;const[px,py]=mgPath(sb);const age=s-sb;
-  mgDot(c,j%3?MG_GOLD:MG_WARM,px+18+(r()-.5)*14,py+6+age*240+(r()-.5)*10,(1.2+r()*2.4)*(1+age*2),Math.max(0,.85-age*2.6))}
- if(s<1.05){c.globalAlpha=1;const[x,y]=mgPath(s);const t2=u*9;c.fillStyle='rgba(255,226,160,.95)';c.strokeStyle='rgba(255,226,160,.95)';
-  c.shadowColor='rgba(255,200,110,.95)';c.shadowBlur=14;
-  // 手綱
-  const K=1.15,ds=[62,100,138,176].map((d,i)=>{const q=mgPath(s+d*K/1110);return[q[0],q[1]-4+Math.sin(t2+i)*1.6]});
-  c.lineWidth=.9;c.beginPath();c.moveTo(x-26*K,y-6*K);for(const d of ds)c.lineTo(d[0]+12*K,d[1]-6*K);c.stroke();
-  mgSleighShape(c,x,y,K);ds.forEach((d,i)=>mgDeer(c,d[0],d[1],K,t2+i*1.2));c.shadowBlur=0}
+function xmSleigh(c,u){const s=(u-.45)/3.4;if(s<=0||s>1.4)return;c.save();
+ // 光の帯：通った道をなめらかに、先ほど細く明るい
+ c.globalCompositeOperation='lighter';const s0=Math.max(0,s-.42),s1=Math.min(1,s);
+ for(const[wm,al,bl]of[[16,.16,7],[6,.35,2],[1.6,.85,0]]){c.filter=bl?`blur(${bl}px)`:'none';for(let j=0;j<40;j++){const a0=s0+(s1-s0)*j/40,a1=s0+(s1-s0)*(j+1)/40;if(a1<=a0)continue;const f=(j+1)/40,fade=Math.max(0,1-(s-a1)*2.6);
+   const p0=mgPath(a0),p1=mgPath(a1);c.strokeStyle=`rgba(255,${206+30*f|0},${140+60*f|0},${(al*f*fade).toFixed(3)})`;c.lineWidth=wm*(.3+.7*f);c.lineCap='round';c.beginPath();c.moveTo(p0[0]+24,p0[1]+4+(s-a0)*90);c.lineTo(p1[0]+24,p1[1]+4+(s-a1)*90);c.stroke()}}
+ c.filter='none';
+ // 帯からこぼれる少しの光
+ const r=XR(808);for(let j=0;j<14;j++){const sb=s-r()*.3;if(sb<0||sb>1)continue;const[px,py]=mgPath(sb);const age=s-sb;mgDot(c,MG_WARM,px+24+(r()-.5)*20,py+4+age*90+age*120*r(),2.4+r()*2,Math.max(0,.7-age*2.4))}
+ if(s<1.05){c.globalCompositeOperation='source-over';c.globalAlpha=1;const[x,y]=mgPath(s);const t2=u*9,K=1.2;
+  const ds=[62,100,138,176].map((d,i)=>{const q=mgPath(s+d*K/1110);return[q[0],q[1]-4+Math.sin(t2+i)*1.6]});
+  const draw=()=>{c.lineWidth=.9;c.beginPath();c.moveTo(x-26*K,y-6*K);for(const d of ds)c.lineTo(d[0]+12*K,d[1]-6*K);c.stroke();mgSleighShape(c,x,y,K);ds.forEach((d,i)=>mgDeer(c,d[0],d[1],K,t2+i*1.2))};
+  c.shadowColor='rgba(255,196,110,.95)';c.shadowBlur=10;c.fillStyle='#f2c879';c.strokeStyle='#f2c879';draw();   // ふちの金
+  c.shadowBlur=0;c.fillStyle='#161a33';c.strokeStyle='#161a33';c.save();c.translate(-.9,.9);draw();c.restore()}   // 影絵
  c.restore()}
 // 絵の中の動き（xmas.js の xmPage から毎コマ呼ぶ）
-function xmFx(c,mode,t,u){xmSnow(c,mode,t);if(mode==1){xmShoot(c,u);xmRise(c,320,282,t,61,26)}if(mode==2){xmSleigh(c,u);xmRise(c,320,445,t,62,18)}}
+function xmFx(c,mode,t,u){xmSnow(c,mode,t);if(mode==1)xmShoot(c,u);if(mode==2)xmSleigh(c,u)}
 
 // ---------- 日付のページ：赤レンガとツリーのスノードーム ----------
 const GW=460,GH=600,GX=230,GY=250,GR=200;let GBASE=null,GL=[],GGLASS=null,GFRONT=null;
@@ -82,7 +86,7 @@ function mgGlobeInit(){if(GBASE)return;GBASE=xmCanvas(GW,GH);const c=GBASE.getCo
  f.fillStyle='rgba(255,255,255,.18)';f.fillRect(a0+30,438,6,100)}
 const GOUT=xmCanvas(GW,GH),GO=GOUT.getContext('2d');
 function mgGlobe(t,u){mgGlobeInit();const c=GO;c.clearRect(0,0,GW,GH);c.save();c.beginPath();c.arc(GX,GY,GR-1,0,7);c.clip();c.drawImage(GBASE,0,0);
- c.globalCompositeOperation='lighter';for(const l of GL){const tw=l.soft?.85+.15*Math.sin(t*l.sp+l.p):.55+.45*Math.sin(t*l.sp+l.p);glow(c,l.x,l.y,l.r,l.c,l.a*tw);if(l.dot){c.fillStyle=`rgba(255,250,230,${.55+.45*tw})`;c.beginPath();c.arc(l.x,l.y,l.dot*.8,0,7);c.fill()}}
+ c.globalCompositeOperation='lighter';for(const l of GL){const tw=l.soft?.85+.15*Math.sin(t*l.sp+l.p):.55+.45*Math.sin(t*l.sp+l.p);if(l.ell){xmEll(c,l,l.a*tw);continue}glow(c,l.x,l.y,l.r,l.c,l.a*tw);if(l.dot){c.fillStyle=`rgba(255,250,230,${.55+.45*tw})`;c.beginPath();c.arc(l.x,l.y,l.dot*.8,0,7);c.fill()}}
  // 中の雪：ページが来た時に舞い上がって、ゆっくり落ちる
  c.globalCompositeOperation='source-over';const r=XR(512),sw=Math.max(0,1-u/2.6);
  for(let i=0;i<110;i++){const a0=r()*7,rr=30+r()*170,sp=10+r()*22,sz=1+r()*2.4,y0=r()*420;
@@ -104,7 +108,7 @@ function mgMarket(){const c=xmCanvas(XW,420),g=c.getContext('2d');const L=[];
  xmString(g,110,170,810,160,56,16,2,L,12);
  xmHut(g,170,318,150,0,41,L);xmHut(g,380,330,170,0,42,L);xmHut(g,610,316,150,0,43,L);
  xmPerson(g,350,388,80,'#6b3a3a',0,44);xmPerson(g,374,392,72,'#2e4a5e',0,45);
- g.globalCompositeOperation='lighter';for(const l of L){glow(g,l.x,l.y,l.r*.8,l.c,l.a*.6);if(l.dot){g.fillStyle='rgba(255,250,230,.8)';g.beginPath();g.arc(l.x,l.y,l.dot,0,7);g.fill()}}
+ g.globalCompositeOperation='lighter';for(const l of L){if(l.ell){xmEll(g,l,l.a*.6);continue}glow(g,l.x,l.y,l.r*.8,l.c,l.a*.6);if(l.dot){g.fillStyle='rgba(255,250,230,.8)';g.beginPath();g.arc(l.x,l.y,l.dot,0,7);g.fill()}}
  g.globalCompositeOperation='destination-in';g.save();g.translate(460,260);g.scale(1,.55);const m=g.createRadialGradient(0,0,200,0,0,420);m.addColorStop(0,'rgba(0,0,0,1)');m.addColorStop(1,'rgba(0,0,0,0)');g.fillStyle=m;g.fillRect(-460,-480,920,960);g.restore();
  return c.toDataURL('image/png')}
 // 紙のページの金の枠
@@ -114,27 +118,25 @@ function mgFrame(){const st=(x,y,s)=>`<path d="M${x},${y-s} Q${x+s*.12},${y-s*.1
 // ---------- 本のまわり：光の粒・めくる端の光・開いた時に光があふれる ----------
 // 座標は本を置いた机の上（#cam の中）。本は 84,232 から 920×1380
 const BX=84,BY=232,BW=920,BH=1380;
-function mgPre(){if(window.MGP)return MGP;const r=XR(4242);const P={amb:[],open:[],turn:[],end:[],tw:[]};
- for(let i=0;i<70;i++)P.amb.push({x:r()*1080,y:r()*1920,v:12+r()*30,s:r()<.18?10+r()*16:1.4+r()*2.8,p:r()*7,ice:r()<.25});
- for(let i=0;i<220;i++){const x=BX+r()*BW,y=BY+BH*(.15+r()*.85);P.open.push({x,y,tb:1.6+r()*1.6,life:1.4+r()*1.8,vx:(x-544)*(.15+r()*.35)+(r()-.5)*60,vy:-(90+r()*260),s:2+r()*4,sp:r()<.22})}
- for(let k=0;k<6;k++)for(let i=0;i<70;i++)P.turn.push({k,f:r(),y:BY+r()*BH,life:.7+r()*1.1,vx:(r()-.5)*70,vy:-(20+r()*110),s:1.2+r()*3})
- for(let i=0;i<70;i++){const a=r()*7,v=120+r()*320;P.end.push({tb:r()*.5,vx:Math.cos(a)*v,vy:Math.sin(a)*v*.6-60,life:.6+r()*.9,s:1.5+r()*3})}
- const spots=[[70,150,15],[168,96,9],[985,128,14],[905,70,8],[52,1700,12],[150,1790,16],[262,1850,8],[1010,1690,15],[905,1800,10],[790,1862,8],[1040,930,9],[30,1000,8],[40,520,7],[1050,420,7]];
- spots.forEach((q,i)=>P.tw.push({x:q[0],y:q[1],s:q[2]*1.4,p:r()*7,sp:1.2+r()*1.4}));window.MGP=P;return P}
+// ぼけ玉：ふちが少し明るい、やわらかい円
+function mgBokeh(c,x,y,R,rgb,a){if(a<=0)return;const g=c.createRadialGradient(x,y,0,x,y,R);g.addColorStop(0,`rgba(${rgb},${a*.55})`);g.addColorStop(.82,`rgba(${rgb},${a*.75})`);g.addColorStop(.93,`rgba(${rgb},${a})`);g.addColorStop(1,`rgba(${rgb},0)`);c.fillStyle=g;c.beginPath();c.arc(x,y,R,0,7);c.fill()}
+function mgPre(){if(window.MGP)return MGP;const r=XR(4242);const P={bok:[],dust:[],rays:[]};
+ const cols=['255,196,120','255,214,160','255,170,110','190,205,255'];
+ for(let i=0;i<11;i++){const side=i%2;P.bok.push({x:side?900+r()*240:-60+r()*240,y:r()*1920,R:30+r()*70,v:6+r()*12,p:r()*7,c:cols[i%4],a:.05+r()*.07})}
+ for(let i=0;i<70;i++)P.dust.push({x:BX+120+r()*(BW-240),y:BY+200+r()*1000,p:r()*7,v:6+r()*16,s:.8+r()*1.6});
+ for(let i=0;i<9;i++)P.rays.push({a:-Math.PI/2+(i-4)*.2+(r()-.5)*.08,w:.05+r()*.07,l:900+r()*500,p:r()*7,al:.5+r()*.5});
+ window.MGP=P;return P}
 function mgEdge(t,k){const a0=k==0?OPEN-1.25:ST[k]-TURN,a1=k==0?OPEN:ST[k];const q=sm(t,a0,a1);return{q,x:BX+BW*Math.cos(eio(q)*178*Math.PI/180)}}
-function mgDraw(t){const cv=document.getElementById('mg');if(!cv)return;const c=cv.getContext('2d');c.setTransform(1,0,0,1,0,0);c.clearRect(0,0,1080,1920);const P=mgPre();c.globalCompositeOperation='lighter';
- // 机の上を漂う光（大きいのはぼけた玉）
- for(const m of P.amb){const y=((m.y-t*m.v)%1980+1980)%1980-30,x=m.x+Math.sin(t*.5+m.p)*30;const a=m.s>9?.11+.05*Math.sin(t+m.p):.5+.4*Math.sin(t*1.7+m.p*3);mgDot(c,m.ice?MG_ICE:MG_GOLD,x,y,m.s*(m.s>9?1:2.4),a)}
- // まわりの星（またたく）
- for(const w of P.tw){const k=.55+.45*Math.sin(t*w.sp+w.p);mgSpark(c,w.x,w.y,w.s*(.7+.3*k),.35+.6*k,.3*Math.sin(t*.4+w.p))}
- // 表紙が開く時：ページから光があふれる
- const og=mgBump(t,1.55,2.5,4.2);if(og>0){c.globalAlpha=1;const g=c.createRadialGradient(544,900,40,544,900,820);g.addColorStop(0,`rgba(255,226,170,${.55*og})`);g.addColorStop(.45,`rgba(255,190,110,${.22*og})`);g.addColorStop(1,'rgba(255,190,110,0)');c.fillStyle=g;c.fillRect(0,0,1080,1920)}
- for(const p of P.open){const a=t-p.tb;if(a<0||a>p.life)continue;const k=a/p.life,px=p.x+p.vx*a,py=p.y+p.vy*a-20*a*a,al=Math.min(1,Math.sin(Math.PI*Math.min(1,k*1.6+.05))*(1-k)*1.6);if(p.sp)mgSpark(c,px,py,p.s*3.2,al,a*1.5);else mgDot(c,MG_WARM,px,py,p.s*2.8*(1-.4*k),al)}c.globalAlpha=1;
- // めくる端からこぼれる光の粉
- for(const p of P.turn){const k0=p.k;if(k0>=N)continue;const a0=k0==0?OPEN-1.25:ST[k0]-TURN,a1=k0==0?OPEN:ST[k0];const tb=a0+(a1-a0)*(.08+p.f*.75);const a=t-tb;if(a<0||a>p.life)continue;
-  const e=mgEdge(tb,k0);if(e.x<-20)continue;const k=a/p.life;mgDot(c,p.f>.5?MG_GOLD:MG_WARM,e.x+p.vx*a,p.y+p.vy*a+30*a*a,p.s*2.4,(1-k)*.95)}
- // ページの上にいつも少しだけ光の粒がのぼる
- const r=XR(99);for(let i=0;i<26;i++){const T=3+r()*2.5,ph=((t/T+r())%1),x=BX+60+r()*(BW-120),y=BY+BH*(.55+r()*.4)-ph*(300+r()*260);if(t<OPEN)continue;mgDot(c,MG_GOLD,x+Math.sin(t+i)*14,y,(1.2+r()*2.2)*2.4,Math.sin(Math.PI*ph)*.55)}
- // 最後：ボタンが出る時に光がはじける
- const te=ST[5]+3.15;for(const p of P.end){const a=t-te-p.tb;if(a<0||a>p.life)continue;const k=a/p.life;mgDot(c,MG_WARM,544+p.vx*a*(1-k*.4),1442+p.vy*a+90*a*a,p.s*2.4,(1-k))}
- c.globalAlpha=1;c.globalCompositeOperation='source-over'}
+function mgDraw(t){const cv=document.getElementById('mg');if(!cv)return;const c=cv.getContext('2d');c.setTransform(1,0,0,1,0,0);c.globalAlpha=1;c.filter='none';c.clearRect(0,0,1080,1920);const P=mgPre();c.globalCompositeOperation='lighter';
+ // 机のまわり：手前のぼけ玉（少しだけ、ゆっくり）
+ for(const b of P.bok){const y=((b.y-t*b.v)%2100+2100)%2100-90;mgBokeh(c,b.x+Math.sin(t*.3+b.p)*20,y,b.R,b.c,b.a*(.75+.25*Math.sin(t*.7+b.p)))}
+ // 表紙が開く時：ページから光の筋がさし、その中にほこりが光る
+ const og=mgBump(t,1.5,2.7,4.6);if(og>0){const ox=544,oy=1180;c.save();c.filter='blur(9px)';
+  for(const ry of P.rays){const a=ry.a+Math.sin(t*.4+ry.p)*.03,L=ry.l*(.6+.4*og);const g=c.createLinearGradient(ox,oy,ox+Math.cos(a)*L,oy+Math.sin(a)*L);g.addColorStop(0,`rgba(255,226,170,${.0})`);g.addColorStop(.12,`rgba(255,226,170,${.42*og*ry.al})`);g.addColorStop(1,'rgba(255,210,150,0)');
+   c.fillStyle=g;c.beginPath();c.moveTo(ox,oy);c.lineTo(ox+Math.cos(a-ry.w)*L,oy+Math.sin(a-ry.w)*L);c.lineTo(ox+Math.cos(a+ry.w)*L,oy+Math.sin(a+ry.w)*L);c.closePath();c.fill()}
+  c.filter='none';const g=c.createRadialGradient(ox,oy-200,30,ox,oy-200,700);g.addColorStop(0,`rgba(255,228,180,${.32*og})`);g.addColorStop(1,'rgba(255,200,140,0)');c.fillStyle=g;c.fillRect(0,0,1080,1920);
+  for(const d of P.dust){const y=d.y-((t-1.5)*d.v),x=d.x+Math.sin(t*.8+d.p)*12;const tw=.5+.5*Math.sin(t*2+d.p*3);mgDot(c,MG_WARM,x,y,d.s*2.2,og*.55*tw)}c.restore()}
+ // 最後：ボタンの上を光が横切り、まわりがほのかに明るくなる
+ const te=ST[5]+3.2;if(t>te){const a=Math.min(1,(t-te)/.6);const g=c.createRadialGradient(544,1442,40,544,1442,420);g.addColorStop(0,`rgba(255,200,150,${.22*a})`);g.addColorStop(1,'rgba(255,200,150,0)');c.fillStyle=g;c.fillRect(0,1000,1080,900);
+  const sw=((t-te-.6)%2.4)/1.1;if(sw>0&&sw<1){c.save();c.beginPath();c.roundRect?c.roundRect(84+142,232+1160,636,104,52):c.rect(84+142,232+1160,636,104);c.clip();const x=84+142-120+sw*(636+240);const q=c.createLinearGradient(x-60,0,x+60,0);q.addColorStop(0,'rgba(255,255,255,0)');q.addColorStop(.5,'rgba(255,245,225,.38)');q.addColorStop(1,'rgba(255,255,255,0)');c.fillStyle=q;c.fillRect(x-60,1380,120,140);c.restore()}}
+ c.globalAlpha=1;c.globalCompositeOperation='source-over';c.filter='none'}
