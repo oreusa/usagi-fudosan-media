@@ -56,6 +56,22 @@
    "n": 190,
    "code": 200,
    "all": 913
+  },
+  {
+   "day": "2026-11-16",
+   "site": "kansai",
+   "n": 596,
+   "code": 403,
+   "all": 596,
+   "err": "{\"errorCode\":\"SiteVerificationNotCompleted\",\"message\":\"Site Verification is not completed. Please wait for some time for the verification to complete and try again.\",\"details\":null}"
+  },
+  {
+   "day": "2026-11-16",
+   "site": "kanto",
+   "n": 230,
+   "code": 403,
+   "all": 890,
+   "err": "{\"errorCode\":\"SiteVerificationNotCompleted\",\"message\":\"Site Verification is not completed. Please wait for some time for the verification to complete and try again.\",\"details\":null}"
   }
  ]
 }
