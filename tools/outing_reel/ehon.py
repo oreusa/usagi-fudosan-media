@@ -106,8 +106,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 #bk circle{filter:blur(14px)}
 #deco{position:absolute;inset:0;width:1080px;height:1920px;pointer-events:none}
 #grain{position:absolute;inset:0;opacity:.35;mix-blend-mode:overlay;pointer-events:none}
-#top{position:absolute;left:0;right:0;top:92px;text-align:center;font:500 25px J;letter-spacing:.42em;color:#d9c39a}
-#top b{display:block;font:500 30px M;letter-spacing:.3em;margin-top:10px;color:#efe2c6}
+#top{position:absolute;z-index:3;left:0;right:0;top:92px;text-align:center;font:500 25px J;letter-spacing:.42em;color:#d9c39a}
+#top b{display:block;font:500 30px M;letter-spacing:.3em;margin-top:10px;color:var(--tb,#efe2c6)}
 #pg{position:absolute;left:0;right:0;top:1640px;text-align:center;font:500 26px M;letter-spacing:.5em;color:#cdb890}
 #cam{position:absolute;inset:0;transform-origin:540px 900px}
 #book{position:absolute;left:84px;top:232px;width:920px;height:1380px;perspective:2600px;perspective-origin:20% 50%}
@@ -150,7 +150,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 <radialGradient id="pm" cx=".5" cy=".47" r=".75"><stop offset=".35" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#fff" stop-opacity="1"/></radialGradient><mask id="pmk"><rect width="1080" height="1920" fill="url(#pm)"/></mask></defs><rect width="1080" height="1920" fill="url(#sp)" mask="url(#pmk)"/></svg>
 <svg id="bk" style="position:absolute;inset:0;width:1080px;height:1920px" viewBox="0 0 1080 1920"></svg>
 <div id="top"></div>
-<div id="cam"><div id="book"><div id="shadow"></div><div id="ribbon"></div><div id="block"></div><div id="pages"></div></div><canvas id="mg" width="1080" height="1920" style="position:absolute;left:0;top:0;pointer-events:none"></canvas></div>
+<div id="cam"><canvas id="dks" width="1080" height="1920" style="position:absolute;left:0;top:0"></canvas><canvas id="dkd" width="1080" height="1920" style="position:absolute;left:0;top:0"></canvas><div id="book"><div id="shadow"></div><div id="ribbon"></div><div id="block"></div><div id="pages"></div></div><canvas id="mg" width="1080" height="1920" style="position:absolute;left:0;top:0;pointer-events:none"></canvas></div>
 <svg id="deco" viewBox="0 0 1080 1920"></svg><div id="pg"></div><div id="lamp"></div>
 <svg id="grain"><filter id="gn"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .55 0"/></filter><rect width="100%" height="100%" filter="url(#gn)"/></svg>
 <script>
@@ -158,6 +158,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 %MAGIC%
 const P=%PAGE%,ST=%ST%,OPEN=%OPEN%,TURN=%TURN%,TOTAL=%TOTAL%,N=6;
 const $=s=>document.querySelector(s);
+%DESK%
 function rng(a){return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
 const cl=(x,a=0,b=1)=>Math.max(a,Math.min(b,x)),eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,eo=x=>1-Math.pow(1-x,3),sm=(t,a,b)=>cl((t-a)/(b-a));
 const DEFS=`<defs>
@@ -313,7 +314,9 @@ function build(){
   document.querySelectorAll('.lv').forEach((g,gi)=>{const r=rng(100+gi);let s='';const cols=XM?XHK:UMI?HK:['#c9402b','#e8862e','#f0b23a','#d4552d','#b5332a'];
     for(let i=0;i<16;i++)s+=`<g class="lf" data-x="${(r()*920).toFixed(0)}" data-s="${(.05+r()*.07).toFixed(3)}" data-p="${r().toFixed(3)}" data-z="${(14+r()*20).toFixed(0)}" data-w="${(r()*6).toFixed(2)}"><path d="${LP}" fill="${cols[i%5]}" opacity=".9"/></g>`;g.innerHTML=s});
   // 11/15 星の飾り：葉の筋と水彩のゆがみを外す（溶けた葉のように見えた）
-  if(MG){$('#desk').style.background='radial-gradient(120% 80% at 50% 42%,#2c3566 0%,#171c3d 55%,#0a0c1e 100%)';$('#deco').style.display='none';document.querySelectorAll('.lv').forEach(e=>e.style.display='none')}
+  if(DK){$('#desk').style.background={momiji:'#2e1a10',xmas:'#0e2219',hama:'#cfc3b0'}[DK];$('#pat').style.display='none';$('#bk').style.display='none';if(DK=='hama'){$('#top').style.color='#6b5440';$('#top').style.setProperty('--tb','#4a3328');$('#pg').style.color='#7a6450'}}
+  dkBuild();
+  if(MG&&!DK){$('#desk').style.background='radial-gradient(120% 80% at 50% 42%,#2c3566 0%,#171c3d 55%,#0a0c1e 100%)'}if(MG){$('#deco').style.display='none';document.querySelectorAll('.lv').forEach(e=>e.style.display='none')}
   if(XM){document.querySelectorAll('.dl path:nth-child(2)').forEach(e=>e.remove());document.querySelectorAll('[filter="url(#wc3)"]').forEach(e=>e.removeAttribute('filter'))}
   if(XM)document.querySelectorAll('.face:not(.cover) path').forEach((e,i)=>{if(e.getAttribute('d')==LP&&!e.closest('.lv'))e.setAttribute('fill',XHK[i%5])});
   if(XM)document.querySelectorAll('path').forEach(e=>{if(e.getAttribute('d')==LP&&!e.closest('.face'))e.setAttribute('fill','#e3c88c')});
@@ -323,7 +326,7 @@ function build(){
 function chars(id,t,t0,step=.07){const el=document.getElementById(id);if(!el)return;el.querySelectorAll('span').forEach((c,i)=>{const k=eo(sm(t,t0+i*step,t0+i*step+.45));c.style.opacity=k;c.style.transform=`translateY(${(1-k)*14}px)`})}
 function fade(id,t,t0,d=.6,dy=18){const el=document.getElementById(id);if(!el)return;const k=eo(sm(t,t0,t0+d));el.style.opacity=k;el.style.transform=`translateY(${(1-k)*dy}px)`}
 function render(t){
-  if(MG)mgDraw(t);
+  if(MG)mgDraw(t);dkDraw(t);
   // めくる
   const ang=[];ang[0]=eio(sm(t,OPEN-1.25,OPEN))*178;
   for(let i=1;i<=N;i++)ang[i]=i<N?eio(sm(t,ST[i]-TURN,ST[i]))*178:0;
@@ -377,7 +380,7 @@ function render(t){
 }
 $('#top').innerHTML=P.top_en+'<b>'+P.top_jp+'</b>';build();render(0);
 </script>"""
-html = (html.replace('%XMAS%', open(ROOT + '/tools/outing_reel/xmas.js').read() + '\n' + open(ROOT + '/tools/outing_reel/scenes.js').read()).replace('%MAGIC%', open(ROOT + '/tools/outing_reel/magic.js').read()).replace('%F%', F).replace('%LOGO%', BR['logo']).replace('%HP1%', BR['hp1']).replace('%HP2%', BR['hp2']).replace('%PAGE%', json.dumps(PAGE, ensure_ascii=False)).replace('%ST%', json.dumps(ST))
+html = (html.replace('%XMAS%', open(ROOT + '/tools/outing_reel/xmas.js').read() + '\n' + open(ROOT + '/tools/outing_reel/scenes.js').read()).replace('%MAGIC%', open(ROOT + '/tools/outing_reel/magic.js').read()).replace('%DESK%', open(ROOT + '/tools/outing_reel/desk.js').read()).replace('%F%', F).replace('%LOGO%', BR['logo']).replace('%HP1%', BR['hp1']).replace('%HP2%', BR['hp2']).replace('%PAGE%', json.dumps(PAGE, ensure_ascii=False)).replace('%ST%', json.dumps(ST))
         .replace('%OPEN%', str(OPEN)).replace('%TURN%', str(TURN)).replace('%TOTAL%', f'{TOTAL:.3f}'))
 open(f'{W}/ehon.html', 'w').write(html)
 open(f'{W}/rec.js', 'w').write(f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:1080,height:1920}}}});
