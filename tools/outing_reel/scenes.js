@@ -292,7 +292,7 @@ function mjBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B
   {const r=XR(44);c.strokeStyle='rgba(120,100,70,.35)';c.lineWidth=1.2;for(let y=980;y<XH;y+=14+(y-960)*.05){const k=(y-960)/(XH-960),x0=330-210*k,x1=430+210*k;c.beginPath();c.moveTo(x0,y);c.lineTo(x1,y);c.stroke();for(let x=x0+r()*30;x<x1;x+=30+k*40){c.beginPath();c.moveTo(x,y);c.lineTo(x,y+12+k*20);c.stroke()}}
    for(let i=0;i<120;i++){const y=960+Math.pow(r(),.7)*(XH-960),k=(y-960)/(XH-960),x=330-210*k+r()*(100+420*k);c.fillStyle=['#c8402c','#e0662f','#ea8a34'][i%3];c.globalAlpha=.85;mjLeaf(c,x,y,4+k*6,r()*6)}c.globalAlpha=1}
   mjTree(c,40,1020,640,0,11,L,{n:1500,wide:.95,lean:.12,zone:1});mjTree(c,880,1010,320,0,12,L,{n:600,wide:.9,zone:1});
-  mjGate2(T.c,380,1000,400,0,T.L);T.ax=380;T.ay=1000;T.d=.1;
+  if(P.gate!==false)mjGate2(T.c,380,1000,400,0,T.L);T.ax=380;T.ay=1000;T.d=.1;   // 11/16 門は寺社の時だけ
   mjLantern(F.c,150,1190,150,0,F.L);mjLantern(F.c,650,1190,150,0,F.L);
   mjTree(F.c,-120,1560,560,0,21,F.L,{n:900,wide:.7,lean:.3});mjTree(F.c,1060,1580,500,0,22,F.L,{n:800,wide:.7,lean:-.3});
   xmPerson(F.c,352,1110,64,'#5a4a5e',0,51,0);xmPerson(F.c,404,1116,60,'#6a5a3a',0,52,1);
@@ -304,6 +304,7 @@ function mjBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B
   wash(c,g=>{g.moveTo(-20,740);g.bezierCurveTo(240,660,480,700,700,672);g.bezierCurveTo(820,660,880,690,XW+20,690);g.lineTo(XW+20,880);g.lineTo(-20,880);g.closePath()},n?'#120e1a':'#b8a088',{edge:.1,gr:.25,light:false,a:n?.9:.55});
   mjForest(c,710,900,mode,6,n?0:.4,L);if(!n)scFog(c,730,40,'250,232,210',.4);else scFog(c,900,50,'255,110,60',.12);
   mjGround2(c,880,mode);
+  if(n){const q=c.createLinearGradient(0,880,0,975);q.addColorStop(0,'rgba(6,4,10,.75)');q.addColorStop(1,'rgba(6,4,10,.35)');c.fillStyle=q;c.fillRect(0,872,XW,105)}   // 11/16 夜の岸が灰色の帯に見えたので暗く
   // 橋の映り込み用に、橋だけを先に描く
   const br=xmCanvas(XW,XH),bc=br.getContext('2d');mjBridge(bc,200,760,1000,72,mode,null);
   mjStream2(c,B.cv,960,1080,mode,br);
@@ -372,7 +373,7 @@ function hmSand2(c,mode){const P=[['#fbf6ea','#efe4cc'],['#f0cdb6','#c8a08e'],['
 const HM_STR=[];for(let k=0;k<3;k++)for(let x=24;x<XW;x+=26)HM_STR.push({x,y:HM_SHORE(x)+56+k*72+Math.sin(x*.012+k*1.7)*16,k});
 function hmBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;
  if(mode==0){scSky(c,['#6eaad6','#b4d6ea','#eef4f0'],800);scClouds(c,6,9,420,720,'#ffffff',.65);scClouds(c,7,4,140,300,'#ffffff',.35);
-  xmGulls(c,6,5);hmSea2(c,800,0);hmHill(c,0,L);hmIsland2(c,440,812,170,0);   // 11/16 やしの葉に穴がかくれないよう右へ
+  xmGulls(c,6,5);hmSea2(c,800,0);hmHill(c,0,L);if(P.engetsu!==false)hmIsland2(c,440,812,170,0);   // 11/16 やしの葉に穴がかくれないよう右へ
   hmSand2(c,0);
   hmPalm(T.c,110,1240,640,0,3,.1);hmPalm(T.c,250,1200,520,0,4,-.05);T.ax=180;T.ay=1220;T.d=.1;
   xmPerson(F.c,560,1250,104,'#3e5a7e',0,31,0);xmPerson(F.c,596,1256,96,'#c08a5a',0,32,1);xmPerson(F.c,630,1262,72,'#e2b84a',0,33,2);xmPerson(F.c,760,1100,60,'#8a4a4a',0,34,0);F.ax=600;F.ay=1260;F.d=.4;
@@ -383,11 +384,11 @@ function hmBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B
   hmSea2(c,806,1);hmHill(c,1,L);
   c.save();c.globalCompositeOperation='lighter';{const r=XR(8);for(let i=0;i<140;i++){const y=812+r()*240,x=250+(r()-.5)*(30+(y-806)*1.1);c.fillStyle=`rgba(255,200,120,${.15+r()*.45})`;c.fillRect(x,y,6+r()*26,1.6+(y-806)*.01)}}c.restore();
   hmSand2(c,1);
-  hmIsland2(T.c,250,880,250,1);T.ax=250;T.ay=880;T.d=.05;
+  if(P.engetsu!==false)hmIsland2(T.c,250,880,250,1);   // 11/16 円月島は白浜の時だけT.ax=250;T.ay=880;T.d=.05;
   L.push({x:250,y:806,r:200,c:'255,200,140',a:.5,p:0,sp:0,soft:1});
   hmPalm(F.c,830,1320,640,1,3,-.08);xmPerson(F.c,520,1290,118,'#3a3a5a',1,36,0);xmPerson(F.c,556,1296,104,'#6a3a3a',1,37,1);F.ax=650;F.ay=1300;F.d=.4;
  }else{scSky(c,['#03040c','#0a0d22','#1a1c3a'],800);xmStars(c,9);xmMoon(c,190,200,40);
-  hmSea2(c,800,2);hmHill(c,2,L);hmIsland2(c,440,812,170,2);
+  hmSea2(c,800,2);hmHill(c,2,L);if(P.engetsu!==false)hmIsland2(c,440,812,170,2);
   hmSand2(c,2);
   const cols=['255,110,170','110,190,255','255,210,110','170,130,255','120,255,200'];
   for(const s of HM_STR)L.push({x:s.x,y:s.y,r:18,c:cols[(s.k*2+Math.floor(s.x/120))%5],a:.35,p:s.x*.05,sp:1.5,dot:1.4});

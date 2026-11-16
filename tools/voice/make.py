@@ -51,6 +51,8 @@ def main():
               open(os.path.join(out, "speakers.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     kana = {}
     ids = [x["id"] for s in sp for x in s["styles"]] if spec["speakers"] == "all" else spec["speakers"]
+    if spec.get("style_names"):   # 11/16 "all" の時、この名前の話し方だけにする（入れた声を全部、明るい話し方で聞き比べる）
+        ok = set(spec["style_names"]); ids = [x["id"] for s in sp for x in s["styles"] if x["name"] in ok]
     for s in ids:
         for n, line in enumerate(spec["lines"]):
             q = json.loads(req(f"/audio_query?speaker={s}&text=" + urllib.parse.quote(line), b"", "POST"))

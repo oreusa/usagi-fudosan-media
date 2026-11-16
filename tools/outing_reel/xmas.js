@@ -218,7 +218,7 @@ function xmLayer(){const cv=xmCanvas(XW,XH);return{cv,c:cv.getContext('2d'),L:[]
 function xmShadowOf(cv){const s=xmCanvas(XW,XH),g=s.getContext('2d');g.filter='brightness(0) blur(7px)';g.drawImage(cv,0,0);return s}
 function xmBase(mode){if(XBASE[mode])return XBASE[mode];if(typeof P!='undefined'&&P.scene=='momiji')return XBASE[mode]=mjBuild(mode);if(typeof P!='undefined'&&P.scene=='hama')return XBASE[mode]=hmBuild(mode);const B=xmLayer(),T=xmLayer(),F=xmLayer();let c=B.c,L=B.L;
  xmSky(c,mode);
- if(mode==0){
+ if(mode==0){scClouds(c,5,7,110,520,'#ffffff',.5);   // 11/16 冬の空にも水彩の雲（のっぺりしていた）
   c.save();c.globalCompositeOperation='screen';glow(c,250,560,460,'255,220,170',.5);c.restore();
   xmGulls(c,6,7);xmWheel(c,150,650,118,0,null);xmSea(c,792,862,0);
   xmWarehouse(c,-30,1015,560,195,0,11,L);xmWarehouse(c,560,985,400,150,0,12,L);

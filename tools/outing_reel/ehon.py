@@ -3,7 +3,7 @@
 台本（spec）に書く物は README.md の「絵本の型」。機械（outing-reel.yml）の中では VOICE_URL があり、声を作って読みを答え合わせしてから動画にする。
 手元で試す時: VDIR=shots/voice/<name> SP=20（先に作った声）。無ければ声なし。
 1080x1920・30fps。render(t) で1コマずつ描いて ffmpeg でつなぐ（tools/outing_reel/make.py と同じ流れ）。"""
-import json, os, subprocess, sys, time, urllib.parse, urllib.request, wave
+import json, os, re, subprocess, sys, time, urllib.parse, urllib.request, wave
 
 ROOT = os.environ.get('ROOT') or os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, ROOT + '/tools/outing_reel')
@@ -91,6 +91,15 @@ if T.get('peaks'): BR['peaks'] = 1                    # 遠くに2つの峰の�
 if T.get('ehon5'): BR['t5'] = T['ehon5']
 if T.get('scene'): BR['scene'] = T['scene']          # 景色：書かなければ山と木。'umi'＝海と砂浜（夜は色の光）。'xmas'＝赤レンガとクリスマスツリー（11/15）。建物なしにする時は motif を yama に
 BR.update(T.get('ehon_brand', {}))
+# 11/16 オーナー「絵によって変わる。そもそものシステムアップ」：台本に scene が無くても、題材から景色を選ぶ（本番の台本は大半が scene なし＝昔の山と塔の絵だった）
+ALLTXT = json.dumps(T, ensure_ascii=False) + json.dumps(spec.get('voice', []), ensure_ascii=False)
+if not T.get('scene') and not T.get('ehon_brand', {}).get('scene'):
+    if re.search('クリスマス', ALLTXT) and re.search('赤レンガ', ALLTXT): BR['scene'] = 'xmas'   # 今のクリスマスの絵は赤レンガ倉庫なので、そこだけ
+    elif re.search('砂浜|ビーチ|海水浴|浜で|浜の|白良浜', ALLTXT): BR['scene'] = 'hama'
+    elif re.search('紅葉|もみじ|モミジ', ALLTXT): BR['scene'] = 'momiji'
+    print('景色', BR['scene'] or '（合う景色が無いので山と塔の絵）')
+PAGE['engetsu'] = bool(re.search('白浜|白良浜|円月島', ALLTXT))      # 浜：円月島は白浜の時だけ描く
+PAGE['gate'] = bool(re.search('寺|神社|天満宮|八幡宮|大社|神宮|院', ALLTXT))   # もみじ：門は寺社の時だけ（公園・庭園は木と道だけ）
 # 11/16 スマホの画面は、その回の県のおでかけページを毎回撮る（古い画面・違う県の画面が出ていた）。撮れなければ今までの絵
 def hp_shots():
     SLUG = {'東京': 'tokyo', '神奈川': 'kanagawa', '埼玉': 'saitama', '千葉': 'chiba', '茨城': 'ibaraki', '栃木': 'tochigi', '群馬': 'gunma',
