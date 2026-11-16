@@ -31,6 +31,25 @@ _fb, _fn = factcheck.run(spec, offline=not os.environ.get('GITHUB_ACTIONS'))
 for _n in _fn: print('数字の答え合わせ：' + _n)
 if _fb: sys.exit('数字の答え合わせで止めた：\n - ' + '\n - '.join(_fb))
 print('数字の答え合わせ：OK')
+# 11/16 夜 owner「なんで47秒？」「使い回しだし舐めてんの？」：長さと使い回しを機械が止める
+#  ①声の合計は150字まで（39秒前後）②声の行が、前の7日の台本（関西 ig/reels・関東 reel）と同じなら止める（最後の行も毎日同じだった）
+_vo = spec.get('voice') or []
+_vlen = sum(len(_re.sub(r'[、。！？\s]', '', v)) for v in _vo)
+if _vo and _vlen > 150: sys.exit(f'声が長すぎる：{_vlen}字（150字まで＝39秒前後。言葉を削る）')
+import glob as _gl, datetime as _dtm
+try: _base = _dtm.date.fromisoformat(spec.get('date', '')[:10])
+except ValueError: _base = None
+if _base and not os.environ.get('EHON_SAMPLE'):
+    _same = []
+    for _f in set(_gl.glob(ROOT + '/ig/reels/*.json') + _gl.glob(os.path.dirname(os.path.abspath(sys.argv[1])) + '/*.json')):
+        if os.path.abspath(_f) == os.path.abspath(sys.argv[1]): continue
+        try: _o = json.load(open(_f, encoding='utf-8')); _od = _dtm.date.fromisoformat(_o.get('date', '')[:10])
+        except Exception: continue
+        if not (0 < (_base - _od).days <= 7): continue
+        for _v in _vo:
+            if _v in (_o.get('voice') or []): _same.append(f'「{_v}」（{os.path.basename(_f)} と同じ）')
+    if _same: sys.exit('使い回しで止めた：声の行が前の7日の台本と同じ\n - ' + '\n - '.join(_same))
+print(f'長さと使い回し：OK（声 {_vlen}字）')
 W = os.path.abspath(os.environ.get('WORK', 'ehon-work')); os.makedirs(W + '/fr', exist_ok=True)
 VDIR = os.environ.get('VDIR', ''); SP = os.environ.get('SP', '20')
 T = spec['text']
