@@ -1,0 +1,42 @@
+{
+"/aivm_models": {
+"get": [
+""
+]
+},
+"/aivm_models/install": {
+"post": [
+"{'content': {'multipart/form-data': {'schema': {'$ref': '#/components/schemas/Body_install_model_aivm_models_install_post'}}}}"
+]
+},
+"/aivm_models/{aivm_model_uuid}": {
+"get": [
+"aivm_model_uuid",
+""
+]
+},
+"/aivm_models/{aivm_model_uuid}/load": {
+"post": [
+"aivm_model_uuid",
+""
+]
+},
+"/aivm_models/{aivm_model_uuid}/unload": {
+"post": [
+"aivm_model_uuid",
+""
+]
+},
+"/aivm_models/{aivm_model_uuid}/update": {
+"post": [
+"aivm_model_uuid",
+""
+]
+},
+"/aivm_models/{aivm_model_uuid}/uninstall": {
+"delete": [
+"aivm_model_uuid",
+""
+]
+}
+}
