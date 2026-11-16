@@ -356,7 +356,7 @@ _gr = os.environ.get("GPT_RUNS", os.path.join(ROOT, "..", "akari-auto", "notes",
 _rows = {r.get("day"): dict(r) for r in tantou.get("rows", [])}
 try:
     for l_ in open(_gr, encoding="utf-8"):
-        m_ = re.match(r"- (\d{4}-\d\d-\d\d) (.+)", l_)
+        m_ = re.match(r"(?:- )?(\d{4}-\d\d-\d\d) (.+)", l_)  # 11/14 から燈の行の頭の「- 」が無くなり、担当の写しが止まって見えた
         if not m_: continue
         r_ = _rows.setdefault(m_.group(1), {"day": m_.group(1)})
         for seg in m_.group(2).split("｜"):
