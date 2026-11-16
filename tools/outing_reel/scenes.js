@@ -307,7 +307,7 @@ function mjFall(c,cx,top,bot,w,mode,L){const night=mode==2,r=XR(77);
  if(L){if(night){L.push({x:cx,y:(top+bot)/2,r:(bot-top)*.45,c:'255,226,170',a:.16,p:0,sp:.2,soft:1});L.push({x:cx,y:bot,r:w*1.8,c:'255,210,150',a:.32,p:1,sp:.4,soft:1});
    for(let i=0;i<10;i++)L.push({x:cx+(r()-.5)*w*1.6,y:bot-20-r()*40,r:16,c:'255,240,210',a:.7,p:i,sp:3,dot:2})}
   else L.push({x:cx,y:bot,r:w*2,c:'255,255,255',a:.25,p:0,sp:.3,soft:1})}}
-function mjBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;
+function mjBuild(mode){if(P.taki)return tkBuild(mode);const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;
  if(mode==0){scSky(c,['#9ec4dc','#d6e4e6','#f4e8d0'],820);scClouds(c,4,8,120,560,'#ffffff',.55);
   c.save();c.globalCompositeOperation='screen';glow(c,330,560,520,'255,226,180',.45);c.restore();
   wash(c,g=>{g.moveTo(-20,760);g.bezierCurveTo(200,690,420,720,600,700);g.bezierCurveTo(760,690,860,720,XW+20,705);g.lineTo(XW+20,860);g.lineTo(-20,860);g.closePath()},'#9aa8b0',{edge:.1,gr:.25,light:false,a:.6});
@@ -437,3 +437,109 @@ function hmFx(c,mode,t,u){c.save();
    c.filter='blur(6px)';c.fillStyle=`rgba(${cols[k%5]},.12)`;c.fillRect(x+Math.cos(a)*120-14,820,28,170);c.restore()}
   const r=XR(77);for(let i=0;i<24;i++){const T=4+r()*3,p=((t/T+r())%1),x=40+r()*840+Math.sin(t+i)*20,y=1100-p*(500+r()*250);glow(c,x,y,9+r()*9,cols[i%5],Math.sin(Math.PI*p)*.6)}}
  c.restore();c.globalAlpha=1}
+
+// ---------- 滝の名所（text.taki。11/16 夜 オーナー「使い回しだし舐めてんの？」→ もみじの寺の絵を使わず、滝の場所だけの3枚） ----------
+// 1枚目＝滝道（川沿いの道・朱の橋・歩く人）／2枚目＝大きな崖を落ちる滝と滝つぼ／夜＝下から照らされた滝。右上（字の場所）は空と遠い山だけ。
+function tkRiver(c,pts,w0,w1,mode){const night=mode==2;const P=[['#8fc2c0','#5e9696'],['#86a89a','#4e7066'],['#121a2a','#070b16']][mode];
+ // pts＝川の中心線（奥→手前）。幅は奥 w0 → 手前 w1
+ const L=[],R=[];for(let i=0;i<pts.length;i++){const u=i/(pts.length-1),w=w0+(w1-w0)*u;const a=pts[Math.max(0,i-1)],b=pts[Math.min(pts.length-1,i+1)];const dx=b[0]-a[0],dy=b[1]-a[1],l=Math.hypot(dx,dy)||1;L.push([pts[i][0]-dy/l*w/2,pts[i][1]+dx/l*w/2]);R.push([pts[i][0]+dy/l*w/2,pts[i][1]-dx/l*w/2])}
+ const path=g=>{g.moveTo(L[0][0],L[0][1]);for(const p of L)g.lineTo(p[0],p[1]);for(let i=R.length-1;i>=0;i--)g.lineTo(R[i][0],R[i][1]);g.closePath()};
+ wash(c,path,P[0],{grad:g=>{const q=g.createLinearGradient(0,pts[0][1],0,pts[pts.length-1][1]);q.addColorStop(0,P[0]);q.addColorStop(1,P[1]);return q},edge:.25,gr:.3,light:false});
+ const r=XR(91);c.save();c.beginPath();path(c);c.clip();
+ for(let i=0;i<160;i++){const u=r(),k=Math.floor(u*(pts.length-1)),f=u*(pts.length-1)-k,p=pts[k],q=pts[Math.min(pts.length-1,k+1)];const x=p[0]+(q[0]-p[0])*f+(r()-.5)*(w0+(w1-w0)*u)*.9,y=p[1]+(q[1]-p[1])*f;const l=6+u*40;
+  c.strokeStyle=night?`rgba(255,180,120,${.12+r()*.2})`:`rgba(255,255,255,${.3+r()*.4})`;c.lineWidth=.6+u*1.6;c.beginPath();c.moveTo(x-l/2,y);c.quadraticCurveTo(x,y-2,x+l/2,y);c.stroke()}
+ c.restore();
+ // 岸の石
+ for(const S of[L,R])for(let i=0;i<S.length;i++){const u=i/(S.length-1);for(let j=0;j<2;j++){const R2=5+u*20+r()*8;c.save();c.translate(S[i][0]+(r()-.5)*20,S[i][1]+(r()-.5)*8);c.scale(1+r()*.6,.6);scBlob(c,0,0,R2,night?'#3a3440':'#c8c0b0',night?'#22202a':'#8e887c',night?'#0c0a10':'#4e483e',-.3,-.5,.95);c.restore()}}
+ return{L,R}}
+function tkRail(c,pts,mode){const night=mode==2;c.strokeStyle=night?'#1a1416':'#6a4a32';c.lineCap='round';
+ for(let i=0;i<pts.length;i++){const[x,y,h]=pts[i];c.lineWidth=Math.max(2,h*.09);c.beginPath();c.moveTo(x,y);c.lineTo(x,y-h);c.stroke()}
+ for(const k of[.95,.55]){c.lineWidth=Math.max(1.5,pts[pts.length-1][2]*.05);c.beginPath();for(const[x,y,h]of pts)c.lineTo(x,y-h*k);c.stroke()}}
+function tkCliff(c,mode,L){const night=mode==2,r=XR(83);
+ // 崖：横に広い岩の壁（一枚岩に見えないよう、段と割れ目と苔。上はもみじの森）
+ const top=400,bot=990,x0=150,x1=470;
+ const edge=[[x0-30,bot],[x0-20,top+200],[x0+10,top+80],[x0+70,top+20],[x0+150,top],[x0+230,top+10],[x1-40,top+60],[x1,top+190],[x1+20,bot]];
+ const base=night?'#1c161a':mode==1?'#5e4a3a':'#6a5a48',dark=night?'#08060a':mode==1?'#2a1e16':'#352a20';
+ wash(c,g=>wob(g,edge,6,21),base,{grad:g=>{const q=g.createLinearGradient(x0,0,x1,0);q.addColorStop(0,dark);q.addColorStop(.45,base);q.addColorStop(.55,base);q.addColorStop(1,dark);return q},edge:.35,gr:.5,light:!night});
+ c.save();c.beginPath();wob(c,edge,6,21);c.clip();
+ // 岩の段（横の層）と縦の割れ目
+ for(let i=0;i<26;i++){const y=top+20+i*(bot-top)/26+(r()-.5)*10;c.strokeStyle=night?'rgba(150,130,170,.10)':`rgba(40,28,18,${.18+r()*.2})`;c.lineWidth=1+r()*2.4;c.beginPath();let x=x0-40;c.moveTo(x,y);while(x<x1+40){x+=30+r()*60;c.lineTo(x,y+(r()-.5)*14)}c.stroke();
+  if(!night){c.strokeStyle=`rgba(255,240,220,${.08+r()*.1})`;c.lineWidth=1;c.beginPath();c.moveTo(x0,y+4);c.lineTo(x1,y+4+(r()-.5)*10);c.stroke()}}
+ for(let i=0;i<60;i++){const x=x0+r()*(x1-x0),y=top+r()*(bot-top);c.strokeStyle=night?'rgba(0,0,0,.4)':'rgba(30,20,12,.35)';c.lineWidth=1+r()*2;c.beginPath();c.moveTo(x,y);c.lineTo(x+(r()-.5)*16,y+20+r()*50);c.stroke()}
+ if(!night)for(let i=0;i<70;i++){const x=x0+r()*(x1-x0),y=top+40+r()*(bot-top-40);c.fillStyle=`rgba(${mode==1?'96,104,52':'72,112,58'},${.2+r()*.35})`;c.beginPath();c.ellipse(x,y,6+r()*22,3+r()*6,0,0,7);c.fill()}
+ // 崖の奥の影（滝の後ろがくぼむ）
+ const cg=c.createRadialGradient(300,680,30,300,700,240);cg.addColorStop(0,night?'rgba(0,0,0,.5)':'rgba(20,14,10,.35)');cg.addColorStop(1,'rgba(0,0,0,0)');c.fillStyle=cg;c.fillRect(0,0,XW,XH);
+ c.restore();
+ // 崖の上と両わきは、もみじの森が滝つぼまでおおう（岩が見えるのは滝のまわりだけ）。右上の字の場所＝x>500,y<690 は避ける
+ const trees=[[200,top+40,200,71],[300,top+10,190,72],[400,top+40,180,73],[110,top+150,240,74],[30,top+260,280,75],[-40,top+420,320,76],[60,top+560,300,77],[-30,bot+20,320,78],[130,bot,240,79],
+  [470,top+300,170,80],[560,900,200,86],[600,top+470,240,87],[700,top+520,260,88],[540,bot-60,250,89],[660,bot+10,300,90],[800,top+560,280,91],[880,bot,300,92]];
+ for(const[x,y,h,sd]of trees)mjTree(c,x,y,h,mode,sd,L,{n:560,wide:1.15,zone:1,noLight:!night||1});
+ return{top,bot}}
+function tkWater(c,cx,top,bot,w,mode,L){const night=mode==2,r=XR(57);
+ const wt=night?['#fff2dc','#c8945e']:['#ffffff','#a8c4d0'];
+ // 落ち口から少し前に張り出して落ちる
+ const sh=g=>{g.moveTo(cx-w*.45,top);g.bezierCurveTo(cx-w*.5,top+30,cx-w*.6,top+(bot-top)*.5,cx-w*.85,bot);g.lineTo(cx+w*.85,bot);g.bezierCurveTo(cx+w*.6,top+(bot-top)*.5,cx+w*.5,top+30,cx+w*.45,top);g.closePath()};
+ wash(c,sh,wt[0],{grad:g=>{const q=g.createLinearGradient(cx-w,0,cx+w,0);q.addColorStop(0,wt[1]);q.addColorStop(.3,wt[0]);q.addColorStop(.7,wt[0]);q.addColorStop(1,wt[1]);return q},edge:.12,gr:.12,light:false,a:night?.9:.95});
+ c.save();c.beginPath();sh(c);c.clip();
+ for(let i=0;i<140;i++){const u=r()*2-1,y0=top+r()*(bot-top)*.7,l=60+r()*(bot-top)*.5,x=cx+u*w*.5*(1+(y0-top)/(bot-top)*.6);c.strokeStyle=night?`rgba(${r()<.5?'255,250,235':'170,110,60'},${.2+r()*.45})`:`rgba(${r()<.4?'140,170,190':'255,255,255'},${.25+r()*.5})`;c.lineWidth=.8+r()*2.6;c.beginPath();c.moveTo(x,y0);c.lineTo(x+u*8,Math.min(bot,y0+l));c.stroke()}
+ c.restore();
+ c.save();c.filter='blur(4px)';c.fillStyle=night?'rgba(255,236,200,.8)':'rgba(255,255,255,.9)';c.beginPath();c.ellipse(cx,top+3,w*.5,w*.1,0,0,7);c.fill();c.restore();
+ if(L&&night){L.push({x:cx,y:(top+bot)/2,r:(bot-top)*.5,c:'255,224,170',a:.2,p:0,sp:.2,soft:1})}}
+function tkPool(c,cx,y,w,mode,L){const night=mode==2,r=XR(63);
+ const P=[['#7ab0b4','#3e7076'],['#6e968a','#33584e'],['#141c2c','#060a14']][mode];
+ wash(c,g=>{g.ellipse(cx,y+40,w,70,0,0,7)},P[0],{grad:g=>{const q=g.createLinearGradient(0,y-30,0,y+110);q.addColorStop(0,P[0]);q.addColorStop(1,P[1]);return q},edge:.2,gr:.25,light:false});
+ c.save();c.beginPath();c.ellipse(cx,y+40,w,70,0,0,7);c.clip();for(let i=0;i<40;i++){const rr=20+r()*w;c.strokeStyle=night?`rgba(255,190,130,${.1+r()*.2})`:`rgba(255,255,255,${.2+r()*.35})`;c.lineWidth=1+r()*1.5;c.beginPath();c.ellipse(cx+(r()-.5)*40,y+10+r()*20,rr,rr*.12,0,Math.PI*(.1+r()*.3),Math.PI*(.7+r()*.3));c.stroke()}c.restore();
+ // しぶきと霧
+ c.save();c.filter='blur(16px)';for(let i=0;i<14;i++){c.fillStyle=night?`rgba(255,226,180,${.22+r()*.2})`:`rgba(255,255,255,${.45+r()*.3})`;c.beginPath();c.ellipse(cx+(r()-.5)*w*.9,y+(r()-.5)*40,40+r()*70,16+r()*22,0,0,7);c.fill()}c.restore();
+ // まわりの岩
+ for(let i=0;i<22;i++){const a=r()*Math.PI,x=cx+Math.cos(a)*(w+10)*(r()<.5?-1:1),yy=y+40+Math.sin(a)*70+(r()-.3)*20,R=14+r()*34;c.save();c.translate(x,yy);c.scale(1.4,.62);scBlob(c,0,0,R,night?'#3a3440':'#c4bcac',night?'#22202a':'#8a8478',night?'#0c0a10':'#4a4438',-.3,-.5,.96);c.restore()}
+ if(L){if(night){L.push({x:cx,y:y+20,r:w*1.6,c:'255,206,140',a:.4,p:1,sp:.4,soft:1});for(let i=0;i<12;i++)L.push({x:cx+(r()-.5)*w*1.4,y:y-10-r()*50,r:14,c:'255,240,210',a:.7,p:i,sp:3,dot:2})}else L.push({x:cx,y:y,r:w*1.6,c:'255,255,255',a:.25,p:0,sp:.3,soft:1})}}
+function tkBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;const n=mode==2;
+ if(mode==0){ // 滝道：奥から手前へ川、右岸に石の道と木の柵、奥に朱の橋
+  scSky(c,['#a6c8dc','#dde8e8','#f4ead6'],760);scClouds(c,4,7,110,520,'#ffffff',.5);
+  c.save();c.globalCompositeOperation='screen';glow(c,700,380,520,'255,232,190',.4);c.restore();
+  wash(c,g=>{g.moveTo(-20,700);g.bezierCurveTo(160,600,340,640,520,610);g.bezierCurveTo(700,590,820,640,XW+20,640);g.lineTo(XW+20,860);g.lineTo(-20,860);g.closePath()},'#8e9aa0',{edge:.1,gr:.25,light:false,a:.55});
+  mjForest(c,660,880,0,15,.5,L);scFog(c,700,40,'240,236,228',.35);
+  // 両岸の斜面
+  wash(c,g=>{g.moveTo(-20,820);g.lineTo(XW+20,800);g.lineTo(XW+20,XH+10);g.lineTo(-20,XH+10);g.closePath()},'#8a7a5a',{grad:g=>{const q=g.createLinearGradient(0,800,0,XH);q.addColorStop(0,'#9a8a62');q.addColorStop(1,'#6a5a3e');return q},edge:.1,gr:.45,light:false});
+  scGrain(c,820,XH,['#e8dcc0','#5a4a32','#7a6a4a'],2200,35,1.8);
+  // 川（奥の右→手前の左）
+  tkRiver(c,[[560,850],[520,880],[470,930],[440,990],[380,1060],[270,1130],[170,1220],[90,1310],[20,1400]],50,320,0);
+  // 道（右岸）：石だたみ
+  const road=g=>{g.moveTo(600,850);g.lineTo(660,850);g.bezierCurveTo(720,960,820,1120,XW+20,1300);g.lineTo(XW+20,XH+10);g.lineTo(380,XH+10);g.bezierCurveTo(470,1180,560,980,600,850);g.closePath()};
+  wash(c,road,'#d8cfbb',{grad:g=>{const q=g.createLinearGradient(0,850,0,XH);q.addColorStop(0,'#e4dccb');q.addColorStop(1,'#bdb39c');return q},edge:.2,gr:.4,light:false});
+  {const r=XR(46);c.save();c.beginPath();road(c);c.clip();c.strokeStyle='rgba(110,92,64,.35)';c.lineWidth=1.2;for(let y=860;y<XH;y+=10+(y-850)*.05){c.beginPath();c.moveTo(380,y);c.lineTo(XW,y+(r()-.5)*4);c.stroke()}
+   for(let i=0;i<110;i++){const y=860+Math.pow(r(),.7)*(XH-860),k=(y-850)/(XH-850);c.fillStyle=['#c8402c','#e0662f','#ea8a34'][i%3];c.globalAlpha=.85;mjLeaf(c,560+r()*360*(.3+k),y,4+k*7,r()*6)}c.globalAlpha=1;c.restore()}
+  // 朱の橋（奥）
+  mjBridge(T.c,330,640,860,26,0,T.L);T.ax=480;T.ay=860;T.d=.1;
+  // 川ぞいの木の柵
+  tkRail(F.c,[[600,880,26],[575,930,34],[545,990,44],[505,1070,58],[455,1170,76],[395,1290,98]],0);
+  // もみじ：左の岸に大きく、右奥に小さく（字の場所に入れない）
+  mjTree(c,-40,980,560,0,81,L,{n:1500,wide:.9,lean:.15,zone:1});mjTree(c,880,880,300,0,82,L,{n:700,wide:.9,zone:1});
+  mjTree(F.c,1040,1600,560,0,83,F.L,{n:900,wide:.7,lean:-.3});
+  // 歩く人（道の上・滝へ向かう後ろ姿）
+  xmPerson(F.c,650,960,58,'#5a4a5e',0,61,0);xmPerson(F.c,690,964,54,'#6a5a3a',0,62,1);
+  xmPerson(F.c,620,1230,112,'#4a4a5e',0,63,0);xmPerson(F.c,690,1240,104,'#8a5a4a',0,64,1);xmPerson(F.c,770,1300,76,'#e2b84a',0,65,2);
+  F.ax=640;F.ay=1250;F.d=.4;
+  return scFinish(0,B,T,F,900)}
+ // 2枚目（秋の昼）と夜：大きな崖の滝
+ if(n){scSky(c,['#03050e','#0a0f22','#1a1430'],760);xmStars(c,9);xmMoon(c,150,190,38)}
+ else{scSky(c,['#e6c49e','#f2dcc0','#f6e6cc'],700);scClouds(c,7,6,140,460,'#fff4e4',.5);c.save();c.globalCompositeOperation='screen';glow(c,720,360,520,'255,214,160',.5);c.restore()}
+ // 奥は山のもみじの森が滝つぼの高さまで続く（11/16 ここが灰色の板に見えていた）
+ wash(c,g=>{g.moveTo(-20,560);g.bezierCurveTo(200,470,400,520,500,690);g.bezierCurveTo(640,700,820,690,XW+20,700);g.lineTo(XW+20,1100);g.lineTo(-20,1100);g.closePath()},n?'#120a10':mode==1?'#7a3a22':'#6a3424',{edge:.1,gr:.3,light:false,a:.95});
+ mjForest(c,700,1000,mode,16,n?0:.35,L);
+ const cl=tkCliff(c,mode,L);
+ tkWater(c,300,cl.top+14,990,58,mode,L);
+ tkPool(c,300,990,260,mode,L);
+ // 手前の岸（石と落ち葉）
+ wash(c,g=>{g.moveTo(-20,1090);g.bezierCurveTo(200,1070,520,1100,XW+20,1060);g.lineTo(XW+20,XH+10);g.lineTo(-20,XH+10);g.closePath()},n?'#14101a':'#9a7a52',{grad:g=>{const q=g.createLinearGradient(0,1060,0,XH);q.addColorStop(0,n?'#1a1420':'#a8865a');q.addColorStop(1,n?'#08060c':'#5e4630');return q},edge:.15,gr:.45,light:false});
+ {const r=XR(52);const pal=n?['#6a160e','#8e2414','#4a0e0a']:['#c8402c','#e0662f','#ea8a34','#b3301f','#f0a040'];for(let i=0;i<240;i++){c.fillStyle=pal[i%pal.length];c.globalAlpha=.85;mjLeaf(c,r()*XW,1080+Math.pow(r(),.7)*(XH-1080),5+r()*8,r()*6.3)}c.globalAlpha=1}
+ if(n){c.save();c.globalCompositeOperation='screen';glow(c,300,980,420,'255,170,90',.35);c.restore();
+  // 照らす灯り（滝つぼの手前の岩かげ）
+  for(const[x,y]of[[120,1080],[500,1080]]){L.push({x,y,r:60,c:'255,190,120',a:.55,p:x,sp:.5,soft:1})}}
+ // 手前：見上げる人と灯籠・大きなもみじの枝（左下）
+ mjLantern(F.c,720,1300,120,mode,F.L);if(n){for(const l of F.L){l.r*=.6;l.a*=.8}}
+ xmPerson(F.c,420,1290,116,n?'#3a3a4a':'#5a5a6e',mode,66,0);xmPerson(F.c,470,1298,104,n?'#4a2a30':'#7a4a3a',mode,67,1);xmPerson(F.c,560,1320,82,n?'#2a3a4a':'#e2b84a',mode,68,2);
+ mjTree(F.c,-160,1600,640,mode,85,F.L,{n:900,wide:.7,lean:.35,noLight:1});
+ T.ax=300;T.ay=990;T.d=.1;F.ax=480;F.ay=1300;F.d=.4;
+ return scFinish(mode,B,T,F,[900,1080,1080][mode])}
