@@ -50,6 +50,7 @@ jobs:
               x = open(f, encoding="utf-8").read()
               if "permalink" in x:
                   done |= {s for s in (f"ig/reels/{D}.json", f"ig/reels/{D}-pm.json") if f'"{s}"' in x}
+          if os.path.exists("ig/reels-hold/STOP"): raise SystemExit(0)  # 11/16 21:41 オーナー「関西も関東も止める」＝絵の基盤ができるまで出さない
           for spec, hh, mm, end in ((f"ig/reels/{D}.json", 7, 30, 15), (f"ig/reels/{D}-pm.json", 18, 0, 22)):
               t = now.replace(hour=hh, minute=mm, second=0, microsecond=0)
               wait = int((t - now).total_seconds())
