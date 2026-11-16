@@ -4,7 +4,11 @@ let SCB=null;function scBlur(c,px,fn){if(!SCB)SCB=xmCanvas(XW,XH);const g=SCB.ge
 // scene 'hama'＝白い砂浜と海（昼の浜／夕焼けと円い穴の島／夜の光のパレード）
 function scSky(c,cols,y1){const g=c.createLinearGradient(0,0,0,y1||XH);cols.forEach((q,i)=>g.addColorStop(i/(cols.length-1),q));c.fillStyle=g;c.fillRect(0,0,XW,XH);
  c.save();c.globalCompositeOperation='multiply';c.globalAlpha=.06;c.drawImage(xmNoise(),0,0);c.restore()}
-function scClouds(c,seed,n,y0,y1,col,a){const r=XR(seed);c.save();c.filter='blur(16px)';for(let i=0;i<n;i++){const x=r()*XW,y=y0+r()*(y1-y0),w=120+r()*240;c.globalAlpha=a;c.fillStyle=col;c.beginPath();c.ellipse(x,y,w,w*.15,0,0,7);c.fill()}c.restore()}
+// 11/16 雲：ふくらみを重ね、下に青い影・上に日の当たる明るさ（絵本の水彩の雲）。字の場所（右上）はうすく
+function scClouds(c,seed,n,y0,y1,col,a){const r=XR(seed);const C=[];for(let i=0;i<n;i++){const x=r()*XW,y=y0+r()*(y1-y0),w=120+r()*240,k=4+Math.floor(r()*4),pf=[];
+ for(let j=0;j<k;j++)pf.push([x+(j-(k-1)/2)*w*.32+(r()-.5)*w*.1,y-Math.sin(Math.PI*(j+.5)/k)*w*.1-r()*w*.04,w*(.13+r()*.09)]);C.push({x,y,w,pf,z:(SC_ZONE(x,y)?.45:1)})}
+ const pass=(fill,al,dy,sc,bl)=>{c.save();c.filter=`blur(${bl}px)`;for(const q of C){c.globalAlpha=Math.min(1,al*q.z);c.fillStyle=fill;c.beginPath();for(const[px,py,pr]of q.pf){c.moveTo(px+pr*sc,py+dy*q.w);c.ellipse(px,py+dy*q.w,pr*sc,pr*sc*.62,0,0,7)}c.ellipse(q.x,q.y+dy*q.w,q.w*.62*sc,q.w*.07,0,0,7);c.fill()}c.restore()};
+ pass('rgb(128,142,170)',a*.32,.05,1,14);pass(col,a,0,1,10);pass('rgb(255,250,236)',a*.55,-.035,.7,7)}
 
 // ---------- もみじ ----------
 function mjLeaf(c,x,y,s,rot){c.save();c.translate(x,y);c.rotate(rot);c.beginPath();
@@ -146,6 +150,12 @@ function mjFx(c,mode,t,u){const r=XR(600+mode);c.save();
    c.fillStyle=['#c8402c','#e0662f','#ea8a34','#b3301f'][i%4];c.globalAlpha=.9;mjLeaf(c,x,y,s,t*1.5*(i%2?1:-1)+ph)}}
  else{c.globalCompositeOperation='lighter';for(let i=0;i<26;i++){const T=5+r()*3,p=((t/T+r())%1),x=60+r()*800+Math.sin(t*.7+i)*30,y=1150-p*(700+r()*300),s=8+r()*8;const a=Math.sin(Math.PI*p);
    glow(c,x,y,s*3,'255,140,70',a*.35);c.globalAlpha=a*.9;c.fillStyle='#ffb070';mjLeaf(c,x,y,s,t*.8+i)}}
+ // 11/16 楼門のページ：参道を親子がゆっくり門へ歩く（足の上下つき）
+ if(mode==0&&typeof XO!='undefined'&&c===XO&&u>0){c.save();c.globalAlpha=Math.min(1,u/1.2);const w=u*9,b=Math.abs(Math.sin(t*5.2))*2.4,b2=Math.abs(Math.sin(t*5.2+1.6))*2.4;
+   xmPerson(c,612,1352-w-b,84,'#6a4a5a',0,61,1);xmPerson(c,646,1358-w-b2,62,'#3e5a7e',0,62,2);c.restore()}
+ // 11/16 池の水面がきらめく（橋とお茶の席のページ・夜のページ。丸窓の中は位置が違うので描かない）
+ if(mode>0&&typeof XO!='undefined'&&c===XO){const q=XR(77);c.globalCompositeOperation='lighter';for(let i=0;i<46;i++){const x=q()*XW,y=968+q()*104,ph=q()*7,sp=1.4+q()*1.6,l=10+q()*30;const a=Math.pow(Math.max(0,Math.sin(t*sp+ph)),3);if(a<.02)continue;
+   c.globalAlpha=a*(mode==2?.75:.6);c.strokeStyle=mode==2?'#ffb070':'#fffbe8';c.lineWidth=1.6;c.beginPath();c.moveTo(x-l/2+Math.sin(t*.6+ph)*6,y);c.lineTo(x+l/2+Math.sin(t*.6+ph)*6,y);c.stroke()}}
  c.restore();c.globalAlpha=1}
 // 浜：昼はかもめ、夕方は流れ星、夜は光の帯が砂浜をなめるように動き、光の玉が浮かび上がる
 function hmFx(c,mode,t,u){c.save();
@@ -166,6 +176,8 @@ function mjTree(c,cx,by,h,mode,seed,L,o){o=o||{};const r=XR(seed);const night=mo
  const ccx=cx+lean*h*.5,ccy=by-h*.64,rx=w*.5,ry=h*.3;
  // 幹と枝（かたまりの中へ向かって伸びる）
  const grow=(x,y,a,len,wd,d)=>{const x2=x+Math.cos(a)*len,y2=y+Math.sin(a)*len,mx=(x+x2)/2+(r()-.5)*len*.25,my=(y+y2)/2;
+  if(d<3&&((x2-ccx)/rx)**2+((y2-ccy)/ry)**2>.92)return;
+  if(d<3&&y2<ccy-ry*.15)return;   // 11/16 かたまりの上半分は葉のすき間から枝が透けるので描かない   // 11/16 葉のかたまりの外へ出る細い枝は描かない（字の近くに黒い枝が飛び出した）
   c.strokeStyle=bark;c.lineWidth=wd;c.beginPath();c.moveTo(x,y);c.quadraticCurveTo(mx,my,x2,y2);c.stroke();
   if(wd>5){c.strokeStyle=barkL;c.globalAlpha=.4;c.lineWidth=wd*.28;c.beginPath();c.moveTo(x-wd*.22,y);c.quadraticCurveTo(mx-wd*.22,my,x2-wd*.2,y2);c.stroke();c.globalAlpha=1}
   if(d<=0)return;const sp=.45+r()*.3;grow(x2,y2,a-sp,len*.72,wd*.62,d-1);grow(x2,y2,a+sp,len*.72,wd*.62,d-1)};
@@ -236,9 +248,10 @@ function mjGate2(c,cx,by,w,mode,L){const night=mode==2,h=w*.95;const ver=night?'
 function mjStream2(c,cv,y0,y1,mode,extra){const top=(x)=>y0+Math.sin(x*.008)*10,bot=(x)=>y1+Math.sin(x*.006+1)*14;
  const path=g=>{g.moveTo(-20,top(-20));for(let x=0;x<=XW+20;x+=20)g.lineTo(x,top(x));for(let x=XW+20;x>=-20;x-=20)g.lineTo(x,bot(x));g.closePath()};
  const snap=xmCanvas(XW,XH);snap.getContext('2d').drawImage(cv,0,0);
- const W=[['#8fb4b0','#5e8a86'],['#7a7c70','#4a5048'],['#0e1222','#06080f']][mode];
+ const W=[['#8fb4b0','#5e8a86'],['#8a9c94','#4e625c'],['#0e1222','#06080f']][mode];
  c.save();c.beginPath();path(c);c.clip();const g=c.createLinearGradient(0,y0,0,y1);g.addColorStop(0,W[0]);g.addColorStop(1,W[1]);c.fillStyle=g;c.fillRect(0,y0-30,XW,y1-y0+60);
- c.globalAlpha=mode==2?.65:.5;c.filter='blur(3px)';c.translate(0,y0*2-6);c.scale(1,-1);c.drawImage(snap,0,0);if(extra)c.drawImage(extra,0,0);c.restore();
+ c.globalAlpha=mode==2?.65:.62;c.filter='blur(3px)';c.save();c.translate(0,y0*2-6-80);c.scale(1,-1);c.drawImage(snap,0,0);c.restore();   // 11/16 岸の地面でなく、奥のもみじの森が水に映る
+ c.translate(0,y0*2-6);c.scale(1,-1);if(extra)c.drawImage(extra,0,0);c.restore();
  // 水面のゆらぎ
  const r=XR(9);c.save();c.beginPath();path(c);c.clip();c.strokeStyle=mode==2?'rgba(255,170,110,.3)':'rgba(255,255,255,.5)';for(let i=0;i<70;i++){const x=r()*XW,y=y0+6+r()*(y1-y0),l=8+r()*44;c.lineWidth=.8+r();c.beginPath();c.moveTo(x,y);c.lineTo(x+l,y);c.stroke()}
  c.fillStyle='rgba(0,0,0,.18)';c.fillRect(0,y0-20,XW,14);c.restore();
@@ -307,7 +320,7 @@ function mjBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B
 // ---------- 白良浜（本格版） ----------
 const HM_SHORE=x=>1000-x*.06+Math.sin(x*.007)*16;
 function hmIsland2(c,cx,by,w,mode,sunHole){const night=mode==2;const tc=xmCanvas(XW,XH),t=tc.getContext('2d');
- const col=night?'#010207':mode==1?'#2e1c2a':'#8a8270';
+ const col=night?'#010207':mode==1?'#2e1c2a':'#9a8266';
  wash(t,g=>wob(g,[[cx-w*.56,by],[cx-w*.5,by-w*.22],[cx-w*.44,by-w*.4],[cx-w*.3,by-w*.5],[cx-w*.12,by-w*.58],[cx+w*.06,by-w*.66],[cx+w*.2,by-w*.62],[cx+w*.32,by-w*.5],[cx+w*.4,by-w*.36],[cx+w*.5,by-w*.2],[cx+w*.6,by-w*.06],[cx+w*.66,by]],4,13),col,{edge:.35,gr:night?0:mode==1?.2:.4,light:!night,a:night?1:.92});
  // 地層の線と光の当たる面
  const r=XR(5);t.save();t.globalCompositeOperation='source-atop';t.strokeStyle=night?'rgba(120,130,200,.12)':mode==1?'rgba(255,170,120,.18)':'rgba(60,50,40,.3)';t.lineWidth=2;
@@ -315,7 +328,7 @@ function hmIsland2(c,cx,by,w,mode,sunHole){const night=mode==2;const tc=xmCanvas
  const lg=t.createLinearGradient(cx-w*.5,0,cx+w*.5,0);lg.addColorStop(0,mode==0?'rgba(255,250,230,.25)':'rgba(0,0,0,0)');lg.addColorStop(1,mode==1?'rgba(255,150,100,.0)':'rgba(0,0,0,.25)');t.fillStyle=lg;t.fillRect(0,0,XW,XH);t.restore();
  // 上の木
  const G=night?['#04060a','#0a0e14']:mode==1?['#1c121a','#2a1a22']:['#3e5e3e','#4e7046','#2e4a32'];
- for(let i=0;i<70;i++){const x=cx-w*.36+r()*w*.7,y=by-w*.6+Math.abs(x-cx)*.3-r()*16;t.fillStyle=G[i%G.length];t.beginPath();t.arc(x,y,4+r()*8,0,7);t.fill()}
+ for(let i=0;i<70;i++){const x=cx-w*.36+r()*w*.7,y=by-w*.6+Math.abs(x-cx)*.3-r()*16;t.fillStyle=G[i%G.length];t.beginPath();t.arc(x,y,(mode==0?6:4)+r()*8,0,7);t.fill()}
  // 円い穴
  t.globalCompositeOperation='destination-out';t.beginPath();t.ellipse(cx,by-w*.13,w*.14,w*.17,0,0,7);t.fill();t.globalCompositeOperation='source-over';
  t.strokeStyle=night?'rgba(0,0,0,.5)':'rgba(30,20,20,.4)';t.lineWidth=3;t.beginPath();t.ellipse(cx,by-w*.13,w*.14,w*.17,0,0,7);t.stroke();
@@ -359,7 +372,7 @@ function hmSand2(c,mode){const P=[['#fbf6ea','#efe4cc'],['#f0cdb6','#c8a08e'],['
 const HM_STR=[];for(let k=0;k<3;k++)for(let x=24;x<XW;x+=26)HM_STR.push({x,y:HM_SHORE(x)+56+k*72+Math.sin(x*.012+k*1.7)*16,k});
 function hmBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;
  if(mode==0){scSky(c,['#6eaad6','#b4d6ea','#eef4f0'],800);scClouds(c,6,9,420,720,'#ffffff',.65);scClouds(c,7,4,140,300,'#ffffff',.35);
-  xmGulls(c,6,5);hmSea2(c,800,0);hmHill(c,0,L);hmIsland2(c,180,812,180,0);
+  xmGulls(c,6,5);hmSea2(c,800,0);hmHill(c,0,L);hmIsland2(c,440,812,170,0);   // 11/16 やしの葉に穴がかくれないよう右へ
   hmSand2(c,0);
   hmPalm(T.c,110,1240,640,0,3,.1);hmPalm(T.c,250,1200,520,0,4,-.05);T.ax=180;T.ay=1220;T.d=.1;
   xmPerson(F.c,560,1250,104,'#3e5a7e',0,31,0);xmPerson(F.c,596,1256,96,'#c08a5a',0,32,1);xmPerson(F.c,630,1262,72,'#e2b84a',0,33,2);xmPerson(F.c,760,1100,60,'#8a4a4a',0,34,0);F.ax=600;F.ay=1260;F.d=.4;
@@ -374,7 +387,7 @@ function hmBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B
   L.push({x:250,y:806,r:200,c:'255,200,140',a:.5,p:0,sp:0,soft:1});
   hmPalm(F.c,830,1320,640,1,3,-.08);xmPerson(F.c,520,1290,118,'#3a3a5a',1,36,0);xmPerson(F.c,556,1296,104,'#6a3a3a',1,37,1);F.ax=650;F.ay=1300;F.d=.4;
  }else{scSky(c,['#03040c','#0a0d22','#1a1c3a'],800);xmStars(c,9);xmMoon(c,190,200,40);
-  hmSea2(c,800,2);hmHill(c,2,L);hmIsland2(c,180,812,180,2);
+  hmSea2(c,800,2);hmHill(c,2,L);hmIsland2(c,440,812,170,2);
   hmSand2(c,2);
   const cols=['255,110,170','110,190,255','255,210,110','170,130,255','120,255,200'];
   for(const s of HM_STR)L.push({x:s.x,y:s.y,r:18,c:cols[(s.k*2+Math.floor(s.x/120))%5],a:.35,p:s.x*.05,sp:1.5,dot:1.4});

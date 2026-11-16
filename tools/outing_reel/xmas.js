@@ -164,7 +164,8 @@ function xmHut(c,x,y,w,mode,seed,L){const r=XR(seed);const night=mode==2,dusk=mo
  if(L)L.push({x:lx,y:ly-1,r:night?34:16,c:'255,196,110',a:night?.8:.3,p:r()*4,sp:3.1,dot:2.2})}
 
 // ---------- 人（丸い頭・コート・マフラー・帽子。夜はツリー側のふちが光る） ----------
-function xmPerson(c,x,y,s,col,mode,seed,kind){const r=XR(seed);kind=kind==null?Math.floor(r()*3):kind;const night=mode==2,dusk=mode==1;
+function xmPerson(c,x,y,s,col,mode,seed,kind){if(s>=88)s*=1.28;const r=XR(seed);   // 11/16 手前の人を大きく（見る人が自分を重ねやすい）
+kind=kind==null?Math.floor(r()*3):kind;const night=mode==2,dusk=mode==1;
  const dk=night?.55:dusk?.25:0,coat=xmMix(col,'#120a14',dk),coat2=xmMix(coat,'#000000',.3),skin=xmMix('#ecc9a8','#2a1a20',dk*1.1),hair=xmMix(['#3a2418','#5a3a22','#1e1410'][Math.floor(r()*3)],'#000',dk*.5);
  const acc=xmMix(['#c0392b','#e2b84a','#f1e7d6','#2e6b4a'][Math.floor(r()*4)],'#100810',dk);
  const ch=kind==2;const S=ch?s*.72:s;
@@ -260,7 +261,19 @@ const XOUT=xmCanvas(XW,XH),XO=XOUT.getContext('2d');
 const XLC=xmCanvas(XW/2,XH/2),XLG=XLC.getContext('2d'),XB1=xmCanvas(XW/4,XH/4),XB1G=XB1.getContext('2d'),XB2=xmCanvas(XW/8,XH/8),XB2G=XB2.getContext('2d');
 function xmEll(c,l,a){c.save();c.translate(l.x,l.y);c.scale(1,l.ry/l.rx);glow(c,0,0,l.rx,l.c,a);c.restore()}
 function xmPopK(u,d){const x=Math.max(0,Math.min(1,(u-d)/1.05));if(x<=0)return 0;const c1=1.5;return 1+(c1+1)*Math.pow(x-1,3)+c1*Math.pow(x-1,2)}
-function xmPage(mode,t,u){const X=xmBase(mode);t=t||0;u=u||0;const c=XO;const k=Math.max(0,Math.min(1,(u+.9)/5.2)),uu=u+.55;
+// 11/16 飛び出す絵本（text.popup）：立ち上がる層を「紙の切り絵」にする。白い切り口・紙の厚み・ページに落ちるくっきりした影
+function POPON(){return typeof P!='undefined'&&!!P.popup}
+function xmPaperize(Ly,mode){const cv=Ly.cv,src=cv.getContext('2d').getImageData(0,0,XW,XH),d=src.data;
+ const mk=(col)=>{const m=xmCanvas(XW,XH),g=m.getContext('2d'),im=g.createImageData(XW,XH),o=im.data;const[r,gg,b]=xmHex(col);
+  for(let i=0;i<d.length;i+=4)if(d[i+3]>90){o[i]=r;o[i+1]=gg;o[i+2]=b;o[i+3]=255}g.putImageData(im,0,0);return m};
+ const W=mk(mode==2?'#8f8576':'#fffaf0'),E=mk(mode==2?'#3e3630':'#b9a688'),out=xmCanvas(XW,XH),g=out.getContext('2d');
+ for(let a=0;a<20;a++){const q=a/20*6.2832;g.drawImage(E,Math.cos(q)*6,Math.sin(q)*6+5)}      // 紙の厚み（下側に見える）
+ for(let a=0;a<20;a++){const q=a/20*6.2832;g.drawImage(W,Math.cos(q)*6,Math.sin(q)*6)}        // 白い切り口
+ g.drawImage(cv,0,0);
+ // 紙の面の明るさ：上が少し明るく、下（折り目の近く）が少し暗い
+ g.globalCompositeOperation='source-atop';const lg=g.createLinearGradient(0,(Ly.ay||1200)-700,0,Ly.ay||1200);lg.addColorStop(0,'rgba(255,248,230,.10)');lg.addColorStop(1,'rgba(40,25,15,.16)');g.fillStyle=lg;g.fillRect(0,0,XW,XH);
+ Ly.cv=out;const s=xmCanvas(XW,XH),h=s.getContext('2d');h.filter='brightness(0) blur(3px)';h.drawImage(out,0,0);Ly.sh2=s;Ly.sh=xmShadowOf(out)}
+function xmPage(mode,t,u){const X=xmBase(mode);if(POPON()&&!X.pz){xmPaperize(X.T,mode);xmPaperize(X.F,mode);X.pz=1}t=t||0;u=u||0;const c=XO;const k=Math.max(0,Math.min(1,(u+.9)/5.2)),uu=u+.55;
  c.setTransform(1,0,0,1,0,0);c.globalCompositeOperation='source-over';c.globalAlpha=1;c.filter='none';
  XLG.setTransform(1,0,0,1,0,0);XLG.clearRect(0,0,XW/2,XH/2);XLG.globalCompositeOperation='lighter';
  const layers=[[X.B,6,null],[X.T,22,X.T],[X.F,38,X.F]];
@@ -273,6 +286,8 @@ function xmPage(mode,t,u){const X=xmBase(mode);t=t||0;u=u||0;const c=XO;const k=
   const kk=Math.max(0,xmPopK(uu,Ly.d));if(kk<=0.001)continue;const ax=Ly.ax+ox,ay=Ly.ay;
   // 紙の影：ページの上に、右奥へ伸びる
   c.save();c.globalAlpha=Math.min(1,kk)*(mode==2?.4:.24);c.translate(ax,ay);c.transform(1,0,-.22,.1*Math.min(1,kk),0,0);c.translate(-ax,-ay);c.drawImage(Ly.sh,ox,0);c.restore();
+  if(POPON()){const q=Math.min(1,kk);c.save();c.globalAlpha=q*(mode==2?.55:.38);c.translate(ax,ay);c.transform(1,0,-.18*(1-q*.6),.35+.6*q,0,0);c.translate(-ax,-ay);c.drawImage(Ly.sh2,ox+16*q,10*q);c.restore();   // 立った紙のくっきりした影（右下）
+   c.save();c.globalAlpha=q*.5;c.fillStyle=mode==2?'rgba(0,0,0,.6)':'rgba(60,40,25,.45)';c.filter='blur(6px)';c.fillRect(ax-460,ay-4,920,14);c.restore()}   // 折り目の線のかげ
   c.save();c.translate(ax,ay);c.scale(.92+.08*kk,kk);c.translate(-ax,-ay);c.drawImage(Ly.cv,ox,0);
   c.restore()}
  // 光：奥から順に（立ち上がりと同じ動き）
@@ -285,5 +300,8 @@ function xmPage(mode,t,u){const X=xmBase(mode);t=t||0;u=u||0;const c=XO;const k=
  if(mode==2){const gy=X.gy;c.save();c.beginPath();c.rect(0,gy,XW,XH-gy);c.clip();c.globalAlpha=.42;c.filter='blur(4px)';c.translate(0,gy*2+40);c.scale(1,-1);c.drawImage(XB1,0,0,XW,XH);c.restore()}
  c.globalCompositeOperation='source-over';c.globalAlpha=1;c.filter='none';
  if(typeof MG!='undefined'&&MG){if(P.scene=='momiji')mjFx(c,mode,t,u);else if(P.scene=='hama')hmFx(c,mode,t,u);else xmFx(c,mode,t,u)}
+ // 11/16 絵の仕上げ：ぼかした写しを重ねて、絵の具がにじむような柔らかい光と深い色に（オートン）
+ {if(typeof XORC=='undefined'){window.XORC=xmCanvas(XW/4,XH/4);window.XORG=XORC.getContext('2d')}XORG.setTransform(1,0,0,1,0,0);XORG.clearRect(0,0,XW/4,XH/4);XORG.filter='blur(4px)';XORG.drawImage(XOUT,0,0,XW/4,XH/4);XORG.filter='none';
+  c.save();c.globalCompositeOperation='soft-light';c.globalAlpha=mode==2?.32:.42;c.drawImage(XORC,0,0,XW,XH);c.globalCompositeOperation='screen';c.globalAlpha=mode==2?.10:.07;c.drawImage(XORC,0,0,XW,XH);c.restore()}
  c.drawImage(X.V,0,0);c.save();c.globalCompositeOperation='multiply';c.globalAlpha=.08;c.drawImage(xmNoise(),0,0);c.restore();
  return XOUT.toDataURL('image/jpeg',.92)}
