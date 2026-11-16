@@ -154,7 +154,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 .vt{position:absolute;writing-mode:vertical-rl;font-family:M;color:#4a3328;letter-spacing:.2em;line-height:1.9;white-space:nowrap;text-orientation:upright}
 .vt span{display:inline-block;opacity:0}
 .vt .tcy{text-combine-upright:all;letter-spacing:0}
-.vt .sdw{text-orientation:mixed;letter-spacing:.04em;margin:.1em 0}
+.vt .ud{letter-spacing:0;inline-size:.8em;line-height:1;text-align:center}
 .cover{background:linear-gradient(100deg,#5d1f1b,#7c2a22 18%,#742620 70%,#5a1c18);border-radius:4px 12px 12px 4px}
 .cover:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 5px),repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 2px,transparent 2px 5px)}
 .cover .spine{position:absolute;left:0;top:0;bottom:0;width:46px;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,0))}
@@ -252,7 +252,8 @@ function leafPath(R){const L=[1,.9,.7,.42],pts=[];const P=(r,d)=>{const a=(d-90)
 // 海の景色（scene: 'umi'）では、もみじの代わりに光のきらめき
 const MG=!!P.magic,XM=P.scene=='xmas',CVS=['xmas','momiji','hama'].includes(P.scene),XHK=['#e2b84a','#c0392b','#f6d36b','#2e6b4a','#f4ead8'],UMI=P.scene=='umi',HK=['#8fd0ff','#ffd27a','#ff8fb8','#b9a0ff','#8fffd0'];
 const LP=(UMI||XM||P.scene=='hama')?'M0,-1Q.1,-.1 1,0Q.1,.1 0,1Q-.1,.1 -1,0Q-.1,-.1 0,-1Z':leafPath(1);
-function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>(l.match(/[0-9A-Za-z][0-9A-Za-z.,:]*[0-9A-Za-z]|./gu)||[]).map(c=>c.length==2?`<span class="tcy">${c}</span>`:c.length>2?`<span class="sdw">${c}</span>`:`<span>${/[!-~]/.test(c)?String.fromCharCode(c.charCodeAt(0)+65248):c}</span>`).join('')).join('<br>')+`</div>`}
+// 11/16 オーナー「数字また横になってる」「漢数字は今どきじゃない」：縦書きの3けた以上は1字ずつ縦に、字の間をつめる（雑誌の縦書きの形）。2けたは1マスに横並び
+function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>(l.match(/[0-9A-Za-z][0-9A-Za-z.,:]*[0-9A-Za-z]|./gu)||[]).map(c=>c.length==2?`<span class="tcy">${c}</span>`:c.length>2?[...c].map(d=>`<span class="ud">${d}</span>`).join(''):`<span>${/[!-~]/.test(c)?String.fromCharCode(c.charCodeAt(0)+65248):c}</span>`).join('')).join('<br>')+`</div>`}
 function scene(mode){ // 0 昼 1 秋 2 夜
   // 11/15 クリスマスの絵（tools/outing_reel/xmas.js）。電球は毎コマまたたく
   if(CVS)return `<svg viewBox="0 0 920 1380">${DEFS}<image class="xmi" data-m="${mode}" href="${xmPage(mode,0)}" width="920" height="1380"/><g class="lv"></g>${PAPER}</svg>`;
@@ -397,8 +398,8 @@ function render(t){
       const g=pg.querySelector('.glow');if(g)g.style.opacity=.2+.5*eo(sm(u,.3,2.2))+.04*Math.sin(t*3);
       pg.querySelectorAll('.lan').forEach((s,j)=>s.style.opacity=.85*eo(sm(u,.5+j*.14,1.1+j*.14)));
       chars('t3',t,ST[i]-.1,.075);fade('n1',t,ST[i]+1.7,.7)}
-    if(i==0)chars('t0',t,ST[i]-.15,.075);
-    if(i==1)chars('t1',t,ST[i]-.15,.075);
+    if(i==0){chars('t0',t,ST[i]-.15,.075)}
+    if(i==1){chars('t1',t,ST[i]-.15,.075)}
     if(i==2&&MG){const gl=pg.querySelector('.xgl');if(gl&&t>ST[i]-TURN-.05&&t<end+.05)gl.setAttribute('href',XM?mgGlobe(t,t-ST[i]):mgRound(t,t-ST[i]))}
     if(i==2){chars('t2',t,ST[i]-.15,.11);fade('d1',t,ST[i]+.25);fade('d2',t,ST[i]+.6,.8,26);fade('d3',t,ST[i]+1.3);const sl=document.getElementById('seal'),sk=sm(t,ST[i]+1.9,ST[i]+2.15);sl.style.opacity=sk;sl.style.transform=`rotate(-6deg) scale(${1.5-.5*eo(sk)})`}
     if(i==4){P.info.forEach((r,j)=>fade('r'+j,t,ST[i]+.05+j*.22,.6,14));fade('nt',t,ST[i]+1.1)}
