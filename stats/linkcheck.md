@@ -1,4 +1,4 @@
-# リンクの確かめ（2026-11-15 11:57 JST・262件）
+# リンクの確かめ（2026-11-16 09:22 JST・262件）
 
 ## 開けない（直す）
 - ✗ 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
@@ -8,11 +8,14 @@
 - ✗ 大阪梅田ツインタワーズ・ノース クリスマスイルミネーション（links/illumination-muryo.html）URLError https://www.hhp.co.jp/
 - ✗ UMEDA MEETS HEART（links/illumination-muryo.html）URLError https://umedameetsheart.com/
 - ✗ 天理市 光の祭典（links/illumination-muryo.html）404 https://www.city.tenri.nara.jp/kakuka/shichoukoushitsu/sougouseisakuka/teijyujirituken/teijujiritsukenibentojoho/15242.html
+- ✗ あべのハルカス 天空のイルミネーション2026（links/illumination-osaka.html）502 https://www.abenoharukas-300.jp/
 - ✗ 勝尾寺 錦秋の宵詣り2026（links/illumination-osaka.html）URLError https://katsuo-ji-temple.or.jp/autumn/
 - ✗ 箕面の森の夜さんぽ（箕面公園 滝道ライトアップ）（links/illumination-osaka.html）404 https://www.city.minoh.lg.jp/brandsenryaku/event/momijimatsuri2025.html
 - ✗ 和歌山城 西之丸庭園（紅葉渓庭園）ライトアップ（links/illumination-wakayama.html）522 https://wakayamajo.jp/
 - ✗ 魯山人の宇宙 魂を刳る美がほしい（links/index.html）TimeoutError https://www.mistore.jp/store/kyoto/museum/event_list/event21.html
+- ✗ キッチンカーグランプリ in 希望が丘（links/index.html）404 https://www.kiboupark-shiga.or.jp/important/156260.html
 - ✗ 大阪ステーションシティ×ドラマチック謎解きゲーム（links/index.html）URLError https://osakastationcity-nazo.com/
+- ✗ 微わかる展2＋小さいすぎるよ展（links/index.html）404 https://kyoto.aeonmall.jp/event/8e1f32a3-1ece-4425-bd22-07ba62ea72f8
 - ✗ 第14回 印南かえるのフェスティバル（links/index.html）404 https://www.town.wakayama-inami.lg.jp/0000001029.html
 - ✗ アニタッチ OSAKA なんば（links/index.html）404 https://www.afpbb.com/articles/-/3648165
 - ✗ 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf

@@ -294,17 +294,20 @@
   {
    "day": "2026-11-16",
    "item": "pic",
-   "what": "Threads 8枠と X 3枠に表紙の絵（9枚作成）"
+   "what": "Threads 8枠と X 3枠に表紙の絵（9枚作成）",
+   "before": 2.59
   },
   {
    "day": "2026-11-16",
    "item": "post",
-   "what": "予約前の門で × の枠（Threads 8枠：HPのアドレスが古い townnote.pages.dev）を kansai.townnote.app に直した"
+   "what": "予約前の門で × の枠（Threads 8枠：HPのアドレスが古い townnote.pages.dev）を kansai.townnote.app に直した",
+   "before": 45
   },
   {
    "day": "2026-11-16",
    "item": "post",
-   "what": "X の速報 4本（京都2・大阪1・奈良1）と路線の順位2本"
+   "what": "X の速報 4本（京都2・大阪1・奈良1）と路線の順位2本",
+   "before": 45
   }
  ]
 }
