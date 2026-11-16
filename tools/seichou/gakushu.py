@@ -473,6 +473,15 @@ def _akari(path):
         import urllib.request
         return json.loads(urllib.request.urlopen("https://raw.githubusercontent.com/oreusa/akari-auto/main/" + path, timeout=20).read().decode("utf-8"))
     except Exception: return None
+def _raw(url):
+    """文字のファイル（読めない時は None＝止まったとは言わない）"""
+    try:
+        import urllib.request
+        return urllib.request.urlopen(url, timeout=20).read().decode("utf-8", "ignore")
+    except Exception: return None
+def _hi(t, pat):
+    if t is None: return None
+    return _mx(re.findall(pat, t))
 _tk = load(S("toukou.json"), {}).get("rows", []); _ks = load(S("kensaku.json"), {}).get("rows", []); _ag = _akari("data/gakushu.json")
 MIMAWARI = [
     ("数字の機械（link-stats）", _mx(r.get("day", "") for r in rows), 1, "Actions の link-stats を見て、止まった段を直す（stats/build-fail.txt）"),
@@ -485,6 +494,10 @@ MIMAWARI = [
     ("やった手の帳面", _mx(y.get("day", "") for y in load(S("yatta.json"), {}).get("rows", [])), 2, "月が2日、指令の手を1つもやっていない。きょうの1つをやって1行足す"),
     ("きょうのリールの台本", _mx(f[:10] for f in os.listdir(os.path.join(ROOT, "ig", "reels")) if re.match(r"\d{4}-\d\d-\d\d\.json$", f)), 0, "ig/reels/きょう.json が無い＝きょうのリールが出ない。朝の回 A2 のとおり、いま絵本の型で1本書いて main に入れる（前の日の朝の回が書くはずだった）"),
     ("関東のきょうの予定表（燈）", (today.isoformat() if _akari("schedule/" + today.isoformat() + ".json") is not None else (today - timedelta(days=1)).isoformat()) if _ag is not None else None, 0, "akari schedule/きょう.json が無い＝関東の投稿が出ない。燈の夜の回（22:11）が書けていない。連絡帳に1行書き、docs/nightly-prompt.md のとおり月が書く"),
+    # 11/16 オーナー「ふたつともお出かけがない」「他にもそんなのがないか」→ 見回りに入っていなかった毎日の仕事を足した
+    ("全ページ点検（allcheck）", _hi(_raw("https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/allcheck/report.md"), r"全ページ点検 (\d{4}-\d\d-\d\d)"), 1, "Actions の allcheck.yml を見る（40分を越えて切れていないか・11/15 に1回切れた）"),
+    ("申し込みの送信テスト", (load(S("formcheck.json"), {}) or {}).get("at", "")[:10], 1, "Actions の formcheck.yml を見る（毎日 7:40・15:40）"),
+    ("関東のおでかけを足す（燈の集め係）", _hi(_raw("https://raw.githubusercontent.com/oreusa/akari-auto/main/notes/collector-log.md"), r"(?m)^- (\d{4}-\d\d-\d\d)"), 1, "燈の集め係（毎日 14:13）が notes/collector-log.md に書いていない。予定の最後の回を見て、止まった元を直す"),
     ("関東の台帳（燈）", (_ag or {}).get("day", "") if _ag is not None else None, 1, "akari の page.yml（公開の機械）が止まっている。Actions を見て直す"),
 ]
 _kim = load(S("kimari.json"), {}) if os.path.exists(S("kimari.json")) else {}
