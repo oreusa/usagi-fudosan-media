@@ -150,6 +150,30 @@ def main(day):
     else:
         rule("楽天ROOM（載った数）", "毎日ROOMに商品が増える", "1日10件以上載る（台帳の線）", None, "stats/room.json が2日分ない", "tools/room/kazu.py を見る")
 
+    # 7d 11/16 オーナー「見回りにはふたつともお出かけがない」：関西のおでかけ一覧が動いているか・減っていないか
+    #   終わったカードは月・木 19:47 の点検が「終わったおでかけ」へ移す。本体に残る一番古い終わりの日が5日より前＝点検が止まっている
+    #   今出ている枚数は 11/9 の 176枚 → 11/16 の 117枚に減っていた（足すのが木曜の1回だけ）。関東（燈）は毎日足して 151枚
+    try:
+        ih = open(R("links", "index.html"), encoding="utf-8").read().split('class="past')[0]
+        cards = re.findall(r'<a [^>]*class="card[^"]*"[^>]*>', ih)
+        ended = sorted(e for e in (re.search(r'data-e="(\d{4}-\d\d-\d\d)', c) for c in cards) if e for e in [e.group(1)] if e < day)
+        age = (today - date.fromisoformat(ended[0])).days if ended else 0
+        rule("おでかけリスト点検（関西）", "終わった催しを一覧に残さない・終わりが近い物を公式で確かめる", "月・木 19:47 に点検する（odekake-list-1947.md）",
+             age <= 4, f"終わったのに一覧に残っている {len(ended)}枚・一番古い終わりの日 {ended[0] if ended else 'なし'}（{age}日前）",
+             "予定「おでかけリスト点検」が動いたかを見て、odekake-list-1947.md の「毎晩」の1〜3をいまやる")
+        per = {}
+        for c in cards:
+            e = re.search(r'data-e="([^"]*)"', c); pf = re.search(r'data-pref="([^"]*)"', c)
+            if pf and (not e or e.group(1)[:10] >= day):
+                per[pf.group(1)] = per.get(pf.group(1), 0) + 1
+        low = [f"{k} {v}" for k, v in per.items() if v < 15]
+        tot = sum(per.values())
+        rule("おでかけの数（関西）", "行く所が見つかる一覧（6府県を公平に）", "今出ているカード 合計120枚以上・どの府県も15枚以上（関東は毎日足して151枚）",
+             tot >= 120 and not low, f"今出ている {tot}枚（" + "・".join(f"{k}{v}" for k, v in per.items()) + "）",
+             "少ない府県（" + ("・".join(low) or "なし") + "）から、odekake-list-1947.md の木曜の照合をきょう前倒しでやる（公式で確かめた物だけ）")
+    except Exception as ex:
+        rule("おでかけリスト点検（関西）", "終わった催しを一覧に残さない", "月・木 19:47 に点検する", None, f"読めない（{ex}）", "links/index.html を見る")
+
     # 8 広告の断り：アフィリエイトのあるページは上下に「広告（PR）」
     miss = []
     for f, t in html_texts("links/**/*.html"):
