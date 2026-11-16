@@ -281,6 +281,32 @@ function mjBench2(c,x,by,w,mode,L){const night=mode==2;const ux=x+w*.66,uy=by-w*
  c.fillStyle='#e8dcc4';c.beginPath();c.ellipse(x+w*.3,by-w*.36,w*.055,w*.04,0,0,Math.PI);c.fill();c.fillStyle='#5a8a3a';c.beginPath();c.ellipse(x+w*.3,by-w*.37,w*.05,w*.012,0,0,7);c.fill();
  c.fillStyle='#f4ead8';c.beginPath();c.ellipse(x+w*.46,by-w*.35,w*.05,w*.016,0,0,7);c.fill();c.fillStyle='#e8909a';c.beginPath();c.arc(x+w*.45,by-w*.375,w*.022,0,7);c.fill();c.fillStyle='#f6c0c4';c.beginPath();c.arc(x+w*.47,by-w*.378,w*.018,0,7);c.fill();
  if(L)L.push({x:ux,y:uy+w*.25,r:w*.7,c:night?'255,120,70':'255,150,110',a:night?.35:.12,p:0,sp:.3,soft:1})}
+// 11/16 箕面大滝（text.taki）：両側の岩壁のあいだを、細く長い滝が落ちる（落差33m）。夜はライトアップで白く光り、滝つぼにしぶきの光
+function mjFall(c,cx,top,bot,w,mode,L){const night=mode==2,r=XR(77);
+ const rock=night?['#120e16','#08060c']:mode==1?['#4e3e34','#2e241e']:['#5e5248','#3a3028'];
+ // 滝の後ろの山：なだらかな斜面を、もみじの木でうめる（字の場所＝右上には出さない）
+ {const hp=g=>{g.moveTo(-20,top+200);g.bezierCurveTo(60,top+60,cx-140,top-60,cx,top-50);g.bezierCurveTo(cx+150,top-40,cx+250,top+140,XW*.6,top+360);g.lineTo(XW*.6,bot+20);g.lineTo(-20,bot+20);g.closePath()};
+  wash(c,hp,night?'#0c0608':mode==1?'#5e2a1c':'#6a3424',{edge:.2,gr:.3,light:false,a:.95});
+  c.save();c.beginPath();hp(c);c.clip();
+  for(const[x,y,h,sd]of[[20,top+330,300,61],[120,top+200,240,62],[200,top+130,190,63],[460,top+170,190,64],[540,top+300,230,65],[620,top+440,240,66],[60,top+470,280,67],[200,top+420,220,68],[470,top+430,220,69]])mjTree(c,x,y,h,mode,sd,L,{n:420,wide:1.1,zone:1,noLight:1});
+  c.restore()}
+ // 岩壁（左右）：滝の両側だけ。上はもみじの森に続く（一枚岩に見えないよう低く、外へなだらかに）
+ for(const sd of[-1,1]){const P=[];P.push([cx+sd*w*.4,bot]);for(let i=0;i<=8;i++){const u=i/8;P.push([cx+sd*(w*.4+u*w*.7)+(r()-.5)*10,top-14+u*(bot-top)*.5+(r()-.5)*16])}P.push([cx+sd*w*1.2,bot+30]);
+  wash(c,g=>wob(g,P,4,sd>0?3:4),rock[0],{grad:g=>{const q=g.createLinearGradient(cx,0,cx+sd*w*2.5,0);q.addColorStop(0,rock[1]);q.addColorStop(1,rock[0]);return q},edge:.4,gr:.4,light:!night})}
+ // 岩の割れ目と苔
+ c.save();c.strokeStyle=night?'rgba(120,110,150,.16)':'rgba(30,24,20,.3)';for(let i=0;i<40;i++){const sd=r()<.5?-1:1,x=cx+sd*(w*.5+r()*w*1.7),y=top+r()*(bot-top);c.lineWidth=1+r()*2;c.beginPath();c.moveTo(x,y);c.lineTo(x+(r()-.5)*24,y+16+r()*40);c.stroke()}
+ if(!night){for(let i=0;i<24;i++){const sd=r()<.5?-1:1;c.fillStyle=`rgba(${mode==1?'110,96,52':'80,110,60'},${.25+r()*.3})`;c.beginPath();c.ellipse(cx+sd*(w*.6+r()*w*1.8),top+(bot-top)*(.2+r()*.8),10+r()*24,4+r()*7,0,0,7);c.fill()}}c.restore();
+ // 落ちる水：白い帯＋縦の筋
+ const wt=night?['#fff4e0','#d8a870']:['#f6fbff','#b8d2de'];
+ wash(c,g=>{g.moveTo(cx-w*.36,top);g.bezierCurveTo(cx-w*.42,top+(bot-top)*.4,cx-w*.5,bot-(bot-top)*.2,cx-w*.56,bot);g.lineTo(cx+w*.56,bot);g.bezierCurveTo(cx+w*.5,bot-(bot-top)*.2,cx+w*.42,top+(bot-top)*.4,cx+w*.36,top);g.closePath()},wt[0],{grad:g=>{const q=g.createLinearGradient(cx-w*.5,0,cx+w*.5,0);q.addColorStop(0,wt[1]);q.addColorStop(.5,wt[0]);q.addColorStop(1,wt[1]);return q},edge:.2,gr:.15,light:false,a:night?.85:.92});
+ c.save();for(let i=0;i<70;i++){const u=r()*2-1,x0=cx+u*w*.34,y0=top+r()*(bot-top)*.5,l=(bot-top)*(.25+r()*.6);c.strokeStyle=night?`rgba(${r()<.5?'255,250,235':'150,100,60'},${.2+r()*.4})`:`rgba(${r()<.5?'150,180,200':'255,255,255'},${.25+r()*.45})`;c.lineWidth=.8+r()*2.2;c.beginPath();c.moveTo(x0,y0);c.quadraticCurveTo(x0+u*6,y0+l*.5,x0+u*w*.14,Math.min(bot,y0+l));c.stroke()}c.restore();
+ // 落ち口の白いしぶき
+ c.save();c.filter='blur(3px)';c.fillStyle=night?'rgba(255,240,210,.8)':'rgba(255,255,255,.85)';c.beginPath();c.ellipse(cx,top+4,w*.42,w*.08,0,0,7);c.fill();c.restore();
+ // 滝つぼのしぶきと霧
+ c.save();c.filter='blur(14px)';for(let i=0;i<12;i++){c.fillStyle=night?`rgba(255,230,190,${.25+r()*.2})`:`rgba(255,255,255,${.4+r()*.3})`;c.beginPath();c.ellipse(cx+(r()-.5)*w*2,bot-10+(r()-.5)*30,w*(.4+r()*.6),18+r()*20,0,0,7);c.fill()}c.restore();
+ if(L){if(night){L.push({x:cx,y:(top+bot)/2,r:(bot-top)*.45,c:'255,226,170',a:.16,p:0,sp:.2,soft:1});L.push({x:cx,y:bot,r:w*1.8,c:'255,210,150',a:.32,p:1,sp:.4,soft:1});
+   for(let i=0;i<10;i++)L.push({x:cx+(r()-.5)*w*1.6,y:bot-20-r()*40,r:16,c:'255,240,210',a:.7,p:i,sp:3,dot:2})}
+  else L.push({x:cx,y:bot,r:w*2,c:'255,255,255',a:.25,p:0,sp:.3,soft:1})}}
 function mjBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;
  if(mode==0){scSky(c,['#9ec4dc','#d6e4e6','#f4e8d0'],820);scClouds(c,4,8,120,560,'#ffffff',.55);
   c.save();c.globalCompositeOperation='screen';glow(c,330,560,520,'255,226,180',.45);c.restore();
@@ -303,16 +329,18 @@ function mjBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B
   else{scSky(c,['#e8c6a0','#f4dcc0','#f6e6cc'],760);scClouds(c,7,6,160,520,'#fff4e4',.5);c.save();c.globalCompositeOperation='screen';glow(c,700,420,560,'255,214,160',.5);c.restore()}
   wash(c,g=>{g.moveTo(-20,740);g.bezierCurveTo(240,660,480,700,700,672);g.bezierCurveTo(820,660,880,690,XW+20,690);g.lineTo(XW+20,880);g.lineTo(-20,880);g.closePath()},n?'#120e1a':'#b8a088',{edge:.1,gr:.25,light:false,a:n?.9:.55});
   mjForest(c,710,900,mode,6,n?0:.4,L);if(!n)scFog(c,730,40,'250,232,210',.4);else scFog(c,900,50,'255,110,60',.12);
+  if(P.taki){mjFall(c,330,n?400:420,905,60,mode,L);mjTree(c,90,900,330,mode,49,L,{n:900,wide:1,lean:.1,zone:1});mjTree(c,560,910,300,mode,50,L,{n:800,wide:1,lean:-.05,zone:1})}   // 11/16 箕面大滝（text.taki）：滝の両側の崖の上にもみじ
   mjGround2(c,880,mode);
   if(n){const q=c.createLinearGradient(0,880,0,975);q.addColorStop(0,'rgba(6,4,10,.75)');q.addColorStop(1,'rgba(6,4,10,.35)');c.fillStyle=q;c.fillRect(0,872,XW,105)}   // 11/16 夜の岸が灰色の帯に見えたので暗く
   // 橋の映り込み用に、橋だけを先に描く
   const br=xmCanvas(XW,XH),bc=br.getContext('2d');mjBridge(bc,200,760,1000,72,mode,null);
   mjStream2(c,B.cv,960,1080,mode,br);
   if(n){L.push({x:460,y:1020,rx:520,ry:60,c:'255,120,60',a:.25,p:0,sp:0,soft:1,ell:1})}
-  mjTree(c,70,960,720,mode,41,L,{n:1900,wide:.82,lean:.12,zone:1});
+  if(P.taki)mjTree(c,-150,960,620,mode,41,L,{n:1500,wide:.7,lean:.2,zone:1});else mjTree(c,70,960,720,mode,41,L,{n:1900,wide:.82,lean:.12,zone:1});
   mjBridge(T.c,200,760,1000,72,mode,T.L);T.ax=480;T.ay=1000;T.d=.1;
   if(n){mjLantern(F.c,110,1250,130,2,F.L);mjLantern(F.c,700,1300,120,2,F.L);for(const l of F.L){l.r*=.55;l.a*=.75}
    xmPerson(F.c,380,1300,112,'#3a3a4a',2,38,0);xmPerson(F.c,414,1306,100,'#4a2a30',2,39,1);xmPerson(F.c,520,1330,90,'#2a3a4a',2,40,0);}
+  else if(P.taki){mjLantern(F.c,700,1300,120,1,F.L);xmPerson(F.c,400,1300,116,'#5a5a6e',1,36,0);xmPerson(F.c,440,1306,104,'#7a4a3a',1,37,1);xmPerson(F.c,560,1330,96,'#3e5a7e',1,38,0)}   // 11/16 滝道：茶席の代わりに歩く人
   else{mjBench2(F.c,480,1310,330,1,F.L);xmPerson(F.c,430,1312,118,'#5a5a6e',1,36,0);xmPerson(F.c,330,1300,110,'#7a4a3a',1,37,1)}
   mjTree(F.c,-140,1600,620,mode,45,F.L,{n:900,wide:.7,lean:.35,noLight:1});F.ax=520;F.ay=1300;F.d=.4;
  }

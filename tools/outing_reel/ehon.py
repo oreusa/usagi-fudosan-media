@@ -25,6 +25,12 @@ import re as _re
 _dt = _t.get('date_title', '')
 if _re.search(r'[A-Za-z]{4,}', _dt) or len(_dt) > 8: _bad.append(f'date_title「{_dt}」は日本語8字まで（英語は縦に割れる）')
 if _bad: sys.exit('字が長すぎて重なります：' + '／'.join(_bad))
+# 11/16 owner「リールをもっと完璧に。数字間違わないとか気をつけて」：曜日と、数字の出どころ（spec の facts＝公式の文）を答え合わせ。合わなければ作らない
+import factcheck
+_fb, _fn = factcheck.run(spec, offline=not os.environ.get('GITHUB_ACTIONS'))
+for _n in _fn: print('数字の答え合わせ：' + _n)
+if _fb: sys.exit('数字の答え合わせで止めた：\n - ' + '\n - '.join(_fb))
+print('数字の答え合わせ：OK')
 W = os.path.abspath(os.environ.get('WORK', 'ehon-work')); os.makedirs(W + '/fr', exist_ok=True)
 VDIR = os.environ.get('VDIR', ''); SP = os.environ.get('SP', '20')
 T = spec['text']
@@ -99,6 +105,7 @@ if not T.get('scene') and not T.get('ehon_brand', {}).get('scene'):
     elif re.search('紅葉|もみじ|モミジ', ALLTXT): BR['scene'] = 'momiji'
     print('景色', BR['scene'] or '（合う景色が無いので山と塔の絵）')
 PAGE['engetsu'] = bool(re.search('白浜|白良浜|円月島', ALLTXT))      # 浜：円月島は白浜の時だけ描く
+PAGE['taki'] = bool(T.get('taki'))   # 11/16 もみじの景色に滝（箕面大滝）を描く
 PAGE['gate'] = bool(re.search('寺|神社|天満宮|八幡宮|大社|神宮|院', ALLTXT))   # もみじ：門は寺社の時だけ（公園・庭園は木と道だけ）
 # 11/16 スマホの画面は、その回の県のおでかけページを毎回撮る（古い画面・違う県の画面が出ていた）。撮れなければ今までの絵
 def hp_shots():
