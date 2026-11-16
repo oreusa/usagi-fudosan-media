@@ -159,8 +159,9 @@ function mgRound(t,u){const hama=P.scene=='hama';if(!RW){RW=xmCanvas(GW,GH);cons
   if(hama){for(let i=0;i<10;i++){const a=i/10*Math.PI*2;const x=GX+Math.cos(a)*(GR+12),y=GY+Math.sin(a)*(GR+12);const g=f.createRadialGradient(x-2,y-2,.5,x,y,6);g.addColorStop(0,'#fff4cc');g.addColorStop(1,'#8a6526');f.fillStyle=g;f.beginPath();f.arc(x,y,5.5,0,7);f.fill()}}
   else{const r=XR(3);f.strokeStyle='rgba(30,15,8,.35)';f.lineWidth=1;for(let i=0;i<40;i++){const a=r()*7,rr=GR+4+r()*18;f.beginPath();f.arc(GX,GY,rr,a,a+.3+r()*.6);f.stroke()}}}
  const c=RO;c.clearRect(0,0,GW,GH);c.drawImage(RW,0,0);c.save();c.beginPath();c.arc(GX,GY,GR,0,7);c.clip();
- const src=mgComposite(hama?2:1,true,t);c.filter=hama?'brightness(1.3) saturate(1.15)':'none';const k=.52,cx=460,cy=hama?1000:900;c.drawImage(src,cx-GR/k,cy-GR/k,GR*2/k,GR*2/k,GX-GR,GY-GR,GR*2,GR*2);c.filter='none';
- if(P.scene=='momiji')mjFx(c,1,t,u);
+ // 11/16 題が「夜の◯◯」なので窓の中は明るくした夜（もみじは灯りを重ねると白くとぶので絵だけ）
+ const src=mgComposite(2,hama,t);c.filter=hama?'brightness(1.3) saturate(1.15)':'brightness(1.5) saturate(1.2)';;const k=.52,cx=460,cy=hama?1000:900;c.drawImage(src,cx-GR/k,cy-GR/k,GR*2/k,GR*2/k,GX-GR,GY-GR,GR*2,GR*2);c.filter='none';
+ if(P.scene=='momiji')mjFx(c,2,t,u);
  // ガラスの光
  c.fillStyle='rgba(255,255,255,.12)';c.beginPath();c.ellipse(GX-80,GY-90,40,90,.7,0,7);c.fill();c.restore();
  const v=c.createRadialGradient(GX,GY,GR*.7,GX,GY,GR);v.addColorStop(0,'rgba(0,0,0,0)');v.addColorStop(1,'rgba(0,0,0,.35)');c.fillStyle=v;c.beginPath();c.arc(GX,GY,GR,0,7);c.fill();
