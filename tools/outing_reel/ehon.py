@@ -91,8 +91,8 @@ LEAD = 0.45         # ページが見えてから声まで
 ST = []; t = OPEN
 for n in range(N):
     # 11/16 オーナー「伸ばそう」：1ページ+1秒（絵を見る時間）
-    ST.append(t); t += max(4.3, LEAD + VD[n] + 1.75) + (0.6 if n == 2 else 0) + (1.6 if n == 5 else 0)
-TOTAL = t + 0.8
+    ST.append(t); t += max(4.3, LEAD + VD[n] + 1.5) + (0.6 if n == 2 else 0) + (0.8 if n == 5 else 0)  # 11/16 41.6秒→39秒前後に（ページの間を0.25秒・最後を0.8秒短く）
+TOTAL = t + 0.6
 F = ROOT + '/tools/fonts'
 d = T['date']
 info = T.get('info', [])
@@ -333,14 +333,27 @@ function umi(mode,far,tc){
     for(let i=0;i<11;i++){const x=50+i*82,y=1200+Math.sin(i*1.3)*26;s+=`<circle class="lan" cx="${x}" cy="${y}" r="40" fill="${cols[i%7]}" opacity=".55" filter="url(#bl)"/><circle cx="${x}" cy="${y}" r="6" fill="#fff"/>`}}
   return s+`</g><g class="lv"></g>${PAPER}</svg>`}
 const NUMS=['一','二','三','四','五','六'];
+function coverArt(){
+  // 11/16 表紙の金の絵を場所ごとに（毎日同じ屋根の絵だった）。滝＝崖から一筋に落ちる滝とつぼ・もみじ／イチョウ並木＝イチョウの葉と並木の一本道
+  const G='#e3c88c',D='#7c2a22';
+  if(P.taki){let s=`<g transform="translate(270,1170)" stroke="${G}" stroke-linejoin="round" stroke-linecap="round">`;
+    s+=`<path d="M-160,0 L-150,-70 L-132,-96 L-128,-150 L-104,-176 L-96,-226 L-70,-246 L-34,-252 L-22,-238 L-26,-150 L-20,-60 L-30,-24 L-160,-10Z" fill="${G}" fill-opacity=".22" stroke-width="4"/>`;
+    s+=`<path d="M160,0 L150,-60 L136,-90 L132,-142 L112,-170 L104,-222 L76,-244 L36,-250 L22,-238 L26,-150 L20,-60 L30,-24 L160,-10Z" fill="${G}" fill-opacity=".22" stroke-width="4"/>`;
+    s+=`<path d="M-104,-176 L-84,-150 M-128,-96 L-110,-80 M112,-170 L92,-146 M136,-90 L116,-76" fill="none" stroke-width="2.5" opacity=".7"/>`;
+    for(let i=-3;i<=3;i++)s+=`<path d="M${i*5.5},-246 Q${i*6+(i%2?2:-2)},-150 ${i*7},-40" fill="none" stroke-width="${i==0?4:2.4}" opacity="${1-Math.abs(i)*.18}"/>`;
+    s+=`<ellipse cx="0" cy="-26" rx="78" ry="15" fill="none" stroke-width="3.5"/><path d="M-56,-10 Q-28,-18 0,-10 Q28,-2 56,-10" fill="none" stroke-width="2.5"/>`;
+    s+=`</g><g transform="translate(150,915) scale(95) rotate(-14)"><path d="${LP}" fill="${G}" opacity=".9"/></g><g transform="translate(405,965) scale(62) rotate(26)"><path d="${LP}" fill="${G}" opacity=".75"/></g><g transform="translate(330,880) scale(40) rotate(-40)"><path d="${LP}" fill="${G}" opacity=".6"/></g>`;return s}
+  if(P.icho){const fan=(x,y,sc,r,o)=>`<g transform="translate(${x},${y}) rotate(${r}) scale(${sc})" opacity="${o}"><path d="M-.9,0 L-2.2,-3.2 C-9,-6 -14.5,-12 -13,-18 Q-7,-22.5 -.6,-19.6 L0,-15.5 L.6,-19.6 Q7,-22.5 13,-18 C14.5,-12 9,-6 2.2,-3.2 L.9,0Z" fill="${G}"/><path d="M0,-3.5 L-6,-17 M0,-3.5 L-2.4,-18.6 M0,-3.5 L2.4,-18.6 M0,-3.5 L6,-17 M0,-3.5 L-10,-15 M0,-3.5 L10,-15" stroke="${D}" stroke-width=".35" opacity=".55"/><path d="M0,0 Q.3,4 1.4,7" fill="none" stroke="${G}" stroke-width="1" stroke-linecap="round"/></g>`;
+    return fan(250,1120,8.4,-14,.95)+fan(380,1130,4.8,26,.8)+fan(176,1000,3.6,-34,.65)}
+  return `<g transform="translate(300,1168) scale(.86)" fill="${G}">${motif(0,0,.5,false).replace(/fill="#[0-9a-f]{6}"/g,'fill="'+G+'"').replace(/stroke="#[0-9a-f]{3,6}"/g,'stroke="'+D+'"')}</g>
+   <g transform="translate(236,960) scale(22) rotate(18)"><path d="${LP}" fill="${G}" opacity=".8"/></g>`}
 function build(){
   const pages=[];const HOLLY=MG&&XM?mgHolly():'';
   // 表紙
   pages.push(`<div class="face cover"><div class="spine"></div><div class="fr1"></div><div class="fr2"></div>
    <div class="gold" style="position:absolute;left:0;right:0;top:138px;text-align:center;font:400 24px J;letter-spacing:.5em">${P.corner}</div>
    ${vtext(P.title,372,250,82,'font-family:MB;color:#e8cf96;line-height:1.75;letter-spacing:.16em','ct')}
-   <svg viewBox="0 0 920 1380" style="opacity:.92"><g transform="translate(300,1168) scale(.86)" fill="#e3c88c">${motif(0,0,.5,false).replace(/fill="#[0-9a-f]{6}"/g,'fill="#e3c88c"').replace(/stroke="#[0-9a-f]{3,6}"/g,'stroke="#7c2a22"')}</g>
-   <g transform="translate(236,960) scale(22) rotate(18)"><path d="${LP}" fill="#e3c88c" opacity=".8"/></g></svg>
+   <svg viewBox="0 0 920 1380" style="opacity:.92">${coverArt()}</svg>
    <div style="position:absolute;right:108px;bottom:200px;width:216px;height:216px;border-radius:50%;background:#f6efdf;box-shadow:0 0 0 3px #d8b874,0 0 0 10px rgba(216,184,116,.28),0 6px 18px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center"><img src="file://%LOGO%" style="width:166px;height:166px"></div>
    <div class="gold" style="position:absolute;left:0;right:0;bottom:118px;text-align:center;font:500 30px M;letter-spacing:.16em;font-size:23px;line-height:1.7;bottom:104px">${P.cover_sub}</div><div id="foil"></div></div>`);
   pages.push(`<div class="face">${scene(0)}${vtext(P.t1,84,120,58,'','t0')}</div>`);

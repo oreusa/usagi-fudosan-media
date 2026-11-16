@@ -195,7 +195,7 @@ function mjTree(c,cx,by,h,mode,seed,L,o){o=o||{};const r=XR(seed);const night=mo
  const per=Math.round((o.n||1300)/Math.max(1,cl.length));
  for(const[x,y,R]of vis){for(let i=0;i<per;i++){const a=r()*6.283,d=Math.pow(r(),.55)*R*1.15;const px=x+Math.cos(a)*d,py=y+Math.sin(a)*d*.85;if(o.zone&&SC_ZONE(px,py))continue;
   const gy=(py-ccy)/ry,gx=(px-ccx)/rx;const lit=night?Math.max(0,gy*.8+.2):Math.max(0,-(gy*.75+gx*.35));let col=pal.leaf[Math.floor(r()*pal.leaf.length)];
-  col=lit>.25?xmMix(col,pal.L,Math.min(.6,.5*lit)):xmMix(col,pal.X,.4*(1-lit)*Math.min(1,d/R));c.fillStyle=col;c.globalAlpha=.92;mjLeaf(c,px,py,h*(.015+r()*.012)*(d>R*.8?1.3:1),r()*6.3)}}
+  col=lit>.25?xmMix(col,pal.L,Math.min(.6,.5*lit)):xmMix(col,pal.X,.4*(1-lit)*Math.min(1,d/R));c.fillStyle=col;c.globalAlpha=.92;const ls=h*(.015+r()*.012)*(d>R*.8?1.3:1);if(o.fan)icFan(c,px,py,ls*2.1,r()*6.3);else mjLeaf(c,px,py,ls,r()*6.3)}}  // 11/16 イチョウは扇の葉（もみじの形で描いていた）
  c.globalAlpha=1;
  if(L&&night&&!o.noLight){for(let i=0;i<4;i++)L.push({x:ccx+(r()-.5)*rx*1.4,y:ccy+ry*(.3+r()*.4),r:h*.18,c:'255,120,60',a:.08,p:r()*6,sp:.3,soft:1});L.push({x:cx,y:by-6,rx:w*.55,ry:h*.05,c:'255,150,80',a:.35,p:0,sp:0,soft:1,ell:1})}
  return cl}
@@ -550,7 +550,7 @@ const IC_PAL=[{L:'#fff0a0',M:'#f2c63a',D:'#c8901e',X:'#8a5a14',leaf:['#f6d24a','
  {L:'#fff2c0',M:'#e8a82a',D:'#6a3e10',X:'#1a0e06',leaf:['#f8d060','#f0b838','#ffe49a','#d89a28','#c07a18']}];
 function icFan(c,x,y,s,rot){c.save();c.translate(x,y);c.rotate(rot);c.beginPath();c.moveTo(0,s*.5);c.lineTo(-s*.08,0);c.quadraticCurveTo(-s*.6,-s*.1,-s*.5,-s*.55);c.quadraticCurveTo(0,-s*.8,s*.5,-s*.55);c.quadraticCurveTo(s*.6,-s*.1,s*.08,0);c.closePath();c.fill();c.restore()}
 function icCarpet(c,y0,y1,mode,n,seed,xa,xb){const r=XR(seed);const pal=IC_PAL[mode].leaf;for(let i=0;i<n;i++){const y=y0+Math.pow(r(),.75)*(y1-y0),k=(y-y0)/(y1-y0);c.fillStyle=pal[i%pal.length];c.globalAlpha=.85;icFan(c,(xa||0)+r()*((xb||XW)-(xa||0)),y,4+k*11,r()*6.3)}c.globalAlpha=1}
-function icTree(c,x,by,h,mode,seed,L,o){return mjTree(c,x,by,h,mode,seed,L,Object.assign({pal:IC_PAL[mode],wide:.62,n:Math.round(h*2.2),zone:1,noLight:1},o||{}))}
+function icTree(c,x,by,h,mode,seed,L,o){return mjTree(c,x,by,h,mode,seed,L,Object.assign({pal:IC_PAL[mode],wide:.62,n:Math.round(h*2.6),zone:1,noLight:1,fan:1},o||{}))}
 function icBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;const n=mode==2;
  if(n){scSky(c,['#040817','#0b1430','#1c1a3a'],760);xmStars(c,12);xmMoon(c,150,180,36)}
  else if(mode==0){scSky(c,['#8cc0e6','#cfe3ee','#f2efe2'],760);scClouds(c,8,7,110,520,'#ffffff',.55)}
@@ -568,10 +568,11 @@ function icBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B
   const rows=[];for(let i=9;i>=0;i--){const k=Math.pow(i/9,1.6);rows.push(k)}
   for(const k of rows){const y=VY+(XH+120-VY)*(1-k),s=1-k*.92;
    const xl=VX-(VX+120)*(1-k)-40*s,xr=VX+(XW-VX+80)*(1-k)+40*s;
-   icTree(T.c,xl,y,90+640*s,mode,100+Math.round(k*90),T.L);
-   const hr=Math.min(90+640*s,(y-700)/.95);if(hr>60)icTree(T.c,xr,y,hr,mode,200+Math.round(k*90),T.L)}
+   icTree(T.c,xl+30*s,y,90+700*s,mode,100+Math.round(k*90),T.L,{wide:.78});
+   const hr=Math.min(90+640*s,(y-700)/.95);if(hr>60)icTree(T.c,xr-30*s,y,hr,mode,200+Math.round(k*90),T.L,{wide:.78})}
   if(n){c.save();c.globalCompositeOperation='screen';glow(c,VX,VY+80,480,'255,200,110',.28);c.restore();
    for(const k of rows){const y=VY+(XH+120-VY)*(1-k),s=1-k*.92;for(const x of[VX-(VX+120)*(1-k)-40*s,VX+(XW-VX+80)*(1-k)+40*s]){L.push({x,y:y-(90+640*s)*.55,r:(90+640*s)*.45,c:'255,206,120',a:.1,p:k*9,sp:.3,soft:1});L.push({x,y:y-4,rx:60*s+10,ry:12*s+3,c:'255,220,150',a:.35,p:0,sp:0,soft:1,ell:1})}}}
+  // 11/16 本物は「自然の形の98本・一本道・枝が頭の上をおおう」（公式）：並木の冠を道の側へ広げ、奥で左右がつながるように
   xmPerson(F.c,430,1000,52,n?'#2a2a3a':'#5a4a5e',mode,71,0);xmPerson(F.c,462,1004,48,n?'#3a2a30':'#7a5a3a',mode,72,1);
   xmPerson(F.c,350,1260,114,n?'#3a3a4a':'#4a4a5e',mode,73,0);xmPerson(F.c,420,1270,104,n?'#4a2a30':'#8a5a4a',mode,74,1);xmPerson(F.c,500,1300,78,n?'#2a3a4a':'#e2b84a',mode,75,2);
   T.ax=VX;T.ay=1100;T.d=.12;F.ax=420;F.ay=1270;F.d=.4;
