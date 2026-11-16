@@ -124,7 +124,8 @@ if not T.get('scene') and not T.get('ehon_brand', {}).get('scene'):
     elif re.search('紅葉|もみじ|モミジ', ALLTXT): BR['scene'] = 'momiji'
     print('景色', BR['scene'] or '（合う景色が無いので山と塔の絵）')
 PAGE['engetsu'] = bool(re.search('白浜|白良浜|円月島', ALLTXT))      # 浜：円月島は白浜の時だけ描く
-PAGE['taki'] = bool(T.get('taki'))   # 11/16 もみじの景色に滝（箕面大滝）を描く
+PAGE['taki'] = bool(T.get('taki'))
+PAGE['icho'] = bool(T.get('icho'))   # 11/16 イチョウ並木（昭和記念公園など）：黄色い並木の3枚   # 11/16 もみじの景色に滝（箕面大滝）を描く
 PAGE['gate'] = bool(re.search('寺|神社|天満宮|八幡宮|大社|神宮|院', ALLTXT))   # もみじ：門は寺社の時だけ（公園・庭園は木と道だけ）
 # 11/16 スマホの画面は、その回の県のおでかけページを毎回撮る（古い画面・違う県の画面が出ていた）。撮れなければ今までの絵
 def hp_shots():
