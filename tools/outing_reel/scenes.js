@@ -147,9 +147,9 @@ function hmBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();let c=B.c,L=B.L
 // もみじ：葉が舞う。夜は光る葉がゆっくり浮かび上がる
 function mjFx(c,mode,t,u){const r=XR(600+mode);c.save();
  if(mode<2){for(let i=0;i<34;i++){const x0=r()*XW,sp=40+r()*60,ph=r()*7,y0=r()*(XH+80),s=7+r()*9;const y=((y0+t*sp)%(XH+80))-40,x=x0+Math.sin(t*.9+ph)*36;
-   c.fillStyle=['#c8402c','#e0662f','#ea8a34','#b3301f'][i%4];c.globalAlpha=.9;mjLeaf(c,x,y,s,t*1.5*(i%2?1:-1)+ph)}}
+   if(P.icho){c.fillStyle=['#f6d24a','#f0c030','#ffe27a','#e8b02a'][i%4];c.globalAlpha=.9;icFan(c,x,y,s*1.3,t*1.5*(i%2?1:-1)+ph)}else{c.fillStyle=['#c8402c','#e0662f','#ea8a34','#b3301f'][i%4];c.globalAlpha=.9;mjLeaf(c,x,y,s,t*1.5*(i%2?1:-1)+ph)}}}
  else{c.globalCompositeOperation='lighter';for(let i=0;i<26;i++){const T=5+r()*3,p=((t/T+r())%1),x=60+r()*800+Math.sin(t*.7+i)*30,y=1150-p*(700+r()*300),s=8+r()*8;const a=Math.sin(Math.PI*p);
-   glow(c,x,y,s*3,'255,140,70',a*.35);c.globalAlpha=a*.9;c.fillStyle='#ffb070';mjLeaf(c,x,y,s,t*.8+i)}}
+   glow(c,x,y,s*3,P.icho?'255,210,110':'255,140,70',a*.35);c.globalAlpha=a*.9;c.fillStyle=P.icho?'#ffd870':'#ffb070';if(P.icho)icFan(c,x,y,s*1.3,t*.8+i);else mjLeaf(c,x,y,s,t*.8+i)}}
  // 11/16 楼門のページ：参道を親子がゆっくり門へ歩く（足の上下つき）
  if(mode==0&&typeof XO!='undefined'&&c===XO&&u>0){c.save();c.globalAlpha=Math.min(1,u/1.2);const w=u*9,b=Math.abs(Math.sin(t*5.2))*2.4,b2=Math.abs(Math.sin(t*5.2+1.6))*2.4;
    xmPerson(c,612,1352-w-b,84,'#6a4a5a',0,61,1);xmPerson(c,646,1358-w-b2,62,'#3e5a7e',0,62,2);c.restore()}
@@ -307,7 +307,7 @@ function mjFall(c,cx,top,bot,w,mode,L){const night=mode==2,r=XR(77);
  if(L){if(night){L.push({x:cx,y:(top+bot)/2,r:(bot-top)*.45,c:'255,226,170',a:.16,p:0,sp:.2,soft:1});L.push({x:cx,y:bot,r:w*1.8,c:'255,210,150',a:.32,p:1,sp:.4,soft:1});
    for(let i=0;i<10;i++)L.push({x:cx+(r()-.5)*w*1.6,y:bot-20-r()*40,r:16,c:'255,240,210',a:.7,p:i,sp:3,dot:2})}
   else L.push({x:cx,y:bot,r:w*2,c:'255,255,255',a:.25,p:0,sp:.3,soft:1})}}
-function mjBuild(mode){if(P.taki)return tkBuild(mode);const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;
+function mjBuild(mode){if(P.taki)return tkBuild(mode);if(P.icho)return icBuild(mode);const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;
  if(mode==0){scSky(c,['#9ec4dc','#d6e4e6','#f4e8d0'],820);scClouds(c,4,8,120,560,'#ffffff',.55);
   c.save();c.globalCompositeOperation='screen';glow(c,330,560,520,'255,226,180',.45);c.restore();
   wash(c,g=>{g.moveTo(-20,760);g.bezierCurveTo(200,690,420,720,600,700);g.bezierCurveTo(760,690,860,720,XW+20,705);g.lineTo(XW+20,860);g.lineTo(-20,860);g.closePath()},'#9aa8b0',{edge:.1,gr:.25,light:false,a:.6});
@@ -543,3 +543,49 @@ function tkBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B
  mjTree(F.c,-160,1600,640,mode,85,F.L,{n:900,wide:.7,lean:.35,noLight:1});
  T.ax=300;T.ay=990;T.d=.1;F.ax=480;F.ay=1300;F.d=.4;
  return scFinish(mode,B,T,F,[900,1080,1080][mode])}
+
+// ---------- イチョウ並木（text.icho。11/16 夜 関東 昭和記念公園「かたらいのイチョウ並木」：もみじの寺の絵の使い回しをやめる） ----------
+const IC_PAL=[{L:'#fff0a0',M:'#f2c63a',D:'#c8901e',X:'#8a5a14',leaf:['#f6d24a','#f0c030','#ffe27a','#e8b02a','#f8dc60','#d8a020']},
+ {L:'#ffe08a',M:'#eeb02e',D:'#b8781a',X:'#6e4210',leaf:['#f0b830','#e8a020','#ffd060','#d89018','#f6c848']},
+ {L:'#fff2c0',M:'#e8a82a',D:'#6a3e10',X:'#1a0e06',leaf:['#f8d060','#f0b838','#ffe49a','#d89a28','#c07a18']}];
+function icFan(c,x,y,s,rot){c.save();c.translate(x,y);c.rotate(rot);c.beginPath();c.moveTo(0,s*.5);c.lineTo(-s*.08,0);c.quadraticCurveTo(-s*.6,-s*.1,-s*.5,-s*.55);c.quadraticCurveTo(0,-s*.8,s*.5,-s*.55);c.quadraticCurveTo(s*.6,-s*.1,s*.08,0);c.closePath();c.fill();c.restore()}
+function icCarpet(c,y0,y1,mode,n,seed,xa,xb){const r=XR(seed);const pal=IC_PAL[mode].leaf;for(let i=0;i<n;i++){const y=y0+Math.pow(r(),.75)*(y1-y0),k=(y-y0)/(y1-y0);c.fillStyle=pal[i%pal.length];c.globalAlpha=.85;icFan(c,(xa||0)+r()*((xb||XW)-(xa||0)),y,4+k*11,r()*6.3)}c.globalAlpha=1}
+function icTree(c,x,by,h,mode,seed,L,o){return mjTree(c,x,by,h,mode,seed,L,Object.assign({pal:IC_PAL[mode],wide:.62,n:Math.round(h*2.2),zone:1,noLight:1},o||{}))}
+function icBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;const n=mode==2;
+ if(n){scSky(c,['#040817','#0b1430','#1c1a3a'],760);xmStars(c,12);xmMoon(c,150,180,36)}
+ else if(mode==0){scSky(c,['#8cc0e6','#cfe3ee','#f2efe2'],760);scClouds(c,8,7,110,520,'#ffffff',.55)}
+ else{scSky(c,['#f0c890','#f6dcb0','#f8ead0'],760);scClouds(c,9,6,140,480,'#fff4e0',.5);c.save();c.globalCompositeOperation='screen';glow(c,240,560,520,'255,220,150',.55);c.restore()}
+ // 遠くの木立
+ wash(c,g=>{g.moveTo(-20,760);g.bezierCurveTo(200,700,380,730,520,712);g.bezierCurveTo(700,700,840,720,XW+20,716);g.lineTo(XW+20,820);g.lineTo(-20,820);g.closePath()},n?'#0a0e18':mode==1?'#b89a60':'#8aa07a',{edge:.1,gr:.3,light:false,a:n?.95:.7});
+ // 芝生
+ wash(c,g=>{g.moveTo(-20,790);g.lineTo(XW+20,790);g.lineTo(XW+20,XH+10);g.lineTo(-20,XH+10);g.closePath()},n?'#0c1210':'#8aa25a',{grad:g=>{const q=g.createLinearGradient(0,790,0,XH);q.addColorStop(0,n?'#101814':mode==1?'#a8a050':'#9ab866');q.addColorStop(1,n?'#04060a':mode==1?'#6a6a2a':'#5e7a3a');return q},edge:.1,gr:.45,light:false});
+ const VX=400,VY=800;
+ if(mode!=1){ // 並木を正面から：道は手前で広く、奥で一点に
+  const road=g=>{g.moveTo(VX-10,VY);g.lineTo(VX+10,VY);g.lineTo(XW*.74,XH+10);g.lineTo(XW*.16,XH+10);g.closePath()};
+  wash(c,road,n?'#2a2420':'#d8c49a',{grad:g=>{const q=g.createLinearGradient(0,VY,0,XH);q.addColorStop(0,n?'#3a3020':'#e6d4a8');q.addColorStop(1,n?'#1a140e':'#c2a878');return q},edge:.15,gr:.35,light:false});
+  icCarpet(c,VY+10,XH,mode,520,71,40,880);
+  // 木：奥から手前へ（左の列は大きく、右の列は字の場所の下に収まる高さ）
+  const rows=[];for(let i=9;i>=0;i--){const k=Math.pow(i/9,1.6);rows.push(k)}
+  for(const k of rows){const y=VY+(XH+120-VY)*(1-k),s=1-k*.92;
+   const xl=VX-(VX+120)*(1-k)-40*s,xr=VX+(XW-VX+80)*(1-k)+40*s;
+   icTree(T.c,xl,y,90+640*s,mode,100+Math.round(k*90),T.L);
+   const hr=Math.min(90+640*s,(y-700)/.95);if(hr>60)icTree(T.c,xr,y,hr,mode,200+Math.round(k*90),T.L)}
+  if(n){c.save();c.globalCompositeOperation='screen';glow(c,VX,VY+80,480,'255,200,110',.28);c.restore();
+   for(const k of rows){const y=VY+(XH+120-VY)*(1-k),s=1-k*.92;for(const x of[VX-(VX+120)*(1-k)-40*s,VX+(XW-VX+80)*(1-k)+40*s]){L.push({x,y:y-(90+640*s)*.55,r:(90+640*s)*.45,c:'255,206,120',a:.1,p:k*9,sp:.3,soft:1});L.push({x,y:y-4,rx:60*s+10,ry:12*s+3,c:'255,220,150',a:.35,p:0,sp:0,soft:1,ell:1})}}}
+  xmPerson(F.c,430,1000,52,n?'#2a2a3a':'#5a4a5e',mode,71,0);xmPerson(F.c,462,1004,48,n?'#3a2a30':'#7a5a3a',mode,72,1);
+  xmPerson(F.c,350,1260,114,n?'#3a3a4a':'#4a4a5e',mode,73,0);xmPerson(F.c,420,1270,104,n?'#4a2a30':'#8a5a4a',mode,74,1);xmPerson(F.c,500,1300,78,n?'#2a3a4a':'#e2b84a',mode,75,2);
+  T.ax=VX;T.ay=1100;T.d=.12;F.ax=420;F.ay=1270;F.d=.4;
+  return scFinish(mode,B,T,F,900)}
+ // 2枚目：夕方、大きな1本のイチョウの下で、黄色いじゅうたんに座る家族
+ icCarpet(c,820,XH,1,900,73);
+ c.save();c.globalCompositeOperation='screen';glow(c,240,1060,420,'255,224,140',.45);c.restore();
+ icTree(T.c,220,1180,780,1,301,T.L,{wide:.56,n:2400});
+ icTree(c,700,900,260,1,302,L);icTree(c,820,930,300,1,303,L);icTree(c,600,880,200,1,304,L);
+ // 木もれ日の帯
+ c.save();c.globalCompositeOperation='screen';c.globalAlpha=.18;c.fillStyle='#fff2c0';for(let i=0;i<5;i++){c.beginPath();c.moveTo(80+i*70,300);c.lineTo(130+i*70,300);c.lineTo(260+i*120,1300);c.lineTo(200+i*120,1300);c.closePath();c.fill()}c.restore();
+ // しきもの
+ wash(F.c,g=>{g.moveTo(330,1230);g.lineTo(590,1214);g.lineTo(640,1300);g.lineTo(360,1320);g.closePath()},'#c8584a',{edge:.3,gr:.3});
+ xmPerson(F.c,420,1270,96,'#4a4a5e',1,76,0);xmPerson(F.c,500,1266,90,'#8a5a4a',1,77,1);xmPerson(F.c,560,1290,70,'#e2b84a',1,78,2);
+ xmPerson(F.c,700,1180,70,'#5a5a6e',1,79,0);
+ T.ax=230;T.ay=1180;T.d=.1;F.ax=480;F.ay=1270;F.d=.4;
+ return scFinish(1,B,T,F,880)}
