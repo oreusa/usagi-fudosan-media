@@ -85,7 +85,7 @@ def dur(n):
 
 
 VD = [dur(n) for n in range(N)]
-OPEN = 2.7          # 表紙が開ききる時刻
+OPEN = 1.5          # 表紙が開ききる時刻（11/16 2.7→1.5：最初の2秒で景色が見えるように。リールは最初の1〜2秒で見るかが決まる）
 TURN = 0.95         # めくる長さ
 LEAD = 0.45         # ページが見えてから声まで
 ST = []; t = OPEN
@@ -375,7 +375,7 @@ function build(){
    </div>`);
   pages.push(`<div class="face" style="background:#f6efdf"><svg viewBox="0 0 920 1380">${DEFS}${MG&&CVS?(XM?`<image x="40" y="1186" width="230" height="166" href="${HOLLY}" transform="rotate(-8 155 1270)"/>`:''):`<g filter="url(#wc3)" opacity=".9"><g transform="translate(790,1180) scale(84) rotate(-24)"><path d="${LP}" fill="#d4552d" opacity=".85"/></g><g transform="translate(690,1270) scale(46) rotate(36)"><path d="${LP}" fill="#f0b23a" opacity=".85"/></g></g>`}${MG?mgFrame():''}<g class="lv"></g>${PAPER}</svg>
    <div id="h0" style="position:absolute;left:0;right:0;top:92px;text-align:center;opacity:0"><div style="font:500 26px J;letter-spacing:.42em;color:#8a6a55">${P.hp_en}</div><div style="font:700 66px MB;letter-spacing:.14em;color:#3d2a22;margin-top:14px">${P.hp_jp}</div></div>
-   <div id="ph" style="position:absolute;left:92px;top:300px;width:400px;height:800px;border-radius:54px;background:#2b211c;padding:14px;box-shadow:0 26px 50px rgba(60,35,20,.35);opacity:0"><div style="width:100%;height:100%;border-radius:42px;overflow:hidden;position:relative;background:#fff"><img id="ph1" src="file://%HP1%" style="position:absolute;left:0;top:0;width:100%"><img id="ph2" src="file://%HP2%" style="position:absolute;left:0;top:0;width:100%;opacity:0"></div></div>
+   <div id="ph" style="position:absolute;left:92px;top:300px;width:400px;height:800px;border-radius:54px;background:#2b211c;padding:14px;box-shadow:0 26px 50px rgba(60,35,20,.35);opacity:0"><div style="width:100%;height:100%;border-radius:42px;overflow:hidden;position:relative;background:#fff"><img id="ph1" src="file://%HP1%" style="position:absolute;left:0;top:0;width:100%"><img id="ph2" src="file://%HP2%" style="position:absolute;left:0;top:0;width:100%;opacity:0"><div id="pc" style="position:absolute;left:14px;right:14px;bottom:26px;background:#fff;border-radius:22px;box-shadow:0 10px 30px rgba(60,35,20,.35),0 0 0 3px #a5332a;padding:14px;display:flex;gap:14px;align-items:center;opacity:0"><div id="pcimg" style="flex:none;width:118px;height:150px;border-radius:14px;background:#e9dcc6 center/cover"></div><div style="min-width:0"><div style="display:inline-block;font:700 17px M;letter-spacing:.08em;color:#fff;background:#a5332a;border-radius:999px;padding:4px 12px">今日のおでかけ</div><div style="font:700 28px MB;color:#3d2a22;line-height:1.3;margin-top:8px">${P.place.split('｜')[0]}</div><div style="font:500 20px M;color:#7a5b4a;margin-top:6px;line-height:1.4">${P.fes}</div><div style="font:700 21px M;color:#a5332a;margin-top:4px">${(P.info.find(r=>r[0]=='期間')||['',''])[1]}</div></div></div></div></div>
    ${vtext(P.t5,110,330,50,'line-height:2.3;letter-spacing:.22em','t5')}
    <div id="h1" style="position:absolute;right:86px;top:860px;width:300px;text-align:center;font:500 30px M;letter-spacing:.2em;line-height:1.9;color:#6b4a3a;opacity:0">無料・登録なし<br>毎日更新</div>
    <div id="end" style="position:absolute;left:0;right:0;top:1160px;text-align:center;opacity:0"><div style="display:inline-block;font:700 50px MB;letter-spacing:.16em;color:#f8ecd8;background:#a5332a;border-radius:999px;padding:22px 54px">プロフィールのリンクから</div></div></div>`);
@@ -453,7 +453,7 @@ function render(t){
     if(i==2&&MG){const gl=pg.querySelector('.xgl');if(gl&&t>ST[i]-TURN-.05&&t<end+.05)gl.setAttribute('href',XM?mgGlobe(t,t-ST[i]):mgRound(t,t-ST[i]))}
     if(i==2){chars('t2',t,ST[i]-.15,.11);fade('d1',t,ST[i]+.25);fade('d2',t,ST[i]+.6,.8,26);fade('d3',t,ST[i]+1.3);const sl=document.getElementById('seal'),sk=sm(t,ST[i]+1.9,ST[i]+2.15);sl.style.opacity=sk;sl.style.transform=`rotate(-6deg) scale(${1.5-.5*eo(sk)})`}
     if(i==4){P.info.forEach((r,j)=>fade('r'+j,t,ST[i]+.05+j*.22,.6,14));fade('nt',t,ST[i]+1.1)}
-    if(i==5){fade('h0',t,ST[i]-.1);fade('ph',t,ST[i]+.2,.8,60);chars('t5',t,ST[i]+.7,.06);fade('h1',t,ST[i]+2.4);fade('end',t,ST[i]+3.2,.7,20);const q=eio(sm(t,ST[i]+2.2,ST[i]+3.0));document.getElementById('ph2').style.opacity=XM?0:q;document.getElementById('ph1').style.transform=`translateY(${-q*40}px)`;const pe=document.getElementById('end');if(t>ST[i]+3.9)pe.style.transform=`scale(${(1+.03*Math.sin((t-ST[i]-3.9)*5)).toFixed(3)})`}}
+    if(i==5){fade('h0',t,ST[i]-.1);fade('ph',t,ST[i]+.2,.8,60);chars('t5',t,ST[i]+.7,.06);fade('h1',t,ST[i]+2.4);fade('end',t,ST[i]+3.2,.7,20);const q=eio(sm(t,ST[i]+2.2,ST[i]+3.0));document.getElementById('ph2').style.opacity=XM?0:q;{const pc=document.getElementById('pc'),pk=eo(sm(t,ST[i]+1.0,ST[i]+1.7));pc.style.opacity=pk;pc.style.transform=`translateY(${(1-pk)*60}px)`;const im=document.getElementById('pcimg');if(window.SNAP&&SNAP[1]&&!im.dataset.s){im.style.backgroundImage=`url(${SNAP[1]})`;im.dataset.s='1'}}document.getElementById('ph1').style.transform=`translateY(${-q*40}px)`;const pe=document.getElementById('end');if(t>ST[i]+3.9)pe.style.transform=`scale(${(1+.03*Math.sin((t-ST[i]-3.9)*5)).toFixed(3)})`}}
 }
 $('#top').innerHTML=P.top_en+'<b>'+P.top_jp+'</b>';build();render(0);
 </script>"""
