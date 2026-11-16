@@ -41,7 +41,7 @@ try: _base = _dtm.date.fromisoformat(spec.get('date', '')[:10])
 except ValueError: _base = None
 if _base and not os.environ.get('EHON_SAMPLE'):
     _same = []
-    for _f in _gl.glob(ROOT + '/ig/reels/*.json') + _gl.glob(ROOT + '/../akari-auto/reel/*.json') + _gl.glob(ROOT + '/reel/*.json'):
+    for _f in set(_gl.glob(ROOT + '/ig/reels/*.json') + _gl.glob(os.path.dirname(os.path.abspath(sys.argv[1])) + '/*.json')):
         if os.path.abspath(_f) == os.path.abspath(sys.argv[1]): continue
         try: _o = json.load(open(_f, encoding='utf-8')); _od = _dtm.date.fromisoformat(_o.get('date', '')[:10])
         except Exception: continue
