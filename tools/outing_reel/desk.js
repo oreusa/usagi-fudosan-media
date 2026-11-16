@@ -68,22 +68,20 @@ function dkHolly(c,x,y,s,rot){c.save();c.translate(x,y);c.rotate(rot);dkShadow(c
  leaf(-2.4);leaf(-.7);leaf(.9);dkNoShadow(c);
  for(const[bx,by]of[[-s*.08,-s*.08],[s*.1,-s*.02],[0,s*.1]]){const g=c.createRadialGradient(bx-3,by-3,1,bx,by,s*.11);g.addColorStop(0,'#ff8a80');g.addColorStop(1,'#8a1a14');c.fillStyle=g;c.beginPath();c.arc(bx,by,s*.11,0,7);c.fill()}c.restore()}
 function dkXmas(c){
- // 机：深い緑のフェルト（細かい織り目）
- const g=c.createRadialGradient(540,900,200,540,900,1300);g.addColorStop(0,'#1d4031');g.addColorStop(1,'#0a1c14');c.fillStyle=g;c.fillRect(0,0,1080,1920);
- const r=XR(71);for(let i=0;i<9000;i++){c.fillStyle=r()<.5?'rgba(0,0,0,.08)':'rgba(180,230,200,.035)';c.fillRect(r()*1080,r()*1920,1+r()*2,1)}
- // 枝：上の左右・下の左右から本の下へ
- dkFir(c,-40,-20,330,170,70,1);dkFir(c,40,-40,120,260,60,2);dkFir(c,1120,-10,760,160,70,3);dkFir(c,1060,-40,960,250,58,4);
- dkFir(c,-50,1960,360,1700,76,5);dkFir(c,-30,1700,250,1860,56,6);dkFir(c,1130,1950,720,1700,76,7);dkFir(c,1100,1690,840,1880,56,8);
- // 金のリボン
- c.save();dkShadow(c,10,3,8,.4);const rb=c.createLinearGradient(0,1700,0,1760);rb.addColorStop(0,'#f6dd9a');rb.addColorStop(.5,'#b8862e');rb.addColorStop(1,'#f2d58c');c.strokeStyle=rb;c.lineWidth=14;c.lineCap='round';
- c.beginPath();c.moveTo(330,1920);c.bezierCurveTo(420,1760,560,1900,640,1780);c.stroke();c.restore();
- // オーナメント
- dkBall(c,210,150,44,DK_RED);dkBall(c,300,95,30,DK_GLD);dkBall(c,880,140,40,DK_GLD);dkBall(c,980,240,30,DK_RED);
- dkBall(c,190,1745,52,DK_GLD);dkBall(c,300,1820,38,DK_RED);dkBall(c,90,1840,30,DK_GRN);dkBall(c,880,1760,50,DK_RED);dkBall(c,770,1850,34,DK_GLD);dkBall(c,1010,1860,30,DK_GRN);
- dkHolly(c,660,1800,62,-.3);dkHolly(c,60,320,46,.8);dkHolly(c,1030,340,46,2.2)}
+ // 11/16 owner「飾りとかじゃない」→ 物は置かない。夜の街の奥にイルミがぼけて見え、雪が静かに降る
+ const g=c.createLinearGradient(0,0,0,1920);g.addColorStop(0,'#0b1024');g.addColorStop(.5,'#141a38');g.addColorStop(1,'#0a0d1c');c.fillStyle=g;c.fillRect(0,0,1080,1920);
+ // 奥のイルミ：大小のぼけを少なめに。上のまん中（題の字）はあける。遠い物ほどぼかす
+ const r=XR(73);const lay=document.createElement('canvas');lay.width=1080;lay.height=1920;const q=lay.getContext('2d');q.globalCompositeOperation='lighter';
+ const put=(x,y,R,a)=>{const col=r()<.8?['255,206,130','255,186,110','255,226,170'][Math.floor(r()*3)]:['255,150,130','210,225,255'][Math.floor(r()*2)];mgBokeh(q,x,y,R,col,a)};
+ for(let i=0;i<9;i++){const x=r()<.5?-20+r()*300:780+r()*320,y=20+r()*230;put(x,y,30+r()*50,.26+r()*.18)}
+ for(let i=0;i<14;i++){const x=-30+r()*1140,y=1640+r()*300;put(x,y,34+r()*60,.26+r()*.18)}
+ for(let i=0;i<10;i++){const x=r()<.5?r()*80:1000+r()*80,y=300+r()*1300;put(x,y,16+r()*26,.2+r()*.14)}
+ c.save();c.filter='blur(5px)';c.drawImage(lay,0,0);c.restore();
+ // 地面の明かりのにじみ
+ const h=c.createRadialGradient(540,2000,100,540,2000,900);h.addColorStop(0,'rgba(255,190,120,.22)');h.addColorStop(1,'rgba(255,190,120,0)');c.fillStyle=h;c.fillRect(0,1000,1080,920)}
 const DK_XL=(()=>{const r=XR(81),L=[];const sp=[[130,60],[250,190],[60,140],[400,40],[680,30],[820,60],[950,120],[1040,60],[30,600],[1050,700],[40,1200],[1045,1300],[140,1660],[350,1700],[60,1780],[440,1880],[650,1700],[760,1780],[960,1700],[1040,1790],[880,1900]];
- for(const[x,y]of sp)L.push({x:x+(r()-.5)*30,y:y+(r()-.5)*30,R:16+r()*26,c:['255,206,130','255,180,110','255,226,170','255,150,120'][Math.floor(r()*4)],p:r()*7,sp:.8+r()*1.4});return L})();
-function dkXmasFx(c,t){c.save();c.globalCompositeOperation='lighter';for(const l of DK_XL){const k=.55+.45*Math.sin(t*l.sp+l.p);mgBokeh(c,l.x,l.y,l.R,l.c,.16*k)}c.restore();
+ for(const[x,y]of sp)if(!(y<260&&x>280&&x<800))L.push({x:x+(r()-.5)*30,y:y+(r()-.5)*30,R:16+r()*26,c:['255,206,130','255,180,110','255,226,170','255,150,120'][Math.floor(r()*4)],p:r()*7,sp:.8+r()*1.4});return L})();
+function dkXmasFx(c,t){c.save();c.globalCompositeOperation='lighter';for(const l of DK_XL){const k=.5+.5*Math.sin(t*l.sp+l.p);mgBokeh(c,l.x,l.y,l.R,l.c,.12*k)}c.restore();
  const r=XR(91);for(let i=0;i<60;i++){const x0=r()*1080,sp=30+r()*50,sz=1.2+r()*3,ph=r()*7,y0=r()*2000;const y=((y0+t*sp)%2000)-40,x=x0+Math.sin(t*.7+ph)*14;mgDot(c,MG_SNOW,x,y,sz*1.6,.55)}c.globalAlpha=1}
 // ---------- 浜 ----------
 function dkScallop(c,x,y,s,rot,col){c.save();c.translate(x,y);c.rotate(rot);dkShadow(c,10,4,8,.32);const g=c.createRadialGradient(0,s*.3,s*.1,0,0,s);g.addColorStop(0,col[0]);g.addColorStop(1,col[1]);c.fillStyle=g;
