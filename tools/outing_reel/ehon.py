@@ -90,6 +90,31 @@ if T.get('peaks'): BR['peaks'] = 1                    # 遠くに2つの峰の�
 if T.get('ehon5'): BR['t5'] = T['ehon5']
 if T.get('scene'): BR['scene'] = T['scene']          # 景色：書かなければ山と木。'umi'＝海と砂浜（夜は色の光）。'xmas'＝赤レンガとクリスマスツリー（11/15）。建物なしにする時は motif を yama に
 BR.update(T.get('ehon_brand', {}))
+# 11/16 スマホの画面は、その回の県のおでかけページを毎回撮る（古い画面・違う県の画面が出ていた）。撮れなければ今までの絵
+def hp_shots():
+    SLUG = {'東京': 'tokyo', '神奈川': 'kanagawa', '埼玉': 'saitama', '千葉': 'chiba', '茨城': 'ibaraki', '栃木': 'tochigi', '群馬': 'gunma',
+            '大阪': 'osaka', '京都': 'kyoto', '兵庫': 'hyogo', '奈良': 'nara', '滋賀': 'shiga', '和歌山': 'wakayama'}
+    slug = spec.get('pref') or SLUG.get(spec.get('tab', ''), '')
+    kanto = spec.get('brand') == 'kanto'
+    host = 'https://lifenote-kanto.pages.dev' if kanto else 'https://townnote.pages.dev'
+    cands = [f'{host}/odekake-{slug}' if slug else f'{host}/odekake']
+    if not kanto and slug and os.path.exists(f'{ROOT}/links/odekake-{slug}.html'): cands.append(f'file://{ROOT}/links/odekake-{slug}.html')
+    js = f'{W}/hpshot.js'
+    open(js, 'w').write("""const {chromium}=require('playwright');(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:390,height:780},deviceScaleFactor:2});
+if(process.argv[2].startsWith('file:'))await p.route('**/*',r=>{const u=r.request().url();(u.startsWith('file:')||u.startsWith('data:'))?r.continue():r.abort()});
+await p.goto(process.argv[2],{timeout:25000,waitUntil:'networkidle'});await p.waitForTimeout(1200);
+await p.screenshot({path:process.argv[3],type:'jpeg',quality:92});await p.evaluate(()=>window.scrollTo(0,560));await p.waitForTimeout(500);await p.screenshot({path:process.argv[4],type:'jpeg',quality:92});await b.close()})().catch(e=>{console.log('hp',e.message);process.exit(1)});""")
+    for u in cands:
+        a, b = f'{W}/hp1.jpg', f'{W}/hp2.jpg'
+        try:
+            r = subprocess.run(['node', js, u, a, b], timeout=90)
+        except Exception:
+            continue
+        if r.returncode == 0 and os.path.exists(b) and os.path.getsize(a) > 30000:
+            BR['hp1'], BR['hp2'] = a, b; print('スマホの画面', u); return
+    print('スマホの画面：撮れないので今までの絵')
+if not os.environ.get('EHON_NO_HP'): hp_shots()
+PAGE['popup'] = bool(T.get('popup') or os.environ.get('EHON_POP'))   # 11/16 飛び出す絵本の版（紙の切り絵が立つ）
 PAGE['globe'] = T.get('globe', '')   # スノードームの台の文字（英字）
 PAGE['magic'] = bool(T.get('magic')) or BR['scene'] in ('xmas', 'momiji', 'hama')   # 11/15 魔法の絵本（光の粒・雪・そり・スノードーム）
 PAGE.update({k: BR[k] for k in ('top_en', 'top_jp', 'cover_sub', 'hp_en', 'hp_jp', 't5', 'seal', 'motif', 'peaks', 'scene')})
@@ -105,7 +130,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 #pat{position:absolute;inset:0;width:1080px;height:1920px;opacity:.16}
 #bk circle{filter:blur(14px)}
 #deco{position:absolute;inset:0;width:1080px;height:1920px;pointer-events:none}
-#grain{position:absolute;inset:0;opacity:.35;mix-blend-mode:overlay;pointer-events:none}
+#grain{position:absolute;inset:0;opacity:.16;mix-blend-mode:overlay;pointer-events:none}
 #top{position:absolute;z-index:3;left:0;right:0;top:92px;text-align:center;font:500 25px J;letter-spacing:.42em;color:#d9c39a}
 #top b{display:block;font:500 30px M;letter-spacing:.3em;margin-top:10px;color:var(--tb,#efe2c6)}
 #pg{position:absolute;left:0;right:0;top:1640px;text-align:center;font:500 26px M;letter-spacing:.5em;color:#cdb890}
@@ -129,6 +154,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 .vt{position:absolute;writing-mode:vertical-rl;font-family:M;color:#4a3328;letter-spacing:.2em;line-height:1.9;white-space:nowrap;text-orientation:upright}
 .vt span{display:inline-block;opacity:0}
 .vt .tcy{text-combine-upright:all;letter-spacing:0}
+.vt .sdw{text-orientation:mixed;letter-spacing:.04em;margin:.1em 0}
 .cover{background:linear-gradient(100deg,#5d1f1b,#7c2a22 18%,#742620 70%,#5a1c18);border-radius:4px 12px 12px 4px}
 .cover:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 5px),repeating-linear-gradient(90deg,rgba(0,0,0,.05) 0 2px,transparent 2px 5px)}
 .cover .spine{position:absolute;left:0;top:0;bottom:0;width:46px;background:linear-gradient(90deg,rgba(0,0,0,.35),rgba(0,0,0,0))}
@@ -168,7 +194,7 @@ const DEFS=`<defs>
 <filter id="fib"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="2" seed="9"/><feColorMatrix values="0 0 0 0 .3  0 0 0 0 .22  0 0 0 0 .15  0 0 0 .32 -.05"/></filter>
 <filter id="wc3" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".03" numOctaves="2" seed="5" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="5"/></filter><filter id="bl"><feGaussianBlur stdDeviation="26"/></filter><filter id="bl2"><feGaussianBlur stdDeviation="7"/></filter>
 </defs>`;
-const PAPER=`<rect width="920" height="1380" filter="url(#pap)" opacity=".5"/><rect width="920" height="1380" filter="url(#fib)" opacity=".55"/>`;
+const PAPER=`<rect width="920" height="1380" filter="url(#pap)" opacity=".16"/><rect width="920" height="1380" filter="url(#fib)" opacity=".42"/>`;
 function hill(y,amp,seed,x0=-40,x1=960){const r=rng(seed);const a=r()*6,b=r()*6,c=r()*6;let s=`M${x0},1400 L${x0},${y}`;
   for(let x=x0;x<=x1;x+=20){const u=x/920;s+=` L${x},${(y-amp*(.55*Math.sin(u*3.1+a)+.3*Math.sin(u*7.3+b)+.15*Math.sin(u*13+c))).toFixed(1)}`}return s+` L${x1},1400Z`}
 function hy(y,amp,seed,x){const r=rng(seed);const a=r()*6,b=r()*6,c=r()*6;const u=x/920;return y-amp*(.55*Math.sin(u*3.1+a)+.3*Math.sin(u*7.3+b)+.15*Math.sin(u*13+c))}
@@ -226,7 +252,7 @@ function leafPath(R){const L=[1,.9,.7,.42],pts=[];const P=(r,d)=>{const a=(d-90)
 // 海の景色（scene: 'umi'）では、もみじの代わりに光のきらめき
 const MG=!!P.magic,XM=P.scene=='xmas',CVS=['xmas','momiji','hama'].includes(P.scene),XHK=['#e2b84a','#c0392b','#f6d36b','#2e6b4a','#f4ead8'],UMI=P.scene=='umi',HK=['#8fd0ff','#ffd27a','#ff8fb8','#b9a0ff','#8fffd0'];
 const LP=(UMI||XM||P.scene=='hama')?'M0,-1Q.1,-.1 1,0Q.1,.1 0,1Q-.1,.1 -1,0Q-.1,-.1 0,-1Z':leafPath(1);
-function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>(l.match(/(?<![0-9])[0-9]{2}(?![0-9])|./gu)||[]).map(c=>c.length==2?`<span class="tcy">${c}</span>`:`<span>${/[!-~]/.test(c)?String.fromCharCode(c.charCodeAt(0)+65248):c}</span>`).join('')).join('<br>')+`</div>`}
+function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>(l.match(/[0-9A-Za-z][0-9A-Za-z.,:]*[0-9A-Za-z]|./gu)||[]).map(c=>c.length==2?`<span class="tcy">${c}</span>`:c.length>2?`<span class="sdw">${c}</span>`:`<span>${/[!-~]/.test(c)?String.fromCharCode(c.charCodeAt(0)+65248):c}</span>`).join('')).join('<br>')+`</div>`}
 function scene(mode){ // 0 昼 1 秋 2 夜
   // 11/15 クリスマスの絵（tools/outing_reel/xmas.js）。電球は毎コマまたたく
   if(CVS)return `<svg viewBox="0 0 920 1380">${DEFS}<image class="xmi" data-m="${mode}" href="${xmPage(mode,0)}" width="920" height="1380"/><g class="lv"></g>${PAPER}</svg>`;
@@ -287,8 +313,8 @@ function build(){
    <div id="d1" style="position:absolute;left:96px;top:150px;color:#4a3328;opacity:0"><div class="num" style="font-size:60px;letter-spacing:.06em;color:#8a6a55">${P.d[0]} <span style="font-size:30px;letter-spacing:.3em">${P.d[1]}</span></div><div style="width:2px;height:70px;background:#8a6a55;margin:22px 0 10px 60px"></div></div>
    <div id="d2" style="position:absolute;left:84px;top:330px;color:#3d2a22;opacity:0"><div class="num" style="font-size:230px;line-height:1">${P.d[2]}</div><div style="font:500 44px M;letter-spacing:.3em;margin:18px 0 0 10px"><span class="num" style="font-size:44px;letter-spacing:.3em">${P.d[3]}</span>　まで</div></div>
    <div id="seal">${P.seal}</div><div id="d3" style="position:absolute;left:96px;top:700px;font:500 38px M;letter-spacing:${P.place.length>11?".06em":".22em"};color:#6b4a3a;opacity:0">${P.place.replace(/｜/g,"　")}</div></div>`);
-  pages.push(`<div class="face">${scene(2)}${vtext(P.t4,84,120,58,'color:#f4e6c4','t3')}
-   <div id="n1" style="position:absolute;left:560px;top:560px;color:#f4e6c4;opacity:0"><div class="num" style="font-size:92px;line-height:1">${P.night[0]}</div><div style="font:500 34px M;letter-spacing:.3em;margin-top:14px"><span class="num" style="font-size:34px;letter-spacing:.3em">${P.night[1]}</span>　${P.night[2]}</div><div style="font:500 40px M;letter-spacing:.2em;margin-top:26px">${P.night[3]}</div></div></div>`);
+  pages.push(`<div class="face">${scene(2)}${vtext(P.t4,84,120,58,'color:#f4e6c4;text-shadow:0 0 14px rgba(6,8,24,.95),0 0 34px rgba(6,8,24,.8)','t3')}
+   <div id="n1" style="position:absolute;left:560px;top:560px;color:#f4e6c4;opacity:0;text-shadow:0 0 16px rgba(6,8,24,.95),0 0 40px rgba(6,8,24,.85),0 0 4px rgba(6,8,24,.9)"><div class="num" style="font-size:92px;line-height:1">${P.night[0]}</div><div style="font:500 34px M;letter-spacing:.3em;margin-top:14px"><span class="num" style="font-size:34px;letter-spacing:.3em">${P.night[1]}</span>　${P.night[2]}</div><div style="font:500 40px M;letter-spacing:.2em;margin-top:26px">${P.night[3]}</div></div></div>`);
   // 案内
   pages.push(`<div class="face" style="background:#f6efdf"><svg viewBox="0 0 920 1380">${DEFS}${MG&&CVS?`${XM?`<image x="664" y="52" width="210" height="151" href="${HOLLY}"/>`:''}<image x="0" y="900" width="920" height="420" href="${XM?mgMarket():mgVig()}" opacity=".95"/>`:`<g filter="url(#wc3)" opacity=".9"><g transform="translate(760,170) scale(70) rotate(20)"><path d="${LP}" fill="#d4552d" opacity=".85"/></g><g transform="translate(660,120) scale(40) rotate(-40)"><path d="${LP}" fill="#f0b23a" opacity=".85"/></g></g>`}${MG?mgFrame():''}<g transform="translate(460,1310)" opacity=".85">${motif(0,0,.5,false)}</g><g class="lv"></g>${PAPER}</svg>
    <div style="position:absolute;left:150px;top:150px;font:500 30px J;letter-spacing:.42em;color:#8a6a55">INFORMATION</div>

@@ -166,6 +166,7 @@ function mjTree(c,cx,by,h,mode,seed,L,o){o=o||{};const r=XR(seed);const night=mo
  const ccx=cx+lean*h*.5,ccy=by-h*.64,rx=w*.5,ry=h*.3;
  // 幹と枝（かたまりの中へ向かって伸びる）
  const grow=(x,y,a,len,wd,d)=>{const x2=x+Math.cos(a)*len,y2=y+Math.sin(a)*len,mx=(x+x2)/2+(r()-.5)*len*.25,my=(y+y2)/2;
+  if(d<3&&((x2-ccx)/rx)**2+((y2-ccy)/ry)**2>.92)return;   // 11/16 葉のかたまりの外へ出る細い枝は描かない（字の近くに黒い枝が飛び出した）
   c.strokeStyle=bark;c.lineWidth=wd;c.beginPath();c.moveTo(x,y);c.quadraticCurveTo(mx,my,x2,y2);c.stroke();
   if(wd>5){c.strokeStyle=barkL;c.globalAlpha=.4;c.lineWidth=wd*.28;c.beginPath();c.moveTo(x-wd*.22,y);c.quadraticCurveTo(mx-wd*.22,my,x2-wd*.2,y2);c.stroke();c.globalAlpha=1}
   if(d<=0)return;const sp=.45+r()*.3;grow(x2,y2,a-sp,len*.72,wd*.62,d-1);grow(x2,y2,a+sp,len*.72,wd*.62,d-1)};

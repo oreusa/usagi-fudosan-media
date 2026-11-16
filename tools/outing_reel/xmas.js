@@ -260,7 +260,19 @@ const XOUT=xmCanvas(XW,XH),XO=XOUT.getContext('2d');
 const XLC=xmCanvas(XW/2,XH/2),XLG=XLC.getContext('2d'),XB1=xmCanvas(XW/4,XH/4),XB1G=XB1.getContext('2d'),XB2=xmCanvas(XW/8,XH/8),XB2G=XB2.getContext('2d');
 function xmEll(c,l,a){c.save();c.translate(l.x,l.y);c.scale(1,l.ry/l.rx);glow(c,0,0,l.rx,l.c,a);c.restore()}
 function xmPopK(u,d){const x=Math.max(0,Math.min(1,(u-d)/1.05));if(x<=0)return 0;const c1=1.5;return 1+(c1+1)*Math.pow(x-1,3)+c1*Math.pow(x-1,2)}
-function xmPage(mode,t,u){const X=xmBase(mode);t=t||0;u=u||0;const c=XO;const k=Math.max(0,Math.min(1,(u+.9)/5.2)),uu=u+.55;
+// 11/16 飛び出す絵本（text.popup）：立ち上がる層を「紙の切り絵」にする。白い切り口・紙の厚み・ページに落ちるくっきりした影
+function POPON(){return typeof P!='undefined'&&!!P.popup}
+function xmPaperize(Ly,mode){const cv=Ly.cv,src=cv.getContext('2d').getImageData(0,0,XW,XH),d=src.data;
+ const mk=(col)=>{const m=xmCanvas(XW,XH),g=m.getContext('2d'),im=g.createImageData(XW,XH),o=im.data;const[r,gg,b]=xmHex(col);
+  for(let i=0;i<d.length;i+=4)if(d[i+3]>90){o[i]=r;o[i+1]=gg;o[i+2]=b;o[i+3]=255}g.putImageData(im,0,0);return m};
+ const W=mk(mode==2?'#8f8576':'#fffaf0'),E=mk(mode==2?'#3e3630':'#b9a688'),out=xmCanvas(XW,XH),g=out.getContext('2d');
+ for(let a=0;a<20;a++){const q=a/20*6.2832;g.drawImage(E,Math.cos(q)*6,Math.sin(q)*6+5)}      // 紙の厚み（下側に見える）
+ for(let a=0;a<20;a++){const q=a/20*6.2832;g.drawImage(W,Math.cos(q)*6,Math.sin(q)*6)}        // 白い切り口
+ g.drawImage(cv,0,0);
+ // 紙の面の明るさ：上が少し明るく、下（折り目の近く）が少し暗い
+ g.globalCompositeOperation='source-atop';const lg=g.createLinearGradient(0,(Ly.ay||1200)-700,0,Ly.ay||1200);lg.addColorStop(0,'rgba(255,248,230,.10)');lg.addColorStop(1,'rgba(40,25,15,.16)');g.fillStyle=lg;g.fillRect(0,0,XW,XH);
+ Ly.cv=out;const s=xmCanvas(XW,XH),h=s.getContext('2d');h.filter='brightness(0) blur(3px)';h.drawImage(out,0,0);Ly.sh2=s;Ly.sh=xmShadowOf(out)}
+function xmPage(mode,t,u){const X=xmBase(mode);if(POPON()&&!X.pz){xmPaperize(X.T,mode);xmPaperize(X.F,mode);X.pz=1}t=t||0;u=u||0;const c=XO;const k=Math.max(0,Math.min(1,(u+.9)/5.2)),uu=u+.55;
  c.setTransform(1,0,0,1,0,0);c.globalCompositeOperation='source-over';c.globalAlpha=1;c.filter='none';
  XLG.setTransform(1,0,0,1,0,0);XLG.clearRect(0,0,XW/2,XH/2);XLG.globalCompositeOperation='lighter';
  const layers=[[X.B,6,null],[X.T,22,X.T],[X.F,38,X.F]];
@@ -273,6 +285,8 @@ function xmPage(mode,t,u){const X=xmBase(mode);t=t||0;u=u||0;const c=XO;const k=
   const kk=Math.max(0,xmPopK(uu,Ly.d));if(kk<=0.001)continue;const ax=Ly.ax+ox,ay=Ly.ay;
   // 紙の影：ページの上に、右奥へ伸びる
   c.save();c.globalAlpha=Math.min(1,kk)*(mode==2?.4:.24);c.translate(ax,ay);c.transform(1,0,-.22,.1*Math.min(1,kk),0,0);c.translate(-ax,-ay);c.drawImage(Ly.sh,ox,0);c.restore();
+  if(POPON()){const q=Math.min(1,kk);c.save();c.globalAlpha=q*(mode==2?.55:.38);c.translate(ax,ay);c.transform(1,0,-.18*(1-q*.6),.35+.6*q,0,0);c.translate(-ax,-ay);c.drawImage(Ly.sh2,ox+16*q,10*q);c.restore();   // 立った紙のくっきりした影（右下）
+   c.save();c.globalAlpha=q*.5;c.fillStyle=mode==2?'rgba(0,0,0,.6)':'rgba(60,40,25,.45)';c.filter='blur(6px)';c.fillRect(ax-460,ay-4,920,14);c.restore()}   // 折り目の線のかげ
   c.save();c.translate(ax,ay);c.scale(.92+.08*kk,kk);c.translate(-ax,-ay);c.drawImage(Ly.cv,ox,0);
   c.restore()}
  // 光：奥から順に（立ち上がりと同じ動き）

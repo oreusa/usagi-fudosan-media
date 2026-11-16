@@ -53,7 +53,7 @@ function xmSleigh(c,u){const s=(u-.45)/3.4;if(s<=0||s>1.4)return;c.save();
   c.shadowBlur=0;c.fillStyle='#161a33';c.strokeStyle='#161a33';c.save();c.translate(-.9,.9);draw();c.restore()}   // 影絵
  c.restore()}
 // 絵の中の動き（xmas.js の xmPage から毎コマ呼ぶ）
-function xmFx(c,mode,t,u){xmSnow(c,mode,t);if(mode==1)xmShoot(c,u);if(mode==2)xmSleigh(c,u)}
+function xmFx(c,mode,t,u){xmSnow(c,mode,t);if(mode==1)xmShoot(c,u)}   // 11/16 夜のそりはやめた（オーナー「飾りじゃない」）
 
 // ---------- 日付のページ：赤レンガとツリーのスノードーム ----------
 const GW=460,GH=600,GX=230,GY=250,GR=200;let GBASE=null,GL=[],GGLASS=null,GFRONT=null;
@@ -159,11 +159,11 @@ function mgRound(t,u){const hama=P.scene=='hama';if(!RW){RW=xmCanvas(GW,GH);cons
   if(hama){for(let i=0;i<10;i++){const a=i/10*Math.PI*2;const x=GX+Math.cos(a)*(GR+12),y=GY+Math.sin(a)*(GR+12);const g=f.createRadialGradient(x-2,y-2,.5,x,y,6);g.addColorStop(0,'#fff4cc');g.addColorStop(1,'#8a6526');f.fillStyle=g;f.beginPath();f.arc(x,y,5.5,0,7);f.fill()}}
   else{const r=XR(3);f.strokeStyle='rgba(30,15,8,.35)';f.lineWidth=1;for(let i=0;i<40;i++){const a=r()*7,rr=GR+4+r()*18;f.beginPath();f.arc(GX,GY,rr,a,a+.3+r()*.6);f.stroke()}}}
  const c=RO;c.clearRect(0,0,GW,GH);c.drawImage(RW,0,0);c.save();c.beginPath();c.arc(GX,GY,GR,0,7);c.clip();
- const src=mgComposite(2,true,t);const k=.52,cx=460,cy=hama?1000:900;c.drawImage(src,cx-GR/k,cy-GR/k,GR*2/k,GR*2/k,GX-GR,GY-GR,GR*2,GR*2);
- if(P.scene=='momiji')mjFx(c,2,t,u);
+ const src=mgComposite(hama?2:1,true,t);c.filter=hama?'brightness(1.3) saturate(1.15)':'none';const k=.52,cx=460,cy=hama?1000:900;c.drawImage(src,cx-GR/k,cy-GR/k,GR*2/k,GR*2/k,GX-GR,GY-GR,GR*2,GR*2);c.filter='none';
+ if(P.scene=='momiji')mjFx(c,1,t,u);
  // ガラスの光
  c.fillStyle='rgba(255,255,255,.12)';c.beginPath();c.ellipse(GX-80,GY-90,40,90,.7,0,7);c.fill();c.restore();
  const v=c.createRadialGradient(GX,GY,GR*.7,GX,GY,GR);v.addColorStop(0,'rgba(0,0,0,0)');v.addColorStop(1,'rgba(0,0,0,.35)');c.fillStyle=v;c.beginPath();c.arc(GX,GY,GR,0,7);c.fill();
  return ROUT.toDataURL('image/png')}
 function mgVig(){const src=mgComposite(0,false,0);const c=xmCanvas(XW,420),g=c.getContext('2d');const k=.62,sh=420/k;g.drawImage(src,0,1340-sh,XW,sh,(XW-XW*k)/2,0,XW*k,420);
- g.globalCompositeOperation='destination-in';g.save();g.translate(460,230);g.scale(1,.6);const m=g.createRadialGradient(0,0,160,0,0,380);m.addColorStop(0,'rgba(0,0,0,1)');m.addColorStop(1,'rgba(0,0,0,0)');g.fillStyle=m;g.fillRect(-460,-400,920,800);g.restore();return c.toDataURL('image/png')}
+ g.globalCompositeOperation='destination-in';g.save();g.translate(460,230);g.scale(1,.6);const m=g.createRadialGradient(0,0,250,0,0,400);m.addColorStop(0,'rgba(0,0,0,1)');m.addColorStop(1,'rgba(0,0,0,0)');g.fillStyle=m;g.fillRect(-460,-400,920,800);g.restore();return c.toDataURL('image/png')}
