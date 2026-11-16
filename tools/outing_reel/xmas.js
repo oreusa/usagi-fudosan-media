@@ -164,7 +164,8 @@ function xmHut(c,x,y,w,mode,seed,L){const r=XR(seed);const night=mode==2,dusk=mo
  if(L)L.push({x:lx,y:ly-1,r:night?34:16,c:'255,196,110',a:night?.8:.3,p:r()*4,sp:3.1,dot:2.2})}
 
 // ---------- 人（丸い頭・コート・マフラー・帽子。夜はツリー側のふちが光る） ----------
-function xmPerson(c,x,y,s,col,mode,seed,kind){const r=XR(seed);kind=kind==null?Math.floor(r()*3):kind;const night=mode==2,dusk=mode==1;
+function xmPerson(c,x,y,s,col,mode,seed,kind){if(s>=88)s*=1.28;const r=XR(seed);   // 11/16 手前の人を大きく（見る人が自分を重ねやすい）
+kind=kind==null?Math.floor(r()*3):kind;const night=mode==2,dusk=mode==1;
  const dk=night?.55:dusk?.25:0,coat=xmMix(col,'#120a14',dk),coat2=xmMix(coat,'#000000',.3),skin=xmMix('#ecc9a8','#2a1a20',dk*1.1),hair=xmMix(['#3a2418','#5a3a22','#1e1410'][Math.floor(r()*3)],'#000',dk*.5);
  const acc=xmMix(['#c0392b','#e2b84a','#f1e7d6','#2e6b4a'][Math.floor(r()*4)],'#100810',dk);
  const ch=kind==2;const S=ch?s*.72:s;
@@ -299,5 +300,8 @@ function xmPage(mode,t,u){const X=xmBase(mode);if(POPON()&&!X.pz){xmPaperize(X.T
  if(mode==2){const gy=X.gy;c.save();c.beginPath();c.rect(0,gy,XW,XH-gy);c.clip();c.globalAlpha=.42;c.filter='blur(4px)';c.translate(0,gy*2+40);c.scale(1,-1);c.drawImage(XB1,0,0,XW,XH);c.restore()}
  c.globalCompositeOperation='source-over';c.globalAlpha=1;c.filter='none';
  if(typeof MG!='undefined'&&MG){if(P.scene=='momiji')mjFx(c,mode,t,u);else if(P.scene=='hama')hmFx(c,mode,t,u);else xmFx(c,mode,t,u)}
+ // 11/16 絵の仕上げ：ぼかした写しを重ねて、絵の具がにじむような柔らかい光と深い色に（オートン）
+ {if(typeof XORC=='undefined'){window.XORC=xmCanvas(XW/4,XH/4);window.XORG=XORC.getContext('2d')}XORG.setTransform(1,0,0,1,0,0);XORG.clearRect(0,0,XW/4,XH/4);XORG.filter='blur(4px)';XORG.drawImage(XOUT,0,0,XW/4,XH/4);XORG.filter='none';
+  c.save();c.globalCompositeOperation='soft-light';c.globalAlpha=mode==2?.32:.42;c.drawImage(XORC,0,0,XW,XH);c.globalCompositeOperation='screen';c.globalAlpha=mode==2?.10:.07;c.drawImage(XORC,0,0,XW,XH);c.restore()}
  c.drawImage(X.V,0,0);c.save();c.globalCompositeOperation='multiply';c.globalAlpha=.08;c.drawImage(xmNoise(),0,0);c.restore();
  return XOUT.toDataURL('image/jpeg',.92)}

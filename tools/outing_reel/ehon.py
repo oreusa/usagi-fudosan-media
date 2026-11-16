@@ -65,7 +65,8 @@ TURN = 0.95         # めくる長さ
 LEAD = 0.45         # ページが見えてから声まで
 ST = []; t = OPEN
 for n in range(N):
-    ST.append(t); t += max(3.3, LEAD + VD[n] + 0.75) + (0.6 if n == 2 else 0) + (1.6 if n == 5 else 0)
+    # 11/16 オーナー「伸ばそう」：1ページ+1秒（絵を見る時間）
+    ST.append(t); t += max(4.3, LEAD + VD[n] + 1.75) + (0.6 if n == 2 else 0) + (1.6 if n == 5 else 0)
 TOTAL = t + 0.8
 F = ROOT + '/tools/fonts'
 d = T['date']
@@ -253,7 +254,7 @@ function leafPath(R){const L=[1,.9,.7,.42],pts=[];const P=(r,d)=>{const a=(d-90)
 const MG=!!P.magic,XM=P.scene=='xmas',CVS=['xmas','momiji','hama'].includes(P.scene),XHK=['#e2b84a','#c0392b','#f6d36b','#2e6b4a','#f4ead8'],UMI=P.scene=='umi',HK=['#8fd0ff','#ffd27a','#ff8fb8','#b9a0ff','#8fffd0'];
 const LP=(UMI||XM||P.scene=='hama')?'M0,-1Q.1,-.1 1,0Q.1,.1 0,1Q-.1,.1 -1,0Q-.1,-.1 0,-1Z':leafPath(1);
 // 11/16 オーナー「数字また横になってる」「漢数字は今どきじゃない」：縦書きの3けた以上は1字ずつ縦に、字の間をつめる（雑誌の縦書きの形）。2けたは1マスに横並び
-function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>(l.match(/[0-9A-Za-z][0-9A-Za-z.,:]*[0-9A-Za-z]|./gu)||[]).map(c=>c.length==2?`<span class="tcy">${c}</span>`:c.length>2?[...c].map(d=>`<span class="ud">${d}</span>`).join(''):`<span>${/[!-~]/.test(c)?String.fromCharCode(c.charCodeAt(0)+65248):c}</span>`).join('')).join('<br>')+`</div>`}
+function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>(l.match(/[0-9][0-9.,:]*[0-9]|./gu)||[]).map(c=>c.length==2?`<span class="tcy">${c}</span>`:c.length>2?[...c].map(d=>`<span class="ud">${d}</span>`).join(''):`<span>${/[!-~]/.test(c)?String.fromCharCode(c.charCodeAt(0)+65248):c}</span>`).join('')).join('<br>')+`</div>`}
 function scene(mode){ // 0 昼 1 秋 2 夜
   // 11/15 クリスマスの絵（tools/outing_reel/xmas.js）。電球は毎コマまたたく
   if(CVS)return `<svg viewBox="0 0 920 1380">${DEFS}<image class="xmi" data-m="${mode}" href="${xmPage(mode,0)}" width="920" height="1380"/><g class="lv"></g>${PAPER}</svg>`;
@@ -315,9 +316,9 @@ function build(){
    <div id="d2" style="position:absolute;left:84px;top:330px;color:#3d2a22;opacity:0"><div class="num" style="font-size:230px;line-height:1">${P.d[2]}</div><div style="font:500 44px M;letter-spacing:.3em;margin:18px 0 0 10px"><span class="num" style="font-size:44px;letter-spacing:.3em">${P.d[3]}</span>　まで</div></div>
    <div id="seal">${P.seal}</div><div id="d3" style="position:absolute;left:96px;top:700px;font:500 38px M;letter-spacing:${P.place.length>11?".06em":".22em"};color:#6b4a3a;opacity:0">${P.place.replace(/｜/g,"　")}</div></div>`);
   pages.push(`<div class="face">${scene(2)}${vtext(P.t4,84,120,58,'color:#f4e6c4;text-shadow:0 0 14px rgba(6,8,24,.95),0 0 34px rgba(6,8,24,.8)','t3')}
-   <div id="n1" style="position:absolute;left:560px;top:560px;color:#f4e6c4;opacity:0;text-shadow:0 0 16px rgba(6,8,24,.95),0 0 40px rgba(6,8,24,.85),0 0 4px rgba(6,8,24,.9)"><div class="num" style="font-size:92px;line-height:1">${P.night[0]}</div><div style="font:500 34px M;letter-spacing:.3em;margin-top:14px"><span class="num" style="font-size:34px;letter-spacing:.3em">${P.night[1]}</span>　${P.night[2]}</div><div style="font:500 40px M;letter-spacing:.2em;margin-top:26px">${P.night[3]}</div></div></div>`);
+   <div id="n1" style="position:absolute;left:500px;top:500px;padding:60px 64px;white-space:nowrap;border-radius:50%;background:radial-gradient(closest-side,rgba(8,10,28,.74),rgba(8,10,28,.5) 55%,rgba(8,10,28,0));color:#f4e6c4;opacity:0;text-shadow:0 0 16px rgba(6,8,24,.95),0 0 40px rgba(6,8,24,.85),0 0 4px rgba(6,8,24,.9)"><div class="num" style="font-size:92px;line-height:1">${P.night[0]}</div><div style="font:500 34px M;letter-spacing:.3em;margin-top:14px"><span class="num" style="font-size:34px;letter-spacing:.3em">${P.night[1]}</span>　${P.night[2]}</div><div style="font:500 40px M;letter-spacing:.2em;margin-top:26px">${P.night[3]}</div></div></div>`);
   // 案内
-  pages.push(`<div class="face" style="background:#f6efdf"><svg viewBox="0 0 920 1380">${DEFS}${MG&&CVS?`${XM?`<image x="664" y="52" width="210" height="151" href="${HOLLY}"/>`:''}<image x="0" y="900" width="920" height="420" href="${XM?mgMarket():mgVig()}" opacity=".95"/>`:`<g filter="url(#wc3)" opacity=".9"><g transform="translate(760,170) scale(70) rotate(20)"><path d="${LP}" fill="#d4552d" opacity=".85"/></g><g transform="translate(660,120) scale(40) rotate(-40)"><path d="${LP}" fill="#f0b23a" opacity=".85"/></g></g>`}${MG?mgFrame():''}<g transform="translate(460,1310)" opacity=".85">${motif(0,0,.5,false)}</g><g class="lv"></g>${PAPER}</svg>
+  pages.push(`<div class="face" style="background:#f6efdf"><svg viewBox="0 0 920 1380">${DEFS}${MG&&CVS?`${XM?`<image x="664" y="52" width="210" height="151" href="${HOLLY}"/>`:''}<image x="0" y="900" width="920" height="420" href="${XM?mgMarket():mgVig()}" opacity=".95"/>`:`<g filter="url(#wc3)" opacity=".9"><g transform="translate(760,170) scale(70) rotate(20)"><path d="${LP}" fill="#d4552d" opacity=".85"/></g><g transform="translate(660,120) scale(40) rotate(-40)"><path d="${LP}" fill="#f0b23a" opacity=".85"/></g></g>`}${MG?mgFrame():''}${MG&&CVS?'':`<g transform="translate(460,1310)" opacity=".85">${motif(0,0,.5,false)}</g>`}<g class="lv"></g>${PAPER}</svg>
    <div style="position:absolute;left:150px;top:150px;font:500 30px J;letter-spacing:.42em;color:#8a6a55">INFORMATION</div>
    <div style="position:absolute;left:150px;top:206px;font:700 62px MB;letter-spacing:.16em;color:#3d2a22" id="it">${P.place.split('｜')[0]}</div>
    ${P.info.map((r,i)=>`<div class="row" id="r${i}" style="top:${340+i*112}px"><span>${r[0]}</span><b>${r[1]}</b></div>`).join('')}
