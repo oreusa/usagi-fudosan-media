@@ -307,7 +307,7 @@ function mjFall(c,cx,top,bot,w,mode,L){const night=mode==2,r=XR(77);
  if(L){if(night){L.push({x:cx,y:(top+bot)/2,r:(bot-top)*.45,c:'255,226,170',a:.16,p:0,sp:.2,soft:1});L.push({x:cx,y:bot,r:w*1.8,c:'255,210,150',a:.32,p:1,sp:.4,soft:1});
    for(let i=0;i<10;i++)L.push({x:cx+(r()-.5)*w*1.6,y:bot-20-r()*40,r:16,c:'255,240,210',a:.7,p:i,sp:3,dot:2})}
   else L.push({x:cx,y:bot,r:w*2,c:'255,255,255',a:.25,p:0,sp:.3,soft:1})}}
-function mjBuild(mode){if(P.taki)return tkBuild(mode);if(P.icho)return icBuild(mode);const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;
+function mjBuild(mode){if(P.kiyo)return kmBuild(mode);if(P.taki)return tkBuild(mode);if(P.icho)return icBuild(mode);const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;
  if(mode==0){scSky(c,['#9ec4dc','#d6e4e6','#f4e8d0'],820);scClouds(c,4,8,120,560,'#ffffff',.55);
   c.save();c.globalCompositeOperation='screen';glow(c,330,560,520,'255,226,180',.45);c.restore();
   wash(c,g=>{g.moveTo(-20,760);g.bezierCurveTo(200,690,420,720,600,700);g.bezierCurveTo(760,690,860,720,XW+20,705);g.lineTo(XW+20,860);g.lineTo(-20,860);g.closePath()},'#9aa8b0',{edge:.1,gr:.25,light:false,a:.6});
@@ -590,3 +590,124 @@ function icBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B
  xmPerson(F.c,700,1180,70,'#5a5a6e',1,79,0);
  T.ax=230;T.ay=1180;T.d=.1;F.ax=480;F.ay=1270;F.d=.4;
  return scFinish(1,B,T,F,880)}
+
+// ---------- 清水の舞台（text.kiyo。11/17 清水寺 秋の夜間特別拝観：もみじの寺の絵の使い回しをやめる） ----------
+// 本物の形：本堂の大きな檜皮ぶきの屋根（入母屋）、崖に張り出した舞台を、長い柱（けやき）が格子に組んで支える。
+// 下の谷（錦雲渓）はもみじでうまる。仁王門と三重塔は朱色。夜の特別拝観は、清水寺から青い一筋の光が夜空へ。
+const KM={wood:['#b8865a','#a8744a','#d8a066'],woodD:['#5a3a24','#4a2e1c','#7a4a28'],roof:['#4e3426','#3e2a1e','#1a1210'],roofL:['#7a5640','#6a4632','#3a2a20'],
+ shu:['#c8452e','#b83a26','#8a2a1c'],wall:['#f2ead6','#efd8b8','#d8b88a']};
+function kmRoof(c,x0,x1,ey,h,mode,o){o=o||{};const w=x1-x0,col=KM.roof[mode],ov=o.ov||w*.12;
+ // 入母屋の大屋根：軒は反り、上は寄棟、まん中に妻（三角）
+ wash(c,g=>{g.moveTo(x0-ov,ey);g.quadraticCurveTo(x0+w*.04,ey-h*.18,x0+w*.14,ey-h*.42);g.lineTo(x0+w*.3,ey-h);g.lineTo(x1-w*.3,ey-h);g.lineTo(x1-w*.14,ey-h*.42);g.quadraticCurveTo(x1-w*.04,ey-h*.18,x1+ov,ey);g.quadraticCurveTo((x0+x1)/2,ey-h*.06,x0-ov,ey);g.closePath()},col,
+  {grad:g=>{const q=g.createLinearGradient(0,ey-h,0,ey);q.addColorStop(0,KM.roofL[mode]);q.addColorStop(1,col);return q},edge:.5,gr:.35,light:mode!=2});
+ // 檜皮の筋
+ c.save();c.strokeStyle=mode==2?'rgba(90,70,60,.25)':'rgba(30,18,10,.28)';c.lineWidth=1.2;for(let i=1;i<14;i++){const u=i/14;c.beginPath();c.moveTo(x0-ov+(w+2*ov)*u,ey-2-Math.abs(u-.5)*h*.1);c.lineTo(x0+w*.3+(w*.4)*u,ey-h+4);c.stroke()}c.restore();
+ // 軒の白い線（垂木の木口）
+ c.save();c.strokeStyle=mode==2?'rgba(255,214,150,.45)':'rgba(250,240,220,.55)';c.lineWidth=3;c.beginPath();c.moveTo(x0-ov,ey);c.quadraticCurveTo((x0+x1)/2,ey-h*.06,x1+ov,ey);c.stroke();c.restore();
+ if(o.gable!==false){const m=(x0+x1)/2,gw=w*.16;wash(c,g=>{g.moveTo(m-gw,ey-h*.42);g.lineTo(m,ey-h*.98);g.lineTo(m+gw,ey-h*.42);g.closePath()},mode==2?'#3a2a20':'#8a6a4a',{edge:.5,gr:.3,a:.9});
+  c.save();c.strokeStyle=mode==2?'#6a4a30':'#7a5236';c.lineWidth=2;c.beginPath();c.moveTo(m-gw,ey-h*.42);c.lineTo(m,ey-h*.98);c.lineTo(m+gw,ey-h*.42);c.stroke();c.restore()}
+ // 棟
+ wash(c,g=>{g.moveTo(x0+w*.29,ey-h-6);g.lineTo(x1-w*.29,ey-h-6);g.lineTo(x1-w*.3,ey-h+4);g.lineTo(x0+w*.3,ey-h+4);g.closePath()},'#2a1c14',{edge:.3,gr:.2,a:.95})}
+// 舞台：x0（本堂の前）から x1（張り出しの先）まで。床は dy、地面は左 g0・右 g1（崖なので右が深い）
+function kmStage(c,x0,x1,dy,g0,g1,mode,L,P2){const n=mode==2,wd=KM.wood[mode],wD=KM.woodD[mode],r=XR(301);
+ const gy=x=>g0+(g1-g0)*Math.pow((x-x0)/(x1-x0),1.15);
+ const cols=[];for(let i=0;i<=8;i++)cols.push(x0+(x1-x0)*i/8);
+ // 奥の柱の列（少し暗く・少しずらす＝格子が奥へ続く）
+ for(const k of[1,0]){const off=k?-14:0,dk=k?.55:0;
+  for(const x of cols){const X=x+off,top=dy+18+(k?6:0),bot=gy(x)+(k?-8:0);
+   wash(c,g=>{g.moveTo(X-5.5,top);g.lineTo(X+5.5,top);g.lineTo(X+6.5,bot);g.lineTo(X-6.5,bot);g.closePath()},xmMix(wd,'#000000',dk*.5),{grad:g=>{const q=g.createLinearGradient(X-6,0,X+6,0);q.addColorStop(0,xmMix(wd,'#ffffff',n?0:.15));q.addColorStop(1,xmMix(wD,'#000000',dk*.4));return q},edge:.4,gr:.3,light:false,a:k?.8:.95})}
+  // 貫（よこの木）：床の下から地面まで等間かく
+  c.save();for(let y=dy+60;y<g1-20;y+=58){const xs=cols.filter(x=>gy(x)>y+10);if(xs.length<2)continue;
+   wash(c,g=>{g.moveTo(xs[0]+off-8,y);g.lineTo(xs[xs.length-1]+off+8,y);g.lineTo(xs[xs.length-1]+off+8,y+8);g.lineTo(xs[0]+off-8,y+8);g.closePath()},xmMix(wD,'#000000',dk*.4),{edge:.3,gr:.3,light:false,a:k?.75:.95})}c.restore()}
+ // 床（舞台の板）と高欄
+ wash(c,g=>{g.moveTo(x0-40,dy);g.lineTo(x1+18,dy);g.lineTo(x1+14,dy+20);g.lineTo(x0-40,dy+20);g.closePath()},wD,{grad:g=>{const q=g.createLinearGradient(0,dy,0,dy+20);q.addColorStop(0,xmMix(wd,'#ffffff',n?.1:.25));q.addColorStop(1,wD);return q},edge:.5,gr:.3,light:false});
+ c.save();c.strokeStyle=n?'#c88a50':'#5a3a24';c.lineWidth=3.2;c.beginPath();c.moveTo(x0-10,dy-22);c.lineTo(x1+14,dy-22);c.lineTo(x1+14,dy);c.stroke();c.lineWidth=2;for(let x=x0;x<=x1+14;x+=22){c.beginPath();c.moveTo(x,dy-22);c.lineTo(x,dy);c.stroke()}c.restore();
+ // 舞台の上の人（手すりから景色を見る）
+ if(P2)for(const[x,s,col,sd,k]of P2)xmPerson(c,x,dy-2,s,col,mode,sd,k);
+ if(n&&L){for(const x of cols)L.push({x,y:(dy+gy(x))/2,r:(gy(x)-dy)*.5,c:'255,190,110',a:.07,p:x,sp:.2,soft:1});L.push({x:(x0+x1)/2,y:dy+10,rx:(x1-x0)*.6,ry:26,c:'255,214,150',a:.4,p:0,sp:.3,soft:1,ell:1})}}
+function kmHall(c,x0,x1,dy,mode,L){const n=mode==2,w=x1-x0;
+ // 本堂の体（柱と蔀戸）
+ wash(c,g=>{g.moveTo(x0,dy-118);g.lineTo(x1,dy-118);g.lineTo(x1,dy);g.lineTo(x0,dy);g.closePath()},n?'#3a2414':'#a8784e',{grad:g=>{const q=g.createLinearGradient(0,dy-118,0,dy);q.addColorStop(0,n?'#5a3a20':'#8a5c3a');q.addColorStop(1,n?'#c8884a':'#b88a5a');return q},edge:.5,gr:.35});
+ c.save();c.strokeStyle=n?'rgba(255,200,130,.5)':'rgba(70,44,26,.55)';c.lineWidth=2;for(let x=x0+w/10;x<x1;x+=w/10){c.beginPath();c.moveTo(x,dy-114);c.lineTo(x,dy);c.stroke()}
+ c.lineWidth=1;for(let y=dy-100;y<dy;y+=12){c.beginPath();c.moveTo(x0,y);c.lineTo(x1,y);c.stroke()}c.restore();
+ if(n)c.save(),c.globalCompositeOperation='screen',glow(c,(x0+x1)/2,dy-50,w*.6,'255,190,110',.35),c.restore();
+ // 組物のかげ
+ wash(c,g=>{g.moveTo(x0-10,dy-118);g.lineTo(x1+10,dy-118);g.lineTo(x1+20,dy-134);g.lineTo(x0-20,dy-134);g.closePath()},n?'#1a120c':'#5a3a24',{edge:.3,gr:.3,light:false});
+ kmRoof(c,x0,x1,dy-130,200,mode,{ov:70})}
+function kmPagoda(c,x,by,h,mode,L){const n=mode==2,sh=KM.shu[mode],w=h*.34;
+ for(let k=0;k<3;k++){const yb=by-h*(.08+k*.25),bw=w*(1-k*.13),bh=h*.1;
+  wash(c,g=>{g.moveTo(x-bw*.42,yb);g.lineTo(x+bw*.42,yb);g.lineTo(x+bw*.42,yb-bh);g.lineTo(x-bw*.42,yb-bh);g.closePath()},sh,{edge:.5,gr:.3,light:!n});
+  c.save();c.fillStyle=n?'rgba(255,220,160,.5)':'#f4ead8';c.fillRect(x-bw*.12,yb-bh*.8,bw*.24,bh*.55);c.restore();
+  const ry=yb-bh,ow=bw*1.02;wash(c,g=>{g.moveTo(x-ow,ry+4);g.quadraticCurveTo(x-bw*.5,ry-h*.04,x-bw*.3,ry-h*.085);g.lineTo(x+bw*.3,ry-h*.085);g.quadraticCurveTo(x+bw*.5,ry-h*.04,x+ow,ry+4);g.quadraticCurveTo(x,ry-6,x-ow,ry+4);g.closePath()},KM.roof[mode],{edge:.5,gr:.3,light:!n});
+  c.save();c.strokeStyle=n?'rgba(255,214,150,.4)':'rgba(250,240,220,.6)';c.lineWidth=2;c.beginPath();c.moveTo(x-ow,ry+4);c.quadraticCurveTo(x,ry-6,x+ow,ry+4);c.stroke();c.restore()}
+ // 相輪
+ const ty=by-h*.83;c.save();c.strokeStyle=n?'#c8a060':'#8a6a3a';c.lineWidth=4;c.beginPath();c.moveTo(x,ty);c.lineTo(x,by-h);c.stroke();c.lineWidth=2;for(let i=0;i<9;i++){const y=ty-6-i*(h*.15/9);c.beginPath();c.moveTo(x-7,y);c.lineTo(x+7,y);c.stroke()}c.restore();
+ wash(c,g=>{g.moveTo(x-w*.48,by);g.lineTo(x+w*.48,by);g.lineTo(x+w*.44,by-h*.08);g.lineTo(x-w*.44,by-h*.08);g.closePath()},n?'#2a2420':'#b8ae9a',{edge:.4,gr:.35});
+ if(n&&L)L.push({x,y:by-h*.45,r:h*.55,c:'255,140,80',a:.22,p:0,sp:.3,soft:1})}
+function kmGate(c,x0,x1,by,mode,L){const n=mode==2,sh=KM.shu[mode],w=x1-x0,h=w*.9;
+ // 楼門：下の階（3間・まん中が通り道）
+ const y1=by-h*.42;wash(c,g=>{g.moveTo(x0+w*.08,by);g.lineTo(x1-w*.08,by);g.lineTo(x1-w*.08,y1);g.lineTo(x0+w*.08,y1);g.closePath()},sh,{edge:.5,gr:.3,light:!n});
+ c.save();c.fillStyle=n?'#140a08':'#3a1a12';c.fillRect(x0+w*.37,by-h*.32,w*.26,h*.32);c.fillStyle=n?'rgba(255,220,160,.35)':'#f2ead6';c.fillRect(x0+w*.13,y1+h*.06,w*.18,h*.14);c.fillRect(x1-w*.31,y1+h*.06,w*.18,h*.14);
+ c.strokeStyle=n?'#5a1a10':'#8a2a1c';c.lineWidth=3;for(const u of[.08,.37,.63,.92]){c.beginPath();c.moveTo(x0+w*u,by);c.lineTo(x0+w*u,y1);c.stroke()}c.restore();
+ // 下の屋根（腰の屋根）
+ const ry=y1;wash(c,g=>{g.moveTo(x0-w*.1,ry+6);g.quadraticCurveTo(x0+w*.02,ry-h*.04,x0+w*.1,ry-h*.09);g.lineTo(x1-w*.1,ry-h*.09);g.quadraticCurveTo(x1-w*.02,ry-h*.04,x1+w*.1,ry+6);g.quadraticCurveTo((x0+x1)/2,ry-4,x0-w*.1,ry+6);g.closePath()},KM.roof[mode],{edge:.5,gr:.3,light:!n});
+ // 上の階
+ const y2=ry-h*.09,y3=y2-h*.2;wash(c,g=>{g.moveTo(x0+w*.14,y2);g.lineTo(x1-w*.14,y2);g.lineTo(x1-w*.14,y3);g.lineTo(x0+w*.14,y3);g.closePath()},sh,{edge:.5,gr:.3,light:!n});
+ c.save();c.strokeStyle=n?'#e0a060':'#f4ead8';c.lineWidth=2;c.beginPath();c.moveTo(x0+w*.1,y2-6);c.lineTo(x1-w*.1,y2-6);c.stroke();for(let x=x0+w*.12;x<x1-w*.1;x+=w*.06){c.beginPath();c.moveTo(x,y2-16);c.lineTo(x,y2-4);c.stroke()}c.restore();
+ kmRoof(c,x0+w*.06,x1-w*.06,y3-4,h*.32,mode,{ov:w*.14,gable:true});
+ if(n&&L){L.push({x:(x0+x1)/2,y:by-h*.4,r:w*.8,c:'255,120,70',a:.25,p:0,sp:.3,soft:1})}}
+function kmBeam(c,x,y,ang,len){ // 夜の青い一筋の光（観音さまの慈悲の光）
+ c.save();c.globalCompositeOperation='screen';c.translate(x,y);c.rotate(ang);
+ for(const[wd,a,b]of[[70,.08,18],[30,.18,8],[10,.5,2],[3,.9,0]]){const q=c.createLinearGradient(0,0,len,0);q.addColorStop(0,`rgba(140,190,255,${a})`);q.addColorStop(.7,`rgba(120,170,255,${a*.5})`);q.addColorStop(1,'rgba(120,170,255,0)');
+  c.fillStyle=q;c.filter=b?`blur(${b}px)`:'none';c.beginPath();c.moveTo(0,-wd*.15);c.lineTo(len,-wd*.5);c.lineTo(len,wd*.5);c.lineTo(0,wd*.15);c.closePath();c.fill()}
+ c.filter='none';glow(c,0,0,60,'170,210,255',.6);c.restore()}
+function kmBuild(mode){const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;const n=mode==2;
+ if(mode==1){ // 2枚目：夕方、朱の仁王門と三重塔へ、石段をのぼる
+  scSky(c,['#eec08e','#f4d6ae','#f8e6c8'],760);scClouds(c,31,6,140,460,'#fff2de',.5);c.save();c.globalCompositeOperation='screen';glow(c,700,520,560,'255,214,150',.5);c.restore();
+  // 奥の東山のもみじ
+  wash(c,g=>{g.moveTo(-20,640);g.bezierCurveTo(200,560,420,600,600,620);g.bezierCurveTo(760,630,860,660,XW+20,650);g.lineTo(XW+20,900);g.lineTo(-20,900);g.closePath()},'#8a4a2a',{edge:.1,gr:.3,light:false,a:.75});
+  mjForest(c,650,900,1,32,.45,L);
+  kmPagoda(c,450,900,370,1,L);
+  // 石段（手前へ広がる）
+  const st=g=>{g.moveTo(230,950);g.lineTo(390,950);g.lineTo(560,XH+10);g.lineTo(40,XH+10);g.closePath()};
+  wash(c,g=>{g.moveTo(-20,900);g.lineTo(XW+20,890);g.lineTo(XW+20,XH+10);g.lineTo(-20,XH+10);g.closePath()},'#9a7a52',{grad:g=>{const q=g.createLinearGradient(0,900,0,XH);q.addColorStop(0,'#a8865a');q.addColorStop(1,'#6a4e34');return q},edge:.1,gr:.4,light:false});
+  wash(c,st,'#cfc4ae',{grad:g=>{const q=g.createLinearGradient(0,950,0,XH);q.addColorStop(0,'#ddd2bc');q.addColorStop(1,'#a89c86');return q},edge:.3,gr:.4,light:false});
+  c.save();c.beginPath();st(c);c.clip();c.strokeStyle='rgba(90,76,56,.45)';c.lineWidth=2;for(let y=962,s=12;y<XH;y+=s,s*=1.12){c.beginPath();c.moveTo(0,y);c.lineTo(XW,y);c.stroke()}c.restore();
+  kmGate(T.c,140,480,960,1,T.L);
+  // もみじ：左右に（字の場所＝右上に入れない）
+  mjTree(c,-60,1100,520,1,311,L,{n:1300,wide:.9,lean:.12,zone:1});mjTree(c,820,1060,420,1,312,L,{n:900,wide:.9,zone:1});
+  mjTree(F.c,1000,1560,520,1,313,F.L,{n:900,wide:.7,lean:-.3});
+  {const r=XR(314);for(let i=0;i<160;i++){c.fillStyle=['#c8402c','#e0662f','#ea8a34'][i%3];c.globalAlpha=.85;mjLeaf(c,40+r()*520,960+Math.pow(r(),.7)*(XH-960),4+r()*8,r()*6)}c.globalAlpha=1}
+  xmPerson(F.c,300,1010,46,'#5a4a5e',1,81,0);xmPerson(F.c,330,1014,42,'#7a5a3a',1,82,1);
+  xmPerson(F.c,250,1260,112,'#4a4a5e',1,83,0);xmPerson(F.c,330,1270,104,'#8a5a4a',1,84,1);xmPerson(F.c,410,1300,76,'#e2b84a',1,85,2);
+  T.ax=320;T.ay=960;T.d=.1;F.ax=320;F.ay=1270;F.d=.4;
+  return scFinish(1,B,T,F,900)}
+ // 1枚目（昼）と夜：谷の向こうに、崖へ張り出した清水の舞台
+ if(n){scSky(c,['#03050e','#0a1024','#1a1838'],780);xmStars(c,33);xmMoon(c,470,150,30)}
+ else{scSky(c,['#9ec6e0','#d6e6ea','#f4ead6'],800);scClouds(c,34,7,120,540,'#ffffff',.55);c.save();c.globalCompositeOperation='screen';glow(c,300,520,520,'255,232,190',.4);c.restore()}
+ // 東山の尾根（左から右へ。右は少し低く）：濃い下地＋もみじの森
+ const ridge=g=>{g.moveTo(-20,620);g.bezierCurveTo(160,560,360,590,520,650);g.bezierCurveTo(660,700,780,720,XW+20,740);g.lineTo(XW+20,1000);g.lineTo(-20,1000);g.closePath()};
+ wash(c,ridge,n?'#140a0c':'#9a4a2a',{edge:.1,gr:.3,light:false,a:1});
+ c.save();c.beginPath();ridge(c);c.clip();mjForest(c,620,960,mode,36,n?0:.3,L);c.restore();
+ if(!n)scFog(c,760,50,'240,232,222',.3);
+ // 谷（錦雲渓）の奥：柱のうしろは濃いもみじ（柱の木の色が浮き出るように）
+ const vb=g=>{g.moveTo(-20,900);g.bezierCurveTo(300,880,600,900,XW+20,880);g.lineTo(XW+20,XH+10);g.lineTo(-20,XH+10);g.closePath()};
+ wash(c,vb,n?'#1a0808':'#7a2a1a',{edge:.1,gr:.35,light:false,a:1});
+ c.save();c.beginPath();vb(c);c.clip();mjForest(c,900,1240,mode,39,n?0:.12,L);c.restore();
+ // 本堂の下の崖（岩と土）
+ wash(c,g=>{g.moveTo(-20,800);g.lineTo(300,812);g.bezierCurveTo(330,900,320,1040,280,1200);g.lineTo(-20,1240);g.closePath()},n?'#120c0e':'#6a5236',{grad:g=>{const q=g.createLinearGradient(0,800,0,1240);q.addColorStop(0,n?'#1e1416':'#7e6444');q.addColorStop(1,n?'#08060a':'#4a3420');return q},edge:.3,gr:.45,light:!n});
+ {const r=XR(40);c.save();c.strokeStyle=n?'rgba(90,70,80,.35)':'rgba(40,28,18,.4)';for(let i=0;i<46;i++){const x=r()*300,y=830+r()*380;c.lineWidth=1+r()*2;c.beginPath();c.moveTo(x,y);c.lineTo(x+(r()-.5)*30,y+20+r()*40);c.stroke()}
+  for(let i=0;i<160;i++){c.fillStyle=n?['#4a1210','#6a1c12'][i%2]:['#b8402a','#d4602e','#6a7a3a','#8a5a2a'][i%4];c.globalAlpha=.75;mjLeaf(c,r()*310,840+Math.pow(r(),.6)*380,4+r()*8,r()*6)}c.globalAlpha=1;c.restore()}
+ if(n)kmBeam(c,250,540,-2.2,1000);
+ // 本堂と舞台（舞台を大きく：清水の舞台の形がひと目で分かるように）
+ kmHall(T.c,10,330,810,mode,T.L);
+ kmStage(T.c,300,690,810,860,1300,mode,T.L,[[380,28,n?'#3a3a4a':'#5a4a5e',91,0],[408,26,n?'#4a2a30':'#8a5a4a',92,1],[560,28,n?'#2a3a4a':'#e2b84a',93,0],[590,24,n?'#3a2a30':'#6a5a7a',94,2],[650,26,n?'#3a3a4a':'#4a5a6e',95,0]]);
+ // 手前の谷のもみじ（柱の足もとをかくす）
+ {const vf=g=>{g.moveTo(-20,1210);g.bezierCurveTo(200,1170,420,1200,600,1190);g.bezierCurveTo(760,1180,860,1200,XW+20,1190);g.lineTo(XW+20,XH+10);g.lineTo(-20,XH+10);g.closePath()};
+  wash(F.c,vf,n?'#2a0a0a':'#b8402a',{edge:.1,gr:.35,light:false,a:1});F.c.save();F.c.beginPath();vf(F.c);F.c.clip();mjForest(F.c,1190,1380,mode,37,0,F.L);F.c.restore()}
+ mjTree(F.c,820,1330,380,mode,315,F.L,{n:1000,wide:.9,zone:1,noLight:n?0:1});
+ mjTree(F.c,110,1290,420,mode,317,F.L,{n:1100,wide:1.1,lean:.1,noLight:n?0:1});mjTree(c,-30,1000,300,mode,318,L,{n:700,wide:1,noLight:1});
+ if(n){c.save();c.globalCompositeOperation='screen';glow(c,480,1000,520,'255,140,70',.22);c.restore();
+  for(let x=60;x<XW;x+=120)F.L.push({x,y:1260,r:150,c:'255,110,60',a:.14,p:x,sp:.3,soft:1})}
+ T.ax=330;T.ay=880;T.d=.1;F.ax=460;F.ay=1280;F.d=.35;
+ return scFinish(mode,B,T,F,[900,900,1100][mode])}
