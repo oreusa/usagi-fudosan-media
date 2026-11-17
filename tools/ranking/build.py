@@ -81,6 +81,8 @@ CSS = ("<style>.rk{background:#fff;border-radius:2px;box-shadow:0 1px 2px rgba(4
        ".rk-b h4{margin:14px 0 4px;font-size:13px;letter-spacing:.06em;color:var(--c)}.rk-b ul{margin:0;padding-left:1.2em}.rk-b p{margin:10px 0 0}"
        ".rk-l{font-weight:700}.rk-n,.rk-s{font-size:12px;color:#7A6E66}.rk-s a{color:inherit}.rk-sub{font-size:12px;color:#7A6E66;margin:-6px 0 12px}"
        ".rk-m{margin-top:14px;padding-top:12px;border-top:1px solid #E6E7EA}.rk-m small{display:block;font-size:11px;letter-spacing:.14em;color:#8A7F76;margin-bottom:6px}"
+       ".rk-f{margin:14px 0 18px;padding:14px 16px;background:#fff;border-radius:12px;box-shadow:0 0 0 1px #E6E0D8}.rk-f p{margin:0 0 10px;font-size:13.5px;line-height:1.8;color:#3A332E}"
+       ".rk-f a{display:inline-block;margin:0 8px 0 0;padding:8px 14px;border-radius:99px;background:#3A332E;color:#fff;text-decoration:none;font-size:13px;font-weight:700}.rk-f a+a{background:#fff;color:#3A332E;box-shadow:0 0 0 1px #3A332E}"
        ".rk-m a{display:inline-block;margin:0 8px 8px 0;padding:6px 12px;border:1px solid #D9D2CB;border-radius:99px;color:#2B2622;text-decoration:none;font-size:12.5px}"
        "</style>")
 s = s.replace("</head>", CSS + "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in ld) + "</head>", 1)
@@ -94,6 +96,21 @@ s = re.sub(r'<div class="en">[^<]*</div>', '<div class="en">KANSAI TOWN RANKING<
 s = re.sub(r"<h1>.*?</h1>", "<h1>関西まちランキング<span>駅・地価・人口を公式の数字で</span></h1>", s, count=1, flags=re.S)
 s = re.sub(r'<p class="sub">.*?</p>', f'<p class="sub">関西の街を、公式の数字で順位にしました。<br>題を押すと、くわしい順位が開きます。</p>', s, count=1, flags=re.S)
 s = re.sub(r'<div class="upd">.*?</div>', f'<div class="upd">{TODAY.year}年{TODAY.month}月{TODAY.day}日 更新・{N}本</div>', s, count=1, flags=re.S)
+# 11/17 オーナー「フォロワー集め」「俯瞰しろ」：外から来る人がいちばん多いページなのに、続きを追う道が無かった。
+# 毎朝7時の連載だと分かるように、次の回（その日の07:00の投稿の「あすの朝7時は◯◯。」）と、Threads・X への道を上に置く。
+nxt = ""
+try:
+    for r in json.load(open(os.path.join(ROOT, "schedule", TODAY.isoformat() + ".json"), encoding="utf-8")):
+        m = re.search(r"あすの朝7時は([^。\n]{2,20})。", r.get("threads_text") or "")
+        if r.get("time") == "07:00" and m:
+            nxt = m.group(1)
+except Exception:
+    pass
+FOLLOW = ('<div class="rk-f"><p><b>毎朝7時、関西の路線を1本ずつ順位にしています。</b>'
+          + (f'<br>次の回は、あすの朝7時の「{E(nxt)}」です。' if nxt else "")
+          + '</p><a href="https://www.threads.com/@fudousan_ai_si" target="_blank" rel="noopener" data-k="連載｜Threadsで毎朝見る">Threads で毎朝見る</a>'
+          '<a href="https://x.com/fudosan_ai_si" target="_blank" rel="noopener" data-k="連載｜Xで見る">X で見る</a></div>')
+s = re.sub(r'(<div class="upd">.*?</div>)', lambda m: m.group(1) + FOLLOW, s, count=1, flags=re.S)
 s = re.sub(r'<div class="flt" id="flt">.*?</div>', "", s, count=1, flags=re.S)
 a = s.index('<section id="'); b = s.index('<section class="faq">'); e = s.index("</section>", b) + len("</section>")
 s = s[:a] + secs + s[e:]
