@@ -1,0 +1,16 @@
+name: kaiten-probe
+# 11/17 開店・閉店の公式の元の HTML を取って、作業用の枝に保存する（読み方を書くため）
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/kaiten/probe.py
+      - run: |
+          git config user.name "kaiten-probe"; git config user.email "actions@users.noreply.github.com"
+          git checkout -B kaiten-probe-out
+          git add -f tools/kaiten/probe && git commit -qm "probe" && git push -f origin kaiten-probe-out
