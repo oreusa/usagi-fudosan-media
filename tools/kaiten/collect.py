@@ -239,7 +239,7 @@ CHAINS = [
 def addr_of(h):
     """お店のページの「住所・所在地」の後ろの住所（本社の住所をつかまないよう、言葉のある所だけ）。"""
     t = z2h(re.sub(r"[ \t]+", " ", text(h)))
-    for m in re.finditer(r"(?:住所|所在地|アドレス|ADDRESS|Address)[\s|:：]*(?:〒?\s*\d{3}-?\d{4}\s*)?(" + ALLP + r")\s*([^\n|]{2,50})", t):
+    for m in re.finditer(r"(?:(?:住所|所在地|アドレス|ADDRESS|Address)[\s|:：]*(?:〒?\s*\d{3}-?\d{4}\s*)?|〒\s*\d{3}-\d{4}\s*)(" + ALLP + r")\s*([^\n|※]{2,50})", t):
         rest = m.group(2).strip()
         if re.search(r"\d|丁目|番地", rest) and not re.search(r"代表|本社|運営|株式会社", rest):
             return m.group(1), re.sub(r"\s*(TEL|電話|ＴＥＬ).*$", "", rest)[:60]
