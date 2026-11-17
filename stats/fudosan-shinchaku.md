@@ -1,9 +1,10 @@
-# 不動産リストの新着の候補（2026-11-16・22ページを見た）
+# 不動産リストの新着の候補（2026-11-17・22ページを見た）
 
 月曜と木曜の 19:47 の回が、上から公式ページで確かめ、合う物を tools/fudosan_list/facts.json に足して make.py を回す。
 足した物・合わない物は stats/fudosan-watch.json の done に URL を入れる（次から出ない）。
 
-## 候補（40件）
+## 候補（41件）
+- 2026-11-17｜大阪市｜[seido] 2026年11月17日 放置自動車の除却について（大阪港湾局）｜https://www.city.osaka.lg.jp/port/page/0000690413.html
 - 2026-11-16｜国土交通省 近畿地方整備局｜[dekiru] まちづくり・建設産業へ｜https://www.kkr.mlit.go.jp/kensei/index.html
 - 2026-11-16｜法務省（相続登記）｜[seido] 相続登記の義務化｜https://www.moj.go.jp/MINJI/souzokutouki-gimuka/index.html
 - 2026-11-16｜法務省（相続登記）｜[seido] 登記情報提供サービス｜https://www.moj.go.jp/MINJI/minji25.html
@@ -46,7 +47,7 @@
 - 2026-11-16｜京阪HD ニュース｜[dekiru] えきから始まるまちづくり｜https://www.keihan-holdings.co.jp/corporate/business/hirakatashi/
 
 ## 今日はじめて見たページ（今出ている物から5件まで候補に入れた。明日からは新しい物だけ）
-- 国土交通省 報道発表・国土交通省 近畿地方整備局・法務省（相続登記）・国税庁・総務省統計局・近畿レインズ・大阪府・京都府・兵庫県・奈良県・滋賀県・和歌山県・大阪市・京都市・神戸市・堺市・JR西日本 ニュースリリース・南海 ニュース・阪急阪神HD ニュース・京阪HD ニュース・Osaka Metro ニュース
+- 国土交通省 報道発表
 
 ## 開けなかったページ（続けば PAGES のアドレスを直す）
 - 近鉄 ニュース https://www.kintetsu.co.jp/news/（HTTPError）
