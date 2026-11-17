@@ -55,9 +55,11 @@ for x in sorted(live, key=lambda x: (x["d"], x["k"] != "close", x["n"])):
 days_html = ""
 for key, g in groups.items():
     d = datetime.date.fromisoformat(g["d"])
-    md = (g["f"].replace("12月", "12.").replace("月", ".") if g["f"] else f"{d.month}.{d.day:02d}")
+    fm = re.match(r"(?:(\d{4})年)?(\d+)月(.*)", g["f"] or "")
+    md = f"{fm.group(2)}月" if fm else (g["f"] or f"{d.month}.{d.day:02d}")
+    wdt = (fm.group(3) or fm.group(1) or "") if fm else ("" if g["f"] else WD[d.weekday()])
     days_html += (f'<section class="day" data-d="{g["d"]}"' + (' data-f="1"' if g["f"] else "") + f'><div class="dt"><div class="md">{E(md)}</div>'
-                  f'<div class="wd">{"" if g["f"] else WD[d.weekday()]}</div><span class="left"></span></div><div class="items">'
+                  f'<div class="wd">{E(wdt)}</div><span class="left"></span></div><div class="items">'
                   + "".join(card(x) for x in g["a"]) + "</div></section>")
 
 N = len(live)
@@ -76,7 +78,7 @@ CSS = ("<style>"
        ".cnt div{text-align:center;padding:12px 4px 11px;border-left:1px solid #E6E0D9}.cnt div:first-child{border-left:0}"
        ".cnt small{display:block;font-size:10.5px;letter-spacing:.12em;color:#8C7B6E}"
        ".cnt b{display:block;font-family:'Shippori Mincho',serif;font-weight:600;font-size:24px;color:#231E1B;margin-top:2px;font-variant-numeric:tabular-nums}"
-       ".kbar{position:sticky;top:0;z-index:5;background:#fff;margin:10px -16px 0;padding:10px 16px 8px;border-bottom:1px solid #E6E0D9}"
+       ".kbar{background:#fff;margin:10px -16px 0;padding:10px 16px 8px;border-bottom:1px solid #E6E0D9}"
        ".seg{display:grid;grid-template-columns:repeat(3,1fr);background:#F1EEEA;border-radius:10px;padding:3px}"
        ".seg button{font:700 13px 'Zen Kaku Gothic New',sans-serif;letter-spacing:.06em;border:0;background:transparent;color:#8C7B6E;padding:8px 0;border-radius:8px;cursor:pointer}"
        ".seg button[aria-pressed=true]{background:#fff;color:#2B2622;box-shadow:0 1px 2px rgba(0,0,0,.08)}"
@@ -84,7 +86,7 @@ CSS = ("<style>"
        ".kpref button{flex:none;font:700 13px 'Zen Kaku Gothic New',sans-serif;letter-spacing:.06em;border:0;background:none;color:#8C7B6E;padding:6px 0;border-bottom:1.5px solid transparent;cursor:pointer}"
        ".kpref button[aria-pressed=true]{color:#2B2622;border-bottom-color:#2B2622}"
        ".day{display:grid;grid-template-columns:62px 1fr;gap:0 14px;padding:18px 0 4px;border-bottom:1px solid #E6E0D9}"
-       ".dt{position:sticky;top:96px;align-self:start}"
+       ".dt{position:sticky;top:12px;align-self:start}"
        ".dt .md{font-family:Jost,sans-serif;font-size:22px;letter-spacing:.02em;color:#231E1B;line-height:1.1;font-variant-numeric:tabular-nums}"
        ".dt .wd{font-family:Jost,sans-serif;font-size:10px;letter-spacing:.3em;color:#8C7B6E;margin-top:4px}"
        ".dt .left{display:inline-block;font-size:10.5px;font-weight:700;color:#6B6058;margin-top:6px}.dt .left.today{color:#3E6B57}"
