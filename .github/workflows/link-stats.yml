@@ -32,6 +32,10 @@ jobs:
           for b in illumi/build.py hatsumode/build.py ranking/build.py kaitai/build.py kaitai/city.py kaiten/build.py; do
             python3 tools/$b "$D" || echo "$D tools/$b" >> stats/build-fail.txt
           done
+          # 11/17 関東の /kaitai（to_life.py・city_life.py）も毎日ためしに作る。関東の住所の点検で 11/14〜11/17 止まっていたのに誰も気づかなかった。
+          # 本物は月の朝の回が akari へ出す。ここは止まったら stats/build-fail.txt に出すだけ（学習の台帳が朝いちばんに出す）
+          AKT="$(mktemp -d)"; mkdir -p "$AKT/site"; curl -fsSL --max-time 20 https://raw.githubusercontent.com/oreusa/akari-auto/main/site/moushikomi.html -o "$AKT/site/moushikomi.html" \
+            && python3 tools/kaitai/to_life.py "$AKT" >/dev/null && python3 tools/kaitai/city_life.py "$AKT" >/dev/null || echo "$D tools/kaitai/to_life.py（関東の /kaitai）" >> stats/build-fail.txt
       - name: event info for search on the list
         # 11/2 おでかけリストのカードから Event の構造化データを作り直す（終わった物は外す）
         run: python3 tools/odekake_ld.py "$(TZ=Asia/Tokyo date +%F)"
