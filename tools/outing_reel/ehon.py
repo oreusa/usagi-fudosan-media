@@ -125,6 +125,7 @@ if not T.get('scene') and not T.get('ehon_brand', {}).get('scene'):
     print('景色', BR['scene'] or '（合う景色が無いので山と塔の絵）')
 PAGE['engetsu'] = bool(re.search('白浜|白良浜|円月島', ALLTXT))      # 浜：円月島は白浜の時だけ描く
 PAGE['taki'] = bool(T.get('taki'))
+PAGE['kiyo'] = bool(T.get('kiyo'))   # 11/17 清水の舞台（清水寺）：舞台と柱・仁王門と三重塔・夜の青い光
 PAGE['icho'] = bool(T.get('icho'))   # 11/16 イチョウ並木（昭和記念公園など）：黄色い並木の3枚   # 11/16 もみじの景色に滝（箕面大滝）を描く
 PAGE['gate'] = bool(re.search('寺|神社|天満宮|八幡宮|大社|神宮|院', ALLTXT))   # もみじ：門は寺社の時だけ（公園・庭園は木と道だけ）
 # 11/16 スマホの画面は、その回の県のおでかけページを毎回撮る（古い画面・違う県の画面が出ていた）。撮れなければ今までの絵
@@ -336,6 +337,15 @@ const NUMS=['一','二','三','四','五','六'];
 function coverArt(){
   // 11/16 表紙の金の絵を場所ごとに（毎日同じ屋根の絵だった）。滝＝崖から一筋に落ちる滝とつぼ・もみじ／イチョウ並木＝イチョウの葉と並木の一本道
   const G='#e3c88c',D='#7c2a22';
+  if(P.kiyo){let s=`<g transform="translate(270,1150)" stroke="${G}" stroke-linejoin="round" stroke-linecap="round" fill="none">`;
+    // 清水の舞台：入母屋の大屋根・本堂・張り出した舞台と、格子に組んだ柱
+    s+=`<path d="M-190,-200 Q-150,-212 -138,-232 L-100,-290 L40,-290 L78,-232 Q90,-212 130,-200 Q-30,-214 -190,-200Z" fill="${G}" fill-opacity=".28" stroke-width="4"/>`;
+    s+=`<path d="M-48,-232 L-30,-282 L-12,-232Z" stroke-width="2.5"/><path d="M-160,-196 L100,-196 L100,-120 L-160,-120Z" stroke-width="3.5"/>`;
+    for(let x=-140;x<=90;x+=26)s+=`<path d="M${x},-194 L${x},-122" stroke-width="1.6" opacity=".7"/>`;
+    s+=`<path d="M-170,-120 L170,-120 M-150,-136 L170,-136 L170,-120" stroke-width="3.5"/>`;
+    for(let i=0;i<=7;i++){const x=-40+i*30,b=-120+30+i*16;s+=`<path d="M${x},-120 L${x},${b}" stroke-width="3"/>`}
+    for(let y=-90;y<=0;y+=30)s+=`<path d="M${-40+Math.max(0,(y+90)/16)*30-30},${y} L170,${y}" stroke-width="2.4" opacity=".85"/>`;
+    s+=`</g><g transform="translate(150,915) scale(95) rotate(-14)"><path d="${LP}" fill="${G}" opacity=".9"/></g><g transform="translate(420,960) scale(56) rotate(26)"><path d="${LP}" fill="${G}" opacity=".75"/></g><g transform="translate(330,860) scale(38) rotate(-40)"><path d="${LP}" fill="${G}" opacity=".6"/></g>`;return s}
   if(P.taki){let s=`<g transform="translate(270,1170)" stroke="${G}" stroke-linejoin="round" stroke-linecap="round">`;
     s+=`<path d="M-160,0 L-150,-70 L-132,-96 L-128,-150 L-104,-176 L-96,-226 L-70,-246 L-34,-252 L-22,-238 L-26,-150 L-20,-60 L-30,-24 L-160,-10Z" fill="${G}" fill-opacity=".22" stroke-width="4"/>`;
     s+=`<path d="M160,0 L150,-60 L136,-90 L132,-142 L112,-170 L104,-222 L76,-244 L36,-250 L22,-238 L26,-150 L20,-60 L30,-24 L160,-10Z" fill="${G}" fill-opacity=".22" stroke-width="4"/>`;
