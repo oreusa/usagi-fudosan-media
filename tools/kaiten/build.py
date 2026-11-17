@@ -42,13 +42,13 @@ cnt = {k: sum(bucket(x) == k for x in live) for k in ("soon", "done", "close")}
 # 決まり：1件を「何の店か（ジャンルの目印）・どこか（駅・街）・いつか（あと何日）」で一目に。上に固定の絞り込み（見るもの・府県・ジャンル・探す）。
 # 週ごとの見出し。閉店は色を抑える。♡で保存（この端末だけ）。画像は使わない（報道発表の画像は報道の目的だけ）。
 GEN = [  # (名前, 目印の絵, 言葉)
-    ("カフェ", "cup", r"カフェ|CAFE|Cafe|珈琲|コーヒー|喫茶|スタバ|スターバックス|ティー|茶房"),
+    ("カフェ", "cup", r"カフェ|CAFE|Cafe|珈琲|コーヒー|喫茶|スタバ|スターバックス|ティー|茶房|Teahouse|茶室|茶寮"),
     ("パン・スイーツ", "cake", r"パン|ベーカリー|ベーグル|スイーツ|ケーキ|洋菓子|和菓子|菓子|カステラ|ドーナツ|チョコ|アイス|クレープ|プリン|まんじゅう|焼き芋|パティスリー"),
-    ("ごはん", "bowl", r"ラーメン|らーめん|麺|そば|うどん|寿司|すし|鮨|焼肉|焼鳥|焼き鳥|居酒屋|食堂|レストラン|ダイニング|バル|ビストロ|定食|丼|カレー|パスタ|ピザ|餃子|中華|イタリアン|フレンチ|和食|天ぷら|揚げ|鰻|うなぎ|ステーキ|ハンバーグ|バーガー|酒場|ビュッフェ|料理|グルメ|フード|ごはん|サイゼリヤ|スシロー|くら寿司|王将|丸亀|マクドナルド|肉"),
+    ("ごはん", "bowl", r"ラーメン|らーめん|麺|そば|うどん|寿司|すし|鮨|焼肉|焼鳥|焼き鳥|居酒屋|食堂|レストラン|ダイニング|バル|ビストロ|定食|丼|カレー|パスタ|ピザ|餃子|中華|イタリアン|フレンチ|和食|天ぷら|揚げ|鰻|うなぎ|ステーキ|ハンバーグ|バーガー|酒場|ビュッフェ|料理|グルメ|フード|ごはん|割烹|麻婆|天下一品|サイゼリヤ|スシロー|くら寿司|王将|丸亀|マクドナルド|肉"),
     ("スーパー・コンビニ", "cart", r"スーパー|マーケット|ローソン|セブン|ファミリーマート|万代|ライフ|イオン(?!モール)|オーケー|ロピア|業務スーパー|コープ|産直|市場|食品館|成城石井|コストコ"),
     ("ドラッグ・薬", "pill", r"ドラッグ|薬局|薬店|調剤|ツルハ|サンドラッグ|ウエルシア|スギ|コスモス|マツキヨ|ココカラ"),
-    ("服・雑貨", "bag", r"ファッション|アパレル|服|ドレス|ウェア|バッグ|帽子|時計|ブランド|ジュエリー|アクセサリー|雑貨|インテリア|家具|ニトリ|デコホーム|無印|ユニクロ|GU|しまむら|ワークマン|靴|シューズ|メガネ|眼鏡|DAISO|ダイソー|THREEPPY|Standard Products|キャンドゥ|セリア|3COINS|ショップ|ストア|STORE|SHOP|コムサ|ホームセンター|ホダカ|コーナン|カインズ|ドン・キホーテ|ドンキ|書店|本屋"),
-    ("美容・からだ", "spark", r"美容|サロン|THANN|ヘア|ネイル|エステ|コスメ|化粧|ジム|フィットネス|整体|マッサージ|クリニック|歯科|医院|サウナ|スパ|温浴|湯|銭湯"),
+    ("服・雑貨", "bag", r"ファッション|アパレル|服|ドレス|ウェア|バッグ|帽子|時計|ブランド|ジュエリー|アクセサリー|雑貨|インテリア|家具|ニトリ|デコホーム|無印|ユニクロ|GU|しまむら|ワークマン|靴|シューズ|メガネ|眼鏡|DAISO|ダイソー|THREEPPY|Standard Products|キャンドゥ|セリア|3COINS|ショップ|ストア|STORE|SHOP|コムサ|ホームセンター|ホダカ|コーナン|カインズ|ドン・キホーテ|ドンキ|書店|本屋|ロフト|LOFT|グッズ|家具|ヒルフィガー|グラニフ|ムーンスター|MOONSTAR|NARUMIYA|ナルミヤ|ビッグウッド|マホウドコロ"),
+    ("美容・からだ", "spark", r"美容|サロン|THANN|BYREDO|バイレード|香水|フレグランス|ヘア|ネイル|エステ|コスメ|化粧|ジム|フィットネス|整体|マッサージ|クリニック|歯科|医院|サウナ|スパ|温浴|湯|銭湯"),
     ("遊び・体験", "star", r"ゲーム|GiGO|ギーゴ|アミューズメント|クレーン|カラオケ|ボウリング|体験|ミュージアム|美術館|水族館|映画|シネマ|テーマパーク|キッズ|遊び|プレイ|NICOPA|ラウンジ"),
     ("泊まる", "bed", r"ホテル|旅館|宿|HOTEL|Hotel|ゲストハウス|リゾート"),
     ("車・家電", "car", r"自動車|バイク|タイヤ|カー用品|家電|電機|ヤマダデンキ|ビックカメラ|ヨドバシ|エディオン|ケーズデンキ|ジョーシン|アップガレージ|ナップス|ライダース"),
@@ -112,6 +112,18 @@ def hatsu(x):
     return t if len(t) <= 6 else (m.group(1) + "初" if m.group(1) else "初出店")
 
 
+import hashlib
+
+
+def is_chain(x):
+    return x.get("src") in ("lawson", "daiso", "cando") or x.get("g") in ("コンビニ", "100円ショップ")
+
+
+def slug(x):
+    """1店ずつのページの名前（日付＋店名と元の印）。変えると検索のアドレスが変わるので変えない。"""
+    return x["d"].replace("-", "") + "-" + hashlib.sha1((x["n"] + "|" + x["u"]).encode()).hexdigest()[:6]
+
+
 def card(x):
     q = urllib.parse.quote(re.sub(r"（.*?）", "", x["n"]) + " " + (x["pl"].split("・")[0] or x["p"]))
     end = f' data-end="{x["end"]}"' if x.get("end") else ""
@@ -139,7 +151,8 @@ def card(x):
             f'<div class="dd{" tx" if fz else ""}"><b>{E(md)}</b>' + (f'<small class="ddw">{wd}</small>' if wd else "") + '</div><span class="cdn left"></span></div>'
             f'<div class="bd"><div class="tp"><span class="gn">{svg(ic)}{E(g)}</span><span class="tag {x["k"]}">{E(lab)}</span>'
             + (f'<span class="hs">{E(h1)}</span>' if h1 else "") + '</div>'
-            f'<h3 class="nm"><a href="{E(x["u"])}" target="_blank" rel="noopener" data-k="公式の発表｜{E(x["n"])}">{E(x["n"])}</a></h3>'
+            + (f'<h3 class="nm"><a href="/kaiten/{slug(x)}" data-k="1店のページ｜{E(x["n"])}">{E(x["n"])}</a></h3>' if not is_chain(x) else
+               f'<h3 class="nm"><a href="{E(x["u"])}" target="_blank" rel="noopener" data-k="公式の発表｜{E(x["n"])}">{E(x["n"])}</a></h3>') +
             f'<p class="pt">{E(x["pt"])}</p>'
             f'<p class="mt">{svg("pin", "mi")}<span>{place}{(" ・ " + E(stn)) if stn else ""}{("<i>" + E(x["tm"]) + "</i>") if x.get("tm") else ""}</span></p>'
             '<div class="ln">'
@@ -284,6 +297,7 @@ JS = ('<script>(function(){var O=false;try{O=localStorage.getItem("usagi_owner")
       # 送る：スマホの共有（LINE など）。無ければ LINE の送る画面。送る先はこのページの、そのお店の所
       'I.forEach(function(x){var b=x.querySelector(".sh");b.onclick=function(){var t=x.querySelector(".nm").textContent+"（"+x.querySelector(".dd b").textContent+" "+x.querySelector(".tag").textContent+"）",u=location.origin+location.pathname+"#"+x.id;'
       'if(navigator.share){navigator.share({title:t,text:t,url:u}).catch(function(){})}else{window.open("https://line.me/R/share?text="+encodeURIComponent(t+" "+u),"_blank","noopener")}}});'
+      'var hp=decodeURIComponent(location.hash).match(/^#p=(.+)$/);if(hp){setTimeout(function(){var b=document.querySelector("#kpref [data-p=\\""+hp[1]+"\\"]");if(b)b.click()},60)}else '
       'if(location.hash){var tg=document.getElementById(location.hash.slice(1));if(tg){var b0=tg.dataset;setTimeout(function(){view=bk(tg)||"soon";[].forEach.call(document.querySelectorAll(".seg button"),function(y){y.setAttribute("aria-pressed",y.dataset.v===view)});pref="";go();tg.hidden=false;tg.scrollIntoView({block:"center"});tg.style.background="#FBF6EE"},50)}}'
       'function cnt(){var n=0;for(var k in FV)n++;document.getElementById("n-fav").textContent=n?n:""}'
       'function go(){[].slice.call(L.querySelectorAll(".wk")).forEach(function(h){h.remove()});var c={soon:0,done:0,close:0},pc={},sh=[];'
@@ -322,3 +336,153 @@ for sm in ("sitemap.xml", "sitemap-all.xml"):
         if f"{BASE}kaiten<" not in x:
             open(p, "w", encoding="utf-8").write(x.replace("</urlset>", f"<url><loc>{BASE}kaiten</loc><lastmod>{TODAY}</lastmod></url>\n</urlset>", 1))
 print("kaiten", N, cnt)
+
+
+# ===== 11/17 夜 1店ずつのページ（/kaiten/日付-印）=====
+# オーナー「あくまで人を呼ぶためのページ。検索からどんどん集まるように」「他社よりハイクオリティ」。
+# 他社（開店閉店.com・関西ニューオープン情報・食べログ）を見て：空の欄を出さない・公式の発表へ1タップ・地図・確かめた日・同じ府県の新しいお店。
+# 写真は使わない（報道発表の画像は報道の目的だけ）。コンビニ・100円ショップは中身が薄いので作らない（一覧から公式へ）。
+JWD = "月火水木金土日"
+SCSS = ("<style>"
+        ".sp-bc{font-size:11.5px;color:#8C7B6E;margin:14px 0 0;padding-right:96px;line-height:1.7}.sp-bc a{color:#6B6058;text-decoration:none}.sp-bc a:hover{text-decoration:underline}"
+        ".sp-hero{display:grid;grid-template-columns:88px 1fr;gap:0 14px;align-items:center;margin:16px 0 0}"
+        "html body .sp-hero .dc.cmb{position:static;width:auto;text-align:center}"
+        "html body .sp-hero .dc .ib{width:84px;height:84px;border-radius:26px}html body .sp-hero .dc .ib svg{width:40px;height:40px}"
+        ".sp-hero h1{font-family:'Shippori Mincho',serif;font-weight:600;font-size:22px;line-height:1.5;letter-spacing:.03em;color:#231E1B;margin:6px 0 0;word-break:auto-phrase}"
+        ".sp-when{margin:18px 0 0;border:1px solid #E6E0D9;border-radius:14px;padding:14px 16px;display:flex;align-items:center;gap:14px}"
+        ".sp-when b{font:500 26px/1.1 Jost,sans-serif;color:#231E1B;letter-spacing:.01em}.sp-when b small{font:700 13px 'Zen Kaku Gothic New',sans-serif;margin-left:4px;color:#6B6058}"
+        ".sp-when .cd{margin-left:auto;font-size:12.5px;font-weight:700;color:#fff;background:#7A5230;border-radius:99px;padding:6px 12px;white-space:nowrap}.sp-when .cd.done{background:#3E6B57}.sp-when .cd:empty{display:none}"
+        ".sp-pt{font-size:14.5px;line-height:1.95;color:#2B2622;margin:16px 0 0}"
+        ".sp-dl{display:grid;grid-template-columns:5.2em 1fr;margin:16px 0 0;border-top:1px solid #EFEAE4}"
+        ".sp-dl dt,.sp-dl dd{padding:11px 0;border-bottom:1px solid #EFEAE4;font-size:13px;line-height:1.75}"
+        ".sp-dl dt{color:#8C7B6E;letter-spacing:.06em;font-size:12px}.sp-dl dd{margin:0;color:#2B2622;min-width:0;overflow-wrap:anywhere}"
+        ".sp-dl dd a{color:#7A5230;font-weight:700}"
+        ".sp-btn{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:16px 0 0}"
+        ".sp-btn a,.sp-btn button{display:flex;align-items:center;justify-content:center;gap:6px;min-height:46px;border-radius:12px;font:700 13.5px 'Zen Kaku Gothic New',sans-serif;text-decoration:none;cursor:pointer;letter-spacing:.04em}"
+        ".sp-btn .p{grid-column:1/-1;background:#2B2622;color:#fff;border:0}.sp-btn .s{background:#fff;color:#2B2622;border:1px solid #2B2622}"
+        ".sp-map{margin:16px 0 0;border-radius:14px;overflow:hidden;border:1px solid #E6E0D9;aspect-ratio:16/10;background:#F1EEEA}.sp-map iframe{width:100%;height:100%;border:0;display:block}"
+        ".sp-sec{margin:28px 0 0}.sp-sec h2{font:600 15px/1.5 'Shippori Mincho',serif;letter-spacing:.1em;color:#231E1B;margin:0 0 4px;padding-bottom:6px;border-bottom:1px solid #2B2622}"
+        ".sp-sec .it{grid-template-columns:72px 1fr}"
+        ".sp-more{margin:18px 0 0;text-align:right;font-size:13px}.sp-more a{color:#7A5230;font-weight:700;text-decoration:none}"
+        ".sp-chk{font-size:11.5px;line-height:1.8;color:#8C7B6E;margin:14px 0 0}"
+        "</style>")
+
+
+def wdate(d):
+    return (f"{d.year}年" if d.year != TODAY.year else "") + f"{d.month}月{d.day}日（{JWD[d.weekday()]}）"
+
+
+def store_page(x, shell, near):
+    d = datetime.date.fromisoformat(x["d"])
+    g, ic = genre(x)
+    fz = x.get("fuzzy")
+    verb = {"open": "オープン", "pop": "オープン（期間限定）", "close": "閉店"}[x["k"]] if not x.get("sub") else x["sub"] + "オープン"
+    when = (fz if fz else wdate(d)) + " " + verb
+    pl = (x.get("pl") or "").strip("・ ")
+    m = re.search(r"([^・]{1,14}駅から徒歩\d+分)", pl)
+    stn = m.group(1) if m else ""
+    pl2 = re.sub(r"・?[^・]{1,14}駅から徒歩\d+分", "", pl).strip("・ ")
+    PF = {"大阪": "大阪府", "京都": "京都府"}.get(x["p"], x["p"] + "県")
+    pl2 = pl2[len(PF):] if pl2.startswith(PF) else pl2
+    city = (re.match(r"(.{1,6}?[市区町村])", pl2) or [None, ""])[1] if pl2 else ""
+    area = city if city.startswith(x["p"]) else PF + city
+    q = urllib.parse.quote(re.sub(r"（.*?）|「|」", " ", x["n"]) + " " + (pl2 or x["p"]))
+    host = urllib.parse.urlparse(x["u"]).netloc.replace("www.", "")
+    srcname = "PR TIMES（会社の発表）" if "prtimes" in host else host
+    lab = {"open": "開店", "pop": "期間限定", "close": "閉店"}[x["k"]]
+    title = (f"【{(fz or (f'{d.year}/' if d.year != TODAY.year else '') + f'{d.month}/{d.day}')}{lab}】{x['n']}｜{area}"
+             + ("の閉店のお知らせ（いつまで・場所）" if x["k"] == "close" else "の新しいお店（いつ・場所・時間）"))[:70]
+    desc = (f"{x['n']}は{when}。{x['pt']} 場所は{x['p']}{('・' + pl2) if pl2 else ''}。"
+            f"{('営業時間は' + x['tm'] + '。') if x.get('tm') else ''}公式の発表と地図へすぐ行けます。")[:150]
+    rows = [("いつ", E(when)), ("場所", E(x["p"] + ("・" + pl2 if pl2 else "")))]
+    if stn:
+        rows.append(("駅から", E(stn)))
+    if x.get("tm"):
+        rows.append(("営業時間", E(x["tm"])))
+    if x.get("end"):
+        e = datetime.date.fromisoformat(x["end"]); rows.append(("いつまで", E(wdate(e))))
+    rows.append(("ジャンル", E(g)))
+    rows.append(("元の発表", f'<a href="{E(x["u"])}" target="_blank" rel="noopener" data-k="1店｜公式の発表">{E(srcname)} ↗</a>'))
+    chk = datetime.date.fromisoformat(x.get("added") or TODAY.isoformat())
+    body = (f'<nav class="sp-bc" aria-label="現在地"><a href="/kaiten">関西の開店・閉店ニュース</a> › <a href="/kaiten#p={E(x["p"])}">{E(x["p"])}</a> › {E(x["n"])}</nav>'
+            f'<div class="sp-hero"><div class="dc cmb" style="--pc:{PCM.get(x["p"], "#8a8f98")}"><div class="ib"><svg viewBox="0 0 24 24">{ICON[ic]}</svg><span class="lb">{LBL.get(g, "SHOP")}</span></div></div>'
+            f'<div><div class="tp"><span class="gn">{svg(ic)}{E(g)}</span><span class="tag {x["k"]}">{E(x.get("sub") or lab)}</span>'
+            + (f'<span class="hs">{E(hatsu(x))}</span>' if hatsu(x) else "") + f'</div><h1>{E(x["n"])}</h1></div></div>'
+            f'<div class="sp-when" data-d="{x["d"]}" data-k="{x["k"]}"><b>{E(fz or f"{d.month}/{d.day}")}<small>{"" if fz else "（" + JWD[d.weekday()] + "）"}{E(verb)}</small></b><span class="cd" id="cd"></span></div>'
+            f'<p class="sp-pt">{E(x["pt"])}</p>'
+            '<dl class="sp-dl">' + "".join(f"<dt>{a}</dt><dd>{b}</dd>" for a, b in rows) + "</dl>"
+            '<div class="sp-btn">'
+            f'<a class="p" href="{E(x["u"])}" target="_blank" rel="noopener" data-k="1店｜公式の発表ボタン">公式の発表を見る ↗</a>'
+            f'<a class="s" href="https://www.google.com/maps/search/?api=1&amp;query={q}" target="_blank" rel="noopener" data-k="1店｜地図アプリ">地図アプリで開く</a>'
+            '<button type="button" class="s" id="sh" data-k="1店｜送る">LINEなどで送る</button></div>'
+            f'<div class="sp-map"><iframe loading="lazy" title="{E(x["n"])}の地図" src="https://maps.google.com/maps?q={q}&amp;z=16&amp;output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe></div>'
+            f'<p class="sp-chk">日付・場所・時間は、{E(srcname)}の発表をもとに {chk.year}年{chk.month}月{chk.day}日に確かめました。変わることがあるので、出かける前に公式の発表をご確認ください。</p>')
+    if near:
+        body += (f'<section class="sp-sec"><h2>{E(x["p"])}のほかの新しいお店</h2>' + "".join(near) + "</section>")
+    pk = {"大阪": "osaka", "京都": "kyoto", "兵庫": "hyogo", "奈良": "nara", "滋賀": "shiga", "和歌山": "wakayama"}.get(x["p"])
+    if pk:  # 下の「あわせて見る」は一覧と同じ物がそのまま付くので、ここは府県のおでかけへの1本だけ
+        body += f'<p class="sp-more"><a href="/odekake-{pk}" data-k="1店｜府県のおでかけ">{E(x["p"])}のおでかけ先も見る →</a></p>'
+    url = BASE + "kaiten/" + slug(x)
+    ldj = [{"@context": "https://schema.org", "@type": "NewsArticle", "headline": title[:110], "description": desc,
+            "datePublished": (x.get("added") or x["d"]) + "T07:00:00+09:00", "dateModified": (x.get("added") or x["d"]) + "T07:00:00+09:00",
+            "mainEntityOfPage": url, "author": {"@type": "Organization", "name": "TOWN NOTE"}, "publisher": {"@type": "Organization", "name": "TOWN NOTE"},
+            "about": {"@type": "Place", "name": x["n"], "address": {"@type": "PostalAddress", "addressRegion": {"大阪": "大阪府", "京都": "京都府"}.get(x["p"], x["p"] + "県"), "streetAddress": pl2[:80]}}},
+           {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+               {"@type": "ListItem", "position": 1, "name": "関西の開店・閉店ニュース", "item": BASE + "kaiten"},
+               {"@type": "ListItem", "position": 2, "name": x["n"], "item": url}]}]
+    t = shell
+    t = re.sub(r"<title>.*?</title>", f"<title>{E(title)}</title>", t, count=1)
+    for prop in ('<meta name="description" content="', '<meta property="og:description" content="'):
+        t = re.sub("(" + re.escape(prop) + ')[^"]*', lambda m: m.group(1) + E(desc), t, count=1)
+    t = re.sub(r'(<meta property="og:title" content=")[^"]*', lambda m: m.group(1) + E(x["n"] + "｜" + when), t, count=1)
+    t = t.replace(f'"{BASE}kaiten"', f'"{url}"')
+    t = re.sub(r'<script type="application/ld\+json">.*?</script>', "", t, flags=re.S)
+    t = t.replace("</head>", SCSS + "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in ldj) + "</head>", 1)
+    a = t.index('<div class="head">'); b = t.index('</main>') + len('</main>')
+    t = t[:a] + body + t[b:]
+    t = re.sub(r'<p class="note">.*?</p>', "", t, count=1, flags=re.S)
+    t = re.sub(r'<nav class="also".*?</nav>', "", t, count=1, flags=re.S)
+    t = t.replace('<a class="back" href="/odekake">関西おでかけリストを見る</a>', '<a class="back" href="/kaiten">関西の開店・閉店ニュースへ戻る</a>', 1)
+    j0 = t.index('<script>(function(){var O'); j1 = t.index("</script>", j0) + len("</script>")
+    SJS = ('<script>(function(){var O=false;try{O=localStorage.getItem("usagi_owner")==="1";}catch(e){}'
+           'function c(k){if(O)return;try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true});}catch(e){}}'
+           'c("表示：開店・閉店の1店"+(document.referrer&&!/townnote\\.(pages|app)/.test(document.referrer)?"（外から）":""));'
+           'document.addEventListener("click",function(e){var a=e.target.closest?e.target.closest("[data-k]"):null;if(a)c("クリック："+a.getAttribute("data-k"));});'
+           'var N=new Date();N=new Date(N.getTime()+(N.getTimezoneOffset()+540)*6e4);var T=N.getFullYear()+"-"+("0"+(N.getMonth()+1)).slice(-2)+"-"+("0"+N.getDate()).slice(-2);'
+           'var w=document.querySelector(".sp-when"),n=Math.round((new Date(w.dataset.d+"T00:00:00")-new Date(T+"T00:00:00"))/864e5),cd=document.getElementById("cd");'
+           'cd.textContent=n>0?"あと"+n+"日":n===0?"きょう":(w.dataset.k==="close"?"閉店しました":"オープンから"+(-n)+"日");if(n<=0)cd.className="cd done";'
+           'document.getElementById("sh").onclick=function(){var t=document.querySelector("h1").textContent+"（"+w.querySelector("b").textContent+"）",u=location.href.split("#")[0];'
+           'if(navigator.share){navigator.share({title:t,text:t,url:u}).catch(function(){})}else{window.open("https://line.me/R/share?text="+encodeURIComponent(t+" "+u),"_blank","noopener")}};'
+           '[].forEach.call(document.querySelectorAll(".sp-sec .it"),function(x){var l=x.querySelector(".left");if(!l)return;var m=Math.round((new Date(x.dataset.d+"T00:00:00")-new Date(T+"T00:00:00"))/864e5);l.textContent=m===0?"きょう":m>0?"あと"+m+"日":"オープンから"+(-m)+"日";l.className="cdn left"+(m>=0&&m<=7?" hot":"")});'
+           '})();</script>')
+    t = t[:j0] + SJS + t[j1:]
+    t = re.sub(r'((?:src|href)=")(?![a-z]+:|/|#)', r'\1/', t)  # 1つ下の階層なので、部品（assets/・logo.png）は根っこから読む
+    assert "kbar" not in t[t.index("<body"):], "一覧の部品が残っている"
+    return t
+
+
+SP = [x for x in items if not is_chain(x) and (TODAY - datetime.date.fromisoformat(x["d"])).days <= 120]
+SPD = os.environ.get("KAITEN_SP_DIR") or os.path.join(ROOT, "links", "kaiten")
+os.makedirs(SPD, exist_ok=True)
+for f in os.listdir(SPD):  # 一覧から外れたお店の古いページは消す（同じ印は同じ中身で作り直す）
+    if f.endswith(".html"):
+        os.remove(os.path.join(SPD, f))
+SHELL = open(os.environ.get("KAITEN_OUT") or os.path.join(ROOT, "links", "kaiten.html"), encoding="utf-8").read()
+made = []
+for x in SP:
+    nb = [y for y in live if y is not x and y["p"] == x["p"] and not is_chain(y) and bucket(y) in ("soon", "done")]
+    nb.sort(key=lambda y: (bucket(y) != "soon", abs((datetime.date.fromisoformat(y["d"]) - datetime.date.fromisoformat(x["d"])).days)))
+    near = [card(y) for y in nb[:5]]
+    out = os.path.join(os.environ.get("KAITEN_SP_DIR") or os.path.join(ROOT, "links", "kaiten"), slug(x) + ".html")
+    open(out, "w", encoding="utf-8").write(store_page(x, SHELL, near))
+    made.append(slug(x))
+for sm in ("sitemap.xml", "sitemap-all.xml"):
+    p = os.path.join(ROOT, "links", sm)
+    if os.path.exists(p):
+        t0 = t = open(p, encoding="utf-8").read()
+        t = re.sub(r"<url><loc>" + re.escape(BASE) + r"kaiten/([0-9a-f-]+)</loc>.*?</url>\n?", lambda m: m.group(0) if m.group(1) in made else "", t)
+        add = "".join(f"<url><loc>{BASE}kaiten/{m}</loc><lastmod>{TODAY}</lastmod></url>\n" for m in made if f"{BASE}kaiten/{m}<" not in t)
+        t = t.replace("</urlset>", add + "</urlset>", 1)
+        if t != t0:
+            open(p, "w", encoding="utf-8").write(t)
+print("kaiten 1店のページ", len(made))
