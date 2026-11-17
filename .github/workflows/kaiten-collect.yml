@@ -1,0 +1,27 @@
+name: kaiten-collect
+# 11/17 開店・閉店ニュースを公式の発表（PR TIMES・ローソン・ダイソー）から6時間ごとに集めて /kaiten を作り直す。
+# PR TIMES の新着の一覧は約15時間ぶんなので、6時間ごとなら取りこぼさない。
+on:
+  schedule:
+    - cron: "10 */6 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/kaiten/collect.py kansai
+      - run: python3 tools/kaiten/build.py "$(TZ=Asia/Tokyo date +%F)"
+      - name: save
+        run: |
+          git config user.name "kaiten-collect"; git config user.email "actions@users.noreply.github.com"
+          git add tools/kaiten/kansai.json tools/kaiten/seen-kansai.json links/kaiten.html
+          git diff --cached --quiet && exit 0
+          git commit -qm "開店・閉店ニュース：公式の発表から集めた"
+          for i in 1 2 3 4; do
+            git pull --rebase --autostash -q -X theirs origin "${GITHUB_REF_NAME}" && git push -q origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((i*5))
+          done
+          exit 1

@@ -31,12 +31,19 @@ URLS = {
  "lopia": "https://lopia.jp/news/",
  "atpress-robots": "https://www.atpress.ne.jp/robots.txt",
 }
+# 11/17 PR TIMES の発表の中身（住所・時間の書き方）を見る
+for i, u in enumerate(["https://prtimes.jp/main/html/rd/p/000001216.000014225.html", "https://prtimes.jp/main/html/rd/p/000001230.000034930.html",
+                       "https://prtimes.jp/main/html/rd/p/000000053.000053965.html", "https://prtimes.jp/main/html/rd/p/000000444.000022024.html",
+                       "https://prtimes.jp/main/html/rd/p/000000288.000040849.html", "https://prtimes.jp/main/html/rd/p/000000012.000135197.html",
+                       "https://www.mandai-net.co.jp/news/", "https://www.sundrug.co.jp/news/post-24634"]):
+    URLS[f"rel{i}"] = u
+URLS = {k: v for k, v in URLS.items() if k.startswith("rel") or k in ("prtimes-news",)}
 out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "probe")
 os.makedirs(out, exist_ok=True)
 for k, u in URLS.items():
     try:
         r = urllib.request.urlopen(urllib.request.Request(u, headers={"User-Agent": "Mozilla/5.0 (compatible; TownNoteBot/1.0)"}), timeout=25)
-        b = r.read()[:600000]
+        b = r.read()[:4000000]
         cs = (re.search(rb'charset=["\']?([\w-]+)', b[:3000]) or [None, b"utf-8"])[1].decode()
         t = b.decode(cs if cs.lower() not in ("shift_jis", "sjis", "x-sjis") else "cp932", "replace")
         open(os.path.join(out, k + ".html"), "w", encoding="utf-8").write(t)
