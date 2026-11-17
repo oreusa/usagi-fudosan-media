@@ -1,0 +1,89 @@
+{
+ "n1": {
+  "time": "07:00",
+  "digest": "56e421a3533915d5",
+  "at": "2026-11-18T06:28:22+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x07": {
+  "time": "07:00",
+  "digest": "7fad9aba003c6203",
+  "at": "2026-11-18T06:28:22+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "S1": {
+  "time": "08:00",
+  "digest": "b61a3071373a23ef",
+  "at": "2026-11-18T06:28:22+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n2": {
+  "time": "09:00",
+  "digest": "bcb172c6118ff0ba",
+  "at": "2026-11-18T06:28:22+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x09": {
+  "time": "09:00",
+  "digest": "6534c956ebf169b4",
+  "at": "2026-11-18T06:28:22+09:00",
+  "threads": "X だけの枠",
+  "twitter": "6afcc6f7a739830f9746bace"
+ },
+ "n3": {
+  "time": "12:00",
+  "digest": "4c5a0a2168ed4285",
+  "at": "2026-11-18T06:28:22+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x12": {
+  "time": "12:00",
+  "digest": "f877ce9b6f3fc047",
+  "at": "2026-11-18T06:28:22+09:00",
+  "threads": "X だけの枠",
+  "twitter": "6afcc6f89b0477630c954ea7"
+ },
+ "n8": {
+  "time": "13:00",
+  "digest": "2bf6552de55ba654",
+  "at": "2026-11-18T06:28:22+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n5": {
+  "time": "15:00",
+  "digest": "0b45e21faf831d23",
+  "at": "2026-11-18T06:28:22+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x15": {
+  "time": "15:00",
+  "digest": "73f7689e3fe63ed6",
+  "at": "2026-11-18T06:28:22+09:00",
+  "threads": "X だけの枠",
+  "twitter": "6afcc6f8f35d3f4877f1fe58"
+ },
+ "n6": {
+  "time": "18:00",
+  "digest": "eee6d6f24aa72056",
+  "at": "2026-11-18T06:28:22+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x18": {
+  "time": "18:00",
+  "digest": "fef9883a17b6df71",
+  "at": "2026-11-18T06:28:22+09:00",
+  "threads": "X だけの枠",
+  "twitter": "6afcc6f99b0477630c954edc"
+ },
+ "reel_twitter": {
+  "tries": 1,
+  "id": "6afcc6fabbe886f1b5143f2a",
+  "url": "https://oreusa.github.io/usagi-fudosan-media/media/reels/2026-11-18-ehon-v1.mp4",
+  "time": "07:30",
+  "texts": [
+   "清水寺（京都市東山区）\n11月21日から。夜の清水の舞台\n\n・夜 〜21時30分\n・期間 11/21〜11/30\n・予約 いりません\n・駐車場 境内になし\n\n出かける前に、公式ページで確かめてください。\n\n#関西おでかけ #清水寺"
+  ],
+  "at": "2026-11-18T06:28:22+09:00"
+ }
+}
