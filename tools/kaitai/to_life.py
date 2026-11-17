@@ -56,7 +56,8 @@ for _a, _b in (('</li></ul><button type="button" class="kt-k"', '</li></ul>' + _
     if s.count(_a) != 1:
         sys.exit("広告の段の目印が見つかりません（to_life.py を直す）: " + _a)
     s = s.replace(_a, _b, 1)
-bad = re.findall(r"[^\n]{0,12}(?:関西|近畿|大阪|神戸|townnote|TOWN|assets/ogp|\"assets/)[^\n]{0,12}", s)
+# 11/17 関東の本当の住所が kanto.townnote.app になった（それは関東の物なので数えない。kansai.townnote.app や townnote.app だけは止める）
+bad = re.findall(r"[^\n]{0,12}(?:関西|近畿|大阪|神戸|townnote|TOWN|assets/ogp|\"assets/)[^\n]{0,12}", s.replace("kanto.townnote.app", "KANTO-HOST").replace("kanto\\.townnote", "KANTO-HOST"))
 if bad:
     sys.exit("関西の言葉・部品が残っています: " + " / ".join(bad[:5]))
 open(dst, "w", encoding="utf-8").write(s)
