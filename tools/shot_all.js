@@ -6,12 +6,12 @@ const T='https://kansai.townnote.app',L='https://kanto.townnote.app';
 const PAGES=[
  ['t-top',T+'/'],['t-odekake',T+'/odekake'],['t-ima',T+'/ima'],['t-illumi',T+'/illumination'],['t-koyo',T+'/koyo'],['t-tomari',T+'/tomari'],['t-hatsumode',T+'/hatsumode'],['t-odekake-osaka',T+'/odekake-osaka'],
  ['t-fudosan',T+'/fudosan-list'],['t-uru',T+'/uru'],['t-sagasu',T+'/sagasu'],['t-chika',T+'/chika-kansai'],['t-machi',T+'/machi/osaka-01'],['t-gyosha',T+'/gyosha'],['t-moushikomi',T+'/moushikomi'],
- ['t-kaitai',T+'/kaitai'],['t-kaitai-rank',T+'/kaitai-ranking'],['t-kaitai-city',T+'/kaitai-neyagawa'],['t-ranking',T+'/ranking'],
+ ['t-kaiten',T+'/kaiten'],['t-kaitai',T+'/kaitai'],['t-kaitai-rank',T+'/kaitai-ranking'],['t-kaitai-city',T+'/kaitai-neyagawa'],['t-ranking',T+'/ranking'],
  ['t-jikka',T+'/jikka/'],['t-jikka-town',T+'/jikka/osaka-01'],['t-shindan',T+'/jikka/shindan/?machi=osaka-42&w=A&d=1'],
  ['t-okaimono',T+'/okaimono'],['t-nesage',T+'/nesage'],['t-kaimawari',T+'/kaimawari'],['t-furusato',T+'/furusato'],['t-otoku',T+'/otoku'],['t-koe',T+'/koe'],['t-privacy',T+'/privacy'],
  ['l-top',L+'/'],['l-odekake',L+'/odekake'],['l-ima',L+'/ima'],['l-illumi',L+'/illumination'],['l-koyo',L+'/koyo'],['l-tomari',L+'/tomari'],['l-odekake-tokyo',L+'/odekake-tokyo'],
  ['l-fudosan',L+'/fudosan-list'],['l-uru',L+'/uru'],['l-sagasu',L+'/sagasu'],['l-chika',L+'/chika-kanto'],['l-machi',L+'/machi/chiba-01'],['l-moushikomi',L+'/moushikomi'],
- ['l-kaitai',L+'/kaitai'],['l-kaitai-rank',L+'/kaitai-ranking'],['l-kaitai-city',L+'/kaitai-yokohama'],
+ ['l-kaiten',L+'/kaiten'],['l-kaitai',L+'/kaitai'],['l-kaitai-rank',L+'/kaitai-ranking'],['l-kaitai-city',L+'/kaitai-yokohama'],
  ['l-jikka',L+'/jikka/'],['l-jikka-town',L+'/jikka/chiba-01'],
  ['l-okaimono',L+'/okaimono'],['l-nesage',L+'/nesage'],['l-kaimawari',L+'/kaimawari'],['l-furusato',L+'/furusato'],['l-otoku',L+'/otoku'],['l-koe',L+'/koe'],['l-privacy',L+'/privacy']
 ];
