@@ -1,10 +1,11 @@
-# リンクの確かめ（2026-11-17 09:24 JST・1184件・HPの全ページ）
+# リンクの確かめ（2026-11-17 14:12 JST・1188件・HPの全ページ）
 
-種類ごと（見た数／開けない数）：不動産 766／3・泊まり 25／0・紅葉 22／2・イルミ 110／9・初もうで 12／0・おでかけ 249／5
+種類ごと（見た数／開けない数）：不動産 766／3・泊まり 26／0・紅葉 22／2・イルミ 110／9・初もうで 12／0・おでかけ 252／6
 行き先の分からないアフィリエイトの入口 0本（押さないので見ていない）
 
 ## 開けない（直す）
 - ✗ [おでかけ] 魯山人の宇宙 魂を刳る美がほしい（links/index.html）TimeoutError https://www.mistore.jp/store/kyoto/museum/event_list/event21.html
+- ✗ [おでかけ] PINGU meets アドベンチャーワールド（links/index.html）503 https://www.aws-s.com/
 - ✗ [おでかけ] 大阪ステーションシティ×ドラマチック謎解きゲーム（links/index.html）URLError https://osakastationcity-nazo.com/
 - ✗ [おでかけ] アニタッチ OSAKA なんば（links/index.html）404 https://www.afpbb.com/articles/-/3648165
 - ✗ [おでかけ] 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
