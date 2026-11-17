@@ -72,6 +72,20 @@
    "code": 403,
    "all": 890,
    "err": "{\"errorCode\":\"SiteVerificationNotCompleted\",\"message\":\"Site Verification is not completed. Please wait for some time for the verification to complete and try again.\",\"details\":null}"
+  },
+  {
+   "day": "2026-11-17",
+   "site": "kansai",
+   "n": 127,
+   "code": 200,
+   "all": 599
+  },
+  {
+   "day": "2026-11-17",
+   "site": "kanto",
+   "n": 170,
+   "code": 200,
+   "all": 892
   }
  ]
 }
