@@ -52,13 +52,15 @@ def gql(query, variables):
     raise RuntimeError(f"Buffer に届かない：{last}")
 
 
-def create(svc, texts, due_utc, topic=None, image=None, alt="", draft=False):
+def create(svc, texts, due_utc, topic=None, image=None, alt="", draft=False, video=None):
     items = [{"text": t} for t in texts]
     asset = [{"image": {"url": image, "metadata": {"altText": alt or "HPの画面"}}}] if image else None
+    if video:
+        asset = [{"video": {"url": video}}]
     meta = {}
     if svc == "twitter":
         meta["twitter"] = {"thread": items} if len(items) > 1 else {}
-        if image:
+        if image or video:
             meta["twitter"]["isAiGenerated"] = True
     else:
         meta["threads"] = {"type": "post", **({"thread": items} if len(items) > 1 else {}),
@@ -134,6 +136,104 @@ def book_day(d, now):
     json.dump(booked, open(bp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
 
+# ---- 11/17 オーナー「リール動画をxにも投稿、朝2つアカウントに」「Threadsはどうする？動画載せる？」「これからそうしよう、フォロワー集め」
+# 毎朝インスタに出すおでかけリール（ig/reels/D.json）の同じ動画を、X はリールと同じ時刻、Threads は 10:30 に出す。
+# 動画（media/reels/…mp4）ができてから・出る150分前から予約。予約の後に動画を作り直したら、出る10分より前なら古い予約を消して入れ直す。
+REEL_SNS = (("twitter", None), ("threads", "10:30"))
+REEL_LEAD = 150
+REEL_LIST = "https://kansai.townnote.app/links/"
+DELETE = 'mutation($i:DeletePostInput!){deletePost(input:$i){__typename}}'
+
+
+def x_weight(t):
+    """X の数え方：URL は23、半角は1、日本語などは2。上限280"""
+    import re
+    n = 0
+    for part in re.split(r"(https?://\S+)", t):
+        if part.startswith("http"):
+            n += 23
+        else:
+            n += sum(1 if ord(c) < 0x1100 else 2 for c in part)
+    return n
+
+
+def reel_texts(spec, svc, d):
+    """リールの台本（公式の文で答え合わせ済み）から X・Threads の文を作る。X はリンクなし・タグ2つまで。"""
+    tx = spec.get("text") or {}
+    place = (tx.get("place") or "").split("｜")
+    name = place[0].strip()
+    city = place[1].strip() if len(place) > 1 else ""
+    head = f"{name}（{city}）" if city else name
+    title = "。".join(t for t in (tx.get("title") or []) if t)
+    info = [f"・{a} {b}" for a, b in (tx.get("info") or []) if a and b]
+    note = "出かける前に、公式ページで確かめてください。"
+    if svc == "twitter":
+        tags = "#関西おでかけ #" + name.replace(" ", "").replace("　", "")
+        rows = list(info)
+        while True:
+            t = "\n".join([head, title, ""] + rows + ["", note, "", tags])
+            if x_weight(t) <= 280 or not rows:
+                return [t] if x_weight(t) <= 280 else []
+            rows.pop()
+    body = "\n".join([head, title, ""] + ([tx["map_caption"]] if tx.get("map_caption") else []) + info
+                     + ["", note, "", CFG.get("last_line", "")]).strip()
+    out = [body]
+    if spec.get("source"):
+        out.append("出典：公式ページ\n" + spec["source"])
+    out.append("日付と地図でさがせる、関西おでかけリスト\n" + REEL_LIST + "?f=th-reel-" + d[5:7] + d[8:10])
+    return out
+
+
+def book_reel_sns(d, now):
+    sp = os.path.join(ROOT, "ig", "reels", d + ".json")
+    spec = load(sp, None)
+    if not spec or os.path.exists(os.path.join(ROOT, "ig", "reels-hold", "STOP")):
+        return
+    url = spec.get("video_url") or ""
+    mp4 = os.path.join(ROOT, "media", "reels", url.rsplit("/", 1)[-1]) if url else ""
+    if not mp4 or not os.path.exists(mp4) or os.path.exists(os.path.join(ROOT, "stats", "reel-fail", d + ".txt")):
+        return  # 動画がまだ（作っている・止まっている）。インスタと同じ物しか出さない
+    bp = os.path.join(ROOT, "state", "booked", d + ".json")
+    booked = load(bp, {})
+    changed = False
+    for svc, hhmm in REEL_SNS:
+        due = datetime.fromisoformat(f"{d}T{hhmm or spec.get('time') or '07:30'}:00+09:00")
+        mins = (due - now).total_seconds() / 60
+        key = "reel_" + svc
+        rec = booked.get(key) or {}
+        if rec.get("id") and rec.get("url") != url and mins > 10:  # 動画を作り直した → 古い予約を消して入れ直す
+            try:
+                r = gql(DELETE, {"i": {"id": rec["id"]}}).get("deletePost") or {}
+                if "Error" in str(r.get("__typename", "")):
+                    raise RuntimeError(r.get("__typename"))
+            except Exception as e:
+                rec["error"] = "古い予約を消せない：" + str(e)[:200]
+                booked[key], changed = rec, True
+                continue
+            rec = {"replaced": rec["id"]}
+        if rec.get("id") or rec.get("tries", 0) >= 3 or not (5 < mins <= REEL_LEAD):
+            continue
+        texts = reel_texts(spec, svc, d)
+        if not texts:
+            rec["error"] = "文が X の280に入らない"
+            booked[key], changed = rec, True
+            continue
+        rec["tries"] = rec.get("tries", 0) + 1
+        try:
+            p = create(svc, texts, due.astimezone(timezone.utc).isoformat().replace("+00:00", "Z"),
+                       topic=spec.get("tab") if svc == "threads" else None, video=url)
+            rec.update({"id": p["id"], "url": url, "time": due.strftime("%H:%M"), "texts": texts,
+                        "at": now.isoformat(timespec="seconds")})
+            rec.pop("error", None)
+        except Exception as e:
+            rec["error"] = str(e)[:300]
+        booked[key], changed = rec, True
+        print(f"リール {svc} {d}：{rec}")
+    if changed:
+        os.makedirs(os.path.dirname(bp), exist_ok=True)
+        json.dump(booked, open(bp, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+
 def after(now):
     """きのう〜あすの予約が出たか・失敗したかを書く（失敗は見回りが朝いちばん上に出す）"""
     if not os.environ.get("BUFFER_API_KEY"):
@@ -164,11 +264,23 @@ def test(now):
 
 if __name__ == "__main__":
     now = datetime.now(JST)
+    if "--reel-text" in sys.argv:  # 文だけ見る：python3 tools/book/book.py --reel-text 2026-11-18
+        d = sys.argv[-1]
+        sp = load(os.path.join(ROOT, "ig", "reels", d + ".json"), {})
+        for svc, _ in REEL_SNS:
+            for t in reel_texts(sp, svc, d):
+                print(f"--- {svc} ({x_weight(t) if svc == 'twitter' else len(t)})\n{t}")
+        sys.exit(0)
     if "--test" in sys.argv:
         test(now)
         sys.exit(0)
     for d in (now.date(), now.date() + timedelta(days=1)):
         book_day(d.isoformat(), now)
+        if CFG.get("machine_booking") and os.environ.get("BUFFER_API_KEY"):
+            try:
+                book_reel_sns(d.isoformat(), now)
+            except Exception as e:
+                print(f"リールの X・Threads 予約×：{e}")
     try:
         after(now)
     except Exception as e:
