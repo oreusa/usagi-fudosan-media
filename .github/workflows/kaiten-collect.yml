@@ -17,7 +17,7 @@ jobs:
       - name: save
         run: |
           git config user.name "kaiten-collect"; git config user.email "actions@users.noreply.github.com"
-          git add tools/kaiten/kansai.json tools/kaiten/seen-kansai.json links/kaiten.html
+          git add tools/kaiten/kansai.json tools/kaiten/seen-kansai.json links/kaiten.html links/kaiten links/sitemap.xml links/sitemap-all.xml
           git diff --cached --quiet && exit 0
           git commit -qm "開店・閉店ニュース：公式の発表から集めた"
           for i in 1 2 3 4; do
