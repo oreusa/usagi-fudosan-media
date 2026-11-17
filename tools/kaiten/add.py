@@ -9,7 +9,7 @@ PREFS = {"kansai": {"大阪", "京都", "兵庫", "奈良", "滋賀", "和歌山
 p = os.path.join(HERE, area + ".json")
 j = json.load(open(p, encoding="utf-8"))
 have = {(x["u"], x["n"]) for x in j["items"]}
-today = (datetime.datetime.utcnow() + datetime.timedelta(hours=9)).date()
+today = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).date()
 added = 0
 for r in rows:
     x = json.loads(r)
