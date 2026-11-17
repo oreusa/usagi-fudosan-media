@@ -3,8 +3,9 @@
 月曜と木曜の 19:47 の回が、上から公式ページで確かめ、合う物を tools/fudosan_list/facts.json に足して make.py を回す。
 足した物・合わない物は stats/fudosan-watch.json の done に URL を入れる（次から出ない）。
 
-## 候補（41件）
+## 候補（42件）
 - 2026-11-17｜大阪市｜[seido] 2026年11月17日 放置自動車の除却について（大阪港湾局）｜https://www.city.osaka.lg.jp/port/page/0000690413.html
+- 2026-11-17｜兵庫県｜[seido] UJIターン就職相談窓口「ひょうご移住・しごとプラザ」｜https://web.pref.hyogo.lg.jp/sr05/comeback/hhw.html
 - 2026-11-16｜国土交通省 近畿地方整備局｜[dekiru] まちづくり・建設産業へ｜https://www.kkr.mlit.go.jp/kensei/index.html
 - 2026-11-16｜法務省（相続登記）｜[seido] 相続登記の義務化｜https://www.moj.go.jp/MINJI/souzokutouki-gimuka/index.html
 - 2026-11-16｜法務省（相続登記）｜[seido] 登記情報提供サービス｜https://www.moj.go.jp/MINJI/minji25.html
