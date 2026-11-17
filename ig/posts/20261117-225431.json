@@ -1,0 +1,16 @@
+{
+ "spec": "ig/reels/2026-11-18.json",
+ "at": "2026-11-17T22:53:46Z",
+ "container": {
+  "id": "18133025227789041"
+ },
+ "status": {
+  "id": "18133025227789041",
+  "status": "Finished: Media has been uploaded and it is ready to be published.",
+  "status_code": "FINISHED"
+ },
+ "publish": {
+  "id": "18100779803661654"
+ },
+ "permalink": "https://www.instagram.com/reel/Df3DLBED_1-/"
+}
