@@ -21,7 +21,7 @@ def fp(path):
 
 sm = open(SM, encoding="utf-8").read()
 def fix(m):
-    loc = m.group(1); path = loc.split("pages.dev/", 1)[1] if "pages.dev/" in loc else ""
+    loc = m.group(1); path = re.sub(r"^https?://[^/]+/?", "", loc)  # 11/17 新しい住所（townnote.app）でも道を取る。前は pages.dev だけで、全部が入口の指紋になっていた
     h = fp(path)
     old = db.get(path)
     if h is None:

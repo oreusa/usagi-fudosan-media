@@ -29,7 +29,7 @@ jobs:
           # 11/12 1つの作る機械が止まっても、ほかと数字の保存は止めない（/kaitai の点検で止まり、数字が1日入らなかった）。
           # 止まった物の名前は stats/build-fail.txt に残し、学習の台帳（gakushu.py）が朝の指令のいちばん上に出す
           D="$(TZ=Asia/Tokyo date +%F)"; : > stats/build-fail.txt
-          for b in illumi/build.py hatsumode/build.py ranking/build.py kaitai/build.py kaitai/city.py; do
+          for b in illumi/build.py hatsumode/build.py ranking/build.py kaitai/build.py kaitai/city.py kaiten/build.py; do
             python3 tools/$b "$D" || echo "$D tools/$b" >> stats/build-fail.txt
           done
       - name: event info for search on the list
@@ -75,7 +75,7 @@ jobs:
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/build-fail.txt stats/link.json stats/link-30.json stats/funnel.md stats/funnel.json stats/seichou.md stats/seichou.json links/illumination*.html links/koyo*.html links/hatsumode.html links/ranking.html links/kaitai.html links/kaitai-*.html links/index.html links/odekake-*.html links/o links/sitemap.xml links/sitemap-all.xml links/sitemap-main.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md stats/fudosan-shinchaku.md stats/fudosan-watch.json links/assets/cover.json stats/room.json stats/room-fail.txt stats/gakushu.md stats/gakushu.json stats/kimari.json stats/shirei.json stats/manabi.json stats/yatta.json
+          git add stats/build-fail.txt stats/link.json stats/link-30.json stats/funnel.md stats/funnel.json stats/seichou.md stats/seichou.json links/illumination*.html links/koyo*.html links/hatsumode.html links/ranking.html links/kaiten.html links/kaitai.html links/kaitai-*.html links/index.html links/odekake-*.html links/o links/sitemap.xml links/sitemap-all.xml links/sitemap-main.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md stats/fudosan-shinchaku.md stats/fudosan-watch.json links/assets/cover.json stats/room.json stats/room-fail.txt stats/gakushu.md stats/gakushu.json stats/kimari.json stats/shirei.json stats/manabi.json stats/yatta.json
           git diff --cached --quiet && exit 0
           git commit -q -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)"
           # 11/12 ほかの保存と重なると push が断られ、その日の数字と台帳がまるごと消えていた → やり直す（ぶつかった所は、いま作った物を残す）
