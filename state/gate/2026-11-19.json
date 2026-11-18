@@ -1,0 +1,152 @@
+{
+ "date": "2026-11-19",
+ "bad": 0,
+ "slots": {
+  "n1": {
+   "ok": true,
+   "time": "07:00",
+   "head": "【関西まちランキング No.36｜阪神本線、甲子園が西宮を5,554人上回り2位🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "0a2ba214ce1b5255",
+   "x": false,
+   "th": true
+  },
+  "x07": {
+   "ok": true,
+   "time": "07:00",
+   "head": "梅田・ルクア サウス11階に、ちいかわの「ナガノマーケット UMEDA」、11/24（火）オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "dba28cf07a65f92f",
+   "x": true,
+   "th": false
+  },
+  "S1": {
+   "ok": true,
+   "time": "08:00",
+   "head": "【実家が奈良市なら｜昨年度の平均は2,047万円🏠】",
+   "bad": [],
+   "warn": [],
+   "digest": "6583e7e1e4b09bc6",
+   "x": false,
+   "th": true
+  },
+  "n2": {
+   "ok": true,
+   "time": "09:00",
+   "head": "【11/19（木）も今夜｜大津・石山寺の「あたら夜もみじ」🍁】",
+   "bad": [],
+   "warn": [],
+   "digest": "3d15fadbe9a95545",
+   "x": false,
+   "th": true
+  },
+  "x09": {
+   "ok": true,
+   "time": "09:00",
+   "head": "加古川・ニッケパークタウン本館2階に「GiGOクレーンゲームオアシス ニッケパークタウン」、11/20（金）グランドオー",
+   "bad": [],
+   "warn": [
+    "絵が無い（文字だけで出る）"
+   ],
+   "digest": "e39a10374b79bf9e",
+   "x": true,
+   "th": false
+  },
+  "n3": {
+   "ok": true,
+   "time": "12:00",
+   "head": "【11/24（火）大阪・梅田｜ちいかわの「ナガノマーケット UMEDA」が開く🛍️】",
+   "bad": [],
+   "warn": [],
+   "digest": "3bd93b34cf65053a",
+   "x": false,
+   "th": true
+  },
+  "x12": {
+   "ok": true,
+   "time": "12:00",
+   "head": "梅田・大丸梅田店に「堂島ロールCanvas」、11/28（土）先行オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "929893f270e04d7e",
+   "x": true,
+   "th": false
+  },
+  "n8": {
+   "ok": true,
+   "time": "13:00",
+   "head": "【関西まちランキング No.37｜近鉄南大阪線、矢田と恵我ノ荘はわずか91人差🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "ec4aff0a2b7ed037",
+   "x": false,
+   "th": true
+  },
+  "n5": {
+   "ok": true,
+   "time": "15:00",
+   "head": "【11/21（土）〜23（月・祝）は夜も｜神戸・須磨離宮公園の紅葉🍁】",
+   "bad": [],
+   "warn": [],
+   "digest": "5ca3f5a3f503567c",
+   "x": false,
+   "th": true
+  },
+  "x15": {
+   "ok": true,
+   "time": "15:00",
+   "head": "京都・烏丸に大垣書店の新しい店「BOOKHOME」、12/4（金）オープン",
+   "bad": [],
+   "warn": [
+    "絵が無い（文字だけで出る）"
+   ],
+   "digest": "6f6bf8b23fe6b0b8",
+   "x": true,
+   "th": false
+  },
+  "n6": {
+   "ok": true,
+   "time": "18:00",
+   "head": "【12/4（金）京都・烏丸｜大垣書店の新しい店「BOOKHOME」が開く📚】",
+   "bad": [],
+   "warn": [],
+   "digest": "993aa5fd105bfb69",
+   "x": false,
+   "th": true
+  },
+  "x18": {
+   "ok": true,
+   "time": "18:00",
+   "head": "神戸・須磨離宮公園の「もみじ観賞会＆ルミエール」、3連休 11/21〜23 は20:00まで開園",
+   "bad": [],
+   "warn": [],
+   "digest": "21fba45abe97603a",
+   "x": true,
+   "th": false
+  },
+  "n7": {
+   "ok": true,
+   "time": "21:00",
+   "head": "【ひと駅しらべ その27｜学園前駅🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "5855ed01cec9eaf9",
+   "x": false,
+   "th": true
+  },
+  "x21": {
+   "ok": true,
+   "time": "21:00",
+   "head": "大津・石山寺の紅葉ライトアップ「あたら夜もみじ」、11/29（日）まで毎晩",
+   "bad": [],
+   "warn": [
+    "絵が無い（文字だけで出る）"
+   ],
+   "digest": "58324b246c1c7588",
+   "x": true,
+   "th": false
+  }
+ }
+}

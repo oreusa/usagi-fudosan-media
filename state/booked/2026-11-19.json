@@ -1,0 +1,89 @@
+{
+ "n1": {
+  "time": "07:00",
+  "digest": "0a2ba214ce1b5255",
+  "at": "2026-11-19T06:26:19+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x07": {
+  "time": "07:00",
+  "digest": "dba28cf07a65f92f",
+  "at": "2026-11-19T06:26:19+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "S1": {
+  "time": "08:00",
+  "digest": "6583e7e1e4b09bc6",
+  "at": "2026-11-19T06:26:19+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n2": {
+  "time": "09:00",
+  "digest": "3d15fadbe9a95545",
+  "at": "2026-11-19T06:26:19+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x09": {
+  "time": "09:00",
+  "digest": "e39a10374b79bf9e",
+  "at": "2026-11-19T06:26:19+09:00",
+  "threads": "X だけの枠",
+  "twitter": "6afe17fd0d8c064ce4d90b91"
+ },
+ "n3": {
+  "time": "12:00",
+  "digest": "3bd93b34cf65053a",
+  "at": "2026-11-19T06:26:19+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x12": {
+  "time": "12:00",
+  "digest": "929893f270e04d7e",
+  "at": "2026-11-19T06:26:19+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n8": {
+  "time": "13:00",
+  "digest": "ec4aff0a2b7ed037",
+  "at": "2026-11-19T06:26:19+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n5": {
+  "time": "15:00",
+  "digest": "5ca3f5a3f503567c",
+  "at": "2026-11-19T06:26:19+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x15": {
+  "time": "15:00",
+  "digest": "6f6bf8b23fe6b0b8",
+  "at": "2026-11-19T06:26:19+09:00",
+  "threads": "X だけの枠",
+  "twitter": "6afe17fe0a1fb75cd419c34f"
+ },
+ "n6": {
+  "time": "18:00",
+  "digest": "993aa5fd105bfb69",
+  "at": "2026-11-19T06:26:19+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x18": {
+  "time": "18:00",
+  "digest": "21fba45abe97603a",
+  "at": "2026-11-19T06:26:19+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "reel_twitter": {
+  "tries": 1,
+  "id": "6afe18000a1fb75cd419c449",
+  "url": "https://oreusa.github.io/usagi-fudosan-media/media/reels/2026-11-19-ehon-v4.mp4",
+  "time": "07:30",
+  "texts": [
+   "永観堂（禅林寺）（京都市左京区）\nおでかけニュース。永観堂の夜もみじ\n\n・受付 夜5時半〜8時半\n・期間 11/20〜12/6\n・券 当日だけ・前売りなし\n・行き方 市バス5系統 徒歩3分\n\n出かける前に、公式ページで確かめてください。\n\n#関西おでかけ #永観堂（禅林寺）"
+  ],
+  "at": "2026-11-19T06:26:19+09:00"
+ }
+}
