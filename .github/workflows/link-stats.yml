@@ -59,6 +59,7 @@ jobs:
           pip install -q pillow >/dev/null 2>&1 || true
           timeout 900 python3 tools/mihon/autophoto.py || echo "$(TZ=Asia/Tokyo date +%F) tools/mihon/autophoto.py" >> stats/build-fail.txt
           python3 tools/mihon/build.py || true
+          python3 tools/hx/nightscore.py links/assets/ph || true
           # 11/19 激変版（?mihon=2）：写真が出る前のぼかし色（ThumbHash）。新しい写真の分だけ足す
           pip install -q thumbhash-python >/dev/null 2>&1 && python3 tools/hx/phh.py links/assets || true
       - name: cover data (表紙の地図の数字)
