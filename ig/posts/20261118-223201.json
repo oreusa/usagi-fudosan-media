@@ -1,0 +1,16 @@
+{
+ "spec": "ig/reels/2026-11-19.json",
+ "at": "2026-11-18T22:31:07Z",
+ "container": {
+  "id": "18133211314789041"
+ },
+ "status": {
+  "id": "18133211314789041",
+  "status": "Finished: Media has been uploaded and it is ready to be published.",
+  "status_code": "FINISHED"
+ },
+ "publish": {
+  "id": "18119093297012515"
+ },
+ "permalink": "https://www.instagram.com/reel/Df5lX3fGdBL/"
+}
