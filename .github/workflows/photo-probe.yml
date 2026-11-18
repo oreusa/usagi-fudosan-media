@@ -14,7 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          if [[ "${{ inputs.words }}" == @* ]]; then
+          if [[ "${{ inputs.words }}" == hyogo* ]]; then
+            pip install -q pillow; read -ra W <<< "${{ inputs.words }}"; PW="${{ inputs.w }}" python3 tools/photo/hyogo.py "${W[1]}" tools/photo/probe/hyogo "${W[@]:2}"
+          elif [[ "${{ inputs.words }}" == @* ]]; then
             f="${{ inputs.words }}"; f="${f#@}"; b=$(basename "$f" .tsv); if [ "${{ inputs.tool }}" = best ]; then b="$b-best"; PW="${{ inputs.w }}" python3 tools/photo/best.py "$f" "tools/photo/probe/$b"; else PW="${{ inputs.w }}" python3 tools/photo/cover.py "$f" "tools/photo/probe/$b"; fi
           else
             IFS='|' read -ra W <<< "${{ inputs.words }}"
