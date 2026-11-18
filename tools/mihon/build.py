@@ -88,7 +88,7 @@ for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', src, re.S):
     if (not o.get("im") or o.get("wk")) and vn in VP:
         o.pop("wk", None); o.update(im=VP[vn]["img"], cr=VP[vn]["cr"], cu=VP[vn].get("page", ""), vn=re.sub(r"\s*\(.*\)$", "", vn))
         # 駅・市・町などの写真は「会場」ではなく「場所」と書く（その建物の写真ではないため）
-        if re.search(r"駅$|市$|町$|村$|^(梅田|なんば|心斎橋|八日市|天満橋|宇治橋)$", o["vn"]): o["vk"] = 1
+        if re.search(r"駅$|市$|町$|村$|^(梅田|なんば|心斎橋|八日市|天満橋|宇治橋|河原町)$", o["vn"]): o["vk"] = 1
     g = IG.get(key)
     if g:
         if g.get("posts"): o["ig"] = g["posts"][:1]
