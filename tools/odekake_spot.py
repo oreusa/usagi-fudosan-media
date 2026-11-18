@@ -72,7 +72,9 @@ def e(x): return html.escape(x, quote=True)
 
 
 spots, seen = [], set()
-for m in re.finditer(r'<a class="card"([^>]*)>(.*?)</a>', s, re.S):
+# 11/18 オーナー「改善点はないか常にみてるか？」→ イルミ・紅葉のページのカードにも1件ページを作る（押すとすぐ公式へ飛ぶのをなくす）
+SRC = s + "".join(open(f, encoding="utf-8").read() for f in sorted(glob.glob("links/illumination*.html")) + sorted(glob.glob("links/koyo*.html")))
+for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', SRC, re.S):
     a = {k: html.unescape(v) for k, v in re.findall(r'(data-[\w-]+|href)="([^"]*)"', m.group(1))}
     b = m.group(2)
     t = re.search(r'class="t">(.*?)</div>', b, re.S)
@@ -86,7 +88,8 @@ for m in re.finditer(r'<a class="card"([^>]*)>(.*?)</a>', s, re.S):
     parts = txt(mm.group(1)).split("｜") if mm else [""]
     spots.append(dict(name=name, key=key, pref=a["data-pref"], st=st, en=en, url=a.get("href", ""), free="無料" in a.get("data-tag", ""), part="一部有料" in b,
                       city=(lambda c, r: r if len(r) > 1 else c)(parts[0].strip(), re.sub(r"^(大阪府|京都府|兵庫県|奈良県|滋賀県|和歌山県)", "", parts[0].strip())), place=re.split(r"[。、]", parts[-1].strip())[0] if len(parts) > 1 else "", dline=txt(dd.group(1)) if dd else "",
-                      map=a.get("data-map", ""), id=hashlib.md5(key.encode()).hexdigest()[:8]))
+                      map=a.get("data-map", ""), id=hashlib.md5(key.encode()).hexdigest()[:8],
+                      kv={txt(k): txt(v) for k, v in re.findall(r'class="kv"><span>(.*?)</span>(.*?)</div>', b, re.S)}))
 
 d0 = datetime.date.fromisoformat(TODAY); upd = f"{d0.year}年{d0.month}月{d0.day}日"
 CSS = open(glob.glob("links/machi/*.html")[0], encoding="utf-8").read()
@@ -111,6 +114,8 @@ for sp in spots:
             left = (datetime.date.fromisoformat(sp["en"]) - d0).days
             stat = "きょうまで" if left == 0 else f"開催中・あと{left}日"
         else: stat = "開催中"
+    kv = sp.get("kv", {})
+    if not when and kv.get("見頃"): when = "見頃は" + kv["見頃"]
     when = when or sp["dline"] or "公式ページで"
     # 11/9 夜「開催日が違う」→ リストの日付の文にある「◯◯のみ」「月曜休館」などを1件ページにも出す（はじめと終わりだけだと毎日やっているように読める）
     dl = re.sub(r"　.*", "", sp["dline"])
@@ -123,7 +128,13 @@ for sp in spots:
     where = (sp["city"] + ("の" + sp["place"] if sp["place"] and sp["place"] != sp["city"] else "")) or fu
     lead = f"{nm}は、{'' if where.startswith(fu) else fu}{where}で" + (f"、{jd(sp['st'])}から{jd(sp['en'])}まで開かれます。" if sp["st"] and sp["en"] and sp["en"] != sp["st"] else (f"、{jd(sp['st'])}に開かれます。" if sp["st"] else "楽しめます。"))
     if sp["free"]: lead += "入場は無料です（一部有料の所があります）。" if sp.get("part") else "入場は無料です。"
-    mo = MORE.get(sp["key"], {}); has = [x for x, k in (("時間", "time"), ("料金", "price"), ("駐車場", "park")) if mo.get(k)]
+    mo = dict(MORE.get(sp["key"], {}))
+    # 紅葉・イルミのカードの「料金・時間・駐車場・メモ」も1件ページに出す（11/18 カードからは外して1件ページへ回した）
+    for lb, kk in (("時間", "time"), ("料金", "price"), ("駐車場", "park")):
+        if kv.get(lb) and not mo.get(kk) and "公式" not in kv[lb]: mo[kk] = kv[lb]
+    if kv.get("メモ") and not mo.get("note"): mo["note"] = kv["メモ"].rstrip("。") + "。"
+    if kv.get("休み") and not mo.get("note"): mo["note"] = "休みは" + kv["休み"].rstrip("。") + "。"
+    has = [x for x, k in (("時間", "time"), ("料金", "price"), ("駐車場", "park")) if mo.get(k)]
     if mo.get("time"): lead += f"時間は{mo['time']}です。"
     if mo.get("price"): lead += f"料金は{mo['price']}です。"
     if mo.get("park"): lead += f"駐車場は{mo['park']}です。"
