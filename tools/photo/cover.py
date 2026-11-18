@@ -7,7 +7,26 @@ OK = ("CC0", "Public domain", "CC BY 2.0", "CC BY 2.1", "CC BY 2.5", "CC BY 3.0"
 UA = {"User-Agent": "TownNotePhotoBot/1.0 (https://kansai.townnote.app/)"}
 def get(u):
     return urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=30).read()
-def wd(q):
+THEME = {"autumn": "autumn OR momiji OR 紅葉 OR leaves", "night": "night OR illumination OR light-up OR ライトアップ OR イルミネーション"}
+def theme_of(name):
+    """11/18 季節違い（紅葉の催しに桜の写真）を出さない。催し名から季節・時間を決める"""
+    if re.search(r"紅葉|もみじ|モミジ|錦秋|秋の", name): return "autumn"
+    if re.search(r"イルミ|ライトアップ|夜|光|ナイト|NIGHT|灯", name): return "night"
+    return ""
+def pick(pages, q, via):
+    for pg in sorted(pages, key=lambda x: x.get("index", 99)):
+        ii = (pg.get("imageinfo") or [{}])[0]; m = ii.get("extmetadata", {})
+        lic = m.get("LicenseShortName", {}).get("value", "")
+        if not any(lic.startswith(o) for o in OK): continue
+        if ii.get("width", 0) < ii.get("height", 1) * 1.2: continue
+        art = re.sub(r"<[^>]+>", "", m.get("Artist", {}).get("value", "")).strip()
+        return {"title": pg["title"], "page": ii.get("descriptionurl"), "thumb": ii.get("thumburl"), "license": lic, "artist": art[:80], "q": q, "via": via}
+def in_cat(cat, theme, q):
+    p = {"action": "query", "format": "json", "generator": "search", "gsrsearch": f'incategory:"{cat}" ({THEME[theme]}) filetype:bitmap', "gsrnamespace": 6, "gsrlimit": 15,
+         "prop": "imageinfo", "iiprop": "url|extmetadata|size", "iiurlwidth": 480}
+    d = json.loads(get("https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode(p)))
+    return pick(d.get("query", {}).get("pages", {}).values(), q, f"category {cat} {theme}")
+def wd(q, theme=""):
     """ウィキデータの「代表の写真」(P18)。日本(P17=Q17)の物だけ。人が選んだ1枚なので、検索より外れが少ない。"""
     p = {"action": "wbsearchentities", "format": "json", "language": "ja", "uselang": "ja", "type": "item", "limit": 5, "search": q}
     hits = json.loads(get("https://www.wikidata.org/w/api.php?" + urllib.parse.urlencode(p))).get("search", [])
@@ -17,17 +36,23 @@ def wd(q):
     for h in hits:
         c = ents.get(h["id"], {}).get("claims", {})
         jp = any(x["mainsnak"].get("datavalue", {}).get("value", {}).get("id") == "Q17" for x in c.get("P17", []))
-        if not jp or "P18" not in c: continue
+        if not jp or ("P18" not in c and "P373" not in c): continue
+        if theme and "P373" in c:
+            try:
+                r = in_cat(c["P373"][0]["mainsnak"]["datavalue"]["value"], theme, q)
+                if r: r["via"] = "wikidata " + h["id"] + " " + h.get("label", "") + " / " + r["via"]; return r
+            except Exception as e: print("ERR cat", q, e)
+        if "P18" not in c: continue
         fn = c["P18"][0]["mainsnak"]["datavalue"]["value"]
         ii = json.loads(get("https://commons.wikimedia.org/w/api.php?" + urllib.parse.urlencode({"action": "query", "format": "json", "titles": "File:" + fn, "prop": "imageinfo", "iiprop": "url|extmetadata|size", "iiurlwidth": 480})))
         pg = list(ii["query"]["pages"].values())[0]; i0 = (pg.get("imageinfo") or [{}])[0]; m = i0.get("extmetadata", {})
         lic = m.get("LicenseShortName", {}).get("value", "")
         if not any(lic.startswith(o) for o in OK): continue
         art = re.sub(r"<[^>]+>", "", m.get("Artist", {}).get("value", "")).strip()
-        return {"title": pg["title"], "page": i0.get("descriptionurl"), "thumb": i0.get("thumburl"), "license": lic, "artist": art[:80], "q": q, "via": "wikidata " + h["id"] + " " + h.get("label", ""), "w": i0.get("width"), "h": i0.get("height")}
-def find(q):
+        return {"title": pg["title"], "page": i0.get("descriptionurl"), "thumb": i0.get("thumburl"), "license": lic, "artist": art[:80], "q": q, "via": "wikidata " + h["id"] + " " + h.get("label", ""), "w": i0.get("width"), "h": i0.get("height"), "season_check": bool(theme)}
+def find(q, theme=""):
     try:
-        r = wd(q)
+        r = wd(q, theme)
         if r: return r
     except Exception as e: print("ERR wd", q, e)
     p = {"action": "query", "format": "json", "generator": "search", "gsrsearch": q + " filetype:bitmap", "gsrnamespace": 6, "gsrlimit": 15,
@@ -40,7 +65,7 @@ def find(q):
         if not any(lic.startswith(o) for o in OK): continue
         if ii.get("width", 0) < ii.get("height", 1) * 1.2: continue
         art = re.sub(r"<[^>]+>", "", m.get("Artist", {}).get("value", "")).strip()
-        return {"title": pg["title"], "page": ii.get("descriptionurl"), "thumb": ii.get("thumburl"), "license": lic, "artist": art[:80], "q": q, "via": "search"}
+        return {"title": pg["title"], "page": ii.get("descriptionurl"), "thumb": ii.get("thumburl"), "license": lic, "artist": art[:80], "q": q, "via": "search", "check": "検索で見つけた物＝場所が合うか必ず目で見る"}
 src, out = sys.argv[1], sys.argv[2]; os.makedirs(out, exist_ok=True)
 res = []
 for i, ln in enumerate(open(src, encoding="utf-8")):
@@ -48,7 +73,7 @@ for i, ln in enumerate(open(src, encoding="utf-8")):
     name, qs = ln.rstrip("\n").split("\t")
     hit = None
     for q in [x for x in qs.split("|") if x]:
-        try: hit = find(q)
+        try: hit = find(q, theme_of(name))
         except Exception as e: print("ERR", q, e)
         time.sleep(0.5)
         if hit: break
