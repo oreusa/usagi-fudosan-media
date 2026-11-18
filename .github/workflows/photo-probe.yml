@@ -1,0 +1,20 @@
+name: photo-probe
+# 11/18 場所の自由に使える写真（ウィキメディア・コモンズ）を集めて、作業用の枝に置く（見本づくり用）
+on:
+  workflow_dispatch:
+    inputs:
+      words: {description: "探す言葉（| で区切る）", required: true, default: "Eikan-do autumn|Kiyomizu-dera|Himeji Castle|Arashiyama|Osaka Castle|Nara Park deer|Kobe Harborland|Shirarahama|Lake Biwa"}
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          IFS='|' read -ra W <<< "${{ inputs.words }}"
+          python3 tools/photo/commons.py tools/photo/probe "${W[@]}"
+      - run: |
+          git config user.name "photo-probe"; git config user.email "actions@users.noreply.github.com"
+          git checkout -B claude/project-thread-q3ep5v
+          git add -f tools/photo/probe && git commit -qm "photo-probe" && git push -f origin claude/project-thread-q3ep5v
