@@ -117,7 +117,7 @@ ci.addEventListener("change",function(){{window.__ikU=1;calc()}});ar.addEventLis
 document.addEventListener("click",function(e){{var a=e.target.closest("[data-k]");if(a)c("クリック："+a.getAttribute("data-k"))}});
 try{{var id=new URLSearchParams(location.search).get("machi")||sessionStorage.getItem("tn_machi")||"";if(id)Object.keys(D).forEach(function(k){{if(D[k].id===id)ci.dataset.want=k}})}}catch(e){{}}
 fill();if(ci.dataset.want&&D[ci.dataset.want][ty]){{ci.value=ci.dataset.want;calc()}}}})();</script>
-<script src="assets/night.js?v=29"></script><script src="assets/menu.js?v=49"></script><script src="assets/v2sub.js?v=12"></script>
+<script src="assets/night.js?v=30"></script><script src="assets/menu.js?v=49"></script><script src="assets/v2sub.js?v=12"></script>
 </body></html>"""
 out = os.path.join(R, "links", "ikura.html" if LIVE else "ikura-mihon.html")
 open(out, "w", encoding="utf-8").write(page)
