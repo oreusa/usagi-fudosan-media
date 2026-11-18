@@ -17,10 +17,12 @@ for(const [name,url] of L){for(const night of [false,true]){
  const st=await p.evaluate(()=>({h:document.body.scrollHeight,over:document.documentElement.scrollWidth>innerWidth+1,
    broken:[...document.images].filter(i=>i.complete&&i.naturalWidth===0&&i.src&&!/instagram/.test(i.src)).map(i=>i.src.slice(-60)),
    imgs:[...document.images].filter(i=>i.naturalWidth>0).length,empty:[...document.querySelectorAll('b,strong,span')].filter(e=>/^\s*0\s*件?$/.test(e.textContent)&&e.offsetParent).length}));
+ // 11/18 見やすさの自動点検（axe-core）：文字の濃さ・押す所の名前・画像の説明など。重い・深刻の数だけ記録（昼だけ）
+ let ax='';if(!night){try{await p.addScriptTag({path:require.resolve('axe-core')});const r=await p.evaluate(async()=>{const x=await axe.run(document,{resultTypes:['violations']});return x.violations.filter(v=>v.impact==='serious'||v.impact==='critical').map(v=>v.id+':'+v.nodes.length)});ax=r.join(',')||'0'}catch(e){ax='err'}}
  const tag=`${name}-${night?'n':'d'}`;
  // 1画面ずつ（全体を1枚で撮ると、夜の背景や固定の部品・あとから出る部分が本物と違って写るため）
  const N=Math.min(Math.ceil(st.h/760),+(process.env.MAXN||8));
  for(let i=0;i<N;i++){await p.evaluate(y=>scrollTo(0,y),i*760);await p.waitForTimeout(700);await p.screenshot({path:`${out}/${tag}-${i}.png`})}
- log.push([tag,url,'h='+st.h,'imgs='+st.imgs,'broken='+st.broken.length,'over='+st.over,'zero='+st.empty,'err='+err.length,st.broken.join(' '),err.join(' | ')].join('\t'));
+ log.push([tag,url,'h='+st.h,'imgs='+st.imgs,'broken='+st.broken.length,'over='+st.over,'zero='+st.empty,'err='+err.length,'axe='+ax,st.broken.join(' '),err.join(' | ')].join('\t'));
  await c.close();}}
 fs.writeFileSync(`${out}/log.tsv`,log.join('\n')+'\n');console.log(log.join('\n'));await b.close()})();
