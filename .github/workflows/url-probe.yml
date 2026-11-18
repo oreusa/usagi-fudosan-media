@@ -1,0 +1,19 @@
+name: url-probe
+# 11/18 作業環境からつながらないページを取って probe 枝の tools/probe/out/ に置く（調べ物用）
+on:
+  workflow_dispatch:
+    inputs:
+      urls: {description: "URL（空白で区切る）", required: true}
+permissions:
+  contents: write
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/probe/fetch.py /tmp/out ${{ inputs.urls }}
+      - run: |
+          git config user.name "url-probe"; git config user.email "actions@users.noreply.github.com"
+          if git fetch -q origin probe; then git checkout -qB probe FETCH_HEAD; else git checkout -q --orphan probe && git rm -rfq .; fi
+          mkdir -p tools/probe/out && cp /tmp/out/* tools/probe/out/ 2>/dev/null; cat /tmp/out/log.tsv >> tools/probe/out/all.tsv
+          git add -f tools/probe/out && git commit -qm "url-probe" && for i in 1 2 3 4; do git pull -q --rebase origin probe 2>/dev/null || true; git push origin probe && break; sleep 7; done
