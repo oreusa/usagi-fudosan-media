@@ -1,0 +1,633 @@
+[
+ {
+  "name": "万博記念公園",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "朝護孫子寺 紅葉",
+  "theme": "autumn",
+  "entity": {
+   "id": "Q11092571",
+   "label": "朝護孫子寺",
+   "cat": "Chyogosonshiji",
+   "p18": "190104 Chogosonshiji Heguri Nara pref Japan01s3.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Chyogosonshi-ji1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Chyogosonshi-ji1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Chyogosonshi-ji1.jpg/1280px-Chyogosonshi-ji1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "KENPEI",
+    "w": 3264,
+    "h": 2448,
+    "score": 63.6,
+    "why": [
+     "季節が合う"
+    ],
+    "file": "001-0.jpg"
+   },
+   {
+    "title": "File:View of Chyogosonshiji hondo3.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:View_of_Chyogosonshiji_hondo3.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/View_of_Chyogosonshiji_hondo3.jpg/1280px-View_of_Chyogosonshiji_hondo3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "KENPEI",
+    "w": 3264,
+    "h": 2448,
+    "score": 63.6,
+    "why": [
+     "季節が合う"
+    ],
+    "file": "001-1.jpg"
+   },
+   {
+    "title": "File:Shigisan Engi NDL 3.png",
+    "page": "https://commons.wikimedia.org/wiki/File:Shigisan_Engi_NDL_3.png",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Shigisan_Engi_NDL_3.png/1280px-Shigisan_Engi_NDL_3.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "Unknown authorUnknown author",
+    "w": 222675,
+    "h": 5209,
+    "score": 27.3,
+    "why": [],
+    "file": "001-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "ほしだ園地",
+  "theme": "",
+  "entity": {
+   "id": "Q85880868",
+   "label": "星のブランコ",
+   "cat": "",
+   "p18": "Hoshinoburanko.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Hoshinoburanko.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hoshinoburanko.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/Hoshinoburanko.jpg/1280px-Hoshinoburanko.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "交野タイムズ",
+    "w": 4032,
+    "h": 3024,
+    "score": 36.3,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "002-0.jpg"
+   }
+  ]
+ },
+ {
+  "name": "西明寺 (甲良町) 紅葉",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "メタセコイア並木 (高島市) 紅葉",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "奇絶峡 紅葉",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "知恩院 紅葉",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "智積院 紅葉",
+  "theme": "autumn",
+  "entity": {
+   "id": "Q11090279",
+   "label": "智積院",
+   "cat": "Chishaku-in",
+   "p18": "Chishakuin07n2040.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Kyoto Chishaku-in Stupa hdsr S5 1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kyoto_Chishaku-in_Stupa_hdsr_S5_1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Kyoto_Chishaku-in_Stupa_hdsr_S5_1.jpg/1280px-Kyoto_Chishaku-in_Stupa_hdsr_S5_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 4.0",
+    "artist": "Hyppolyte de Saint-Rambert",
+    "w": 5328,
+    "h": 4000,
+    "score": 20.3,
+    "why": [],
+    "file": "007-0.jpg"
+   },
+   {
+    "title": "File:Kyoto Chishaku-in outdoorview hdsr S5 1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kyoto_Chishaku-in_outdoorview_hdsr_S5_1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Kyoto_Chishaku-in_outdoorview_hdsr_S5_1.jpg/1280px-Kyoto_Chishaku-in_outdoorview_hdsr_S5_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 4.0",
+    "artist": "Hyppolyte de Saint-Rambert",
+    "w": 5328,
+    "h": 4000,
+    "score": 20.3,
+    "why": [],
+    "file": "007-1.jpg"
+   },
+   {
+    "title": "File:Kyoto Chishaku-in outdoorview hdsr S5 11.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kyoto_Chishaku-in_outdoorview_hdsr_S5_11.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Kyoto_Chishaku-in_outdoorview_hdsr_S5_11.jpg/1280px-Kyoto_Chishaku-in_outdoorview_hdsr_S5_11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 4.0",
+    "artist": "Hyppolyte de Saint-Rambert",
+    "w": 5328,
+    "h": 4000,
+    "score": 20.3,
+    "why": [],
+    "file": "007-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "光明寺 (長岡京市) 紅葉",
+  "theme": "autumn",
+  "entity": {
+   "id": "Q4802803",
+   "label": "光明寺",
+   "cat": "Kōmyō-ji (Nagaokakyo)",
+   "p18": "131130 Komyoji Nagaokakyo Kyoto pref Japan06s3.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:131130 Komyoji Nagaokakyo Kyoto pref Japan13s3.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:131130_Komyoji_Nagaokakyo_Kyoto_pref_Japan13s3.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/131130_Komyoji_Nagaokakyo_Kyoto_pref_Japan13s3.jpg/1280px-131130_Komyoji_Nagaokakyo_Kyoto_pref_Japan13s3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.5",
+    "artist": "663highland",
+    "w": 4770,
+    "h": 3180,
+    "score": 64.7,
+    "why": [
+     "季節が合う"
+    ],
+    "file": "008-0.jpg"
+   },
+   {
+    "title": "File:Nagaokakyou14.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Nagaokakyou14.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Nagaokakyou14.JPG/1280px-Nagaokakyou14.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Taekotukide",
+    "w": 2560,
+    "h": 1920,
+    "score": 62.8,
+    "why": [
+     "季節が合う"
+    ],
+    "file": "008-1.jpg"
+   },
+   {
+    "title": "File:Nagaokakyou15.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Nagaokakyou15.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Nagaokakyou15.JPG/1280px-Nagaokakyou15.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Taekotukide",
+    "w": 2560,
+    "h": 1920,
+    "score": 62.8,
+    "why": [
+     "季節が合う"
+    ],
+    "file": "008-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "大阪市立長居植物園",
+  "theme": "",
+  "entity": {
+   "id": "Q6149771",
+   "label": "大阪市立長居植物園",
+   "cat": "Nagai Botanical Garden",
+   "p18": "Nagai Botanical Garden, Nemophila flowers 001.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Flowers of Prunus mume (Armenaca mume ‘Bumpi’) at Nagai Botanical Garden, February 2024 - 5452.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flowers_of_Prunus_mume_(Armenaca_mume_%E2%80%98Bumpi%E2%80%99)_at_Nagai_Botanical_Garden,_February_2024_-_5452.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Flowers_of_Prunus_mume_%28Armenaca_mume_%E2%80%98Bumpi%E2%80%99%29_at_Nagai_Botanical_Garden%2C_February_2024_-_5452.jpg/1280px-Flowers_of_Prunus_mume_%28Armenaca_mume_%E2%80%98Bumpi%E2%80%99%29_at_Nagai_Botanical_Garden%2C_February_2024_-_5452.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Laitche",
+    "w": 5144,
+    "h": 3528,
+    "score": 120.0,
+    "why": [
+     "秀逸",
+     "高品質"
+    ],
+    "file": "009-0.jpg"
+   },
+   {
+    "title": "File:Flowers of Prunus mume (Armeniaca mume ‘Setsugekka’) at Nagai Park, January 2024 - 9435.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flowers_of_Prunus_mume_(Armeniaca_mume_%E2%80%98Setsugekka%E2%80%99)_at_Nagai_Park,_January_2024_-_9435.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Flowers_of_Prunus_mume_%28Armeniaca_mume_%E2%80%98Setsugekka%E2%80%99%29_at_Nagai_Park%2C_January_2024_-_9435.jpg/1280px-Flowers_of_Prunus_mume_%28Armeniaca_mume_%E2%80%98Setsugekka%E2%80%99%29_at_Nagai_Park%2C_January_2024_-_9435.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Laitche",
+    "w": 4875,
+    "h": 3293,
+    "score": 119.8,
+    "why": [
+     "秀逸",
+     "高品質"
+    ],
+    "file": "009-1.jpg"
+   },
+   {
+    "title": "File:Flowers of Prunus mume (Armeniaca mume) at Nagai Park, January 2024 - 1221 (2).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Flowers_of_Prunus_mume_(Armeniaca_mume)_at_Nagai_Park,_January_2024_-_1221_(2).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Flowers_of_Prunus_mume_%28Armeniaca_mume%29_at_Nagai_Park%2C_January_2024_-_1221_%282%29.jpg/1280px-Flowers_of_Prunus_mume_%28Armeniaca_mume%29_at_Nagai_Park%2C_January_2024_-_1221_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Laitche",
+    "w": 4196,
+    "h": 3064,
+    "score": 119.4,
+    "why": [
+     "秀逸",
+     "高品質"
+    ],
+    "file": "009-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "ハーベストの丘",
+  "theme": "",
+  "entity": {
+   "id": "Q11428100",
+   "label": "堺・緑のミュージアム ハーベストの丘",
+   "cat": "",
+   "p18": "Harvest Hill (Agriculture park in Sakai).jpg"
+  },
+  "cand": []
+ },
+ {
+  "name": "馬見丘陵公園",
+  "theme": "",
+  "entity": {
+   "id": "Q11552292",
+   "label": "池部駅",
+   "cat": "Ikebe Station",
+   "p18": "Ikebe Station.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Ikebe Station.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ikebe_Station.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Ikebe_Station.jpg/1280px-Ikebe_Station.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "PekePON",
+    "w": 2000,
+    "h": 1500,
+    "score": -0.09999999999999964,
+    "why": [
+     "記録写真",
+     "代表の写真"
+    ],
+    "file": "011-0.jpg"
+   },
+   {
+    "title": "File:Ikebe Station and Kawai Town Hall entrance.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ikebe_Station_and_Kawai_Town_Hall_entrance.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Ikebe_Station_and_Kawai_Town_Hall_entrance.jpg/1280px-Ikebe_Station_and_Kawai_Town_Hall_entrance.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "PekePON",
+    "w": 2000,
+    "h": 1125,
+    "score": -8.6,
+    "why": [
+     "記録写真"
+    ],
+    "file": "011-1.jpg"
+   },
+   {
+    "title": "File:Ikebe Station plaza.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ikebe_Station_plaza.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/86/Ikebe_Station_plaza.jpg/1280px-Ikebe_Station_plaza.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "PekePON",
+    "w": 2000,
+    "h": 1125,
+    "score": -8.6,
+    "why": [
+     "記録写真"
+    ],
+    "file": "011-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "白龍園 紅葉",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "善法律寺 紅葉",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "最上山 紅葉",
+  "theme": "autumn",
+  "entity": {
+   "id": "Q877216",
+   "label": "宍粟市",
+   "cat": "Shiso, Hyogo",
+   "p18": "Haga Castle 01.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Mimuro no Taki,Chigusa,Hyogo.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Mimuro_no_Taki,Chigusa,Hyogo.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Mimuro_no_Taki%2CChigusa%2CHyogo.jpg/1280px-Mimuro_no_Taki%2CChigusa%2CHyogo.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Fujishitata",
+    "w": 4608,
+    "h": 3456,
+    "score": 58.8,
+    "why": [
+     "季節が合う"
+    ],
+    "file": "014-0.jpg"
+   },
+   {
+    "title": "File:Hitotsuyama Kofun (Shiso), funkyu.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hitotsuyama_Kofun_(Shiso),_funkyu.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Hitotsuyama_Kofun_%28Shiso%29%2C_funkyu.jpg/1280px-Hitotsuyama_Kofun_%28Shiso%29%2C_funkyu.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "Saigen Jiro",
+    "w": 6016,
+    "h": 4000,
+    "score": 20.5,
+    "why": [],
+    "file": "014-1.jpg"
+   },
+   {
+    "title": "File:Honke Monzenya.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Honke_Monzenya.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Honke_Monzenya.jpg/1280px-Honke_Monzenya.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 4.0",
+    "artist": "皓月旗",
+    "w": 5953,
+    "h": 3974,
+    "score": 20.5,
+    "why": [],
+    "file": "014-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "京都国立博物館",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "堺アルフォンス・ミュシャ館",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "大阪市立クラフトパーク",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "ネスタリゾート神戸",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "旧居留地 (神戸)",
+  "theme": "",
+  "entity": {
+   "id": "Q11511038",
+   "label": "旧居留地十五番館",
+   "cat": "The Old Settlement Hall No.15",
+   "p18": "The old settlement hall of no15 01 1920.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:The old settlement hall of no15 01 1920.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:The_old_settlement_hall_of_no15_01_1920.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/The_old_settlement_hall_of_no15_01_1920.jpg/1280px-The_old_settlement_hall_of_no15_01_1920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.5",
+    "artist": "663highland",
+    "w": 1920,
+    "h": 1080,
+    "score": 33.3,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "019-0.jpg"
+   },
+   {
+    "title": "File:Kobe kyukyoryuchi01 1920.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kobe_kyukyoryuchi01_1920.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Kobe_kyukyoryuchi01_1920.jpg/1280px-Kobe_kyukyoryuchi01_1920.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.5",
+    "artist": "663highland",
+    "w": 1920,
+    "h": 1080,
+    "score": 31.3,
+    "why": [],
+    "file": "019-1.jpg"
+   },
+   {
+    "title": "File:The Old Settlement Hall No.15 - 01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:The_Old_Settlement_Hall_No.15_-_01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/The_Old_Settlement_Hall_No.15_-_01.jpg/1280px-The_Old_Settlement_Hall_No.15_-_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Kakidai",
+    "w": 2500,
+    "h": 1618,
+    "score": 26.4,
+    "why": [],
+    "file": "019-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "てんしば",
+  "theme": "",
+  "entity": {
+   "id": "Q5364342",
+   "label": "天王寺公園",
+   "cat": "Tennoji Park",
+   "p18": "Tennoji park01s3200.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Eastern great egret landing at Tennōji Park in Osaka, November 2016 - 066.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Eastern_great_egret_landing_at_Tenn%C5%8Dji_Park_in_Osaka,_November_2016_-_066.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Eastern_great_egret_landing_at_Tenn%C5%8Dji_Park_in_Osaka%2C_November_2016_-_066.jpg/1280px-Eastern_great_egret_landing_at_Tenn%C5%8Dji_Park_in_Osaka%2C_November_2016_-_066.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Laitche",
+    "w": 3699,
+    "h": 2552,
+    "score": 132.9,
+    "why": [
+     "秀逸",
+     "高品質",
+     "価値"
+    ],
+    "file": "020-0.jpg"
+   },
+   {
+    "title": "File:Spot-billed duck, Tennōji Park, Osaka, October 2015.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Spot-billed_duck,_Tenn%C5%8Dji_Park,_Osaka,_October_2015.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Spot-billed_duck%2C_Tenn%C5%8Dji_Park%2C_Osaka%2C_October_2015.jpg/1280px-Spot-billed_duck%2C_Tenn%C5%8Dji_Park%2C_Osaka%2C_October_2015.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Laitche",
+    "w": 4500,
+    "h": 3000,
+    "score": 119.5,
+    "why": [
+     "秀逸",
+     "高品質"
+    ],
+    "file": "020-1.jpg"
+   },
+   {
+    "title": "File:Common kingfisher, Tennōji Park, February 2026 - 0162.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Common_kingfisher,_Tenn%C5%8Dji_Park,_February_2026_-_0162.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Common_kingfisher%2C_Tenn%C5%8Dji_Park%2C_February_2026_-_0162.jpg/1280px-Common_kingfisher%2C_Tenn%C5%8Dji_Park%2C_February_2026_-_0162.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Laitche",
+    "w": 6960,
+    "h": 4640,
+    "score": 115.0,
+    "why": [
+     "秀逸",
+     "高品質"
+    ],
+    "file": "020-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "ローザンベリー多和田",
+  "theme": "",
+  "entity": {
+   "id": "Q824020",
+   "label": "米原市",
+   "cat": "Maibara, Shiga",
+   "p18": "Mt. Ibuki and bullet train in Maibara, Shiga.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:成菩提院前邸 - Flickr - m-louis.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E6%88%90%E8%8F%A9%E6%8F%90%E9%99%A2%E5%89%8D%E9%82%B8_-_Flickr_-_m-louis.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/%E6%88%90%E8%8F%A9%E6%8F%90%E9%99%A2%E5%89%8D%E9%82%B8_-_Flickr_-_m-louis.jpg/1280px-%E6%88%90%E8%8F%A9%E6%8F%90%E9%99%A2%E5%89%8D%E9%82%B8_-_Flickr_-_m-louis.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "m-louis .® from Osaka, Japan",
+    "w": 8256,
+    "h": 5504,
+    "score": 36.6,
+    "why": [],
+    "file": "021-0.jpg"
+   },
+   {
+    "title": "File:Ryokan Kameya ac (3).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ryokan_Kameya_ac_(3).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Ryokan_Kameya_ac_%283%29.jpg/1280px-Ryokan_Kameya_ac_%283%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Asturio Cantabrio",
+    "w": 6000,
+    "h": 3989,
+    "score": 35.5,
+    "why": [],
+    "file": "021-1.jpg"
+   },
+   {
+    "title": "File:Ryokan Kameya ac (1).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ryokan_Kameya_ac_(1).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/Ryokan_Kameya_ac_%281%29.jpg/1280px-Ryokan_Kameya_ac_%281%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Asturio Cantabrio",
+    "w": 5863,
+    "h": 3899,
+    "score": 35.4,
+    "why": [],
+    "file": "021-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "豊郷小学校旧校舎群",
+  "theme": "",
+  "entity": {
+   "id": "Q11634258",
+   "label": "豊郷町立豊郷小学校",
+   "cat": "Toyosato Municipal Toyosato Elementary School",
+   "p18": "Toyosato Elementary School New building.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Toyosato Elementary School New building.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Toyosato_Elementary_School_New_building.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Toyosato_Elementary_School_New_building.jpg/1280px-Toyosato_Elementary_School_New_building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "Rsa",
+    "w": 2524,
+    "h": 1728,
+    "score": 34.6,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "022-0.jpg"
+   },
+   {
+    "title": "File:The old schoolhouse of Toyosato elementary school (旧豊郷小学校) - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:The_old_schoolhouse_of_Toyosato_elementary_school_(%E6%97%A7%E8%B1%8A%E9%83%B7%E5%B0%8F%E5%AD%A6%E6%A0%A1)_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/The_old_schoolhouse_of_Toyosato_elementary_school_%28%E6%97%A7%E8%B1%8A%E9%83%B7%E5%B0%8F%E5%AD%A6%E6%A0%A1%29_-_panoramio.jpg/1280px-The_old_schoolhouse_of_Toyosato_elementary_school_%28%E6%97%A7%E8%B1%8A%E9%83%B7%E5%B0%8F%E5%AD%A6%E6%A0%A1%29_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "yuukin",
+    "w": 4000,
+    "h": 3000,
+    "score": 34.3,
+    "why": [],
+    "file": "022-1.jpg"
+   },
+   {
+    "title": "File:豊郷小学校 - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E8%B1%8A%E9%83%B7%E5%B0%8F%E5%AD%A6%E6%A0%A1_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/%E8%B1%8A%E9%83%B7%E5%B0%8F%E5%AD%A6%E6%A0%A1_-_panoramio.jpg/1280px-%E8%B1%8A%E9%83%B7%E5%B0%8F%E5%AD%A6%E6%A0%A1_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "kanesue",
+    "w": 3648,
+    "h": 2736,
+    "score": 34.0,
+    "why": [],
+    "file": "022-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "東条湖おもちゃ王国",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ }
+]
