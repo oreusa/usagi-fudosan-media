@@ -32,8 +32,40 @@ var css=
 '.act a.mfav[aria-pressed=true]{background:#FFF7E0;border-color:#E2B53B;color:#7A5A00}'+
 '.mshr{display:none;gap:8px;margin-top:8px}.mshr.open{display:flex}.mshr a{flex:1;text-align:center;font-size:13px;padding:11px 0;border-radius:10px;border:1px solid #ddd;color:#2B2622;text-decoration:none;font-weight:700}'+
 /* 夜：ページ全体が反転するので、写真だけ元に戻す（night.js の決まり） */
-'html.night .cmb .ib.mph img,html.night .pr5 .ti.mph img,html.night .mph-o img{filter:invert(1) hue-rotate(180deg) brightness(.9)}'+
-'html.night .mnow{background:#E7F4EC}';
+
+'html.night .mnow{background:#E7F4EC}'+
+/* 写真のあるカード：上に大きな写真。カードの絵のタイルと日付の札は今のまま、写真の下の端に少し重ねる */
+'html body a.card.cm.mbig.mbig.mbig.mbig.mbig.mbig{padding-top:192px!important;min-height:0}'+
+'a.card.mbig .mbp{position:absolute;left:0;right:0;top:0;height:176px;border-radius:8px 8px 0 0;overflow:hidden;background:#e9e6e2}'+
+'a.card.mbig .mbp img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}'+
+'a.card.mbig:hover .mbp img{transform:scale(1.03)}'+
+'a.card.mbig .mbp small{position:absolute;right:8px;bottom:6px;font-size:9px;color:#fff;opacity:.85;text-shadow:0 1px 2px rgba(0,0,0,.6);max-width:60%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'+
+'a.card.mbig .cmb{top:146px!important;z-index:2}'+
+'a.card.mbig .cmb .ib{box-shadow:0 0 0 3px #fff,0 10px 18px -10px rgba(0,0,0,.45)}'+
+'a.card.mbig .wfav{z-index:3}'+
+/* きょうのおでかけニュース（3つの入口のすぐ下） */
+'.mnews{margin:22px 0 6px}'+
+'.mnews .mnh{display:flex;align-items:flex-end;justify-content:space-between;padding:0 2px 10px}'+
+'.mnews .mnh small{display:block;font-family:Jost,sans-serif;font-size:10px;letter-spacing:.28em;color:#B97A62;margin-bottom:5px}'+
+'.mnews .mnh b{font-family:"Shippori Mincho","Noto Serif JP",serif;font-weight:600;font-size:19px;letter-spacing:.12em;color:#2B2622}'+
+'.mnews .mnh time{font-size:11.5px;color:#8a837d;letter-spacing:.04em}'+
+'.mnews .mntr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:0 -2px;padding:0 2px 4px}.mnews .mntr::-webkit-scrollbar{display:none}'+
+'.mnews .mnsl{position:relative;flex:0 0 100%;scroll-snap-align:start;border-radius:16px;overflow:hidden;aspect-ratio:4/3;display:block;color:#fff;text-decoration:none;background:#2b2622;box-shadow:0 16px 30px -20px rgba(40,30,20,.6)}'+
+'.mnews .mnsl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}'+
+'.mnews .mnsl::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 38%,rgba(10,8,6,.78) 100%)}'+
+'.mnews .mntx{position:absolute;left:16px;right:16px;bottom:15px;z-index:1}'+
+'.mnews .mntg{display:inline-flex;gap:6px;align-items:center;font-size:11px;font-weight:700;background:rgba(255,255,255,.94);color:#2B2622;border-radius:999px;padding:5px 10px;margin-bottom:9px}'+
+'.mnews .mntg i{font-style:normal;color:var(--pc,#B97A62)}'+
+'.mnews .mntx b{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:21px;line-height:1.38;letter-spacing:.01em;text-shadow:0 1px 10px rgba(0,0,0,.35)}'+
+'.mnews .mntx span{display:block;font-size:12px;opacity:.9;margin-top:5px}'+
+'.mnews .mncr{position:absolute;top:8px;right:10px;z-index:1;font-size:9px;opacity:.8;text-shadow:0 1px 2px rgba(0,0,0,.6)}'+
+'.mnews .mndt{display:flex!important;flex-direction:row;justify-content:center;gap:6px;margin-top:10px}.mnews .mndt i{display:block;flex:none;width:6px;height:6px;border-radius:3px;background:#d6d1cb;transition:width .3s}.mnews .mndt i.on{width:18px;background:#2B2622}'+
+/* おすすめ5 の1位：大きな写真 */
+'.pr5 .m1{display:block;position:relative;margin:4px 0 2px;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#e9e6e2}.pr5 .m1 img{width:100%;height:100%;object-fit:cover;display:block}'+
+'.pr5 .m1 em{position:absolute;left:10px;top:10px;font-style:normal;font-family:Jost,sans-serif;font-weight:600;font-size:11px;letter-spacing:.14em;background:#fff;color:#C0563C;border-radius:999px;padding:4px 10px}'+
+'html.night .mnews .mnsl{filter:invert(1) hue-rotate(180deg)}html.night .mnews .mnsl img{filter:none!important}'+
+'html.night a.card.mbig .cmb .ib{box-shadow:0 0 0 3px #fff}'+
+'html.night .mnews .mndt i.on{background:#2B2622}';
 var st=document.createElement('style');st.textContent=css;(document.head||document.documentElement).appendChild(st);
 function k(s){return (s||'').replace(/\s+/g,'')}
 function find(t){return D[k(t)]}
@@ -57,13 +89,33 @@ function photo(box,o,big){if(box.classList.contains('mph'))return;box.classList.
 function cards(){
   document.querySelectorAll('a.card,a.fc').forEach(function(a){
     var tt=a.querySelector(a.matches('a.fc')?'b':'.t');if(!tt)return;var o=find(tt.textContent);if(!o)return;
-    var ib=a.querySelector('.cmb .ib');if(ib&&o.im)photo(ib,o);
+    if(o.im){if(a.matches('a.card')){if(!a.querySelector('.mbp')&&a.querySelector('.cmb')){var f=document.createElement('div');f.className='mbp';f.innerHTML='<img src="/assets/ph/s/'+o.im+'" alt="" loading="lazy" decoding="async"><small>'+esc(o.cr.replace(/（.*$/,''))+'</small>';a.insertBefore(f,a.firstChild);a.classList.add('mbig')}}
+      else{var ib=a.querySelector('.cmb .ib');if(ib)photo(ib,o)}}
     if(!a.dataset.mh){var h=hook(o);if(h){var s=document.createElement('span');s.className='mhk';s.textContent=h;tt.parentNode.insertBefore(s,tt)}a.dataset.mh=1}
     var row=a.querySelector('.v2c');if(row)nowPill(row,o);
     if(o.id&&a.matches('a.card'))a.dataset.mo=o.id;
   });
   document.querySelectorAll('.pr5 a').forEach(function(a){var b=a.querySelector('.tx b');if(!b)return;var o=find(b.textContent);if(!o)return;
     var ti=a.querySelector('.ti');if(ti&&o.im)photo(ti,o);if(o.id)a.dataset.mo=o.id});
+  var p5=document.querySelector('.pr5');if(p5&&!p5.querySelector('.m1')){var as=p5.querySelectorAll('a[data-mo]');for(var i=0;i<as.length;i++){var b2=as[i].querySelector('.tx b'),o2=b2&&find(b2.textContent);if(o2&&o2.im){var m1=document.createElement('a');m1.className='m1';m1.href='/o/'+o2.id;m1.innerHTML='<img src="/assets/ph/s/'+o2.im+'" alt="" loading="lazy"><em>No.'+(i+1)+'</em>';as[i].parentNode.insertBefore(m1,as[i]);break}}}
+  news();
+}
+
+/* きょうのおでかけニュース：3つの入口のすぐ下。写真のある・いま開催中か7日以内に始まる催しから、終わりが近い順に4つ */
+function news(){var q=document.querySelector('.qk');if(!q||document.querySelector('.mnews'))return;
+  var t=ymd(jst()),t7=ymd(new Date(jst().getTime()+7*864e5)),L=[];
+  for(var x in D){var o=D[x];if(o.im&&o.id&&o.hk&&o.e>=t&&o.s<=t7)L.push(o)}
+  L.sort(function(a,b){var ra=a.s<=t?0:1,rb=b.s<=t?0:1;return ra-rb||(a.e<b.e?-1:1)});
+  var P={};L=L.filter(function(o){if(P[o.p]>=1&&L.length>6)return false;P[o.p]=(P[o.p]||0)+1;return true}).slice(0,5);if(!L.length)return;
+  var PC={"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"},W='日月火水木金土',d=jst();
+  var h='<div class="mnh"><div><small>TODAY’S NEWS</small><b>きょうのおでかけニュース</b></div><time>'+(d.getUTCMonth()+1)+'/'+d.getUTCDate()+'（'+W[d.getUTCDay()]+'）</time></div><div class="mntr">';
+  L.forEach(function(o){var st=o.s<=t?'開催中':(+o.s.slice(5,7))+'/'+(+o.s.slice(8))+'から';h+='<a class="mnsl" href="/o/'+o.id+'" style="--pc:'+(PC[o.p]||'#B97A62')+'"><img src="/assets/ph/'+o.im+'" alt="" decoding="async"><span class="mncr">写真：'+esc(o.cr.replace(/（.*$/,''))+'</span><span class="mntx"><span class="mntg"><i>'+esc(o.p)+'</i>'+st+'・'+(+o.e.slice(5,7))+'/'+(+o.e.slice(8))+'まで</span><b>'+esc(hook(o))+'</b><span>'+esc(o.n)+'</span></span></a>'});
+  h+='</div><div class="mndt">'+L.map(function(o,i){return '<i'+(i?'':' class="on"')+'></i>'}).join('')+'</div>';
+  var w=document.createElement('section');w.className='mnews';w.setAttribute('aria-label','きょうのおでかけニュース');w.innerHTML=h;q.parentNode.insertBefore(w,q.nextSibling);
+  var tr=w.querySelector('.mntr'),dots=w.querySelectorAll('.mndt i'),cur=0,hold=0;
+  tr.addEventListener('scroll',function(){var i=Math.round(tr.scrollLeft/tr.clientWidth);if(i!==cur){cur=i;dots.forEach(function(e,k){e.classList.toggle('on',k===i)})}},{passive:true});
+  ['touchstart','pointerdown'].forEach(function(ev){tr.addEventListener(ev,function(){hold=Date.now()},{passive:true})});
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(function(){if(Date.now()-hold<9000||document.hidden)return;var r=tr.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;tr.scrollTo({left:((cur+1)%dots.length)*tr.clientWidth,behavior:'smooth'})},5200);
 }
 /* カードを押すと、そのおでかけの1件ページ（写真・説明・公式ボタン）へ。☆・地図・近くの宿は今のまま */
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-mo]');if(!a||e.defaultPrevented||e.metaKey||e.ctrlKey)return;
