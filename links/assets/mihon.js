@@ -104,7 +104,6 @@ function cards(){
   });
   document.querySelectorAll('.pr5 a').forEach(function(a){var b=a.querySelector('.tx b');if(!b)return;var o=find(b.textContent);if(!o)return;
     var ti=a.querySelector('.ti');if(ti&&o.im)photo(ti,o);if(o.id)a.dataset.mo=o.id});
-  var p5=document.querySelector('.pr5');if(p5&&!p5.querySelector('.m1')){var as=p5.querySelectorAll('a[data-mo]');for(var i=0;i<as.length;i++){var b2=as[i].querySelector('.tx b'),o2=b2&&find(b2.textContent);if(o2&&o2.im&&!o2.wk){var m1=document.createElement('a');m1.className='m1';m1.href='/o/'+o2.id;m1.innerHTML='<img class="mfade" src="/assets/ph/s/'+o2.im+'" alt="" loading="lazy" decoding="async"><em>No.'+(i+1)+'</em>';as[i].parentNode.insertBefore(m1,as[i]);break}}}
   news();
 }
 
