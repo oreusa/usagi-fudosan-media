@@ -18,7 +18,9 @@ for(const [name,url] of L){for(const night of [false,true]){
    broken:[...document.images].filter(i=>i.complete&&i.naturalWidth===0&&i.src&&!/instagram/.test(i.src)).map(i=>i.src.slice(-60)),
    imgs:[...document.images].filter(i=>i.naturalWidth>0).length,empty:[...document.querySelectorAll('b,strong,span')].filter(e=>/^\s*0\s*件?$/.test(e.textContent)&&e.offsetParent).length}));
  const tag=`${name}-${night?'n':'d'}`;
- await p.screenshot({path:`${out}/${tag}.png`,fullPage:true,clip:{x:0,y:0,width:390,height:Math.min(st.h,6000)}}).catch(async()=>{await p.screenshot({path:`${out}/${tag}.png`})});
+ // 1画面ずつ（全体を1枚で撮ると、夜の背景や固定の部品・あとから出る部分が本物と違って写るため）
+ const N=Math.min(Math.ceil(st.h/760),+(process.env.MAXN||8));
+ for(let i=0;i<N;i++){await p.evaluate(y=>scrollTo(0,y),i*760);await p.waitForTimeout(700);await p.screenshot({path:`${out}/${tag}-${i}.png`})}
  log.push([tag,url,'h='+st.h,'imgs='+st.imgs,'broken='+st.broken.length,'over='+st.over,'zero='+st.empty,'err='+err.length,st.broken.join(' '),err.join(' | ')].join('\t'));
  await c.close();}}
 fs.writeFileSync(`${out}/log.tsv`,log.join('\n')+'\n');console.log(log.join('\n'));await b.close()})();
