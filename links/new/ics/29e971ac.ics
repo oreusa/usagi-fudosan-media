@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:29e971ac@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261011
+DTEND;VALUE=DATE:20270201
+SUMMARY:木下大サーカス 橿原公演
+LOCATION:イオンモール橿原 奈良県橿原市
+URL:https://kinoshita-circus.co.jp/index.htm
+DESCRIPTION:公式 https://kinoshita-circus.co.jp/index.htm\n関西おでかけ https://kansai.townnote.app/new/o/29e971ac
+END:VEVENT
+END:VCALENDAR

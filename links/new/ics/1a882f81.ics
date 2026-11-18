@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:1a882f81@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260728
+DTEND;VALUE=DATE:20270125
+SUMMARY:北斎・広重づくし
+LOCATION:大阪浮世絵美術館 大阪市中央区
+URL:https://osaka-ukiyoe-museum.com/exhibition.html
+DESCRIPTION:公式 https://osaka-ukiyoe-museum.com/exhibition.html\n関西おでかけ https://kansai.townnote.app/new/o/1a882f81
+END:VEVENT
+END:VCALENDAR

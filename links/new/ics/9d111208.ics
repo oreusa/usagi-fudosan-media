@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:9d111208@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260724
+DTEND;VALUE=DATE:20261130
+SUMMARY:ハルカス300×名探偵コナン
+LOCATION:ハルカス300 大阪市阿倍野区
+URL:https://t-event.jp/harukas300conan/
+DESCRIPTION:公式 https://t-event.jp/harukas300conan/\n関西おでかけ https://kansai.townnote.app/new/o/9d111208
+END:VEVENT
+END:VCALENDAR

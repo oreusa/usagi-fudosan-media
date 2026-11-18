@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:a864b7a3@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261221
+SUMMARY:躍動する明代の書 台北何創時コレクション
+LOCATION:大阪市立美術館 大阪市天王寺区
+URL:https://www.osaka-art-museum.jp/special_exhibition/mindai
+DESCRIPTION:公式 https://www.osaka-art-museum.jp/special_exhibition/mindai\n関西おでかけ https://kansai.townnote.app/new/o/a864b7a3
+END:VEVENT
+END:VCALENDAR

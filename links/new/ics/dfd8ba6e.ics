@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:dfd8ba6e@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20261227
+SUMMARY:Ensemble Gala 第2回コンサート
+LOCATION:奈良県橿原文化会館 橿原市
+URL:https://kashibun.jp/kb-event/kb-event-17049/
+DESCRIPTION:公式 https://kashibun.jp/kb-event/kb-event-17049/\n関西おでかけ https://kansai.townnote.app/new/o/dfd8ba6e
+END:VEVENT
+END:VCALENDAR

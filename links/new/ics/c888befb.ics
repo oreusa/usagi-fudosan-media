@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:c888befb@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20270113
+SUMMARY:ガチャガチャ展 in 大阪
+LOCATION:なんばスカイオ 大阪市浪速区
+URL:https://www.tv-osaka.co.jp/event/gacha/
+DESCRIPTION:公式 https://www.tv-osaka.co.jp/event/gacha/\n関西おでかけ https://kansai.townnote.app/new/o/c888befb
+END:VEVENT
+END:VCALENDAR

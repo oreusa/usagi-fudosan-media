@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:15d4d935@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261124
+SUMMARY:スワップミート in 花博公園
+LOCATION:花博記念公園鶴見緑地 大阪市鶴見区
+URL:https://www.tsurumi-ryokuchi.jp/events/28742
+DESCRIPTION:公式 https://www.tsurumi-ryokuchi.jp/events/28742\n関西おでかけ https://kansai.townnote.app/new/o/15d4d935
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:e9844d67@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20270201
+SUMMARY:有田みかんスタンプラリー
+LOCATION:湯浅町 和歌山県 和歌山県有田市・湯浅町・広川町・有田川町
+URL:https://asoboyo-arida.com/2026/08/17/aridamikanstamprally/
+DESCRIPTION:公式 https://asoboyo-arida.com/2026/08/17/aridamikanstamprally/\n関西おでかけ https://kansai.townnote.app/new/o/e9844d67
+END:VEVENT
+END:VCALENDAR

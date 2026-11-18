@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:f70361c4@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261122
+SUMMARY:紀州根来寺かくばん祭り
+LOCATION:旧和歌山県議会議事堂・道の駅ねごろ歴史の丘・根來寺 岩出市
+URL:https://www.city.iwade.lg.jp/soshiki/16/1603.html
+DESCRIPTION:公式 https://www.city.iwade.lg.jp/soshiki/16/1603.html\n関西おでかけ https://kansai.townnote.app/new/o/f70361c4
+END:VEVENT
+END:VCALENDAR

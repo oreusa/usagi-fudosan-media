@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:e17d6526@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20261228
+SUMMARY:ドーンセンター周遊謎解き「キラリ町と不思議なつぼみ」
+LOCATION:ドーンセンター 大阪市中央区
+URL:https://www.tokitokievent.com/dawn2026
+DESCRIPTION:公式 https://www.tokitokievent.com/dawn2026\n関西おでかけ https://kansai.townnote.app/new/o/e17d6526
+END:VEVENT
+END:VCALENDAR

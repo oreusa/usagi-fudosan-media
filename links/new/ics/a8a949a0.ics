@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:a8a949a0@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261207
+SUMMARY:長谷寺の紅葉
+LOCATION:長谷寺 奈良県桜井市
+URL:https://www.hasedera.or.jp/
+DESCRIPTION:公式 https://www.hasedera.or.jp/\n関西おでかけ https://kansai.townnote.app/new/o/a8a949a0
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:cf0f8d64@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260320
+DTEND;VALUE=DATE:20270412
+SUMMARY:没後100年 クロード・モネ展
+LOCATION:アサヒグループ大山崎山荘美術館 京都府大山崎町
+URL:https://www.asahigroup-oyamazaki.com/news/2026/01/30100/
+DESCRIPTION:公式 https://www.asahigroup-oyamazaki.com/news/2026/01/30100/\n関西おでかけ https://kansai.townnote.app/new/o/cf0f8d64
+END:VEVENT
+END:VCALENDAR

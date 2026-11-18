@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:674653f7@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260302
+DTEND;VALUE=DATE:20270123
+SUMMARY:豊臣兄弟！大和郡山 大河ドラマ館
+LOCATION:ドラマの衣装や小道具の展示。やまと郡山城ホール 奈良県大和郡山市
+URL:https://www.hidenaga-yamatokoriyama.jp/exhibition/
+DESCRIPTION:公式 https://www.hidenaga-yamatokoriyama.jp/exhibition/\n関西おでかけ https://kansai.townnote.app/new/o/674653f7
+END:VEVENT
+END:VCALENDAR

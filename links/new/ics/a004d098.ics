@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:a004d098@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261201
+SUMMARY:清水寺 秋の夜間特別拝観
+LOCATION:17時半〜。小中学生200円 京都市東山区
+URL:https://www.kiyomizudera.or.jp/event/yakan.php
+DESCRIPTION:公式 https://www.kiyomizudera.or.jp/event/yakan.php\n関西おでかけ https://kansai.townnote.app/new/o/a004d098
+END:VEVENT
+END:VCALENDAR

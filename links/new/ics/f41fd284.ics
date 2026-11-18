@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:f41fd284@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20261207
+SUMMARY:百済寺と近江の仏教美術
+LOCATION:MIHO MUSEUM 滋賀県甲賀市
+URL:https://www.miho.jp/en/exhibition/autumn2026/
+DESCRIPTION:公式 https://www.miho.jp/en/exhibition/autumn2026/\n関西おでかけ https://kansai.townnote.app/new/o/f41fd284
+END:VEVENT
+END:VCALENDAR

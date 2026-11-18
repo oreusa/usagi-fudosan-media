@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:c9559bd0@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261204
+SUMMARY:ライドアラウンドin岸和田
+LOCATION:岸和田市内 大阪府岸和田市
+URL:https://tour-de-nippon.jp/ridearound-kishiwada/
+DESCRIPTION:公式 https://tour-de-nippon.jp/ridearound-kishiwada/\n関西おでかけ https://kansai.townnote.app/new/o/c9559bd0
+END:VEVENT
+END:VCALENDAR

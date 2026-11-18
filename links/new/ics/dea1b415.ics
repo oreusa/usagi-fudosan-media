@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:dea1b415@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260801
+DTEND;VALUE=DATE:20261221
+SUMMARY:謎の城 in 郡山城
+LOCATION:郡山城跡・城下町 奈良県大和郡山市
+URL:https://www.nazonoshiro.com/event/koriyama_hidenaga2/
+DESCRIPTION:公式 https://www.nazonoshiro.com/event/koriyama_hidenaga2/\n関西おでかけ https://kansai.townnote.app/new/o/dea1b415
+END:VEVENT
+END:VCALENDAR

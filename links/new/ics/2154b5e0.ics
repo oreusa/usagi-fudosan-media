@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:2154b5e0@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261211
+SUMMARY:国城観光農園 みかん狩り
+LOCATION:国城観光農園 和歌山県橋本市
+URL:https://www.kunigikankounouen.com/fruit
+DESCRIPTION:公式 https://www.kunigikankounouen.com/fruit\n関西おでかけ https://kansai.townnote.app/new/o/2154b5e0
+END:VEVENT
+END:VCALENDAR

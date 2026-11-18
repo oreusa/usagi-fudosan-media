@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:b2154424@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20270701
+SUMMARY:謎の城 in 大阪城
+LOCATION:大阪城公園 大阪市中央区
+URL:https://www.nazonoshiro.com/
+DESCRIPTION:公式 https://www.nazonoshiro.com/\n関西おでかけ https://kansai.townnote.app/new/o/b2154424
+END:VEVENT
+END:VCALENDAR

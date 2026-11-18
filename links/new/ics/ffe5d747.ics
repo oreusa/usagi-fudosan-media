@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:ffe5d747@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20270102
+DTEND;VALUE=DATE:20270126
+SUMMARY:魯山人の宇宙 魂を刳る美がほしい
+LOCATION:美術館「えき」KYOTO 京都市下京区
+URL:https://www.mistore.jp/store/kyoto/museum/event_list/event21.html
+DESCRIPTION:公式 https://www.mistore.jp/store/kyoto/museum/event_list/event21.html\n関西おでかけ https://kansai.townnote.app/new/o/ffe5d747
+END:VEVENT
+END:VCALENDAR

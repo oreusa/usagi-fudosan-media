@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:7db278ad@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261124
+SUMMARY:秋期企画展「湖・川が育む水との暮らし」
+LOCATION:銅鐸博物館（野洲市歴史民俗博物館） 野洲市
+URL:https://www.city.yasu.lg.jp/soshiki/rekishiminzoku/museum.html
+DESCRIPTION:公式 https://www.city.yasu.lg.jp/soshiki/rekishiminzoku/museum.html\n関西おでかけ https://kansai.townnote.app/new/o/7db278ad
+END:VEVENT
+END:VCALENDAR

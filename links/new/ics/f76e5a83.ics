@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:f76e5a83@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261129
+SUMMARY:永源寺 紅葉ライトアップ
+LOCATION:小学生以下は無料 滋賀県東近江市
+URL:https://eigenji-t.jp/haikan/
+DESCRIPTION:公式 https://eigenji-t.jp/haikan/\n関西おでかけ https://kansai.townnote.app/new/o/f76e5a83
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:79e1388b@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261006
+DTEND;VALUE=DATE:20261130
+SUMMARY:特別展 源氏物語 王朝のかがやき
+LOCATION:京都国立博物館 京都市東山区
+URL:https://genjiten.jp/
+DESCRIPTION:公式 https://genjiten.jp/\n関西おでかけ https://kansai.townnote.app/new/o/79e1388b
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:082075ea@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261130
+SUMMARY:いい福展
+LOCATION:世界凧博物館東近江大凧会館。大人300円・水曜休み 東近江市
+URL:https://higashiomi-j.com/oodakokaikan/oodakokaikan_event/oodakokaikan_event-4556/
+DESCRIPTION:公式 https://higashiomi-j.com/oodakokaikan/oodakokaikan_event/oodakokaikan_event-4556/\n関西おでかけ https://kansai.townnote.app/new/o/082075ea
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:070f6601@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261207
+SUMMARY:教林坊 紅葉ライトアップ
+LOCATION:石の寺。17時半〜19時半 滋賀県近江八幡市
+URL:https://kyourinbo.jimdofree.com/
+DESCRIPTION:公式 https://kyourinbo.jimdofree.com/\n関西おでかけ https://kansai.townnote.app/new/o/070f6601
+END:VEVENT
+END:VCALENDAR
