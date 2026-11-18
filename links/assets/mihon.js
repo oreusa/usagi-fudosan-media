@@ -109,15 +109,18 @@ function cards(){
 }
 
 /* きょうのおでかけニュース：3つの入口のすぐ下。写真のある・いま開催中か7日以内に始まる催しから、終わりが近い順に4つ */
-function news(){var q=document.querySelector('.qk');if(!q||document.querySelector('.mnews'))return;
+function news(){var pa=location.pathname,KD=/^\/illumination/.test(pa)?'il':/^\/koyo/.test(pa)?'ky':'',q=document.querySelector('.qk')||(KD&&(document.querySelector('.tnb')||document.querySelector('nav.sw')));if(!q||document.querySelector('.mnews'))return;
+  var PF={osaka:'大阪',kyoto:'京都',hyogo:'兵庫',nara:'奈良',shiga:'滋賀',wakayama:'和歌山'},pm=pa.match(/-(osaka|kyoto|hyogo|nara|shiga|wakayama)/),pf=pm?PF[pm[1]]:'';
+  var RX=KD==='il'?/イルミ|ライト|灯|光|ルミナ|クリスマス|ツリー|夜/:KD==='ky'?/紅葉|もみじ|楓|錦秋|ライトアップ/:null;
   var t=ymd(jst()),t7=ymd(new Date(jst().getTime()+7*864e5)),L=[];
-  for(var x in D){var o=D[x];if(o.im&&!o.wk&&o.id&&o.hk&&o.e>=t&&o.s<=t7)L.push(o)}
+  var ON={};if(KD)document.querySelectorAll('a.card .t').forEach(function(e){var o=find(e.textContent);if(o)ON[o.n]=1});
+  for(var x in D){var o=D[x];if(!o.im||o.wk||(pf&&o.p!==pf))continue;if(KD){if(ON[o.n]&&(o.id||o.u)&&(!o.e||o.e>=t)&&(!o.s||o.s<=t7))L.push(o)}else if(RX){if(RX.test(o.n+(o.hk||''))&&(o.id||o.u)&&(!o.e||o.e>=t)&&(!o.s||o.s<=t7))L.push(o)}else if(o.id&&o.hk&&o.e>=t&&o.s<=t7)L.push(o)}
   var sc=function(o){return (/イルミ|ライト|灯|光|夜|ルミナ|紅葉|もみじ/.test(o.n+o.hk)?0:2)+(o.s<=t?0:1)};
   L.sort(function(a,b){return sc(a)-sc(b)||(a.e<b.e?-1:1)});
-  var P={};L=L.filter(function(o){if(P[o.p]>=1&&L.length>6)return false;P[o.p]=(P[o.p]||0)+1;return true}).slice(0,5);if(!L.length)return;
+  var P={};L=L.filter(function(o){if(!pf&&P[o.p]>=1&&L.length>6)return false;P[o.p]=(P[o.p]||0)+1;return true}).slice(0,5);if(!L.length)return;
   var PC={"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"},W='日月火水木金土',d=jst();
-  var h='<div class="mnh"><div><small>TODAY’S NEWS</small><b>きょうのおでかけニュース</b></div><span class="mnlive"></span><time>'+(d.getUTCMonth()+1)+'/'+d.getUTCDate()+'（'+W[d.getUTCDay()]+'）</time></div><div class="mntr">';
-  L.forEach(function(o){var st=o.s<=t?'開催中':(+o.s.slice(5,7))+'/'+(+o.s.slice(8))+'から';h+='<a class="mnsl" href="/o/'+o.id+'" style="--pc:'+(PC[o.p]||'#B97A62')+'"><img class="mfade" src="/assets/ph/'+o.im+'" alt="" decoding="async"'+(L.indexOf(o)===0?' fetchpriority="high"':' loading="lazy"')+'><span class="mncr">写真：'+esc(o.cr.replace(/（.*$/,''))+'</span><span class="mntx"><span class="mntg"><i>'+esc(o.p)+'</i>'+st+'・'+(+o.e.slice(5,7))+'/'+(+o.e.slice(8))+'まで</span><b>'+esc(hook(o))+'</b><span class="mnn">'+esc(o.n)+'</span></span></a>'});
+  var h='<div class="mnh"><div><small>TODAY’S NEWS</small><b>'+(KD==='il'?'今夜のイルミ':KD==='ky'?'いまの紅葉':'きょうのおでかけニュース')+'</b></div><span class="mnlive"></span><time>'+(d.getUTCMonth()+1)+'/'+d.getUTCDate()+'（'+W[d.getUTCDay()]+'）</time></div><div class="mntr">';
+  L.forEach(function(o){var st=!o.s?'見頃':o.s<=t?'開催中':(+o.s.slice(5,7))+'/'+(+o.s.slice(8))+'から';h+='<a class="mnsl" href="'+(o.id?'/o/'+o.id:esc(o.u)+'" target="_blank" rel="noopener')+'" style="--pc:'+(PC[o.p]||'#B97A62')+'"><img class="mfade" src="/assets/ph/'+o.im+'" alt="" decoding="async"'+(L.indexOf(o)===0?' fetchpriority="high"':' loading="lazy"')+'><span class="mncr">写真：'+esc(o.cr.replace(/（.*$/,''))+'</span><span class="mntx"><span class="mntg"><i>'+esc(o.p)+'</i>'+st+(o.e?'・'+(+o.e.slice(5,7))+'/'+(+o.e.slice(8))+'まで':'')+'</span>'+(hook(o)?'<b>'+esc(hook(o))+'</b><span class="mnn">'+esc(o.n)+'</span>':'<b>'+esc(o.n)+'</b>')+'</span></a>'});
   h+='</div><div class="mndt">'+L.map(function(o,i){return '<i'+(i?'':' class="on"')+'></i>'}).join('')+'</div>';
   var w=document.createElement('section');w.className='mnews';w.setAttribute('aria-label','きょうのおでかけニュース');w.innerHTML=h;q.parentNode.insertBefore(w,q.nextSibling);
   var lv=w.querySelector('.mnlive');function live(){var on=0,soon=0;for(var x in D){var n=now(D[x]);if(n){if(n.c==='soon')soon++;else on++}}lv.innerHTML=on?'<i></i>いま開いている所 <b>'+on+'</b>':soon?'<i class="s"></i>まもなく点灯 <b>'+soon+'</b>':'';lv.hidden=!(on||soon)}live();setInterval(live,60000);
