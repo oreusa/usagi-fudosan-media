@@ -35,6 +35,7 @@ var css=
 '.mph-o{margin:0 0 14px}.mph-o img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:18px;background:#eee;box-shadow:0 14px 30px -18px rgba(40,30,20,.45)}'+
 '.mph-o figcaption{font-size:10.5px;color:#9a928b;margin:7px 2px 0;line-height:1.5}.mph-o figcaption a{color:inherit}'+
 '.head .mhk-o{font-family:"Zen Kaku Gothic New",sans-serif;font-weight:700;font-size:14px;color:var(--pc,#6b625b);margin:10px 0 0;letter-spacing:.03em;line-height:1.6;position:relative}'+
+'.mig{margin:18px 0 0}.mig>span{display:block;font-size:12px;font-weight:700;color:#71717A;letter-spacing:.06em;margin:0 0 8px}.mig .instagram-media{margin:0!important;min-width:0!important;width:100%!important;border-radius:8px!important}.mig iframe{border-radius:8px!important}.migl{display:inline-flex;align-items:center;gap:8px;padding:11px 16px;border:1px solid #E4E4E7;border-radius:999px;font-weight:700;font-size:14px;color:#18181B;text-decoration:none;background:#fff}.migl i{width:18px;height:18px;border-radius:5px;background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF);display:inline-block}html.night .mig .instagram-media,html.night .mig iframe{filter:invert(1) hue-rotate(180deg)}'+
 '.mds{background:#F4F4F5;border-radius:4px;padding:16px 16px 15px;margin:14px 0 0}.mds span{display:block;font-size:10.5px;color:#8a837d;letter-spacing:.08em;margin-bottom:6px}.mds p{margin:0;font-size:14.5px;line-height:1.9;color:#2B2622}'+
 '.act a.mfav[aria-pressed=true]{background:#FFF7E0;border-color:#E2B53B;color:#7A5A00}'+
 '.mshr{display:none;gap:8px;margin-top:8px}.mshr.open{display:flex}.mshr a{flex:1;text-align:center;font-size:13px;padding:11px 0;border-radius:10px;border:1px solid #ddd;color:#2B2622;text-decoration:none;font-weight:700}'+
@@ -145,6 +146,12 @@ function detail(){var m=location.pathname.match(/^\/o\/([0-9a-f]{8})/);if(!m||do
   document.querySelectorAll('.big>div').forEach(function(b){var sp=b.querySelector('span');if(sp&&sp.textContent.trim()==='いまは'){var w=document.createElement('div');w.className='mnowl';b.appendChild(w);nowPill(w,o);setInterval(function(){nowPill(w,o)},60000)}});
   var ld=document.querySelector('.lead');
   if(o.ds&&ld){var x=document.createElement('div');x.className='mds';x.innerHTML='<span>どんな催し？</span><p>'+esc(o.ds)+'</p>';ld.parentNode.insertBefore(x,ld.nextSibling);ld.style.display='none'}
+  if((o.ig&&o.ig.length)||o.ia){var at=document.querySelector('.act')||ld;if(at){var g=document.createElement('div');g.className='mig';
+    if(o.ig&&o.ig.length){var pl='https://www.instagram.com/'+o.ig[0]+'/';g.innerHTML='<span>主催者のインスタから</span><blockquote class="instagram-media" data-instgrm-permalink="'+pl+'?utm_source=ig_embed" data-instgrm-version="14"><a href="'+pl+'" target="_blank" rel="noopener">インスタで見る</a></blockquote>';
+      var lj=function(){if(window.instgrm){window.instgrm.Embeds.process();return}if(document.getElementById('migjs'))return;var sc=document.createElement('script');sc.id='migjs';sc.async=1;sc.src='https://www.instagram.com/embed.js';document.body.appendChild(sc)};
+      if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){if(es[0].isIntersecting){io.disconnect();lj()}},{rootMargin:'600px'});io.observe(g)}else lj()}
+    else{g.innerHTML='<a class="migl" href="https://www.instagram.com/'+esc(o.ia)+'/" target="_blank" rel="noopener"><i></i>主催者のインスタで写真を見る</a>'}
+    at.parentNode.insertBefore(g,at.nextSibling)}}
   var ac=document.querySelector('.act');if(ac){
     var fav=[];try{fav=JSON.parse(localStorage.getItem('tn_fav')||'[]')||[]}catch(e){}
     var on=fav.indexOf(o.u)>=0,cal='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(o.n)+'&dates='+o.s.replace(/-/g,'')+'/'+(function(){var d=new Date(o.e+'T00:00:00Z');d.setUTCDate(d.getUTCDate()+1);return ymd(d).replace(/-/g,'')})()+'&details='+encodeURIComponent('公式：'+o.u+'\n'+location.href)+'&location='+encodeURIComponent((document.querySelector('.sub')||{}).textContent||'');
@@ -163,7 +170,7 @@ document.addEventListener('load',function(e){var i=e.target;if(i&&i.tagName==='I
 document.addEventListener('error',function(e){var i=e.target;if(i&&i.tagName==='IMG'&&i.classList.contains('mfade'))fin(i)},true);
 setInterval(fade,700);
 var q;function run(){clearTimeout(q);q=setTimeout(function(){if(!READY)return;cards();detail();fade()},80)}
-fetch('/assets/mihon.json?v='+(window.__mhv||2)).then(function(r){return r.json()}).then(function(j){D={};for(var x in j){D[x]=j[x];if(j[x].id)ID[j[x].id]=j[x]}READY=1;run();
+fetch('/assets/mihon.json?v='+(window.__mhv||3)).then(function(r){return r.json()}).then(function(j){D={};for(var x in j){D[x]=j[x];if(j[x].id)ID[j[x].id]=j[x]}READY=1;run();
   try{new MutationObserver(run).observe(document.body,{childList:true,subtree:true})}catch(e){}
   setInterval(function(){document.querySelectorAll('a.card .v2c').forEach(function(r){var a=r.closest('a.card'),t=a&&a.querySelector('.t');if(t)nowPill(r,find(t.textContent))})},60000)}).catch(function(){});
 })();

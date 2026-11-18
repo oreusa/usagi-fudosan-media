@@ -6,6 +6,11 @@ H = os.path.dirname(os.path.abspath(__file__)); R = os.path.dirname(os.path.dirn
 sys.path.insert(0, os.path.join(R, "tools/new"))
 NEW = os.path.join(R, "tools/new")
 PH = json.load(open(os.path.join(NEW, "photos.json"), encoding="utf-8"))
+IG = {}
+try:
+    IG = {re.sub(r"\s+", "", k): v for k, v in json.load(open(os.path.join(NEW, "ig.json"), encoding="utf-8")).items()}
+except Exception:
+    pass
 HK = json.load(open(os.path.join(NEW, "hooks.json"), encoding="utf-8"))
 DS = json.load(open(os.path.join(NEW, "desc.json"), encoding="utf-8"))
 MORE = {re.sub(r"\s+", "", k): v for k, v in json.load(open(os.path.join(R, "tools/odekake_more.json"), encoding="utf-8"))["rows"].items()}
@@ -69,6 +74,10 @@ for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', src, re.S):
             im.save(th, "WEBP", quality=74)
         o.update(im=f, cr=p["cr"], cu=p.get("page", ""))
         if p.get("weak"): o["wk"] = 1
+    g = IG.get(key)
+    if g:
+        if g.get("posts"): o["ig"] = g["posts"][:1]
+        if g.get("acc"): o["ia"] = g["acc"][0]
     data[key] = o
 json.dump(data, open(os.path.join(R, "links/assets/mihon.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print("見本の表", len(data), "件・写真", sum(1 for v in data.values() if "im" in v), "・1件ページ", sum(1 for v in data.values() if "id" in v))
