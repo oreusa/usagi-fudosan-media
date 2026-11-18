@@ -101,7 +101,7 @@ function slim(){document.querySelectorAll('a.card .kv:not(.mk)').forEach(functio
 function cards(){slim();
   document.querySelectorAll('a.card,a.fc').forEach(function(a){
     var tt=a.querySelector(a.matches('a.fc')?'b':'.t');if(!tt)return;var o=find(tt.textContent);if(!o)return;
-    if(o.im){if(a.matches('a.card')&&!o.wk){if(!a.querySelector('.mbp')&&a.querySelector('.cmb')){var f=document.createElement('div');f.className='mbp';f.innerHTML='<img class="mfade" src="/assets/ph/s/'+o.im+'" alt="" loading="lazy" decoding="async"><small>'+esc(o.cr.replace(/（.*$/,''))+'</small>'+(o.vn&&o.n.indexOf(o.vn)<0?'<i class="mvn">会場：'+esc(o.vn)+'</i>':'');a.insertBefore(f,a.firstChild);a.classList.add('mbig');var go=a.querySelector(':scope>.go');if(go){var cs=getComputedStyle(go);if(cs.position==='absolute'&&parseFloat(cs.top)<60)go.style.top=(parseFloat(cs.top)+152)+'px'}}}
+    if(o.im){if(a.matches('a.card')&&!o.wk){if(!a.querySelector('.mbp')&&a.querySelector('.cmb')){var f=document.createElement('div');f.className='mbp';f.innerHTML='<img class="mfade" src="/assets/ph/s/'+o.im+'" alt="" loading="lazy" decoding="async"><small>'+esc(o.cr.replace(/（.*$/,''))+'</small>'+(o.vn&&o.n.indexOf(o.vn)<0?'<i class="mvn">'+(o.vk?'場所：':'会場：')+esc(o.vn)+'</i>':'');a.insertBefore(f,a.firstChild);a.classList.add('mbig');var go=a.querySelector(':scope>.go');if(go){var cs=getComputedStyle(go);if(cs.position==='absolute'&&parseFloat(cs.top)<60)go.style.top=(parseFloat(cs.top)+152)+'px'}}}
       else if(!a.querySelector('.mbp')){var ib=a.querySelector('.cmb .ib');if(ib)photo(ib,o)}}
     if(!a.dataset.mh){var h=hook(o);if(h){var s=document.createElement('span');s.className='mhk';s.textContent=h;tt.parentNode.insertBefore(s,tt)}a.dataset.mh=1}
     var row=a.querySelector('.v2c');if(row)nowPill(row,o);
@@ -147,7 +147,7 @@ var warm={};document.addEventListener('pointerdown',function(e){var t=e.target.c
 function detail(){var m=location.pathname.match(/^\/o\/([0-9a-f]{8})/);if(!m||document.body.dataset.mhd)return;var o=ID[m[1]];if(!o)return;document.body.dataset.mhd=1;
   var hd=document.querySelector('.head');
   if(hd){var h=hook(o);if(h){var p=document.createElement('p');p.className='mhk-o';p.textContent=h;var sub=hd.querySelector('.sub');hd.insertBefore(p,sub||null)}}
-  var cap='<figcaption>'+(o.vn&&o.n.indexOf(o.vn)<0?'会場（'+esc(o.vn)+'）の':'')+'写真：'+(o.cu?'<a href="'+esc(o.cu)+'" target="_blank" rel="noopener">'+esc(o.cr)+'</a>':esc(o.cr))+'</figcaption>';
+  var cap='<figcaption>'+(o.vn&&o.n.indexOf(o.vn)<0?(o.vk?'場所（':'会場（')+esc(o.vn)+'）の':'')+'写真：'+(o.cu?'<a href="'+esc(o.cu)+'" target="_blank" rel="noopener">'+esc(o.cr)+'</a>':esc(o.cr))+'</figcaption>';
   var ex=document.querySelector('.mph-o');if(ex){ex.querySelector('img').alt=o.n;ex.insertAdjacentHTML('beforeend',cap)}
   else if(o.im&&hd){var f=document.createElement('figure');f.className='mph-o';f.innerHTML='<img src="/assets/ph/'+o.im+'" alt="'+esc(o.n)+'" decoding="async" fetchpriority="high" class="mfade">'+cap;hd.parentNode.insertBefore(f,hd.nextSibling)}
   document.querySelectorAll('.big>div').forEach(function(b){var sp=b.querySelector('span');if(sp&&sp.textContent.trim()==='いまは'){var w=document.createElement('div');w.className='mnowl';b.appendChild(w);nowPill(w,o);setInterval(function(){nowPill(w,o)},60000)}});
