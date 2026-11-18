@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: python3 tools/probe/fetch.py /tmp/out ${{ inputs.urls }}
+      - env: {URLS: "${{ inputs.urls }}"}
+        run: python3 tools/probe/fetch.py /tmp/out $URLS
       - run: |
           git config user.name "url-probe"; git config user.email "actions@users.noreply.github.com"
           if git fetch -q origin probe; then git checkout -qB probe FETCH_HEAD; else git checkout -q --orphan probe && git rm -rfq .; fi
