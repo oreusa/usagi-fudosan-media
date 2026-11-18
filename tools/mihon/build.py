@@ -83,6 +83,8 @@ for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', src, re.S):
         o.update(im=f, cr=p["cr"], cu=p.get("page", ""))
         if p.get("weak"): o["wk"] = 1
     vn = KV.get(key)
+    if vn and vn not in VP and vn in PH and not PH[vn].get("weak"):   # 会場が名所として写真を持っている時（奈良公園など）
+        VP[vn] = {"img": PH[vn]["img"], "cr": PH[vn]["cr"], "page": PH[vn].get("page", "")}
     if (not o.get("im") or o.get("wk")) and vn in VP:
         o.pop("wk", None); o.update(im=VP[vn]["img"], cr=VP[vn]["cr"], cu=VP[vn].get("page", ""), vn=vn)
     g = IG.get(key)
