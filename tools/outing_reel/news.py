@@ -111,6 +111,19 @@ FIRST = 1.3      # 写真と見出しを先に見せる
 GAP = 0.55
 ST = []; t = FIRST
 for n in range(N): ST.append(t); t += VD[n] + GAP
+# 11/18 BGMの拍（librosa）に場面の頭を合わせる：声の頭を「次の拍」まで少し待たせる（最大0.35秒）。拍で絵が変わると気持ちいい
+try:
+    import librosa
+    subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-ss', '0.2', '-i', f'{ROOT}/tools/brand/reel_bgm.m4a', '-t', f'{t + 6:.1f}', '-ac', '1', '-ar', '22050', f'{W}/beat.wav'], check=True)
+    _y, _sr = librosa.load(f'{W}/beat.wav', sr=22050)
+    _, _bt = librosa.beat.beat_track(y=_y, sr=_sr); BEATS = [float(x) for x in librosa.frames_to_time(_bt, sr=_sr)]
+    sh = 0; ST2 = []
+    for n in range(N):
+        s0 = ST[n] + sh; nb = [b for b in BEATS if s0 <= b <= s0 + 0.35]
+        if nb: sh += nb[0] - s0; s0 = nb[0]
+        ST2.append(s0)
+    print('拍に合わせた', [round(a - b, 2) for a, b in zip(ST2, ST)]); t += sh; ST = ST2
+except Exception as e: print('拍：使わない', str(e)[:80])
 END = ST[-1]     # 最後の行（あしたも〜）から、終わりの札
 TOTAL = t + 1.6
 SUB = [{'segs': segs(VO[n]), 'tm': timing(n)} for n in range(N)]
@@ -120,11 +133,11 @@ try:
 except ValueError: DATE = ('', '')
 KANTO = spec.get('brand') == 'kanto'
 P = dict(title=T.get('title', ['', ''])[-1], corner=T.get('corner', ''), place=T.get('place', ''), cards=T.get('cards', []), sub=SUB, st=ST, end=END, total=TOTAL,
-         date=DATE[0], wd=DATE[1], credit=(spec.get('photo') or {}).get('note','')+f'写真：{CREDIT}（{LIC}・Wikimedia Commons）', site='LIFE NOTE' if KANTO else 'TOWN NOTE',
+         date=DATE[0], wd=DATE[1], credit=f'写真'+(spec.get('photo') or {}).get('note','')+f'：{CREDIT}（{LIC}・Wikimedia Commons）', site='LIFE NOTE' if KANTO else 'TOWN NOTE',
          list='関東おでかけリスト' if KANTO else '関西おでかけリスト', tab=spec.get('tab', ''), focus=(spec.get('photo') or {}).get('focus', [50, 50]))
 F = ROOT + '/tools/fonts'
 LOGO = ROOT + ('/tools/outing_reel/kanto/logo.png' if KANTO else '/tools/brand/logo.png')
-html = r"""<!doctype html><meta charset="utf-8"><style>
+html = r"""<!doctype html><html lang="ja"><meta charset="utf-8"><style>
 @font-face{font-family:M;src:url(file://%F%/ShipporiMincho-Bold.ttf)}
 @font-face{font-family:G;src:url(file://%F%/ZenKakuGothicNew-Bold.ttf)}
 @font-face{font-family:GB;src:url(file://%F%/ZenKakuGothicNew-Black.ttf)}
@@ -168,11 +181,11 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#120e0b;color:#f
 <div id="endc"><img src="file://%LOGO%"><div class="s" id="es"></div><div class="l" id="el"></div><div class="b">日付と地図でさがせます</div><div class="n">プロフィールのリンクから</div></div>
 <script>
 const P=%P%;const $=i=>document.getElementById(i);
-const cl=(x,a,b)=>Math.max(a,Math.min(b,x)),sm=(t,a,b)=>cl((t-a)/(b-a),0,1),eo=x=>1-Math.pow(1-x,3),eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2;
+const cl=(x,a,b)=>Math.max(a,Math.min(b,x)),sm=(t,a,b)=>cl((t-a)/(b-a),0,1),eo=x=>1-Math.pow(1-x,3),eio=x=>x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2,spr=x=>x>=1?1:1-Math.exp(-6*x)*Math.cos(9*x);
 $('dt').innerHTML=P.date+'<b>（'+P.wd+'）</b>';$('cr').textContent=P.credit;$('hk').textContent=P.corner;$('h1').textContent=P.title;$('hp').textContent=P.place;
 $('es').textContent=P.site;$('el').textContent=P.list;
 // 字幕：区切りごとに1文字ずつ <i>
-function subHTML(n){return P.sub[n].segs.map((s,k)=>[...s].map((c,j)=>'<i data-k="'+k+'" data-j="'+j+'">'+c+'</i>').join('')).join('')}
+function subHTML(n){return P.sub[n].segs.map((s,k)=>'<span style="display:block">'+[...s].map((c,j)=>'<i data-k="'+k+'" data-j="'+j+'">'+c+'</i>').join('')+'</span>').join('')}
 let curN=-1;const IM=$('im');
 function render(t){
   // 写真：全体でゆっくりズーム＋場面ごとに見る所が少し動く（同じ写真でも止まって見えない）
@@ -187,7 +200,7 @@ function render(t){
   // 札：その行の札（ガラスの板）が下から出る
   const cn=n>=1&&n<P.st.length-1?n:-1;const cd=$('cd');
   if(cd.dataset.n!=String(cn)){cd.dataset.n=cn;const c=P.cards[cn]||[];cd.innerHTML=c.map(r=>r[0]?'<div class="cd"><span>'+r[0]+'</span><b>'+r[1]+'</b></div>':'<div class="cd note"><b>'+r[1]+'</b></div>').join('')}
-  if(cn>=0){[...cd.children].forEach((e,i)=>{const k=eo(sm(t,P.st[cn]-0.1+i*0.12,P.st[cn]+0.55+i*0.12)),o=1-sm(t,(P.st[cn+1]||P.total)-0.35,(P.st[cn+1]||P.total)-0.05);e.style.opacity=(k*o).toFixed(3);e.style.transform=`translateY(${((1-k)*50).toFixed(1)}px)`})}
+  if(cn>=0){[...cd.children].forEach((e,i)=>{const k=spr(sm(t,P.st[cn]-0.1+i*0.12,P.st[cn]+0.75+i*0.12)),o=1-sm(t,(P.st[cn+1]||P.total)-0.35,(P.st[cn+1]||P.total)-0.05);e.style.opacity=(Math.min(1,k)*o).toFixed(3);e.style.transform=`translateY(${((1-k)*50).toFixed(1)}px)`})}
   // 字幕：声に合わせて1文字ずつ白→黄（いま読んでいる区切り）
   const sn=P.st.filter(s=>t>=s-0.15).length-1;const sp=$('sp');
   if(sn<0||sn>=P.sub.length-1&&t>P.end+0.2){sp.style.opacity=sn>=P.sub.length-1?Math.max(0,1-sm(t,P.end+0.2,P.end+0.6)):0}
