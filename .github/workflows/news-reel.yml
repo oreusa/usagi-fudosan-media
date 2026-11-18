@@ -8,7 +8,7 @@ on:
         description: "ig/reels-mihon の spec の名前（例 2026-11-19-news）"
         required: true
       tool:
-        description: "news＝写真ニュース / ehon2＝絵本の型 v2"
+        description: "news＝写真ニュース / ehon2＝絵本の型 v2 / tech＝テクノロジーの型"
         required: false
         default: "ehon2"
 permissions:
@@ -38,7 +38,7 @@ jobs:
         run: |
           case "$N" in *[!A-Za-z0-9_-]*) echo "名前が変"; exit 1;; esac
           mkdir -p media/reels/mihon
-          T="${{ inputs.tool }}"; case "$T" in news|ehon2) ;; *) exit 1;; esac
+          T="${{ inputs.tool }}"; case "$T" in news|ehon2|tech) ;; *) exit 1;; esac
           EHON_SAMPLE=1 WORK=/tmp/news STILLS="2.5,8,13,18.5,23,28" python3 tools/outing_reel/$T.py "ig/reels-mihon/$N.json" "media/reels/mihon/$N.mp4"
           mkdir -p media/reels/mihon/$N-still && cp /tmp/news/c-*.jpg media/reels/mihon/$N-still/ 2>/dev/null || true
       - name: 保存
