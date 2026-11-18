@@ -1,0 +1,4 @@
+top	https://kansai.townnote.app/?mihon=2
+odekake	https://kansai.townnote.app/odekake?mihon=2
+ktop	https://kanto.townnote.app/?mihon=2
+kodekake	https://kanto.townnote.app/odekake?mihon=2
