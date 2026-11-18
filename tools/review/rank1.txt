@@ -1,0 +1,2 @@
+ranking	https://kansai.townnote.app/ranking?mihon=2
+ranking0	https://kansai.townnote.app/ranking
