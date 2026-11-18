@@ -10,16 +10,7 @@ var tb=document.getElementById('theme');if(tb)tb.addEventListener('click',functi
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change',logo);logo();
 function paint(){document.querySelectorAll('[data-heart]').forEach(function(b){b.setAttribute('aria-pressed',!!saved[b.getAttribute('data-heart')])})}
 document.addEventListener('click',function(e){
-  var b=e.target.closest('[data-heart]');if(b){e.preventDefault();var id=b.getAttribute('data-heart');if(saved[id])delete saved[id];else{saved[id]=Date.now();b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop')}store();paint();
-/* いま開いている（時間が分かるおでかけだけ・日本の時刻） */
-function nowJP(){var d=new Date(Date.now()+(d0=new Date().getTimezoneOffset()+540)*6e4);return d}var d0;
-function openNow(){var n=nowJP(),m=n.getHours()*60+n.getMinutes(),ymd=n.getFullYear()+'-'+('0'+(n.getMonth()+1)).slice(-2)+'-'+('0'+n.getDate()).slice(-2);
-  document.querySelectorAll('[data-h]').forEach(function(c){var h=c.getAttribute('data-h'),el=c.querySelector('.now');if(!h||!el)return;var d=c.dataset;if(!(d.s<=ymd&&d.e>=ymd)){el.hidden=true;return}
-    var x=h.split('-').map(function(t){var a=t.split(':');return a[0]*60+ +a[1]});var night=x[0]>=15*60,txt='',cls='';
-    if(m>=x[0]&&m<x[1]){var left=x[1]-m;txt=night?'いまライトアップ中':(left<=120?'あと'+(left>=60?Math.floor(left/60)+'時間':'')+(left%60?left%60+'分':'')+'で閉まる':'いま開いています');cls='on'}
-    else if(m<x[0]&&x[0]-m<=180){txt=(night?'今夜':'きょう')+h.split('-')[0]+'から';cls='soon'}
-    if(txt){el.hidden=false;el.textContent=txt;el.className='now '+cls}else el.hidden=true})}
-openNow();setInterval(openNow,60000);if(window.__savedView)window.__savedView();return}
+  var b=e.target.closest('[data-heart]');if(b){e.preventDefault();var id=b.getAttribute('data-heart');if(saved[id])delete saved[id];else{saved[id]=Date.now();b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop')}store();paint();if(window.__savedView)window.__savedView();return}
   var s=e.target.closest('[data-share]');if(s){e.preventDefault();var d={title:document.title,text:s.getAttribute('data-share'),url:location.href};if(navigator.share){navigator.share(d).catch(function(){})}else{var x=document.getElementById('shr');if(x)x.classList.toggle('open')}return}
   var c=e.target.closest('[data-copy]');if(c){e.preventDefault();var t=c.getAttribute('data-copy')+' '+location.href;try{navigator.clipboard.writeText(t).then(function(){c.textContent='コピーしました'})}catch(er){}return}
   var j=e.target.closest('a[href^="#"]');if(j&&j.getAttribute('href').length>1){var el=document.getElementById(j.getAttribute('href').slice(1));if(el){e.preventDefault();el.scrollIntoView({behavior:'smooth'})}}
