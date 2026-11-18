@@ -1,0 +1,23 @@
+name: review-shot
+# 11/18 HP全体の見回り：一覧のページを昼と夜で撮って review 枝の shots/review/<名前>/ へ（作業環境から本番に届かないため）
+on:
+  workflow_dispatch:
+    inputs:
+      list: {description: "URLの一覧ファイル（リポジトリの中）", required: true}
+      name: {description: "保存するフォルダ名", required: true}
+permissions:
+  contents: write
+jobs:
+  shot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm i --no-save playwright@1.49.1 && (timeout 150 npx playwright install --with-deps chromium || npx playwright install chromium)
+      - run: sudo apt-get install -y -qq fonts-noto-cjk >/dev/null 2>&1 || true
+      - run: node tools/review/shots.js "${{ inputs.list }}" /tmp/rv
+      - run: |
+          git config user.name "review-shot"; git config user.email "actions@users.noreply.github.com"
+          if git fetch -q origin review; then git checkout -qB review FETCH_HEAD; else git checkout -q --orphan review && git rm -rfq .; fi
+          rm -rf "shots/review/${{ inputs.name }}"; mkdir -p "shots/review/${{ inputs.name }}" && cp /tmp/rv/* "shots/review/${{ inputs.name }}/"
+          git add -f shots/review && git commit -qm "review ${{ inputs.name }}" && for i in 1 2 3 4; do git pull -q --rebase origin review 2>/dev/null || true; git push origin review && break; sleep 7; done

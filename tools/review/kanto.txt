@@ -1,0 +1,15 @@
+top	https://kanto.townnote.app/
+odekake	https://kanto.townnote.app/odekake
+koyo	https://kanto.townnote.app/koyo
+kaiten	https://kanto.townnote.app/kaiten
+ima	https://kanto.townnote.app/ima
+okaimono	https://kanto.townnote.app/okaimono
+otoku	https://kanto.townnote.app/otoku
+nesage	https://kanto.townnote.app/nesage
+furusato	https://kanto.townnote.app/furusato
+fudosan	https://kanto.townnote.app/fudosan-list
+akiya	https://kanto.townnote.app/akiya-ranking
+kaitai	https://kanto.townnote.app/kaitai
+moushikomi	https://kanto.townnote.app/moushikomi
+uru	https://kanto.townnote.app/uru
+sagasu	https://kanto.townnote.app/sagasu
