@@ -37,3 +37,7 @@ kkaitai	https://kanto.townnote.app/kaitai?mihon=2
 kmoushikomi	https://kanto.townnote.app/moushikomi?mihon=2
 kuru	https://kanto.townnote.app/uru?mihon=2
 ksagasu	https://kanto.townnote.app/sagasu?mihon=2
+o1	https://kansai.townnote.app/o/a972a667?mihon=2
+machi1	https://kansai.townnote.app/machi/osaka-01?mihon=2
+ko1	https://kanto.townnote.app/o/aa4f0471?mihon=2
+kmachi1	https://kanto.townnote.app/machi/tokyo-01?mihon=2
