@@ -12,8 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
-          IFS='|' read -ra W <<< "${{ inputs.words }}"
-          python3 tools/photo/commons.py tools/photo/probe "${W[@]}"
+          if [[ "${{ inputs.words }}" == @* ]]; then
+            f="${{ inputs.words }}"; python3 tools/photo/cover.py "${f#@}" tools/photo/probe
+          else
+            IFS='|' read -ra W <<< "${{ inputs.words }}"
+            python3 tools/photo/commons.py tools/photo/probe "${W[@]}"
+          fi
       - run: |
           git config user.name "photo-probe"; git config user.email "actions@users.noreply.github.com"
           git checkout -B claude/project-thread-q3ep5v
