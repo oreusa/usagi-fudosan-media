@@ -56,7 +56,7 @@ var css=
 '.mnews .mnh small{display:block;font-family:Jost,sans-serif;font-size:10px;letter-spacing:.28em;color:#B97A62;margin-bottom:5px}'+
 '.mnews .mnh b{font-family:"Shippori Mincho","Noto Serif JP",serif;font-weight:600;font-size:19px;letter-spacing:.12em;color:#2B2622}'+
 '.mnews .mnh time{font-size:11.5px;color:#8a837d;letter-spacing:.04em}'+
-'.mnews .mntr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:0 -2px;padding:0 2px 4px}.mnews .mntr::-webkit-scrollbar{display:none}'+
+'.mnews .mnh{gap:8px}.mnews .mnlive{margin-left:auto;margin-right:8px;display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;color:#1E7A4A;background:#E7F4EC;border-radius:999px;padding:5px 10px;white-space:nowrap}.mnews .mnlive b{font-family:Jost,sans-serif;font-size:13px}.mnews .mnlive i{width:7px;height:7px;border-radius:50%;background:#22A35A;animation:mnp 1.8s ease-out infinite}.mnews .mnlive i.s{background:#E08A2E;animation:none}.mnews .mnlive:has(i.s){color:#A55A12;background:#FBF0E2}'+'.mnews .mntr{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;scrollbar-width:none;-webkit-overflow-scrolling:touch;margin:0 -2px;padding:0 2px 4px}.mnews .mntr::-webkit-scrollbar{display:none}'+
 '.mnews .mnsl{position:relative;flex:0 0 100%;scroll-snap-align:start;border-radius:16px;overflow:hidden;aspect-ratio:4/3;display:block;color:#fff;text-decoration:none;background:#2b2622;box-shadow:0 16px 30px -20px rgba(40,30,20,.6)}'+
 '.mnews .mnsl img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}'+
 '.mnews .mnsl::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 38%,rgba(10,8,6,.78) 100%)}'+
@@ -116,10 +116,11 @@ function news(){var q=document.querySelector('.qk');if(!q||document.querySelecto
   L.sort(function(a,b){return sc(a)-sc(b)||(a.e<b.e?-1:1)});
   var P={};L=L.filter(function(o){if(P[o.p]>=1&&L.length>6)return false;P[o.p]=(P[o.p]||0)+1;return true}).slice(0,5);if(!L.length)return;
   var PC={"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"},W='日月火水木金土',d=jst();
-  var h='<div class="mnh"><div><small>TODAY’S NEWS</small><b>きょうのおでかけニュース</b></div><time>'+(d.getUTCMonth()+1)+'/'+d.getUTCDate()+'（'+W[d.getUTCDay()]+'）</time></div><div class="mntr">';
+  var h='<div class="mnh"><div><small>TODAY’S NEWS</small><b>きょうのおでかけニュース</b></div><span class="mnlive"></span><time>'+(d.getUTCMonth()+1)+'/'+d.getUTCDate()+'（'+W[d.getUTCDay()]+'）</time></div><div class="mntr">';
   L.forEach(function(o){var st=o.s<=t?'開催中':(+o.s.slice(5,7))+'/'+(+o.s.slice(8))+'から';h+='<a class="mnsl" href="/o/'+o.id+'" style="--pc:'+(PC[o.p]||'#B97A62')+'"><img class="mfade" src="/assets/ph/'+o.im+'" alt="" decoding="async"'+(L.indexOf(o)===0?' fetchpriority="high"':' loading="lazy"')+'><span class="mncr">写真：'+esc(o.cr.replace(/（.*$/,''))+'</span><span class="mntx"><span class="mntg"><i>'+esc(o.p)+'</i>'+st+'・'+(+o.e.slice(5,7))+'/'+(+o.e.slice(8))+'まで</span><b>'+esc(hook(o))+'</b><span class="mnn">'+esc(o.n)+'</span></span></a>'});
   h+='</div><div class="mndt">'+L.map(function(o,i){return '<i'+(i?'':' class="on"')+'></i>'}).join('')+'</div>';
   var w=document.createElement('section');w.className='mnews';w.setAttribute('aria-label','きょうのおでかけニュース');w.innerHTML=h;q.parentNode.insertBefore(w,q.nextSibling);
+  var lv=w.querySelector('.mnlive');function live(){var on=0,soon=0;for(var x in D){var n=now(D[x]);if(n){if(n.c==='soon')soon++;else on++}}lv.innerHTML=on?'<i></i>いま開いている所 <b>'+on+'</b>':soon?'<i class="s"></i>まもなく点灯 <b>'+soon+'</b>':'';lv.hidden=!(on||soon)}live();setInterval(live,60000);
   var tr=w.querySelector('.mntr'),dots=w.querySelectorAll('.mndt i'),sl=w.querySelectorAll('.mnsl'),cur=0,hold=0;if(sl[0])sl[0].classList.add('cur');
   tr.addEventListener('scroll',function(){var i=Math.round(tr.scrollLeft/tr.clientWidth);if(i!==cur){cur=i;dots.forEach(function(e,k){e.classList.toggle('on',k===i)});sl.forEach(function(e,k){e.classList.toggle('cur',k===i)})}},{passive:true});
   ['touchstart','pointerdown'].forEach(function(ev){tr.addEventListener(ev,function(){hold=Date.now()},{passive:true})});

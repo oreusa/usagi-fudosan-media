@@ -479,5 +479,29 @@
   "page": "https://commons.wikimedia.org/wiki/File:Oku-no-in_by_night_(6155533279).jpg",
   "src": "commons",
   "weak": true
+ },
+ "Himeji大手前通り・姫路城イルミネーション": {
+  "img": "511c41d5.webp",
+  "cr": "兵庫県観光連盟（ひょうご観光写真ライブラリー）",
+  "page": "https://hyogo-tourism.jp/photo/detail_592.html",
+  "src": "hyogo"
+ },
+ "明石海峡大橋ライトアップ": {
+  "img": "8ec628a3.webp",
+  "cr": "兵庫県観光連盟（ひょうご観光写真ライブラリー）",
+  "page": "https://hyogo-tourism.jp/photo/detail_967.html",
+  "src": "hyogo"
+ },
+ "南京町ランターンフェア": {
+  "img": "dffa9c94.webp",
+  "cr": "兵庫県観光連盟（ひょうご観光写真ライブラリー）",
+  "page": "https://hyogo-tourism.jp/photo/detail_718.html",
+  "src": "hyogo"
+ },
+ "神戸メリケンクリスマス": {
+  "img": "51341e59.webp",
+  "cr": "兵庫県観光連盟（ひょうご観光写真ライブラリー）",
+  "page": "https://hyogo-tourism.jp/photo/detail_912.html",
+  "src": "hyogo"
  }
 }
