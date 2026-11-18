@@ -23,4 +23,4 @@ jobs:
           mv tools/photo/probe /tmp/probe
           if git fetch -q origin photo-probe; then git checkout -qB photo-probe FETCH_HEAD; else git checkout -q --orphan photo-probe && git rm -rfq .; fi
           mkdir -p tools/photo/probe && cp -r /tmp/probe/* tools/photo/probe/
-          git add -f tools/photo/probe && git commit -qm "photo-probe" && for i in 1 2 3 4; do git pull -q --rebase origin photo-probe 2>/dev/null; git push origin photo-probe && break; sleep 7; done
+          git add -f tools/photo/probe && git commit -qm "photo-probe" && for i in 1 2 3 4; do git pull -q --rebase origin photo-probe 2>/dev/null || true; git push origin photo-probe && break; sleep 7; done
