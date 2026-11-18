@@ -6,7 +6,7 @@ var s=document.createElement("style");s.textContent="html{scrollbar-gutter:stabl
 h.classList.add("v2bar-on");setTimeout(function(){if(!document.getElementById("v2bar"))h.classList.remove("v2bar-on");},4000);}catch(e){}})();
 /* 11/9 ほかのリスト（ページの下とメニューで同じ名前・同じタイル）。cur＝いま見ているリスト（出さない） */
 window.TN_OL=(function(){var life=/usagi-life|lifenote|life-note|kanto\.townnote/.test(location.host),p=location.pathname;
-return {life:life,cur:/^\/(koe|privacy)/.test(p)?"":/fudosan|machi|uru|sagasu|chika|gyosha|moushikomi|jikka/.test(p)?"fu":/okaimono|otoku|tanka|nesage|furusato|kaimawari/.test(p)?"ok":"od",
+return {life:life,cur:/^\/(koe|privacy)/.test(p)?"":/fudosan|machi|uru|sagasu|chika|gyosha|moushikomi|jikka/.test(p)||/^\/(kaitai|ikura|ranking|akiya)/.test(p)?"fu":/okaimono|otoku|tanka|nesage|furusato|kaimawari/.test(p)?"ok":"od",
 I:{od:'<path d="M12 21s-6-5.6-6-10.5A6 6 0 0 1 18 10.5C18 15.4 12 21 12 21z"/><circle cx="12" cy="10.5" r="2.2"/>',
 fu:'<path d="M4 11l8-6 8 6"/><path d="M6 10v9h12v-9"/><path d="M10 19v-5h4v5"/>',
 ok:'<path d="M6 8h12l-1 12H7z"/><path d="M9 8a3 3 0 0 1 6 0"/>'},
@@ -33,7 +33,7 @@ tiles:function(pre){var o=this,h="";o.L.forEach(function(x){if(x[0]===o.cur)retu
    全ページ共通のメニュー（11/3 テスターの声「メニューが見にくい」→ 項目はゴシックの太字・英字の小見出しなし・説明を濃く）。右上の三本線 → 右から出る紙。昼と夜の切り替えもここ（night.js）。
    ページを足すときは L に1行足すだけ。押された数は /c に「メニュー｜名前」で数える。 */
 (function(){
-  var P=location.pathname.replace(/^\/townnotes\//,"/"),FU=/^\/(fudosan|uru|moushikomi|gyosha|sagasu|chika-|machi\/|jikka)/.test(P),here=
+  var P=location.pathname.replace(/^\/townnotes\//,"/"),FU=/^\/(fudosan|uru|moushikomi|gyosha|sagasu|chika-|machi\/|jikka|kaitai|ikura|ranking|akiya)/.test(P),here=
     /^\/sagasu/.test(P)?"fbuy":/^\/fudosan-list/.test(P)?"flist":/^\/chika-kansai/.test(P)?"chika":/^\/chika-osaka/.test(P)?"chikao":/^\/(odekake|index\.html)$/.test(P)?"list":/^\/illumination/.test(P)?"illumi":/^\/koyo/.test(P)?"koyo":/^\/koe/.test(P)?"koe":/^\/tomari/.test(P)?"tomari":/^\/ima/.test(P)?"ima":/^\/(town-notes)?$/.test(P)?"tn":/^\/uru/.test(P)?"uru":/^\/gyosha/.test(P)?"gyosha":/^\/jikka/.test(P)?"jikka":/^\/moushikomi/.test(P)?"satei":/^\/(fudosan|gyosha)/.test(P)?"fudosan":"";
   var L=[
     ["LIST","list","/odekake","関西おでかけリスト","開催中・これからのおでかけ"],
@@ -384,7 +384,7 @@ var NB=[
 ].filter(function(n){return n.only!==false;});
 /* 11/10 オーナー「TOWN NOTEの表紙なのにおでかけNOWはおかしい」→ 表紙では、まとめた目次（各リストへ）から。名前は各ページの名前のまま（11/10 オーナー「そこはリストだろ」） */
 var COVER=(LF?/^\/(index)?$/:/^\/(town-notes)?$/).test(P);
-function side(){if(COVER)return "top";if(/^\/jikka/.test(P))return "jk";if(/^\/(fudosan|uru|ikura|moushikomi|gyosha|sagasu|chika-|ranking|kaitai|machi\/)/.test(P))return "fu";if(/^\/(okaimono|otoku|tanka|nesage|furusato|kaimawari)/.test(P))return "ok";
+function side(){if(COVER)return "top";if(/^\/jikka/.test(P))return "jk";if(/^\/(fudosan|uru|ikura|moushikomi|gyosha|sagasu|chika-|ranking|kaitai|akiya|machi\/)/.test(P))return "fu";if(/^\/(okaimono|otoku|tanka|nesage|furusato|kaimawari)/.test(P))return "ok";
  if(/^\/koe/.test(P)){try{var s=sessionStorage.getItem("tn_side");if(s)return s;}catch(e){}}return "od";}
 var HERE=side();try{if(!/^\/koe/.test(P))sessionStorage.setItem("tn_side",HERE);}catch(e){}
 /* 前回のつづき：ほかのページを見ていたら、目次の上に1行（この端末だけ） */
