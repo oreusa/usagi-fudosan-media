@@ -511,5 +511,119 @@
   "cr": "兵庫県観光連盟（ひょうご観光写真ライブラリー）",
   "page": "https://hyogo-tourism.jp/photo/detail_912.html",
   "src": "hyogo"
+ },
+ "大阪城公園（西ノ丸・モミジ谷）": {
+  "img": "1b5279a8.webp",
+  "cr": "ustung（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/126397594@N03/23068584685",
+  "src": "openverse"
+ },
+ "天龍寺": {
+  "img": "cd9eed0a.webp",
+  "cr": "Tetsuhiro Terada（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/95330854@N06/30428145234",
+  "src": "openverse"
+ },
+ "南禅寺": {
+  "img": "15b076dc.webp",
+  "cr": "Tetsuhiro Terada（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/95330854@N06/26389303672",
+  "src": "openverse"
+ },
+ "北野天満宮 もみじ苑": {
+  "img": "f5ad5aa2.webp",
+  "cr": "Big Ben in Japan（CC BY-SA 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/74418647@N00/31530668917",
+  "src": "openverse"
+ },
+ "北野天満宮 もみじ苑 ライトアップ": {
+  "img": "2226f77c.webp",
+  "cr": "Big Ben in Japan（CC BY-SA 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/74418647@N00/31530668917",
+  "src": "openverse"
+ },
+ "清水寺": {
+  "img": "4ecb6b4e.webp",
+  "cr": "np&djjewell（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/10110263@N03/4605689138",
+  "src": "openverse"
+ },
+ "談山神社": {
+  "img": "43f78b24.webp",
+  "cr": "coniferconifer（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/7656600@N06/51693506800",
+  "src": "openverse"
+ },
+ "談山神社 紅葉まつり": {
+  "img": "2eed82c2.webp",
+  "cr": "coniferconifer（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/7656600@N06/51693506800",
+  "src": "openverse"
+ },
+ "根來寺": {
+  "img": "a0f6d372.webp",
+  "cr": "Tetsuhiro Terada（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/95330854@N06/25303229715",
+  "src": "openverse"
+ },
+ "大阪城イルミナージュ": {
+  "img": "b3861ed0.webp",
+  "cr": "reggiepen（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/42438962@N05/26574496125",
+  "src": "openverse"
+ },
+ "相楽園": {
+  "img": "20c719a3.webp",
+  "cr": "MShades（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/23054755@N00/164784780",
+  "src": "openverse"
+ },
+ "奈良公園": {
+  "img": "5a4e9da7.webp",
+  "cr": "lecrajane（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/48043232@N05/22725556708",
+  "src": "openverse"
+ },
+ "知恩院 秋のライトアップ夜間特別拝観": {
+  "img": "9fcb29e2.webp",
+  "cr": "雷太（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/128275472@N07/39683436421",
+  "src": "openverse",
+  "weak": true
+ },
+ "中央公会堂プロジェクションマッピング": {
+  "img": "6229c078.webp",
+  "cr": "501622731plus1（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/50893125@N03/12205242375",
+  "src": "openverse",
+  "weak": true
+ },
+ "神戸クリスマスマーケット2026 古城のクリスマス": {
+  "img": "795ebb9f.webp",
+  "cr": "uphillblok（CC BY-SA 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/35803445@N07/13905824510",
+  "src": "openverse",
+  "weak": true
+ },
+ "錦秋の玄宮園ライトアップ": {
+  "img": "cb21d476.webp",
+  "cr": "unertlkm（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/17103550@N00/6508774541",
+  "src": "openverse",
+  "weak": true
+ },
+ "金剛輪寺（湖東三山）": {
+  "img": "f9f7088c.webp",
+  "cr": "Tetsuhiro Terada（CC BY 2.0・Flickr）",
+  "page": "https://www.flickr.com/photos/95330854@N06/30906093420",
+  "src": "openverse",
+  "weak": true
+ },
+ "観心寺": {
+  "img": "85a7cb6f.webp",
+  "cr": "dlovins99（CC0 1.0・Flickr）",
+  "page": "https://www.flickr.com/photos/74001418@N00/54727164011",
+  "src": "openverse",
+  "weak": true
  }
 }
