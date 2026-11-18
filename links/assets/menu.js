@@ -334,16 +334,19 @@ var O=window.TN_OL,sns=document.querySelector(".sns"),ft=document.querySelector(
 if(/^\/(town-notes)?$/.test(location.pathname)&&!sns)return;
 if(!sns&&!ft){var mm=document.querySelector("main");if(!mm)return;mm.insertAdjacentHTML("beforeend",'<div class="ft"></div>');ft=mm.lastElementChild;}
 var h='<div class="fx">';
-document.querySelectorAll(".sns a.co, .cos a.co").forEach(function(a){
+/* 11/18 /fudosan（不動産のご相談）は、3つの大きなボタンがページの中身そのもの → 細い1行に変えない（小さな文字の行だけになっていた） */
+var isF=/^\/fudosan(\.html)?$/.test(location.pathname);
+document.querySelectorAll(isF?".cos a.co":".sns a.co, .cos a.co").forEach(function(a){
  var en=a.getAttribute("data-en")||"";var t=(a.childNodes[0]&&a.childNodes[0].nodeValue||a.textContent).trim();
  var lab=en==="LISTING"?"お店・主催者の方へ：おでかけ掲載のご相談":t+"を見る";
  h+='<a class="fl" href="'+a.getAttribute("href")+'" rel="noopener" data-k="下｜'+lab+'">'+lab+' <span>→</span></a>';});
 /* 11/9 オーナー「ちゃんと統一できてる？」→ FOLLOW の無いページ（イルミ・紅葉・泊まり・街ページなど）にも同じ下を出す */
 if(!sns&&O.cur==="od")h+='<a class="fl" href="https://ig.me/m/fudousan_ai_si" rel="noopener" data-k="下｜おでかけ掲載のご相談">お店・主催者の方へ：おでかけ掲載のご相談 <span>→</span></a>';
 h+='<div class="oh">ほかのリスト</div><div class="og">'+O.tiles("下の入口｜")+'</div></div>';
-document.querySelectorAll(".cos, .sns a.co").forEach(function(e){e.remove();});
+document.querySelectorAll(isF?".cos":".cos, .sns a.co").forEach(function(e){e.remove();});
 document.querySelectorAll("a.tnx").forEach(function(e){e.remove();});
 if(!sns){ft.insertAdjacentHTML("beforebegin",h+'<div class="sns fsn"><h2>FOLLOW</h2><a href="https://www.instagram.com/fudousan_ai_si/" target="_blank" rel="noopener">Instagram<span>@fudousan_ai_si</span></a><a href="https://www.threads.com/@fudousan_ai_si" target="_blank" rel="noopener">Threads<span>@fudousan_ai_si</span></a><a href="https://x.com/fudosan_ai_si" target="_blank" rel="noopener">X<span>@fudosan_ai_si</span></a></div>');sns=document.querySelector(".fsn");}
+else if(isF){sns.insertAdjacentHTML("afterend",h);sns=sns.nextElementSibling;}
 else sns.insertAdjacentHTML("beforebegin",h);
 var after=sns;if(ft&&sns.parentNode){sns.parentNode.insertBefore(ft,sns.nextSibling);after=ft;}
 document.querySelectorAll(".pr-note").forEach(function(n){after.parentNode.insertBefore(n,after.nextSibling);after=n;});
