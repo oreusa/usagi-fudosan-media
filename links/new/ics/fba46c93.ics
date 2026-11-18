@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:fba46c93@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261014
+DTEND;VALUE=DATE:20270212
+SUMMARY:鈴木崇 もののをかし
+LOCATION:和歌山県立近代美術館 和歌山市
+URL:https://www.momaw.jp/exhibit/2026suzuki/
+DESCRIPTION:公式 https://www.momaw.jp/exhibit/2026suzuki/\n関西おでかけ https://kansai.townnote.app/new/o/fba46c93
+END:VEVENT
+END:VCALENDAR

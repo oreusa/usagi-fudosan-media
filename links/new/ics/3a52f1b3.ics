@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:3a52f1b3@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20261130
+SUMMARY:企画展 平城遷都
+LOCATION:平城宮いざない館 奈良市
+URL:https://www.heijo-park.jp/event/heijyosento/
+DESCRIPTION:公式 https://www.heijo-park.jp/event/heijyosento/\n関西おでかけ https://kansai.townnote.app/new/o/3a52f1b3
+END:VEVENT
+END:VCALENDAR

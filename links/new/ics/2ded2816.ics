@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:2ded2816@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20261124
+SUMMARY:仮面ライダー×自然のチカラ展
+LOCATION:神戸海洋博物館 神戸市中央区
+URL:https://kobe-maritime-museum.com/exhibition/exhibition-866/
+DESCRIPTION:公式 https://kobe-maritime-museum.com/exhibition/exhibition-866/\n関西おでかけ https://kansai.townnote.app/new/o/2ded2816
+END:VEVENT
+END:VCALENDAR

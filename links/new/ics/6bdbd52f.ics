@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:6bdbd52f@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:ONSEN・ガストロノミーウォーキング in 那智勝浦
+LOCATION:ブルービーチ那智に集合 和歌山県那智勝浦町
+URL:https://www.wakayama-kanko.or.jp/events/detail_4410.html
+DESCRIPTION:公式 https://www.wakayama-kanko.or.jp/events/detail_4410.html\n関西おでかけ https://kansai.townnote.app/new/o/6bdbd52f
+END:VEVENT
+END:VCALENDAR

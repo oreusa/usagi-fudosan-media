@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:d8c05936@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260801
+DTEND;VALUE=DATE:20261221
+SUMMARY:羽柴兄弟 謎解き立志伝
+LOCATION:長浜別院大通寺ほか 滋賀県長浜市
+URL:https://kitabiwako.jp/event/event_61844
+DESCRIPTION:公式 https://kitabiwako.jp/event/event_61844\n関西おでかけ https://kansai.townnote.app/new/o/d8c05936
+END:VEVENT
+END:VCALENDAR

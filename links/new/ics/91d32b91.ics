@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:91d32b91@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20261130
+SUMMARY:水木しげる 魂の漫画展
+LOCATION:神戸ファッション美術館 神戸市東灘区
+URL:https://event.city.kobe.lg.jp/event/kscQI3XjCQ6kLhZNhXHt
+DESCRIPTION:公式 https://event.city.kobe.lg.jp/event/kscQI3XjCQ6kLhZNhXHt\n関西おでかけ https://kansai.townnote.app/new/o/91d32b91
+END:VEVENT
+END:VCALENDAR

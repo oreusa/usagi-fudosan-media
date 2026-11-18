@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:4c833599@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261130
+SUMMARY:梅小路公園 紅葉まつり ライトアップ
+LOCATION:京都駅から歩ける。小学生300円 京都市下京区
+URL:https://www.kyoto-ga.jp/event/umekouji/index.html
+DESCRIPTION:公式 https://www.kyoto-ga.jp/event/umekouji/index.html\n関西おでかけ https://kansai.townnote.app/new/o/4c833599
+END:VEVENT
+END:VCALENDAR

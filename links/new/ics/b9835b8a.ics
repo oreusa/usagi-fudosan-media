@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:b9835b8a@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20270401
+SUMMARY:ひこにゃん 彦根城に眠る謎を解け！（謎解き）
+LOCATION:彦根城 滋賀県彦根市
+URL:https://p-con.iroawase.jp/hikonyan/
+DESCRIPTION:公式 https://p-con.iroawase.jp/hikonyan/\n関西おでかけ https://kansai.townnote.app/new/o/b9835b8a
+END:VEVENT
+END:VCALENDAR

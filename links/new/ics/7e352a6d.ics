@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:7e352a6d@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261027
+DTEND;VALUE=DATE:20261124
+SUMMARY:和歌山城公園菊花展
+LOCATION:和歌山城 表坂登り口前広場 和歌山市
+URL:https://www.city.wakayama.wakayama.jp/kankou/nenkangyoji/1006644.html
+DESCRIPTION:公式 https://www.city.wakayama.wakayama.jp/kankou/nenkangyoji/1006644.html\n関西おでかけ https://kansai.townnote.app/new/o/7e352a6d
+END:VEVENT
+END:VCALENDAR

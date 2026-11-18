@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:9e3c87c3@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261230
+SUMMARY:嵯峨野トロッコ列車 光の幻想列車
+LOCATION:16時半からの列車で、夜の紅葉の中を走る 京都市右京区
+URL:https://www.westjr.co.jp/press/article/2026/09/18/items/260918_00_press_hikarinogensouressya.pdf
+DESCRIPTION:公式 https://www.westjr.co.jp/press/article/2026/09/18/items/260918_00_press_hikarinogensouressya.pdf\n関西おでかけ https://kansai.townnote.app/new/o/9e3c87c3
+END:VEVENT
+END:VCALENDAR

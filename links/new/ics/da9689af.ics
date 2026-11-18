@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:da9689af@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20261201
+SUMMARY:TOTTEI PARK イルミナイト
+LOCATION:TOTTEI PARK 緑の丘 神戸市中央区
+URL:https://www.totteikobe.jp/news/article/29950
+DESCRIPTION:公式 https://www.totteikobe.jp/news/article/29950\n関西おでかけ https://kansai.townnote.app/new/o/da9689af
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:0dd7fb97@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20270109
+DTEND;VALUE=DATE:20270323
+SUMMARY:つくる女性の100年
+LOCATION:大阪中之島美術館 大阪市北区
+URL:https://nakka-art.jp/exhibition-post/paving-the-way100/
+DESCRIPTION:公式 https://nakka-art.jp/exhibition-post/paving-the-way100/\n関西おでかけ https://kansai.townnote.app/new/o/0dd7fb97
+END:VEVENT
+END:VCALENDAR

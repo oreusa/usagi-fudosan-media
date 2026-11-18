@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:87d42186@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261228
+SUMMARY:トナリマチドライブスタンプラリー
+LOCATION:東近江市内10か所 滋賀県東近江市
+URL:https://area.jaf.or.jp/drive/stamp-rally/kansai/shiga_stamprally_no1650
+DESCRIPTION:公式 https://area.jaf.or.jp/drive/stamp-rally/kansai/shiga_stamprally_no1650\n関西おでかけ https://kansai.townnote.app/new/o/87d42186
+END:VEVENT
+END:VCALENDAR

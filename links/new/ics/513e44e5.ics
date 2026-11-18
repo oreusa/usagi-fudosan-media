@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:513e44e5@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20261124
+SUMMARY:やなせたかし展
+LOCATION:姫路文学館 兵庫県姫路市
+URL:https://www.himejibungakukan.jp/events/event/2026yanasetakashi/
+DESCRIPTION:公式 https://www.himejibungakukan.jp/events/event/2026yanasetakashi/\n関西おでかけ https://kansai.townnote.app/new/o/513e44e5
+END:VEVENT
+END:VCALENDAR

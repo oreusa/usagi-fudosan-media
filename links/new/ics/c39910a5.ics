@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:c39910a5@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261130
+SUMMARY:万博記念公園 紅葉まつり
+LOCATION:日本庭園のもみじ。入園料が必要 大阪府吹田市
+URL:https://www.expo70-park.jp/event/77753/
+DESCRIPTION:公式 https://www.expo70-park.jp/event/77753/\n関西おでかけ https://kansai.townnote.app/new/o/c39910a5
+END:VEVENT
+END:VCALENDAR

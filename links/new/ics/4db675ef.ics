@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:4db675ef@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261207
+SUMMARY:白龍園の紅葉 秋の特別公開
+LOCATION:白龍園 京都市左京区
+URL:https://hakuryuen.com/plan/event/
+DESCRIPTION:公式 https://hakuryuen.com/plan/event/\n関西おでかけ https://kansai.townnote.app/new/o/4db675ef
+END:VEVENT
+END:VCALENDAR

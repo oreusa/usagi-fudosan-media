@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:9b2e6e5c@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260710
+DTEND;VALUE=DATE:20261201
+SUMMARY:シガパークめぐり スタンプラリー
+LOCATION:県内14公園 滋賀県内
+URL:https://www.pref.shiga.lg.jp/rb00/press-release/29267.html
+DESCRIPTION:公式 https://www.pref.shiga.lg.jp/rb00/press-release/29267.html\n関西おでかけ https://kansai.townnote.app/new/o/9b2e6e5c
+END:VEVENT
+END:VCALENDAR

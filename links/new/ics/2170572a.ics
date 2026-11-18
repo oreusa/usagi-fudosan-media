@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:2170572a@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261214
+SUMMARY:名探偵コナン 疾風の追走からの脱出
+LOCATION:読売テレビ 10hall 大阪市中央区
+URL:https://realdgame.jp/s/conan2026/events/yomiuri.html
+DESCRIPTION:公式 https://realdgame.jp/s/conan2026/events/yomiuri.html\n関西おでかけ https://kansai.townnote.app/new/o/2170572a
+END:VEVENT
+END:VCALENDAR

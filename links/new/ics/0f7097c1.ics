@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:0f7097c1@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260904
+DTEND;VALUE=DATE:20261229
+SUMMARY:ドイツ祭り2026 Beer & Wine Fest
+LOCATION:神戸布引ハーブ園 神戸市中央区
+URL:https://www.kobeherb.com/topics/40131
+DESCRIPTION:公式 https://www.kobeherb.com/topics/40131\n関西おでかけ https://kansai.townnote.app/new/o/0f7097c1
+END:VEVENT
+END:VCALENDAR

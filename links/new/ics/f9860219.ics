@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:f9860219@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260829
+DTEND;VALUE=DATE:20261130
+SUMMARY:神戸六甲ミーツ・アート2026
+LOCATION:六甲山上 神戸市灘区
+URL:https://rokkomeetsart.jp/
+DESCRIPTION:公式 https://rokkomeetsart.jp/\n関西おでかけ https://kansai.townnote.app/new/o/f9860219
+END:VEVENT
+END:VCALENDAR

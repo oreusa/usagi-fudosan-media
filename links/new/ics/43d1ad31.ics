@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:43d1ad31@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261207
+SUMMARY:NAKED GARDEN NIGHTS 東本願寺・渉成園
+LOCATION:東本願寺・渉成園 京都市下京区
+URL:https://www.higashihonganji.or.jp/news/worship/554114022/
+DESCRIPTION:公式 https://www.higashihonganji.or.jp/news/worship/554114022/\n関西おでかけ https://kansai.townnote.app/new/o/43d1ad31
+END:VEVENT
+END:VCALENDAR

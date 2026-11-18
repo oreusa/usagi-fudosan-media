@@ -52,6 +52,9 @@ jobs:
       - name: rebuild 泊まりで行くおでかけ
         # 10/31 宿とカードの新しい一覧で毎朝作り直す（終わったおでかけは消える）
         run: python3 tools/tomari/build.py "$(TZ=Asia/Tokyo date +%F)"
+      - name: new odekake site preview (/new/)
+        # 11/18 owner「全部任せる・本気で作って」→ 新しい関西おでかけの見本（noindex）を毎朝同じ元から作り直す。止まっても他は止めない
+        run: python3 tools/new/build.py "$(TZ=Asia/Tokyo date +%F)" || echo "$(TZ=Asia/Tokyo date +%F) tools/new/build.py" >> stats/build-fail.txt
       - name: cover data (表紙の地図の数字)
         # 11/10 表紙 v3：府県ごとの開催中・地価の上がり幅・戸建の売れた平均を3KBの cover.json に（表紙は毎回リスト全体を読まない）
         run: pip install -q beautifulsoup4 && python3 tools/cover/make.py || true
@@ -79,7 +82,7 @@ jobs:
         run: |
           git config user.name "link-stats bot"
           git config user.email "actions@users.noreply.github.com"
-          git add stats/build-fail.txt stats/link.json stats/link-30.json stats/funnel.md stats/funnel.json stats/seichou.md stats/seichou.json links/illumination*.html links/koyo*.html links/hatsumode.html links/ranking.html links/kaiten.html links/kaitai.html links/kaitai-*.html links/index.html links/odekake-*.html links/o links/sitemap.xml links/sitemap-all.xml links/sitemap-main.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md stats/fudosan-shinchaku.md stats/fudosan-watch.json links/assets/cover.json stats/room.json stats/room-fail.txt stats/gakushu.md stats/gakushu.json stats/kimari.json stats/shirei.json stats/manabi.json stats/yatta.json
+          git add stats/build-fail.txt stats/link.json stats/link-30.json stats/funnel.md stats/funnel.json stats/seichou.md stats/seichou.json links/illumination*.html links/koyo*.html links/hatsumode.html links/ranking.html links/kaiten.html links/kaitai.html links/kaitai-*.html links/index.html links/odekake-*.html links/o links/new links/sitemap.xml links/sitemap-all.xml links/sitemap-main.xml stats/sitemap-dates.json stats/hp-learning.json links/kansai-yado.json links/tomari.html stats/linkcheck.md stats/fudosan-shinchaku.md stats/fudosan-watch.json links/assets/cover.json stats/room.json stats/room-fail.txt stats/gakushu.md stats/gakushu.json stats/kimari.json stats/shirei.json stats/manabi.json stats/yatta.json
           git diff --cached --quiet && exit 0
           git commit -q -m "stats + illumination rebuild: $(TZ=Asia/Tokyo date +%F)"
           # 11/12 ほかの保存と重なると push が断られ、その日の数字と台帳がまるごと消えていた → やり直す（ぶつかった所は、いま作った物を残す）

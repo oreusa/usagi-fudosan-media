@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:d0f13760@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20261214
+SUMMARY:おぎの美術館（屋外の美術館）
+LOCATION:平城宮跡歴史公園 奈良市
+URL:https://www.heijo-park.jp/event_category/%E5%B1%95%E7%A4%BA/
+DESCRIPTION:公式 https://www.heijo-park.jp/event_category/%E5%B1%95%E7%A4%BA/\n関西おでかけ https://kansai.townnote.app/new/o/d0f13760
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:5d7ca651@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260904
+DTEND;VALUE=DATE:20270201
+SUMMARY:奥大和 謎解きラリー
+LOCATION:奥大和エリア 奈良県高取町ほか
+URL:https://www.pref.nara.lg.jp/n008/p164026.html
+DESCRIPTION:公式 https://www.pref.nara.lg.jp/n008/p164026.html\n関西おでかけ https://kansai.townnote.app/new/o/5d7ca651
+END:VEVENT
+END:VCALENDAR

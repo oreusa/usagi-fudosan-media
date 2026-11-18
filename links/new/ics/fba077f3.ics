@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:fba077f3@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261122
+DTEND;VALUE=DATE:20261123
+SUMMARY:KASHIHARA SKY PALETTE 万葉花火
+LOCATION:橿原運動公園 奈良県橿原市
+URL:https://sky-palette.hanabifes.com/
+DESCRIPTION:公式 https://sky-palette.hanabifes.com/\n関西おでかけ https://kansai.townnote.app/new/o/fba077f3
+END:VEVENT
+END:VCALENDAR

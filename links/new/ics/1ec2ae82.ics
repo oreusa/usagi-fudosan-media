@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:1ec2ae82@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260901
+DTEND;VALUE=DATE:20261201
+SUMMARY:ブルーメの丘 秋の味覚バイキング
+LOCATION:滋賀農業公園ブルーメの丘 滋賀県日野町
+URL:https://www.blumenooka.jp/have/
+DESCRIPTION:公式 https://www.blumenooka.jp/have/\n関西おでかけ https://kansai.townnote.app/new/o/1ec2ae82
+END:VEVENT
+END:VCALENDAR

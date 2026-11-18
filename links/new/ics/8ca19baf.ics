@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:8ca19baf@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20261123
+SUMMARY:浄厳院国際芸術祭2026
+LOCATION:浄厳院。水・木は休み。中学生以下無料 近江八幡市
+URL:https://www.jogoninart.com/
+DESCRIPTION:公式 https://www.jogoninart.com/\n関西おでかけ https://kansai.townnote.app/new/o/8ca19baf
+END:VEVENT
+END:VCALENDAR

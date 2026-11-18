@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:7f9a9651@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261201
+SUMMARY:ムーミン×神戸ポートタワー
+LOCATION:神戸ポートタワー 神戸市中央区
+URL:https://www.kobe-port-tower.com/info/moomin/
+DESCRIPTION:公式 https://www.kobe-port-tower.com/info/moomin/\n関西おでかけ https://kansai.townnote.app/new/o/7f9a9651
+END:VEVENT
+END:VCALENDAR

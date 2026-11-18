@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:0d411bde@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261226
+DTEND;VALUE=DATE:20270308
+SUMMARY:ルーシー・リー展 東西をつなぐ優美のうつわ
+LOCATION:あべのハルカス美術館 大阪市阿倍野区
+URL:https://www.aham.jp/exhibition/future/lucie_rie/
+DESCRIPTION:公式 https://www.aham.jp/exhibition/future/lucie_rie/\n関西おでかけ https://kansai.townnote.app/new/o/0d411bde
+END:VEVENT
+END:VCALENDAR

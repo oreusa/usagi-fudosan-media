@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:29751588@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260808
+DTEND;VALUE=DATE:20261125
+SUMMARY:高野・山麓スタンプラリー
+LOCATION:高野・山麓エリア 和歌山県橋本市ほか
+URL:https://www.pref.wakayama.lg.jp/prefg/130300/01/d00221612_d/fil/260731_stamp.pdf
+DESCRIPTION:公式 https://www.pref.wakayama.lg.jp/prefg/130300/01/d00221612_d/fil/260731_stamp.pdf\n関西おでかけ https://kansai.townnote.app/new/o/29751588
+END:VEVENT
+END:VCALENDAR

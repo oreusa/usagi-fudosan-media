@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:080c01f2@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20261124
+SUMMARY:ペダルで時を漕ぐ デジタルスタンプラリー
+LOCATION:神出山田自転車道 神戸市北区
+URL:https://event.city.kobe.lg.jp/event/OSHoI3B50boJ3RrtuNtr
+DESCRIPTION:公式 https://event.city.kobe.lg.jp/event/OSHoI3B50boJ3RrtuNtr\n関西おでかけ https://kansai.townnote.app/new/o/080c01f2
+END:VEVENT
+END:VCALENDAR

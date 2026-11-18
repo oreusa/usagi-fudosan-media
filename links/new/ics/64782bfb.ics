@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:64782bfb@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261207
+SUMMARY:談山神社 紅葉ライトアップ
+LOCATION:十三重塔と紅葉 奈良県桜井市
+URL:https://tanzan.or.jp/info/jinja_news/%e8%ab%87%e5%b1%b1%e7%a5%9e%e7%a4%be%e3%80%8c%e7%b4%85%e8%91%89%e3%81%be%e3%81%a4%e3%82%8a%e3%80%8d/
+DESCRIPTION:公式 https://tanzan.or.jp/info/jinja_news/%e8%ab%87%e5%b1%b1%e7%a5%9e%e7%a4%be%e3%80%8c%e7%b4%85%e8%91%89%e3%81%be%e3%81%a4%e3%82%8a%e3%80%8d/\n関西おでかけ https://kansai.townnote.app/new/o/64782bfb
+END:VEVENT
+END:VCALENDAR

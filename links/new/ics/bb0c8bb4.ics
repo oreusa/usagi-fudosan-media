@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:bb0c8bb4@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20261214
+SUMMARY:シガラキ・ニューウェーブ
+LOCATION:滋賀県立陶芸の森 滋賀県甲賀市
+URL:https://www.sccp.jp/exhibitions/toigeikan-exhibition/
+DESCRIPTION:公式 https://www.sccp.jp/exhibitions/toigeikan-exhibition/\n関西おでかけ https://kansai.townnote.app/new/o/bb0c8bb4
+END:VEVENT
+END:VCALENDAR

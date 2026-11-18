@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:1e3f68ee@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261121
+DTEND;VALUE=DATE:20261123
+SUMMARY:たかさご万灯祭2026
+LOCATION:山陽高砂駅の南側 兵庫県高砂市
+URL:https://www.city.takasago.lg.jp/soshikikarasagasu/citypromotionshitsu/kanko_tokusan/2/13744.html
+DESCRIPTION:公式 https://www.city.takasago.lg.jp/soshikikarasagasu/citypromotionshitsu/kanko_tokusan/2/13744.html\n関西おでかけ https://kansai.townnote.app/new/o/1e3f68ee
+END:VEVENT
+END:VCALENDAR

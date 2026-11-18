@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:032b8cd0@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261130
+SUMMARY:ナンシー関の消しゴムハンコをアーカイブする展
+LOCATION:奈良市美術館 奈良市
+URL:https://ncmoa.art/archives/10044
+DESCRIPTION:公式 https://ncmoa.art/archives/10044\n関西おでかけ https://kansai.townnote.app/new/o/032b8cd0
+END:VEVENT
+END:VCALENDAR

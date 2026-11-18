@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//TOWN NOTE//kansai//JA
+BEGIN:VEVENT
+UID:a79928d8@kansai.townnote.app
+DTSTAMP:20261118T000000Z
+DTSTART;VALUE=DATE:20261001
+DTEND;VALUE=DATE:20261228
+SUMMARY:草津 周遊謎解き 青ばな善右衛門
+LOCATION:草津市内 滋賀県草津市
+URL:https://www.city.kusatsu.shiga.jp/citysales/odekakenavi/shokan20260930.html
+DESCRIPTION:公式 https://www.city.kusatsu.shiga.jp/citysales/odekakenavi/shokan20260930.html\n関西おでかけ https://kansai.townnote.app/new/o/a79928d8
+END:VEVENT
+END:VCALENDAR
