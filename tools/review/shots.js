@@ -14,7 +14,7 @@ for(const [name,url] of L){for(const night of [false,true]){
  await p.waitForTimeout(1500);
  await p.evaluate(async()=>{for(let y=0;y<Math.min(document.body.scrollHeight,9000);y+=500){scrollTo(0,y);await new Promise(r=>setTimeout(r,120))}scrollTo(0,0)});
  await p.waitForTimeout(1200);
- const st=await p.evaluate(()=>({h:document.body.scrollHeight,over:document.documentElement.scrollWidth>innerWidth+1,
+ const st=await p.evaluate(()=>({h:document.body.scrollHeight,over:document.documentElement.scrollWidth>innerWidth+1,ovw:(()=>{if(document.documentElement.scrollWidth<=innerWidth+1)return '';const o=[];for(const e of document.body.querySelectorAll('*')){const r=e.getBoundingClientRect();if(r.right>innerWidth+1&&r.width>0&&getComputedStyle(e).position!=='fixed')o.push(e.tagName+'.'+String(e.className).slice(0,30)+'@'+Math.round(r.left)+'-'+Math.round(r.right));if(o.length>6)break}return 'sw='+document.documentElement.scrollWidth+' '+o.join(',')})(),
    broken:[...document.images].filter(i=>i.complete&&i.naturalWidth===0&&i.src&&!/instagram/.test(i.src)).map(i=>i.src.slice(-60)),
    imgs:[...document.images].filter(i=>i.naturalWidth>0).length,empty:[...document.querySelectorAll('b,strong,span')].filter(e=>/^\s*0\s*件?$/.test(e.textContent)&&e.offsetParent).length}));
  // 11/18 見やすさの自動点検（axe-core）：文字の濃さ・押す所の名前・画像の説明など。重い・深刻の数だけ記録（昼だけ）
@@ -23,6 +23,6 @@ for(const [name,url] of L){for(const night of [false,true]){
  // 1画面ずつ（全体を1枚で撮ると、夜の背景や固定の部品・あとから出る部分が本物と違って写るため）
  const N=Math.min(Math.ceil(st.h/760),+(process.env.MAXN||8));
  for(let i=0;i<N;i++){await p.evaluate(y=>scrollTo(0,y),i*760);await p.waitForTimeout(700);await p.screenshot({path:`${out}/${tag}-${i}.png`})}
- log.push([tag,url,'h='+st.h,'imgs='+st.imgs,'broken='+st.broken.length,'over='+st.over,'zero='+st.empty,'err='+err.length,'axe='+ax,st.broken.join(' '),err.join(' | ')].join('\t'));
+ log.push([tag,url,'h='+st.h,'imgs='+st.imgs,'broken='+st.broken.length,'over='+st.over+(st.ovw?'('+st.ovw+')':''),'zero='+st.empty,'err='+err.length,'axe='+ax,st.broken.join(' '),err.join(' | ')].join('\t'));
  await c.close();}}
 fs.writeFileSync(`${out}/log.tsv`,log.join('\n')+'\n');console.log(log.join('\n'));await b.close()})();
