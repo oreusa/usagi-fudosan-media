@@ -18,7 +18,8 @@ KIKAI = [
     ("oreusa/akari-auto", "metrics.yml", "関東の数字", 30),
     ("oreusa/usagi-fudosan-media", "link-stats.yml", "関西HPの毎日の作り直し・数字", 30),
     ("oreusa/usagi-fudosan-media", "kaiten-collect.yml", "開店・閉店ニュース集め（6時間ごと）", 10),
-    ("oreusa/usagi-fudosan-media", "book.yml", "X・Threads の予約", 3),
+    # 11/18 GitHub の30分おきの起動は数時間抜けることがある（11/17 は9時間空いた）。予約は前もって入るので12時間
+    ("oreusa/usagi-fudosan-media", "book.yml", "X・Threads の予約", 12),
     ("oreusa/usagi-fudosan-media", "allcheck.yml", "全ページ点検", 30),
     ("oreusa/usagi-fudosan-media", "formcheck.yml", "申し込みの送信テスト", 16),
     ("oreusa/usagi-fudosan-media", "headcheck.yml", "ページの頭の点検", 30),
