@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="ja"><!-- InstanceBegin template="/Templates/baseMain.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P2S84R7');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="format-detection" content="telephone=no">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>写真・動画ライブラリ｜兵庫県公式観光サイト 兵庫観光ナビ</title>
+<!-- InstanceEndEditable -->
+<link rel="canonical" href="https://www.hyogo-tourism.jp/photo/index.html">
+<meta name="description" content="事業者の皆さまに利用いただける無料の画像ダウンロードです。エリアやカテゴリーからお好みの画像を検索いただけます。">
+<meta name="author" content="公益社団法人ひょうご観光本部">
+<meta name="theme-color" content="#4593d0">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="兵庫観光navi">
+<meta property="og:url" content="https://www.hyogo-tourism.jp/photo/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="写真・動画ライブラリ｜兵庫県公式観光サイト 兵庫観光ナビ">
+<meta property="og:description" content="事業者の皆さまに利用いただける無料の画像ダウンロードです。エリアやカテゴリーからお好みの画像を検索いただけます。">
+<meta property="og:image" content="https://www.hyogo-tourism.jp/common/images/ogImg.png">
+<meta name="apple-mobile-web-app-title" content="兵庫観光navi">
+<link rel="apple-touch-icon" href="https://www.hyogo-tourism.jp/common/images/touchIcon.png">
+<link rel="icon" href="https://www.hyogo-tourism.jp/common/images/favicon.ico">
+<link rel="stylesheet" href="/common/css/default.css">
+<link rel="stylesheet" href="/common/css/base.css">
+<!-- InstanceBeginEditable name="head" -->
+<link rel="stylesheet" href="/js/slick/slick.min.css">
+<link rel="stylesheet" href="/css/commonSearch.css">
+<!-- InstanceEndEditable -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1814959799322186"
+     crossorigin="anonymous"></script>
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+ <script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+  googletag.defineSlot('/22662939841/hyogo-tourism_Footer_Rectangle_01', [[300, 250], [336, 280]], 'div-gpt-ad-1768185350661-0').addService(googletag.pubads());
+  googletag.pubads().enableSingleRequest();
+  googletag.enableServices();
+  });
+ </script>
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+ <script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+  googletag.defineSlot('/22662939841/hyogo-tourism_Footer_Rectangle_02', [[300, 250], [336, 280]], 'div-gpt-ad-1768185488793-0').addService(googletag.pubads());
+  googletag.pubads().enableSingleRequest();
+  googletag.enableServices();
+  });
+ </script>
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+ <script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+  googletag.defineSlot('/22662939841/hyogo-tourism_Footer_Rectangle_03', [[300, 250], [336, 280]], 'div-gpt-ad-1768185567763-0').addService(googletag.pubads());
+  googletag.pubads().enableSingleRequest();
+  googletag.enableServices();
+  });
+ </script>
+</head>
+<body id="body" class="do scrollTop">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2S84R7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="wrapper">
+<header id="header">
+	
+	<h1 id="siteName">
+		<a href="/index.html">兵庫観光navi</a>
+	</h1>
+	<div id="hTerroir">
+		<a href="/terroir">ひょうごテロワール旅</a>
+	</div>
+	
+</header>
+<div id="pagePath">
+	<ul>
+		
+		<li><a href="/index.html">TOP</a></li>
+		<!-- InstanceBeginEditable name="pagePath" -->
+		<li>写真・動画ライブラリ</li>
+		<!-- InstanceEndEditable -->
+		
+	</ul>
+</div>
+<main id="main">
+<!-- InstanceBeginEditable name="main" -->
+	<article id="photo">
+		<h2>写真・動画ライブラリ</h2>
+		<div>
+			<a href="list.html">リストを見る</a>
+		</div>
+		<div id="tab">
+			<ul>
+				<li><a href="terms.html">利用規約</a></li>
+				<li class="select"><a href="index.html">写真一覧</a></li>
+				<li><a href="/movie">動画一覧</a></li>
+			</ul>
+		</div>
+	</article>
+	<article id="search">
+		<h2>条件を指定して探す</h2>
+		<div id="searchMenu">
+			<details name="searchMenu">
+				<summary>カテゴリを選択</summary>
+				<div>
+					<div>
+						<ul>
+							<li data-id="cat1">
+								<label for="cat1"><input type="checkbox" class="searchCategory" id="cat1" value="1" >世界遺産・日本遺産</label>
+							</li>
+							<li data-id="cat2">
+								<label for="cat2"><input type="checkbox" class="searchCategory" id="cat2" value="2" >歴史文化・町並み</label>
+							</li>
+							<li data-id="cat3">
+								<label for="cat3"><input type="checkbox" class="searchCategory" id="cat3" value="3" >寺社仏閣</label>
+							</li>
+							<li data-id="cat4">
+								<label for="cat4"><input type="checkbox" class="searchCategory" id="cat4" value="4" >自然景観・公園</label>
+							</li>
+							<li data-id="cat5">
+								<label for="cat5"><input type="checkbox" class="searchCategory" id="cat5" value="5" >花・紅葉</label>
+							</li>
+							<li data-id="cat6">
+								<label for="cat6"><input type="checkbox" class="searchCategory" id="cat6" value="6" >夜景</label>
+							</li>
+							<li data-id="cat7">
+								<label for="cat7"><input type="checkbox" class="searchCategory" id="cat7" value="7" >レジャー施設</label>
+							</li>
+							<li data-id="cat8">
+								<label for="cat8"><input type="checkbox" class="searchCategory" id="cat8" value="8" >温泉</label>
+							</li>
+							<li data-id="cat9">
+								<label for="cat9"><input type="checkbox" class="searchCategory" id="cat9" value="9" >グルメ・酒</label>
+							</li>
+							<li data-id="cat10">
+								<label for="cat10"><input type="checkbox" class="searchCategory" id="cat10" value="10" >伝統工芸</label>
+							</li>
+							<li data-id="cat11">
+								<label for="cat11"><input type="checkbox" class="searchCategory" id="cat11" value="11" >イベント</label>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<button class="doSearch">指定した条件で検索</button>
+						<button class="doClearAll">検索条件をクリア</button>
+					</div>
+				</div>
+			</details>
+			<details name="searchMenu">
+				<summary>エリアを選択</summary>
+				<div>
+					<div id="searchArea">
+						<div id="searchAreaMap">
+							<svg viewBox="0 0 640 800">
+								<use xlink:href="/images/areaMap.svg#base"></use>
+								<a><use xlink:href="/images/areaMap.svg#base_hanshin"></use></a>
+								<a><use xlink:href="/images/areaMap.svg#base_kobe"></use></a>
+								<a><use xlink:href="/images/areaMap.svg#base_harima"></use></a>
+								<a><use xlink:href="/images/areaMap.svg#base_tajima"></use></a>
+								<a><use xlink:href="/images/areaMap.svg#base_tamba"></use></a>
+								<a><use xlink:href="/images/areaMap.svg#base_awaji"></use></a>
+								<use xlink:href="/images/areaMap.svg#text_pc"></use>
+							</svg>
+						</div>
+						<div id="searchAreaList">
+							<dl>
+								<dt><label for="area1"><input type="checkbox" class="searchArea" id="area1" value="1" >摂津(阪神)</label></dt>
+								<dd><label for="area2"><input type="checkbox" class="searchArea" id="area2" value="2" >芦屋市</label></dd>
+								<dd><label for="area3"><input type="checkbox" class="searchArea" id="area3" value="3" >西宮市</label></dd>
+								<dd><label for="area4"><input type="checkbox" class="searchArea" id="area4" value="4" >尼崎市</label></dd>
+								<dd><label for="area5"><input type="checkbox" class="searchArea" id="area5" value="5" >伊丹市</label></dd>
+								<dd><label for="area6"><input type="checkbox" class="searchArea" id="area6" value="6" >三田市</label></dd>
+								<dd><label for="area7"><input type="checkbox" class="searchArea" id="area7" value="7" >川西市</label></dd>
+								<dd><label for="area8"><input type="checkbox" class="searchArea" id="area8" value="8" >猪名川町</label></dd>
+								<dd><label for="area9"><input type="checkbox" class="searchArea" id="area9" value="9" >宝塚市</label></dd>
+							</dl>
+							<dl>
+								<dt><label for="area10"><input type="checkbox" class="searchArea" id="area10" value="10" >摂津(神戸)</label></dt>
+								<dd><label for="area11"><input type="checkbox" class="searchArea" id="area11" value="11" >神戸市</label></dd>
+							</dl>
+							<dl>
+								<dt><label for="area12"><input type="checkbox" class="searchArea" id="area12" value="12" >播磨</label></dt>
+								<dd><label for="area13"><input type="checkbox" class="searchArea" id="area13" value="13" >市川町</label></dd>
+								<dd><label for="area14"><input type="checkbox" class="searchArea" id="area14" value="14" >神河町</label></dd>
+								<dd><label for="area15"><input type="checkbox" class="searchArea" id="area15" value="15" >姫路市</label></dd>
+								<dd><label for="area16"><input type="checkbox" class="searchArea" id="area16" value="16" >福崎町</label></dd>
+								<dd><label for="area17"><input type="checkbox" class="searchArea" id="area17" value="17" >たつの市</label></dd>
+								<dd><label for="area18"><input type="checkbox" class="searchArea" id="area18" value="18" >佐用町</label></dd>
+								<dd><label for="area19"><input type="checkbox" class="searchArea" id="area19" value="19" >宍粟市</label></dd>
+								<dd><label for="area20"><input type="checkbox" class="searchArea" id="area20" value="20" >上郡町</label></dd>
+								<dd><label for="area21"><input type="checkbox" class="searchArea" id="area21" value="21" >赤穂市</label></dd>
+								<dd><label for="area22"><input type="checkbox" class="searchArea" id="area22" value="22" >相生市</label></dd>
+								<dd><label for="area23"><input type="checkbox" class="searchArea" id="area23" value="23" >太子町</label></dd>
+								<dd><label for="area24"><input type="checkbox" class="searchArea" id="area24" value="24" >稲美町</label></dd>
+								<dd><label for="area25"><input type="checkbox" class="searchArea" id="area25" value="25" >加古川市</label></dd>
+								<dd><label for="area26"><input type="checkbox" class="searchArea" id="area26" value="26" >高砂市</label></dd>
+								<dd><label for="area27"><input type="checkbox" class="searchArea" id="area27" value="27" >播磨町</label></dd>
+								<dd><label for="area28"><input type="checkbox" class="searchArea" id="area28" value="28" >明石市</label></dd>
+								<dd><label for="area29"><input type="checkbox" class="searchArea" id="area29" value="29" >加西市</label></dd>
+								<dd><label for="area30"><input type="checkbox" class="searchArea" id="area30" value="30" >加東市</label></dd>
+								<dd><label for="area31"><input type="checkbox" class="searchArea" id="area31" value="31" >三木市</label></dd>
+								<dd><label for="area32"><input type="checkbox" class="searchArea" id="area32" value="32" >小野市</label></dd>
+								<dd><label for="area33"><input type="checkbox" class="searchArea" id="area33" value="33" >西脇市</label></dd>
+								<dd><label for="area34"><input type="checkbox" class="searchArea" id="area34" value="34" >多可町</label></dd>
+							</dl>
+							<dl>
+								<dt><label for="area35"><input type="checkbox" class="searchArea" id="area35" value="35" >但馬</label></dt>
+								<dd><label for="area36"><input type="checkbox" class="searchArea" id="area36" value="36" >香美町</label></dd>
+								<dd><label for="area37"><input type="checkbox" class="searchArea" id="area37" value="37" >新温泉町</label></dd>
+								<dd><label for="area38"><input type="checkbox" class="searchArea" id="area38" value="38" >朝来市</label></dd>
+								<dd><label for="area39"><input type="checkbox" class="searchArea" id="area39" value="39" >豊岡市</label></dd>
+								<dd><label for="area40"><input type="checkbox" class="searchArea" id="area40" value="40" >養父市</label></dd>
+							</dl>
+							<dl>
+								<dt><label for="area41"><input type="checkbox" class="searchArea" id="area41" value="41" >丹波</label></dt>
+								<dd><label for="area42"><input type="checkbox" class="searchArea" id="area42" value="42" >丹波市</label></dd>
+								<dd><label for="area43"><input type="checkbox" class="searchArea" id="area43" value="43" >丹波篠山市</label></dd>
+							</dl>
+							<dl>
+								<dt><label for="area44"><input type="checkbox" class="searchArea" id="area44" value="44" >淡路</label></dt>
+								<dd><label for="area45"><input type="checkbox" class="searchArea" id="area45" value="45" >洲本市</label></dd>
+								<dd><label for="area46"><input type="checkbox" class="searchArea" id="area46" value="46" >淡路市</label></dd>
+								<dd><label for="area47"><input type="checkbox" class="searchArea" id="area47" value="47" >南あわじ市</label></dd>
+							</dl>
+						</div>
+					</div>
+					<div>
+						<button class="doSearch">指定した条件で検索</button>
+						<button class="doClearAll">検索条件をクリア</button>
+					</div>
+				</div>
+			</details>
+			<details name="searchMenu">
+				<summary>向きを選択</summary>
+				<div>
+					<div>
+						<ul>
+							<li><label for="pdr1"><input type="radio" id="pdr1" value="1"  class="searchDirection" name="itemSearchDirection">縦</label></li>
+							<li><label for="pdr2"><input type="radio" id="pdr2" value="2"  class="searchDirection" name="itemSearchDirection">横</label></li>
+						</ul>
+					</div>
+					<div>
+						<button class="doSearch">指定した条件で検索</button>
+						<button class="doClearAll">検索条件をクリア</button>
+					</div>
+				</div>
+			</details>
+			<div id="searchButton">
+				<input type="text" id="searchKeyword" value="" placeholder="キーワードを入力">
+				<button class="doSearch">検索</button>
+			</div>
+		</div>
+		
+	</article>
+	<article id="result">
+		<h2>検索結果</h2>
+		<div id="resultSet">
+			<div id="resultCount"><span>633</span>件ありました</div>
+			<div id="resultSwitch">
+				<dl id="resultSort">
+					<dt>並び順</dt>
+					
+					<dd class="select" data-id="1">人気順（週間）</dd>
+					<dd class="" data-id="0">更新順</dd>
+					
+				</dl>
+			</div>
+		</div>
+		<div id="resultList" class="photoList">
+			<section>
+				<h3>有馬温泉街</h3>
+				<div>
+					<a data-id="619">リストに追加</a>
+					<a href="detail_619.html">detail_619.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=619" alt="有馬温泉街" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>姫路城2023-10</h3>
+				<div>
+					<a data-id="936">リストに追加</a>
+					<a href="detail_936.html">detail_936.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=936" alt="姫路城2023-10" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>あわじ花さじき-2</h3>
+				<div>
+					<a data-id="52">リストに追加</a>
+					<a href="detail_52.html">detail_52.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=52" alt="あわじ花さじき-2" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>生野銀山の紅葉</h3>
+				<div>
+					<a data-id="572">リストに追加</a>
+					<a href="detail_572.html">detail_572.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=572" alt="生野銀山の紅葉" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>竹田城跡-Ⅰ</h3>
+				<div>
+					<a data-id="512">リストに追加</a>
+					<a href="detail_512.html">detail_512.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=512" alt="竹田城跡-Ⅰ" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>竹田城跡の朝焼け</h3>
+				<div>
+					<a data-id="595">リストに追加</a>
+					<a href="detail_595.html">detail_595.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=595" alt="竹田城跡の朝焼け" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>氷ノ山</h3>
+				<div>
+					<a data-id="614">リストに追加</a>
+					<a href="detail_614.html">detail_614.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=614" alt="氷ノ山" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>伊和都比売神社3</h3>
+				<div>
+					<a data-id="944">リストに追加</a>
+					<a href="detail_944.html">detail_944.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=944" alt="伊和都比売神社3" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>城崎温泉-2</h3>
+				<div>
+					<a data-id="327">リストに追加</a>
+					<a href="detail_327.html">detail_327.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=327" alt="城崎温泉-2" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>明延探検坑道-1</h3>
+				<div>
+					<a data-id="533">リストに追加</a>
+					<a href="detail_533.html">detail_533.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=533" alt="明延探検坑道-1" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>伊和都比売神社5</h3>
+				<div>
+					<a data-id="946">リストに追加</a>
+					<a href="detail_946.html">detail_946.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=946" alt="伊和都比売神社5" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>坂越の街並み-1</h3>
+				<div>
+					<a data-id="177">リストに追加</a>
+					<a href="detail_177.html">detail_177.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=177" alt="坂越の街並み-1" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>生野銀山-Ⅰ</h3>
+				<div>
+					<a data-id="507">リストに追加</a>
+					<a href="detail_507.html">detail_507.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=507" alt="生野銀山-Ⅰ" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>「天空の城跡」_朝来市竹田城</h3>
+				<div>
+					<a data-id="560">リストに追加</a>
+					<a href="detail_560.html">detail_560.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=560" alt="「天空の城跡」_朝来市竹田城" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>姫路城2023-6</h3>
+				<div>
+					<a data-id="932">リストに追加</a>
+					<a href="detail_932.html">detail_932.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=932" alt="姫路城2023-6" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>城崎温泉-10</h3>
+				<div>
+					<a data-id="337">リストに追加</a>
+					<a href="detail_337.html">detail_337.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=337" alt="城崎温泉-10" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>「魅惑の泉と石柱」_豊岡市玄武洞</h3>
+				<div>
+					<a data-id="552">リストに追加</a>
+					<a href="detail_552.html">detail_552.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=552" alt="「魅惑の泉と石柱」_豊岡市玄武洞" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>姫路城ライトアップ</h3>
+				<div>
+					<a data-id="592">リストに追加</a>
+					<a href="detail_592.html">detail_592.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=592" alt="姫路城ライトアップ" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>伊和都比売神社4</h3>
+				<div>
+					<a data-id="945">リストに追加</a>
+					<a href="detail_945.html">detail_945.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=945" alt="伊和都比売神社4" width="100" height="100" loading="lazy"></figure>
+			</section>
+			<section>
+				<h3>長源寺の紅葉</h3>
+				<div>
+					<a data-id="602">リストに追加</a>
+					<a href="detail_602.html">detail_602.html</a>
+				</div>
+				<figure><img src="/lsc/api/photo/?src=602" alt="長源寺の紅葉" width="100" height="100" loading="lazy"></figure>
+			</section>
+		</div>
+		
+		<div id="pagenation">
+			
+			<ol class="pc tb">
+				<li><a href="index_1_1________.html" class="lsc-current-page" title="1～20">1</a></li>
+				<li><a href="index_2_1________.html" class="" title="21～40">2</a></li>
+				<li><a href="index_3_1________.html" class="" title="41～60">3</a></li>
+				<li><a href="index_4_1________.html" class="" title="61～80">4</a></li>
+				<li><a href="index_5_1________.html" class="" title="81～100">5</a></li>
+				<li><a href="index_6_1________.html" class="" title="101～120">6</a></li>
+				<li><a href="index_7_1________.html" class="" title="121～140">7</a></li>
+				<li><a href="index_8_1________.html" class="" title="141～160">8</a></li>
+				<li><a href="index_9_1________.html" class="" title="161～180">9</a></li>
+				<li><a href="index_10_1________.html" class="" title="181～200">10</a></li>
+				<li> ... </li>
+				<li><a href="index_2_1________.html" title="21～40" rel="next">次へ</a></li>
+			</ol>
+			<ol class="sp">
+				<li><a href="index_1_1________.html" class="lsc-current-page" title="1～20">1</a></li>
+				<li><a href="index_2_1________.html" class="" title="21～40">2</a></li>
+				<li><a href="index_3_1________.html" class="" title="41～60">3</a></li>
+				<li><a href="index_4_1________.html" class="" title="61～80">4</a></li>
+				<li><a href="index_5_1________.html" class="" title="81～100">5</a></li>
+				<li><a href="index_2_1________.html" title="21～40" rel="next">次へ</a></li>
+			</ol>
+		</div>
+	</article>
+<!-- InstanceEndEditable -->
+</main>
+<nav id="nav">
+	<h2>Menu</h2>
+	
+	<div id="navGlobal">
+		<ul>
+			<li><a href="/feature/index.html">特集</a></li>
+			<li><a href="/review/index.html">みんなのオススメ</a></li>
+			<li><a href="/course/index.html">モデルコース</a></li>
+			<li><a href="/spot/index.html">スポット</a></li>
+			<li><a href="/experience/index.html">体験</a></li>
+			<li><a href="/event/index.html">イベント</a></li>
+			<li><a href="/feature/gourmet">グルメ</a></li>
+			<li><a href="https://local.staynavi.direct/hyogo-tourism/search/results?pf=28">旅の予約</a></li>
+			<li><a href="/access/index.html">アクセス</a></li>
+		</ul>
+	</div>
+	<div id="navPickup">
+		<ul>
+			<li><a href="https://www.hyogo-tourism.jp/universal/top" target="_self">ユニバーサルツーリズム</a></li>
+			<li><a href="https://www.hyogo-tourism.jp/feature/detail_19.html" target="_self">ひょうごのお土産</a></li>
+			<li><a href="https://www.hyogo-tourism.jp/feature/onsen" target="_self">兵庫の温泉・宿泊施設</a></li>
+		</ul>
+	</div>
+	<div id="navBusiness">
+		<ul>
+			<li><a href="/business/index.html">旅行会社の皆様</a></li>
+			<li><a href="/fcnet/index.html">ロケ・撮影</a></li>
+		</ul>
+	</div>
+	<div id="navFavorite">
+		<a href="/favorite/index.html">お気に入り</a>
+	</div>
+	<details id="navLanguage" translate="no">
+		<summary>Language</summary>
+		<div>
+			<ul>
+				<li><a href="/world/" target="_blank">English</a></li>
+				<li><a href="/zh-TW/" target="_blank">中文繁體</a></li>
+				<li><a href="/zh-CN/" target="_blank">中文简体</a></li>
+				<li><a href="/ko/" target="_blank">한국어</a></li>
+				<li><a href="/fr/" target="_blank">Français</a></li>
+			</ul>
+		</div>
+	</details>
+	
+	<details id="navInfo">
+		<summary>当サイトについて</summary>
+		<div>
+			<ul>
+				<li><a href="/outline">運営組織</a></li>
+				<li><a href="/privacy">プライバシーポリシー</a></li>
+			</ul>
+		</div>
+	</details>
+	<div id="navExtra">
+		<ul>
+			<li><a href="/brochure/index.html">パンフレットダウンロード</a></li>
+			<li><a href="/photo/index.html">写真・動画ライブラリ</a></li>
+			<li><a href="/form/contact/">お問い合わせ</a></li>
+		</ul>
+	</div>
+	<div id="navSearch">
+		<script async src="https://cse.google.com/cse.js?cx=b0009d49c8e5045cc"></script>
+		<div class="gcse-searchbox-only"></div>
+	</div>
+</nav>
+<footer id="footer">
+	<div id="fBanner">
+<!-- /22662939841/hyogo-tourism_Footer_Rectangle_01 -->
+ <div id='div-gpt-ad-1768185350661-0' style='min-width: 300px; min-height: 250px;'>
+  <script>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1768185350661-0'); });
+  </script>
+ </div>
+<!-- /22662939841/hyogo-tourism_Footer_Rectangle_02 -->
+ <div id='div-gpt-ad-1768185488793-0' style='min-width: 300px; min-height: 250px;'>
+  <script>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1768185488793-0'); });
+  </script>
+ </div>
+<!-- /22662939841/hyogo-tourism_Footer_Rectangle_03 -->
+ <div id='div-gpt-ad-1768185567763-0' style='min-width: 300px; min-height: 250px;'>
+  <script>
+  googletag.cmd.push(function() { googletag.display('div-gpt-ad-1768185567763-0'); });
+  </script>
+ </div>
+	</div>
+	<div id="fNav">
+		<div id="fNavGlobal">
+			<dl>
+				<dt>観光案内</dt>
+				<dt><a href="/index.html">観光トップ</a></dt>
+				<dd><a href="/feature/index.html">特集</a></dd>
+				<dd><a href="/review/index.html">みんなのオススメ</a></dd>
+				<dd><a href="/course/index.html">モデルコース</a></dd>
+				<dd><a href="/spot/index.html">スポット</a></dd>
+				<dd><a href="/experience/index.html">体験</a></dd>
+				<dd><a href="/event/index.html">イベント</a></dd>
+				<dd><a href="/feature/gourmet">グルメ</a></dd>
+				<dd><a href="https://local.staynavi.direct/hyogo-tourism/search/results?pf=28">旅の予約</a></dd>
+				<dd><a href="/access/index.html">アクセス</a></dd>
+				<dd><a href="/universal/top">ユニバーサルツーリズム</a></dd>
+			</dl>
+			<dl>
+				<dt>このサイトについて</dt>
+				<dd><a href="/privacy">このサイトについて</a></dd>
+				<dd><a href="/outline">ひょうご観光本部のご紹介</a></dd>
+				<dd><a href="/meisanhin">兵庫県指定観光名産品協会のご紹介</a></dd>
+			</dl>
+			<dl>
+				<dt>法人の皆様</dt>
+				<dt><a href="/business/index.html">法人トップ</a></dt>
+				<dd><a href="/business/news/index.html">お知らせ</a></dd>
+				<dd><a href="/business/experience/index.html">旅行会社の方へ</a></dd>
+				<dd><a href="/fcnet/index.html">フィルムコミッション</a></dd>
+			</dl>
+			<dl translate="no">
+				<dt>Foreign Language</dt>
+				<dd><a href="/world/">English</a></dd>
+				<dd><a href="/zh-TW/">中文繁體</a></dd>
+				<dd><a href="/zh-CN/">中文简体</a></dd>
+				<dd><a href="/ko/">한국어</a></dd>
+				<dd><a href="/fr/" target="_blank">Français</a></dd>
+			</dl>
+		</div>
+		<div id="fNavExtra">
+			<ul>
+				<li><a href="/brochure/index.html">パンフレットダウンロード</a></li>
+				<li><a href="/photo/index.html">写真・動画ライブラリ</a></li>
+				<li><a href="/form/contact/">お問い合わせ</a></li>
+			</ul>
+		</div>
+		<div id="fNavJsts">
+			<p>兵庫県・（公社）ひょうご観光本部は日本版持続可能な観光ガイドライン（JSTS-D）のロゴマークを取得しています。</p>
+			<figure>
+				<a href="https://www.mlit.go.jp/kankocho/seisaku_seido/kihonkeikaku/jizoku_kankochi/jizokukano_taisei/torikumi/jsts-d_logomark.html" target="_blank">
+					<img src="/common/images/logoIcon.jsts.webp" alt="JSTS-D" width="100" height="100" loading="lazy">
+				</a>
+			</figure>
+		</div>
+	</div>
+	<div id="copyright">
+		<p>COPYRIGHT &copy; HYOGO TOURISM BUREAU ALL RIGHT RESERVED.</p>
+	</div>
+</footer>
+
+<div id="floatingNav">
+	<ul>
+		<li><a href="/feature/index.html">特集</a></li>
+		<li><a href="/review/index.html">みんなのオススメ</a></li>
+		<li><a href="/course/index.html">モデルコース</a></li>
+		<li><a href="/spot/index.html">スポット</a></li>
+		<li><a href="/experience/index.html">体験</a></li>
+		<li><a href="/event/index.html">イベント</a></li>
+		<li><a href="/feature/gourmet">グルメ</a></li>
+		<li><a href="https://local.staynavi.direct/hyogo-tourism/search/results?pf=28">宿泊</a></li>
+	</ul>
+</div>
+
+<div id="pageTop">ページトップへ</div>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/common/js/default.js"></script>
+<script src="/common/js/base.js"></script>
+<!-- InstanceBeginEditable name="foot" -->
+<script src="/js/slick/slick.min.js"></script>
+<script src="/js/commonSearch.js"></script>
+<script src="/js/commonPhoto.js"></script>
+<!-- InstanceEndEditable -->
+</body>
+<!-- InstanceEnd --></html>
