@@ -13,12 +13,14 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           if [[ "${{ inputs.words }}" == @* ]]; then
-            f="${{ inputs.words }}"; python3 tools/photo/cover.py "${f#@}" tools/photo/probe
+            f="${{ inputs.words }}"; f="${f#@}"; b=$(basename "$f" .tsv); python3 tools/photo/cover.py "$f" "tools/photo/probe/$b"
           else
             IFS='|' read -ra W <<< "${{ inputs.words }}"
             python3 tools/photo/commons.py tools/photo/probe "${W[@]}"
           fi
       - run: |
           git config user.name "photo-probe"; git config user.email "actions@users.noreply.github.com"
-          git checkout -B claude/project-thread-q3ep5v
-          git add -f tools/photo/probe && git commit -qm "photo-probe" && git push -f origin claude/project-thread-q3ep5v
+          mv tools/photo/probe /tmp/probe
+          if git fetch -q origin photo-probe; then git checkout -qB photo-probe FETCH_HEAD; else git checkout -q --orphan photo-probe && git rm -rfq .; fi
+          mkdir -p tools/photo/probe && cp -r /tmp/probe/* tools/photo/probe/
+          git add -f tools/photo/probe && git commit -qm "photo-probe" && for i in 1 2 3 4; do git pull -q --rebase origin photo-probe 2>/dev/null; git push origin photo-probe && break; sleep 7; done
