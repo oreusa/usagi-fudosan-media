@@ -5,6 +5,7 @@ on:
     inputs:
       list: {description: "URLの一覧ファイル（リポジトリの中）", required: true}
       name: {description: "保存するフォルダ名", required: true}
+      act: {description: "yes なら全部の部品を押す点検（act.js）も", required: false, default: "no"}
 permissions:
   contents: write
 jobs:
@@ -16,6 +17,8 @@ jobs:
       - run: npm i --no-save playwright@1.49.1 axe-core@4.10.2 && (timeout 150 npx playwright install --with-deps chromium || npx playwright install chromium)
       - run: sudo apt-get install -y -qq fonts-noto-cjk >/dev/null 2>&1 || true
       - run: node tools/review/shots.js "${{ inputs.list }}" /tmp/rv
+      - if: ${{ inputs.act == 'yes' }}
+        run: timeout 1500 node tools/review/act.js "${{ inputs.list }}" > /tmp/rv/act.log 2>&1 || true
       - run: |
           git config user.name "review-shot"; git config user.email "actions@users.noreply.github.com"
           if git fetch -q origin review; then git checkout -qB review FETCH_HEAD; else git checkout -q --orphan review && git rm -rfq .; fi
