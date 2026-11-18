@@ -5,7 +5,7 @@ import sys, os, json, hashlib, re, datetime
 from PIL import Image
 R = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 D, P = sys.argv[1], sys.argv[2]
-PH = os.path.join(R, "links/assets/ph"); VPF = os.path.join(R, "tools/new/venue_photos.json")
+PH = os.environ.get("PHDIR") or os.path.join(R, "links/assets/ph"); VPF = os.environ.get("VPFILE") or os.path.join(R, "tools/new/venue_photos.json")  # 関東(燈)にも使う
 VP = json.load(open(VPF)); B = json.load(open(os.path.join(D, "best.json")))
 T = datetime.date.today().isoformat()
 for ln in open(P, encoding="utf-8"):
