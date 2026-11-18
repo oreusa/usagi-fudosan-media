@@ -153,3 +153,10 @@ d54d20b2	ERR	HTTP Error 403: Forbidden		https://ja.kyoto.travel/
 34647376	200	39539	text/html; charset=UTF-8	https://osaka-info.jp/photolibrary/
 b32f65b7	200	37080	text/html; charset=UTF-8	https://octb.osaka-info.jp/
 7ae7e247	ERR	<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1081)>		https://www.nara-kankou.or.jp/
+dacf7014	200	113898	text/html; charset=UTF-8	https://photo.osaka-info.jp/
+d6c55733	200	30408	text/html; charset=UTF-8	https://hyogo-tourism.jp/photo/index.html
+48fa427c	200	22181	text/html; charset=UTF-8	https://yamatoji.nara-kankou.or.jp/018img_delivery_user/
+b7534521	ERR	HTTP Error 404: Not Found		https://www.biwako-visitors.jp/business/
+0f14de98	200	63833	text/html; charset=UTF-8	https://www.wakayama-kanko.or.jp/
+1cdfdf99	ERR	HTTP Error 404: Not Found		https://photo.osaka-info.jp/terms/
+87dbd021	200	118090	text/html; charset=UTF-8	https://photo.osaka-info.jp/guide/
