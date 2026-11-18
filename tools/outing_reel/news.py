@@ -145,7 +145,9 @@ html = r"""<!doctype html><html lang="ja"><meta charset="utf-8"><style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1920px;overflow:hidden;background:#120e0b;color:#fff}
 #ph{position:absolute;inset:0;overflow:hidden}
-#ph img{position:absolute;left:50%;top:50%;height:1920px;width:auto;min-width:1080px;object-fit:cover;will-change:transform}
+#ph img{position:absolute;left:50%;top:50%;height:1920px;width:auto;min-width:1080px;object-fit:cover;will-change:transform;filter:contrast(1.07) saturate(1.06) sepia(.08) brightness(.97)}
+#vg{position:absolute;inset:0;background:radial-gradient(ellipse 85% 70% at 50% 45%,rgba(0,0,0,0) 55%,rgba(8,5,3,.38) 100%)}
+#gr{position:absolute;inset:-60px;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 #sh1{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,7,5,.62) 0%,rgba(10,7,5,0) 22%,rgba(10,7,5,0) 46%,rgba(10,7,5,.55) 66%,rgba(10,7,5,.9) 100%)}
 #bar{position:absolute;left:64px;right:64px;top:118px;display:flex;align-items:center;gap:18px}
 #tag{font:900 34px GB;letter-spacing:.08em;background:#C0563C;color:#fff;padding:14px 26px 15px;border-radius:10px;box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
@@ -154,7 +156,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#120e0b;color:#f
 #live i{width:14px;height:14px;border-radius:50%;background:#ff5a4a;box-shadow:0 0 0 0 rgba(255,90,74,.6)}
 #cr{position:absolute;right:40px;top:206px;font:500 19px G;color:rgba(255,255,255,.72);text-shadow:0 1px 6px rgba(0,0,0,.6);max-width:560px;text-align:right}
 #hd{position:absolute;left:64px;right:64px;top:1010px}
-#hd .k{font:500 26px J;letter-spacing:.34em;color:#F1C9A8;margin-bottom:22px;display:flex;align-items:center;gap:18px}#hd .k:after{content:"";height:2px;width:80px;background:#F1C9A8}
+#hd .k{text-shadow:0 2px 10px rgba(0,0,0,.7);font:500 26px J;letter-spacing:.34em;color:#F1C9A8;margin-bottom:22px;display:flex;align-items:center;gap:18px}#hd .k:after{content:"";height:2px;width:80px;background:#F1C9A8}
 #hd h1{font:700 104px/1.22 M;letter-spacing:.04em;text-shadow:0 4px 30px rgba(0,0,0,.45)}
 #hd .pl{font:700 32px G;color:rgba(255,255,255,.9);margin-top:22px;letter-spacing:.04em}
 #cd{position:absolute;left:64px;right:64px;top:1080px;display:flex;flex-direction:column;gap:16px}
@@ -171,7 +173,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#120e0b;color:#f
 #endc .n{font:700 30px G;color:rgba(255,255,255,.8);margin-top:34px;letter-spacing:.06em}
 #prog{position:absolute;left:64px;right:64px;top:96px;height:5px;border-radius:3px;background:rgba(255,255,255,.22);overflow:hidden}#prog i{display:block;height:100%;background:#fff;transform-origin:0 50%}
 </style>
-<div id="ph"><img id="im" src="file://%PHOTO%"></div><div id="sh1"></div>
+<div id="ph"><img id="im" src="file://%PHOTO%"></div><div id="vg"></div><div id="sh1"></div><div id="gr"></div>
 <div id="prog"><i id="pb"></i></div>
 <div id="bar"><div id="tag">おでかけニュース</div><div id="dt"></div><div id="live"><i id="lv"></i>NEWS</div></div>
 <div id="cr"></div>
@@ -194,7 +196,7 @@ function render(t){
   let px=0,py=0;for(let i=0;i<pans.length;i++){const s=i?P.st[i-1]||P.total:0;const k=eio(sm(t,s-.2,s+1.4));px+= (pans[i][0]-(i?pans[i-1][0]:0))*k;py+=(pans[i][1]-(i?pans[i-1][1]:0))*k}
   IM.style.transform=`translate(calc(-50% + ${px}%),calc(-50% + ${py}%)) scale(${z.toFixed(4)})`;IM.style.objectPosition=P.focus[0]+'% '+P.focus[1]+'%';
   $('pb').style.transform=`scaleX(${(t/P.total).toFixed(4)})`;
-  $('lv').style.opacity=(0.55+0.45*Math.abs(Math.sin(t*2.4))).toFixed(2);
+  $('gr').style.transform=`translate(${(Math.floor(t*12)*37%60)-30}px,${(Math.floor(t*12)*53%60)-30}px)`;$('lv').style.opacity=(0.55+0.45*Math.abs(Math.sin(t*2.4))).toFixed(2);
   // 見出し：最初の行だけ
   const h=eo(sm(t,0.25,1.05))*(1-sm(t,P.st[1]-0.35,P.st[1]+0.1));const hd=$('hd');hd.style.opacity=h;hd.style.transform=`translateY(${(1-eo(sm(t,0.25,1.05)))*40}px)`;
   // 札：その行の札（ガラスの板）が下から出る
