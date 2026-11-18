@@ -46,7 +46,7 @@ def hours(t, alt=""):
 
 
 import glob
-src = "".join(open(f, encoding="utf-8").read() for f in [os.path.join(R, "links/index.html")] + sorted(glob.glob(os.path.join(R, "links/illumination*.html"))) + sorted(glob.glob(os.path.join(R, "links/koyo*.html"))))
+src = "".join(open(f, encoding="utf-8").read() for f in [os.path.join(R, "links/index.html")] + sorted(glob.glob(os.path.join(R, "links/illumination*.html"))) + sorted(glob.glob(os.path.join(R, "links/koyo*.html"))) + [os.path.join(R, "links/hatsumode.html")])
 data = {}
 for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', src, re.S):
     a = {k: html.unescape(v) for k, v in re.findall(r'(data-[\w-]+|href)="([^"]*)"', m.group(1))}
@@ -82,7 +82,7 @@ for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', src, re.S):
             im.save(th, "WEBP", quality=74)
         o.update(im=f, cr=p["cr"], cu=p.get("page", ""))
         if p.get("weak"): o["wk"] = 1
-    vn = KV.get(key)
+    vn = KV.get(key) or (name if name in VP else None)   # 11/18 初詣など、名前そのものが場所（住吉大社など）
     if vn and vn not in VP and vn in PH and not PH[vn].get("weak"):   # 会場が名所として写真を持っている時（奈良公園など）
         VP[vn] = {"img": PH[vn]["img"], "cr": PH[vn]["cr"], "page": PH[vn].get("page", "")}
     if (not o.get("im") or o.get("wk")) and vn in VP:
