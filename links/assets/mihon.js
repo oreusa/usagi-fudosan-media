@@ -57,7 +57,7 @@ var css=
 '.mnews .mntg{display:inline-flex;gap:6px;align-items:center;font-size:11px;font-weight:700;background:rgba(255,255,255,.94);color:#2B2622;border-radius:999px;padding:5px 10px;margin-bottom:9px}'+
 '.mnews .mntg i{font-style:normal;color:var(--pc,#B97A62)}'+
 '.mnews .mntx b{display:block;font-family:"Zen Kaku Gothic New",sans-serif;font-weight:900;font-size:21px;line-height:1.38;letter-spacing:.01em;text-shadow:0 1px 10px rgba(0,0,0,.35)}'+
-'.mnews .mntx span{display:block;font-size:12px;opacity:.9;margin-top:5px}'+
+'.mnews .mntx .mnn{display:block;font-size:12px;opacity:.9;margin-top:5px}'+
 '.mnews .mncr{position:absolute;top:8px;right:10px;z-index:1;font-size:9px;opacity:.8;text-shadow:0 1px 2px rgba(0,0,0,.6)}'+
 '.mnews .mndt{display:flex!important;flex-direction:row;justify-content:center;gap:6px;margin-top:10px}.mnews .mndt i{display:block;flex:none;width:6px;height:6px;border-radius:3px;background:#d6d1cb;transition:width .3s}.mnews .mndt i.on{width:18px;background:#2B2622}'+
 /* おすすめ5 の1位：大きな写真 */
@@ -109,7 +109,7 @@ function news(){var q=document.querySelector('.qk');if(!q||document.querySelecto
   var P={};L=L.filter(function(o){if(P[o.p]>=1&&L.length>6)return false;P[o.p]=(P[o.p]||0)+1;return true}).slice(0,5);if(!L.length)return;
   var PC={"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"},W='日月火水木金土',d=jst();
   var h='<div class="mnh"><div><small>TODAY’S NEWS</small><b>きょうのおでかけニュース</b></div><time>'+(d.getUTCMonth()+1)+'/'+d.getUTCDate()+'（'+W[d.getUTCDay()]+'）</time></div><div class="mntr">';
-  L.forEach(function(o){var st=o.s<=t?'開催中':(+o.s.slice(5,7))+'/'+(+o.s.slice(8))+'から';h+='<a class="mnsl" href="/o/'+o.id+'" style="--pc:'+(PC[o.p]||'#B97A62')+'"><img src="/assets/ph/'+o.im+'" alt="" decoding="async"><span class="mncr">写真：'+esc(o.cr.replace(/（.*$/,''))+'</span><span class="mntx"><span class="mntg"><i>'+esc(o.p)+'</i>'+st+'・'+(+o.e.slice(5,7))+'/'+(+o.e.slice(8))+'まで</span><b>'+esc(hook(o))+'</b><span>'+esc(o.n)+'</span></span></a>'});
+  L.forEach(function(o){var st=o.s<=t?'開催中':(+o.s.slice(5,7))+'/'+(+o.s.slice(8))+'から';h+='<a class="mnsl" href="/o/'+o.id+'" style="--pc:'+(PC[o.p]||'#B97A62')+'"><img src="/assets/ph/'+o.im+'" alt="" decoding="async"><span class="mncr">写真：'+esc(o.cr.replace(/（.*$/,''))+'</span><span class="mntx"><span class="mntg"><i>'+esc(o.p)+'</i>'+st+'・'+(+o.e.slice(5,7))+'/'+(+o.e.slice(8))+'まで</span><b>'+esc(hook(o))+'</b><span class="mnn">'+esc(o.n)+'</span></span></a>'});
   h+='</div><div class="mndt">'+L.map(function(o,i){return '<i'+(i?'':' class="on"')+'></i>'}).join('')+'</div>';
   var w=document.createElement('section');w.className='mnews';w.setAttribute('aria-label','きょうのおでかけニュース');w.innerHTML=h;q.parentNode.insertBefore(w,q.nextSibling);
   var tr=w.querySelector('.mntr'),dots=w.querySelectorAll('.mndt i'),cur=0,hold=0;
