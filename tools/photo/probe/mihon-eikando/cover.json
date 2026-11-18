@@ -1,0 +1,50 @@
+[
+ {
+  "name": "永観堂 紅葉",
+  "hit": {
+   "title": "File:Eikan-do Zenrin-ji, November 2016 -03.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Eikan-do_Zenrin-ji,_November_2016_-03.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Eikan-do_Zenrin-ji%2C_November_2016_-03.jpg/1280px-Eikan-do_Zenrin-ji%2C_November_2016_-03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "license": "CC BY-SA 4.0",
+   "artist": "Martin Falbisoner",
+   "q": "永観堂",
+   "via": "wikidata Q2380134 禅林寺",
+   "w": 5816,
+   "h": 3877,
+   "season_check": true,
+   "file": "000.jpg"
+  }
+ },
+ {
+  "name": "永観堂 多宝塔",
+  "hit": {
+   "title": "File:Eikando Zenrinji-temple Tahoto.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Eikando_Zenrinji-temple_Tahoto.JPG",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0e/Eikando_Zenrinji-temple_Tahoto.JPG/1280px-Eikando_Zenrinji-temple_Tahoto.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "license": "CC BY 2.5",
+   "artist": "Tomomarusan",
+   "q": "永観堂 多宝塔",
+   "via": "search",
+   "check": "検索で見つけた物＝場所が合うか必ず目で見る",
+   "file": "001.jpg"
+  }
+ },
+ {
+  "name": "永観堂 放生池",
+  "hit": {
+   "title": "File:Eikando, Kyoto - Eikando7376.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Eikando,_Kyoto_-_Eikando7376.jpg",
+   "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/53/Eikando%2C_Kyoto_-_Eikando7376.jpg/1280px-Eikando%2C_Kyoto_-_Eikando7376.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "license": "CC0",
+   "artist": "lumoplank",
+   "q": "Eikando pond autumn",
+   "via": "search",
+   "check": "検索で見つけた物＝場所が合うか必ず目で見る",
+   "file": "002.jpg"
+  }
+ },
+ {
+  "name": "永観堂 夜",
+  "hit": null
+ }
+]
