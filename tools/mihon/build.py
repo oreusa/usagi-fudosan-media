@@ -32,9 +32,10 @@ def hours(t, alt=""):
     return ""
 
 
-src = open(os.path.join(R, "links/index.html"), encoding="utf-8").read()
+import glob
+src = "".join(open(f, encoding="utf-8").read() for f in [os.path.join(R, "links/index.html")] + sorted(glob.glob(os.path.join(R, "links/illumination*.html"))) + sorted(glob.glob(os.path.join(R, "links/koyo*.html"))))
 data = {}
-for m in re.finditer(r'<a class="card"([^>]*)>(.*?)</a>', src, re.S):
+for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', src, re.S):
     a = {k: html.unescape(v) for k, v in re.findall(r'(data-[\w-]+|href)="([^"]*)"', m.group(1))}
     b = m.group(2); t = re.search(r'class="t">(.*?)</div>', b, re.S)
     if not t: continue
