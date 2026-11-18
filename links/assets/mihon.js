@@ -42,12 +42,12 @@ var css=
 
 'html.night .mnow{background:#E7F4EC}'+
 /* 写真のあるカード：上に大きな写真。カードの絵のタイルと日付の札は今のまま、写真の下の端に少し重ねる */
-'html body a.card.cm.mbig.mbig.mbig.mbig.mbig.mbig{padding-top:192px!important;min-height:0}'+
-'a.card.mbig .mbp{position:absolute;left:0;right:0;top:0;height:176px;border-radius:8px 8px 0 0;overflow:hidden;background:#e9e6e2}'+
+'html body a.card.cm.mbig.mbig.mbig.mbig.mbig.mbig{padding-top:166px!important;min-height:0}'+
+'a.card.mbig .mbp{position:absolute;left:0;right:0;top:0;height:150px;border-radius:8px 8px 0 0;overflow:hidden;background:#e9e6e2}'+
 'a.card.mbig .mbp img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}'+
 'a.card.mbig:hover .mbp img{transform:scale(1.03)}'+
 'a.card.mbig .mbp small{position:absolute;right:8px;bottom:6px;font-size:9px;color:#fff;opacity:.85;text-shadow:0 1px 2px rgba(0,0,0,.6);max-width:60%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}'+
-'a.card.mbig .cmb{top:146px!important;z-index:2}'+
+'a.card.mbig .cmb{top:120px!important;z-index:2}'+
 'a.card.mbig .cmb .ib{box-shadow:0 0 0 3px #fff,0 10px 18px -10px rgba(0,0,0,.45)}'+
 'a.card.mbig .wfav{z-index:3}'+
 /* きょうのおでかけニュース（3つの入口のすぐ下） */
@@ -96,23 +96,24 @@ function photo(box,o,big){if(box.classList.contains('mph'))return;box.classList.
 function cards(){
   document.querySelectorAll('a.card,a.fc').forEach(function(a){
     var tt=a.querySelector(a.matches('a.fc')?'b':'.t');if(!tt)return;var o=find(tt.textContent);if(!o)return;
-    if(o.im){if(a.matches('a.card')){if(!a.querySelector('.mbp')&&a.querySelector('.cmb')){var f=document.createElement('div');f.className='mbp';f.innerHTML='<img class="mfade" src="/assets/ph/s/'+o.im+'" alt="" loading="lazy" decoding="async"><small>'+esc(o.cr.replace(/（.*$/,''))+'</small>';a.insertBefore(f,a.firstChild);a.classList.add('mbig');var go=a.querySelector(':scope>.go');if(go){var cs=getComputedStyle(go);if(cs.position==='absolute'&&parseFloat(cs.top)<60)go.style.top=(parseFloat(cs.top)+178)+'px'}}}
-      else{var ib=a.querySelector('.cmb .ib');if(ib)photo(ib,o)}}
+    if(o.im){if(a.matches('a.card')&&!o.wk){if(!a.querySelector('.mbp')&&a.querySelector('.cmb')){var f=document.createElement('div');f.className='mbp';f.innerHTML='<img class="mfade" src="/assets/ph/s/'+o.im+'" alt="" loading="lazy" decoding="async"><small>'+esc(o.cr.replace(/（.*$/,''))+'</small>';a.insertBefore(f,a.firstChild);a.classList.add('mbig');var go=a.querySelector(':scope>.go');if(go){var cs=getComputedStyle(go);if(cs.position==='absolute'&&parseFloat(cs.top)<60)go.style.top=(parseFloat(cs.top)+152)+'px'}}}
+      else if(!a.querySelector('.mbp')){var ib=a.querySelector('.cmb .ib');if(ib)photo(ib,o)}}
     if(!a.dataset.mh){var h=hook(o);if(h){var s=document.createElement('span');s.className='mhk';s.textContent=h;tt.parentNode.insertBefore(s,tt)}a.dataset.mh=1}
     var row=a.querySelector('.v2c');if(row)nowPill(row,o);
     if(o.id&&a.matches('a.card'))a.dataset.mo=o.id;
   });
   document.querySelectorAll('.pr5 a').forEach(function(a){var b=a.querySelector('.tx b');if(!b)return;var o=find(b.textContent);if(!o)return;
     var ti=a.querySelector('.ti');if(ti&&o.im)photo(ti,o);if(o.id)a.dataset.mo=o.id});
-  var p5=document.querySelector('.pr5');if(p5&&!p5.querySelector('.m1')){var as=p5.querySelectorAll('a[data-mo]');for(var i=0;i<as.length;i++){var b2=as[i].querySelector('.tx b'),o2=b2&&find(b2.textContent);if(o2&&o2.im){var m1=document.createElement('a');m1.className='m1';m1.href='/o/'+o2.id;m1.innerHTML='<img class="mfade" src="/assets/ph/s/'+o2.im+'" alt="" loading="lazy" decoding="async"><em>No.'+(i+1)+'</em>';as[i].parentNode.insertBefore(m1,as[i]);break}}}
+  var p5=document.querySelector('.pr5');if(p5&&!p5.querySelector('.m1')){var as=p5.querySelectorAll('a[data-mo]');for(var i=0;i<as.length;i++){var b2=as[i].querySelector('.tx b'),o2=b2&&find(b2.textContent);if(o2&&o2.im&&!o2.wk){var m1=document.createElement('a');m1.className='m1';m1.href='/o/'+o2.id;m1.innerHTML='<img class="mfade" src="/assets/ph/s/'+o2.im+'" alt="" loading="lazy" decoding="async"><em>No.'+(i+1)+'</em>';as[i].parentNode.insertBefore(m1,as[i]);break}}}
   news();
 }
 
 /* きょうのおでかけニュース：3つの入口のすぐ下。写真のある・いま開催中か7日以内に始まる催しから、終わりが近い順に4つ */
 function news(){var q=document.querySelector('.qk');if(!q||document.querySelector('.mnews'))return;
   var t=ymd(jst()),t7=ymd(new Date(jst().getTime()+7*864e5)),L=[];
-  for(var x in D){var o=D[x];if(o.im&&o.id&&o.hk&&o.e>=t&&o.s<=t7)L.push(o)}
-  L.sort(function(a,b){var ra=a.s<=t?0:1,rb=b.s<=t?0:1;return ra-rb||(a.e<b.e?-1:1)});
+  for(var x in D){var o=D[x];if(o.im&&!o.wk&&o.id&&o.hk&&o.e>=t&&o.s<=t7)L.push(o)}
+  var sc=function(o){return (/イルミ|ライト|灯|光|夜|ルミナ|紅葉|もみじ/.test(o.n+o.hk)?0:2)+(o.s<=t?0:1)};
+  L.sort(function(a,b){return sc(a)-sc(b)||(a.e<b.e?-1:1)});
   var P={};L=L.filter(function(o){if(P[o.p]>=1&&L.length>6)return false;P[o.p]=(P[o.p]||0)+1;return true}).slice(0,5);if(!L.length)return;
   var PC={"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"},W='日月火水木金土',d=jst();
   var h='<div class="mnh"><div><small>TODAY’S NEWS</small><b>きょうのおでかけニュース</b></div><time>'+(d.getUTCMonth()+1)+'/'+d.getUTCDate()+'（'+W[d.getUTCDay()]+'）</time></div><div class="mntr">';
@@ -143,7 +144,7 @@ function detail(){var m=location.pathname.match(/^\/o\/([0-9a-f]{8})/);if(!m||do
   else if(o.im&&hd){var f=document.createElement('figure');f.className='mph-o';f.innerHTML='<img src="/assets/ph/'+o.im+'" alt="'+esc(o.n)+'" decoding="async" fetchpriority="high" class="mfade">'+cap;hd.parentNode.insertBefore(f,hd.nextSibling)}
   document.querySelectorAll('.big>div').forEach(function(b){var sp=b.querySelector('span');if(sp&&sp.textContent.trim()==='いまは'){var w=document.createElement('div');w.className='mnowl';b.appendChild(w);nowPill(w,o);setInterval(function(){nowPill(w,o)},60000)}});
   var ld=document.querySelector('.lead');
-  if(o.ds&&ld){var x=document.createElement('div');x.className='mds';x.innerHTML='<span>どんな催し？</span><p>'+esc(o.ds)+'</p>';ld.parentNode.insertBefore(x,ld.nextSibling)}
+  if(o.ds&&ld){var x=document.createElement('div');x.className='mds';x.innerHTML='<span>どんな催し？</span><p>'+esc(o.ds)+'</p>';ld.parentNode.insertBefore(x,ld.nextSibling);ld.style.display='none'}
   var ac=document.querySelector('.act');if(ac){
     var fav=[];try{fav=JSON.parse(localStorage.getItem('tn_fav')||'[]')||[]}catch(e){}
     var on=fav.indexOf(o.u)>=0,cal='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(o.n)+'&dates='+o.s.replace(/-/g,'')+'/'+(function(){var d=new Date(o.e+'T00:00:00Z');d.setUTCDate(d.getUTCDate()+1);return ymd(d).replace(/-/g,'')})()+'&details='+encodeURIComponent('公式：'+o.u+'\n'+location.href)+'&location='+encodeURIComponent((document.querySelector('.sub')||{}).textContent||'');
@@ -155,7 +156,12 @@ function detail(){var m=location.pathname.match(/^\/o\/([0-9a-f]{8})/);if(!m||do
       else if(b.classList.contains('mcp')){e.preventDefault();try{navigator.clipboard.writeText(location.href).then(function(){b.textContent='コピーしました'})}catch(x){}}});
   }
 }
-function fade(){document.querySelectorAll('img.mfade:not(.in)').forEach(function(i){if(i.dataset.fw)return;i.dataset.fw=1;var ok=function(){i.classList.add('in');var p=i.parentElement;if(p)p.classList.add('ld')};if(i.complete&&i.naturalWidth)ok();else{i.addEventListener('load',ok);i.addEventListener('error',ok)}})}
+function fin(i){if(i.classList.contains('in'))return;i.classList.add('in');var p=i.parentElement;if(p)p.classList.add('ld')}
+function fade(){document.querySelectorAll('img.mfade:not(.in)').forEach(function(i){if(i.complete&&i.naturalWidth)fin(i)})}
+/* 写真が読めたら出す（カードが作り直されて写真が写し替えられても拾えるよう、ページ全体で受ける） */
+document.addEventListener('load',function(e){var i=e.target;if(i&&i.tagName==='IMG'&&i.classList.contains('mfade'))fin(i)},true);
+document.addEventListener('error',function(e){var i=e.target;if(i&&i.tagName==='IMG'&&i.classList.contains('mfade'))fin(i)},true);
+setInterval(fade,700);
 var q;function run(){clearTimeout(q);q=setTimeout(function(){if(!READY)return;cards();detail();fade()},80)}
 fetch('/assets/mihon.json?v='+(window.__mhv||2)).then(function(r){return r.json()}).then(function(j){D={};for(var x in j){D[x]=j[x];if(j[x].id)ID[j[x].id]=j[x]}READY=1;run();
   try{new MutationObserver(run).observe(document.body,{childList:true,subtree:true})}catch(e){}
