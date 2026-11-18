@@ -1,0 +1,86 @@
+"""11/18 オーナー「しっかり仕組みの確認と改善」「そんなミスダメだろ」
+関東の公開（akari page.yml）が点検で止まったのに、1時間以上だれも気づかなかった（11/17 にも関東の /kaitai が3日止まっていた）。
+→ 公開・毎日の機械が「最後に失敗した」「決めた時間より長く成功していない」を1回で全部見る。
+見回り（13:47・18:47・23:47）と朝の回の最初に回す。× が1つでもあれば、その回のうちに直す。
+
+使い方: python3 tools/allcheck/kikai.py   （gh が使える所。Actions では GH_TOKEN を渡す）
+× の時は終わりの値が 1。"""
+import datetime as dt
+import json
+import subprocess
+import sys
+
+# (リポジトリ, 機械, 何をするか, 成功が空いてよい時間)  ※ GitHub の時刻起動は3〜4時間遅れるので、毎日の物は30時間
+KIKAI = [
+    ("oreusa/akari-auto", "page.yml", "関東HPを作って公開（1日2回）", 16),
+    ("oreusa/akari-auto", "linkcheck.yml", "関東のリンク点検", 30),
+    ("oreusa/akari-auto", "ranking.yml", "関東ランキング", 30),
+    ("oreusa/akari-auto", "metrics.yml", "関東の数字", 30),
+    ("oreusa/usagi-fudosan-media", "link-stats.yml", "関西HPの毎日の作り直し・数字", 30),
+    ("oreusa/usagi-fudosan-media", "kaiten-collect.yml", "開店・閉店ニュース集め（6時間ごと）", 10),
+    ("oreusa/usagi-fudosan-media", "book.yml", "X・Threads の予約", 3),
+    ("oreusa/usagi-fudosan-media", "allcheck.yml", "全ページ点検", 30),
+    ("oreusa/usagi-fudosan-media", "formcheck.yml", "申し込みの送信テスト", 16),
+    ("oreusa/usagi-fudosan-media", "headcheck.yml", "ページの頭の点検", 30),
+    ("oreusa/usagi-fudosan-media", "indexnow.yml", "Bing へ送る", 30),
+    ("oreusa/usagi-fudosan-media", "post-img.yml", "投稿の絵", 30),
+    ("oreusa/usagi-fudosan-media", "metrics.yml", "関西の数字", 16),
+    # 関西は点検が公開を止めない（赤になるだけ）。赤のまま出ている＝お客さんに見えている
+    ("oreusa/usagi-fudosan-media", "ngcheck.yml", "関西のページの見せてはいけない言葉", 99999),
+]
+
+
+def gh(path):
+    out = subprocess.run(["gh", "api", path], capture_output=True, text=True, timeout=60)
+    if out.returncode != 0:
+        raise RuntimeError(out.stderr.strip()[:200])
+    return json.loads(out.stdout)
+
+
+def t(s):
+    return dt.datetime.fromisoformat(s.replace("Z", "+00:00"))
+
+
+now = dt.datetime.now(dt.timezone.utc)
+bad = []
+rows = []
+for repo, wf, what, hours in KIKAI:
+    try:
+        runs = gh(f"repos/{repo}/actions/workflows/{wf}/runs?per_page=15&exclude_pull_requests=true")["workflow_runs"]
+    except Exception as e:  # 読めない＝見えていない、も × にする
+        bad.append(f"× {what}（{repo.split('/')[1]} {wf}）：読めない {e}")
+        continue
+    runs = [r for r in runs if r.get("head_branch") in ("main", None) or r.get("event") in ("schedule", "workflow_dispatch")]
+    done = [r for r in runs if r["status"] == "completed" and r["conclusion"] not in ("cancelled", "skipped")]
+    ok = [r for r in done if r["conclusion"] == "success"]
+    last = done[0] if done else None
+    age = (now - t(ok[0]["updated_at"])).total_seconds() / 3600 if ok else None
+    mark = "○"
+    why = ""
+    if last and last["conclusion"] != "success":
+        mark, why = "×", f"最後の回が {last['conclusion']}（{t(last['updated_at']).astimezone(dt.timezone(dt.timedelta(hours=9))):%m/%d %H:%M}）{last['html_url']}"
+    elif age is None or age > hours:
+        mark, why = "×", f"{hours}時間より長く成功していない（最後の成功 {'なし' if age is None else f'{age:.0f}時間前'}）"
+    line = f"{mark} {what}（{repo.split('/')[1]} {wf}）" + (f"：{why}" if why else f"：最後の成功 {age:.0f}時間前")
+    rows.append(line)
+    if mark == "×":
+        bad.append(line)
+
+# 関西HPの公開（Cloudflare Pages）：main の最新の印が success か
+try:
+    sha = gh("repos/oreusa/usagi-fudosan-media/commits/main")["sha"]
+    cr = gh(f"repos/oreusa/usagi-fudosan-media/commits/{sha}/check-runs")["check_runs"]
+    cf = [c for c in cr if c["name"] == "Cloudflare Pages"]
+    if cf and cf[0]["status"] == "completed" and cf[0]["conclusion"] != "success":
+        bad.append(f"× 関西HPの公開（Cloudflare Pages）：main {sha[:7]} が {cf[0]['conclusion']}")
+    else:
+        rows.append(f"○ 関西HPの公開（Cloudflare Pages）：main {sha[:7]} {cf[0]['status'] if cf else '印なし'}")
+except Exception as e:
+    bad.append(f"× 関西HPの公開：読めない {e}")
+
+print("\n".join(rows))
+if bad:
+    print("\n直すもの：")
+    print("\n".join(bad))
+    sys.exit(1)
+print("\n機械：全部 ○")

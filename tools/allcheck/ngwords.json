@@ -61,6 +61,16 @@
   "試飲",
   "試着",
   "汐彩",
-  "ゲストハウス 澪"
+  "ゲストハウス 澪",
+  "雫香"
+ ],
+ "external_data": [
+  "data/kaiten.json",
+  "data/illumi.json",
+  "data/koyo.json",
+  "data/meisho.json",
+  "data/page-spots.json",
+  "tools/kaiten/kansai.json",
+  "tools/odekake_more.json"
  ]
 }
