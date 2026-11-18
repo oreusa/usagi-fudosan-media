@@ -5,6 +5,7 @@ on:
     inputs:
       words: {description: "探す言葉（| で区切る）", required: true, default: "Eikan-do autumn|Kiyomizu-dera|Himeji Castle|Arashiyama|Osaka Castle|Nara Park deer|Kobe Harborland|Shirarahama|Lake Biwa"}
       w: {description: "写真の幅（@ファイルの時）", required: false, default: "480"}
+      tool: {description: "cover＝1枚 / best＝行きたくなる写真の候補3枚", required: false, default: "cover"}
 permissions:
   contents: write
 jobs:
@@ -14,7 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: |
           if [[ "${{ inputs.words }}" == @* ]]; then
-            f="${{ inputs.words }}"; f="${f#@}"; b=$(basename "$f" .tsv); PW="${{ inputs.w }}" python3 tools/photo/cover.py "$f" "tools/photo/probe/$b"
+            f="${{ inputs.words }}"; f="${f#@}"; b=$(basename "$f" .tsv); if [ "${{ inputs.tool }}" = best ]; then b="$b-best"; PW="${{ inputs.w }}" python3 tools/photo/best.py "$f" "tools/photo/probe/$b"; else PW="${{ inputs.w }}" python3 tools/photo/cover.py "$f" "tools/photo/probe/$b"; fi
           else
             IFS='|' read -ra W <<< "${{ inputs.words }}"
             python3 tools/photo/commons.py tools/photo/probe "${W[@]}"
