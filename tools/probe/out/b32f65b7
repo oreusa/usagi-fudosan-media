@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MDJMTKW');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="公益財団法人大阪観光局のご案内ページです。事業概要、プレスリリース、賛助会員などの財団情報をご紹介しています。">
+  <meta name="keywords" content="osaka, info">
+  <meta property="og:site_name" content="大阪観光局公式サイト">
+  <meta property="og:title" content="大阪観光局公式サイト">
+  <meta property="og:description" content="公益財団法人大阪観光局のご案内ページです。事業概要、プレスリリース、賛助会員などの財団情報をご紹介しています。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://octb.osaka-info.jp/https://octb.osaka-info.jp/">
+  <meta property="og:image" content="https://cdn.osaka-info.jp/cache/page_translation_1200/63c80f3c-7d69-11eb-895c-0af0cba29dd8.jpeg?v=1633310028https://cdn.osaka-info.jp/cache/page_translation_1200/63c80f3c-7d69-11eb-895c-0af0cba29dd8.jpeg?v=1633310028">
+  <title>大阪観光局公式サイト</title>
+  <link rel="icon" type="image/x-icon" href="common/img/favicon.png">
+  <link rel="apple-touch-icon" href="https://octb.osaka-info.jp/common/img/120x120.png">
+  <link rel="mask-icon" sizes="any" href="https://octb.osaka-info.jp/common/img/120x120.png" color="">
+  <link rel="stylesheet" type="text/css" href="common/css/common.css">
+  <link rel="stylesheet" type="text/css" href="common/css/contents.css?20260904" media="screen and (min-width:601px),print">
+  <link rel="stylesheet" type="text/css" href="common/css/sp_contents.css?20260904" media="screen and (max-width:600px)">
+  <link href="common/css/slick-theme.css" rel="stylesheet" type="text/css">
+  <link href="common/css/slick.css" rel="stylesheet" type="text/css">
+  <!--font-->
+  <script>
+    (function(d) {
+      var config = {
+          kitId: 'pqj1kzo',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h = d.documentElement,
+        t = setTimeout(function() {
+          h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+        }, config.scriptTimeout),
+        tk = d.createElement("script"),
+        f = false,
+        s = d.getElementsByTagName("script")[0],
+        a;
+      h.className += " wf-loading";
+      tk.src = 'https://use.typekit.net/' + config.kitId + '.js';
+      tk.async = true;
+      tk.onload = tk.onreadystatechange = function() {
+        a = this.readyState;
+        if (f || a && a != "complete" && a != "loaded") return;
+        f = true;
+        clearTimeout(t);
+        try {
+          Typekit.load(config)
+        } catch (e) {}
+      };
+      s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+  <!--font-->
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDJMTKW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="wrap index_wrap">
+
+  <!--<div class="index_top_news">
+  <a  href="https://osaka-info.jp/news/emergency/" target="_blank" rel="noreferrer noopener">
+  【お知らせ】新型コロナウイルス感染症拡大防止に<span class="nosp">伴う大阪府観光施設の閉鎖について</span>
+  </a><span class="close_btn">&#10005;</span>
+  </div>-->
+
+  
+
+    <header class="header ja_header" id="header">
+  <!-- <div class="aside_lang">
+    <a href="https://www.linkedin.com/company/octb" target="_blank"><img src="https://mice.osaka-info.jp/common/img/icon_in.png" alt=""></a>
+    <div class="aside_lang_switch">
+      <span>JA</span>
+      <span>EN</span>
+    </div>
+  </div> -->
+
+  <div class="header_lang">
+    <div class="header_lang_left">
+      <a href="https://www.linkedin.com/company/octb" target="_blank"><img src="https://mice.osaka-info.jp/common/img/icon_in.png" alt=""></a>
+      <div class="header_lang_switch">
+        <span id="lang-ja">JA</span>
+        <span id="lang-en">EN</span>
+      </div>
+      </div>
+    <div class="header_lang_right">
+      <a href="https://osaka-info.jp/" class="header_blue_btn" target="_blank">大阪の観光についてはこちら</a>
+    </div>
+
+  </div>
+
+  <div class="menu-btn btn-trigger nopc" id="btn01">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="header_main">
+    <div class="inner">
+      <a href="/" class="header_logo"><img src="/common/img/logo.svg" alt="大阪観光局 OSAKA CONVENTION & TOURISM BUREAU"></a>
+      <div class="menu" id="menu">
+        <ul class="accordion-menu">
+          <li class="menu_list">
+            <div class="dropdownlink">大阪観光局概要<span>Overview</span><i class="op_plus"></i></div>
+            <ol class="submenuItems">
+              <li><a href="/organization.html">組織概要</a></li>
+              <li><a href="/greeting.html">理事長挨拶</a></li>
+              <li><a href="/vision.html">観光局の未来ビジョン</a></li>
+              <li><a href="/business/">事業概要</a></li>
+              <li><a href="/sdgs/">大阪×SDGs</a></li>
+              <li><a href="/startup/">大阪×スタートアップ</a></li>
+              <li><a href="/disclosure.html">ディスクロージャー</a></li>
+              <li><a href="/document.html">提供資料</a></li>
+              <li><a href="/logomark.html">ロゴマーク</a></li>
+              <li><a href="/recruit.html">採用情報</a></li>
+              <li><a href="/news_bid/">入札情報</a></li>
+            </ol>
+          </li>
+          <li class="menu_list">
+            <div class="dropdownlink">MICE<small>(会議・展示会・イベント等の開催)</small><span>Meetings&Events</span><i class="op_plus"></i></div>
+            <ol class="submenuItems">
+              <li><a href="/business/b09.html">事業概要</a></li>
+              <li><a href="https://mice.osaka-info.jp/" target="_blank">公式MICEサイト</a></li>
+              <!--MICEサイトトップへ移動-->
+              <li><a href="https://mice.osaka-info.jp/whyosaka/events_destination/" target="_blank">理想のMICE開催都市</a></li>
+              <!--MICEサイトに開設後のページに移動-->
+              <li><a href="https://mice.osaka-info.jp/event_planning/organizers/" target="_blank">主催者へのご支援</a></li>
+              <!--MICEサイトに開設後のページに移動-->
+            </ol>
+          </li>
+          <li class="menu_list">
+            <div class="dropdownlink">教育・修学旅行<span>Education</span><i class="op_plus"></i></div>
+            <ol class="submenuItems">
+              <li><a href="https://www.studyinosaka.com/" target="_blank">外国人留学生</a></li>
+              <li><a href="/learning-trip-to-japan.html">訪日教育旅行</a></li>
+              <li><a href="https://www.shugakuryoko.osaka-info.jp/" target="_blank">国内修学旅行</a></li>
+            </ol>
+          </li>
+          <li class="menu_list">
+            <div class="dropdownlink">賛助会員<span>Membership</span><i class="op_plus"></i></div>
+            <ol class="submenuItems">
+              <li><a href="/auth.cgi">賛助会員ログイン</a></li>
+              <li><a href="/membership.html">賛助会員について</a></li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+      <span class="icon_glass nosp"></span>
+      <script async src="https://cse.google.com/cse.js?cx=047987492c663051c"></script>
+      <div class="gcse-search"></div>
+      <a href="/contact.html" class="icon_mail nosp"></a>
+    </div>
+
+  </div>
+</header>
+    <div class="contents index">
+      <main>
+        <div class="mv">
+          <ul class="slider_mv">
+
+	<li>
+		
+			<img src="https://octb.osaka-info.jp/images/mv01.png" alt="通天閣">
+			
+	</li>
+
+	<li>
+		
+			<img src="https://octb.osaka-info.jp/images/Nakanoshima%20Art%20Museum.jpg" alt="中の島美術館">
+			
+	</li>
+
+	<li>
+		
+			<img src="https://octb.osaka-info.jp/images/namba-yasaka-shrine.jpg" alt="難波八坂神社">
+			
+	</li>
+
+	<li>
+		
+			<img src="https://octb.osaka-info.jp/images/Osaka%20Castlev3.jpeg" alt="大阪城">
+			
+	</li>
+
+	<li>
+		
+			<img src="https://octb.osaka-info.jp/images/landscape-g9c3e87d48_1920.jpg" alt="夕日">
+			
+	</li>
+
+          </ul>
+          <div class="inner">
+            <div class="mv_txt_wrap">
+              <h1 class="mv_ttl">アジアNO.1の<br>国際観光文化都市の実現へ</h1>
+              <p class="mv_subttl">OSAKA CONVENTION & TOURISM BUREAU</p>
+            </div>
+          </div>
+        </div>
+
+        <section class="sec_index_news fadein">
+          <div class="tab-area">
+            <div class="tab active">お知らせ</div>
+            <div class="tab">プレスリリース</div>
+            <div class="tab">賛助会員からの<br class="nopc">お知らせ</div>
+            <div class="tab">入札情報</div>
+          </div>
+          <div class="inner">
+            <div class="content-area">
+              <div class="content show">
+                <ul class="index_news_list">
+                 
+                  <li>
+                  
+                    <a href="https://s3.ap-northeast-1.amazonaws.com/content.osaka-info.jp/press_release/20261106/06_NightPark1106.pdf" target="_blank">
+                  
+                    <span class="news_date">2026/11/06</span>
+                      <p>EXPO NIGHT PARKについて</p>
+                    </a>
+                  </li>
+                
+                  <li>
+                  
+                    <a href="https://s3.ap-northeast-1.amazonaws.com/content.osaka-info.jp/press_release/20261106/03_gastronomy_bisyokukaido1106%2B.pdf" target="_blank">
+                  
+                    <span class="news_date">2026/11/06</span>
+                      <p>令和 8 年度『日本の美食街道』視察＆フォーラム＆交流会のご案内</p>
+                    </a>
+                  </li>
+                
+                  <li>
+                  
+                    <a href="https://s3.ap-northeast-1.amazonaws.com/content.osaka-info.jp/press_release/20261106/01_gaikyo1106.pdf" target="_blank">
+                  
+                    <span class="news_date">2026/11/06</span>
+                      <p> 来阪訪日外客数（10月発表分）</p>
+                    </a>
+                  </li>
+                
+                </ul>
+                <a href="news_common/" class="btn01">一覧を見る</a>
+              </div>
+              <div class="content">
+                <ul class="index_news_list release_news_list">
+                
+                  <li>
+                  
+                    <a href="https://s3.ap-northeast-1.amazonaws.com/content.osaka-info.jp/press_release/20261106/07_release_SUMO_EXPO1106.pdf" target="_blank">
+                  
+                    <span class="news_date">2026/11/06</span>
+                      <p>いよいよ来週11月14日（土）開催！観覧無料！ 「SUMO EXPO 女だけの相撲大会 」</p>
+                    </a>
+                  </li>
+                
+                  <li>
+                  
+                    <a href="https://s3.ap-northeast-1.amazonaws.com/content.osaka-info.jp/press_release/20261106/05_release_SJL1106.pdf" target="_blank">
+                  
+                    <span class="news_date">2026/11/06</span>
+                      <p>シャープジャスダロジスティクス株式会社とのオフィシャル パートナー(ゴールド)契約の締結について </p>
+                    </a>
+                  </li>
+                
+                  <li>
+                  
+                    <a href="https://s3.ap-northeast-1.amazonaws.com/content.osaka-info.jp/press_release/20261106/04_release_OSAKA_INFO_MINI_20261106.pdf" target="_blank">
+                  
+                    <span class="news_date">2026/11/06</span>
+                      <p>大阪の「今、知りたい」を109言語で ～大阪観光局が運営する観光案内所の知見を活かし、 デジタル観光案内所「OSAKA INFO MINI」の運用を開始します～</p>
+                    </a>
+                  </li>
+                
+                </ul>
+                <a href="news_release/" class="btn01">一覧を見る</a>
+              </div>
+              <div class="content">
+                <ul class="index_news_list">
+                    <li>
+        
+        <a href="https://octb.osaka-info.jp/news_member/content_6.html#011468">
+        
+                    
+                    <span class="news_date">2026/11/15</span>
+                      <p>外国人旅行者様が気軽に手紙が書ける「writing station」を設置しました</p>
+                    
+                    <p class="newspage_poster">投稿者: イケマンファーム株式会社</p>
+                    
+                    
+                    
+                      <p class="newspage_summary">外国人旅行者様がその場でポストカードやグリーティングカードを買って、葉書やカードが書けるwritin...</p>
+					 
+        
+        
+        </a>
+        
+        </li>
+
+    <li>
+        
+        <a href="https://octb.osaka-info.jp/news_member/20261127.html#011458">
+        
+                    
+                    <span class="news_date">2026/11/11</span>
+                      <p>【無料オンラインセミナー | 11/27（金）開催】 まだ『表示順位』ばかり気にしていませんか？ Googleローカル検索の第一人者が明かす、AI時代のホテル集客 Googleマップ新常識  ～順位アップだけでは予約が増えない理由と、"本物"のAI対策～</p>
+                    
+                    <p class="newspage_poster">投稿者: 株式会社mov</p>
+                    
+                    
+                    
+                      <p class="newspage_summary">Google検索やGoogleマップに加え、ChatGPTやGeminiなどの生成AIの普及により、...</p>
+					 
+        
+        
+        </a>
+        
+        </li>
+
+    <li>
+        
+        <a href="https://octb.osaka-info.jp/news_member/_1027ota_google.html#011424">
+        
+                    
+                    <span class="news_date">2026/10/20</span>
+                      <p>【無料オンラインセミナー | 10/27（火）開催】OTAだけに頼らない！インバウンド獲得と自社予約率を最大化する手法 ～Googleマップ集客×パーソナライズ施策の実践～</p>
+                    
+                    <p class="newspage_poster">投稿者: 株式会社mov</p>
+                    
+                    
+                    
+                      <p class="newspage_summary">インバウンド需要が拡大するなか、宿泊施設にとって予約を増やすだけでなく、OTAに依存せず自社予約を増...</p>
+					 
+        
+        
+        </a>
+        
+        </li>
+  
+                </ul>
+                <a href="news_member/" class="btn01">一覧を見る</a>
+              </div>
+              <div class="content">
+                <ul class="index_news_list">
+                
+                  <li>
+                  
+                    <a href="https://octb.osaka-info.jp/news_bid/post_168.html">
+                  
+                    <span class="news_date">2026/11/13</span>
+                      <p>「デジタルフルカラー複合機他一式賃貸借」 一般競争入札 質疑書に対する回答書</p>
+                    </a>
+                  </li>
+                
+                  <li>
+                  
+                    <a href="https://octb.osaka-info.jp/news_bid/post_166.html">
+                  
+                    <span class="news_date">2026/11/04</span>
+                      <p>「大阪観光局デジタルフルカラー複合機他一式賃貸借」について一般競争入札での募集を開始します</p>
+                    </a>
+                  </li>
+                
+                  <li>
+                  
+                    <a href="https://www.city.osaka.lg.jp/keizaisenryaku/page/0000678781.html" target="_blank">
+                  
+                    <span class="news_date">2026/07/14</span>
+                      <p>「大阪・光の饗宴2026の開催にかかる広報プロモ―ション等業務委託」にかかる選定結果を掲載しました</p>
+                    </a>
+                  </li>
+                
+               </ul>
+                <a href="news_bid/" class="btn01">一覧を見る</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sec_index_about fadein">
+          <div class="inner">
+
+            <h2 class="index_sec_ttl">About The OCTB</h2>
+            <span class="index_sec_subttl">大阪観光局について</span>
+            <p class="index_sec_summary">大阪府、大阪市及び堺市の歴史、文化、経済的特性を活かした観光事業の<br class="nosp">振興、コンベンションの誘致・支援等に関する事業を行っております。
+              <a href="business/" class="index_business_btn">事業概要一覧</a>
+            </p>
+            <ul class="index_about_list">
+              <li class="index_about_contents">
+                <a href="https://www.e-pass.osaka-info.jp/jp/" target="_blank">
+                  <div class="index_about_img"><img src="https://octb.osaka-info.jp/images/thumb23-1.png" alt="大阪楽遊パス・大阪周遊パス"></div>
+                  <div class="index_about_txt">
+                    <div class="index_about_icon about_icon02"></div>
+                    <p>大阪楽遊パス</p>
+                  </div>
+                </a>
+              </li>
+              <li class="index_about_contents">
+                <a href="business/b06.html">
+                  <div class="index_about_img"><img src="common/img/index/about01.png" alt="食（ガストロノミー）"></div>
+                  <div class="index_about_txt">
+                    <div class="index_about_icon about_icon01"></div>
+                    <p>食<small style="letter-spacing: 0.05em;">（ガストロノミー）</small></p>
+                  </div>
+                </a>
+              </li>
+              <li class="index_about_contents">
+                <a href="business/b07.html">
+                  <div class="index_about_img"><img src="common/img/index/about04.png" alt="スポーツツーリズム"></div>
+                  <div class="index_about_txt">
+                    <div class="index_about_icon about_icon04"></div>
+                    <p>スポーツツーリズム</p>
+                  </div>
+                </a>
+              </li>
+              <li class="index_about_contents">
+                <a href="business/b17.html">
+                  <div class="index_about_img"><img src="common/img/index/about05.png" alt="文化・芸術"></div>
+                  <div class="index_about_txt">
+                    <div class="index_about_icon about_icon05"></div>
+                    <p>文化・芸術</p>
+                  </div>
+                </a>
+              </li>
+              <li class="index_about_contents">
+                <a href="business/b16.html">
+                  <div class="index_about_img"><img src="common/img/index/about10.png" alt="緑化・環境への取組"></div>
+                  <div class="index_about_txt">
+                    <div class="index_about_icon about_icon10"></div>
+                    <p>緑化・環境への取組</p>
+                  </div>
+                </a>
+              </li>
+              <!-- <li class="index_about_contents">
+                <a href="https://www.weare.osaka-info.jp/pref/" target="_blank">
+                  <div class="index_about_img"><img src="common/img/index/about09.png" alt="府内周遊の促進"></div>
+                  <div class="index_about_txt">
+                    <div class="index_about_icon about_icon09"></div>
+                    <p>府内周遊の促進</p>
+                  </div>
+                </a>
+              </li> -->
+              <li class="index_about_contents">
+                <a href="business/b08.html">
+                  <div class="index_about_img"><img src="common/img/index/about11.png" alt="スーパーラグジュアリー"></div>
+                  <div class="index_about_txt">
+                    <div class="index_about_icon about_icon11"></div>
+                    <p>スーパーラグジュアリー</p>
+                  </div>
+                </a>
+              </li>
+              <li class="index_about_contents">
+                <a href="business/b15.html">
+                  <div class="index_about_img"><img src="common/img/index/about03.png" alt="LGBTQツーリズム"></div>
+                  <div class="index_about_txt">
+                    <div class="index_about_icon about_icon03"></div>
+                    <p>LGBTQツーリズム</p>
+                  </div>
+                </a>
+              </li>
+              <li class="index_about_contents">
+                <a href="business/b12.html">
+                  <div class="index_about_img"><img src="common/img/index/about06.png" alt="留学生支援"></div>
+                  <div class="index_about_txt">
+                    <div class="index_about_icon about_icon06"></div>
+                    <p>留学生支援</p>
+                  </div>
+                </a>
+              </li>
+              <li class="index_about_contents">
+              <a href="business/b14.html">
+              <div class="index_about_img">
+              <img src="common/img/index/about08.png" alt="教育旅行(海外・国内)">
+              </div>
+              <div class="index_about_txt">
+              <div class="index_about_icon about_icon08"></div>
+              <p>教育旅行(海外・国内)</p>
+              </div>
+              </a>
+            </li>
+              <li class="index_about_contents">
+                <a href="https://www.osaka-fc.jp/" target="_blank">
+                  <div class="index_about_img"><img src="common/img/index/about12.png" alt="フィルムコミッション"></div>
+                  <div class="index_about_txt">
+                    <div class="index_about_icon about_icon12"></div>
+                    <p>フィルムコミッション</p>
+                  </div>
+                </a>
+              </li>
+              <li class="index_about_contents">
+              <a href="business/b27.html">
+              <div class="index_about_img">
+              <img src="common/img/index/about13.png" alt="マーケティング基盤">
+              </div>
+              <div class="index_about_txt">
+              <div class="index_about_icon about_icon13"></div>
+              <p>マーケティング基盤</p>
+              </div>
+              </a>
+            </li>
+            <li class="index_about_contents">
+            <a href="business/b29.html">
+            <div class="index_about_img">
+             <img src="common/img/index/about14.png" alt="医療ツーリズム">
+            </div>
+            <div class="index_about_txt">
+            <div class="index_about_icon about_icon14"></div>
+            <p>医療ツーリズム</p>
+            </div>
+            </a>
+            </li>
+              <!--
+              <li class="index_about_contents index_ambassador">
+                <a href="business/b14.html">
+                  <div class="index_about_img"><img src="common/img/index/ambassador01.png" alt="NMB48"></div>
+                  <div class="index_about_txt">
+                    <p>NMB48</p>
+                  </div>
+                </a>
+              </li>
+              <li class="index_about_contents index_ambassador">
+                <a href="business/b18.html">
+                  <div class="index_about_img"><img src="common/img/index/ambassador02.png" alt="SUPER EIGHT"></div>
+                  <div class="index_about_txt">
+                    <p>SUPER EIGHT</p>
+                  </div>
+                </a>
+              </li> -->
+            </ul>
+            <div class="index_ambassador">
+              <a href="ambassador/">
+                <div class="index_about_img"><img src="common/img/index/ambassador.png?230613" alt="大阪観光シンボルキャラクター・大阪観光スペシャルサポーター・大阪観光大使"></div>
+                <div class="index_about_txt">
+                  <div class="index_about_icon about_icon_ambassador"></div>
+                  <p>大阪観光シンボルキャラクター・<br>大阪観光スペシャルサポーター・<br class="nopc">大阪観光大使</p>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </section>
+        <section class="sec_index_member fadein">
+          <div class="inner">
+            <h2 class="index_sec_ttl">Membership</h2>
+            <span class="index_sec_subttl">賛助会員</span>
+            <p class="index_sec_summary">観光振興は、関係者の総合力で実施していく必要があり、当財団は会員様との<br>
+              強固な連携により大阪の観光振興・コンベンション誘致を一体的に推進して<br class="nosp">
+              まいります。この機会にぜひ皆様方にも大阪の活性化の一翼を<br class="nosp">
+              担っていただきいと願っております。<br class="nosp">
+              何卒、ご理解・ご賛同を賜り、ご入会頂けますようお願いいたします。<br>
+              ※年会費（1口1万円） 法人・団体等：5口～　個人：1口～</p>
+            <div class="index_member_btn_wrap">
+              <a href="membership.html">賛助会員について</a>
+              <a href="membership_search.html">賛助会員検索</a>
+              <a href="auth.cgi">賛助会員ログイン</a>
+            </div>
+          </div>
+        </section>
+     <section class="partner_area">
+          <div class="inner">
+            <h2 class="index_sec_ttl">Partners</h2>
+            <span class="index_sec_subttl">パートナー</span>
+            <ul class="partner_list">
+             
+              <li><a href="https://www.acn-net.co.jp/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/acn.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://www.expocity-mf.com/expo/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/MF_03_width500.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://cyujo.com/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/299f02ca70156089b42b6a0a383dec78f5badb1d.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://www.hanshin-chiyoda.co.jp/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/partner03.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://www.jtbbwt.com/government/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/partner04_n.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://www.ntt-west.co.jp/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/partner05_n.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://www.saraya.com/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/partner06.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://hitocom.co.jp/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/hito-logo.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://device-square.com/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/d4d798105b44bd7b3ac8c1abf9d53c15871331b3.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://ju-ren.jp/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/99aa36b06a82ff2780d3962e8066cbac7a66ce29.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://www.ihg.com/hotels/jp/ja/reservation" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/IHG-logo01.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://www.vpon.com/jp/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/95f73de6c4ac9ffc5c53cd03572b7cbaa6af121e.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://www.senju.co.jp/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/5d1f351ed38326e8d27286df85af607edd0299ff.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://www.lifecard.co.jp/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/lifecard_logo_active.png" alt="">
+				
+
+              </a></li>
+			
+              <li><a href="https://miracle-world.co.jp/" target="_blank" rel="noreferrer noopener">
+
+   				
+                  <img src="https://octb.osaka-info.jp/dummy_partner/images/322ef90a59afa993dd4d9b6b20785ea995066ca8.png" alt="">
+				
+
+              </a></li>
+			
+            </ul>
+          </div>
+        </section> 
+      </main>
+    </div>
+    <footer class="footer">
+  <a href="#" class="totop"><div><img src="/common/img/arrow_w.svg" alt="ページ先頭へ"></div><span>ページ先頭へ</span></a>
+  <div class="inner">
+    <div class="footer_wrap">
+      <div class="footer_info">
+        <img src="/common/img/logo.svg" alt="大阪観光局 OSAKA CONVENTION & TOURISM BUREAU" class="footer_logo">
+        <p class="footer_info_txt">
+          公益財団法人大阪観光局<br>
+          〒542-0081 大阪市中央区南船場4-4-21<br>
+          TODA BUILDING 心斎橋（旧りそな船場ビル）5階<br>
+          06-6282-5900（代表）
+        </p>
+      </div>
+      <div class="expo_logo"><a href="https://www.expo2025.or.jp/" target="_blank"><img src="/common/img/EXPO2025LOGOtate.jpg" alt="大阪・関西万博 EXPO2025" class="nosp"></a></div>
+      <div class="footer_list_wrap">
+      <ul class="footer_list">
+        <li><span>大阪観光局概要</span>
+          <ol><a href="/organization.html">組織概要</a></ol>
+          <ol><a href="/greeting.html">理事長挨拶</a></ol>
+          <ol><a href="/vision.html">観光局の未来ビジョン</a></ol>
+          <ol><a href="/business/">事業概要</a></ol>
+          <ol><a href="/sdgs/">大阪×SDGs</a></ol>
+          <ol><a href="/startup/">大阪×スタートアップ</a></ol>
+          <ol><a href="/disclosure.html">ディスクロージャー</a></ol>
+          <ol><a href="/document.html">提供資料</a></ol>
+          <ol><a href="/logomark.html">ロゴマーク</a></ol>
+          <ol><a href="/recruit.html">採用情報</a></ol>
+          <ol><a href="/news_bid/">入札情報</a></ol>
+        </li>
+      </ul>
+      <ul class="footer_list">
+        <li><a href="https://mice.osaka-info.jp/" target="_blank"><span>MICE</span></a></li>
+        <li><span>教育・修学旅行</span>
+          <ol><a href="https://www.studyinosaka.com/" target="_blank">外国人留学生</a></ol>
+          <ol><a href="/learning-trip-to-japan.html">訪日教育旅行</a></ol>
+          <ol><a href="https://www.shugakuryoko.osaka-info.jp/" target="_blank">国内修学旅行</a></ol>
+        </li>
+        <li><span>賛助会員</span>
+          <ol><a href="/auth.cgi">賛助会員ログイン</a></ol>
+          <ol><a href="/membership.html">賛助会員について</a></ol>
+          <!-- <ol><a href="">会員リスト</a></ol> -->
+        </li>
+      </ul>
+      <ul class="footer_list">
+        <li><a href="/contact.html"><span>お問い合わせ</span></a></li>
+        <li><a href="/privacy-policy.html"><span>プライバシーポリシー</span></a></li>
+        <li><a href="/site-policy.html"><span>サイトポリシー</span></a></li>
+      </ul>
+      </div>
+    </div>
+    <div class="footer_logo_wrap">
+      <!-- <a href="https://www.expo2025.or.jp/" target="_blank"><img src="/common/img/EXPO2025LOGOtate.jpg" alt="大阪・関西万博 EXPO2025" class="nopc"></a> -->
+    <a href="/business/b15.html"><img src="/common/img/lgbtq_logo.svg" alt="LGBTQツーリズム"></a>
+    <a href="https://jp.linkedin.com/company/octb" target="_blank"><img src="/common/img/linkdin.png" alt="linkdin"></a>
+    </div>
+  </div>
+  <p class="copy">&copy;OSAKA CONVENTION &amp; TOURISM BUREAU !</p>
+</footer>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="common/js/script.js"></script>
+  <script type="text/javascript" src="common/js/slick.min.js"></script>
+
+  <script>
+    $(function() {
+      let tabs = $(".tab"); // tabのクラスを全て取得し、変数tabsに配列で定義
+      $(".tab").on("click", function() { // tabをクリックしたらイベント発火
+        $(".active").removeClass("active"); // activeクラスを消す
+        $(this).addClass("active"); // クリックした箇所にactiveクラスを追加
+        const index = tabs.index(this); // クリックした箇所がタブの何番目か判定し、定数indexとして定義
+        $(".content").removeClass("show").eq(index).addClass("show"); // showクラスを消して、contentクラスのindex番目にshowクラスを追加
+      })
+    })
+  </script>
+
+  <script>
+    $(function() {
+      $('.slider_mv').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: false,
+        slidesToShow: 1,
+        arrows: false,
+      });
+    });
+  </script>
+
+  <!-- <script>
+    $(function() {
+      if (window.matchMedia('(min-width: 601px)').matches) {
+        $('.slider').slick({
+          autoplay: true,
+          autoplaySpeed: 3000,
+          dots: false,
+          slidesToShow: 5,
+          arrows: true,
+        });
+      } else {
+        $('.slider').slick({
+          autoplay: true,
+          autoplaySpeed: 3000,
+          dots: false,
+          slidesToShow: 1,
+          arrows: true,
+          centerMode: true,
+          centerPadding: '20%'
+        });
+      }
+    });
+  </script> -->
+
+  <script>
+    $(function() {
+      var height = $(".header_sub").height();
+      var height2 = $(".index_top_news").height();
+      $("#header").css("margin-top", height2);
+      $(".contents").css("padding-top", height + height2);
+    });
+
+    $(function() {
+      var height = $(".header_sub").height();
+      $('.close_btn').on('click', function() {
+        $(".index_top_news").css("display", "none");
+        $(".contents").css("padding-top", height);
+        $("#header").css("margin-top", 0);
+      });
+    }());
+
+    $(window).scroll(function() {
+      var element = $('.mv'),
+        element2 = $('.header'),
+        scroll = $(window).scrollTop(),
+        height = element.outerHeight();
+      height2 = element2.outerHeight();
+      if (scroll > height + height2) {
+        element2.addClass('scroll-hidden');
+      } else {
+        element2.removeClass('scroll-hidden');
+      }
+    });
+  </script>
+
+
+</body>
+
+</html>

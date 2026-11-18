@@ -141,3 +141,15 @@ bb0d932d	200	83308	text/html; charset=UTF-8	https://asoboyo-arida.com/2026/08/17
 c6ed93e1	200	26929	text/html; charset=UTF-8	https://www.wakayama-kanko.or.jp/events/detail_4396.html
 6b90868e	200	36688	text/html	https://www.city.wakayama.wakayama.jp/kankou/nenkangyoji/1006644.html
 0245d0b4	200	85278	text/html; charset=UTF-8	https://www.minakata.org/2026_exh2
+84498f29	ERR	HTTP Error 404: Not Found		https://www.wakayama-kanko.or.jp/photo_library/
+b8dac559	ERR	HTTP Error 404: Not Found		https://www.wakayama-kanko.or.jp/biz/
+757c4b7d	ERR	HTTP Error 404: Not Found		https://www.biwako-visitors.jp/photolibrary/
+f10f3506	200	263155	text/html; charset=utf-8	https://www.biwako-visitors.jp/
+57fa69af	ERR	HTTP Error 404: Not Found		https://hyogo-tourism.jp/photolibrary/
+0f161faa	200	56319	text/html; charset=UTF-8	https://hyogo-tourism.jp/
+896c232e	ERR	HTTP Error 404: Not Found		https://yamatoji.nara-kankou.or.jp/photo/
+7ce2eec8	200	64273	text/html; charset=UTF-8	https://yamatoji.nara-kankou.or.jp/
+d54d20b2	ERR	HTTP Error 403: Forbidden		https://ja.kyoto.travel/
+34647376	200	39539	text/html; charset=UTF-8	https://osaka-info.jp/photolibrary/
+b32f65b7	200	37080	text/html; charset=UTF-8	https://octb.osaka-info.jp/
+7ae7e247	ERR	<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1081)>		https://www.nara-kankou.or.jp/
