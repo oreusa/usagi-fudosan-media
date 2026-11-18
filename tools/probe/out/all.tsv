@@ -172,3 +172,6 @@ ff29dcef	200	229112	text/html; charset=utf-8	https://kanto.townnote.app/illumina
 e1bc3022	200	170068	text/html; charset=utf-8	https://kanto.townnote.app/okaimono
 072e56b0	200	152477	text/html; charset=utf-8	https://kanto.townnote.app/tanka
 fe72943e	200	117745	text/html; charset=utf-8	https://kanto.townnote.app/illumination-tokyo
+dacf7014	200	113898	text/html; charset=UTF-8	https://photo.osaka-info.jp/
+1cdfdf99	ERR	HTTP Error 404: Not Found		https://photo.osaka-info.jp/terms/
+87dbd021	200	118090	text/html; charset=UTF-8	https://photo.osaka-info.jp/guide/
