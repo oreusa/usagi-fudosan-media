@@ -2,6 +2,9 @@
    初めは昼。太陽と月のマーク（menu.js。三本線の隣とメニューの中）で夜に切り替えられ、選んだ方を覚える。
    色は全部のページで手で決めているので、ページ全体を反転して暗くし、写真・ロゴ・地図の色は元に戻す。
    ページの先頭で読むこと（あとで読むと一瞬白く光る）。 */
+/* 11/18 見本（クオリティアップ）：?mihon=1 を付けた人だけ mihon.js を読む。?mihon=0 で消える。普通のお客さんには何も出ない */
+(function(){try{var m=location.search.match(/[?&]mihon=([01])/);if(m){if(m[1]==="1")localStorage.setItem("tn_mihon","1");else localStorage.removeItem("tn_mihon");}
+if(localStorage.getItem("tn_mihon")==="1"&&/(^|\.)townnote\.app$|localhost|pages\.dev$/.test(location.hostname)&&!/kanto/.test(location.hostname)){var s=document.createElement("script");s.src="/assets/mihon.js?v=1";s.defer=true;document.head.appendChild(s);}}catch(e){}})();
 (function(){
   var K="usagi_theme",d=document.documentElement;
   /* 10/31 オーナー「初めは昼にしといて」→ 時間では変えない。太陽と月のマークで選んだ時だけ夜 */
