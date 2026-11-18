@@ -68,6 +68,7 @@ for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', src, re.S):
             im = im.crop(((w - s0) // 2, (hh - s0) // 2, (w - s0) // 2 + s0, (hh - s0) // 2 + s0)).resize((200, 200), Image.LANCZOS)
             im.save(th, "WEBP", quality=74)
         o.update(im=f, cr=p["cr"], cu=p.get("page", ""))
+        if p.get("weak"): o["wk"] = 1
     data[key] = o
 json.dump(data, open(os.path.join(R, "links/assets/mihon.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print("見本の表", len(data), "件・写真", sum(1 for v in data.values() if "im" in v), "・1件ページ", sum(1 for v in data.values() if "id" in v))

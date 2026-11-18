@@ -15,7 +15,8 @@
   "img": "080c01f2.webp",
   "cr": "Mti（CC BY-SA 3.0・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:Kandetown_Furugami_Nishi-ku_Hyogopref_Hyogoprefectural_road_563_Kande_Yamada_cycle_path_line_No,3.JPG",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "ドイツ祭り2026 Beer & Wine Fest": {
   "img": "0f7097c1.webp",
@@ -45,7 +46,8 @@
   "img": "2ae58b54.webp",
   "cr": "Keith Pomakis（CC BY-SA 2.5・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:Nijo_Castle.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "仮面ライダー×自然のチカラ展": {
   "img": "2ded2816.webp",
@@ -69,7 +71,8 @@
   "img": "3af98fde.webp",
   "cr": "馬面長伊奈（CC BY-SA 4.0・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:%E3%80%8C%E7%AC%AC45%E5%9B%9E%E5%85%A8%E6%97%A5%E6%9C%AC%E7%B7%8F%E5%90%88%E9%A6%AC%E8%A1%93%E5%A4%A7%E4%BC%9A2015%E3%80%8D%E3%81%AE%E3%82%AF%E3%83%AD%E3%82%B9%E3%82%AB%E3%83%B3%E3%83%88%E3%83%AA%E3%83%BC%E7%AB%B6%E6%8A%80%E3%81%A7%E5%9F%8E%E5%A3%81%E3%82%92%E9%A3%9B%E8%B6%8A%E3%81%99%E3%82%8B%E3%82%A2%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3.JPG",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "秋のフラワーコンサート": {
   "img": "57ecb02c.webp",
@@ -105,13 +108,15 @@
   "img": "64823dc1.webp",
   "cr": "Sakai Yayoi（CC0・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:Keitakuen_Garden_and_Osaka_City_Museum_of_Fine_Arts.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "米原奇譚謎解き「白イノシシの絆と優しい嘘」": {
   "img": "6f5a2a17.webp",
   "cr": "くろふね（CC BY-SA 4.0・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:%E6%B9%96%E5%8C%97%E3%81%AE%E3%81%8A%E3%81%AF%E3%81%AA%E3%81%97%EF%BC%88%E7%B1%B3%E5%8E%9F%E9%A7%85%EF%BC%89.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "和歌山城公園菊花展": {
   "img": "7e352a6d.webp",
@@ -147,31 +152,36 @@
   "img": "87d42186.webp",
   "cr": "663highland（CC BY-SA 4.0・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:240608_Aga-jinja_Higashiomi_Shiga_pref_Japan42s3.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "酒にのまれ展": {
   "img": "91059a66.webp",
   "cr": "663highland（CC BY 2.5・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:Itami_City_Museum_of_Art_and_Kakimori-bunko02s3.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "水木しげる 魂の漫画展": {
   "img": "91d32b91.webp",
   "cr": "不明（CC BY 2.5・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:Kobe_fashion_museum03bs3200.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "PINGU meets アドベンチャーワールド": {
   "img": "9863c9fc.webp",
   "cr": "Nankou Oronain (as36…（CC BY-SA 3.0・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%80%8C%E3%83%93%E3%83%83%E3%82%B0%E3%82%AA%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%B3%E3%80%8D_2014.1.03_-_panoramio.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "ハルカス300×名探偵コナン": {
   "img": "9d111208.webp",
   "cr": "Loggieloggie（CC0・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:Osaka_Skyline_from_Abeno_Harukas_20260505_115626_UTC%2B9_75_mm.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "嵯峨野トロッコ列車 光の幻想列車": {
   "img": "9e3c87c3.webp",
@@ -183,13 +193,15 @@
   "img": "a7d878bc.webp",
   "cr": "Nankou Oronain (as36…（CC BY-SA 3.0・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:%E3%82%A2%E3%83%89%E3%83%99%E3%83%B3%E3%83%81%E3%83%A3%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%AB%E3%83%89%E3%80%8C%E3%83%93%E3%83%83%E3%82%B0%E3%82%AA%E3%83%BC%E3%82%B7%E3%83%A3%E3%83%B3%E3%80%8D_2014.1.03_-_panoramio.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "躍動する明代の書 台北何創時コレクション": {
   "img": "a864b7a3.webp",
   "cr": "Sakai Yayoi（CC0・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:Keitakuen_Garden_and_Osaka_City_Museum_of_Fine_Arts.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "夜の海遊館": {
   "img": "ae3dd1e6.webp",
@@ -201,13 +213,15 @@
   "img": "b2154424.webp",
   "cr": "663highland（CC BY 2.5・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:Osaka_Castle_01bs3200.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "シガラキ・ニューウェーブ": {
   "img": "bb0c8bb4.webp",
   "cr": "663highland（CC BY 2.5・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:Shigaraki_Ceramic_Cultural_Park15s3872.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "六甲山のキノコ展": {
   "img": "bd51ec49.webp",
@@ -243,7 +257,8 @@
   "img": "d0f13760.webp",
   "cr": "663highland（CC BY-SA 4.0・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:181103_Heijo_Palace_Daigokuden_Nara_Japan02bs.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "宇治十帖スタンプラリー": {
   "img": "d2fc6591.webp",
@@ -255,7 +270,8 @@
   "img": "d388610f.webp",
   "cr": "663highland（CC BY 2.5・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:Biwako_Otsukan12n.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "植物園のもみじ散策・紅葉のライトアップ": {
   "img": "d753a33c.webp",
@@ -291,7 +307,8 @@
   "img": "f41fd284.webp",
   "cr": "663highland（CC BY-SA 4.0・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:241119_MIHO_MUSEUM_Koga_Shiga_pref_Japan08s3.jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "永源寺 紅葉ライトアップ": {
   "img": "f76e5a83.webp",
@@ -303,7 +320,8 @@
   "img": "f9860219.webp",
   "cr": "そらみみ（CC BY-SA 4.0・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:View_from_Tenrandai_Observatory_at_dusk_20141008-1.JPG",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  },
  "灘の酒蔵 謎解き探訪2026": {
   "img": "605c2e01.webp",
@@ -459,6 +477,7 @@
   "img": "1b74528b.webp",
   "cr": "Maarten Heerlien from Voorschoten, The N（CC BY 2.0・ウィキメディア・コモンズ）",
   "page": "https://commons.wikimedia.org/wiki/File:Oku-no-in_by_night_(6155533279).jpg",
-  "src": "commons"
+  "src": "commons",
+  "weak": true
  }
 }
