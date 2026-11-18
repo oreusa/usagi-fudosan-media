@@ -11,6 +11,14 @@ try:
     IG = {re.sub(r"\s+", "", k): v for k, v in json.load(open(os.path.join(NEW, "ig.json"), encoding="utf-8")).items()}
 except Exception:
     pass
+VP, KV = {}, {}
+try:
+    VP = json.load(open(os.path.join(NEW, "venue_photos.json"), encoding="utf-8"))
+    AL = json.load(open(os.path.join(R, "tools/photo/venue_alias.json"), encoding="utf-8"))
+    for vn, ks in json.load(open(os.path.join(R, "tools/photo/venues.json"), encoding="utf-8")).items():
+        for kk in ks: KV[kk] = AL.get(vn, vn)
+except Exception:
+    pass
 HK = json.load(open(os.path.join(NEW, "hooks.json"), encoding="utf-8"))
 DS = json.load(open(os.path.join(NEW, "desc.json"), encoding="utf-8"))
 MORE = {re.sub(r"\s+", "", k): v for k, v in json.load(open(os.path.join(R, "tools/odekake_more.json"), encoding="utf-8"))["rows"].items()}
@@ -74,6 +82,9 @@ for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', src, re.S):
             im.save(th, "WEBP", quality=74)
         o.update(im=f, cr=p["cr"], cu=p.get("page", ""))
         if p.get("weak"): o["wk"] = 1
+    vn = KV.get(key)
+    if (not o.get("im") or o.get("wk")) and vn in VP:
+        o.pop("wk", None); o.update(im=VP[vn]["img"], cr=VP[vn]["cr"], cu=VP[vn].get("page", ""), vn=vn)
     g = IG.get(key)
     if g:
         if g.get("posts"): o["ig"] = g["posts"][:1]
