@@ -118,7 +118,11 @@ function news(){var pa=location.pathname,KD=/^\/illumination/.test(pa)?'il':/^\/
   var RX=KD==='il'?/イルミ|ライト|灯|光|ルミナ|クリスマス|ツリー|夜/:KD==='ky'?/紅葉|もみじ|楓|錦秋|ライトアップ/:null;
   var t=ymd(jst()),t7=ymd(new Date(jst().getTime()+7*864e5)),L=[];
   var ON={};if(KD)document.querySelectorAll('a.card .t').forEach(function(e){var o=find(e.textContent);if(o)ON[o.n]=1});
+<<<<<<< HEAD
   for(var x in D){var o=D[x];if(!o.im||o.wk||(o.vn&&o.n.indexOf(o.vn)<0)||(pf&&o.p!==pf))continue;if(KD){if(ON[o.n]&&(o.id||o.u)&&(!o.e||o.e>=t)&&(!o.s||o.s<=t7))L.push(o)}else if(RX){if(RX.test(o.n+(o.hk||''))&&(o.id||o.u)&&(!o.e||o.e>=t)&&(!o.s||o.s<=t7))L.push(o)}else if(o.id&&o.hk&&o.e>=t&&o.s<=t7)L.push(o)}
+=======
+  for(var x in D){var o=D[x];if(!o.im||o.wk||(pf&&o.p!==pf))continue;if(KD){if(ON[o.n]&&(o.id||o.u)&&(!o.e||o.e>=t)&&(!o.s||o.s<=t7))L.push(o)}else if(RX){if(RX.test(o.n+(o.hk||''))&&(o.id||o.u)&&(!o.e||o.e>=t)&&(!o.s||o.s<=t7))L.push(o)}else if(o.id&&o.hk&&o.e>=t&&o.s<=t7)L.push(o)}
+>>>>>>> origin/main
   var sc=function(o){return (/イルミ|ライト|灯|光|夜|ルミナ|紅葉|もみじ/.test(o.n+o.hk)?0:2)+(o.s<=t?0:1)};
   L.sort(function(a,b){return sc(a)-sc(b)||(a.e<b.e?-1:1)});
   var P={};L=L.filter(function(o){if(!pf&&P[o.p]>=1&&L.length>6)return false;P[o.p]=(P[o.p]||0)+1;return true}).slice(0,5);if(!L.length)return;
