@@ -136,7 +136,7 @@ else if(h>=18){e.textContent="いまは"+h+"時台です。昼だけの所はも
 <nav class="also" aria-label="あわせて見る"><small>あわせて見る</small><a href="/tomari" data-k="あわせて：泊まりで行くおでかけ">泊まりで行くおでかけ</a><a href="/illumination" data-k="あわせて：関西イルミネーション">関西イルミネーション</a><a href="/koyo" data-k="あわせて：紅葉ライトアップ">紅葉ライトアップ</a></nav>
 <a class="back" href="/odekake">関西おでかけリストへ戻る</a>
 <div class="ft">TOWN NOTE│関西おでかけリスト</div></div>
-<script>(function(){
+<script>/* 11/18 夕方（17時から）は、同じ時間の帯の中でイルミ・夜の催しを先に（閉まっている美術館が上に並んでいた） */var EVN=new Date(Date.now()+9*36e5).getUTCHours()>=17,BN=function(m){var B=[15,30,45,60,90,120,180,1e9],i=0;while(m>B[i])i++;return i},NT=function(x){return /イルミ|ライトアップ|夜|ナイト|光|ルミナ|ランタン|花火/.test((x.t||'')+' '+(x.m||''))?1:0};(function(){
 var PC={"大阪":"#B97A62","京都":"#8A7495","兵庫":"#4F6681","奈良":"#6F8C68","滋賀":"#5F8F98","和歌山":"#C4925A"};
 var JMA={"大阪":"270000","京都":"260000","兵庫":"280000","奈良":"290000","滋賀":"250000","和歌山":"300000"};
 /* 出発の駅（だいたいの位置） */
@@ -239,7 +239,7 @@ function load(){Promise.all([
 document.addEventListener("cm-ready",function(){try{draw()}catch(e){}});
 function draw(){if(!O||!ITEMS.length)return;
   ITEMS.forEach(function(x){x.k=km(O.la,O.lo,x.la,x.lo);x.min=mins(x.k);x.b=brg(O.la,O.lo,x.la,x.lo);});
-  var L=ITEMS.slice().sort(function(a,b){return (RAIN?(b.inside-a.inside):0)||a.min-b.min||a.k-b.k}),show=L.filter(function(x){return x.min<=MAXM});
+  var L=ITEMS.slice().sort(function(a,b){return (RAIN?(b.inside-a.inside):0)||(EVN?(BN(a.min)-BN(b.min))||(NT(b)-NT(a)):0)||a.min-b.min||a.k-b.k}),show=L.filter(function(x){return x.min<=MAXM});
   document.getElementById("nNear").textContent=ITEMS.filter(function(x){return x.min<=60}).length;
   document.getElementById("lh").textContent=RAIN?"雨の予報：屋内らしい所を先に":"近い順";
   document.getElementById("ls").textContent=(O.g?"いまいる場所":O.n)+"から　"+show.length+"か所";
@@ -270,7 +270,7 @@ function draw(){if(!O||!ITEMS.length)return;
     var st=x.e&&x.e===T?'<span class="ls">きょうまで</span>':(x.e&&dd(T,x.e)<=3?'<span class="ls">あと'+dd(T,x.e)+'日</span>':(x.e?'<span class="on">開催中</span>':""));
     var dt=x.e?fd(x.e)+" まで":(x.d.replace(/\s+/g," ").trim());
     /* 11/6 夜#44：朝早い・夜おそい時は、着いた時にまだ開いていない／もう閉まった所があるので、カードにも書く（開く時間は公式で） */
-    var hh=jst().getUTCHours(),nt=/イルミ|ライトアップ|夜|ナイト|光|ルミナ|ランタン|花火/.test(x.t+" "+x.m),tw=hh<9?'<span class="tw">着くころ開く前かも</span>':(hh>=17&&!nt?'<span class="tw">着くころ閉まっているかも</span>':"");
+    var hh=jst().getUTCHours(),nt=/イルミ|ライトアップ|夜|ナイト|光|ルミナ|ランタン|花火/.test(x.t+" "+x.m),tw=hh<9?'<span class="tw">開く前かも</span>':(hh>=17&&!nt?'<span class="tw">閉館後かも</span>':"");
     var route="https://www.google.com/maps/dir/?api=1&origin="+encodeURIComponent(dir)+"&destination="+(x.ex?x.la+","+x.lo:encodeURIComponent(x.q))+"&travelmode=transit";/* 11/6 夜「行き方の目的地が別の施設」→ 場所が市の中心までしか分からない物は、会場の名前で案内する */
     h+='<article class="it" id="i-'+esc(x.t)+'" style="--pc:'+PC[x.p]+'"><a class="card" href="'+esc(x.href)+'"'+(x.op&&!x.e?' data-open="'+x.op+'"':'')+' target="_blank" rel="noopener" data-k="公式｜'+esc(x.t)+'"><div class="v2c"><span class="p">'+x.p+'</span>'+st+(x.free?'<span class="f">無料</span>':"")+tw+'</div><div class="v2d">'+esc(dt)+'</div><div class="t">'+esc(x.t)+'</div><div class="m">'+esc(x.place+(x.m?"｜"+x.m:""))+'</div><div class="tt"><small>約</small>'+tmin(x.min)+'<i>'+(x.k<10?x.k.toFixed(1):Math.round(x.k))+' km</i></div><div class="go">→</div></a><div class="rt"><a href="'+route+'" target="_blank" rel="noopener" data-k="行き方｜'+esc(x.t)+'">行き方</a></div></article>';});
   document.getElementById("list").innerHTML=h;document.getElementById("none").style.display=show.length?"none":"block";}
