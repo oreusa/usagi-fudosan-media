@@ -1,0 +1,2295 @@
+{
+ "ENLIGHTENMENT JAPAN": {
+  "u": "https://enlightenment-immersive.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "ハルカス300×名探偵コナン": {
+  "u": "https://t-event.jp/harukas300conan/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "harukas300"
+  ]
+ },
+ "ALL OF EVANGELION（エヴァ30周年展）": {
+  "u": "https://www.hirakatapark.co.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "hirakatapark"
+  ]
+ },
+ "NHK日曜美術館50年展": {
+  "u": "https://nichibiten50.jp/overview.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nichibiten50"
+  ]
+ },
+ "躍動する明代の書 台北何創時コレクション": {
+  "u": "https://www.osaka-art-museum.jp/special_exhibition/mindai",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "ocmfa_since1936"
+  ]
+ },
+ "つくる女性の100年": {
+  "u": "https://nakka-art.jp/exhibition-post/paving-the-way100/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nakkaart2022"
+  ]
+ },
+ "魯山人の宇宙 魂を刳る美がほしい": {
+  "u": "https://www.mistore.jp/store/kyoto/museum/event_list/event21.html",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "ルーシー・リー展 東西をつなぐ優美のうつわ": {
+  "u": "https://www.aham.jp/exhibition/future/lucie_rie/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "abeno_harukas_art_museum"
+  ]
+ },
+ "細田守の原点／展": {
+  "u": "https://osaka-info.jp/event/hosodagenten-osaka/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "discover_osaka"
+  ]
+ },
+ "大英博物館日本美術コレクション 百花繚乱": {
+  "u": "https://nakka-art.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nakkaart2022"
+  ]
+ },
+ "秋のフラワーコンサート": {
+  "u": "https://hanabun-osaka.witc-pm.jp/event/2026flwcon-au/",
+  "ok": true,
+  "posts": [
+   "p/Df3RnrvDqIu",
+   "p/Df1BcOFiFeU",
+   "p/Df0s0mdFtCh",
+   "p/DfwXsKOk8QT",
+   "p/DftgxhunLK4",
+   "p/Dfs-dT7jGUy"
+  ],
+  "acc": [
+   "hanabun_osaka"
+  ]
+ },
+ "謎の城 in 大阪城": {
+  "u": "https://www.nazonoshiro.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "rekishirealnazo"
+  ]
+ },
+ "スワップミート in 花博公園": {
+  "u": "https://www.tsurumi-ryokuchi.jp/events/28742",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "tsurumiryokuchi"
+  ]
+ },
+ "名探偵コナン 疾風の追走からの脱出": {
+  "u": "https://realdgame.jp/s/conan2026/events/yomiuri.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "ミュシャ芸術博覧会リターンズ": {
+  "u": "https://mucha.sakai-bunshin.com/event/mucha2026ex2/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "sakai_alphonse_mucha_museum"
+  ]
+ },
+ "クラフトパーク 秋の日曜体験": {
+  "u": "https://osaka-craftpark.com/news_cat/event",
+  "ok": true,
+  "posts": [
+   "p/Dfqn0nqRTxI",
+   "p/DfWRAwOBVUk",
+   "p/DfLZaH1ExHU",
+   "p/DfLZUx7EyNx",
+   "p/DfKKSwlsvAZ",
+   "p/DfKAW3BE2RK"
+  ],
+  "acc": [
+   "osakacraftpark"
+  ]
+ },
+ "怪々YOKAI祭 2026": {
+  "u": "https://eigamura.com/feature/yokai2026/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "uzumasa_eigamura"
+  ]
+ },
+ "没後100年 クロード・モネ展": {
+  "u": "https://www.asahigroup-oyamazaki.com/news/2026/01/30100/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "asahibeer.oyamazaki"
+  ]
+ },
+ "特別展 源氏物語 王朝のかがやき": {
+  "u": "https://genjiten.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "genji_kagayaki"
+  ]
+ },
+ "白龍園の紅葉 秋の特別公開": {
+  "u": "https://hakuryuen.com/plan/event/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "hakuryuen"
+  ]
+ },
+ "宇治十帖スタンプラリー": {
+  "u": "https://www.city.uji.kyoto.jp/site/murasaki/104428.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "TOTTEI PARK イルミナイト": {
+  "u": "https://www.totteikobe.jp/news/article/29950",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "tottei_official"
+  ]
+ },
+ "やなせたかし展": {
+  "u": "https://www.himejibungakukan.jp/events/event/2026yanasetakashi/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "神戸六甲ミーツ・アート2026": {
+  "u": "https://rokkomeetsart.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "rokkomeetsart"
+  ]
+ },
+ "水木しげる 魂の漫画展": {
+  "u": "https://event.city.kobe.lg.jp/event/kscQI3XjCQ6kLhZNhXHt",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "トーベとムーミン展": {
+  "u": "https://tove-moomins.exhibit.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "tove_moomins"
+  ]
+ },
+ "ムーミン×神戸ポートタワー": {
+  "u": "https://www.kobe-port-tower.com/info/moomin/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobeporttower_official"
+  ]
+ },
+ "六甲山のキノコ展": {
+  "u": "https://www.kobe-park.or.jp/shinrin/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe_arboretum"
+  ]
+ },
+ "仮面ライダー×自然のチカラ展": {
+  "u": "https://kobe-maritime-museum.com/exhibition/exhibition-866/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe_maritime_m"
+  ]
+ },
+ "灘の酒蔵 謎解き探訪2026": {
+  "u": "https://jellyroom.jp/nada/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nadatanbou2026"
+  ]
+ },
+ "須磨デジタルスタンプラリー": {
+  "u": "https://event.city.kobe.lg.jp/event/uBivEyKaeDKvLtYvqYFx",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "たかさご万灯祭2026": {
+  "u": "https://www.city.takasago.lg.jp/soshikikarasagasu/citypromotionshitsu/kanko_tokusan/2/13744.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "みきUMAフェス2026": {
+  "u": "https://www.city.miki.lg.jp/soshiki/33/98089.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "企画展 平城遷都": {
+  "u": "https://www.heijo-park.jp/event/heijyosento/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "heijokyusekirekisikouen"
+  ]
+ },
+ "謎の城 in 郡山城": {
+  "u": "https://www.nazonoshiro.com/event/koriyama_hidenaga2/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "rekishirealnazo"
+  ]
+ },
+ "奥大和 謎解きラリー": {
+  "u": "https://www.pref.nara.lg.jp/n008/p164026.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "木下大サーカス 橿原公演": {
+  "u": "https://kinoshita-circus.co.jp/index.htm",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kinoshitacircus"
+  ]
+ },
+ "おふさ観音 秋のバラまつり": {
+  "u": "https://www.ofusa.jp/highlights/rose",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "ofusa2021"
+  ]
+ },
+ "曽爾高原 山灯り": {
+  "u": "https://yamatoji.nara-kankou.or.jp/02nature/02kougen/03east_area/sonikogen/event/jkknnajnf9/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "naravisitorsbureau_official"
+  ]
+ },
+ "KASHIHARA SKY PALETTE 万葉花火": {
+  "u": "https://sky-palette.hanabifes.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kashihara_tourism"
+  ]
+ },
+ "飛鳥資料館 秋期特別展": {
+  "u": "https://www.nabunken.go.jp/asuka/info/2026/08/post-560.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "シガパークめぐり スタンプラリー": {
+  "u": "https://www.pref.shiga.lg.jp/rb00/press-release/29267.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "shigaphotoclub"
+  ]
+ },
+ "草津 周遊謎解き 青ばな善右衛門": {
+  "u": "https://www.city.kusatsu.shiga.jp/citysales/odekakenavi/shokan20260930.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "シガラキ・ニューウェーブ": {
+  "u": "https://www.sccp.jp/exhibitions/toigeikan-exhibition/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "sccp_museum"
+  ]
+ },
+ "羽柴兄弟 謎解き立志伝": {
+  "u": "https://kitabiwako.jp/event/event_61844",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "n_m_tourism_association",
+   "biwako_no_moto_dmo"
+  ]
+ },
+ "百済寺と近江の仏教美術": {
+  "u": "https://www.miho.jp/en/exhibition/autumn2026/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "キッチンカーグランプリ in 希望が丘": {
+  "u": "https://www.kiboupark-shiga.or.jp/important/156423.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kiboupark.shiga",
+   "campleader.kibougaoka"
+  ]
+ },
+ "ギュウポケ in ドラゴン": {
+  "u": "https://ameblo.jp/pocketmarche/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "和歌山城 光と幻想の夜": {
+  "u": "https://www.city.wakayama.wakayama.jp/kankou/1010182/1065599.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "紀州根来寺かくばん祭り": {
+  "u": "https://www.city.iwade.lg.jp/soshiki/16/1603.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "iwade.city"
+  ]
+ },
+ "2026翔龍祭（龍神林業まつり・村民文化祭）": {
+  "u": "https://www.ryujin-kanko.jp/2026/10/27/4812/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "syoryusai2001"
+  ]
+ },
+ "Festa LuCe": {
+  "u": "https://festaluce.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "festaluce"
+  ]
+ },
+ "企画展 くらひらく": {
+  "u": "https://hakubutu.wakayama.jp/exhibit/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "wakayamakenpaku"
+  ]
+ },
+ "国城観光農園 みかん狩り": {
+  "u": "https://www.kunigikankounouen.com/fruit",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "鈴木崇 もののをかし": {
+  "u": "https://www.momaw.jp/exhibit/2026suzuki/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "moma_wakayama"
+  ]
+ },
+ "PINGU meets アドベンチャーワールド": {
+  "u": "https://www.aws-s.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "adventureworld_official"
+  ]
+ },
+ "高野・山麓スタンプラリー": {
+  "u": "https://www.pref.wakayama.lg.jp/prefg/130300/01/d00221612_d/fil/260731_stamp.pdf",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "insta_wakayama"
+  ]
+ },
+ "豊臣兄弟！大和郡山 大河ドラマ館": {
+  "u": "https://www.hidenaga-yamatokoriyama.jp/exhibition/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "yamatokoriyama_pr"
+  ]
+ },
+ "植物園のもみじ散策・紅葉のライトアップ": {
+  "u": "https://www.kobe-park.or.jp/shinrin/eventlist/%ef%bd%9e%e4%b8%96%e7%95%8c%e3%81%ae%e6%a3%ae%e3%81%ae%e7%b4%85%e8%91%89%e3%82%81%e3%81%90%e3%82%8a%ef%bd%9e-%e6%a4%8d%e7%89%a9%e5%9c%92%e3%81%ae%e3%82%82%e3%81%bf%e3%81%98%e6%95%a3%e7%ad%96-2/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe_arboretum"
+  ]
+ },
+ "アドベンチャーワールド LIGHT PARKS": {
+  "u": "https://www.aws-s.com/lightparks&nightsafari/lightparks/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "御堂筋イルミネーション2026": {
+  "u": "https://hikari-kyoen.com/core/midosuji",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "hikari_kyouen"
+  ]
+ },
+ "万博記念公園 紅葉まつり": {
+  "u": "https://www.expo70-park.jp/event/77753/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "suitabiyori",
+   "expo70park"
+  ]
+ },
+ "万博の森 どんぐりフェス": {
+  "u": "https://www.expo70-park.jp/event/77654/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "expo70park"
+  ]
+ },
+ "北斎・広重づくし": {
+  "u": "https://osaka-ukiyoe-museum.com/exhibition.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "osakaukiyoemuseum"
+  ]
+ },
+ "夜の海遊館": {
+  "u": "https://www.kaiyukan.com/program/night/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kaiyukan_japan"
+  ]
+ },
+ "南大阪リアル謎解きゲーム きくなーれのなぞとき大冒険": {
+  "u": "https://www.pref.osaka.lg.jp/o120180/senshunm/tyokubaijo/nazo_event/event.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "osakaprefpr"
+  ]
+ },
+ "南海旅なぞTRAIN2026 ～謎解きは旅の途中で～": {
+  "u": "https://www.nankai.co.jp/traffic/digital/nazotoki_2026.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "otent_nankai"
+  ]
+ },
+ "大阪ステーションシティ×ドラマチック謎解きゲーム": {
+  "u": "https://osakastationcity-nazo.com/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "ライドアラウンドin岸和田": {
+  "u": "https://tour-de-nippon.jp/ridearound-kishiwada/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "ko_fuan",
+   "aisailand_izumino",
+   "koyama.baikadou"
+  ]
+ },
+ "ナゾトキイベント「ぐわ兵衛とアソビ帝国」": {
+  "u": "https://hamadera.osaka-park.or.jp/event-information/%e3%83%8a%e3%82%be%e3%83%88%e3%82%ad%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%80%8c%e3%81%90%e3%82%8f%e5%85%b5%e8%a1%9b%e3%81%a8%e3%82%a2%e3%82%bd%e3%83%93%e5%b8%9d%e5%9b%bd%e3%80%8d/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "hamaderakoen",
+   "kotsu_yuen"
+  ]
+ },
+ "ドーンセンター周遊謎解き「キラリ町と不思議なつぼみ」": {
+  "u": "https://www.tokitokievent.com/dawn2026",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "ガチャガチャ展 in 大阪": {
+  "u": "https://www.tv-osaka.co.jp/event/gacha/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "gachagacha_tvo"
+  ]
+ },
+ "梅小路公園 紅葉まつり ライトアップ": {
+  "u": "https://www.kyoto-ga.jp/event/umekouji/index.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kyoto_umekojipark",
+   "takaragaike_kodomonorakuen",
+   "maruyamakouenkyoto"
+  ]
+ },
+ "東寺 紅葉のライトアップ": {
+  "u": "https://toji.or.jp/exhibition/2026_autumn/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "清水寺 秋の夜間特別拝観": {
+  "u": "https://www.kiyomizudera.or.jp/event/yakan.php",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "feel_kiyomizudera"
+  ]
+ },
+ "嵯峨野トロッコ列車 光の幻想列車": {
+  "u": "https://www.westjr.co.jp/press/article/2026/09/18/items/260918_00_press_hikarinogensouressya.pdf",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "jrwest_official"
+  ]
+ },
+ "京都 秋めぐりパスポート": {
+  "u": "https://souda-kyoto.jp/other/autumn2026/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "blayn_inc",
+   "soudakyoto_official"
+  ]
+ },
+ "NAKED meets 二条城 2026": {
+  "u": "https://nijo-jocastle.city.kyoto.lg.jp/event/matsuri2026-1/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nijojocastle"
+  ]
+ },
+ "企画展「あっちもこっちもスズキさん」": {
+  "u": "https://files.microcms-assets.io/assets/218fe239b5e04e63b5e1c6e743e86224/289671ea40a441cda1359e3f7a214ba8/press_20260930.pdf",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "虎屋所蔵品展「心なごむ動物たち」": {
+  "u": "https://www.toraya-group.co.jp/news/20261009",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "toraya.confectionery"
+  ]
+ },
+ "ジュエリーは、誰を夢みる": {
+  "u": "https://www.momak.go.jp/Japanese/exhibitionarchive/2026/468.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "momakyoto"
+  ]
+ },
+ "びっくり構図展": {
+  "u": "https://hosotsuji-ihee-museum.com/exhibition#surprising",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "hosotsujiiheemuseum"
+  ]
+ },
+ "読書週間 Book＆POP展": {
+  "u": "https://www.miyako-eco.jp/event/event-39278/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "miyako_ecology_center"
+  ]
+ },
+ "NAKED GARDEN NIGHTS 東本願寺・渉成園": {
+  "u": "https://www.higashihonganji.or.jp/news/worship/554114022/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "higashihonganji_otaniha"
+  ]
+ },
+ "好古園 紅葉会": {
+  "u": "https://www.himeji-machishin.jp/ryokka/kokoen/info_detail.php?eid=00303",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "須磨離宮公園 秋のバラ観賞会": {
+  "u": "https://www.kobe-park.or.jp/rikyu/event/event-27232/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "sumarikyu_kobe"
+  ]
+ },
+ "神戸イルミナージュ": {
+  "u": "https://fruit-flowerpark.jp/uvqiuz/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "fruitflowerpark.kobe"
+  ]
+ },
+ "出会える西宮の文化財2026": {
+  "u": "https://www.nishi.or.jp/bunka/rekishitobunkazai/bunkazai/hogo_katsuyou/siteibunkazai_2022.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "酒にのまれ展": {
+  "u": "https://itami-im.jp/exhibitions/%E9%85%92%E3%81%AB%E3%81%AE%E3%81%BE%E3%82%8C%E5%B1%95/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "itami_museum"
+  ]
+ },
+ "企画展「ふれる×れきはく」": {
+  "u": "https://rekihaku.pref.hyogo.lg.jp/exhibition/21536/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "hyogo_pref_museum_of_history"
+  ]
+ },
+ "SIKIガーデン AutumnSeason": {
+  "u": "https://www.rokkosan.com/museum/sikigarden/?lang=en",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "rokkomorinone"
+  ]
+ },
+ "ペダルで時を漕ぐ デジタルスタンプラリー": {
+  "u": "https://event.city.kobe.lg.jp/event/OSHoI3B50boJ3RrtuNtr",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "ドイツ祭り2026 Beer & Wine Fest": {
+  "u": "https://www.kobeherb.com/topics/40131",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe_nunobiki_herb_gardens"
+  ]
+ },
+ "2026 パンダがむすぶ西宮展": {
+  "u": "https://frentehall.jp/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/%E7%B7%B4%E7%BF%92%E5%AE%A4%E3%83%BB%E5%A4%9A%E7%9B%AE%E7%9A%84%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9_0261107-1122/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "frentehall.jp"
+  ]
+ },
+ "吉野山 紅葉ライトアップ": {
+  "u": "https://yoshino-kankou.jp/autumn-foliage/",
+  "ok": true,
+  "posts": [
+   "p/Cpmcwp7JhMl",
+   "p/CpUjI2iJ3Ti",
+   "p/CpCUydIpGDb",
+   "reel/Ck0boluphd2"
+  ],
+  "acc": [
+   "yoshino_kankou"
+  ]
+ },
+ "談山神社 紅葉ライトアップ": {
+  "u": "https://tanzan.or.jp/info/jinja_news/%e8%ab%87%e5%b1%b1%e7%a5%9e%e7%a4%be%e3%80%8c%e7%b4%85%e8%91%89%e3%81%be%e3%81%a4%e3%82%8a%e3%80%8d/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "tanzanjinja"
+  ]
+ },
+ "長谷寺の紅葉": {
+  "u": "https://www.hasedera.or.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "hase_dera"
+  ]
+ },
+ "おぎの美術館（屋外の美術館）": {
+  "u": "https://www.heijo-park.jp/event_category/%E5%B1%95%E7%A4%BA/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "heijokyusekirekisikouen"
+  ]
+ },
+ "斑鳩文化財センター 秋季特別展「華麗なる王族」": {
+  "u": "https://www.town.ikaruga.nara.jp/0000003368.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "没後25年 上村松篁展": {
+  "u": "https://www.kintetsu-g-hd.co.jp/culture/shohaku/exhibition/uemura-shoko-25th-memorial/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "ナンシー関の消しゴムハンコをアーカイブする展": {
+  "u": "https://ncmoa.art/archives/10044",
+  "ok": true,
+  "posts": [
+   "p/DWaQak9k7ef"
+  ],
+  "acc": [
+   "naracmoa",
+   "embed.js"
+  ]
+ },
+ "Ensemble Gala 第2回コンサート": {
+  "u": "https://kashibun.jp/kb-event/kb-event-17049/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "特別展「高照らすみやこ 描かれた飛鳥・藤原の宮都」": {
+  "u": "https://www.pref.nara.lg.jp/n046/p107032.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "石山寺 あたら夜もみじ": {
+  "u": "https://www.ishiyamadera.or.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "ishiyamadera",
+   "ishiyama_kei_chan",
+   "ishiyamaderamonzenichi0018"
+  ]
+ },
+ "永源寺 紅葉ライトアップ": {
+  "u": "https://eigenji-t.jp/haikan/",
+  "ok": true,
+  "posts": [
+   "reel/DfqFJSSMfUY"
+  ],
+  "acc": []
+ },
+ "教林坊 紅葉ライトアップ": {
+  "u": "https://kyourinbo.jimdofree.com/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "ブルーメの丘 秋の味覚バイキング": {
+  "u": "https://www.blumenooka.jp/have/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "blumenooka"
+  ]
+ },
+ "米原奇譚謎解き「白イノシシの絆と優しい嘘」": {
+  "u": "https://kitabiwako.jp/event/event_64748",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "n_m_tourism_association",
+   "biwako_no_moto_dmo"
+  ]
+ },
+ "びわ湖大津館 秋のローズフェスタ": {
+  "u": "https://www.biwako-otsukan.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "ひこにゃん 彦根城に眠る謎を解け！（謎解き）": {
+  "u": "https://p-con.iroawase.jp/hikonyan/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "丸木スマ展 73歳からのアーティスト": {
+  "u": "https://shigamuseum.jp/exhibitions/12995",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "shigamuseum"
+  ]
+ },
+ "トナリマチドライブスタンプラリー": {
+  "u": "https://area.jaf.or.jp/drive/stamp-rally/kansai/shiga_stamprally_no1650",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "いい福展": {
+  "u": "https://higashiomi-j.com/oodakokaikan/oodakokaikan_event/oodakokaikan_event-4556/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "oodako_museum"
+  ]
+ },
+ "浄厳院国際芸術祭2026": {
+  "u": "https://www.jogoninart.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "atartsexhibition"
+  ]
+ },
+ "秋期企画展「湖・川が育む水との暮らし」": {
+  "u": "https://www.city.yasu.lg.jp/soshiki/rekishiminzoku/museum.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "わかやまMEAT UPフェア": {
+  "u": "https://wakayama-meat-up.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "wakayamapref_wagyu"
+  ]
+ },
+ "有田みかんスタンプラリー": {
+  "u": "https://asoboyo-arida.com/2026/08/17/aridamikanstamprally/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "arida.wakayama"
+  ]
+ },
+ "ONSEN・ガストロノミーウォーキング in 那智勝浦": {
+  "u": "https://www.wakayama-kanko.or.jp/events/detail_4410.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nagomi_wakayama_tourism"
+  ]
+ },
+ "日本遺産認定10周年記念「鯨とともに生きる」周遊スタンプラリー": {
+  "u": "https://www.wakayama-kanko.or.jp/events/detail_4396.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nagomi_wakayama_tourism"
+  ]
+ },
+ "和歌山城公園菊花展": {
+  "u": "https://www.city.wakayama.wakayama.jp/kankou/nenkangyoji/1006644.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "2026年企画展II「熊楠の結婚」": {
+  "u": "https://www.minakata.org/2026_exh2",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "minakatakumagusu_archives"
+  ]
+ },
+ "ナッツベリーリゾート大阪": {
+  "u": "https://osaka.nutsberry-resort.com/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "岸和田場外魚市場 みなとマルシェ": {
+  "u": "https://www.pref.osaka.lg.jp/hodo/fumin/o120130/prs_51036.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "osakaprefpr"
+  ]
+ },
+ "うめきたの森（グラングリーン大阪）": {
+  "u": "https://www.city.osaka.lg.jp/hodoshiryo/osakatokei/0000677513.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "LUCUA キャラクターズワールド": {
+  "u": "https://www.westjr.co.jp/press/article/2026/09/30/items/260930_00_press_lucuasouth.pdf",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "jrwest_official"
+  ]
+ },
+ "アニタッチ OSAKA なんば": {
+  "u": "https://www.afpbb.com/articles/-/3648165",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "イマーシブジャーニー 大阪": {
+  "u": "https://immersivejourney.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "immersive_j"
+  ]
+ },
+ "Superblue Kyoto": {
+  "u": "https://www.superblue.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "superblue.art"
+  ]
+ },
+ "高槻城公園 北エリア": {
+  "u": "https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "新しい琵琶湖文化館": {
+  "u": "https://www.pref.shiga.lg.jp/sd00/2582.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "shigaphotoclub"
+  ]
+ },
+ "大和工業アリーナ姫路": {
+  "u": "https://www.city.himeji.lg.jp/kanko/0000033468.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "びわ湖テラス Sky Bridge": {
+  "u": "https://www.biwako-valley.com/green/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "biwakovalley_biwakoterrace"
+  ]
+ },
+ "UCCコーヒー博物館": {
+  "u": "https://www.ucc.co.jp/museum/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "uccueshimacoffee"
+  ]
+ },
+ "奈良監獄ミュージアム": {
+  "u": "https://hoshinoresorts.com/nara-prison-museum/ja/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nara_prison_museum"
+  ]
+ },
+ "東条湖おもちゃ王国 トミカ・プラレールランド": {
+  "u": "https://www.omochaoukoku.com/tojoko/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "太秦映画村": {
+  "u": "https://eigamura.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "uzumasa_eigamura"
+  ]
+ },
+ "六甲山アスレチックパーク GREENIA「Chibidoland」": {
+  "u": "https://www.rokkosan.com/greenia/pickup/special/6031/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "greenia_653"
+  ]
+ },
+ "ニフレル「どくにふれる」": {
+  "u": "https://www.nifrel.jp/dokunifrel/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "NIFREL_OFFICIAL"
+  ]
+ },
+ "Lightscape in Rokko しょくぶつのあかり": {
+  "u": "https://www.rokkosan.com/top/facility/gt/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "omo.rokko"
+  ]
+ },
+ "ひかりの森～夜の芸術散歩～（神戸六甲ミーツ・アート）": {
+  "u": "https://rokkomeetsart.jp/hikarinomori/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "rokkomeetsart"
+  ]
+ },
+ "神戸旧居留地イルミネーション": {
+  "u": "https://www.city.kobe.lg.jp/a30028/shise/kekaku/jutakutoshikyoku/scene/11_night/38_kyoryuchi.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "my.sweet.kobe"
+  ]
+ },
+ "明石海峡大橋ライトアップ": {
+  "u": "https://www.jb-honshi.co.jp/customer_index/kanko_event/lightup/lightup-akashi.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "神戸ガス燈通りのイルミネーション": {
+  "u": "https://harborland.co.jp/",
+  "ok": true,
+  "posts": [
+   "reel/Dfqo4mJTI0a",
+   "reel/DfbGMffTEzY",
+   "reel/DfRmbIMTJhH",
+   "reel/Def2VSuTLPm",
+   "reel/DeVltzazVpI",
+   "reel/DeSmolgT4g6"
+  ],
+  "acc": [
+   "kobeharborland"
+  ]
+ },
+ "神戸三田プレミアム・アウトレット ウィンターイルミネーション": {
+  "u": "https://www.premiumoutlets.co.jp/kobesanda/information/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobesandapremiumoutlets"
+  ]
+ },
+ "umie ウィンターイルミネーション": {
+  "u": "https://umie.jp/news",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe_harborland_umie"
+  ]
+ },
+ "神戸クリスマスマーケット2026 古城のクリスマス": {
+  "u": "https://www.kobeherb.com/tips/kobechristmasmarket/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe_nunobiki_herb_gardens"
+  ]
+ },
+ "ホテルオークラ神戸 クリスマスイルミネーション": {
+  "u": "https://www.kobe.hotelokura.co.jp/",
+  "ok": true,
+  "posts": [
+   "p/Df1Pmxrn3Di",
+   "p/Dfyq8NgH2G5",
+   "p/Dftg_sbnzer",
+   "p/DfoXmwjHywx",
+   "p/DfnthkKH6NE",
+   "p/DfjN7oGn4hZ"
+  ],
+  "acc": [
+   "hotelokurakobe"
+  ]
+ },
+ "ネスタリゾート神戸 NESTA ILLUMINA": {
+  "u": "https://nesta.co.jp/event/580/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nestaresortkobe"
+  ]
+ },
+ "Himeji大手前通り・姫路城イルミネーション": {
+  "u": "https://www.city.himeji.lg.jp/sangyo/0000028413.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "himeji_illumination"
+  ]
+ },
+ "南京町ランターンフェア": {
+  "u": "https://www.nankinmachi.or.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nankinmachi"
+  ]
+ },
+ "生野イルミネーションロード": {
+  "u": "https://www.city.asago.hyogo.jp/soshiki/5.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "city_asagokouhou_official"
+  ]
+ },
+ "神戸メリケンクリスマス": {
+  "u": "https://kobemerikenxmas.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe_meriken_xmas"
+  ]
+ },
+ "神戸ルミナリエ": {
+  "u": "https://www.city.kobe.lg.jp/a64051/284690987078.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "my.sweet.kobe"
+  ]
+ },
+ "つかしん ウィンターイルミネーション": {
+  "u": "https://www.tsukashin.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "tsukashin_official"
+  ]
+ },
+ "SOL's Christmas": {
+  "u": "https://www.kobe-sol.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe_sol"
+  ]
+ },
+ "森林植物園 紅葉のライトアップ": {
+  "u": "https://www.kobe-park.or.jp/shinrin/eventlist/%E7%B4%85%E8%91%89%E3%81%AE%E3%83%A9%E3%82%A4%E3%83%88%E3%82%A2%E3%83%83%E3%83%97-4/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe_arboretum"
+  ]
+ },
+ "須磨離宮公園 もみじ観賞会": {
+  "u": "https://www.kobe-park.or.jp/rikyu/event/event-27324/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "sumarikyu_kobe"
+  ]
+ },
+ "布引の紅葉 ライトアップ": {
+  "u": "https://www.kobeherb.com/topics/43870",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe_nunobiki_herb_gardens"
+  ]
+ },
+ "最上山もみじ祭り ライトアップ": {
+  "u": "https://shiso.or.jp/recommended_spots/%E6%9C%80%E4%B8%8A%E5%B1%B1%E3%82%82%E3%81%BF%E3%81%98%E7%A5%AD%E3%82%8A",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "shiso_marche"
+  ]
+ },
+ "書寫山圓教寺 紅葉ライトアップ": {
+  "u": "http://www.shosha.or.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "shoshazan_engyouji"
+  ]
+ },
+ "ニデック京都タワー ライトアップ": {
+  "u": "https://www.kyoto-tower.jp/lightup/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "ホテルオークラ京都 ウインターイルミネーション": {
+  "u": "https://www.hotel.kyoto/okura/event/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "hotelokurakyoto"
+  ]
+ },
+ "アグネス・イルミネーション2026": {
+  "u": "https://www.heian.ac.jp/topics/event",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "st_agnesuniv"
+  ]
+ },
+ "京都駅ビル グラフィカルイルミネーション": {
+  "u": "https://www.kyoto-station-building.co.jp/graphical_illumination/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kyoto_station_building",
+   "kyotoramenkoji",
+   "kyotostation_washokukoji"
+  ]
+ },
+ "バンビオイルミネーション": {
+  "u": "https://totteoki.kyoto.travel/events/12138/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "平安神宮×NAKED 冬のライトアップ（ヨルマイリ）": {
+  "u": "https://garden.naked.works/kyoto/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "光のページェント TWINKLE JOYO": {
+  "u": "http://城陽市観光協会.jp/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "同志社大学 クリスマス・イルミネーション": {
+  "u": "https://www.christian-center.jp/xmas/index.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "八瀬比叡山口駅 Illumi-station": {
+  "u": "https://eizandensha.co.jp/guide/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "eizandensha"
+  ]
+ },
+ "GOOD NATURE STATION 竹灯り散歩": {
+  "u": "https://goodnaturestation.com/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "高台寺 秋の夜間特別拝観": {
+  "u": "https://www.kodaiji.com/saiji.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kodaiji_zen_temple"
+  ]
+ },
+ "圓徳院 秋のライトアップ": {
+  "u": "https://www.kodaiji.com/entoku-in/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kodaiji_zen_temple"
+  ]
+ },
+ "仁和寺 紅葉雲海ライトアップ": {
+  "u": "https://ninnaji.jp/news/event-34-2/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "ninnajitemple"
+  ]
+ },
+ "東寺 紅葉ライトアップと金堂・講堂 夜間特別拝観": {
+  "u": "https://toji.or.jp/search/%E6%9D%B1%E5%AF%BA+%E5%A4%9C%E9%96%93%E7%89%B9%E5%88%A5%E6%8B%9D%E8%A6%B3/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "青蓮院門跡 秋の夜間特別拝観": {
+  "u": "https://www.shorenin.com/night/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "智積院 智山紅葉月": {
+  "u": "https://souda-kyoto.jp/other/autumn2026/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "blayn_inc",
+   "soudakyoto_official"
+  ]
+ },
+ "貴船もみじ灯篭": {
+  "u": "https://kifunejinja.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kifunejinja"
+  ]
+ },
+ "叡山電車 もみじのトンネル ライトアップ": {
+  "u": "https://eizandensha.co.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "eizandensha"
+  ]
+ },
+ "梅小路公園 紅葉まつり": {
+  "u": "https://www.kyoto-ga.jp/event/umekouji/index.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kyoto_umekojipark",
+   "takaragaike_kodomonorakuen",
+   "maruyamakouenkyoto"
+  ]
+ },
+ "北野天満宮 もみじ苑 ライトアップ": {
+  "u": "https://kitanotenmangu.or.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kitano_tenmangu"
+  ]
+ },
+ "くろ谷 金戒光明寺 秋の夜の特別拝観": {
+  "u": "https://www.kurodani.jp/lightup/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kurodani1175"
+  ]
+ },
+ "宝厳院 紅葉ライトアップ": {
+  "u": "https://hogonin.jp/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "知恩院 秋のライトアップ夜間特別拝観": {
+  "u": "https://www.chion-in.or.jp/",
+  "ok": true,
+  "posts": [
+   "p/Df3stNHn6av",
+   "p/Df3aL-XuB62",
+   "reel/Df1WFUKxFUP",
+   "p/DfvxAXNRaS4",
+   "p/DfoifEqFNcS",
+   "p/DfYhL_Mn6LC"
+  ],
+  "acc": [
+   "chion_in"
+  ]
+ },
+ "永観堂 秋の寺宝展 夜間拝観": {
+  "u": "https://www.eikando.or.jp/lp/2026/index.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "醍醐寺 秋期夜間拝観": {
+  "u": "https://www.daigoji.or.jp/event/detail7.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "daigoji_temple"
+  ]
+ },
+ "善法律寺 紅葉ライトアップ": {
+  "u": "https://ritsuji.web.fc2.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "zenporitsuji"
+  ]
+ },
+ "フェスティバルイルミネーション2026": {
+  "u": "https://www.festival-city.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "大阪ステーションシティ Twilight Fantasy 2026 MIRACLE CHRISTMAS": {
+  "u": "https://osakastationcity.com/event/6459/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "osakastationcity",
+   "osc_greenstaff"
+  ]
+ },
+ "通天閣ライトアップ": {
+  "u": "https://www.tsutenkaku.co.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "tsutenkaku_official",
+   "tsutenkakutower_official"
+  ]
+ },
+ "OSAKA光のルネサンス 中之島イルミネーションストリート": {
+  "u": "https://hikari-kyoen.com/core/renaissance",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "hikari_kyouen"
+  ]
+ },
+ "中之島ウエスト・冬ものがたり2026": {
+  "u": "https://nakanoshima-west.jp/information/fuyumonogatari/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nakanoshima_west"
+  ]
+ },
+ "グランフロント大阪 GRAND WISH CHRISTMAS": {
+  "u": "https://www.grandfront-osaka.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "grand.front.osaka"
+  ]
+ },
+ "梅田スカイビル クリスマス2026": {
+  "u": "https://www.skybldg.co.jp/event/xmas/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "なんば光旅": {
+  "u": "https://www.nankai.co.jp/news/261030.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "otent_nankai"
+  ]
+ },
+ "HERBIS CHRISTMAS": {
+  "u": "https://www.herbis.jp/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "阪急うめだ本店 ミラーボールツリー": {
+  "u": "https://www.hankyu-dept.co.jp/honten/event/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "hankyu_umeda_honten",
+   "hankyu_event",
+   "hankyumode"
+  ]
+ },
+ "クリスマスマーケットin大阪 てんしば 2026": {
+  "u": "https://osaka-christmasmarket.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "osaka_christmasmarket"
+  ]
+ },
+ "いばらきイルミフェスタ灯": {
+  "u": "http://ibaraki-akari.osaka.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "堺イルミネーション2026": {
+  "u": "https://sakai-machi.com/illumination/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "fukurounomori_gakuen"
+  ]
+ },
+ "中央公会堂プロジェクションマッピング": {
+  "u": "https://hikari-kyoen.com/core/renaissance",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "hikari_kyouen"
+  ]
+ },
+ "海遊館イルミネーション": {
+  "u": "https://www.kaiyukan.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kaiyukan_japan"
+  ]
+ },
+ "ITAMIウィンターイルミネーション": {
+  "u": "https://www.osaka-airport.co.jp/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "りんくうプレミアム・アウトレット ウィンターイルミネーション": {
+  "u": "https://www.premiumoutlets.co.jp/rinku/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "rinkupremiumoutlets"
+  ]
+ },
+ "HEP FIVE クリスマスイルミネーション": {
+  "u": "https://www.hepfive.jp/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "ディアモール大阪 クリスマス": {
+  "u": "https://www.diamor.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "diamorosaka"
+  ]
+ },
+ "大阪梅田ツインタワーズ・ノース クリスマスイルミネーション": {
+  "u": "https://www.hhp.co.jp/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "UMEDA MEETS HEART": {
+  "u": "https://umedameetsheart.com/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "Sennan Park Light Up": {
+  "u": "https://www.tryhardjapanevent.com/sennan-park-light-up",
+  "ok": true,
+  "posts": [
+   "p/DXYlTeMjfRR",
+   "p/DSW8giAE77h",
+   "p/DGRvIdSSliI",
+   "p/DTSejvnExyl",
+   "p/DT_-LyOE49W",
+   "p/DV7ur1IExbR"
+  ],
+  "acc": [
+   "tryhard_japan_official",
+   "osaka_night_fusion",
+   "ogimachi_lantern"
+  ]
+ },
+ "大東市スマイルミネーション": {
+  "u": "https://www.city.daito.lg.jp/soshiki/56/65351.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "daitostyle"
+  ]
+ },
+ "天理市 光の祭典": {
+  "u": "https://www.city.tenri.nara.jp/kakuka/shichoukoushitsu/sougouseisakuka/teijyujirituken/teijujiritsukenibentojoho/15242.html",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "桜井イルミネーション": {
+  "u": "https://www.city.sakurai.lg.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "イルミネーション in かしはら": {
+  "u": "https://www.city.kashihara.nara.jp/soshiki/1027/gyomu/2/1/3615.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kashihara_official"
+  ]
+ },
+ "馬見クリスマス きらめきマルシェ": {
+  "u": "https://www.pref.nara.jp/67882.htm",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "しあわせ回廊 なら瑠璃絵": {
+  "u": "https://rurie.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nararurie"
+  ]
+ },
+ "たかのはらイルミネーション": {
+  "u": "https://takanohara-nigiwai.jp/event/takanohara-illumination25-26/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "takanohara_event"
+  ]
+ },
+ "もりやま冬ホタル": {
+  "u": "https://moriyama-cci.or.jp/2026/10/22/huyuhotaru2026/",
+  "ok": true,
+  "posts": [
+   "p/Df3d7CpCLwD",
+   "reel/DfysF53pN9W",
+   "reel/DfysBUSpwxj",
+   "reel/Dfyrtw7pAhO",
+   "reel/DfyrNmdpkBc",
+   "reel/DfyqSFGpbOD"
+  ],
+  "acc": [
+   "moriyamacci"
+  ]
+ },
+ "Lighting Bell in NOTOGAWA": {
+  "u": "http://notomatikyo.com/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "East Rainbow": {
+  "u": "https://www.higashiomi.net/media/annual_events/eastrainbow",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "higashiomi_tourism_association"
+  ]
+ },
+ "みんなdeつなご 草津まちイルミ": {
+  "u": "https://www.city.kusatsu.shiga.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "SHIRARAHAMA Light Parade": {
+  "u": "https://www.nankishirahama.jp/news/19718/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nankishirahama_navi"
+  ]
+ },
+ "けやきライトパレード": {
+  "u": "https://keyaki-light-parade.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "keyaki_light_parade",
+   "fukko_const",
+   "machimunekougei"
+  ]
+ },
+ "貴志川イルミネーション": {
+  "u": "https://www.wakayama-kanko.or.jp/features/detail_236.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nagomi_wakayama_tourism"
+  ]
+ },
+ "徐福公園イルミネーション": {
+  "u": "https://www.wakayama-kanko.or.jp/features/detail_750.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nagomi_wakayama_tourism"
+  ]
+ },
+ "等彌神社 紅葉ライトアップ": {
+  "u": "https://www.city.sakurai.lg.jp/sosiki/machidukuribu/kankouka/kankoujigyou/100sen/1401859706988.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "室生寺 紅葉ライトアップ": {
+  "u": "https://www.uda-kankou.jp/navigation/1324",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "談山神社 紅葉まつり": {
+  "u": "https://tanzan.or.jp/info/jinja_news/%e8%ab%87%e5%b1%b1%e7%a5%9e%e7%a4%be%e3%80%8c%e7%b4%85%e8%91%89%e3%81%be%e3%81%a4%e3%82%8a%e3%80%8d/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "tanzanjinja"
+  ]
+ },
+ "長居植物園 チームラボ ボタニカルガーデン 大阪": {
+  "u": "https://www.teamlab.art/jp/e/botanicalgarden/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "teamlab"
+  ]
+ },
+ "ENLIGHTENMENT JAPAN 2026": {
+  "u": "https://enlightenment-immersive.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "ほしだ園地 星のブランコ 光の架け橋": {
+  "u": "https://o-wonderforest.com/hoshida/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "osaka_wonderforest"
+  ]
+ },
+ "ハーベストの丘 Wonder Night Hill": {
+  "u": "https://farm.or.jp/illumination_2026",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "harvesthill_sakai"
+  ]
+ },
+ "ひらかたパーク 光の遊園地": {
+  "u": "https://www.hirakatapark.co.jp/attractions/illumination/",
+  "ok": true,
+  "posts": [
+   "p/Cogq1emP0H1",
+   "p/CmghM45PEAk",
+   "p/CmRJe2vPVhc",
+   "p/CmQd7wGviDJ",
+   "p/CmL4xvOvg0u",
+   "p/Cl-dp94vv1i"
+  ],
+  "acc": [
+   "hirakatapark"
+  ]
+ },
+ "あべのハルカス 天空のイルミネーション2026": {
+  "u": "https://www.abenoharukas-300.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "abenoharukas_osaka_official"
+  ]
+ },
+ "大阪城イルミナージュ": {
+  "u": "https://illuminagegroup.com/ja/events/osaka",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "イルミナイト万博〜2026 WINTER〜": {
+  "u": "https://www.expo70-park.jp/event/78001/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "expo70park"
+  ]
+ },
+ "竹あかりと紅葉のライトアップ": {
+  "u": "https://hanabun-osaka.witc-pm.jp/event/2026momiji/",
+  "ok": true,
+  "posts": [
+   "p/Df3RnrvDqIu",
+   "p/Df1BcOFiFeU",
+   "p/Df0s0mdFtCh",
+   "p/DfwXsKOk8QT",
+   "p/DftgxhunLK4",
+   "p/Dfs-dT7jGUy"
+  ],
+  "acc": [
+   "hanabun_osaka",
+   "washin2019"
+  ]
+ },
+ "空中庭園 Xmas": {
+  "u": "https://www.skybldg.co.jp/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "ユニバーサル・クリスマス・ジョイ": {
+  "u": "https://www.usj.co.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "大仙日本庭園 秋季夜間特別開園「紅葉の灯」": {
+  "u": "https://www.daisenteien.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "daisenteien"
+  ]
+ },
+ "箕面大滝ほか 秋のライトアップ（箕面公園 滝道）": {
+  "u": "https://www.mino-park.jp/event/art/1087/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "minohkoen_minohpark"
+  ]
+ },
+ "勝尾寺 錦秋の宵詣り2026": {
+  "u": "https://katsuo-ji-temple.or.jp/autumn/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "HIKARIUM 冬のファンタジーガーデン": {
+  "u": "https://www.illumi.rb-tawada.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "rosa_and_berry_tawada"
+  ]
+ },
+ "豊郷小学校旧校舎群ライトアップ＆イルミネーション2026": {
+  "u": "https://toyosato-kanko.jp/event/event-3859/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "toyosatogram"
+  ]
+ },
+ "びわ湖大津館 イルミネーション": {
+  "u": "https://www.biwako-otsukan.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "ブルーメの丘 ライトアップガーデン": {
+  "u": "https://www.blumenooka.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "blumenooka"
+  ]
+ },
+ "錦秋の玄宮園ライトアップ": {
+  "u": "https://hikonecastle.com/night-viewing/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "hikonecastle_knt"
+  ]
+ },
+ "百済寺 紅葉ライトアップ": {
+  "u": "http://www.hyakusaiji.jp/topics/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "長壽寺 紅葉ライトアップ（湖南三山）": {
+  "u": "https://www.city.shiga-konan.lg.jp/iju_konan/support/inennto/reiwahachi/41937.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "konancity_tsunagaru_shiga"
+  ]
+ },
+ "フェスタ・ルーチェ in 和歌山マリーナシティ": {
+  "u": "https://festaluce.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "festaluce"
+  ]
+ },
+ "高野山 金剛峯寺 正門・蛇腹路ライトアップ": {
+  "u": "https://www.koyasan.or.jp/sp/news/2026/10/14/7626/",
+  "ok": true,
+  "posts": [
+   "p/Dfzi451oJ40",
+   "p/DfyYkCcmA_S",
+   "p/DfwH-hBIPtt",
+   "p/Dfq5kVAIOc1",
+   "p/DfpNcSymCyy",
+   "p/DfjVYqCIEaM"
+  ],
+  "acc": [
+   "koyasan_kongobuji"
+  ]
+ },
+ "和歌山城 西之丸庭園（紅葉渓庭園）ライトアップ": {
+  "u": "https://wakayamajo.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "wakayamajo_official"
+  ]
+ },
+ "再度公園": {
+  "u": "https://www.feel-kobe.jp/feature/kobe-autumn-leaves/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe.kanko"
+  ]
+ },
+ "瑞宝寺公園": {
+  "u": "https://www.feel-kobe.jp/feature/kobe-autumn-leaves/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe.kanko"
+  ]
+ },
+ "最上山公園 もみじ山": {
+  "u": "https://www.hyogo-tourism.jp/spot/detail_1041.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "hyogonavi_official"
+  ]
+ },
+ "須磨離宮公園": {
+  "u": "https://www.feel-kobe.jp/feature/kobe-autumn-leaves/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe.kanko"
+  ]
+ },
+ "相楽園": {
+  "u": "https://www.feel-kobe.jp/feature/kobe-autumn-leaves/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kobe.kanko"
+  ]
+ },
+ "貴船神社": {
+  "u": "https://kifunejinja.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kifunejinja"
+  ]
+ },
+ "東福寺": {
+  "u": "https://tofukuji.jp/guide/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "tofukuji_zen_temple"
+  ]
+ },
+ "永観堂（禅林寺）": {
+  "u": "https://www.eikando.or.jp/lp/2026/index.html",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "天龍寺": {
+  "u": "https://www.tenryuji.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "heavenly_dragon.temple"
+  ]
+ },
+ "南禅寺": {
+  "u": "https://nanzenji.or.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "daihonzan_nanzenji"
+  ]
+ },
+ "北野天満宮 もみじ苑": {
+  "u": "https://kitanotenmangu.or.jp/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kitano_tenmangu"
+  ]
+ },
+ "高台寺": {
+  "u": "https://www.kodaiji.com/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "kodaiji_zen_temple"
+  ]
+ },
+ "毘沙門堂": {
+  "u": "https://www.kyoto-kankou.or.jp/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Mzg1NzAsInB1ciI6ImJsb2JfaWQifX0=--397e7cc41940b4193b458ec691899f40a63f5cb5/%E7%B4%85%E8%91%89%E3%81%A0%E3%82%88%E3%82%8A.pdf",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "光明寺": {
+  "u": "https://www.kyoto-kankou.or.jp/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Mzg1NzAsInB1ciI6ImJsb2JfaWQifX0=--397e7cc41940b4193b458ec691899f40a63f5cb5/%E7%B4%85%E8%91%89%E3%81%A0%E3%82%88%E3%82%8A.pdf",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "清水寺": {
+  "u": "https://www.kiyomizudera.or.jp/",
+  "ok": true,
+  "posts": [
+   "p/DfW6MhpyLV6",
+   "p/DfW5q4fS5CP",
+   "p/DfEbqKyGTbO",
+   "p/De1LYGpgbV5"
+  ],
+  "acc": [
+   "feel_kiyomizudera"
+  ]
+ },
+ "奈良公園": {
+  "u": "https://yamatoji.nara-kankou.or.jp/page/page_20.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "naravisitorsbureau_official"
+  ]
+ },
+ "吉野山": {
+  "u": "https://yamatoji.nara-kankou.or.jp/page/page_20.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "naravisitorsbureau_official"
+  ]
+ },
+ "正暦寺": {
+  "u": "https://yamatoji.nara-kankou.or.jp/page/page_20.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "naravisitorsbureau_official"
+  ]
+ },
+ "依水園": {
+  "u": "https://yamatoji.nara-kankou.or.jp/page/page_20.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "naravisitorsbureau_official"
+  ]
+ },
+ "談山神社": {
+  "u": "https://yamatoji.nara-kankou.or.jp/page/page_20.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "naravisitorsbureau_official"
+  ]
+ },
+ "長谷寺": {
+  "u": "https://yamatoji.nara-kankou.or.jp/page/page_20.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "naravisitorsbureau_official"
+  ]
+ },
+ "室生寺": {
+  "u": "https://yamatoji.nara-kankou.or.jp/page/page_20.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "naravisitorsbureau_official"
+  ]
+ },
+ "信貴山 朝護孫子寺": {
+  "u": "https://yamatoji.nara-kankou.or.jp/page/page_20.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "naravisitorsbureau_official"
+  ]
+ },
+ "勝尾寺": {
+  "u": "https://osaka-info.jp/special/events-maple-autumn/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "discover_osaka"
+  ]
+ },
+ "箕面公園（箕面大滝）": {
+  "u": "https://www.mino-park.jp/koyo/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "minohkoen_minohpark"
+  ]
+ },
+ "万博記念公園": {
+  "u": "https://www.expo70-park.jp/event/77753/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "suitabiyori",
+   "expo70park"
+  ]
+ },
+ "大阪城公園（西ノ丸・モミジ谷）": {
+  "u": "https://www.osakacastlepark.jp/autumnfes/map/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "osaka_castle_park",
+   "osakacastlepark.odekake"
+  ]
+ },
+ "摂津峡（もみじ谷）": {
+  "u": "https://www.citybus.city.takatsuki.osaka.jp/event/detail/2018112701003/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "牛滝山 大威徳寺": {
+  "u": "https://osaka-info.jp/special/events-maple-autumn/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "discover_osaka"
+  ]
+ },
+ "大仙公園 日本庭園": {
+  "u": "https://www.sakai-tcb.or.jp/spot/detail/125",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "ほしだ園地": {
+  "u": "https://osaka-info.jp/special/events-maple-autumn/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "discover_osaka"
+  ]
+ },
+ "観心寺": {
+  "u": "https://osaka-info.jp/special/events-maple-autumn/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "discover_osaka"
+  ]
+ },
+ "服部緑地": {
+  "u": "https://osaka-info.jp/special/events-maple-autumn/",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "discover_osaka"
+  ]
+ },
+ "西明寺（湖東三山）": {
+  "u": "https://saimyouji.com/flower/",
+  "ok": true,
+  "posts": [],
+  "acc": []
+ },
+ "百済寺（湖東三山）": {
+  "u": "https://www.hyakusaiji.jp/",
+  "ok": false,
+  "posts": [],
+  "acc": []
+ },
+ "石山寺": {
+  "u": "https://www.ishiyamadera.or.jp/flower/autumn",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "ishiyamadera",
+   "ishiyama_kei_chan"
+  ]
+ },
+ "金剛輪寺（湖東三山）": {
+  "u": "https://www.biwako-visitors.jp/spot/detail/1259/?active=hana&hana_kinds=4",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "biwako_visitors_bureau"
+  ]
+ },
+ "メタセコイア並木": {
+  "u": "https://takashima-kanko.jp/area/autumn.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "biwakotakashima"
+  ]
+ },
+ "高野山": {
+  "u": "https://www.wakayama-kanko.or.jp/features/detail_224.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "cafe884",
+   "nemunoki_shokudo1026",
+   "nagomi_wakayama_tourism"
+  ]
+ },
+ "根來寺": {
+  "u": "https://www.wakayama-kanko.or.jp/features/detail_224.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "cafe884",
+   "nemunoki_shokudo1026",
+   "nagomi_wakayama_tourism"
+  ]
+ },
+ "和歌山城 紅葉渓庭園": {
+  "u": "https://www.wakayama-kanko.or.jp/events/detail_3873.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "wakayamajo_official",
+   "nagomi_wakayama_tourism"
+  ]
+ },
+ "奇絶峡": {
+  "u": "https://www.wakayama-kanko.or.jp/events/detail_3931.html",
+  "ok": true,
+  "posts": [],
+  "acc": [
+   "nagomi_wakayama_tourism"
+  ]
+ }
+}
