@@ -1,0 +1,1354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-9234627-12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-9234627-12');
+  gtag('config', 'G-JY2TZ5HXF6');
+  // UserAgent
+	gtag('set','dimension1',window.navigator.userAgent);
+</script>
+
+<script>
+	(function(i,s,o,g,r,a,m){
+		i['GoogleAnalyticsObject']=r;
+		i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)
+		},i[r].l=1*new Date();
+		a=s.createElement(o),m=s.getElementsByTagName(o)[0];
+		a.async=1;
+		a.src=g;
+		m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-9234627-12', 'expo70-park.jp');
+	ga('require', 'displayfeatures');
+	ga('send', 'pageview');
+	// UserAgent
+	ga('set','dimension1',window.navigator.userAgent);
+</script>
+
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="keywords" content="大阪万博,公園,花,万国博覧会,太陽の塔,Expo,Tower of the sun,ガンバ大阪,大阪府日本万国博覧会記念公園事務所,日本庭園">
+<meta name="description" content="1970年に開催された日本万国博覧会、当時の先端技術を駆使して建てられたパビリオンが林立する未来都市空間。さまざまな樹木や草花を植え、太陽の塔を中心に、自然の森、そして新たな緑の公園として再生しました。">
+<meta name="google-site-verification" content="y7RiY8vs-B8TbLKNXBTxnFJpyzbcm5UjoHAmI9w3kHQ">
+
+<!-- favicon -->
+<link rel="icon" href="https://www.expo70-park.jp/common_src/img/favicon/favicon.ico">
+<!-- スマホ用 -->
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.expo70-park.jp/common_src/img/favicon/apple-touch-icon-180x180-precomposed.png">
+<meta name="theme-color" content="#065dac">
+<!-- Windows8, 10用設定 -->
+<meta name="application-name" content="万博記念公園"/>
+<meta name="msapplication-square70x70logo" content="https://www.expo70-park.jp/common_src/img/favicon/mstile-small.jpg"/>
+<meta name="msapplication-square150x150logo" content="https://www.expo70-park.jp/common_src/img/favicon/mstile-medium.jpg"/>
+<meta name="msapplication-wide310x150logo" content="https://www.expo70-park.jp/common_src/img/favicon/mstile-wide.jpg"/>
+<meta name="msapplication-square310x310logo" content="https://www.expo70-park.jp/common_src/img/favicon/mstile-large.jpg"/>
+<meta name="msapplication-TileColor" content="#ffffff"/><meta property="og:title" content="紅葉まつり | 万博記念公園">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.expo70-park.jp">
+<meta property="og:image" content="https://www.expo70-park.jp/sys/wp-content/uploads/8283ae5047e5f8e0884b4d9c1ed7f9ab-640x480.png">
+<meta property="og:site_name" content="万博記念公園">
+<title>紅葉まつり | 万博記念公園</title>
+<!--[if lt IE 9]>
+<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script>
+<![endif]-->
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.expo70-park.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.expo70-park.jp%2Fevent%2F77753%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.expo70-park.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.expo70-park.jp%2Fevent%2F77753%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='common-style-css' href='https://www.expo70-park.jp/sys/wp-content/themes/pc/src/css/common.css?ver=240910' media='all' />
+<link rel='stylesheet' id='page-style-css' href='https://www.expo70-park.jp/sys/wp-content/themes/pc/src/css/single.css?ver=240910' media='all' />
+<link rel='stylesheet' id='print-style-css' href='https://www.expo70-park.jp/sys/wp-content/themes/pc/src/css/print.css?ver=240910' media='print' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<script id="jquery-js" src="//code.jquery.com/jquery-1.11.3.min.js?ver=7.1.4"></script>
+<link rel="https://api.w.org/" href="https://www.expo70-park.jp/wp-json/" /><link rel="canonical" href="https://www.expo70-park.jp/event/77753/" />
+<link rel='shortlink' href='https://www.expo70-park.jp/?p=77753' />
+<link rel="icon" href="https://www.expo70-park.jp/sys/wp-content/uploads/cropped-apple-touch-icon-180x180-precomposed-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.expo70-park.jp/sys/wp-content/uploads/cropped-apple-touch-icon-180x180-precomposed-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.expo70-park.jp/sys/wp-content/uploads/cropped-apple-touch-icon-180x180-precomposed-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.expo70-park.jp/sys/wp-content/uploads/cropped-apple-touch-icon-180x180-precomposed-270x270.png" />
+<script>
+	var banpakuConf = {};
+	(function(conf){
+		// =====================================================================
+		// ページタイプ
+		// =====================================================================
+		conf.isHome = false;					conf.isHome = false;
+				conf.isSingle = true;		// =====================================================================
+		// パス
+		// =====================================================================
+		conf.path = {
+			js  : 'https://www.expo70-park.jp/sys/wp-content/themes/pc/src/js/',
+			img : 'https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/'
+		}
+			})(banpakuConf);
+</script>
+</head>
+<body class="wp-singular event-template-default single single-event postid-77753 wp-theme-pc  color-event">
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v16.0" nonce="kw2ilJRh"></script>
+<script>
+  (function() {
+    var cx = '014330863451441317683:xrq_ggczre0';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div id="wrap">
+<header class="frame__header">
+	<div class="header-contents">
+		<h1 class="module__header-title"><a href="https://www.expo70-park.jp/"><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/header-title.png" alt="万博記念公園 | Expo'70 Commemorative Park"></a></h1>
+		<div class="header-modules">
+			<div>
+				<ul class="module__header-sub-menu">
+					<li><a href="https://www.expo70-park.jp/other/sitemap">サイトマップ</a></li>
+					<li><a href="https://www.expo70-park.jp/guide/access">交通アクセス</a></li>
+					<li><a href="http://www.pref.osaka.lg.jp/bampaku/nyuusatsu/index.html" target="_blank">入札関連情報</a></li>
+				</ul>
+				<dl class="module__font-size" id="font-size">
+					<dt>文字サイズ</dt>
+					<dd><ul>
+						<li data-size="normal">標準</li>
+						<li data-size="large">大</li>
+					</ul></dd>
+				</dl>
+			</div>
+			<div>
+				  <form class="module__header-search" id="cse-search-box" action="https://www.expo70-park.jp/search-result/" method="GET">
+				    <label><input type="text" name="search" placeholder="Google カスタム検索" /></label>
+				    <input type="submit" value="検索" />
+				  </form>
+				<ul class="module__language">
+											<li><a class="active" href="https://www.expo70-park.jp/">日本語</a></li>
+																	<li lang="en"><a href="https://www.expo70-park.jp/languages/english/">English</a></li>
+																<li lang="zh-CN"><a href="https://www.expo70-park.jp/languages/chinese/">简体中文</a></li>
+																<li lang="ko"><a href="https://www.expo70-park.jp/languages/korean/">한국어</a></li>
+										<li><a href="https://www.expo70-park.jp/other/foreign-language/">Google Translate</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="frame__contents">
+		<div class="title-set">
+		
+<h1><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/page-title/event.jpg" alt="万博記念公園はイベントがいっぱい！"></h1>		<ol class="module__pankuzu"><li><a href="https://www.expo70-park.jp/">トップ</a><span class="chain" title="の">＞</span></li><li><a href="https://www.expo70-park.jp/event/">イベント一覧</a><span class="chain" title="の">＞</span></li><li><span class="end">紅葉まつり</span></li></ol>	</div>
+		<div class="frame__left-contents">
+<article class="main">
+			<h1 class="module__contents-title"><span>紅葉まつり</span></h1>
+					<div class="module__contents-colum1--img"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/8283ae5047e5f8e0884b4d9c1ed7f9ab-640x480.png" alt="紅葉まつり"></p></div>					<div class="module__contents-colum1--text"><p>秋の深まりとともに、イロハモミジやヤマモミジなどが美しく色づき、公園全体が季節の彩りに包まれる万博記念公園。日本庭園では、茶室「汎庵・万里庵」の特別公開のほか、中央休憩所を中心に、紅葉を五感で楽しむイベントを開催。美しい秋の景色とともに、日本の秋をお楽しみください。</p>
+<table>
+<tbody>
+<tr>
+<td style="vertical-align: middle;">
+<p>日程</p>
+</td>
+<td style="vertical-align: middle;">
+<p>2026年11月7日（土）〜 11月29日（日）</p>
+<p>※期間中無休</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">時間</td>
+<td style="vertical-align: middle;">
+<p>9:30〜17:00（入園は16:30まで）</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">場所</td>
+<td style="vertical-align: middle;">
+<p>日本庭園、自然文化園「紅葉渓」ほか</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">料金</td>
+<td style="vertical-align: middle;">
+<p>無料</p>
+<p>※別途自然文化園・日本庭園共通入園料が必要</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>※掲載内容は事前の予告なく変更・中止になる場合があります。</p>
+<p class="contents-tipstyle-button"><a href="https://www.expo70-park.jp/flower/34875/" target="_blank" rel="noopener">紅葉情報はこちら</a></p>
+</div>					<hr class="module__contents-line">					<div class="module__contents-caption" id="caption"><h2><span>紅葉マップ</span></h2></div>					<div class="module__contents-colum1--img"><p><a href="https://www.expo70-park.jp/sys/wp-content/uploads/7659d3de6c828e08ec9efd84952425bb.png"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/7659d3de6c828e08ec9efd84952425bb-640x452.png" alt="園内紅葉map"></a></p></div>					<div class="module__contents-colum1--file"><ul><li class="pdf"><a href="https://www.expo70-park.jp/sys/wp-content/uploads/a1a3e982497b28f67a91957eaf406e11.pdf" target="_blank">紅葉マップ</a></li></ul></div>					<hr class="module__contents-line">					<div class="module__contents-caption" id="caption"><h2><span>紅葉まつり期間中の関連イベント一覧</span></h2></div>					<div class="module__contents-colum1--text"><p>別途自然文化園・日本庭園共通入園料が必要です。</p>
+</div>					<div class="module__contents-caption"><h3><span>日本庭園 茶室「汎庵・万里庵」特別公開</span></h3></div>					<div class="module__contents-colum1--left"><div class="left"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/deaca3f362ffe8a0cd9bf24de98c6856-240x180.jpg" alt="汎庵"></p><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/banrian-e1792995719263-240x180.png" alt="banrian"></p></div><div class="right"><p>汎庵は武家住宅様式の書院造りを、万里庵は檜皮葺の小さな建物の草庵をイメージして造られており、互いに添景となるように建てられています。</p>
+<table>
+<tbody>
+<tr>
+<td style="width: 100px; vertical-align: middle;">日程</td>
+<td style="vertical-align: middle;">11月7日（土）〜11月29日（日）</td>
+</tr>
+<tr>
+<td style="width: 100px; vertical-align: middle;">時間</td>
+<td style="vertical-align: middle;">
+<p>10:00〜16:00</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100px; vertical-align: middle;">料金</td>
+<td style="vertical-align: middle;">
+<p>無料</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></div>					<div class="module__contents-caption"><h3><span>日本庭園 茶室「汎庵」呈茶</span></h3></div>					<div class="module__contents-colum1--left"><div class="left"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/teicya-240x170.jpg" alt="teicya"></p><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/29e10f4aa88e80280497df3e4c00ec0b-240x174.jpg" alt="もみじ呈茶茶菓"></p></div><div class="right"><p>本格的な茶室「汎庵」で庭を眺めながら和菓子とお抹茶をお楽しみください。</p>
+<table>
+<tbody>
+<tr>
+<td style="width: 100px; vertical-align: middle;">日程</td>
+<td style="vertical-align: middle;">
+<p>11月7日（土）～11月29日（日）<span class="font-red"><strong><br />
+</strong></span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 100px; vertical-align: middle;">時間</td>
+<td style="vertical-align: middle;">
+<p>10:00〜16:00（最終受付15:30）</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100px; vertical-align: middle;">料金</td>
+<td style="vertical-align: middle;">
+<p>季節の和菓子と抹茶のセット 900円</p>
+<p>&nbsp;</p>
+<p>※割引入園券付抹茶券も各入園ゲート窓口で<br />
+販売（開園から15:00まで）</p>
+<p>高校生以上1,230円（中学生以下は入園無料のため、抹茶セット券900円のみ）</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div></div>					<div class="module__contents-colum1--text"></div>					<div class="module__contents-caption"><h3><span>日本庭園 茶室「千里庵」特別公開</span></h3></div>					<div class="module__contents-colum1--left"><div class="left"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/52e2b7fb35d25fd035b41a3fb2b1b1a3-240x190.png" alt="千里庵"></p></div><div class="right"><p>普段は立ち入ることのできない風情ある茶室「千里庵（せんりあん）」を特別公開します。静かなたたずまいの中で、枯山水の庭をお楽しみください。</p>
+<table>
+<tbody>
+<tr>
+<td>日程</td>
+<td>11月7日（土）〜29日（日）</td>
+</tr>
+<tr>
+<td>時間</td>
+<td>10:00〜16:30</td>
+</tr>
+<tr>
+<td>料金</td>
+<td>
+<p>無料</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="contents-tipstyle-button">
+<strong>■11月7日（土）は枯山水砂紋引き体験もございます。ぜひご参加ください。</strong></p>
+<p class="contents-tipstyle-button"><a href="https://www.expo70-park.jp/event/77872/" target="_blank" rel="noopener">「砂紋引き体験」の詳細はこちら</a></p>
+<p class="contents-tipstyle-button"> </p>
+</div></div>					<div class="module__contents-caption"><h3><span>日本庭園周遊パークタクシーツアー</span></h3></div>					<div class="module__contents-colum1--left"><div class="left"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/park-taxi-240x300.png" alt="パークタクシー"></p></div><div class="right"><p>運転手による案内を聞きながら日本庭園を1周します。（所要時間約30分）</p>
+<table>
+<tbody>
+<tr>
+<td style="width: 100px; vertical-align: middle;">日程</td>
+<td style="vertical-align: middle;">
+<p>11月7日（土）〜29日（日）</p>
+<p class="font-red">※雨天運休</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100px; vertical-align: middle;">時間</td>
+<td style="vertical-align: middle;">
+<p>9:30～最終受付16:30（随時出発）</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100px; vertical-align: middle;">場所</td>
+<td style="vertical-align: middle;">
+<p>日本庭園 中央休憩所前 臨時停留所</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100px; vertical-align: middle;">料金</td>
+<td style="vertical-align: middle;">
+<p>3歳以上：お一人1,000円</p>
+<p>3歳未満：保護者の膝上でのご乗車時は無料</p>
+<p>※座席を1席使用する場合は、3歳未満のお子様でも1,000円</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div></div>					<div class="module__contents-caption"><h3><span>日本庭園 秋の盆栽展</span></h3></div>					<div class="module__contents-colum1--left"><div class="left"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/bonsai-240x180.png" alt="日本庭園 秋の盆栽展1"></p><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/IMG_9936-240x180.jpg" alt="日本庭園 秋の盆栽展2"></p></div><div class="right"><p>日本の伝統美を凝縮した芸術、盆栽。<br />
+本展では、季節ごとの風情を宿す名品から、現代感覚を取り入れた作品まで、選りすぐりの盆栽を一堂に展示いたします。紅葉に色づく日本庭園の静謐な空間で、時を重ねて育まれた自然との対話をぜひお楽しみください。</p>
+<table>
+<tbody>
+<tr>
+<td style="width: 100px; vertical-align: middle;">
+<p>日程</p>
+</td>
+<td>
+<p>11月28日（土）、29日（日）</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100px; vertical-align: middle;">
+<p>時間</p>
+</td>
+<td>
+<p>9:30〜17:00</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100px; vertical-align: middle;">
+<p>場所</p>
+</td>
+<td>
+<p>日本庭園 園芸植物展示場</p>
+</td>
+</tr>
+<tr>
+<td style="width: 100px; vertical-align: middle;">
+<p>料金</p>
+</td>
+<td>無料</td>
+</tr>
+</tbody>
+</table>
+<p>■協力<br />
+日本盆栽協会大阪府支部連合会</p>
+</div></div>					<div class="module__contents-caption"><h3><span>　</span></h3></div>					<div class="module__contents-caption"><h3><span>モーニングヨガ ―秋色の公園で、特別な朝時間＜要事前予約＞</span></h3></div>					<div class="module__contents-colum1--left"><div class="left"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/76c3fa2748f30f417c1cb1864d8473eb-240x160.jpg" alt="モーニングヨガ"></p></div><div class="right"><p>開園前の静かな公園で過ごす、特別な朝時間。爽やかな秋の空気を感じながら、芝生の上でゆったりと身体を動かし、心と身体を整えるひとときをお楽しみください。<br />
+※対象：小学生以上</p>
+<table>
+<tbody>
+<tr>
+<td style="vertical-align: middle;">日時</td>
+<td>
+<p>11月29日（日）</p>
+<p class="font-red">※雨天中止</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">時間</td>
+<td>
+<p>8:30～9:30 （開場7:45～）</p>
+<p>※事前予約の方のみ入園可</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">場所</td>
+<td>自然文化園 チューリップの花園西側 芝生広場</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">料金</td>
+<td>
+<p>中学生以下：1,000円</p>
+<p>高校生以上：1,500円</p>
+<p>※料金には、自然文化園・日本庭園共通入園料（高校生以上450円）、ヨガ体験費用が含まれます</p>
+</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">受付</td>
+<td>事前予約制</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">定員</td>
+<td>100名</td>
+</tr>
+<tr>
+<td style="vertical-align: middle;">講師</td>
+<td>仁下愛美、金谷真由美</td>
+</tr>
+</tbody>
+</table>
+<p class="contents-tipstyle-button">※予約申込は、11月4日（水）開始<br />
+（受付開始日が当初の予定から変更となりました。）<br />
+<a href="https://www.jalan.net/kankou/spt_27205ah3332016094/activity/l0000714DD/?ccnt=planList-in&amp;rootCd=3&amp;screenId=OUW2210&amp;dateUndecided=1">予約チケット販売ページ（「じゃらん」にリンクします）</a><strong>　<br />
+■参加に際しての注意事項</strong><br />
+・妊娠中の方はご参加いただけません。<br />
+・動きやすい服装でご参加ください。（更衣室はございません）<br />
+・ヨガマットの貸し出しはございません。ヨガマットやビーチタオル等をご持参ください。<br />
+・ヨガ会場への参加者の方以外の入場はできませんので、予めご了承ください。</p>
+</div></div>					<div class="module__contents-caption"><h4><span>■講師紹介</span></h4></div>					<div class="module__contents-colum1--left"><div class="left"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/143ec2ebff984e741209721d9e56a87a-240x160.png" alt="ヨガ講師_仁下愛美"></p></div><div class="right"><p><strong>仁下愛美（ヘルスクリエイター）</strong></p>
+<p>大手ヨガスタジオで10万人に向けレッスンを行う。現在はフリーランスとしてお寺ヨガ開催や、ホテルでのヨガクラス、オーガニックブランドとのタイアップイベントなどを行う。<br />
+全国各地で自身のヨガリトリートを開催しながら、RYT200・ 500指導者養成講座トレーナーとしてオンラインや対面講座を実施。</p>
+<p>&nbsp;</p>
+</div></div>					<div class="module__contents-colum1--left"><div class="left"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/2fef4ffb5199ac5cec93369da8c68ebe-240x143.jpg" alt="ヨガ講師_金谷真由美"></p></div><div class="right"><p><strong>金谷 真由美（国家資格キャリアコンサルタント／ヨガインストラクター）</strong></p>
+<p>国家資格キャリアコンサルタントとして、大学や地域でキャリアカウンセリング・相談支援に携わる傍ら、ヨガインストラクターとして活動。RYT200修了。IHTAヨガインストラクター2級・1級取得。</p>
+<p>これまでに京都の寺院でのヨガ指導、ポジティブシンキングとヨガを組み合わせた自治体公開講座、オンラインレッスン、地域での少人数クラスを実施。自然の中で心と身体をゆるめ、自分自身と向き合う時間を大切にし、初心者の方にも安心して参加いただける場づくりを心掛けている。</p>
+<p>&nbsp;</p>
+</div></div>					<div class="module__contents-caption"><h3><span>今日は、紅葉日和 by 吹田日和</span></h3></div>					<div class="module__contents-colum1--img"><p><a href="https://momiji.suitabiyori.com/2026/" target="_blank"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/suitabiyori_20261107_1129_1080_1350-1-640x800.jpg" alt="今日は、紅葉日和 by 吹田日和"></a></p></div>					<div class="module__contents-colum1--text"><p>吹田の街の魅力を発信する地域Webメディア<a href="https://suitabiyori.com/" target="_blank" rel="noopener">「吹田日和」</a>がプロデュース。秋の日本庭園を舞台に、限定カフェ、人力車や着物、写真撮影会、アートなどの体験、こだわりのグルメが集う秋の特別企画をお届けします。<br />
+※各イベントの詳細やご予約については、以下特設サイトをご確認ください。</p>
+<p class="contents-tipstyle-button"><a href="https://momiji.suitabiyori.com/2026/" target="_blank" rel="noopener">「今日は、紅葉日和 by 吹田日和」特設サイトはこちら</a></p>
+<p class="contents-tipstyle-button"><a href="https://www.instagram.com/suitabiyori/" target="_blank" rel="noopener">「吹田日和」Instagramはこちら<br />
+</a></p>
+<p>&nbsp;</p>
+<p><strong>■「今日は、紅葉日和 by 吹田日和」イベント一覧（開催日順）<br />
+</strong>※一部コンテンツは雨天中止となる場合があります。<strong><br />
+</strong></p>
+<table>
+<tbody>
+<tr>
+<td style="background-color: #fce0bd; width: 130px; text-align: center;">日程</td>
+<td style="background-color: #fce0bd; width: 190px; text-align: center;">イベント名</td>
+<td style="background-color: #fce0bd; width: 125px; text-align: center;">場所</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: middle;">11月7日(土)～29日(日)</td>
+<td style="vertical-align: middle;">
+<p>日本庭園 人力車体験＜当日予約可能＞</p>
+</td>
+<td style="vertical-align: middle;">
+<p>日本庭園内（受付：千里庵）</p>
+</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: middle;">
+<p> 11月7日(土)、8日(日)、14日(土)、15日(日)、21日(土)、22日(日)、28日(土)、29日(日)</p>
+</td>
+<td style="vertical-align: middle;">
+<p>紅葉まつり限定「cafe千里庵」</p>
+<p>〜枯山水を眺めながら、特別なカヌレと淹れたてコーヒーを〜</p>
+</td>
+<td style="vertical-align: middle;">日本庭園 千里庵</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: middle;">
+<p>11月7日(土)〜10日(火)、12日(木)〜17日(火)、19(木)〜24日(火)、26(木)〜28日(土)</p>
+</td>
+<td style="vertical-align: middle;">
+<p>プロフォトグラファーによる紅葉写真撮影会</p>
+<p>※事前予約可能・満員で締切・空き枠次第で当日参加可能</p>
+</td>
+<td style="vertical-align: middle;">日本庭園内（受付：千里庵）</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: middle;">
+<p>11月7日(土)、8日(日)、12日(木)〜15日(日)、17日(火)、19日(木)〜23日(月·祝)、</p>
+<p>26日(木)〜29日(日)</p>
+</td>
+<td style="vertical-align: middle;">
+<p>日本庭園中央休憩所 秋のプチマルシェ<br />
+〜吹田日和が厳選した、秋の「おいしい」が集合〜</p>
+</td>
+<td style="vertical-align: middle;">日本庭園 中央休憩所</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: middle;">
+<p>11月8日(日)〜10日(火)、12日(木)〜17日(火)、19日(木)、21日(土)、22日(日)、24日(火)</p>
+</td>
+<td style="vertical-align: middle;">
+<p>着付け・レンタル着物体験</p>
+<p>※事前予約可能・満員で締切・空き枠次第で当日参加可能</p>
+</td>
+<td style="vertical-align: middle;">日本庭園 千里庵</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: middle;">
+<p>11月9日(月)、17日(火)、26日(木)</p>
+</td>
+<td style="vertical-align: middle;">
+<p>初心者向け！紅葉フォトウォーク</p>
+<p>※事前予約可能・満員で締切・空き枠次第で当日参加可能</p>
+</td>
+<td style="vertical-align: middle;">日本庭園内（受付：千里庵）</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: middle;">
+<p>11月12日(木)、19日(木)、26日(木)</p>
+</td>
+<td style="vertical-align: middle;">
+<p>盆栽ワークショップ</p>
+</td>
+<td style="vertical-align: middle;">日本庭園 中央休憩所</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: middle;">11月21日(土)</td>
+<td style="vertical-align: middle;">
+<p>芸術の秋 自由すぎるおえかき会</p>
+<p>※事前予約可能・満員で締切・空き枠次第で当日参加可能</p>
+</td>
+<td style="vertical-align: middle;">自然文化園 水車茶屋</td>
+</tr>
+<tr>
+<td style="text-align: left; vertical-align: middle;">11月28日(土)</td>
+<td style="vertical-align: middle;">
+<p>廃材アートワークショップ</p>
+<p>※事前予約可能・満員で締切・空き枠次第で当日参加可能</p>
+</td>
+<td style="vertical-align: middle;">自然文化園 水車茶屋</td>
+</tr>
+</tbody>
+</table>
+</div>					<div class="module__contents-colum1--img"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/autumn_petit_marche_white_10-640x258.jpg" alt="今日は、紅葉日和1"></p><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/7f21f13388e0c943a2f01ef198326d07-640x300.png" alt="今日は、紅葉日和2"></p></div>					<hr class="module__contents-line">					<div class="module__contents-caption" id="caption"><h2><span>主な紅葉見どころスポット</span></h2></div>					<div class="module__contents-colum1--img"><p><a href="https://www.expo70-park.jp/sys/wp-content/uploads/5092da119e91dfd7b31f7c2eb2301f6a.png"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/5092da119e91dfd7b31f7c2eb2301f6a-640x506.png" alt="紅葉見どころスポット_map"></a></p></div>					<div class="module__contents-caption" id="caption"><h2><span>日本庭園の紅葉スポット</span></h2></div>					<div class="module__contents-colum1--text"><p>日本庭園は日本の造園技術の粋を集めて造られた名園です。紅く染められた庭園は美しく、見る人を魅了します。そんな秋の日本庭園を余すことなく満喫できる、紅葉スポットを紹介します。</p>
+<p>日本庭園は国の文化審議会において「造園文化の発展に寄与した意義深い事例」として評価され、2024年（令和6年）10月11日に国登録記念物（名勝地関係）として文化財登録されました。</p>
+<p>心字池を彩る紅葉や、美しくひっそりと色づく茶室「汎庵・万里庵」の庭園、木漏れ日の滝と銘木モミジのコントラストなど、庭園を巡りながら移りゆく景色をお楽しみください。</p>
+<p><strong>＜日本庭園 紅葉スポット＞</strong><br />
+㋑ 心字池<br />
+㋺ 茶室「汎庵・万里庵」<br />
+㋩ 深山の泉<br />
+㋥ 木漏れ日の滝・その周辺<br />
+㋭ 梅林北側<br />
+　</p>
+</div>					<div class="module__contents-caption" id="caption"><h2><span>自然文化園の紅葉スポット</span></h2></div>					<div class="module__contents-colum1--text"><p>ケヤキやプラタナス、イチョウ、フウ、モミジなど、色鮮やかな紅葉に包まれる自然文化園。西大路のプラタナス並木道や、カラフルに彩られる紅葉渓など、秋ならではの景観が随所に広がります。<br />
+また、西大路の石畳に映えるプラタナスや、ソラードの上から見る色づく木々も美しくおすすめです。</p>
+<p>自然観察学習館周辺は10月下旬頃から紅葉し始めます。自然文化園の中で一番早く、大きなモミジのような葉っぱのアメリカフウが赤、オレンジ、黄色のグラデーションに色づきます。また、中津道沿いに植えられているドウダンツツジ、イチョウなどと相まってとてもきれいな景色となります。ほかにもひょうたん池など、自然文化園の西エリアも紅葉スポットがたくさんあります。</p>
+<p><strong>＜自然文化園 紅葉スポット＞</strong><br />
+① にれの池周辺<br />
+② もみの池周辺<br />
+③ 自然観察学習館周辺<br />
+④ 紅葉渓<br />
+⑤ もみじの滝<br />
+⑥ 西大路<br />
+⑦ けやきの丘周辺</p>
+</div>					<div class="module__contents-caption"><h3><span>紅葉渓（もみじだに）</span></h3></div>					<div class="module__contents-colum1--img"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/23-640x237.png" alt="紅葉渓"></p></div>					<div class="module__contents-colum1--text"><p>自然観察学習館から中津道を進んだ所にある、ひと際目を引く紅葉スポット。アメリカフウやタイワンフウをはじめ、色々な木々が赤や黄色に色付く、知る人ぞ知る人気のスポットです。</p>
+</div>					<div class="module__contents-caption"><h3><span>西大路（にしおおじ）</span></h3></div>					<div class="module__contents-colum1--img"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/8b688dfa3c4e71d7555bfee34947a0e1-640x237.png" alt="西大路"></p></div>					<div class="module__contents-colum1--text"><p>まるでヨーロッパの風景のような 約360mの石畳の並木道。約200本近くの高木のプラタナスが黄葉する姿は圧巻です。11月下旬頃までが見ごろ。</p>
+<p>&nbsp;</p>
+</div>					<div class="module__contents-caption"><h3><span>紅葉に染まる万博記念公園 自然文化園をおすすめスポットから眺めよう！</span></h3></div>					<div class="module__contents-colum1--text"><p>自然文化園の西エリアにある豊かな森の多くは紅葉に染まります。<br />
+このエリアにはさまざまな施設があり、普段とは異なる視点からその様子を眺めることができます。</p>
+</div>					<div class="module__contents-caption"><h4><span>■ソラード（森の空中観察路）</span></h4></div>					<div class="module__contents-colum1--left"><div class="left"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/B299620-240x180.jpg" alt="ソラード"></p></div><div class="right"><p>空中観察路から眺める紅葉の様子は壮観です。紅葉渓やもみじの滝など自然文化園の紅葉の名所にも至近です。<br />
+※無料：詳細は下記リンクからご確認ください。</p>
+<p class="contents-tipstyle-button"><span class="font-red"><strong>【ソラード展望タワー立ち入り禁止のお知らせ】</strong></span><br />
+<span class="font-red">現在、ソラード展望タワーにおいて床板のズレが発生しております。</span><br />
+<span class="font-red">造的に問題があるか安全確認を行うため、当面の間、同施設への立ち入りを禁止させていただきます。</span><span class="font-red">ご利用のお客様には大変ご迷惑をおかけしますが、何卒ご理解とご協力の程よろしくお願い申し上げます。</span></p>
+<p class="contents-tipstyle-button"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-03/" target="_blank" rel="noopener">「ソラード（森の空中観察路）」の詳細はこちら</a></p>
+</div></div>					<div class="module__contents-caption"><h4><span>■ファンタズーマ</span></h4></div>					<div class="module__contents-colum1--left"><div class="left"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/8a99ce939a6d7a31a4d966f6584c197d1-240x171.jpg" alt="ファンタズーマ"></p></div><div class="right"><p>「ファンタズーマ」最上階にある「天空回廊」からは360°のパノラマで公園全体が見渡せます。<br />
+※その他詳細については、下記リンクからご確認ください。</p>
+<p class="contents-tipstyle-button"><a href="https://www.se-amuse.jp/fantazooma/" target="_blank" rel="noopener">「ファンタズーマ」公式サイトはこちら</a></p>
+<p class="contents-tipstyle-button"> <br />
+　</p>
+</div></div>					<div class="module__contents-caption"><h4><span>■ボウケンノモリ 街のすぐ近くでアドベンチャー、手軽に冒険に出発！</span></h4></div>					<div class="module__contents-colum1--left"><div class="left"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/PXL_20240718_0654305781-240x135.jpg" alt="ボウケンノモリ"></p></div><div class="right"><p>木々を近くに見ながら各種アクティビティが楽しめます。もみの池を横断するターザンロープから眺める周囲の風景は格別です。<br />
+※その他詳細については、下記リンクからご確認ください。</p>
+<p class="contents-tipstyle-button"><a href="https://www.expo70-park.jp/facility/play/boukennomori/" target="_blank" rel="noopener">「ボウケンノモリ」の詳細はこちら</a></p>
+</div></div>					<hr class="module__contents-line">					<div class="module__contents-caption"><h4><span>万博記念公園には自然がいっぱい！</span></h4></div>					<div class="module__contents-caption"><h4><span> 万博の緑地を守りはぐくむ管理者のコラムを不定期で発信しています。</span></h4></div>					<div class="module__contents-colum1--text"></div>					<div class="module__contents-caption" id="caption"><h2><span>花とみどりの仕掛け人</span></h2></div>					<div class="module__contents-colum1--text"></div>					<div class="module__contents-caption"><h3><span>＜テーマ＞紅葉</span></h3></div>					<div class="module__contents-colum1--file"><ul><li class="pdf"><a href="https://www.expo70-park.jp/sys/wp-content/uploads/BANPAKU-NEWS_column_202311_momiji.pdf" target="_blank">花とみどりの仕掛け人【紅葉】＜万博記念公園だより2023年11月号掲載＞</a></li></ul></div>					<div class="module__contents-colum1--img"><p><img src="https://www.expo70-park.jp/sys/wp-content/uploads/bbad7d934f83628d3e12b583b2fee0f4-640x302.jpg" alt="コラム11月号_紅葉"></p></div>					<hr class="module__contents-line">					<div class="module__contents-caption" id="caption"><h2><span>便利な各種パンフレット</span></h2></div>					<div class="module__contents-colum1--text"><p>会場案内地図や、季節ごとの開花情報など、沢山のパンフレットがございます。</p>
+<p class="contents-tipstyle-button"><a href="http://www.expo70-park.jp/guide/booklet/" target="_blank" rel="noopener">各種パンフレットダウンロードはこちら</a></p>
+</div>			
+			<hr class="module__contents-line">
+		<div class="module__contents-caption">
+			<h2><span>アクセス</span></h2>
+		</div>
+		<div class="module__contents-caption">
+			<h4><span>電車でお越しの方</span></h4>
+		</div>
+		<div class="module__contents-colum1--img">
+			<p><a href="https://www.expo70-park.jp/guide/access/" onclick="if (typeof ga === 'function') ga('send','event','event_access_btn','click','train', 1);"><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/event/btn_access_train.png" alt="アクセスの詳細はこちら"></a></p>
+		</div>
+		<div class="module__contents-caption">
+			<h4><span>車でお越しの方</span></h4>
+		</div>
+		<div class="module__contents-colum1--img">
+			<p><a href="https://www.expo70-park.jp/guide/parking/" onclick="if (typeof ga === 'function') ga('send','event','event_access_btn','click','car', 1);"><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/event/btn_access_car.png" alt="駐車場へのアクセスはこちら"></a></p>
+		</div>
+		<aside class="module__article-footer">
+	<p class="return-btn"><a href="#" id="retrun-btn"><i><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/retrun-btn-icon.jpg" alt=""></i><span>前のページに戻る</span></a></p>
+	<div class="share">
+		<div class="twitter">
+			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.async=true;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</div>
+		<div class="facebook">
+			<div class="fb-like" data-href="https://www.expo70-park.jp/event/77753/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+		</div>
+	</div>
+</aside></article>
+<aside class="module__associated-event">
+	<header>
+		<div class="left">
+			<h1>関連イベント</h1>
+		</div>
+	</header>
+	<div class="cnt">
+		<ul>
+											<li class="odd">
+							<p class="left"><a href="https://www.expo70-park.jp/event/77499/"><img width="100" height="100" src="https://www.expo70-park.jp/sys/wp-content/uploads/98856c40ad7a193ad49197ba9a36b7f4-140x140.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.expo70-park.jp/sys/wp-content/uploads/98856c40ad7a193ad49197ba9a36b7f4-140x140.jpg 140w, https://www.expo70-park.jp/sys/wp-content/uploads/98856c40ad7a193ad49197ba9a36b7f4-150x150.jpg 150w, https://www.expo70-park.jp/sys/wp-content/uploads/98856c40ad7a193ad49197ba9a36b7f4-80x80.jpg 80w" sizes="auto, (max-width: 100px) 100vw, 100px" /></a></p>
+				<div class="right">
+					<p class="date">2026年10月24日(土曜日)から<br>2026年11月23日(月曜日)</p>
+					<h1><a href="https://www.expo70-park.jp/event/77499/">秋のローズフェスタ</a></h1>
+				</div>
+			</li>
+								<li class="even">
+							<p class="left"><a href="https://www.expo70-park.jp/event/77753/"><img width="100" height="100" src="https://www.expo70-park.jp/sys/wp-content/uploads/8283ae5047e5f8e0884b4d9c1ed7f9ab-140x140.png" class="attachment-100x100 size-100x100 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.expo70-park.jp/sys/wp-content/uploads/8283ae5047e5f8e0884b4d9c1ed7f9ab-140x140.png 140w, https://www.expo70-park.jp/sys/wp-content/uploads/8283ae5047e5f8e0884b4d9c1ed7f9ab-150x150.png 150w, https://www.expo70-park.jp/sys/wp-content/uploads/8283ae5047e5f8e0884b4d9c1ed7f9ab-80x80.png 80w" sizes="auto, (max-width: 100px) 100vw, 100px" /></a></p>
+				<div class="right">
+					<p class="date">2026年11月07日(土曜日)から<br>2026年11月29日(日曜日)</p>
+					<h1><a href="https://www.expo70-park.jp/event/77753/">紅葉まつり</a></h1>
+				</div>
+			</li>
+								</ul><ul>			<li class="odd">
+							<p class="left"><a href="https://www.expo70-park.jp/event/78001/"><img width="100" height="100" src="https://www.expo70-park.jp/sys/wp-content/uploads/29f250197d361b372220ba0b4cad8e7e-140x140.png" class="attachment-100x100 size-100x100 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.expo70-park.jp/sys/wp-content/uploads/29f250197d361b372220ba0b4cad8e7e-140x140.png 140w, https://www.expo70-park.jp/sys/wp-content/uploads/29f250197d361b372220ba0b4cad8e7e-150x150.png 150w, https://www.expo70-park.jp/sys/wp-content/uploads/29f250197d361b372220ba0b4cad8e7e-80x80.png 80w" sizes="auto, (max-width: 100px) 100vw, 100px" /></a></p>
+				<div class="right">
+					<p class="date">2026年11月22日(日曜日)から<br>2026年12月30日(水曜日)</p>
+					<h1><a href="https://www.expo70-park.jp/event/78001/">イルミナイト万博〜2026 WINTER〜｜プロジェクションマッピング「I’m 万博　We are 万博」</a></h1>
+				</div>
+			</li>
+								<li class="even">
+							<p class="left"><a href="https://www.expo70-park.jp/event/78383/"><img width="100" height="100" src="https://www.expo70-park.jp/sys/wp-content/uploads/d262ea64779a9dee1950b5dce7f7fddc-140x140.png" class="attachment-100x100 size-100x100 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.expo70-park.jp/sys/wp-content/uploads/d262ea64779a9dee1950b5dce7f7fddc-140x140.png 140w, https://www.expo70-park.jp/sys/wp-content/uploads/d262ea64779a9dee1950b5dce7f7fddc-150x150.png 150w, https://www.expo70-park.jp/sys/wp-content/uploads/d262ea64779a9dee1950b5dce7f7fddc-80x80.png 80w" sizes="auto, (max-width: 100px) 100vw, 100px" /></a></p>
+				<div class="right">
+					<p class="date">2026年11月27日(金曜日)から<br>2026年11月29日(日曜日)</p>
+					<h1><a href="https://www.expo70-park.jp/event/78383/">Re:Bornヨルダン館プロジェクト【結果通知の一部配信遅延について】</a></h1>
+				</div>
+			</li>
+								</ul><ul>			<li class="odd">
+							<p class="left"><a href="https://www.expo70-park.jp/event/77977/"><img width="100" height="100" src="https://www.expo70-park.jp/sys/wp-content/uploads/ff26243f04411577ae7f1e7734af9bfd-140x140.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.expo70-park.jp/sys/wp-content/uploads/ff26243f04411577ae7f1e7734af9bfd-140x140.jpg 140w, https://www.expo70-park.jp/sys/wp-content/uploads/ff26243f04411577ae7f1e7734af9bfd-150x150.jpg 150w, https://www.expo70-park.jp/sys/wp-content/uploads/ff26243f04411577ae7f1e7734af9bfd-80x80.jpg 80w" sizes="auto, (max-width: 100px) 100vw, 100px" /></a></p>
+				<div class="right">
+					<p class="date">2026年10月20日(火曜日)から<br>2026年11月23日(月曜日)</p>
+					<h1><a href="https://www.expo70-park.jp/event/77977/">令和8年度「万博記念公園写真コンテスト」作品募集</a></h1>
+				</div>
+			</li>
+								<li class="even">
+							<p class="left"><a href="https://www.expo70-park.jp/event/75663/"><img width="100" height="100" src="https://www.expo70-park.jp/sys/wp-content/uploads/STAMP-PASSPORT-140x140.jpeg" class="attachment-100x100 size-100x100 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.expo70-park.jp/sys/wp-content/uploads/STAMP-PASSPORT-140x140.jpeg 140w, https://www.expo70-park.jp/sys/wp-content/uploads/STAMP-PASSPORT-150x150.jpeg 150w, https://www.expo70-park.jp/sys/wp-content/uploads/STAMP-PASSPORT-80x80.jpeg 80w" sizes="auto, (max-width: 100px) 100vw, 100px" /></a></p>
+				<div class="right">
+					<p class="date">2026年4月22日(水曜日)から<br>2027年2月28日(日曜日)</p>
+					<h1><a href="https://www.expo70-park.jp/event/75663/">“学びながら巡る万博体験”「EXPO&#8217;70スタンプラリー＆EFE Global Learning Project」</a></h1>
+				</div>
+			</li>
+								</ul><ul>			<li class="odd">
+							<p class="left"><a href="https://www.expo70-park.jp/event/74555/"><img width="100" height="100" src="https://www.expo70-park.jp/sys/wp-content/uploads/9d0ee5bfb9c15fff45c24c6936ea39cf-140x140.jpg" class="attachment-100x100 size-100x100 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.expo70-park.jp/sys/wp-content/uploads/9d0ee5bfb9c15fff45c24c6936ea39cf-140x140.jpg 140w, https://www.expo70-park.jp/sys/wp-content/uploads/9d0ee5bfb9c15fff45c24c6936ea39cf-150x150.jpg 150w, https://www.expo70-park.jp/sys/wp-content/uploads/9d0ee5bfb9c15fff45c24c6936ea39cf-80x80.jpg 80w" sizes="auto, (max-width: 100px) 100vw, 100px" /></a></p>
+				<div class="right">
+					<p class="date">2026年3月14日(土曜日)から<br>2027年2月28日(日曜日)</p>
+					<h1><a href="https://www.expo70-park.jp/event/74555/">EXPO&#8217;70パビリオン企画展 1970年大阪万博ビフォー・アフター展 ～あのパビリオンはいまどこに？～ 2026</a></h1>
+				</div>
+			</li>
+								<li class="even">
+							<p class="left"><a href="https://www.expo70-park.jp/event/75878/"><img width="100" height="100" src="https://www.expo70-park.jp/sys/wp-content/uploads/e89ac1325f5e465b801bbccb92cd14d9-140x140.png" class="attachment-100x100 size-100x100 wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.expo70-park.jp/sys/wp-content/uploads/e89ac1325f5e465b801bbccb92cd14d9-140x140.png 140w, https://www.expo70-park.jp/sys/wp-content/uploads/e89ac1325f5e465b801bbccb92cd14d9-150x150.png 150w, https://www.expo70-park.jp/sys/wp-content/uploads/e89ac1325f5e465b801bbccb92cd14d9-80x80.png 80w" sizes="auto, (max-width: 100px) 100vw, 100px" /></a></p>
+				<div class="right">
+					<p class="date">2026年5月11日(月曜日)から<br>2027年3月14日(日曜日)</p>
+					<h1><a href="https://www.expo70-park.jp/event/75878/">竹林保全活動ボランティア募集＜要事前申込＞</a></h1>
+				</div>
+			</li>
+						</ul>
+	</div>
+</aside>
+<div class="module__park-and-sport-new-event">
+<section class="event-box">
+	<header>
+		<div class="left">
+			<h1>公園イベント情報</h1>
+		</div>
+		<div class="right">
+			<p class="btn"><a href="https://www.expo70-park.jp/event/?type=park"><i><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/arrow-box-white.png" alt=""></i><span>一覧</span></a></p>
+		</div>
+	</header>
+	<div class="cnt">
+		<ul class="stripe">
+						<li>
+				<p class="left"><a href="https://www.expo70-park.jp/event/77499/"><img width="150" height="150" src="https://www.expo70-park.jp/sys/wp-content/uploads/98856c40ad7a193ad49197ba9a36b7f4-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.expo70-park.jp/sys/wp-content/uploads/98856c40ad7a193ad49197ba9a36b7f4-150x150.jpg 150w, https://www.expo70-park.jp/sys/wp-content/uploads/98856c40ad7a193ad49197ba9a36b7f4-80x80.jpg 80w, https://www.expo70-park.jp/sys/wp-content/uploads/98856c40ad7a193ad49197ba9a36b7f4-140x140.jpg 140w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a></p>
+				<div class="right">
+					<p class="date">2026年10月24日(土曜日)から<br>2026年11月23日(月曜日)</p>
+					<h1><a href="https://www.expo70-park.jp/event/77499/">秋のローズフェスタ</a></h1>
+				</div>
+			</li>
+						<li>
+				<p class="left"><a href="https://www.expo70-park.jp/event/77753/"><img width="150" height="150" src="https://www.expo70-park.jp/sys/wp-content/uploads/8283ae5047e5f8e0884b4d9c1ed7f9ab-150x150.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.expo70-park.jp/sys/wp-content/uploads/8283ae5047e5f8e0884b4d9c1ed7f9ab-150x150.png 150w, https://www.expo70-park.jp/sys/wp-content/uploads/8283ae5047e5f8e0884b4d9c1ed7f9ab-80x80.png 80w, https://www.expo70-park.jp/sys/wp-content/uploads/8283ae5047e5f8e0884b4d9c1ed7f9ab-140x140.png 140w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a></p>
+				<div class="right">
+					<p class="date">2026年11月07日(土曜日)から<br>2026年11月29日(日曜日)</p>
+					<h1><a href="https://www.expo70-park.jp/event/77753/">紅葉まつり</a></h1>
+				</div>
+			</li>
+						<li>
+				<p class="left"><a href="https://www.expo70-park.jp/event/78001/"><img width="150" height="150" src="https://www.expo70-park.jp/sys/wp-content/uploads/29f250197d361b372220ba0b4cad8e7e-150x150.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.expo70-park.jp/sys/wp-content/uploads/29f250197d361b372220ba0b4cad8e7e-150x150.png 150w, https://www.expo70-park.jp/sys/wp-content/uploads/29f250197d361b372220ba0b4cad8e7e-80x80.png 80w, https://www.expo70-park.jp/sys/wp-content/uploads/29f250197d361b372220ba0b4cad8e7e-140x140.png 140w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a></p>
+				<div class="right">
+					<p class="date">2026年11月22日(日曜日)から<br>2026年12月30日(水曜日)</p>
+					<h1><a href="https://www.expo70-park.jp/event/78001/">イルミナイト万博〜2026 WINTER〜｜プロジェクションマッピング「I’m 万博　We are 万博」</a></h1>
+				</div>
+			</li>
+						<li>
+				<p class="left"><a href="https://www.expo70-park.jp/event/78383/"><img width="150" height="150" src="https://www.expo70-park.jp/sys/wp-content/uploads/d262ea64779a9dee1950b5dce7f7fddc-150x150.png" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.expo70-park.jp/sys/wp-content/uploads/d262ea64779a9dee1950b5dce7f7fddc-150x150.png 150w, https://www.expo70-park.jp/sys/wp-content/uploads/d262ea64779a9dee1950b5dce7f7fddc-80x80.png 80w, https://www.expo70-park.jp/sys/wp-content/uploads/d262ea64779a9dee1950b5dce7f7fddc-140x140.png 140w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a></p>
+				<div class="right">
+					<p class="date">2026年11月27日(金曜日)から<br>2026年11月29日(日曜日)</p>
+					<h1><a href="https://www.expo70-park.jp/event/78383/">Re:Bornヨルダン館プロジェクト【結果通知の一部配信遅延について】</a></h1>
+				</div>
+			</li>
+						<li>
+				<p class="left"><a href="https://www.expo70-park.jp/event/77977/"><img width="150" height="150" src="https://www.expo70-park.jp/sys/wp-content/uploads/ff26243f04411577ae7f1e7734af9bfd-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.expo70-park.jp/sys/wp-content/uploads/ff26243f04411577ae7f1e7734af9bfd-150x150.jpg 150w, https://www.expo70-park.jp/sys/wp-content/uploads/ff26243f04411577ae7f1e7734af9bfd-80x80.jpg 80w, https://www.expo70-park.jp/sys/wp-content/uploads/ff26243f04411577ae7f1e7734af9bfd-140x140.jpg 140w" sizes="auto, (max-width: 150px) 100vw, 150px" /></a></p>
+				<div class="right">
+					<p class="date">2026年10月20日(火曜日)から<br>2026年11月23日(月曜日)</p>
+					<h1><a href="https://www.expo70-park.jp/event/77977/">令和8年度「万博記念公園写真コンテスト」作品募集</a></h1>
+				</div>
+			</li>
+					</ul>
+	</div>
+</section>
+<section class="sport-box">
+	<header>
+		<div class="left">
+			<h1>スポーツイベント情報</h1>
+		</div>
+		<div class="right">
+			<p class="btn"><a href="https://www.expo70-park.jp/event/?type=sports"><i><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/arrow-box-white.png" alt=""></i><span>一覧</span></a></p>
+		</div>
+	</header>
+	<div class="cnt">
+		<ul class="stripe">
+					</ul>
+	</div>
+</section>
+</div>
+	<!-- CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://taka-hash.com/assets/css/takahash-1.0.0.css">
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<!-- Javascript（jQueryより下に配置） -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://taka-hash.com/assets/js/jquery.takahash-1.0.0.js" charset="utf-8"></script>
+<script>
+jQuery(function($){
+//タカハッシュ埋め込みプラグイン
+$('#takahash-posts').takahash({
+	id: 'expo70', //弊社から指定のID
+	count: 12, //1回での投稿取得数（最大30まで）
+	modal: true, //モーダルウィンドウ（ポップアップ）
+	postType: 'popup', //表示タイプ
+	postClass: 'post col-xs-6 col-sm-4 col-md-3 col-lg-3', //各投稿のクラス
+	moreSelector: '.takahash-more', //もっと見るのセレクタ
+	loadingSelector: '.takahash-loading', //ローディング画像のセレクタ
+});
+});
+</script>
+<div class="module__takahash" id="banpiku">
+	<h2>みんなの #万博記念公園</h2>
+	<p>Instagramに「#万博記念公園」のハッシュタグをつけて投稿された<br>
+皆さまの投稿画像から公園風景などの投稿をランダムに表示しています</p>
+	<div id="takahash-posts" class="takahash-posts row"></div>
+	<div class="text-center">
+		<div class="takahash-loading"><i class="fa fa-spinner fa-pulse fa-lg fa-fw"></i><span class="sr-only">Loading...</span></div>
+		<a class="takahash-more btn btn-default">もっと見る</a>
+	</div>
+</div>
+
+	<div class="module__facebook"><div class="fb-page" data-href="https://www.facebook.com/expo70park" data-width="500" data-height="425" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/expo70park"><a href="https://www.facebook.com/expo70park">万博記念公園</a></blockquote></div></div></div>
+
+	<div class="module__youtube">
+		<iframe title="youtube" width="560" height="315" src="https://www.youtube.com/embed/CY_TLvUx52k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+	<div class="module__tripadvisor">
+		<div id="TA_selfserveprop206" class="TA_selfserveprop"><ul id="SaGQiWSn" class="TA_links r8sDjE9594bv"><li id="ats978JC7V" class="yZpwWhHR"><a target="_blank" href="https://www.tripadvisor.com/"><img src="https://www.tripadvisor.com/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/></a></li></ul></div><script async src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=206&amp;locationId=1407321&amp;lang=en_US&amp;rating=true&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=true&amp;border=true&amp;display_version=2"></script>
+	</div>
+
+	</div>
+	<div class="frame__right-contents"><nav class="module__side-cause-nav">
+	<h1>目的別でさがす</h1>
+	<ul class="list">
+		<li class="page_item page-item-18 page_item_has_children"><a href="https://www.expo70-park.jp/cause/expo/">大阪万博</a></li>
+<li class="page_item page-item-27 page_item_has_children"><a href="https://www.expo70-park.jp/cause/nature/">自然に触れる</a></li>
+<li class="page_item page-item-50 page_item_has_children"><a href="https://www.expo70-park.jp/cause/play/">遊ぶ・体を動かす</a></li>
+		<li><a href="https://www.expo70-park.jp/facility/">施設を利用する</a></li>
+		<li><a href="https://www.expo70-park.jp/events/">イベントに参加する</a></li>
+	</ul>
+	<ul class="bottom-nav">
+		<li class="left"><a href="https://www.expo70-park.jp/guide/access"><i></i><span>アクセス</span></a></li>
+		<li class="right"><a href="https://www.expo70-park.jp/guide/parking"><i></i><span>駐車場</span></a></li>
+	</ul>
+</nav>
+<ul class="module__side-banner">
+		<li><a href="https://www.expo70-park.jp/digitalmap/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/1acc331e22d3a90f0fca2bf26c70fcef-220x69.png" alt="デジタルマップ"></a></li>
+		<li><a href="https://www.expo70-park.jp/bampaku_ticket/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/4167d7436817f4f4cfb8c98b5ec1125d-220x69.jpg" alt="電子チケットバナー"></a></li>
+		<li><a href="http://taiyounotou-expo70.jp/" target="_blank"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/90ac0dc66953faa928ca3b9feb4d7cd7-220x220.jpg" alt="太陽の塔オフィシャルサイト"></a></li>
+		<li><a href="https://lin.ee/MuaMGP8" target="_blank"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/LINE_banpaku_minibaner2-220x87.jpg" alt="banpaku_Instagram_minibaner"></a></li>
+		<li><a href="https://x.com/expo70park_jp" target="_blank"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/79d147eadde155cd7176e0c1370e36da-220x70.png" alt="banpaku_x_minibaner"></a></li>
+		<li><a href="https://www.instagram.com/expo70park/" target="_blank"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/41-220x70.png" alt="banpaku_Instagram_minibaner"></a></li>
+		<li><a href="https://www.facebook.com/expo70park" target="_blank"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/61-220x70.png" alt="banpaku_facebook_minibaner"></a></li>
+		<li><a href="https://www.youtube.com/user/expo70park/featured" target="_blank"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/53-220x70.png" alt="banpaku_YouTube_minibaner++"></a></li>
+		<li><a href="https://www.expo70-park.jp/sdgs/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/4e28e4d2579c57667103a74f031be728-220x70.jpg" alt="SDGs  万博記念公園の取組み"></a></li>
+		<li><a href="https://www.expo70-park.jp/info/50437/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/naniwadanshi_600_190-220x70.jpg" alt="「なにわ男子」よりコメントをいただきました！"></a></li>
+		<li><a href="https://www.expo70-park.jp/ajisai-haiku-2025/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/2b72e7862380299690d35ac407e5c119-220x70.png" alt="「あじさいの俳句」入選句"></a></li>
+		<li><a href="https://www.expo70-park.jp/instagramphotogallary2024/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/648fcd4c42280f2c4a198cef59e0635e1-220x73.png" alt="インスタフォトコン入賞ギャラリー"></a></li>
+		<li><a href="https://www.expo70-park.jp/photospot_autumn/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/top_photospoto_autumn2020-220x154.png" alt="フォトスポット"></a></li>
+		<li><a href="/info/11877/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/bnr_naibusaisei-220x70.png" alt="「太陽の塔内部再生」事業"></a></li>
+		<li><a href="http://taiyounotou-expo70.jp/dct_live/" target="_blank"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/bnr_dri_photo-220x70.png" alt="太陽の塔内部公開記念イベント　DREAMS COME TRUE Special Live|2018年3月18日（日曜日）万博記念公園太陽の広場|写真掲載中！"></a></li>
+		<li><a href="/guide/mothers/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/bnr_formama-220x90.png" alt="車いすをご利用の方・お子様連れの方へ"></a></li>
+		<li><a href="https://www.expo70-park.jp/info/56276/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/banner_banpaku-220x100.jpg" alt="万博記念公園運動施設の使用受付について"></a></li>
+		<li><a href="https://www.expo70-park.jp/info/74380/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/shiyoushisetsu_nonyear-220x70.png" alt="専用使用施設の優先受付について"></a></li>
+		<li><a href="https://www.expo70-park.jp/info/74379/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/side_concert-220x70.png" alt="野外コンサートの優先受付について"></a></li>
+		<li><a href="/other/expo70kikin/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/5115b45e0b77c9423fccd2318897528c-220x70.png" alt="日本万国博覧会記念公園基金への寄附金の募集について"></a></li>
+		<li><a href="/other/fund/"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/eafffc6651a53dad98e9f2195602cd2f-220x70.png" alt="日本万国博覧会記念基金|公益財団法人関西・大阪21世紀協会"></a></li>
+	</ul>
+<nav class="module__side-nav">
+		<dl class="events">
+		<dt><span>イベント</span></dt>
+		<dd><ul><li class="page_item"><a href="https://www.expo70-park.jp/events/during-events/">イベント一覧（開催中・開催予定）</a></li><li class="page_item"><a href="https://www.expo70-park.jp/events/schedule/">公園イベント年間スケジュール</a></li><li class="page_item"><a href="https://www.expo70-park.jp/event/?type=park">公園イベント一覧</a></li><li class="page_item"><a href="https://www.expo70-park.jp/event/?type=sports">スポーツイベント一覧</a></li></ul></dd>
+	</dl>
+			<dl class="nature">
+		<dt><span>自然に触れる</span></dt>
+		<dd><ul>
+			<li><a href="https://www.expo70-park.jp/flower/">見ごろの花</a></li>
+			<li class="page_item page-item-33"><a href="https://www.expo70-park.jp/cause/nature/experience/">自然に親しむ</a></li>
+<li class="page_item page-item-44"><a href="https://www.expo70-park.jp/cause/nature/japanese-garden-poi/">日本庭園の見どころ</a></li>
+<li class="page_item page-item-40"><a href="https://www.expo70-park.jp/cause/nature/play/">森を探検する</a></li>
+<li class="page_item page-item-29"><a href="https://www.expo70-park.jp/cause/nature/model-course/">散策モデルコース</a></li>
+<li class="page_item page-item-270 page_item_has_children"><a href="https://www.expo70-park.jp/cause/nature/foreset-efforts/">万博の森づくり</a></li>
+<li class="page_item page-item-274"><a href="https://www.expo70-park.jp/cause/nature/environment-conservation/">環境保全への取り組み</a></li>
+<li class="page_item page-item-5235 page_item_has_children"><a href="https://www.expo70-park.jp/cause/nature/observation/">動植物の観察</a></li>
+<li class="page_item page-item-33476 page_item_has_children"><a href="https://www.expo70-park.jp/cause/nature/four_seasons/">万博記念公園の四季</a></li>
+		</ul></dd>
+	</dl>
+			<dl class="facility">
+		<dt><span>施設</span></dt>
+		<dd><ul>
+			<li class="page_item page-item-52931 page_item_has_children"><a href="https://www.expo70-park.jp/facility/play/">■遊ぶ、レクリエーション</a>
+<ul class='children'>
+	<li class="page_item page-item-96"><a href="https://www.expo70-park.jp/facility/play/nature-06/">園内乗り物</a></li>
+	<li class="page_item page-item-66451"><a href="https://www.expo70-park.jp/facility/play/try_train/">トライ・トレイン</a></li>
+	<li class="page_item page-item-65858"><a href="https://www.expo70-park.jp/facility/play/boukennomori/">ボウケンノモリ</a></li>
+	<li class="page_item page-item-74471"><a href="https://www.expo70-park.jp/facility/play/fantazooma/">ファンタズーマ</a></li>
+	<li class="page_item page-item-57597"><a href="https://www.expo70-park.jp/facility/play/playnature-08-07/">宝石さがし「バンパク タカラバコ」</a></li>
+	<li class="page_item page-item-29499"><a href="https://www.expo70-park.jp/facility/play/nature-08-06/">巨大立体アスレチック迷路</a></li>
+	<li class="page_item page-item-48705"><a href="https://www.expo70-park.jp/facility/play/nature-08-01/">夢の池 サイクルボート</a></li>
+	<li class="page_item page-item-48711"><a href="https://www.expo70-park.jp/facility/play/nature-08-02/">万博おもしろ自転車広場</a></li>
+	<li class="page_item page-item-116"><a href="https://www.expo70-park.jp/facility/play/nature-08-03/">やったねの木（大型すべり台）</a></li>
+	<li class="page_item page-item-118"><a href="https://www.expo70-park.jp/facility/play/nature-08-04/">わくわく池の冒険ひろば</a></li>
+	<li class="page_item page-item-120"><a href="https://www.expo70-park.jp/facility/play/nature-08-05/">船の遊具「エキスポみらいgo!」</a></li>
+	<li class="page_item page-item-136"><a href="https://www.expo70-park.jp/facility/play/other-01/">パークゴルフ万博公園</a></li>
+	<li class="page_item page-item-138"><a href="https://www.expo70-park.jp/facility/play/other-02/">天然温泉 万博おゆば</a></li>
+	<li class="page_item page-item-94"><a href="https://www.expo70-park.jp/facility/play/nature-05/">森の足湯</a></li>
+</ul>
+</li>
+<li class="page_item page-item-52985 page_item_has_children"><a href="https://www.expo70-park.jp/facility/buy_eat/">■買う、食べる</a>
+<ul class='children'>
+	<li class="page_item page-item-950"><a href="https://www.expo70-park.jp/facility/buy_eat/other-10/">レストラン Park Cafe</a></li>
+	<li class="page_item page-item-130"><a href="https://www.expo70-park.jp/facility/buy_eat/calture-02-01/">森の洋食　グリルみんぱく</a></li>
+	<li class="page_item page-item-32255"><a href="https://www.expo70-park.jp/facility/buy_eat/neu-cafe/">neu.cafe（ノイ カフェ）</a></li>
+	<li class="page_item page-item-32262"><a href="https://www.expo70-park.jp/facility/buy_eat/seattles_best_coffee/">シアトルズベストコーヒー</a></li>
+	<li class="page_item page-item-32267"><a href="https://www.expo70-park.jp/facility/buy_eat/gela_fru/">クレープ＆タピオカ ジェラフル</a></li>
+	<li class="page_item page-item-32297"><a href="https://www.expo70-park.jp/facility/buy_eat/nagomi/">日本庭園中央休憩所内 喫茶 和み（なごみ）</a></li>
+	<li class="page_item page-item-34907"><a href="https://www.expo70-park.jp/facility/buy_eat/north_garden/">薪窯ピッツァ・カフェ NORTH GARDEN（ノースガーデン）</a></li>
+	<li class="page_item page-item-36394"><a href="https://www.expo70-park.jp/facility/buy_eat/outdoor-living/">「LIVING PARK」&#038; カフェ「WEST」</a></li>
+	<li class="page_item page-item-39462"><a href="https://www.expo70-park.jp/facility/buy_eat/nuggetnugget/">NUGGET NUGGET</a></li>
+	<li class="page_item page-item-961"><a href="https://www.expo70-park.jp/facility/buy_eat/nature-12/">バーベキュー場「b-base」</a></li>
+	<li class="page_item page-item-32272"><a href="https://www.expo70-park.jp/facility/buy_eat/information/">EXPO GOODS STORE</a></li>
+	<li class="page_item page-item-52954"><a href="https://www.expo70-park.jp/facility/buy_eat/familymart/">ファミリーマート</a></li>
+	<li class="page_item page-item-56891"><a href="https://www.expo70-park.jp/facility/buy_eat/taiyounotou_shop/">太陽の塔ミュージアムショップ</a></li>
+	<li class="page_item page-item-52814"><a href="https://www.expo70-park.jp/facility/buy_eat/yoshitako/">吉たこ</a></li>
+</ul>
+</li>
+<li class="page_item page-item-52981 page_item_has_children"><a href="https://www.expo70-park.jp/facility/watchlearn/">■観る、学ぶ</a>
+<ul class='children'>
+	<li class="page_item page-item-85 page_item_has_children"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-01/">自然観察学習館 moricara</a></li>
+	<li class="page_item page-item-90"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-03/">ソラード（森の空中観察路）</a></li>
+	<li class="page_item page-item-150"><a href="https://www.expo70-park.jp/facility/watchlearn/other-07/">EXPO&#8217;70 パビリオン</a></li>
+	<li class="page_item page-item-3507"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-11/">自然学習の森</a></li>
+	<li class="page_item page-item-33651"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-04/">現代美術の森</a></li>
+	<li class="page_item page-item-53012"><a href="https://www.expo70-park.jp/facility/watchlearn/calture-01-2/">大阪日本民芸館</a></li>
+	<li class="page_item page-item-53014"><a href="https://www.expo70-park.jp/facility/watchlearn/calture-02-2/">国立民族学博物館</a></li>
+	<li class="page_item page-item-13369"><a href="https://www.expo70-park.jp/facility/watchlearn/heiwanokane/">平和の鐘</a></li>
+	<li class="page_item page-item-29822"><a href="https://www.expo70-park.jp/facility/watchlearn/rosegarden/">平和のバラ園</a></li>
+	<li class="page_item page-item-102"><a href="https://www.expo70-park.jp/facility/watchlearn/japanese-garden-02/">茶室「千里庵」</a></li>
+	<li class="page_item page-item-104"><a href="https://www.expo70-park.jp/facility/watchlearn/japanese-garden-03/">茶室「汎庵・万里庵」</a></li>
+	<li class="page_item page-item-73795"><a href="https://www.expo70-park.jp/facility/watchlearn/inochidama/">いのち球モニュメント</a></li>
+	<li class="page_item page-item-75486"><a href="https://www.expo70-park.jp/facility/watchlearn/jordan-karesansui/">ヨルダン館友好・交流記念『枯山水モニュメント』</a></li>
+</ul>
+</li>
+<li class="page_item page-item-53005 page_item_has_children"><a href="https://www.expo70-park.jp/facility/reserve/">■予約する</a>
+<ul class='children'>
+	<li class="page_item page-item-122"><a href="https://www.expo70-park.jp/facility/reserve/nature-09/">お祭り広場</a></li>
+	<li class="page_item page-item-3187"><a href="https://www.expo70-park.jp/facility/reserve/nature-10/">緑地広場</a></li>
+	<li class="page_item page-item-53018"><a href="https://www.expo70-park.jp/facility/reserve/nature-12-2/">バーベキュー場「b-base」</a></li>
+</ul>
+</li>
+<li class="page_item page-item-52953 page_item_has_children"><a href="https://www.expo70-park.jp/facility/related_facilities/">■関連施設</a>
+<ul class='children'>
+	<li class="page_item page-item-108"><a href="https://www.expo70-park.jp/facility/related_facilities/japanese-garden-05/">迎賓館</a></li>
+	<li class="page_item page-item-128"><a href="https://www.expo70-park.jp/facility/related_facilities/calture-01/">大阪日本民芸館</a></li>
+	<li class="page_item page-item-146"><a href="https://www.expo70-park.jp/facility/related_facilities/other-05/">インフォメーションセンター</a></li>
+	<li class="page_item page-item-11103"><a href="https://www.expo70-park.jp/facility/related_facilities/wi-fi/">Wi-Fi 設置場所</a></li>
+	<li class="page_item page-item-148"><a href="https://www.expo70-park.jp/facility/related_facilities/other-06/">大阪モノレール</a></li>
+	<li class="page_item page-item-9691"><a href="https://www.expo70-park.jp/facility/related_facilities/expocity/">EXPO CITY</a></li>
+</ul>
+</li>
+		</ul></dd>
+	</dl>
+			<dl class="sports">
+		<dt><span>スポーツ</span></dt>
+		<dd><ul>
+			<li class="page_item page-item-204"><a href="https://www.expo70-park.jp/sports/enjoy/">スポーツを楽しむ</a></li>
+<li class="page_item page-item-206"><a href="https://www.expo70-park.jp/sports/spectate/">スポーツを観戦する</a></li>
+<li class="page_item page-item-210 page_item_has_children"><a href="https://www.expo70-park.jp/sports/facility/">スポーツ施設一覧</a></li>
+<li class="page_item page-item-47904"><a href="https://www.expo70-park.jp/sports/status/">予約状況</a></li>
+		</ul></dd>
+	</dl>
+			<dl class="guide">
+		<dt><span>ご利用案内</span></dt>
+		<dd><ul><li class="page_item page-item-11601"><a href="https://www.expo70-park.jp/guide/fee/">ご利用料金</a></li>
+<li class="page_item page-item-258"><a href="https://www.expo70-park.jp/guide/mothers/">お体の不自由な方・乳幼児連れの方へ</a></li>
+<li class="page_item page-item-256"><a href="https://www.expo70-park.jp/guide/banpaku-all-passport/">万博オールパスポート</a></li>
+<li class="page_item page-item-248"><a href="https://www.expo70-park.jp/guide/parking/">駐車場情報</a></li>
+<li class="page_item page-item-12212"><a href="https://www.expo70-park.jp/guide/dantai_bus_jizenyoyaku/">一部の駐車場における団体バスの事前駐車予約について</a></li>
+<li class="page_item page-item-25722"><a href="https://www.expo70-park.jp/guide/kouensisetsu_siyousinsei/">公園施設使用等にかかる各種申請書の様式</a></li>
+<li class="page_item page-item-13087"><a href="https://www.expo70-park.jp/guide/smokingarea/">万博記念公園内の喫煙場所について</a></li>
+<li class="page_item page-item-260"><a href="https://www.expo70-park.jp/guide/check/">ご利用時間・休園日</a></li>
+<li class="page_item page-item-46972 page_item_has_children"><a href="https://www.expo70-park.jp/guide/booklet/">各種パンフレット</a>
+<ul class='children'>
+	<li class="page_item page-item-46988"><a href="https://www.expo70-park.jp/guide/booklet/booklet-h25/">万博記念公園だよりバックナンバー</a></li>
+</ul>
+</li>
+<li class="page_item page-item-54889"><a href="https://www.expo70-park.jp/guide/access/">交通・アクセス情報</a></li>
+</ul></dd>
+	</dl>
+			<dl class="expo">
+		<dt><span>大阪万博</span></dt>
+		<dd><ul>
+			<li><a href="https://www.expo70-park.jp/cause/expo">大阪万博について</a></li>
+			<li><a href="https://www.expo70-park.jp/cause/expo/#caption5">パビリオン一覧</a></li>
+			<li><a href="https://www.expo70-park.jp/cause/expo/tower-of-sun">太陽の塔</a></li>
+		</ul></dd>
+	</dl>
+			<dl class="other">
+		<dt><span>その他</span></dt>
+		<dd><ul>
+			<li class="page_item page-item-278"><a href="https://www.expo70-park.jp/other/contents/">コンテンツの無断使用禁止等について</a></li>
+<li class="page_item page-item-284"><a href="https://www.expo70-park.jp/other/link/">リンク</a></li>
+<li class="page_item page-item-2814"><a href="https://www.expo70-park.jp/other/fund/">万博記念基金</a></li>
+<li class="page_item page-item-3087"><a href="https://www.expo70-park.jp/other/site-policy/">サイトポリシー</a></li>
+<li class="page_item page-item-18428"><a href="https://www.expo70-park.jp/other/expo70kikin/">日本万国博覧会記念公園基金への寄附金の募集について</a></li>
+<li class="page_item page-item-30064"><a href="https://www.expo70-park.jp/other/foreign-language/">Foreign Language</a></li>
+<li class="page_item page-item-31647"><a href="https://www.expo70-park.jp/other/%e3%82%a6%e3%82%a7%e3%83%96%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b7%e3%83%93%e3%83%aa%e3%83%86%e3%82%a3%e6%96%b9%e9%87%9d/">万博記念公園ウェブアクセシビリティ方針</a></li>
+<li class="page_item page-item-32803"><a href="https://www.expo70-park.jp/other/inquiry-2/">お問い合わせ</a></li>
+<li class="page_item page-item-282"><a href="https://www.expo70-park.jp/other/privacy-policy/">個人情報保護方針</a></li>
+			<li class="page_item"><a href="http://www.pref.osaka.lg.jp/bampaku/nyuusatsu/index.html" rel="noopener noreferrer" target="_blank">入札関連情報</a></li>
+		</ul></dd>
+	</dl>
+	</nav>
+<ul class="module__side-banner">
+		<li><a href="https://www.expo70-park.jp/events/schedule/" target="_blank"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/958e45ee3f366ddc286ea20a359a50f4.jpg" alt="年間スケジュール"></a></li>
+		<li><a href="http://www.pref.osaka.lg.jp/" target="_blank"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/osakapref.jpg" alt="大阪府"></a></li>
+		<li><a href="http://www.osaka-museum.com/index.html" target="_blank"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/43869d50dfb4c11bfec759093a5d03c3-220x53.png" alt="大阪ミュージアム"></a></li>
+		<li><a href="https://www.google.com/maps/d/viewer?ll=34.59945961445091%2C135.44781090771647&z=11&mid=1LXGNqjF_cWiqXsHKy5Ie1LLTbUlhIR8 " target="_blank"><img src="https://www.expo70-park.jp/sys/wp-content/uploads/29d3bc99193cb0b837fb8cc53f050ae510-220x220.png" alt="パークマップ"></a></li>
+	</ul>
+</div>
+	<p class="module__to-top"><a href="#"><span>ページトップへ戻る</span></a></p>
+</div>
+<footer class="frame__footer">
+	<div class="footer-contents">
+		<h1 class="module__footer-title">万博記念公園 | Expo'70 Commemorative Park</h1>
+		<div class="set1">
+						<dl class="module__footer-nav-list--nature">
+				<dt><a href="https://www.expo70-park.jp/cause/nature/"><span>自然に触れる</span><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/arrow-box-white.png" alt=""></a></dt>
+				<dd><ul><li class="page_item page-item-44"><a href="https://www.expo70-park.jp/cause/nature/japanese-garden-poi/">日本庭園の見どころ</a></li>
+<li class="page_item page-item-33476 page_item_has_children"><a href="https://www.expo70-park.jp/cause/nature/four_seasons/">万博記念公園の四季</a>
+<ul class='children'>
+	<li class="page_item page-item-37633 page_item_has_children"><a href="https://www.expo70-park.jp/cause/nature/four_seasons/four_seasons_winter/">万博記念公園の「冬」</a>
+	<ul class='children'>
+		<li class="page_item page-item-38236"><a href="https://www.expo70-park.jp/cause/nature/four_seasons/four_seasons_winter/photospot_winter/">公園事務所スタッフが見つけたベストフォトスポット 冬（1月～3月）</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-37616 page_item_has_children"><a href="https://www.expo70-park.jp/cause/nature/four_seasons/four_seasons_summer/">万博記念公園の「夏」</a>
+	<ul class='children'>
+		<li class="page_item page-item-41961"><a href="https://www.expo70-park.jp/cause/nature/four_seasons/four_seasons_summer/photospot_summer/">公園事務所スタッフが見つけたベストフォトスポット 夏（7月～9月）</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-37612 page_item_has_children"><a href="https://www.expo70-park.jp/cause/nature/four_seasons/four_seasons_spring/">万博記念公園の「春」</a>
+	<ul class='children'>
+		<li class="page_item page-item-39995"><a href="https://www.expo70-park.jp/cause/nature/four_seasons/four_seasons_spring/photospot_spring/">公園事務所スタッフが見つけたベストフォトスポット 春（4月～6月）</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-37627 page_item_has_children"><a href="https://www.expo70-park.jp/cause/nature/four_seasons/four_seasons_autumn/">万博記念公園の「秋」</a>
+	<ul class='children'>
+		<li class="page_item page-item-43668"><a href="https://www.expo70-park.jp/cause/nature/four_seasons/four_seasons_autumn/photospot_autumn/">公園事務所スタッフが見つけたベストフォトスポット 秋（10月～12月）</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="page_item page-item-5235 page_item_has_children"><a href="https://www.expo70-park.jp/cause/nature/observation/">動植物の観察</a>
+<ul class='children'>
+	<li class="page_item page-item-8103"><a href="https://www.expo70-park.jp/cause/nature/observation/donguri/">どんぐりさがしに出かけよう！</a></li>
+	<li class="page_item page-item-8104"><a href="https://www.expo70-park.jp/cause/nature/observation/susukinosita/">ススキの下をのぞいてみよう！</a></li>
+	<li class="page_item page-item-8018"><a href="https://www.expo70-park.jp/cause/nature/observation/semi/">セミの羽化を観察しよう</a></li>
+	<li class="page_item page-item-8220"><a href="https://www.expo70-park.jp/cause/nature/observation/kouyou/">万博記念公園を彩る樹木</a></li>
+	<li class="page_item page-item-8256"><a href="https://www.expo70-park.jp/cause/nature/observation/kouyouspot/">万博記念公園紅葉スポット</a></li>
+	<li class="page_item page-item-8446"><a href="https://www.expo70-park.jp/cause/nature/observation/fuyunomusi/">冬の虫たちを観察してみよう！</a></li>
+	<li class="page_item page-item-8407"><a href="https://www.expo70-park.jp/cause/nature/observation/fuyunotori/">冬の鳥を観察してみよう！</a></li>
+	<li class="page_item page-item-1521"><a href="https://www.expo70-park.jp/cause/nature/observation/insect/">春の昆虫を観察しよう！</a></li>
+	<li class="page_item page-item-1539"><a href="https://www.expo70-park.jp/cause/nature/observation/wild-flower/">春の野草を観察しよう</a></li>
+	<li class="page_item page-item-8500"><a href="https://www.expo70-park.jp/cause/nature/observation/harunotori/">春の鳥を観察してみよう！</a></li>
+	<li class="page_item page-item-8312"><a href="https://www.expo70-park.jp/cause/nature/observation/fuyume/">樹木の冬芽や葉痕を観察しよう！</a></li>
+	<li class="page_item page-item-8528"><a href="https://www.expo70-park.jp/cause/nature/observation/mizubenoikimono/">水辺の生き物をのぞいてみよう！</a></li>
+	<li class="page_item page-item-8748"><a href="https://www.expo70-park.jp/cause/nature/observation/kusamura/">草むらの生き物たち</a></li>
+</ul>
+</li>
+<li class="page_item page-item-40"><a href="https://www.expo70-park.jp/cause/nature/play/">森を探検する</a></li>
+<li class="page_item page-item-33"><a href="https://www.expo70-park.jp/cause/nature/experience/">自然に親しむ</a></li>
+<li class="page_item page-item-29"><a href="https://www.expo70-park.jp/cause/nature/model-course/">散策モデルコース</a></li>
+<li class="page_item page-item-270 page_item_has_children"><a href="https://www.expo70-park.jp/cause/nature/foreset-efforts/">万博の森づくり</a>
+<ul class='children'>
+	<li class="page_item page-item-1880"><a href="https://www.expo70-park.jp/cause/nature/foreset-efforts/foreset-efforts-03/">シジュウカラの繁殖期の生態</a></li>
+	<li class="page_item page-item-1841"><a href="https://www.expo70-park.jp/cause/nature/foreset-efforts/foreset-efforts-02/">密生林区域の人工ギャップ形成と森林表土撒き出しが植物の種多様性に与える影響</a></li>
+	<li class="page_item page-item-1757"><a href="https://www.expo70-park.jp/cause/nature/foreset-efforts/foreset-efforts-01/">自然再生40年の取組みを発表しました</a></li>
+</ul>
+</li>
+<li class="page_item page-item-274"><a href="https://www.expo70-park.jp/cause/nature/environment-conservation/">環境保全への取り組み</a></li>
+</ul></dd>
+			</dl>
+									<dl class="module__footer-nav-list--sport">
+				<dt><a href="https://www.expo70-park.jp/sports/"><span>スポーツ</span><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/arrow-box-white.png" alt=""></a></dt>
+				<dd><ul><li class="page_item page-item-204"><a href="https://www.expo70-park.jp/sports/enjoy/">スポーツを楽しむ</a></li>
+<li class="page_item page-item-206"><a href="https://www.expo70-park.jp/sports/spectate/">スポーツを観戦する</a></li>
+<li class="page_item page-item-210 page_item_has_children"><a href="https://www.expo70-park.jp/sports/facility/">スポーツ施設一覧</a>
+<ul class='children'>
+	<li class="page_item page-item-216"><a href="https://www.expo70-park.jp/sports/facility/american-football/">アメリカンフットボール球技場（MKタクシーフィールドエキスポ）</a></li>
+	<li class="page_item page-item-218"><a href="https://www.expo70-park.jp/sports/facility/gamba/">ガンバ大阪関連スポーツ施設</a></li>
+	<li class="page_item page-item-32951"><a href="https://www.expo70-park.jp/sports/facility/recreation-ground-softball02/">スポーツ広場 No.1 ～ No.4（軟式 or ソフト）</a></li>
+	<li class="page_item page-item-22300"><a href="https://www.expo70-park.jp/sports/facility/recreation-ground-softball03/">スポーツ広場 No.5 （ソフトボール専用）</a></li>
+	<li class="page_item page-item-224"><a href="https://www.expo70-park.jp/sports/facility/tennis/">万博テニスガーデン</a></li>
+	<li class="page_item page-item-226"><a href="https://www.expo70-park.jp/sports/facility/futsal/">万博フットサルクラブ</a></li>
+	<li class="page_item page-item-228"><a href="https://www.expo70-park.jp/sports/facility/arena/">万博記念競技場</a></li>
+	<li class="page_item page-item-13541"><a href="https://www.expo70-park.jp/sports/facility/syouhiroba/">小広場</a></li>
+	<li class="page_item page-item-230"><a href="https://www.expo70-park.jp/sports/facility/min-athletic-ground/">小運動場</a></li>
+	<li class="page_item page-item-232"><a href="https://www.expo70-park.jp/sports/facility/boys-ball-game-ground/">少年球技場</a></li>
+	<li class="page_item page-item-234"><a href="https://www.expo70-park.jp/sports/facility/boys-ball-stadium/">少年野球場</a></li>
+	<li class="page_item page-item-236"><a href="https://www.expo70-park.jp/sports/facility/archery-hall/">弓道場</a></li>
+	<li class="page_item page-item-238"><a href="https://www.expo70-park.jp/sports/facility/general-sports-ground/">総合スポーツ広場</a></li>
+	<li class="page_item page-item-240"><a href="https://www.expo70-park.jp/sports/facility/athletic-ground/">運動場</a></li>
+	<li class="page_item page-item-242"><a href="https://www.expo70-park.jp/sports/facility/ball-stadium/">野球場</a></li>
+</ul>
+</li>
+<li class="page_item page-item-47904"><a href="https://www.expo70-park.jp/sports/status/">予約状況</a></li>
+</ul></dd>
+			</dl>
+									<dl class="module__footer-nav-list--event">
+				<dt><a href="https://www.expo70-park.jp/events/"><span>イベント</span><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/arrow-box-white.png" alt=""></a></dt>
+				<dd><ul><li class="page_item page-item-1144"><a href="https://www.expo70-park.jp/events/during-events/">イベント一覧（開催中・開催予定）</a></li>
+<li class="page_item page-item-1146"><a href="https://www.expo70-park.jp/events/schedule/">公園イベント年間スケジュール</a></li>
+</ul></dd>
+			</dl>
+					</div>
+		<div class="set2">
+						<dl class="module__footer-nav-list--facility">
+				<dt><a href="https://www.expo70-park.jp/facility/"><span>施設</span><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/arrow-box-white.png" alt=""></a></dt>
+				<dd><ul><li class="page_item page-item-32736"><a href="https://www.expo70-park.jp/facility/shop/">ショップ・レストラン</a></li>
+<li class="page_item page-item-134"><a href="https://www.expo70-park.jp/facility/other/">レクリエーション・その他エリア</a></li>
+<li class="page_item page-item-126"><a href="https://www.expo70-park.jp/facility/calture/">文化施設</a></li>
+<li class="page_item page-item-98"><a href="https://www.expo70-park.jp/facility/japanese-garden/">日本庭園</a></li>
+<li class="page_item page-item-80 page_item_has_children"><a href="https://www.expo70-park.jp/facility/nature/">自然文化園</a>
+<ul class='children'>
+	<li class="page_item page-item-110"><a href="https://www.expo70-park.jp/facility/nature/nature-08/">遊具・ボート・自転車</a></li>
+</ul>
+</li>
+<li class="page_item page-item-52931 page_item_has_children"><a href="https://www.expo70-park.jp/facility/play/">■遊ぶ、レクリエーション</a>
+<ul class='children'>
+	<li class="page_item page-item-96"><a href="https://www.expo70-park.jp/facility/play/nature-06/">園内乗り物</a></li>
+	<li class="page_item page-item-66451"><a href="https://www.expo70-park.jp/facility/play/try_train/">トライ・トレイン</a></li>
+	<li class="page_item page-item-65858"><a href="https://www.expo70-park.jp/facility/play/boukennomori/">ボウケンノモリ</a></li>
+	<li class="page_item page-item-74471"><a href="https://www.expo70-park.jp/facility/play/fantazooma/">ファンタズーマ</a></li>
+	<li class="page_item page-item-57597"><a href="https://www.expo70-park.jp/facility/play/playnature-08-07/">宝石さがし「バンパク タカラバコ」</a></li>
+	<li class="page_item page-item-29499"><a href="https://www.expo70-park.jp/facility/play/nature-08-06/">巨大立体アスレチック迷路</a></li>
+	<li class="page_item page-item-48705"><a href="https://www.expo70-park.jp/facility/play/nature-08-01/">夢の池 サイクルボート</a></li>
+	<li class="page_item page-item-48711"><a href="https://www.expo70-park.jp/facility/play/nature-08-02/">万博おもしろ自転車広場</a></li>
+	<li class="page_item page-item-116"><a href="https://www.expo70-park.jp/facility/play/nature-08-03/">やったねの木（大型すべり台）</a></li>
+	<li class="page_item page-item-118"><a href="https://www.expo70-park.jp/facility/play/nature-08-04/">わくわく池の冒険ひろば</a></li>
+	<li class="page_item page-item-120"><a href="https://www.expo70-park.jp/facility/play/nature-08-05/">船の遊具「エキスポみらいgo!」</a></li>
+	<li class="page_item page-item-136"><a href="https://www.expo70-park.jp/facility/play/other-01/">パークゴルフ万博公園</a></li>
+	<li class="page_item page-item-138"><a href="https://www.expo70-park.jp/facility/play/other-02/">天然温泉 万博おゆば</a></li>
+	<li class="page_item page-item-94"><a href="https://www.expo70-park.jp/facility/play/nature-05/">森の足湯</a></li>
+</ul>
+</li>
+<li class="page_item page-item-52985 page_item_has_children"><a href="https://www.expo70-park.jp/facility/buy_eat/">■買う、食べる</a>
+<ul class='children'>
+	<li class="page_item page-item-950"><a href="https://www.expo70-park.jp/facility/buy_eat/other-10/">レストラン Park Cafe</a></li>
+	<li class="page_item page-item-130"><a href="https://www.expo70-park.jp/facility/buy_eat/calture-02-01/">森の洋食　グリルみんぱく</a></li>
+	<li class="page_item page-item-32255"><a href="https://www.expo70-park.jp/facility/buy_eat/neu-cafe/">neu.cafe（ノイ カフェ）</a></li>
+	<li class="page_item page-item-32262"><a href="https://www.expo70-park.jp/facility/buy_eat/seattles_best_coffee/">シアトルズベストコーヒー</a></li>
+	<li class="page_item page-item-32267"><a href="https://www.expo70-park.jp/facility/buy_eat/gela_fru/">クレープ＆タピオカ ジェラフル</a></li>
+	<li class="page_item page-item-32297"><a href="https://www.expo70-park.jp/facility/buy_eat/nagomi/">日本庭園中央休憩所内 喫茶 和み（なごみ）</a></li>
+	<li class="page_item page-item-34907"><a href="https://www.expo70-park.jp/facility/buy_eat/north_garden/">薪窯ピッツァ・カフェ NORTH GARDEN（ノースガーデン）</a></li>
+	<li class="page_item page-item-36394"><a href="https://www.expo70-park.jp/facility/buy_eat/outdoor-living/">「LIVING PARK」&#038; カフェ「WEST」</a></li>
+	<li class="page_item page-item-39462"><a href="https://www.expo70-park.jp/facility/buy_eat/nuggetnugget/">NUGGET NUGGET</a></li>
+	<li class="page_item page-item-961"><a href="https://www.expo70-park.jp/facility/buy_eat/nature-12/">バーベキュー場「b-base」</a></li>
+	<li class="page_item page-item-32272"><a href="https://www.expo70-park.jp/facility/buy_eat/information/">EXPO GOODS STORE</a></li>
+	<li class="page_item page-item-52954"><a href="https://www.expo70-park.jp/facility/buy_eat/familymart/">ファミリーマート</a></li>
+	<li class="page_item page-item-52814"><a href="https://www.expo70-park.jp/facility/buy_eat/yoshitako/">吉たこ</a></li>
+	<li class="page_item page-item-56891"><a href="https://www.expo70-park.jp/facility/buy_eat/taiyounotou_shop/">太陽の塔ミュージアムショップ</a></li>
+</ul>
+</li>
+<li class="page_item page-item-52981 page_item_has_children"><a href="https://www.expo70-park.jp/facility/watchlearn/">■観る、学ぶ</a>
+<ul class='children'>
+	<li class="page_item page-item-85 page_item_has_children"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-01/">自然観察学習館 moricara</a>
+	<ul class='children'>
+		<li class="page_item page-item-44456"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-01/44456-2/">自然素材やクラフトキットの販売 in 自然観察学習館</a></li>
+		<li class="page_item page-item-49391"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-01/moricara_event_info/">自然観察学習館 moricara イベント情報</a></li>
+		<li class="page_item page-item-37206"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-01/dantai_menu/">自然観察学習館 moricara 団体メニュー</a></li>
+		<li class="page_item page-item-50406"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-01/volunteer/">自然観察学習館 moricara 学習館のボランティア</a></li>
+		<li class="page_item page-item-20983"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-01/information/">自然観察学習館 moricara 施設紹介</a></li>
+		<li class="page_item page-item-37172"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-01/news_letter/">広報誌「moricaraニュースレター」</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-90"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-03/">ソラード（森の空中観察路）</a></li>
+	<li class="page_item page-item-150"><a href="https://www.expo70-park.jp/facility/watchlearn/other-07/">EXPO&#8217;70 パビリオン</a></li>
+	<li class="page_item page-item-3507"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-11/">自然学習の森</a></li>
+	<li class="page_item page-item-33651"><a href="https://www.expo70-park.jp/facility/watchlearn/nature-04/">現代美術の森</a></li>
+	<li class="page_item page-item-53012"><a href="https://www.expo70-park.jp/facility/watchlearn/calture-01-2/">大阪日本民芸館</a></li>
+	<li class="page_item page-item-53014"><a href="https://www.expo70-park.jp/facility/watchlearn/calture-02-2/">国立民族学博物館</a></li>
+	<li class="page_item page-item-13369"><a href="https://www.expo70-park.jp/facility/watchlearn/heiwanokane/">平和の鐘</a></li>
+	<li class="page_item page-item-29822"><a href="https://www.expo70-park.jp/facility/watchlearn/rosegarden/">平和のバラ園</a></li>
+	<li class="page_item page-item-102"><a href="https://www.expo70-park.jp/facility/watchlearn/japanese-garden-02/">茶室「千里庵」</a></li>
+	<li class="page_item page-item-104"><a href="https://www.expo70-park.jp/facility/watchlearn/japanese-garden-03/">茶室「汎庵・万里庵」</a></li>
+	<li class="page_item page-item-73795"><a href="https://www.expo70-park.jp/facility/watchlearn/inochidama/">いのち球モニュメント</a></li>
+	<li class="page_item page-item-75486"><a href="https://www.expo70-park.jp/facility/watchlearn/jordan-karesansui/">ヨルダン館友好・交流記念『枯山水モニュメント』</a></li>
+</ul>
+</li>
+<li class="page_item page-item-53005 page_item_has_children"><a href="https://www.expo70-park.jp/facility/reserve/">■予約する</a>
+<ul class='children'>
+	<li class="page_item page-item-122"><a href="https://www.expo70-park.jp/facility/reserve/nature-09/">お祭り広場</a></li>
+	<li class="page_item page-item-3187"><a href="https://www.expo70-park.jp/facility/reserve/nature-10/">緑地広場</a></li>
+	<li class="page_item page-item-53018"><a href="https://www.expo70-park.jp/facility/reserve/nature-12-2/">バーベキュー場「b-base」</a></li>
+</ul>
+</li>
+<li class="page_item page-item-52953 page_item_has_children"><a href="https://www.expo70-park.jp/facility/related_facilities/">■関連施設</a>
+<ul class='children'>
+	<li class="page_item page-item-108"><a href="https://www.expo70-park.jp/facility/related_facilities/japanese-garden-05/">迎賓館</a></li>
+	<li class="page_item page-item-128"><a href="https://www.expo70-park.jp/facility/related_facilities/calture-01/">大阪日本民芸館</a></li>
+	<li class="page_item page-item-146"><a href="https://www.expo70-park.jp/facility/related_facilities/other-05/">インフォメーションセンター</a></li>
+	<li class="page_item page-item-11103"><a href="https://www.expo70-park.jp/facility/related_facilities/wi-fi/">Wi-Fi 設置場所</a></li>
+	<li class="page_item page-item-148"><a href="https://www.expo70-park.jp/facility/related_facilities/other-06/">大阪モノレール</a></li>
+	<li class="page_item page-item-9691"><a href="https://www.expo70-park.jp/facility/related_facilities/expocity/">EXPO CITY</a></li>
+</ul>
+</li>
+</ul></dd>
+			</dl>
+					</div>
+		<div class="set3">
+						<dl class="module__footer-nav-list--guide">
+				<dt><a href="https://www.expo70-park.jp/guide/"><span>ご利用案内</span><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/arrow-box-white.png" alt=""></a></dt>
+				<dd><ul><li class="page_item page-item-258"><a href="https://www.expo70-park.jp/guide/mothers/">お体の不自由な方・乳幼児連れの方へ</a></li>
+<li class="page_item page-item-260"><a href="https://www.expo70-park.jp/guide/check/">ご利用時間・休園日</a></li>
+<li class="page_item page-item-12212"><a href="https://www.expo70-park.jp/guide/dantai_bus_jizenyoyaku/">一部の駐車場における団体バスの事前駐車予約について</a></li>
+<li class="page_item page-item-256"><a href="https://www.expo70-park.jp/guide/banpaku-all-passport/">万博オールパスポート</a></li>
+<li class="page_item page-item-13087"><a href="https://www.expo70-park.jp/guide/smokingarea/">万博記念公園内の喫煙場所について</a></li>
+<li class="page_item page-item-25722"><a href="https://www.expo70-park.jp/guide/kouensisetsu_siyousinsei/">公園施設使用等にかかる各種申請書の様式</a></li>
+<li class="page_item page-item-46972 page_item_has_children"><a href="https://www.expo70-park.jp/guide/booklet/">各種パンフレット</a>
+<ul class='children'>
+	<li class="page_item page-item-46988"><a href="https://www.expo70-park.jp/guide/booklet/booklet-h25/">万博記念公園だよりバックナンバー</a></li>
+</ul>
+</li>
+<li class="page_item page-item-248"><a href="https://www.expo70-park.jp/guide/parking/">駐車場情報</a></li>
+<li class="page_item page-item-11601"><a href="https://www.expo70-park.jp/guide/fee/">ご利用料金</a></li>
+<li class="page_item page-item-54889"><a href="https://www.expo70-park.jp/guide/access/">交通・アクセス情報</a></li>
+</ul></dd>
+			</dl>
+									<dl class="module__footer-nav-list--expo">
+				<dt><a href="https://www.expo70-park.jp/cause/expo/"><span>大阪万博</span><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/arrow-box-white.png" alt=""></a></dt>
+				<dd><ul><li class="page_item page-item-14832"><a href="https://www.expo70-park.jp/cause/expo/ec/">EC館</a></li>
+<li class="page_item page-item-14828"><a href="https://www.expo70-park.jp/cause/expo/oecd/">OECD館</a></li>
+<li class="page_item page-item-610"><a href="https://www.expo70-park.jp/cause/expo/rcd/">RCD館</a></li>
+<li class="page_item page-item-14638"><a href="https://www.expo70-park.jp/cause/expo/textiles/">せんい館</a></li>
+<li class="page_item page-item-14701"><a href="https://www.expo70-park.jp/cause/expo/midori/">みどり館</a></li>
+<li class="page_item page-item-14805"><a href="https://www.expo70-park.jp/cause/expo/irish/">アイルランド館</a></li>
+<li class="page_item page-item-14735"><a href="https://www.expo70-park.jp/cause/expo/ibm/">アイ・ビー・エム館</a></li>
+<li class="page_item page-item-15182"><a href="https://www.expo70-park.jp/cause/expo/afghanistan/">アフガニスタン館</a></li>
+<li class="page_item page-item-15173"><a href="https://www.expo70-park.jp/cause/expo/abudhabi/">アブダビ館</a></li>
+<li class="page_item page-item-15025"><a href="https://www.expo70-park.jp/cause/expo/american-park/">アメリカン・パーク</a></li>
+<li class="page_item page-item-158"><a href="https://www.expo70-park.jp/cause/expo/america/">アメリカ館</a></li>
+<li class="page_item page-item-14927"><a href="https://www.expo70-park.jp/cause/expo/alaska/">アラスカ州館</a></li>
+<li class="page_item page-item-15207"><a href="https://www.expo70-park.jp/cause/expo/uar/">アラブ連合館</a></li>
+<li class="page_item page-item-200"><a href="https://www.expo70-park.jp/cause/expo/algeria/">アルジェリア館</a></li>
+<li class="page_item page-item-15157"><a href="https://www.expo70-park.jp/cause/expo/argentine/">アルゼンチン館</a></li>
+<li class="page_item page-item-15147"><a href="https://www.expo70-park.jp/cause/expo/itaria/">イタリア館</a></li>
+<li class="page_item page-item-14248"><a href="https://www.expo70-park.jp/cause/expo/indonesia/">インドネシア館</a></li>
+<li class="page_item page-item-15068"><a href="https://www.expo70-park.jp/cause/expo/republicofindia/">インド館</a></li>
+<li class="page_item page-item-15001"><a href="https://www.expo70-park.jp/cause/expo/uganda/">ウガンダ館</a></li>
+<li class="page_item page-item-14786"><a href="https://www.expo70-park.jp/cause/expo/uruguay/">ウルグァイ館</a></li>
+<li class="page_item page-item-15138"><a href="https://www.expo70-park.jp/cause/expo/ecuador/">エクアドル館</a></li>
+<li class="page_item page-item-574"><a href="https://www.expo70-park.jp/cause/expo/ethiopia/">エチオピア館</a></li>
+<li class="page_item page-item-15186"><a href="https://www.expo70-park.jp/cause/expo/el-salvador/">エルサルバドル館</a></li>
+<li class="page_item page-item-160"><a href="https://www.expo70-park.jp/cause/expo/netherlands/">オランダ館</a></li>
+<li class="page_item page-item-14877"><a href="https://www.expo70-park.jp/cause/expo/ontario/">オンタリオ州館</a></li>
+<li class="page_item page-item-174"><a href="https://www.expo70-park.jp/cause/expo/australia/">オーストラリア館</a></li>
+<li class="page_item page-item-156"><a href="https://www.expo70-park.jp/cause/expo/canada/">カナダ館</a></li>
+<li class="page_item page-item-15191"><a href="https://www.expo70-park.jp/cause/expo/cambodia/">カンボジア館</a></li>
+<li class="page_item page-item-14525"><a href="https://www.expo70-park.jp/cause/expo/gas/">ガス・パビリオン</a></li>
+<li class="page_item page-item-15012"><a href="https://www.expo70-park.jp/cause/expo/gabonaise/">ガボン館</a></li>
+<li class="page_item page-item-14315"><a href="https://www.expo70-park.jp/cause/expo/ghana/">ガーナ館</a></li>
+<li class="page_item page-item-14324"><a href="https://www.expo70-park.jp/cause/expo/cyprus/">キプロス館</a></li>
+<li class="page_item page-item-186"><a href="https://www.expo70-park.jp/cause/expo/cuba/">キューバ館</a></li>
+<li class="page_item page-item-15089"><a href="https://www.expo70-park.jp/cause/expo/christianity/">キリスト教館</a></li>
+<li class="page_item page-item-188"><a href="https://www.expo70-park.jp/cause/expo/greece/">ギリシア館</a></li>
+<li class="page_item page-item-182"><a href="https://www.expo70-park.jp/cause/expo/kuwait/">クウェート館</a></li>
+<li class="page_item page-item-14647"><a href="https://www.expo70-park.jp/cause/expo/kubota/">クボタ館</a></li>
+<li class="page_item page-item-14867"><a href="https://www.expo70-park.jp/cause/expo/quebec/">ケベック州館</a></li>
+<li class="page_item page-item-14719"><a href="https://www.expo70-park.jp/cause/expo/costa-rica/">コスタリカ館</a></li>
+<li class="page_item page-item-15276"><a href="https://www.expo70-park.jp/cause/expo/kodak/">コダック館</a></li>
+<li class="page_item page-item-15097"><a href="https://www.expo70-park.jp/cause/expo/colombia/">コロンビア館</a></li>
+<li class="page_item page-item-14263"><a href="https://www.expo70-park.jp/cause/expo/saudiarabia/">サウジアラビア館</a></li>
+<li class="page_item page-item-14643"><a href="https://www.expo70-park.jp/cause/expo/suntory/">サントリー館</a></li>
+<li class="page_item page-item-14957"><a href="https://www.expo70-park.jp/cause/expo/san-francisco/">サンフランシスコ市館</a></li>
+<li class="page_item page-item-14756"><a href="https://www.expo70-park.jp/cause/expo/sanyo/">サンヨー館</a></li>
+<li class="page_item page-item-162"><a href="https://www.expo70-park.jp/cause/expo/zambia/">ザンビア館</a></li>
+<li class="page_item page-item-14795"><a href="https://www.expo70-park.jp/cause/expo/sierra-leone/">シエラレオネ館</a></li>
+<li class="page_item page-item-190"><a href="https://www.expo70-park.jp/cause/expo/singapore/">シンガポール館</a></li>
+<li class="page_item page-item-170"><a href="https://www.expo70-park.jp/cause/expo/switzerland/">スイス館</a></li>
+<li class="page_item page-item-568"><a href="https://www.expo70-park.jp/cause/expo/scandinavia/">スカンジナビア館</a></li>
+<li class="page_item page-item-14267"><a href="https://www.expo70-park.jp/cause/expo/ceylon/">セイロン館</a></li>
+<li class="page_item page-item-164"><a href="https://www.expo70-park.jp/cause/expo/ussr/">ソ連館</a></li>
+<li class="page_item page-item-180"><a href="https://www.expo70-park.jp/cause/expo/thailand/">タイ館</a></li>
+<li class="page_item page-item-14583"><a href="https://www.expo70-park.jp/cause/expo/takarabeautilion/">タカラ・ビューティリオン</a></li>
+<li class="page_item page-item-14275"><a href="https://www.expo70-park.jp/cause/expo/tanzania/">タンザニア館</a></li>
+<li class="page_item page-item-14265"><a href="https://www.expo70-park.jp/cause/expo/czechoslovakia/">チェコスロバキア館</a></li>
+<li class="page_item page-item-15072"><a href="https://www.expo70-park.jp/cause/expo/chile/">チリ館</a></li>
+<li class="page_item page-item-168"><a href="https://www.expo70-park.jp/cause/expo/germany/">ドイツ館</a></li>
+<li class="page_item page-item-14261"><a href="https://www.expo70-park.jp/cause/expo/dominicana/">ドミニカ館</a></li>
+<li class="page_item page-item-15168"><a href="https://www.expo70-park.jp/cause/expo/nigeria/">ナイジェリア館</a></li>
+<li class="page_item page-item-14861"><a href="https://www.expo70-park.jp/cause/expo/nicaragua/">ニカラグァ館</a></li>
+<li class="page_item page-item-172"><a href="https://www.expo70-park.jp/cause/expo/new-zealand/">ニュージーランド館</a></li>
+<li class="page_item page-item-15134"><a href="https://www.expo70-park.jp/cause/expo/nepal/">ネパール館</a></li>
+<li class="page_item page-item-14923"><a href="https://www.expo70-park.jp/cause/expo/hawaii/">ハワイ州館</a></li>
+<li class="page_item page-item-15021"><a href="https://www.expo70-park.jp/cause/expo/panama/">パナマ館</a></li>
+<li class="page_item page-item-603"><a href="https://www.expo70-park.jp/cause/expo/burma/">ビルマ館</a></li>
+<li class="page_item page-item-198"><a href="https://www.expo70-park.jp/cause/expo/philippines/">フィリピン館</a></li>
+<li class="page_item page-item-14762"><a href="https://www.expo70-park.jp/cause/expo/fujipan_robot/">フジパン・ロボット館</a></li>
+<li class="page_item page-item-176"><a href="https://www.expo70-park.jp/cause/expo/france/">フランス館</a></li>
+<li class="page_item page-item-15163"><a href="https://www.expo70-park.jp/cause/expo/brazil/">ブラジル館</a></li>
+<li class="page_item page-item-14871"><a href="https://www.expo70-park.jp/cause/expo/british-columbia/">ブリティッシュ・コロンビア州館</a></li>
+<li class="page_item page-item-178"><a href="https://www.expo70-park.jp/cause/expo/bulgaria/">ブルガリア館</a></li>
+<li class="page_item page-item-15093"><a href="https://www.expo70-park.jp/cause/expo/viet-nam/">ベトナム共和国館</a></li>
+<li class="page_item page-item-15202"><a href="https://www.expo70-park.jp/cause/expo/venezuela/">ベネズエラ館</a></li>
+<li class="page_item page-item-166"><a href="https://www.expo70-park.jp/cause/expo/belgium/">ベルギー館</a></li>
+<li class="page_item page-item-14661"><a href="https://www.expo70-park.jp/cause/expo/pepsi/">ペプシ館</a></li>
+<li class="page_item page-item-15143"><a href="https://www.expo70-park.jp/cause/expo/peru/">ペルー館</a></li>
+<li class="page_item page-item-196"><a href="https://www.expo70-park.jp/cause/expo/portugal/">ポルトガル館</a></li>
+<li class="page_item page-item-14340"><a href="https://www.expo70-park.jp/cause/expo/madagascar/">マダガスカル館</a></li>
+<li class="page_item page-item-15195"><a href="https://www.expo70-park.jp/cause/expo/malta/">マルタ館</a></li>
+<li class="page_item page-item-15177"><a href="https://www.expo70-park.jp/cause/expo/malaysia/">マレーシア館</a></li>
+<li class="page_item page-item-14712"><a href="https://www.expo70-park.jp/cause/expo/munich/">ミュンヘン市館</a></li>
+<li class="page_item page-item-559"><a href="https://www.expo70-park.jp/cause/expo/mexico/">メキシコ館</a></li>
+<li class="page_item page-item-15213"><a href="https://www.expo70-park.jp/cause/expo/monaco/">モナコ館</a></li>
+<li class="page_item page-item-14767"><a href="https://www.expo70-park.jp/cause/expo/the_mormon/">モルモン・パビリオン</a></li>
+<li class="page_item page-item-14790"><a href="https://www.expo70-park.jp/cause/expo/mauritius/">モーリシャス館</a></li>
+<li class="page_item page-item-594"><a href="https://www.expo70-park.jp/cause/expo/laos/">ラオス館</a></li>
+<li class="page_item page-item-14745"><a href="https://www.expo70-park.jp/cause/expo/ricoh/">リコー館</a></li>
+<li class="page_item page-item-14961"><a href="https://www.expo70-park.jp/cause/expo/los-angeles/">ロスアンゼルス市館</a></li>
+<li class="page_item page-item-14536"><a href="https://www.expo70-park.jp/cause/expo/wacoal_riccar_sewing_machine/">ワコール・リッカーミシン館</a></li>
+<li class="page_item page-item-14919"><a href="https://www.expo70-park.jp/cause/expo/washington-state/">ワシントン州館</a></li>
+<li class="page_item page-item-14652"><a href="https://www.expo70-park.jp/cause/expo/mitsuigroup/">三井グループ館</a></li>
+<li class="page_item page-item-14741"><a href="https://www.expo70-park.jp/cause/expo/mitsubishi/">三菱未来館</a></li>
+<li class="page_item page-item-15153"><a href="https://www.expo70-park.jp/cause/expo/centrafricaine/">中央アフリカ館</a></li>
+<li class="page_item page-item-194"><a href="https://www.expo70-park.jp/cause/expo/republic-of-china/">中華民国館</a></li>
+<li class="page_item page-item-14579"><a href="https://www.expo70-park.jp/cause/expo/sumitomo/">住友童話館</a></li>
+<li class="page_item page-item-15354"><a href="https://www.expo70-park.jp/cause/expo/chemical/">化学工業館</a></li>
+<li class="page_item page-item-14692"><a href="https://www.expo70-park.jp/cause/expo/furukawa/">古河パビリオン</a></li>
+<li class="page_item page-item-14824"><a href="https://www.expo70-park.jp/cause/expo/united-nations/">国連館</a></li>
+<li class="page_item page-item-15029"><a href="https://www.expo70-park.jp/cause/expo/local_governments/">地方自治体館</a></li>
+<li class="page_item page-item-192"><a href="https://www.expo70-park.jp/cause/expo/rok/">大韓民国館</a></li>
+<li class="page_item page-item-990"><a href="https://www.expo70-park.jp/cause/expo/tower-of-sun/">太陽の塔</a></li>
+<li class="page_item page-item-14594"><a href="https://www.expo70-park.jp/cause/expo/fuji_group/">富士グループ・パビリオン</a></li>
+<li class="page_item page-item-14688"><a href="https://www.expo70-park.jp/cause/expo/japanfolkcrafts/">日本民芸館</a></li>
+<li class="page_item page-item-20"><a href="https://www.expo70-park.jp/cause/expo/japan/">日本館</a></li>
+<li class="page_item page-item-14696"><a href="https://www.expo70-park.jp/cause/expo/hitachigroup/">日立グループ館</a></li>
+<li class="page_item page-item-14656"><a href="https://www.expo70-park.jp/cause/expo/toshibaihi/">東芝ＩＨＩ館</a></li>
+<li class="page_item page-item-15355"><a href="https://www.expo70-park.jp/cause/expo/matsushita/">松下館</a></li>
+<li class="page_item page-item-14772"><a href="https://www.expo70-park.jp/cause/expo/seikatsusangyo/">生活産業館</a></li>
+<li class="page_item page-item-14750"><a href="https://www.expo70-park.jp/cause/expo/automobile/">自動車館</a></li>
+<li class="page_item page-item-184"><a href="https://www.expo70-park.jp/cause/expo/uk/">英国館</a></li>
+<li class="page_item page-item-15282"><a href="https://www.expo70-park.jp/cause/expo/rainbowtower/">虹の塔</a></li>
+<li class="page_item page-item-14269"><a href="https://www.expo70-park.jp/cause/expo/cotedivoire/">象牙海岸館</a></li>
+<li class="page_item page-item-14588"><a href="https://www.expo70-park.jp/cause/expo/steel/">鉄鋼館</a></li>
+<li class="page_item page-item-14571"><a href="https://www.expo70-park.jp/cause/expo/electric_power/">電力館</a></li>
+<li class="page_item page-item-15286"><a href="https://www.expo70-park.jp/cause/expo/telecommunication/">電気通信館</a></li>
+<li class="page_item page-item-14706"><a href="https://www.expo70-park.jp/cause/expo/hong-kong/">香港館</a></li>
+<li class="page_item page-item-22"><a href="https://www.expo70-park.jp/cause/expo/japanese-garden/">日本庭園</a></li>
+</ul></dd>
+			</dl>
+					</div>
+		<div class="set4">
+						<dl class="module__footer-nav-list--other">
+				<dt><a href="https://www.expo70-park.jp/other/"><span>その他</span><img src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/img/arrow-box-white.png" alt=""></a></dt>
+				<dd><ul>
+					<li class="page_item page-item-30064"><a href="https://www.expo70-park.jp/other/foreign-language/">Foreign Language</a></li>
+<li class="page_item page-item-32803"><a href="https://www.expo70-park.jp/other/inquiry-2/">お問い合わせ</a></li>
+<li class="page_item page-item-278"><a href="https://www.expo70-park.jp/other/contents/">コンテンツの無断使用禁止等について</a></li>
+<li class="page_item page-item-3087"><a href="https://www.expo70-park.jp/other/site-policy/">サイトポリシー</a></li>
+<li class="page_item page-item-286"><a href="https://www.expo70-park.jp/other/sitemap/">サイトマップ</a></li>
+<li class="page_item page-item-284"><a href="https://www.expo70-park.jp/other/link/">リンク</a></li>
+<li class="page_item page-item-31647"><a href="https://www.expo70-park.jp/other/%e3%82%a6%e3%82%a7%e3%83%96%e3%82%a2%e3%82%af%e3%82%bb%e3%82%b7%e3%83%93%e3%83%aa%e3%83%86%e3%82%a3%e6%96%b9%e9%87%9d/">万博記念公園ウェブアクセシビリティ方針</a></li>
+<li class="page_item page-item-2814"><a href="https://www.expo70-park.jp/other/fund/">万博記念基金</a></li>
+<li class="page_item page-item-282"><a href="https://www.expo70-park.jp/other/privacy-policy/">個人情報保護方針</a></li>
+<li class="page_item page-item-18428"><a href="https://www.expo70-park.jp/other/expo70kikin/">日本万国博覧会記念公園基金への寄附金の募集について</a></li>
+					<li class="page_item"><a href="http://www.pref.osaka.lg.jp/bampaku/nyuusatsu/index.html" target="_blank">入札関連情報</a></li>
+				</ul></dd>
+			</dl>
+								</div>
+
+				<div class="module__theme-switcher"></div>
+			</div>
+	<div class="module__copyright"><p>Copyright (C) 2014 大阪府日本万国博覧会記念公園事務所 All Rights Reserved.</p></div>
+</footer>
+</div>
+
+<nav class="module__pop-menu">
+	<ul>
+		<li class="nature"><a href="https://www.expo70-park.jp/cause/nature/">自然</a></li>
+		<li class="sport"><a href="https://www.expo70-park.jp/sports/">スポーツ</a></li>
+		<li class="event"><a href="https://www.expo70-park.jp/events/">イベント</a></li>
+		<li class="facility"><a href="https://www.expo70-park.jp/facility/">施設</a></li>
+		<li class="guide"><a href="https://www.expo70-park.jp/guide/">ご利用案内</a></li>
+		<li class="expo"><a href="https://www.expo70-park.jp/cause/expo/">大阪万博</a></li>
+		<li class="other"><a href="https://www.expo70-park.jp/other/">その他</a></li>
+	</ul>
+</nav>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/sys/wp-*.php","/sys/wp-admin/*","/sys/wp-content/uploads/*","/sys/wp-content/*","/sys/wp-content/plugins/*","/sys/wp-content/themes/pc/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="common-script-js" src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/js/common.js?ver=7.1.4"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.expo70-park.jp/sys/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.expo70-park.jp/sys/wp-includes/js/wp-emoji-loader.min.js
+</script>
+</body>
+</html>
+<!-- Quick Cache file path: /cache/quick-cache/cache/https/www-expo70-park-jp/event/77753.html -->
+<!-- Quick Cache file built for (https://www.expo70-park.jp/event/77753/) in 0.11688 seconds, on: Nov 18th, 2026 @ 4:41 am UTC. -->
+<!-- This Quick Cache file will auto-expire (and be rebuilt) on: Nov 18th, 2026 @ 4:51 am UTC (based on your configured expiration time). -->
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- Quick Cache fully functional :-) Cache file served for (https://www.expo70-park.jp/event/77753/) in 0.00030 seconds, on: Nov 18th, 2026 @ 4:43 am UTC. -->

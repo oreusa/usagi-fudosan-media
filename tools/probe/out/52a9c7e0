@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description"
+		content="特別展「源氏物語 王朝のかがやき」の公式サイトです。2026年10月6日（火）～11月29日（日）まで、京都国立博物館で開催。その後、2027年1月19日（火）～3月14日（日）で、東京国立博物館に巡回予定。"
+		lang="ja">
+	<meta name="keywords" content="源氏物語,王朝のかがやき,紫式部,光源氏,王朝物語,彰子,東京国立博物館,京都国立博物館,上野,茶屋町" lang="ja">
+	<meta name="robots" content="NOODP, NOARCHIVE, INDEX, FOLLOW">
+	<meta name="author" content="© NHK, NHK Promotions Inc., Nikkei Inc. All rights reserved.">
+	<meta name="copyright" content="NHK, NHK Promotions Inc., Nikkei Inc. All rights reserved.">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="">
+
+	<!-- OGP: -->
+	<meta property="og:title" content="特別展「源氏物語 王朝のかがやき」">
+	<meta property="og:description"
+		content="特別展「源氏物語 王朝のかがやき」の公式サイトです。2026年10月6日（火）～11月29日（日）まで、京都国立博物館で開催。その後、2027年1月19日（火）～3月14日（日）で、東京国立博物館に巡回予定。">
+	<meta property="og:image" content="https://genjiten.jp/asset/images/common/ogimage.jpg">
+	<meta property="og:url" content="https://genjiten.jp/">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="特別展「源氏物語 王朝のかがやき」公式サイト">
+	<title>特別展「源氏物語 王朝のかがやき」</title>
+
+	<link rel="canonical" href="https://genjiten.jp">
+	<link rel="icon" href="https://genjiten.jp/asset/images/common/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="https://genjiten.jp/asset/images/common/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152"
+		href="https://genjiten.jp/asset/images/common/apple-touch-icon-precomposed.png">
+
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700;800&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700&display=swap"
+		rel="stylesheet">
+
+	<!-- css -->
+	<link rel="stylesheet" media="all" href="./asset/css/common.css">
+
+	<!-- common -->
+	<script type="text/javascript" src="./asset/js/common.js"></script>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ER8C3284E4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-ER8C3284E4');
+	</script>
+
+</head>
+
+<body id="pageHome">
+
+	<div id="page_top"></div>
+<header>
+  <div id="headerwrap">
+    <div id="toplogo"><a href="./"><img width="60" height="72" src="./asset/images/common/logo.png"></a></div>
+    <nav id="nav">
+      <ul id="menunav">
+        <li class="has-submenu">
+          <a id="homelink" class="navlink" href="./">HOME</a>
+
+          <ul class="sub-menu">
+            <li><a class="navlink" href="./index.html#highlights">見どころ</a></li>
+            <li><a class="navlink" href="./index.html#outline">開催概要</a></li>
+            <li><a class="navlink" href="./index.html#guide">音声ガイド</a></li>
+            <li><a class="navlink" href="./index.html#supporter">スペシャル<br class="pc">サポーター</a></li>
+          </ul>
+        </li>
+
+        <li><a class="navlink" href="./introduction.html">展示作品紹介</a>
+        </li>
+
+        <li><a class="navlink" href="./ticket.html">チケット</a>
+        </li>
+
+        <li><a class="navlink" href="./goods.html">図録／グッズ</a>
+        </li>
+
+        <li><a class="navlink" href="./special.html">番組／イベント／<br class="pc">スペシャル</a>
+        </li>
+
+        <li><a href="https://www.kyohaku.go.jp/eng/exhibitions/special/2026_genji/" target="_blank">ENGLISH<br class="pc"> (Kyoto Venue)</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="snsicon">
+      <a href="https://x.com/genji_kagayaki" target="_blank"><img width="30" height="30"
+          src="./asset/images/common/x_wh.png"></a>
+      <a href="https://www.instagram.com/genji_kagayaki/" target="_blank"> <img width="30" height="30"
+          src="./asset/images/common/insta_wh.png"></a>
+    </div>
+    <button id="menuicon"><span></span><span></span><span></span><button>
+  </div>
+</header>
+	<main id="main">
+		<!-- メインビジュアル -->
+		<div id="mv" class="mainVisual">
+			<div class="mv_main">
+				<picture>
+					<!-- スマホ -->
+					<source media="(max-width: 768px)" srcset="./asset/images/home/main_sp.webp">
+					<!-- PC -->
+					<img src="./asset/images/home/main_pc.webp" alt="東京都美術館開館100周年記念　大英博物館日本美術コレクション　百花繚乱〜海を越えた江戸絵画">
+				</picture>
+			</div>
+		</div>
+		<section class="topbtn">
+			<div class="inner">
+				<div class="buttonwrap">
+					<a href="#highlights" class="button jump">見どころ</a>
+					<a href="#outline" class="button jump">開催概要</a>
+					<a href="#guide" class="button jump">音声ガイド</a>
+					<a href="#supporter" class="button jump">スペシャルサポーター</a>
+				</div>
+			</div>
+		</section>
+		<section id="news">
+			<div class="inner">
+				<h2>NEWS</h2>
+				<ul>
+
+					<li class="newsitem"><span>2026.11.10</span>
+						<div><a class="underline" href="./asset/images/home/news_kyoto.pdf" target="_blank">【重要】京都会場　ARTPASSをご利用のお客様へ（PDF）</a></div>
+					</li>
+					<li class="newsitem"><span>2026.11.10</span>
+						<div><a class="underline" href="./asset/images/home/news_tokyo.pdf" target="_blank">【重要】東京会場　アソビュー！・ARTPASSをご利用のお客様へ（PDF）</a></div>
+					</li>
+					<li class="newsitem"><span>2026.11.04</span>
+						<div>画家・大和和紀さんから<a class="underline" href="./special.html#message">応援メッセージ</a>が届きました！</div>
+					</li>
+					<li class="newsitem"><span>2026.10.20</span>
+						<div>東京会場の<a class="underline" href="./ticket.html?id=id2&tc=tc2">チケット情報</a>を更新しました。</div>
+					</li>
+					<li class="newsitem"><span>2026.10.09</span>
+						<div>東京会場の<a class="underline" href="./introduction.html?id=id2">「展示作品紹介」</a>を更新しました。</div>
+					</li>
+					<li class="newsitem"><span>2026.10.09</span>
+						<div>お詫び<br>「キーアニマル」トートバッグセット券（京都会場）の販売金額に誤りがございました。ご購入のお客様には心よりお詫び申し上げます。詳しくは<a class="underline" href="./ticket.html#apology">こちら</a>をご覧ください。</div>
+					</li>
+					<li class="newsitem"><span>2026.10.06</span>
+						<div><a class="underline" href="#message">儒烏風亭らでんさん京都会場開幕のお祝いメッセージ</a>を公開しました。</div>
+					</li>
+					<li class="newsitem"><span>2026.10.05</span>
+						<div><a class="underline" href="./goods.html">図録・グッズページ</a>公開しました。</div>
+					</li>
+					<li class="newsitem"><span>2026.09.30</span>
+						<div><a class="underline" href="./goods.html#raden">儒烏風亭らでんさんコラボグッズ</a>を掲載しました。</div>
+					</li>
+					<li class="newsitem"><span>2026.09.17</span>
+						<div><a class="underline" href="./ticket.html?tc=tc2">チケットページ（東京会場）</a>を更新しました。</div>
+					</li>
+					<li class="newsitem"><span>2026.09.16</span>
+						<div><a class="underline" href="./asset/images/home/list_kyoto.pdf" target="_blank">出品作品一覧（京都）</a>を掲載しました。</div>
+					</li>
+					<li class="newsitem"><span>2026.09.04</span>
+						<div><a class="underline" href="./special.html#interview">音声ガイドナビゲーター塩野瑛久さんのインタビュー</a>を掲載しました。</div>
+					</li>
+					<li class="newsitem"><span>2026.08.27</span>
+						<div><a class="underline" href="./asset/images/home/list.pdf" target="_blank">出品作品一覧（京都会場・東京会場）</a>を掲載しました。</div>
+					</li>
+					<li class="newsitem"><span>2026.08.03</span>
+						<div><a class="underline" href="./ticket.html">チケット情報（京都会場）</a>更新しました。</div>
+					</li>
+					<li class="newsitem"><span>2026.07.23</span>
+						<div>京都会場の「<a class="underline" href="./introduction.html?id=id1">展示作品</a>」情報を更新しました。</div>
+					</li>
+					<li class="newsitem"><span>2026.07.15</span>
+						<div><a class="underline" href="./introduction.html?id=id2">東京会場の作品についてお知らせ</a></div>
+					</li>
+					<li class="newsitem"><span>2026.07.06</span>
+						<div>京都会場の情報を更新しました。</div>
+					</li>
+					<li class="newsitem"><span>2026.06.23</span>
+						<div>HPをリニューアルいたしました。</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="button">
+			<div class="inner">
+
+				<div class="buttonwrap">
+					<a class="button red" href="https://x.com/KNM_updates" target="_blank">
+					混雑状況　京都会場
+					<span class="small">@KNM_updates／10月6日9:00から</span>
+					</a>
+					<a class="button purple" href="./asset/images/home/flyer.pdf" target="_blank">京都会場チラシPDF（2026/8/17版）</a>
+				</div>
+
+				<div class="buttonwrap" id="list">
+					<a class="button lightpurple" href="./asset/images/home/list_kyoto.pdf" target="_blank">
+						<span class="big" style="color :#000;">出品作品一覧　京都</span>
+						<span class="small" style="color :#000;">ダウンロード／PDF／400KB／2026年9月16日版</span>
+					</a>
+					<a class="button green" href="./asset/images/home/list.pdf" target="_blank">
+						<span class="big">出品作品一覧　京都・東京</span>
+						<span class="small">ダウンロード／PDF／400KB／2026年10月6日版</span>
+					</a>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- 開催趣旨 -->
+		<section id="purpose">
+			<div class="inner">
+				<div class="contentbox kazariwaku">
+					<span class="corner top-left"></span>
+					<span class="corner top-right"></span>
+					<span class="corner bottom-left"></span>
+					<span class="corner bottom-right"></span>
+
+					<h2>史上最大級の源氏物語展</h2>
+					<p>
+						平安時代に紫式部によって著された『源氏物語』は、宮廷を舞台として貴公子・光源氏や個性豊かな女性たちの恋愛模様、人生模様を織りなした、日本文学史を代表する王朝物語です。<br>
+						後の時代に読み継がれる中で、文字の世界を超え、さまざまな美術作品を生み出しました。<br>
+						本展は、『源氏物語』の場面やモチーフを表した麗しい絵画、工芸品を一堂に集め、本文を綴った写本やその注釈類、さらに芸能や大衆文化への広がりも紹介することによって、わが国の文化に豊かなかがやきを与え続けたこの名作の魅力に迫ります。<br>
+						千年以上われわれを魅了し、いまや世界に広がる『源氏物語』。<br>
+						京都・東京の両国立博物館が総力を挙げてその華やかな美と魅力をお届けする、かつてない大展覧会です。
+					</p>
+
+					<h2>源氏物語とは？</h2>
+					<div class="flex L3R1">
+						<div class="left">
+							<p>
+								貴族文化が花開いた平安時代中期に、藤原道長の娘・<ruby>彰子<rt>しょうし</rt></ruby>に仕えた女房・紫式部によって書かれた長編物語です。<br>
+								主人公の光源氏の苦悩多き一生が、女性たちとの恋愛や、宮廷社会の栄枯盛衰の中で、深く繊細な心理そして美意識とともに格調高く綴られます。<br>
+								全五十四帖のうち最後の十帖は、不義の子・薫を主人公にした光源氏死後の物語で、「宇治十帖」と呼ばれます。<br>
+								「世界最古の長編小説」ともいわれ、古典として読み継がれる名作です。
+							</p>
+						</div>
+						<div class="right">
+							<img src="./asset/images/home/top.png" alt="紫式部像 土佐光起筆　江戸時代・17世紀　滋賀・石山寺蔵　［京都：前期展示］">
+							<div class="captionRow">
+								<div class="caption_text">
+									<p class="imgtitle">紫式部像</p>
+									<p class="small">土佐光起筆　江戸時代・17世紀　滋賀・石山寺蔵　［京都：前期展示］</p>
+									<div class="badgeWrap">
+										<span class="badge kyoto">京都</span>
+										<span class="badge tokyo">東京</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="highlights">
+			<div class="inner">
+				<h2>見どころ</h2>
+
+				<!-- 1 -->
+				<div class="highlightheader">
+					<div class="highlighttitle">
+						見どころ<span class="num">1</span>
+					</div>
+					<p>京博では約50年ぶり、東博では初の「源氏物語展」<br>王朝文化の象徴『源氏物語』にかかわる美術の名品が大集結！</p>
+				</div>
+				<div class="textBg">
+					<p>戦国時代の新しい源氏絵</p>
+				</div>
+				<div class="flex col nomargin">
+					<img src="./asset/images/home/m01.png" alt="車争図屛風(右隻)　土佐光茂筆 室町時代・永禄3年(1560) 京都・仁和寺蔵　［京都：前期展示］">
+					<div class="captionRow">
+						<div class="caption_text">
+							<p class="imgtitle"><span class="textbig">車争図屛風(右隻)</span></p>
+							<p class="small">土佐光茂筆　室町時代・永禄3年(1560)　京都・仁和寺蔵　［京都：前期展示］</p>
+						</div>
+						<div class="badgeWrap">
+							<span class="badge kyoto">京都</span>
+							<span class="badge tokyo">東京</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- 2 -->
+				<div class="highlightheader">
+					<div class="highlighttitle">
+						見どころ<span class="num">2</span>
+					</div>
+					<p>現存最古の源氏絵・国宝「源氏物語絵巻」が場面を替えて全期間出品！</p>
+				</div>
+				<div class="textBg">
+					<p>宿命の子・薫を抱く光源氏</p>
+				</div>
+				<div class="flex col nomargin">
+					<img src="./asset/images/home/m02.png"
+						alt="国宝　源氏物語絵巻　柏木三　平安時代・12世紀 愛知・徳川美術館蔵 　©徳川美術館イメージアーカイブ/DNPartcom">
+					<div class="captionRow">
+						<div class="caption_text">
+							<p class="imgtitle"><span class="textbig"><span class="red">国宝</span>　源氏物語絵巻　柏木三</span></p>
+							<p class="small">平安時代・12世紀　愛知・徳川美術館蔵 　©徳川美術館イメージアーカイブ/DNPartcom</p>
+						</div>
+						<div class="badgeWrap">
+							<span class="badge tokyo">東京</span>
+						</div>
+					</div>
+				</div>
+				<div class="textBg">
+					<p>垣間見る薫、月を見つめる姫君</p>
+				</div>
+				<div class="flex col nomargin">
+					<img src="./asset/images/home/m08.png"
+						alt="国宝　源氏物語絵巻　橋姫　平安時代・12世紀　愛知・徳川美術館蔵　［京都：11月3日～15日展示］　©徳川美術館イメージアーカイブ/DNPartcom">
+					<div class="captionRow">
+						<div class="caption_text">
+							<p class="imgtitle"><span class="textbig"><span class="red">国宝</span>　源氏物語絵巻　橋姫</span></p>
+							<p class="small">平安時代・12世紀　愛知・徳川美術館蔵　［京都：11月3日～15日展示］　©徳川美術館イメージアーカイブ/DNPartcom</p>
+						</div>
+
+						<div class="badgeWrap">
+							<span class="badge kyoto">京都</span>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 3 -->
+				<div class="highlightheader">
+					<div class="highlighttitle">
+						見どころ<span class="num">3</span>
+					</div>
+					<p>海外からの里帰り出品も!</p>
+				</div>
+				<div class="textBg">
+					<p>54帖全場面揃う最古の源氏絵</p>
+				</div>
+				<div class="flex L1R1 nomargintop">
+					<div class="left">
+						<img src="./asset/images/home/m04.png"
+							alt="源氏物語画帖 第51帖「浮舟」　土佐光信筆 室町時代・永正6年(1509)　アメリカ・ハーバード美術館/アーサー・M・サックラー美術館蔵　［京都：通期展示］　Bequest of the Hofer Collection of the Arts of Asia, 1985.352.51.A -. B">
+					</div>
+					<div class="right">
+						<div class="captionRow">
+							<div class="caption_text">
+								<p class="imgtitle"><span class="textbig">源氏物語画帖 第51帖「浮舟」</span></p>
+								<p class="small">土佐光信筆　室町時代・永正7年(1510)<br>
+									アメリカ・ハーバード美術館／アーサー・M・サックラー美術館蔵<br>
+									［京都：通期展示］<br>
+									Bequest of the Hofer Collection of the Arts of Asia, 1985.352.51.A -.B</p>
+							</div>
+						</div>
+						<div class="badgeWrap">
+							<span class="badge kyoto">京都</span>
+							<span class="badge tokyo">東京</span>
+						</div>
+					</div>
+				</div>
+
+
+
+				<!-- 4 -->
+				<div class="highlightheader">
+					<div class="highlighttitle">
+						見どころ<span class="num">4</span>
+					</div>
+					<p>近年注目の幻の源氏物語絵巻も多数出品！</p>
+				</div>
+				<div class="textBg">
+					<p>史上最大規模の源氏絵</p>
+				</div>
+				<div class="flex L1R1 nomargintop">
+					<div class="left">
+						<img src="./asset/images/home/m05.png"
+							alt="源氏物語絵巻（盛安本） 葵（部分） 江戸時代・17世紀　京都国立博物館蔵　［京都：通期展示、巻替あり］">
+					</div>
+					<div class="right">
+						<div class="captionRow">
+							<div class="caption_text">
+								<p class="imgtitle"><span class="textbig">源氏物語絵巻（盛安本） 葵（部分）</span></p>
+								<p class="small">江戸時代・17世紀　京都国立博物館蔵　［京都：通期展示、巻替あり］</p>
+							</div>
+							<div class="badgeWrap">
+								<span class="badge kyoto">京都</span>
+								<span class="badge tokyo">東京</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- 5 -->
+				<div class="highlightheader">
+					<div class="highlighttitle">
+						見どころ<span class="num">5</span>
+					</div>
+					<p>京都会場は〈能〉、東京会場は〈浮世絵〉を中心とした展示も!</p>
+				</div>
+				<div class="flex L2R1 nomargin">
+					<div class="left flex L1R1 yoko nomargin">
+						<div class="left flex col nomargin">
+							<div class="textBg" style="width: 100%;">
+								<p style="margin-bottom: 0;">目元の金彩は情念のしるし</p>
+							</div>
+							<img src="./asset/images/home/m06.png" class="change"
+								alt="重要文化財　能面 泥眼　「天下一河内」焼印　江戸時代・17世紀 東京国立博物館蔵　京都：通期展示">
+							<div class="captionRow">
+								<div class="caption_text">
+									<p class="imgtitle"><span class="textbig"><span class="red">重要文化財</span><br>能面
+											泥眼 金春家伝来</span></p>
+									<p class="small">「天下一河内」焼印<br>江戸時代・17世紀<br>東京国立博物館蔵<br>［京都：通期展示］　※京都会場のみ展示</p>
+								</div>
+
+								<div class="badgeWrap">
+									<span class="badge kyoto">京都</span>
+								</div>
+							</div>
+						</div>
+						<div class="right flex col nomargin">
+							<div class="textBg" style="width: 100%;">
+								<p style="margin-bottom: 0;">浮世絵美人画の人気画題</p>
+							</div>
+							<img src="./asset/images/home/m07.png" alt="美人愛猫図　礒田湖龍斎筆　江戸時代・天明年間(1781～89)頃 東京国立博物館蔵">
+							<div class="captionRow">
+								<div class="caption_text">
+									<p class="imgtitle"><span class="textbig">美人愛猫図</span></p>
+									<p class="small">礒田湖龍斎筆　江戸時代・天明年間(1781～89)頃　東京国立博物館蔵</p>
+								</div>
+
+								<div class="badgeWrap">
+									<span class="badge tokyo">東京</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="right">
+					</div>
+				</div>
+				<!-- <div class="buttonwrap">
+					<a class="button purple suzume" href="./introduction.html">京都展の詳しい作品はこちら</a>
+				</div> -->
+			</div>
+		</section>
+
+		<!-- 開催概要 -->
+		<section id="outline">
+			<div class="inner">
+				<h2>開催概要</h2>
+				<div data-tab-group="ol">
+					<div class="tabbuttons" id="ol_contents">
+						<a id="tab1_btn" data-tab="ol1" class="tabbutton tabbtn purple current" tabindex="0">京都会場</a>
+						<a id="tab2_btn" data-tab="ol2" class="tabbutton tabbtn" tabindex="0">東京会場</a>
+					</div>
+
+					<!-- 京都会場 -->
+					<div id="tabol1" class="tabcont">
+						<div class="kazariwaku purple">
+							<span class="corner top-left"></span>
+							<span class="corner top-right"></span>
+							<span class="corner bottom-left"></span>
+							<span class="corner bottom-right"></span>
+
+							<div class="overviewBox">
+								<div class="tab_box purple">
+									<div class="in_box">
+
+										<div class="row">
+											<div class="row_ttl">展覧会名</div>
+											<div class="row_cont">特別展「源氏物語　王朝のかがやき」</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">会場</div>
+											<div class="row_cont">
+												<a href="https://www.kyohaku.go.jp/jp/"
+													target="_blank"
+													class="underline">京都国立博物館 平成知新館</a>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">会期</div>
+											<div class="row_cont">
+												2026年10月6日(火)～11月29日(日)<br>
+												主な展示替<br>
+												前期：10月6日（火）～11月1日（日）<br>
+												後期：11月3日（火・祝）～11月29日（日）<br>
+												<p class="attention">※会期中、一部の作品は上記以外にも展示替を行います。</p>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">休館日</div>
+											<div class="row_cont">
+												月曜日、10月13日（火）、11月24日（火）<br>
+												<p class="attention">※ただし、2026年10月12日（月・祝）、11月23日（月・祝）は開館</p>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">開館時間</div>
+											<div class="row_cont">
+												9：00～17：30（入館は17：00まで）<br>
+												金曜日は、9：00～20：00（入館は19：30まで）
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">地図・アクセス</div>
+											<div class="row_cont">
+												<img src="./asset/images/home/map_k.png" alt="京都国立博物館 平成知新館">
+												◎JR・近鉄＝京都駅下車、駅前市バスD2のりばから86・206・208号系統にて博物館三十三間堂前下車、徒歩すぐ<br>
+												◎京阪電車=七条駅下車、東へ徒歩7分<br>
+												◎市バス＝博物館三十三間堂下車、徒歩すぐ<br>
+												<p class="attention">※ご来館はなるべく公共交通機関をご利用ください。駐車場は有料となっております。</p>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">住所</div>
+											<div class="row_cont">
+												京都国立博物館<br>
+												〒605-0931 京都府京都市東山区茶屋町527
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">主催</div>
+											<div class="row_cont">
+												<span class="company-name">京都国立博物館、</span>
+												<span class="company-name">日本経済新聞社、</span>
+												<span class="company-name">ＮＨＫ京都放送局、</span>
+												<span class="company-name">ＮＨＫエンタープライズ近畿</span>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">協賛</div>
+											<div class="row_cont">
+												<span class="company-name">岩谷産業、</span>
+												<span class="company-name">大阪商工信用金庫、</span>
+												<span class="company-name">松栄堂、</span>
+												<span class="company-name">ＳＣＲＥＥＮホールディングス、</span>
+												<span class="company-name">ダイキン工業、</span>
+												<span class="company-name">ＮＩＳＳＨＡ、</span>
+												<span class="company-name">三井住友信託銀行、</span>
+												<span class="company-name">三井不動産、</span>
+												<span class="company-name">村田機械、</span>
+												<span class="company-name">桃谷順天館、</span>
+												<span class="company-name">リシュモン ジャパン</span>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">特別協力</div>
+											<div class="row_cont">
+												<span class="company-name">古典の日推進委員会</span>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">協力</div>
+											<div class="row_cont">
+												<span class="company-name">日本航空</span>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">お問い合わせ</div>
+											<div class="row_cont">
+												<a class="underline" href="tel:0755252473">075-525-2473</a>（テレホンサービス）
+											</div>
+										</div>
+
+										<div class="buttonwrap">
+											<a class="button purple"
+												href="./asset/images/home/flyer.pdf"
+												target="_blank">チラシPDF（2026/7/6版）</a>
+										</div>
+
+										<!--
+										<div class="row">
+											<div class="row_ttl">交通</div>
+											<div class="row_cont">
+												JR上野駅公園口・鶯谷駅南口より徒歩10分<br>
+												東京メトロ銀座線・日比谷線上野駅、千代田線根津駅、京成電鉄京成上野駅より徒歩15分
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_cont">
+												<p class="attention">
+													※展示作品、会期、開館時間、休館日、入館方法等については今後の諸事情により変更する場合があります。
+												</p>
+											</div>
+										</div>
+										-->
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 東京会場 -->
+					<div id="tabol2" class="tabcont">
+						<div class="kazariwaku tokyo">
+							<span class="corner top-left"></span>
+							<span class="corner top-right"></span>
+							<span class="corner bottom-left"></span>
+							<span class="corner bottom-right"></span>
+
+							<div class="overviewBox">
+								<div class="tab_box">
+									<div class="in_box">
+
+										<div class="row">
+											<div class="row_ttl">展覧会名</div>
+											<div class="row_cont">特別展「源氏物語　王朝のかがやき」</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">会場</div>
+											<div class="row_cont">
+												<a class="underline"
+													href="https://www.tnm.jp/"
+													target="_blank">東京国立博物館 平成館</a>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">会期</div>
+											<div class="row_cont">
+												2027年1月19日(火)～3月14日(日)<br>
+												<p class="attention">※会期中、一部の作品は展示替を行います。</p>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">休館日</div>
+											<div class="row_cont">
+												月曜日<br>
+												<p class="attention">※ただし、2027年2月22日（月）は開館</p>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">開館時間</div>
+											<div class="row_cont">
+												午前9時30分～午後5時（入館は4時30分まで）<br>
+												<p class="attention">※毎週金・土曜日は午後8時まで</p>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">地図</div>
+											<div class="row_cont">
+												<img src="./asset/images/home/map.png" alt="東京国立博物館 平成館">
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">住所</div>
+											<div class="row_cont">
+												東京国立博物館<br>
+												〒110-8712 東京都台東区上野公園 13-9
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">主催</div>
+											<div class="row_cont">
+												<span class="company-name">東京国立博物館、</span>
+												<span class="company-name">日本経済新聞社、</span>
+												<span class="company-name">ＮＨＫ、</span>
+												<span class="company-name">ＮＨＫプロモーション</span>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">協賛</div>
+											<div class="row_cont">
+												<span class="company-name">ＳＣＲＥＥＮホールディングス、</span>
+												<span class="company-name">ダイキン工業、</span>
+												<span class="company-name">ＮＩＳＳＨＡ、</span>
+												<span class="company-name">三井住友信託銀行、</span>
+												<span class="company-name">三井不動産</span>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">協力</div>
+											<div class="row_cont">
+												<span class="company-name">日本航空</span>
+											</div>
+										</div>
+
+										<div class="row">
+											<div class="row_ttl">お問い合わせ</div>
+											<div class="row_cont">
+												<a class="underline" href="tel:05055418600">050-5541-8600</a>（ハローダイヤル）
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<ul class="circle">
+						<li>展示作品、会期、展示期間等については、今後諸事情により変更する場合があります。</li>
+						<li>京都会場のみ、東京会場のみで出品される作品があります。また、会期中一部作品の展示替、場面替があります。</li>
+					</ul>
+
+				</div>
+			</div>
+		</section>
+
+		<!-- 音声ガイドナビゲーター/スペシャルサポーター -->
+		<section id="guide">
+			<div class="inner">
+				<div class="contentbox kazariwaku">
+					<span class="corner top-left"></span>
+					<span class="corner top-right"></span>
+					<span class="corner bottom-left"></span>
+					<span class="corner bottom-right"></span>
+
+					<h2>音声ガイド</h2>
+					<h3>ナビゲーター<br>塩野瑛久さん（俳優）</h3>
+					<div class="flex L2R1">
+						<div class="left flex col nomargin">
+							<p>
+								塩野瑛久さんが源氏物語の世界へ誘います！<br>
+								本展の音声ガイドナビゲーターに俳優の塩野瑛久さんが決定しました。2024年の大河ドラマ「光る君へ」（ＮＨＫ）では一条天皇役を演じた塩野さん。今回は音声ガイドナビゲーターとして、『源氏物語』の雅な世界をご案内いたします。
+							</p>
+							<div class="sp">
+								<img src="./asset/images/home/sp01.webp" alt="塩野瑛久さん（俳優）">
+							</div>
+							<div class="singleBox comment">
+								<h3 class="small">塩野瑛久さんコメント
+								</h3>
+								<p>特別展「源氏物語　王朝のかがやき」の音声ガイドナビゲーターを担うことになりました。<br>
+									時代を越えて、これほどまでに多彩な美を生み出し、愛され続けてきた物語にまた携わることができて大変光栄に思います。<br>
+									かつて大河ドラマ「光る君へ」で一条天皇の人生を歩んだ私にとって、『源氏物語』はどこか懐かしく、また特別な縁を感じる作品です。<br>
+									皆さまにより深く、作品の魅力を伝えられたらと思います。<br>
+									<br>
+									悠久の時を超えて集結する“美のかがやき”を、どうぞ心ゆくまでご堪能ください。
+								</p>
+							</div>
+							<div class="singleBox gr">
+								<h3 class="small">プロフィール
+								</h3>
+								<p class="profile">
+									東京都出身。2012年、デビュー。スーパー戦隊シリーズ「獣電戦隊キョウリュウジャー」（13）で立風館ソウジ／キョウリュウグリーン役を演じた。ドラマ「来世ではちゃんとします」で主人公を翻弄するAくんや、映画「HiGH&LOW
+									THE
+									WORST」の小田島有剣役で注目を集め、大河ドラマ「光る君へ」（'24）で演じた一条天皇役が話題に。近年の主な代表作に、ドラマ「魔物(마물)」('25)「嘘が嘘で嘘は嘘だ」「未来のムスコ」（'26）、映画「八犬伝」「チャチャ」('24)「ゴールデンカムイ
+									網走監獄襲撃編」('26)など。そのほか、映画「SAKAMOTO
+									DAYS」(4.29)、「マジカル・シークレット・ツアー」（6.19）、「ラブ≠コメディ」（7.3）、「すべて真夜中の恋人たち」（今秋）の公開が控えるなど、話題作への出演が相次いでいる。現在放送中のTVアニメ「あかね噺」（テレビ朝日系全国24局ネット“IMAnimation”枠）では、阿良川魁生役で声優も務めている。
+								</p>
+							</div>
+						</div>
+						<div class="right pc">
+							<img src="./asset/images/home/sp01.webp" alt="塩野瑛久さん（俳優）">
+						</div>
+					</div>
+					<div class="buttonwrap">
+						<a class="button green" href="./special.html#interview">塩野さんスペシャルインタビューはこちら</a>
+					</div>
+
+					<h3>ナレーション<br>早見沙織さん（声優）</h3>
+					<div class="flex L2R1">
+						<div class="left flex col nomargin">
+							<div class="sp">
+								<img src="./asset/images/home/hs.png" alt="早見沙織さん（声優）">
+							</div>
+							<div class="singleBox comment">
+								<p>
+									特別展「源氏物語　王朝のかがやき」の音声ガイドで、声優・早見沙織さんがナレーションを担当することが決定しました！<br>
+									音声ガイドの収録を終えた早見さんに、収録を通して感じた『源氏物語』の魅力や、気になる作品、展覧会の楽しみ方などを伺いました。<br>
+									<br>
+									<b class="purple">Q1.本日、音声ガイドの収録を終えられた率直なご感想をお聞かせください。<br>
+									また、収録を通じて特に印象に残ったところや、エピソードがあれば教えてください。</b><br>
+									<br>
+									教科書などで一度は触れる機会のある『源氏物語』ですが、今回の収録を通して、改めてその背景や歴史について詳しく知ることができました。<br>
+									現代のように作品を広く瞬時に届けられる手段がなかった時代から、さまざまな形でその時々を生きる人々に愛され、受け継がれながら、今を生きる私たちへとつながってきたことを思うと、感慨深いものがありました。<br>
+									展示をご覧になる皆さまに、作品の知識や背景とあわせて、より一層展示を楽しんでいただけるよう、心を込めて読ませていただきました。<br>
+									<br>
+									<b class="purple">Q2.本展をご覧になる方に、おすすめの楽しみ方や注目してほしいポイントがあれば教えてください。</b><br>
+									<br>
+									ひとつの『源氏物語』が、時代によってさまざまな描かれ方、取り上げられ方をしているところが、とても面白いと感じました。<br>
+									それぞれの時代の人々が『源氏物語』をどのように受け取り、表現してきたのかにも注目しながら、いろいろな角度から物語の世界を楽しんでいただきたいです。<br>
+									<!--br>
+									<b>Q3.本展出品作品のなかで、実際に見てみたい作品や気になる作品があれば教えてください。</b><br>
+									<br>
+									「源氏物語絵巻」です。『源氏物語』を描いた現存最古の絵巻であり、国宝でもあるということで、ぜひ実際に見てみたいです。繊細な色彩や、ひとつひとつの表現を間近で味わってみたいと思いました。<br>
+									また、「源氏物語図扇面貼交屏風」も気になります。物語のさまざまな場面を一望できるという、その華やかで圧巻の世界を見てみたいです。<br>
+									<br>
+									<b>Q4.展覧会の開催を楽しみにされている皆さまへ、本展の魅力とメッセージをお願いします。</b><br>
+									<br>
+									長い時を超えて愛され、受け継がれてきた『源氏物語』の魅力が、ぎゅっと詰まった展覧会です。<br>
+									もともと『源氏物語』がお好きな方はもちろん、「詳しくは知らないけれど、少し気になっている」という方にも、さまざまな作品を通して新しい魅力に出会っていただけると思います。ぜひ音声ガイドとともに、物語の世界をじっくり楽しんでいただけたら嬉しいです。<br-->
+								</p>
+							</div>
+							<div class="singleBox gr">
+								<h3 class="small">プロフィール
+								</h3>
+								<p class="profile">
+									声優。5月29日生まれ。東京都出身。<br>
+									主な代表作は、「SPY×FAMILY（ヨル・フォージャー役）」、「鬼滅の刃（胡蝶しのぶ役）」、<br>
+									「魔法騎士レイアース（エメロード役）」、「魔女と傭兵（シアーシャ役）」、<br>
+									TBSテレビ「ニンゲン観察バラエティ『モニタリング』」ナレーションなど。
+								</p>
+							</div>
+						</div>
+						<div class="right pc">
+							<img src="./asset/images/home/hs.png" alt="早見沙織（声優）">
+						</div>
+					</div>
+					<div class="guidebox">
+						<h3>会場レンタル版</h3>
+						<p>専用ガイド機をレンタルし、会場内でお楽しみください。<br>
+							貸出料金：お一人様 700円（税込）</p>
+						<span class="shikiri"></span>
+						<div class="flex guideflex">
+							<div>
+								<h3>アプリ配信版（iOS/Android） 「聴く美術」</h3>
+								<p class="small">※対応言語：日本語</p>
+								<p>配信期間中はいつでもどこでも何度でも視聴可能。<br>
+									予定配信価格：800円（税込）<br>
+									配信期間：2026年10月6日～2027年3月14日</p>
+							</div>
+														<div class="appicon">
+								<img src="./asset/images/home/kiku_logo.png" class="guideicon" alt="聴く美術">
+							</div>
+						</div>
+						<p>
+							＜利用方法＞
+						<ol class="num_nokakko">
+							<li>まずはアコースティガイド公式アプリ「聴く美術」をダウンロード！</li>
+							<li>アプリ内で音声ガイドコンテンツを選択して決済、ダウンロードしてください。</li>
+						</ol>
+						</p>
+						<a href="https://play.google.com/store/apps/details?id=com.acoustiguidemobile.am_kikubijutu&pcampaignid=web_share"
+							target="_blank">
+							<img src="./asset/images/home/google.png" class="badge" alt="Google Play">
+						</a>
+						<a href="https://apps.apple.com/pe/app/%E8%81%B4%E3%81%8F%E7%BE%8E%E8%A1%93/id1490548306"
+							target="_blank">
+							<img src="./asset/images/home/apple.png" class="badge" alt="App Store">
+						</a>
+						<ul class="attention small">
+							<li>お使いのOSのバージョンによって、ダウンロードできない場合がございます。</li>
+							<li>展覧会会場内でご使用の場合は、ヘッドホンもしくはイヤホンをご利用ください。</li>
+							<li>会場内での通話・カメラ使用はご遠慮ください。</li>
+						</ul>
+						<p>＜音声ガイドサービスに関するお問い合わせ＞<br>
+							(株)アコースティガイド・ジャパン<br>
+							<a class="underline"
+								href="mailto:support@acoustiguide.co.jp">support@acoustiguide.co.jp</a> / TEL：<a
+								class="underline" href="tel:0357714083">03-5771-4083</a> (月～金、10:00～18:00)
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- スペシャルサポーター -->
+		<section id="supporter">
+			<div class="inner">
+				<div class="contentbox kazariwaku">
+					<span class="corner top-left"></span>
+					<span class="corner top-right"></span>
+					<span class="corner bottom-left"></span>
+					<span class="corner bottom-right"></span>
+					<h2>スペシャルサポーター<br><ruby>儒烏風亭<rt>じゅうふうてい</rt></ruby>らでんさん（VTuber）
+					</h2>
+					<p>
+						美術を愛するVTuber儒烏風亭らでんさんが源氏物語の魅力を多角的に発信！<br>
+						本展のスペシャルサポーターに学芸員資格を有し、国内外の美術作品の魅力を配信しているVTuberの儒烏風亭らでんさんが就任しました。音声ガイドのスペシャルトラック、会場限定グッズなど様々なコラボレーションをお届けいたします。
+					</p>
+							<div class="flex L2R1">
+								<div class="left flex col nomargin">
+									<img src="./asset/images/home/jr01.png" alt="儒烏風亭らでんさん（VTuber）">
+								</div>
+								<div class="right">
+									<img src="./asset/images/home/jr02.png" alt="儒烏風亭らでんさん（VTuber）">
+									<p class="small" style="text-align: right;">© COVER</p>
+								</div>
+							</div>
+							<h3 class="center" id="message">京都会場開幕のお祝いメッセージ</h3>
+							<div class="youtube nomarginbottom nomargintop">
+							  <iframe
+							    src="https://www.youtube.com/embed/IN1t0MocunY?si=XAg4rbatMgwFoG5J"
+							    title="YouTube video player"
+							    frameborder="0"
+							    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							    referrerpolicy="strict-origin-when-cross-origin"
+							    allowfullscreen>
+							  </iframe>
+							</div>
+							<div class="buttonwrap">
+								<a class="button green" href="./goods.html?id=gd2">儒烏風亭らでんさんとのコラボグッズが誕生！！</a>
+							</div>
+							
+							<div class="singleBox comment">
+								<h3 class="small">儒烏風亭らでんさんコメント
+								</h3>
+								<p>hololive DEV_IS の ReGLOSS
+									というユニットに所属しています、儒烏風亭らでんと申します。この度、スペシャルサポーターに就任させていただくことになりました！平安時代、紫式部によって書かれた『源氏物語』は今でも多くの方に愛され、アニメや漫画、ドラマなどさまざまなメディアで新たな姿を見せてくれます。時を超えて「描きたい」と思わせる力と魅力を持った源氏物語の世界を、皆さまと一緒に味わうことができること、とても光栄に思います。物語と、それを繋ぐメディアがいつまでも守られ、愛されますように。
+								</p>
+								<p class="small" style="text-align :right;">※所属先は2026年4月23日時点</p>
+							</div>
+							<br>
+							<div class="singleBox gr">
+								<h3 class="small">プロフィール
+								</h3>
+								<p class="profile">VTuberグループ「hololive」内のユニット、ReGLOSSに所属。学芸員資格を保有し、配信では美術や伝統芸能など芸術関連のテーマを扱い、日本文化の魅力を発信している。東京国立博物館が実施した源氏物語図屛風を修復するクラウドファンディングでは自らも寄付をし、文化財の継承に協力した。
+								</p>
+							</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 報道関係お問い合わせ -->
+		<section id="contact">
+			<div class="inner">
+				<div class="contentbox kazariwaku">
+					<span class="corner top-left"></span>
+					<span class="corner top-right"></span>
+					<span class="corner bottom-left"></span>
+					<span class="corner bottom-right"></span>
+					<h2>報道関係お問い合わせ(京都·東京会場共通)</h2>
+					「源氏物語展」広報事務局(ユース·プラニング センター内)<br>
+					E-mail: <a class="underline" href="mailto:genji2026-2027@ypcpr.com">genji2026-2027@ypcpr.com</a><br>
+					住所:〒150-8551 東京都渋谷区桜丘町9-8 KN渋谷3ビル4F
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<div class="snsicon">
+    <a href="https://x.com/genji_kagayaki" target="_blank"><img width="30" height="30"
+            src="./asset/images/common/x.png"></a>
+    <a href="https://www.instagram.com/genji_kagayaki/" target="_blank"> <img width="30" height="30"
+            src="./asset/images/common/insta.png"></a>
+</div>
+
+<div id="go_top">
+    <a href="#page_top"></a>
+</div>
+
+<footer id="footer" class="flex col nomarginbottom">
+    <div class="nikkeilogo center">
+<img src="./asset/images/common/nhk_nikkei_logo.png">
+</div>
+    <a class="yellow" href="./policy.html">サイトポリシー</a>
+    <div class="copyright">
+        <span>© Nikkei Inc., NHK, NHK Promotions Inc. All rights reserved.<br>
+        本サイトの文章、画像、動画等の内容を無断で転載することを禁止いたします。</span>
+    </div>
+</footer>
+</body>
+
+</html>

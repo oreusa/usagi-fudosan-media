@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Imagetoolbar" content="no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="DA0lEOAG4O6EW7FaXESVHZbaZmwzJYr6fF_fgjY0jk8" />
+
+<meta property="og:title" content="ＮＨＫ日曜美術館５０年展" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://nichibiten50.jp" />
+<meta property="og:image" content="https://nichibiten50.jp/image/fb.jpg" />
+<meta property="og:description" content="2026年10月10日（土）～12月20日（日）｜大阪中之島美術館" />
+<meta property="og:site_name" content="ＮＨＫ日曜美術館５０年展" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://nichibiten50.jp/image/x.jpg" />
+
+<meta name="copyright" content="NHK, NHK Promotions Inc.">
+<meta name="description" content="2026年10月10日（土）～12月20日（日）｜大阪中之島美術館">
+<meta name="keyword" content="NHK,日曜美術館,美術,大阪中之島美術館">
+
+<title>開催概要｜ＮＨＫ日曜美術館５０年展</title>
+
+<link rel="shortcut icon" type="image/vnd.microsoft.ico" href="image/nichibiten50_osk.ico">
+<link rel="apple-touch-icon" href="image/apple-touch-icon_osk.png" sizes="180x180">
+<link rel="icon" href="image/android-touch-icon_osk.png" type="image/png" sizes="192x192">
+
+<link rel="stylesheet" href="js/animate.min.css">
+<link rel="stylesheet" href="style.css" media="all">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.smoothScroll.js"></script>
+<script src="js/animatedModal.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/base_overview.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H0HCH9YB62"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-H0HCH9YB62');</script>
+
+</head>
+
+<body onContextmenu="return false">
+
+
+<a id="top"></a>
+<div id="menu"><a id="menu_btn" class="menu" href="#navspmodal"><span>MENU</span></a></div>
+<div id="ticketsbannar"><a href="tickets.html"><img src="image/tickets_bannar.png" alt="チケット購入はこちら"/></a></div>
+
+<div id="content">
+
+<header role="banner">
+<div id="pageheaderbg">
+<div id="pageheader">
+<picture><source media="(max-width:767px)" class="sr_fi2" srcset="image/pageheader_osk_sp.png" alt="ＮＨＫ日曜美術館５０年展"><img class="sr_fi2" src="image/pageheader_osk_pc.png" alt="ＮＨＫ日曜美術館５０年展"/></picture>
+</div>
+</div>
+
+<div id="nav" class="marugothic">
+<ul><li class="navhome"><a class="urw" href="index.html">HOME</a></li><li class="navoverview pl"><a class="urw" href="overview.html">開催概要</a></li><li class="navhighlight"><a class="urw" href="highlight.html">見どころ</a></li><li class="navtickets"><a class="urw" href="tickets.html">チケット</a></li><li class="navnichibi"><a class="urw" href="nichibi.html">日曜美術館･番組情報</a></li><li class="navspecial"><a class="urw" href="special.html">スペシャル</a></li><li class="navgoods"><a class="urw" href="goods.html">図録･グッズ･音声ガイド</a></li><li class="navsocial"><div id="socialnav"><ul><li><a href="https://x.com/nichibiten50" target="_blank"><img src="image/x_logo2.png" alt="X"/></a></li><li><a href="https://www.instagram.com/nichibiten50/" target="_blank"><img src="image/inst_logo.png" alt="Instagram"/></a></li></ul></div></li></ul>
+</div>
+
+</header>
+
+
+<main role="main">
+
+<div id="tabs">
+<section>
+<div class="main pdt3b2 clearfix">
+<h1 class="h1s sr_lfi">開催概要</h1>
+<div class="tabsnav sr_fi">
+<ul class="marugothic" ontouchstart=""><li><a href="#tokyo">東京展</a></li><li><a href="#shizuoka">静岡展</a></li><li><a href="#osaka">大阪展</a></li></ul>
+</div>
+</div>
+</section>
+
+<section id="tokyo">
+<div class="main pdb3 clearfix">
+<h2 class="h2b marugothic"><span class="soldouth2">終了しました</span><br>東京展</h2>
+<table class="ta_outline">
+<tr>
+<td class="td_outlineL td_outlineLU"><p class="fl marugothic">展覧会名</p></td>
+<td class="td_outlineR td_outlineRU"><p class="fxl">ＮＨＫ日曜美術館５０年展</p>
+<p class="fxs">NHK Sunday Museum 50th Anniversary Exhibition</p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">会期</p></td>
+<td class="td_outlineR"><p>2026年3月28日（土）～6月21日（日）</p>
+<ul class="kome fs"><li>＊会期中、一部作品の展示替えがあります。</li></ul></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">会場</p></td>
+<td class="td_outlineR"><p><a href="https://museum.geidai.ac.jp/" target="_blank">東京藝術大学大学美術館</a>（東京・上野）</p>
+<p class="fs">〒110-8714 東京都台東区上野公園12-8</p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">作品リスト</p></td>
+<td class="td_outlineR"><div class="clearfix">
+<div class="mainL mainLsp0"><a class="btn2 btn2w" href="image/list_tokyo.pdf?260612" target="_blank">東京会場作品リスト<br><span class="fxs">ダウンロード／PDF／約335KB</span></a><a class="btn2 btn2w" href="image/list_en_tokyo.pdf?260612" target="_blank">List of works (Tokyo)<br><span class="fxs">Download／PDF／118KB</span></a></div>
+<div class="mainR"><a class="btn2 btn2w" href="image/list_3avenue.pdf" target="_blank">3会場作品リスト（公式図録より）<br><span class="fxs">ダウンロード／PDF／約2.45MB</span></a></div>
+</div></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">休館日</p></td>
+<td class="td_outlineR"><p>月曜日（ただし5月4日は開館）</p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">開館時間</p></td>
+<td class="td_outlineR"><p>10:00～17:00（入館は閉館の30分前まで）</p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">主催</p></td>
+<td class="td_outlineR"><p class="wsnr"><span>東京藝術大学、</span><span>ＮＨＫ、</span><span>ＮＨＫプロモーション</span></p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">企画協力</p></td>
+<td class="td_outlineR"><p class="wsnr"><span>ＮＨＫエデュケーショナル</span></p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">協賛</p></td>
+<td class="td_outlineR"><p class="wsnr"><span>ＮＩＳＳＨＡ</span></p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">助成</p></td>
+<td class="td_outlineR"><p class="wsnr"><span>藝大フレンズ賛助金</span></p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">お問合せ</p></td>
+<td class="td_outlineR"><p>050-5541-8600（ハローダイヤル）</p>
+<ul class="kome fs">
+<li>＊午前9時～午後8時、年中無休</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="td_outlineL td_outlineLD"><p class="fl marugothic">報道関係<br class="brsp">お問合せ</p></td>
+<td class="td_outlineR td_outlineRD"><p>｢ＮＨＫ日曜美術館５０年展」広報事務局（ユース・プラニング センター内）</p>
+<p>担当：芦田・平野・池袋</p>
+<p class="fs">E-mail：<a href="mailto:nichibiten50@ypcpr.com">nichibiten50@ypcpr.com</a></p>
+<p class="fs">TEL：03-6821-8808</p>
+<p class="fs">FAX：03-6821-8869</p>
+<ul class="kome fs">
+<li>＊土日、祝日を除く平日のみ午前10時～午後5時</li></ul>
+</td>
+</tr>
+</table>
+
+<div class="mgt3 clearfix">
+<div class="mainFT2L"><div id="map_tokyo"></div></div>
+<div class="mainFTR">
+<ul>
+<li>JR上野駅（公園口）、東京メトロ千代田線根津駅（1番出口）より徒歩10分</li>
+<li>京成上野駅（正面口）、東京メトロ日比谷線・銀座線上野駅（7番出口）より徒歩15分</li>
+</ul>
+<br>
+<ul class="kome fs"><li>※駐車場はございませんので、お車での来館はご遠慮ください。</li></ul>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="shizuoka">
+<div class="main pdb3 clearfix">
+<h2 class="h2b marugothic"><span class="soldouth2">終了しました</span><br>静岡展</h2>
+<table class="ta_outline mgt2">
+<tr>
+<td class="td_outlineL td_outlineLU"><p class="fl marugothic">展覧会名</p></td>
+<td class="td_outlineR td_outlineRU"><p class="fxl">ＮＨＫ日曜美術館５０年展</p>
+<p class="fxs">NHK Sunday Museum 50th Anniversary Exhibition</p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">会期</p></td>
+<td class="td_outlineR"><p>2026年7月18日（土）～9月27日（日）</p>
+<ul class="kome fs"><li>＊会期中、一部作品の展示替えがあります。</li>
+</ul></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">会場</p></td>
+<td class="td_outlineR"><p><a href="https://spmoa.shizuoka.shizuoka.jp/" target="_blank">静岡県立美術館</a></p>
+<p class="fs">〒422-8002 静岡市駿河区谷田53-2</p></td>
+</tr>
+<tr>
+<td class="td_outlineL td_outlineLD"><p class="fl marugothic">休館日</p></td>
+<td class="td_outlineR td_outlineRD"><p>毎週月曜日（月曜日が祝日・振替休日の場合は開館し、翌日休館。）</p></td>
+</tr>
+</table>
+<br>
+<ul class="kome fs">
+<li>＊詳細は、<a href="https://spmoa.shizuoka.shizuoka.jp/exhibition/detail/135" target="_blank">静岡県立美術館ホームページ</a>をご確認ください。</li>
+</ul>
+</div>
+</section>
+
+
+<section id="osaka">
+<div class="main pdb3 clearfix">
+<h2 class="h2b marugothic">大阪展</h2>
+<table class="ta_outline">
+<tr>
+<td class="td_outlineL td_outlineLU"><p class="fl marugothic">展覧会名</p></td>
+<td class="td_outlineR td_outlineRU"><p class="fxl">ＮＨＫ日曜美術館５０年展</p>
+<p class="fxs">NHK Sunday Museum 50th Anniversary Exhibition</p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">会期</p></td>
+<td class="td_outlineR"><p>2026年10月10日（土）～12月20日（日）</p>
+<ul class="kome fs"><li>＊会期中、一部作品の展示替えがあります。</li>
+</ul></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">作品リスト</p></td>
+<td class="td_outlineR"><div class="clearfix">
+<div class="mainL mainLsp0"><a class="btn2 btn2w" href="image/list_osaka.pdf?261009" target="_blank">大阪会場作品リスト<br><span class="fxs">ダウンロード／PDF／約513KB</span></a><a class="btn2 btn2w" href="image/list_en_osaka.pdf?261014" target="_blank">List of works (Osaka)<br><span class="fxs">Download／PDF／171KB</span></a></div>
+<div class="mainR"><a class="btn2 btn2w" href="image/list_3avenue.pdf" target="_blank">3会場作品リスト（公式図録より）<br><span class="fxs">ダウンロード／PDF／約2.45MB</span></a></div>
+</div></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">会場</p></td>
+<td class="td_outlineR"><p><a href="https://nakka-art.jp" target="_blank">大阪中之島美術館</a> 5階展示室
+</p>
+<p class="fs">〒530-0005 大阪府大阪市北区中之島4丁目3-1</p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">休館日</p></td>
+<td class="td_outlineR"><p>月曜日、10月13日（火）、11月24日（火）</p>
+<ul class="kome fs"><li>＊10月12日（月・祝）、11月23日（月・祝）は開館</li></ul></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">開場時間</p></td>
+<td class="td_outlineR"><p>10:00～17:00（入場は16:30まで）</p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">主催</p></td>
+<td class="td_outlineR"><p class="wsnr"><span>大阪中之島美術館、</span><span>ＮＨＫ大阪放送局、</span><span>ＮＨＫエンタープライズ近畿</span></p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">企画協力</p></td>
+<td class="td_outlineR"><p class="wsnr"><span>ＮＨＫエデュケーショナル</span></p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">協賛</p></td>
+<td class="td_outlineR"><p class="wsnr"><span>ＮＩＳＳＨＡ</span></p></td>
+</tr>
+<tr>
+<td class="td_outlineL"><p class="fl marugothic">お問合せ</p></td>
+<td class="td_outlineR"><p>大阪市総合コールセンター（なにわコール）</p>
+<p>06-4301-7285 </p>
+<ul class="kome fs">
+<li>＊受付時間 8:00–21:00（年中無休）</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="td_outlineL td_outlineLD"><p class="fl marugothic">報道関係<br class="brsp">お問合せ</p></td>
+<td class="td_outlineR td_outlineRD"><p>｢ＮＨＫ日曜美術館５０年展」広報事務局（株式会社TMオフィス内）</p>
+<p>担当：馬場・永井・西坂</p>
+<p class="fs">E-mail：<a href="mailto:nichibiten50@tm-office.co.jp">nichibiten50@tm-office.co.jp</a></p>
+<p class="fs">テレフォンセンター：050-1807-2919</p>
+<p class="fs">FAX：050-1722-9032</p>
+<ul class="kome fs">
+<li>＊土日、祝日を除く平日のみ午前10時～午後5時 </li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+</section>
+
+</div>
+
+
+
+<section>
+<div id="navfooter" class="marugothic">
+<ul><li class="navhome"><a class="urw" href="index.html">HOME</a></li><li class="navoverview"><a class="urw" href="overview.html">開催概要</a></li><li class="navhighlight"><a class="urw" href="highlight.html">見どころ</a></li><li class="navtickets"><a class="urw" href="tickets.html">チケット</a></li><li class="navnichibi"><a class="urw" href="nichibi.html">日曜美術館<br class="brsp">･番組情報</a></li><li class="navspecial"><a class="urw" href="special.html">スペシャル</a></li><li class="navgoods"><a class="urw" href="goods.html">図録･グッズ<br class="brsp">･音声ガイド</a></li></ul>
+</div>
+</section>
+
+<section>
+<footer role="contentinfo">
+<div id="footer">
+<p class="fxs"><a class="policy_btn" href="#policy">サイトポリシー</a></p>
+<small>© 2025-2026 NHK, NHK Promotions Inc.</small></div>
+</footer>
+</section>
+
+
+</main>
+</div>
+
+
+<div id="policy">
+<section>
+<div class="main pd3 clearfix">
+<div class="closed"><a class="close-policy" href="#modalclosed"><img src="image/nav_closed.png" alt="closed"/></a></div>
+<h1 class="h1s">サイトポリシー / Site Policy</h1>
+<p class="justify">本ウェブサイトは、株式会社ＮＨＫプロモーション及び東京藝術大学、ＮＨＫ（以下、「主催者」といいます）が主催する「ＮＨＫ日曜美術館５０年展」の公式ウェブサイトです。 本ウェブサイトの閲覧・利用を行う利用者（以下、「利用者」といいます。）は、以下の内容に同意の上、ご利用いただくものとします。</p>
+<br>
+<div class="fxs">
+
+<h3>免責事項</h3>
+<p class="justify">本ウェブサイトに記載された情報の完全性・正確性に対して一切の保証を与えるものではありません。予告なしに、掲載されている情報を変更することがあります。本ウェブサイトに含まれる情報もしくは内容を利用することで直接・間接的に生じた損失に関し一切責任を負わないものとします。本ウェブサイトからリンクする外部サイトは、利用者の利便性を図るためのものであり、リンク先の外部サイト記載された情報の完全性・正確性に対して一切の保証を与えるものではありません。</p>
+
+<h3 class="mgt2">禁止事項</h3>
+<p class="justify">本ウェブサイトのご利用に際し、以下の行為を禁止いたします。</p>
+<ul class="mgt0">
+<li>本ウェブサイトの運営を妨げる行為および支障をきたす行為。</li>
+<li>他の利用者、第三者、もしくは主催者に迷惑、不利益、プライバシー等の損害を与える行為またはその恐れのある行為。</li>
+<li>公序良俗に反する行為またはその恐れがある行為。</li>
+<li>法律、法令もしくは条例に違反する行為。</li>
+<li>その他、主催者が不適切と判断する行為。</li>
+</ul>
+
+<h3 class="mgt2">知的財産権</h3>
+<p class="justify">本ウェブサイト上のすべての著作物（文章、画像、動画等）の著作権等をはじめとした知的財産権は、主催者または主催者に使用を認めた権利者に帰属します。利用者は本ウェブサイトの内容について、無断で転載、複製・転用、転送、販売等の二次利用を行うことはできません。</p>
+
+<h3 class="mgt2">推奨環境・プラグイン・リンク等について</h3>
+<p class="justify">〇推奨環境</p>
+<div class="pdl1">
+<p class="justify">本ウェブサイトを快適にご覧いただくために、最新のブラウザーのご利用をおすすめします。制作にあたっては、以下のブラウザーの動作確認を行っています。</p>
+<ul class="mgt0">
+<li>Windows(10以上)：FireFox、Google Chrome、MicrosoftEdge</li>
+<li>Mac：Safari</li>
+</ul>
+<p class="justify">スマートフォン向けに表示を最適化しているページにつきましては、以下の環境で動作確認を行っております。</p>
+<ul class="mgt0">
+<li>Android端末：Android6.0以上のスマートフォン標準搭載のブラウザー</li>
+<li>iOS端末：iOS11.x以上のスマートフォン標準搭載のブラウザー</li>
+<li>iPadOS端末：iPadOS13.x以上のタブレット搭載のブラウザー</li>
+</ul>
+</div>
+<br>
+<p class="justify">〇プラグイン</p>
+<div class="pdl1">
+<p class="justify">本ウェブサイトには、動画・アニメーション・PDFなどを使用したコンテンツがあります。これらのコンテンツは、以下のプラグインソフトをインストールすることでご利用いただけます。プラグインソフトをお持ちでない方は、以下の各サイトからダウンロードできます。</p>
+<br>
+<p class="justify">Adobe Acrobat Reader DC</p>
+<p class="justify">PDFファイルを表示するソフトです。ダウンロードは<a href="https://get.adobe.com/jp/reader/" target="_blank">こちら</a>から</p>
+<br>
+<p class="justify">JavaScriptとCookie</p>
+<p class="justify">本ウェブサイトでは、JavaScriptとCookieを使用しています。お使いのブラウザでJavascript及びCookieの設定を無効にされている場合、正しく機能しない、もしくは正しく表示されない場合がございます。全てのコンテンツをご利用いただくには、ブラウザー設定で有効にしていただくことをお奨めいたします。</p>
+</div>
+<br>
+<p class="justify">〇リンク</p>
+<div class="pdl1">
+<p class="justify">本ウェブサイトへのリンクは、営利を目的とせず、フレームなしで行う場合には、原則として自由です。本ウェブサイトの趣旨に合わないと主催者が判断した場合や、「ＮＨＫ日曜美術館５０年展」主催者の催事運営その他事業等を害する恐れがあると主催者が判断した場合は、リンク自体をお断りすることがあります。なお、編集・更新の都合により、本ウェブサイト内の各ページは予告なく変更・削除されることがあります。また、アクセス認証を求められる場合があります。リンクを設定いただいても、短期間でリンク切れとなる可能性もありますので、あらかじめご了承ください。</p>
+</div>
+
+<h3 class="mgt2">利用者情報の利用について</h3>
+<p class="justify">本ウェブサイトでは、主催者が、Cookieを使用して利用者の端末情報（IPアドレス、オペレーティングシステムやブラウザーの種類等）及び利用者の行動履歴（アクセスした時刻、URL、訪問回数等）等（以下、これらを総称し「利用者情報」といいます。）を取得し、以下のような目的に利用しています。</p>
+<br>
+<p class="justify">（1）サービス改善のための分析</p>
+<p class="justify">（2）利用者に最適と推定されるコンテンツの配信</p>
+<p class="justify">（3）行動ターゲティング広告等の広告配信</p>
+<br>
+<ul class="kome"><li>※主催者は、上記記載の目的で、外部企業との間で、外部企業が利用者情報に関する秘密を保持し、適切な管理を行う内容の契約を締結したうえで、利用者情報に関する業務を当該外部企業に委託する場合があります。あらかじめご了承ください。</li>
+<li>※主催者は、利用者情報をそのまま、または統計処理した後に利用します。</li>
+<li>※主催者は、利用者情報を利用する必要がなくなったときに遅滞なく消去します。</li>
+</ul>
+
+<h3 class="mgt2">アクセスデータの取得・利用に使用しているツールは以下の通りです。</h3>
+<p class="justify">〇Google Analytics</p>
+<div class="pdl1"><p class="justify">｢Google Analytics」は、Google社が提供するウェブ解析ツールで、Cookie、ウェブビーコン、またはそれらに類似するテクノロジーによって利用者情報を収集しています。Google Analyticsについては、<a href="https://www.google.com/intl/ja_jp/analytics/" target="_blank">https://www.google.com/intl/ja_jp/analytics/</a>（※外部サイト）をご覧ください。</p>
+<br>
+<p class="justify">なお、Google Analyticsによる利用者情報の収集を希望されない場合は、Google社が提供する「Google アナリティクス オプトアウト アドオン」を使用中のブラウザーにインストールすることで、無効にすることができます。Googleアナリティクスを無効にするには<a href="https://tools.google.com/dlpage/gaoptout?hl=ja" target="_blank">https://tools.google.com/dlpage/gaoptout?hl=ja</a>（※外部サイト）をご覧ください。</p>
+</div>
+
+</div>
+</div>
+</section>
+</div>
+
+<div id="navspmodal">
+<div class="closed2"><a class="close-navspmodal" href="#modalclosed"><img src="image/nav_closed2.png" alt="closed"/></a></div>
+<div id="navspmodalbg">
+<div id="navsp" class="marugothic" ontouchstart="">
+<div id="navsp_logo"><img src="image/nav_logo_osk.png" alt="ＮＨＫ日曜美術館５０年展"/></div>
+<ul>
+<li><a class="urw_sp" href="index.html">HOME</a></li>
+<li><a class="urw_sp" href="overview.html">開催概要</a></li>
+<li><a class="urw_sp" href="highlight.html">見どころ</a></li>
+<li><a class="urw_sp" href="tickets.html">チケット</a></li>
+<li><a class="urw_sp" href="nichibi.html">日曜美術館･番組情報</a></li>
+<li><a class="urw_sp" href="special.html">スペシャル</a></li>
+<li><a class="urw_sp" href="goods.html">図録･グッズ･音声ガイド</a></li>
+<li><a class="urw_sp" href="https://nakka-art.jp" target="_blank">大阪中之島美術館</a></li>
+</ul>
+</div>
+
+<div id="navsp_social">
+<ul><li><a href="https://x.com/nichibiten50" target="_blank"><img src="image/x_logo.png" alt="X"/></a></li><li><a href="https://www.instagram.com/nichibiten50/" target="_blank"><img src="image/inst_logo.png" alt="Instagram"/></a></li></ul>
+</div>
+<div id="spfooterlink"><ul><li><a class="close-navspmodal policy_btn" href="#policy">サイトポリシー</a></li></ul></div>
+<small class="alignC">© 2025-2026 NHK, NHK Promotions Inc.</small>
+</div>
+</div>
+
+<script src="js/scrollreveal.min.js"></script>
+<script src="js/sr.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<?php
+	$directory_path='../../../';
+	$page_name='exhibition detail';
+?>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>ルーシー・リー展　－東西をつなぐ優美のうつわ－ | あべのハルカス美術館</title>
+	<link rel="alternate" media="only screen and (max-width: 640px)" href="https://www.aham.jp/sp/exhibition/lucie_rie/">
+	<meta name="keywords" content="ルーシー・リー展　－東西をつなぐ優美のうつわ－,あべの,ハルカス,美術館,アート,ミュージアム,大阪,展覧会">
+	<meta name="description" content="
+20世紀を代表する陶芸家ルーシー・リー（1902-1995）は、19歳の時に轆轤(ろくろ)と出合い陶芸の道へと進みます。それ以来、彼女の尽きない探究心から生まれた優美なかたちと豊かな色彩表現は、ウィーンからロンドンに渡り活動を続けるなかで洗練を極め、新しい造形世界を人々に提示しました。本展は、今もなお私たちを魅了してやまない彼女の作陶の軌跡を、それぞれの地で出会った人やもの、さらに東洋との関わりを交えながら紐解きます。
+	">
+	<link rel="stylesheet" href="../../../common/css/style.css">
+	<script src="../../../common/scripts/device.js"></script>
+	<script src="../../../common/scripts/jquery.js"></script>
+	<script src="../../../common/scripts/imageover.js"></script>
+	<script src="../../../common/scripts/smoothscroll.js"></script>
+	<script src="../../../common/scripts/scripts.js"></script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src= 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore (j,f); })(window,document,'script','dataLayer','GTM-PCXFNKN');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T3288Z6');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MDXG38Z');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body class="exhibition detail">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCXFNKN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3288Z6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MDXG38Z"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<!-- header -->
+	<div id="header" class="clearfix">
+		<p class="logo">
+			<a href="../../../">
+				<img src="../../../common/images/logo_header_off.gif" alt="あべのハルカス美術館" width="288" height="46">
+			</a>
+		</p>
+<!--
+<style>
+	#btn_passport{
+		width: 120px;float: left;border: 1px solid #40b8d3;padding: 5px 27px;margin: 6px 0 0 36px;letter-spacing: 3px;
+		transition: background-color .3s,border .3s,color .3s;
+		-webkit-transition: background-color .3s,border .3s,color .3s;
+		-webkit-border-radius: 3;
+		-moz-border-radius: 3;
+		border-radius: 3px;
+		color : #40b8d3;
+		text-decoration: none;
+		line-height: 1.3;
+		display : block
+		}
+	#btn_passport:hover{border: 1px solid #40b8d3;background:#40b8d3;color:white;}
+</style>
+		<a href="../../../passport2019/" id="btn_passport">
+			<span style="letter-spacing: 1px;">開館5周年記念</span><br>
+			<span style="letter-spacing: 4px;">年間パスポート</span><br>
+			<span style="letter-spacing: 5px;">のご案内</span>
+		</a>
+-->
+		<div id="globalNav">
+			<ul class="clearfix">
+				<li id="gnav01"><a href="../../../exhibition/future/">展覧会情報</a></li>
+				<li id="gnav02"><a href="../../../guide/">ご利用案内</a></li>
+				<li id="gnav03"><a href="../../../access/">アクセス</a></li>
+				<li id="gnav04"><a href="../../../about/">美術館について</a></li>
+			</ul>
+		</div>
+	</div><!-- /header -->
+	<div id="localNav">
+	<!--<div id="localNav1" class="subNav"><div class="inner"><ul><li><a href="../../../exhibition/now/">開催中の展覧会</a></li><li><a href="../../../exhibition/future/">これからの展覧会</a></li></ul></div></div>-->
+		<div id="localNav4" class="subNav">
+			<div class="inner">
+				<ul>
+					<li><a href="../../../about/#about">あべのハルカス美術館とは</a></li>
+					<li><a href="../../../about/#concept">コンセプト</a></li>
+					<li><a href="../../../about/#logomark">ロゴマーク</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="contents" class="clearfix">
+		<div id="main">
+			<div class="head">
+				<h2><img src="../../images/categorytitle.gif" alt="EXHIBITION 展覧会情報" width="750" height="79"></h2>
+				<div id="path_container">
+					<ul id="path">
+						<li><a href="../../../">あべのハルカス美術館（大阪）</a></li>
+						<li><a href="../../future/">これからの展覧会</a></li>
+						<!--li><a href="../../past/past.html">これまでの展覧会</a></li-->
+						<li>ルーシー・リー展</li>
+					</ul>
+				</div>
+			</div>
+			<div class="body" itemscope itemtype="http://schema.org/Event">
+				<div class="exhibition clearfix">
+					<div class="figure">
+						<img style="height:300px; height:200px;" src="./images/img_lucie_rie.jpg?v=1005" itemprop="image"
+						 alt="ルーシー・リー展　－東西をつなぐ優美のうつわ－">
+					</div>
+					<div class="detail">
+						<style><!--
+body.exhibition.detail #main .body .exhibition .detail .date {margin-top: 20px;margin-left: 35px;font-size: 18px;line-height: 24px;display: block;}
+body.exhibition.detail #main .body .exhibition .detail .note {margin-top: 30px;}
+body.exhibition.detail #main .body .exhibition .detail .en   {font: 11px Arial, Helvetica, sans-serif;color: #7C7C60;line-height: 16px !important;display: block;}
+.italic{font-style:italic !important;}
+.f80 {font-size: 80% !important;}
+						--></style>
+						<p itemprop="name" class="name">
+							<span class="">ルーシー・リー展</span><br>
+							<span class="f80">－東西をつなぐ優美のうつわ－</span><br>
+							<!--span class="en">
+							</span-->
+						</p>
+						<p class="date">
+							2026年12月26日（土）～ 2027年3月7日（日）<br>
+							<span class="en">
+							December 26, 2026 (Saturday) to March 7, 2027 (Sunday)
+							</span>
+						</p>
+						<!--p class="date" style="font-size: 16px;">
+							※会期中、展示替えがあります。
+						</p-->
+						<p class="note">
+ルーシー・リー 《青釉鉢》 1980年頃 <br>井内コレクション(国立工芸館寄託)<br>撮影：品野塁
+							<span class="en" style="margin-top:5px;">
+							</span>
+						</p>
+					</div>
+				</div>
+				<div class="exhibition clearfix">
+					<div class="figure" style="text-align: center;">
+						<img style="height:200px;" src="./images/img_lucie_rie2.jpg" itemprop="image" alt="">
+						<p class="note" style="margin-top:8px;line-height: 15px;font-size: 11px;">
+ルーシー・リー 《ブロンズ釉花器》 1980年頃<br>井内コレクション(国立工芸館寄託)<br>撮影：品野塁
+						</p>
+					</div>
+					<div class="figure" style="vertical-align: top; text-align: center; padding-left: 10px;">
+						<img style="height:200px;" src="./images/img_lucie_rie3.jpg" itemprop="image" alt="">
+						<p class="note" style="margin-top:8px;line-height: 15px;font-size: 11px;">
+ルーシー・リー 《ピンク象嵌小鉢》 1975-79年頃 <br>国立工芸館蔵 <br>撮影：エス・アンド・ティ フォト
+						</p>
+					</div>
+				</div>
+				<table id="tbl_dis">
+				<style><!--
+#tbl_dis th {text-align : center}
+#tbl_dis .en{font: 13px Arial, Helvetica, sans-serif;display:block;color: #7C7C60;line-height: 16px;}
+			--></style>
+					<tr><th>展覧会概要<span class="en">Overview</span></th >
+						<td itemprop="description">
+							<p>
+20世紀を代表する陶芸家ルーシー・リーは、1902年オーストリアのウィーンに生まれました。ウィーン工芸美術学校で<ruby><rb>轆轤</rb><rp>（</rp><rt>ろくろ</rt><rp>）</rp></ruby>の面白さに魅了され陶芸の道へと進んだ彼女は、国際的な展覧会で数々の賞を受賞しながら作家としての地位を確立していきます。しかし、迫りくる戦争は彼女の作陶にも影を落とします。1938年、亡命を余儀なくされたルーシー・リーは、活動の場をイギリスへと移し以後およそ半世紀にわたりロンドンの地で制作を続けました。
+				</p>
+				<p>
+しなやかさと緊張感を併せ持つフォルム、色鮮やかな<ruby><rb>釉薬</rb><rp>(</rp><rt>ゆうやく</rt><rp>)</rp></ruby>のバリエーション、掻き落としや<ruby><rb>象嵌</rb><rp>(</rp><rt>ぞうがん</rt><rp>)</rp></ruby>による味わい深い表現。彼女の尽きない探究心から生まれた作品の数々は、ロンドンでの活動を続けるなかで洗練を極めます。その静かな美学は、凛とした<ruby><rb>佇</rb><rp>(</rp><rt>たたず</rt><rp>)</rp></ruby>まいのうつわ一つひとつに、揺るぎなく宿っているのです。
+				</p>
+				<p>
+本展は、今もなお人々を魅了してやまないルーシー・リーの作陶の軌跡を、それぞれの地で出会った人やもの、時代背景、さらに日本を中心とした東洋との関わりを交えながらご紹介します。バーナード・リーチやハンス・コパー、濱田庄司など交流のあった作家の作品も併せて展示し、彼女が当時の思潮から何を学び、自身のスタイルへと昇華したのかを紐解きながら、造形の源泉や作品に込められた信念に迫る展覧会です。
+							</p>
+							<!--p class="en">
+							</p-->
+							<p><a href="./images/pdf_ad_lucie_rie.pdf" target="_blank">
+								ルーシー・リー展　－東西をつなぐ優美のうつわ－ 　案内チラシ（PDF：4.25MB）
+							</a></p>
+							<!--p><a href="./images/pdf_lst_lucie_rie.pdf" target="_blank">
+								ルーシー・リー展　－東西をつなぐ優美のうつわ－ 　目録（PDF：MB）
+							</a></p-->
+							
+						</td>
+					</tr>
+					<!--tr><th>公式サイト<span class="en">Official Website</span></th>
+						<td>
+							<a href="" target="_blank"></a>
+						</td>
+					</tr-->
+					<tr itemprop="location" itemtype="http://schema.org/Place">
+						<th>会場<span class="en">Venue</span></th>
+						<td>
+<p><span itemprop="name">あべのハルカス美術館</span><br><span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><span itemprop="addressLocality">大阪市</span><span itemprop="streetAddress">阿倍野区阿倍野筋1-1-43 あべのハルカス16F　</span>
+<meta itemprop="addressRegion" content="大阪市"><meta itemprop="addressCountry" content="日本"><meta itemprop="postalCode" content="5456016"><a href="../../../access/">
+<img src="../../../common/images/btn_access_off.gif" alt="アクセス" width="73" height="22"></a></span></p>
+<p class="en">ABENO HARUKAS Art Museum<br>ABENO HARUKAS 16F 1-43 Abenosuji 1chome, Abeno-ku, Osaka 545-6016 JAPAN</p>
+						</td>
+					</tr>
+					<tr><th>開催期間<span class="en">Date</span></th >
+						<td>
+							<p>
+								<span itemprop="startDate" content="2026-12-26">2026年12月26日（土）</span>～
+								<span itemprop="endDate"   content="2027-03-07">2027年3月7日（日）</span>
+							</p>
+							<p class="en">December 26, 2026 (Saturday) to March 7, 2027 (Sunday)</p>
+						</td>
+					</tr>
+					<tr><th>開館時間<span class="en">Opening hours</span></th>
+						<td>
+							<p>火～金 / 10：00～20：00<br>月土日祝 / 10：00～18：00</p>
+							<ul class="note"><li>＊入館は閉館30分前まで</li></ul>
+							<p class="en">[Tues. - Fri.] 10:00-20:00<br>[Mon., Sat., Sun., &amp; national holidays] 10:00-18:00<br>Last admission is 30 minutes before closing.</p>
+						</td>
+					</tr>
+					<tr><th>休館日<span class="en">Closed Date</span></th>
+						<td>
+							<p>2026年12月31日（木）、2027年1月1日（金・祝）</p>
+							<p class="en">December 31, 2026 (Thursday), January 1, 2027 (Friday, Holiday)</p>
+						</td>
+					</tr>
+					<tr><th>入館料</th>
+						<td>
+							<table class="price">
+								<tbody><tr>
+									<th class="category"></th>
+									<th class="current">当日</th>
+									<th class="advance">前売･団体</th>
+									<th class="group"></th>
+								</tr>
+								<tr>
+									<td class="category"><b>一般</b></td>
+									<td class="current">1,800円</td>
+									<td class="advance">1,600円</td>
+									<td class="group"></td>
+								</tr>
+								<tr>
+									<td class="category"><b>大高生</b></td>
+									<td class="current">1,400円</td>
+									<td class="advance">1,200円</td>
+									<td class="group"></td>
+								</tr>
+								<tr class="last">
+									<td class="category"><b>中小生</b></td>
+									<td class="current">500円</td>
+									<td class="advance">300円</td>
+									<td class="group"></td>
+								</tr>
+								</tbody>
+							</table>
+							<ul class="note">
+								<li>※団体は15名様以上。</li>
+								<li>※前売券は2026年10月3日(土)から12月25日(金)までプレイガイドなどで販売。</li>
+								<li>※障がい者手帳をお持ちの方は、美術館チケットカウンターで購入されたご本人と付き添いの方1名まで当日料金の半額。</li>
+							</ul>
+							
+							<div class="ticket">
+								<strong>【チケット販売所】</strong>
+<style>
+	.ticket{font-size:14px; line-height: 1.4; padding-top:15px; border-top: 1px dotted #ccc;}
+	.ticket li{text-indent: -1em;padding-left: 1em;margin-bottom:0.5em;}
+	.ticket a {display:inline-block; text-indent:0;}
+	.text_sub {font-size:90%;}
+</style>
+								<ul>
+<li>・<a href="https://www.asoview.com/channel/ticket/Pw0x0jNv4v/ticket0000057390/" target="_blank">あべのハルカス美術館オンラインチケット</a><br>
+	購入後にスマホへ届くQRコードを、入場ゲートでかざしてご入館いただけます。
+	<p class="text_sub" style="text-indent: -1em;padding-left: 1em;">※購入には〈アソビュー！〉への登録が必要です。</p>
+</li>
+<li>・あべのハルカス美術館ミュージアムショップ（美術館開館日のみ営業）</li>
+<li>・近鉄駅営業所</li>
+<li>・各プレイガイド<br>
+	ABCぴあ、チケットぴあ、ローソンチケット、イープラス、CNプレイガイド、セブンチケットなど。<br>
+	<p class="text_sub" style="text-indent: -1em;padding-left: 1em;">※チケット購入に際しプレイガイドによって各種手数料が発生する場合がございます。</p>
+</li>
+								</ul>
+							</div>
+							<ul class="note" style="padding-top:15px;border-top:1px dotted #31bad5;">
+								<li style="margin-bottom: 10px;overflow: auto;line-height: 1.6;">
+<h4 style="line-height: 2;font-weight: bold;font-size: 115%;"><span style="color: #31bad5;">●</span>大阪市立美術館との相互割引
+										<!--span style="font-weight: normal; color: red;display:inline-block;">&nbsp;　※終了しました</span-->
+									</h4>
+									<p style="text-indent: 0;">
+本展と特別展「円山応挙　リアルの先へ 空間革命」2027年2月6日(土)～4月4日(日)の当日券をそれぞれ100円引きでご購入いただけます。各館の券売窓口で観覧券(半券可)をご提示ください（1枚につきお一人様1回限り有効、他の割引との併用不可）。
+									</p>
+								</li>
+							</ul>
+							<ul class="note" style="padding-top:15px;border-top:1px dotted #31bad5;">
+								<li style="margin-bottom: 10px;overflow: auto;line-height: 1.6;">
+									<h4 style="line-height: 2;font-weight: bold;font-size: 115%;"><span style="color: #31bad5;">●</span>お得な前売セット券（価格は全て税込）</h4>
+<h4 style="line-height: 2;font-weight: bold;font-size: 115%;">●ペア券(一般2枚組) 3,000円
+										<!--span style="font-weight: normal; color: red;display:inline-block;">&nbsp;　※終了しました</span-->
+									</h4>
+									<p style="text-indent: 0;">
+									お一人で2回に分けてのご使用も可能です。<br>
+									※<a href="https://w.pia.jp/a/lucie-rie/" target="_blank">ABCぴあ</a>、<a href="https://w.pia.jp/t/lucie-rie/" target="_blank">チケットぴあ（Pコード 996-162）</a>、<a href="https://l-tike.com/lucie_rie/" target="_blank">ローソンチケット（Lコード 52154）</a>、<a href="https://eplus.jp/lucie-rie/" target="_blank">イープラス</a>、<a href="https://www.cnplayguide.com/lucie-rie/" target="_blank">CNプレイガイド</a>、<a href="https://7ticket.jp/sp/lucie-rie" target="_blank">セブンチケット</a>で販売。
+									</p>
+								</li>
+								<li style="margin-bottom: 10px;overflow: auto;line-height: 1.6;">
+									<img src="./images/img01.jpg" style="max-width: 100%;margin-left: 1em;margin-bottom:1em;width: 260px;float: right;">
+<h4 style="line-height: 2;font-weight: bold;font-size: 115%;">●大阪会場限定！ トートバッグセット券　2,800円
+										<!--span style="font-weight: normal; color: red;display:inline-block;">&nbsp;　※終了しました</span-->
+									</h4>
+									<p style="text-indent: 0;">
+本展観覧券（一般）とトートバッグ（大阪限定カラー）がセットになったお得なチケットです。
+									</p>
+									<ul>
+<li>※限定500セット。<a href="https://l-tike.com/lucie_rie/" target="_blank">ローソンチケット（Lコード 52154）</a>限定。</li>
+<li>※本展観覧券とグッズ引換券が別々に発券されます。グッズは会期中に美術館ミュージアムショップでお引換えください。</li>
+<li>※本グッズは数量限定製作のため、チケットが完売した場合、ミュージアムショップでの取り扱いはありません。</li>
+<li>※画像はイメージです。</li>
+									</ul>
+								</li>
+								<li style="margin-bottom: 10px;overflow: auto;line-height: 1.6;">
+<h4 style="line-height: 2;font-weight: bold;font-size: 115%;">●陶芸ワークショップセット券　 4,500円
+										<!--span style="font-weight: normal; color: red;display:inline-block;">&nbsp;　※終了しました</span-->
+									</h4>
+									<p style="text-indent: 0;margin-bottom:0;">
+本展観覧券と「ルーシー・リーの制作技法を体験するワークショップ」参加券がセットになったスペシャルチケットです。
+									</p>
+									<ul>
+<li>※限定40セット。<a href="https://w.pia.jp/t/lucie-rie/" target="_blank"></a>チケットぴあ（Pコード 996-162）、<a href="https://w.pia.jp/a/lucie-rie/" target="_blank"></a>ABCぴあ限定。</li>
+									</ul>
+									<span style="font-weight: normal; color: red;display: inline-block;text-indent: 0;margin-top: .5em;">予定数に達したため販売を終了しました。</span>
+									<p style="margin-top: 13px;">
+										<span style="text-align:center;float: right;display:inline-block;margin-bottom:1em;margin-left:1em;">
+											<img src="./images/img_ws.jpg" style="max-width: 100%;width: 280px;"><br>
+											佐藤典克氏（陶芸家、日本工芸会正会員）
+										</span>
+　ルーシー・リーの作品の魅力は、しなやかさと緊張感を併せ持つフォルムと、そのフォルム1つひとつに合うように調合された釉薬と装飾の豊かなバリエーションです。色鮮やかな釉薬や、掻き落としなどによる繊細な装飾は、うつわに独特のリズムと豊かな表情をもたらします。こうした技法に、ルーシー・リーの感性が加わることで、繊細さとモダンさを具えた魅力ある作品世界が生まれています。今回は「ルーシー・リー展」の関連イベントとして、ルーシー・リーの制作技法を体験するワークショップを企画しました。素焼きしたうつわに刷毛で絵具を塗り、専用の針で表面を掻き落として模様を描いていきます。かたちに合う色や模様を想像しながら、あなただけの素敵なうつわを制作してみませんか？ご参加をお待ちしています。
+									</p>
+									<div style="margin-top: 13px;text-align:center;vertical-align: top;display: flex;justify-content: space-evenly;flex-wrap: wrap;gap: 20px;margin-bottom: 13px;">
+<p style="display: flex; flex-direction: column; align-items: center;margin-bottom:1em;"><img src="./images/img_ws01.jpg" style="max-height: 100%;height:150px;margin-bottom:.5em;" alt="">①使用する道具</p>
+<p style="display: flex; flex-direction: column; align-items: center;margin-bottom:1em;"><img src="./images/img_ws02.jpg" style="max-height: 100%;height:150px;margin-bottom:.5em;" alt="">②筆で絵具を塗った後、<br>専用の針で表面を掻き落とします</p>
+<p style="display: flex; flex-direction: column; align-items: center;margin-bottom:1em;"><img src="./images/img_ws03.jpg" style="max-height: 100%;height:150px;margin-bottom:.5em;" alt="">③完成例　</p>
+									</div>
+									<p>
+　講師：佐藤典克氏（陶芸家・日本工芸会正会員）<br>
+日時：2027年1月23日(土) ①10:30～ ②14:00～ （各回とも約90分）<br>
+場所：あべのハルカス23階 ハルカス大学セミナールーム<br>
+　　　アクセス（<a href="http://harudai.jp/join/campus/" target="_blank">http://harudai.jp/join/campus/</a>）<br>
+定員：各回20名
+									</p>
+									<p>
+　※本展観覧券と参加券が別々に発券されます。<br>
+※営利目的の転売禁止、変更・払い戻し・再発行はできません。<br>
+※作品は、後日美術館にてお渡しいたします（着払いでの発送も可能）。
+									</p>
+									<p>
+　◆◆◆チケット購入者のみなさま◆◆◆<br>
+ワークショップ開始の10分前までに会場へお越しください。<br>
+当日は汚れても良い服装かエプロン、また手ふき用のタオルをご持参ください。<br>
+展覧会は、ワークショップ当日に限らず会期中いつでもご覧いただけますが、再入場はできません。
+									</p>
+								</li>
+							</ul>
+							<!--ul class="note" style="padding-top:15px;border-top:1px dotted #31bad5;">
+								<li>
+									<h4 style="line-height: 2;font-weight: bold;font-size: 115%;"><span style="color: #31bad5;">●</span>お得な先行チケットも発売！</h4>
+									各種プレイガイド（ローソンチケット、チケットぴあ、イープラス、セブンチケット、CNプレイガイド、楽天チケットなど）で6月11日(土)から9月16日(金)まで販売。
+									<ul class="note">
+										<li style="margin-top: 10px;">①先行ペアチケット2,00円（税込、一般2枚組）<br>2枚で1つの絵になる特別なチケットと、ご来館時にお引き換えいたします。</li>
+										<li style="margin-top: 10px;">②先行親子チケット1,00円<br>（税込、一般1名＋中学生までのお子様1名のセット券）<br>お子様は実質無料！ご利用は親子同時入館に限ります。</li>
+									</ul>
+								</li>
+							</ul-->
+
+							<h4 style="color: #31bad5;font-size: 135%;padding-top: 40px; margin-bottom:10px;">
+								大阪マリオット都ホテルとのセットプラン
+							</h4>
+							<p>ホテルのグルメと観覧券とのセット券を販売いたします。</p>
+							<ul class="note alink" style="padding-top:15px;border:3px dotted #31bad5;">
+								<li style="margin-bottom: 10px;overflow: auto;line-height: 1.6;padding-right:10px;">
+									<h4 style="line-height: 2;font-weight: bold;font-size: 115%;">
+									<span style="color: #31bad5;">●</span>19階「LOUNGE PLUS」ケーキセット＋観覧券
+									<!--span style="font-weight: normal; color: red;display:inline-block;">&nbsp;　※終了しました</span--></h4>
+									<p style="margin-left:1em;font-size: 110%;">
+ケーキセット（ドリンク1杯付き）と本展観覧券のセット
+									</p>
+									<p style="margin:8px 1em;font-weight:bold;text-indent: 0;">
+料　金：お一人様(税サ込)　前売券4,000円　当日券4,200円
+									</p>
+									<p style="margin:8px 1em 0;text-indent: 0;">
+販売期間：前売券　2026年10月 3日(土)～2026年12月25日(金)<br>
+　　　　　当日券　2026年12月26日(土)～2027年3月7日(日)<br>
+販売場所：ローソンチケット、大阪マリオット都ホテル予約サイト<br>
+会　　場：19階「LOUNGE PLUS」(ラウンジプラス)<br>
+提供期間：2026年12月26日(土)～2027年3月7日(日)<br>
+提供時間：10:00～20:00
+									</p>
+									<p style="display:inline-block;text-align:center;text-indent: 0;margin-left: 1em;">
+										<img src="./images/marriott01.jpg" alt="" style="width: 285px;">
+									</p>
+									<p style="display:inline-block;text-align:center;text-indent: 0;margin-left: 1em;">
+										<img src="./images/marriott02.jpg" alt="" style="width: 285px;">
+									</p><p>
+								</p></li>
+							</ul>
+							
+							<ul class="note alink" style="padding-top:15px;border:3px dotted #31bad5;">
+								<li style="margin-bottom: 10px;overflow: auto;line-height: 1.6;padding-right:10px;">
+									<h4 style="line-height: 2;font-weight: bold;font-size: 115%;">
+									<span style="color: #31bad5;">●</span>19階ライブキッチン「COOKA」ランチブッフェ＋観覧券
+									<!--span style="font-weight: normal; color: red;display:inline-block;">&nbsp;　※終了しました</span--></h4>
+									<p style="margin-left:1em;font-size: 110%;">
+多彩なメニューが楽しめるランチブッフェと本展観覧券のセット
+									</p>
+									<p style="margin:8px 1em;font-weight:bold;text-indent: 0;">
+料　金：お一人様(税サ込)　前売券6,400円　当日券6,600円
+									</p>
+									<p style="margin:8px 1em 0;text-indent: 0;">
+販売期間：前売券　2026年10月 3日(土)～2026年12月25日(金)<br>
+　　　　　当日券　2026年12月26日(土)～2027年3月7日(日)<br>
+販売場所：ローソンチケット、大阪マリオット都ホテル予約サイト<br>
+会　　場：19階 ライブキッチン「COOKA」(クーカ)<br>
+提供期間：2026年12月26日(土)～2027年3月7日(日)<br>
+　　　　　※除外日：2026年12月31日～2027年1月3日<br>
+提供時間：11:30～15:00（土日祝は２部制・90分制）<br>
+　　　　　※お料理の提供は、閉店時間の30分前までとさせていただきます。
+									</p>
+									<p style="display:inline-block;text-align:center;text-indent: 0;margin-left: 1em;">
+										<img src="./images/marriott03.jpg" alt="">
+									</p><p>
+								</p></li>
+							</ul>
+							
+							<ul class="note alink" style="padding-top:15px;border:3px dotted #31bad5;">
+								<li style="margin-bottom: 10px;overflow: auto;line-height: 1.6;padding-right:10px;">
+									<h4 style="line-height: 2;font-weight: bold;font-size: 115%;">
+									<span style="color: #31bad5;">●</span>57階レストラン「ZK」ランチ+観覧券
+									<!--span style="font-weight: normal; color: red;display:inline-block;">&nbsp;　※終了しました</span--></h4>
+									<p style="margin-left:1em;font-size: 110%;">
+欧風料理「Zekkei Lunch」と本展観覧券のセット
+									</p>
+									<p style="margin:8px 1em;font-weight:bold;text-indent: 0;">
+料　金：お一人様（税サ込） 7,300円
+									</p>
+									<p style="margin:8px 1em 0;text-indent: 0;">
+販売期間：2026年10月3日(土)～2027年3月7日(日)<br>
+販売場所：大阪マリオット都ホテル予約サイト<br>
+　　　　　※ローソンチケットでの販売はございません。<br>
+会　　場：57階 レストラン「ZK」(ジーケー)<br>
+提供期間：2026年12月26日(土)～2027年3月7日(日)<br>
+　　　　　※2027年1月1日～1月3日<br>
+提供時間：11:30～14:30（ラストオーダー）
+									</p>
+									<p style="display:inline-block;text-align:center;text-indent: 0;margin-left: 1em;">
+										<img src="./images/marriott04.jpg" alt="" style="width: 285px;">
+									</p>
+									<p style="display:inline-block;text-align:center;text-indent: 0;margin-left: 1em;">
+										<img src="./images/marriott05.jpg" alt="" style="width: 285px;">
+									</p><p>
+								</p></li>
+							</ul>
+							<p style="margin-bottom: 10px;">
+							　【事前予約推奨】<br>
+							　　大阪マリオット都ホテル レストラン予約<br>
+							　　TEL:06-6628-6187（受付時間10：00～19：00）<br>
+							　　ローソンチケットにてセット券をご購入の場合、購入後にお席の事前予約を推奨いたします。<br>
+							　　ご予約時に本展とのセット券をご利用の旨をお伝えください。
+							</p>
+							<p style="margin-left:2em;margin-bottom: 20px;font-size:90%;">
+							※ご予約無しの場合、満席の際にお待ちいただく可能性がございます。<br>
+							※希望日が満席の場合にはご予約をお取りすることができません。<br>
+							　席に限りがあるため、土日祝をご希望の場合はお早めのご予約を推奨いたします。<br>
+							※各セット券は予告なく販売終了することがございます。<br>
+							※ホテルラウンジ、レストランの営業時間は変更になる場合がございます。<br>
+							※画像は全てイメージです。
+							</p>
+						</td>
+					</tr>
+					<tr><th>主催</th>
+						<td colspan="2">
+							<p>あべのハルカス美術館、朝日新聞社、朝日放送テレビ</p>
+						</td>
+					</tr>
+					<tr><th>企画協力</th>
+						<td colspan="2">
+							<p>国立工芸館</p>
+						</td>
+					</tr>
+					<tr><th>特別協力</th>
+						<td colspan="2">
+							<p>井内コレクション、京都国立近代美術館</p>
+						</td>
+					</tr>
+					<tr><th>協賛</th>
+						<td colspan="2">
+							<p>DNP大日本印刷</p>
+						</td>
+					</tr>
+				</table>
+
+<!-- .event -->
+				<div class="event" id="event">
+					<h3><img src="../images/title_event.gif" alt="EVENT イベント情報" width="750" height="24"></h3>
+<style>
+	div.event table tr th, div.event table tr th p { width : 85px; text-align : left; }
+	div.event table tr td, div.event table tr td p { width : 600px; text-align : left; }
+	div.event h4{line-height:1.2}
+	div.event li{text-indent:-1em;margin-left:1em;line-height:1.2}
+	div.event ruby rt{font-size: 70%;}
+</style>
+
+<div id="" class="section">
+	<h4>ハルカス大学連携 美術講座 「はじめまして、ルーシー・リー」</h4>
+	<p style="margin-top: 20px;font-size: 15px;line-height: 1.3;">
+本展担当学芸員が、展覧会の構成や作品の見どころをご紹介します。
+	</p>
+	<table><tbody>
+		<tr><th><p>講　師</p></th>
+			<td>
+			<p>横山志野（あべのハルカス美術館学芸員）</p>
+		</td></tr>
+		<tr><th><p>日　時</p></th>
+			<td>
+			<p>2027年1月16日（土） 14:00～15:00 （13:30 開場・受付開始）</p>
+		</td></tr>
+		<tr><th><p>会　場</p></th>
+			<td>
+			<p>あべのハルカス23階 ハルカス大学セミナールーム<br>
+				アクセス（<a href="http://harudai.jp/join/campus/" target="_blank">http://harudai.jp/join/campus/</a>）
+			</p>
+		</td></tr>
+		<tr><th><p>定　員</p></th>
+			<td>
+			<p>70名（事前申込制、先着順）</p>
+		</td></tr>
+		<tr><th><p>申込期間</p></th>
+			<td>
+			<p>11月17日（火）10:00～ 定員に達し次第終了</p>
+		</td></tr>
+		<tr><th><p>申込方法</p></th>
+			<td>
+			<p>ハルカス大学webサイト（<a href="https://harudai.jp/" target="_blank">https://harudai.jp/</a>）
+			</p>
+		</td></tr>
+		<tr><th><p></p></th><td>
+			<ul>
+<li>※聴講は無料ですが、本展観覧券（半券可）が必要です。</li>
+<li>※お申し込みは、お電話（06-4703-3034）、ハルカス大学受付（あべのハルカス23階キャンパスフロア）でも承ります。</li>
+			</ul><p></p>
+		</td></tr>
+		<tr><th><p></p></th><td>
+		</td></tr>
+	</tbody></table>
+	<p class="bg"><img src="../images/bg_event.gif" alt="" width="53" height="65"></p>
+</div>
+
+<!--div id="" class="section">
+	<h4>音声ガイド</h4>
+	<table><tbody>
+		<tr>
+			<td colspan="2" style="padding-bottom:2em;">
+			<p><strong>[ナビゲーター]　</strong></p>
+			<p style="line-height:1.6;">
+			</p>
+			
+			<p style="margin-top:26px;">
+								●音声ガイドをご試聴いただけます<br>
+								<audio controls controlslist="nodownload"oncontextmenu="return false;">
+									<source src="./images/guide.mp3">
+								</audio>
+							</p>
+							
+			<p><strong>[さんコメント]</strong></p>
+			<p style="line-height:1.6;">
+			</p>
+			<p style="text-align:center;width: 560px;">
+				<img src="./images/img04.jpg" alt="宣材写真" style="margin-bottom: 10px;"><br>
+			</p>
+		</td></tr>
+		<tr><th><p>　[解説時間]</p></th><td><p>　約30分</p></td></tr>
+		<tr><th><p>　[貸出料金]</p></th><td><p>　お一人様１台　円（税込）　※アプリ配信はございません。</p></td></tr>
+		<tr><th><p style="white-space:nowrap;">　制作・お問い合わせ：</p></th>
+			<td>
+		</td></tr>
+		<tr><td>
+			<ul>
+<li></li>
+			</ul>
+		</td></tr>
+	</tbody></table>
+	<p class="bg"><img src="../images/bg_event.gif" alt="" width="53" height="65"></p>
+</div>
+-->
+				</div><!-- /.event-->
+
+				<p class="tolist">
+					<!--a href="../../past/past.html"-->
+					<a href="../../future/">
+						<img src="../../images/btn_toexhibition_off.gif" alt="展覧会一覧へ戻る" width="222" height="46">
+					</a>
+				</p>
+			</div>
+		</div>
+		<div id="side">
+			<div id="sideNav">
+				<p class="title"><img src="../../images/sidetitle.gif" alt="EXHIBITION 展覧会情報" width="200" height="79"></p>
+				<ul>
+					<li class="current"><a href="../../future/">これからの展覧会</a></li>
+					<li><a href="../../past/past.html">これまでの展覧会</a></li>
+				</ul>
+			</div>
+<?php require_once($directory_path . 'common/include/side.inc'); ?>
+		</div>
+	</div>
+<?php require_once($directory_path . 'common/include/footer.inc'); ?>
+</body>
+</html>

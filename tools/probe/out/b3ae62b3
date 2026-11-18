@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>びわ湖大津館</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<meta name="description" content="きらめく琵琶湖とイングリッシュガーデンに囲まれた、歴史ある旧琵琶湖ホテル本館のびわ湖大津館です。"/>
+<meta name="keywords" content="びわ湖大津館,イングリッシュガーデン,ウエディング,レストラン,滋賀県,びわ湖"/>
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+<script src="js/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(window).load(function() {
+    $('#slider').nivoSlider();
+});
+</script>
+<script type="text/javascript">
+$(function(){
+    $('#slider').nivoSlider({
+        effect:'fade', // スライド時のアニメーション
+        slices:6, // For slice animations
+        boxCols: 8, // For box animations
+        boxRows: 4, // For box animations
+        animSpeed:500, // アニメーションの速度(ms)
+        pauseTime:3000, // 画像の停止時間(ms)
+        startSlide:0, // 初めに表示する画像位置(0から)
+        directionNav:true, // 前・次ボタンを表示
+        directionNavHide:true, // マウスホバー時のみナビゲーションを表示
+        pauseOnHover:true, // マウスホバー時に切り替えを一時停止
+        controlNav:true, // コントロールナビの表示
+        controlNavThumbs:false, // コントロールナビに画像サムネイルを使用
+        controlNavThumbsFromRel:false, // Use image rel for thumbs
+        controlNavThumbsSearch: '.jpg', // Replace this with...
+        controlNavThumbsReplace: '_thumb.jpg', // ...this in thumb Image src
+        keyboardNav:true, // スライドをキーボードで操作
+        manualAdvance:false, // 自動スライドしない
+        captionOpacity:0.8, // キャプションの透過度
+        prevText: 'Prev', // 前ボタンの名前
+        nextText: 'Next', // 次ボタンの名前
+  });
+});
+</script>
+<link href="themes/default/default.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="head_wrap" class="clearfix">
+  <div id="header" class="clearfix">
+    <div class="headTxt fs90 clearfix">
+      <div class="headTit">花と湖に囲まれた想い出の館・びわ湖大津館</div>
+      <div class="laLink">| <a href="pdf/japan.pdf" target="_blank">JAPANESE</a> | <a href="pdf/english.pdf" target="_blank">ENGLISH</a> | <a href="pdf/korea.pdf" target="_blank">한국어</a> | <a href="pdf/hantai.pdf" target="_blank">繁体字</a> | <a href="pdf/kantai.pdf" target="_blank">簡体字</a> | </div>
+    </div>
+    <div id="masthead">
+      <div id="head_logo"><a href="/"><img src="images/biwako_otsukan_TOP_02_02.jpg" alt="びわ湖大津館のトップへ" height="58" width="274" /></a></div>
+      <div id="header_r">
+        <div id="acs"><a href="access.php">アクセス</a> </div>
+        <div id="otoi"><a href="contact.php">お問い合わせ</a> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="gmenu_bg">
+  <div id="gmanu_wrap">
+    <ul id="gmanu">
+      <li><a href="/" title="トップページ" class="top_on">トップページ</a></li>
+      <li><a href="englishgarden.php" title="イングリッシュガーデン" class="englishgarden">イングリッシュガーデン</a></li>
+      <li><a href="restaurant.php" title="レストラン" class="restaurant">レストラン</a></li>
+      <li><a href="party.php" title="ご宴会" class="enkai">ご宴会</a></li>
+      <!-- <li><a href="wedding.php" title="ウェディング" class="wedding">ウェディング</a></li> -->
+      <li><a href="rental_room.php" title="会議室・レンタルルーム" class="rentalroom">会議室・レンタルルーム</a></li>
+      <li><a href="biwako.php" title="びわ湖へ" class="biwako">びわ湖へ</a></li>
+    </ul>
+  </div>
+</div>
+<div id="vision_bg">
+  <div class="slider-wrapper theme-default">
+    <div id="slider" class="nivoSlider">
+		<!-- <a href="images/illmi2020.pdf" target="_blank"><img src="images/ill_2020.jpg" width="960" height="384" /></a>
+		<a href="images/rose_festa_aki_2020.pdf" target="_blank"><img src="images/rose_festa_aki_2020.jpg" width="960" height="384" /></a>
+		<a href="images/sakura_tulip_fes_2020_compressed.pdf" target="_blank"><img src="images/sakura2020.jpg" width="960" height="384" /></a>
+		<a href="images/rose_1905.pdf" target="_blank"><img src="images/rose_1905.jpg" width="960" height="384" /></a>--> 
+      <!--<a href="images/2019_summerfesta.pdf" target="_blank"><img src="images/2019_summerfesta.jpg" width="960" height="384" /></a> -->
+      <!--<a href="hanabi.php"><img src="images/hanabi_slide_2019.jpg" width="960" height="384" /></a>--> 
+      <!--<a href="images/rosefesta_aki.pdf" target="_blank"><img src="images/bnr_aki_rose_2018.jpg" width="960" height="384" /></a>--> 
+      <!--<a href="images/halloween2019.pdf" target="_blank"><img src="images/halloween2019.jpg" width="960" height="384" /></a> -->
+      <!--<a href="images/family_festa_2019.pdf" target="_blank"><img src="images/family_festa_2019.jpg" width="960" height="384" /></a> -->
+      <!--<a href="images/ill_1912.pdf" target="_blank"><img src="images/ill_slide_19.jpg" width="960" height="384" /></a>  -->
+      <a href="englishgarden.php"><img src="images/vision_05.jpg" width="960" height="384" /></a> <a href="englishgarden.php"><img src="images/vision_01.jpg" width="960" height="384" /></a><!--<a href="wedding.php"><img src="images/vision_02.jpg" width="960" height="384" /></a>--><a href="biwako.php"> <img src="images/vision_04.jpg" width="960" height="384" /></a><img src="images/vision_03.jpg" width="960" height="384" /></div>
+    <!--<div id="htmlcaption" class="nivo-html-caption">
+    <strong>This</strong> is an example of a <em>HTML</em> caption with <a href="#">a link</a>.
+</div>--> 
+    <!--<div id="vision_img"><img src="images/vision_05.jpg" width="960" height="384" /></div>--> 
+  </div>
+  <div id="wrapper" style="padding-top:0;">
+    <div id="main">
+<!-- <p style="text-align: center;"><a style="color: red; font-weight: bold; font-size: 16px; text-decoration: underline;" href="pdf/corona_kansenyoboutaisaku_220401.pdf" target="new">※重要※ 新型コロナウィルス感染予防対策について</a></p> -->
+      <div id="container">
+        <div id="content">
+          <div id="news_tit"><img src="images/oshirase_tit.jpg" alt="" height="48" width="351" /> </div>
+          <div id="news_box">
+            <table border="0" cellspacing="0" cellpadding="0" width="563">
+                              <tr>
+                  <td valign="top" class="day" width="80">2026.11.17</td>
+                  <td valign="top" class="title">【開花状況】<a href="https://biwako-otsukan.jp/images/whatsnew/20261117163113.11">イングリッシュガーデン開花状況（11/17現在）</a></td>
+                </tr>
+                                <tr>
+                  <td valign="top" class="day" width="80">2026.11.14</td>
+                  <td valign="top" class="title">【お知らせ】<a href="https://biwako-otsukan.jp/images/whatsnew/20261114165108.jpg">2026年～2027年庭園冬期営業予定は、こちらをご覧ください。</a></td>
+                </tr>
+                                <tr>
+                  <td valign="top" class="day" width="80">2026.11.14</td>
+                  <td valign="top" class="title">【お知らせ】<a href="https://biwako-otsukan.jp/images/whatsnew/20261114160739.14現在）">びわ湖大津館年末年始営業時間のご案内</a></td>
+                </tr>
+                                <tr>
+                  <td valign="top" class="day" width="80">2026.11.12</td>
+                  <td valign="top" class="title">【開花状況】<a href="https://biwako-otsukan.jp/images/whatsnew/20261112141749.11">バラ開花状況（11/12現在）</a></td>
+                </tr>
+                                <tr>
+                  <td valign="top" class="day" width="80">2026.11.11</td>
+                  <td valign="top" class="title"><p>【イベント】12/5(土)～2027/1/31(日)びわ湖大津館2026イルミネーション「光が織りなす世界旅行」を開催！</p><p><a href="https://biwako-otsukan.jp/images/whatsnew/20261111174759.jpg">イベントの詳細はこちら①</a></p><p><a href="https://biwako-otsukan.jp/images/whatsnew/20261111174806.jpg">イベントの詳細はこちら②</a></p></td>
+                </tr>
+                                <tr>
+                  <td valign="top" class="day" width="80">2026.10.11</td>
+                  <td valign="top" class="title">【イベント】10/24(土）～11/23（月）秋のバラシーズンに合わせて「秋のローズフェスタ」を開催！寄せ植え教室やガーデン演奏会など様々なイベントを実施します♪<div><a href="https://biwako-otsukan.jp/images/whatsnew/20261011135501.jpg">イベント詳細はこちら①</a>　</div><div><a href="https://biwako-otsukan.jp/images/whatsnew/20261011135511.jpg">イベント詳細②</a></div></td>
+                </tr>
+                                <tr>
+                  <td valign="top" class="day" width="80">2026.09.30</td>
+                  <td valign="top" class="title"><p>【重要】<a href="https://biwako-otsukan.jp/images/whatsnew/20260930133734.jpg">2027年2月17日(水)・18日(木)は休館日です</a></p><p>設備点検の為、上記の日程は終日休館とさせて頂きます。両日とも館内へはご入館いただけません。ご不便をお掛けいたしますが、予めご了承くださいませ。</p></td>
+                </tr>
+                                <tr>
+                  <td valign="top" class="day" width="80">2026.06.04</td>
+                  <td valign="top" class="title">～映画「国宝」ロケ地パネル展 　終了のお知らせ～<div>2025年6月6日より上映しておりました映画「国宝」は、一部劇場を除き、2026年6月11日（木）をもって上映を終了いたしました。</div><div>当館1階ロビーで行っておりました「国宝」ロケ地パネル展も、2026年6月11日（木）をもって終了させて頂きます。</div><div>期間中たくさんのお客様にご来館いただき、誠にありがとうございました。</div></td>
+                </tr>
+                                <tr>
+                  <td valign="top" class="day" width="80">2026.01.31</td>
+                  <td valign="top" class="title">【重要】<a href="https://biwako-otsukan.jp/images/whatsnew/20260131165638.4改定案内">運営変更のご案内</a></td>
+                </tr>
+                                <tr>
+                  <td valign="top" class="day" width="80">2026.01.31</td>
+                  <td valign="top" class="title">【重要】<a href="https://biwako-otsukan.jp/images/whatsnew/20260131170016.4駐車場割引時間変更のご案内">2026年4月1日～柳が崎湖畔公園駐車場割引の変更について</a></td>
+                </tr>
+                              </table>
+            </div>
+            <!--<div id="news_list"><a href="archives/category/release"><img src="images/arrow.gif" /> 新着ニュース一覧</a></div>-->
+            <div id="event_list_tit"><img src="images/event_tit.jpg" alt="イベント情報" height="51" width="351" /> </div>
+            <div id="event_list_box">
+              <table border="0" cellspacing="0" cellpadding="0" width="563">
+                        <tr>
+            <td valign="top" class="day" width="80">2026.11.05</td>
+            <td valign="top" class="title"><a href="event_detail.php?no=198">
+                11/29(日)「畑中晴文先生のミモザリース作り」【予約制】            </a></td>
+        </tr>
+        <tr>
+            <td valign="top" class="day" width="80">2026.11.05</td>
+            <td valign="top" class="title"><a href="event_detail.php?no=230">
+                11/23(月祝)　チョークアート「バラを描こう！」【予約制】            </a></td>
+        </tr>
+        <tr>
+            <td valign="top" class="day" width="80">2026.11.05</td>
+            <td valign="top" class="title"><a href="event_detail.php?no=239">
+                11/22(日)「ばらとアロマのロールオンづくり」【予約優先制】            </a></td>
+        </tr>
+        <tr>
+            <td valign="top" class="day" width="80">2026.11.05</td>
+            <td valign="top" class="title"><a href="event_detail.php?no=256">
+                11/21（土)「伊原木香奈先生の季節の寄せ植え教室」【予約制】            </a></td>
+        </tr>
+        <tr>
+            <td valign="top" class="day" width="80">2026.10.19</td>
+            <td valign="top" class="title"><a href="event_detail.php?no=232">
+                【期間中毎日】10/24(土)～11/23(月祝)「ロージーちゃんを探せ！」            </a></td>
+        </tr>
+            </table>
+          </div>
+          <div style="padding-left:42px;">
+            <iframe src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fbiwakootsukan.japan&amp;width=583&amp;height=500&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=true&amp;show_border=true&amp;appId=555447074560456" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:583px; height:500px;" allowTransparency="true"></iframe>
+          </div>
+          <div class="clear"></div>
+          <!--          <div id="event_page_tit" style="margin-bottom:0px; height:35px;"><img src="images/goannai_tit_01.jpg" width="583" height="24" alt="びわ湖大津館について　－　蘇った昭和初期の名近代建築　－"  class="mb15"/></div>
+          <div style="margin-bottom:20px;">
+            <p class="annai_txt mb15">びわ湖大津館は、1934年（昭和9年）、外国人観光客の誘致を目的に県内初の国際観光ホテルとして建築された建物（旧琵琶湖ホテル本館）をリニューアル活用した大津市の文化施設です。<br />
+              旧琵琶湖ホテル時代には、『湖国の迎賓館』として昭和天皇を始め多くの皇族の方々、ヘレン・ケラー、ジョン・ウエイン、川端康成など多分野の著名人をお迎えし、名実ともに県下唯一の格式を持ったホテルとして営業されておりました。<br />
+              建物の設計は、東京歌舞伎座や明治生命館等を設計したことで有名な岡田建築事務所（岡田信一郎創設）によるもので、桃山様式と呼ばれる特徴的な和風の外観と洋風の内観は、琵琶湖の風景と古都大津の風土に見事に調和したデザインとなっております。<br />
+              1998年（平成10年）、琵琶湖ホテルが新しく浜大津に移転することになり、この建物の取り壊しを惜しむ多くの市民の声に応えて、大津市が耐震と改修保存を行い、2002年（平成14年）4月から柳が崎湖畔公園 びわ湖大津館として新たに開館致しました。<br />
+              現在、3階建の館内にはレストランやショップの他、貸会議室・貸ホールや市民ギャラリーなどがあり、人々が集い、創造や交流を生み出す場として利用されています。<br />
+              <a href="info.pdf" target="_blank" style="text-decoration:underline;">びわ湖大津館館内MAPはこちら</a><br />
+              <a href="images/MAP2.pdf" target="_blank" style="text-decoration:underline;">柳が崎湖畔公園全体MAPはこちら</a></p>
+            <p class="annai_txt mb15">・2000年　大津市指定有形文化財　登録、
+              2007年　経済産業省　近代産業遺産群　認定</p>
+            <p class="annai_txt">柳が崎湖畔公園には、びわ湖大津館の他、約5,900㎡に広がるイングリッシュガーデンやびわ湖遊覧船が楽しめる柳が崎湖畔公園港もあり、花と湖に気軽にふれあえる観光スポットとなっています。</p>
+          </div>
+          <table border="0" cellspacing="0" cellpadding="0" width="" style="margin-bottom:20px;">
+            <tr>
+              <td width="200"  style="padding-right:23px;" valign="top"><img src="images/goannai_pic_01.jpg" width="280" height="210" alt="多目的ホール" /><br />
+                <p align="left" class="fs95" style="width:182px;">旧琵琶湖ホテル</p></td>
+              <td width="186" valign="top"><img src="images/goannai_pic_02.jpg" width="280" height="210" alt="会議室" /><br />
+                <p align="left" class="fs95" style="width:220px;">空から見た旧琵琶湖ホテル（戦前）</p></td>
+            </tr>
+          </table>
+          <div class="clear"></div>--> 
+          
+          <!-- .entry-content --> 
+        </div>
+        <!-- #post-## --> 
+        
+      </div>
+      <div id="side_cont">
+        <div class="side_bn"><a href="goannai.php"><img src="images/bn_goannai.jpg" width="290" height="80" alt="大津館のご案内"/></a></div>
+        <div id="side_adress"><img src="images/gaikan.jpg" width="268" height="205" alt="びわ湖大津館" /><br />
+          営業時間 9:00-21:00　※店舗により異なる<br />
+          （受付時間 9:00-19:00）<br />
+          〒520-0022　<br />
+          滋賀県大津市柳が崎5番35号<br />
+          TEL:077-511-4187（9:00-19:00）<br />
+          FAX:077-511-3228<br />
+レストラン予約・問合せ<br />
+TEL:077-511-4180（10:00-19:30）<br />
+        </div>
+		<div class="side_bn"><a href="https://sweet-wedding.net/special/otsukan.html" target="_blank"><img src="images/wedding_bnr.jpg" width="290" height="80" alt="大津館のご案内"/></a></div>
+        <div class="side_bn"><a href="images/shimigallery.pdf" target="_blank"><img src="images/bn_shimin.jpg" width="290" height="80" alt="市民ギャラリー"/></a></div>
+        <div class="side_bn"><a href="pdf/kyokashinsei.pdf" target="_blank"><img src="images/kyokashinsei.jpg" width="290" height="80" alt="柳が崎湖畔公園で撮影や催し物をご希望のお客様へのご案内"/></a></div>
+        <div class="side_bn"><a href="pdf/garden_genmen.pdf" target="_blank"><img src="images/garden_genmen.jpg" width="290" height="80" alt="ガーデン入園時に減免の申請をされる団体様へのご案内"/></a></div>
+		  <!-- <div class="side_bn"><a href="https://www.youtube.com/watch?v=V8iLRIfiETE&feature=youtu.be" target="_blank"><img src="images/2016fw_banner.jpg" width="290" height="80" alt="びわ湖花火大会"/></a></div> -->
+        <!-- <div class="side_bn"><a href="http://gallery-o.net/" target="_blank"><img src="images/gallery-o.jpg" width="290" height="80" alt=""/></a></div> -->
+        
+        <div class="side_bn"><a href="images/ryokou.pdf" target="_blank"><img src="images/bn_ryo.jpg" width="290" height="80" alt="旅行会社様へのご案内"/></a></div>
+        <!--<div class="side_bn"><a href="images/renntasaikuru.pdf" target="_blank"><img src="images/rc_banner.jpg" width="290" height="80" alt="レンタサイクル"/></a></div>-->
+        <div class="side_bn"><a href="http://www.hieizan.gr.jp/" target="_blank"><img src="images/mthiei_banner.jpg" width="290" height="80" alt="山と水と光の廻廊"/></a></div>
+        <div class="side_bn"><a href="http://www.biwakokisen.co.jp/" target="_blank"><img src="images/kisen_bn.jpg" width="290" height="80" alt="琵琶湖汽船"/></a></div>
+        <div class="side_bn"><a href="http://www.keihan-engei.com/" target="_blank"><img src="images/keihan_bn.jpg" width="290" height="80" alt="京阪園芸"/></a></div>
+        <div class="side_bn"><a href="http://www.o-pal.com/" target="_blank"><img src="images/opal-logo.jpg" width="290" height="80" alt="オーパル"/></a></div>
+      </div>
+    </div>
+    <!-- #main -->
+    
+    <div id="footer" > </div>
+    <!-- #footer --> 
+    
+  </div>
+  <!-- #wrapper -->
+  <div id="re_top_posi">
+    <div id="re_top"><a href="#top"><img src="images/page_top.jpg" width="112" height="27" alt="ページトップへ" /></a></div>
+  </div>
+  <div id="foot_end">
+    <div id="foot_endbox">
+      <div id="foot_endcom"> <a href="access.php">アクセス</a> 　<a href="privacy.php">プライバシーポリシー</a> 　<a href="sitemap.php">サイトマップ</a> 　<a href="contact.php">お問合わせ</a><br />
+      </div>
+      <img src="images/foot_logo.jpg"  alt="びわ湖大津館"/><br />
+      Copyright © BIWAKO OTSUKAN. All Rights Reserved.</div>
+  </div>
+</div>
+</body>
+</html>

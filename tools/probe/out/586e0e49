@@ -1,0 +1,418 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="INDEX" />
+<meta name="robots" content="FOLLOW" />
+	<meta name="keywords" content="博物館,飛鳥,明日香,asuka,壁画,キトラ,高松塚,四神,石造物,山田寺">
+	<meta name="description" content="" />
+<title>秋期特別展「世界遺産「飛鳥・藤原の宮都」と奈文研 」を開催します | お知らせ | 飛鳥資料館｜公式サイト</title>
+<link rel="alternate" type="application/atom+xml" title="Recent Entries" href="https://www.nabunken.go.jp/asuka/info/atom.xml" />
+<script type="text/javascript" src="https://www.nabunken.go.jp/asuka/info/mt.js"></script>
+<!--[if lt IE 9]>
+	<script src="/asuka/js/html5shiv.js"></script>
+<![endif]-->
+<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-3.4.1.min.js"></script>
+<script src="/asuka/js/pagetop.js"></script>
+<link rel="stylesheet" href="/asuka/js/last-sidebar.css">
+<script src="/asuka/js/jquery.mobile.events.js"></script>
+<script src="/asuka/js/jquery.last-sidebar.js"></script>
+<script>
+$(function(){
+  $('#slideMenu').lastSidebar({
+    align: 'right',
+    speed: 200,
+    noscroll: true
+  });
+});
+</script>
+<link href="/asuka/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<link href="/asuka/css/reset.css" rel="stylesheet" type="text/css">
+<link href="/asuka/css/layouts.css" rel="stylesheet" type="text/css">
+	<link href="/asuka/css/contents.css" rel="stylesheet" type="text/css">
+<link href="/asuka/css/responsive.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/asuka/css/print.css" type="text/css" media="print">
+<link rel="stylesheet" href="/asuka/bootstrap/css/bootstrap-print.css" type="text/css" media="print">
+<link rel="stylesheet" href="/asuka/bootstrap/css/bootstrap-print-adjust.css" type="text/css" media="print">
+<script src="/asuka/js/jquery.smoothScroll.js"></script>
+<link rel="shortcut icon" href="/asuka/favicon.ico" type="" />
+<link rel="icon" href="/asuka/favicon.ico" type="" />
+</head>
+<body  class="mt-entry-archive layout-wtt  drawer drawer--right">
+<div class="container2">
+<script>
+$(document).ready(function() {
+	var $win = $(window),
+		$main = $('main'),
+		$nav = $('nav'),
+		navHeight = $nav.outerHeight(),
+		header_contents = $('#header_contents').outerHeight(),
+		navPos = $nav.offset().top,
+		fixedClass = 'is-fixed';
+	$win.on('load scroll', function() {
+		var value = $(this).scrollTop();
+		if ( value > navPos ) {
+			$nav.addClass(fixedClass);
+			$main.css('margin-top', navHeight);
+		} else {
+			$nav.removeClass(fixedClass);
+			$main.css('margin-top', '0');
+			//$('#top_slider').css('margin-top', header_contents)
+		}
+	});
+});
+</script>
+<div id="header_contents">
+	<header class="wrap hidden-xs">
+		<ul id="header_layout">
+			<li class="left"></li>
+			<li class="center"><h1><a href="/asuka/index.html"><img src="/asuka/images/logo_asuka2.png" alt="飛鳥資料館"></a></h1></li>
+			<li class="right">
+					<ul id="btn_fontsize">
+                    <a href="https://twitter.com/ASUKA_HM" class="fb" target="_blank" rel="noopener"><img src="https://www.nabunken.go.jp/asuka/images/logo-black.png" alt="飛鳥資料館公式ツイッターへのリンク" height="22"/></a>
+                    <a href="https://www.facebook.com/asukahistoricalmuseum/" class="fb" target="_blank" rel="noopener"><img src="https://www.nabunken.go.jp/asuka/images/f_logo_RGB-Grey_72.png" alt="飛鳥資料館公式フェイスブックへのリンク" height="28"/></a>
+					<li><span>　</span><span class="glyphicon glyphicon-menu-right"></span><a href="https://www.nabunken.go.jp/asuka/en/exhibits.html
+">English</a></li>
+					</ul><!-- //btn_fontsize-->
+			</li>
+		</ul><!--//header_layout-->
+	</header>
+	<nav class="wrap changeFontsize hidden-xs">
+		<ul>
+			<li id="homepage"><a href="/asuka/index.html"><img class="imgalt" src="/asuka/images/menu_home.png" alt=""><br>ホーム</a></li>
+			<li><a href="/asuka/about/"><img class="imgalt" src="/asuka/images/menu_about.png" alt=""><br>飛鳥資料館について</a></li>
+			<li><a href="/asuka/teien/"><img class="imgalt" src="/asuka/images/menu_teien.png" alt=""><br>庭園</a></li>
+			<li><a href="/asuka/annai/"><img class="imgalt" src="/asuka/images/menu_annai.png" alt=""><br>常設展示</a></li>
+			<li><a href="/asuka/kikaku/"><img class="imgalt" src="/asuka/images/menu_kikaku.png" alt=""><br>特別展・企画展</a></li>
+			<li><a href="/asuka/manabi/"><img class="imgalt" src="/asuka/images/menu_manabi.png" alt=""><br>学び</a></li>
+			<li><a href="/asuka/access/"><img class="imgalt" src="/asuka/images/menu_access.png" alt=""><br>ご利用案内・アクセス</a></li>
+		</ul>
+	</nav>
+	<script type="text/javascript">
+	$(function() {
+		try{
+			var page_title = document.getElementsByClassName("active")[0].innerHTML;
+			var $dir = location.href.split("/");
+			var $dir2 = $dir[$dir.length -2];
+			var img_alt;
+			var img_src;
+			img_alt = "menu_"+ $dir2 +".png";
+			for(var i=0 ; i<document.getElementsByClassName("imgalt").length ;i++){
+			img_src = document.getElementsByClassName("imgalt")[i].src;
+			if(img_src.match(img_alt)){
+					img_src = document.getElementsByClassName("imgalt")[i].src.slice(0,-4);
+				document.getElementsByClassName("imgalt")[i].src = img_src + "_active.png";
+			}
+		}
+			}catch(e){}
+	});
+	</script>
+</div><!--//#header-->
+<div id="sub_page"></div>
+<h1 class="title_bg">
+		<picture>
+			<source media="(min-width: 320px)" srcset="/asuka/info/images/subpage_title_03.png">
+			<source media="(min-width: 640px)" srcset="/asuka/info/images/subpage_title_02.png">
+			<img src="/asuka/info/images/subpage_title_02.png" alt="お知らせ">
+		</picture>
+</h1>
+<div class="clearfix">&nbsp;</div>
+<div id="contents" class="changeFontsize event_top">
+<div id="area_contents" class="wrap">
+	<div id="area_info">
+<div id="entry-14592" class="article">
+		<h3>秋期特別展「世界遺産「飛鳥・藤原の宮都」と奈文研 」を開催します</h3>
+		<div class="letterbody">
+				<div class="asset-body">
+					<p><span>令和8年10月9日（金）から秋期特別展「世界遺産「飛鳥・藤原の宮都」と奈文研」を開催します。</span><br /><br /><span>今回の特別展では、70年以上の歳月をかけて奈文研が明らかにした「飛鳥・藤原の宮都」の遺跡の価値とその調査研究のあゆみを、実物の出土遺物や調査当時の生資料、最新の研究成果を通して紹介します。古代国家誕生の舞台を解き明かしてきた諸先輩、そして、私たちの熱い思いに触れながら、飛鳥・藤原の宮都の歴史をお楽しみください。</span><br /><br /><br /><span>◆会期　2026年10月9日（金）～12月13日（日）月曜休館</span><br /><br /><span>◆「世界遺産「飛鳥・藤原の宮都」と奈文研 」の詳細は<a href="https://www.nabunken.go.jp/asuka/kikaku/post-46.html" title="2026年秋期特別展ページへのリンク">こちら</a></span><br /><br /></p>
+<p><span><img alt="56_C_195_R.jpg" src="https://www.nabunken.go.jp/asuka/info/images/56_C_195_R.jpg" width="313" height="436" class="mt-image-none" /></span></p>
+				</div>
+<div class="clearfix"></div>
+				<p class="date">2026年08月20日(木曜日)</p>
+        <div class="osirase_cat" style="background:#d49a40; float: right;">ニュース</div>
+        <div class="clearfix"></div>
+		</div>
+<div style="clear: both;" class="hidden-xs" >&nbsp;</div>
+	</div><!--//article-->
+<div class="container">
+<div class="row">
+<div id="archive-link">
+	<div class="Entry_link">
+		<p class="list">
+			<a href="https://www.nabunken.go.jp/asuka/info/2026/09/17-3.html">新しい記事</a>&nbsp;｜&nbsp;<a href="/asuka/info/">お知らせ一覧</a>&nbsp;｜&nbsp;<a href="https://www.nabunken.go.jp/asuka/info/2026/08/post-559.html">古い記事</a>
+        </p>
+	</div>
+		</div>
+</div>
+</div>
+	</div><!--//area_info-->
+</div><!--//end of area_contents-->
+</div><!--//#contents-->
+<div style="clear: both;" >&nbsp;</div>
+<div class="hidden-xs">
+<div id="breadcrumbs">
+	<ul class="wrap">
+		<li><a href="/asuka/">ホーム</a></li>
+    <li><a href="/asuka//info/">お知らせ</a></li>
+		<li class="active">秋期特別展「世界遺産「飛鳥・藤原の宮都」と奈文研 」を開催します</li>
+	</ul>
+</div><!--//breadcrumbs-->
+</div>
+<div id="icon_pagetop" class="hidden-xs no-print">
+<a href="#header_contents"><span><img src="/asuka/images/icn_arrow_brown_top.png" alt=""> ページトップ</span><img src="/asuka/images/icn_pagetop.png" alt=""></a>
+</div>
+<div id="icon_pagetop" class="hidden-lg hidden-md hidden-sm no-print">
+<a href="#header_contents"><span><img src="/asuka/images/icn_arrow_brown_top2.png" alt="ページトップ" width="30"></span></a>
+</div>
+<div class="container-fluid">
+      <div class="row">
+<div id="footer_contents" class="changeFontsize">
+<div id="footer_information" class="wrap">
+	<div id="footer_address" class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+		<h4><span>独立行政法人国立文化財機構</span><br class="hidden-lg hidden-md hidden-sm" /> 奈良文化財研究所 飛鳥資料館<span>　</span><span>　</span><a href="https://twitter.com/ASUKA_HM" class="fb" target="_blank" rel="noopener"><img src="/asuka/images/logo-black.png" alt="飛鳥資料館公式Xへのリンク"　height="20"/></a>
+                    <a href="https://www.facebook.com/asukahistoricalmuseum/" class="fb" target="_blank" rel="noopener"><img src="/asuka/images/f_logo_RGB-Grey_72.png" alt="飛鳥資料館公式フェイスブックへのリンク" height="30"/></a></h4>
+		<ul class="link_button_mini font_s">
+        <li><a href="/asuka/access/" class="blue"><img src="/asuka/images/icn_arrow_white.png"> ご利用案内・交通アクセス</a></li>
+		</ul>
+		<ul id="address">
+			<li><dl>
+				<dt>所在地</dt>
+				<dd>〒634-0102<br>
+				奈良県高市郡明日香村奥山601</dd>
+			</dl></li>
+			<li><dl>
+				<dt>連絡先</dt>
+				<dd>TEL 0744-54-3561 <br class="hidden-lg hidden-md" />FAX 0744-54-3563</dd>
+			</dl></li>
+			<li><dl>
+				<dt>観覧時間</dt>
+				<dd>9:00〜16:30（入館は16:00まで）</dd>
+			</dl></li>
+			<li><dl>
+				<dt>休館日</dt>
+            <dd>毎週月曜日（祝日と重なれば翌平日）、<br class="hidden-lg hidden-md" />年末年始(R8/12/23～R9/1/3)</dd>
+			</dl></li>
+			<li><dl>
+				<dt>観覧料</dt>
+				<dd>一般 350円／大学生 200円／<br class="hidden-lg hidden-md" />70歳以上・高校生及び18歳未満 無料<br>
+				各種優待は、受付でご確認ください。
+</dd>
+			</dl></li>
+		</ul>
+	</div><!--//footer_address-->
+	<div id="footer_map" class="col-lg-6 hidden-md hidden-sm hidden-xs">
+	<script type="text/javascript" src="https://map.yahoo.co.jp/embedmap/V3/?lon=135.8089&lat=34.48437&zoom=13&cond=action:place;maptype:basic;gid:UC2POLOeVYE&width=500&height=262"></script>
+	</div>
+	<div id="footer_map2" class="hidden-lg col-md-6 col-sm-6 col-xs-12 no-print">
+		<div class="footer_map2_inner no-print">
+	<script type="text/javascript" src="https://map.yahoo.co.jp/embedmap/V3/?lon=135.80298&lat=34.48437&zoom=13&cond=action:place;maptype:basic;gid:UC2POLOeVYE&width=300&height=262"></script>
+	</div>
+	</div>
+</div><!--//footer_information-->
+<footer>
+<div id="footer_search_box" class="hidden-lg hidden-md hidden-sm no-print">
+  <dl  class="no-print">
+	<dt style="border-bottom: 1px dotted #4D3A2B; font-weight: bold; margin-bottom: 8px;">サイト内検索</dt>
+	<dd id="footer_search"><form method="get" action="https://www.nabunken.go.jp/mt/mt-search.cgi">
+	<input type="text" id="search" name="search" value=""  placeholder="キーワードを入力"/>
+    <input type="hidden" name="IncludeBlogs" value="32,33,35" />
+	<input type="hidden" name="limit" value="20" />
+	<input type="submit" accesskey="4" value="検索" class="btn_search" />
+</form>
+</dd>
+  </dl>
+</div>
+	<div id="area_footer_sitemap" class="wrap hidden-xs">
+		<ul>
+			<li>
+				<dl>
+					<dt><a href="/asuka/"><img src="/asuka/images/icn_arrow_brown.png"> ホーム</a></dt>
+				</dl>
+				<dl>
+					<dt><a href="/asuka/about/"><img src="/asuka/images/icn_arrow_brown.png"> 飛鳥資料館について</a></dt>
+					<dd><a href="/asuka/about/#area_greeting">館長からのごあいさつ</a></dd>
+					<dd><a href="/asuka/about/#area_history">飛鳥資料館の歩み</a></dd>
+					<dd><a href="/asuka/about/#area_facility">施設案内</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="/asuka/teien/"><img src="/asuka/images/icn_arrow_brown.png"> 庭園</a></dt>
+					<dd><a href="/asuka/teien/#stone">庭園の石造物</a></dd>
+					<dd><a href="/asuka/teien/#flower">季節の花々</a></dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt><a href="/asuka/annai/"><img src="/asuka/images/icn_arrow_brown.png"> 常設展示</a></dt>
+					<dd><a href="/asuka/annai/lobby.html">ロビー</a></dd>
+					<dd><a href="/asuka/annai/room1.html">第一展示室</a></dd>
+					<dd><a href="/asuka/annai/room2.html">第二展示室</a></dd>
+					<dd><a href="/asuka/annai/bf.html">特集展示</a></dd>
+					<dd><a href="/asuka/annai/theater.html">映像コーナー</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="/asuka/kikaku/"><img src="/asuka/images/icn_arrow_brown.png"> 特別展・企画展</a></dt>
+					<dd><a href="/asuka/kikaku/pastexhibition.html">過去の展示一覧</a></dd>
+                    <dd><a href="/asuka/kikaku/contest.html">写真コンテスト</a></dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt><a href="/asuka/manabi/"><img src="/asuka/images/icn_arrow_brown.png"> 学び</a></dt>
+					<dd><a href="/asuka/manabi/family.html">個人・ファミリー向け</a></dd>
+					<dd><a href="/asuka/manabi/group.html">団体・グループ向け</a></dd>
+					<dd><a href="/asuka/manabi/school.html">学校団体向け</a></dd>
+				</dl>
+				<dl>
+					<dt><a href="/asuka/download/"><img src="/asuka/images/icn_arrow_brown.png"> ダウンロードコンテンツ</a></dt>
+				</dl>
+				<dl>
+					<dt><a href="/asuka/shop/about.html"><img src="/asuka/images/icn_arrow_brown.png"> ミュージアムショップ</a></dt>
+					<dd><a href="/asuka/shop/backnumber.html">販売中の図録</a></dd>
+                	<dd><a href="http://www.book61.co.jp/search.php?kw=%C6%E0%CE%C9%CA%B8%B2%BD%BA%E2%B8%A6%B5%E6%BD%EA&MC=&SC=&off=&off2=&mojibake=%F3%FE&LC=&book_name=&series=&author=&publisher=&pubs=&pube=&book_id=&isbn=&mojibake=%F3%FE&detail=" target="_blank">オンラインショップ（六一書房）<img src="/asuka/images/blankicon.png" /></a></dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt><a href="/asuka/access/"><img src="/asuka/images/icn_arrow_brown.png"> ご利用案内・アクセス</a></dt>
+					<dd><a href="/asuka/access/#area_guidance">観覧時間・観覧料</a></dd>
+					<dd><a href="/asuka/access/#area_access">アクセス</a></dd>
+					<dd><a href="/asuka/access/#area_map">館内マップ</a></dd>
+					<dd><a href="/asuka/access/#area_photograph">撮影・画像利用について</a></dd>
+					<dd><a href="/asuka/access/#area_group">団体利用について</a></dd>
+					<dd><a href="/asuka/access/reserve.html">団体利用の予約・手続き</a></dd>
+					<dd><a href="/asuka/access/#area_inqury">お問い合わせ</a></dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt><a href="/asuka/info/"><img src="/asuka/images/icn_arrow_brown.png"> お知らせ</a></dt>
+									<dt><a href="https://www.facebook.com/asukahistoricalmuseum/" target="_blank"><img src="/asuka/images/icn_arrow_brown.png"> 飛鳥資料館 Facebook <img src="/asuka/images/blankicon.png" /></a></dt>
+					<dt><a href="/asuka/link.html"><img src="/asuka/images/icn_arrow_brown.png"> 関連リンク</a></dt>
+					<dt><a href="/asuka/sitemap.html"><img src="/asuka/images/icn_arrow_brown.png"> サイトマップ</a></dt>
+					<dt><a href="https://www.nabunken.go.jp/info/law.html"><img src="/asuka/images/icn_arrow_brown.png"> サイトポリシー <img src="/asuka/images/blankicon.png" /></a></dt>
+					<dt><a href="https://www.nabunken.go.jp/info/law.html"><img src="/asuka/images/icn_arrow_brown.png"> 個人情報保護について <img src="/asuka/images/blankicon.png" /></a></dt>
+					<dt><a href="/asuka/en/"><img src="/asuka/images/icn_arrow_brown.png"> English</a></dt>
+				</dl>
+				<dl>
+					<dt>サイト内検索</dt>
+					<dd id="footer_search"><form method="get" action="https://www.nabunken.go.jp/mt/mt-search.cgi">
+	<input type="text" id="search" name="search" value=""  placeholder="キーワードを入力"/>
+    <input type="hidden" name="IncludeBlogs" value="32,33,35" />
+	<input type="hidden" name="limit" value="20" />
+	<input type="submit" accesskey="4" value="検索" class="btn_search" />
+</form>
+</dd>
+				</dl>
+			</li>
+		</ul>
+	</div><!--//area_footer_sitemap-->
+	<div class="clearfix">&nbsp;</div>
+	<div id="area_footer_banner" class="wrap">
+        <div class="fotter_banner_center">
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+				<a href="https://www.nabunken.go.jp/" target="_blank"><img src="/asuka/images/link_bnr01.jpg" alt="独立行政法人国立文化財機構 奈良文化財研究所へのリンク" class="img-responsive"></a>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+				<a href="https://www.nabunken.go.jp/heijo/museum/" target="_blank"><img src="/asuka/images/link_bnr02.jpg" alt="平城京跡資料館へのリンク" class="img-responsive"></a>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+				<a href="https://www.nabunken.go.jp/fujiwara/exhibit.html" target="_blank"><img src="/asuka/images/link_bnr03.jpg"alt="藤原宮跡資料室へのリンク" class="img-responsive"></a>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                <a href="https://www.nabunken.go.jp/shijin/" target="_blank"><img src="/asuka/images/banner2-280x73.jpg"alt="" class="img-responsive"></a>
+			</div>
+        </div>
+	</div><!--//area_footer_banner-->
+	<div class="clearfix">&nbsp;</div>
+<script src="/asuka/js/jquery.matchHeight.js"></script>
+<script>$(function(){$('.kako_all').matchHeight();});</script>
+<script>$(function(){$('.model_box').matchHeight();});</script>
+<script>$(function(){$('.model_box_mini').matchHeight();});</script>
+	<div id="copyright">Copyright&copy; 2026, Nara National Research Institute for Cultural Properties, All Rights Reserved.</div>
+</footer>
+</div><!--//#footerfontents-->
+</div>
+</div>
+ </div><!--/container-->
+<div class="hidden-lg hidden-md hidden-sm no-print">
+<div id="model_menu">
+<div id="model_menu_inner">
+<div id="model_menu_logo" class="col-md-10 col-sm-10 col-xs-10">
+<a href="/asuka/"><img src="/asuka/images/model_logo.png" alt="" class="title-img-responsive"></a>
+</div>
+</div>
+</div>
+<p class="triggerBtn">
+		<a href="#" id="menuTrigger">
+			<span></span>
+			<span></span>
+			<span></span>
+        	<span>メニュー</span>
+			</a>
+		</p>
+</div>
+	<div id="slideMenu">
+		<div id="model_top" class="clearfix" style="background: white;">
+			<a href="/asuka/">&nbsp;<img src="/asuka/images/model_logo.png" alt="" class="title-img-responsive"></a>
+		</div>
+		<div class="model_box accordion">
+			<a href="">展示</a>
+			<ul>
+				<li><a href="/asuka/annai">常設展示</a></li>
+				<li><a href="/asuka/kikaku">特別展・企画展</a></li>
+				<li><a href="/asuka/teien">庭園</a></li>
+			</ul>
+		</div>
+		<div class="model_box accordion"><a href="">ご利用案内・アクセス</a>
+			<ul>
+				<li><a href="/asuka/access/#area_guidance">開館時間・観覧料</a></li>
+				<li><a href="/asuka/access/#area_access">アクセス</a></li>
+				<li><a href="/asuka/access/#area_photograph">撮影</a></li>
+				<li><a href="/asuka/access/#area_map">館内マップ</a></li>
+				<li><a href="/asuka/access/#area_facility">施設・サービス</a></li>
+				<li><a href="/asuka/access/#area_group">一般・学校団体利用</a></li>
+			</ul>
+		</div>
+		<div class="model_box accordion"><a href="">学び</a>
+			<ul>
+				<li><a href="/asuka/manabi/">館内での学び</a></li>
+				<li><a href="/asuka/download/">ダウンロードコンテンツ</a></li>
+			</ul>
+		</div>
+		<div class="model_box accordion"><a href="">飛鳥資料館について</a>
+			<ul>
+				<li><a href="/asuka/about/#area_greeting">ごあいさつ</a></li>
+				<li><a href="/asuka/about/#area_history">飛鳥資料館の歩み</a></li>
+				<li><a href="/asuka/about/#area_facility">施設案内</a></li>
+			</ul>
+		</div>
+		<div class="model_box"><a href="/asuka/shop/about.html">ミユージアムショップ</a></div>
+		<div class="model_box two_btn"><a href="/asuka/info">お知らせ</a><a href="/asuka/access/#area_inqury">お問い合わせ</a></div>
+        <div class="model_box">
+		<div id="model_english" class="text-center">
+		<p class="model_en_title">他の言語を選ぶ</p>
+		<div class="en_grp clearfix">
+			<ul>
+			<li><a href="/asuka/en" style="margin-left: 0px;">English</a></li>
+		    </ul>
+        </div>
+        </div>
+	    </div>
+<script src="/asuka/js/sp_nav.js"></script>
+</div>
+<script src="/asuka/bootstrap/js/bootstrap.js"></script>
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-41634407-2', 'nabunken.go.jp');
+	ga('send', 'pageview');
+</script>
+

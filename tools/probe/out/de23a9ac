@@ -1,0 +1,968 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="content-script-type" content="text/script" />
+	<meta http-equiv="content-style-type" content="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" href="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/css/import/common.css?ver=20261118044326" type="text/css" />
+	<link rel="stylesheet" href="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/css/import/design.css?ver=20261118044326" type="text/css" />
+	<link rel="stylesheet" href="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/css/add.css?ver=20261118044326" type="text/css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/css/add3.css?ver=20261118044326" type="text/css" />
+	<link rel="stylesheet" href="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/css/cookie.css?ver=20261118044326" type="text/css" />
+
+	<script type="text/javascript" src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/js/rollover.js?type=_on" charset="utf-8"></script>
+	<script type="text/javascript" src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/js/heightLine.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/js/function.js?ver=20261118044326" charset="utf-8"></script>
+	<script type="text/javascript" src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/js/jquery.js"></script>
+	<script type="text/javascript" src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/js/jquery.function.js?ver=20261118044326"></script>
+
+	
+	<title>展覧会 | 和歌山県立博物館</title>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/favicon.ico?ver=2022">
+	<link rel="apple-touch-icon" href="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/webclip.png?ver=2022">
+	
+	<meta name='robots' content='max-image-preview:large' />
+<meta name="description" content="県立博物館では、和歌山県における原始・古代から近現代までの3万年の歴史を紹介する「常設展」をはじめ「屋外展示」「ギャラリー展示」を行っており、特に近世文人画の作品や紀州3大窯にかかわる陶磁器は大きなコレクションとなっています。" >
+<meta name="keywords" content="和歌山,博物館" >
+<meta property="og:site_name" content="和歌山県立博物館" >
+<meta property="og:title" content="展覧会  :  和歌山県立博物館" >
+<meta property="og:type" content="blog" >
+<meta property="og:url" content="https://hakubutu.wakayama.jp/exhibit/" >
+<meta property="og:description" content="県立博物館では、和歌山県における原始・古代から近現代までの3万年の歴史を紹介する「常設展」をはじめ「屋外展示」「ギャラリー展示」を行っており、特に近世文人画の作品や紀州3大窯にかかわる陶磁器は大きなコレクションとなっています。" >
+<meta property="og:image" content="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/ogp.png?v=20261118134326" >
+<meta name="twitter:card" content="summary_large_image">
+<link rel="shortcut icon" href="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/favicon.png">
+<link rel="alternate" type="application/rss+xml" title="和歌山県立博物館 &raquo; 展覧会 フィード" href="https://hakubutu.wakayama.jp/exhibit/feed/" />
+<link rel='stylesheet' id='wp-block-library-css' href='https://hakubutu.wakayama.jp/cms/hakubutsu-management/wp-includes/css/dist/block-library/style.min.css?ver=6.2.15' type='text/css' media='all' />
+<style id='safe-svg-svg-icon-style-inline-css' type='text/css'>
+.safe-svg-cover .safe-svg-inside{display:inline-block;max-width:100%}.safe-svg-cover svg{height:100%;max-height:100%;max-width:100%;width:100%}
+
+</style>
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://hakubutu.wakayama.jp/cms/hakubutsu-management/wp-includes/css/classic-themes.min.css?ver=6.2.15' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/plugins/contact-form-7/includes/css/styles.css?ver=5.7.7' type='text/css' media='all' />
+<link rel='stylesheet' id='cookie-notice-front-css' href='https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/plugins/cookie-notice/css/front.min.css?ver=2.5.6' type='text/css' media='all' />
+<script type='text/javascript' id='cookie-notice-front-js-before'>
+var cnArgs = {"ajaxUrl":"https:\/\/hakubutu.wakayama.jp\/cms\/hakubutsu-management\/wp-admin\/admin-ajax.php","nonce":"fd1dafab3f","hideEffect":"fade","position":"bottom","onScroll":false,"onScrollOffset":100,"onClick":false,"cookieName":"cookie_notice_accepted","cookieTime":2592000,"cookieTimeRejected":2592000,"globalCookie":false,"redirection":false,"cache":false,"revokeCookies":false,"revokeCookiesOpt":"automatic"};
+</script>
+<script type='text/javascript' src='https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/plugins/cookie-notice/js/front.min.js?ver=2.5.6' id='cookie-notice-front-js'></script>
+<link rel="https://api.w.org/" href="https://hakubutu.wakayama.jp/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://hakubutu.wakayama.jp/cms/hakubutsu-management/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://hakubutu.wakayama.jp/cms/hakubutsu-management/wp-includes/wlwmanifest.xml" />
+<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+	var inputs = event.detail.inputs;
+	var	label = "";
+
+    for ( var i = 0; i < inputs.length; i++ ) {
+        if ( 'wpcf7conversion' == inputs[i].name ) {
+			label = inputs[i].value;
+            break;
+        }
+    }
+	
+	gtag('event', 'send', {
+	  'event_category': 'Contact Form',
+	  'event_action': 'submit',
+	  'event_label': label
+	});
+}, false );
+</script>
+			<style type="text/css" id="wp-custom-css">
+			/* 固定ページ（ID: 21843）の画像を保護 */
+.page-id-21843 img {
+  pointer-events: none !important;
+}		</style>
+		
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v9.0" nonce="qz7gtL0P"></script>
+	
+	<div class="l-sp-menu -slide">
+		<div class="l-sp-menu__content">
+			<div class="l-sp-menu__header">
+				<div>
+										
+						<div class="l-sp-menu__language">
+							<div class="c-dropdown">
+								<div name="select-language" class="c-dropdown__btn">Language</div>
+								<ul class="c-dropdown__content">
+																			<li><a href="https://hakubutu.wakayama.jp/">日本語</a></li>
+																			<li><a href="https://hakubutu.wakayama.jp/language/english/">English</a></li>
+																			<li><a href="https://hakubutu.wakayama.jp/language/chinese/">中文</a></li>
+																			<li><a href="https://hakubutu.wakayama.jp/language/korean/">한국어</a></li>
+																	</ul>
+							</div>
+						</div>
+					
+					<div>
+						<div class="l-sp-menu__access">
+							<a href="/guide-menu/guide/"><span>アクセス</span></a>
+						</div>
+						<p id="js-sp-nav__close-btn" class="l-sp-menu__close-btn">
+							<a href="javascript:void(0);">
+								<span class="text">CLOSE</span>
+							</a>
+						</p>
+					</div>
+				</div>
+
+									<div class="l-sp-menu__keyword-search">
+						<form method="get" action="https://hakubutu.wakayama.jp/./" class="l-header__keyword-search">
+							<input type="text" name="s" value="" placeholder="キーワードを入力" class="l-header__keyword-search-input">
+							<button class="l-header__keyword-search-btn" type="submit"><img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/ico_search01.svg" alt="検索"></button>
+						</form><!-- / l-header__keyword-search -->
+					</div>
+							</div>
+			<!-- / l-sp-menu__header -->
+			
+			<div>
+				<div class="l-sp-menu__main">
+					<div class="p-sp-menu">
+													<ul class="p-sp-menu__list">
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://hakubutu.wakayama.jp/" title="ホーム"><span>ホーム</span></a>
+																					</div>
+
+																			</li>
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://hakubutu.wakayama.jp/guide-menu/" title="利用案内"><span>利用案内</span></a>
+																							<button type="button" class="menu-btn">
+													<span class="inn">
+														<span class="bar"></span>
+														<span class="bar"></span>
+													</span>
+												</button>
+																					</div>
+
+																					<ul>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/guide-menu/guide/" title="入館料・アクセス">
+															<span>
+																																	入館料・アクセス																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/guide-menu/schedule/" title="年間開館スケジュール">
+															<span>
+																																	年間開館スケジュール																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/guide-menu/documents/" title="申請・申込一覧">
+															<span>
+																																	申請・申込一覧																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/guide-menu/tomonokai/" title="友の会">
+															<span>
+																																	友の会																															</span>
+														</a>
+													</li>
+																							</ul>
+																			</li>
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://hakubutu.wakayama.jp/exhibit-menu/" title="展示"><span>展示</span></a>
+																							<button type="button" class="menu-btn">
+													<span class="inn">
+														<span class="bar"></span>
+														<span class="bar"></span>
+													</span>
+												</button>
+																					</div>
+
+																					<ul>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/exhibit/" title="特別展・企画展・その他">
+															<span>
+																																	特別展・企画展・その他																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/exhibit-menu/exhibit-in-year-2026/" title="今年度の展覧会">
+															<span>
+																																	今年度の展覧会																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/exhibit-menu/josetu/" title="常設展ガイド">
+															<span>
+																																	常設展ガイド																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/exhibit-menu/3d/" title="3D画像で体験！">
+															<span>
+																																	3D画像で体験！																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/exhibit-menu/others/" title="その他の展示">
+															<span>
+																																	その他の展示																															</span>
+														</a>
+													</li>
+																							</ul>
+																			</li>
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://hakubutu.wakayama.jp/education/" title="教育普及"><span>教育普及</span></a>
+																							<button type="button" class="menu-btn">
+													<span class="inn">
+														<span class="bar"></span>
+														<span class="bar"></span>
+													</span>
+												</button>
+																					</div>
+
+																					<ul>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/education/schoolguide/" title="学校の先生へ">
+															<span>
+																																	学校の先生へ																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/education/m-work/" title="博物館の仕事">
+															<span>
+																																	博物館の仕事																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/education/gakushuushitsu/" title="学習室で閲覧できる書籍">
+															<span>
+																																	学習室で閲覧できる書籍																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/education/kensyu/" title="教員研修・博物館実習">
+															<span>
+																																	教員研修・博物館実習																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/education/worksheet/" title="ワークシート">
+															<span>
+																																	ワークシート																															</span>
+														</a>
+													</li>
+																							</ul>
+																			</li>
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://hakubutu.wakayama.jp/collection/" title="収蔵品"><span>収蔵品</span></a>
+																							<button type="button" class="menu-btn">
+													<span class="inn">
+														<span class="bar"></span>
+														<span class="bar"></span>
+													</span>
+												</button>
+																					</div>
+
+																					<ul>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/collection/search/" title="館蔵品目録 <br>（検索窓付き）">
+															<span>
+																																	館蔵品目録 <br>（検索窓付き）																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://wakayama.museum/" title="和歌山ミュージアムコレクション"target="_blank" rel="noreferrer">
+															<span>
+																																	<span class="p-external-link">和歌山ミュージアムコレクション</span>
+																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/guide-menu/tokubetueturan/" title="収蔵品の特別閲覧">
+															<span>
+																																	収蔵品の特別閲覧																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/collection/shashinriyou/" title="写真資料の利用">
+															<span>
+																																	写真資料の利用																															</span>
+														</a>
+													</li>
+																							</ul>
+																			</li>
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://hakubutu.wakayama.jp/archive-menu/" title="刊行物"><span>刊行物</span></a>
+																							<button type="button" class="menu-btn">
+													<span class="inn">
+														<span class="bar"></span>
+														<span class="bar"></span>
+													</span>
+												</button>
+																					</div>
+
+																					<ul>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/guide-menu/syuppan/" title="ご購入いただける刊行物">
+															<span>
+																																	ご購入いただける刊行物																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/archive-menu/kakokankoubutu/" title="これまでの刊行物">
+															<span>
+																																	これまでの刊行物																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/archive-menu/kandayori/" title="博物館だより">
+															<span>
+																																	博物館だより																															</span>
+														</a>
+													</li>
+																							</ul>
+																			</li>
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://hakubutu.wakayama.jp/about-museum/" title="当館について"><span>当館について</span></a>
+																							<button type="button" class="menu-btn">
+													<span class="inn">
+														<span class="bar"></span>
+														<span class="bar"></span>
+													</span>
+												</button>
+																					</div>
+
+																					<ul>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/guide-menu/about/" title="和歌山県立博物館について">
+															<span>
+																																	和歌山県立博物館について																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/information/" title="博物館ニュース">
+															<span>
+																																	博物館ニュース																															</span>
+														</a>
+													</li>
+																									<li>
+														<a href="https://hakubutu.wakayama.jp/about-museum/disasters/" title="文化財の災害・盗難">
+															<span>
+																																	文化財の災害・盗難																															</span>
+														</a>
+													</li>
+																							</ul>
+																			</li>
+															</ul>
+											</div>
+				</div>
+				<!-- / l-sp-menu__main -->
+
+				
+				<div class="l-sp-menu__sub">
+											<div class="p-sp-sub-menu">
+															<ul class="p-sp-sub-menu__list">
+																			<li class="p-sp-sub-menu__item"><a href="https://hakubutu.wakayama.jp/sitemap/" title="サイトマップ">サイトマップ</a></li>
+																			<li class="p-sp-sub-menu__item"><a href="https://hakubutu.wakayama.jp/privacy-policy/" title="プライバシーポリシー">プライバシーポリシー</a></li>
+																			<li class="p-sp-sub-menu__item"><a href="https://hakubutu.wakayama.jp/site-policy/" title="サイトポリシー">サイトポリシー</a></li>
+																	</ul>
+													</div>
+						<!-- /p-sp-sub-menu -->
+					
+													<p class="p-sp-sub-menu__sns">
+																			<a href="https://www.instagram.com/wakayamakenpaku/" target="_blank" rel="nofollow"><img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/btn_instagram.svg" alt="Instagram" /></a>
+																												<a href="https://twitter.com/wakayamakenpaku" target="_blank" rel="nofollow"><img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/btn_x.svg" alt="X" /></a>
+																												<a href="https://www.facebook.com/wakayamakenpaku/" target="_blank" rel="nofollow"><img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/btn_facebook.svg" alt="Facebook" /></a>
+																												<a href="https://www.youtube.com/user/wakayamakenpaku" target="_blank" rel="nofollow"><img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/btn_youtube.svg" alt="YouTube" /></a>
+																	</p>
+																		</div>
+				<!-- / l-sp-menu__sub -->
+			</div>
+		</div><!-- / l-sp-menu__content -->
+	</div><!-- / l-sp-menu -->
+
+	<div id="bgzone" class="site-all">
+		<div class="l-header">
+			<div class="c-container -fluid">
+				<div class="l-header__container">
+					<div class="l-header__main">
+												<div class="l-header__information">
+							<span class="date">11/18 <span>[水]</span></span>
+							<span>本日開館</span>
+						</div>
+
+						<div class="l-header__siteID">
+							<h1>
+								<a href="https://hakubutu.wakayama.jp" title="和歌山県立博物館">
+									<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/header.svg" alt="和歌山県立博物館" />
+								</a>
+							</h1>
+						</div>
+					</div>
+					<!-- / l-header__siteID -->
+
+					<div class="l-header__nav">
+						<div>
+								
+								<div class="l-header__language">
+									<ul class="l-header__language-list">
+																					<li class="l-header__language-item"><a href="https://hakubutu.wakayama.jp/" title="日本語">日本語</a></li>
+																					<li class="l-header__language-item"><a href="https://hakubutu.wakayama.jp/language/english/" title="English">English</a></li>
+																					<li class="l-header__language-item"><a href="https://hakubutu.wakayama.jp/language/chinese/" title="中文">中文</a></li>
+																					<li class="l-header__language-item"><a href="https://hakubutu.wakayama.jp/language/korean/" title="한국어">한국어</a></li>
+																			</ul>
+								</div>
+								<!-- / l-header__language -->
+							
+															<form method="get" action="https://hakubutu.wakayama.jp/./" class="l-header__keyword-search">
+									<input type="text" name="s" value="" placeholder="キーワードを入力" class="l-header__keyword-search-input">
+									<button class="l-header__keyword-search-btn" type="submit"><img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/ico_search01.svg" alt="検索"></button>
+								</form><!-- / l-header__keyword-search -->
+													</div>
+
+													<nav class="l-main-menu">
+								<ul class="l-main-menu__list">
+																			<li class="l-main-menu__item">
+											<a href="https://hakubutu.wakayama.jp/guide-menu/" title="利用案内"><span>利用案内</span></a>
+																							<div class="l-main-menu__item-wrapper">
+													<ul>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/guide-menu/guide/" title="入館料・アクセス">
+																	<span>
+																																			入館料・アクセス																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/guide-menu/schedule/" title="年間開館スケジュール">
+																	<span>
+																																			年間開館スケジュール																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/guide-menu/documents/" title="申請・申込一覧">
+																	<span>
+																																			申請・申込一覧																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/guide-menu/tomonokai/" title="友の会">
+																	<span>
+																																			友の会																																		</span>
+																</a>
+															</li>
+																											</ul>
+												</div>
+																					</li>
+																			<li class="l-main-menu__item">
+											<a href="https://hakubutu.wakayama.jp/exhibit-menu/" title="展示"><span>展示</span></a>
+																							<div class="l-main-menu__item-wrapper">
+													<ul>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/exhibit/" title="特別展・企画展・その他">
+																	<span>
+																																			特別展・企画展・その他																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/exhibit-menu/exhibit-in-year-2026/" title="今年度の展覧会">
+																	<span>
+																																			今年度の展覧会																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/exhibit-menu/josetu/" title="常設展ガイド">
+																	<span>
+																																			常設展ガイド																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/exhibit-menu/3d/" title="3D画像で体験！">
+																	<span>
+																																			3D画像で体験！																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/exhibit-menu/others/" title="その他の展示">
+																	<span>
+																																			その他の展示																																		</span>
+																</a>
+															</li>
+																											</ul>
+												</div>
+																					</li>
+																			<li class="l-main-menu__item">
+											<a href="https://hakubutu.wakayama.jp/education/" title="教育普及"><span>教育普及</span></a>
+																							<div class="l-main-menu__item-wrapper">
+													<ul>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/education/schoolguide/" title="学校の先生へ">
+																	<span>
+																																			学校の先生へ																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/education/m-work/" title="博物館の仕事">
+																	<span>
+																																			博物館の仕事																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/education/gakushuushitsu/" title="学習室で閲覧できる書籍">
+																	<span>
+																																			学習室で閲覧できる書籍																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/education/kensyu/" title="教員研修・博物館実習">
+																	<span>
+																																			教員研修・博物館実習																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/education/worksheet/" title="ワークシート">
+																	<span>
+																																			ワークシート																																		</span>
+																</a>
+															</li>
+																											</ul>
+												</div>
+																					</li>
+																			<li class="l-main-menu__item">
+											<a href="https://hakubutu.wakayama.jp/collection/" title="収蔵品"><span>収蔵品</span></a>
+																							<div class="l-main-menu__item-wrapper">
+													<ul>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/collection/search/" title="館蔵品目録 <br>（検索窓付き）">
+																	<span>
+																																			館蔵品目録 <br>（検索窓付き）																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://wakayama.museum/" title="和歌山ミュージアムコレクション"target="_blank" rel="noreferrer">
+																	<span>
+																																			<span class="p-external-link">和歌山ミュージアムコレクション</span>
+																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/guide-menu/tokubetueturan/" title="収蔵品の特別閲覧">
+																	<span>
+																																			収蔵品の特別閲覧																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/collection/shashinriyou/" title="写真資料の利用">
+																	<span>
+																																			写真資料の利用																																		</span>
+																</a>
+															</li>
+																											</ul>
+												</div>
+																					</li>
+																			<li class="l-main-menu__item">
+											<a href="https://hakubutu.wakayama.jp/archive-menu/" title="刊行物"><span>刊行物</span></a>
+																							<div class="l-main-menu__item-wrapper">
+													<ul>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/guide-menu/syuppan/" title="ご購入いただける刊行物">
+																	<span>
+																																			ご購入いただける刊行物																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/archive-menu/kakokankoubutu/" title="これまでの刊行物">
+																	<span>
+																																			これまでの刊行物																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/archive-menu/kandayori/" title="博物館だより">
+																	<span>
+																																			博物館だより																																		</span>
+																</a>
+															</li>
+																											</ul>
+												</div>
+																					</li>
+																			<li class="l-main-menu__item">
+											<a href="https://hakubutu.wakayama.jp/about-museum/" title="当館について"><span>当館について</span></a>
+																							<div class="l-main-menu__item-wrapper">
+													<ul>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/guide-menu/about/" title="和歌山県立博物館について">
+																	<span>
+																																			和歌山県立博物館について																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/information/" title="博物館ニュース">
+																	<span>
+																																			博物館ニュース																																		</span>
+																</a>
+															</li>
+																													<li>
+																<a href="https://hakubutu.wakayama.jp/about-museum/disasters/" title="文化財の災害・盗難">
+																	<span>
+																																			文化財の災害・盗難																																		</span>
+																</a>
+															</li>
+																											</ul>
+												</div>
+																					</li>
+																	</ul>
+							</nav>
+							<!-- l-main-menu -->
+											</div>
+					<!-- l-header__nav -->
+
+					<div id="js-sp-menu-trigger" class="c-hamburger-btn">
+						<a href="javascript:void(0);">
+							<span>
+								<span class="c-hamburger-btn__bar -first"></span>
+								<span class="c-hamburger-btn__bar -second"></span>
+								<span class="c-hamburger-btn__bar -third"></span>
+							</span>
+							<span class="c-hamburger-btn__text">MENU</span>
+						</a>
+					</div>
+					<!-- / c-hamburger-btn -->
+				</div>
+				<!-- / l-header__container -->
+			</div>
+		</div>
+		<!-- l-header -->
+	
+				<div id="container">
+			<div id="container-layout">
+<div id="main-section" class="heightLine-group-section">
+	<!--コンテンツ一つ分ここから -->
+	<div class="contents">
+		<nav class="p-breadcrumb"><ol class="p-breadcrumb__list"><li class="p-breadcrumb__item -home"><a href="https://hakubutu.wakayama.jp/">トップページ</a></li><li class="p-breadcrumb__item">展覧会</li></ol></nav>		<div class="clear"><img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/images/spacer.gif" width="1" height="1" alt="" /></div>
+		
+
+						<div class="title-bar-main-outer">
+					<div class="title-bar-main">
+						<h3>開催中の展覧会</h3>
+					</div>
+				</div>
+				<div class="p-article-list">
+					<div class="p-article-list__item">
+		<div class="p-article-list__item-image">
+		<a href="https://hakubutu.wakayama.jp/exhibit/s100-anojuuwa2026/">
+			<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/uploads/2026/10/紀伊青年学校校旗.jpg" alt="コーナー展示「《昭和100年》 “あのじゅう”の和歌山」" width="120" />
+		</a>
+	</div><!-- p-article-list__item-image -->
+		<div class="p-article-list__item-text ">
+		<h4 class="p-article-list__item-title"><a href="https://hakubutu.wakayama.jp/exhibit/s100-anojuuwa2026/">コーナー展示「《昭和100年》 “あのじゅう”の和歌山」</a></h4>
+		<div class="p-article-list__item-description">
+			<p>令和８年(2026)10月10日(土)〜12月6日(日)<br />
+（企画展「くらひらくｰ博物館の蔵仕事ｰ」と併催）</p>　紀伊青年学校校旗（和歌山県立博物館蔵）
+　今年、令和８年(2026)は、昭和元年(1926)から起算して、100年目の年にあたります。約63年にわたる昭和という時代は、昭和20年(1945)の敗戦を境にして、悲惨な戦争につきすすんだ前半の…					</div><!-- p-article-list__item-description -->
+		<p class="p-article-list__item-date">UPDATE:2026.10.09</p>
+	</div><!-- p-article-list__item-text -->
+</div><!-- p-article-list__item --><div class="p-article-list__item">
+		<div class="p-article-list__item-image">
+		<a href="https://hakubutu.wakayama.jp/exhibit/kurahiraku2026/">
+			<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/uploads/2026/10/サムネイル.png" alt="企画展「くらひらく−博物館の蔵仕事−」" width="120" />
+		</a>
+	</div><!-- p-article-list__item-image -->
+		<div class="p-article-list__item-text ">
+		<h4 class="p-article-list__item-title"><a href="https://hakubutu.wakayama.jp/exhibit/kurahiraku2026/">企画展「くらひらく−博物館の蔵仕事−」</a></h4>
+		<div class="p-article-list__item-description">
+			<p>令和8（2026）年10月10日（土）～12月6日（日）</p>人々はむかしから大切なものを蔵におさめてきました。蔵は、持ち主や関わってきた人々の歴史をものがたります。地域の歴史にまつわる文化財を集め、守り、調べていく博物館にとって、蔵は貴重な資料のありかです。
+この展覧会では、８つのテーマにそって、博…					</div><!-- p-article-list__item-description -->
+		<p class="p-article-list__item-date">UPDATE:2026.10.09</p>
+	</div><!-- p-article-list__item-text -->
+</div><!-- p-article-list__item -->				</div>
+			
+
+			
+		
+
+		<div class="title-bar-main-outer">
+			<div class="title-bar-main">
+									<h3>これまでの展覧会</h3>
+							</div>
+		</div>
+					<div class="p-article-list">
+				<div class="p-article-list__item">
+		<div class="p-article-list__item-image">
+		<a href="https://hakubutu.wakayama.jp/exhibit/rosetu2026/">
+			<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/uploads/2026/05/サムネイル２.png" alt="特別展「蘆雪生動 ―南紀 無量寺への旅―」" width="120" />
+		</a>
+	</div><!-- p-article-list__item-image -->
+		<div class="p-article-list__item-text ">
+		<h4 class="p-article-list__item-title"><a href="https://hakubutu.wakayama.jp/exhibit/rosetu2026/">特別展「蘆雪生動 ―南紀 無量寺への旅―」</a></h4>
+		<div class="p-article-list__item-description">
+			<p>2026年8月11日（火・祝）～9月23日（水・祝）<br />
+《前期》第一期：8月11日(火・祝)～16日(日)／第二期：8月18日(火)～30日(日)<br />
+《後期》第三期：9月1日(火)～13日(日)／第四期：9月15日(火)～23日(水・祝)</p>　江戸時代の京都の画家、長沢蘆雪。愛らしい生き物や、くすっと笑ってしまうような面白みのある表現が得意です。そんな蘆雪の初めての大仕事が、和歌山の南の三つのお寺―無量寺・成就寺・草堂寺―で描いた、180枚ほどにもなる襖絵。三つのお寺のうちの一つが、串本町にある無量寺です。無量寺は今年、襖絵を大切にしまってきた収蔵庫を修理することになりました。県立博物館ではこの修理に合わせ、紀南に残る生き生きと動き出すような蘆雪の絵を、一堂に公開します。					</div><!-- p-article-list__item-description -->
+		<p class="p-article-list__item-date">UPDATE:2026.05.12</p>
+	</div><!-- p-article-list__item-text -->
+</div><!-- p-article-list__item --><div class="p-article-list__item">
+		<div class="p-article-list__item-image">
+		<a href="https://hakubutu.wakayama.jp/exhibit/ihuu2025/">
+			<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/uploads/2025/07/サムネイル-1.png" alt="特別展「紀伊徳川家の威風」" width="120" />
+		</a>
+	</div><!-- p-article-list__item-image -->
+		<div class="p-article-list__item-text ">
+		<h4 class="p-article-list__item-title"><a href="https://hakubutu.wakayama.jp/exhibit/ihuu2025/">特別展「紀伊徳川家の威風」</a></h4>
+		<div class="p-article-list__item-description">
+			<p>2025年10月11日（土）～11月24日（月・振休）</p>　紀伊徳川家は、江戸時代の和歌山城主で、現在の和歌山県や三重県南部に広がる紀伊藩を治めました。尾張・水戸とともに御三家として将軍家を支え、八代将軍吉宗や一四代将軍家茂を輩出しました。この特別展では、紀伊徳川家の歴史を関連する資料から紹介します。					</div><!-- p-article-list__item-description -->
+		<p class="p-article-list__item-date">UPDATE:2025.09.10</p>
+	</div><!-- p-article-list__item-text -->
+</div><!-- p-article-list__item --><div class="p-article-list__item">
+		<div class="p-article-list__item-image">
+		<a href="https://hakubutu.wakayama.jp/exhibit/kuraberu2025/">
+			<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/uploads/2025/07/サムネイル.png" alt="夏休みこども向け企画展「くらべてみよう！ふたりの絵」" width="120" />
+		</a>
+	</div><!-- p-article-list__item-image -->
+		<div class="p-article-list__item-text ">
+		<h4 class="p-article-list__item-title"><a href="https://hakubutu.wakayama.jp/exhibit/kuraberu2025/">夏休みこども向け企画展「くらべてみよう！ふたりの絵」</a></h4>
+		<div class="p-article-list__item-description">
+			<p>令和7(2025)年8月2日(土)～9月23日(火･祝)</p>　　いまからおよそ200年前、江戸時代の和歌山に、とても絵の上手なふたりがいたよ。その名は、桑山玉洲と野呂介石！
+　一才ちがいの友だちで、きっとライバルでもあったふたり。夏休みの博物館では、玉洲さんと介石さんの絵や、ふたりがあこがれて学んだ…					</div><!-- p-article-list__item-description -->
+		<p class="p-article-list__item-date">UPDATE:2025.07.31</p>
+	</div><!-- p-article-list__item-text -->
+</div><!-- p-article-list__item --><div class="p-article-list__item">
+		<div class="p-article-list__item-image">
+		<a href="https://hakubutu.wakayama.jp/exhibit/nankai2025/">
+			<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/uploads/2025/05/サムネイル.png" alt="企画展 「祇園南海の詩と書−教養・芸術・心情−」" width="120" />
+		</a>
+	</div><!-- p-article-list__item-image -->
+		<div class="p-article-list__item-text ">
+		<h4 class="p-article-list__item-title"><a href="https://hakubutu.wakayama.jp/exhibit/nankai2025/">企画展 「祇園南海の詩と書−教養・芸術・心情−」</a></h4>
+		<div class="p-article-list__item-description">
+			<p>令和７(2025)年６月14日(土)～７月21日(月･祝)</p>日本文学の歴史の中で、仮名文学とならんで、漢字のみで詩文を表現する漢文学が相当にさかんであったことは、十分に知られていないことかも知れません。しかし、平安時代前期とともに、江戸時代にはとくに漢文学への関心が高く、教養のある人びと、すなわち文…					</div><!-- p-article-list__item-description -->
+		<p class="p-article-list__item-date">UPDATE:2025.05.29</p>
+	</div><!-- p-article-list__item-text -->
+</div><!-- p-article-list__item --><div class="p-article-list__item">
+		<div class="p-article-list__item-image">
+		<a href="https://hakubutu.wakayama.jp/exhibit/profile2025/">
+			<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/uploads/2025/04/サムネイル.png" alt="特別展「仏像のプロフィール わかやまうまれ、わかやまそだち」" width="120" />
+		</a>
+	</div><!-- p-article-list__item-image -->
+		<div class="p-article-list__item-text ">
+		<h4 class="p-article-list__item-title"><a href="https://hakubutu.wakayama.jp/exhibit/profile2025/">特別展「仏像のプロフィール わかやまうまれ、わかやまそだち」</a></h4>
+		<div class="p-article-list__item-description">
+			<p>2025年 4月26日（土）～ 6月1日（日）</p>　和歌山には、はるか昔から、和歌山の人々を見守ってきた仏像がたくさんあります。県立博物館では、こうした仏像をたずねて、和歌山の歴史をひもとくヒントを教えてもらっています。
+　この展覧会では、博物館で仏像を調べるときのポイントⅠ～Ⅳに沿って、仏像や仏画をみながら、それぞれが和歌山に伝わる理由に注目します。仏像のなまえ、かたち、からだのつくり、地域やお寺のことなど、仏像のプロフィールになる情報のひとつひとつが、和歌山の歴史につながる大事なヒントになります。さまざまなみかたをとおして、和歌山の仏像の魅力にであう機会となればうれしいです。					</div><!-- p-article-list__item-description -->
+		<p class="p-article-list__item-date">UPDATE:2025.04.17</p>
+	</div><!-- p-article-list__item-text -->
+</div><!-- p-article-list__item --><div class="p-article-list__item">
+		<div class="p-article-list__item-image">
+		<a href="https://hakubutu.wakayama.jp/exhibit/utsusu/">
+			<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/uploads/2025/03/サムネイル.png" alt="企画展 「 “写（うつす）” ―紀州のやきものを巡るまなざし― 」" width="120" />
+		</a>
+	</div><!-- p-article-list__item-image -->
+		<div class="p-article-list__item-text ">
+		<h4 class="p-article-list__item-title"><a href="https://hakubutu.wakayama.jp/exhibit/utsusu/">企画展 「 “写（うつす）” ―紀州のやきものを巡るまなざし― 」</a></h4>
+		<div class="p-article-list__item-description">
+			<p>2025年 3月15日（土）～ 4月20日（日）</p>　和歌山県立博物館では、3月15日（土）から4月20日（日）までの会期で、企画展「“写（うつす）”―紀州のやきものを巡るまなざし―」を開催します。19世紀の紀州ゆかりの多様なやきものを、何かを「写す」という営みに注目してご紹介します。やきも…					</div><!-- p-article-list__item-description -->
+		<p class="p-article-list__item-date">UPDATE:2025.03.13</p>
+	</div><!-- p-article-list__item-text -->
+</div><!-- p-article-list__item --><div class="p-article-list__item">
+		<div class="p-article-list__item-image">
+		<a href="https://hakubutu.wakayama.jp/exhibit/seitijunrei-5/">
+			<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/uploads/2025/01/サムネイル.png" alt="世界遺産「紀伊山地の霊場と参詣道」登録20周年記念特別展　聖地巡礼　―熊野と高野―　第Ⅴ期　蘇りの地・熊野　―熊野本宮大社・湯峯と熊野川―" width="120" />
+		</a>
+	</div><!-- p-article-list__item-image -->
+		<div class="p-article-list__item-text ">
+		<h4 class="p-article-list__item-title"><a href="https://hakubutu.wakayama.jp/exhibit/seitijunrei-5/">世界遺産「紀伊山地の霊場と参詣道」登録20周年記念特別展　聖地巡礼　―熊野と高野―　第Ⅴ期　蘇りの地・熊野　―熊野本宮大社・湯峯と熊野川―</a></h4>
+		<div class="p-article-list__item-description">
+			<p>2025年 2月1日（土）～ 3月9日（日）</p>　熊野本宮大社を中心とする熊野への参詣は、山岳修験（さんがくしゅげん）における「擬死再生（ぎしさいせい）」、すなわち生まれ変わりの修行の一つとして行われていました。また熊野三山の一つ熊野本宮大社は、もとは熊野川の中洲（なかす）に鎮座しており…					</div><!-- p-article-list__item-description -->
+		<p class="p-article-list__item-date">UPDATE:2025.01.29</p>
+	</div><!-- p-article-list__item-text -->
+</div><!-- p-article-list__item --><div class="p-article-list__item">
+		<div class="p-article-list__item-image">
+		<a href="https://hakubutu.wakayama.jp/exhibit/seitijunrei-4/">
+			<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/uploads/2024/11/サムネイル.png" alt="世界遺産「紀伊山地の霊場と参詣道」登録20周年記念特別展　聖地巡礼　―熊野と高野―　第Ⅳ期　熊野信仰の美と荘厳　―熊野速玉大社の神像と古神宝―" width="120" />
+		</a>
+	</div><!-- p-article-list__item-image -->
+		<div class="p-article-list__item-text ">
+		<h4 class="p-article-list__item-title"><a href="https://hakubutu.wakayama.jp/exhibit/seitijunrei-4/">世界遺産「紀伊山地の霊場と参詣道」登録20周年記念特別展　聖地巡礼　―熊野と高野―　第Ⅳ期　熊野信仰の美と荘厳　―熊野速玉大社の神像と古神宝―</a></h4>
+		<div class="p-article-list__item-description">
+			<p>2024年 12月7日（土）～2025年 1月19日（日）</p>　聖地・熊野に祀られる厳かな神像と、神々に捧げられたきらびやかな宝物の数々。これらは熊野への篤い信仰を象徴的に物語ります。第Ⅳ期展示では､熊野速玉大社が誇る国宝の神像と古神宝を中心に、熊野信仰のなかで生み出された麗しい宝物の数々を紹介します…					</div><!-- p-article-list__item-description -->
+		<p class="p-article-list__item-date">UPDATE:2024.11.26</p>
+	</div><!-- p-article-list__item-text -->
+</div><!-- p-article-list__item --><div class="p-article-list__item">
+		<div class="p-article-list__item-image">
+		<a href="https://hakubutu.wakayama.jp/exhibit/seitijunrei-3/">
+			<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/uploads/2024/09/サムネイル.png" alt="世界遺産「紀伊山地の霊場と参詣道」登録20周年記念特別展　聖地巡礼　―熊野と高野―　第Ⅲ期　人・道・祈り―紀伊路・伊勢路・大辺路をゆく―" width="120" />
+		</a>
+	</div><!-- p-article-list__item-image -->
+		<div class="p-article-list__item-text ">
+		<h4 class="p-article-list__item-title"><a href="https://hakubutu.wakayama.jp/exhibit/seitijunrei-3/">世界遺産「紀伊山地の霊場と参詣道」登録20周年記念特別展　聖地巡礼　―熊野と高野―　第Ⅲ期　人・道・祈り―紀伊路・伊勢路・大辺路をゆく―</a></h4>
+		<div class="p-article-list__item-description">
+			<p>前期：2024年 10月12日（土）～11月4日（月・祝）<br />
+後期：2024年 11月6日（水）～11月24日（日）<br />
+※前期・後期で一部の作品について展示替えをおこないます。</p>　和歌山県立博物館では、今年6月15日（土）から翌令和7年3月9日（日）までの期間、世界遺産「紀伊山地の霊場と参詣道」登録20周年を記念して、特別展「聖地巡礼―熊野と高野―」を開催しています。
+　10月12日（土）～11月24日（日）には、第Ⅲ期展示として「人・道・祈り―紀伊路・伊勢路・大辺路をゆく―」と題した展覧会を開催する予定にしています。この展示では、熊野三山や高野山といった霊場をつなぐ“道”を取り上げるとともに、それらの沿道に所在する寺社・霊場とその名宝の数々をご紹介いたします。旅人気分で、博物館で紀伊半島の“霊場めぐり”をしてみてはいかがでしょうか？重要文化財 14 件、和歌山県指定文化財 5 件、三重県指定文化財 5 件を展示します（会期の前期（10/12～11/4）、後期（11/6～11/24）で一部の作品について展示替えを行います）。					</div><!-- p-article-list__item-description -->
+		<p class="p-article-list__item-date">UPDATE:2024.09.13</p>
+	</div><!-- p-article-list__item-text -->
+</div><!-- p-article-list__item --><div class="p-article-list__item">
+		<div class="p-article-list__item-image">
+		<a href="https://hakubutu.wakayama.jp/exhibit/seitijunrei-2/">
+			<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/uploads/2024/07/サムネイル.png" alt="世界遺産「紀伊山地の霊場と参詣道」登録20周年記念特別展　聖地巡礼　―熊野と高野―　第Ⅱ期　神仏・祖師の住まう山　―高野山上・山麓の宗教文化―" width="120" />
+		</a>
+	</div><!-- p-article-list__item-image -->
+		<div class="p-article-list__item-text ">
+		<h4 class="p-article-list__item-title"><a href="https://hakubutu.wakayama.jp/exhibit/seitijunrei-2/">世界遺産「紀伊山地の霊場と参詣道」登録20周年記念特別展　聖地巡礼　―熊野と高野―　第Ⅱ期　神仏・祖師の住まう山　―高野山上・山麓の宗教文化―</a></h4>
+		<div class="p-article-list__item-description">
+			<p>前期：2024年 8月3日（土）～8月25日（日）<br />
+後期：2024年 8月31日（土）～9月29日（日）<br />
+※前期・後期で大幅な展示替えをおこないます。<br />
+8月27日（火）～30日（金）は展示替えのため常設展「きのくにの歩み」のみご観覧いただけます。<br />
+</p>高野山は、真言密教の道場であると同時に、地主神の丹生明神を祀り、神仏が融合して信仰を織りなす山といえます。そして、祖師・弘法大師空海がいまも永遠の瞑想を続けているという、祖師の住まう聖地でもあるのです。第Ⅱ期の展示では、数々の貴重な文化財をとおして、今日も大切に受け継がれる、高野山上と山麓の豊かな宗教文化を紹介します。					</div><!-- p-article-list__item-description -->
+		<p class="p-article-list__item-date">UPDATE:2024.07.25</p>
+	</div><!-- p-article-list__item-text -->
+</div><!-- p-article-list__item -->				<div class="page-navi"><p><span>&lt;&lt;</span><span class="page-navi-list"><span class="current_page">1</span><a href="https://hakubutu.wakayama.jp/exhibit/page/2/" class="link_page">2</a><a href="https://hakubutu.wakayama.jp/exhibit/page/3/" class="link_page">3</a><a href="https://hakubutu.wakayama.jp/exhibit/page/4/" class="link_page">4</a></span><a href="https://hakubutu.wakayama.jp/exhibit/page/4/">&gt;&gt;</a></p></div>			</div>
+				
+	</div>
+	<!--コンテンツ一つ分ここまで -->
+</div>
+
+<div id="sub-section-right" class="heightLine-group-section">
+	<div id="sub-section-right-inner">
+					<div class="title-bar-outer">
+				<div class="title-bar">
+					<h3>開催中の展覧会</h3>
+				</div>
+			</div>
+			<div class="bottom20">
+				<ul class="mark_red">
+										<li><a href="https://hakubutu.wakayama.jp/exhibit/s100-anojuuwa2026/">コーナー展示「《昭和100年》 “あのじゅう”の和歌山」</a></li>
+										<li><a href="https://hakubutu.wakayama.jp/exhibit/kurahiraku2026/">企画展「くらひらく−博物館の蔵仕事−」</a></li>
+									</ul>
+			</div>
+		
+		
+		<div class="title-bar-outer">
+			<div class="title-bar">
+				<h3>これまでの展覧会</h3>
+			</div>
+		</div>
+		<div class="bottom20">
+			<ul class="mark_red">
+								<li><a href="https://hakubutu.wakayama.jp/exhibit_years/2025%e5%b9%b4%e5%ba%a6%e3%81%ae%e5%b1%95%e8%a6%a7%e4%bc%9a/">2025年度の展覧会</a></li>
+								<li><a href="https://hakubutu.wakayama.jp/exhibit_years/2026%e5%b9%b4%e5%ba%a6%e3%81%ae%e5%b1%95%e8%a6%a7%e4%bc%9a/">2026年度の展覧会</a></li>
+								<li><a href="https://hakubutu.wakayama.jp/exhibit_years/2024%e5%b9%b4%e5%ba%a6%e3%81%ae%e5%b1%95%e8%a6%a7%e4%bc%9a/">2024年度の展覧会</a></li>
+								<li><a href="https://hakubutu.wakayama.jp/exhibit_years/2023%e5%b9%b4%e5%ba%a6%e3%81%ae%e5%b1%95%e8%a6%a7%e4%bc%9a/">2023年度の展覧会</a></li>
+								<li><a href="https://hakubutu.wakayama.jp/exhibit_years/2022%e5%b9%b4%e5%ba%a6%e3%81%ae%e5%b1%95%e8%a6%a7%e4%bc%9a/">2022年度の展覧会</a></li>
+								<li><a href="https://hakubutu.wakayama.jp/exhibit_years/2021%e5%b9%b4%e5%ba%a6%e3%81%ae%e5%b1%95%e8%a6%a7%e4%bc%9a/">2021年度の展覧会</a></li>
+							</ul>
+			<p class="text-right"><a href="https://hakubutu.wakayama.jp/exhibit/">[すべて表示する]</a></p>
+		</div>
+	</div>
+</div>
+	</div><!--#container-layout-->
+</div><!--#container-->
+
+<!--footer -->
+<div class="l-footer">
+	<div id="js-pagetop" class="p-back-to-top">
+		<a href="#top" aria-label="このページの先頭へ">
+			<img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/images/back_to_top.svg" alt="" />
+		</a>
+	</div>
+
+	<div class="c-container">
+		<div class="l-footer__container">
+			<div class="l-footer__info">
+									<p class="l-footer__info-logo">
+						<a href="https://hakubutu.wakayama.jp" title="和歌山県立博物館"><img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/header.svg" alt="和歌山県立博物館" width="247" height="40" /></a>
+					</p>
+					<p class="l-footer__info-address">
+						〒640-8137 和歌山市吹上1-4-14<br />
+TEL：073-436-8670<br />
+FAX：073-436-6643					</p>
+					<p class="l-footer__info-opening">
+						開館時間：9:30-17:00（入場は16:30まで）<br />
+休館日：<br />
+* 月曜日（ただし祝日の場合は、その翌平日）<br />
+* 年末年始（令和6年12月29日～令和7年1月3日）<br />
+* 臨時休館日（展示替え期間など）					</p>
+					<p class="l-footer__info-access">
+						<a href="https://hakubutu.wakayama.jp/guide-menu/guide/">
+							周辺マップ／交通アクセス						</a>
+					</p>
+					
+											<p class="l-footer__info-sns">
+																	<a href="https://www.instagram.com/wakayamakenpaku/" target="_blank" rel="nofollow"><img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/btn_instagram.svg" alt="Instagram" /></a>
+																									<a href="https://twitter.com/wakayamakenpaku" target="_blank" rel="nofollow"><img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/btn_x.svg" alt="X" /></a>
+																									<a href="https://www.facebook.com/wakayamakenpaku/" target="_blank" rel="nofollow"><img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/btn_facebook.svg" alt="Facebook" /></a>
+																									<a href="https://www.youtube.com/user/wakayamakenpaku" target="_blank" rel="nofollow"><img src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/tmpl-img/btn_youtube.svg" alt="YouTube" /></a>
+															</p>
+															</div>
+			<!-- / l-footer__info -->
+
+							<div class="l-footer__nav">
+					<nav class="l-footer__nav-body">
+														<ul class="l-footer__nav-list">
+																			<li class="l-footer__nav-item"><a href="https://hakubutu.wakayama.jp/" title="トップページ">トップページ</a></li>
+																	</ul>
+															<ul class="l-footer__nav-list">
+																			<li class="l-footer__nav-item"><a href="https://hakubutu.wakayama.jp/guide-menu/" title="利用案内">利用案内</a></li>
+																			<li class="l-footer__nav-item"><a href="https://hakubutu.wakayama.jp/exhibit-menu/" title="展示">展示</a></li>
+																			<li class="l-footer__nav-item"><a href="https://hakubutu.wakayama.jp/education/" title="教育普及">教育普及</a></li>
+																			<li class="l-footer__nav-item"><a href="https://hakubutu.wakayama.jp/collection/" title="収蔵品">収蔵品</a></li>
+																			<li class="l-footer__nav-item"><a href="https://hakubutu.wakayama.jp/archive-menu/" title="刊行物">刊行物</a></li>
+																			<li class="l-footer__nav-item"><a href="https://hakubutu.wakayama.jp/information" title="博物館ニュース">博物館ニュース</a></li>
+																	</ul>
+															<ul class="l-footer__nav-list">
+																			<li class="l-footer__nav-item"><a href="https://hakubutu.wakayama.jp/sitemap/" title="サイトマップ">サイトマップ</a></li>
+																			<li class="l-footer__nav-item"><a href="https://hakubutu.wakayama.jp/privacy-policy/" title="プライバシーポリシー">プライバシーポリシー</a></li>
+																			<li class="l-footer__nav-item"><a href="https://hakubutu.wakayama.jp/site-policy/" title="サイトポリシー">サイトポリシー</a></li>
+																	</ul>
+												</nav>
+
+					<small>©和歌山県立博物館</small>
+				</div>
+				<!-- / l-footer__nav -->
+					</div>
+		<!-- / l-footer__container -->
+	</div>
+	<!-- /c-container -->
+</div>
+<!-- / l-footer -->
+</div><!--#bgzone-->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script type="text/javascript" src="https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/themes/hakubutsu-theme/js/main.js?ver=20261118044326"></script>
+	
+<script type='text/javascript' src='https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.7' id='swv-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/hakubutu.wakayama.jp\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://hakubutu.wakayama.jp/cms/hakubutsu-management/contents/plugins/contact-form-7/includes/js/index.js?ver=5.7.7' id='contact-form-7-js'></script>
+
+		<!-- Cookie Notice plugin v2.5.6 by Hu-manity.co https://hu-manity.co/ -->
+		<div id="cookie-notice" role="dialog" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom" aria-label="Cookie Notice" style="background-color: rgba(50,50,58,1);"><div class="cookie-notice-container" style="color: #fff"><span id="cn-notice-text" class="cn-text-container">よりよいエクスペリエンスを提供するため、当ウェブサイトでは Cookie を使用しています。引き続き閲覧する場合、Cookie の使用を承諾したものとみなされます。</span><span id="cn-notice-buttons" class="cn-buttons-container"><a href="#" id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button" aria-label="OK" style="background-color: #00a99d">OK</a></span><span id="cn-close-notice" data-cookie-set="accept" class="cn-close-icon" title="いいえ"></span></div>
+			
+		</div>
+		<!-- / Cookie Notice plugin -->
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head><style>img.lazy{min-height:1px}</style><link href="https://www.heijo-park.jp/cms/wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js" as="script">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+
+<meta name="keywords" content="歴史,公園,奈良県,奈良市,国営公園,世界遺産,平城宮跡,平城京,平城遷都,遺跡,観光,散策,大極殿,朱雀門,復原,公園整備">
+<meta name="description" content="国営平城宮跡歴史公園は、奈良時代の遺跡が保存・復原された公園で、世界遺産にも登録されています。どなたでも自由に散策したり憩いを楽しめます。">
+
+<link rel="shortcut icon" href="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/ico/favicon.ico">
+<link rel="apple-touch-icon" href="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/ico/favicon.png">
+<link rel="stylesheet" href="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/css/set.css" media="all">
+<link rel="stylesheet" href="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/css/common.css" media="all">
+
+
+<link rel="stylesheet" href="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/css/slick.css" media="all">
+<link rel="stylesheet" href="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/css/slick-theme.css" media="all">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/style.css" media="all">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+		<!-- All in One SEO 5.0.5.1 - aioseo.com -->
+		<title>【企画展】平城遷都ー「飛鳥・藤原の宮都」から平城へー (会期：9/19～11/29) | 国営平城宮跡歴史公園</title>
+	<meta name="robots" content="max-image-preview:large" />
+	<meta name="google-site-verification" content="G-1HR53XCVKQ" />
+	<link rel="canonical" href="https://www.heijo-park.jp/event/heijyosento/" />
+		<meta name="generator" content="All in One SEO (AIOSEO) 5.0.5.1" />
+		<meta property="og:locale" content="ja_JP" />
+		<meta property="og:site_name" content="国営平城宮跡歴史公園 | 国営平城宮跡歴史公園は、奈良時代の遺跡が保存・復原された公園で、世界遺産にも登録されています。どなたでも自由に散策したり憩いを楽しめます。" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="【企画展】平城遷都ー「飛鳥・藤原の宮都」から平城へー (会期：9/19～11/29) | 国営平城宮跡歴史公園" />
+		<meta property="og:url" content="https://www.heijo-park.jp/event/heijyosento/" />
+		<meta property="article:published_time" content="2026-08-17T00:00:33+00:00" />
+		<meta property="article:modified_time" content="2026-08-25T02:09:41+00:00" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="【企画展】平城遷都ー「飛鳥・藤原の宮都」から平城へー (会期：9/19～11/29) | 国営平城宮跡歴史公園" />
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https:\/\/www.heijo-park.jp\/event\/heijyosento\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/www.heijo-park.jp\/#listItem","position":1,"name":"\u30db\u30fc\u30e0","item":"https:\/\/www.heijo-park.jp\/","nextItem":{"@type":"ListItem","@id":"https:\/\/www.heijo-park.jp\/event\/#listItem","name":"\u30a4\u30d9\u30f3\u30c8"}},{"@type":"ListItem","@id":"https:\/\/www.heijo-park.jp\/event\/#listItem","position":2,"name":"\u30a4\u30d9\u30f3\u30c8","item":"https:\/\/www.heijo-park.jp\/event\/","nextItem":{"@type":"ListItem","@id":"https:\/\/www.heijo-park.jp\/event_category\/other\/#listItem","name":"\u305d\u306e\u4ed6"},"previousItem":{"@type":"ListItem","@id":"https:\/\/www.heijo-park.jp\/#listItem","name":"\u30db\u30fc\u30e0"}},{"@type":"ListItem","@id":"https:\/\/www.heijo-park.jp\/event_category\/other\/#listItem","position":3,"name":"\u305d\u306e\u4ed6","item":"https:\/\/www.heijo-park.jp\/event_category\/other\/","nextItem":{"@type":"ListItem","@id":"https:\/\/www.heijo-park.jp\/event_category\/%e5%b1%95%e7%a4%ba\/#listItem","name":"\u5c55\u793a"},"previousItem":{"@type":"ListItem","@id":"https:\/\/www.heijo-park.jp\/event\/#listItem","name":"\u30a4\u30d9\u30f3\u30c8"}},{"@type":"ListItem","@id":"https:\/\/www.heijo-park.jp\/event_category\/%e5%b1%95%e7%a4%ba\/#listItem","position":4,"name":"\u5c55\u793a","item":"https:\/\/www.heijo-park.jp\/event_category\/%e5%b1%95%e7%a4%ba\/","nextItem":{"@type":"ListItem","@id":"https:\/\/www.heijo-park.jp\/event\/heijyosento\/#listItem","name":"\u3010\u4f01\u753b\u5c55\u3011\u5e73\u57ce\u9077\u90fd\u30fc\u300c\u98db\u9ce5\u30fb\u85e4\u539f\u306e\u5bae\u90fd\u300d\u304b\u3089\u5e73\u57ce\u3078\u30fc\u3000(\u4f1a\u671f\uff1a9\/19\uff5e11\/29)"},"previousItem":{"@type":"ListItem","@id":"https:\/\/www.heijo-park.jp\/event_category\/other\/#listItem","name":"\u305d\u306e\u4ed6"}},{"@type":"ListItem","@id":"https:\/\/www.heijo-park.jp\/event\/heijyosento\/#listItem","position":5,"name":"\u3010\u4f01\u753b\u5c55\u3011\u5e73\u57ce\u9077\u90fd\u30fc\u300c\u98db\u9ce5\u30fb\u85e4\u539f\u306e\u5bae\u90fd\u300d\u304b\u3089\u5e73\u57ce\u3078\u30fc\u3000(\u4f1a\u671f\uff1a9\/19\uff5e11\/29)","previousItem":{"@type":"ListItem","@id":"https:\/\/www.heijo-park.jp\/event_category\/%e5%b1%95%e7%a4%ba\/#listItem","name":"\u5c55\u793a"}}]},{"@type":"Organization","@id":"https:\/\/www.heijo-park.jp\/#organization","name":"\u56fd\u55b6\u5e73\u57ce\u5bae\u8de1\u6b74\u53f2\u516c\u5712","description":"\u56fd\u55b6\u5e73\u57ce\u5bae\u8de1\u6b74\u53f2\u516c\u5712\u306f\u3001\u5948\u826f\u6642\u4ee3\u306e\u907a\u8de1\u304c\u4fdd\u5b58\u30fb\u5fa9\u539f\u3055\u308c\u305f\u516c\u5712\u3067\u3001\u4e16\u754c\u907a\u7523\u306b\u3082\u767b\u9332\u3055\u308c\u3066\u3044\u307e\u3059\u3002\u3069\u306a\u305f\u3067\u3082\u81ea\u7531\u306b\u6563\u7b56\u3057\u305f\u308a\u61a9\u3044\u3092\u697d\u3057\u3081\u307e\u3059\u3002","url":"https:\/\/www.heijo-park.jp\/"},{"@type":"WebPage","@id":"https:\/\/www.heijo-park.jp\/event\/heijyosento\/#webpage","url":"https:\/\/www.heijo-park.jp\/event\/heijyosento\/","name":"\u3010\u4f01\u753b\u5c55\u3011\u5e73\u57ce\u9077\u90fd\u30fc\u300c\u98db\u9ce5\u30fb\u85e4\u539f\u306e\u5bae\u90fd\u300d\u304b\u3089\u5e73\u57ce\u3078\u30fc (\u4f1a\u671f\uff1a9\/19\uff5e11\/29) | \u56fd\u55b6\u5e73\u57ce\u5bae\u8de1\u6b74\u53f2\u516c\u5712","inLanguage":"ja","isPartOf":{"@id":"https:\/\/www.heijo-park.jp\/#website"},"breadcrumb":{"@id":"https:\/\/www.heijo-park.jp\/event\/heijyosento\/#breadcrumblist"},"datePublished":"2026-08-17T09:00:33+09:00","dateModified":"2026-08-25T11:09:41+09:00"},{"@type":"WebSite","@id":"https:\/\/www.heijo-park.jp\/#website","url":"https:\/\/www.heijo-park.jp\/","name":"\u56fd\u55b6\u5e73\u57ce\u5bae\u8de1\u6b74\u53f2\u516c\u5712","description":"\u56fd\u55b6\u5e73\u57ce\u5bae\u8de1\u6b74\u53f2\u516c\u5712\u306f\u3001\u5948\u826f\u6642\u4ee3\u306e\u907a\u8de1\u304c\u4fdd\u5b58\u30fb\u5fa9\u539f\u3055\u308c\u305f\u516c\u5712\u3067\u3001\u4e16\u754c\u907a\u7523\u306b\u3082\u767b\u9332\u3055\u308c\u3066\u3044\u307e\u3059\u3002\u3069\u306a\u305f\u3067\u3082\u81ea\u7531\u306b\u6563\u7b56\u3057\u305f\u308a\u61a9\u3044\u3092\u697d\u3057\u3081\u307e\u3059\u3002","inLanguage":"ja","publisher":{"@id":"https:\/\/www.heijo-park.jp\/#organization"}}]}
+		</script>
+		<!-- All in One SEO -->
+
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='shortlink' href='https://www.heijo-park.jp/?p=9877' />
+<meta name="generator" content="Site Kit by Google 1.192.0" /><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1HR53XCVKQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1HR53XCVKQ');
+</script>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+</head>
+
+
+<body>
+<header id="header">
+<div class="spheader">
+	<div class="inner">
+		<p class="logo"><a href="https://www.heijo-park.jp/"><img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201%201%22%3E%3C%2Fsvg%3E" data-src="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/img/logo.svg" alt="国営平城宮跡歴史公園"></a></p>
+		<ul class="global">
+			<li><a href="https://www.heijo-park.jp/" class="fade">日本語</a></li>
+			<li><a href="https://www.heijo-park.jp/en/" class="fade" hreflang="en">English</a></li>
+			<li><a href="https://www.heijo-park.jp/ko/" class="fade" hreflang="ko">한국어</a></li>
+			<li><a href="https://www.heijo-park.jp/cn/" class="fade" hreflang="zh-cmn-Hans">简体中文</a></li>
+			<li><a href="https://www.heijo-park.jp/tw/" class="fade" hreflang="zh-cmn-Hant">繁体中文</a></li>
+		</ul>
+		
+		<div class="fontSize">
+		<span>文字サイズ</span>
+		<ul>
+		 <li class="changeBtn">小</li>
+		 <li class="changeBtn">中</li>
+		 <li class="changeBtn">大</li>
+		</ul>
+		</div>
+    			<dl class="telbox">
+		<dt>お問い合わせ先</dt>
+		<dd><small>平城宮跡管理センター</small><i class="fa fa-phone-square" aria-hidden="true"></i><span class="tel-link">0742-36-8780</span></dd>
+	</dl>
+    	</div>
+	
+	
+	
+	<nav id="contnav">
+		<div id="toggle"> <a href=""><span></span><span></span><span></span></a> </div>
+		<div id="menu">
+		<div class="searchbox">
+		<script>
+		  (function() {
+			var cx = '012421446204284422782:h6krqqvpouu';
+			var gcse = document.createElement('script');
+			gcse.type = 'text/javascript';
+			gcse.async = true;
+			gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(gcse, s);
+		  })();
+		</script>
+		<div id="gsc"><gcse:search></gcse:search></div>
+		</div>
+		
+			<ul>
+				<li class="fade"><a href="https://www.heijo-park.jp/">ホーム</a></li>
+				<li class="fade"><a href="https://www.heijo-park.jp/information/">ご利用案内</a></li>
+				<li class="fade"><a href="https://www.heijo-park.jp/guide/">エリア施設紹介</a></li>
+				<li class="fade"><a href="https://www.heijo-park.jp/event/">イベント情報</a></li>
+        <li class="fade"><a href="https://www.heijo-park.jp/about/">平城宮跡と復原のあゆみ</a></li>
+				<li class="fade"><a href="https://www.heijo-park.jp/information/access/">アクセス</a></li>
+				<li class="fade"><a href="https://www.heijo-park.jp/faq/">よくある質問</a></li>
+			</ul>
+			</div>
+	</nav>
+	
+
+</div>
+</header>
+
+<article class="changeArea" id="event">
+  <div class="mainSimg event">
+    <h1><span>イベント情報</span></h1>
+  </div>
+
+  <section id="eventdata">
+    <div class="inner clearfix">
+          <div class="selectmonth">
+        <div class="accordion">
+          <a class="toggle"><i class="fa fa-calendar" aria-hidden="true"></i>月別イベント一覧</a>
+          <div class="allmonth">
+            <ul>
+              	<li><a href='https://www.heijo-park.jp/2027/03/?meta_key=event_day'>2027年3月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2027/02/?meta_key=event_day'>2027年2月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2027/01/?meta_key=event_day'>2027年1月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2026/12/?meta_key=event_day'>2026年12月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2026/11/?meta_key=event_day'>2026年11月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2026/10/?meta_key=event_day'>2026年10月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2026/09/?meta_key=event_day'>2026年9月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2026/08/?meta_key=event_day'>2026年8月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2026/07/?meta_key=event_day'>2026年7月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2026/06/?meta_key=event_day'>2026年6月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2026/05/?meta_key=event_day'>2026年5月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2026/04/?meta_key=event_day'>2026年4月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2026/03/?meta_key=event_day'>2026年3月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2026/02/?meta_key=event_day'>2026年2月のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2026/01/?meta_key=event_day'>2026年1月のイベント</a></li>
+            </ul>
+            <div class="backnumber">
+              <p><i class="fa fa-pencil-square-o" aria-hidden="true"></i>バックナンバー</p>
+              <ul>
+                	<li><a href='https://www.heijo-park.jp/2025/?meta_key=event_day'>2025年のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2024/?meta_key=event_day'>2024年のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2023/?meta_key=event_day'>2023年のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2022/?meta_key=event_day'>2022年のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2021/?meta_key=event_day'>2021年のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2020/?meta_key=event_day'>2020年のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2019/?meta_key=event_day'>2019年のイベント</a></li>
+	<li><a href='https://www.heijo-park.jp/2018/?meta_key=event_day'>2018年のイベント</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        
+      <div class="entry">
+                        <h2 style="border-bottom: 3px solid #8c50c4;"><small>2026/09/19(土)</small><span>【企画展】平城遷都ー「飛鳥・藤原の宮都」から平城へー　(会期：9/19～11/29)</span>
+        <!-- googleTranslate -->
+        <div id="google_translate_element"></div><script type="text/javascript">
+        function googleTranslateElementInit() {
+          new google.translate.TranslateElement({pageLanguage: 'ja', includedLanguages: 'en,ko,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+        }
+        </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <!-- googleTranslate -->
+        </h2>
+
+                                        <p class="clearfix text_page_text"><img class="alignleft lazy" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20638%20650%22%3E%3C%2Fsvg%3E" data-src="https://www.heijo-park.jp/cms/wp-content/uploads/0d3104c7a2fa82ab15f1e72e012d0e61.jpg" alt="" width="40%"/>
+          平城宮・京から出土した飛鳥・藤原地域の宮殿・寺院と関連する考古資料を中心に、奈良時代の政治・文化の中心となる平城京への遷都がどのように進められたかを紹介します。（出展資料約50点を予定）        </p>
+                                        <table class="tbmain sptbl">
+                    <tr>
+            <th width="20%">
+              会期            </th>
+            <td>
+              2026年9月19日（土）～11月29日（日）<br />
+※休館日：11月9日（月）            </td>
+          </tr>
+                    <tr>
+            <th width="20%">
+              時間            </th>
+            <td>
+              9：00～17：00（入館は16：30まで）            </td>
+          </tr>
+                    <tr>
+            <th width="20%">
+              場所            </th>
+            <td>
+              平城宮いざない館　企画展示室            </td>
+          </tr>
+                    <tr>
+            <th width="20%">
+              観覧            </th>
+            <td>
+              無料            </td>
+          </tr>
+                    <tr>
+            <th width="20%">
+              主催            </th>
+            <td>
+              独立行政法人 国立文化財機構 奈良文化財研究所、平城宮跡管理センター            </td>
+          </tr>
+                  </table>
+                                        <div class="eventatt">
+          <a href="https://www.heijo-park.jp/cms/wp-content/uploads/81edde18c21206da1d6f9c268e5c81ac-1.pdf" target="_blank" class="fade pdfbactlink">詳細PDFはこちら</a>
+        </div>
+                                <div class="map flexible">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d614.4468680255036!2d135.7953629046694!3d34.686191765624045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60013b8cc6d437c1%3A0x827e3766fc1b83a!2z5bmz5Z-O5a6u44GE44GW44Gq44GE6aSo!5e0!3m2!1sja!2sjp!4v1717979001585!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>        </div>
+
+                                      </div>
+    </div>
+  </section>
+
+  <section class="txtc clearfix">
+    <div>
+      <a href="https://www.heijo-park.jp/event/" class="bactlink fade">一覧へ戻る</a>
+    </div>
+  </section>
+</article>
+
+<footer>
+<p id="pagetop"><a href="#header" class="fade"><img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201%201%22%3E%3C%2Fsvg%3E" data-src="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/img/pagetop.png" alt="ページTOPへ"></a></p>
+<div class="inner clearfix">
+
+<div class="row">
+	<div class="col-sm-8 col-xs-12 linkbox">
+	<ul class="siteinfo">
+		<li><a href="https://www.heijo-park.jp/information/groupuse/" class="fade">団体利用</a></li>
+		<li><a href="https://www.heijo-park.jp/information/location/" class="fade">イベント・撮影に関する申請</a></li>
+		<li><a href="https://www.heijo-park.jp/contact-2/" class="fade">ご意見・ご感想</a></li>
+		<li><a href="https://www.heijo-park.jp/policy/" class="fade">個人情報保護方針</a></li>
+		<li><a href="https://www.heijo-park.jp/rules/" class="fade">利用規約</a></li>
+	</ul>
+	<div class="row footlink">
+		<div class="col-sm-6 listbox">
+		<ul>
+			<li><a href="https://www.heijo-park.jp/about/" class="fade">平城宮跡と復原のあゆみ</a>
+				<ul>
+					<li><a href="https://www.heijo-park.jp/about/heijokyo/" class="fade">平城京とは？</a></li>
+					<li><a href="https://www.heijo-park.jp/about/history/" class="fade">平城京の歴史</a></li>
+					<li><a href="https://www.heijo-park.jp/about/ayumi/" class="fade">保存整備の歩み</a></li>
+					<li><a href="https://www.heijo-park.jp/about/fukugen/" target="_blank" class="fade">復原事業</a></li>
+				</ul>
+			</li>
+		</ul>
+		
+		<ul>
+			<li><a href="https://www.heijo-park.jp/information/" class="fade">ご利用案内</a>
+				<ul>
+					<li><a href="https://www.heijo-park.jp/information/facility/" class="fade">施設情報（利用時間など）</a></li>
+					<li><a href="https://www.heijo-park.jp/information/access/" class="fade">アクセス（公共交通機関・駐車場）</a></li>
+					<li><a href="https://www.heijo-park.jp/information/otoku/" class="fade">観光案内所・交通おトク情報</a></li>
+					<li><a href="https://www.heijo-park.jp/information/ud/" class="fade">ユニバーサルデザインの情報</a></li>
+					<li><a href="https://www.heijo-park.jp/information/pamphlet/" class="fade">パンフレット・ガイドマップ</a></li>
+					<li><a href="https://www.heijo-park.jp/information/groupuse/" class="fade">団体利用について</a></li>
+					<li><a href="https://www.heijo-park.jp/information/location/" class="fade">イベント・撮影に関する申請</a></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+	
+		<div class="col-sm-6 listbox">
+		<ul>
+			<li><a href="https://www.heijo-park.jp/guide/" class="fade">エリア施設紹介</a>
+				<ul>
+					<li><a href="https://www.heijo-park.jp/guide/daigokuden/" class="fade">第一次大極殿院</a></li>
+					<li><a href="https://www.heijo-park.jp/guide/suzakumon/" class="fade">朱雀門ひろば</a></li>
+					<li><a href="https://www.heijo-park.jp/guide/east/" class="fade">第二次大極殿・東院庭園など</a></li>
+					<li><a href="https://www.heijo-park.jp/guide/research/" class="fade">調査・研究</a></li>
+					<li><a href="https://www.heijo-park.jp/guide/midokoro/" class="fade">その他エリア</a></li>
+				</ul>
+			</li>
+		</ul>
+		
+		<ul>
+			<li><a href="https://www.heijo-park.jp/event/" class="fade">イベント情報</a></li>
+			<li><a href="https://www.heijo-park.jp/news/" class="fade">お知らせ</a></li>
+			<li><a href="https://www.heijo-park.jp/information/onegai/" class="fade">公園内の注意事項とお願い</a></li>
+			<li><a href="https://www.heijo-park.jp/faq/" class="fade">よくある質問</a></li>
+			<li><a href="https://www.kkr.mlit.go.jp/asuka/" class="fade" target="_blank">国営飛鳥歴史公園事務所の情報</a></li>
+		</ul>
+	
+		</div>
+	</div>
+	</div>
+	
+	<div class="col-sm-4  col-xs-12 addbox">
+	 <address>
+	 	<p><a href="https://www.heijo-park.jp/" class="fade"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201%201%22%3E%3C%2Fsvg%3E" data-src="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/img/flogo.svg" alt="国営平城宮跡歴史公園" class="flogo lazy"></a></p>
+		<p><strong>平城宮跡管理センター</strong><br>
+		〒630-8012<br>
+		奈良県奈良市二条大路南三丁目5番1号<br>
+		TEL　0742-36-8780<br>
+		FAX　0742-36-8781</p>
+		
+		<p class="ftbanner">
+		<a href="https://www.kkr.mlit.go.jp/asuka/" target="_blank" class="fade"><img class="lazy" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201%201%22%3E%3C%2Fsvg%3E" data-src="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/img/bn_asuka.jpg" alt="国営平城宮跡歴史公園事務所"></a>
+		</p>
+	 </address>
+	</div>
+</div>
+</div>
+<p class="copyright">Copyright© ASUKA HISTORICAL NATIONAL GOVERNMENT PARK OFFICE All Rights Reserved.</p>
+</footer>
+
+<script src="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/js/breakpoints.js"></script>
+<script src="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/js/jquery.matchHeight.js"></script>
+<script src="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/js/fixed_midashi.js"></script>
+<script src="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/js/jquery.cookie.js"></script>
+<script src="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/js/font.js"></script>
+<script src="https://www.heijo-park.jp/cms/wp-content/themes/heijo-park/js/common.js"></script>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/cms/wp-*.php","/cms/wp-admin/*","/cms/wp-content/uploads/*","/cms/wp-content/*","/cms/wp-content/plugins/*","/cms/wp-content/themes/heijo-park/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<!-- キャンペーン効果測定用タグ -->
+<script type="text/javascript"> var _fout_queue = _fout_queue || {}; if (_fout_queue.segment === void 0) _fout_queue.segment = {}; if (_fout_queue.segment.queue === void 0) _fout_queue.segment.queue = []; _fout_queue.segment.queue.push({ 'user_id': 40740 }); if (_fout_queue.redirect === void 0) _fout_queue.redirect = {}; _fout_queue.redirect['is_redirect'] = true; (function() { var el = document.createElement('script'); el.type = 'text/javascript'; el.async = true; el.src = 'https://js.fout.jp/segmentation.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(el, s); })(); </script>
+<!-- //キャンペーン効果測定用タグ -->
+<script>function w3tc_ll_observe(ll){if(!ll||!ll.update)return;var t;new MutationObserver(function(){clearTimeout(t);t=setTimeout(function(){ll.update();},200);}).observe(document.documentElement,{childList:true,subtree:true});}window.addEventListener("LazyLoad::Initialized",function(e){setTimeout(function(){window.w3tc_lazyload=e.detail.instance;w3tc_ll_observe(window.w3tc_lazyload);},1);});window.w3tc_lazyload=1,window.lazyLoadOptions={elements_selector:".lazy",callback_loaded:function(t){var e;try{e=new CustomEvent("w3tc_lazyload_loaded",{detail:{e:t}})}catch(a){(e=document.createEvent("CustomEvent")).initCustomEvent("w3tc_lazyload_loaded",!1,!1,{e:t})}window.dispatchEvent(e)}}</script><script async src="https://www.heijo-park.jp/cms/wp-content/plugins/w3-total-cache/pub/js/lazyload.min.js"></script></body>
+</html>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
+
+オブジェクトキャッシュ 59/83 オブジェクトが Disk を使用中
+遅延読み込み
+
+Served from: www.heijo-park.jp @ 2026-11-18 13:43:02 by W3 Total Cache
+-->

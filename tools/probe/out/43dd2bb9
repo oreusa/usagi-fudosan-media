@@ -1,0 +1,2331 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns# website: http://ogp.me/ns/website#">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <link rel="shortcut icon" href="https://souda-kyoto.jp/ea410e00000014t5-img/favicon.png">
+  <link rel="apple-touch-icon" href="https://souda-kyoto.jp/ea410e00000014t5-img/apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="https://souda-kyoto.jp/ea410e00000014t5-img/apple-touch-icon.png">
+
+
+  <!-- meta Base-->
+  <title>2026年秋「そうだ 京都、行こう。」キャンペーン｜そうだ 京都、行こう。</title>
+  <meta name="description" content="これだけの秋が「町の一角」にある。それだけで贅沢でした。" />
+  <meta name="keywords" content="JR東海,東海旅客鉄道株式会社,新幹線,旅行,観光情報,旅行商品,ずらし旅,分散型旅行,京都,紅葉,秋,毘沙門堂" />
+  <link rel="canonical" href="https://souda-kyoto.jp/other/autumn2026/">
+
+  <!-- Facebook OG-->
+  <meta property="og:title" content="2026年秋「そうだ 京都、行こう。」キャンペーン｜そうだ 京都、行こう。" />
+  <meta property="og:site_name" content="そうだ 京都、行こう。 | 京都への旅行、観光スポットで京都遊び" />
+  <meta property="og:url" content="https://souda-kyoto.jp/other/autumn2026/" />
+  <meta property="og:image" content="https://souda-kyoto.jp/other/autumn2026/_img/ogp.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="これだけの秋が「町の一角」にある。それだけで贅沢でした。" />
+  <!-- //Facebook OG-->
+
+  <!-- Twitter OG-->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:site" content="https://souda-kyoto.jp/other/autumn2026/" />
+  <meta property="twitter:title" content="2026年秋「そうだ 京都、行こう。」キャンペーン｜そうだ 京都、行こう。" />
+  <meta property="twitter:url" content="https://souda-kyoto.jp/other/autumn2026/" />
+  <meta property="twitter:description" content="これだけの秋が「町の一角」にある。それだけで贅沢でした。" />
+  <meta name="twitter:image" content="https://souda-kyoto.jp/other/autumn2026/_img/ogp.jpg" />
+  <!-- /Twitter OG-->
+
+  <!-- Style Base -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@400;500;700&family=Zen+Old+Mincho:wght@900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="_css/style.css" />
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+        event: "gtm.js",
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+      j.async = true;
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-THPRVRQ");
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-THPRVRQ" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div class="fixed_bnr_trgger_position">
+    <div id="fixed_bnr_trigger"></div>
+  </div>
+  <div class="single-header" data-src-bnr="/_assets/_html/autumn2026.html"></div>
+
+  <div id="noise" aria-hidden="true"></div>
+  <div id="fixed_bg" aria-hidden="true">
+    <picture>
+      <source srcset="_img/bg-pc.jpg" media="(min-width:769px)" width="1440" height="2325">
+      <source srcset="_img/bg@2x.jpg" media="(max-width:768px)">
+      <img src="_img/bg@2x.jpg" width="780" height="2190" alt="" loading="lazy" decoding="eager">
+    </picture>
+  </div>
+
+  <main>
+    <section id="mainvisual" class="section">
+      <article>
+        <div class="content_wrap ">
+          <h1 class="logo">
+            <a href="https://souda-kyoto.jp/"><img src="https://souda-kyoto.jp/_assets/_img/logo.png" alt="そうだ 京都、行こう。"
+                width="196" height="228" loading="eager" decoding="async" /></a>
+          </h1>
+          <figure class="main_img" aria-hidden="true">
+            <picture>
+              <!-- wbp -->
+              <source srcset="_img/mv_bg-pc.webp 1x, _img/mv_bg-pc@2x.webp 2x" type="image/webp"
+                media="(min-width:769px)">
+              <source srcset="_img/mv_bg.webp 1x, _img/mv_bg@2x.webp 2x" type="image/webp" media="(max-width:768px)">
+              <!-- jpg -->
+              <source srcset="_img/mv_bg-pc.jpg 1x, _img/mv_bg-pc@2x.jpg 2x" media="(min-width:769px)">
+              <source srcset="_img/mv_bg.jpg 1x, _img/mv_bg@2x.jpg 2x" media="(max-width:768px)">
+              <img src="_img/mv_bg.jpg" width="390" height="480" alt="" loading="eager" decoding="async">
+            </picture>
+          </figure>
+          <div class="main_title_wrap">
+            <h2 class="main_title"><img src="_img/mv_title.svg" alt="そうだ 京都、行こう" width="208" height="191"
+                loading="eager">
+            </h2>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- top -->
+    <section id="top" class="section">
+      <article>
+        <div class="content_wrap">
+          <h3 class="title mincho"><span>「そうだ 京都、行こう。」がお届けする</span>
+            <span>秋の京都旅</span>
+          </h3>
+          <ul class="nav_wrap medium">
+            <li><a href="#tokuhai">特別拝観</a></li>
+            <li><a href="#tourism">観光プラン</a></li>
+            <li><a href="#event">特別イベント</a></li>
+            <li><a href="#course">モデルコース</a></li>
+            <li><a href="#interview"><span class="text_wrap"><span>スペシャル</span><span>インタビュー</span></span></a></li>
+            <li><a href="#cm">CM情報</a></li>
+            <li><a href="#autumn_info">紅葉情報</a></li>
+            <li><a href="#recommend">おすすめ情報</a></li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <div class="clip_wrap">
+      <!-- nav_area -->
+      <div class="nav_area">
+        <!-- Pickup -->
+        <section id="pickup" class="section target-area">
+          <article>
+            <div class="content_wrap slideup animation once">
+              <div class="momiji_wrap">
+                <img src="_img/pickup_momiji01.svg" width="44" height="48" loading="lazy" alt=""
+                  class="momiji momiji01_pickup is-left">
+                <img src="_img/pickup_momiji02.svg" width="44" height="48" loading="lazy" alt=""
+                  class="momiji momiji02_pickup is-right">
+                <img src="_img/pickup_momiji03.svg" width="44" height="48" loading="lazy" alt=""
+                  class="momiji momiji03_pickup is-right">
+              </div>
+              <hgroup class="title_wrap ">
+                <p class="sub bold">Pickup!</p>
+                <h3 class="main mincho splitText">秋<span>の</span>満喫プラン</h3>
+              </hgroup>
+              <ul class="plan_list_wrap medium">
+                <li>
+                  <div class="btn_outer">
+                    <h4 class="plan_title">智山紅葉月</h4>
+                    <div class="plan_details">
+                      <p class="plan_place">総本山智積院</p>
+                      <p class="plan_dates">11/7（土）〜12/6（日）</p>
+                    </div>
+                    <figure class="plan_img">
+                      <picture>
+                        <source
+                          srcset="_img/pickup_plan_chisanmomiji-pc.webp 1x, _img/pickup_plan_chisanmomiji-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/pickup_plan_chisanmomiji.webp 1x, _img/pickup_plan_chisanmomiji@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source
+                          srcset="_img/pickup_plan_chisanmomiji-pc.jpg 1x, _img/pickup_plan_chisanmomiji-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/pickup_plan_chisanmomiji.jpg 1x, _img/pickup_plan_chisanmomiji@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/pickup_plan_chisanmomiji.jpg" width="100" height="120" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000762/plans?lang=ja"
+                      target="_blank" rel="nofollow" class="btn btn_expand js-ga-click" data-id="autumn2026_pickup05"
+                      data-category="autumn2026"><span>予約はこちら</span></a>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="btn_outer">
+                    <h4 class="plan_title">京都秋めぐりパスポート</h4>
+                    <div class="plan_details">
+                      <p class="plan_place">毘沙門堂門跡、<wbr>醍醐寺、<wbr>詩仙堂丈山寺、<wbr>永観堂、<wbr>二尊院、<wbr>鈴虫寺（華厳寺）、<wbr>隨心院</p>
+                      <p class="plan_dates">10/4（日）〜12/27（日）</p>
+                    </div>
+                    <figure class="plan_img">
+                      <picture>
+                        <source srcset="_img/pickup_plan_passport-pc.webp 1x, _img/pickup_plan_passport-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/pickup_plan_passport.webp 1x, _img/pickup_plan_passport@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source srcset="_img/pickup_plan_passport-pc.jpg 1x, _img/pickup_plan_passport-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/pickup_plan_passport.jpg 1x, _img/pickup_plan_passport@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/pickup_plan_passport.jpg" width="100" height="120" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000724/plans?lang=ja"
+                      target="_blank" rel="nofollow" class="btn btn_expand js-ga-click" data-id="autumn2026_pickup04"
+                      data-category="autumn2026"><span>予約はこちら</span></a>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="btn_outer">
+                    <h4 class="plan_title">オリジナル限定デザイン御朱印</h4>
+                    <div class="plan_details">
+                      <p class="plan_place">東福寺</p>
+                      <p class="plan_dates">10/1（木）〜 12/27（日）</p>
+                      <ul class="plan_notes">
+                        <li>10/5（月）、17（土）除く</li>
+                      </ul>
+                    </div>
+                    <figure class="plan_img">
+                      <picture>
+                        <source
+                          srcset="_img/pickup_plan_goshuin_tofukuji-pc.webp 1x, _img/pickup_plan_goshuin_tofukuji-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source
+                          srcset="_img/pickup_plan_goshuin_tofukuji.webp 1x, _img/pickup_plan_goshuin_tofukuji@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source
+                          srcset="_img/pickup_plan_goshuin_tofukuji-pc.jpg 1x, _img/pickup_plan_goshuin_tofukuji-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source
+                          srcset="_img/pickup_plan_goshuin_tofukuji.jpg 1x, _img/pickup_plan_goshuin_tofukuji@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/pickup_plan_goshuin_tofukuji.jpg" width="100" height="120" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000002/plans/Z000002-C038413-M040954/detail?specialCode=&lang=ja"
+                      target="_blank" rel="nofollow" class="btn btn_expand js-ga-click" data-id="autumn2026_pickup03"
+                      data-category="autumn2026"><span>予約はこちら</span></a>
+                  </div>
+                </li>
+              </ul>
+              <a href="https://ec.travel.jr-central.co.jp/tp/special/sodakyoto_autumn/optionalFacilities?lang=ja"
+                target="_blank" rel="nofollow" class="btn large js-ga-click" data-id="autumn2026_pickup_all"
+                data-category="autumn2026"><span>観光プランをもっとみる</span></a>
+            </div>
+          </article>
+        </section>
+        <!-- ／ Pickup -->
+
+        <!-- 特別拝観 -->
+        <section id="tokuhai" class="section target-area">
+          <article>
+            <div class="content_wrap slideup animation once">
+              <div class="momiji_wrap">
+                <img src="_img/tokuhai_momiji01.svg" width="74" height="77" loading="lazy" alt=""
+                  class="momiji momiji01_tokuhai is-left">
+                <img src="_img/tokuhai_momiji02.svg" width="56" height="48" loading="lazy" alt=""
+                  class="momiji momiji02_tokuhai is-left">
+                <img src="_img/tokuhai_momiji03.svg" width="60" height="51" loading="lazy" alt=""
+                  class="momiji momiji03_tokuhai is-right">
+              </div>
+              <!-- 特別拝観とは？ -->
+              <div class="haikan_outer">
+                <div class="common_title">
+                  <hgroup class="title_wrap">
+                    <p class="sub bold">EXサービス会員限定</p>
+                    <h3 class="main mincho splitText">特別拝観</h3>
+                  </hgroup>
+                  <p class="title_lead">紅葉の名所を、朝・夜と違った表情で楽しめる特別プラン。<br class="pc-block">定員制で、ゆったりとご鑑賞いただけます。</p>
+                </div>
+                <div class="haikan_wrap">
+                  <h4 class="haikan_title">特別拝観とは？</h4>
+                  <ul class="haikan_list">
+                    <li>
+                      <h5 class="haikan_list_title"><img src="_img/tokuhai_icon01.svg" width="40" height="40"
+                          loading="lazy" alt="">混雑回避で快適</h5>
+                      <p class="haikan_list_lead">日中は混雑必至の名所をゆったり拝観。貸切見学や先行入場プランを利用して心ゆくまで鮮やかな紅葉を満喫。</p>
+                    </li>
+                    <li>
+                      <h5 class="haikan_list_title"><img src="_img/tokuhai_icon02.svg" width="40" height="40"
+                          loading="lazy" alt="">特別な時間帯にご案内！</h5>
+                      <p class="haikan_list_lead">朝、夜間など、いつもとは違う会員限定の時間帯に拝観。</p>
+                    </li>
+                    <li>
+                      <h5 class="haikan_list_title"><img src="_img/tokuhai_icon03.svg" width="40" height="40"
+                          loading="lazy" alt="">思い立ったらすぐ予約可能！</h5>
+                      <div class="haikan_list_lead">自宅や旅先で、どこからでも気軽に予約が可能。<a
+                          href="https://jr-central.co.jp/ex/travel-portal/" target="_blank" rel="nofollow"
+                          class="text_link">EX旅先予約</a>から申し込むだけで計画的に京都旅行を楽しめる。
+
+                        <ul class="notes">
+                          <li>「EX旅先予約」での購入には「エクスプレス予約」または「スマートEX」いずれかの会員登録が必要です。</li>
+                        </ul>
+                      </div>
+
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 実施社寺 -->
+              <div class="pickup_wrap">
+                <hgroup class="pickup_title">
+                  <h3 class="title">実施寺院</h3>
+                  <img src="_img/tokuhai_title_pickup.svg" width="93" height="27" loading="lazy" alt="Pick Up!"
+                    class="img">
+                </hgroup>
+                <ul class="pickup_list_wrap">
+                  <!-- 夜 -->
+                  <li class="pickup_list">
+                    <picture class="bg_img" aria-hidden="true">
+                      <source srcset="_img/tokuhai_bg_night-pc.webp 1x, _img/tokuhai_bg_night-pc@2x.webp 2x"
+                        type="image/webp" media="(min-width:769px)">
+                      <source srcset="_img/tokuhai_bg_night.webp 1x, _img/tokuhai_bg_night@2x.webp 2x" type="image/webp"
+                        media="(max-width:768px)">
+                      <source srcset="_img/tokuhai_bg_night-pc.jpg 1x, _img/tokuhai_bg_night-pc@2x.jpg 2x"
+                        media="(min-width:769px)">
+                      <source srcset="_img/tokuhai_bg_night.jpg 1x, _img/tokuhai_bg_night@2x.jpg 2x"
+                        media="(max-width:768px)">
+                      <img src="_img/tokuhai_bg_night.jpg" width="600" height="700" alt="" loading="lazy"
+                        decoding="async">
+                    </picture>
+                    <div class="pickup_list_inner night">
+                      <hgroup class="pickup_list_title_wrap ">
+                        <h4 class="pickup_list_title "><span>夜の</span><span>特別拝観</span></h4>
+                        <p class="pickup_list_lead ">ライトアップされた幻想的な夜の紅葉と、いつもとは違う特別な景色に出会う</p>
+                      </hgroup>
+                      <!-- 夜間プラン -->
+                      <ul class="plan_list_wrap medium">
+                        <!-- 東寺 -->
+                        <li>
+                          <div class="btn_outer">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/tokuhai_plan_night_toji.webp 1x, _img/tokuhai_plan_night_toji@2x.webp 2x"
+                                  type="image/webp">
+                                <source
+                                  srcset="_img/tokuhai_plan_night_toji.jpg 1x, _img/tokuhai_plan_night_toji@2x.jpg 2x">
+                                <img src="_img/tokuhai_plan_night_toji.jpg" width="326" height="182" alt=""
+                                  loading="lazy" decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h4 class="plan_title">東寺<span class="plan_title_hash">#先行入場</span></h4>
+                              <p class="plan_dates">11/6（金）〜12/13（日）</p>
+                              <ul class="plan_notes">
+                                <li>11/21（土）除く</li>
+                              </ul>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000003/plans?lang=ja"
+                              target="_blank" rel="nofollow" class="btn btn_expand js-ga-click"
+                              data-id="autumn2026_tokuhai_night01" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                        <!-- 真如堂 -->
+                        <li>
+                          <div class="btn_outer">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/tokuhai_plan_night_shinnyodo.webp 1x, _img/tokuhai_plan_night_shinnyodo@2x.webp 2x"
+                                  type="image/webp">
+                                <source
+                                  srcset="_img/tokuhai_plan_night_shinnyodo.jpg 1x, _img/tokuhai_plan_night_shinnyodo@2x.jpg 2x">
+                                <img src="_img/tokuhai_plan_night_shinnyodo.jpg" width="326" height="182" alt=""
+                                  loading="lazy" decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h4 class="plan_title">真如堂<span class="plan_title_hash">#貸切</span></h4>
+                              <p class="plan_dates">11/18（水）〜12/8（火）</p>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000697/plans?lang=ja"
+                              target="_blank" rel="nofollow" class="btn btn_expand js-ga-click"
+                              data-id="autumn2026_tokuhai_night02" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                        <!-- 東福寺 -->
+                        <li>
+                          <div class="btn_outer">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/tokuhai_plan_night_tofukuji.webp 1x, _img/tokuhai_plan_night_tofukuji@2x.webp 2x"
+                                  type="image/webp">
+                                <source
+                                  srcset="_img/tokuhai_plan_night_tofukuji.jpg 1x, _img/tokuhai_plan_night_tofukuji@2x.jpg 2x">
+                                <img src="_img/tokuhai_plan_night_tofukuji.jpg" width="326" height="182" alt=""
+                                  loading="lazy" decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h4 class="plan_title">東福寺<span class="plan_title_hash">#貸切</span></h4>
+                              <p class="plan_dates">11/18（水）〜12/6（日）</p>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000002/plans?optionalIds=Z000002-C038383-M040922,Z000002-C038384-M040923"
+                              target="_blank" rel="nofollow" class="btn btn_expand js-ga-click"
+                              data-id="autumn2026_tokuhai_night03" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <!-- 朝の -->
+                  <li class="pickup_list ">
+                    <picture class="bg_img" aria-hidden="true">
+                      <source srcset="_img/tokuhai_bg_morning-pc.webp 1x, _img/tokuhai_bg_morning-pc@2x.webp 2x"
+                        type="image/webp" media="(min-width:769px)">
+                      <source srcset="_img/tokuhai_bg_morning.webp 1x, _img/tokuhai_bg_morning@2x.webp 2x"
+                        type="image/webp" media="(max-width:768px)">
+
+                      <source srcset="_img/tokuhai_bg_morning-pc.jpg 1x, _img/tokuhai_bg_morning-pc@2x.jpg 2x"
+                        media="(min-width:769px)">
+                      <source srcset="_img/tokuhai_bg_morning.jpg 1x, _img/tokuhai_bg_morning@2x.jpg 2x"
+                        media="(max-width:768px)">
+                      <img src="_img/tokuhai_bg_morning.jpg" width="600" height="700" alt="" loading="lazy"
+                        decoding="async">
+                    </picture>
+                    <div class="pickup_list_inner morning">
+                      <hgroup class="pickup_list_title_wrap morning">
+                        <h4 class="pickup_list_title"><span>朝の</span><span>特別拝観</span></h4>
+                        <p class="pickup_list_lead">混雑前の澄んだ空気のなか、静寂に包まれた朝の紅葉をゆったり独占</p>
+                      </hgroup>
+                      <!-- 朝のプラン -->
+                      <ul class="plan_list_wrap medium">
+                        <!-- 毘沙門堂 -->
+                        <li>
+                          <div class="btn_outer">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/tokuhai_plan_morning_bishamon.webp 1x, _img/tokuhai_plan_morning_bishamon@2x.webp 2x"
+                                  type="image/webp">
+                                <source
+                                  srcset="_img/tokuhai_plan_morning_bishamon.jpg 1x, _img/tokuhai_plan_morning_bishamon@2x.jpg 2x">
+                                <img src="_img/tokuhai_plan_morning_bishamon.jpg" width="326" height="182" alt=""
+                                  loading="lazy" decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h4 class="plan_title">毘沙門堂門跡<span class="plan_title_hash">#案内付き #貸切</span></h4>
+                              <p class="plan_dates">11/22（日）、28（土）、29（日）、12/5（土）</p>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000348/plans?lang=ja"
+                              target="_blank" rel="nofollow" class="btn btn_expand js-ga-click"
+                              data-id="autumn2026_tokuhai_morning01" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                        <!-- 永観堂 -->
+                        <li>
+                          <div class="btn_outer">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/tokuhai_plan_morning_eikando.webp 1x, _img/tokuhai_plan_morning_eikando@2x.webp 2x"
+                                  type="image/webp">
+                                <source
+                                  srcset="_img/tokuhai_plan_morning_eikando.jpg 1x, _img/tokuhai_plan_morning_eikando@2x.jpg 2x">
+                                <img src="_img/tokuhai_plan_morning_eikando.jpg" width="326" height="182" alt=""
+                                  loading="lazy" decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h4 class="plan_title">永観堂<span class="plan_title_hash">#貸切</span></h4>
+                              <p class="plan_dates">11/20（金）〜12/6（日）</p>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000238/plans/Z000238-C037733-M040888/detail?specialCode=&lang=ja"
+                              target="_blank" rel="nofollow" class="btn btn_expand js-ga-click"
+                              data-id="autumn2026_tokuhai_morning02" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                        <!-- 東福寺 -->
+                        <li>
+                          <div class="btn_outer">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/tokuhai_plan_morning_tofukuji.webp 1x, _img/tokuhai_plan_morning_tofukuji@2x.webp 2x"
+                                  type="image/webp">
+                                <source
+                                  srcset="_img/tokuhai_plan_morning_tofukuji.jpg 1x, _img/tokuhai_plan_morning_tofukuji@2x.jpg 2x">
+                                <img src="_img/tokuhai_plan_morning_tofukuji.jpg" width="326" height="182" alt=""
+                                  loading="lazy" decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h4 class="plan_title">東福寺<span class="plan_title_hash">#貸切</span></h4>
+                              <p class="plan_dates">11/19（木）〜12/6（日）</p>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000002/plans/Z000002-C037064-M039471/detail?specialCode=&lang=ja"
+                              target="_blank" rel="nofollow" class="btn btn_expand js-ga-click"
+                              data-id="autumn2026_tokuhai_morning03" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </li>
+                </ul>
+              </div>
+              <!--  -->
+              <a href="https://souda-kyoto.jp/plan/autumn_sp/" target="_blank" rel="nofollow"
+                class="btn large js-ga-click" data-id="autumn2026_tokuhai_all"
+                data-category="autumn2026"><span>秋の特別拝観サイトをみる</span></a>
+            </div>
+          </article>
+        </section>
+        <!-- ／ 特別拝観 -->
+
+        <!-- 観光プラン -->
+        <section id="tourism" class="section target-area">
+          <article>
+            <div class="content_wrap slideup animation once">
+              <div class="momiji_wrap">
+                <img src="_img/tourism_momiji01.svg" width="82" height="60" loading="lazy" alt=""
+                  class="momiji momiji01_tourism is-left">
+                <img src="_img/tourism_momiji02.svg" width="64" height="70" loading="lazy" alt=""
+                  class="momiji momiji02_tourism is-right">
+                <img src="_img/tourism_momiji03.svg" width="80" height="72" loading="lazy" alt=""
+                  class="momiji momiji03_tourism is-right">
+              </div>
+              <div class="common_title">
+                <hgroup class="title_wrap">
+                  <p class="sub bold">秋ならではの京都へ</p>
+                  <h3 class="main mincho splitText">観光プラン</h3>
+                </hgroup>
+                <p class="title_lead">神社や寺院、町並みが鮮やかに彩られる秋は、京都旅におすすめの季節。<br>
+                  せっかくなら、とっておきの紅葉風景だけでなく、あなたの「お気に入り」を探しに出かけてみませんか。</p>
+              </div>
+              <ul class="plan_list_wrap medium">
+                <!-- ジブリ -->
+                <li>
+                  <div class="btn_outer bottom_border">
+                    <figure class="plan_img">
+                      <picture>
+                        <source
+                          srcset="_img/tourism_plan_zen_ghibli2-pc.webp 1x, _img/tourism_plan_zen_ghibli2-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/tourism_plan_zen_ghibli2.webp 1x, _img/tourism_plan_zen_ghibli2@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source
+                          srcset="_img/tourism_plan_zen_ghibli2-pc.jpg 1x, _img/tourism_plan_zen_ghibli2-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/tourism_plan_zen_ghibli2.jpg 1x, _img/tourism_plan_zen_ghibli2@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/tourism_plan_zen_ghibli2.jpg" width="100" height="100" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <div class="plan_details">
+                      <h4 class="plan_title">『禅とジブリ』京都展　観覧チケット</h4>
+                      <p class="plan_place">京都市京セラ美術館&nbsp;<wbr>新館&nbsp;<wbr>東山キューブ</p>
+                      <p class="plan_dates">10/3（土）〜12/6（日）</p>
+                      <ul class="plan_notes">
+                        <li>休館日：月曜日（祝・休日の場合は開館）</li>
+                      </ul>
+
+                    </div>
+                    <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000726/plans?lang=ja"
+                      target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                      data-id="autumn2026_plan08" data-category="autumn2026"><span>予約はこちら</span></a>
+                  </div>
+                </li>
+                <!-- NAKED GARDEN NIGHTS -->
+                <li>
+                  <div class="btn_outer bottom_border">
+                    <figure class="plan_img">
+                      <picture>
+                        <source
+                          srcset="_img/tourism_plan_naked_garden_night-pc.webp 1x, _img/tourism_plan_naked_garden_night-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source
+                          srcset="_img/tourism_plan_naked_garden_night.webp 1x, _img/tourism_plan_naked_garden_night@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source
+                          srcset="_img/tourism_plan_naked_garden_night-pc.jpg 1x, _img/tourism_plan_naked_garden_night-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source
+                          srcset="_img/tourism_plan_naked_garden_night.jpg 1x, _img/tourism_plan_naked_garden_night@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/tourism_plan_naked_garden_night.jpg" width="100" height="100" alt=""
+                          loading="lazy" decoding="async">
+                      </picture>
+                    </figure>
+                    <div class="plan_details">
+                      <h4 class="plan_title">NAKED GARDEN NIGHTS東本願寺・渉成園</h4>
+                      <p class="plan_place">東本願寺</p>
+                      <p class="plan_dates">10/31（土）〜12/6（日）</p>
+                      <ul class="plan_notes">
+                        <li>上記のうち33日間の実施となります</li>
+                      </ul>
+                    </div>
+                    <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/6490M02/plans?lang=ja"
+                      target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                      data-id="autumn2026_plan02" data-category="autumn2026"><span>予約はこちら</span></a>
+                  </div>
+                </li>
+                <!-- パスポート -->
+                <li>
+                  <div class="btn_outer bottom_border">
+                    <figure class="plan_img">
+                      <picture>
+                        <source srcset="_img/tourism_plan_passport-pc.webp 1x, _img/tourism_plan_passport-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/tourism_plan_passport.webp 1x, _img/tourism_plan_passport@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source srcset="_img/tourism_plan_passport.jpg 1x, _img/tourism_plan_passport@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/tourism_plan_passport-pc.jpg 1x, _img/tourism_plan_passport-pc@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/tourism_plan_passport.jpg" width="100" height="100" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <div class="plan_details">
+                      <h4 class="plan_title">京都秋めぐりパスポート</h4>
+                      <p class="plan_place">毘沙門堂門跡、<wbr>醍醐寺、<wbr>詩仙堂丈山寺、<wbr>永観堂、<wbr>二尊院、<wbr>鈴虫寺<wbr>（華厳寺）、<wbr>隨心院
+                      </p>
+                      <p class="plan_dates">10/4（日）〜12/27（日）</p>
+                    </div>
+                    <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000724/plans?lang=ja"
+                      target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                      data-id="autumn2026_plan03" data-category="autumn2026"><span>予約はこちら</span></a>
+                  </div>
+                </li>
+                <!-- 御朱印／東福寺 -->
+                <li>
+                  <div class="btn_outer bottom_border">
+                    <figure class="plan_img">
+                      <picture>
+                        <source
+                          srcset="_img/tourism_plan_goshuin_tofukuji-pc.webp 1x, _img/tourism_plan_goshuin_tofukuji-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source
+                          srcset="_img/tourism_plan_goshuin_tofukuji.webp 1x, _img/tourism_plan_goshuin_tofukuji@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source
+                          srcset="_img/tourism_plan_goshuin_tofukuji-pc.jpg 1x, _img/tourism_plan_goshuin_tofukuji-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source
+                          srcset="_img/tourism_plan_goshuin_tofukuji.jpg 1x, _img/tourism_plan_goshuin_tofukuji@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/tourism_plan_goshuin_tofukuji.jpg" width="100" height="100" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <div class="plan_details">
+                      <h4 class="plan_title">限定デザインの御朱印授与</h4>
+                      <p class="plan_place">東福寺</p>
+                      <p class="plan_dates">10/1（木）〜12/27（日）</p>
+                      <ul class="plan_notes">
+                        <li>10/5（月）、17（土）除く</li>
+                      </ul>
+                    </div>
+                    <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000002/plans/Z000002-C038413-M040954/detail?specialCode=&lang=ja"
+                      target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                      data-id="autumn2026_plan04" data-category="autumn2026"><span>予約はこちら</span></a>
+                  </div>
+                </li>
+                <!-- 嵯峨野トロッコ -->
+                <li>
+                  <div class="btn_outer bottom_border">
+                    <figure class="plan_img">
+                      <picture>
+                        <source
+                          srcset="_img/tourism_plan_arashiyama_sweet-pc.webp 1x, _img/tourism_plan_arashiyama_sweet-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source
+                          srcset="_img/tourism_plan_arashiyama_sweet.webp 1x, _img/tourism_plan_arashiyama_sweet@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source
+                          srcset="_img/tourism_plan_arashiyama_sweet-pc.jpg 1x, _img/tourism_plan_arashiyama_sweet-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source
+                          srcset="_img/tourism_plan_arashiyama_sweet.jpg 1x, _img/tourism_plan_arashiyama_sweet@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/tourism_plan_arashiyama_sweet.jpg" width="100" height="100" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <div class="plan_details">
+                      <h4 class="plan_title">嵐山スイーツと楽しむ<br>
+                        秋の嵯峨野トロッコ</h4>
+                      <p class="plan_dates">11/22（日）、<wbr>23（月・祝）、<wbr>29（日）、<wbr>12/5（土）、<wbr>12（土）、<wbr>13（日）</p>
+                      <ul class="plan_notes">
+                        <li>設定日により乗車時間が異なります。</li>
+                      </ul>
+                    </div>
+                    <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000155/plans?lang=ja"
+                      target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                      data-id="autumn2026_plan05" data-category="autumn2026"><span>予約はこちら</span></a>
+                  </div>
+                </li>
+
+                <!-- 東本願寺　通常非公開エリアで味わう精進料理「お斎（おとき）」 -->
+                <li>
+                  <div class="btn_outer bottom_border">
+                    <figure class="plan_img">
+                      <picture>
+                        <source srcset="_img/tourism_plan_shojin-pc.webp 1x, _img/tourism_plan_shojin-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/tourism_plan_shojin.webp 1x, _img/tourism_plan_shojin@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source srcset="_img/tourism_plan_shojin-pc.jpg 1x, _img/tourism_plan_shojin-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/tourism_plan_shojin.jpg 1x, _img/tourism_plan_shojin@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/tourism_plan_shojin.jpg" width="100" height="100" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <div class="plan_details">
+                      <h4 class="plan_title">東本願寺　通常非公開エリアで味わう精進料理「お斎（おとき）」</h4>
+                      <p class="plan_place">東本願寺</p>
+                      <p class="plan_dates">11/22（日）、23（月・祝）、<wbr>27（金）</p>
+                    </div>
+                    <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/6231M08/plans?lang=ja"
+                      target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                      data-id="autumn2026_plan06" data-category="autumn2026"><span>予約はこちら</span></a>
+                  </div>
+                </li>
+
+                <!-- 陶芸 -->
+                <li>
+                  <div class="btn_outer bottom_border">
+                    <figure class="plan_img">
+                      <picture>
+                        <source srcset="_img/tourism_plan_tougei-pc.webp 1x, _img/tourism_plan_tougei-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/tourism_plan_tougei.webp 1x, _img/tourism_plan_tougei@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source srcset="_img/tourism_plan_tougei-pc.jpg 1x, _img/tourism_plan_tougei-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/tourism_plan_tougei.jpg 1x, _img/tourism_plan_tougei@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/tourism_plan_tougei.jpg" width="100" height="100" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <div class="plan_details">
+                      <h4 class="plan_title">【京都の伝統文化に触れる】職人による解説付き！清水焼工房見学＆陶芸体験◎</h4>
+                      <p class="plan_place">京焼・清水焼窯元 陶あん</p>
+
+                      <p class="plan_dates">11/21（土）、28（土）</p>
+                    </div>
+                    <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000753/plans/Z000753-C041812-M044353/detail?specialCode=&lang=ja"
+                      target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                      data-id="autumn2026_plan07" data-category="autumn2026"><span>予約はこちら</span></a>
+                  </div>
+                </li>
+
+                <!-- びわ湖 -->
+                <li>
+                  <div class="btn_outer bottom_border">
+                    <figure class="plan_img">
+                      <picture>
+                        <source srcset="_img/tourism_plan_biwako-pc.webp 1x, _img/tourism_plan_biwako-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/tourism_plan_biwako.webp 1x, _img/tourism_plan_biwako@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source srcset="_img/tourism_plan_biwako-pc.jpg 1x, _img/tourism_plan_biwako-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/tourism_plan_biwako.jpg 1x, _img/tourism_plan_biwako@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/tourism_plan_biwako.jpg" width="100" height="100" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <div class="plan_details">
+                      <h4 class="plan_title">びわ湖疏水船</h4>
+                      <p class="plan_dates">10/4（日）〜11/15（日）の日曜日、<wbr>10/12（月・祝）　</p>
+                    </div>
+                    <a href="#" target="_blank" rel="nofollow" class="btn small btn_expand end"><span>販売終了</span></a>
+                  </div>
+                </li>
+              </ul>
+              <a href="https://ec.travel.jr-central.co.jp/tp/special/sodakyoto_autumn/optionalFacilities?lang=ja"
+                target="_blank" rel="nofollow" class="btn large js-ga-click" data-id="autumn2026_plan_all"
+                data-category="autumn2026"><span>観光プランをもっとみる</span></a>
+            </div>
+          </article>
+        </section>
+        <!-- ／ 観光プラン -->
+
+        <!-- 特別イベント -->
+        <section id="event" class="section target-area">
+          <!-- bg -->
+          <picture class="bg_img" aria-hidden="true">
+            <source srcset="_img/event_bg-pc.webp 1x, _img/event_bg-pc@2x.webp 2x" type="image/webp"
+              media="(min-width:769px)">
+            <source srcset="_img/event_bg.webp 1x, _img/event_bg@2x.webp 2x" type="image/webp"
+              media="(max-width:768px)">
+
+            <source srcset="_img/event_bg-pc.jpg 1x, _img/event_bg-pc@2x.jpg 2x" media="(min-width:769px)">
+            <source srcset="_img/event_bg.jpg 1x, _img/event_bg@2x.jpg 2x" media="(max-width:768px)">
+            <img src="_img/event_bg.jpg" width="600" height="1200" alt="" loading="lazy" decoding="async">
+          </picture>
+          <article>
+            <div class="content_wrap slideup animation once">
+              <div class="momiji_wrap">
+                <img src="_img/event_momiji01.svg" width="69" height="70" loading="lazy" alt=""
+                  class="momiji momiji01_event is-left">
+                <img src="_img/event_momiji02.svg" width="118" height="105" loading="lazy" alt=""
+                  class="momiji momiji02_event is-right">
+              </div>
+              <div class="common_title">
+                <hgroup class="title_wrap">
+                  <p class="sub bold">この秋の見どころ</p>
+                  <h3 class="main mincho splitText">特別イベント</h3>
+                </hgroup>
+                <p class="title_lead">「そうだ 京都、行こう。」がお届けするスペシャルコンテンツ。<br>
+                  京都がより深く、鮮やかに色づく。今だけの特別な体験をお楽しみください。</p>
+              </div>
+              <ul class="plan_list_wrap medium">
+
+                <!-- 智山紅葉月 -->
+                <li id="chisan">
+                  <div class="btn_outer ">
+                    <figure class="plan_img">
+                      <picture>
+                        <source srcset="_img/event_plan_chisanin-pc.webp 1x, _img/event_plan_chisanin-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/event_plan_chisanin.webp 1x, _img/event_plan_chisanin@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source srcset="_img/event_plan_chisanin-pc.jpg 1x, _img/event_plan_chisanin-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/event_plan_chisanin.jpg 1x, _img/event_plan_chisanin@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/event_plan_chisanin.jpg" width="100" height="120" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <div class="plan_details">
+                      <h4 class="plan_title">智山紅葉月</h4>
+                      <p class="plan_place">総本山智積院</p>
+                      <p class="plan_dates">11/7（土）〜12/6（日）</p>
+                      <p class="plan_lead">
+                        境内を彩る紅葉が幻想的な雲海に浮かび上がる、特別なライトアップイベントを開催。提灯の灯りが連なる参道など、新たな演出も加わった秋の夜ならではの景色をお楽しみください。</p>
+                    </div>
+                    <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000762/plans?lang=ja"
+                      target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                      data-id="autumn2026_event02" data-category="autumn2026"><span>予約はこちら</span></a>
+                  </div>
+                  <!-- アコーディオン -->
+                  <div class="accordion_outer">
+                    <div class="accordion_wrap">
+                      <input type="checkbox" id="event_acd02" class="accordion_checkbox">
+                      <label for="event_acd02"
+                        class="accordion_checkbox_label"><span>詳細をみる</span><span>とじる</span></label>
+                      <div class="accordion_body">
+                        <div class="accordion_body_inner">
+                          <div class="event_accordion_body">
+                            <table class="event_table">
+                              <tbody>
+                                <tr>
+                                  <th>時間</th>
+                                  <td>17:00〜21:00（最終入場20:40）</td>
+                                </tr>
+                                <tr>
+                                  <th>入場料</th>
+                                  <td>1,500円</td>
+                                </tr>
+                                <tr>
+                                  <th>アクセス</th>
+                                  <td>・JR京都駅からバス&徒歩で20分（京都市バス「東山七条」バス停から徒歩約3分）<br>
+                                    ・京阪電車「七条」駅から徒歩約10分<br>
+                                    ・イベント開催期間中の土・日・祝日は、JR京都駅八条口から無料シャトルバスを運行<br>
+                                    詳しくは<a href="https://blayn.jp/chisan/bus" target="_blank" rel="nofollow"
+                                      class="text_link">こちら</a>をご確認ください。<br>
+                                    ※お越しの際は、公共交通機関をご利用ください。</td>
+                                </tr>
+                                <tr>
+                                  <th>主催</th>
+                                  <td>総本山智積院、ブレイン株式会社</td>
+                                </tr>
+                                <tr>
+                                  <th>後援</th>
+                                  <td>JR東海、（公社）京都市観光協会​</td>
+                                </tr>
+                                <tr>
+                                  <th>ご案内</th>
+                                  <td>・当日券は現地券売所にて17:00より販売します。<br>
+                                    ※事前販売分が売り切れの場合でもご購入いただけます。<br>
+                                    ・荒天時には中止とさせていただく場合がございます。開催中止の情報は智山紅葉月の公式インスタグラムのストーリーにてご確認ください。<br>
+                                    <a href="https://www.instagram.com/blayn_inc" target="_blank" rel="nofollow"
+                                      class="text_link">https://www.instagram.com/blayn_inc</a><br>
+                                    ・混雑時は入場をお待ちいただく場合がございますので、お時間に余裕をもってご来場ください。<br>
+                                    ・ペット同伴での入場はできません。（補助犬は除く）<br>
+                                    ・三脚・一脚・脚立などの撮影補助具に類似するものの使用は禁止となります。
+                                  </td>
+                                </tr>
+
+                              </tbody>
+                            </table>
+                            <a href="https://blayn.jp/chisan" target="_blank" rel="nofollow"
+                              class="btn large js-ga-click" data-id="autumn2026_event02_special"
+                              data-category="autumn2026"><span>特設サイトをみる</span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 山科〜醍醐 ぐるっと -->
+                <li id="stamprally">
+                  <div class="btn_outer">
+                    <figure class="plan_img">
+                      <picture>
+                        <source srcset="_img/event_plan_gurutto-pc.webp 1x, _img/event_plan_gurutto-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/event_plan_gurutto.webp 1x, _img/event_plan_gurutto@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source srcset="_img/event_plan_gurutto-pc.jpg 1x, _img/event_plan_gurutto-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/event_plan_gurutto.jpg 1x, _img/event_plan_gurutto@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/event_plan_gurutto.jpg" width="100" height="120" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <div class="plan_details">
+                      <h4 class="plan_title">山科〜醍醐 ぐるっと<br>スタンプラリー</h4>
+                      <p class="plan_place">毘沙門堂門跡、<wbr>京都山科 ホテル山楽、<wbr>隨心院、<wbr>醍醐寺</p>
+                      <p class="plan_dates">10/1（木）〜12/13（日）</p>
+                      <p class="plan_lead">山科〜醍醐エリアの3つの寺院などを巡る、重ね押しスタンプラリー「歴史とご褒美スイーツ編」を開催。</p>
+                    </div>
+                    <a href="https://souda-kyoto.jp/guide/comfort/trip.html#stamprally" target="_blank" rel="nofollow"
+                      class="btn small btn_expand js-ga-click" data-id="autumn2026_event05"
+                      data-category="autumn2026"><span>コースの見どころ</span></a>
+                  </div>
+                  <!-- アコーディオン -->
+                  <div class="accordion_outer">
+                    <div class="accordion_wrap">
+                      <input type="checkbox" id="event_acd04" class="accordion_checkbox">
+                      <label for="event_acd04"
+                        class="accordion_checkbox_label"><span>詳細をみる</span><span>とじる</span></label>
+                      <div class="accordion_body">
+                        <div class="accordion_body_inner">
+                          <div class="event_accordion_body">
+                            <table class="event_table">
+                              <tbody>
+                                <tr>
+                                  <th>詳細</th>
+                                  <td>
+                                    スタンプを重ねて押していくと、カラフルなひとつの絵柄が完成します。どんな絵柄が完成するかは、お楽しみです。絵柄を完成された方には「山科なすびサブレ」の引換券をお渡しいたします 。スタンプを集めたあとは、ご褒美スイーツをお楽しみください。
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th>対象<br>施設</th>
+                                  <td>毘沙門堂門跡/京都山科 ホテル山楽/隨心院/醍醐寺</td>
+                                </tr>
+                                <tr>
+                                  <th>参加<br>方法</th>
+                                  <td>京なびや上記の各スタンプ設置場所で配付中のパンフレット（台紙付き）を入手すれば、どなたでも無料でご参加いただけます。</td>
+                                </tr>
+                                <tr>
+                                  <th>主催</th>
+                                  <td>京都市</td>
+                                </tr>
+                                <tr>
+                                  <th>その他</th>
+                                  <td>
+                                    「ぐるっとスタンプラリー」は、もう一つのコース「イチモンジタナゴと疏水の謎編」も同時開催 。京都と滋賀をつなぐ「琵琶湖疏水」を舞台に6つのスポットを巡ります。スタンプラリーを楽しみながら、国や府県のレッドリストに登録されているイチモンジタナゴの生態について楽しく学べます。
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <a href="https://souda-kyoto.jp/guide/comfort/trip.html#stamprally" target="_blank"
+                              rel="nofollow" class="btn large js-ga-click" data-id="autumn2026_event05_special"
+                              data-category="autumn2026"><span>コースの見どころ</span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- 京都音楽博覧会2026 -->
+                <li id="kyotoonpaku">
+                  <div class="btn_outer end accordion_none">
+                    <figure class="plan_img">
+                      <picture>
+                        <source
+                          srcset="_img/event_plan_musicfestival-pc.webp 1x, _img/event_plan_musicfestival-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/event_plan_musicfestival.webp 1x, _img/event_plan_musicfestival@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source
+                          srcset="_img/event_plan_musicfestival-pc.jpg 1x, _img/event_plan_musicfestival-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/event_plan_musicfestival.jpg 1x, _img/event_plan_musicfestival@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/event_plan_musicfestival.jpg" width="100" height="120" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <div class="plan_details">
+                      <h4 class="plan_title">京都音楽博覧会2026</h4>
+                      <p class="plan_place">梅小路公園</p>
+                      <p class="plan_dates">10/10（土）、10/11（日）</p>
+                      <div class="plan_lead">
+                        今年で20周年を迎える京都音楽博覧会2026に「そうだ&nbsp;京都、行こう。」がブース出展。<br>東京駅〜岐阜羽島駅間から新幹線でお越しいただいた方は、ブースでアンケートにご回答いただくと、先着3,000名様にコラボグッズを1つプレゼント。
+                        <ul class="plan_notes">
+                          <li>無くなり次第配布終了。</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <a href="#" target="_blank" rel="nofollow"
+                      class="btn small btn_expand end"><span>本イベントは終了しました</span></a>
+                  </div>
+                  <!-- アコーディオン -->
+                  <div class="accordion_outer">
+                    <div class="accordion_wrap ">
+                    </div>
+                  </div>
+                </li>
+                <!-- KYOPO2026 -->
+                <li id="kyopo">
+                  <div class="btn_outer end accordion_none">
+                    <figure class="plan_img">
+                      <picture>
+                        <source srcset="_img/event_plan_kyopo2026-pc.webp 1x, _img/event_plan_kyopo2026-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/event_plan_kyopo2026.webp 1x, _img/event_plan_kyopo2026@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source srcset="_img/event_plan_kyopo2026-pc.jpg 1x, _img/event_plan_kyopo2026-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/event_plan_kyopo2026.jpg 1x, _img/event_plan_kyopo2026@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/event_plan_kyopo2026.jpg" width="100" height="120" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                      <figcaption>写真:タナカ製陶</figcaption>
+                    </figure>
+                    <div class="plan_details">
+                      <h4 class="plan_title">KYOPO (キョポ) ー<br>Kyoto Pottery Expo 2026</h4>
+                      <p class="plan_place">京都山科清水焼団地一帯</p>
+                      <p class="plan_dates">10/16（金）〜10/18（日）</p>
+                      <p class="plan_lead">KYOPO×そうだ 京都、行こう。のスタンプラリーを開催。指定の条件をクリアされた方には景品をプレゼントいたします。</p>
+                    </div>
+                    <a href="#" target="_blank" rel="nofollow"
+                      class="btn small btn_expand end"><span>本イベントは終了しました</span></a>
+
+                  </div>
+                  <!-- アコーディオン -->
+                  <div class="accordion_outer">
+                    <div class="accordion_wrap">
+                    </div>
+                  </div>
+                </li>
+                <!-- 嵐山月灯路 -->
+                <li id="arashiyama">
+                  <div class="btn_outer end accordion_none">
+                    <figure class="plan_img">
+                      <picture>
+                        <source srcset="_img/event_plan_arashiyama-pc.webp 1x, _img/event_plan_arashiyama-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/event_plan_arashiyama.webp 1x, _img/event_plan_arashiyama@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source srcset="_img/event_plan_arashiyama-pc.jpg 1x, _img/event_plan_arashiyama-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/event_plan_arashiyama.jpg 1x, _img/event_plan_arashiyama@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/event_plan_arashiyama.jpg" width="100" height="120" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+                    <div class="plan_details">
+                      <h4 class="plan_title">嵐山月灯路</h4>
+                      <p class="plan_place">嵐山竹林の小径</p>
+                      <p class="plan_dates">9/30（水）〜11/8（日）</p>
+                      <p class="plan_lead">大人気の竹林の小径のライトアップをはじめ、約1kmに渡る灯りの路をお楽しみください。</p>
+                    </div>
+                    <a href="#" target="_blank" rel="nofollow"
+                      class="btn small btn_expand end"><span>本イベントは終了しました</span></a>
+                  </div>
+                  <!-- アコーディオン -->
+                  <div class="accordion_outer end">
+                    <div class="accordion_wrap">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+              <a href="https://ec.travel.jr-central.co.jp/tp/special/sodakyoto_autumn/optionalFacilities?lang=ja"
+                target="_blank" rel="nofollow" class="btn large js-ga-click" data-id="autumn2026_event_all"
+                data-category="autumn2026"><span>観光プランをもっとみる</span></a>
+            </div>
+          </article>
+        </section>
+        <!-- ／ 特別イベント -->
+
+        <!-- モデルコース -->
+        <section id="course" class="section target-area">
+          <article>
+            <div class="content_wrap slideup animation once">
+              <div class="momiji_wrap">
+                <img src="_img/course_momiji01.svg" width="44" height="48" loading="lazy" alt=""
+                  class="momiji momiji01_course is-left">
+                <img src="_img/course_momiji02.svg" width="44" height="48" loading="lazy" alt=""
+                  class="momiji momiji02_course is-right">
+              </div>
+              <div class="common_title">
+                <hgroup class="title_wrap">
+                  <p class="sub bold">秋の京都をめぐるなら</p>
+                  <h3 class="main mincho splitText">モデルコース</h3>
+                </hgroup>
+                <p class="title_lead">定番も紅葉も、欲張りに。<br class="pc-block">秋の京都を効率よく巡る、贅沢な時間を過ごしませんか？</p>
+              </div>
+              <ul class="plan_list_wrap medium">
+                <!-- パスポート -->
+                <li>
+                  <div class="btn_outer">
+                    <h4 class="plan_title"><span class="length">1泊2日</span>人気の紅葉名所をかしこく巡る旅</h4>
+                    <p class="plan_lead">
+                      京都を代表する、イチオシの紅葉スポットを大満喫。「そうだ&nbsp;京都、行こう。」2026年秋のキャンペーンCMの舞台となった毘沙門堂門跡や人気の東寺は、一般拝観時間外に拝観できる「特別拝観プラン」でゆったり楽しみましょう。
+                    </p>
+                    <a data-micromodal-trigger="modal-1" class="btn small btn_expand"><span>詳しくみる</span></a>
+                  </div>
+                </li>
+                <li>
+                  <div class="btn_outer ">
+                    <h4 class="plan_title"><span class="length">2泊3日</span>紅葉だけじゃない！京都の秋を楽しみつくす初めての京都旅</h4>
+                    <p class="plan_lead">
+                      紅葉の名所を巡るだけでなく、朝や夜間に楽しむ「特別拝観プラン」や、期間限定の御朱印集め、ライトアップされた美しい寺院など、秋ならではの特別な京都を満喫。初めてでも楽しめる京都旅です。
+                    </p>
+                    <a data-micromodal-trigger="modal-2" class="btn small btn_expand"><span>詳しくみる</span></a>
+                  </div>
+                </li>
+              </ul>
+              <a href="https://ec.travel.jr-central.co.jp/tp/special/sodakyoto_autumn/optionalFacilities?lang=ja"
+                target="_blank" rel="nofollow" class="btn large js-ga-click" data-id="autumn2026_course_all"
+                data-category="autumn2026"><span>観光プランをもっとみる</span></a>
+
+            </div>
+          </article>
+        </section>
+        <!-- ／ モデルコース -->
+
+        <!-- モーダル 1-->
+        <div class="section modal micromodal-slide course_modal " id="modal-1" aria-hidden="true">
+          <div class="modal_overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal_container" role="dialog" aria-modal="true">
+              <main class="modal_content">
+                <!-- モーダル内コンテンツは以下に -->
+                <button class="modal_close" aria-label="閉じる" data-micromodal-close></button>
+
+                <div class="modal_content_wrap">
+
+                  <!-- タイトル -->
+                  <div class="title_wrap">
+                    <img src="_img/modal_course_title_foot.svg" alt="" width="38" height="48" loading="lazy"
+                      class="deco">
+                    <hgroup class="title_group">
+                      <p class="sub">1泊2日 モデルコース</p>
+                      <h3 class="main">人気の紅葉名所をかしこく巡る旅</h3>
+                    </hgroup>
+                    <p class="lead">
+                      京都を代表する、イチオシの紅葉スポットを大満喫。「そうだ&nbsp;京都、行こう。」2026年秋のキャンペーンCMの舞台となった毘沙門堂門跡や人気の東寺は、一般拝観時間外に拝観できる「特別拝観プラン」でゆったり楽しみましょう。
+                    </p>
+                    <ul class="plan_notes">
+                      <li>紅葉シーズンは特に、当日の混雑状況や交通事情により、移動時間が表記と異なる場合がございます。あらかじめご了承のうえ、時間に余裕を持ってご計画ください。</li>
+                      <li>「毘沙門堂門跡 案内付き朝の貸切拝観」は、11/22（日）、28（土）、29（日）、12/5（土）のみの実施となります。</li>
+                    </ul>
+                  </div>
+
+                  <!-- スケジュール -->
+                  <div class="schedule_outer">
+                    <!-- 1日目 -->
+                    <div class="schedule_wrap">
+
+                      <h4 class="schedule_title">1日目</h4>
+
+                      <div class="schedule_inner">
+                        <span class="dotline"></span>
+                        <div class="spot">京都駅
+                          <div class="illust family">
+                            <img src="_img/modal_illust_family.svg" alt="" width="64" height="68" loading="lazy">
+                          </div>
+                          <div class="spot_inner">
+                            <p>京都総合観光案内所 「京なび」にて<br>京都秋めぐりパスポート受け取り</p>
+                          </div>
+                        </div>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon train"></span>地下鉄</div>
+                          <div class="root">
+                            <span><span>地下鉄<em>「京都駅」</em>より、烏丸線<em>「烏丸御池駅」</em>乗換、東西線<em>「東山駅」</em>下車、徒歩約15分</span></span>
+                          </div>
+                          <div class="time">合計移動所要時間：約35分</div>
+                        </div>
+
+                        <div class="spot">平安神宮</div>
+                        <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000025/plans?lang=ja"
+                          target="_blank" rel="nofollow" class="btn js-ga-click" data-id="autumn2026_course1_1"
+                          data-category="autumn2026"><span>オリジナル限定デザイン御朱印</span></a>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon bus"></span>市バス</div>
+                          <div class="root">
+                            <span>市バス<em>「岡崎公園 動物園前」</em>バス停より、<em>「一乗寺下り松町」</em>下車、徒歩約7分</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約35分</div>
+                        </div>
+
+                        <div class="spot">詩仙堂丈山寺</div>
+                        <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000724/plans?lang=ja"
+                          target="_blank" rel="nofollow" class="btn js-ga-click" data-id="autumn2026_course1_2"
+                          data-category="autumn2026"><span>京都秋めぐりパスポート</span></a>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon bus"></span>市バス</div>
+                          <div class="root">
+                            <span>市バス<em>「一乗寺下り松町」</em>バス停より、<em>「京都駅前」</em>下車、徒歩約20分</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約75分</div>
+                        </div>
+
+                        <div class="spot">東寺</div>
+                        <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000003/plans?lang=ja"
+                          target="_blank" rel="nofollow" class="btn js-ga-click" data-id="autumn2026_course1_3"
+                          data-category="autumn2026"><span>夜間特別拝観先行入場</span></a>
+                      </div>
+                    </div>
+                    <!-- 2日目 -->
+                    <div class="schedule_wrap">
+                      <h4 class="schedule_title">2日目</h4>
+                      <div class="schedule_inner">
+                        <span class="dotline"></span>
+
+                        <div class="spot">毘沙門堂門跡<div class="illust senior"><img src="_img/modal_illust_senior.svg"
+                              alt="" width="49" height="68" loading="lazy"></div>
+                        </div>
+                        <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000348/plans?lang=ja"
+                          target="_blank" rel="nofollow" class="btn js-ga-click" data-id="autumn2026_course1_4"
+                          data-category="autumn2026"><span>案内付き朝の貸切拝観</span></a>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon train"></span>地下鉄</div>
+                          <div class="root">
+                            <span>地下鉄<em>「山科駅」</em>より、東西線<em>「小野駅」</em>下車、徒歩約5分</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約40分</div>
+                        </div>
+
+                        <div class="spot">隨心院</div>
+                        <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000724/plans?lang=ja"
+                          target="_blank" rel="nofollow" class="btn js-ga-click" data-id="autumn2026_course1_5"
+                          data-category="autumn2026"><span>京都秋めぐりパスポート</span></a>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon walk"></span>徒歩</div>
+                          <div class="root">
+                            <span>隨心院より徒歩約15分</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約15分</div>
+                        </div>
+
+                        <div class="spot">醍醐寺</div>
+                        <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000724/plans?lang=ja"
+                          target="_blank" rel="nofollow" class="btn js-ga-click" data-id="autumn2026_course1_6"
+                          data-category="autumn2026"><span>京都秋めぐりパスポート</span></a>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon bus"></span>京阪バス</div>
+                          <div class="root">
+                            <span>京阪バス（京都醍醐寺ライン）<em>「醍醐寺」</em>バス停より、<em>「京都駅八条口（ホテル京阪京都グランデ前）」</em>下車、徒歩約5分</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約45分</div>
+                        </div>
+                        <div class="spot">京都駅</div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- プランリスト -->
+                  <dl class="modal_plan_list_wrap">
+                    <dt>このコースで使えるお得なプラン</dt>
+                    <dd>
+                      <ul class="plan_list_wrap medium">
+                        <!-- 01 -->
+                        <li>
+                          <div class="btn_outer bottom_border">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/modal_course01_plan01.webp 1x, _img/modal_course01_plan01@2x.webp 2x"
+                                  type="image/webp" media="(min-width:769px)">
+                                <source
+                                  srcset="_img/modal_course01_plan01.webp 1x, _img/modal_course01_plan01@2x.webp 2x"
+                                  type="image/webp" media="(max-width:768px)">
+                                <source srcset="_img/modal_course01_plan01.jpg 1x, _img/modal_course01_plan01@2x.jpg 2x"
+                                  media="(min-width:769px)">
+                                <source srcset="_img/modal_course01_plan01.jpg 1x, _img/modal_course01_plan01@2x.jpg 2x"
+                                  media="(max-width:768px)">
+                                <img src="_img/modal_course01_plan01.jpg" width="80" height="80" alt="" loading="lazy"
+                                  decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h5 class="plan_title">オリジナル限定デザイン御朱印</h5>
+                              <p class="plan_place">平安神宮</p>
+                              <p class="plan_dates">10/1（木）〜12/27（日）</p>
+                              <ul class="plan_notes">
+                                <li>10/22（木）、10/23（金）除く</li>
+                              </ul>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000025/plans?lang=ja"
+                              target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                              data-id="autumn2026_course1_list01" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                        <!-- 02 -->
+                        <li>
+                          <div class="btn_outer bottom_border">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/modal_course01_plan02.webp 1x, _img/modal_course01_plan02@2x.webp 2x"
+                                  type="image/webp" media="(min-width:769px)">
+                                <source
+                                  srcset="_img/modal_course01_plan02.webp 1x, _img/modal_course01_plan02@2x.webp 2x"
+                                  type="image/webp" media="(max-width:768px)">
+                                <source srcset="_img/modal_course01_plan02.jpg 1x, _img/modal_course01_plan02@2x.jpg 2x"
+                                  media="(min-width:769px)">
+                                <source srcset="_img/modal_course01_plan02.jpg 1x, _img/modal_course01_plan02@2x.jpg 2x"
+                                  media="(max-width:768px)">
+                                <img src="_img/modal_course01_plan02.jpg" width="80" height="80" alt="" loading="lazy"
+                                  decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h5 class="plan_title">京都秋めぐりパスポート</h5>
+                              <p class="plan_place">
+                                <span>毘沙門堂門跡、</span><span>醍醐寺、</span><span>詩仙堂丈山寺、</span><span>永観堂、</span><span>二尊院、</span><span>鈴虫寺</span><span>（華厳寺）、</span><span>隨心院</span>
+                              </p>
+                              <p class="plan_dates">10/4（日）〜12/27（日）</p>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000724/plans?lang=ja"
+                              target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                              data-id="autumn2026_course1_list02" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                        <!-- 03 -->
+                        <li>
+                          <div class="btn_outer bottom_border">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/modal_course01_plan03.webp 1x, _img/modal_course01_plan03@2x.webp 2x"
+                                  type="image/webp" media="(min-width:769px)">
+                                <source
+                                  srcset="_img/modal_course01_plan03.webp 1x, _img/modal_course01_plan03@2x.webp 2x"
+                                  type="image/webp" media="(max-width:768px)">
+                                <source srcset="_img/modal_course01_plan03.jpg 1x, _img/modal_course01_plan03@2x.jpg 2x"
+                                  media="(min-width:769px)">
+                                <source srcset="_img/modal_course01_plan03.jpg 1x, _img/modal_course01_plan03@2x.jpg 2x"
+                                  media="(max-width:768px)">
+                                <img src="_img/modal_course01_plan03.jpg" width="80" height="80" alt="" loading="lazy"
+                                  decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h5 class="plan_title">夜間特別拝観先行入場</h5>
+                              <p class="plan_place">東寺</p>
+                              <p class="plan_dates">11/6（金）〜12/13（日）</p>
+                              <ul class="plan_notes">
+                                <li>11/21（土）除く</li>
+                              </ul>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000003/plans?lang=ja"
+                              target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                              data-id="autumn2026_course1_list03" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+
+                        <!-- 05 -->
+                        <li>
+                          <div class="btn_outer bottom_border">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/modal_course01_plan04.webp 1x, _img/modal_course01_plan04@2x.webp 2x"
+                                  type="image/webp" media="(min-width:769px)">
+                                <source
+                                  srcset="_img/modal_course01_plan04.webp 1x, _img/modal_course01_plan04@2x.webp 2x"
+                                  type="image/webp" media="(max-width:768px)">
+                                <source srcset="_img/modal_course01_plan04.jpg 1x, _img/modal_course01_plan04@2x.jpg 2x"
+                                  media="(min-width:769px)">
+                                <source srcset="_img/modal_course01_plan04.jpg 1x, _img/modal_course01_plan04@2x.jpg 2x"
+                                  media="(max-width:768px)">
+                                <img src="_img/modal_course01_plan04.jpg" width="80" height="80" alt="" loading="lazy"
+                                  decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h5 class="plan_title">案内付き朝の貸切拝観</h5>
+                              <p class="plan_place">毘沙門堂門跡</p>
+                              <p class="plan_dates">11/22（日）、28（土）、29（日）、12/5（土）</p>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000348/plans?lang=ja"
+                              target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                              data-id="autumn2026_course1_list04" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+
+                  <!-- 注釈 -->
+                  <ul class="plan_notes">
+                    <li>各スポットの有料・要予約・設定期間などの最新情報は、事前に「<a href="https://jr-central.co.jp/ex/travel-portal/"
+                        target="_blank" rel="nofollow" class="text_link">EX旅先予約</a>」ページよりご確認ください。
+                    </li>
+                    <li>
+                      「秋めぐりパスポート」は7つの寺院から最大4つを選んで巡っていただけます。対象寺院は毘沙門堂門跡、醍醐寺、詩仙堂丈山寺、永観堂、二尊院、鈴虫寺（華厳寺）、隨心院となります。「永観堂」を選択する場合は最大3寺院となります。
+                    </li>
+                  </ul>
+
+                  <a class="btn close" data-micromodal-close><span>とじる</span></a>
+                </div>
+
+                <!-- ／ モーダル内コンテンツはここまで-->
+              </main>
+            </div>
+          </div>
+        </div>
+
+        <!-- モーダル 2-->
+        <div class="section modal micromodal-slide course_modal " id="modal-2" aria-hidden="true">
+          <div class="modal_overlay" tabindex="-1" data-micromodal-close>
+            <div class="modal_container" role="dialog" aria-modal="true">
+              <main class="modal_content">
+                <!-- モーダル内コンテンツは以下に -->
+                <button class="modal_close" aria-label="閉じる" data-micromodal-close></button>
+                <div class="modal_content_wrap">
+
+                  <!-- タイトル -->
+                  <div class="title_wrap">
+                    <img src="_img/modal_course_title_foot.svg" alt="" width="38" height="48" loading="lazy"
+                      class="deco">
+                    <hgroup class="title_group">
+                      <p class="sub">2泊3日 モデルコース</p>
+                      <h3 class="main">紅葉だけじゃない！<br>京都の秋を楽しみつくす<br>初めての京都旅</h3>
+                    </hgroup>
+                    <p class="lead">
+                      紅葉の名所を巡るだけでなく、朝や夜間に楽しむ「特別拝観プラン」や、期間限定の御朱印集め、ライトアップされた美しい寺院など、秋ならではの特別な京都を満喫。初めてでも楽しめる京都旅です。
+                    </p>
+                    <ul class="plan_notes">
+                      <li>紅葉シーズンは特に、当日の混雑状況や交通事情により、移動時間が表記と異なる場合がございます。あらかじめご了承のうえ、時間に余裕を持ってご計画ください。</li>
+                      <li>「旧三井家下鴨別邸 歴史薫る邸宅で過ごす朝〜精進料理と望楼見学〜」は、11/3（火）、11/15（日）、12/7（月）、12/13（日）のみの実施となります。</li>
+                    </ul>
+                  </div>
+
+                  <!-- スケジュール -->
+                  <div class="schedule_outer">
+                    <!-- 1日目 -->
+                    <div class="schedule_wrap">
+
+                      <h4 class="schedule_title">1日目</h4>
+
+                      <div class="schedule_inner">
+                        <span class="dotline"></span>
+                        <div class="spot">京都駅<div class="illust family">
+                            <img src="_img/modal_illust_family.svg" alt="" width="64" height="68" loading="lazy">
+                          </div>
+                        </div>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon train"></span>地下鉄</div>
+                          <div class="root">
+                            <span>地下鉄<em>「京都駅」</em>より、烏丸線<em>「烏丸御池駅」</em>乗換、東西線<em>「東山駅」</em>下車、徒歩約10分</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約30分</div>
+                        </div>
+
+                        <div class="spot">京都市京セラ美術館 新館 東山キューブ</div>
+                        <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000726/plans?lang=ja"
+                          target="_blank" rel="nofollow" class="btn js-ga-click " data-id="autumn2026_course2_1"
+                          data-category="autumn2026"><span>『禅とジブリ』京都展　観覧チケット</span></a>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon walk"></span>徒歩</div>
+                          <div class="root">
+                            <span>京都市京セラ美術館 新館 東山キューブより徒歩約20分</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約20分</div>
+                        </div>
+
+                        <div class="spot">南禅寺</div>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon bus"></span>市バス</div>
+                          <div class="root">
+                            <span>市バス<em>「南禅寺・永観堂道」</em>バス停より、<em>「真如堂前」</em>下車、徒歩約8分</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約25分</div>
+                        </div>
+
+                        <div class="spot">真如堂</div>
+                        <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000697/plans?lang=ja"
+                          target="_blank" rel="nofollow" class="btn js-ga-click" data-id="autumn2026_course2_3"
+                          data-category="autumn2026"><span>夜間貸切特別拝観</span></a>
+                      </div>
+                    </div>
+                    <!-- 2日目 -->
+                    <div class="schedule_wrap">
+                      <h4 class="schedule_title">2日目</h4>
+
+                      <div class="schedule_inner">
+                        <span class="dotline"></span>
+
+                        <div class="spot">旧三井家下鴨別邸<div class="illust senior"><img src="_img/modal_illust_senior.svg"
+                              alt="" width="49" height="68" loading="lazy"></div>
+                        </div>
+                        <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000027/plans?lang=ja"
+                          target="_blank" rel="nofollow" class="btn js-ga-click line2" data-id="autumn2026_course2_4"
+                          data-category="autumn2026"><span>歴史薫る邸宅で過ごす朝<br>〜精進料理と望楼見学〜</span></a>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon walk"></span>徒歩</div>
+                          <div class="root">
+                            <span>旧三井家下鴨別邸より徒歩約25分</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約25分</div>
+                        </div>
+
+                        <div class="spot">相国寺</div>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon bus"></span>市バス</div>
+                          <div class="root">
+                            <span>市バス<em>「烏丸今出川（地下鉄今出川駅）」</em><wbr>バス停より、<em>「北野天満宮前」</em>下車すぐ</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約25分</div>
+                        </div>
+
+                        <div class="spot">北野天満宮</div>
+                        <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000018/plans/Z000018-C039212-M041779/detail?specialCode=&lang=ja"
+                          target="_blank" rel="nofollow" class="btn js-ga-click" data-id="autumn2026_course2_6"
+                          data-category="autumn2026"><span>オリジナル限定デザイン御朱印</span></a>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon bus"></span>市バス</div>
+                          <div class="root">
+                            <span>市バス<em>「北野天満宮前」</em>バス停より、<em>「妙心寺北門前」</em>下車、徒歩約2分</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約20分</div>
+                        </div>
+
+                        <div class="spot">妙心寺</div>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon train"></span><span class="icon bus"></span>JR・市バス</div>
+                          <div class="root">
+                            <span>JR嵯峨野線（山陰本線）<em>「花園駅」</em>より、<em>「京都駅」</em>乗換、奈良線<em>「東福寺駅」</em>乗換、市バス<em>「東福寺前」</em>バス停より、<em>「東山七条」</em>下車、徒歩約3分</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約60分</div>
+                        </div>
+
+                        <div class="spot">智積院</div>
+                        <a href="#" target="_blank" rel="nofollow" class="btn js-ga-click comingsoon"
+                          data-id="autumn2026_course2_8" data-category="autumn2026"><span>智山紅葉月</span></a>
+
+                      </div>
+                    </div>
+
+                    <!-- 3日目 -->
+                    <div class="schedule_wrap">
+                      <h4 class="schedule_title">3日目</h4>
+
+                      <div class="schedule_inner">
+                        <span class="dotline"></span>
+                        <div class="spot">東福寺<div class="illust woman"><img src="_img/modal_illust_woman.svg" alt=""
+                              width="42" height="68" loading="lazy"></div>
+                        </div>
+                        <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000002/plans/Z000002-C037064-M039471/detail?specialCode=&lang=ja"
+                          target="_blank" rel="nofollow" class="btn js-ga-click" data-id="autumn2026_course2_9"
+                          data-category="autumn2026"><span>朝の貸切拝観</span></a>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon walk"></span>徒歩</div>
+                          <div class="root">
+                            <span>東福寺より徒歩約8分</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約8分</div>
+                        </div>
+
+                        <div class="spot">東福寺霊源院</div>
+                        <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000723/plans?lang=ja"
+                          target="_blank" rel="nofollow" class="btn js-ga-click" data-id="autumn2026_course2_10"
+                          data-category="autumn2026"><span>オリジナル限定デザイン御朱印</span></a>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon train"></span>JR</div>
+                          <div class="root">
+                            <span>JR奈良線<em>「東福寺駅」</em>より、
+                              <em>「京都駅」</em>乗換、 琵琶湖線・湖西線<em>「山科駅」</em>下車、徒歩約20分</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約45分</div>
+                        </div>
+
+                        <div class="spot">毘沙門堂門跡</div>
+
+                        <div class="root_wrap">
+                          <div class="by"><span class="icon train"></span><span class="icon walk"></span>JR</div>
+                          <div class="root">
+                            <span>JR琵琶湖線・湖西線<em>「山科駅」</em>より、<em>「京都駅」</em>下車</span>
+                          </div>
+                          <div class="time">合計移動所要時間：約30分</div>
+                        </div>
+
+                        <div class="spot">京都駅</div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- プランリスト -->
+                  <dl class="modal_plan_list_wrap">
+                    <dt>このコースで使えるお得なプラン</dt>
+                    <dd>
+                      <ul class="plan_list_wrap medium">
+                        <!-- 01 -->
+                        <li>
+                          <div class="btn_outer bottom_border">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/modal_course02_plan01.webp 1x, _img/modal_course02_plan01@2x.webp 2x"
+                                  type="image/webp" media="(min-width:769px)">
+                                <source
+                                  srcset="_img/modal_course02_plan01.webp 1x, _img/modal_course02_plan01@2x.webp 2x"
+                                  type="image/webp" media="(max-width:768px)">
+                                <source srcset="_img/modal_course02_plan01.jpg 1x, _img/modal_course02_plan01@2x.jpg 2x"
+                                  media="(min-width:769px)">
+                                <source srcset="_img/modal_course02_plan01.jpg 1x, _img/modal_course02_plan01@2x.jpg 2x"
+                                  media="(max-width:768px)">
+                                <img src="_img/modal_course02_plan01.jpg" width="80" height="80" alt="" loading="lazy"
+                                  decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h5 class="plan_title">『禅とジブリ』京都展　観覧チケット</h5>
+                              <p class="plan_place"><span>京都市京セラ美術館&nbsp;</span><span>新館&nbsp;</span>
+                                <span>東山キューブ</span>
+                              </p>
+                              <p class="plan_dates">10/3（土）〜12/6（日）</p>
+                              <ul class="plan_notes">
+                                <li>休館日：月曜日（祝・休日の場合は開館）</li>
+                              </ul>
+
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000726/plans?lang=ja"
+                              target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                              data-id="autumn2026_course2_list01" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                        <!-- 02 -->
+                        <li>
+                          <div class="btn_outer bottom_border">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/modal_course02_plan02.webp 1x, _img/modal_course02_plan02@2x.webp 2x"
+                                  type="image/webp" media="(min-width:769px)">
+                                <source
+                                  srcset="_img/modal_course02_plan02.webp 1x, _img/modal_course02_plan02@2x.webp 2x"
+                                  type="image/webp" media="(max-width:768px)">
+                                <source srcset="_img/modal_course02_plan02.jpg 1x, _img/modal_course02_plan02@2x.jpg 2x"
+                                  media="(min-width:769px)">
+                                <source srcset="_img/modal_course02_plan02.jpg 1x, _img/modal_course02_plan02@2x.jpg 2x"
+                                  media="(max-width:768px)">
+                                <img src="_img/modal_course02_plan02.jpg" width="80" height="80" alt="" loading="lazy"
+                                  decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h5 class="plan_title">夜間貸切特別拝観</h5>
+                              <p class="plan_place">真如堂</p>
+                              <p class="plan_dates">11/18（水）〜12/8（火）</p>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000697/plans?lang=ja"
+                              target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                              data-id="autumn2026_course2_list02" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                        <!-- 03 -->
+                        <li>
+                          <div class="btn_outer bottom_border">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/modal_course02_plan03.webp 1x, _img/modal_course02_plan03@2x.webp 2x"
+                                  type="image/webp" media="(min-width:769px)">
+                                <source
+                                  srcset="_img/modal_course02_plan03.webp 1x, _img/modal_course02_plan03@2x.webp 2x"
+                                  type="image/webp" media="(max-width:768px)">
+                                <source srcset="_img/modal_course02_plan03.jpg 1x, _img/modal_course02_plan03@2x.jpg 2x"
+                                  media="(min-width:769px)">
+                                <source srcset="_img/modal_course02_plan03.jpg 1x, _img/modal_course02_plan03@2x.jpg 2x"
+                                  media="(max-width:768px)">
+                                <img src="_img/modal_course02_plan03.jpg" width="80" height="80" alt="" loading="lazy"
+                                  decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h5 class="plan_title">歴史薫る邸宅で過ごす朝〜精進料理と望楼見学〜</h5>
+                              <p class="plan_place">旧三井家下鴨別邸</p>
+                              <p class="plan_dates">11/3（火）、11/15（日）、12/7（月）、12/13（日）</p>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000027/plans?lang=ja"
+                              target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                              data-id="autumn2026_course2_list03" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                        <!-- 04 -->
+                        <li>
+                          <div class="btn_outer bottom_border">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/modal_course02_plan04.webp 1x, _img/modal_course02_plan04@2x.webp 2x"
+                                  type="image/webp" media="(min-width:769px)">
+                                <source
+                                  srcset="_img/modal_course02_plan04.webp 1x, _img/modal_course02_plan04@2x.webp 2x"
+                                  type="image/webp" media="(max-width:768px)">
+                                <source srcset="_img/modal_course02_plan04.jpg 1x, _img/modal_course02_plan04@2x.jpg 2x"
+                                  media="(min-width:769px)">
+                                <source srcset="_img/modal_course02_plan04.jpg 1x, _img/modal_course02_plan04@2x.jpg 2x"
+                                  media="(max-width:768px)">
+                                <img src="_img/modal_course02_plan04.jpg" width="80" height="80" alt="" loading="lazy"
+                                  decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h5 class="plan_title">そうだ 京都、行こう。限定デザインの御朱印授与</h5>
+                              <p class="plan_place">北野天満宮</p>
+                              <p class="plan_dates">10/31（土）〜12/6（日）</p>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000018/plans/Z000018-C039212-M041779/detail?specialCode=&lang=ja"
+                              target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                              data-id="autumn2026_course2_list04" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                        <!-- 05 -->
+                        <li>
+                          <div class="btn_outer bottom_border">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/modal_course02_plan05.webp 1x, _img/modal_course02_plan05@2x.webp 2x"
+                                  type="image/webp" media="(min-width:769px)">
+                                <source
+                                  srcset="_img/modal_course02_plan05.webp 1x, _img/modal_course02_plan05@2x.webp 2x"
+                                  type="image/webp" media="(max-width:768px)">
+                                <source srcset="_img/modal_course02_plan05.jpg 1x, _img/modal_course02_plan05@2x.jpg 2x"
+                                  media="(min-width:769px)">
+                                <source srcset="_img/modal_course02_plan05.jpg 1x, _img/modal_course02_plan05@2x.jpg 2x"
+                                  media="(max-width:768px)">
+                                <img src="_img/modal_course02_plan05.jpg" width="80" height="80" alt="" loading="lazy"
+                                  decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h5 class="plan_title">智山紅葉月</h5>
+                              <p class="plan_place">智積院</p>
+                              <p class="plan_dates">11/7（土）〜12/6（日）</p>
+                            </div>
+                            <a href="#" target="_blank" rel="nofollow"
+                              class="btn small btn_expand js-ga-click comingsoon" data-id="autumn2026_course2_list05"
+                              data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+                        <!-- 06 -->
+                        <li>
+                          <div class="btn_outer bottom_border">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/modal_course02_plan06.webp 1x, _img/modal_course02_plan06@2x.webp 2x"
+                                  type="image/webp" media="(min-width:769px)">
+                                <source
+                                  srcset="_img/modal_course02_plan06.webp 1x, _img/modal_course02_plan06@2x.webp 2x"
+                                  type="image/webp" media="(max-width:768px)">
+                                <source srcset="_img/modal_course02_plan06.jpg 1x, _img/modal_course02_plan06@2x.jpg 2x"
+                                  media="(min-width:769px)">
+                                <source srcset="_img/modal_course02_plan06.jpg 1x, _img/modal_course02_plan06@2x.jpg 2x"
+                                  media="(max-width:768px)">
+                                <img src="_img/modal_course02_plan06.jpg" width="80" height="80" alt="" loading="lazy"
+                                  decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h5 class="plan_title">朝の貸切拝観</h5>
+                              <p class="plan_place">東福寺</p>
+                              <p class="plan_dates">11/19（木）〜12/6（日）</p>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000002/plans/Z000002-C037064-M039471/detail?specialCode=&lang=ja"
+                              target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                              data-id="autumn2026_course2_list06" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+
+                        <!-- 07 -->
+                        <li>
+                          <div class="btn_outer bottom_border">
+                            <figure class="plan_img">
+                              <picture>
+                                <source
+                                  srcset="_img/modal_course02_plan07.webp 1x, _img/modal_course02_plan07@2x.webp 2x"
+                                  type="image/webp" media="(min-width:769px)">
+                                <source
+                                  srcset="_img/modal_course02_plan07.webp 1x, _img/modal_course02_plan07@2x.webp 2x"
+                                  type="image/webp" media="(max-width:768px)">
+                                <source srcset="_img/modal_course02_plan07.jpg 1x, _img/modal_course02_plan07@2x.jpg 2x"
+                                  media="(min-width:769px)">
+                                <source srcset="_img/modal_course02_plan07.jpg 1x, _img/modal_course02_plan07@2x.jpg 2x"
+                                  media="(max-width:768px)">
+                                <img src="_img/modal_course02_plan07.jpg" width="80" height="80" alt="" loading="lazy"
+                                  decoding="async">
+                              </picture>
+                            </figure>
+                            <div class="plan_details">
+                              <h5 class="plan_title">オリジナル限定デザイン御朱印</h5>
+                              <p class="plan_place">東福寺霊源院</p>
+                              <p class="plan_dates">11/14（土）〜11/29（日）</p>
+                              <ul class="plan_notes">
+                                <li>紅葉の状況によっては延長の可能性あり</li>
+                              </ul>
+                            </div>
+                            <a href="https://ec.travel.jr-central.co.jp/tp/optionalFacilities/Z000723/plans?lang=ja"
+                              target="_blank" rel="nofollow" class="btn small btn_expand js-ga-click"
+                              data-id="autumn2026_course2_list07" data-category="autumn2026"><span>予約はこちら</span></a>
+                          </div>
+                        </li>
+
+                      </ul>
+                    </dd>
+                  </dl>
+
+                  <!-- 注釈 -->
+                  <ul class="plan_notes">
+                    <li>各スポットの有料・要予約・設定期間などの最新情報は、事前に「<a href="https://jr-central.co.jp/ex/travel-portal/"
+                        target="_blank" rel="nofollow" class="text_link">EX旅先予約</a>」ページよりご確認ください。
+                    </li>
+                    <li>
+                      「秋めぐりパスポート」は7つの寺院から最大4つを選んで巡っていただけます。対象寺院は毘沙門堂門跡、醍醐寺、詩仙堂丈山寺、永観堂、二尊院、鈴虫寺（華厳寺）、隨心院となります。「永観堂」を選択する場合は最大3寺院となります。
+                    </li>
+                  </ul>
+
+                  <a class="btn close" data-micromodal-close><span>とじる</span></a>
+
+                </div>
+
+                <!-- ／ モーダル内コンテンツはここまで-->
+              </main>
+            </div>
+          </div>
+        </div>
+        <!-- ／ モーダル -->
+
+        <!-- インタビュー -->
+        <section id="interview" class="section target-area">
+          <!-- bg -->
+          <picture class="bg_img" aria-hidden="true">
+            <source srcset="_img/interview_bg-pc.webp 1x, _img/interview_bg-pc@2x.webp 2x" type="image/webp"
+              media="(min-width:769px)">
+            <source srcset="_img/interview_bg.webp 1x, _img/interview_bg@2x.webp 2x" type="image/webp"
+              media="(max-width:768px)">
+
+            <source srcset="_img/interview_bg-pc.jpg 1x, _img/interview_bg-pc@2x.jpg 2x" media="(min-width:769px)">
+            <source srcset="_img/interview_bg.jpg 1x, _img/interview_bg@2x.jpg 2x" media="(max-width:768px)">
+            <img src="_img/interview_bg.jpg" width="600" height="1172" alt="" loading="lazy" decoding="async">
+          </picture>
+          <article>
+            <div class="content_wrap slideup animation once">
+              <div class="momiji_wrap">
+                <img src="_img/interview_momiji01.svg" width="94" height="96" loading="lazy" alt=""
+                  class="momiji momiji01_interview is-left">
+                <img src="_img/interview_momiji02.svg" width="70" height="63" loading="lazy" alt=""
+                  class="momiji momiji02_interview is-right">
+              </div>
+              <div class="common_title">
+                <hgroup class="title_wrap">
+                  <p class="sub bold">スペシャルインタビュー</p>
+                  <h3 class="main mincho splitText"><span class="">京都が誇る</span><span class="">伝統産業を</span><span
+                      class="">次の世代へ</span></h3>
+                  <p class="sub2 mincho">KYOPO（キョポ）<br>ーKyoto Pottery Expo 2026</p>
+                </hgroup>
+              </div>
+              <div class="interview_intro_wrap">
+                <div class="interview_intro">
+                  <figure>
+                    <picture>
+                      <!-- wbp -->
+                      <source srcset="_img/interview_intro_img.webp 1x, _img/interview_intro_img@2x.webp 2x"
+                        type="image/webp" media="(min-width:769px)">
+                      <source srcset="_img/interview_intro_img.webp 1x, _img/interview_intro_img@2x.webp 2x"
+                        type="image/webp" media="(max-width:768px)">
+                      <!-- jpg -->
+                      <source srcset="_img/interview_intro_img.jpg 1x, _img/interview_intro_img@2x.jpg 2x"
+                        media="(min-width:769px)">
+                      <source srcset="_img/interview_intro_img.jpg 1x, _img/interview_intro_img@2x.jpg 2x"
+                        media="(max-width:768px)">
+                      <img src="_img/interview_intro_img.jpg" width="160" height="136" alt="" loading="lazy"
+                        decoding="async">
+                    </picture>
+                  </figure>
+                  <dl>
+                    <dt>一般事務局法人KYOPO</dt>
+                    <dd>
+                      <span><span class="small">（左）事務局 </span>淺井 忠博<span class="small">さん</span></span>
+                      <span><span class="small">（右）代表理事</span>泉 享志<span class="small">さん</span></span>
+                    </dd>
+                  </dl>
+
+                </div>
+              </div>
+              <div class="main_content">
+                <div class="accordion_wrap">
+                  <input type="checkbox" id="accordion_interview" class="accordion_checkbox">
+                  <div class="accordion_body">
+                    <div class="accordion_body_inner">
+                      <div class=" interview_conntents">
+                        <p class="main_lead">
+                          京都市山科区の清水焼団地一帯で毎年10月に開催されている、京焼・清水焼を中心とした陶器まつりが、初開催から50年の節目にリニューアル！事務局の運営にも携わる地域振興プロデューサーの淺井さんと、前身の「清水焼の郷まつり」から尽力されている理事の泉さんにその背景についてうかがいました。
+                        </p>
+
+                        <figure class="img_wrap">
+                          <picture>
+                            <source
+                              srcset="_img/interview_main_photo01-pc.webp 1x, _img/interview_main_photo01-pc@2x.webp 2x"
+                              type="image/webp" media="(min-width:769px)">
+                            <source srcset="_img/interview_main_photo01.webp 1x, _img/interview_main_photo01@2x.webp 2x"
+                              type="image/webp" media="(max-width:768px)">
+                            <source
+                              srcset="_img/interview_main_photo01-pc.jpg 1x, _img/interview_main_photo01-pc@2x.jpg 2x"
+                              media="(min-width:769px)">
+                            <source srcset="_img/interview_main_photo01.jpg 1x, _img/interview_main_photo01@2x.jpg 2x"
+                              media="(max-width:768px)">
+                            <img src="_img/interview_main_photo01.jpg" width="310" height="173" alt="" loading="lazy"
+                              decoding="async">
+                          </picture>
+                        </figure>
+                        <div class="lead_wrap">
+                          <h4 class="title">改めて「清水焼団地」の成り立ちについて教えてください。</h4>
+                          <p class="lead">
+                            泉：そもそも作り手の多くは清水寺にほど近い五条坂や、泉涌寺、今熊野といった東山エリアを拠点に活動していました。しかし当時の場所は非常に手狭であり「もっと広い場所が欲しい」と手を挙げたメンバーたちが、65年前に現在の場所へ集団で移転してきました。それが清水焼団地のはじまりです。
+                          </p>
+                        </div>
+                        <div class="lead_wrap">
+                          <h4 class="title">「清水焼」の定義はあるのでしょうか。</h4>
+                          <p class="lead">
+                            泉：信楽焼や備前焼などは、地元で採れる土や原料そのものがその焼き物の風合いや特徴を決定づけます。しかし京都は地元で容易に原料を採掘することが基本的にできない土地柄でした。日本各地から集まった陶工（職人）たちはそれぞれの技術や作風を武器に個性豊かな焼き物を作っていきました。こうして生まれた京都の焼き物が「清水焼」と呼ばれるようになりました。
+                          </p>
+                        </div>
+                        <figure class="img_wrap">
+                          <picture>
+                            <source
+                              srcset="_img/interview_main_photo02-pc.webp 1x, _img/interview_main_photo02-pc@2x.webp 2x"
+                              type="image/webp" media="(min-width:769px)">
+                            <source srcset="_img/interview_main_photo02.webp 1x, _img/interview_main_photo02@2x.webp 2x"
+                              type="image/webp" media="(max-width:768px)">
+
+                            <source
+                              srcset="_img/interview_main_photo02-pc.jpg 1x, _img/interview_main_photo02-pc@2x.jpg 2x"
+                              media="(min-width:769px)">
+                            <source srcset="_img/interview_main_photo02.jpg 1x, _img/interview_main_photo02@2x.jpg 2x"
+                              media="(max-width:768px)">
+                            <img src="_img/interview_main_photo02.jpg" width="310" height="173" alt="" loading="lazy"
+                              decoding="async">
+                          </picture>
+                        </figure>
+
+                        <div class="lead_wrap">
+                          <h4 class="title">今回の「KYOPO」へのリニューアルの意図を教えてください。</h4>
+                          <p class="lead">
+                            淺井：清水焼も他の伝統産業同様に担い手不足が課題です。さらに次の世代を見据えたとき、若い世代に興味を持ってもらうための取り組みにしていきたいという思いが強まりました。そこで50年を機にリニューアルすることを決定しました。
+                          </p>
+                        </div>
+                        <div class="lead_wrap">
+                          <h4 class="title">「KYOPO」の見どころは？</h4>
+                          <p class="lead">
+                            淺井：ろくろや手びねりなど陶芸の技術を競う「KYOPO Cup」ですね。まつりの3日間をかけトーナメント形式で行います。<br>
+                            <br>
+                            「清水の郷まつり」でも行っていた人気の企画で、地元・清水焼団地の職人はもちろん全国から集まるプロの陶芸家、アマチュア、さらには海外の方が飛び入り参戦されることもありました。参加者は与えられたテーマに沿って制限時間内に制作を行います。<br>
+                            <br>
+                            泉：今年のテーマは協議中ですが、過去の例をあげると「大皿の直径の大きさ」や制限時間内の「制作個数を競う」などがありました。それぞれの得意分野があるため、総合的にバランスの取れた職人が一番強い。職人たちが真剣勝負を繰り広げる姿は圧巻です！<br>
+                            <br>
+                            淺井：このほか、国際交流の一環で台湾の作家さんの作品を会場に展示します。今後も国や地域の枠を越えて、陶芸を通じた文化交流の拠点を目指します。
+                          </p>
+                        </div>
+
+                        <figure class="img_wrap">
+                          <picture>
+                            <source
+                              srcset="_img/interview_main_photo03-pc.webp 1x, _img/interview_main_photo03-pc@2x.webp 2x"
+                              type="image/webp" media="(min-width:769px)">
+                            <source srcset="_img/interview_main_photo03.webp 1x, _img/interview_main_photo03@2x.webp 2x"
+                              type="image/webp" media="(max-width:768px)">
+
+                            <source
+                              srcset="_img/interview_main_photo03-pc.jpg 1x, _img/interview_main_photo03-pc@2x.jpg 2x"
+                              media="(min-width:769px)">
+                            <source srcset="_img/interview_main_photo03.jpg 1x, _img/interview_main_photo03@2x.jpg 2x"
+                              media="(max-width:768px)">
+                            <img src="_img/interview_main_photo03.jpg" width="310" height="173" alt="" loading="lazy"
+                              decoding="async">
+                          </picture>
+                        </figure>
+
+                        <div class="lead_wrap">
+                          <h4 class="title">JR東海とのコラボイベントも開催されますね。</h4>
+                          <p class="lead">
+                            今回お声がけいただき、2つのスタンプラリーを一緒に行うことになりました。複数のお店でお買い回りいただくプランでは、先着順で「豆皿」をプレゼントします！
+                            1種類ではなく複数の色柄を準備しました。どのような色柄の豆皿と出会えるか、楽しみにしてくださいね！
+                          </p>
+                        </div>
+                        <div class="lead_wrap">
+                          <h4 class="title">ご覧の皆さまへメッセージをお願いします。</h4>
+                          <p class="lead">
+                            泉：清水焼は日常の暮らしに最も近い京都の伝統産業のひとつで、実際に使っていただけるのが魅力です。当日は130もの作家・事業者が一堂に会します。今後も進化を続ける「KYOPO」へ、ぜひ一度いらしてください！
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <label for="accordion_interview"
+                    class="accordion_checkbox_label"><span>もっと読む</span><span>とじる</span></label>
+                </div>
+              </div>
+            </div>
+
+          </article>
+        </section>
+        <!-- ／ インタビュー -->
+
+        <!-- CM情報 -->
+        <section id="cm" class="section target-area ">
+          <article>
+            <div class="content_wrap slideup animation once">
+              <hgroup class="simple_title">
+                <img src="_img/title_simple_deco.svg" alt="" width="40" height="40" loading="lazy">
+                <h3 class="mincho">CM情報</h3>
+              </hgroup>
+
+              <ul class="cm_list_wrap">
+                <li>
+                  <div class="cm_list">
+                    <h4 class="cm_list_title gothic medium"><span class="deco">2026年 秋編</span>
+                    </h4>
+                    <div class="cm_list_img youtube_wrap">
+                      <iframe width="560" height="244" src="https://www.youtube.com/embed/tsjJZ3w56BI"
+                        title="YouTube Developers Live: Embedded Web Player Customization" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="cm_list">
+                    <h4 class="cm_list_title gothic medium poster"><span class="deco">ポスターグラフィック</span></h4>
+
+                    <figure class="cm_list_img poster">
+                      <picture>
+                        <source srcset="_img/cm_img_poster-pc.webp 1x, _img/cm_img_poster-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/cm_img_poster.webp 1x, _img/cm_img_poster@2x.webp 2x" type="image/webp"
+                          media="(max-width:768px)">
+                        <source srcset="_img/cm_img_poster-pc.jpg 1x, _img/cm_img_poster-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/cm_img_poster.jpg 1x, _img/cm_img_poster@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/cm_img_poster.jpg" width="358" height="253" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                    </figure>
+
+                  </div>
+                </li>
+              </ul>
+
+              <div class="cm_lead gothic medium">
+                <h4 class="cm_lead_title medium">これだけの秋が「町の一角」にある。<br>
+                  それだけで贅沢でした。</h4>
+                <p>
+                  京都の東の玄関口「山科」は平安京以前からの歴史を誇り、古来より人が多く行き来したエリア。古刹が点在し、秋の紅葉、春の桜スポットも数多くあります。写真は、その中の代表格「毘沙門堂門跡」。起りはなんと一三〇〇年以上も遡る飛鳥時代。やがてこの地に移り、さらに三六〇年以上かけてさまざまな日本の文化や自然を取り込み、こうして今の私たちに見応えある景色を展開してくれているのです。秋の勅使門前の参道は、頭上を覆い尽くす紅葉のトンネルがやがて石段に積もる「敷き紅葉」へと様相を変えてゆく。さて、今年の紅葉は、どんなパフォーマンスで旅人を迎えてくれるのでしょうか。<br>
+                  <br>
+                  2025年11月撮影。広告上の演出を施しています。
+                </p>
+              </div>
+
+              <a href="https://souda-kyoto.jp/campaign/index.html" target="_blank" rel="nofollow"
+                class="gallery_btn bottom_border js-ga-click" data-id="autumn2026_cm01" data-category="autumn2026">
+                <span class="text medium">過去のキャンペーンギャラリー</span>
+                <span class="arrow"></span>
+              </a>
+
+              <div class="spot_wrap">
+                <ul class="spot_list_wrap">
+                  <li><a href="https://souda-kyoto.jp/guide/spot/bishamondo.html" target="_blank" rel="nofollow"
+                      class="btn large js-ga-click" data-id="autumn2026_cm02"
+                      data-category="autumn2026"><span>毘沙門堂門跡</span></a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </article>
+        </section>
+        <!-- ／ CM情報 -->
+
+        <!-- 紅葉情報 -->
+        <section id="autumn_info" class="section">
+          <article>
+            <div class="content_wrap slideup animation once">
+              <div class="content">
+                <h3 class="title mincho">
+                  <span>2026<span class="small">年</span></span>
+                  <span>紅葉情報</span>
+                </h3>
+                <a href="https://souda-kyoto.jp/guide/season/koyo/index.html" target="_blank" rel="nofollow"
+                  class="btn large js-ga-click" data-id="autumn2026_info"
+                  data-category="autumn2026"><span>紅葉情報ページをみる</span></a>
+              </div>
+              <figure class="autumn_bg_img" aria-hidden="true">
+                <picture>
+                  <source srcset="_img/autumn_info_bg-pc.webp 1x,  _img/autumn_info_bg-pc@2x.webp 2x" type="image/webp"
+                    media="(min-width:769px)">
+                  <source srcset="_img/autumn_info_bg.webp 1x, _img/autumn_info_bg@2x.webp 2x" type="image/webp"
+                    media="(max-width:768px)">
+                  <source srcset="_img/autumn_info_bg-pc.jpg 1x, _img/autumn_info_bg-pc@2x.jpg 2x"
+                    media="(min-width:769px)">
+                  <source srcset="_img/autumn_info_bg.jpg 1x,_img/autumn_info_bg@2x.jpg 2x" media="(max-width:768px)">
+                  <source srcset="_img/autumn_info_bg.jpg 1x, _img/autumn_info_bg@2x.jpg 2x" media="(max-width:768px)">
+                  <img src="_img/autumn_info_bg.jpg" width="1028" height="684" alt="" loading="lazy" decoding="async">
+                </picture>
+              </figure>
+
+            </div>
+          </article>
+        </section>
+        <!-- ／ 紅葉情報 -->
+
+        <!-- おすすめ情報 -->
+        <section id="recommend" class="section target-area  ">
+          <article>
+            <div class="content_wrap slideup animation once">
+              <hgroup class="simple_title">
+                <img src="_img/title_simple_deco.svg" alt="" width="40" height="40" loading="lazy">
+                <h3 class="mincho">おすすめ情報</h3>
+              </hgroup>
+
+              <ul class="reccomend_wrap ">
+                <!-- 秋の特拝 -->
+                <li>
+                  <a href="https://souda-kyoto.jp/plan/autumn_sp/" target=" _blank" rel="nofollow">
+                    <figure>
+                      <picture>
+                        <source srcset="_img/recommend_bnr_tokuhai-pc.webp 1x, _img/recommend_bnr_tokuhai-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/recommend_bnr_tokuhai.webp 1x, _img/recommend_bnr_tokuhai@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source srcset="_img/recommend_bnr_tokuhai-pc.jpg 1x, _img/recommend_bnr_tokuhai-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/recommend_bnr_tokuhai.jpg 1x, _img/recommend_bnr_tokuhai@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/recommend_bnr_tokuhai.jpg" width="358" height="185" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                      <figcaption>秋の特別拝観</figcaption>
+                    </figure>
+                  </a>
+                </li>
+                <!-- サステナ -->
+                <li>
+                  <a href="https://souda-kyoto.jp/other/sustainable/" target="_blank" rel="nofollow">
+                    <figure>
+                      <picture>
+                        <source
+                          srcset="_img/recommend_bnr_sutainable-pc.webp 1x, _img/recommend_bnr_sutainable-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/recommend_bnr_sutainable.webp 1x, _img/recommend_bnr_sutainable@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source
+                          srcset="_img/recommend_bnr_sutainable-pc.jpg 1x, _img/recommend_bnr_sutainable-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/recommend_bnr_sutainable.jpg 1x, _img/recommend_bnr_sutainable@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/recommend_bnr_sutainable.jpg" width="358" height="185" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                      <figcaption>京都サステナツーリズム</figcaption>
+                    </figure>
+                  </a>
+                </li>
+                <!-- 秋の京都旅はずらして快適！ -->
+                <li>
+                  <a href="https://souda-kyoto.jp/guide/comfort/trip.html" target=" _blank" rel="nofollow">
+                    <figure>
+                      <picture>
+                        <source srcset="_img/recommend_bnr_kaiteki-pc.webp 1x, _img/recommend_bnr_kaiteki-pc@2x.webp 2x"
+                          type="image/webp" media="(min-width:769px)">
+                        <source srcset="_img/recommend_bnr_kaiteki.webp 1x, _img/recommend_bnr_kaiteki@2x.webp 2x"
+                          type="image/webp" media="(max-width:768px)">
+                        <source srcset="_img/recommend_bnr_kaiteki-pc.jpg 1x, _img/recommend_bnr_kaiteki-pc@2x.jpg 2x"
+                          media="(min-width:769px)">
+                        <source srcset="_img/recommend_bnr_kaiteki.jpg 1x, _img/recommend_bnr_kaiteki@2x.jpg 2x"
+                          media="(max-width:768px)">
+                        <img src="_img/recommend_bnr_kaiteki.jpg" width="358" height="185" alt="" loading="lazy"
+                          decoding="async">
+                      </picture>
+                      <figcaption>秋の京都旅はずらして快適！</figcaption>
+                    </figure>
+                  </a>
+                </li>
+
+              </ul>
+              <ul class="notes gothic">
+                <li>「EX旅先予約」は「エクスプレス予約」・「スマートEX」会員の方がご利用いただけます。<br>
+                  ご購入には会員登録が必要となります。<a href="https://smart-ex.jp/beginner/" target="_blank" rel="nofollow"
+                    class="text_link">詳細はこちら</a>
+                </li>
+                <li>「EX旅先予約」で購入いただいた場合の料金を記載しています。</li>
+                <li>画像、イラストはすべてイメージです。</li>
+                <li>紅葉の見頃は時季により異なります。</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+        <!-- ／ おすすめ情報 -->
+
+        <!-- bnr -->
+        <section id="banner-sec" class="section target-area">
+          <div class="wrap">
+            <a href="https://twitter.com/souda_kyouto" target="_blank" rel="noopener"><img src="_img/bnr_tw.jpg"
+                alt="そうだ 京都、行こう。公式X（旧Twitter）でも情報発信中！" width="245" height="129" loading="lazy" decoding="async"></a>
+
+            <a href="https://www.instagram.com/soudakyoto_official/" target="_blank" rel="noopener"><img
+                src="_img/bnr_insta.jpg" alt="そうだ 京都、行こう。公式インスタグラム" width="245" height="129" loading="lazy"
+                decoding="async"></a>
+
+            <a href="https://ja.kyoto.travel/comfort/" target="_blank" rel="noopener"><img src="_img/bnr_3mitsu.jpg"
+                alt="混雑回避に役立つ京都観光快適度マップ ライブカメラ映像配信中" width="245" height="129" loading="lazy" decoding="async"></a>
+
+            <a href="https://souda-kyoto.jp/plan/" target="_blank" rel="noopener"><img src="_img/bnr_plan.jpg"
+                alt="京都への旅行プランはこちら" width="245" height="129" loading="lazy" decoding="async"></a>
+          </div>
+
+        </section>
+        <!-- ／bnr -->
+
+      </div><!-- ／ nav_area -->
+
+    </div><!-- ／ clip_wrap -->
+  </main>
+
+
+
+  <!-- 固定バナー -->
+  <div class="fixed_bnr section" id="fixed_bnr">
+    <form>
+      <input type="checkbox" name="fixed_radio" id="fixed_radio">
+      <label for="fixed_radio"></label>
+    </form>
+    <a href="https://ec.travel.jr-central.co.jp/tp/special/tokuhai/optionalFacilities?lang=ja" target="_blank"
+      rel="nofollow" class="link js-ga-click" data-id="autumn2026_fixed_bnr" data-category="autumn2026">
+
+      <hgroup>
+        <p class="sub_title medium">事前予約・定員制</p>
+        <h3 class="main_title medium"><span>秋<span></span>の特別拝観</span>
+          <span>ご予約受付中</span>
+        </h3>
+      </hgroup>
+
+      <picture class="img">
+        <source srcset="_img/fixed_bnr_img.webp 1x, _img/fixed_bnr_img@2x.webp 2x" type="image/webp"
+          media="(min-width:769px)">
+        <source srcset="_img/fixed_bnr_img.webp 1x ,_img/fixed_bnr_img@2x.webp 2x" type="image/webp"
+          media="(max-width:768px)">
+
+        <source srcset="_img/fixed_bnr_img.jpg 1x,_img/fixed_bnr_img@2x.jpg 2x" media="(min-width:769px)">
+        <source srcset="_img/fixed_bnr_img.jpg 1x,_img/fixed_bnr_img@2x.jpg 2x" media="(max-width:768px)">
+        <img src="_img/fixed_bnr_img.jpg" width="102" height="78" alt="" loading="lazy" decoding="async">
+      </picture>
+      <span class="arrow"></span>
+    </a>
+  </div>
+
+
+  <!-- footer -->
+  <div class="footer"></div>
+  <script type="text/javascript" src="https://souda-kyoto.jp/_assets/_javascript/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function () {
+      $.ajax({
+        type: 'GET',
+        url: '/_assets/_html/footer.html',
+        dataType: 'html',
+        success: function (data) {
+          $('.footer').append(data);
+        }
+      });
+    });
+  </script> <!-- /footer -->
+
+  <script src="https://souda-kyoto.jp/_assets/_javascript/header-loader.js"></script>
+  <script src="_javascript/gsap.min.js"></script>
+  <script src="_javascript/ScrollTrigger.min.js"></script>
+  <script src="_javascript/micromodal.min.js"></script>
+  <script src="_javascript/lottie.min.js"></script>
+
+  <script type="text/javascript" src="_javascript/script_gtm.js"></script>
+  <script type="text/javascript" src="_javascript/script.js"></script>
+  <script type="text/javascript" src="_javascript/script_lottie.js"></script>
+
+</body>
+
+</html>

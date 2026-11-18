@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>たぬき探偵ジェリー 灘五郷の秘密の依頼｜2026年度 灘の酒蔵謎解き探訪</title>
+<meta name="description" content="たぬき探偵ジェリーと灘五郷の酒蔵をめぐる謎解きイベント「灘の酒蔵謎解き探訪」。2026年9月17日〜2027年2月28日開催、参加無料・事前予約不要。">
+<link rel="canonical" href="https://jellyroom.jp/nada/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="たぬき探偵ジェリー 灘五郷の秘密の依頼｜2026年度 灘の酒蔵謎解き探訪">
+<meta property="og:description" content="たぬき探偵ジェリーと灘五郷の酒蔵をめぐる謎解きイベント「灘の酒蔵謎解き探訪」。2026年9月17日〜2027年2月28日開催、参加無料・事前予約不要。">
+<meta property="og:image" content="https://jellyroom.jp/nada/images/nada_ogp.jpg">
+<meta property="og:url" content="https://jellyroom.jp/nada/">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="たぬき探偵ジェリー 灘五郷の秘密の依頼｜2026年度 灘の酒蔵謎解き探訪">
+<meta name="twitter:description" content="たぬき探偵ジェリーと灘五郷の酒蔵をめぐる謎解きイベント「灘の酒蔵謎解き探訪」。2026年9月17日〜2027年2月28日開催、参加無料・事前予約不要。">
+<meta name="twitter:image" content="https://jellyroom.jp/nada/images/nada_ogp.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-900:#3E2E38;
+    --navy-800:#4E3C48;
+    --navy-700:#453644;
+    --beige-100:#F5EEDD;
+    --beige-200:#ECE1C6;
+    --beige-300:#DFCFA4;
+    --sora-300:#A9DDD6;
+    --sora-500:#3DB0AB;
+    --sora-700:#2C8B82;
+    --shu-500:#9E2E2E;
+    --shu-600:#7E2424;
+    --gold-500:#8B7A5E;
+    --gold-300:#C9BC9E;
+    --gold-600:#6B5D45;
+    --wave-svg:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='30' viewBox='0 0 60 30'%3E%3Cg fill='none' stroke='%233DB0AB' stroke-width='1.6' opacity='.45'%3E%3Cpath d='M0 25 C10 7,20 7,30 25 C40 7,50 7,60 25'/%3E%3Cpath d='M0 16 C10 -2,20 -2,30 16 C40 -2,50 -2,60 16'/%3E%3C/g%3E%3C/svg%3E");
+    --ink:#211B12;
+    --paper:#FBF7EC;
+    --mizu:#3DB0AB;
+    --kome:#9A8C72;
+    --waza:#3E2E38;
+    --kobe-nishi:#8A6E85;
+    --kobe-higashi:#9E2E2E;
+    --nishi-nishi:#1E3A5E;
+    --nishi-higashi:#0F7A64;
+    --font-display:'Noto Sans JP', "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+    --font-body:'Noto Sans JP', "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+    --radius-card:14px;
+    --shadow-card:0 10px 28px rgba(62,46,56,.14);
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important;}
+  }
+  body{
+    margin:0;
+    font-family:var(--font-body);
+    color:var(--ink);
+    background:var(--beige-100);
+    line-height:1.8;
+    font-size:16.5px;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  h1,h2,h3,h4{font-family:var(--font-display);margin:0;line-height:1.5;}
+  p{margin:0;}
+  a{color:inherit;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 20px;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:14px; letter-spacing:.14em; font-weight:700;
+    color:var(--shu-600);
+  }
+  .eyebrow::before{
+    content:""; width:20px; height:1px; background:var(--shu-500); display:inline-block;
+  }
+  .section{ padding:84px 0; }
+  .section--tight{ padding:64px 0; }
+  .section-head{ text-align:center; max-width:700px; margin:0 auto 46px; }
+  .section-head h2{ font-size:clamp(28px,4.8vw,40px); margin-top:12px; font-weight:700; }
+  .section-head p{ margin-top:16px; color:var(--navy-700); font-size:17px; }
+
+  /* ---------- placeholder image slots ---------- */
+  .img-slot{
+    position:relative; overflow:hidden; border-radius:var(--radius-card);
+    background:
+      linear-gradient(135deg, rgba(255,255,255,.14), rgba(255,255,255,0) 55%),
+      repeating-linear-gradient(115deg, var(--slot-a,#9A8C72) 0 2px, transparent 2px 26px),
+      linear-gradient(155deg, var(--slot-b,#3E2E38), var(--slot-c,#3DB0AB));
+    display:flex; align-items:flex-end; justify-content:flex-start;
+    min-height:220px;
+  }
+  .img-slot__icon{ position:absolute; inset:0; margin:auto; width:34%; opacity:.5; }
+  .img-slot__tag{
+    position:relative; margin:14px; padding:6px 12px; border-radius:999px;
+    background:rgba(62,46,56,.55); color:#fff; font-size:12.5px; letter-spacing:.06em;
+    font-family:'Noto Sans JP', monospace; backdrop-filter: blur(2px);
+  }
+  .img-slot--warm{ --slot-a:#9A8C72; --slot-b:#C9BC9E; --slot-c:#3DB0AB; }
+  .img-slot--sky{ --slot-a:#3DB0AB; --slot-b:#79C9C2; --slot-c:#1E3A5E; }
+  .img-slot--shu{ --slot-a:#9E2E2E; --slot-b:#8A6E85; --slot-c:#3E2E38; }
+
+  /* ---------- stamp signature ---------- */
+  .stamp{
+    position:relative; width:74px; height:74px; border-radius:50%;
+    border:2.5px solid var(--shu-500); color:var(--shu-500);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-display); font-weight:700; font-size:13px;
+    transform:rotate(-8deg);
+    writing-mode:vertical-rl;
+    letter-spacing:.08em;
+    flex-shrink:0;
+  }
+  .stamp::after{
+    content:""; position:absolute; inset:6px; border:1px solid var(--shu-500); border-radius:50%; opacity:.6;
+  }
+
+  /* ---------- header ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:50;
+    background:rgba(62,46,56,.92); backdrop-filter:blur(6px);
+    color:#fff; padding:10px 0;
+    transform:translateY(-100%); transition:transform .3s ease;
+  }
+  .topbar.is-visible{ transform:translateY(0); }
+  .topbar .wrap{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .topbar__title{ font-family:var(--font-display); font-size:15.5px; letter-spacing:.03em; }
+  .topbar__title small{ display:block; font-family:var(--font-body); font-size:11.5px; color:var(--sora-300); font-weight:400; }
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:15px 26px; border-radius:999px; font-weight:700; font-size:16px;
+    text-decoration:none; border:none; cursor:pointer; white-space:nowrap;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:active{ transform:scale(.97); }
+  .btn--primary{ background:var(--shu-500); color:#fff; box-shadow:0 10px 22px rgba(158,46,46,.35); }
+  .btn--primary:hover{ background:var(--shu-600); }
+  .btn--ghost{ background:rgba(255,255,255,.1); color:#fff; border:1px solid rgba(255,255,255,.5); }
+  .hero .btn--ghost{ background:rgba(62,46,56,.05); color:var(--navy-900); border:1px solid rgba(62,46,56,.35); }
+  .btn--outline{ background:var(--paper); color:var(--navy-900); border:2px solid var(--navy-900); }
+  .btn--outline:hover{ background:var(--navy-900); color:#fff; }
+  .btn--small{ padding:10px 18px; font-size:14px; }
+  .btn--line-icon{ width:20px; height:20px; }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative; background:linear-gradient(180deg, var(--sora-300) 0%, var(--beige-100) 42%, var(--beige-300) 100%);
+    color:var(--navy-900); overflow:hidden; padding:26px 0 46px;
+  }
+  .hero::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:30px;
+    background-image:var(--wave-svg); background-repeat:repeat-x; background-size:60px 30px;
+    opacity:.7; pointer-events:none;
+  }
+  .hero__nav{ display:flex; align-items:center; justify-content:space-between; padding-bottom:18px; }
+  .hero__mark{ display:flex; align-items:center; gap:10px; font-family:var(--font-display); font-size:15px; letter-spacing:.04em; }
+  .hero__mark span{ display:block; font-family:var(--font-body); font-size:11px; color:var(--sora-700); font-weight:500; }
+  .hero__grid{ display:grid; gap:28px; align-items:center; }
+  .hero__visual{ position:relative; aspect-ratio:210/297; border-radius:20px; }
+  .hero__logo{ aspect-ratio:16/6; max-width:420px; min-height:120px; }
+  .hero__infobar{
+    margin-top:24px; background:rgba(62,46,56,.06); border:1px solid rgba(62,46,56,.14);
+    border-radius:16px; padding:20px 22px; display:flex; flex-direction:column; gap:14px;
+  }
+  .hero__infobar-row{ display:flex; align-items:flex-start; gap:10px; }
+  .hero__infobar-row svg{ width:20px; height:20px; color:var(--sora-700); flex-shrink:0; margin-top:2px; }
+  .hero__infobar-label{ display:block; font-size:11.5px; letter-spacing:.1em; color:var(--gold-600); font-weight:700; margin-bottom:3px; }
+  .hero__infobar-value{ font-weight:800; font-size:19px; color:var(--navy-900); line-height:1.5; }
+  .hero__infobar-value--sm{ font-weight:500; font-size:14.5px; color:var(--navy-700); line-height:1.6; }
+  .hero__infobar .hero__badge-row{ margin-top:2px; }
+  .hero__badge-row{ display:flex; flex-wrap:wrap; gap:10px; }
+  .badge{
+    display:inline-flex; align-items:center; gap:7px;
+    background:rgba(62,46,56,.05); border:1px solid rgba(62,46,56,.18);
+    padding:11px 16px; border-radius:999px; font-size:14px; font-weight:500; color:var(--navy-800);
+  }
+  .badge b{ color:var(--navy-900); font-weight:800; }
+  .badge--accent{ background:rgba(158,46,46,.08); border-color:rgba(158,46,46,.3); color:var(--shu-600); }
+  .badge__dot{ width:6px; height:6px; border-radius:50%; background:var(--sora-500); flex-shrink:0; }
+  .hero h1{ font-size:clamp(28px,6vw,44px); font-weight:800; letter-spacing:.02em; margin-top:14px; }
+  .hero__lead{ margin-top:18px; font-size:16px; color:var(--navy-700); max-width:44em; }
+  .hero__cta{ margin-top:28px; display:flex; flex-wrap:wrap; gap:12px; }
+  .scroll-cue{ margin-top:36px; display:flex; align-items:center; gap:10px; font-size:12.5px; color:var(--sora-700); letter-spacing:.08em; }
+  .scroll-cue svg{ animation:bob 1.6s ease-in-out infinite; }
+  @keyframes bob{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(5px);} }
+
+  /* ---------- overview ---------- */
+  .overview-grid{ display:grid; grid-template-columns:1fr; gap:14px; }
+  .ov-card{
+    background:var(--paper); border-radius:var(--radius-card); padding:20px 20px 22px;
+    box-shadow:var(--shadow-card); border-top:3px solid var(--sora-500);
+  }
+  .ov-card--accent{ border-top-color:var(--shu-500); }
+  .ov-card__label{ display:flex; align-items:center; gap:8px; font-size:13.5px; font-weight:700; color:var(--navy-700); letter-spacing:.06em; }
+  .ov-card__value{ margin-top:10px; font-family:var(--font-display); font-size:20px; font-weight:700; color:var(--navy-900); }
+  .ov-card__value small{ display:block; font-family:var(--font-body); font-weight:500; font-size:14.5px; color:var(--ink); margin-top:5px; }
+  .icon{ width:24px; height:24px; color:var(--shu-500); flex-shrink:0; }
+
+  /* ---------- instagram banner (top) ---------- */
+  #overview{ padding-bottom:56px; }
+  .instagram-banner{ padding:0 0 56px; }
+  .instagram-chip{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    background:var(--paper); border:1px solid var(--beige-300); border-radius:999px;
+    padding:15px 22px; font-size:14.5px; font-weight:700; color:var(--navy-900);
+    box-shadow:var(--shadow-card); text-decoration:none; max-width:540px; margin:0 auto;
+  }
+  .instagram-chip svg{ width:20px; height:20px; color:var(--shu-500); flex-shrink:0; }
+
+  /* ---------- story ---------- */
+  .story{
+    background:linear-gradient(180deg, var(--beige-200) 0%, var(--beige-300) 100%);
+    color:var(--navy-900); position:relative;
+  }
+  .story::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:30px;
+    background-image:var(--wave-svg); background-repeat:repeat-x; background-size:60px 30px;
+    opacity:.7; pointer-events:none;
+  }
+  .story .wrap{ display:grid; gap:34px; }
+  .story__text p{ margin-bottom:18px; font-size:17px; color:var(--navy-700); }
+  .story__text p:last-of-type{ margin-bottom:0; }
+  .story__emph{ font-family:var(--font-display); font-weight:700; color:var(--shu-600); font-size:18px; }
+  .story__quote{
+    border-left:3px solid var(--shu-500); padding:14px 18px; margin:24px 0;
+    font-family:var(--font-display); font-size:19px; color:var(--navy-900); font-weight:600;
+    background:rgba(255,255,255,.55); border-radius:0 12px 12px 0;
+  }
+  .story__closing{
+    margin-top:28px; font-family:var(--font-display); font-size:23px; font-weight:700; color:var(--navy-900);
+  }
+  .clues{ display:flex; gap:10px; margin:22px 0; flex-wrap:wrap; }
+  .clue{
+    display:flex; align-items:center; gap:8px; background:rgba(255,255,255,.5);
+    border:1px solid rgba(139,122,94,.4); padding:8px 14px; border-radius:999px; font-size:13px; color:var(--gold-600); font-weight:700;
+  }
+
+  /* ---------- courses ---------- */
+  .course-grid{ display:grid; grid-template-columns:1fr; gap:18px; }
+  .course-card{
+    background:var(--paper); border-radius:var(--radius-card); overflow:hidden; box-shadow:var(--shadow-card);
+    display:flex; flex-direction:column; border-top:5px solid transparent;
+  }
+  .course-card:nth-child(1){ border-top-color:var(--kobe-nishi); }
+  .course-card:nth-child(2){ border-top-color:var(--kobe-higashi); }
+  .course-card:nth-child(3){ border-top-color:var(--nishi-nishi); }
+  .course-card:nth-child(4){ border-top-color:var(--nishi-higashi); }
+  .course-card:nth-child(1) .course-card__area{ color:var(--kobe-nishi); }
+  .course-card:nth-child(2) .course-card__area{ color:var(--kobe-higashi); }
+  .course-card:nth-child(3) .course-card__area{ color:var(--nishi-nishi); }
+  .course-card:nth-child(4) .course-card__area{ color:var(--nishi-higashi); }
+  .course-card__img{ aspect-ratio:3/2; border-radius:0; }
+  .course-card__body{ padding:26px 24px 28px; }
+  .course-card__area{ font-size:13px; letter-spacing:.08em; color:var(--sora-700); font-weight:700; }
+  .course-card__name{ font-size:23px; font-weight:700; margin-top:6px; }
+  .course-card__spots{ margin-top:16px; display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+  .spot-card{ display:block; border-radius:10px; overflow:hidden; background:var(--beige-200); text-decoration:none; color:inherit; transition:transform .15s ease, box-shadow .15s ease; }
+  .spot-card:hover{ transform:translateY(-2px); box-shadow:var(--shadow-card); }
+  .spot-card img{ display:block; width:100%; aspect-ratio:4/3; object-fit:cover; }
+  .spot-card span{ display:flex; align-items:center; gap:5px; padding:8px 10px; font-size:12.5px; line-height:1.4; color:var(--navy-800); font-weight:500; }
+  .spot-card span svg{ width:13px; height:13px; color:var(--shu-500); flex-shrink:0; }
+  .course-card__extra{ margin-top:14px; width:calc(50% - 5px); border-radius:10px; background:var(--beige-200); font-size:13px; color:var(--navy-700); line-height:1.6; overflow:hidden; }
+  .course-card__extra b{ display:block; color:var(--navy-900); padding:12px 14px 0; }
+  .course-card__extra .spot-card{ background:transparent; border-radius:0; margin-top:8px; }
+  .course-card__foot{ margin-top:16px; }
+  .link-arrow{ display:inline-flex; align-items:center; gap:6px; font-size:13px; font-weight:700; color:var(--shu-500); text-decoration:none; }
+
+  /* ---------- how-to (steps) ---------- */
+  .steps{ position:relative; display:grid; gap:0; }
+  .step{ display:grid; grid-template-columns:64px minmax(0,1fr); gap:18px; padding-bottom:38px; position:relative; }
+  .step:last-child{ padding-bottom:0; }
+  .step__rail{ position:relative; display:flex; flex-direction:column; align-items:center; }
+  .step__num{
+    width:52px; height:52px; border-radius:50%; background:var(--navy-900); color:var(--gold-300);
+    display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:700; font-size:19px;
+    border:2px solid var(--gold-500); flex-shrink:0; z-index:1;
+  }
+  .step__line{ flex:1; width:2px; background-image:linear-gradient(var(--navy-700) 60%, transparent 0); background-size:2px 8px; background-repeat:repeat-y; margin-top:8px; }
+  .step:last-child .step__line{ display:none; }
+  .step__content h3{ font-size:19px; font-weight:700; color:var(--navy-900); }
+  .step__content p{ margin-top:10px; font-size:16px; color:var(--navy-700); }
+  .step__icon-slot{ width:68px; height:68px; border-radius:14px; margin-top:14px; min-height:68px; }
+  .howto__report{
+    margin-top:40px; background:var(--paper); border:1px solid var(--beige-300); border-radius:14px;
+    padding:20px 24px; box-shadow:var(--shadow-card);
+  }
+  .howto__report h4{ font-size:14.5px; font-weight:800; color:var(--navy-900); letter-spacing:.04em; }
+  .howto__report ul{ list-style:none; margin:12px 0 0; padding:0; display:grid; gap:8px; }
+  .howto__report li{ font-size:14.5px; color:var(--navy-700); }
+  .howto__report li b{ color:var(--navy-900); font-weight:700; }
+
+  /* ---------- goods ---------- */
+  .goods-grid{ display:grid; grid-template-columns:1fr; gap:18px; }
+  .goods-card{ background:var(--paper); border-radius:var(--radius-card); box-shadow:var(--shadow-card); overflow:hidden; }
+  .goods-card__img{ aspect-ratio:16/10; border-radius:0; }
+  .goods-card__body{ padding:20px; }
+  .goods-card__kicker{ font-size:13.5px; font-weight:700; color:var(--shu-600); }
+  .goods-card__title{ font-family:var(--font-display); font-weight:700; font-size:21px; margin-top:8px; }
+  .goods-card p.note{ font-size:14px; color:var(--navy-700); margin-top:14px; }
+  .prize-list{ margin-top:20px; display:grid; gap:14px; }
+  .prize-item{
+    display:flex; gap:14px; align-items:flex-start; background:var(--paper);
+    border:1px solid var(--beige-300); border-radius:14px; padding:16px 18px; box-shadow:var(--shadow-card);
+  }
+  .prize-item__num{
+    width:42px; height:42px; border-radius:50%; color:#fff; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; font-family:var(--font-display); font-weight:800; font-size:16px;
+  }
+  .prize-item:nth-child(1) .prize-item__num{ background:var(--shu-500); }
+  .prize-item:nth-child(2) .prize-item__num{ background:var(--sora-700); }
+  .prize-item:nth-child(3) .prize-item__num{ background:var(--gold-500); }
+  .prize-item p{ font-size:16.5px; font-weight:800; color:var(--navy-900); }
+  .prize-item p.sub{ margin-top:6px; font-size:13.5px; color:var(--navy-700); font-weight:500; }
+
+  /* ---------- line section ---------- */
+  .line-band{ background:var(--sora-700); color:#fff; border-radius:20px; padding:36px 24px; display:grid; gap:20px; }
+  .line-band h2{ font-size:26px; }
+  .line-band p{ font-size:16px; color:var(--sora-300); margin-top:14px; }
+  .line-band .btn{ margin-top:18px; }
+  .btn--line{ background:#06C755; color:#fff; box-shadow:0 10px 22px rgba(6,199,85,.35); }
+  .btn--line:hover{ background:#05a648; }
+
+  /* ---------- faq ---------- */
+  .faq-item{ border-bottom:1px solid var(--beige-300); }
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; cursor:pointer;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    padding:20px 4px; font-family:var(--font-body); font-size:16px; font-weight:700; color:var(--navy-900);
+  }
+  .faq-q__left{ display:flex; gap:10px; }
+  .faq-q__mark{ color:var(--shu-500); font-family:var(--font-display); flex-shrink:0; }
+  .faq-plus{ width:20px; height:20px; flex-shrink:0; position:relative; }
+  .faq-plus::before, .faq-plus::after{ content:""; position:absolute; background:var(--navy-800); border-radius:2px; transition:transform .25s ease, opacity .25s ease; }
+  .faq-plus::before{ inset:9px 0; height:2px; }
+  .faq-plus::after{ inset:0 9px; width:2px; }
+  .faq-item.is-open .faq-plus::after{ transform:rotate(90deg); opacity:0; }
+  .faq-a{ max-height:0; overflow:hidden; transition:max-height .3s ease; }
+  .faq-a__inner{ padding:0 4px 20px 30px; font-size:15px; color:var(--navy-700); }
+
+  /* ---------- notes ---------- */
+  .notes-grid{ display:grid; grid-template-columns:1fr; gap:12px; }
+  .note-card{ display:flex; gap:14px; background:var(--paper); border-radius:12px; padding:18px 20px; box-shadow:var(--shadow-card); }
+  .note-card__icon{ width:30px; height:30px; color:var(--navy-700); flex-shrink:0; }
+  .note-card p{ font-size:15px; color:var(--navy-800); }
+  .note-card--warn{ background:#F6E7E3; border:1px solid rgba(158,46,46,.35); }
+  .note-card--warn .note-card__icon{ color:var(--shu-600); }
+  .note-card--warn p{ font-weight:700; color:var(--shu-600); }
+
+  /* ---------- organizer / footer ---------- */
+  .footer{ position:relative; background:linear-gradient(180deg, var(--beige-300) 0%, var(--beige-200) 100%); color:var(--navy-700); }
+  .footer::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:30px;
+    background-image:var(--wave-svg); background-repeat:repeat-x; background-size:60px 30px;
+    opacity:.7; pointer-events:none;
+  }
+  .footer h4{ font-size:14.5px; color:var(--gold-600); font-weight:700; letter-spacing:.05em; margin-bottom:12px; }
+  .footer .cols{ display:grid; grid-template-columns:1fr; gap:30px; padding:56px 0 32px; }
+  .footer p{ font-size:14.5px; line-height:1.9; color:var(--navy-700); }
+  .footer a.mail{ color:var(--sora-700); text-decoration:underline; }
+  .footer__related{ border-top:1px solid rgba(62,46,56,.14); padding:22px 0; text-align:center; }
+  .footer__related h4{ margin-bottom:8px; }
+  .footer__legal{ border-top:1px solid rgba(62,46,56,.14); padding:18px 0; text-align:center; font-size:11.5px; color:rgba(62,46,56,.55); }
+  .footer__logos{ display:flex; justify-content:center; align-items:center; gap:28px; flex-wrap:wrap; padding:22px 0; border-top:1px solid rgba(62,46,56,.14); }
+  .footer__logos img{ height:76px; width:auto; }
+
+  /* ---------- sticky mobile cta ---------- */
+  .sticky-cta{
+    position:fixed; left:0; right:0; bottom:0; z-index:60;
+    background:rgba(62,46,56,.95); backdrop-filter:blur(6px);
+    padding:10px 16px; display:flex; align-items:center; justify-content:space-between; gap:10px;
+    transform:translateY(120%); transition:transform .3s ease;
+    box-shadow:0 -6px 20px rgba(0,0,0,.2);
+  }
+  .sticky-cta.is-visible{ transform:translateY(0); }
+  .sticky-cta__text{ color:#fff; font-size:13px; }
+  .sticky-cta__text b{ display:block; font-size:15px; }
+
+  /* ---------- reveal ---------- */
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.is-in{ opacity:1; transform:translateY(0); }
+
+  /* ================= DESKTOP ================= */
+  @media (min-width:768px){
+    .section{ padding:104px 0; }
+    .hero{ padding:20px 0 84px; }
+    .hero__grid{ grid-template-columns:1.05fr .95fr; gap:52px; }
+    .hero__visual{ aspect-ratio:210/297; height:auto; order:2; }
+    .hero__content{ order:1; }
+    .overview-grid{ grid-template-columns:repeat(4,1fr); }
+    .course-grid{ grid-template-columns:repeat(2,1fr); }
+    .goods-grid{ grid-template-columns:1.1fr .9fr; }
+    .steps{ grid-template-columns:repeat(5,1fr); gap:18px; }
+    .steps{ align-items:start; }
+    .step{ grid-template-columns:1fr; grid-template-rows:52px auto; text-align:center; padding-bottom:0; }
+    .step__rail{ flex-direction:row; }
+    .step__line{ width:auto; height:2px; flex:1; margin-top:0; margin-left:6px; background-image:linear-gradient(90deg, var(--navy-700) 60%, transparent 0); background-size:8px 2px; background-repeat:repeat-x; align-self:center; }
+    .step__num{ margin:0 auto; }
+    .step:last-child .step__num{ margin:0; }
+    .step__icon-slot{ margin:12px auto 0; }
+    .story .wrap{ max-width:760px; margin:0 auto; }
+    .notes-grid{ grid-template-columns:repeat(2,1fr); }
+    .footer .cols{ grid-template-columns:1.2fr 1fr 1fr; }
+    .sticky-cta{ display:none; }
+  }
+  @media (min-width:1024px){
+    .goods-grid{ grid-template-columns:1fr 1fr; }
+  }
+  .visually-hidden{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "灘五郷の秘密の依頼｜2026年度 灘の酒蔵謎解き探訪",
+  "description": "灘五郷の酒蔵をめぐりながら、たぬき探偵ジェリーと一緒に「灘の酒のおいしさの秘密」を調査する謎解き体験型イベント。",
+  "startDate": "2026-09-17",
+  "endDate": "2027-02-28",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": {
+    "@type": "Place",
+    "name": "灘五郷（神戸市・西宮市）",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "神戸市・西宮市",
+      "addressRegion": "兵庫県",
+      "addressCountry": "JP"
+    }
+  },
+  "image": ["https://jellyroom.jp/nada/images/nada_ogp.jpg"],
+  "organizer": {
+    "@type": "Organization",
+    "name": "神戸市・西宮市",
+    "url": "https://jellyroom.jp/nada/"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "JPY",
+    "availability": "https://schema.org/InStock",
+    "url": "https://jellyroom.jp/nada/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="site-content">
+
+<!-- ===== sticky top bar (appears after scrolling past hero) ===== -->
+<div class="topbar" id="topbar">
+  <div class="wrap">
+    <div class="topbar__title"><img src="images/nada_wordmark.png" alt="灘の酒蔵謎解き探訪" style="height:16px; width:auto; display:block; filter:brightness(0) invert(1);"></div>
+    <a href="#line" class="btn btn--line btn--small">LINE登録</a>
+  </div>
+</div>
+
+<!-- ===== 1. ファーストビュー ===== -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="hero__nav">
+      <div class="hero__mark"><img src="images/nada_wordmark.png" alt="灘の酒蔵謎解き探訪" style="height:32px; width:auto;"><span>2026年度</span></div>
+    </div>
+
+    <div class="hero__grid">
+      <div class="hero__content reveal is-in">
+        <h1 class="visually-hidden">たぬき探偵ジェリー 灘五郷の秘密の依頼｜2026年度 灘の酒蔵謎解き探訪　灘五郷（神戸市・西宮市）の酒蔵をめぐる謎解きイベント</h1>
+        <div class="hero__logo" style="aspect-ratio:auto; display:flex; align-items:center; justify-content:center; width:100%; max-width:100%;">
+          <img src="images/nada_logo.png" alt="たぬき探偵ジェリー 灘五郷の秘密の依頼" style="max-width:360px; width:100%; height:auto; display:block; margin:0 auto;">
+        </div>
+
+        <div class="hero__infobar">
+          <div class="hero__infobar-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+            <div>
+              <span class="hero__infobar-label">開催期間</span>
+              <span class="hero__infobar-value">2026年9月17日（木）〜2027年2月28日（日）</span>
+            </div>
+          </div>
+          <div class="hero__infobar-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <span class="hero__infobar-value hero__infobar-value--sm">開催エリア：灘五郷（神戸市・西宮市）</span>
+          </div>
+          <div class="hero__badge-row">
+            <span class="badge badge--accent">参加無料</span>
+            <span class="badge badge--accent">予約不要</span>
+          </div>
+        </div>
+
+        <p class="hero__lead">灘五郷の酒蔵をめぐりながら、たぬき探偵ジェリーと一緒に「灘の酒のおいしさの秘密」を調査しよう。手がかりは、水・米・技。まちにちりばめられた謎を解くたびに、灘五郷に受け継がれてきた酒造りの物語が見えてくる。</p>
+
+        <div class="hero__cta">
+          <a href="#howto" class="btn btn--primary">
+            <svg class="btn--line-icon" viewBox="0 0 24 24" fill="none"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.8-.4 1.3-.4 1.6-.6 2.6-.1.4.2.6.5.4l3.3-2.1c4.9-.5 8.5-3.7 8.5-7.7C22 6.6 17.5 3 12 3Z" fill="currentColor"/></svg>
+            参加方法を見る
+          </a>
+          <a href="#courses" class="btn btn--ghost">4つのコースを見る</a>
+        </div>
+
+        <div class="scroll-cue">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+          スクロールして調査をはじめる
+        </div>
+      </div>
+
+      <div class="hero__visual reveal is-in" style="overflow:hidden; min-height:400px;">
+        <img src="images/nada_kv.jpg" alt="灘五郷の街並みとたぬき探偵ジェリー" style="width:100%; height:100%; object-fit:contain; display:block;">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== 2. 開催概要 ===== -->
+<section class="section section--tight" id="overview">
+  <div class="wrap">
+    <div class="overview-grid">
+      <div class="ov-card ov-card--accent reveal">
+        <div class="ov-card__label">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          開催期間
+        </div>
+        <div class="ov-card__value">2026年9月17日（木）<small>〜 2027年2月28日（日）</small></div>
+      </div>
+
+      <div class="ov-card reveal">
+        <div class="ov-card__label">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          開催エリア
+        </div>
+        <div class="ov-card__value">灘五郷地域<small>神戸市：西郷・御影郷・魚崎郷<br>西宮市：西宮郷・今津郷</small></div>
+      </div>
+
+      <div class="ov-card ov-card--accent reveal">
+        <div class="ov-card__label">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M12 9v6"/></svg>
+          参加費
+        </div>
+        <div class="ov-card__value">参加無料</div>
+      </div>
+
+      <div class="ov-card reveal">
+        <div class="ov-card__label">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 4v5h5"/></svg>
+          参加に必要なもの
+        </div>
+        <div class="ov-card__value" style="font-size:17px;">チラシ（問題用紙）・筆記用具<small style="font-size:17px; font-weight:700;">LINEアプリを使用できるデバイス</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="instagram-banner">
+  <div class="wrap">
+    <a href="https://www.instagram.com/nadatanbou2026/" target="_blank" rel="noopener" class="instagram-chip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+      公式Instagramもチェック！最新情報を配信中
+    </a>
+  </div>
+</section>
+
+<!-- ===== 3. ストーリー ===== -->
+<section class="section story" id="story">
+  <div class="wrap">
+    <div class="story__text reveal">
+      <span class="eyebrow" style="color:var(--shu-600)"><span style="width:18px;height:1px;background:var(--shu-500);display:inline-block;"></span>STORY</span>
+
+      <p style="margin-top:20px;">灘五郷に、ちょっと食いしん坊で好奇心旺盛な<span class="story__emph">たぬき探偵ジェリー</span>がやってきた。酒蔵のまちを歩いていると、ふわりと酒の香りにまぎれて、一通の依頼状が舞い込む。</p>
+
+      <p>そこに書かれていたのは、こんな言葉だった。</p>
+
+      <div class="story__quote">「灘の酒のおいしさの秘密を、まち歩きしながら調査してほしい」</div>
+
+      <p>手がかりは、水・米・技の三つ。けれどジェリーは、日本酒のことをまだよく知らない。</p>
+      <p>「おいしさの秘密って、いったいどこにあるんだろう？」</p>
+      <p>そこであなたは、ジェリーの相棒として調査に参加することに。</p>
+      <p>酒蔵に残された謎、まちにちりばめられた手がかり、そして各地で出会う水・米・技の物語。謎を解くたびに、灘五郷に受け継がれてきた酒造りの秘密が少しずつ見えてくる。</p>
+
+      <p class="story__closing">さあ、ジェリーと一緒に調査手帳を開こう！<br>謎はすべて、キミが解け！</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. コース紹介 ===== -->
+<section class="section" id="courses">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">COURSE</span>
+      <h2>4つのコースをめぐって、<br>灘五郷の秘密を調査しよう</h2>
+      <p>本イベントでは、灘五郷地域を4つのコースに分けて謎解きを実施します。各コースでは、酒造りを支える水・米・技にまつわる謎が出題されます。各スポットに設置されたパネルを探し、謎を解きながら酒蔵のまちをめぐりましょう。小謎を解くとLINEにキーワードが届き、コースごとの酒の謎に挑戦できます。</p>
+    </div>
+
+    <div class="course-grid">
+      <article class="course-card reveal">
+        <div class="course-card__body">
+          <div class="course-card__area">神戸エリア・西</div>
+          <h3 class="course-card__name">神戸西コース</h3>
+          <div class="course-card__spots">
+            <a class="spot-card" href="https://www.sawanotsuru.co.jp/site/company/siryokan/" target="_blank" rel="noopener"><img src="images/spots/kobe-nishi-sawanotsuru.jpg" alt="沢の鶴ミュージアムショップ"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>沢の鶴ミュージアムショップ</span></a>
+            <a class="spot-card" href="https://www.konanzuke.co.jp/mukonosato/" target="_blank" rel="noopener"><img src="images/spots/kobe-nishi-konan.jpg" alt="こうべ甲南　武庫の郷"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>こうべ甲南　武庫の郷</span></a>
+            <a class="spot-card" href="https://www.google.com/maps/search/?api=1&amp;query=%E3%81%BE%E3%82%81%E3%82%80%E3%81%8E%E3%83%9E%E3%83%AB%E3%82%B7%E3%82%A7%20by%20%E3%83%9E%E3%83%AB%E3%83%A4%E3%83%8A%E3%82%AE%20%E7%A5%9E%E6%88%B8%E5%B8%82" target="_blank" rel="noopener"><img src="images/spots/kobe-nishi-mamemugi.jpg" alt="まめむぎマルシェbyマルヤナギ"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>まめむぎマルシェbyマルヤナギ</span></a>
+            <a class="spot-card" href="https://www.shushinkan.co.jp/" target="_blank" rel="noopener"><img src="images/spots/kobe-nishi-shushinkan.jpg" alt="神戸酒心館"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>神戸酒心館</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card reveal">
+        <div class="course-card__body">
+          <div class="course-card__area">神戸エリア・東</div>
+          <h3 class="course-card__name">神戸東コース</h3>
+          <div class="course-card__spots">
+            <a class="spot-card" href="https://www.hakutsuru.co.jp/community/shiryo/" target="_blank" rel="noopener"><img src="images/spots/kobe-higashi-hakutsuru.jpg" alt="白鶴酒造資料館"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>白鶴酒造資料館</span></a>
+            <a class="spot-card" href="https://www.kikumasamune.co.jp/kinenkan/" target="_blank" rel="noopener"><img src="images/spots/kobe-higashi-kikumasamune.jpg" alt="菊正宗酒造記念館"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>菊正宗酒造記念館</span></a>
+            <a class="spot-card" href="https://www.sakuramasamune.co.jp/sakuraen/sakuraen_index.html" target="_blank" rel="noopener"><img src="images/spots/kobe-higashi-sakuramasamune.jpg" alt="櫻正宗記念館 櫻宴"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>櫻正宗記念館 櫻宴</span></a>
+            <a class="spot-card" href="http://www.hamafukutsuru.co.jp/" target="_blank" rel="noopener"><img src="images/spots/kobe-higashi-hamafukutsuru.jpg" alt="浜福鶴吟醸工房"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>浜福鶴吟醸工房</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card reveal">
+        <div class="course-card__body">
+          <div class="course-card__area">西宮エリア・西</div>
+          <h3 class="course-card__name">西宮西コース</h3>
+          <div class="course-card__spots">
+            <a class="spot-card" href="https://hakutaka.jp/" target="_blank" rel="noopener"><img src="images/spots/nishinomiya-nishi-hakutaka.jpg" alt="白鷹禄水苑"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>白鷹禄水苑</span></a>
+            <a class="spot-card" href="http://www.rengakan.com/" target="_blank" rel="noopener"><img src="images/spots/nishinomiya-nishi-nihonsakari.jpg" alt="日本盛 酒蔵通り煉瓦館"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>日本盛 酒蔵通り煉瓦館</span></a>
+            <a class="spot-card" href="https://classics.hakushika.co.jp/" target="_blank" rel="noopener"><img src="images/spots/nishinomiya-nishi-hakushika.jpg" alt="白鹿クラシックス"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>白鹿クラシックス</span></a>
+          </div>
+          <div class="course-card__extra">
+            <b>周辺観光情報</b>
+            <a class="spot-card" href="https://sake-museum.jp/" target="_blank" rel="noopener"><img src="images/spots/nishinomiya-nishi-sakemuseum.jpg" alt="酒ミュージアム（白鹿記念酒造博物館）"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>酒ミュージアム（白鹿記念酒造博物館）</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="course-card reveal">
+        <div class="course-card__body">
+          <div class="course-card__area">西宮エリア・東</div>
+          <h3 class="course-card__name">西宮東コース</h3>
+          <div class="course-card__spots">
+            <a class="spot-card" href="https://tokuwaka.storeinfo.jp/" target="_blank" rel="noopener"><img src="images/spots/nishinomiya-higashi-mandai.jpg" alt="万代大澤醸造株式会社（德若）"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>万代大澤醸造株式会社（德若）</span></a>
+            <a class="spot-card" href="https://sekijuan.ozeki.co.jp/" target="_blank" rel="noopener"><img src="images/spots/nishinomiya-higashi-ozeki.jpg" alt="大関 甘辛の関寿庵"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>大関 甘辛の関寿庵</span></a>
+            <a class="spot-card" href="http://ohsawasyuzo.com/" target="_blank" rel="noopener"><img src="images/spots/nishinomiya-higashi-osawa.jpg" alt="大澤本家酒造株式会社（寳娘）"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>大澤本家酒造株式会社（寳娘）</span></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4.5 マップ ===== -->
+<section class="section section--tight" id="map">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">MAP</span>
+      <h2>謎解きスポットマップ</h2>
+      <p>全スポットの位置をまとめたGoogleマイマップです。まち歩きの際にご活用ください。</p>
+    </div>
+    <div style="position:relative; width:100%; aspect-ratio:16/10; border-radius:var(--radius-card); overflow:hidden; box-shadow:var(--shadow-card);">
+      <iframe src="https://www.google.com/maps/d/embed?mid=1AU2OydWzH3lPbyXtDR3xnXaXV6MOqgk" style="position:absolute; inset:0; width:100%; height:100%; border:0;" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. 参加方法 ===== -->
+<section class="section" id="howto" style="background:var(--beige-200);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">HOW TO PLAY</span>
+      <h2>参加方法</h2>
+      <p>迷ったらこの5ステップの通りに進めば大丈夫。ジェリーと一緒に調査を進めよう。</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step__rail"><div class="step__num">1</div><div class="step__line"></div></div>
+        <div class="step__content">
+          <h3>チラシ（問題用紙）を手に入れよう</h3>
+          <p>灘五郷の各所で配架されているイベントチラシ（問題用紙）を受け取ります。チラシ（問題用紙）に掲載された二次元コードから、イベント公式LINEアカウントを友だち登録してください。</p>
+          <div style="margin-top:16px;">
+            <p style="font-size:13px; color:var(--ink); font-weight:700; margin-bottom:8px;">※チラシ（問題用紙）は9/14からダウンロード可能です。</p>
+            <a href="files/chirashi.pdf" download class="btn btn--outline btn--small" style="white-space:normal; max-width:100%; text-align:center; line-height:1.4;">
+              <svg class="btn--line-icon" style="flex-shrink:0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>
+              チラシ（問題用紙）PDFをダウンロード
+            </a>
+            <p style="margin-top:8px; font-size:13px; color:var(--shu-500); font-weight:700;">※印刷される場合は「両面印刷・長辺綴じ」で出力してください。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step__rail"><div class="step__num">2</div><div class="step__line"></div></div>
+        <div class="step__content">
+          <h3>酒蔵のまちをめぐって謎を解こう</h3>
+          <p>各スポットに設置されたパネルを探し、謎を解きます。答えをLINEに送信すると、「酒の謎」のコラムやキーワードが届きます。各スポットではお買い物や飲食も楽しもう！クーポンを利用できる施設もありますので、ぜひあわせてご利用ください。</p>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step__rail"><div class="step__num">3</div><div class="step__line"></div></div>
+        <div class="step__content">
+          <h3>コースごとの「酒の謎」に挑戦しよう</h3>
+          <p>3つのキーワードを集めて、コースごとの「酒の謎」に挑戦できます。最後の答えを導き出しましょう。</p>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step__rail"><div class="step__num">4</div><div class="step__line"></div></div>
+        <div class="step__content">
+          <h3>クリア画面を提示してノベルティを受け取ろう</h3>
+          <p>「酒の謎」に正解すると、LINEにコースクリア画面が届きます。指定の報告所でクリア画面を提示すると、先着でノベルティがもらえます。</p>
+        </div>
+      </div>
+
+      <div class="step reveal">
+        <div class="step__rail"><div class="step__num">5</div></div>
+        <div class="step__content">
+          <h3>酒蔵等を巡って３つのプレゼント抽選に応募しよう</h3>
+          <p>4コース完全クリアで「謎解き賞」、対象施設で合算3,000円（税込）以上の商品購入等で「お買い物賞」、公式Xのフォロー＆リプライで「SNS賞」に応募できます。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="howto__report reveal">
+      <h4>報告所（ノベルティの引き換え場所）</h4>
+      <ul>
+        <li><b>神戸エリア（神戸西・神戸東コース）：</b>神戸市総合インフォメーションセンター<br>年中無休 9:00〜18:00</li>
+        <li><b>西宮エリア（西宮西・西宮東コース）：</b>阪神西宮おでかけ案内所<br>平日 10:00〜19:00／土日祝 9:00〜17:00</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. 記念品・プレゼント ===== -->
+<section class="section" id="goods">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">NOVELTY &amp; PRIZE</span>
+      <h2>ノベルティ・プレゼント抽選</h2>
+    </div>
+
+    <div class="goods-grid">
+      <div class="goods-card reveal">
+        <div class="goods-card__img" style="overflow:hidden; background:#fff;"><img src="images/shiori_4courses.jpg" alt="コース別しおり4種" style="width:100%; height:100%; object-fit:contain; object-position:center center; display:block;"></div>
+        <div class="goods-card__body">
+          <div class="goods-card__kicker">各コースクリアのノベルティ</div>
+          <div class="goods-card__title">しおりをプレゼント</div>
+          <p style="margin-top:12px; font-size:15.5px;">各コースの謎解きを達成すると、コースごとに異なる種類のオリジナルノベルティをお受け取りいただけます。ぜひ全4コースクリアを達成し、4種類すべてのノベルティのコンプリートを目指してください。<br>受取方法は、LINEで表示されるノベルティ受取画面を、神戸市総合インフォメーションセンター（神戸西・神戸東コースのノベルティ）、または阪神西宮おでかけ案内所（西宮西・西宮東コースのノベルティ）の引換場所でご提示ください。</p>
+          <p class="note">※ノベルティの受け取りは、「LINE1アカウントにつき各種類1点まで（最大4点まで）」となります。同一コースのノベルティを複数受け取ることはできません。<br>※ノベルティは各コース先着500名様分の数量限定のため、なくなり次第終了となりますので、あらかじめご了承ください。</p>
+        </div>
+      </div>
+
+      <div class="goods-card reveal">
+        <div class="goods-card__body">
+          <div class="goods-card__kicker">プレゼント抽選</div>
+          <div class="goods-card__title">酒蔵等を巡って３つの抽選に応募しよう！</div>
+          <p style="margin-top:12px; font-size:15.5px;">※20歳未満の方には、酒類を含む賞品をお送りしません。</p>
+
+          <div class="prize-list">
+            <div class="prize-item">
+              <div class="prize-item__num">①</div>
+              <div><p>謎解き賞</p><p class="sub">4コースを完全クリアした方が対象です。イベント公式LINEアカウントでゲームクリア時に届くURLからご応募ください。</p></div>
+            </div>
+            <div class="prize-item">
+              <div class="prize-item__num">②</div>
+              <div><p>お買い物賞</p><p class="sub">イベント期間中に、対象施設で合算して3,000円（税込み）以上の商品ご購入やご飲食、ご入場等をされた方が対象です。なお、応募には、対象施設でのお買い物やご飲食等の際のレシートや、ミュージアムなどの入場半券等の写真が必要となります。<br><br><b style="color:var(--navy-900);">対象施設</b><br>〔神戸西コース〕沢の鶴ミュージアムショップ、まめむぎマルシェbyマルヤナギ、こうべ甲南 武庫の郷・甲南漬本店（ショップ）、神戸酒心館 蔵元ショップ 東明蔵（さかばやし除く）<br>〔神戸東コース〕白鶴酒造資料館、菊正宗酒造記念館、櫻正宗記念館 櫻宴（2Fレストラン含む）、浜福鶴 吟醸工房<br>〔西宮西コース〕白鷹禄水苑、白鹿クラシックス、日本盛 酒蔵通り煉瓦館、協力施設：酒ミュージアム（白鹿記念酒造博物館）<br>〔西宮東コース〕大澤本家酒造株式会社（寳娘）、万代大澤醸造株式会社（德若）、大関 甘辛の関寿庵<br><br><b style="color:var(--navy-900);">応募フォーム</b><br><a class="mail" href="https://docs.google.com/forms/d/e/1FAIpQLSd0CuwWdmwrDaz4vC4jQTuJEF4J-rph6G2ui9gE4D1hijCgaQ/viewform?usp=header" target="_blank" rel="noopener">お買い物賞に応募する</a></p></div>
+            </div>
+            <div class="prize-item">
+              <div class="prize-item__num">③</div>
+              <div><p>SNS賞</p><p class="sub">たぬき探偵ジェリーの公式Xアカウント（<a class="mail" href="https://x.com/tanteijelly" target="_blank" rel="noopener">https://x.com/tanteijelly</a>）をフォローし、対象の投稿にリプライした方が対象です。※応募フォーム等への入力は不要です。</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. LINEについて ===== -->
+<section class="section section--tight" id="line">
+  <div class="wrap">
+    <div class="line-band reveal">
+      <span class="eyebrow" style="color:var(--gold-300)"><span style="width:18px;height:1px;background:var(--gold-500);display:inline-block;"></span>LINE</span>
+      <h2>LINEで謎解きを進めよう</h2>
+      <p>本イベントでは、チラシ（問題用紙）とイベント公式LINEアカウントを連動して謎解きを進めます。各スポットで謎を解き、答えをLINEに送ると、「酒の謎」のコラムやキーワードが届きます。ヒント提供や正誤判定もLINE上で行うため、初めての方でも自分のペースで参加できます。</p>
+      <a href="https://lin.ee/XBwi4Bl" class="btn btn--line" target="_blank" rel="noopener">
+        <svg class="btn--line-icon" viewBox="0 0 24 24" fill="none"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.8-.4 1.3-.4 1.6-.6 2.6-.1.4.2.6.5.4l3.3-2.1c4.9-.5 8.5-3.7 8.5-7.7C22 6.6 17.5 3 12 3Z" fill="currentColor"/></svg>
+        イベント公式LINEを友だち登録
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. よくある質問 ===== -->
+<section class="section" id="faq" style="background:var(--beige-200);">
+  <div class="wrap" style="max-width:820px;">
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>よくある質問</h2>
+    </div>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>参加定員はありますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">定員はありません。開催期間中であれば、どなたでも自由にご参加いただけます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>複数コースを巡ることはできますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">はい、可能です。神戸西コース、神戸東コース、西宮西コース、西宮東コースの4コースすべてに参加していただけます。コースごとに異なる謎解きやノベルティをご用意していますので、ぜひ全コース制覇を目指してください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>チラシ（問題用紙）はどこで入手できますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">酒蔵等の各スポットや、神戸市総合インフォメーションセンター、阪神西宮おでかけ案内所、阪神電鉄各駅などで配布しています。※配布場所によっては在庫がなくなっている場合があります。イベントホームページにもPDFデータを掲載しておりますが、印刷にずれが生じると正しくお楽しみいただけない場合がございます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>参加費は無料ですか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">本イベントの参加費は無料です。<br>ただし、飲食や試飲、商品購入などを希望される場合は、別途料金が必要となる場合があります。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>事前申込は必要ですか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">事前申込は不要です。<br>開催期間中であれば、いつでもご参加いただけます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>子どもでも参加できますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">ご参加いただけます。ただし、謎解きは10歳以上向けの内容（難易度）となっていますので、小さなお子さまは保護者の方と一緒の参加をおすすめします。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>外国人も参加できますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">ご参加いただけます。<br>ただし、謎解き問題やイベント案内、LINEコンテンツは日本語のみでの提供となります。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>謎解きで行き詰まった場合、各施設の方にヒントや答えを聞くことはできますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">各施設の方は、謎解きのヒントや答えをご案内しておりません。ヒントはLINE公式アカウント上でご確認いただけますので、そちらをご利用ください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>イベントの参加には何が必要ですか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">イベントへの参加には、チラシ（問題用紙）、筆記用具、およびLINEアプリを利用できるスマートフォンなどの端末が必要です。<br>チラシ（問題用紙）は、酒蔵等の各スポットほか、神戸市総合インフォメーションセンター、阪神西宮おでかけ案内所、阪神電鉄各駅などで配布しています。イベントホームページにもPDFデータを掲載しておりますが、印刷にずれが生じると正しくお楽しみいただけない場合がございます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>イベントの参加方法について教えてください。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">参加にあたっては、チラシ（問題用紙）に掲載されている二次元コードを読み取り、イベント公式LINEアカウントを友だち登録してください。その後、LINE上で希望するコースを選択し、酒蔵等の各スポットを巡りながら謎解きをお楽しみください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>期間中、謎解きに2回以上参加できますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">はい、ご参加いただけます。同じスポットを複数回訪れて、再度謎解きをお楽しみいただくことも可能です。また、開催期間中であれば、ご自身のペースで何度でも参加していただけます。ただし、プレゼント抽選への応募は各賞につきお一人様1回までとなりますので、あらかじめご了承ください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>複数人で参加できますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">ご家族やご友人同士で一緒にご参加いただけます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>プレゼント抽選の応募期限はいつまでですか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">プレゼント抽選の応募期限は2027年2月28日23:59までです。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>プレゼント抽選の当選発表はいつですか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">厳正な抽選のうえ、当選者の発表は賞品の発送をもって代えさせていただきます。<br>なお、当落に関する個別のお問い合わせにはお答えできません。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>お買い物等の際のレシートやミュージアムなどの入場半券を紛失しましたが、プレゼント抽選に応募できますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">プレゼント抽選のうち「お買い物賞」への応募には、対象施設でのお買い物やご飲食等の際のレシートや、ミュージアムなどの入場半券等の写真が必要となります。<br>レシートや入場半券等を紛失された場合は無効となりますので、応募完了まで保管してください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>ノベルティの受け取り方法と受け取り場所を教えてください。また、ノベルティは複数もらえますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">各コースの謎解きを達成すると、コースごとに異なる種類のオリジナルノベルティをお受け取りいただけます。LINEで表示されるノベルティ受取画面を神戸市総合インフォメーションセンター（神戸西・神戸東コースのノベルティ）、または阪神西宮おでかけ案内所（西宮西・西宮東コースのノベルティ）の引換場所でご提示ください。なお、ノベルティの受け取りは、「LINE1アカウントにつき各種類１点まで（最大４点まで）」となります。同一コースのノベルティを複数受け取ることはできません。また、ノベルティは各コース先着500名様分の数量限定のため、なくなり次第終了となりますので、あらかじめご了承ください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>ノベルティの在庫は確認できますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">ノベルティの在庫状況は随時変動するため、お電話等での在庫保証はできません。あらかじめご了承ください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>謎解きの途中で、スマートフォンを機種変更したいのですが、機種変更後も謎解きを継続できますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">はい、継続してご参加いただけます。<br>機種変更前にLINEのトーク履歴をバックアップし、機種変更後も同じLINEアカウントでログインしたうえでトーク履歴を復元すると、これまでのイベント参加状況を引き続き確認できます。なお、LINEアカウントを削除または変更した場合でも、改めてイベント公式LINEアカウントを友だち登録することでイベントへの参加は可能です。ただし、それまでの参加履歴や進捗状況を引き継ぐことはできません。イベントの参加状況はLINEのトーク履歴上でのみ確認できます。そのため、謎解きクリア時に送信される画像や達成画面は、スクリーンショット等で保存しておくことをおすすめします。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>謎解きの答えがわからない場合、どうすれば良いですか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">LINE公式アカウントのトーク画面で、パネルに書かれたヒント番号を入力すると、ヒントを確認できます。ヒントを見た場合も、ノベルティの受け取りやプレゼント抽選への応募に参加していただけます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>推奨環境を教えてください。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">iOS11以降/Safari、Android6以降/Chrome推奨。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>謎解きスポットの施設が休館日でも謎解きはできますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">休館日には各施設の入口付近等に出題資料を掲示しておりますので、謎解きは可能です。なお、ご来場前に各スポットの公式ホームページ等で営業時間や休館日をご確認いただくことをおすすめします。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>試飲はありますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">試飲の実施状況は酒蔵によって異なりますので、各酒蔵へ直接お問い合わせください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>謎解きは飲酒しなくても楽しめますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">はい、お酒を飲まれない方でもお楽しみいただけます。<br>また、商品の購入や飲食をしなくてもご参加いただけます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>車で参加できますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">施設に駐車場がある場合は、お車でお越しいただくことが可能です。<br>ただし、駐車台数には限りがあり、満車の場合もありますので、できるだけ公共交通機関をご利用ください。また、試飲等で飲酒された場合は、絶対に運転しないでください。飲酒運転は法律で禁止されています。安全にイベントをお楽しみいただくため、公共交通機関でのご参加をおすすめします。<br>※駐車場の有無や利用条件については、各施設へ直接お問い合わせください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span class="faq-q__left"><span class="faq-q__mark">Q</span>雨天でも参加できますか。</span><span class="faq-plus"></span></button>
+        <div class="faq-a"><div class="faq-a__inner">本イベントは常設型イベントのため、雨天でもご参加いただけます。ただし、荒天時は各施設の営業状況等を事前にご確認のうえ参加してください。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. 注意事項 ===== -->
+<section class="section section--tight" id="notes">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">NOTICE</span>
+      <h2>注意事項</h2>
+    </div>
+
+    <div class="notes-grid reveal">
+      <div class="note-card">
+        <svg class="note-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12Z"/></svg>
+        <p>イベント参加中は、交通ルールを守り、安全に謎解きをお楽しみください。</p>
+      </div>
+      <div class="note-card">
+        <svg class="note-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        <p>各施設では、スタッフの指示や施設ごとのルールに従ってください。</p>
+      </div>
+      <div class="note-card">
+        <svg class="note-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+        <p>歩きスマホは危険です。立ち止まって安全を確認してから操作してください。</p>
+      </div>
+      <div class="note-card">
+        <svg class="note-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
+        <p>施設の営業時間・休館日・展示内容は変更となる場合があります。</p>
+      </div>
+      <div class="note-card">
+        <svg class="note-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 7 9 18l-5-5"/></svg>
+        <p>ノベルティ・賞品の内容は変更となる場合があります。ノベルティは数に限りがあり、なくなり次第終了となります。</p>
+      </div>
+      <div class="note-card note-card--warn">
+        <svg class="note-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 2.6 17a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+        <p>飲酒は20歳になってから。お酒は適量で楽しみましょう。飲酒運転は法律で禁止されています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 10. 主催・関連情報 ===== -->
+<footer class="footer" id="organizer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>主催・協力</h4>
+        <p><b style="color:var(--navy-900);">主催</b>：神戸市・西宮市</p>
+        <p style="margin-top:10px;"><b style="color:var(--navy-900);">協力</b>：「灘の酒蔵」活性化プロジェクト実行委員会（灘五郷酒造組合、神戸市、西宮市、阪神電気鉄道株式会社）／西宮日本酒振興連絡会</p>
+      </div>
+
+      <div>
+        <h4>ゲーム内容に関するお問い合わせ</h4>
+        <p>2026年度「灘の酒蔵謎解き探訪」イベント事務局<br>株式会社セレスポ 内</p>
+        <p style="margin-top:8px;"><a class="mail" href="mailto:nadatanbou2026@cerespo.co.jp">nadatanbou2026@cerespo.co.jp</a></p>
+      </div>
+
+      <div>
+        <h4>その他のお問い合わせ</h4>
+        <p><b style="color:var(--navy-900);">［神戸市］</b>神戸市お問い合わせセンター<br>0570-083-330 または 078-333-3330<br>年中無休 8:00〜21:00</p>
+        <p style="margin-top:10px;"><b style="color:var(--navy-900);">［西宮市］</b>阪神西宮おでかけ案内所<br>0798-36-2782<br>平日 10:00〜19:00／土日祝 9:00〜17:00</p>
+      </div>
+    </div>
+
+    <div class="footer__related">
+      <h4>関連リンク</h4>
+      <p><a class="mail" href="https://www.instagram.com/nadatanbou2026/" target="_blank" rel="noopener">イベント公式Instagram</a></p>
+    </div>
+
+    <div class="footer__logos">
+      <img src="images/logo-gogo.png" alt="Go!Go!灘五郷!">
+      <img src="images/logo-heritage.jpg" alt="日本遺産 JAPAN HERITAGE">
+    </div>
+
+    <div class="footer__legal">© 2026年度「灘の酒蔵謎解き探訪」イベント事務局</div>
+  </div>
+</footer>
+
+<!-- ===== sticky bottom CTA (mobile) ===== -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta__text">まずは<b>LINEで友だち登録</b></div>
+  <a href="#line" class="btn btn--line btn--small">
+    <svg class="btn--line-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.8-.4 1.3-.4 1.6-.6 2.6-.1.4.2.6.5.4l3.3-2.1c4.9-.5 8.5-3.7 8.5-7.7C22 6.6 17.5 3 12 3Z" fill="currentColor"/></svg>
+    登録する
+  </a>
+</div>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    const q = item.querySelector('.faq-q');
+    const a = item.querySelector('.faq-a');
+    q.addEventListener('click', ()=>{
+      const isOpen = item.classList.contains('is-open');
+      document.querySelectorAll('.faq-item.is-open').forEach(other=>{
+        if(other!==item){ other.classList.remove('is-open'); other.querySelector('.faq-a').style.maxHeight=null; }
+      });
+      if(isOpen){ item.classList.remove('is-open'); a.style.maxHeight=null; }
+      else{ item.classList.add('is-open'); a.style.maxHeight=a.scrollHeight+'px'; }
+    });
+  });
+
+  // top bar + sticky cta visibility
+  const topbar = document.getElementById('topbar');
+  const stickyCta = document.getElementById('stickyCta');
+  const hero = document.getElementById('top');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.target===hero){
+        const past = !e.isIntersecting;
+        topbar.classList.toggle('is-visible', past);
+        stickyCta.classList.toggle('is-visible', past);
+      }
+    });
+  }, {threshold:0});
+  io.observe(hero);
+
+  // reveal on scroll
+  const revealItems = document.querySelectorAll('.reveal');
+  const ro = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('is-in'); ro.unobserve(e.target); }
+    });
+  }, {threshold:.15});
+  revealItems.forEach(el=>ro.observe(el));
+</script>
+</div>
+</body>
+</html>

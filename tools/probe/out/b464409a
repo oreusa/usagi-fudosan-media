@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>【公式】大和多武峰鎮座｜談山神社</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"  name="viewport">
+  <meta name="description" content="奈良県桜井市にある談山神社の公式ホームページです。当神社は桜と紅葉の名所です。">
+<meta name="keywords" content="談山神社,多武峯妙楽寺,藤原鎌足,神仏霊場奈良二十四番,奈良県桜井市">
+
+  <!-- Main Stylesheet File -->
+  
+    <link rel="stylesheet" type="text/css" href="https://tanzan.or.jp/info/wp-content/themes/tanzan-wp/css/slick.css">
+    <link href="https://tanzan.or.jp/info/wp-content/themes/tanzan-wp/css/style.css" rel="stylesheet" media="screen">
+	
+	<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-P8EQWRNCG3"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-P8EQWRNCG3'); </script>
+</head>
+    
+<body>
+        <!-- ハンバーガーメニュー部分 -->
+  <div class="drawer">
+
+    <!-- ハンバーガーメニューの表示・非表示を切り替えるチェックボックス -->
+    <input type="checkbox" id="drawer-check" class="drawer-hidden" >
+
+    <!-- ハンバーガーアイコン -->
+    <label for="drawer-check" class="drawer-open" class="sp-only"><span>目次</span></label>
+
+    <!-- メニュー -->
+    <nav class="drawer-content fade">
+    <div class="drawer-content-inner">
+        <div class="pc-only">
+        <img src="https://tanzan.or.jp/info/wp-content/themes/tanzan-wp/img/logo_pc.png" alt="談山神社">
+        </div>
+        <div class="drawer-rightside">
+            <div class="sp-only" style="position:absolute;right:0"><img src="https://tanzan.or.jp/info/wp-content/themes/tanzan-wp/img/logo_sp.png" height="240px" alt="談山神社"></div>
+        <ul class="drawer-list">
+			<li><a href="https://tanzan.or.jp/index.html">目次</a></li>
+        <li><a href="https://tanzan.or.jp/haikan.html">拝観案内</a></li>
+        <li><a href="https://tanzan.or.jp/dantai.html">団体参拝・観光業者様へ</a></li>
+        <li><a href="https://tanzan.or.jp/info/jinja_news/">お知らせ</a></li>
+		<li><a href="https://tanzan.or.jp/contact/mail_send.php">お問い合わせ</a></li>
+          
+      </ul>
+        <ul class="drawer-list">
+            <li><a href="https://tanzan.or.jp/rekishi.html">談山神社の歴史</a></li>
+                <li><a href="https://tanzan.or.jp/gyouji.html">年中行事</a></li>
+                <li><a href="https://tanzan.or.jp/gokitou.html">御祈祷</a></li>
+                <li><a href="https://tanzan.or.jp/keidai.html">境内案内</a></li>
+                <li><a href="https://tanzan.or.jp/juyohin.html">授与品</a></li>
+                <li><a href="https://tanzan.or.jp/katarahi.html">談の会</a></li>
+                <li><a href="https://tanzan.or.jp/gagaku.html">雅楽会</a></li>
+                <li><a href="https://tanzan.or.jp/housan.html">奉賛事業</a></li>
+                <li><a href="https://tanzan.or.jp/access.html">交通案内</a></li>
+      </ul>
+            </div>
+        </div>    
+        
+      
+    </nav>
+
+  </div>
+    <header class="second">
+        <!--/slider-->
+<div class="second-menu-side">
+    <div class="menu_contents">
+        <h1><a href="https://tanzan.or.jp/index.html"><img src="https://tanzan.or.jp/info/wp-content/themes/tanzan-wp/img/logo_pc.png" alt="談山神社"></a></h1>
+        <ul>
+                <li><a href="https://tanzan.or.jp/rekishi.html">歴史</a></li>
+                <li><a href="https://tanzan.or.jp/gyouji.html">年中行事</a></li>
+                <li><a href="https://tanzan.or.jp/gokitou.html">御祈祷</a></li>
+                <li><a href="https://tanzan.or.jp/keidai.html">境内案内</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://tanzan.or.jp/juyohin.html">授与品</a></li>
+                <li><a href="https://tanzan.or.jp/katarahi.html">談の会</a></li>
+                <li><a href="https://tanzan.or.jp/housan.html">奉賛事業</a></li>
+                <li><a href="https://tanzan.or.jp/access.html">交通案内</a></li>
+            </ul>
+    </div>
+</div>
+        
+<div class="bg_second" style="background-image: url(https://tanzan.or.jp/info/wp-content/themes/tanzan-wp/img/img-second-header11.jpg)"></div>
+<div class="top-menu-base"></div>
+<div class="top-menu">
+    <ul>
+        <li><a href="https://tanzan.or.jp/haikan.html">拝観案内</a></li>
+        <li><a href="https://tanzan.or.jp/dantai.html">団体参拝・観光業者様へ</a></li>
+        <li><a href="https://tanzan.or.jp/info/jinja_news/">お知らせ</a></li>
+    	<li><a href="https://tanzan.or.jp/contact/mail_send.php">お問い合わせ</a></li>
+</ul>
+        </div>
+
+        
+    
+    </header>
+<div class="second-contents">
+    <section>                
+                <h2>神社からのお知らせ</h2>
+		<div class="text">
+			 <h3>談山神社「紅葉まつり」</h3>
+                                
+                <div class="info-news">
+<h4>期間</h4>
+<p><b>令和8年10月1日（木）～12月6日（日）</b></p>
+<p>
+	談山神社「紅葉まつり」が開催されます。<br />
+	2026年は10月1日（木）から12月6日（日）まで、境内一帯が鮮やかな紅葉に彩られ、歴史ある社殿や十三重塔との美しい景観を楽しめます。
+</p>
+<h4>期間中の行事・祭典</h4>
+<p>○10月11日（日）10時　嘉吉祭<br />
+○10月26日（月）　<a href="https://tanzan.or.jp/info/jinja_news/%E6%BA%80%E6%9C%88%E3%81%AE%E5%A4%9C%E3%81%AE%E7%89%B9%E5%88%A5%E6%8B%9D%E8%A6%B3-2/">満月の夜の特別拝観</a><br />
+○11月3日（火・祝）11時　 けまり祭<br />
+○11月17日（火）10時30分　例大祭<br />
+○11月28日（土）18時　雅楽の夕べ舞楽「蘭陵王」</p>
+<h4>期間中の特別企画</h4>
+<p>○11月1日（日）～12月20日（日）<br />
+<a hre="https://tanzan.or.jp/info/jinja_news/%E9%8E%8C%E8%B6%B3%E3%81%A8%E5%88%80%e3%80%80%E6%AD%A6%E3%81%AE%E7%A5%88%E3%82%8A/"> 社宝特別展「鎌足と刀 武の祈り」</a></p>
+<p>○10月31日（土）～11月8日（日）<br />
+ けまり体験イベント<br />
+ 予約優先 / 参加費:1,000円</p>
+<p>○11月14日（土）～12月6日（日）<br />
+ 紅葉ライトアップ（期間中の日没～20時30分毎日実施）</p>
+<p><a href="https://tanzan.or.jp/info/wp-content/uploads/2026/10/r08_kouyou-scaled.jpg"><br />
+	<img decoding="async" src="https://tanzan.or.jp/info/wp-content/uploads/2026/10/r08_kouyou-scaled.jpg" alt="" width="1808"
+		height="2560" class="alignnone size-full wp-image-365" /><br />
+</a></p>
+<h4>お問い合わせ</h4>
+<p>談山神社　社務所<br />
+【TEL】0744-49-0001</p>
+                    </div>
+                    
+                
+				<div class="btn_base w50" style="margin-top:50px;">
+					<a href="https://tanzan.or.jp/info/jinja_news/">お知らせ一覧に戻る</a>
+				</div>
+			
+		</div>
+       
+            </section>
+        
+    </div>
+
+
+<footer>
+        <div class="contents_2">
+        <div class="">
+            <div class="footer_logo_second sp-only"><img src="https://tanzan.or.jp/info/wp-content/themes/tanzan-wp/img/logo-yoko.png"></div>
+            <div class="jinja_name pc-only">談山神社</div>
+            <address>〒633-0032 奈良県桜井市多武峰319<br>TEL: 0744-49-0001　FAX: 0744-49-0236
+            
+            </address>
+            
+        <div class="sns">
+            <div class="umashi"><a href="https://nara.jr-central.co.jp/shajinavi/tanzan/" target="_blank"><img src="https://tanzan.or.jp/info/wp-content/themes/tanzan-wp/img/ind_bod_01_ico_12.png" alt="いざいざ奈良"></a></div><div class="umashi"><a href="https://koyo.walkerplus.com/detail/ar0729e13054/" target="_blank"><img src="https://www.tanzan.or.jp/img/bnr_walkerplus.jpg" alt="walkerplusに掲載されました" style="height: 70px; width: auto;"></a></div>
+            <div><a href="https://twitter.com/TanzanJinja" target="_blank">
+                    <i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+				    <div><a href="https://www.instagram.com/tanzanjinja/" target="_blank">
+                    <i class="fa-brands fa-instagram"></i></a></div>
+            </div>
+            
+            <div class="copyright">&copy;&nbsp;2023&nbsp;談山神社</div>
+        </div>
+        </div>
+        <div class="footer_img"></div>
+        
+    </footer>
+    
+    
+    <div id="page-top"><a href="#"><i class="fa fa-angle-up fa-3x" aria-hidden="true"></i></a></div>
+    
+    <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <script src="js/main.js"></script>
+            <script src="js/slick.min.js"></script>
+            <script src="js/myslick.js"></script>
+            <script src="js/main.js"></script>
+    </body>
+</html>

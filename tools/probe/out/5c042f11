@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#fff8d6">
+  <meta name="color-scheme" content="light">
+  <meta name="deployment-build" content="ftp">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7826QXJTRS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-7826QXJTRS');
+  </script>
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="description" content="ひこにゃんと一緒に、国宝彦根城に眠る謎に挑戦！城内の歴史や景色を巡りながら解き進む周遊型謎解きです。制限時間なし・ヒントありで、謎解きが初めての方やお子さまも安心。2026年10月1日〜2027年3月31日、彦根城にて開催中。">
+  <title>滋賀魅力発見なぞとき｜ひこにゃんと彦根城に眠る謎を解け！</title>
+  <link rel="canonical" href="https://p-con.iroawase.jp/hikonyan/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="ひこにゃん 滋賀魅力発見なぞとき">
+  <meta property="og:title" content="滋賀魅力発見なぞとき｜ひこにゃんと彦根城に眠る謎を解け！">
+  <meta property="og:description" content="ひこにゃんと一緒に、国宝彦根城に眠る謎に挑戦！城内の歴史や景色を巡りながら解き進む周遊型謎解きです。制限時間なし・ヒントありで、謎解きが初めての方やお子さまも安心。2026年10月1日〜2027年3月31日、彦根城にて開催中。">
+  <meta property="og:url" content="https://p-con.iroawase.jp/hikonyan/">
+  <meta property="og:image" content="https://p-con.iroawase.jp/hikonyan/assets/images/hikonyan-ogp.png">
+  <meta property="og:image:secure_url" content="https://p-con.iroawase.jp/hikonyan/assets/images/hikonyan-ogp.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="探偵姿のひこにゃんと彦根城、『彦根城に眠る謎を解け！』のイベントビジュアル">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="滋賀魅力発見なぞとき｜ひこにゃんと彦根城に眠る謎を解け！">
+  <meta name="twitter:description" content="ひこにゃんと一緒に、国宝彦根城に眠る謎に挑戦！城内の歴史や景色を巡りながら解き進む周遊型謎解きです。制限時間なし・ヒントありで、謎解きが初めての方やお子さまも安心。2026年10月1日〜2027年3月31日、彦根城にて開催中。">
+  <meta name="twitter:image" content="https://p-con.iroawase.jp/hikonyan/assets/images/hikonyan-ogp.png">
+  <meta name="twitter:image:alt" content="探偵姿のひこにゃんと彦根城、『彦根城に眠る謎を解け！』のイベントビジュアル">
+  <link rel="icon" type="image/png" sizes="64x64" href="./assets/images/favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon-180.png">
+  <link rel="preload" as="image" type="image/webp" href="./assets/images-rendered/mv_bg.webp" fetchpriority="high" data-build-remove>
+  <link rel="preload" as="image" type="image/webp" href="./assets/images-rendered/hero-main-transparent@2x.webp" fetchpriority="high" data-build-remove>
+  <script>document.documentElement.classList.add("has-js");</script>
+  <link rel="stylesheet" href="./assets/css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">本文へ移動</a>
+  <div class="desktop-scene" aria-hidden="true">
+    <span class="desktop-scene__logo"></span>
+    <span class="desktop-scene__character"></span>
+  </div>
+  <header class="site-header"><button class="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="global-menu" aria-expanded="false"></button></header>
+
+  <main id="main-content" class="site-shell">
+    <h1 class="visually-hidden">ひこにゃん 滋賀魅力発見なぞとき 彦根城に眠る謎を解け！</h1>
+    <section id="top" class="hero" aria-label="イベントメインビジュアル">
+      <img class="hero__main hero-reveal hero-reveal--main" src="./assets/images-rendered/hero-main-transparent@2x.webp" alt="探偵姿のひこにゃん" width="597" height="957" loading="eager" decoding="async" fetchpriority="high">
+      <img class="hero__logo hero-reveal hero-reveal--logo" src="./assets/images-rendered/hero-logo-transparent@2x.webp" alt="ひこにゃん 滋賀魅力発見なぞとき 彦根城に眠る謎を解け！" width="620" height="527" loading="eager" decoding="async" fetchpriority="high">
+      <img class="hero__date hero-reveal hero-reveal--details" src="./assets/images-rendered/hero-date-transparent@2x.webp" alt="開催期間 2026年10月1日から2027年3月31日まで 会期中無休" width="677" height="195" loading="eager" decoding="async">
+      <img class="hero__copy hero-reveal hero-reveal--details" src="./assets/images-rendered/hero-copy-transparent@2x.webp" alt="ひこにゃんと一緒に、謎解きに挑戦！" width="170" height="492" loading="eager" decoding="async">
+    </section>
+
+    <section id="story" class="story" aria-labelledby="story-title">
+      <h2 id="story-title" class="visually-hidden">ストーリー</h2>
+      <div class="story__body">
+        <div class="story__copy story__copy--intro"><p>おさんぽが大すきな、ひこにゃん。<br>きょうもいつものように彦根城を<br>歩いていると……<br>あれれ、城内は謎がたくさん！</p></div>
+        <div class="story__copy story__copy--turn"><p>気になって気になって、これじゃあ<br>おさんぽどころじゃありません。<br>そこでひこにゃん、<br>探偵すがたに大へんしん！</p></div>
+        <span class="story__detective-wrap"><img class="story__detective" src="./assets/images-rendered/nyan_01.webp" alt="探偵姿に変身したひこにゃん" width="1000" height="1239" loading="lazy" decoding="async" fetchpriority="low"></span>
+        <div class="story__copy story__copy--last"><p>だいすきなおさんぽライフを<br>とりもどすため、<br>彦根城にねむる謎に挑みます。<br>天守へ、石垣へ、お堀のほとりへ。<br>歩いて、見つけて、ひらめいて。<br>ひこにゃんといっしょに、<br>彦根城の謎を解いてあげてください。</p></div>
+      </div>
+      <img class="story__bottom-character" src="./assets/images-rendered/nyan_02.webp" alt="" width="377" height="384" loading="lazy" decoding="async" fetchpriority="low">
+    </section>
+
+    <div class="orange-divider" aria-hidden="true"><img src="./assets/images-rendered/orange-divider-node-2014-12738@2x.webp" alt="" width="750" height="160" loading="lazy" decoding="async"></div>
+    <section id="play" class="play" aria-label="遊び方、プレイ形式、開催概要">
+      <img class="play__character" src="./assets/images-rendered/nyan05.webp" alt="" width="146" height="198" loading="lazy" decoding="async">
+      <article class="content-card play-card">
+        <img class="play-card__title" src="./assets/images-rendered/play-title-node-2014-14595@2x.webp" alt="遊び方／プレイ形式" width="611" height="60" loading="lazy" decoding="async">
+        <section class="play-step">
+          <img class="step-badge" src="./assets/images-rendered/step1-node-2014-14611@2x.webp" alt="1" width="70" height="69" loading="lazy" decoding="async">
+          <h2>謎解きキットを購入しよう！</h2>
+          <p class="purchase-info">◆ 発売場所 ／ 国宝 彦根城<br><span>　　　　　　彦根城表門券売所</span><br>◆ 販売時間 ／ 8:30～16:30</p>
+          <a class="map-button" href="https://maps.app.goo.gl/HPV7xaZvFqstZKqy8" target="_blank" rel="noopener noreferrer">Googleマップで見る</a>
+        </section>
+        <img class="play-divider" src="./assets/images-rendered/play-divider-node-2014-14674@2x.webp" alt="" width="603" height="6" loading="lazy" decoding="async">
+        <section class="play-step">
+          <img class="step-badge" src="./assets/images-rendered/step2-node-2014-14685@2x.webp" alt="2" width="70" height="69" loading="lazy" decoding="async">
+          <h2>彦根城内を巡って謎を解こう！</h2>
+          <p>城内の歴史や景色を満喫しながら、<br>自分のペースで謎解きを楽しもう！</p>
+          <div class="feature-grid"><img src="./assets/images-rendered/feature-time-node-2014-14701@2x.webp" alt="制限時間なし" width="248" height="246" loading="lazy" decoding="async"><img src="./assets/images-rendered/feature-duration-node-2014-14776@2x.webp" alt="所要時間 約60分程度（休憩・観光時間を除く）" width="248" height="246" loading="lazy" decoding="async"><img src="./assets/images-rendered/feature-people-node-2014-14852@2x.webp" alt="人数制限なし" width="248" height="246" loading="lazy" decoding="async"></div>
+        </section>
+        <img class="play-divider" src="./assets/images-rendered/play-divider-node-2014-14674@2x.webp" alt="" width="603" height="6" loading="lazy" decoding="async">
+        <section class="play-step play-step--prize">
+          <img class="step-badge" src="./assets/images-rendered/step3-node-2123-5.svg" alt="3" width="35" height="35" loading="lazy" decoding="async">
+          <h2>景品をゲット！</h2>
+          <p>このイベント限定の<br>ひこにゃんステッカーをプレゼント！</p>
+          <img class="prize-image" src="./assets/images-rendered/prize-sticker-node-2123-16@2x.webp" alt="イベント限定ひこにゃんステッカーのイメージ" width="597" height="312" loading="lazy" decoding="async">
+        </section>
+      </article>
+
+      <article class="content-card assurance-card">
+        <h2 class="visually-hidden">初めてでも安心！</h2>
+        <img class="assurance-card__title" src="./assets/images-rendered/anshin_header.webp" alt="初めてでも安心！" width="480" height="166" loading="lazy" decoding="async">
+        <ol class="assurance-list">
+          <li><img class="assurance-number" src="./assets/images-rendered/anshin01.svg" alt="1" width="35" height="36" loading="lazy" decoding="async"><strong>困ったときの<br>ヒントあり！</strong><img class="assurance-photo" src="./assets/images-rendered/assurance-photo-1@2x.webp" alt="参加キットのイメージ" width="222" height="180" loading="lazy" decoding="async"></li>
+          <li><img class="assurance-number" src="./assets/images-rendered/anshin02.svg" alt="2" width="35" height="36" loading="lazy" decoding="async"><strong>制限時間なし！<br>自分のペースで<br>遊べる</strong><img class="assurance-photo" src="./assets/images-rendered/assurance-photo-2@2x.webp" alt="参加キットのイメージ" width="222" height="180" loading="lazy" decoding="async"></li>
+          <li><img class="assurance-number" src="./assets/images-rendered/anshin03.svg" alt="3" width="35" height="36" loading="lazy" decoding="async"><strong>観光や休憩を<br>挟みながら<br>楽しめる！</strong><img class="assurance-photo" src="./assets/images-rendered/assurance-photo-3@2x.webp" alt="参加キットのイメージ" width="222" height="180" loading="lazy" decoding="async"></li>
+        </ol>
+      </article>
+
+      <article id="event" class="content-card overview-card">
+        <img class="overview-character" src="./assets/images-rendered/nyan06.webp" alt="" width="100" height="170" loading="lazy" decoding="async">
+        <h2 class="visually-hidden">開催概要</h2>
+        <img class="overview-title-image" src="./assets/images-rendered/header_gaiyou.webp" alt="開催概要" width="300" height="45" loading="lazy" decoding="async">
+        <section><h3>場　所</h3><p class="overview-place"><strong>国宝 彦根城</strong><br>（〒522-0061 滋賀県彦根市金亀町１−１）<br>（JR 琵琶湖線「彦根駅」から徒歩 約15分）</p><p class="sales-note">彦根城表門券売所でキット購入ができます。</p><iframe class="map-embed" title="国宝 彦根城周辺のGoogleマップ" src="https://www.google.com/maps?q=%E5%9B%BD%E5%AE%9D%20%E5%BD%A6%E6%A0%B9%E5%9F%8E&amp;output=embed" width="597" height="230" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><a class="map-button" href="https://maps.app.goo.gl/HPV7xaZvFqstZKqy8" target="_blank" rel="noopener noreferrer">Googleマップで見る</a></section>
+        <section><h3>期　間</h3><p>2026年10月1日（木）<br>〜2027年3月31日（水）会期中無休<br>8:30〜16:30</p></section>
+        <section><h3>料　金</h3><p>謎解きキット代 <strong class="price">1,000<small>円（税込）</small></strong><br>＋ 彦根城入場料<br><small>（一般：1,000円／小・中学生：300円）</small></p></section>
+      </article>
+    </section>
+
+    <section class="information">
+      <section id="rules" class="rules" aria-labelledby="rules-title">
+        <img class="rules__character" src="./assets/images-rendered/nyan04.webp" alt="" width="105" height="186" loading="lazy" decoding="async">
+        <details class="rules-accordion" open>
+          <summary id="rules-title" class="teal-title"><span>遊ぶときのルール・注意点</span><span class="accordion-arrow" aria-hidden="true"></span></summary>
+          <div class="rules-list">
+          <p>◾️交通ルールおよび一般的なマナーを守り、安全にご参加ください。</p><p>◾️路上駐車や私有地への無断立入はご遠慮ください。お車でお越しの際は、必ず指定の駐車場をご利用願います。</p><p>◾️彦根城では探索可能時間が限られております。最新の開館時間などは、各施設へ直接ご確認ください。</p><p>◾️謎解きが途中の場合でも、17:00以降は退出いただきます。できるだけ時間に余裕をもってお越しください。</p><p>◾️台風などの悪天候や文化財施設の修理などにより、予告なく観覧区域を閉鎖する場合があります。</p><p>◾️謎解きキットの事前予約や前売り販売はございません。当日、現地にてお買い求めください。</p><p>◾️施設スタッフは謎解きに関する答えや、ヒントは持っておりませんので、スタッフへのお問い合わせはご遠慮ください。</p><p>◾️小学生以下のお子様は、必ず保護者同伴でのご参加をお願いいたします。</p><p>◾️危険防止のため、日没後の捜索はお控えください。</p><p>◾️イベント参加中に発生した事故・けが・感染症・器物破損等につきましては、参加者ご本人の責任となります。あらかじめご承知おきのうえご参加ください。</p><p>◾️熱中症を防ぐため、こまめな水分補給と適切な体調管理を心がけてください。</p><p>◾️安全を最優先に、足場の悪い場所や立入禁止区域には近づかないようお願いいたします。</p><p>◾イベントの答えや解説をSNSやブログ等へ公開する行為は禁止しております。（感想や体験談のシェアは大歓迎です!）</p>
+          </div>
+        </details>
+      </section>
+      <section id="faq" class="faq" aria-labelledby="faq-title">
+        <img class="faq__character" src="./assets/images-rendered/nyan03.webp" alt="" width="120" height="192" loading="lazy" decoding="async">
+        <h2 id="faq-title" class="teal-title">よくある質問</h2>
+        <div class="faq-list">
+          <details><summary><span class="q-mark">Q</span><span>謎解きってなんですか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-answer"><span class="a-mark">A</span><p>謎解きとは、冊子に書かれた指示に従いながら、現地に仕掛けられた問題を解き進める体験型ゲームです。</p></div></details>
+          <details><summary><span class="q-mark">Q</span><span>謎解きに初めて参加します。難しくありませんか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-answer"><span class="a-mark">A</span><p>初めての方でも遊びやすい難易度となっております。もしわからない問題があっても、ヒントになりそうな場所の写真を撮って、自宅でゆっくりと考えることも可能です。</p></div></details>
+          <details><summary><span class="q-mark">Q</span><span>どんなイベントですか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-answer"><span class="a-mark">A</span><p>このイベントは、彦根城内に設置された「謎解きスポット」を巡りながら謎を解いていく、謎解き体験イベントです。城内に散りばめられた謎を解くことで、物語が進んでいきます。</p></div></details>
+          <details><summary><span class="q-mark">Q</span><span>地域を知らなくても楽しめますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-answer"><span class="a-mark">A</span><p>もちろんお楽しみいただけます。地域の名所や施設をめぐることで、地元の方にも新しい発見がある内容になっています。</p></div></details>
+          <details><summary><span class="q-mark">Q</span><span>年齢制限はありますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-answer"><span class="a-mark">A</span><p>年齢制限はありません。小学校高学年以上のお子さんであれば一人でも解けますし、それ以下の年齢のお子さまも保護者の方とご一緒であれば遊ぶことができます。</p></div></details>
+          <details><summary><span class="q-mark">Q</span><span>制限時間はありますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-answer"><span class="a-mark">A</span><p>制限時間はありません。1日で回っても、数日に分けて遊んでもOKです。ただし各施設の探索可能時間にご参加いただくようにご注意ください。また、日をまたいでの参加の場合は、それぞれに入場料がかかる点にご注意ください。</p></div></details>
+          <details><summary><span class="q-mark">Q</span><span>施設にトイレはありますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-answer"><span class="a-mark">A</span><p>施設内にトイレが複数あります。詳細は彦根城での案内をご確認ください。</p></div></details>
+          <details><summary><span class="q-mark">Q</span><span>どのような服装が適していますか？</span><span class="faq-icon" aria-hidden="true"></span></summary><div class="faq-answer"><span class="a-mark">A</span><p>徒歩での移動がありますので、歩きやすい靴・動きやすい服装でお越しください。</p></div></details>
+        </div>
+      </section>
+      <img class="information__bottom-scene" src="./assets/images-rendered/nyan_footer.webp" alt="" width="423" height="197" loading="lazy" decoding="async">
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <nav class="footer-nav" aria-label="フッターメニュー"><a href="#top">TOP</a><a href="#story">ストーリー</a><a href="#play">遊び方／プレイ形式</a><a href="#event">開催概要</a><a href="#rules">遊ぶ時のルール・注意点</a><a href="#faq">よくある質問</a></nav>
+    <div class="footer-divider" aria-hidden="true"></div>
+    <div class="footer-credit"><div><p>主催／謎制作</p><img src="./assets/images-rendered/picon-logo-node-2019-22919@2x.webp" alt="ピコン 謎解きクリエイティブチーム" width="240" height="147" loading="lazy" decoding="async"><p class="footer-note">※ピコンは株式会社いろあわせの謎解き制作ブランドです。</p></div><div><p>協力</p><p class="footer-support"><strong>彦根市</strong><br><strong>公益社団法人 彦根観光協会</strong><br><strong>彦根城運営管理センター</strong></p></div></div>
+    <div class="footer-divider" aria-hidden="true"></div>
+    <address class="contact"><p>● お問い合わせ</p><p>株式会社いろあわせ<br><a href="tel:0749206399">TEL 0749-20-6399</a><br><a href="mailto:p-con@iroawase.co.jp">Mail:p-con@iroawase.co.jp</a></p></address>
+  </footer>
+
+  <nav class="desktop-side-nav" aria-label="ページ内メニュー"><a href="#top">TOP</a><a href="#story">ストーリー</a><a href="#play">遊び方／プレイ形式</a><a href="#event">開催概要</a><a href="#rules">遊ぶ時のルール・注意点</a><a href="#faq">よくある質問</a></nav>
+  <div class="menu-backdrop" hidden></div>
+  <nav id="global-menu" class="menu-drawer" aria-label="メインメニュー" aria-hidden="true"><div class="menu-drawer__header"><span>MENU</span><button class="menu-close" type="button" aria-label="メニューを閉じる">×</button></div><ul><li><a href="#top">TOP</a></li><li><a href="#story">ストーリー</a></li><li><a href="#play">遊び方／プレイ形式</a></li><li><a href="#event">開催概要</a></li><li><a href="#rules">遊ぶ時のルール・注意点</a></li><li><a href="#faq">よくある質問</a></li></ul></nav>
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>

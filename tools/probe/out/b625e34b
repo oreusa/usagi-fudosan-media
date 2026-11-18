@@ -1,0 +1,2118 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0,user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+	<title>ライドアラウンド in 岸和田</title>
+	<meta name="description"
+		content="自転車で街を巡ってスポットを訪れたり、グルメを楽しむことでポイントを獲得します。獲得したポイントは通貨として商品と交換もできるので、開催期間をたっぷり使ってポイントを集めましょう！">
+	<link rel="stylesheet" type="text/css" media="all" href="assets/css/style.css?ver3.9">
+	<meta property="og:title" content="ライドアラウンド in 岸和田" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://tour-de-nippon.jp/ridearound-kishiwada/" />
+	<meta property="og:image" content="https://tour-de-nippon.jp/ridearound-kishiwada/assets/img/ogimg.jpg" />
+	<meta property="og:site_name" content="ライドアラウンド in 岸和田" />
+	<meta property="og:description"
+		content="自転車で街を巡ってスポットを訪れたり、グルメを楽しむことでポイントを獲得します。獲得したポイントは通貨として商品と交換もできるので、開催期間をたっぷり使ってポイントを集めましょう！" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="ライドアラウンド in 岸和田" />
+	<meta name="twitter:description"
+		content="自転車で街を巡ってスポットを訪れたり、グルメを楽しむことでポイントを獲得します。獲得したポイントは通貨として商品と交換もできるので、開催期間をたっぷり使ってポイントを集めましょう！" />
+	<meta name="twitter:image" content="https://tour-de-nippon.jp/ridearound-kishiwada/assets/img/ogimg.jpg" />
+	<script src="https://cdn.jsdelivr.net/npm/viewport-extra@1.0.3/dist/viewport-extra.min.js"></script>
+	<script>
+		new ViewportExtra(375)
+	</script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-H4ZYJ5LENK"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-H4ZYJ5LENK');
+	</script>
+</head>
+
+<body>
+	<div class="main">
+		<header class="gHeader">
+			<h1 class="gHeader__logo">
+				<img src="assets/img/logotype.svg?0" alt="ライドアラウンド in 岸和田">
+			</h1>
+			<div class="hamburger"><span></span></div>
+		</header>
+				<div class="gNavi">
+			<ul class="gNaviList">
+				<li class="gNaviList__item">
+					<a href="#news" class="-scroll">ニュース</a>
+				</li>
+				<li class="gNaviList__item">
+					<a href="#about" class="-scroll">ライドアラウンドとは</a>
+				</li>
+				<li class="gNaviList__item">
+					<a href="#play" class="-scroll">遊び方</a>
+				</li>
+				<li class="gNaviList__item">
+					<a href="#area" class="-scroll">地域紹介</a>
+				</li>
+				<li class="gNaviList__item">
+					<a href="#campaign" class="-scroll">キャンペーン情報</a>
+				</li>
+				<li class="gNaviList__item">
+					<a href="#privilege" class="-scroll">賞品をGET！</a>
+				</li>
+				<li class="gNaviList__item">
+					<a href="#entry" class="-scroll">参加方法</a>
+				</li>
+
+				<li class="gNaviList__item">
+					<a href="#faq" class="-scroll">よくある質問</a>
+				</li>
+				<li class="gNaviList__item">
+					<a href="#contact" class="-scroll">お問合せ</a>
+				</li>
+			</ul>
+		</div>
+
+
+		<div class="mv">
+			<h1 class="mv__logo">
+				<img src="assets/img/logo.png" alt="ライドアラウンド in 岸和田">
+			</h1>
+			<div class="mv__info">
+				<img src="assets/img/free.svg?2" class="mv__free">
+				<div class="mv__description">
+					<div class="mv__descriptionInner">
+						<div class="mv__descriptionCopy">
+							街がテーマパークになる<br class="-onlySmall">位置情報アクティビティ
+						</div>
+					</div>
+				</div>
+				<img src="assets/img/date.png?25" class="mv__date">
+			</div>
+			<img src="assets/img/mv.png" class="mv__illust">
+		</div>
+
+		<!--ニュース-->
+		<div class="news main__contents" id="news">
+			<div class="main__inner">
+				<div class="contentHeader">
+					<h2 class="contentTitle"><span>ニュース</span></h2>
+				</div>
+				<ul class="newsList">
+					<li class="newsList__item">
+						<div class="newsList__itemDate">
+							2026.11.18
+						</div>
+						<div class="newsList__itemContent">
+
+							<h3 class="newsList__itemTitle">イベント終了時点での「総獲得ポイント」に応じて希望賞品を申請いただける「ランク別賞品」の申請フォームを開設しました。</h3>
+							<p>12/13までにご申請ください。<a href="#privilegeTotal" class="-scroll">詳細はこちら</a></p>
+						</div>
+					</li>
+					<li class="newsList__item">
+						<div class="newsList__itemDate">
+							2026.10.22
+						</div>
+						<div class="newsList__itemContent">
+							<h3 class="newsList__itemTitle"><a href="#eventspot" class="-scroll">イベント連携スポットが登場！</a></h3>
+							<p>本部にて150ポイント獲得しよう！</p>
+						</div>
+					</li>
+					<li class="newsList__item">
+						<div class="newsList__itemDate">
+							2026.10.03
+						</div>
+						<div class="newsList__itemContent">
+							<h3 class="newsList__itemTitle">本日よりイベント期間がスタートです！</h3>
+							<p>12月3日（木）までお楽しみください。</p>
+						</div>
+					</li>
+					<li class="newsList__item">
+						<div class="newsList__itemDate">
+							2026.09.15
+						</div>
+						<div class="newsList__itemContent">
+							<h3 class="newsList__itemTitle">事前エントリーを開始しました！</h3>
+							<p>10月3日（土）のイベント開始に先立ち事前エントリーを開始しました。<a href="https://travelo.jp/event-detail/?event_id=264"
+									target="_blank">エントリーはこちらから</a></p>
+						</div>
+					</li>
+					<li class="newsList__item">
+						<div class="newsList__itemDate">
+							2026.06.29
+						</div>
+						<div class="newsList__itemContent">
+							<h3 class="newsList__itemTitle">【開催決定】今年もライドアラウンドの開催が決定しました！</h3>
+							<p>開催期間は2026年10月3日（土）〜12月3日（木）を予定しております。現在、WEBをリニューアルしております。リニューアル完了まで今しばらくお待ちください。</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--ライドアラウンド とは-->
+		<div class="about" id="about">
+			<div class="main__inner">
+				<div class="about__inner">
+					<div class="contentHeader">
+						<div class="about__title">
+							<a href="/ridearound/" target="_blank">ライドアラウンドとは</a>
+						</div>
+						<h2 class="about__catch">自転車で街を巡るポイント獲得ゲーム！</h2>
+					</div>
+					<div class="about__description">
+						自転車で街を巡ってスポットを訪れたり、グルメを楽しむことでポイントを獲得します。獲得したポイントは<em>通貨</em>として商品と交換もできるので、開催期間をたっぷり使ってポイントを集めましょう！<br>
+						ただの観光では出会えない<em>地域の良いところ</em>に触れながら街をテーマパークのように遊べます！
+					</div>
+
+					<div class="button button--small" style="margin-top: 1.5em;">
+						<div class="button__container">
+							<a href="https://youtube.com/shorts/2Ng0pg6krVw?si=fR4iHp8yZvDExjpx" target="_blank"
+								class="button__inner -scroll">1分で分かる！ライドアラウンドって何？</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--遊び方-->
+		<div class="play main__contents" id="play">
+			<div class="main__inner">
+				<div class="contentHeader">
+					<h2 class="contentTitle"><span>遊び方</span></h2>
+					<div class="contentLead contentLead--center">
+						スマホアプリを使って、<br class="-onlySmall">岸和田エリアを走り回ろう！
+					</div>
+				</div>
+				<div class="playListContainer">
+					<div class="playListContainer__item">
+						<ul class="playList">
+							<li class="playList__item">
+								<div class="playList__itemInner">
+									<div class="playList__itemImage">
+										<img src="assets/img/play_start.png" alt="Start!!">
+									</div>
+									<h3 class="playList__itemTitle">自転車で<br>スポットを巡る！</h3>
+									<div class="playList__itemDescription">
+										決まったルートはありません。気になるスポットを見つけてオリジナルのサイクリングを楽しみましょう。
+									</div>
+								</div>
+							</li>
+							<li class="playList__item">
+								<div class="playList__itemInner">
+									<div class="playList__itemImage">
+										<img src="assets/img/play_checkin.png" alt="Check in!!">
+									</div>
+									<h3 class="playList__itemTitle">スマホで<br>チェックイン！</h3>
+									<div class="playList__itemDescription">
+										スポットに到着したらチェックインをしてポイントがゲットできます。スポットの中には追加得点が狙えるボーナスがあることも？！
+									</div>
+								</div>
+							</li>
+						</ul>
+						<!-- <div class="button button--xsmall">
+						<div class="button__container">
+							<a href="#areaMymap" class="button__inner -scroll">スポットを見る</a>
+						</div>
+					</div> -->
+					</div>
+					<div class="playListContainer__item">
+						<ul class="playList">
+							<li class="playList__item">
+								<div class="playList__itemInner">
+									<div class="playList__itemImage">
+										<img src="assets/img/play_point.png" alt="Present Get!!">
+									</div>
+									<h3 class="playList__itemTitle">集めたポイントを<br>商品と交換！</h3>
+									<div class="playList__itemDescription">
+										ポイントを集めて獲得した「通貨」を特典と交換できます。頑張った分だけ特典がもらえます！
+									</div>
+								</div>
+								<!-- <div class="button button--xsmall">
+								<div class="button__container">
+									<a href="#privilege" class="button__inner -scroll">賞品を見る</a>
+								</div>
+							</div> -->
+							</li>
+							<li class="playList__item">
+								<div class="playList__itemInner">
+									<div class="playList__itemImage">
+										<img src="assets/img/play_photo.png" alt="Take a picture!!">
+									</div>
+									<h3 class="playList__itemTitle">豪華賞品獲得の<br>チャンスが盛りだくさん！</h3>
+									<div class="playList__itemDescription">
+										自転車に乗り慣れていない方も十分上位を狙えます！
+									</div>
+								</div>
+								<!-- <div class="button button--xsmall">
+								<div class="button__container">
+									<a href="#privilege" class="button__inner -scroll">賞品を見る</a>
+								</div>
+							</div> -->
+							</li>
+						</ul>
+						<div class="button button--xsmall">
+							<div class="button__container">
+								<a href="#privilege" class="button__inner -scroll">賞品を見る</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="play__entry">
+					<div class="button">
+						<div class="button__container">
+							<a href="#entry" class="button__inner -scroll">参加方法をみる</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--おすすめの楽しみ方-->
+		<div class="recommend main__contents" id="recommend">
+			<div class="modelcourseContainer">
+				<!-- <div class="contentHeader">
+					<h2 class="contentTitle"><span>おすすめの楽しみ方</span></h2>
+				</div> -->
+				<!-- <h3 class="contentSubTitle"><span>モデルコース</span></h3> -->
+				<ul class="modelcourse">
+					<li class="modelcourse__item">
+						<h3 class="modelcourse__itemTitle">
+							tom's cyclingが<br>ライドアラウンド in 岸和田に参戦！
+						</h3>
+						<div class="modelcourse__itemContainer">
+							<div class="modelcourse__itemYoutube">
+								<div class="movie">
+									<iframe loading="lazy" src="https://www.youtube.com/embed/DakBUNbtRrw" frameborder="0"
+										allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen></iframe>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="modelcourse__item">
+						<h3 class="modelcourse__itemTitle">
+							まさくんとAD藤本が<br>岸和田の街を巡る！【前編】
+						</h3>
+						<div class="modelcourse__itemContainer">
+							<div class="modelcourse__itemYoutube">
+								<div class="movie">
+									<iframe loading="lazy" src="https://www.youtube.com/embed/OjfyHLINxdI" frameborder="0"
+										allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen></iframe>
+								</div>
+								<!-- <div class="caption">
+									この動画は昨年に撮影したものです。
+								</div> -->
+							</div>
+						</div>
+					</li>
+					<li class="modelcourse__item">
+						<h3 class="modelcourse__itemTitle">
+							まさくんとAD藤本が<br>岸和田の街を巡る！【後編】
+						</h3>
+						<div class="modelcourse__itemContainer">
+							<div class="modelcourse__itemYoutube">
+								<div class="movie">
+									<iframe loading="lazy" src="https://www.youtube.com/embed/UyZxHQZTLjc" frameborder="0"
+										allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+										allowfullscreen></iframe>
+								</div>
+								<!-- <div class="caption">
+									この動画は昨年に撮影したものです。
+								</div> -->
+							</div>
+						</div>
+					</li>
+				</ul>
+
+				<div class="caption">
+					本動画は2024年開催時に撮影したものです
+				</div>
+			</div>
+		</div>
+
+		<!--エリア-->
+		<div class="area main__contents" id="area">
+			<div class="contentHeader">
+				<h2 class="contentTitle"><span>地域紹介</span></h2>
+				<div class="contentLead contentLead--center">
+					<em>大阪府岸和田市がステージに！</em>
+					<!-- 街中からの海岸沿い、趣ある昔ながらの商店街、<br>お好きなロケーションをお楽しみいただけます。 -->
+				</div>
+			</div>
+
+			<div class="areaMap">
+				<div class="areaMap__description">
+					<span>ご近所の行きやすいスポットでポイントを貯めるも良し。岸和田市全域を走破して貯めるのも良しです。あなたのペースで楽しみましょう！</span>
+				</div>
+				<img src="assets/img/map.svg?0" class="areaMap__local">
+			</div>
+
+			
+			<div class="main__inner">
+				<div class="main__contents" id="eventspot">
+					<div class="contentHeader">
+						<h2 class="contentTitle"><span>イベント連携スポット</span></h2>
+						<div class="contentLead contentLead--center">
+							<em>各イベント会場にて、<br class="-onlySmall">ボーナス150ポイントを獲得しましょう！</em>
+						</div>
+					</div>
+					<div class="eventTableContainer">
+						<table class="eventTable eventTable--spot">
+							<tr>
+								<th>イベント名</th>
+								<th>日時</th>
+								<th>場所</th>
+								<th>イベント紹介</th>
+								<th>イベント詳細</th>
+							</tr>
+							<tr>
+								<td>岸和田城下<br>秋のうまいもんフェスタと<br>城あかり</td>
+								<td>11月8日（日）・14日（土）<br>10:00～16:00<br>※小雨決行・荒天中止</td>
+								<td>二の丸広場（本部）<br>岸和田市岸城町７−７</td>
+								<td>
+									<p>
+										令和8年11月に実施される第45回全国豊かな海づくり大会「魚庭（なにわ）の海おおさか大会」の機運醸成として、「海」に関する企画や「食」の提供のほか、岸和田城の夜間開場等の灯りイベントを実施します。<br>※小雨決行・荒天中止
+									</p>
+									<p style="color: #ea2929">
+										★「二の丸広場 本部」にて、ボーナス獲得の4桁数字を確認してください！入力して、ボーナス150ポイント獲得！（会場にてチェックインが必要です）
+									</p>
+								</td>
+								<td><a href="https://www.city.kishiwada.lg.jp/page/shokunight.html" target="_blank">詳細はこちら</a></td>
+							</tr>
+							<tr>
+								<td>もみじまつり</td>
+								<td>11月23日（祝・月）<br>10:30～15:00<br>※荒天中止</td>
+								<td>牛滝山大威徳寺（本部）<br>岸和田市大沢町１１７８</td>
+								<td>
+									<p>
+										美しく彩られた自然を「牛滝山もみじまつり」で楽しみませんか？食欲の秋にうれしい美味しい泉州の特産品の販売や、大威徳寺の御朱印授与もあります。是非、お越しください！<br>※小雨決行・荒天中止
+									</p>
+									<p style="color: #ea2929">
+										★「もみじまつり 本部」にて、ボーナス獲得の4桁数字を確認してください！入力して、ボーナス150ポイント獲得！（会場にてチェックインが必要です）
+									</p>
+								</td>
+								<td><a href="https://www.city.kishiwada.lg.jp/page/usitakisanmomizimaturi.html"
+										target="_blank">詳細はこちら</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+
+
+
+
+
+				<div class="areaMymap" id="areaMymap">
+					<iframe src="https://www.google.com/maps/d/embed?mid=1EWJD23AITMnNTXZfS7OyJeLPS1HZ5sU&ehbc=2E312F"></iframe>
+				</div>
+			</div>
+
+			<div class="galleryContainer swiper-container">
+				<ul class="gallerySlider swiper-wrapper">
+											<li class="gallerySlider__item swiper-slide">
+							<img src="assets/img/gallery1.jpg?0">
+						</li>
+											<li class="gallerySlider__item swiper-slide">
+							<img src="assets/img/gallery2.jpg?0">
+						</li>
+											<li class="gallerySlider__item swiper-slide">
+							<img src="assets/img/gallery3.jpg?0">
+						</li>
+											<li class="gallerySlider__item swiper-slide">
+							<img src="assets/img/gallery4.jpg?0">
+						</li>
+											<li class="gallerySlider__item swiper-slide">
+							<img src="assets/img/gallery5.jpg?0">
+						</li>
+											<li class="gallerySlider__item swiper-slide">
+							<img src="assets/img/gallery6.jpg?0">
+						</li>
+											<li class="gallerySlider__item swiper-slide">
+							<img src="assets/img/gallery7.jpg?0">
+						</li>
+											<li class="gallerySlider__item swiper-slide">
+							<img src="assets/img/gallery8.jpg?0">
+						</li>
+											<li class="gallerySlider__item swiper-slide">
+							<img src="assets/img/gallery9.jpg?0">
+						</li>
+									</ul>
+				<div class="swiper-button-prev swiper-button-prev--round"></div>
+				<div class="swiper-button-next swiper-button-next--round"></div>
+			</div>
+		</div>
+
+		
+
+		<!--オープニングDay-->
+		
+
+		<div class="specialEvent main__contents" id="eventspot">
+			<div class="main__inner">
+				<div class="contentHeader">
+					<h2 class="contentTitle"><span>同時開催イベント</span></h2>
+					<!-- <div style="text-align: center; font-size: 1.15rem; font-weight: bold;">エントリー開始までしばらくお待ちください。</div> -->
+				</div>
+
+				<ul class="eventList">
+					<li class="eventList__item">
+						<div class="eventList__image">
+							<img src="assets/img/event_quizrally.jpg">
+							<div class="button button--small -ignoreSmall" style="margin-top: 40px;">
+								<div class="button__container">
+									<a href="https://travelo.jp/event-detail/?event_id=267" target="_blank"
+										class="button__inner">イベントエントリーはこちら</a>
+								</div>
+							</div>
+						</div>
+						<div class="eventList__text">
+							<h3 class="eventList__title">新登場「クイズラリー編（全3コース）」を開催！</h3>
+							<!-- <div class="eventList__date">【対象期間】8月15日（木）～10月15日（火）</div> -->
+
+							<div class="eventList__description">
+								<p>
+									岸和田のまちを巡りながらクイズを解いて、豪華特典をGETしよう！<br>
+									参加費はもちろん無料。お子さまと一緒に楽しめるコースもご用意しています。ぜひ全コースコンプリートを目指してください。
+								</p>
+								<p>
+									<strong>【遊び方】</strong>
+									<span style="color: #cb3e95; font-weight: bold; display: block;">①行き先は謎の中！</span>
+									経由スポットは事前に明かされません。クイズを解きながら、次の目的地を目指しましょう。<br>
+									<span style="color: #cb3e95; font-weight: bold; display: block; margin-top: .5em;">②スポットでチェックイン</span>
+									指定の場所に到着してチェックインすると、クイズが出題されます。<br>
+									<span style="color: #cb3e95; font-weight: bold; display: block; margin-top: .5em;">③正解して次のスポットへ</span>
+									見事正解すると、次のスポットが表示されます。クイズに答えて、ゴールを目指しましょう！
+								</p>
+								<p>
+									<strong>【コース】</strong><br>
+									Aコース：親子で楽しむ城下町さんぽ「だんじり探偵団！お祭りのひみつを探せ」<br>
+									Bコース：行基の足あとをたどる「久米田・自然探検コース」<br>
+									Cコース：海から山まで走りきる「岸和田グランドツアー」
+								</p>
+								<p>
+									<strong>【完走特典（全員）】アプリ通貨＆達成カード</strong><br>
+									1コース完走毎に、アプリ上にて「300ローズ」をプレゼント。<br>
+									「ライドアラウンド in 岸和田」の<a href="#privilegePoint" class="-scroll">チケット交換</a>を楽しもう！
+								</p>
+								<p>
+									<strong>【完走特典（先着）】ちきりくん×ライドアラウンドオリジナルグッズ</strong><br>
+									完走したコースに応じて、下記の商品を先着でプレゼント。イベント終了後に発送します。<br>
+									Aコース：オリジナル巾着（先着150名）<br>
+									Bコース：オリジナルハンカチ（先着100名）<br>
+									Cコース：オリジナルエコバッグ（先着50名）
+								</p>
+								<p>
+									<strong>【完走特典（抽選）】お食事券</strong><br>
+									いずれか1コース完走で、「グルメリア六甲 お食事券5,000円分」を3名様にプレゼント！<br>
+									完走された方を対象に、イベント終了後に自動抽選を行います。（抽選へのお申し込みは不要です）
+								</p>
+								<div class="button button--small -onlySmall" style="margin-top: 10px;">
+									<div class="button__container">
+										<a href="https://travelo.jp/event-detail/?event_id=267" target="_blank"
+											class="button__inner">イベントエントリーはこちら</a>
+									</div>
+								</div>
+
+
+								<!-- <p class="eventList__postscript">
+									<span class="caption">
+										※注意事項<br>
+										・各イベント連携スポットでは、「ボーナス200ポイント」を獲得できますが、チェックインポイントはイベント当日を含め0点です。
+									</span>
+								</p> -->
+
+
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+
+		<!--キャンペーン情報-->
+		<div class="event main__contents" id="campaign">
+			<div class="main__inner">
+				<div class="contentHeader">
+					<h2 class="contentTitle"><span>キャンペーン情報</span></h2>
+					<!-- <div style="text-align: center; font-size: 1.15rem; font-weight: bold;">※2025の情報です。</div> -->
+				</div>
+				<ul class="eventList">
+					
+
+					<li class="eventList__item eventList__item--noimage" id="campaing_startdash">
+						<!-- <div class="eventList__image">
+							<img src="assets/img/kofuan.jpg">
+						</div> -->
+						<div class="eventList__text">
+							<h3 class="eventList__title">【スタートダッシュキャンペーン】10月中に500ポイントを目指せ！</h3>
+							<div class="eventList__date">
+								【期間】10月3日（土）～10月31日（土）
+							</div>
+							<div class="eventList__description">
+								<p>
+									条件：上記期間内に500ポイントGETした方<br>
+									対象：条件を満たした方の中から<em>抽選で20名</em><br>
+									参加方法：別途お申込みは不要​<br>
+									<span class="caption">※当選の発表は11月中旬を予定しています。当選された方のみにメールにてご連絡いたします。</span>
+								</p>
+								<p>
+									<strong>【賞品】</strong> MYOJUNKAにてご使用いただける3,000円チケット<br>
+									<span class="caption">平日（火～金）は「腸活弁当（1食1,000円）」、土日は「お食事処　MYOJUNKAでのお食事券」としてご利用いただけます。</span>
+								</p>
+								<p>
+									～MYOJUNKAとは～<br>
+									今日のカラダに、何を届ける？<br>食べることは、毎日のこと。だからこそ、一食一食を大切にしたい。<br>
+									季節の食材を取り入れながら、タンパク質、食物繊維、青魚、彩り、巡り。<br>
+									その日のテーマを一箱に。<br>
+									杉江能楽堂から、食でカラダをととのえる。<br>
+								</p>
+								<p class="caption">
+									★最新の営業時間は公式SNSをご確認ください<br>公式SNS：<a href="https://www.instagram.com/ko_fuan/"
+										target="_blank">https://www.instagram.com/ko_fuan/</a>
+								</p>
+								<!-- <p>
+						 <strong>【当選者】</strong><br>hideG／tama／tHama／UMA／おりゅう／かあさん／こんかぱ／つりた／トモ／ナオタダ／なっちゃん／はまちゃん／ビイト／ひで／ひと／まこっち／みぞぐち／ヤサイマシマシ／よう／大今橋
+					 </p> -->
+
+
+								<!-- <div class="button button--small" style="text-align: left; margin-top: 20px;">
+					 <div class="button__container">
+						 <a href="assets/img/130th_winner.pdf" target="_blank" class="button__inner">当選者一覧</a>
+					 </div>
+				 </div> -->
+							</div>
+						</div>
+					</li>
+
+					<li class="eventList__item eventList__item--noimage" id="campaing_complete">
+						<!-- <div class="eventList__image">
+						<img src="assets/img/event_pudding.jpg">
+					</div> -->
+						<div class="eventList__text">
+							<h3 class="eventList__title">【コンプリートキャンペーン】MAP制覇を目指せ！</h3>
+							<div class="eventList__date">
+								【期間】10月3日（土）～12月3日（木）
+							</div>
+							<div class="eventList__description">
+								<p>
+									条件：すべての常設スポットにチェックインした方<br>
+									対象：条件を満たした方の中から<em>抽選で3名</em><br>
+									参加方法：別途お申込みは不要​​<br>
+									<span class="caption">※当選の発表は12月中を予定しています。当選された方のみにメールにてご連絡いたします。</span>
+								</p>
+								<p>
+									<strong>【賞品】</strong> 豪華自転車グッズ
+								</p>
+								<!-- <p>
+									<strong>【当選者】</strong> ゆきおー／ASAGE／ハイカラうどん
+								</p> -->
+
+								<!-- <div class="button button--small" style="text-align: left; margin-top: 20px;">
+								<div class="button__container">
+									<a href="assets/img/130th_winner.pdf" target="_blank" class="button__inner">当選者一覧</a>
+								</div>
+							</div> -->
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!--賞品をGET！-->
+		<div class="privilege main__contents" id="privilege">
+			<div class="main__inner">
+				<div class="contentHeader">
+					<h2 class="contentTitle"><span>賞品をGET！</span></h2>
+					<!-- <div style="text-align: center; font-size: 1.15rem; font-weight: bold;">※2025の情報です。</div> -->
+				</div>
+				<div class="contentLead contentLead--center">
+					誰でも狙えるチャンスが盛りだくさん！
+				</div>
+				<ul class="privilegeNavi">
+					<li class="privilegeNavi__item">
+						<a href="#privilegePoint"
+							class="privilegeNavi__itemButton privilegeNavi__itemButton--point -scroll">チケット交換</a>
+					</li>
+					<li class="privilegeNavi__item">
+						<a href="#privilegeTotal"
+							class="privilegeNavi__itemButton privilegeNavi__itemButton--total -scroll">ランク別賞品</a>
+					</li>
+				</ul>
+
+				
+				<div class="privilegePoint contentBlock" id="privilegePoint" style="margin-top: 30px;">
+					<h3 class="contentSubTitle"><span>チケット交換</span></h3>
+					<div class="privilege__lead">
+						イベントで集めたポイントは「通貨」として商品チケットと交換することができます。<br class="-ignoreSmall">頑張った分だけご褒美をゲットしましょう！
+					</div>
+					<div class="privilege__targetContainer">
+						<div class="privilege__target">
+							全員
+						</div>
+						<div class="privilege__target privilege__target--date">
+							イベント開始～12/10まで
+						</div>
+					</div>
+					<!-- 
+				<div class="privilege__comingsoon">
+					coming soon
+				</div> -->
+
+
+					<ul class="circleList circleList--pinkpurple">
+
+						<li class="circleList__item">
+							<div class="circleList__itemEyecatch">
+								<img src="assets/img/point01.jpg?26" class="circleList__itemImage">
+								<div class="circleList__itemPoint">
+									<div class="circleList__itemPointInner">
+										<em>500</em>ローズ
+									</div>
+								</div>
+							</div>
+							<h4 class="circleList__itemTitle">
+								700円以下のタルトと交換
+								<span class="caption">タルトルタ</span>
+							</h4>
+						</li>
+						<li class="circleList__item">
+							<div class="circleList__itemEyecatch">
+								<img src="assets/img/point02.jpg?26" class="circleList__itemImage">
+								<div class="circleList__itemPoint">
+									<div class="circleList__itemPointInner">
+										<em>400</em>ローズ
+									</div>
+								</div>
+							</div>
+							<h4 class="circleList__itemTitle">
+								水なすぬか漬<br>（売れ行きによって別商品）
+								<span class="caption">旬茄</span>
+							</h4>
+						</li>
+						<li class="circleList__item">
+							<div class="circleList__itemEyecatch">
+								<img src="assets/img/point03.jpg?26" class="circleList__itemImage">
+								<div class="circleList__itemPoint">
+									<div class="circleList__itemPointInner">
+										<em>500</em>ローズ
+									</div>
+								</div>
+							</div>
+							<h4 class="circleList__itemTitle">
+								秘伝の熟成 味噌ダレ<br>（焼肉のたれ）
+								<span class="caption">焼肉ホルモン とっちゃん 久米田駅前店</span>
+							</h4>
+						</li>
+
+
+
+						<li class="circleList__item">
+							<div class="circleList__itemEyecatch">
+								<img src="assets/img/point04.jpg?26" class="circleList__itemImage">
+								<div class="circleList__itemPoint">
+									<div class="circleList__itemPointInner">
+										<em>500</em>ローズ
+									</div>
+								</div>
+							</div>
+							<h4 class="circleList__itemTitle">
+								180円以下の商品３つ
+								<span class="caption">お菓子屋 ふらね</span>
+							</h4>
+						</li>
+
+						<li class="circleList__item">
+							<div class="circleList__itemEyecatch">
+								<img src="assets/img/point05.jpg?26" class="circleList__itemImage">
+								<div class="circleList__itemPoint">
+									<div class="circleList__itemPointInner">
+										<em>300</em>ローズ
+									</div>
+								</div>
+							</div>
+							<h4 class="circleList__itemTitle">
+								350円以下の商品
+								<span class="caption">ブーランジェ・シャンソニエ</span>
+							</h4>
+						</li>
+						<li class="circleList__item">
+							<div class="circleList__itemEyecatch">
+								<img src="assets/img/point06.jpg?26" class="circleList__itemImage">
+								<div class="circleList__itemPoint">
+									<div class="circleList__itemPointInner">
+										<em>300</em>ローズ
+									</div>
+								</div>
+							</div>
+							<h4 class="circleList__itemTitle">
+								400円以下のおにぎり１つ
+								<span class="caption">おにぎり たべり屋</span>
+							</h4>
+						</li>
+						<li class="circleList__item">
+							<div class="circleList__itemEyecatch">
+								<img src="assets/img/point07.jpg?26" class="circleList__itemImage">
+								<div class="circleList__itemPoint">
+									<div class="circleList__itemPointInner">
+										<em>700</em>ローズ
+									</div>
+								</div>
+							</div>
+							<h4 class="circleList__itemTitle">
+								ハンバーガー Bランチ
+								<span class="caption">CHIPPER</span>
+							</h4>
+						</li>
+
+						<li class="circleList__item">
+							<div class="circleList__itemEyecatch">
+								<img src="assets/img/point08.jpg?26" class="circleList__itemImage">
+								<div class="circleList__itemPoint">
+									<div class="circleList__itemPointInner">
+										<em>300</em>ローズ
+									</div>
+								</div>
+							</div>
+							<h4 class="circleList__itemTitle">
+								300円以下の商品１つ
+								<span class="caption">ルパンナ</span>
+							</h4>
+						</li>
+
+						<li class="circleList__item">
+							<div class="circleList__itemEyecatch">
+								<img src="assets/img/point09.jpg?26" class="circleList__itemImage">
+								<div class="circleList__itemPoint">
+									<div class="circleList__itemPointInner">
+										<em>500</em>ローズ
+									</div>
+								</div>
+							</div>
+							<h4 class="circleList__itemTitle">
+								500円以下のスコーン<br>または洋菓子
+								<span class="caption">pâtisserie Lentement…<br>（パティスリー ラントマン）</span>
+							</h4>
+						</li>
+					</ul>
+
+					<div class="contentParagraph">
+						<div class="button button--small">
+							<div class="button__container">
+								<a href="https://drive.google.com/file/d/1X7th8WFMNq4-dUuHdOmEIzGELYX1IKu5/view" target="_blank"
+									class="button__inner">チケット利用方法</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="contentParagraph">
+						<h4 class="contentSub2Title">注意事項</h4>
+						<div class="caution">
+							<div class="caution__inner">
+								<ul class="caution__list">
+									<li class="caution__listItem">
+										<!-- <h3 class="caution__listItemTitle">その他の注意事項</h3> -->
+										<ul class="caution__listSub">
+											<li class="caution__listSubItem">
+												<div class="caution__listAttention">
+													<ul>
+														<li>
+															商品チケットは「通貨」を使用し交換します。「通貨」はチェックインポイントを集めると貯めることができます。
+														</li>
+														<li>
+															保有「通貨」を満たしていれば、同じ商品を複数回交換することも可能です。
+														</li>
+														<li>
+															商品チケットはそれぞれの準備数に達した時点で交換を終了いたします。予めご了承ください。
+														</li>
+														<li>
+															商品チケットの使用方法・場所はチケット詳細をご確認ください。
+														</li>
+														<li>
+															チケットを誤って交換した場合、元に戻すことはできません。
+														</li>
+														<li>
+															チケット交換をしてもランキングへの影響はありません。
+														</li>
+													</ul>
+												</div>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="privilegeTotal contentBlock" id="privilegeTotal">
+					<!-- <div style="text-align: center; font-size: 1.1rem; font-weight: bold; margin-bottom: .75em;">
+						※2025情報です。近日中に公開予定です。</div> -->
+					<h3 class="contentSubTitle"><span>ランク別賞品</span></h3>
+					<div class="privilege__lead">
+						スポットを巡れば巡るほどポイントを獲得でき、豪華賞品もGETのチャンス！<br class="-ignoreSmall">
+						イベント終了時点での「総獲得ポイント」に応じ希望賞品を申し込み可能です
+
+						<!-- 獲得ポイントに関係なく、イベント参加中に投稿していただいた写真でフォト賞に参加できます。（任意） -->
+					</div>
+					<div class="privilege__target">
+						全員
+					</div>
+
+					<div class="contentParagraph">
+						<div class="prize">
+							<h4 class="prizeTitle">賞品一例</h4>
+							<div class="prizeContainer swiper-container">
+								<ul class="prizeProduct swiper-wrapper">
+									<li class="prizeProduct__item swiper-slide">
+										<img src="assets/img/prize01.jpg?25" class="prizeProduct__itemImage">
+										<div class="prizeProduct__itemName">
+											釜山グループ お食事券
+										</div>
+									</li>
+									<li class="prizeProduct__item swiper-slide">
+										<img src="assets/img/prize02.jpg?26" class="prizeProduct__itemImage">
+										<div class="prizeProduct__itemName">
+											岸和田ビール
+										</div>
+									</li>
+
+									<li class="prizeProduct__item swiper-slide">
+										<img src="assets/img/prize03.jpg?26" class="prizeProduct__itemImage">
+										<div class="prizeProduct__itemName">
+											昆布セット
+										</div>
+									</li>
+								</ul>
+								<div class="swiper-pagination swiper-pagination--outside"></div>
+								<div class="swiper-button-prev swiper-button-prev--outside"></div>
+								<div class="swiper-button-next swiper-button-next--outside"></div>
+
+								<!-- <p class="caption">
+								※写真はイメージとなります
+							</p> -->
+							</div>
+
+													</div>
+					</div>
+
+
+					<div class="ranking" id="ranking">
+						<div class="tableContainer">
+							<table class="rankingTable">
+								<tr>
+									<th>
+										カテゴリー名
+									</th>
+									<th>
+										対象数
+									</th>
+									<th>
+										賞品内容
+									</th>
+									<th>
+										販売元
+									</th>
+								</tr>
+
+								<tr class="s_rank">
+									<td rowspan="2" class="rank">
+										Sランク<br>【3500ポイント以上】
+									</td>
+									<td>
+										2名
+									</td>
+									<td>
+										新米3kg＋旬の野菜詰合せ　
+									</td>
+									<td>
+										<a href="https://www.instagram.com/aisailand_izumino/" target="_blank">道の駅 愛彩ランド</a>
+									</td>
+								</tr>
+								<tr class="s_rank">
+									<td>
+										1名
+									</td>
+									<td>
+										釜山グループ4店舗で使用いただけるお食事券（5,000円分）
+									</td>
+									<td>
+										<a href="https://www.earthcompany.co.jp/" target="_blank">手作り冷麺・焼き肉　釜山道川</a>
+									</td>
+								</tr>
+
+
+								<tr class="a_rank">
+									<td rowspan="2" class="rank">
+										Aランク<br>【1500ポイント以上】
+									</td>
+									<td>
+										3名
+									</td>
+									<td>
+										洋菓子セット（3,000円相当）
+									</td>
+									<td>
+										<a href="https://www.t-yokogawa.com/" target="_blank">T.YOKOGAWA</a>
+									</td>
+								</tr>
+								<tr class="a_rank">
+									<td>
+										3名
+									</td>
+									<td>
+										岸和田ビール（鐵工、黒鐵、白鐵　各1本）
+									</td>
+									<td>
+										<a href="https://www.kishiwada-beer.com/" target="_blank">北海鉄工所</a>
+									</td>
+								</tr>
+
+								<tr class="b_rank">
+									<td rowspan="4" class="rank">
+										Bランク<br>【500ポイント以上】
+									</td>
+									<td>
+										5名
+									</td>
+									<td>
+										洋菓子セット（1,500円相当）
+									</td>
+									<td>
+										<a href="https://c-matsui.com/" target="_blank">シャルパンティエマツイ</a>
+									</td>
+								</tr>
+
+								<tr class="b_rank">
+									<td>
+										5名
+									</td>
+									<td>
+										四つ屋根だんじり せんべい
+									</td>
+									<td>
+										<a href="https://kishiwadafugetsudou.com/" target="_blank">岸和田風月堂</a>
+									</td>
+								</tr>
+								<tr class="b_rank">
+									<td>
+										5名
+									</td>
+									<td>
+										城下町もなか
+									</td>
+									<td>
+										<a href="https://www.instagram.com/koyama.baikadou/" target="_blank">小山梅花堂</a>
+									</td>
+								</tr>
+								<tr class="b_rank">
+									<td>
+										5名
+									</td>
+									<td>
+										昆布セット（1,500円相当）
+									</td>
+									<td>
+										<a href="https://torii-shop.com/?srsltid=AfmBOopIRVZ8KhAxaetO2vjjiANfByM9L7FjGyeudifQ0GOKSu-i4Lc8"
+											target="_blank">鳥居商店</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+
+
+						<div style="margin-block: 10px 30px; font-size: .85rem;">
+							※応募者多数の場合は抽選となります。<br>
+							※事務局より当選者の方へ直接ご連絡いたします。<br>
+							※応募はおひとり様1回となります。複数回お申込みがあった場合は全てのお申込みが無効となります。<br>
+							※賞品内容および期間等のキャンペーンの実施内容は、都合により予告なく変更になる場合があります。
+						</div>
+
+						<div class="button button--small">
+							<div class="button__container">
+								<p>
+									<a href="https://form.run/@ride-kishiwada2026"
+										target="_blank" class="button__inner">申し込む（12月13日〆切）</a>
+								</p>
+								<!-- <p>＜申込締め切り＞<br>12月15日（日）</p> -->
+							</div>
+						</div>
+
+					</div>
+
+
+
+					
+				</div>
+			</div>
+		</div>
+
+		<!--参加方法-->
+		<div class="entry main__contents" id="entry">
+			<div class="main__inner main__inner--narrow">
+				<div class="contentHeader">
+					<h2 class="contentTitle"><span>参加方法</span></h2>
+				</div>
+				<div class="button button--small" style="margin: 30px auto;">
+					<div class="button__container">
+						<a href="https://drive.google.com/file/d/14r0c3jE3smEuwgUSvfZEqHTVvtK7Za6z/view?usp=drive_link"
+							target="_blank" class="button__inner">プレイガイド</a>
+					</div>
+				</div>
+
+				<ul class="entryStep">
+					<li class="entryStep__item">
+						<h3 class="entryStep__itemTitle">アプリをダウンロード</h3>
+						<ul class="entryStep__itemBullet">
+							<li>
+								スマホアプリ「TraVelo（トラベロ）」をダウンロード
+							</li>
+							<li>
+								「TraVelo」のユーザー登録が必要です。（無料）
+							</li>
+						</ul>
+						<div class="download">
+							<div class="travelo">
+								<div class="travelo__title">
+									<img src="assets/img/travelo_logo.svg">
+								</div>
+								<div class="travelo__applink">
+									<ul class="applinkList">
+										<li class="applinkList__item">
+											<a href="https://apps.apple.com/jp/app/travelo/id1664042502" target="_blank"
+												class="applinkList__itemButton"><img src="assets/img/button_app.png"></a>
+											<img src="assets/img/qr_app.svg" class="applinkList__itemQR">
+										</li>
+										<li class="applinkList__item">
+											<a href="https://play.google.com/store/apps/details?id=jp.travelo.app" target="_blank"
+												class="applinkList__itemButton"><img src="assets/img/button_googleplay.png"></a>
+											<img src="assets/img/qr_google.svg" class="applinkList__itemQR">
+										</li>
+									</ul>
+									<p class="travelo__link">
+										<a href="https://tour-de-nippon.jp/travelo/" target="_blank">公式WEBサイト</a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+
+						<!-- <ul class="download">
+						<li class="download__item">
+							<a href="https://apps.apple.com/us/app/travelo/id1664042502" target="_blank"><img src="assets/img/button_app.png"></a>
+						</li>
+						<li class="download__item">
+							<a href="https://play.google.com/store/apps/details?id=jp.travelo.app" target="_blank"><img src="assets/img/button_googleplay.png"></a>
+						</li>
+					</ul> -->
+
+					</li>
+
+					<li class="entryStep__item">
+						<h3 class="entryStep__itemTitle">エントリー（無料）</h3>
+						<ul class="entryStep__itemBullet">
+							<li>
+								エントリーするイベントを選択します。
+							</li>
+							<li>
+								カテゴリーなど必要情報を入力し、エントリー完了です。
+							</li>
+							<li>
+								スマホ1台につき1エントリーとなります。<br><span class="note">例：スマホを持つお父さんとスマホを持たないお子さま＝1エントリー</span>
+							</li>
+						</ul>
+						<ul class="entryProperty entryProperty--narrow">
+							<li class="entryProperty__item">
+								<div class="entryProperty__itemImage">
+									<img src="assets/img/icon_free.svg">
+								</div>
+								<div class="entryProperty__itemText">
+									参加費<br>無料
+								</div>
+							</li>
+							<li class="entryProperty__item">
+								<div class="entryProperty__itemImage">
+									<img src="assets/img/icon_allage.svg">
+								</div>
+								<div class="entryProperty__itemText">
+									年齢<br>制限なし
+								</div>
+							</li>
+							<li class="entryProperty__item">
+								<div class="entryProperty__itemImage">
+									<img src="assets/img/icon_people.svg">
+								</div>
+								<div class="entryProperty__itemText">
+									参加人数<br>制限なし
+								</div>
+							</li>
+
+							<li class="entryProperty__item">
+								<div class="entryProperty__itemImage">
+									<img src="assets/img/icon_mobile.svg">
+								</div>
+								<div class="entryProperty__itemText">
+									スマホ1台<br>1エントリー
+								</div>
+							</li>
+						</ul>
+					</li>
+
+					<li class="entryStep__item">
+						<h3 class="entryStep__itemTitle">遊び方</h3>
+						<h4 class="entryStep__itemSubTitle">マップ</h4>
+						<ul class="entryStep__itemBullet">
+							<li>
+								専用アプリ「TraVelo」から、イベント内にある「マップ」を開きます。
+							</li>
+							<li>
+								「マップ」には、エリアとなる「街」の名所や名店、裏スポットなど自慢のご当地スポットが、たくさん掲載されています。
+							</li>
+							<li>
+								スポットの中から、気になるお店や施設を選び、自転車で向かいます。スポットまでのルートに指定はありません。お好きなルートで巡りましょう！
+							</li>
+							<li>
+								道案内が不安な場合は、ナビゲーション機能をご利用ください。
+							</li>
+						</ul>
+
+						<h4 class="entryStep__itemSubTitle">得点</h4>
+						<div class="entryStep__itemBulletTitle">
+							チェックインポイント
+						</div>
+						<ul class="entryStep__itemBullet">
+							<li>
+								選んだスポットに到着すると、「チェックイン」ができるようになり、「ポイント」を獲得できます。
+							</li>
+						</ul>
+						<div class="entryStep__itemBulletTitle">
+							ボーナスポイント
+						</div>
+						<ul class="entryStep__itemBullet">
+							<li>
+								またスポットによっては「ボーナスポイント」が設定されています。「お店の一押しメニューを購入せよ」等といった「お題」にこたえることで、追加でポイントをGETすることができます。
+							</li>
+						</ul>
+
+
+
+						<h4 class="entryStep__itemSubTitle">敢闘賞</h4>
+						<div class="entryStep__itemBulletTitle">
+							チケット交換
+						</div>
+						<ul class="entryStep__itemBullet">
+							<li>
+								イベントで集めたポイントは「通貨」として商品チケットと交換することができます。
+							</li>
+						</ul>
+
+						<!-- <div class="entryStep__itemBulletTitle">
+						フォト賞
+					</div>
+					<ul class="entryStep__itemBullet">
+						<li>
+							街を巡りながら出会った風景を、SNSで投稿すると「フォト賞」にノミネートされます。<br>
+							スポットをたくさん巡る自信のない方でも、素敵な写真をとって豪華賞品をGETしましょう。
+						</li>
+					</ul> -->
+
+						<ul class="entryProperty entryProperty--narrow">
+							<li class="entryProperty__item">
+								<div class="entryProperty__itemImage">
+									<img src="assets/img/icon_every.svg">
+								</div>
+								<div class="entryProperty__itemText">
+									いつでも<br>どこでも<br>スタートOK
+								</div>
+							</li>
+							<li class="entryProperty__item">
+								<div class="entryProperty__itemImage">
+									<img src="assets/img/icon_time.svg">
+								</div>
+								<div class="entryProperty__itemText">
+									時間制限<br>なし
+								</div>
+							</li>
+							<li class="entryProperty__item">
+								<div class="entryProperty__itemImage">
+									<img src="assets/img/icon_calendar.svg">
+								</div>
+								<div class="entryProperty__itemText">
+									数日掛けて<br>チャレンジOK
+								</div>
+							</li>
+							<li class="entryProperty__item">
+								<div class="entryProperty__itemImage">
+									<img src="assets/img/icon_gps.svg">
+								</div>
+								<div class="entryProperty__itemText">
+									ポイントは<br>GPSが自動で取得
+								</div>
+							</li>
+						</ul>
+					</li>
+
+									</ul>
+
+
+
+				<div class="cautionFrame">
+					<h3 class="cautionFrame__title">注意事項</h3>
+					<ul class="cautionFrame__list">
+						<li class="cautionFrame__listItem">
+							イベント参加には「TraVelo」のユーザー登録（無料）が必要となります。
+						</li>
+						<li class="cautionFrame__listItem">
+							本イベントへの参加はアプリをダウンロードされた方に限ります。（スマートフォンを使用せず同行された方は対象外となります）
+						</li>
+						<li class="cautionFrame__listItem">
+							アプリの操作方法や不具合・救済措置については<a href="https://note.com/tour_de_nippon/n/nd04f2b8d8583"
+								target="_blank">こちら</a>をご確認ください。
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!--持ち物-->
+		<div class="bring main__contents" id="bring">
+			<div class="main__inner">
+				<div class="contentHeader">
+					<h2 class="contentTitle"><span>持ち物</span></h2>
+				</div>
+				<ul class="bringList">
+					<li class="bringList__item">
+						<img src="assets/img/icon_required.svg" class="bringList__itemType">
+						<img src="assets/img/bring_bike.svg" class="bringList__itemIcon">
+						<h3 class="bringList__itemTitle">自転車</h3>
+						<div class="bringList__itemDescription">
+							整備された道交法に準じた自転車でご参加ください。レンタサイクルの利用をご希望の場合は下記レンタサイクルをご覧ください。<br>※大阪府では「自転車保険」の加入が義務となっているため必ずご自身でご加入ください。
+						</div>
+					</li>
+
+					<li class="bringList__item">
+						<img src="assets/img/icon_required.svg" class="bringList__itemType">
+						<img src="assets/img/bring_racer.svg" class="bringList__itemIcon">
+						<h3 class="bringList__itemTitle">ヘルメット</h3>
+						<div class="bringList__itemDescription">
+							安全性を確保するため自転車用ヘルメットの着用をお願いいたします。
+						</div>
+					</li>
+
+					<li class="bringList__item">
+						<img src="assets/img/icon_required.svg" class="bringList__itemType">
+						<img src="assets/img/bring_mobile.svg" class="bringList__itemIcon">
+						<h3 class="bringList__itemTitle">スマホ</h3>
+						<div class="bringList__itemDescription">
+							専用アプリ「TraVelo」をダウンロードし、ご参加いただきます。お持ちでないお子さま等は保護者の方の同伴のもとお楽しみください。
+						</div>
+					</li>
+
+					<li class="bringList__item">
+						<img src="assets/img/icon_required.svg" class="bringList__itemType">
+						<img src="assets/img/bring_insurance.svg" class="bringList__itemIcon">
+						<h3 class="bringList__itemTitle">保険</h3>
+						<div class="bringList__itemDescription">
+							参加中の事故・傷病への補償を希望する場合は、ご自身で保険にご加入ください。
+							<!-- <div class="bringList__itemButton">
+							<a href="https://www.pref.nara.jp/53824.htm" target="_blank">詳細はこちら</a>
+						</div> -->
+						</div>
+					</li>
+
+					<li class="bringList__item">
+						<img src="assets/img/icon_recommend.svg" class="bringList__itemType">
+						<img src="assets/img/bring_holder.svg" class="bringList__itemIcon">
+						<h3 class="bringList__itemTitle">スマホホルダー</h3>
+						<div class="bringList__itemDescription">
+							サイクリング中に専用アプリを使用する際にあると便利です。
+						</div>
+					</li>
+
+					<li class="bringList__item">
+						<img src="assets/img/icon_recommend.svg" class="bringList__itemType">
+						<img src="assets/img/bring_battery.svg" class="bringList__itemIcon">
+						<h3 class="bringList__itemTitle">モバイルバッテリー</h3>
+						<div class="bringList__itemDescription">
+							専用アプリはバッテリーを消耗するため必ずご持参ください。途中でバッテリーが切れると完走の証明が出来なくなる場合があります。
+						</div>
+					</li>
+					<li class="bringList__item">
+						<img src="assets/img/icon_recommend.svg" class="bringList__itemType">
+						<img src="assets/img/bring_lock.svg" class="bringList__itemIcon">
+						<h3 class="bringList__itemTitle">自転車の鍵</h3>
+						<div class="bringList__itemDescription">
+							スポットによっては自転車を停めて移動する必要がある場合もあります。飲食店などに立ち寄る際にも鍵があると便利です。
+						</div>
+					</li>
+
+				</ul>
+
+				<div class="cautionFrame">
+					<!-- <h3 class="cautionFrame__title">注意事項</h3> -->
+					<ul class="cautionFrame__list">
+						<li class="cautionFrame__listItem">
+							スマートフォンは1台につき1エントリーとなります。入賞や特典はエントリーされた方のみ対象です。<br>例：スマホを持つお父さんとスマホを持たないお子さま＝1エントリー
+						</li>
+						<!-- <li class="cautionFrame__listItem">
+						茨城県では自転車損害賠償責任保険への加入が努力義務とされています。
+					</li> -->
+					</ul>
+				</div>
+
+				<div class="contentParagraph">
+					<h3 class="contentSubTitle"><span>My自転車が無くても参加OK！</span></h3>
+					<h4 class="contentSub2Title">レンタサイクル</h4>
+					<div class="rentaCycleContainer swiper-container">
+						<ul class="rentaCycle swiper-wrapper">
+							<li class="rentaCycle__item swiper-slide">
+								<!-- <div class="rentaCycle__itemCity">
+								あきる野市
+							</div> -->
+								<img src="assets/img/renta_kishiwada.jpg" class="rentaCycle__itemImage">
+								<div class="rentaCycle__itemText">
+									<div class="rentaCycle__itemName">
+										岸和田シェアサイクル
+									</div>
+									<table class="rentaCycle__itemInfo">
+										<tr>
+											<th>
+												場所
+											</th>
+											<td>
+												<a href="https://maps.app.goo.gl/mdBumy7wYTUpvzxy9" target="_blank">道の駅愛彩ランド バス停前</a>
+											</td>
+										</tr>
+										<tr>
+											<th>
+												営業時間
+											</th>
+											<td>
+												9:00～23:59
+											</td>
+										</tr>
+										<tr>
+											<th>
+												料金
+											</th>
+											<td>
+												​​他の移動手段と組み合わせて時々利用する場合は「1回会員」、1日中時間を気にせず利用したい場合は「1日パス」がお得です。
+											</td>
+										</tr>
+									</table>
+									<div class="button button--small">
+										<div class="button__container">
+											<a href="https://www.city.kishiwada.osaka.jp/soshiki/129/kishiwada-sharecycle.html"
+												target="_blank" class="button__inner">詳細をみる</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="rentaCycle__item swiper-slide">
+								<!-- <div class="rentaCycle__itemCity">
+								青梅市
+							</div> -->
+								<img src="assets/img/renta_danjirin.jpg" class="rentaCycle__itemImage">
+								<div class="rentaCycle__itemText">
+									<div class="rentaCycle__itemName">
+										レンタサイクル だんじリン
+									</div>
+									<table class="rentaCycle__itemInfo">
+										<tr>
+											<th>
+												場所
+											</th>
+											<td>
+												<a href="https://maps.app.goo.gl/2bnPAJ8hndezTwbn9" target="_blank">岸和田駅3号自転車等駐車場</a>
+											</td>
+										</tr>
+										<tr>
+											<th>
+												営業時間
+											</th>
+											<td>
+												6:30～21:00
+											</td>
+										</tr>
+										<tr>
+											<th>
+												料金
+											</th>
+											<td>
+												300円／1日（申込のあった日の翌朝10時まで）<br>
+												3000円／1か月<br>
+												※台数に限りがございます。予めご了承ください。
+											</td>
+										</tr>
+									</table>
+
+									<div class="button button--small">
+										<div class="button__container">
+											<a href="https://www.kishiwada-cci.or.jp/kishiwada-tmo/" target="_blank"
+												class="button__inner">詳細をみる</a>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="swiper-pagination swiper-pagination--outside"></div>
+						<div class="swiper-button-prev swiper-button-prev--outside"></div>
+						<div class="swiper-button-next swiper-button-next--outside"></div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<!--よくある質問-->
+		<div class="faq main__contents" id="faq">
+			<div class="main__inner main__inner--narrow">
+				<div class="contentHeader">
+					<h2 class="contentTitle"><span>よくある質問</span></h2>
+				</div>
+				<div class="button button--small" style="margin: 0 auto 30px; max-width: 25em;">
+					<a href="https://note.com/tour_de_nippon/n/nd04f2b8d8583" class="button__inner"
+						target="_blank">アプリの不具合と対処方法/救済措置はこちら</a>
+				</div>
+				<ul class="faqList">
+					<li class="faqList__item" id="faq1">
+						<div class="faqList__itemQ">
+							参加費はかかりますか？
+						</div>
+						<div class="faqList__itemA">
+							本イベントは無料でご参加いただけます。ただし、ボーナスをクリアする際や寄り道をされる際の飲食代や施設への入館料などはご自身でご準備ください。
+						</div>
+					</li>
+					<li class="faqList__item" id="faq2">
+						<div class="faqList__itemQ">
+							アプリの使い方が分かりません。
+						</div>
+						<div class="faqList__itemA">
+							アプリ内「マイページ」から「遊び方」をご確認ください。<br>ブラウザ版の<a href="https://travelo.jp/how-to-play"
+								target="_blank">こちら</a>からもご確認いただけます。
+
+						</div>
+					</li>
+
+					<li class="faqList__item" id="faq3">
+						<div class="faqList__itemQ">
+							走行中アプリが停止して動かなくなってしまいました。
+						</div>
+						<div class="faqList__itemA">
+							アプリが起動できない場合、イベント続行はできません。後日、中断した段階から再開ができるので併せてご検討ください。
+						</div>
+					</li>
+					<li class="faqList__item" id="faq4">
+						<div class="faqList__itemQ">
+							途中でスマホのバッテリーが切れてしまい、アプリでの走行ができません。
+						</div>
+						<div class="faqList__itemA">
+							モバイルバッテリーを携行を推奨しております。バッテリー切れでアプリが起動できない場合、イベント続行はできません。後日、中断した段階から再開ができるので併せてご検討ください。
+						</div>
+					</li>
+					<li class="faqList__item" id="faq5">
+						<div class="faqList__itemQ">
+							スポットについてもチェックインできません。
+						</div>
+						<div class="faqList__itemA">
+							チェックインができるGPSの範囲内に到着していない可能性があります。チェックイン機能はGPS機能を利用しています。あらかじめスマートフォンのGPS機能をONにしてください。対象スポットのGPS感知エリアに到着したら「チェックイン」が押せるようになります。それでもチェックインが出来ない場合は、当該のスポットはチェックインをせずにそのスポットの写真を撮影してそのまま走行を続けてください。その後、下記2つのどちらかの方法で事務局へご連絡ください。事務局で確認し、ポイントを加算させていただきます。<br>
+							①走行中の場合：プレイ中画面右上のiマーク＞「イベント問合せ（事務局との1対1のチャット機能）」より「スポット名」「スポット写真」を送付ください。<br>
+							②走行終了後の場合：マイページ＞「不具合報告・お問い合わせ」より「ユーザーID（マイページより9から始まる）」「イベント名／コース名」「スポット名」をご連絡ください。
+						</div>
+					</li>
+					<li class="faqList__item" id="faq6">
+						<div class="faqList__itemQ">
+							ボーナスポイントの獲得方法がわかりません。
+						</div>
+						<div class="faqList__itemA">
+							一部スポットには追加得点がもらえるボーナスがある場合があります。チェックインをした後に、「スペシャルアクション」として特別ポイントが押せるようになります。表示されているお題をクリアし、対象店舗にて秘密のコード（数字4桁）を教えてもらい入力してください。ボーナスポイントが獲得できます。もし、ポイントの獲得ができなかった場合、下記2つのどちらかの方法で事務局へご連絡ください。事務局で確認し、ポイントを加算させていただきます。<br>
+							①走行中の場合：プレイ中画面右上のiマーク＞「イベント問合せ（事務局との1対1のチャット機能）」より「スポット名」「お題をクリアした証明（レシートなど）」を送付ください。<br>
+							②走行終了後の場合：マイページ＞「不具合報告・お問い合わせ」より「ユーザーID（マイページより9から始まる）」「イベント名／コース名」「スポット名」をご連絡ください。
+						</div>
+					</li>
+					<li class="faqList__item" id="faq7">
+						<div class="faqList__itemQ">
+							通貨の獲得方法が分かりません。
+						</div>
+						<div class="faqList__itemA">
+							「通貨（コイン）」はチェックインポイント・ボーナスポイントを集め、「ミッション」を達成することで貯めることができます。ミッションは300ポイント到達、というように獲得ポイントに応じて定められています。
+						</div>
+					</li>
+					<li class="faqList__item" id="faq8">
+						<div class="faqList__itemQ">
+							貯めた通貨の交換の使い方が分かりません。
+						</div>
+						<div class="faqList__itemA">
+							アプリ内「ウォレット」で貯めた通貨が確認できます。通貨を選択すると該当通貨で交換できる「商品チケット」が表示されますので通貨を使ってご希望のチケットへ交換してください。<br>
+							※通貨には利用期間が定められています。利用期間が過ぎてしまった通貨を使用することはできません。ご注意ください。<br>
+							※誤って通貨を消費してしまった場合、元に戻すことはできません。ご注意ください。
+						</div>
+					</li>
+					<li class="faqList__item" id="faq9">
+						<div class="faqList__itemQ">
+							商品チケットの使い方が分かりません。
+						</div>
+						<div class="faqList__itemA">
+							アプリ内「ウォレット」＞所持チケット一覧に通貨で交換した商品チケットが保管されています。引換え場所へ行き、利用するを選択肢し、最後の画面操作を引換窓口の方に確認してもらい商品を受け取ってください。<br>
+							※チケット引換えには利用期間が定められています。利用期間が過ぎてしまったチケットを使用することはできません。ご注意ください。<br>
+							※チケットによっては数量上限があるものがあります。上限に達し次第引換え終了となりますのでご注意ください。
+						</div>
+					</li>
+					<li class="faqList__item" id="faq10">
+						<div class="faqList__itemQ">
+							スタート時間は決まっていますか？
+						</div>
+						<div class="faqList__itemA">
+							決まっていません。期間内であればいつでもどこからでもイベントに参加できます。（スポットの営業時間にご注意ください）
+						</div>
+					</li>
+					<li class="faqList__item" id="faq11">
+						<div class="faqList__itemQ">
+							複数の端末のポイントを合算することはできますか？
+						</div>
+						<div class="faqList__itemA">
+							できません。ご家族・グループなど複数名でご参加の場合も、ポイントは1端末ごとに加算されます。
+						</div>
+					</li>
+					<li class="faqList__item" id="faq12">
+						<div class="faqList__itemQ">
+							指定のスポット以外に寄り道することはできますか？
+						</div>
+						<div class="faqList__itemA">
+							問題ありません。ぜひスポットを巡りながら、地域の魅力を見つけましょう。
+						</div>
+					</li>
+					<li class="faqList__item" id="faq13">
+						<div class="faqList__itemQ">
+							参加できる自転車に決まりはありますか？
+						</div>
+						<div class="faqList__itemA">
+							ありません。電動自転車やレンタル自転車でのご参加も可能です。ただし、道路交通法の遵守をお願いいたします。
+						</div>
+					</li>
+					<li class="faqList__item" id="faq14">
+						<div class="faqList__itemQ">
+							チェックインポイントやボーナスポイントは1ヵ所につき1回しか獲得できないのですか？また、日付が変われば2回目は可能ですか？
+						</div>
+						<div class="faqList__itemA">
+							チェックインポイントやボーナスポイントともにイベント期間を通して1回のみのポイント加算となります。
+						</div>
+					</li>
+					<li class="faqList__item" id="faq15">
+						<div class="faqList__itemQ">
+							ランキングに結果が反映されません。
+						</div>
+						<div class="faqList__itemA">
+							ランキングは1時間に1回の更新となります。即時反映でないことを予めご了承ください。
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+
+		<!--注意事項-->
+		<div class="attention main__contents" id="attention">
+			<div class="main__inner main__inner--narrow">
+				<div class="contentHeader">
+					<h2 class="contentTitle"><span>注意事項</span></h2>
+				</div>
+
+				<!--その他の注意事項-->
+				<div class="contentParagraph">
+					<!-- <div class="contentHeader">
+					<h2 class="contentSub2Title">その他の注意事項</h2>
+				</div> -->
+					<div class="caution">
+						<div class="caution__inner">
+							<ul class="caution__list">
+
+								<li class="caution__listItem">
+									<ul class="caution__listSub">
+										<li class="caution__listSubItem">
+											<div class="caution__listAttention">
+												<ul>
+													<li>
+														本イベントは専用アプリ上でのみ行います。専用アプリをご利用いただけない場合、ご参加はできません。
+													</li>
+													<li>
+														お１人様あたり１台のスマホで専用アプリを使用していただく必要があります。グループで走行された場合でも、お１人様１台ご準備ください。
+													</li>
+													<li>
+														ボーナスポイントを獲得するには、ボーナスポイント対象店舗の営業時間内に行っていただく必要があります。事前に走行計画を設定されることをおすすめします。
+													</li>
+													<li>
+														チケット交換はイベント期間中に限ります。過去に遡って交換をすることはできませんのでご了承ください。
+													</li>
+
+													<li>
+														エリア内に誘導員の配置や事務局手配のエイドステーションの設置はありません。本アプリを利用いただきながら、スポットとなっているグルメなどを各自のペースで自由にお楽しみください。
+													</li>
+													<li>
+														本イベントは、開催期間中何回でもご参加いただけます。（再エントリー不要）
+													</li>
+													<li>
+														本イベントの内容は、事前の告知なく変更、または終了させていただく場合がございます。
+													</li>
+													<li>
+														本イベントは、開催期間内であっても、システム障害その他の理由でサービスを停止する場合がございます。
+													</li>
+												</ul>
+											</div>
+										</li>
+
+
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<!--イベント参加規約-->
+		<div class="rules main__contents" id="rules">
+			<div class="main__inner main__inner--narrow">
+				<div class="contentHeader">
+					<h2 class="contentTitle"><span>イベント参加規約</span></h2>
+				</div>
+				<div class="caution">
+					<div class="caution__inner">
+						<ul class="caution__list -number">
+							<li class="caution__listItem">
+								私は、心疾患・疾病等なく、健康に留意し、十分な準備をして本イベントに参加します。感染症、傷病、事故、紛失等に対し、リスクや損失を理解したうえで自己責任において本イベントに参加します。
+							</li>
+							<li class="caution__listItem">
+								私は、主催者が設けたすべての規約、規則、指示に従い、本イベント及び付帯行事で発生した事故に対し、自己の責任において処理し、事故が主催者の故意または重大な過失に起因する場合を除き、主催者・管理者並びに参加者・関係者を非難したり責任を問わない事を誓います。
+							</li>
+							<li class="caution__listItem">
+								私は、本イベント出走前に、使用する自転車が安全基準に適合している事を確認し、本イベントで安全に走行ができるよう自己責任において整備および検車して参加します。
+							</li>
+							<li class="caution__listItem">
+								私は、本イベント参加中、道路交通法をはじめとする交通法規および規則を順守して、安全な走行を行います。
+							</li>
+							<li class="caution__listItem">
+								私は、本イベント参加に支障があると判断された場合、主催者の開催中止の指示に直ちに従います。また、その他、主催者の安全管理・運営上の指示に従います。
+							</li>
+							<li class="caution__listItem">
+								私は、主催者が本イベント参加中の事故・傷病・感染症への感染を補償する保険に加入していないことを承知しており、補償が必要な場合は、自ら保険に加入します。
+							</li>
+							<li class="caution__listItem">
+								私は、個人の所有物及び用具（自転車・付属品含む）に対し、一切の責任を持ち主催者及び他イベント参加者、一般来場者に対してその紛失、破損等の責任を問わない事を誓います。
+							</li>
+							<li class="caution__listItem">
+								私は、強風、豪雨、積雪、震災、その他気象条件の悪化、事故等（それに伴う会場周辺の環境変動、社会情勢の変化を含む）また、政府や地方自治体等からの緊急事態宣言の発令および本イベント開催自粛要請を受けてのものなど、主催者の責によらない事由で本イベントの中止または変更、中断が生じても異存がない事を承諾します。
+							</li>
+							<li class="caution__listItem">
+								私は、上記の事由で本イベントが中止・変更になったとしても、移動や宿泊等にかかる費用を主催者が負担しない事を承諾します。
+							</li>
+							<li class="caution__listItem">
+								私は、本イベントに関する放送、ウェブサイト、印刷物、SNSアカウント等の媒体や、次回イベントの広告等による私の写真、映像を自由に使用する事を承諾します。
+							</li>
+							<li class="caution__listItem">
+								私は、本イベントで主催者及び共催者、関係団体が取得した個人情報が、イベント参加者へのサービス向上を目的とし、参加案内、関連情報の通知、次回イベントの案内、確認連絡、協賛・協力・関係団体からのサービスの提供、記録発表等に利用されることを承諾します。
+							</li>
+							<li class="caution__listItem">
+								私の家族・親族、保護者（参加者が未成年の場合）、及び一緒に参加するメンバーが、本イベントへの参加と本規約について承諾しています。私が未成年の場合、私は、保護者の承諾を得て出場します。
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--開催概要-->
+		<div class="overview main__contents" id="overview">
+			<div class="main__inner main__inner--narrow">
+				<div class="contentHeader">
+					<h2 class="contentTitle"><span>開催概要</span></h2>
+				</div>
+				<div class="overviewContainer">
+					<table class="overviewTable">
+						<tr>
+							<th>名称</th>
+							<td>-CYCLE EXPO- ライドアラウンド in 岸和田 2026</td>
+						</tr>
+						<tr>
+							<th>参加費</th>
+							<td>無料</td>
+						</tr>
+						<tr>
+							<th>期間</th>
+							<td>2026年10月3日（土）～12月3日（木）</td>
+						</tr>
+						<tr>
+							<th>主催</th>
+							<td>岸和田市</td>
+						</tr>
+						<tr>
+							<th>企画運営</th>
+							<td>
+								一般社団法人ルーツ・スポーツ・ジャパン
+							</td>
+						</tr>
+						<tr>
+							<th>事務局</th>
+							<td>
+								ツール・ド・ニッポン事務局
+							</td>
+						</tr>
+					</table>
+				</div>
+
+				<!-- <ul class="sponsarBanner">
+					<li class="sponsarBanner__item">
+						<a href="https://www.instagram.com/osaka_landscape/" target="_blank">
+							<img src="assets/img/project_logo.png" alt="映える大阪プロジェクト">
+						</a>
+					</li>
+				</ul>
+				<p style="margin-top:10px; text-align:center; font-size:90%;">本事業は、大阪の景観魅力発信を行う<br
+						class="-onlySmall">「映える大阪プロジェクト」に参画しています。
+					</p> -->
+			</div>
+		</div>
+
+		<!--お問い合わせ-->
+		<div class="contact main__contents" id="contact">
+			<div class="main__inner main__inner--narrow">
+				<div class="contentHeader">
+					<h2 class="contentTitle"><span>お問合せ</span></h2>
+				</div>
+				<div class="button button--small" style="margin: 0 auto 30px; max-width: 25em;">
+					<a href="https://note.com/tour_de_nippon/n/nd04f2b8d8583" class="button__inner"
+						target="_blank">アプリの不具合と対処方法/救済措置はこちら</a>
+				</div>
+				<div class="button">
+					<div class="button__container">
+						<a href="mailto:info@roots-sports.jp" class="button__inner"><img
+								src="/ridearound-tourdenishimino/assets/img/icon_mail.svg" class="icon">メールで問合せ</a>
+					</div>
+				</div>
+				<div class="contact__mail">
+					<a href="mailto:info@roots-sports.jp">info@roots-sports.jp</a>
+				</div>
+
+				<!-- <a href="tel:03-3354-2300" class="contact__tel">03-3354-2300</a>
+				<div class="contact__hours">
+					（平日のみ10:00～17:30）
+				</div> -->
+
+				<div class="contact__address">
+					〒160-0002<br>東京都新宿区四谷坂町12-21 コモンズビル7階<br>（ルーツ・スポーツ・ジャパン内）
+				</div>
+				<div class="contact__note">※お問合せの際は「ライドアラウンド in 岸和田について」とお伝えいただくとスムーズです。</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="fixedButton -ignoreSmall">
+		<a href="https://travelo.jp/event-detail/?event_id=264" target="_blank" class="entryButton">
+			エントリー受付中<img src="assets/img/free2.svg?0" class="icon">
+		</a>
+	</div>
+
+
+	<footer class="gFooter">
+		<div class="gFooter__button -onlySmall">
+			<a href="https://travelo.jp/event-detail/?event_id=264" target="_blank" class="entryButton">
+				エントリー受付中<img src="assets/img/free2.svg?0" class="icon">
+			</a>
+		</div>
+		<div class="gFooter__bg"></div>
+		<a href="#" class="pagetop -scroll">
+			<span class="pagetop__inner"><img src="assets/img/arrow.svg"></span>
+		</a>
+	</footer>
+
+	<footer class="commonFooter">
+	<div class="commonFooter__mainmenu">
+		<ul class="mainmenu">
+			<li class="mainmenu__item">
+				<a href="https://note.com/tour_de_nippon/n/nd04f2b8d8583" target="_blank">お問い合わせ</a>
+			</li>
+			<li class="mainmenu__item">
+				<a href="http://roots-sports.jp" target="_blank">運営会社</a>
+			</li>
+			<li class="mainmenu__item">
+				<a href="http://roots-sports.jp/contact/" target="_blank">開催をご検討の地域・企業様</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- <div class="commonFooter__note">
+		<div class="commonFooter__noteInner commonFooter__noteInner--center">
+			8月11日（木）～8月15日（月）は事務局が夏季休業となります。<br>
+			※メールのご回答・ご返信は8月16日（火）以降となります。予めご了承ください。
+		</div>
+	</div> -->
+
+	<div class="commonFooter__sitemenu">
+		<div class="sitemenu">
+			<div class="sitemenu__category">
+				<h2 class="sitemenu__categoryTitle"><div class="subheading"><span>期間イベント</span></div>ライドアラウンド</h2>
+				<ul class="sitemenu__navi">
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound/" target="_blank">公式サイト</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-fvillage-hokkaido/" target="_blank">北海道：江別/恵庭/南幌/由仁/長沼/栗山/北広島</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-tagajo/" target="_blank">宮城県：多賀城</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-la-france.jp/" target="_blank">山形県：上山</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-iwaki/" target="_blank">福島県：いわき</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-utsunomiya/" target="_blank">栃木県：宇都宮</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-ibaraki-central/" target="_blank">茨城県：県央</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-ibaraki-south/" target="_blank">茨城県：県南</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-tsuchiura/" target="_blank">茨城県：土浦</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-kasumigaura/" target="_blank">茨城県：かすみがうら</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-oarai/" target="_blank">茨城県：大洗</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-hitachi/" target="_blank">茨城県：日立</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-kisarazu/" target="_blank">千葉県：木更津</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-musashifuchu/" target="_blank">東京都：府中</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-tama/" target="_blank">東京都：多摩</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-gotemba/" target="_blank">静岡県：御殿場</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-kambara/" target="_blank">静岡県：蒲原・由比</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-tourdenishimino/" target="_blank">岐阜県：西美濃</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-kishiwada/" target="_blank">大阪府：岸和田</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-awajishima/" target="_blank">兵庫県：淡路島</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-nara/" target="_blank">奈良県：奈良/田原/明日香/吉野</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-kamiamakusa/" target="_blank">熊本県：上天草</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/ridearound-takamori/" target="_blank">熊本県：高森</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="sitemenu__category">
+				<h2 class="sitemenu__categoryTitle"><div class="subheading"><span>期間イベント</span></div>ツール･ド チャレンジ</h2>
+				<ul class="sitemenu__navi">
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/cycle-ball/" target="_blank">全国：サイクルボール</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/oshi-ichi/" target="_blank">宮城県：牡鹿半島</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/vts-fukushima/" target="_blank">福島県：福島/二本松/伊達/相馬</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/date-fukushima/" target="_blank">福島県：伊達</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/niigata-3area/" target="_blank">新潟県：上越/魚沼/十日町・津南</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/tonenumata-gunma/" target="_blank">群馬県：利根沼田</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/daigo/" target="_blank">茨城県：大子</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://www.tour-de-nippon.jp/kasu-ichi/" target="_blank">茨城県：かすみがうら</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/fuchu-tokyo/" target="_blank">東京都：府中</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/gotemba/" target="_blank">静岡県：御殿場</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/susono-fuji/" target="_blank">静岡県：裾野</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/izu-numazu/" target="_blank">静岡県：伊豆・沼津</a>
+					</li>
+
+					<li class="sitemenu__naviItem">
+						<a href="https://www.qbei.jp/contents/event/tour-de-kansai.html" target="_blank">関西３府県：京都/奈良/和歌山</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://matsurin.info/tour-de-kyotanabe.html" target="_blank">京都府：京田辺</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://www.qbei.jp/contents/event/tour-de-kyototamba.html" target="_blank">京都府：京都丹波</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/sakurajima/" target="_blank">鹿児島県：桜島</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="sitemenu__category">
+				<h2 class="sitemenu__categoryTitle"><div class="subheading"><span>1dayイベント</span></div>レース/ロングライド</h2>
+				<ul class="sitemenu__navi">
+					<!-- <li class="sitemenu__naviItem">
+						<a href="https://www.tour-de-nippon.jp/series/" target="_blank">公式サイト</a>
+					</li> -->
+					<!-- <li class="sitemenu__naviItem">
+						<a href="https://www.tour-de-nippon.jp/series/nissan-stadium/" target="_blank">日産スタジアム・サイクルパークフェスティバル</a>
+					</li> -->
+					<li class="sitemenu__naviItem">
+						<a href="https://www.tour-de-nippon.jp/series/fujisanhc/" target="_blank">富士山ヒルクライム</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://www.tour-de-nippon.jp/series/fujiichi/" target="_blank">富士山１周サイクリング</a>
+					</li>
+					<!-- <li class="sitemenu__naviItem">
+						<a href="https://www.tour-de-nippon.jp/series/daigo-yamizosan/" target="_blank">いばらきKOM in 八溝山</a>
+					</li>
+
+					<li class="sitemenu__naviItem">
+						<a href="https://www.tour-de-nippon.jp/series/tsukuba/" target="_blank">９極の耐９ in 筑波サーキット</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://www.tour-de-nippon.jp/series/onsen-rider-kaga" target="_blank">温泉ライダー in 加賀温泉郷</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://www.tour-de-nippon.jp/series/hachiko-kiritanpo-ride/" target="_blank">ハチ公きりたんぽライド</a>
+					</li> -->
+				</ul>
+			</div>
+
+			<div class="sitemenu__category">
+				<h2 class="sitemenu__categoryTitle"><div class="subheading"><span>others</span></div>その他</h2>
+				<ul class="sitemenu__navi">
+				<li class="sitemenu__naviItem">
+						<a href="https://kasumigaura-activity.jp/" target="_blank">かすみがうらアクティビティコミッション</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/kasumigaura-funcamping/" target="_blank">かすみがうらファンキャンピング</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/kasumigaura-charipay/" target="_blank">かすみがうらチャリPay</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://kagaon-cycling.jp/" target="_blank">加賀温泉駅からはじまるサイクリング 加賀ON</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://shizumichi-cycling.jp/" target="_blank">しずみち自転車旅</a>
+					</li>
+					<!-- <li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/kasumigaura-activity-village/" target="_blank">かすみがうらアクティビティヴィレッジCAMP WEEK</a>
+					</li> -->
+					
+					<!-- <li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/kasumigaura-ride-village/" target="_blank">かすみがうらライドヴィレッジ</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://taiki-dialog.jp/" target="_blank">大紀町ダイアログ</a>
+					</li> -->
+				</ul>
+			</div>
+			<div class="sitemenu__category">
+				<h2 class="sitemenu__categoryTitle"><div class="subheading"><span>application</span></div>アプリ</h2>
+				<ul class="sitemenu__navi">
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/app-tourde/" target="_blank">ツール・ド</a>
+					</li>
+					<li class="sitemenu__naviItem">
+						<a href="https://tour-de-nippon.jp/travelo/" target="_blank">TraVelo</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="commonFooter__tourde">
+		<div class="tourdeIntro">
+		<img src="/common/assets/img/avator.svg" class="tourdeIntro__avator">
+			<div class="tourdeIntro__lead">
+				<img src="/common/assets/img/logo_travelo_wht.svg" class="tourdeIntro__leadLogo">
+			</div>
+			<div class="tourdeIntro__screenshot">
+				<img src="/common/assets/img/screenshot.png?0">
+			</div>
+			<div class="tourdeIntro__download">
+				<div class="tourdeIntro__downloadCopy">
+					次の休み、<br>どこ走りに行こう?
+				</div>
+				<ul class="tourdeIntro__downloadButton">
+					<li>
+						<a href="https://apps.apple.com/us/app/travelo/id1664042502" target="_blank"><img src="/common/assets/img/badge_app.svg"></a>
+					</li>
+					<li>
+						<a href="https://play.google.com/store/apps/details?id=jp.travelo.app" target="_blank"><img src="/common/assets/img/badge_googleplay.svg"></a>
+					</li>
+				</ul>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="commonFooter__bottom">
+		<img src="/common/assets/img/logo_tdn.svg?0" class="commonFooter__bottomLogo">
+	</div>
+</footer>
+
+<link rel="stylesheet" type="text/css" media="all" href="/common/assets/css/style.css?1.7">
+<script type="text/javascript" src="/common/assets/js/script.js?0"></script>
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+	<script type="text/javascript" src="assets/lib/swiper.min.js"></script>
+	<script type="text/javascript" src="assets/lib/smooth-scroll.polyfills.min.js"></script>
+	<script type="text/javascript" src="assets/lib/imagesloaded.pkgd.min.js"></script>
+	<script type="text/javascript" src="assets/js/script.js?ver1.8"></script>
+</body>
+
+</html>

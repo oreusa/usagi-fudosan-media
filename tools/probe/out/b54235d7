@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-170786194-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-170786194-1');
+</script>
+<meta charset="utf-8">
+<meta name="format-detection" content="telephone=no">
+<meta name="theme-color" content="#ffffff">
+<meta name="viewport" content="width=device-width,user-scalable=yes">
+<meta property="og:title" content="ミュージアム | 滋賀県立陶芸の森" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.sccp.jp/exhibitions/toigeikan-exhibition/" />
+<!--<meta property="og:image" content="/Image/common/ogp.jpg" />-->
+<meta property="og:site_name"  content="滋賀県立陶芸の森" />
+<meta property="og:description" content="滋賀県立陶芸の森は、やきものを素材に創造・研修・展示など多様な機能を持つ公園として、また、人・物・情報の交流をとおして地域産業の振興や新しい文化創造の場とするとともに、滋賀から世界へ情報を発信することを目的に整備され、平成２年６月に竣工、開設されました。大きく分けて4つのエリアから構成され、目的に合わせて、コンセプトの異なるそれぞれのエリアを楽しんでいただけます。文化・芸術の発信地として、園内にはいたるところに陶芸家の作品を屋外展示、また自然豊かな公園としてもご利用いただけます。" />
+<link rel="icon" href="https://www.sccp.jp/sccp-logo.ico">
+<link href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+<link href="https://www.sccp.jp/drawer/drawer.css" rel="stylesheet" type="text/css">
+<link href="https://www.sccp.jp/CSS/reset.css" rel="stylesheet" type="text/css">
+<link href="https://www.sccp.jp/CSS/common.css" rel="stylesheet" type="text/css">
+<link href="https://www.sccp.jp/CSS/page.css" rel="stylesheet" type="text/css">
+<link href="https://www.sccp.jp/CSS/sp.css" rel="stylesheet" type="text/css">
+<link href="//use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+<link href="https://www.sccp.jp/CSS/page_modify.css" rel="stylesheet" type="text/css">
+<link href="/CSS/print.css" media="print" rel="stylesheet" type="text/css">
+<title>陶芸館（陶芸美術館） | ミュージアム | 滋賀県立陶芸の森</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+<![endif]-->
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<link rel='stylesheet' id='sass-basis-core-css' href='https://www.sccp.jp/wp-content/plugins/snow-monkey-forms/dist/css/fallback.css' media='all' />
+<link rel='stylesheet' id='snow-monkey-forms-css' href='https://www.sccp.jp/wp-content/plugins/snow-monkey-forms/dist/css/app.css' media='all' />
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='font-awesome-css' href='https://www.sccp.jp/wp-content/plugins/arconix-shortcodes/includes/css/font-awesome.min.css' media='all' />
+<link rel='stylesheet' id='arconix-shortcodes-css' href='https://www.sccp.jp/wp-content/plugins/arconix-shortcodes/includes/css/arconix-shortcodes.min.css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css' href='https://www.sccp.jp/wp-content/plugins/contact-form-7/includes/css/styles.css' media='all' />
+<link rel='stylesheet' id='fancybox-for-wp-css' href='https://www.sccp.jp/wp-content/plugins/fancybox-for-wordpress/assets/css/fancybox.css' media='all' />
+<link rel='stylesheet' id='parent-style-css' href='https://www.sccp.jp/wp-content/themes/sccp.jp/style.css' media='all' />
+<link rel='stylesheet' id='child-style-css' href='https://www.sccp.jp/wp-content/themes/sccp.jp/style.css' media='all' />
+<link rel="https://api.w.org/" href="https://www.sccp.jp/wp-json/" />
+<!-- Fancybox for WordPress v3.3.7 -->
+<style type="text/css">
+	.fancybox-slide--image .fancybox-content{background-color: #FFFFFF}div.fancybox-caption{display:none !important;}
+	
+	img.fancybox-image{border-width:10px;border-color:#FFFFFF;border-style:solid;}
+	div.fancybox-bg{background-color:rgba(102,102,102,0.3);opacity:1 !important;}div.fancybox-content{border-color:#FFFFFF}
+	div#fancybox-title{background-color:#FFFFFF}
+	div.fancybox-content{background-color:#FFFFFF}
+	div#fancybox-title-inside{color:#333333}
+	
+	
+	
+	div.fancybox-caption p.caption-title{display:inline-block}
+	div.fancybox-caption p.caption-title{font-size:14px}
+	div.fancybox-caption p.caption-title{color:#333333}
+	div.fancybox-caption {color:#333333}div.fancybox-caption p.caption-title {background:#fff; width:auto;padding:10px 30px;}div.fancybox-content p.caption-title{color:#333333;margin: 0;padding: 5px 0;}body.fancybox-active .fancybox-container .fancybox-stage .fancybox-content .fancybox-close-small{display:block;}
+</style><script type="text/javascript">
+	jQuery(function () {
+
+		var mobileOnly = false;
+		
+		if (mobileOnly) {
+			return;
+		}
+
+		jQuery.fn.getTitle = function () { // Copy the title of every IMG tag and add it to its parent A so that fancybox can show titles
+			var arr = jQuery("a[data-fancybox]");jQuery.each(arr, function() {var title = jQuery(this).children("img").attr("title") || '';var figCaptionHtml = jQuery(this).next("figcaption").html() || '';var processedCaption = figCaptionHtml;if (figCaptionHtml.length && typeof DOMPurify === 'function') {processedCaption = DOMPurify.sanitize(figCaptionHtml, {USE_PROFILES: {html: true}});} else if (figCaptionHtml.length) {processedCaption = jQuery("<div>").text(figCaptionHtml).html();}var newTitle = title;if (processedCaption.length) {newTitle = title.length ? title + " " + processedCaption : processedCaption;}if (newTitle.length) {jQuery(this).attr("title", newTitle);}});		}
+
+		// Supported file extensions
+
+				var thumbnails = jQuery("a:has(img)").not(".nolightbox").not('.envira-gallery-link').not('.ngg-simplelightbox').filter(function () {
+			return /\.(jpe?g|png|gif|mp4|webp|bmp|pdf)(\?[^/]*)*$/i.test(jQuery(this).attr('href'))
+		});
+		
+
+		// Add data-type iframe for links that are not images or videos.
+		var iframeLinks = jQuery('.fancyboxforwp').filter(function () {
+			return !/\.(jpe?g|png|gif|mp4|webp|bmp|pdf)(\?[^/]*)*$/i.test(jQuery(this).attr('href'))
+		}).filter(function () {
+			return !/vimeo|youtube/i.test(jQuery(this).attr('href'))
+		});
+		iframeLinks.attr({"data-type": "iframe"}).getTitle();
+
+				// Gallery All
+		thumbnails.addClass("fancyboxforwp").attr("data-fancybox", "gallery").getTitle();
+		iframeLinks.attr({"data-fancybox": "gallery"}).getTitle();
+
+		// Gallery type NONE
+		
+		// Call fancybox and apply it on any link with a rel atribute that starts with "fancybox", with the options set on the admin panel
+		jQuery("a.fancyboxforwp").fancyboxforwp({
+			loop: false,
+			smallBtn: true,
+			zoomOpacity: "auto",
+			animationEffect: "fade",
+			animationDuration: 500,
+			transitionEffect: "fade",
+			transitionDuration: "300",
+			overlayShow: true,
+			overlayOpacity: "0.3",
+			titleShow: true,
+			titlePosition: "inside",
+			keyboard: true,
+			showCloseButton: true,
+			arrows: true,
+			clickContent:false,
+			clickSlide: "close",
+			mobile: {
+				clickContent: function (current, event) {
+					return current.type === "image" ? "toggleControls" : false;
+				},
+				clickSlide: function (current, event) {
+					return current.type === "image" ? "close" : "close";
+				},
+			},
+			wheel: false,
+			toolbar: true,
+			preventCaptionOverlap: true,
+			onInit: function() { },			onDeactivate
+	: function() { },		beforeClose: function() { },			afterShow: function(instance) { jQuery( ".fancybox-image" ).on("click", function( ){ ( instance.isScaledDown() ) ? instance.scaleToActual() : instance.scaleToFit() }) },				afterClose: function() { },					caption : function( instance, item ) {var title = "";if("undefined" != typeof jQuery(this).context ){var title = jQuery(this).context.title;} else { var title = ("undefined" != typeof jQuery(this).attr("title")) ? jQuery(this).attr("title") : false;}var caption = jQuery(this).data('caption') || '';if ( item.type === 'image' && title.length ) {caption = (caption.length ? caption + '<br />' : '') + '<p class="caption-title">'+jQuery("<div>").text(title).html()+'</p>' ;}if (typeof DOMPurify === "function" && caption.length) { return DOMPurify.sanitize(caption, {USE_PROFILES: {html: true}}); } else { return jQuery("<div>").text(caption).html(); }},
+		afterLoad : function( instance, current ) {var captionContent = current.opts.caption || '';var sanitizedCaptionString = '';if (typeof DOMPurify === 'function' && captionContent.length) {sanitizedCaptionString = DOMPurify.sanitize(captionContent, {USE_PROFILES: {html: true}});} else if (captionContent.length) { sanitizedCaptionString = jQuery("<div>").text(captionContent).html();}if (sanitizedCaptionString.length) { current.$content.append(jQuery('<div class=\"fancybox-custom-caption inside-caption\" style=\" position: absolute;left:0;right:0;color:#000;margin:0 auto;bottom:0;text-align:center;background-color:#FFFFFF \"></div>').html(sanitizedCaptionString)); }},
+			})
+		;
+
+			})
+</script>
+<!-- END Fancybox for WordPress -->
+<style id="wp-custom-css">
+/* 「非公開：」の文字だけを赤くする */
+.ttl .private-label {
+    color: #ff0000;
+    font-weight: bold;
+}
+</style>
+<script type="text/javascript">
+// TOP用　緊急メッセージ　
+    $(function () {
+// 最初のコンテンツ以外は非表示
+        $(".accordion-content:not(:first-of-type)").css("display", "none");
+// 矢印の向きを変えておく
+        $(".accordion-title:first-of-type").addClass("open");
+        $(".accordion-title").click(function () {
+            $(".open").not(this).removeClass("open").next().slideUp(300);
+            $(this).toggleClass("open").next().slideToggle(300);
+        });
+    });
+</script>
+</head>
+<body id="exhibitions" class="under">
+<div class="drawer drawer--right">
+<div id="wrapper">
+<header id="header">
+	<div id="hdrInner">
+		<h1 id="hdrLogo"><a href="https://www.sccp.jp">陶芸の森</a></h1>
+			<!-- =============================== PC GLOBAL NAVIGATION =============================== -->
+		<nav id="gNavi">
+			<ul>
+				<li><a href="/what-sccp-is/">陶芸の森とは</a></li>
+				<li><a href="/exhibitions/toigeikan-exhibition/">陶芸館<span>(陶芸美術館)</span></a></li>
+				<li><a href="https://digital-museum.sccp.jp/">3D</a></li>
+				<li><a href="/shigaraki-shinko/">甲賀市立信楽産業展示館</a></li>
+				<li><a href="/artist-in-r/">創作研修館<span>(アーティスト・イン・レジデンス)</span></a></li>
+			</ul>
+			<ul>
+				<li><a href="/edu-programs/">つちっこプログラム</a></li>
+				<li><a href="/events/sigarakigaku/">しがらき学ノススメ!<span>(一般向け陶芸講座)</span></a></li>
+				<li><a href="/events/event/">イベント</a></li>
+				<li><a href="https://shop.sccp.jp/" target="_blank">ミュージアムショップ</a></li>
+				<li><a href="/guide/">来園のご案内</a></li>
+			</ul>
+		</nav>
+		<!-- =============================== HAMBURGER NAVIGATION =============================== -->
+		<div id="hbgNavi">
+			<button type="button" class="drawer-toggle drawer-hamburger"><span class="sr-only">toggle navigation</span> <span class="drawer-hamburger-icon"></span></button>
+			<nav class="drawer-nav">
+			<ul class="drawer-menu">
+				<li><a href="/what-sccp-is/">陶芸の森とは</a></li>
+				<li><a href="/exhibitions/toigeikan-exhibition/">陶芸館<span>(陶芸美術館)</span></a></li>
+				<li><a href="https://digital-museum.sccp.jp/">3D</a></li>
+				<li><a href="/shigaraki-shinko/">甲賀市立信楽産業展示館</a></li>
+				<li><a href="/artist-in-r/">創作研修館<span>(アーティスト・イン・レジデンス)</span></a></li>
+				<li><a href="/edu-programs/">つちっこプログラム</a></li>
+				<li><a href="/events/sigarakigaku/">しがらき学ノススメ<span>(一般向け陶芸講座)</span></a></li>
+				<li><a href="/events/event/">イベント</a></li>
+				<li><a href="https://shop.sccp.jp/" target="_blank">ミュージアムショップ</a></li>
+				<li><a href="/guide/">来園のご案内</a></li>
+				</ul>
+				<p class="hbgNavi_icon">
+				<a href="https://www.facebook.com/togeinomori" target="_blank"><i class="fab fa-facebook-f"></i></a>  
+				<a href="https://twitter.com/tougeinomori" target="_blank"><i class="fab fa-twitter"></i></a>  
+				<a href="https://www.instagram.com/sccp_museum/" target="_blank"><i class="fab fa-instagram"></i></a></p>
+				<p class="hbgNavi_lang"><a href="/" class="active">JA</a>　<a href="/e/">EN</a></p>
+			</nav>
+		</div>
+		<div id="subNavi">
+			<ul class="langBox">
+				<li><a href="https://www.sccp.jp" class="active">JA</a></li>
+				<li><a href="https://www.sccp.jp/e/" class="">EN</a></li>
+			</ul>
+			<ul class="snsBox">
+				<li><a href="https://www.facebook.com/togeinomori" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="https://twitter.com/tougeinomori" target="_blank"><i class="fab fa-twitter"></i></a></li>
+               <li><a href="https://www.instagram.com/sccp_museum/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+<div id="header--alt">
+	<h1 id="hdrLogo--alt"><a href="https://www.sccp.jp">陶芸の森</a></h1>
+	<!-- =============================== PC GLOBAL NAVIGATION =============================== -->
+	<nav id="gNavi--alt">
+		<ul>
+				<li><a href="/what-sccp-is/">陶芸の森とは</a></li>
+				<li><a href="/exhibitions/toigeikan-exhibition/">陶芸館<span>(陶芸美術館)</span></a></li>
+				<li><a href="https://digital-museum.sccp.jp/">3D</a></li>
+				<li><a href="/shigaraki-shinko/">甲賀市立信楽産業展示館</a></li>
+				<li><a href="/artist-in-r/">創作研修館<span>(アーティスト・イン・レジデンス)</span></a></li>
+		</ul>
+		<ul>
+				<li><a href="/edu-programs/">つちっこプログラム</a></li>
+				<li><a href="/events/sigarakigaku/">しがらき学ノススメ<span>(一般向け陶芸講座)</span></a></li>
+				<li><a href="/events/event/">イベント</a></li>
+				<li><a href="https://shop.sccp.jp/" target="_blank">ミュージアムショップ</a></li>
+				<li><a href="/guide/">来園のご案内</a></li>
+			</ul>
+	</nav>
+</div>
+<div id="sidebar">
+	<div class="box_01">
+		<ul class="langBox">
+			<li><a href="https://www.sccp.jp" class="active">JA</a></li>
+			<li><a href="https://www.sccp.jp/e/" class="">EN</a></li>
+		</ul>
+		<ul class="snsBox">
+			<li><a href="https://www.facebook.com/togeinomori" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+			<li><a href="https://twitter.com/tougeinomori" target="_blank"><i class="fab fa-twitter"></i></a></li>
+			<li><a href="https://www.instagram.com/sccp_museum/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+		</ul>
+	</div>
+	<div class="totop"><a href="#wrapper">PAGE TOP</a></div>
+</div>
+<div id="luxy">
+<div id="contents" class="cf">
+<div id="main-title">
+<div class="btn-sub_R"><a href="/calendars/">営業カレンダー</a></div>
+</div>
+<div id="breadcrumb">
+	<ul>
+		<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.sccp.jp" itemprop="url"><span itemprop="title">ホーム</span></a></li>
+				<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><span itemprop="title">陶芸館（陶芸美術館）</span></li>
+			</ul>
+</div>
+<div id="localNavigation" class="localNavigation_02">
+	<ul class="list_01">
+		<li><a href="https://www.sccp.jp/exhibitions/toigeikan-exhibition/" class="active">陶芸館（陶芸美術館）</a></li><li><a href="https://www.sccp.jp/exhibitions/tougeikan-gallery/">陶芸館ギャラリー</a></li>		<li><a href="https://www.sccp.jp/museum-shop/">ミュージアムショップ</a></li>
+	</ul>
+
+</div>
+<div id="primary">
+	<div id="content" role="main">
+	<section class="archive">
+		<div id="TtlBlock"><h1>陶芸館（陶芸美術館）</h1></div>
+								<ul class="tab">
+			<li><a href="https://www.sccp.jp/exhibitions/toigeikan-exhibition/" class="nolink"><span>今年度の展覧会</span></a></li>
+			<li><a href="https://www.sccp.jp/exhibitions/date/2025/"><span>過去の展覧会</span></a></li>
+		</ul>
+				<div id="CtsBlock">
+			<div class="secInner">
+				<ul class="list_01">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																	<li>
+						<div class="imgBox">
+																			<img src="https://www.sccp.jp/wp-content/uploads/2026/05/0e55ad4311775b5fd57ee2133ad826d5-1-scaled.jpg" />
+												</div>
+						<div class="textBox">
+														<div class="badge">終了しました</div>
+														<div class="ttl">特別企画展「炎との対話から　私の自然釉－神山清子展」</div>
+							<div class="date">
+																	2026年06月13日（土） -
+									2026年08月30日（日）															</div>
+							<div class="content">　神山清子（1936－2023）は、信楽焼の女性陶芸家の草分けとして知られています。
+　神山清子の作陶は１９５３年に入社した陶器会社での絵付けにはじまります。火鉢の絵…</div>
+							<div class="btn_01"><a href="https://www.sccp.jp/exhibitions/21521/">READ MORE</a></div>
+						</div>
+					</li>
+																													<li>
+						<div class="imgBox">
+																			<img src="https://www.sccp.jp/wp-content/uploads/2026/07/2c694d8918c48eb76eadf35a46df68d7-scaled.jpg" />
+												</div>
+						<div class="textBox">
+														<div class="badge">ただいま開催中!!</div>
+														<div class="ttl">特別展「シガラキ・ニューウェーブ：ひろがる創造のいま」</div>
+							<div class="date">
+																	2026年09月12日（土） -
+									2026年12月13日（日）															</div>
+							<div class="content">近年、信楽周辺には多様な分野のアーティストが集まり、陶芸、彫刻、絵画、インスタレーションなど領域を横断する新しい創造の動きが生まれている。その背景には、長く窯…</div>
+							<div class="btn_01"><a href="https://www.sccp.jp/exhibitions/21527/">READ MORE</a></div>
+						</div>
+					</li>
+																													<li>
+						<div class="imgBox">
+																			<img src="https://www.sccp.jp/wp-content/uploads/2026/04/e8090d73966901967c6eb4e414137b71-1024x768.jpg" />
+												</div>
+						<div class="textBox">
+														<div class="badge"></div>
+														<div class="ttl">特別展「ティーカップ・メリーゴーラウンド　 ヨーロッパ陶磁にみるモダンデザイン100年 岐阜県現代陶芸美術館コレクション」</div>
+							<div class="date">
+																	2027年03月06日（土） -
+									2027年05月30日（日）															</div>
+							<div class="content">ドイツのマイセン、フランスのセーヴル、デンマークのロイヤル・コペンハーゲンなど綺羅星のような名窯の、ティーウェアやコーヒーウェアの名品を室内装飾品とともに紹介…</div>
+							<div class="btn_01"><a href="https://www.sccp.jp/exhibitions/21534/">READ MORE</a></div>
+						</div>
+					</li>
+																				</ul>
+							</div>
+		</div>
+	</section>
+	</div>
+</div>
+
+</div><!--　=============================== contents end ===============================　-->
+<!-- =============================== FOOTER =============================== -->
+<footer id="footer">
+	<div class="box_01">
+	<div class="ftrInner">
+		<div class="box-upper">
+			<ul class="leftBox">
+				<li class="left_box--01"><a href="/shigaraki-shinko/">
+					<div class="imgBox"><img src="https://www.sccp.jp/Image/common/banner_01.png"></div>
+					<div class="textBox">信楽焼ショップ（甲賀市立信楽産業展示館）</div>
+				</a></li>
+				<li class="left_box--02"><a href="https://www.sccp.jp/supporter-volunteer/">
+					<div class="imgBox"><img src="https://www.sccp.jp/Image/common/banner_02.png"></div>
+					<div class="textBox">サポーター・ボランティア</div>
+				</a></li>
+			</ul>
+			<ul class="rightBox">
+				<li class="right_box--01"><a href="https://www.sccp.jp/rental-guide/">
+					<div class="imgBox"><img src="https://www.sccp.jp/Image/common/banner_03.png"></div>
+					<div class="textBox">貸し施設のご案内</div>
+				</a></li>
+				<li class="right_box--02"><a href="https://www.sccp.jp/search/">
+					<div class="imgBox"><img src="https://www.sccp.jp/Image/common/banner_04.png"></div>
+					<div class="textBox">収蔵品データベース</div>
+				</a></li>
+			</ul>
+		</div>
+		<div class="box-downer">
+			<div class="bnrBox">
+				<div class="sakkaichi"><a href="http://www.shigaraki-sakkaichi.com/" target="_blank"><img src="https://www.sccp.jp/Image/common/shigaraki-sakkaichi_logo.png" alt="信楽作家市" width="84" height="84"></a></div>
+				<div class="ceramic-art"><a href="/park/market/"><img src="/Image/common/artmarket_logo.png" alt="信楽セラミック・アート・マーケット in 陶芸の森" width="84" height="84"></a></div>
+				<div class="craft-festa"><a href="https://www.shigarakimori-craft.com/" target="_blank"><img src="https://www.sccp.jp/Image/common/shigaraki-craft-festa_logo.png" alt="しがらき森のクラフトフェスタ" width="84" height="84"></a></div>
+				<div class="gingetsusha"><a href="https://gindawara.co.jp/pages/gingetsusha" target="_blank"><img src="https://www.sccp.jp/Image/common/gingetsusha_logo.png" alt="銀月舎" width="84" height="84"></a></div>
+			<div class="ftrSubnavi">
+				<ul>
+					<li><a href="https://www.sccp.jp/about/">陶芸の森 管理情報</a></li>
+					<li><a href="/toi/">お問い合わせ</a></li>
+					<li><a href="https://www.sccp.jp/privacypolicy">プライバシーポリシー</a></li>
+					<li><a href="https://www.sccp.jp/snspolicy">ソーシャルメディアサービス運用ポリシー</a></li>
+					<li><a href="https://www.sccp.jp/download/">申請書ダウンロード</a></li>
+					<li><a href="https://www.sccp.jp/links/">リンク</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	<div class="box_02">
+		<div class="footer_sitemapBox">
+			<div class="ttl_01">
+				<h1><span class="eng">SITEMAP</span>　<span class="jpn">サイトマップ</span></h1>
+			</div>
+			<!-- sitemap-->
+			 <div class="footer_sitemap">
+              <ul class="f_column">
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/what-sccp-is/about-mori/">陶芸の森とは</a></li>
+                <li><a href="/exhibitions/toigeikan-exhibition/">陶芸館（陶芸美術館）</a>
+                  <ul class="fs-02">
+                    <li><a href="/exhibitions/toigeikan-exhibition/">陶芸館（陶芸美術館）</a></li>
+                    <li><a href="/exhibitions/tougeikan-gallery/">陶芸館ギャラリー</a></li>
+                    <li><a href="/museum-shop/">ミュージアムショップ</a></li>
+                  </ul>
+				<li><a href="https://digital-museum.sccp.jp/">3D</a></li>
+                </li>
+                <li><a href="/shigaraki-shinko/">甲賀市立信楽産業展示館</a></li>
+                <li><a href="/artist-in-r/">創作研修館<br>(アーティスト・イン・レジデンス)</a></li>
+                <li><a href="/edu-programs/">つちっこプログラム(子ども事業)</a>
+                  <ul class="fs-02">
+                    <li><a href="/edu-programs/tsuchi_family/">親子向け体験講座「子どもやきものシリーズ」（特別講座）</a></li>
+                    <li><a href="/edu-programs/tsuchi_school/">学校向けメニュー（つちっこプログラム）</a>
+                      <ul class="fs-03">
+                        <li><a href="/edu-programs/about-edu-programs/">つちっこプログラム概要</a></li>
+                        <li><a href="/edu-programs/tsuchikko-pamphlet/">パンフレット</a></li>
+                        <li><a href="/edu-programs/introduce-lecturer/">講師紹介</a></li>
+                        <li><a href="/edu-programs/guideline/">申込要項</a></li>
+                        <li><a href="/edu-programs/subsidy/">鉄道運賃補助制度</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="f_column">
+                <li><a href="/events/">イベント</a>
+                  <ul class="fs-02">
+                    <li><a href="/events/event/">イベント</a></li>
+                    <li><a href="/events/lecture/">レクチャー・ワークショップ</a></li>
+                    <li><a href="/events/sigarakigaku/">しがらき学ノススメ(一般向け陶芸講座)</a></li>
+                  </ul>
+                </li>
+                <li><a href="/guide/">来園のご案内</a>
+                  <ul class="fs-02">
+                    <li><a href="/guide/access/">交通アクセス</a>
+                      <ul class="fs-03">
+                        <li><a href="http://koka-skr.co.jp/timetable.html" class="exLink">信楽高原鐵道の時刻表</a></li>
+                        <li><a href="/guide/time-table/">甲賀市コミュニティバスの時刻表</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="/guide/open-hour/">ご利用案内</a></li>
+                    <li><a href="/guide/map/">園内マップ</a></li>
+                    <li><a href="/guide/attention/">施設利用時のお願い</a></li>
+                    <li><a href="/guide/group-application/">団体施設利用申し込み</a></li>
+                    <li><a href="/guide/special-application/">特別観覧許可申請</a></li>
+                    <li><a href="/guide/fujiki/">まちなか交流拠点「FUJIKI」</a></li>
+                  </ul>
+                </li>
+				   <li><a href="/events/18959/">年間スケジュール</a></li>
+				   <li><a href="/calendars/">営業カレンダー</a></li>
+              </ul>
+              <ul class="f_column">
+				  <li><a href="/shigaraki-shinko/">信楽焼ショップ<br>（甲賀市立信楽産業展示館）</a></li>
+                <li><a href="/supporter-volunteer/">サポーター・ボランティア</a>
+                  <ul class="fs-02">
+                    <li><a href="/supporter-volunteer/volunteer/">ボランティア</a></li>
+					  <li><a href="/supporter-volunteer/fund/">陶芸の森サポーター制度</a></li>
+					</ul></li>
+					   <li><a href="/rental-guide/">貸し施設のご利用案内</a></li>
+					   <li><a href="/search/">収蔵品データベース</a></li>
+                <li><a href="/about/">陶芸の森 管理情報</a>
+                  <ul class="fs-02">
+                    <li><a href="/about/aboutus/">施設概要</a></li>
+                    <li><a href="/about/about-manage/">定款・事業報告</a></li>
+                    <li><a href="/about/annualreport/">年報</a></li>
+                  </ul>
+                </li>
+                <li><a href="/toi/">お問合せ</a></li>
+                <li><a href="/privacypolicy">プライバシーポリシー</a></li>
+				<li><a href="/snspolicy">ソーシャルメディアサービス運用ポリシー</a></li>
+                <li><a href="/download/">申請書ダウンロード</a></li>
+				  <li><a href="/links/">リンク</a></li>
+              </ul>
+              <ul class="f_column">
+                <li><a href="/news/">お知らせ</a></li>
+				<li><a href="/air/">アーティスト・イン・レジデンス</a></li>
+				<li><a href="/park/market/">セラミック・アート・マーケット<br>in 陶芸の森</a></li>
+                <li><a href="https://shop.sccp.jp/" class="exLink" target="_blank">陶芸の森ミュージアムショップ<br>6SENSES オンラインショップ</a></li>
+                <li><a href="http://www.shigaraki-sakkaichi.com/" class="exLink" target="_blank">信楽作家市</a></li>
+                <li><a href="https://gindawara.co.jp/pages/gingetsusha" class="exLink" target="_blank">銀月舎<br>（カフェレストラン）</a></li>
+				<li class="f_column-aki">
+				<a href="https://www.facebook.com/togeinomori" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
+				<a href="https://twitter.com/tougeinomori" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+				<a href="https://www.instagram.com/sccp_museum/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+				</li>
+				<li><a href="/e/">English Page</a></li>
+              </ul>
+            </div>
+            <div class="f_column-info">
+				<h2><a href="/">滋賀県立陶芸の森</a></h2>
+              <p>〒529-1804 滋賀県甲賀市信楽町勅旨2188-7　TEL. 0748-83-0909　FAX. 0748-83-1193</p>
+            </div>
+          </div>
+        </div><!-- footer_sitemapBox END-->
+	<!-- sitemapEND-->
+	
+	<div class="box_03">
+		<small id="copy"><span>Copyright c 1990-2023 The Foundation of Shigaraki Ceramic Cultural Park. All Rights Reserved.</span></small>
+	</div>
+</footer>
+</div><!--　=============================== luxy end ===============================　-->
+</div><!--　=============================== wrapper end ===============================　-->
+</div><!--　=============================== drawer end ===============================　-->
+<!-- JavaScript -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+<script src="//cdn.rawgit.com/twbs/bootstrap/v3.3.5/js/dropdown.js"></script>
+<script src="https://www.sccp.jp/drawer/drawer.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".drawer").drawer();
+});
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.1/dist/jquery.fancybox.min.js"></script>
+<script src="https://www.sccp.jp/JS/inview.js"></script>
+<script src="https://www.sccp.jp/JS/luxy.js"></script>
+<script src="https://www.sccp.jp/JS/common.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/sccp.jp/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="wp-hooks-js" src="https://www.sccp.jp/wp-includes/js/dist/hooks.min.js"></script>
+<script id="wp-i18n-js" src="https://www.sccp.jp/wp-includes/js/dist/i18n.min.js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="swv-js" src="https://www.sccp.jp/wp-content/plugins/contact-form-7/includes/swv/js/index.js"></script>
+<script id="contact-form-7-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2026-10-30 09:04:34+0000","generator":"GlotPress\/4.1.0","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=1; plural=0;","lang":"ja_JP"},"This contact form is placed in the wrong place.":["\u3053\u306e\u30b3\u30f3\u30bf\u30af\u30c8\u30d5\u30a9\u30fc\u30e0\u306f\u9593\u9055\u3063\u305f\u4f4d\u7f6e\u306b\u7f6e\u304b\u308c\u3066\u3044\u307e\u3059\u3002"],"Error:":["\u30a8\u30e9\u30fc:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+</script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/www.sccp.jp\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script id="contact-form-7-js" src="https://www.sccp.jp/wp-content/plugins/contact-form-7/includes/js/index.js"></script>
+<script id="snow-monkey-forms-js-before">
+var snowmonkeyforms = {"view_json_url":"https:\/\/www.sccp.jp\/wp-json\/snow-monkey-form\/v1\/view?ver=1794976994","nonce":"8a4b3356b6"}
+//# sourceURL=snow-monkey-forms-js-before
+</script>
+<script id="snow-monkey-forms-js" src="https://www.sccp.jp/wp-content/plugins/snow-monkey-forms/dist/js/app.js"></script>
+<script id="google-recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6LczihouAAAAAC540ZxMaa--fM-xtNrI3uWsBALK"></script>
+<script id="snow-monkey-forms@recaptcha-js" src="https://www.sccp.jp/wp-content/plugins/snow-monkey-forms/dist/js/recaptcha.js"></script>
+<script id="snow-monkey-forms@recaptcha-js-after">
+var snowmonkeyforms_recaptcha = {"siteKey":"6LczihouAAAAAC540ZxMaa--fM-xtNrI3uWsBALK"}
+//# sourceURL=snow-monkey-forms%40recaptcha-js-after
+</script>
+<script id="wp-polyfill-js" src="https://www.sccp.jp/wp-includes/js/dist/vendor/wp-polyfill.min.js"></script>
+<script id="wpcf7-recaptcha-js-before">
+var wpcf7_recaptcha = {
+    "sitekey": "6LceWV8cAAAAAMi7OAf71XRnkgDgZmBtWgfEUgCW",
+    "actions": {
+        "homepage": "homepage",
+        "contactform": "contactform"
+    }
+};
+//# sourceURL=wpcf7-recaptcha-js-before
+</script>
+<script id="wpcf7-recaptcha-js" src="https://www.sccp.jp/wp-content/plugins/contact-form-7/modules/recaptcha/index.js"></script>
+</body>
+</html>

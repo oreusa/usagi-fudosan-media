@@ -1,0 +1,424 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- Google Tag Manager -->
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+
+})(window,document,'script','dataLayer','GTM-M6BFDC7P');</script>
+
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TV7T7C3N');</script>
+<!-- End Google Tag Manager -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '426752637172548');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=426752637172548&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-153201326-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-153201326-1');
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K65XQWX');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="description" content="世界三大サーカスのひとつ「木下サーカス」の公演スケジュール、チケット情報プログラムの紹介、歴史、求人情報 などを掲載しています。">
+<meta name="keywords" content="木下,サーカス,木下サーカス,世界三大サーカス,公演スケジュール,チケット購入,プログラム,スターに注目,オリジナルグッズ,こども広場,会社概要,割引クーポン,よくある質問,サイトマップ">
+<title>【公式】木下大サーカス</title>
+<style type="text/css">
+header {
+	background-color: #000000;
+	height: 90px;
+	width: 960px;
+}
+nav {
+	background-color: #F00D11;
+	width: 960px;
+	height: 50px;
+}
+main {
+	background-color: #F0F0F0;
+	float: right;
+	width: 600px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	height: auto;
+}
+aside {
+	background-color: #FFFFFF;
+	float: left;
+	width: 200px;
+	padding-right: 20px;
+	padding-left: 20px;
+	margin-bottom: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: thin inset rgba(152,152,57,1.00);
+}
+footer {
+	background-color: #000000;
+	clear: both;
+	width: 920px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-style: normal;
+	color: #FFFFFF;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 14px;
+	text-align: right;
+}
+#container {
+	background-color: #FFFFFF;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.move {
+	width: 960px;
+	
+
+	background-color: #000000;
+}
+.s-nav {
+	width: 960px;
+	height: 250px;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.main-nav {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	width: 960px;
+	padding: 0;
+	height: 250px;
+}
+.nav-01 {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+.banner {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.news {
+	width: 600px;
+	margin-bottom: 0px;
+}
+.news-p {
+	color: #000000;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-style: normal;
+	font-size: 14px;
+	line-height: 1.4;
+	text-align: left;
+}
+.foote-div {
+	width: 920px;
+}
+.footer-nav {
+	color: #FFFFFF;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-style: normal;
+	font-size: 16px;
+	text-align: right;
+}
+.top-footer {
+}
+.top-copy {
+	text-align: center;
+}
+a:link {
+	color: #FF0000;
+	text-decoration: underline;
+}
+a:hover {
+	color: #FF0000;
+	text-decoration: none;
+	background-color: #FFFFFF;
+}
+a:visited {
+	text-decoration: underline;
+	color: #FF0000;
+}
+a:active {
+	text-decoration: underline;
+	color: #FF0000;
+}
+main .news .news-p {
+}
+main .news .news-p {
+}
+.ba {
+}
+</style>
+<script type="text/javascript">
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="jquery.bxslider.min.js"></script>
+
+    <link href="jquery.bxslider.css" rel="stylesheet" />
+    <style type="text/css">
+    .text14B {	font-family: "ＭＳ Ｐゴシック", "Osaka";
+	font-size: 14px;
+	font-style: normal;
+	line-height: 140%;
+	color: #000000;
+}
+    </style>
+    <script type="text/javascript">
+
+            $(document).ready(function(){
+
+                $('.bxslider').bxSlider({
+
+                    auto: true,
+					pause: 5000
+
+                });
+
+        	});
+
+    </script>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1793490244693746');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1793490244693746&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+</head>
+
+<body onLoad="MM_preloadImages('images/top/topnavib1-2.gif','images/top/topnavib2-2.gif','images/top/topnavib3-2.gif','images/top/topnavib4-2.gif','images/top/topnavib5-2.gif','images/top/topnavib6-2.gif','images/top/topnavib7-2.gif','images/top/topnavib9-2.gif','images/top/topnavib8-2.gif')" topmargin="0">
+<!-- Google Tag Manager (noscript) -->
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M6BFDC7P"
+
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K65XQWX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="container">
+  <header><img src="images/top/toptitle-124.jpg" alt="木下大サーカスの公式サイトです。" width="960" height="90" usemap="#Map"/>
+    <map name="Map">
+      <area shape="rect" coords="688,24,846,67" href="https://www.kinoshita-circus.co.jp/sps/index.htm" target="_blank" alt="スマホ版サイトへ">
+    </map>
+  </header>
+  <nav>
+  <ul class="main-nav">
+  <il><a href="#"></a></il><il><a href="htmls/sche/sche-01.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/top/topnavib1-2.gif',1)"><img src="images/top/topnavib1-1.gif" alt="公演スケジュールのページへ" width="107" height="50" id="Image10"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/top/topnavib2-2.gif',1)"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/top/topnavib3-2.gif',1)"></a><a href="#"></a></il><il><a href="#"></a></il><il><a href="htmls/ticket/ticket-01.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','images/top/topnavib2-2.gif',1)"><img src="images/top/topnavib2-1.gif" alt="チケット購入ページへ" width="107" height="50" id="Image11"></a><a href="htmls/prog/prog.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/top/topnavib3-2.gif',1)"><img src="images/top/topnavib3-1.gif" alt="プログラム紹介ページへ" width="107" height="50" id="Image9"></a><a href="htmls/faq/faq.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image12','','images/top/topnavib11-2.gif',1)"><img src="images/top/topnavib11-1.gif" alt="よくある質問のページへ" width="106" height="50" id="Image12"></a><a href="htmls/goods/goods.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image13','','images/top/topnavib5-2.gif',1)"><img src="images/top/topnavib5-1.gif" alt="木下大サーカスのオリジナルグッズのご紹介ページへ" width="106" height="50" id="Image13"></a><a href="htmls/kids/kidstop.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image14','','images/top/topnavib6-2.gif',1)"><img src="images/top/topnavib6-1.gif" alt="こども広場のページへ" width="106" height="50" id="Image14"></a><a href="htmls/disc/disc.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image15','','images/top/topnavib7-2.gif',1)"><img src="images/top/topnavib7-1.gif" alt="割引クーポンのページへ" width="107" height="50" id="Image15"></a><a href="mailto:webmaster@kinoshita-circus.co.jp" target="_blank" onMouseOver="MM_swapImage('Image16','','images/top/topnavib8-2.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="images/top/topnavib8-1.gif" alt="メールでのお問い合わせはこちら" width="107" height="50" id="Image16"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image16','','images/top/topnavib7-2.gif',1)"></a><a href="htmls/sche/english-top.htm" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image17','','images/top/navib-langu.gif',1)"><img src="images/top/navib-langu.gif" alt="english" width="107" height="50" id="Image17"></a><a href="#"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/top/topnavib3-2.gif',1)"></a></il><il><a href="#"></a></il><il><a href="#"></a></il><il><a href="#"></a></il><il><a href="#"></a></il><il><a href="#"></a></il>
+  </ul>
+  </nav>
+  <div class="move"><ul class="bxslider">
+	  <li><a href="htmls/sche/sche-nara-2027.htm"><img src="images/top/slide-2027-nara.jpg" width="960" height="350" alt="奈良橿原公演のスケジュール"/></a></li>
+		<li><img src="images/top/slide-04.jpg" width="960" height="350" alt=""/></li>
+		<li><img src="images/top/slide-03.jpg" width="960" height="350" alt=""/></li>
+        <li><img src="images/top/slide-02.jpg" width="960" height="350" alt=""/></li>
+		<li><img src="images/top/slide-04.jpg" width="960" height="350" alt=""/>/</li></ul></div>
+  <div class="s-nav">
+    <ul class="main-nav">
+  <il></il><il><a href="https://www.kinoshita-circus.co.jp/info/venue/show"><img src="images/top/s-nav-01-07-02.jpg" width="323" height="250" alt=""/></a><a href="https://youtu.be/MTEKiaswkqQ" target="_blank"><img src="images/top/s-nav-tent.jpg" width="323" height="250" alt="赤テントの贈り物の動画へ"/></a></il><il><a href="htmls/news/go-to-circus.htm"><img src="images/top/s-nav-05-03.jpg" alt="" width="314" height="250"/></a></il>
+    </ul>
+</div>
+<main>
+  <p><img src="sps/images/top/mente-2026-1117.gif" width="580" height="237" alt=""/><br>
+    <br>
+    <img src="images/top/tenbai-2025.gif" width="580" height="350" alt=""/><br>
+    <br>
+    <a href="htmls/news/aigo.htm"><img src="images/news/animal-fukushi-20230612.jpg" width="580" height="156" alt=""/></a>  <br>
+    <br>
+    <a href="https://readyfor.jp/projects/kinoshita" target="_blank"><img src="images/top/top-2020-02.jpg" width="580" height="118" alt=""/></a><br>
+</p>
+  <hr>
+  <img src="images/top/newstag.gif" width="308" height="21" alt=""/>
+  <hr>
+	 <article class="news">
+	    <p align="left" class="news-p"><span class="news-p1">【2026.11.17】</span><br>
+      <span class="news-p1">◆</span><span class="news-p1">2028年3月卒業予定者対象<br>
+      営業推進本部　概要説明会を実施いたします。<br>
+      開催日：2026年11月25日（水）<br>
+      開催場所：木下大サーカス横浜公演準備事務局      <BR>
+        >><a href="htmls/prof/recruit-2026-1125.htm">詳しい情報はこちら</a><br>
+        </span></p>
+    <hr align="left" width="580">
+</article>
+		 <article class="news">
+	    <p align="left" class="news-p"><span class="news-p1">【2026.11.13】</span><br>
+      <span class="news-p1">◆</span><span class="news-p1">社長の木下唯志が中国新聞社主催の「第83回中国文化賞」を受賞いたしました。<BR>
+        >><a href="htmls/news/news-20261113.htm">詳しい情報はこちら</a><br>
+        </span></p>
+    <hr align="left" width="580">
+</article>
+  <article class="news">
+	    <p align="left" class="news-p"><span class="news-p1">【2026.11.09】</span><br>
+      <span class="news-p1">◆</span><span class="news-p1">ご縁のあったまちに寄せる想い<br>
+      2026年熊本地震の復旧・復興支援として、木下サーカスより義援金を寄付させていただきました。<BR>
+        >><a href="htmls/news/news-20261109.htm">詳しい情報はこちら</a><br>
+        </span></p>
+    <hr align="left" width="580">
+</article>
+	  <article class="news">
+	    <p align="left" class="news-p"><span class="news-p1">【2026.11.04】</span><br>
+      <span class="news-p1">◆</span><span class="news-p1">木下大サーカス　オリジナルキャラクターの名前が決定しました！<br>
+      たくさんのご応募ありがとうございました。<BR>
+        >><a href="htmls/news/news-20261104.htm">詳しい情報はこちら</a><br>
+        </span></p>
+    <hr align="left" width="580">
+</article>
+	  <article class="news">
+	    <p align="left" class="news-p"><span class="news-p1">【2026.10.16】</span><br>
+      <span class="news-p1">◆</span><span class="news-p1">動物福祉と福祉活動に関して<BR>
+        >><a href="htmls/news/aigo-okayama-2026.htm">詳しい情報はこちら</a><br>
+        </span></p>
+    <hr align="left" width="580">
+</article>
+	<article class="news">
+	  <p align="left" class="news-p"><span class="news-p1"> 【2026.5.30】<br>
+      ◆奈良橿原公演（公演期間：2026年 10/11～ 2027年 1/31）<BR>
+>><a href="htmls/sche/sche-nara-2027.htm">詳しい情報はこちら</a><br>
+※交替芸によりプログラムの一部を変更する場合があります。<BR>
+    </span></p>
+      <hr align="left" width="580">
+  </article>
+	<article class="news">
+	  <p align="left" class="news-p"><span class="news-p1"> 【2026.4.28】<br>
+◆岡山県交通安全協会に招待券を贈呈しました。<BR>
+>><a href="htmls/news/news-20260428.htm">詳しい情報はこちら</a><br>
+      </span></p>
+      <hr align="left" width="580">
+  </article>
+		<article class="news">
+    <p align="left" class="news-p"><span class="news-p1"> 【2026.4.23】<br>
+◆岡山公演：福祉招待券を贈呈しました。<BR>
+>><a href="htmls/news/news-20260423.htm">詳しい情報はこちら</a><br>
+      </span></p>
+      <hr align="left" width="580">
+    </article>
+    <article class="news">
+      <p align="left" class="news-p"><span class="news-p1"> 【2026.2.17】<br>
+      ◆岡山公演（公演期間：2026年 6/27～ 2026年 9/27）<BR>
+>><a href="htmls/sche/sche-okayama-2026.htm">詳しい情報はこちら</a><br>
+※交替芸によりプログラムの一部を変更する場合があります。<BR>
+    </span></p>
+      <hr align="left" width="580">
+  </article>
+	<article class="news">
+    <p align="left" class="news-p"><span class="news-p1"> 【2026.2.13】<br>
+◆磐田公演：福祉招待券を贈呈しました。<BR>
+>><a href="htmls/news/news-20260213.htm">詳しい情報はこちら</a><br>
+      </span></p>
+      <hr align="left" width="580">
+    </article>
+	<article class="news"> </article>
+	<article class="news"> </article>
+    <article class="news">
+	  <p class="news-p">>><a href="htmls/news/news-topics.htm">ニュース&amp;トピックス一覧はこちら</a></p>
+    <hr align="left" width="580">
+  </article>
+</main>
+  <aside>
+    <div class="banner"><a href="http://www.tickets.funity.jp/kinoshita-circus/" target="_blank"><img src="images/top/banner-ot-02.jpg" width="200" height="80" alt="木下大サーカスオフィシャルチケット"/></a</div>
+	<div class="banner"></div>
+    <div class="banner"><a href="htmls/ticket/kinenkan.htm"><img src="images/top/kinenkan-banner.jpg" width="200" height="80" alt="木下サーカス記念館"/></a></div>
+	  	      <div class="banner"><a href="https://www.jalan.net/kankou/spt_guide000000219862/" target="_blank"><img src="images/top/banner-j-02.gif" width="200" height="80" alt="じゃらん：木下サーカス記念館チケット予約受付中！"/></a></div>
+    <div class="banner"><a href="htmls/prof/prof-13.htm"><img src="images/top/banner-ambassador.jpg" width="200" height="80" alt="木下社長が世界サーカス連盟の大使に！"/></a></div>
+    <div class="banner"><a href="htmls/prof/prof-04.htm"><img src="images/top/banner-zou.gif" width="200" height="50" alt="キノシタエレファントホスピタルのページへ"/></a></div>
+	      <div class="banner"><img src="images/top/banner-sns-02.jpg" alt="SNS" width="200" height="70" usemap="#Map2"/>
+            <map name="Map2">
+              <area shape="rect" coords="9,13,60,62" href="https://www.facebook.com/kinoshita.dai.circus/" target="_blank">
+              <area shape="rect" coords="74,12,127,65" href="https://twitter.com/circuskinoshita/" target="_blank">
+              <area shape="rect" coords="136,13,191,63" href="https://www.instagram.com/kinoshitacircus/" target="_blank">
+            </map>
+	      </div>
+	  <div class="banner"><a href="htmls/prog/prog.htm"><img src="images/top/banner-movei.gif" width="200" height="50" alt=""/></a></div>
+    <div class="banner"><a href="htmls/prof/recruit-job.htm"><img src="images/top/banner-arb.gif" width="200" height="50" alt="採用情報のページへ"/></a></div>
+	      <div class="banner"><a href="htmls/prof/prof-09.htm"><img src="images/top/saoyoubanner.jpg" width="200" height="50" alt="採用情報のページへ"/></a></div>
+    <a href="htmls/prof/recruit-interview.htm"><img src="images/top/sennpai-banner.gif" width="200" height="50" alt="先輩社員のインタビューページへ"/></a>
+    <div class="banner"><a href="htmls/imp/imp.htm"><img src="images/top/banner-imp.gif" width="200" height="50" alt="お客様の声をご紹介"/></a></div>
+	  <div class="banner"><a href="htmls/news/vimeo.htm"><img src="images/top/vimeo-banner.jpg" width="200" height="80" alt=""/></a></div>
+  </aside>
+  <footer>
+    <div class="foote-nav">| <a href="htmls/news/privacy.htm">プライバシーポリシー</a> | <a href="htmls/site/site.htm">サイトマップ</a> | <a href="htmls/prof/prof-01.htm">会社概要</a>| </div>
+    <div class="top-copy">Copyright(C)2026 KINOSHITA CIRCUS CO. , LTD. All Rights Reserved.</div>
+  </footer>
+</div>
+</body>
+</html>

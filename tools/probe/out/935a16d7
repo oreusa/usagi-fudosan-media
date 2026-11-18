@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<title>たべる・買う | 滋賀農業公園ブルーメの丘</title>-->
+
+<meta name="description" content="滋賀県・日野町にある、四季折々の花や自然体験プログラム・アウトドアが楽しめる体験型農業公園、「滋賀農業公園ブルーメの丘」の公式サイトです。「馬のえさやり体験」、カンガルーやカピバラと触れ合えるイベントなど、動物たちと一緒に過ごす時間は気持ちを和やかにしてくれると人気です。合計72個のアトラクションのなかから自由に選んで進めるアルプスジムやゴーカートといった、大人から子どもまで楽しめるアクティビティが揃っております。農村レストランの「旬菜バイキング」では自家製パンやチーズ入りソーセージなど、園内の加工房で作られた逸品を味えます。体を動かしたあとに是非ご利用ください。" />
+<meta name="keywords" content="滋賀,アクティビティ,アウトドア" />	
+
+<!-- FAVICON SETTING -->
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/icon-192x192.png">
+
+<!-- URL CANONICAL -->
+<link rel="canonical" href="https://www.blumenooka.jp/have/">
+
+<title>たべる・買う ｜ 滋賀農業公園ブルーメの丘【公式】-大人も子供も楽しめるアウトドア・アクティビティ-｜</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//yubinbango.github.io' />
+<link rel='dns-prefetch' href='//use.fontawesome.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.blumenooka.jp\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.6.11"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.blumenooka.jp/wp-includes/css/dist/block-library/style.min.css?ver=6.6.11' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='fontawesome_css-css' href='https://use.fontawesome.com/releases/v5.6.1/css/all.css?ver=6.6.11' type='text/css' media='all' />
+<link rel='stylesheet' id='commom_css-css' href='https://www.blumenooka.jp/wp-content/themes/blume/css/common.css?ver=6.6.11' type='text/css' media='all' />
+<link rel='stylesheet' id='style_css-css' href='https://www.blumenooka.jp/wp-content/themes/blume/css/style.css?ver=6.6.11' type='text/css' media='all' />
+<link rel='stylesheet' id='mts_simple_booking_front_css-css' href='https://www.blumenooka.jp/wp-content/plugins/mts-simple-booking-c/css/mtssb-front.css?ver=6.6.11' type='text/css' media='all' />
+<script type="text/javascript" src="https://www.blumenooka.jp/wp-content/themes/blume/js/jquery.min.js?ver=6.6.11" id="jquery-js"></script>
+<script type="text/javascript" src="https://www.blumenooka.jp/wp-content/themes/blume/js/ofi.min.js?ver=6.6.11" id="obf_js-js"></script>
+<script type="text/javascript" src="https://www.blumenooka.jp/wp-content/themes/blume/js/common.js?ver=6.6.11" id="common_js-js"></script>
+<link rel="https://api.w.org/" href="https://www.blumenooka.jp/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.blumenooka.jp/wp-json/wp/v2/pages/80" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.blumenooka.jp/xmlrpc.php?rsd" />
+<link rel="canonical" href="https://www.blumenooka.jp/have/" />
+<link rel='shortlink' href='https://www.blumenooka.jp/?p=80' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.blumenooka.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.blumenooka.jp%2Fhave%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.blumenooka.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.blumenooka.jp%2Fhave%2F&#038;format=xml" />
+<meta name="generator" content="Site Kit by Google 1.157.0" />
+<!-- Google タグ マネージャー スニペット (Site Kit が追加) -->
+<script type="text/javascript">
+/* <![CDATA[ */
+
+			( function( w, d, s, l, i ) {
+				w[l] = w[l] || [];
+				w[l].push( {'gtm.start': new Date().getTime(), event: 'gtm.js'} );
+				var f = d.getElementsByTagName( s )[0],
+					j = d.createElement( s ), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore( j, f );
+			} )( window, document, 'script', 'dataLayer', 'GTM-TZKM2ZQP' );
+			
+/* ]]> */
+</script>
+
+<!-- (ここまで) Google タグ マネージャー スニペット (Site Kit が追加) -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', 'UA-25400463-5', 'auto');
+    // Plugins
+    ga('send', 'pageview');
+</script>
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MZV950WY3D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MZV950WY3D');
+</script>
+	
+	
+</head>
+
+<body class="page-template-default page page-id-80 page-parent page-have">
+<div id="container">
+<header id="header">
+<div class="inner">
+     
+            <p class="logo"><a href="https://www.blumenooka.jp"><img src="https://www.blumenooka.jp/wp-content/themes/blume/img/common/logo.png" alt="滋賀農業公園ブルーメの丘【公式】-大人も子供も楽しめるアウトドア・アクティビティ-｜"/></a></p>
+        <p class="chlang_btn"><a href="https://translate.google.com/translate?hl=&sl=ja&tl=en&u=http%3A%2F%2Fwww.blumenooka.jp%2F" target="_blank">English</a></p>
+    <p class="menu_btn"><span></span><span></span><span></span><span class="menu">MENU</span></p>
+    <div class="navi_open">
+        <!--<p class="logo"><a href="https://www.blumenooka.jp"><img src="https://www.blumenooka.jp/wp-content/themes/blume/img/common/logo.png" alt="滋賀農業公園ブルーメの丘【公式】-大人も子供も楽しめるアウトドア・アクティビティ-｜"/></a></p>-->
+        <nav id="gnavi">
+            <ul>
+                <li><a href="https://www.blumenooka.jp/attraction/">あそびつくせ！楽しみ方けんさく</a>
+                    <ul class="w50 odd">
+                        <li class="w100"><a href="https://www.blumenooka.jp/attraction/">イベント情報</a></li>
+                        <li><a href="https://www.blumenooka.jp/flower/">花ごよみ</a></li>
+                        <li><a href="https://www.blumenooka.jp/lp/dogrun/">ドッグラン</a></li>
+                        <li><a href="https://www.blumenooka.jp/experience/">たいけんする</a></li>
+                        <li><a href="https://www.blumenooka.jp/touch/">さわる・見る</a></li>
+                        <li><a href="https://www.blumenooka.jp/play/">あそぶ </a></li>
+                        <li><a href="https://www.blumenooka.jp/have/">たべる・買う</a></li>
+                        <li><a href="https://www.blumenooka.jp/lp/jabujabu-pond/">じゃぶじゃぶ池</a></li>
+                        <li><a href="https://www.blumenooka.jp/lp/babbling-brook/">せせらぎ小川</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.blumenooka.jp/information/">総合案内</a>
+                    <ul class="w50">
+                        <li><a href="https://www.blumenooka.jp/access/">交通アクセス</a></li>
+                        <li><a href="https://www.blumenooka.jp/price/">料金案内</a></li>
+                        <li><a href="https://www.blumenooka.jp/group/">団体でのご利用</a></li>
+                        <li><a href="https://www.blumenooka.jp/passport/">年間パスポート会員様</a></li>
+                        <li><a href="https://www.blumenooka.jp/news/">お知らせ</a></li>
+                        <li><a href="https://www.blumenooka.jp/media/">メディア掲載</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav><!-- /gnavi -->
+    </div><!-- /navi_open -->
+</div><!-- /inner -->
+</header>    <section class="mv">
+      <img width="1919" height="600" src="https://www.blumenooka.jp/wp-content/uploads/2020/02/mv_have.jpg" class="attachment-1920x675 size-1920x675 wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://www.blumenooka.jp/wp-content/uploads/2020/02/mv_have.jpg 1919w, https://www.blumenooka.jp/wp-content/uploads/2020/02/mv_have-300x94.jpg 300w, https://www.blumenooka.jp/wp-content/uploads/2020/02/mv_have-1024x320.jpg 1024w, https://www.blumenooka.jp/wp-content/uploads/2020/02/mv_have-768x240.jpg 768w, https://www.blumenooka.jp/wp-content/uploads/2020/02/mv_have-1536x480.jpg 1536w" sizes="(max-width: 1919px) 100vw, 1919px" />    </section><!--/ mv -->
+    
+    <div class="breadcrumb">
+    <div class="inner">
+    <div id="breadcrumb" class="cf"><span itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.blumenooka.jp" itemprop="url"><span itemprop="title">HOME</span></a> &gt; </span><span>たべる・買う</span></div>    </div><!-- /inner -->
+    </div><!-- /breadcrumb -->
+
+<main class="sub">
+    <div class="inner">
+        <h1><span>EAT・BUY</span>たべる・買う</h1>
+        
+        <!-- アルプスジムのみ表示 -->
+                <!-- /アルプスジムのみ表示 -->
+        
+        
+                        
+        					                    <h2><span>開催中のイベント</span></h2>
+					                    <ul class="attraction_list attraction_list--open">
+                                                <li class="cf">
+                            <dl>
+                                <dt> 
+									<a href="https://www.blumenooka.jp/post-19317/">
+                                    <figure class="object-fit-img">
+                                    												<img width="300" height="300" src="https://www.blumenooka.jp/wp-content/uploads/2025/10/そんなバーガー_アイコン-300x300.jpg" class="attachment-medium size-medium wp-post-image" alt="" decoding="async" srcset="https://www.blumenooka.jp/wp-content/uploads/2025/10/そんなバーガー_アイコン-300x300.jpg 300w, https://www.blumenooka.jp/wp-content/uploads/2025/10/そんなバーガー_アイコン-150x150.jpg 150w, https://www.blumenooka.jp/wp-content/uploads/2025/10/そんなバーガー_アイコン.jpg 337w" sizes="(max-width: 300px) 100vw, 300px" />										                                    <figcaption>そんなバーガーなフェス</figcaption>
+                                    </figure>
+									</a>
+                                </dt>
+                                <dd>
+                                                                                                            <p class="period"><span>期間</span>11月22日(日)・23日(月祝)</p>
+									                                    <ul class="category_list">
+                                        <li><a href="https://www.blumenooka.jp/category/have/#search_tab" class="have">たべる・買う</a></li><li><a href="https://www.blumenooka.jp/category/recommend/#search_tab" class="recommend">オススメ</a></li>                                    </ul>
+                                </dd>
+                            </dl>
+                        </li>
+                                            <li class="cf">
+                            <dl>
+                                <dt> 
+									<a href="https://www.blumenooka.jp/post-20891/">
+                                    <figure class="object-fit-img">
+                                    												<img width="300" height="300" src="https://www.blumenooka.jp/wp-content/uploads/2026/08/2026秋バイキング_アイコン-300x300.jpg" class="attachment-medium size-medium wp-post-image" alt="" decoding="async" srcset="https://www.blumenooka.jp/wp-content/uploads/2026/08/2026秋バイキング_アイコン-300x300.jpg 300w, https://www.blumenooka.jp/wp-content/uploads/2026/08/2026秋バイキング_アイコン-150x150.jpg 150w, https://www.blumenooka.jp/wp-content/uploads/2026/08/2026秋バイキング_アイコン.jpg 336w" sizes="(max-width: 300px) 100vw, 300px" />										                                    <figcaption>農村レストラン【秋季限定】秋の味覚バイキング</figcaption>
+                                    </figure>
+									</a>
+                                </dt>
+                                <dd>
+                                                                                                            <p class="period"><span>期間</span>9月1日(火)～11月30日(月)</p>
+									                                    <ul class="category_list">
+                                        <li><a href="https://www.blumenooka.jp/category/have/#search_tab" class="have">たべる・買う</a></li><li><a href="https://www.blumenooka.jp/category/popular/#search_tab" class="popular">大好評</a></li>                                    </ul>
+                                </dd>
+                            </dl>
+                        </li>
+                                            <li class="cf">
+                            <dl>
+                                <dt> 
+									<a href="https://www.blumenooka.jp/post-19086/">
+                                    <figure class="object-fit-img">
+                                    												<img width="300" height="300" src="https://www.blumenooka.jp/wp-content/uploads/2025/09/はじめてのおつかい_アイコン-300x300.jpg" class="attachment-medium size-medium wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.blumenooka.jp/wp-content/uploads/2025/09/はじめてのおつかい_アイコン-300x300.jpg 300w, https://www.blumenooka.jp/wp-content/uploads/2025/09/はじめてのおつかい_アイコン-150x150.jpg 150w, https://www.blumenooka.jp/wp-content/uploads/2025/09/はじめてのおつかい_アイコン.jpg 336w" sizes="(max-width: 300px) 100vw, 300px" />										                                    <figcaption>はじめてのおつかいチャレンジ！inブルーメの丘</figcaption>
+                                    </figure>
+									</a>
+                                </dt>
+                                <dd>
+                                                                                                            <p class="period"><span>期間</span>土日祝</p>
+									                                    <ul class="category_list">
+                                        <li><a href="https://www.blumenooka.jp/category/have/#search_tab" class="have">たべる・買う</a></li><li><a href="https://www.blumenooka.jp/category/weekends/#search_tab" class="weekends">土日祝限定</a></li><li><a href="https://www.blumenooka.jp/category/popular/#search_tab" class="popular">大好評</a></li>                                    </ul>
+                                </dd>
+                            </dl>
+                        </li>
+                                            <li class="cf">
+                            <dl>
+                                <dt> 
+									<a href="https://www.blumenooka.jp/post-17499/">
+                                    <figure class="object-fit-img">
+                                    												<img width="300" height="300" src="https://www.blumenooka.jp/wp-content/uploads/2025/01/手ぶらBBQ_アイコン-300x300.jpg" class="attachment-medium size-medium wp-post-image" alt="" decoding="async" loading="lazy" srcset="https://www.blumenooka.jp/wp-content/uploads/2025/01/手ぶらBBQ_アイコン-300x300.jpg 300w, https://www.blumenooka.jp/wp-content/uploads/2025/01/手ぶらBBQ_アイコン-150x150.jpg 150w, https://www.blumenooka.jp/wp-content/uploads/2025/01/手ぶらBBQ_アイコン.jpg 337w" sizes="(max-width: 300px) 100vw, 300px" />										                                    <figcaption>手ぶらでBBQ</figcaption>
+                                    </figure>
+									</a>
+                                </dt>
+                                <dd>
+                                                                                                            <ul class="category_list">
+                                        <li><a href="https://www.blumenooka.jp/category/experience/#search_tab" class="experience">たいけんする</a></li><li><a href="https://www.blumenooka.jp/category/have/#search_tab" class="have">たべる・買う</a></li><li><a href="https://www.blumenooka.jp/category/recommend/#search_tab" class="recommend">オススメ</a></li>                                    </ul>
+                                </dd>
+                            </dl>
+                        </li>
+                                        </ul>
+        
+                
+        <div class="lead"><p>ブルーメの丘にはおいしいものもいっぱいです!<br>
+お腹いっぱいになってまた遊んじゃおう!!<br>
+園内の工房で作る自家製品はお土産にぴったり。</p></div> 
+        
+    </div><!-- /inner -->
+    
+
+    <!-- あそぶページのみアルプスジムバナー表示 -->
+        <!-- /あそぶページのみアルプスジムバナー表示 -->
+    
+        <div class="anchor_area">
+        <ul class="inner">
+            <li><a href="/shop/outdoorterrace">手ぶらでBBQ</a></li>
+<li><a href="/shop/#shop">自家製品・お土産</a></li>        </ul>
+    </div><!-- /anchor_area -->
+        
+    
+
+    <div class="inner">
+    <section id="restaurant">
+<h2><span>レストラン</span></h2>
+ <div class="restaurant">
+    <h4>農村レストラン【秋季限定】「秋の味覚バイキング」</h4>
+     <ul class="restaurant_imgs">
+                    <li><img decoding="async" src="https://www.blumenooka.jp/wp-content/uploads/2026/08/カツオのたたき.jpg" /></li>
+                            <li><img decoding="async" src="https://www.blumenooka.jp/wp-content/uploads/2026/06/174A2176.jpg" /></li>
+            </ul>
+   <dl>
+    <dt><img loading="lazy" decoding="async" width="336" height="336" src="https://www.blumenooka.jp/wp-content/uploads/2026/08/2026秋バイキング_アイコン.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://www.blumenooka.jp/wp-content/uploads/2026/08/2026秋バイキング_アイコン.jpg 336w, https://www.blumenooka.jp/wp-content/uploads/2026/08/2026秋バイキング_アイコン-300x300.jpg 300w, https://www.blumenooka.jp/wp-content/uploads/2026/08/2026秋バイキング_アイコン-150x150.jpg 150w" sizes="(max-width: 336px) 100vw, 336px" /></dt>
+    <dd>
+        <div class="article_cont">
+        <p><span style="font-size: 18pt; color: #ff6600;">きのこにカツオにさつまいも、秋のごちそう大集合！</span></p>
+<p><span style="font-size: 18pt;"><span style="font-size: 14pt;">秋を感じる季節メニューが新登場！</span><br />
+<span style="font-size: 14pt;">地元産の旬菜やご当地料理も食べ放題!!</span><br />
+</span><span>野菜を中心とした和洋折衷バイキング！</span></p>
+<p><span>旬の食材を使った<strong><span style="font-size: 14pt;">季節のお料理</span></strong>や、<br />
+<strong><span style="font-size: 14pt;">地元の食材</span></strong>を使ったお料理など、<br />
+<strong><span style="font-size: 14pt;">種類豊富な秋の味覚バイキングをご堪能ください！</span></strong></span></p>
+<p>焼きたてソーセージや、季節素材をいただく揚げたての天ぷらは絶品です！</p>
+<p>※食材の仕入れ情勢により予告なくメニューを変更する場合があります。<br />
+※写真はイメージです。</p>
+		</div>
+        <dl>
+                                    <dt>営業時間</dt>
+            <dd>11:00〜16:00(ラストご入店 15:00)</dd>
+                                    <dt>料金</dt>
+            <dd>大人(中学生以上) 　2,200円<br>
+こども(小学生以上) 　1,200円<br>
+3〜6歳(未就学児) 　700円<br>
+3歳未満　無料</dd>
+                                    <dt>お食事時間</dt>
+            <dd>60分制</dd>
+                                    <dt>お食事内容</dt>
+            <dd>【秋の味覚】<br>
+①松茸ご飯<br>
+②戻りカツオのたたき<br>
+➂根菜と鶏肉のグリル<br>
+④和風キノコパスタ<br>
+⑤松茸と牛肉のすき焼き風煮<br>
+⑥さつま芋甘露煮<br>
+⑦さつま芋とキノコの天ぷら<br>
+⑧キノコあんかけ揚げ出し豆腐（だし巻き）<br>
+⑨さんまの竜田揚げ<br>
+⑩秋鮭のマリネ<br>
+<br>
+【スイーツ】<br>
+・さつま芋ケーキ<br>
+・リンゴケーキ<br>
+・わらび餅<br>
+・フルーツゼリー<br>
+・アイスクリーム<br>
+<br>
+【バイキングテーブル】<br>
+・自家製ソーセージ<br>
+・滋賀県大豆の手作り豆腐<br>
+・丁字麩のからし酢味噌和え<br>
+・赤こんにゃく煮<br>
+・ローストポーク<br>
+・里芋の煮物<br>
+・若鶏の唐揚げ<br>
+・コロッケ<br>
+・ポテトフライ<br>
+・ミートボール<br>
+・筑前煮<br>
+・その他<br>
+<br>
+【ライブキッチン】<br>
+・グリルソーセージ<br>
+・さつま芋ときのこの天ぷら<br>
+・戻りカツオのたたき<br>
+<br>
+【サラダ】<br>
+・フレッシュ野菜<br>
+・ポテトサラダ<br>
+<br>
+【ごはん】<br>
+・日野町産米<br>
+・松茸ご飯<br>
+・ビーフカレー<br>
+<br>
+【汁物】<br>
+・野菜の味噌汁
+<br>
+【ドリンクバー】<br>
+・ソフトドリンク<br>
+・コーヒー<br>
+・紅茶<br></dd>
+                                    <dt>場所</dt>
+            <dd>街のエリア 農村レストラン</dd>
+                                </dl>
+    </dd>
+    </dl>
+</div>
+<div class="restaurant">
+    <h4>農村レストラン「春の彩り 旬彩バイキング」</h4>
+     <ul class="restaurant_imgs">
+                    <li><img decoding="async" src="https://www.blumenooka.jp/wp-content/uploads/2026/03/174A2248.jpg" /></li>
+                            <li><img decoding="async" src="https://www.blumenooka.jp/wp-content/uploads/2026/03/174A2176.jpg" /></li>
+            </ul>
+   <dl>
+    <dt><img loading="lazy" decoding="async" width="320" height="320" src="https://www.blumenooka.jp/wp-content/uploads/2026/03/2026春バイキング_アイコン.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://www.blumenooka.jp/wp-content/uploads/2026/03/2026春バイキング_アイコン.jpg 320w, https://www.blumenooka.jp/wp-content/uploads/2026/03/2026春バイキング_アイコン-300x300.jpg 300w, https://www.blumenooka.jp/wp-content/uploads/2026/03/2026春バイキング_アイコン-150x150.jpg 150w" sizes="(max-width: 320px) 100vw, 320px" /></dt>
+    <dd>
+        <div class="article_cont">
+        <p><span style="font-size: 18pt;">春を感じる季節メニューが新登場！<br />
+地元産の旬菜やご当地料理も食べ放題!!<br />
+</span><span>野菜を中心とした和洋折衷バイキング！</span></p>
+<p><span>旬の食材を使った<strong><span style="font-size: 14pt;">季節のお料理</span></strong>や、<br />
+<strong><span style="font-size: 14pt;">地元の食材</span></strong>を使ったお料理など、<br />
+<strong><span style="font-size: 14pt;">種類豊富な春の味覚バイキングをご堪能ください！</span></strong></span></p>
+<p>開催期間：3月7日（土）～5月31日（日）</p>
+<p>園内工房の自家製ソーセージや、季節素材をいただく揚げたての天ぷらは絶品です！</p>
+<p>※食材の仕入れ情勢により予告なくメニューを変更する場合があります。<br />
+※写真はイメージです。</p>
+		</div>
+        <dl>
+                                    <dt>営業時間</dt>
+            <dd>11:00〜16:00(ラストご入店 15:00)</dd>
+                                    <dt>料金</dt>
+            <dd>大人(中学生以上) 2,200円 こども(小学生以上) 1,200円 3〜6歳(未就学児) 700円</dd>
+                                    <dt>お食事時間</dt>
+            <dd>60分制</dd>
+                                    <dt>お食事内容</dt>
+            <dd>【春メニュー】<br>
+初ガツオのたたき・ローストポーク（梅ソース）・さわら西京焼き・菜の花のちらし寿司・菜の花の辛し和え・たけのこ土佐煮・春キャベツとしらすのパスタ・緑野菜のペペロンチーノ・わかさぎの南蛮漬け・チキンとゴロゴロ野菜のバジルソース
+<br>
+【いちごフェアスイーツ】<br>
+いちごファウンテン・マシュマロ・イチゴショート・イチゴロールケーキ・ミニおはぎ（きなこ）・とちおとめゼリー・アイス3種
+<br>
+【ご飯コーナー】<br>
+ご飯・菜の花のちらし寿司・カレー・みそ汁
+<br>
+【サラダバー】<br>
+サニーレタス・トマト・ミニトマト・ブロッコリー・水菜・ポテトサラダ
+<br>
+【カウンターコーナー】<br>
+ソーセージ・春野菜の天ぷら・カツオのたたき
+<br>
+【バイキングテーブル】<br>
+菜の花の辛し和え・たけのこ土佐煮・緑野菜のペペロンチーノ・わかさぎの南蛮漬け・さわら西京焼き・春キャベツとしらすのパスタ・きゃべつと小松菜のおひたし・若鶏唐揚げ・ローストポーク・丁子麩にからし酢みそ和え・赤こんにゃくの煮物・日野菜漬け・きんぴらごぼう・チャプチェ・ミートボール・チキンとゴロゴロ野菜のバジルソース・その他
+<br>
+【パンコーナー】<br>
+テーブルロール・ミニクロワッサン・バケット
+<br>
+【ドリンクバー】<br>
+ソフトドリンク各種</dd>
+                                    <dt>場所</dt>
+            <dd>街のエリア 農村レストラン</dd>
+                                </dl>
+    </dd>
+    </dl>
+</div>
+<div class="restaurant">
+    <h4>BBQハウス「焼肉食べ放題」</h4>
+     <ul class="restaurant_imgs">
+                    <li><img decoding="async" src="https://www.blumenooka.jp/wp-content/uploads/2020/02/img_resturant04.jpg" /></li>
+                            <li><img decoding="async" src="https://www.blumenooka.jp/wp-content/uploads/2020/02/img_resturant05.jpg" /></li>
+            </ul>
+   <dl>
+    <dt><img loading="lazy" decoding="async" width="513" height="570" src="https://www.blumenooka.jp/wp-content/uploads/2020/02/img_resturant06.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://www.blumenooka.jp/wp-content/uploads/2020/02/img_resturant06.png 513w, https://www.blumenooka.jp/wp-content/uploads/2020/02/img_resturant06-270x300.png 270w" sizes="(max-width: 513px) 100vw, 513px" /></dt>
+    <dd>
+        <div class="article_cont">
+        <p><span style="font-size: 18pt;"><strong>人気の焼肉食べ放題！</strong></span></p>
+<p>90分間の食べ放題でお腹も大満足！</p>
+		</div>
+        <dl>
+                                    <dt>営業時間</dt>
+            <dd>11:00～16:30（ラストご入店15:00）<br>8/11は花火大会のため11:00～19:30（ラストご入店18:00）</dd>
+                                    <dt>料金</dt>
+            <dd>大人 2,700円<br>
+小学生以上 1,500円<br>
+3〜6歳 800円<br>
+（2歳以下無料）<br>
+<br>
+※焼肉食べ放題は変動価格制を導入しております。</dd>
+                                    <dt>お食事時間</dt>
+            <dd>90分制</dd>
+                                    <dt>お食事内容</dt>
+            <dd>新鮮なお肉と、地元野菜が食べ放題♪
+ドリンクバーとカレーバーもセットで楽しめます！</dd>
+                                    <dt>場所</dt>
+            <dd>街のエリア　BBQハウス 焼肉食べ放題</dd>
+                                    <dt>メニュー</dt>
+            <dd>牛肩ロース・牛バラ・豚ロース・豚バラ・鶏モモ・ソーセージ・近江米ご飯・各種野菜・カレー
+※食べ放題の牛肉は近江牛ではございません。</dd>
+                    </dl>
+    </dd>
+    </dl>
+</div>
+<div class="restaurant">
+    <h4>ファストフード「まちカフェ」</h4>
+     <ul class="restaurant_imgs">
+                    <li><img decoding="async" src="https://www.blumenooka.jp/wp-content/uploads/2022/04/E8A7309.jpg" /></li>
+                            <li><img decoding="async" src="https://www.blumenooka.jp/wp-content/uploads/2020/02/繧｢繧ｦ繝医Λ繧､繝ｳ蜑・b-e1664677531100.jpg" /></li>
+            </ul>
+   <dl>
+    <dt><img loading="lazy" decoding="async" width="508" height="565" src="https://www.blumenooka.jp/wp-content/uploads/2020/02/img_resturant09.png" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://www.blumenooka.jp/wp-content/uploads/2020/02/img_resturant09.png 508w, https://www.blumenooka.jp/wp-content/uploads/2020/02/img_resturant09-270x300.png 270w" sizes="(max-width: 508px) 100vw, 508px" /></dt>
+    <dd>
+        <div class="article_cont">
+        <p>カフェテリア形式のおしゃれなファストフード店。<br />
+テイクアウトして、テラスや青空の下でピクニック気分を楽しめます。<br />
+自慢のソフトクリームもおすすめ。</p>
+<p>&nbsp;</p>
+		</div>
+        <dl>
+                                    <dt>営業時間</dt>
+            <dd>10:00～16:30</dd>
+                                    <dt>料金</dt>
+            <dd>ソフトクリーム450円<br>
+ピザ　(ミックス・ポテマヨ・照り焼きチキン) 900円<br>
+パスタ　(ミートソース・カルボナーラ・明太クリーム)各種 850円<br>
+各種ソフトドリンク<br></dd>
+                                                            <dt>場所</dt>
+            <dd>街のエリア　まちカフェ</dd>
+                                </dl>
+    </dd>
+    </dl>
+</div>
+
+ 
+
+</section>
+    
+        
+
+        
+    </div><!-- /inner -->
+    
+</main> 
+  <footer>
+    <div class="bnr_area">
+      <div class="inner">
+    　 
+      <ul class="sns_icons">
+          <li><a href="https://www.facebook.com/%E6%BB%8B%E8%B3%80%E8%BE%B2%E6%A5%AD%E5%85%AC%E5%9C%92-%E3%83%96%E3%83%AB%E3%83%BC%E3%83%A1%E3%81%AE%E4%B8%98-718603918192497/" target="_blank"><img src="https://www.blumenooka.jp/wp-content/themes/blume/img/common/ico_fb.png" alt="facebook"></a></li>
+          <li><a href="https://www.instagram.com/blumenooka/" target="_blank"><img src="https://www.blumenooka.jp/wp-content/themes/blume/img/common/ico_instagram.png" alt="Instagram"></a></li>
+          <li><a href="https://twitter.com/blumenhugel?ref_src=twsrc%5Etfw&ref_url=http%3A%2F%2Fwww.blumenooka.jp%2F" target="_blank"><img src="https://www.blumenooka.jp/wp-content/themes/blume/img/common/ico_twitter.png" alt="Twitter"></a></li>
+          <li><a href="http://line.naver.jp/ti/p/%40blumenooka" target="_blank"><img src="https://www.blumenooka.jp/wp-content/themes/blume/img/common/ico_line.png" alt="LINE"></a></li>
+          <li><a href="https://www.youtube.com/channel/UCnba2eNq4mZgPBKHIg0jrJw" target="_blank"><img src="https://www.blumenooka.jp/wp-content/themes/blume/img/common/ico_youtube.png" alt="Youtube"></a></li>
+		  <li><a href="https://www.tiktok.com/@blume_hugel?is_from_webapp=1&sender_device=pc" target="_blank"><img src="https://www.blumenooka.jp/wp-content/themes/blume/img/common/ico_tiktok.png" alt="TikTok"></a></li>
+      </ul>
+      </div><!-- /inner -->
+    </div><!-- /bnr_area -->
+    
+    <div class="sitemap_area pc">
+      <ul>
+        <li><a href="https://www.blumenooka.jp/attraction/">あそびつくせ！楽しみ方けんさく</a></li>
+        <li><a href="https://www.blumenooka.jp/attraction/">イベント情報</a></li>
+        <li><a href="https://www.blumenooka.jp/flower/">花ごよみ</a></li>
+        <li><a href="https://www.blumenooka.jp/experience/">たいけんする</a></li>
+        <li><a href="https://www.blumenooka.jp/touch/">さわる・見る</a></li>
+        <li><a href="https://www.blumenooka.jp/play/">あそぶ</a></li>
+        <li><a href="https://www.blumenooka.jp/have/">たべる・買う</a></li>
+        <li><a href="https://www.blumenooka.jp/information/">総合案内</a></li>
+        <li><a href="https://www.blumenooka.jp/access/">交通アクセス</a></li>
+        <li><a href="https://www.blumenooka.jp/price/">料金案内</a></li>
+        <li><a href="https://www.blumenooka.jp/group/">団体でのご利用</a></li>
+        <li><a href="https://www.blumenooka.jp/passport/">年間パスポート会員様</a></li>
+        <li><a href="https://www.blumenooka.jp/news/">お知らせ</a></li>
+        <li><a href="https://www.blumenooka.jp/media/">メディア掲載</a></li>
+      </ul>
+    </div><!-- /sitemap_area -->
+    <div class="link_area">
+      <ul class="inner">
+        <li><a href="https://www.blumenooka.jp/company/">企業情報</a></li>
+        <li><a href="https://www.blumenooka.jp/recruit/">採用情報</a></li>
+        <li><a href="https://www.blumenooka.jp/faq/">よくある質問</a></li>
+        <li><a href="https://www.blumenooka.jp/policy/">サイトポリシー</a></li>
+        <li><a href="https://www.blumenooka.jp/privacy/">プライバシーポリシー</a></li>
+        <li><a href="https://www.blumenooka.jp/sitemap/">サイトマップ</a></li>
+      </ul>
+    </div><!-- /link_area -->
+    <div class="siteinfo_area">
+      <div class="inner">
+        <p class="pagetop"><a href="#container"><span>PAGE TOP</span></a></p>
+        <div class="siteinfo">
+            <p class="logo"><a href="./"><img src="https://www.blumenooka.jp/wp-content/themes/blume/img/common/logo.png" alt="滋賀農業公園ブルーメの丘"/></a></p>
+            <p class="address">滋賀農業公園ブルーメの丘<br>〒529-1628 滋賀県蒲生郡日野町西大路843<br>電話:0748-52-2611</p>
+        </div><!-- /siteinfo -->
+        <p class="copyright">&copy; Blumen hügel inc.</p>
+      </div><!-- /inner -->
+    </div><!-- /siteinfo_area -->
+  </footer>
+  <!-- /footer --> 
+  
+</div>
+<!-- /container -->
+		<!-- Google タグ マネージャー (noscript) スニペット (Site Kit が追加) -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZKM2ZQP" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- (ここまで) Google タグ マネージャー (noscript) スニペット (Site Kit が追加) -->
+		<script type="text/javascript" src="https://yubinbango.github.io/yubinbango/yubinbango.js" id="yubinbango-js"></script>
+<script type="text/javascript" id="vk-ltc-js-js-extra">
+/* <![CDATA[ */
+var vkLtc = {"ajaxurl":"https:\/\/www.blumenooka.jp\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.blumenooka.jp/wp-content/plugins/vk-link-target-controller/js/script.min.js?ver=1.7.6.0" id="vk-ltc-js-js"></script>
+
+</body>
+</html>

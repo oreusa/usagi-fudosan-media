@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-179726484-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-179726484-1');
+</script>  
+
+    <meta charset="utf-8">
+            <meta name="viewport" content="width=1180px">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no,address=no,email=no">
+    <title>お知らせ｜臨済宗永源寺派 大本山 永源寺</title>
+    <meta name="copyright" content="Copyright(C) EIGENJI. All rights reserved." />
+    <meta name="description" content="大本山　永源寺からの拝観案内です。催しもののご案内、日頃の行事やイベントのお知らせをお届けいたします。">
+    <meta property="og:title" content="お知らせ｜臨済宗永源寺派 大本山 永源寺" />
+    <meta property="og:description" content="大本山　永源寺からの拝観案内です。催しもののご案内、日頃の行事やイベントのお知らせをお届けいたします。" />
+    <meta property="og:image" content="https://eigenji-t.jp/assets/img/page/top/top1.jpg" />
+    <meta property="og:url" content="https://eigenji-t.jp/haikan/" />
+    <meta property="og:type" content="article" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap">
+    
+    <link rel="stylesheet" href="/assets/css/common/common.css?v=20261118-044549">
+          <link rel="stylesheet" href="/assets/css/component/component.css?v=20261118-044549">
+				<link rel="stylesheet" href="/assets/css/addition.min.css?v=20261118-044549">
+
+
+    <link rel="shortcut icon" href="https://eigenji-t.jp/favicon.ico">
+    <link rel="canonical" href="https://eigenji-t.jp/haikan/">
+</head>
+
+<body>
+	<header id="header" class="underheader">
+		<div class="inner headerTop">
+			<div class="underLogo">
+				<p><a href="/"><img src="/assets/img/page/kaizan/under_logo.png" alt="永源寺"></a></p>
+			</div>
+
+			<nav class="headerNav">
+				<ul class="mainNav">
+									<li class="mainNavItem"><a href="/">トップ</a></li>
+									<li class="mainNavItem"><a href="/about/">永源寺について</a></li>
+					<li class="mainNavItem"><a href="/kaizan/"> 開山寂室禅師</a></li>
+					<li class="mainNavItem"><a href="/ground/">境内案内</a></li>
+					<li class="mainNavItem"><a href="/event/">行事案内</a></li>
+					<li class="mainNavItem"><a href="/access/">アクセス</a></li>
+					<li class="mainNavItem"><a href="/contact/">よくある質問</a></li>
+				</ul>
+
+				<div class="languageBtn subPage">
+					<a href="javascript:void(0);" class="childOpenBtnHader">Language</a>
+					<ul class="languageList">
+						<li class="languageItem"><a href="/">日本語</a></li>
+						<li class="languageItem"><a href="/en/">ENGLISH</a></li>
+						<li class="languageItem"><a href="/cn/">簡体中文</a></li>
+						<li class="languageItem"><a href="/tw/">繁体中文</a></li>
+					</ul>
+				</div>
+
+				<!-- 202402追加 -->
+				<figure class="headerNav_tour subPage">
+					<a href="/tour/" target="_blank" class="headerNav_tour_link">
+						<img src="/tour/assets/images/top/ttl_re.svg" alt="源 ROOTS OF JAPAN" width="" height="">
+					</a>
+				</figure>
+
+        <!-- 202503追加 -->
+				<figure class="headerNav_jyaran subPage">
+					<a href="https://www.jalan.net/activity/official/spt_25401ag2130014022/" target="_blank" class="headerNav_jyaran_link">
+						<img src="/assets/img/page/top/bnr_jyaran.jpg" alt="じゃらん" width="200" height="33">
+					</a>
+				</figure>
+
+				<figure class="underNihonLogo">
+					<img src="/assets/img/page/top/nihonisan_logo.png" alt="日本遺産" loading="lazy">
+				</figure>
+			</nav>
+
+		</div>
+
+		<div class="content">
+			<section>
+				  <div class="btn-trigger" id="btn01">
+					<span class="navline"></span>
+					<span class="navline"></span>
+					<span class="navline"></span>
+				  </div>
+			</section>
+		</div>
+		<div class="spHeaderBar sp">
+			<figure class="underLogo">
+				<a href="/"><img src="/assets/img/page/kaizan/under_logo.png" alt="永源寺"></a>
+			</figure>
+		</div>
+		<ul class="gnav">
+			<li><a href="/">トップ</a></li>
+			<li><a href="/about/">永源寺について</a></li>
+			<li><a href="/kaizan/"> 開山寂室禅師</a></li>
+			<li><a href="/ground/">境内案内</a></li>
+			<li><a href="/event/">行事案内</a></li>
+			<li><a href="/contact/">よくある質問</a></li>
+			<li><a href="/access/">アクセス</a></li>
+			<li><a href="/link/">リンク</a></li>
+			<li class="language"><a href="/en/">ENGLISH</a><a href="/cn/">簡体中文</a><a href="/tw/">繁体中文</a></li>
+			<li class="gnav_sp_headerNav">
+				<!-- 202402追加 -->
+				<figure class="headerNav_tour">
+					<a href="/tour/" target="_blank" class="headerNav_tour_link">
+						<img src="/tour/assets/images/top/ttl_re.svg" alt="源 ROOTS OF JAPAN" width="" height="">
+					</a>
+				</figure>
+
+				<!-- 202403追加 -->
+				<!-- <figure class="headerNav_award">
+					<a href="https://cjpf.jp/award/" target="_blank" class="headerNav_award_link">
+						<img src="/assets/img/page/top/logo_cjpfaward.png" alt="CJPF AWARD" width="" height="">
+					</a>
+				</figure> -->
+        
+        <!-- 20250307追加 -->
+				<figure class="headerNav_jyaran">
+					<a href="https://www.jalan.net/activity/official/spt_25401ag2130014022/" target="_blank" class="headerNav_jyaran_link">
+						<img src="/assets/img/page/top/bnr_jyaran.jpg" alt="じゃらん" width="" height="">
+					</a>
+				</figure>
+			</li>
+		</ul>
+
+		
+	</header>
+
+
+
+<main id="main">
+    <div class="summary haikanMv">
+        <div class="inner">
+            <div class="catch">
+                <h1 class="catchttl">お知らせ</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="contents">
+        <div class="mainContents">
+
+        <div class="bcWrap">
+	<ol id="breadcrumb" class="inner pl100" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<a href="/" itemprop="item"><span itemprop="name">トップページ</span></a>
+			<meta itemprop="position" content="1" />
+		</li>
+		<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<span itemprop="name">お知らせ</span>
+			<meta itemprop="position" content="2" />
+		</li>
+	</ol>
+</div>
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": [
+		{
+			"@type": "ListItem",
+			"position": 1,
+			"item": {
+				"@id": "https://eigenji-t.jp",
+				"name": "TOP"
+			}
+		},
+				{
+			"@type": "ListItem",
+			"position": 2,
+			"item": {
+				"@id": "https://eigenji-t.jp/haikan/",
+				"name": "お知らせ"
+			}
+		}
+			]
+}
+</script>
+            <article>
+                <section class="haikan underBack">
+                    <div class="inner">
+                        <div class="ttlTop01Wrap">
+                            <h2 class="ttl02">永源寺拝観のお知らせ</h2>
+                        </div>
+
+                        
+                        <div class="annai_box">
+                            <div class="flex jc_sb_pc fw_w_sp fd_cr_sp">
+                                <h2 class="annai_ttl"><a href="https://eigenji-t.jp/2026/11/18/%ef%bc%91%ef%bc%91%e6%9c%88%ef%bc%91%ef%bc%97%e6%97%a5%e3%80%80%e6%b0%b8%e6%ba%90%e5%af%ba%e5%a2%83%e5%86%85%e3%81%ae%e6%a7%98%e5%ad%90/">１１月１８日（水）　永源寺境内の様子</a></h2>
+                                <p class="mb010 data"><time datetime="2026-11-18">2026年11月18日</time></p>
+                            </div>
+
+                            <div class="annai_txt"><p>昨日からの雨はやみ、西の空が少し明るくなってまいりました。山門上から見るモミジがまさに見ごろを迎えています。<br />
+山門、法堂の特別拝観は１０時、１１時３０分、１４時の３回行われます。詳しくは永源寺前観光案内所にお問い合わせください。<br />
+料金　１５００円　（入山志納料含）<br />
+℡　０７４８ー２７－２０２０</p>
+<p><img fetchpriority="high" decoding="async" class="alignnone size-large wp-image-3001" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1230-1024x768.jpeg" alt="" width="1024" height="768" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1230-1024x768.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1230-300x225.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1230-768x576.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1230-1536x1152.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1230-2048x1536.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1230-1200x900.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /><img decoding="async" class="alignnone size-large wp-image-3002" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1232-1024x852.jpeg" alt="" width="1024" height="852" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1232-1024x852.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1232-300x250.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1232-768x639.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1232-1536x1278.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1232-2048x1704.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1232-1082x900.jpeg 1082w" sizes="(max-width: 1024px) 100vw, 1024px" /><img decoding="async" class="alignnone size-large wp-image-3003" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1236-1024x778.jpeg" alt="" width="1024" height="778" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1236-1024x778.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1236-300x228.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1236-768x583.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1236-1536x1167.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1236-2048x1556.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1236-1185x900.jpeg 1185w" sizes="(max-width: 1024px) 100vw, 1024px" /><img loading="lazy" decoding="async" class="alignnone size-large wp-image-3004" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1234-1024x768.jpeg" alt="" width="1024" height="768" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1234-1024x768.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1234-300x225.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1234-768x576.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1234-1536x1152.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1234-2048x1536.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1234-1200x900.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /><img loading="lazy" decoding="async" class="alignnone size-large wp-image-3000" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1240-1024x816.jpeg" alt="" width="1024" height="816" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1240-1024x816.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1240-300x239.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1240-768x612.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1240-1536x1223.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1240-2048x1631.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1240-1130x900.jpeg 1130w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+</div>
+
+                            <div class="flex_pc jc_sa_pc">
+                                                        </div>
+                        </div>
+
+                        
+                        <div class="annai_box">
+                            <div class="flex jc_sb_pc fw_w_sp fd_cr_sp">
+                                <h2 class="annai_ttl"><a href="https://eigenji-t.jp/2026/11/16/11%e6%9c%8816%e6%97%a5%e3%80%80%e6%b0%b8%e6%ba%90%e5%af%ba%e5%a2%83%e5%86%85%e3%81%ae%e6%a7%98%e5%ad%90/">11月16日　永源寺境内の様子</a></h2>
+                                <p class="mb010 data"><time datetime="2026-11-16">2026年11月16日</time></p>
+                            </div>
+
+                            <div class="annai_txt"><p>昨日の雨とうって変わって穏やかな晴天になりました。紅葉はいよいよ見頃を迎えております。</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-large wp-image-2993" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1218-1024x1016.jpeg" alt="" width="1024" height="1016" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1218-1024x1016.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1218-300x298.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1218-150x150.jpeg 150w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1218-768x762.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1218-1536x1524.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1218-2048x2032.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1218-907x900.jpeg 907w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2994" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1219-1024x768.jpeg" alt="" width="1024" height="768" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1219-1024x768.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1219-300x225.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1219-768x576.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1219-1536x1152.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1219-2048x1536.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1219-1200x900.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2995" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1221-1024x768.jpeg" alt="" width="1024" height="768" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1221-1024x768.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1221-300x225.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1221-768x576.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1221-1536x1152.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1221-2048x1536.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1221-1200x900.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2996" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1222-1024x1021.jpeg" alt="" width="1024" height="1021" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1222-1024x1021.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1222-300x300.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1222-150x150.jpeg 150w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1222-768x766.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1222-1536x1532.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1222-2048x2043.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1222-902x900.jpeg 902w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2997" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1224-1024x768.jpeg" alt="" width="1024" height="768" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1224-1024x768.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1224-300x225.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1224-768x576.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1224-1536x1152.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1224-2048x1536.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1224-1200x900.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /></p>
+</div>
+
+                            <div class="flex_pc jc_sa_pc">
+                                                        </div>
+                        </div>
+
+                        
+                        <div class="annai_box">
+                            <div class="flex jc_sb_pc fw_w_sp fd_cr_sp">
+                                <h2 class="annai_ttl"><a href="https://eigenji-t.jp/2026/11/15/%e9%a3%9f%e4%ba%8b%e5%87%a6%e3%80%8e%e9%9f%b3%e7%84%a1%e7%80%ac%e3%80%8f%e3%81%a8%e3%82%ad%e3%83%83%e3%83%81%e3%83%b3%e3%82%ab%e3%83%bc%e3%80%8e%e3%83%96%e3%83%a9%e3%83%b3%e3%83%96%e3%83%ab%e3%80%8f/">食事処『音無瀬』とキッチンカー『ブランブル』が開店いたしました。</a></h2>
+                                <p class="mb010 data"><time datetime="2026-11-15">2026年11月15日</time></p>
+                            </div>
+
+                            <div class="annai_txt"><p>昨日から永源寺の食事処『音無瀬』とキッチンカー　『ブランブル』が開店致しました。おうどんやおそば、ぜんざい、甘酒などの温かい食事や、パフェ、クレープ等のスイーツ軽食をご用意しております。永源寺にお越しの際は、ぜひご利用下さい。20日（金）17時から方丈で尺八とピアノの奉納演奏もございます。</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-large wp-image-2984" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/1-1024x737.jpeg" alt="" width="1024" height="737" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/1-1024x737.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/1-300x216.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/1-768x552.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/1-1536x1105.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/1-2048x1473.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/1-1200x863.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2985" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/2-1024x729.jpeg" alt="" width="1024" height="729" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/2-1024x729.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/2-300x213.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/2-768x546.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/2-1536x1093.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/2-2048x1457.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/2-1200x854.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2986" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/3-1024x768.jpeg" alt="" width="1024" height="768" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/3-1024x768.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/3-300x225.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/3-768x576.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/3-1536x1152.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/3-2048x1536.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/3-1200x900.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2987" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/4-1024x768.jpeg" alt="" width="1024" height="768" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/4-1024x768.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/4-300x225.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/4-768x576.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/4-1536x1152.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/4-2048x1536.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/4-1200x900.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2988" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/5-1024x768.jpeg" alt="" width="1024" height="768" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/5-1024x768.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/5-300x225.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/5-768x576.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/5-1536x1152.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/5-2048x1536.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/5-1200x900.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2989" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/6-819x1024.jpg" alt="" width="819" height="1024" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/6-819x1024.jpg 819w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/6-240x300.jpg 240w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/6-768x960.jpg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/6-720x900.jpg 720w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/6.jpg 1080w" sizes="(max-width: 819px) 100vw, 819px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2990" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/7-819x1024.jpg" alt="" width="819" height="1024" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/7-819x1024.jpg 819w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/7-240x300.jpg 240w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/7-768x960.jpg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/7-720x900.jpg 720w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/7.jpg 1080w" sizes="(max-width: 819px) 100vw, 819px" /></p>
+</div>
+
+                            <div class="flex_pc jc_sa_pc">
+                                                        </div>
+                        </div>
+
+                        
+                        <div class="annai_box">
+                            <div class="flex jc_sb_pc fw_w_sp fd_cr_sp">
+                                <h2 class="annai_ttl"><a href="https://eigenji-t.jp/2026/11/15/11%e6%9c%8814%e6%97%a5%ef%bc%88%e5%9c%9f%ef%bc%89%e3%80%80%e6%b0%b8%e6%ba%90%e5%af%ba%e3%83%96%e3%83%ab%e3%83%bc%e3%83%a9%e3%82%a4%e3%83%88%e3%82%a2%e3%83%83%e3%83%97/">11月14日（土）　永源寺ブルーライトアップ</a></h2>
+                                <p class="mb010 data"><time datetime="2026-11-15">2026年11月15日</time></p>
+                            </div>
+
+                            <div class="annai_txt"><p>昨日から永源寺のライトアップが始まり、今年も世界糖尿病デーにあわせ本堂のブルーライトアップが開催されました。本堂では永源寺マルベリーと株式会社ソシアの企画協賛で、桑の葉の奉納と健康祈願法要が営修され、17時20分から本堂前でブルーライト点灯式が行われました。</p>
+<p><img loading="lazy" decoding="async" class="alignnone size-large wp-image-2977" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600297-1024x818.jpg" alt="" width="1024" height="818" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600297-1024x818.jpg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600297-300x240.jpg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600297-768x614.jpg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600297-1536x1227.jpg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600297-2048x1637.jpg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600297-1126x900.jpg 1126w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2978" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600299-1024x678.jpg" alt="" width="1024" height="678" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600299-1024x678.jpg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600299-300x199.jpg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600299-768x509.jpg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600299-1536x1017.jpg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600299-1200x795.jpg 1200w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600299.jpg 1993w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2979" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600301-1024x686.jpg" alt="" width="1024" height="686" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600301-1024x686.jpg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600301-300x201.jpg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600301-768x515.jpg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600301-1536x1030.jpg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600301-2048x1373.jpg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600301-1200x804.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2980" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600304-1024x685.jpg" alt="" width="1024" height="685" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600304-1024x685.jpg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600304-300x201.jpg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600304-768x514.jpg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600304-1536x1028.jpg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600304-2048x1371.jpg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600304-1200x803.jpg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2981" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600305-817x1024.jpg" alt="" width="817" height="1024" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600305-817x1024.jpg 817w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600305-239x300.jpg 239w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600305-768x963.jpg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600305-1225x1536.jpg 1225w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600305-1633x2048.jpg 1633w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600305-718x900.jpg 718w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/P1600305-scaled.jpg 2041w" sizes="(max-width: 817px) 100vw, 817px" /></p>
+</div>
+
+                            <div class="flex_pc jc_sa_pc">
+                                                        </div>
+                        </div>
+
+                        
+                        <div class="annai_box">
+                            <div class="flex jc_sb_pc fw_w_sp fd_cr_sp">
+                                <h2 class="annai_ttl"><a href="https://eigenji-t.jp/2026/11/13/%e6%b0%b8%e6%ba%90%e5%af%ba%e3%83%a9%e3%82%a4%e3%83%88%e3%82%a2%e3%83%83%e3%83%97%e3%80%8011%e6%9c%8814%e6%97%a5%ef%bc%88%e5%9c%9f%ef%bc%89%e3%82%88%e3%82%8a%e5%a7%8b%e3%81%be%e3%82%8a%e3%81%be/">永源寺ライトアップ　11月14日（土）より始まります。</a></h2>
+                                <p class="mb010 data"><time datetime="2026-11-13">2026年11月13日</time></p>
+                            </div>
+
+                            <div class="annai_txt"><div dir="auto">週末のお天気が心配ですが、今日も穏やかな日よりとなっております。</div>
+<div dir="auto">明日からいよいよ永源寺のライトアップが始まります。法堂には工房SHINの竹灯籠が設置されております。今年は瓦屋寺、百済寺、永源寺三ヶ寺連携で楓街道周遊コースも企画しております。ふるってご参加下さい。</div>
+<div dir="auto"><a href="https://www.instagram.com/reel/DfqFJSSMfUY/?utm_source=ig_web_copy_link&amp;exln=MzRlODBiNWFlZA==&amp;srtk=MzRlODBiNWFlZA==">https://www.instagram.com/reel/DfqFJSSMfUY/?utm_source=ig_web_copy_link&amp;exln=MzRlODBiNWFlZA==&amp;srtk=MzRlODBiNWFlZA==</a></div>
+<div dir="auto">ライトアップ行事日程</div>
+<div dir="auto">永源寺ライトアップ　14日（土）～28日（土）</div>
+<div dir="auto">ブルーライトアップ　14日（土）　17時から</div>
+<div dir="auto">紅葉ライトアップ奉納演奏　尺八×ピアノ</div>
+<div dir="auto">”五孔八十八”ミニライブ　20日（金）17時から</div>
+<div dir="auto">ともしびミニライブ　21日（土）17時30分より</div>
+<div dir="auto">ウィンドベルコンサート22日（日）18時頃</div>
+<div dir="auto"><img loading="lazy" decoding="async" class="alignnone size-large wp-image-2967" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1192-1024x768.jpeg" alt="" width="1024" height="768" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1192-1024x768.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1192-300x225.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1192-768x576.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1192-1536x1152.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1192-2048x1536.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1192-1200x900.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2968" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1195-1024x768.jpeg" alt="" width="1024" height="768" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1195-1024x768.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1195-300x225.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1195-768x576.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1195-1536x1152.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1195-2048x1536.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1195-1200x900.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2969" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1197-1024x768.jpeg" alt="" width="1024" height="768" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1197-1024x768.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1197-300x225.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1197-768x576.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1197-1536x1152.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1197-2048x1536.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1197-1200x900.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2970" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1198-1024x768.jpeg" alt="" width="1024" height="768" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1198-1024x768.jpeg 1024w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1198-300x225.jpeg 300w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1198-768x576.jpeg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1198-1536x1152.jpeg 1536w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1198-2048x1536.jpeg 2048w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IMG_1198-1200x900.jpeg 1200w" sizes="(max-width: 1024px) 100vw, 1024px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2971" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN001-724x1024.jpg" alt="" width="724" height="1024" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN001-724x1024.jpg 724w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN001-212x300.jpg 212w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN001-768x1086.jpg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN001-1086x1536.jpg 1086w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN001-636x900.jpg 636w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN001.jpg 1240w" sizes="(max-width: 724px) 100vw, 724px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2972" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN002-724x1024.jpg" alt="" width="724" height="1024" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN002-724x1024.jpg 724w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN002-212x300.jpg 212w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN002-768x1086.jpg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN002-1086x1536.jpg 1086w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN002-636x900.jpg 636w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN002.jpg 1240w" sizes="(max-width: 724px) 100vw, 724px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2973" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN03-628x1024.jpg" alt="" width="628" height="1024" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN03-628x1024.jpg 628w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN03-184x300.jpg 184w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN03-768x1252.jpg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN03-942x1536.jpg 942w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN03-552x900.jpg 552w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/IN03.jpg 982w" sizes="(max-width: 628px) 100vw, 628px" /> <img loading="lazy" decoding="async" class="alignnone size-large wp-image-2974" src="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/ウィンドベルチラシ２-2021_11_16-00_02_44-UTC-724x1024.jpg" alt="" width="724" height="1024" srcset="https://eigenji-t.jp/manager/wp-content/uploads/2026/11/ウィンドベルチラシ２-2021_11_16-00_02_44-UTC-724x1024.jpg 724w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/ウィンドベルチラシ２-2021_11_16-00_02_44-UTC-212x300.jpg 212w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/ウィンドベルチラシ２-2021_11_16-00_02_44-UTC-768x1086.jpg 768w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/ウィンドベルチラシ２-2021_11_16-00_02_44-UTC-1086x1536.jpg 1086w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/ウィンドベルチラシ２-2021_11_16-00_02_44-UTC-1448x2048.jpg 1448w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/ウィンドベルチラシ２-2021_11_16-00_02_44-UTC-636x900.jpg 636w, https://eigenji-t.jp/manager/wp-content/uploads/2026/11/ウィンドベルチラシ２-2021_11_16-00_02_44-UTC-scaled.jpg 1810w" sizes="(max-width: 724px) 100vw, 724px" /></div>
+</div>
+
+                            <div class="flex_pc jc_sa_pc">
+                                                        </div>
+                        </div>
+
+                        
+
+	<nav class="navigation pagination" aria-label="投稿">
+		
+		<div class="nav-links"><ul class='page-numbers'>
+	<li><span aria-current="page" class="page-numbers current">1</span></li>
+	<li><a class="page-numbers" href="https://eigenji-t.jp/haikan/page/2/">2</a></li>
+	<li><span class="page-numbers dots">&hellip;</span></li>
+	<li><a class="page-numbers" href="https://eigenji-t.jp/haikan/page/79/">79</a></li>
+	<li><a class="next page-numbers" href="https://eigenji-t.jp/haikan/page/2/">»</a></li>
+</ul>
+</div>
+	</nav>
+                        <div class="past_article">
+  <p>以前の記事一覧</p>
+  <div class="flex_pc jc_sb_pc">
+    <ul class="past_article_list">
+    					<li><a href="https://eigenji-t.jp/2026/04/02/%ef%bc%9c%e9%87%8d%e8%a6%81%ef%bc%9e%e3%80%804%e6%9c%881%e6%97%a5%e3%82%88%e3%82%8a%e6%b0%b8%e6%ba%90%e5%af%ba%e5%8f%82%e6%8b%9d%e5%bf%97%e7%b4%8d%e6%96%99%e3%81%8c%e5%a4%89%e6%9b%b4%e3%81%ab%e3%81%aa/">＜重要＞　4月1日より永源寺参拝志納料が変更になります。</a></li>
+					<li><a href="https://eigenji-t.jp/2025/03/10/%e7%ac%ac%e5%9b%9b%e5%8d%81%e5%85%ab%e5%9b%9e%e3%80%80%e9%96%8b%e5%b1%b1%e5%af%82%e5%ae%a4%e7%a6%85%e5%b8%ab%e5%a5%89%e8%b3%9b%e8%8c%b6%e4%bc%9a%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/">第四十八回　開山寂室禅師奉賛茶会のお知らせ</a></li>
+					<li><a href="https://eigenji-t.jp/2025/03/07/%e3%82%b7%e3%82%ac%e3%83%aa%e3%82%ba%e3%83%a0%e4%bd%93%e9%a8%93%e3%81%ab%e6%96%b0%e7%b7%91%e3%81%ae%e6%b0%b8%e6%ba%90%e5%af%ba%e6%97%a9%e6%9c%9d%e7%89%b9%e5%88%a5%e6%8b%9d%e8%a6%b3%e3%81%8c%e6%8e%b2/">シガリズム体験に新緑の永源寺早朝特別拝観が掲載されました。</a></li>
+					<li><a href="https://eigenji-t.jp/2024/10/29/11%e6%9c%88%e3%80%80%e8%a6%b3%e6%a5%93%e6%9c%9f%e6%b0%b8%e6%ba%90%e5%af%ba%e6%8b%9d%e8%a6%b3%e3%81%ae%e4%ba%88%e5%ae%9a/">11月　観楓期永源寺拝観の予定</a></li>
+					<li><a href="https://eigenji-t.jp/2024/10/10/%e8%a6%b3%e5%85%89%e3%82%b7%e3%83%bc%e3%82%ba%e3%83%b3%e3%81%ae%e5%a2%83%e5%86%85%e4%ba%88%e7%b4%84%e5%88%b6%e9%a7%90%e8%bb%8a%e5%a0%b4%e3%81%ae%e3%81%8a%e3%81%97%e3%82%89%e3%81%9b/">観光シーズンの境内予約制駐車場のおしらせ</a></li>
+					<li><a href="https://eigenji-t.jp/2023/10/13/%ef%bc%91%ef%bc%91%e6%9c%88%e3%80%80%e6%b0%b8%e6%ba%90%e5%af%ba%e8%a6%b3%e6%a5%93%e6%9c%9f%e8%a1%8c%e4%ba%8b%e3%83%bb%e6%8b%9d%e8%a6%b3%e6%99%82%e9%96%93%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/">１１月　永源寺観楓期行事案内と拝観時間のお知らせ</a></li>
+					<li><a href="https://eigenji-t.jp/2023/03/01/%e3%82%a4%e3%83%b3%e3%83%90%e3%82%a6%e3%83%b3%e3%83%89%e5%90%91%e3%81%91%e7%89%b9%e8%a8%ad%e3%83%9b%e3%83%bc%e3%83%a0%e3%83%9a%e3%83%bc%e3%82%b8%e3%81%a8%e5%8b%95%e7%94%bb%e3%81%ae%e5%85%ac%e9%96%8b/">インバウンド向け特設ホームページと動画の公開</a></li>
+					<li><a href="https://eigenji-t.jp/2022/11/25/11%e3%81%8c%e3%81%a425%e6%97%a5%e3%81%ae%e7%b4%85%e8%91%89%e7%8a%b6%e6%b3%81%e3%81%a8%e5%8f%82%e6%8b%9d%e6%99%82%e9%96%93%e5%a4%89%e6%9b%b4%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/">11月25日の紅葉状況と参拝時間変更のお知らせ</a></li>
+					<li><a href="https://eigenji-t.jp/2022/11/02/twitter%e3%82%a2%e3%82%ab%e3%82%a6%e3%83%b3%e3%83%88%e3%81%ae%e5%a4%89%e6%9b%b4%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/">twitterアカウントの変更について</a></li>
+					<li><a href="https://eigenji-t.jp/2021/11/01/%e6%b0%b8%e6%ba%90%e5%af%ba%e8%a6%b3%e6%a5%93%e6%a1%88%e5%86%85%e3%80%80%e6%9c%ac%e5%b0%8a%e4%b8%96%e7%b6%99%e8%a6%b3%e4%b8%96%e9%9f%b3%e3%81%94%e9%96%8b%e5%b8%b3%e3%81%a8%e5%af%82%e5%ae%a4%e7%a6%85/">永源寺観楓案内　本尊世継観世音ご開帳と寂室禅師塑像特別公開</a></li>
+					<li><a href="https://eigenji-t.jp/2021/05/01/%e6%96%b0%e5%9e%8b%e3%82%b3%e3%83%ad%e3%83%8a%e3%82%a6%e3%82%a4%e3%83%ab%e3%82%b9%e6%84%9f%e6%9f%93%e6%8b%a1%e5%a4%a7%e3%81%ab%e4%bc%b4%e3%81%86-%e3%80%8c%e5%a5%89%e8%b3%9b%e8%8c%b6%e4%bc%9a-2/">新型コロナウイルス感染拡大に伴う  「奉賛茶会」お茶席中止のお知らせ</a></li>
+					<li><a href="https://eigenji-t.jp/2020/11/19/%e6%b0%b8%e6%ba%90%e5%af%ba%e3%81%94%e6%9d%a5%e5%b1%b1%e3%81%94%e6%8b%9d%e8%a6%b3%e9%a0%82%e3%81%8f%e3%81%ab%e5%bd%93%e3%81%a3%e3%81%a6%e3%81%ae%e3%81%8a%e9%a1%98%e3%81%84/">永源寺ご来山ご拝観頂くに当ってのお願い</a></li>
+					<li><a href="https://eigenji-t.jp/2026/11/18/%ef%bc%91%ef%bc%91%e6%9c%88%ef%bc%91%ef%bc%97%e6%97%a5%e3%80%80%e6%b0%b8%e6%ba%90%e5%af%ba%e5%a2%83%e5%86%85%e3%81%ae%e6%a7%98%e5%ad%90/">１１月１８日（水）　永源寺境内の様子</a></li>
+					<li><a href="https://eigenji-t.jp/2026/11/16/11%e6%9c%8816%e6%97%a5%e3%80%80%e6%b0%b8%e6%ba%90%e5%af%ba%e5%a2%83%e5%86%85%e3%81%ae%e6%a7%98%e5%ad%90/">11月16日　永源寺境内の様子</a></li>
+					<li><a href="https://eigenji-t.jp/2026/11/15/%e9%a3%9f%e4%ba%8b%e5%87%a6%e3%80%8e%e9%9f%b3%e7%84%a1%e7%80%ac%e3%80%8f%e3%81%a8%e3%82%ad%e3%83%83%e3%83%81%e3%83%b3%e3%82%ab%e3%83%bc%e3%80%8e%e3%83%96%e3%83%a9%e3%83%b3%e3%83%96%e3%83%ab%e3%80%8f/">食事処『音無瀬』とキッチンカー『ブランブル』が開店いたしました。</a></li>
+					<li><a href="https://eigenji-t.jp/2026/11/15/11%e6%9c%8814%e6%97%a5%ef%bc%88%e5%9c%9f%ef%bc%89%e3%80%80%e6%b0%b8%e6%ba%90%e5%af%ba%e3%83%96%e3%83%ab%e3%83%bc%e3%83%a9%e3%82%a4%e3%83%88%e3%82%a2%e3%83%83%e3%83%97/">11月14日（土）　永源寺ブルーライトアップ</a></li>
+					<li><a href="https://eigenji-t.jp/2026/11/13/%e6%b0%b8%e6%ba%90%e5%af%ba%e3%83%a9%e3%82%a4%e3%83%88%e3%82%a2%e3%83%83%e3%83%97%e3%80%8011%e6%9c%8814%e6%97%a5%ef%bc%88%e5%9c%9f%ef%bc%89%e3%82%88%e3%82%8a%e5%a7%8b%e3%81%be%e3%82%8a%e3%81%be/">永源寺ライトアップ　11月14日（土）より始まります。</a></li>
+					<li><a href="https://eigenji-t.jp/2026/11/11/11%e6%9c%8811%e6%97%a5%ef%bc%88%e6%b0%b4%ef%bc%89%e6%b0%b8%e6%ba%90%e5%af%ba%e5%a2%83%e5%86%85%e3%81%ae%e6%a7%98%e5%ad%90/">11月11日（水）永源寺境内の様子</a></li>
+					<li><a href="https://eigenji-t.jp/2026/11/08/11%e6%9c%888%e6%97%a5%ef%bc%88%e6%97%a5%ef%bc%89%e6%b0%b8%e6%ba%90%e5%af%ba%e5%a2%83%e5%86%85%e3%81%ae%e6%a7%98%e5%ad%90/">11月8日（日）永源寺境内の様子</a></li>
+					<li><a href="https://eigenji-t.jp/2026/11/07/11%e6%9c%88%e3%80%805%e3%80%816%e6%97%a5%e3%80%80%e4%bb%a4%e5%92%8c8%e5%b9%b4%e5%ba%a6%e7%91%9e%e7%9f%b3%e4%bc%9a/">11月　5、6日　令和8年度瑞石会</a></li>
+					<li><a href="https://eigenji-t.jp/2026/11/03/11%e6%9c%883%e6%97%a5%e3%80%80%e6%96%87%e5%8c%96%e3%81%ae%e6%97%a5%e3%81%ae%e6%b0%b8%e6%ba%90%e5%af%ba%e5%a2%83%e5%86%85-2/">11月3日　文化の日の永源寺境内</a></li>
+					<li><a href="https://eigenji-t.jp/2026/11/02/11%e6%9c%88%e8%a6%b3%e6%a5%93%e6%9c%9f%e3%80%80%e6%b0%b8%e6%ba%90%e5%af%ba%e6%8b%9d%e8%a6%b3%e6%a1%88%e5%86%85-2/">11月観楓期　永源寺拝観案内</a></li>
+				    </ul>
+
+<ul class="past_year_article"><li><a href="/2026/"><span class="pr020">2026年</span>記事一覧</a></li><li><a href="/2025/"><span class="pr020">2025年</span>記事一覧</a></li><li><a href="/2024/"><span class="pr020">2024年</span>記事一覧</a></li><li><a href="/2023/"><span class="pr020">2023年</span>記事一覧</a></li><li><a href="/2022/"><span class="pr020">2022年</span>記事一覧</a></li><li><a href="/2021/"><span class="pr020">2021年</span>記事一覧</a></li><li><a href="/2020/"><span class="pr020">2020年</span>記事一覧</a></li><li><a href="/2019/"><span class="pr020">2019年</span>記事一覧</a></li><li><a href="/2018/"><span class="pr020">2018年</span>記事一覧</a></li><li><a href="/2017/"><span class="pr020">2017年</span>記事一覧</a></li><li><a href="/2016/"><span class="pr020">2016年</span>記事一覧</a></li><li><a href="/2014/"><span class="pr020">2014年</span>記事一覧</a></li><li><a href="/2013/"><span class="pr020">2013年</span>記事一覧</a></li><li><a href="/2012/"><span class="pr020">2012年</span>記事一覧</a></li><li><a href="/2011/"><span class="pr020">2011年</span>記事一覧</a></li><li><a href="/2010/"><span class="pr020">2010年</span>記事一覧</a></li></ul>    </div>
+</div>
+                    </div>
+                </section>
+
+            </article>
+        </div>
+    </div>
+    <!-- //contents -->
+</main>
+
+
+  <footer id="footer" class="footer">
+		<div class="footerContent">
+			<div class="inner footerBox">
+				<div class="logoBox">
+					<figure>
+						<img src="/assets/img/page/top/logo2.png" alt="永源寺" loading="lazy">
+					</figure>
+				</div>
+				<div class="footerAbout">
+					<p class="footerTtl">臨済宗永源寺派 大本山 永源寺</p>
+					<p class="footerAddress">〒527-0212 <br class="sp">滋賀県東近江市永源寺高野町41</p>
+					<p class="footerTel">TEL <a href="tel:0748270016">0748-27-0016</a> / FAX 0748-27-1055</p>
+				</div>
+				<ul class="snsBox">
+					<li>
+						<a href="https://www.facebook.com/eigenji.sightseeing/" target="_blank"><img src="/assets/img/page/top/facebook.png" alt="facebook"></a>
+					</li>
+					<li>
+						<a href="https://twitter.com/LT1PJc8WDq7mKaU" target="_blank"><img src="/assets/img/page/top/twitter.png" alt="twitter"></a>
+					</li>				
+				</ul>
+				<div class="nihonisanBox">
+					<figure>
+						<img src="/assets/img/page/top/nihonisan_logo.png" alt="日本遺産" loading="lazy">
+					</figure>
+					<p>永源寺と奥永源寺の<br class="pc">山村景観は、日本遺産<br class="pc">『水と暮らしの文化遺産』<br class="pc">に指定されています。</p>
+				</div>
+				<nav class="footerNav">
+					<ul class="footerNavArea">
+						<li><a href="/about/">永源寺について</a></li>
+						<li><a href="/kaizan/"> 開山寂室禅師</a></li>
+						<li><a href="/ground/">境内案内</a></li>
+						<li><a href="/event/">行事案内</a></li>
+						<li><a href="/contact/">よくある質問</a></li>
+						<li><a href="/access/">アクセス</a></li>
+						<li><a href="/link/">リンク</a></li>
+					</ul>
+				</nav>
+				<p class="copy">Copyright&copy; Eigen-ji Temple. All rights reserved.</p>
+
+			</div>
+		</div>
+	</footer>
+
+	<div class="overlay"></div>
+
+	<div id="pagetop">トップへ</div>
+
+	<script src="/assets/js/common/jquery.min.js"></script>
+	<script src="/assets/js/common/slick.min.js"></script>
+	<script src="/assets/js/common/base.js"></script>
+
+
+</body>
+
+</html>

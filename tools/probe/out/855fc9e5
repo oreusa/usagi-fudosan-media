@@ -1,0 +1,842 @@
+
+
+
+
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156818711-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-156818711-1');
+</script><meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>ジュエリーは、誰を夢みる｜京都国立近代美術館 | The National Museum of Modern Art, Kyoto</title>
+<meta name="description" content="">
+
+<!-- 共通プロパティ -->
+<!-- 共通プロパティ -->
+
+<!-- viewport -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://www.momak.go.jp/wp-content/themes/momak/assets/css/default.css">
+<link rel="stylesheet" href="https://www.momak.go.jp/wp-content/themes/momak/assets/css/common.css?20261027">
+
+
+<!-- 個別プロパティ -->
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://www.momak.go.jp/wp-content/themes/momak/assets/css/slick/slick-theme.css">
+<link rel="stylesheet" href="https://www.momak.go.jp/wp-content/themes/momak/assets/css/slick/slick.css">
+<link rel="stylesheet" href="https://www.momak.go.jp/wp-content/themes/momak/assets/css/exhibition.css">
+<link rel="stylesheet" href="https://www.momak.go.jp/wp-content/themes/momak/assets/css/acf-place.css">
+
+
+<meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.momak.go.jp/Japanese/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.momak.go.jp%2FJapanese%2Fexhibitionarchive%2F2026%2F468.html" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.momak.go.jp/Japanese/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.momak.go.jp%2FJapanese%2Fexhibitionarchive%2F2026%2F468.html&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='eo-leaflet.js-css' href='https://www.momak.go.jp/wp-content/plugins/event-organiser/lib/leaflet/leaflet.min.css' media='all' />
+<style id="eo-leaflet.js-inline-css">
+.leaflet-popup-close-button{box-shadow:none!important;}
+/*# sourceURL=eo-leaflet.js-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='contact-form-7-css' href='https://www.momak.go.jp/wp-content/plugins/contact-form-7/includes/css/styles.css' media='all' />
+<link rel='stylesheet' id='jwp-a11y-frontend-css' href='https://www.momak.go.jp/wp-content/plugins/jwp-a11y/assets/css/frontend.css' media='all' />
+<link rel="https://api.w.org/" href="https://www.momak.go.jp/Japanese/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.momak.go.jp/xmlrpc.php?rsd" />
+<link rel="canonical" href="https://www.momak.go.jp/Japanese/exhibitionarchive/2026/468.html" />
+<link rel='shortlink' href='https://www.momak.go.jp/Japanese/?p=130297' />
+
+
+<!-- 個別プロパティ -->
+
+</head>
+
+    <body id="scExhibition" class="detail">
+
+        
+        <div id="page">
+
+        <!-- ヘッダー -->
+        <div id="bgLine">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div><!-- #bgLine -->
+
+<header>
+
+<h1>
+<span><a href="https://www.momak.go.jp/Japanese/"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/logo_01.svg" alt="京都国立近代美術館">京都国立近代美術館</a></span>
+<span><a href="https://www.momak.go.jp/Japanese/"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/logo_01_s.svg" alt="京都国立近代美術館"></a></span>
+<span><a href="https://www.momak.go.jp/Japanese/"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/logo_02.svg" alt="京都国立近代美術館"></a></span>
+</h1>
+
+<nav>
+<ul>
+<li><a href="https://www.momak.go.jp/Japanese/guide/">ご利用案内</a></li>
+<li><a href="https://www.momak.go.jp/Japanese/news/">お知らせ</a></li>
+<li><a href="https://www.momak.go.jp/Japanese/exhibitionArchive/">展覧会</a></li>
+<li><a href="https://www.momak.go.jp/Japanese/collectionGallery/">コレクション・ギャラリー</a></li>
+<li><a href="https://www.momak.go.jp/Japanese/collection/">所蔵作品</a></li>
+<li><a href="https://www.momak.go.jp/Japanese/guide/access.html">交通アクセス</a></li>
+<li id="btnSearch">
+<a href="javascript:void(0)"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/icon_search.svg" alt="search"></a>
+<form method="get" action="https://www.momak.go.jp/Japanese/" name="searchformNavi" id="searchformNavi">
+<input type="text" name="s" id="s" placeholder="| サイト内を検索">
+<img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/icon_search_b.svg" id="btn-submit-nav" alt="search">
+<input id="submit_btn_nav" type="submit" style="display: none">
+</form>
+</li>
+</ul>
+</nav>
+
+<div id="btnMenu" class="col-1"><div><span></span><span></span></div><small>MENU</small></div>
+
+<div id="btnLang">
+<a href="javascript:void(0)">Language</a>
+<p>
+<a href="/English/">English</a>
+<a href="/otherlangs/chinese.html">簡体中文</a>
+<a href="/otherlangs/korean.html">한국어</a>
+</p>
+</div><!-- #btnLang -->
+
+<div id="btnScroll">Scroll</div>
+
+<div id="menuList">
+<div></div>
+<div>
+<p>
+<span>
+<a href="https://www.momak.go.jp/Japanese/guide/">ご利用案内</a><br>
+<a href="https://www.momak.go.jp/Japanese/news/">イベント／お知らせ</a><br>
+<a href="https://www.momak.go.jp/Japanese/exhibitionArchive/">展覧会</a><br>
+<a href="https://www.momak.go.jp/Japanese/collectionGallery/">コレクション・<br class="sp">ギャラリー</a><br>
+<a href="https://www.momak.go.jp/Japanese/films/">MoMAK Films</a><br>
+<a href="https://www.momak.go.jp/Japanese/education/">教育普及</a><br>
+<a href="https://www.momak.go.jp/Japanese/collection/">所蔵作品</a><br>
+</span>
+<span>
+<a href="https://www.momak.go.jp/Japanese//collection/reading.html">蔵書閲覧</a><br>
+<a href="https://www.momak.go.jp/Japanese/publishing/">刊行物</a><br>
+<a href="https://www.momak.go.jp/Japanese/momak_home.html">おうちでMoMAK</a><br>
+<a href="https://www.momak.go.jp/Japanese/about/">美術館について</a><br>
+<a href="https://www.momak.go.jp/Japanese/membership/">会員制度</a><br>
+<a href="https://www.momak.go.jp/Japanese/membership/ok.html">OKパスポート</a><br>
+<a href="https://www.momak.go.jp/Japanese/guide/m4.html">京都ミュージアムズ・フォー</a><br>
+<a href="https://www.momak.go.jp/Japanese/guide/access.html">交通アクセス</a>
+</span>
+</p>
+<form method="get" action="https://www.momak.go.jp/Japanese/" name="searchform" id="searchform">
+<dl>
+<dt><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/footer_sns_title.svg" alt="Follow Us"></dt>
+<dd><a target=" _blank" href="https://www.instagram.com/momakyoto/"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/icon_sns_instagram.svg" alt="instagram"></a></dd>
+<dd><a target=" _blank" href="https://www.facebook.com/momak.go.jp/"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/icon_sns_fb.svg" alt="facebook"></a></dd>
+<dd><a target=" _blank" href="https://www.youtube.com/@momakyoto"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/icon_sns_youtube.svg" alt="youtube"></a></dd>
+</dl>
+<input type="text" name="s" id="s" placeholder="| サイト内を検索">
+<img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/icon_search_b.svg" id="btn-submit" alt="search">
+<input id="submit_btn" type="submit" style="display: none">
+</form>
+</div>
+</div><!-- #menuList -->
+
+<div id="slide">
+
+<div id="slideEff">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div><!-- #slideEff -->
+
+<div id="slideImg">
+</div><!-- #slideImg -->
+<div id="slideImgSP">
+<img src="" alt=""></div><!-- #slideImgSP -->
+
+<div id="slideDisp">
+<p>開館状況&nbsp;&nbsp;─&nbsp;&nbsp;</p>
+<span class="slideBar"><span></span></span>
+</div><!-- #slideDisp -->
+
+<div id="slideBtn">
+<a href="javascript:void(0)" class="slideImg-prev"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/icon_si_left_02.svg"></a>
+<a href="javascript:void(0)" class="slideImg-next"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/icon_si_right_02.svg"></a>
+</div><!-- #slideBtn -->
+
+
+</div><!-- #slid -->
+
+</header>
+
+
+        
+        
+<main>
+
+		<section id="scMainImg" class="col-5 pos-2">
+			<img src="https://www.momak.go.jp/wp-content/uploads/2026/09/banner_2336×1460pix_F.jpg" alt="">		</section>
+		
+		<section id="scTitle" class="col-3 pos-2">
+			<p>展覧会</p>
+			<p>ジュエリーは、誰を夢みる</p>
+			<p>2026.10.24 sat. - 01.17 sun.</p>
+			<div>
+			<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.momak.go.jp/Japanese/exhibitionarchive/2026/468.html" target="_blank"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/icon_fb.svg" alt="フェイスブックにシェア"></a>
+			<a href="http://twitter.com/share?text=%E3%82%B8%E3%83%A5%E3%82%A8%E3%83%AA%E3%83%BC%E3%81%AF%E3%80%81%E8%AA%B0%E3%82%92%E5%A4%A2%E3%81%BF%E3%82%8B&url=https://www.momak.go.jp/Japanese/exhibitionarchive/2026/468.html&hashtags=京都国立近代美術館" rel="nofollow" target="_blank"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/icon_tw.svg" alt="ツイッターに投稿"></a>
+			</div>
+		</section>
+
+
+		<section id="scEventInfo" class="col-4 pos-2">
+			
+			<div class="wrap">
+
+			<div class="description">
+			<hr>
+			<p>
+			　あなたに、本当に似合うジュエリーとは——それは周囲の視線や年齢に左右されず、高価なブランドのジュエリーでもなく、今この自分の気持ちを表して強く豊かに生活するためのものであってほしい。本展で紹介するのは、そんな願いを模索する作家たちの試みです。<br>
+<br>
+　日本でジュエリーが一般的ではなかった時期に、平松保城（1926–2012）や菱田安彦（1927–1981）を中心に日本ジュエリーデザイナー協会（JJDA）が設立されたのは1964年のこと。JJDAを中心に開催された「国際ジュウリー・アート展」（西武百貨店渋谷店、1970年から1986年）は、欧米の動向を日本に紹介し、素材の価値だけではないデザインという概念を広めました。70年代後半からは、ジュエリーの特性をコンセプトとした、同時代美術と呼応する作品が日本にも紹介されます。これらはコンテンポラリージュエリーと呼ばれ、富や象徴としての役割や、着用者と見る人との関係性を逆手に取った表現が提示されます。1993年には、伊藤一廣（1948–1997）やオットー・キュンツリ（b. 1948）を中心として東京、ミュンヘン、アムステルダムによる三校合同展が始まるなど、コンセプチュアルな姿勢を持つ海外作家との交流が継続しました。現在、芸術表現としてのジュエリーの領域で、日本人作家は大きな存在感を見せます。同時に彼／彼女たちは、コンセプチュアルなジュエリーを自らのアイデンティティを問い直す方法論ともしてきました。<br>
+<br>
+　本展は、専門学校ヒコ・みづのジュエリーカレッジ所蔵作品の大規模な公開に加え、約50年ぶりにドイツから来日する優品、また現代作家作品まで約350件により構成されます。身に着けるものに表現が侵入している、というジュエリーの可能性を、戦後の日本に視点を据えて問い直します。			</p>
+			</div>
+
+			<div class="list">
+			<hr>
+			<p>
+			主な出品作家（生年順）<br>
+シガード・ペアソン、マリオ・ピントン、ラインホルト・ライリンク、ブルーノ・マルティナッツィ、平松保城、菱田安彦、ヘルマン・ユンガー、山田禮子、ペーター・スキュービック、ウェンディ・ラムショウ、ディビッド・ワトキンス、ハイス・バッカー、中山あや、ベルンハルト・ショービンガー、永井慧悧子、伊藤一廣、オットー・キュンツリ、テレーゼ・ヒルバート、キャロライン・ブロードヘッド、ダニエル・クルーガー、ワーウィック・フリーマン、薗部悦子、テッド・ノーテン、カール・フリッチ、いしかわまり、嶺脇美貴子、フェリカ・ヴァン・デル・リースト、大山由華、田口史樹、鎌田治朗、珠数かおり、新里明子、ほか70名以上を予定
+<br><br>
+会場デザイン<br>
+中村竜治（中村竜治建築設計事務所）<br>
+<br>
+グラフィックデザイン<br>
+菊地敦己
+<br><br>
+<strong>出品リスト</strong>
+<a href="/wp-content/uploads/2026/10/list1026.pdf" target="_blank" rel="noopener noreferrer">出品リスト（PDF 593KB）</a>
+<br><br>
+<strong>プレスリリース</strong>
+<a href="/wp-content/uploads/2026/11/press468_1023.pdf" target="_blank" rel="noopener noreferrer">プレスリリース（PDF 1MB）</a><br>
+プレスの方は<a href="/Japanese/press.html">こちらから</a>ご覧いただけます。			</p>
+			</div>
+			
+							
+										
+
+			</div><!-- .wrap -->
+
+			<div class="info">
+			<hr>
+			<!--<p><p>
+<div style="font-size: 1.0rem">
+<a href="https://www.e-tix.jp/momak_exhibition/#Jewellery" id="etix-button" class="btn-default" target="_blank" rel="noopener noreferrer">チケットを購入</a>
+</div>
+<br>
+<p>
+<span style="color: #900">※日時予約制ではございません。</span><br>
+<br>
+<strong>会期</strong>
+2026年10月24日（土）～2027年1月17日（日）<br>
+<br>
+
+<strong>開館時間</strong>
+午前10時～午後6時<br>
+金曜日は午後8時まで開館<br>
+＊入館は閉館の30分前まで<br />
+<br>
+
+<strong>休館日</strong>
+月曜日（ただし、11月23日、1月11日は開館）11月24日（火）、年末年始（12月29日（火）～1月3日（日））、1月12日（火）
+<br>
+<br>
+
+<strong>観覧料</strong>
+一般：2,000円（1,800円）<br>
+大学生：1,300円（1,100円）<br>
+高校生：600円（400円）<br>
+※（）内は前売及び夜間割引（金曜午後6時以降）<br>
+※「ジュエリー割」「M4相互割引」各観覧料から100円引き<br>
+※中学生以下は無料*。<br>
+※障害者手帳をお持ちの方とその付添者1名は無料*。<br>
+※ひとり親家庭の世帯員の方は無料*。<br>
+*入館の際に学生証、年齢の確認ができるもの、障害者手帳等をご提示ください。<br>
+※本料金でコレクション展もご覧いただけます。<br>
+※前売券は2026年8月24日(月)から10月23日(金)までの限定販売です。<br>
+
+<br><strong>「ジュエリー割」</strong>
+あなたのジュエリーを身に着けてお越しになると当日券が各種100円引きでご購入いただけます。<br>
+チケットご購入時に窓口にて「ジュエリー割引お願いします」とお声がけください。<br>
+※当日チケット窓口で購入の方のみ適用、チケットご購入後の割引はできません。<br>
+※ご本人様のみ有効、その他割引との併用不可。<br>
+
+<br><strong>「M4相互割引」</strong>
+京都国立博物館・京都府京都文化博物館・京都市京セラ美術館の対象となる展覧会の観覧券をご提示いただくと当日券が各種100円引きでご購入いただけます。<br>
+※当日チケット窓口で購入の方のみ適用、その他割引との併用不可。<br>
+詳細は、<a href="https://www.momak.go.jp/Japanese/guide/m4.html" target="_blank" rel="noopener noreferrer">京都ミュージアムズ・フォー</a>をご覧ください。<br>
+
+<p>
+
+</p></p>-->
+	
+<p>
+<div style="font-size: 1.0rem">
+<a href="https://www.e-tix.jp/momak_exhibition/#Jewellery" class="btn-default" target="_blank" rel="noopener noreferrer">チケットを購入</a>
+</div>
+<br>
+<p>
+<span style="color: #900">※日時予約制ではございません。</span><br>
+<br>
+<strong>会期</strong>
+2026年10月24日（土）～2027年1月17日（日）<br>
+<br>
+
+<strong>開館時間</strong>
+午前10時～午後6時<br>
+金曜日は午後8時まで開館<br>
+＊入館は閉館の30分前まで<br />
+<br>
+
+<strong>休館日</strong>
+月曜日（ただし、11月23日、1月11日は開館）11月24日（火）、年末年始（12月29日（火）～1月3日（日））、1月12日（火）
+<br>
+<br>
+
+<strong>観覧料</strong>
+一般：2,000円（1,800円）<br>
+大学生：1,300円（1,100円）<br>
+高校生：600円（400円）<br>
+※（）内は前売及び夜間割引（金曜午後6時以降）<br>
+※「ジュエリー割」「M4相互割引」各観覧料から100円引き<br>
+※中学生以下は無料*。<br>
+※障害者手帳をお持ちの方とその付添者1名は無料*。<br>
+※ひとり親家庭の世帯員の方は無料*。<br>
+*入館の際に学生証、年齢の確認ができるもの、障害者手帳等をご提示ください。<br>
+※本料金でコレクション展もご覧いただけます。<br>
+※前売券は2026年8月24日(月)から10月23日(金)までの限定販売です。<br>
+
+<br><strong>「ジュエリー割」</strong>
+あなたのジュエリーを身に着けてお越しになると当日券が各種100円引きでご購入いただけます。<br>
+チケットご購入時に窓口にて「ジュエリー割引お願いします」とお声がけください。<br>
+※当日チケット窓口で購入の方のみ適用、チケットご購入後の割引はできません。<br>
+※ご本人様のみ有効、その他割引との併用不可。<br>
+
+<br><strong>「M4相互割引」</strong>
+京都国立博物館・京都府京都文化博物館・京都市京セラ美術館の対象となる展覧会の観覧券をご提示いただくと当日券が各種100円引きでご購入いただけます。<br>
+※当日チケット窓口で購入の方のみ適用、その他割引との併用不可。<br>
+詳細は、<a href="https://www.momak.go.jp/Japanese/guide/m4.html" target="_blank" rel="noopener noreferrer">京都ミュージアムズ・フォー</a>をご覧ください。<br>
+
+<p>
+
+</p>
+				
+			</div>
+
+		</section><!-- #scEventInfo -->
+		
+
+		<!-- 展示作品 -->
+				<section id="scWorks" class="col-5 pos-2">
+			<strong>主な展示作品</strong>
+			<ul>
+
+						<li>
+				<img src="https://www.momak.go.jp/wp-content/uploads/2026/06/3.jpg" alt="平松保城 ブローチ 1977年 金（K23、K18）、七宝（裏面）東京藝術大学蔵"><br>
+				平松保城 ブローチ 1977年 金（K23、K18）、七宝（裏面）東京藝術大学蔵<br>
+				<small></small>
+			</li>
+						<li>
+				<img src="https://www.momak.go.jp/wp-content/uploads/2026/06/6.jpg" alt="オットー・キュンツリ ブローチ《スイス・ゴールド》1983年 厚紙、アクリル 京都国立近代美術館蔵 ©Otto Künzli, VG Bild-Kunst, Bonn 2025"><br>
+				オットー・キュンツリ ブローチ《スイス・ゴールド》1983年 厚紙、アクリル 京都国立近代美術館蔵 ©Otto Künzli, VG Bild-Kunst, Bonn 2025<br>
+				<small></small>
+			</li>
+						<li>
+				<img src="https://www.momak.go.jp/wp-content/uploads/2026/06/7.jpg" alt="オットー・キュンツリ ペンダント《日の出一日の入り》1993年 アクリル 専門学校ヒコ・みづのジュエリーカレッジ蔵 ©Otto Künzli 撮影：渞忠之"><br>
+				オットー・キュンツリ ペンダント《日の出一日の入り》1993年 アクリル 専門学校ヒコ・みづのジュエリーカレッジ蔵 ©Otto Künzli 撮影：渞忠之<br>
+				<small></small>
+			</li>
+						<li>
+				<img src="https://www.momak.go.jp/wp-content/uploads/2026/06/8.jpg" alt="フェリカ・ヴァン・デル・リースト ネックレス《お皿を持った小ライオン》2004年 種々の糸、プラスチック、14金、ガラス専門学校ヒコ・みづのジュエリーカレッジ蔵©Felieke van der Leest 撮影：渞忠之"><br>
+				フェリカ・ヴァン・デル・リースト ネックレス《お皿を持った小ライオン》2004年 種々の糸、プラスチック、14金、ガラス<br>専門学校ヒコ・みづのジュエリーカレッジ蔵©Felieke van der Leest 撮影：渞忠之<br>
+				<small></small>
+			</li>
+						<li>
+				<img src="https://www.momak.go.jp/wp-content/uploads/2026/06/9.jpg" alt="カール・フリッチ リング 2005年 ガラス、銀 専門学校ヒコ・みづのジュエリーカレッジ蔵 ©Karl Fritsch 撮影：渞忠之"><br>
+				カール・フリッチ リング 2005年 ガラス、銀 専門学校ヒコ・みづのジュエリーカレッジ蔵 ©Karl Fritsch 撮影：渞忠之<br>
+				<small></small>
+			</li>
+						<li>
+				<img src="https://www.momak.go.jp/wp-content/uploads/2026/06/11.jpg" alt="テッド・ノーテン《Chisaka&#039;s Bag》2006年 リング、アクリル樹脂 専門学校ヒコ・みづのジュエリーカレッジ蔵 ©Ted Noten 撮影：渞忠之"><br>
+				テッド・ノーテン《Chisaka's Bag》2006年 リング、アクリル樹脂 専門学校ヒコ・みづのジュエリーカレッジ蔵 ©Ted Noten 撮影：渞忠之<br>
+				<small></small>
+			</li>
+						<li>
+				<img src="https://www.momak.go.jp/wp-content/uploads/2026/06/12.jpg" alt="いしかわまり リング《Love makes blind（愛は盲目）》1999年 銀 作家蔵"><br>
+				いしかわまり リング《Love makes blind（愛は盲目）》1999年 銀 作家蔵<br>
+				<small></small>
+			</li>
+						<li>
+				<img src="https://www.momak.go.jp/wp-content/uploads/2026/06/15.jpg" alt="田口史樹 ブローチ、ペンダント〈White Expression〉シリーズ 2019年 銀、ロジウムコーティング 作家蔵 撮影：渞忠之"><br>
+				田口史樹 ブローチ、ペンダント〈White Expression〉シリーズ 2019年 銀、ロジウムコーティング 作家蔵 撮影：渞忠之<br>
+				<small></small>
+			</li>
+						<li>
+				<img src="https://www.momak.go.jp/wp-content/uploads/2026/06/16.jpg" alt="数珠かおり ネックレス《LA ROUE DE FORTUNE halssmykke / unika（運命の輪）》2025年 エナメル、銅、真鍮、銀、金箔（24K) 、顔料 作家蔵"><br>
+				数珠かおり ネックレス《LA ROUE DE FORTUNE halssmykke / unika（運命の輪）》2025年 エナメル、銅、真鍮、銀、金箔（24K) 、顔料 作家蔵<br>
+				<small></small>
+			</li>
+						<li>
+				<img src="https://www.momak.go.jp/wp-content/uploads/2026/06/17.jpg" alt="新里明子 ヘッド／ノーズピース《Another Skin》2015年 金メッキ真鍮、スワロフスキークリスタル 作家蔵"><br>
+				新里明子 ヘッド／ノーズピース《Another Skin》2015年 金メッキ真鍮、スワロフスキークリスタル 作家蔵<br>
+				<small></small>
+			</li>
+						<li>
+				<img src="https://www.momak.go.jp/wp-content/uploads/2026/06/19.jpg" alt="新里明子 マウス／アームピース《自信増幅器ーSmile and Speak Up》2018年 真鍮 作家蔵"><br>
+				新里明子 マウス／アームピース《自信増幅器ーSmile and Speak Up》2018年 真鍮 作家蔵<br>
+				<small></small>
+			</li>
+						<li>
+				<img src="https://www.momak.go.jp/wp-content/uploads/2026/06/20.jpg" alt="薗部悦子 ブレスレット《The Shape of Time》2007年 カーネリアン、20Kゴールド 作家蔵"><br>
+				薗部悦子 ブレスレット《The Shape of Time》2007年 カーネリアン、20Kゴールド 作家蔵<br>
+				<small></small>
+			</li>
+						<li>
+				<img src="https://www.momak.go.jp/wp-content/uploads/2026/06/22.jpg" alt="渡邉良重《ジャーニー》2012年 インク、紙 作家蔵"><br>
+				渡邉良重《ジャーニー》2012年 インク、紙 作家蔵<br>
+				<small></small>
+			</li>
+			
+			
+			</ul>
+		</section><!-- #scWorks -->
+		
+
+		<section id="scEventInfo02" class="col-4 pos-2">
+
+			<div class="event">
+			
+			
+			<hr>
+			<h2>関連イベント</h2>
+
+			<strong>■学生×MoMAK ジュエリー・パーティ</strong>
+<p>
+「ジュエリーは、誰を夢みる」展の開幕前夜、10月23日の特別内覧会において「学生×MoMAK　ジュエリー・パーティ」を開催します。<br>
+<dl>
+<dt>日時：</dt><dd>2026年10月23日（金）</dd>
+<dt>対象：</dt><dd>学校（専門学校や美術大学など）に所属しジュエリーを制作する学生（参加者に卒業生を含むことも可能）<br>※参加には、所属校の申込代表者（教職員等）をとおして事前申込が必要です</dd>
+<p>
+詳細・申込は<a href="https://www.momak.go.jp/Japanese/exhibition468_event01.html" target="_blank"><u>こちら</u></a></p>
+</p><br><strong>■講演会「ソーシャルプラクティスとしてのジュエリー」</strong>
+<p>大山由華の芸術活動は、ジュエリー、ウェアラブル・スカルプチャー（身に着ける彫刻）、パフォーマンスにまたがっています。講演「ソーシャル・プラクティス」としてのジュエリー」では、公共空間での介入や人々との出会い、参加型であり、探索的な体験が、一時的なコミュニティを生み出すと同時に、ジュエリー制作のプロセスをどのように形づくってきたのかを探ります。こうした経験を通じて生まれたジュエリーは、そこで育まれた記憶を宿す媒体となります。</p>
+
+<dl>
+<dt>日時：</dt><dd>2026年10月24日（土）14時～15時30分</dd>
+<dt>講師：</dt><dd>大山由華（ブルク・ギービヒェンシュタイン美術大学ハレ・教授、本展出品作家）</dd>
+<dt>会場：</dt><dd>京都国立近代美術館1階講堂</dd>
+<dt>定員：</dt><dd>先着80名（事前申込制）</dd>
+<dt>参加方法：</dt><dd>申込は<u>こちら</u></a></dd>
+<dt>申込期間：</dt><dd>9月24日（木）10時～10月23日（金）17時（定員に達した時点で受付終了）</dd>
+<dt>参加費：</dt><dd>無料（ただし「ジュエリー展」の観覧券〈半券可〉が必要）</dd>
+<p>※申込期間に定員に達しない場合もしくはキャンセルによる空きがある場合は、講演会当日13時30分より、当館1階インフォメーションにて当日券を配布します。<br>
+<br>
+※後日、<a href="https://www.youtube.com/@momakyoto" target="_blank"><u>YouTube</u></a>にてアーカイブ配信を予定しております。</p>
+<br><br><br><strong>■ギャラリートークをインスタLIVE にて配信</strong>
+<dl>
+<dt>日時：</dt><dd>2026年11月2日（月）12時00分～</dd>
+<dt>解説：</dt><dd>宮川智美（当館研究員・本展担当者）</dd>
+</dl>
+<p><a href="https://www.instagram.com/momakyoto/" target="_blank" rel="noopener noreferrer">京都国立近代美術館インスタグラムアカウント</a></p>
+<br><br><br><strong>■ミュージアムズ・フォー関連講座「ジュエリーに託された夢：戦後日本のコンテンポラリージュエリーと世界への窓」</strong>
+<dl>
+<dt>日時：</dt><dd>2026年11月7日（土）14時～15時30分</dd>
+<dt>講師：</dt><dd>宮川智美</dd>
+<dt>会場：</dt><dd>京都国立近代美術館1階講堂</dd>
+<dt>定員：</dt><dd>先着80名（事前申込制）</dd>
+<dt>参加方法：</dt><dd>申込は<u>こちら</u></a></dd>
+<dt>申込期間：</dt><dd>10月7日（水）10時～11月6日（金）17時（定員に達した時点で受付終了）</dd>
+<dt>参加費：</dt><dd>無料（ただし「ジュエリー展」の観覧券〈半券可〉が必要）</dd>
+<p>※申込期間に定員に達しない場合もしくはキャンセルによる空きがある場合は、講演会当日13時30分より、当館1階インフォメーションにて当日券を配布します。<br>
+※日本語による文字通訳があります</p><br>
+<br><br><br><strong>■まちの中のジュエリーを探す</strong>
+<dl>
+<dt>日時：</dt><dd>2026年11月1日（日）13時30分～16時</dd>
+<dt>対象：</dt><dd>高校生以上、どなたでも</dd>
+<dt>定員：</dt><dd>30名程度（事前申込制、申込多数の場合は抽選）</dd>
+<dt>参加費：</dt><dd>無料（高校生以上は別途本展観覧券が必要）</dd>
+<dt>講師：</dt><dd>寺嶋孝佳（本展出品作家）</dd>
+<p>
+詳細・申込は<a href="https://www.momak.go.jp/Japanese/exhibition468_event02.html"><u>こちら</u></a></p>
+<br><br><br><strong>■映画上映［NFAJ 所蔵作品選集］MoMAK Films 2026「装身具（アクセサリー）で始まる物語」 </strong>
+<p>
+<dl>
+<dt>日時：</dt><dd>11月21日（土）、22日（日）</dd>
+<dt>会場：</dt><dd>京都国立近代美術館 1階講堂</dd>
+<dt>主催：</dt><dd>京都国立近代美術館、国立映画アーカイブ（NFAJ）</dd>
+<br>
+詳細は<a href="https://www.momak.go.jp/Japanese/films/mf_2026/momakfilms01.html" target="_blank"><u>こちら</u></a>
+</p>
+<br><br><br><strong>■もまっくファミリーデー</strong>
+<dl>
+<dt>日時：</dt><dd>12月19日（土）10時～18時</dd>
+<dt>対象：</dt><dd>小さなお子様連れのご家族や小学生、中学生など（予約不要）<br>※大人の方のみでもご来館いただけます</dd>
+<br>
+<p>「もまっくファミリーデー」は、小さなお子様連れのご家族や小学生、中学生、大人の方まで、どなたでも気兼ねなくおしゃべりしながら過ごせる１日です。作品を見ながら感じたことや考えたことをおしゃべりすることで、新たな気づきや作品の魅力発見につながることもあります。親子での美術館デビューなど、ぜひお気軽にご来館ください。<br>
+対象・年齢は目安です。ご友人やご家族と一緒におしゃべりしながら鑑賞したいという方はぜひこの機会に足をお運びください。<br>
+<br>
+詳細は<a href="https://www.momak.go.jp/Japanese/education/public/"><u>こちら</u></a></p>
+<br><br><br><strong>■学生向けワークショップ「彫金と彫留に宿る美意識」</strong>
+<dl>
+<dt>日時：</dt><dd>12月19（土）</dd>
+<dt>会場：</dt><dd>京都国立近代美術館1階講堂</dd>
+<dt>対象：</dt><dd>美術・デザイン・工芸・芸術系の大学/大学院、専門学校に在学中の方</dd>
+<dt>参加費：</dt><dd>無料</dd>
+<dt>主催：</dt><dd>京都国立近代美術館、NIWAKA</dd>
+<br>
+詳細は<a href="https://www.momak.go.jp/Japanese/exhibition468_event03.html" target="_blank"><u>こちら</u></a>
+<br><br><br>
+			</div>
+
+
+
+
+
+
+			<div class="sponsor">
+			<hr>
+			<h2>主催</h2>
+			<!--<p>
+			<p>
+京都国立近代美術館<br>
+<br>
+
+<strong>特別協力</strong>
+専門学校ヒコ・みづのジュエリーカレッジ<br>
+公益社団法人日本ジュエリーデザイナー協会<br>
+国立工芸館<br>
+<br>
+<strong>協賛</strong>
+<img src="https://www.momak.go.jp/wp-content/uploads/2026/08/niwaka-font-purple-2.png" alt="niwaka" style="width:clamp(100px,8vw,180px);height:auto"><br>
+<br>
+<strong>協力</strong>
+JEWELRY JOURNAL
+
+</p>			</p>-->
+				
+<p>
+京都国立近代美術館<br>
+<br>
+
+<strong>特別協力</strong>
+専門学校ヒコ・みづのジュエリーカレッジ<br>
+公益社団法人日本ジュエリーデザイナー協会<br>
+国立工芸館<br>
+<br>
+<strong>協賛</strong>
+<img src="https://www.momak.go.jp/wp-content/uploads/2026/08/niwaka-font-purple-2.png" alt="niwaka" style="width:clamp(100px,8vw,180px);height:auto"><br>
+<br>
+<strong>協力</strong>
+JEWELRY JOURNAL
+
+</p>				
+			</div>
+
+		</section><!-- #scEventInfo02 -->
+
+		<section id="scDocument" class="col-4 pos-2">
+
+				<div>
+		<p>
+		<strong>広報資料</strong>
+		<a href="https://www.momak.go.jp/wp-content/uploads/2026/09/e-flyer_260904.pdf" target="_blank">チラシ（1.7MB）</a>		</p>
+		<p><img src="https://www.momak.go.jp/wp-content/uploads/2026/09/ジュエリー展web用縦_260819-scaled.jpg" alt=""></p>		</div>
+		
+
+
+				<div>
+		<p>
+		<strong>図録</strong>
+		3,850円（税込）		</p>
+		<p><img src="https://www.momak.go.jp/wp-content/uploads/2026/10/cj_catalog-2-1-scaled.jpg" alt=""></p>		</div>
+		
+		
+
+		</section><!-- #scDocument -->
+
+<section id="scPlaceArea" class="col-4 pos-2">
+						</section>
+		
+		<section id="scEventInfo03" class="col-4 pos-2"><p><strong>巡回</strong><br>
+<a href="https://www.grandtoit.jp/museum/" target="_blank" rel="noopener noreferrer">島根県立石見美術館</a>　2027年3月20日（土）～6月14日（月）<br>
+<a href="https://www.art-museum.pref.yamanashi.jp/" target="_blank" rel="noopener noreferrer">山梨県立美術館</a>　2027年7月3日（土）～8月29日（日）
+</p></section><!-- #scBtnArea -->		
+
+
+
+		<section id="scBtnArea" class="col-2 pos-3">
+
+		
+		<a href="https://www.momak.go.jp/Japanese/events/exhibition">展覧会トップに戻る</a>
+
+		</section><!-- #scBtnArea -->
+
+
+</main>
+
+
+
+
+
+        <!-- フッター -->
+        <footer>
+
+<div>
+
+<div id="bgLine">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+<div class="label">
+<a href="#top" class="btn"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/btn_totop.svg" alt="TOPへ"></a>
+<span><a href="/Japanese/">トップ</a>  ／  <a href="/Japanese/exhibitionArchive/">展覧会</a>  ／  ジュエリーは、誰を夢みる</span>
+</div>
+
+<div class="photo"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/ph_footer.jpg" alt=""></div>
+
+<div class="link">
+<div class="col-1 pos-2">
+<a href="https://www.momak.go.jp/Japanese/"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/logo_footer.svg" alt="京都国立近代美術館"></a>
+<dl>
+<dt><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/footer_sns_title.svg" alt="Follow Us"></dt>
+<dd><a target=" _blank" href="https://www.instagram.com/momakyoto/"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/footer_sns_instagram.svg" alt="instagram"></a></dd>
+<dd><a target=" _blank" href="https://www.facebook.com/momak.go.jp/"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/footer_sns_fb.svg" alt="facebook"></a></dd>
+<dd><a target=" _blank" href="https://www.youtube.com/@momakyoto"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/footer_sns_youtube.svg" alt="youtube"></a></dd>
+</dl>
+<a href="https://www.momak.go.jp/Japanese/press.html">プレスの方へ</a>
+<a href="https://www.momak.go.jp/Japanese/imagerequest.html">画像利用申請</a>
+<a href="https://www.momak.go.jp/Japanese/procurement.html">調達情報</a>
+<a href="https://www.momak.go.jp/Japanese/recruitment.html">採用情報</a>
+<a href="https://www.momak.go.jp/Japanese/contact.html">お問い合わせ</a>
+<a href="https://www.momak.go.jp/Japanese/sns.html">SNS</a>
+<a href="https://www.momak.go.jp/Japanese/sitepolicy.html">サイトポリシー</a>
+<a href="https://www.momak.go.jp/Japanese/privacypolicy.html">プライバシーポリシー</a>
+<a href="https://www.momak.go.jp/Japanese/sitemap.html">サイトマップ</a>
+<a href="https://www.momak.go.jp/Japanese/announcement.html">国立美術館から</a>
+<small>© The National Museum of Modern Art, Kyoto.</small>
+</div>
+
+<div class="col-1 pos-3">
+<a href="https://www.momak.go.jp/Japanese/exhibitionArchive/"><strong>展覧会</strong></a>
+<a href="https://www.momak.go.jp/Japanese/exhibitionArchive/">開催中</a>
+<a href="https://www.momak.go.jp/Japanese/exhibitionArchive/#next">これから</a>
+<a href="https://www.momak.go.jp/Japanese/exhibitionArchive/2026/">これまで</a>
+<br>
+<a href="https://www.momak.go.jp/Japanese/collectionGallery/"><strong>コレクション・ギャラリー</strong></a>
+<a href="https://www.momak.go.jp/Japanese/collectionGalleryArchive/">コレクション展</a>
+<a href="https://www.momak.go.jp/Japanese/collectionGalleryArchive/" style="display:inline;">開催中</a>／<a href="https://www.momak.go.jp/Japanese/collectionGalleryArchive/#next" style="display:inline;">これから</a>／<a href="https://www.momak.go.jp/Japanese/collectionGalleryArchive/?sy=2026" style="display:inline;">これまで</a></a>
+<a href="https://www.momak.go.jp/Japanese/curatorialStudiesArchive/" style="margin-top:12px;">キュレトリアル・スタディズ</a>
+<a href="https://www.momak.go.jp/Japanese/curatorialStudiesArchive/" style="display:inline;">開催中</a>／<a href="https://www.momak.go.jp/Japanese/curatorialStudiesArchive/#next" style="display:inline;">これから</a>／<a href="https://www.momak.go.jp/Japanese/curatorialStudiesArchive/#past" style="display:inline;">これまで</a><br>
+
+<br>
+<a href="https://www.momak.go.jp/Japanese/collection/"><strong>所蔵作品</strong></a>
+<a href="https://www.momak.go.jp/Japanese/collection/">所蔵作品紹介</a>
+<a href="https://jmapps.ne.jp/momak/" target="_blank">収蔵品データベース</a>
+<a href="http://search.artmuseums.go.jp/" target="_blank">所蔵作品検索</a>
+<a href="http://opac.momak.go.jp/" target="_blank">蔵書検索</a>
+<a href="https://www.momak.go.jp/Japanese/collection/reading.html">蔵書閲覧</a>
+<!--<a href="https://www.momak.go.jp/Japanese/collection/readingrequest.html">予約フォーム</a>-->
+<br>
+<a href="https://www.momak.go.jp/Japanese/news/"><strong>イベント／お知らせ</strong></a>
+<a href="https://www.momak.go.jp/Japanese/eventCalendar/">イベントカレンダー</a>
+<a href="https://www.momak.go.jp/Japanese/news/">イベント一覧／お知らせ一覧</a>
+</div>
+
+<div class="col-1 pos-3">
+<a href="https://www.momak.go.jp/Japanese/films/"><strong>MoMAK Films</strong></a>
+<a href="https://www.momak.go.jp/Japanese/films/">上映スケジュール</a>
+<a href="https://www.momak.go.jp/Japanese/films/2025/">過去の上映作品</a>
+<br>
+<a href="https://www.momak.go.jp/Japanese/education/"><strong>教育普及</strong></a>
+<a href="https://www.momak.go.jp/Japanese/education/school/">スクールプログラム</a>
+<a href="https://www.momak.go.jp/Japanese/education/public/">パブリックプログラム</a>
+<a href="https://www.momak.go.jp/senses/" target="_blank">感覚をひらく</a>
+<br>
+<a href="https://www.momak.go.jp/Japanese/publishing/"><strong>刊行物</strong></a>
+<a href="https://www.momak.go.jp/Japanese/publishing/cataloglist2026.html">展覧会図録</a>
+<a href="https://www.momak.go.jp/Japanese/publishing/catalogListPossession.html">所蔵品目録</a>
+<a href="https://www.momak.go.jp/Japanese/publishing/crossSections/vols001-010.html">CROSS SECTIONS</a>
+<a href="https://www.momak.go.jp/Japanese/publishing/miru/">美術館ニュース『視る』</a>
+<a href="https://www.momak.go.jp/Japanese/publishing/annual_report.html">活動報告</a>
+<br>
+<a href="https://www.momak.go.jp/Japanese/momak_home.html"><strong>おうちでMoMAK</strong></a>
+</div>
+
+<div class="col-1 pos-3">
+<a href="https://www.momak.go.jp/Japanese/about/"><strong>美術館について</strong></a>
+<a href="https://www.momak.go.jp/Japanese/about/about.html">運営方針</a>
+<a href="https://www.momak.go.jp/Japanese/about/history.html">美術館の歴史</a>
+<a href="https://www.momak.go.jp/Japanese/about/organization.html">組織図</a>
+<a href="https://www.momak.go.jp/Japanese/about/architecture.html">建築について</a>
+<a href="https://www.momak.go.jp/Japanese/about/donation.html">寄附のお願い</a>
+<a href="/wp-content/uploads/2026/07/2026momak.pdf" target="_blank" rel="noopener noreferrer">美術館概要（PDF）</a>
+<br>
+<a href="https://www.momak.go.jp/Japanese/membership/"><strong>会員制度</strong></a>
+<a href="https://www.momak.go.jp/Japanese/membership/supportingmembers.html">賛助会員</a>
+<!--<a href="https://www.momak.go.jp/Japanese/membership/membership.html">友の会</a>-->
+<a href="https://www.momak.go.jp/Japanese/membership/campusMembers.html">キャンパスメンバーズ</a>
+<br>
+<a href="https://www.momak.go.jp/Japanese/membership/ok.html"><strong>OKパスポート</strong></a>
+<br>
+<a href="https://www.momak.go.jp/Japanese/guide/m4.html"><strong>京都ミュージアムズ・フォー</strong></a>
+<br>
+<a href="https://www.momak.go.jp/Japanese/guide/"><strong>ご利用案内</strong></a>
+<a href="https://www.momak.go.jp/Japanese/guide/">開館時間／休館日／観覧料</a>
+<a href="https://www.momak.go.jp/Japanese/guide/access.html">交通アクセス</a>
+<a href="https://www.momak.go.jp/Japanese/guide/floorGuide.html">フロアガイド</a>
+<a href="https://www.momak.go.jp/Japanese/guide/barrierFree.html">バリアフリー</a>
+<a href="https://www.momak.go.jp/Japanese/guide/museumShop.html">ミュージアムショップ</a>
+<a href="https://www.momak.go.jp/Japanese/guide/museumShop.html#cafe">カフェ</a>
+<!--<a href="https://www.momak.go.jp/Japanese/guide/m4.html">京都ミュージアムズ・フォー</a>-->
+<a href="https://www.momak.go.jp/Japanese/guide/faq.html">よくある質問</a>
+</div>
+
+</div>
+
+<div class="col-1 pos-1 gh-Text"><img src="https://www.momak.go.jp/wp-content/themes/momak/assets/img/common/txt_momak.svg" alt=""></div>
+
+</div>
+
+</footer>
+        </div><!-- #page -->
+
+                <div id="acf-gallery-modal" class="acf-modal" role="dialog" aria-modal="true" aria-label="画像ギャラリー">
+            <div class="acf-modal-inner">
+                <button class="acf-modal-close" aria-label="閉じる">&times;</button>
+                <div class="acf-modal-content"></div>
+                <button class="acf-modal-prev" aria-label="前の画像">&#10094;</button>
+                <button class="acf-modal-next" aria-label="次の画像">&#10095;</button>
+                <p class="acf-modal-counter"></p>
+            </div>
+        </div>
+
+        <!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script src="https://www.momak.go.jp/wp-content/themes/momak/assets/js/jquery.cookie.js"></script>
+
+<!-- 【新】共通JS -->
+
+
+
+<script src="https://www.momak.go.jp/wp-content/themes/momak/assets/js/jquery.matchHeight-min.js"></script>
+<script src="https://www.momak.go.jp/wp-content/themes/momak/assets/js/hMarquee.min.js"></script>
+<script src="https://www.momak.go.jp/wp-content/themes/momak/assets/js/desvg.js"></script>
+<script src="https://www.momak.go.jp/wp-content/themes/momak/assets/js/fitie.js"></script>
+<script src="https://www.momak.go.jp/wp-content/themes/momak/assets/js/common.js"></script>
+
+<!-- 【新】個別JS -->
+<script src="https://www.momak.go.jp/wp-content/themes/momak/assets/js/slick.min.js"></script>
+<script src="https://www.momak.go.jp/wp-content/themes/momak/assets/js/exhibition.js"></script>
+<script src="https://www.momak.go.jp/wp-content/themes/momak/assets/js/acf-place.js"></script>
+
+<!-- 【旧】共通JS -->
+
+<!-- 【旧】個別JS -->
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/Japanese/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/momak/*","/Japanese/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="wp-hooks-js" src="https://www.momak.go.jp/wp-includes/js/dist/hooks.min.js"></script>
+<script id="wp-i18n-js" src="https://www.momak.go.jp/wp-includes/js/dist/i18n.min.js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="swv-js" src="https://www.momak.go.jp/wp-content/plugins/contact-form-7/includes/swv/js/index.js"></script>
+<script id="contact-form-7-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2026-10-30 09:04:34+0000","generator":"GlotPress\/4.1.0","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=1; plural=0;","lang":"ja_JP"},"This contact form is placed in the wrong place.":["\u3053\u306e\u30b3\u30f3\u30bf\u30af\u30c8\u30d5\u30a9\u30fc\u30e0\u306f\u9593\u9055\u3063\u305f\u4f4d\u7f6e\u306b\u7f6e\u304b\u308c\u3066\u3044\u307e\u3059\u3002"],"Error:":["\u30a8\u30e9\u30fc:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+</script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/www.momak.go.jp\/Japanese\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script id="contact-form-7-js" src="https://www.momak.go.jp/wp-content/plugins/contact-form-7/includes/js/index.js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.momak.go.jp/wp-includes/js/wp-emoji-release.min.js"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.momak.go.jp/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+<!-- 【旧】共通JS(個別後) -->
+
+
+    </body>
+
+
+</html>

@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="和歌山・南紀白浜に広がるアドベンチャーワールド。陸・海・空の動物たち約120種・1,600頭が暮らすここは、パークテーマ「いのちを見つめ、問い続ける。」のもと、驚きや感動を通して“いのちの美しさ”に気づく体験をお届けします。">
+		<meta name="keywords" content="アドベンチャーワールド,パンダ,和歌山,白浜">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="format-detection" content="telephone=no">
+		<meta property="og:title" content="アドベンチャーワールド">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://www.aws-s.com/">
+		<meta property="og:image" content="http://www.aws-s.com/assets/img/og-image.jpg">
+		<meta property="og:site_name" content="アドベンチャーワールド">
+		<meta property="og:description" content="和歌山・南紀白浜に広がるアドベンチャーワールド。陸・海・空の動物たち約120種・1,600頭が暮らすここは、パークテーマ「いのちを見つめ、問い続ける。」のもと、驚きや感動を通して“いのちの美しさ”に気づく体験をお届けします。">
+		<meta property="fb:app_id" content="412894292419455">
+		<title>アドベンチャーワールド</title>
+        <script src="/assets/js/gw-popup.js"></script>
+
+		<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NQLDL8X');</script>
+<!-- End Google Tag Manager -->
+<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/webclip.png">
+<link rel="stylesheet" href="/assets/css/styles.css" media="all">
+<script src="/assets/js/library.js"></script>
+<script src="/assets/js/scripts.js"></script>
+<script src="//kitchen.juicer.cc/?color=6fDfojC6rB0=" async=""></script>
+<script src="/assets/js/gw-popup.js"></script>
+<script>
+(function (c, n, s) {
+    if (c[n] === void 0) {c['ULObject'] = n;
+    c[n] = c[n] || function () {(c[n].q = c[n].q || []).push(arguments)};
+    c[n].l = 1 * new Date();var e = document.createElement('script');
+    e.async = 1;e.src = s + "/chatbot.js";
+    var t = document.getElementsByTagName('script')[0];t.parentNode.insertBefore(e, t);}
+})(window, 'ul_widget', 'https://support-widget.userlocal.jp');
+ul_widget('init', { 'id': '34ab2c7a537d4cdd4e1e', 'lg_id': '' });
+</script>
+	<script type="application/json" id="weglot-data">{"allLanguageUrls":{"ja":"https://www.aws-s.com","zh":"https://www.aws-s.com/zh","zh-tw":"https://www.aws-s.com/zh-tw","en":"https://www.aws-s.com/en"},"originalCanonicalUrl":"https://www.aws-s.com/","originalPath":"/","settings":{"auto_switch":false,"auto_switch_fallback":null,"category":8,"custom_settings":{"button_style":{"with_name":true,"full_name":true,"is_dropdown":true,"with_flags":false,"flag_type":"rectangle_mat"},"switchers":[{"style":{"with_name":true,"with_flags":false,"full_name":false,"flag_type":"square","size_scale":"0.65"},"opts":{"open_hover":true,"close_outside_click":false,"is_responsive":false,"display_device":"mobile","pixel_cutoff":768},"colors":{"text_inactive":"#000000","text_active":"#FFFFFF","text_hover":"#FFFFFF","bg_inactive":"#FFFFFF","bg_active":"#000357","bg_hover":"#666EFB"},"location":{},"template":{"name":"horizontal_expand","hash":"931b92b214f8efc140a3e34a10b5bb82f11185b5"}}],"translate_search":false,"loading_bar":true,"hide_switcher":false,"translate_images":false,"subdomain":false,"wait_transition":true,"dynamic":""},"deleted_at":null,"dynamics":[],"excluded_blocks":[],"excluded_paths":[{"excluded_languages":[],"language_button_displayed":false,"type":"START_WITH","value":"/admin"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/aaa/posts/news4.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202406.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/aaa/2024_4_27_08_22_50/pageindices/index5.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/aaa/20250421_1052/pageindices/index8.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/aaa/20250421_1052/pageindices/index20.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/2017.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/2018.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pandakopanda"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202310.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202311.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202211.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202209.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202308.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202303.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/2016.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202203.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202207.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202307.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202210.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202309.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202208.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202306.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202312.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202305.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/202212.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/2019.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"MATCH_REGEX","value":"^/topics/detail\\?id=0{0,2}[1-9]$|^/topics/detail\\?id=0?[1-9][0-9]$|^/topics/detail\\?id=[1-9][0-9]{2}$|^/topics/detail\\?id=1[0-9]{3}$|^/topics/detail\\?id=2[0-9]{3}$|^/topics/detail\\?id=3[0-8][0-9]{2}$|^/topics/detail\\?id=3900$"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/2023.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"MATCH_REGEX","value":"^/topics/detail\\?id=top3110$"},{"excluded_languages":[],"language_button_displayed":false,"type":"START_WITH","value":"/topics/detail.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"MATCH_REGEX","value":"/topics/detail.php"},{"excluded_languages":[],"language_button_displayed":false,"type":"MATCH_REGEX","value":"/topics/index.php"},{"excluded_languages":[],"language_button_displayed":false,"type":"MATCH_REGEX","value":"/topics/static/yoursmileday2015.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"MATCH_REGEX","value":"/ticket"},{"excluded_languages":[],"language_button_displayed":false,"type":"MATCH_REGEX","value":"/takezakura"},{"excluded_languages":[],"language_button_displayed":false,"type":"MATCH_REGEX","value":"/sustainable_smile_train"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/2022.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/2021.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/pressrelease/2020.html"},{"excluded_languages":[],"language_button_displayed":false,"type":"IS_EXACTLY","value":"/jobfind"}],"external_enabled":false,"host":"www.aws-s.com","is_dns_set":true,"is_https":true,"language_from":"ja","language_from_custom_flag":null,"language_from_custom_name":null,"languages":[{"connect_host_destination":null,"custom_code":null,"custom_flag":null,"custom_local_name":null,"custom_name":null,"enabled":true,"language_to":"zh"},{"connect_host_destination":null,"custom_code":null,"custom_flag":null,"custom_local_name":null,"custom_name":null,"enabled":true,"language_to":"zh-tw"},{"connect_host_destination":null,"custom_code":null,"custom_flag":"us","custom_local_name":null,"custom_name":null,"enabled":true,"language_to":"en"}],"media_enabled":false,"page_views_enabled":false,"technology_id":12,"technology_name":"Other","translation_engine":3,"url_type":"SUBDIRECTORY","versions":{"translation":1792658159,"slugTranslation":1752732354}}}</script>
+<script async="" src="https://cdn.weglot.com/weglot.min.js?api_key=wg_4247189701074a90a0b248019b950d045" type="text/javascript"></script><link href="https://www.aws-s.com" hreflang="ja" rel="alternate"><link href="https://www.aws-s.com/zh" hreflang="zh" rel="alternate"><link href="https://www.aws-s.com/zh-tw" hreflang="zh-tw" rel="alternate"><link href="https://www.aws-s.com/en" hreflang="en" rel="alternate"></head>
+	<body>
+
+		<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQLDL8X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="header">
+<h1 class="header__logo">
+<a href="/">
+  <img src="/assets/img/logo.png" width="356" height="78" alt="アドベンチャーワールド" class="pc">
+  <img src="/assets/img/logo2.png" width="300" height="52" alt="アドベンチャーワールド" class="sp">
+</a>
+</h1>
+<div class="menu-link-wrap">
+<div class="group-link">
+<a href="/guide/group/">グループ予約</a>
+</div>
+<div class="faq-link">
+<a href="/guide/faq/">よくあるご質問</a>
+</div>
+</div>
+<div class="sp-menu-ticketstore-link">
+<a href="https://terravie-app.com/find/tickets/result?park_ids=03fa2f6b-b1f2-9687-d647-3cbaa7aa157f&modal=ticket" target="_blank" class="button-ticket">チケット購入</a>
+</div>
+<div class="global-navigation-wrap">
+<button class="sp-menu-toggle-button" type="button">メニュー</button>
+<nav>
+<ul class="global-navigation">
+<li class="attractions"><a href="/attractions/">ツアー・アトラクション</a>
+<button type="button" class="sp-sub-menu-toggle-button">詳細を開く</button>
+<ul class="global-sub-navigation">
+<li><a href="/attractions/#now-attractions">いま注目のツアー・アトラクション</a></li>
+<li><a href="/attractions/#search-attractions">目的別にツアー・アトラクションを探す</a></li>
+</ul>
+</li>
+<li class="animals"><a href="/animals/">動物の紹介</a>
+<button type="button" class="sp-sub-menu-toggle-button">詳細を開く</button>
+<ul class="global-sub-navigation">
+<!--<li><a href="/animals/panda/">ジャイアントパンダ</a></li>-->
+<li><a href="/animals/sea-animals/">海に暮らす動物</a></li>
+<li><a href="/animals/carnivore/">肉食動物</a></li>
+<li><a href="/animals/herbivore/">草食動物</a></li>
+<li><a href="/animals/family/">ふれあい広場・ファミリー広場の動物</a></li>
+</ul>
+</li>
+<li class="facility"><a href="/facility/">施設の紹介</a>
+<button type="button" class="sp-sub-menu-toggle-button">詳細を開く</button>
+<ul class="global-sub-navigation">
+<li><a href="/facility/#entrance">エントランス周辺</a></li>
+<li><a href="/facility/#marine-world">マリンワールド</a></li>
+<li><a href="/facility/#safari-world">サファリワールド</a></li>
+<li><a href="/facility/#friendship">動物とのふれあい・プレイゾーン</a></li>
+<li><a href="/facility/play-zone/">プレイゾーン（遊園地）</a></li>
+<li><a href="/facility/restaurant/">レストラン</a></li>
+<li><a href="/facility/shop/">ショップ</a></li>
+<li><a href="/facility/service/">サービス施設</a></li>
+</ul>
+</li>
+<li class="guide"><a href="/guide/">パークガイド</a>
+<button type="button" class="sp-sub-menu-toggle-button">詳細を開く</button>
+<ul class="global-sub-navigation">
+<li><a href="/guide/opening_hours/">営業時間のご案内</a></li>
+<li><a href="/guide/schedule/">ライブアトラクション・スケジュール</a></li>
+<li><a href="/guide/charge/">料金のご案内</a></li>
+<li><a href="/guide/group/">グループ予約</a></li>
+<li><a href="/accessible-guide/" target="_blank"><span class="icon-blank">バリアフリーガイド</span></a></li>
+<li><a href="https://terravie-app.com/find/tickets/result?park_ids=03fa2f6b-b1f2-9687-d647-3cbaa7aa157f&modal=ticket" target="_blank" class="button-ticket"><span class="icon-blank">チケット購入</span></a></li>
+<li><a href="/guide/access/">アクセス</a></li>
+<li><a href="/guide/faq/">よくあるご質問</a></li>
+<li><a href="/parktheme-sdgs/">パークテーマ・SDGs</a></li>
+</ul>
+</li>
+<li class="group"><a href="/guide/group/">グループ予約</a></li>
+<li class="faq"><a href="/guide/faq/">よくあるご質問</a></li>
+<li class="onlineshop"><a href="https://www.ec-aws.com/shop/default.aspx" class="icon-blank2" target="_blank">オンラインショップ</a></li>
+<li class="ticketstore"><a href="https://terravie-app.com/find/tickets/result?park_ids=03fa2f6b-b1f2-9687-d647-3cbaa7aa157f&modal=ticket" class="icon-blank button-ticket" target="_blank">チケット購入</a></li>
+</ul>
+</nav>
+</div>
+<div class="floating-banner js-floating-banner">
+  <a href="https://terravie-app.com/find/tickets/result?park_ids=03fa2f6b-b1f2-9687-d647-3cbaa7aa157f&modal=ticket" target="_blank" class="button-ticket">チケット購入</a>
+</div>
+</header>
+
+
+
+		<main>
+
+      <div class="main-visual-wrap">
+        <div class="main-visual-slider-wrap">
+        <div class="main-visual-slider">
+    			<!--
+<div class="main-visual-slider__content">
+<div class="visual-banner">
+<a href="https://class="visual-banner-inner" target="_blank">
+<div class="visual-banner__image">
+</div>
+<div class="visual-banner__content">
+<h2 class="visual-banner__content-heading"></h2>
+<div class="visual-banner__content-text">
+    <p><span class="leader-text"></span></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+-->
+
+<div class="main-visual-slider__content">
+<div class="visual-banner">
+<a href="https://www.aws-s.com/lightparks&nightsafari/" class="visual-banner-inner" target="_blank">
+<div class="visual-banner__image">
+<picture>
+  <source srcset="/include/img/slider/lightparks&nightsafari_1111SP.jpg" media="(max-width: 640px)">
+  <img src="/include/img/slider/lightparks&nightsafari_1111TP.jpg" alt="">
+</picture>
+</div>
+<div class="visual-banner__content">
+<h2 class="visual-banner__content-heading">LIGHT PARKS & ナイトサファリ</h2>
+<div class="visual-banner__content-text">
+    <p><span class="leader-text">営業終了後のアドベンチャーワールドで、光に満ちた幻想的なふれあい広場を楽しむ「LIGHT PARKS」と、動物たちの夜の素顔に出会う「ナイトサファリ」、ふたつの夜がはじまります。</span></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+<div class="main-visual-slider__content">
+<div class="visual-banner">
+<a href="https://www.aws-s.info/pingu" class="visual-banner-inner" target="_blank">
+<div class="visual-banner__image">
+<picture>
+  <source srcset="/include/img/slider/2026pingu_2SP.jpg" media="(max-width: 640px)">
+  <img src="/include/img/slider/2026pingu_2PC.jpg" alt="">
+</picture>
+</div>
+<div class="visual-banner__content">
+<h2 class="visual-banner__content-heading">PINGU&trade; meets アドベンチャーワールド!</h2>
+<div class="visual-banner__content-text">
+    <p><span class="leader-text">パークの個性豊かな10種類のペンギンたちと、世界中で愛される「ピングー」の夢の共演が再び実現！(開催期間:2026年10月1日~2027年2月28日)</span></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+<div class="main-visual-slider__content">
+<div class="visual-banner">
+<a href="https://www.aws-s.com/topics/detail?id=top4772" class="visual-banner-inner" target="_blank">
+<div class="visual-banner__image">
+<picture>
+  <source srcset="/include/img/slider/mugenpasu_sankusudei_SP.jpg" media="(max-width: 640px)">
+  <img src="/include/img/slider/mugenpasu_sankusudei.jpg" alt="">
+</picture>
+</div>
+<div class="visual-banner__content">
+<h2 class="visual-banner__content-heading">無限アドベンチャーパスサンクスサンデー</h2>
+<div class="visual-banner__content-text">
+    <p><span class="leader-text">【１１月の日曜日限定】パスホルダーの皆様に感謝を込めて！</span></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+
+
+<div class="main-visual-slider__content">
+<div class="visual-banner">
+<a href="https://www.aws-s.com/attractions/detail?id=eve368" class="visual-banner-inner" target="_blank">
+<div class="visual-banner__image">
+<picture>
+  <source srcset="/include/img/slider/livethe_niku_2SP.jpg" media="(max-width: 640px)">
+  <img src="/include/img/slider/livethe_niku_2PC.jpg" alt="">
+</picture>
+</div>
+<div class="visual-banner__content">
+<h2 class="visual-banner__content-heading">動物たちが躍動する秋シーズン！ライブ実況ツアー</h2>
+<div class="visual-banner__content-text">
+    <p><span class="leader-text">アニマルエデュテイナーごとに十人十色の解説が光る、その瞬間しか味わえない予測不能なライブ実況ツアー。</span></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+<div class="main-visual-slider__content">
+<div class="visual-banner">
+<a href="https://www.aws-s.com/safariworld/" class="visual-banner-inner" target="_blank">
+<div class="visual-banner__image">
+<picture>
+  <source srcset="/include/img/slider/2026safari_autumn_SP.jpg" media="(max-width: 640px)">
+  <img src="/include/img/slider/2026safari_autumn_PC.jpg" alt="秋のサファリワールド">
+</picture>
+</div>
+<div class="visual-banner__content">
+<h2 class="visual-banner__content-heading">秋のサファリワールド</h2>
+<div class="visual-banner__content-text">
+    <p><span class="leader-text">動物たちの動きが冴え渡る秋！爽やかな空気のもとで生き生きと動く動物たちを間近で観察できるベストシーズンです。</span></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+<div class="main-visual-slider__content">
+<div class="visual-banner">
+<a href="https://www.aws-s.com/penguin-world/" class="visual-banner-inner" target="_blank">
+<div class="visual-banner__image">
+<picture>
+  <source srcset="/include/img/slider/penguin_world_SP.jpg" media="(max-width: 640px)">
+  <img src="/include/img/slider/penguin_world_PC.jpg" alt="10種約470羽のペンギンワールド">
+</picture>
+</div>
+<div class="visual-banner__content">
+<h2 class="visual-banner__content-heading">10種約470羽のペンギンワールド</h2>
+<div class="visual-banner__content-text">
+    <p><span class="leader-text">世界最大のコウテイペンギンから世界最小のコガタペンギンまで！</span></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+<div class="main-visual-slider__content">
+<div class="visual-banner">
+<a href="https://www.aws-s.com/always_together/" class="visual-banner-inner" target="_blank">
+<div class="visual-banner__image">
+<picture>
+  <source srcset="/include/img/slider/AlwaysTogether_2_SP.jpg" media="(max-width: 640px)">
+  <img src="/include/img/slider/AlwaysTogether_2_PC.jpg" alt="">
+</picture>
+</div>
+<div class="visual-banner__content">
+<h2 class="visual-banner__content-heading">新生マリンライブ「Always Together」</h2>
+<div class="visual-banner__content-text">
+    <p><span class="leader-text">名曲『Always Together』とともに贈る、いのちを祝う秋の祭り。心揺さぶる「シネマティック・ライブ」</span></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+<div class="main-visual-slider__content">
+<div class="visual-banner">
+<a href="https://www.aws-s.info/more-infinite-adventurepass" class="visual-banner-inner" target="_blank">
+<div class="visual-banner__image">
+<picture>
+  <source srcset="/include/img/slider/motto_mugen_3_SP.jpg" media="(max-width: 640px)">
+  <img src="/include/img/slider/motto_mugen_3_PC.jpg" alt="">
+</picture>
+</div>
+<div class="visual-banner__content">
+<h2 class="visual-banner__content-heading">もっと無限アドベンチャーパス</h2>
+<div class="visual-banner__content-text">
+    <p><span class="leader-text">2027年5月末まで何度も入園できる！大人は＋3,500円、中人小人は無料でアップグレード（販売期間）2026年7月18日～　来年のGWも冒険し放題！</span></p>
+</div>
+</div>
+</a>
+</div>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+        </div>
+      </div>
+
+
+
+			<div class="information">
+				<div class="information__inner">
+					<section class="today-schedule holiday">
+						<h2 class="today-schedule__heading"><span class="today-schedule__heading-inner">本日2026年11月18日(水) は<span class="red-text">休園</span>いたします。</span></h2>
+						<div class="today-schedule__content">
+							
+							<a href="/guide/opening_hours/" class="today-schedule__link">
+								<span class="today-schedule__link-normal">明日以降の営業カレンダー</span>
+								<span class="today-schedule__link-short">明日以降はこちら</span>
+							</a>
+						</div>
+					</section>
+
+					<a href="https://terravie-app.com/" target="_blank" class="banner-ticketstore"><span class="icon-blank">チケット購入にはかんたん便利な事前購入がおすすめ</span></a>
+
+				</div>
+			</div>
+
+
+			<style>
+/* ==== 共通スタイル ==== */
+.banner-section {
+    margin-top: 80px;
+}
+
+.banner-heading {
+    font-size: 32px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 24px;
+    letter-spacing: .05em;
+    color: #222;
+}
+
+/* ==== 開催中のイベント：固定バナー ==== */
+.banner-wrapper {
+    text-align: center;
+}
+
+.banner-item {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px 20px;
+    max-width: 700px;
+}
+
+.banner-item img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==== 開催予定のイベント：スライドバナー（カード型+テキスト） ==== */
+.card-banner-slide-section {
+    margin: 40px auto 0;
+    max-width: 1460px;
+    padding: 0 20px;
+}
+
+.card-banner-slide {
+    position: relative;
+}
+
+.card-banner-track {
+    display: flex;
+    overflow-x: auto;
+    gap: 24px;
+    padding: 4px 4px 16px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.card-banner-track::-webkit-scrollbar {
+    height: 6px;
+}
+.card-banner-track::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+}
+
+.card-banner-item {
+    flex: 0 0 auto;
+    width: 260px;
+    scroll-snap-align: start;
+    text-align: left;
+}
+
+.card-banner-item a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-banner-item__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.card-banner-item__category {
+    margin-top: 14px;
+    font-size: 13px;
+    color: #666;
+}
+
+.card-banner-item__title {
+    margin-top: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #222;
+}
+
+.card-banner-item__period {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #444;
+    line-height: 1.5;
+}
+
+.card-banner-item__link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #0b5fff;
+    text-decoration: underline;
+}
+.card-banner-item__link:hover { text-decoration: none; }
+
+.card-banner-item.is-coming-soon .card-banner-item__link {
+  color: #000;
+  text-decoration: none;
+}
+
+.card-banner-item.is-coming-soon .card-banner-item__title {
+  min-height: 3em;
+}
+
+.card-banner-nav {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #0b5fff;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+}
+.card-banner-nav:hover { background: #084bcc; }
+.card-banner-nav--prev { left: -4px; }
+.card-banner-nav--next { right: -4px; }
+
+/* ドット型ページネーション（スマホのみ） */
+.card-banner-dots {
+    display: none;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.card-banner-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.card-banner-dot.active {
+    background: #0b5fff;
+}
+
+/* スマホ用 */
+@media screen and (max-width: 600px) {
+    .banner-section {
+        margin-top: 40px;
+    }
+    .banner-heading {
+        font-size: 22px;
+        margin-bottom: 16px;
+    }
+    .banner-wrapper {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .banner-item {
+        display: block;
+        width: 100%;
+        margin: 5px 0;
+        max-width: 100%;
+    }
+    .banner-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-banner-slide-section {
+        margin-top: 30px;
+        padding: 0 12px;
+    }
+    .card-banner-track {
+        gap: 16px;
+    }
+    .card-banner-item {
+        width: 78%;
+    }
+    .card-banner-nav {
+        display: none;
+    }
+    .card-banner-dots {
+        display: block;
+    }
+}
+
+/* ==== NEWバッジ（カテゴリ横の赤ピル） ==== */
+.card-banner-item__new {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 0 9px;
+    border-radius: 999px;
+    background: #e60033;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: .08em;
+    line-height: 1.7;
+    vertical-align: middle;
+}
+
+/* ==== NEWの付いたカードを赤枠で囲む（カードの外側に描くので、画像の大きさは変わらない） ==== */
+.card-banner-track {
+    padding: 10px 10px 16px;          /* 枠が切れないよう上下左右に余白（元は 4px 4px 16px） */
+    scroll-padding-inline: 10px;      /* スクロールで止まる位置も余白に合わせる */
+}
+.card-banner-item:has(.card-banner-item__new) {
+    position: relative;
+}
+.card-banner-item:has(.card-banner-item__new)::after {
+    content: "";
+    position: absolute;
+    inset: -7px -7px -10px;
+    border: 2px solid #e60033;
+    border-radius: 18px;
+    pointer-events: none;
+}
+</style>
+
+<div class="banner-section">
+
+<!-- ==== 開催中のイベント（スライドバナー+テキスト） ==== -->
+<p class="banner-heading">開催中のイベント</p>
+
+<div class="card-banner-slide-section">
+    <div class="card-banner-slide">
+        <button type="button" class="card-banner-nav card-banner-nav--prev" aria-label="前へ">&#10094;</button>
+
+        <div class="card-banner-track" id="cardBannerTrackOpen">
+        <div class="card-banner-item">
+              <a href="https://www.aws-s.info/pingu" target="_blank" class="banner-tracking" data-banner-name="ピングー2026" data-banner-section="開催予定のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/2026pingu_2.jpg" alt="ピングー2026">
+                <p class="card-banner-item__category">イベント</p>
+                <p class="card-banner-item__title">PINGU™ meets アドベンチャーワールド</p>
+                <p class="card-banner-item__period">開催期間：2026年10月1日(木)〜<br>2027年2月28日(日)</p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+            </a>
+            </div>
+
+ 
+         <div class="card-banner-item">
+              <a href="https://www.aws-s.com/lightparks&nightsafari/lightparks/" target="_blank" class="banner-tracking" data-banner-name="light parks" data-banner-section="開催中のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/lightparksA_1109.jpg" alt="LIGHT_PARKS_2026-2027">
+                <p class="card-banner-item__category">イベント</p>
+                <p class="card-banner-item__title">LIGHT PARKS in Adventure World</p>
+                <p class="card-banner-item__period">開催期間：2026年10月24日(土)〜<br>2027年3月31日(水)</p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+            </a>
+        </div>
+
+       
+            <div class="card-banner-item">
+              <a href="https://www.aws-s.com/lightparks&nightsafari/nightsafari/" target="_blank" class="banner-tracking" data-banner-name="ナイトサファリ" data-banner-section="開催中のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/nightsafari2026_1109.jpg" alt="night_safari_2026-2027">
+                <p class="card-banner-item__category">イベント</p>
+                <p class="card-banner-item__title">ナイトサファリ</p>
+                <p class="card-banner-item__period">開催期間：2026年10月24日(土)〜<br>2027年3月31日(水)</p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+            </a>
+            </div>
+      
+ 
+           <div class="card-banner-item">
+              <a href="https://www.aws-s.com/topics/detail?id=top4769" class="banner-tracking" data-banner-name="運動場パンダ" data-banner-section="開催予定のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/panda_undoujo.jpg" alt="運動場パンダ">
+                <p class="card-banner-item__category">イベント</p>
+                <p class="card-banner-item__title">「運動場パンダ」登場</p>
+                <p class="card-banner-item__period">11月の土日祝日</p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+              </a>
+            </div>
+
+         <div class="card-banner-item">
+              <a href="https://www.aws-s.com/topics/detail?id=top4777" class="banner-tracking" data-banner-name="ギガ盛チャンス" data-banner-section="開催中のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/giga.jpg" alt="ギガ盛チャンス">
+                <p class="card-banner-item__category">イベント</p>
+                <p class="card-banner-item__title">ギガ盛　通常の20倍があたる！？</p>
+                <p class="card-banner-item__period">2026年11月7日～順次スタート</p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+              </a>
+            </div>
+
+
+         <div class="card-banner-item">
+              <a href="https://www.aws-s.com/attractions/detail?id=eve368" class="banner-tracking" data-banner-name="「LIVE THEサファリ」肉増量中" data-banner-section="開催中のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/livethe_niku.jpg" alt="LIVE THEサファリ">
+                <p class="card-banner-item__category">イベント</p>
+                <p class="card-banner-item__title">「LIVE THEサファリ」肉増量中</p>
+                <p class="card-banner-item__period">肉増量期間：2026年11月30日まで</p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+              </a>
+            </div>
+
+
+
+
+
+          <div class="card-banner-item">
+              <a href="https://www.aws-s.info/more-infinite-adventurepass" target="_blank" class="banner-tracking" data-banner-name="もっと無限アドベンチャーパス" data-banner-section="開催中のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/motmugen.jpg" alt="もっと無限アドベンチャーパス">
+                <p class="card-banner-item__category">お知らせ</p>
+                <p class="card-banner-item__title">もっと無限アドベンチャーパス</p>
+                <p class="card-banner-item__period">～2027年5月31日まで何度でも入園できる</p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+              </a>
+            </div>
+        
+        </div><!-- /.card-banner-track -->
+
+
+        <button type="button" class="card-banner-nav card-banner-nav--next" aria-label="次へ">&#10095;</button>
+    </div>
+    <div class="card-banner-dots" id="dotsOpen"></div>
+</div>
+
+
+
+<div class="card-banner-slide-section">
+    <div class="card-banner-slide">
+        <button type="button" class="card-banner-nav card-banner-nav--prev" aria-label="前へ">&#10094;</button>
+        <div class="card-banner-track" id="cardBannerTrackUpcoming">
+
+        <div class="card-banner-item">
+              <a href="https://www.aws-s.com/topics/detail?id=top4785" target="_blank" class="banner-tracking" data-banner-name="いい夫婦の日　コウテイペンギン" data-banner-section="お知らせ">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/2026iifuufu.jpg" alt="いい夫婦の日　コウテイペンギン">
+                <p class="card-banner-item__category">お知らせ</p>
+                <p class="card-banner-item__title">いい夫婦 パートナー・オブ・ザ・イヤー ２０２６</p>
+                <p class="card-banner-item__period">コウテイペンギンペアが特別賞を受賞！授賞式2026年11月19日</p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+              </a>
+            </div>
+
+        <div class="card-banner-item">
+              <a href="https://www.aws-s.com/penguin-world/" class="banner-tracking" data-banner-name="10種約470羽のペンギンワールド" data-banner-section="開催中のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/penguin_world.jpg" alt="10種約470羽のペンギンワールド">
+                <p class="card-banner-item__category">お知らせ</p>
+                <p class="card-banner-item__title">10種約470羽のペンギンワールド</p>
+                <p class="card-banner-item__period"></p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+              </a>
+            </div>
+
+ <div class="card-banner-item">
+              <a href="https://www.aws-s.com/topics/detail?id=top4772" target="_blank" class="banner-tracking" data-banner-name="無限アドベンチャーパスサンクスサンデー" data-banner-section="開催中のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/mugenpasu_sankusudei2.jpg" alt="無限アドベンチャーパスサンクスサンデー">
+                <p class="card-banner-item__category">お知らせ</p>
+                <p class="card-banner-item__title">無限アドベンチャーパスサンクスサンデー</p>
+                <p class="card-banner-item__period">【１１月の日曜日限定】パスホルダーの皆様に感謝を込めて！</p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+              </a>
+            </div>
+
+ <div class="card-banner-item">
+              <a href="https://www.aws-s.com/topics/detail?id=top4773" target="_blank" class="banner-tracking" data-banner-name="和歌山キャンペーン" data-banner-section="開催中のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/wakayama_can.jpg" alt="和歌山キャンペーン">
+                <p class="card-banner-item__category">お知らせ</p>
+                <p class="card-banner-item__title">和歌山県ふるさと誕生日キャンペーン</p>
+                <p class="card-banner-item__period">期間：2026年11月21日～23日</p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+              </a>
+            </div>
+
+
+          <div class="card-banner-item">
+              <a href="https://www.aws-s.com/safariworld/" class="banner-tracking" data-banner-name="秋のサファリワールド" data-banner-section="開催中のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/2026safari_autumn.jpg" alt="秋のサファリワールド">
+                <p class="card-banner-item__category">お知らせ</p>
+                <p class="card-banner-item__title">秋は、動物がいちばん動く。</p>
+                <p class="card-banner-item__period"></p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+              </a>
+            </div>
+
+
+            
+            <div class="card-banner-item">
+              <a href="https://www.aws-s.info/shirahama" target="_blank" class="banner-tracking" data-banner-name="パートナーホテル・お店" data-banner-section="開催中のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/shirahamasmilepartners.jpg" alt="パートナーホテル・お店">
+                <p class="card-banner-item__category">お知らせ</p>
+                <p class="card-banner-item__title">パートナーホテル・お店に行くといいことがある！</p>
+                <p class="card-banner-item__period"></p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+              </a>
+            </div>
+
+<!--
+            <div class="card-banner-item">
+              <a href="https://www.aws-s.com/penguin-world/rockhopper/" target="_blank" class="banner-tracking" data-banner-name="キタイワトビペンギンの赤ちゃん" data-banner-section="開催中">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/baby_rockhopper1030.jpg" alt="キタイワトビペンギンの赤ちゃん">
+                <p class="card-banner-item__category">お知らせ</p>
+                <p class="card-banner-item__title">キタイワトビペンギンの赤ちゃん成長記録</p>
+                <p class="card-banner-item__period">11/7に親元へ戻りました</p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+            </a>
+            </div>
+-->
+
+          <div class="card-banner-item">
+              <a href="https://www.aws-s.info/rainyday" class="banner-tracking" data-banner-name="雨の日でも楽しいアドベンチャーワールド" data-banner-section="開催中のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/rainyday.jpg" alt="雨の日でも楽しいアドベンチャーワールド">
+                <p class="card-banner-item__category">お知らせ</p>
+                <p class="card-banner-item__title">雨の日でも楽しいアドベンチャーワールド</p>
+                <p class="card-banner-item__period"></p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+              </a>
+            </div>
+        </div><!-- /.card-banner-track -->
+        <button type="button" class="card-banner-nav card-banner-nav--next" aria-label="次へ">&#10095;</button>
+    </div>
+    <div class="card-banner-dots" id="dotsUpcoming"></div>
+</div>
+
+<!-- ==== 開催予定のイベント（スライドバナー+テキスト） ==== -->
+<!--<p class="banner-heading" style="margin-top: 40px;">お知らせ・開催予定のイベント</p>-->
+
+<!--<div class="card-banner-slide-section">
+    <div class="card-banner-slide">
+        <button type="button" class="card-banner-nav card-banner-nav--prev" aria-label="前へ">&#10094;</button>
+
+        <div class="card-banner-track" id="cardBannerTrackUpcoming">
+
+
+           
+          <div class="card-banner-item">
+              <a href="https://www.aws-s.com/topics/detail?id=top4769" class="banner-tracking" data-banner-name="運動場パンダ" data-banner-section="開催予定のイベント">
+                <img class="card-banner-item__image" src="include/img/top_free_top/slide/panda_undoujo.jpg" alt="運動場パンダ">
+                <p class="card-banner-item__category">イベント</p>
+                <p class="card-banner-item__title">「運動場パンダ」実施期間延長</p>
+                <p class="card-banner-item__period">11月3日（火･祝）以降の土日祝</p>
+                <span class="card-banner-item__link">詳しくはこちら</span>
+              </a>
+            </div>
+        
+        <button type="button" class="card-banner-nav card-banner-nav--next" aria-label="次へ">&#10095;</button>
+    </div>
+    <div class="card-banner-dots" id="dotsUpcoming"></div>
+</div> --> 
+
+</div><!-- /.banner-section --> 
+
+<script>
+(function () {
+    function setupBannerSlide(trackId, dotsId) {
+        var track = document.getElementById(trackId);
+        if (!track) return;
+
+        var slideEl = track.closest('.card-banner-slide');
+        if (!slideEl) return;
+
+        var prevBtn = slideEl.querySelector('.card-banner-nav--prev');
+        var nextBtn = slideEl.querySelector('.card-banner-nav--next');
+        var dotsContainer = document.getElementById(dotsId);
+
+        // ドット生成
+        var items = track.querySelectorAll('.card-banner-item');
+        if (dotsContainer && items.length > 1) {
+            items.forEach(function (item, index) {
+                var dot = document.createElement('span');
+                dot.className = 'card-banner-dot' + (index === 0 ? ' active' : '');
+                dot.addEventListener('click', function () {
+                    var item = track.querySelector('.card-banner-item');
+                    var gap = 16;
+                    var itemWidth = item.offsetWidth;
+                    var distance = (itemWidth + gap) * index;
+                    track.scrollLeft = distance;
+                });
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function updateDots() {
+            if (!dotsContainer) return;
+            var item = track.querySelector('.card-banner-item');
+            if (!item) return;
+            var itemWidth = item.offsetWidth;
+            var gap = 24;
+            var currentIndex = Math.round(track.scrollLeft / (itemWidth + gap));
+            var dots = dotsContainer.querySelectorAll('.card-banner-dot');
+            dots.forEach(function (dot, index) {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function scrollByCard(direction) {
+            var item = track.querySelector('.card-banner-item');
+            if (!item) return;
+            var gap = 24;
+            var itemWidth = item.offsetWidth;
+            var distance = (itemWidth + gap) * direction;
+            track.scrollBy({ left: distance, behavior: 'smooth' });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                scrollByCard(-1);
+            });
+        }
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                scrollByCard(1);
+            });
+        }
+
+        // スクロール時にドット更新
+        track.addEventListener('scroll', updateDots);
+        track.addEventListener('scrollend', updateDots);
+    }
+
+    // 両方のスライドを初期化
+    setupBannerSlide('cardBannerTrackOpen', 'dotsOpen');
+    setupBannerSlide('cardBannerTrackUpcoming', 'dotsUpcoming');
+
+    // GA4 バナークリック追跡
+    document.querySelectorAll('.card-banner-track a').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+            var title = this.querySelector('.card-banner-item__title')?.innerText || 'Unknown';
+            var trackId = this.closest('.card-banner-track')?.id || '';
+            var section = trackId === 'cardBannerTrackOpen' ? '開催中のイベント' : '開催予定のイベント';
+
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'banner_click', {
+                    'banner_name': title,
+                    'banner_section': section,
+                    'banner_url': this.href
+                });
+            }
+        });
+    });
+})();
+</script>
+
+
+			<section class="top-section">
+
+				<div class="top-heading">
+					<p class="top-heading__decorative-text">TOUR, ATTRACTIONS</p>
+					<h2 class="top-heading__heading">今注目のツアー・アトラクション</h2>
+				</div>
+
+				<ul class="column-change-3to2">
+										<li>
+						<a href="/attractions/category?t=3" class="arrow-button">
+							<section class="thumbnail-set">
+								<div class="thumbnail-set__photo"><img src="/getImage.php?path=type_3.jpg" alt=""></div>
+								<h3 class="thumbnail-set__heading">動物たちのライブを楽しむ</h3>
+								<p class="thumbnail-set__text">信頼関係から生まれる動物たちのライブパフォーマンス</p>
+							</section>
+						</a>
+					</li>
+										<li>
+						<a href="/attractions/category?t=11" class="arrow-button">
+							<section class="thumbnail-set">
+								<div class="thumbnail-set__photo"><img src="/getImage.php?path=type_11.jpg" alt=""></div>
+								<h3 class="thumbnail-set__heading">自由にお楽しみいただけるライブ、アトラクション(無料）</h3>
+								<p class="thumbnail-set__text">ご入園後、各会場で無料で自由にお楽しみいただけます。<br>一部アトラクションには人数制限があります。</p>
+							</section>
+						</a>
+					</li>
+										<li>
+						<a href="/attractions/category?t=30" class="arrow-button">
+							<section class="thumbnail-set">
+								<div class="thumbnail-set__photo"><img src="/getImage.php?path=type_30.jpg" alt=""></div>
+								<h3 class="thumbnail-set__heading">10種類470羽のペンギンワールドを楽しむ</h3>
+								<p class="thumbnail-set__text">１０種のペンギンたちに出会える唯一のパーク。</p>
+							</section>
+						</a>
+					</li>
+										<li>
+						<a href="/attractions/category?t=8" class="arrow-button">
+							<section class="thumbnail-set">
+								<div class="thumbnail-set__photo"><img src="/getImage.php?path=type_8.jpg" alt=""></div>
+								<h3 class="thumbnail-set__heading">ツアー、アトラクション(有料：当日予約)</h3>
+								<p class="thumbnail-set__text">動物たちにより近く、動物たちのことをより深く。ご入園後、予約が必要です。（人数制限があります）</p>
+							</section>
+						</a>
+					</li>
+										<li>
+						<a href="/attractions/category?t=9" class="arrow-button">
+							<section class="thumbnail-set">
+								<div class="thumbnail-set__photo"><img src="/getImage.php?path=type_9.jpg" alt=""></div>
+								<h3 class="thumbnail-set__heading">ツアー、アトラクション(有料：先着順)</h3>
+								<p class="thumbnail-set__text">動物たちにより近く、動物たちのことをより深く。会場で先着順に受付します（人数制限があります）<br></p>
+							</section>
+						</a>
+					</li>
+										<li>
+						<a href="/attractions/category?t=10" class="arrow-button">
+							<section class="thumbnail-set">
+								<div class="thumbnail-set__photo"><img src="/getImage.php?path=type_10.jpg" alt=""></div>
+								<h3 class="thumbnail-set__heading">ツアー、アトラクション(有料：事前予約)</h3>
+								<p class="thumbnail-set__text">より近くで動物たちとふれあい、特別な体験をお楽しみいただけます。</p>
+							</section>
+						</a>
+					</li>
+										<li>
+						<a href="/attractions/category?t=12" class="arrow-button">
+							<section class="thumbnail-set">
+								<div class="thumbnail-set__photo"><img src="/getImage.php?path=type_12.jpg" alt=""></div>
+								<h3 class="thumbnail-set__heading">ファミリーにおすすめ</h3>
+								<p class="thumbnail-set__text">お子様連れのファミリーにおすすめのツアー＆アトラクション！</p>
+							</section>
+						</a>
+					</li>
+										<li>
+						<a href="/attractions/category?t=6" class="arrow-button">
+							<section class="thumbnail-set">
+								<div class="thumbnail-set__photo"><img src="/getImage.php?path=type_6.jpg" alt=""></div>
+								<h3 class="thumbnail-set__heading">海の動物におやつをあたえる</h3>
+								<p class="thumbnail-set__text">海の動物たちに魚などを直接あたえることができるアトラクション！</p>
+							</section>
+						</a>
+					</li>
+										<li>
+						<a href="/attractions/category?t=7" class="arrow-button">
+							<section class="thumbnail-set">
+								<div class="thumbnail-set__photo"><img src="/getImage.php?path=type_7.jpg" alt=""></div>
+								<h3 class="thumbnail-set__heading">陸の動物におやつをあたえる</h3>
+								<p class="thumbnail-set__text">動物たちの食べる姿は様々。手渡しでおやつをあたえてみよう。</p>
+							</section>
+						</a>
+					</li>
+					
+
+				</ul>
+
+				<div class="button-layout">
+					<a href="/attractions/" class="basic-button">すべてのツアー・アトラクション</a>
+				</div>
+
+			</section>
+
+
+			<section class="top-section topics">
+
+				<div class="top-heading">
+					<p class="top-heading__decorative-text">TOPICS</p>
+					<h2 class="top-heading__heading">トピックス</h2>
+				</div>
+
+				<ul class="top-topics">
+										<li>
+						<a href="/topics/detail?id=top4794">
+							<div class="top-topics__photo"><img src="/getImage.php?path=top4794_1.jpg" alt=""></div>
+							<div class="top-topics__content">
+								<div class="top-topics__content-date">2026年11月17日（火） <span class="icon-text3">お知らせ</span></div>
+								<div class="top-topics__content-title">「PINGU™ meets アドベンチャーワールド」ピングー＆ピンガに会えるグリーティングを開催！</div>
+							</div>
+						</a>
+					</li>
+										<li>
+						<a href="/topics/detail?id=top4793">
+							<div class="top-topics__photo"><img src="/getImage.php?path=top4793_1.jpg" alt=""></div>
+							<div class="top-topics__content">
+								<div class="top-topics__content-date">2026年11月16日（月） <span class="icon-text3">お知らせ</span></div>
+								<div class="top-topics__content-title">高病原性鳥インフルエンザウイルス感染防止対策の強化について</div>
+							</div>
+						</a>
+					</li>
+										<li>
+						<a href="/topics/detail?id=top4792">
+							<div class="top-topics__photo"><img src="/getImage.php?path=top4792_1.jpg" alt=""></div>
+							<div class="top-topics__content">
+								<div class="top-topics__content-date">2026年11月16日（月） <span class="icon-text3">お知らせ</span></div>
+								<div class="top-topics__content-title">「かわいい」のその先にある秘密とは？夜のペンギンワールドへようこそ！いのちのドラマに出会う『ナイトペンギンツアー２０２７』開催決定！２０２６年１１月１７日（火）よりチケット販売開始</div>
+							</div>
+						</a>
+					</li>
+										<li>
+						<a href="/topics/detail?id=top4791">
+							<div class="top-topics__photo"><img src="/getImage.php?path=top4791_1.jpg" alt=""></div>
+							<div class="top-topics__content">
+								<div class="top-topics__content-date">2026年11月16日（月） <span class="icon-text3">お知らせ</span></div>
+								<div class="top-topics__content-title">Terravie　12～1月分プレミアムカバフィーディング販売のお知らせ</div>
+							</div>
+						</a>
+					</li>
+										<li>
+						<a href="/topics/detail?id=top4790">
+							<div class="top-topics__photo"><img src="/getImage.php?path=top4790_1.jpg" alt=""></div>
+							<div class="top-topics__content">
+								<div class="top-topics__content-date">2026年11月14日（土） <span class="icon-text3">お知らせ</span></div>
+								<div class="top-topics__content-title">アドベンチャーワールドでヒゲパパに会おう！１２月１９日（土）・２０日（日）「ヒゲパパ２０２６ クリスマスライブ」を開催いたします！</div>
+							</div>
+						</a>
+					</li>
+										<li>
+						<a href="/topics/detail?id=top4789">
+							<div class="top-topics__photo"><img src="/getImage.php?path=top4789_1.jpg" alt=""></div>
+							<div class="top-topics__content">
+								<div class="top-topics__content-date">2026年11月13日（金） <span class="icon-text3">お知らせ</span></div>
+								<div class="top-topics__content-title">本日スタート！動物たちの堆肥で育った「近大ICTイチゴ」約１０ｋｇをアフリカゾウへプレゼント！明日・明後日も、イチゴの山を届けるイベントを開催します！</div>
+							</div>
+						</a>
+					</li>
+					
+				</ul>
+
+				<div class="button-layout">
+					<a href="/topics/" class="basic-button">過去のトピックスを見る</a>
+					<a href="/pressrelease/" class="basic-button">プレスリリースはこちら</a>
+				</div>
+
+			</section>
+
+
+			<section class="top-section animal">
+
+				<div class="top-heading">
+					<p class="top-heading__decorative-text">ANIMAL</p>
+					<h2 class="top-heading__heading">動物の紹介</h2>
+				</div>
+
+				<section class="top-animal">
+					<div class="top-animal__image"><img src="/assets/img/top/animal_photo.jpg" width="691" height="401" alt=""></div>
+					<div class="top-animal__content">
+						<div class="top-animal__content-label">Once I want to meet a number of valuable animals</div>
+						<h3 class="top-animal__content-heading">動物たちとふれあう<br>こころ豊かな“とき”</h3>
+						<div class="top-animal__content-text">
+							<p>バンドウイルカ・エンペラーペンギン・アフリカゾウ・チーター…生き生きと暮らす、約120種1600頭の動物たち。自然を映し出す彼らの瞳から、かけがえのないものに気付く、こころ豊かな”とき”を</p>
+						</div>
+						<div class="button-layout is-right">
+							<a href="/animals/" class="basic-button">アドベンチャーワールドの動物紹介</a>
+						</div>
+					</div>
+				</section>
+
+			</section>
+
+
+			<section class="top-section">
+
+				<div class="top-heading">
+					<p class="top-heading__decorative-text">SHOP, RESTAURANT</p>
+					<h2 class="top-heading__heading">ショップ・レストラン</h2>
+				</div>
+
+				<ul class="column-change-2to1">
+					<li>
+						<a href="/facility/shop/" class="arrow-button">
+							<section class="thumbnail-set">
+								<div class="thumbnail-set__photo"><img src="/assets/img/top/shop_photo.jpg" width="485" height="186" alt=""></div>
+								<h3 class="thumbnail-set__heading">楽しい想い出に彩りを添えるショップ</h3>
+								<p class="thumbnail-set__text">海・陸・空、世界中の多様な動物たちをモチーフにしたオリジナルグッズやお菓子など、ここでしか手に入らない魅力的な商品が目白押しです。</p>
+							</section>
+						</a>
+					</li>
+					<li>
+						<a href="/facility/restaurant/" class="arrow-button">
+							<section class="thumbnail-set">
+								<div class="thumbnail-set__photo"><img src="/assets/img/top/restaurant_photo.jpg" width="485" height="186" alt=""></div>
+								<h3 class="thumbnail-set__heading">メニューのバリエーション豊富なレストラン</h3>
+								<p class="thumbnail-set__text">ボリュームいっぱいのお肉料理から新鮮な海の幸、カジュアルなカフェなど、子どもから大人まで楽しめるメニューを取り揃えています。</p>
+							</section>
+						</a>
+					</li>
+				</ul>
+
+			</section>
+
+
+			<section class="top-section facilities">
+
+				<div class="top-heading">
+					<p class="top-heading__decorative-text">FACILITIES</p>
+					<h2 class="top-heading__heading">施設の紹介</h2>
+				</div>
+
+				<section class="top-facilities">
+					<div class="top-facilities__image"><img src="/assets/img/top/facilities_photo.jpg" width="1400" height="290" alt=""></div>
+					<div class="top-facilities__content">
+						<div class="top-facilities__column1">
+							<h3 class="top-facilities__heading">思い思いのときを過ごす Smileあふれる様々なシーン</h3>
+							<div class="top-facilities__text">
+								<p>サファリワールド、マリンワールド、エンジョイワールド。<br>パークには大切な人と過ごす様々なシーンがあり、Smileあふれる出会いが待っています。</p>
+							</div>
+						</div>
+						<div class="top-facilities__column2">
+							<a href="/facility/" class="basic-button">アドベンチャーワールドの施設紹介</a>
+						</div>
+					</div>
+				</section>
+
+			</section>
+
+
+			<section class="top-section park-guide">
+
+				<div class="top-heading">
+					<p class="top-heading__decorative-text">PARK GUIDE</p>
+					<h2 class="top-heading__heading">パークガイド</h2>
+				</div>
+
+				<ul class="column-change-3to1">
+					<li>
+						<section class="top-entrance-fee">
+							<div class="top-entrance-fee__conent1">
+								<h3 class="top-entrance-fee__heading">入園料（1DAY）</h3>
+								<table class="border-table">
+									<tr>
+										<th><span>大人</span>（18歳以上）</th>
+										<td>5,300円</td>
+									</tr>
+									<tr>
+										<th><span>シニア</span>（65歳以上）</th>
+										<td>4,800円</td>
+									</tr>
+									<tr>
+										<th><span>中人</span>（12～17歳）</th>
+										<td>4,300円</td>
+									</tr>
+									<tr>
+										<th><span>小人</span>（4～11歳）</th>
+										<td>3,300円</td>
+									</tr>
+								</table>
+								<div class="astarisk-text">
+									<p><span>＊</span>料金は予告なく変更する場合があります。<br>
+									あらかじめご了承ください。</p>
+								</div>
+							</div>
+							<div class="top-entrance-fee__conent2">
+								<ul class="top-entrance-fee__link">
+									<li><a href="/guide/charge/">その他の入園券</a>
+										<p>グループ料金、二日間入園券、年間パスポート</p>
+									</li>
+									<li><a href="https://adventureworld.co.jp/index.php" target="_blank" class="icon-blank">オフィシャルチケットストア</a>
+										<p>並ばずに入園できアトラクションも予約できる</p>
+									</li>
+								</ul>
+							</div>
+						</section>
+					</li>
+
+					<li>
+						<section class="top-calendar">
+							<div class="top-calendar__inner">
+								<h3 class="top-calendar__heading">営業カレンダー</h3>
+								<div class="top-calendaer-slider">
+									
+			<div class="top-calendar-slider__content">
+			<section>
+			<h4 class="calendar-heading">2026年11月</h4>
+			<table class="top-calendar-table">
+			<thead>
+			<tr>
+			<th class="sunday">日</th>
+			<th>月</th>
+			<th>火</th>
+			<th>水</th>
+			<th>木</th>
+			<th>金</th>
+			<th class="saturday">土</th>
+			</tr>
+			</thead>
+			<tbody><tr><td class="sunday"><span class="day-text">1</span></td><td class="normal-day"><span class="day-text">2</span></td><td class="holiday"><span class="day-text">3</span></td><td class="normal-day closed-day"><span class="day-text">4</span></td><td class="normal-day"><span class="day-text">5</span></td><td class="normal-day"><span class="day-text">6</span></td><td class="saturday"><span class="day-text">7</span></td></tr><tr><td class="sunday"><span class="day-text">8</span></td><td class="normal-day"><span class="day-text">9</span></td><td class="normal-day"><span class="day-text">10</span></td><td class="normal-day closed-day"><span class="day-text">11</span></td><td class="normal-day"><span class="day-text">12</span></td><td class="normal-day"><span class="day-text">13</span></td><td class="saturday"><span class="day-text">14</span></td></tr><tr><td class="sunday"><span class="day-text">15</span></td><td class="normal-day"><span class="day-text">16</span></td><td class="normal-day"><span class="day-text">17</span></td><td class="normal-day closed-day today"><span class="day-text">18</span></td><td class="normal-day"><span class="day-text">19</span></td><td class="normal-day"><span class="day-text">20</span></td><td class="saturday"><span class="day-text">21</span></td></tr><tr><td class="sunday"><span class="day-text">22</span></td><td class="holiday"><span class="day-text">23</span></td><td class="normal-day"><span class="day-text">24</span></td><td class="normal-day closed-day"><span class="day-text">25</span></td><td class="normal-day"><span class="day-text">26</span></td><td class="normal-day"><span class="day-text">27</span></td><td class="saturday"><span class="day-text">28</span></td></tr><tr><td class="sunday"><span class="day-text">29</span></td><td class="normal-day"><span class="day-text">30</span></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td></tr><tr><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td></tr></tbody></table></section></div>
+			<div class="top-calendar-slider__content">
+			<section>
+			<h4 class="calendar-heading">2026年12月</h4>
+			<table class="top-calendar-table">
+			<thead>
+			<tr>
+			<th class="sunday">日</th>
+			<th>月</th>
+			<th>火</th>
+			<th>水</th>
+			<th>木</th>
+			<th>金</th>
+			<th class="saturday">土</th>
+			</tr>
+			</thead>
+			<tbody><tr><td class="space"></td><td class="space"></td><td class="normal-day closed-day"><span class="day-text">1</span></td><td class="normal-day closed-day"><span class="day-text">2</span></td><td class="normal-day"><span class="day-text">3</span></td><td class="normal-day"><span class="day-text">4</span></td><td class="saturday"><span class="day-text">5</span></td></tr><tr><td class="sunday"><span class="day-text">6</span></td><td class="normal-day"><span class="day-text">7</span></td><td class="normal-day closed-day"><span class="day-text">8</span></td><td class="normal-day closed-day"><span class="day-text">9</span></td><td class="normal-day"><span class="day-text">10</span></td><td class="normal-day"><span class="day-text">11</span></td><td class="saturday"><span class="day-text">12</span></td></tr><tr><td class="sunday"><span class="day-text">13</span></td><td class="normal-day"><span class="day-text">14</span></td><td class="normal-day"><span class="day-text">15</span></td><td class="normal-day closed-day"><span class="day-text">16</span></td><td class="normal-day"><span class="day-text">17</span></td><td class="normal-day"><span class="day-text">18</span></td><td class="saturday"><span class="day-text">19</span></td></tr><tr><td class="sunday"><span class="day-text">20</span></td><td class="normal-day"><span class="day-text">21</span></td><td class="normal-day"><span class="day-text">22</span></td><td class="normal-day"><span class="day-text">23</span></td><td class="normal-day"><span class="day-text">24</span></td><td class="normal-day"><span class="day-text">25</span></td><td class="saturday"><span class="day-text">26</span></td></tr><tr><td class="sunday"><span class="day-text">27</span></td><td class="normal-day"><span class="day-text">28</span></td><td class="normal-day"><span class="day-text">29</span></td><td class="normal-day"><span class="day-text">30</span></td><td class="normal-day"><span class="day-text">31</span></td><td class="space"></td><td class="space"></td></tr><tr><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td></tr></tbody></table></section></div>
+			<div class="top-calendar-slider__content">
+			<section>
+			<h4 class="calendar-heading">2027年01月</h4>
+			<table class="top-calendar-table">
+			<thead>
+			<tr>
+			<th class="sunday">日</th>
+			<th>月</th>
+			<th>火</th>
+			<th>水</th>
+			<th>木</th>
+			<th>金</th>
+			<th class="saturday">土</th>
+			</tr>
+			</thead>
+			<tbody><tr><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="holiday"><span class="day-text">1</span></td><td class="saturday"><span class="day-text">2</span></td></tr><tr><td class="sunday"><span class="day-text">3</span></td><td class="normal-day"><span class="day-text">4</span></td><td class="normal-day"><span class="day-text">5</span></td><td class="normal-day"><span class="day-text">6</span></td><td class="normal-day"><span class="day-text">7</span></td><td class="normal-day"><span class="day-text">8</span></td><td class="saturday"><span class="day-text">9</span></td></tr><tr><td class="sunday"><span class="day-text">10</span></td><td class="holiday"><span class="day-text">11</span></td><td class="normal-day closed-day"><span class="day-text">12</span></td><td class="normal-day closed-day"><span class="day-text">13</span></td><td class="normal-day"><span class="day-text">14</span></td><td class="normal-day"><span class="day-text">15</span></td><td class="saturday"><span class="day-text">16</span></td></tr><tr><td class="sunday"><span class="day-text">17</span></td><td class="normal-day"><span class="day-text">18</span></td><td class="normal-day closed-day"><span class="day-text">19</span></td><td class="normal-day closed-day"><span class="day-text">20</span></td><td class="normal-day closed-day"><span class="day-text">21</span></td><td class="normal-day"><span class="day-text">22</span></td><td class="saturday"><span class="day-text">23</span></td></tr><tr><td class="sunday"><span class="day-text">24</span></td><td class="normal-day"><span class="day-text">25</span></td><td class="normal-day closed-day"><span class="day-text">26</span></td><td class="normal-day closed-day"><span class="day-text">27</span></td><td class="normal-day closed-day"><span class="day-text">28</span></td><td class="normal-day"><span class="day-text">29</span></td><td class="saturday"><span class="day-text">30</span></td></tr><tr><td class="sunday"><span class="day-text">31</span></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td></tr></tbody></table></section></div>
+			<div class="top-calendar-slider__content">
+			<section>
+			<h4 class="calendar-heading">2027年02月</h4>
+			<table class="top-calendar-table">
+			<thead>
+			<tr>
+			<th class="sunday">日</th>
+			<th>月</th>
+			<th>火</th>
+			<th>水</th>
+			<th>木</th>
+			<th>金</th>
+			<th class="saturday">土</th>
+			</tr>
+			</thead>
+			<tbody><tr><td class="space"></td><td class="normal-day"><span class="day-text">1</span></td><td class="normal-day"><span class="day-text">2</span></td><td class="normal-day closed-day"><span class="day-text">3</span></td><td class="normal-day"><span class="day-text">4</span></td><td class="normal-day"><span class="day-text">5</span></td><td class="saturday"><span class="day-text">6</span></td></tr><tr><td class="sunday"><span class="day-text">7</span></td><td class="normal-day"><span class="day-text">8</span></td><td class="normal-day"><span class="day-text">9</span></td><td class="normal-day closed-day"><span class="day-text">10</span></td><td class="holiday"><span class="day-text">11</span></td><td class="normal-day"><span class="day-text">12</span></td><td class="saturday"><span class="day-text">13</span></td></tr><tr><td class="sunday"><span class="day-text">14</span></td><td class="normal-day"><span class="day-text">15</span></td><td class="normal-day"><span class="day-text">16</span></td><td class="normal-day closed-day"><span class="day-text">17</span></td><td class="normal-day"><span class="day-text">18</span></td><td class="normal-day"><span class="day-text">19</span></td><td class="saturday"><span class="day-text">20</span></td></tr><tr><td class="sunday"><span class="day-text">21</span></td><td class="normal-day"><span class="day-text">22</span></td><td class="holiday"><span class="day-text">23</span></td><td class="normal-day closed-day"><span class="day-text">24</span></td><td class="normal-day"><span class="day-text">25</span></td><td class="normal-day"><span class="day-text">26</span></td><td class="saturday"><span class="day-text">27</span></td></tr><tr><td class="sunday"><span class="day-text">28</span></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td></tr><tr><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td></tr></tbody></table></section></div>
+			<div class="top-calendar-slider__content">
+			<section>
+			<h4 class="calendar-heading">2027年03月</h4>
+			<table class="top-calendar-table">
+			<thead>
+			<tr>
+			<th class="sunday">日</th>
+			<th>月</th>
+			<th>火</th>
+			<th>水</th>
+			<th>木</th>
+			<th>金</th>
+			<th class="saturday">土</th>
+			</tr>
+			</thead>
+			<tbody><tr><td class="space"></td><td class="normal-day"><span class="day-text">1</span></td><td class="normal-day closed-day"><span class="day-text">2</span></td><td class="normal-day closed-day"><span class="day-text">3</span></td><td class="normal-day"><span class="day-text">4</span></td><td class="normal-day"><span class="day-text">5</span></td><td class="saturday"><span class="day-text">6</span></td></tr><tr><td class="sunday"><span class="day-text">7</span></td><td class="normal-day"><span class="day-text">8</span></td><td class="normal-day"><span class="day-text">9</span></td><td class="normal-day closed-day"><span class="day-text">10</span></td><td class="normal-day"><span class="day-text">11</span></td><td class="normal-day"><span class="day-text">12</span></td><td class="saturday"><span class="day-text">13</span></td></tr><tr><td class="sunday"><span class="day-text">14</span></td><td class="normal-day"><span class="day-text">15</span></td><td class="normal-day"><span class="day-text">16</span></td><td class="normal-day closed-day"><span class="day-text">17</span></td><td class="normal-day"><span class="day-text">18</span></td><td class="normal-day"><span class="day-text">19</span></td><td class="saturday"><span class="day-text">20</span></td></tr><tr><td class="holiday"><span class="day-text">21</span></td><td class="holiday"><span class="day-text">22</span></td><td class="normal-day"><span class="day-text">23</span></td><td class="normal-day"><span class="day-text">24</span></td><td class="normal-day"><span class="day-text">25</span></td><td class="normal-day"><span class="day-text">26</span></td><td class="saturday"><span class="day-text">27</span></td></tr><tr><td class="sunday"><span class="day-text">28</span></td><td class="normal-day"><span class="day-text">29</span></td><td class="normal-day"><span class="day-text">30</span></td><td class="normal-day"><span class="day-text">31</span></td><td class="space"></td><td class="space"></td><td class="space"></td></tr><tr><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td></tr></tbody></table></section></div>
+			<div class="top-calendar-slider__content">
+			<section>
+			<h4 class="calendar-heading">2027年04月</h4>
+			<table class="top-calendar-table">
+			<thead>
+			<tr>
+			<th class="sunday">日</th>
+			<th>月</th>
+			<th>火</th>
+			<th>水</th>
+			<th>木</th>
+			<th>金</th>
+			<th class="saturday">土</th>
+			</tr>
+			</thead>
+			<tbody><tr><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="normal-day"><span class="day-text">1</span></td><td class="normal-day"><span class="day-text">2</span></td><td class="saturday"><span class="day-text">3</span></td></tr><tr><td class="sunday"><span class="day-text">4</span></td><td class="normal-day"><span class="day-text">5</span></td><td class="normal-day closed-day"><span class="day-text">6</span></td><td class="normal-day closed-day"><span class="day-text">7</span></td><td class="normal-day"><span class="day-text">8</span></td><td class="normal-day"><span class="day-text">9</span></td><td class="saturday"><span class="day-text">10</span></td></tr><tr><td class="sunday"><span class="day-text">11</span></td><td class="normal-day"><span class="day-text">12</span></td><td class="normal-day"><span class="day-text">13</span></td><td class="normal-day closed-day"><span class="day-text">14</span></td><td class="normal-day"><span class="day-text">15</span></td><td class="normal-day"><span class="day-text">16</span></td><td class="saturday"><span class="day-text">17</span></td></tr><tr><td class="sunday"><span class="day-text">18</span></td><td class="normal-day"><span class="day-text">19</span></td><td class="normal-day"><span class="day-text">20</span></td><td class="normal-day closed-day"><span class="day-text">21</span></td><td class="normal-day"><span class="day-text">22</span></td><td class="normal-day"><span class="day-text">23</span></td><td class="saturday"><span class="day-text">24</span></td></tr><tr><td class="sunday"><span class="day-text">25</span></td><td class="normal-day"><span class="day-text">26</span></td><td class="normal-day"><span class="day-text">27</span></td><td class="normal-day"><span class="day-text">28</span></td><td class="holiday"><span class="day-text">29</span></td><td class="normal-day"><span class="day-text">30</span></td><td class="space"></td></tr><tr><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td></tr></tbody></table></section></div>
+			<div class="top-calendar-slider__content">
+			<section>
+			<h4 class="calendar-heading">2027年05月</h4>
+			<table class="top-calendar-table">
+			<thead>
+			<tr>
+			<th class="sunday">日</th>
+			<th>月</th>
+			<th>火</th>
+			<th>水</th>
+			<th>木</th>
+			<th>金</th>
+			<th class="saturday">土</th>
+			</tr>
+			</thead>
+			<tbody><tr><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="saturday"><span class="day-text">1</span></td></tr><tr><td class="sunday"><span class="day-text">2</span></td><td class="holiday"><span class="day-text">3</span></td><td class="holiday"><span class="day-text">4</span></td><td class="holiday"><span class="day-text">5</span></td><td class="normal-day"><span class="day-text">6</span></td><td class="normal-day"><span class="day-text">7</span></td><td class="saturday"><span class="day-text">8</span></td></tr><tr><td class="sunday"><span class="day-text">9</span></td><td class="normal-day"><span class="day-text">10</span></td><td class="normal-day"><span class="day-text">11</span></td><td class="normal-day closed-day"><span class="day-text">12</span></td><td class="normal-day"><span class="day-text">13</span></td><td class="normal-day"><span class="day-text">14</span></td><td class="saturday"><span class="day-text">15</span></td></tr><tr><td class="sunday"><span class="day-text">16</span></td><td class="normal-day"><span class="day-text">17</span></td><td class="normal-day"><span class="day-text">18</span></td><td class="normal-day closed-day"><span class="day-text">19</span></td><td class="normal-day"><span class="day-text">20</span></td><td class="normal-day"><span class="day-text">21</span></td><td class="saturday"><span class="day-text">22</span></td></tr><tr><td class="sunday"><span class="day-text">23</span></td><td class="normal-day"><span class="day-text">24</span></td><td class="normal-day"><span class="day-text">25</span></td><td class="normal-day closed-day"><span class="day-text">26</span></td><td class="normal-day"><span class="day-text">27</span></td><td class="normal-day"><span class="day-text">28</span></td><td class="saturday"><span class="day-text">29</span></td></tr><tr><td class="sunday"><span class="day-text">30</span></td><td class="normal-day"><span class="day-text">31</span></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td></tr></tbody></table></section></div>
+								</div>
+								<!-- /top-calendaer-slider -->
+
+								<ul class="calendar-legend">
+									<li class="normal-day">営業日</li>
+									<li class="closed-day">休園日</li>
+									<li class="night-day">夜間特別営業</li>
+								</ul>
+
+								<div class="astarisk-text">
+									<!--<p><span>＊</span>開園時間を早める場合がございます。</p>-->
+									<p><span>＊</span>一部の雑誌において、誤った休園日情報がありますのでご確認ください。</p>
+								</div>
+								<a href="/guide/opening_hours/" class="white-gray-button">詳細の営業カレンダーを見る</a>
+							</div>
+						</section>
+					</li>
+
+					<li>
+						<section class="top-access">
+							<iframe id="top-access-map" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB8d1i9BqoBrh8A70_xZL8nygO2YFuJOkE&q=33.667843,135.372774&zoom=12"></iframe>
+							<div class="top-access__inner">
+								<h3 class="top-access__heading">アクセス</h3>
+								<ul class="access-list">
+									<li class="car">
+										<section>
+											<h4 class="access-list__heading">車で</h4>
+											<p>松原ジャンクションより阪和自動車道経由：約2時間</p>
+										</section>
+									</li>
+									<li class="bus">
+										<section>
+											<h4 class="access-list__heading">バスで</h4>
+											<p>大阪よりなんば(OCAT)または大阪駅JR高速BT：約3時間30分</p>
+										</section>
+									</li>
+									<li class="train">
+										<section>
+											<h4 class="access-list__heading">電車で</h4>
+											<p>大阪（JR天王寺駅）より紀勢本線特急：約2時間</p>
+										</section>
+									</li>
+								</ul>
+								<a href="/guide/access/" class="white-gray-button">アクセスの詳細を見る</a>
+							</div>
+						</section>
+					</li>
+				</ul>
+
+				<div class="button-layout">
+					<a href="/guide/" class="basic-button">パークについてさらに詳しく</a>
+				</div>
+
+			</section>
+
+			            <div class="top-big-banner">
+				<ul class="column-change-3to1">
+					<li><a href="https://mice.ms-aws.com/" class="bottom" target="_blank"><img src="/include/img/top_free_bottom/mice.jpeg" width="485" height="266" alt=""></a></li>
+					<li><a href="https://aws-dream.com/" class="bottom" target="_blank"><img src="/assets/img/top/banner_big_dream.jpg" width="485" height="266" alt="ドリームデイアットザズー"></a></li>
+					<li><a href="https://www.aws-s.com/thanks_pandafamily/" class="bottom" target="_blank"><img src="/include/img/top_free_bottom/pandaloveclub.jpg" width="485" height="266" alt="PANDA LOVE CLUB"></a></li>
+				</ul>
+				<ul class="column-change-3to1">
+					<li><a href="https://www.michitabi.com/roundtour/kansai_adventure_world/" class="bottom" target="_blank"><img src="https://www.aws-s.com/include/img/top_free_bottom/drive.jpg" width="485" height="266" alt="PANDA LOVE CLUB"></a></li>
+
+					<li><a href="https://www.jal.co.jp/jp/ja/domtour/jaldp/shirahama/" class="bottom" target="_blank"><img src="/include/img/top_free_bottom/shirahama_iko.jpg" width="485" height="266" alt="PANDA LOVE CLUB"></a></li>
+				</ul>
+			</div>
+<!--					<li><a href="https://www.aws-s.info/kawachan" class="bottom" target="_blank"><img src="/include/img/top_free_bottom/kawachan.jpg" width="485" height="266" alt="かわちゃんツッコミたくなるどうぶつ四コマ図鑑"></a></li>
+					<li><img src="/assets/img/top/banner_big_tripadvisor.jpg" width="485" height="266" alt="アドベンチャーワールドが「トリップアドバイザー」にランクインいたしました！！日本のテーマパークランキング4位"></li>
+					<li><a href="https://www.aws-s.com/new-panda/" class="bottom" target="_blank"><img src="/include/img/top_free_bottom/panda_world.jpg" width="485" height="266" alt=""></a></li>-->
+
+
+			<section class="top-section movie">
+
+				﻿
+
+<div class="top-heading">
+<p class="top-heading__decorative-text">MOVIE</p>
+<h2 class="top-heading__heading">映像</h2>
+</div>
+
+<ul class="column-change-2to1">
+
+<li>
+<a class="modal-movie arrow-button is-white" href="https://www.youtube.com/watch?v=mMxSY9GWkR8">
+<section class="thumbnail-set">
+<div class="thumbnail-set__photo"><img src="/include/img/movie/2026summer.png" width="485" height="186" alt=""></div>
+<h3 class="thumbnail-set__heading">2026年夏プロモーション映像</h3>
+<p class="thumbnail-set__text"></p>
+</section>
+</a>
+</li>
+<li>
+<a class="modal-movie arrow-button is-white" href="https://www.youtube.com/watch?v=kXMK-6yL7MQ">
+<section class="thumbnail-set">
+<div class="thumbnail-set__photo"><img src="/include/img/movie/2026earth-park.png" width="485" height="186" alt=""></div>
+<h3 class="thumbnail-set__heading">『Sense of Wonder』</h3>
+<p class="thumbnail-set__text"></p>
+</section>
+</a>
+</li>
+
+
+</ul>
+https://youtu.be/mMxSY9GWkR8
+
+			</section>
+
+
+		</main>
+
+
+		
+<footer class="footer">
+<button class="pagetop-button">ページトップへ</button>
+<div class="footer__container">
+
+<div class="footer__column1">
+<div class="footer-logo">
+<img src="/assets/img/logo2.png" width="262" height="55" alt="アドベンチャーワールド">
+</div>
+<!--
+<ul class="footer-main-banner">
+<li><a href="http://adventureworld-app.com/" target="_blank"><img src="/assets/img/footer_banner_apli.png" width="103" height="79" alt="公式パークアプリ"></a></li>
+<li><a href="https://adventureworld.co.jp/index.php" target="_blank"><img src="/assets/img/footer_banner_ticketstore.png" width="152" height="79" alt="アドベンチャーワールド チケットストア"></a></li>
+</ul>
+-->
+</div>
+
+<div class="footer__column2">
+<div class="footer-navigation">
+<ul class="footer-navigation__main-list">
+<li class="home"><a href="/">ホーム</a></li>
+</ul>
+<ul class="footer-navigation__main-list">
+<li><a href="/topics/">トピックス</a></li>
+<li><a href="/pressrelease/">プレスリリース</a></li>
+<li><a href="/attractions/">ツアー・<br>アトラクション</a></li>
+</ul>
+<ul class="footer-navigation__main-list">
+<li><a href="/animals/">動物の紹介</a>
+  <ul class="footer-navigation__sub-list">
+<!--    <li><a href="/animals/panda/">ジャイアントパンダ</a></li> -->
+    <li><a href="/animals/sea-animals/">海に暮らす動物</a></li>
+    <li><a href="/animals/carnivore/">肉食動物</a></li>
+    <li><a href="/animals/herbivore/">草食動物</a></li>
+    <li><a href="/animals/family/">ふれあい広場・ファミリー広場</a></li>
+  </ul>
+</li>
+</ul>
+</div>
+<div class="footer-navigation">
+<ul class="footer-navigation__main-list">
+<li><a href="/facility/">施設の紹介</a>
+  <ul class="footer-navigation__sub-list">
+    <li><a href="/facility/play-zone/">プレイゾーン</a></li>
+    <li><a href="/facility/restaurant/">レストラン</a></li>
+    <li><a href="/facility/shop/">ショップ</a></li>
+    <li><a href="/facility/service/">サービス施設</a></li>
+  </ul>
+</li>
+</ul>
+<ul class="footer-navigation__main-list">
+  <li><a href="/parktheme-sdgs/">パークテーマ・SDGs</a></li>
+</ul>
+<ul class="footer-navigation__main-list">
+<li><a href="/guide/">パークガイド</a>
+  <ul class="footer-navigation__sub-list">
+    <li><a href="/guide/opening_hours/">営業時間のご案内</a></li>
+    <li><a href="/guide/schedule/">ライブアトラクション・スケジュール</a></li>
+    <li><a href="/guide/charge/">料金のご案内</a></li>
+    <li><a href="/guide/group/">グループ予約</a></li>
+    <li><a href="/accessible-guide/" target="_blank"><span class="icon-blank is-blue">バリアフリーガイド</span></a></li>
+    <li><a href="/guide/access/">アクセス</a></li>
+    <li><a href="/guide/faq/">よくあるご質問</a></li>
+  </ul>
+</li>
+</ul>
+</div>
+<div class="footer-navigation">
+<ul class="footer-navigation__main-list">
+<li><a href="/company/">運営会社</a>
+  <ul class="footer-navigation__sub-list">
+    <li><a href="/company/recruit/">採用情報</a></li>
+  </ul>
+</li>
+<li><a href="/sitemap/">サイトマップ</a></li>
+<li><a href="/privacypolicy/">プライバシーポリシー</a></li>
+</ul>
+</div>
+
+</div>
+
+<div class="footer__column3">
+<div class="footer-social-button">
+<div class="footer-social-button__title">最新ニュース配信中！</div>
+<ul class="footer-social-button__list">
+<li><a href="https://x.com/aws_official" target="_blank"><img src="/assets/img/footer_social_icon_x.png" width="40" height="40" alt="アドベンチャーワールド公式X"></a></li>
+<li><a href="https://www.facebook.com/adventureworld.official/" target="_blank"><img src="/assets/img/footer_social_icon_facebook.png" width="40" height="40" alt="アドベンチャーワールド公式Facebookページ"></a></li>
+<li><a href="https://www.youtube.com/channel/UCVEmpbL5VzfXsULPFeRsj4Q" target="_blank"><img src="/assets/img/footer_social_icon_youtube.png" width="40" height="40" alt="アドベンチャーワールド公式Youtubeチャンネル"></a></li>
+<li><a href="https://www.instagram.com/adventureworld_official/" target="_blank"><img src="/assets/img/footer_social_icon_instagram.png" width="38" height="38" alt="アドベンチャーワールド公式Instagram"></a></li>
+<li><a href="https://www.tiktok.com/@adventureworldofficial" target="_blank"><img src="/assets/img/footer_social_icon_tiktok.png" width="38" height="38" alt="アドベンチャーワールド公式Instagram"></a></li>
+</ul>
+</div>
+</div>
+
+<div class="footer__bottom">
+<ul class="footer-navigation-banner">
+<li><a href="http://www.ms-aws.com/"><img src="/getImage.php?path=ban014.jpg" width="225" height="50" alt=""></a></li>
+<li><a href="https://www.aws-s.com/jobfind/"><img src="/getImage.php?path=ban049.jpg" width="225" height="50" alt=""></a></li>
+<li><a href="https://www.aws-s.info/birthday2023"><img src="/getImage.php?path=ban052.jpg" width="225" height="50" alt=""></a></li>
+<li><a href="https://www.aws-s.info/2404school-program"><img src="/getImage.php?path=ban054.jpg" width="225" height="50" alt=""></a></li>
+<li><a href="http://www.aws-s.com/aaa/index.html"><img src="/getImage.php?path=ban021.jpg" width="225" height="50" alt=""></a></li>
+<li><a href="https://aws-n-tourism.com/"><img src="/getImage.php?path=ban063.jpg" width="225" height="50" alt=""></a></li>
+</ul>
+</div>
+
+<div class="footer__copyright">&copy; ADVENTURE WORLD All Rights Reserved.</div>
+</div>
+</footer>
+
+
+	</body>
+</html>

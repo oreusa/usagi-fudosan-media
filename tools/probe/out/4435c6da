@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+<!-- OptanonConsentNoticeStart -->
+<script type="text/javascript" src="https://cdn-apac.onetrust.com/consent/01801210-ba07-4e80-be70-2c572152354a/OtAutoBlock.js" ></script>
+<script src="https://cdn-apac.onetrust.com/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="01801210-ba07-4e80-be70-2c572152354a" ></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OptanonConsentNoticeEnd -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, user-scalable=no, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>【開館30周年記念展のお知らせ】「没後100年　クロード・モネ展」｜お知らせ｜アサヒグループ大山崎山荘美術館</title>
+    <meta name="description" content="アサヒグループ大山崎山荘美術館では、築100 年以上の建築物や美しい庭園が大山崎の景観と一体となった、特別な空間での作品鑑賞を大切にしています。印象派の巨匠クロード・モネの傑作「睡蓮」連作や、民藝運動ゆかりの作品などをご覧いただけます。" />
+    <meta property="og:title" content="【開館30周年記念展のお知らせ】「没後100年　クロード・モネ展」｜お知らせ｜アサヒグループ大山崎山荘美術館">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="アサヒグループ大山崎山荘美術館">
+    <meta property="og:description" content="アサヒグループ大山崎山荘美術館では、築100 年以上の建築物や美しい庭園が大山崎の景観と一体となった、特別な空間での作品鑑賞を大切にしています。印象派の巨匠クロード・モネの傑作「睡蓮」連作や、民藝運動ゆかりの作品などをご覧いただけます。" />
+    <meta property="og:locale" content="ja_JP">
+    <link rel="shortcut icon" href="/assets/img/common/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/style.css?0.09759251972406658">
+    <script src="/assets/lib/jquery-3.6.1.min.js"></script>
+    <script src="/assets/lib/slick/js/slick.min.js"></script>
+    <script src="/assets/js/app.js?0.44091106904294985"></script>
+    <script src="/assets/js/latest-exhibition.js"></script>
+    <script src="/assets/js/notification.js"></script>
+<!-- SiteCatalyst_js start -->
+<script type="text/javascript">
+function s_code_onload(){
+  s.t();
+}
+</script>
+<script type="text/javascript" src="https://www.asahigroup-japan.co.jp/web-service/common/sc_parts_hd/s_code.js" onload="s_code_onload()"></script>
+<!-- SiteCatalyst_js end -->
+</head>
+<body class="">
+
+  <div class="l-main">
+    <div class="l-main_side">
+
+      <header class="l-header">
+    <div class="l-header_inner">
+      <h1 class="l-header_logo"><a href="/"><img src="/assets/img/common/logo.png" srcset="/assets/img/common/logo.png 1x, /assets/img/common/logo@2x.png 2x" alt="アサヒグループ大山崎山荘美術館"></a></h1>
+      <ul class="l-header_menuList">
+        <li class="l-header_menuList_item"><a href="/exhibition/">展覧会</a>
+          <div class="l-menuBlock">
+            <div class="l-menuBlock_inner">
+              <div class="l-menuBlock_body js-latest-exhibition">
+              </div>
+              <div class="l-menuBlock_footer"><a class="l-menuBlock_link" href="/exhibition/archive/">展覧会・イベントアーカイブ</a></div>
+            </div>
+          </div>
+        </li>
+        <li class="l-header_menuList_item"><a href="/about/">美術館について</a>
+          <div class="l-menuBlock">
+            <div class="l-menuBlock_inner">
+              <div class="l-menuBlock_aboutList">
+                <div class="l-menuBlock_aboutItem"><a class="l-menuBlock_aboutLink" href="/about/"><img src="/assets/img/layout/menu_about-01.png" srcset="/assets/img/layout/menu_about-01.png 1x,/assets/img/layout/menu_about-01@2x.png 2x" alt="">
+                    <p>コンセプト/ごあいさつ</p>
+                  </a></div>
+                <div class="l-menuBlock_aboutItem"><a class="l-menuBlock_aboutLink" href="/about/history/"><img src="/assets/img/layout/menu_about-02.png" srcset="/assets/img/layout/menu_about-02.png 1x,/assets/img/layout/menu_about-02@2x.png 2x" alt="">
+                    <p>歴史</p>
+                  </a></div>
+                <div class="l-menuBlock_aboutItem"><a class="l-menuBlock_aboutLink" href="/about/yamamoto/"><img src="/assets/img/layout/menu_about-03.png" srcset="/assets/img/layout/menu_about-03.png 1x,/assets/img/layout/menu_about-03@2x.png 2x" alt="">
+                    <p>山本爲三郎コレクション</p>
+                  </a></div>
+                <div class="l-menuBlock_aboutItem"><a class="l-menuBlock_aboutLink" href="/about/structure/"><img src="/assets/img/layout/menu_about-04.png" srcset="/assets/img/layout/menu_about-04.png 1x,/assets/img/layout/menu_about-04@2x.png 2x" alt="">
+                    <p>建築</p>
+                  </a></div>
+                <div class="l-menuBlock_aboutItem"><a class="l-menuBlock_aboutLink" href="/about/design/"><img src="/assets/img/layout/menu_about-05.png" srcset="/assets/img/layout/menu_about-05.png 1x,/assets/img/layout/menu_about-05@2x.png 2x" alt="">
+                    <p>意匠</p>
+                  </a></div>
+                <div class="l-menuBlock_aboutItem"><a class="l-menuBlock_aboutLink" href="/about/garden/"><img src="/assets/img/layout/menu_about-06.png" srcset="/assets/img/layout/menu_about-06.png 1x,/assets/img/layout/menu_about-06@2x.png 2x" alt="">
+                    <p>季節の庭園</p>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="l-header_menuList_item"><a href="/collection/">所蔵品</a>
+          <div class="l-menuBlock">
+            <div class="l-menuBlock_inner">
+              <div class="l-menuBlock_collectionList l-menuBlock_collectionList-text">
+                <div class="l-menuBlock_collectionItem"><a class="l-menuBlock_collectionLink" href="/collection/painting/">
+                    <p>絵画</p>
+                  </a></div>
+                <div class="l-menuBlock_collectionItem"><a class="l-menuBlock_collectionLink" href="/collection/ceramics/">
+                    <p>陶磁器</p>
+                  </a></div>
+                <div class="l-menuBlock_collectionItem"><a class="l-menuBlock_collectionLink" href="/collection/crafts/">
+                    <p>工芸</p>
+                  </a></div>
+                <div class="l-menuBlock_collectionItem"><a class="l-menuBlock_collectionLink" href="/collection/sculpture/">
+                    <p>彫刻</p>
+                  </a></div>
+              </div>
+              <div class="l-menuBlock_collectionList">
+                <div class="l-menuBlock_collectionItem"><a class="l-menuBlock_collectionLink" href="/collection/monet/"><img src="/assets/img/layout/menu_collection-01.png" srcset="/assets/img/layout/menu_collection-01.png 1x,/assets/img/layout/menu_collection-01@2x.png 2x" alt="">
+                    <p>クロード・モネ</p>
+                  </a></div>
+                <div class="l-menuBlock_collectionItem"><a class="l-menuBlock_collectionLink" href="/collection/kawai-kanjiro/"><img src="/assets/img/layout/menu_collection-02.png" srcset="/assets/img/layout/menu_collection-02.png 1x,/assets/img/layout/menu_collection-02@2x.png 2x" alt="">
+                    <p>河井寬次郎</p>
+                  </a></div>
+                <div class="l-menuBlock_collectionItem"><a class="l-menuBlock_collectionLink" href="/collection/hamada-shoji/"><img src="/assets/img/layout/menu_collection-03.png" srcset="/assets/img/layout/menu_collection-03.png 1x,/assets/img/layout/menu_collection-03@2x.png 2x" alt="">
+                    <p>濱田庄司</p>
+                  </a></div>
+                <div class="l-menuBlock_collectionItem"><a class="l-menuBlock_collectionLink" href="/collection/leach/"><img src="/assets/img/layout/menu_collection-04.png" srcset="/assets/img/layout/menu_collection-04.png 1x,/assets/img/layout/menu_collection-04@2x.png 2x" alt="">
+                    <p>バーナード・リーチ</p>
+                  </a></div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="l-header_menuList_item js-menuList" data-target="guide-block"><a href="/guide/">ご利用案内</a>
+          <div class="l-menuBlock">
+            <div class="l-menuBlock_inner">
+              <div class="l-menuBlock_guideList">
+                <div class="l-menuBlock_guideItem">
+                  <a class="l-menuBlock_guideLink" href="/guide/#calendar">開館時間・休館日</a>
+                  <a class="l-menuBlock_guideLink" href="/guide/#ticket">入館料</a>
+                  <a class="l-menuBlock_guideLink" href="/guide/access/">アクセス</a>
+                  <a class="l-menuBlock_guideLink" href="/guide/floor/">フロア＆庭園ガイド</a>
+                  <a class="l-menuBlock_guideLink" href="/guide/rest/">喫茶室</a>
+                  <a class="l-menuBlock_guideLink" href="/guide/shop/">ミュージアムショップ</a>
+              	  <a class="l-menuBlock_guideLink" href="/guide/barrier-free-accessibility/">バリアフリー／アクセシビリティ</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <ul class="l-header_menuLink">
+        <li class="l-header_menuLink_item"><a href="/news/">お知らせ</a></li>
+        <li class="l-header_menuLink_item"><a href="/staffblog/">スタッフブログ</a></li>
+        <li class="l-header_menuLink_item"><a href="/about/community/">教育普及</a></li>
+        <li class="l-header_menuLink_item"><a href="/pressroom/">プレスリリース</a></li>
+      </ul>
+      <div class="l-header_metaWrapper">
+          <div class="l-header_sns">
+          <ul class="l-header_sns_list">
+              <li class="l-header_sns_list_item"><a href="https://www.facebook.com/asahibeer.oyamazaki/" target="_blank"><img src="/assets/img/icon/facebook.svg" alt=""></a></li>
+              <li class="l-header_sns_list_item"><a href="https://www.instagram.com/asahibeer.oyamazaki/" target="_blank"><img src="/assets/img/icon/instagram.svg" alt=""></a></li>
+              <li class="l-header_sns_list_item"><a href="https://www.youtube.com/@AsahiGroupOyamazakiMuseum" target="_blank"><img src="/assets/img/icon/youtube.svg" alt=""></a></li>
+              <li class="l-header_sns_list_item"><a href="https://x.com/asahi_oyamazaki" target="_blank"><img src="/assets/img/icon/x-twitter.svg" alt=""></a></li>    
+          </ul>
+          </div>
+          <div class="l-header_lang js-langSelect">
+          <div class="l-header_langLabel">LANGUAGE</div><img class="l-header_langArrow" src="/assets/img/icon/arrow-solid-sm-right.svg" alt="">
+          <div class="l-header_langListWrapper">
+              <div class="l-header_langList"><a class="l-header_langItem" href="/english/">ENGLISH</a><a class="l-header_langItem" href="/chinese/">中文</a><a class="l-header_langItem is-active" href="/">日本語</a></div>
+          </div>
+      </div>
+      </div>
+    </div>
+    <a class="l-header_current" href="/guide/#calendar">
+      <div class="l-header_current_date js-current" data-lang="ja" ><span class="l-header_current_ym js-current_ym">0000/00/</span><span class="l-header_current_d js-current_d">00</span><span class="l-header_current_dow js-current_dow">（）</span></div>
+      <div class="l-header_current_status"><span class="js-current-status">開館</span></div>
+    </a>
+    <div class="l-header_nav">
+      <nav class="l-gnav">
+        <div class="l-gnav_inner">
+          <ul class="l-gnav_list">
+            <li class="l-gnav_item"><a href="/guide/"><span class="l-gnav_itemImg"><img src="/assets/img/icon/calendar.svg" alt=""></span><span class="l-gnav_itemText">開館時間・休館日</span></a></li>
+            <li class="l-gnav_item"><a href="/guide/#ticket"><span class="l-gnav_itemImg"><img src="/assets/img/icon/ticket.svg" alt=""></span><span class="l-gnav_itemText">入館料</span></a></li>
+            <li class="l-gnav_item"><a href="/guide/access/"><span class="l-gnav_itemImg"><img src="/assets/img/icon/access.svg" alt=""></span><span class="l-gnav_itemText">アクセス</span></a></li>
+            <li class="l-gnav_item"><a href="/guide/floor/"><span class="l-gnav_itemImg"><img src="/assets/img/icon/map.svg" alt=""></span><span class="l-gnav_itemText">フロア＆庭園ガイド</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+      <div class="l-headerSp js-headerSp">
+    <div class="l-headerSp_inner">
+      <div class="l-headerSp_heading">
+        <h1 class="l-headerSp_logo"><a href="/"><img src="/assets/img/common/logo-sp.png" srcset="/assets/img/common/logo-sp.png 1x, /assets/img/common/logo-sp@2x.png 2x" alt="アサヒグループ大山崎山荘美術館"></a></h1>
+        <div class="l-menu js-menu-icon"><span class="l-menu_bar-top"></span><span class="l-menu_bar-middle"></span><span class="l-menu_bar-bottom"></span></div>
+      </div>
+      <div class="l-headerSp_nav js-menu">
+        <div class="l-headerSp_navInner">
+          <ul class="l-headerSp_menuList">
+            <li class="l-headerSp_menuList_item"><a href="/exhibition/">展覧会</a>
+              <ul class="l-headerSp_menuSubList">
+                
+                <li class="l-headerSp_menuSubList_item"><a href="https://www.asahigroup-oyamazaki.com/exhibition/kawai-hamada/">直近の展覧会</a></li>
+                
+                <li class="l-headerSp_menuSubList_item"><a href="/exhibition/archive/">展覧会・イベントアーカイブ</a></li>
+              </ul>
+            </li>
+            <li class="l-headerSp_menuList_item"><a href="/about/">美術館について</a>
+              <ul class="l-headerSp_menuSubList">
+                <li class="l-headerSp_menuSubList_item"><a href="/about/history/">歴史</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/about/yamamoto/">山本爲三郎コレクション</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/about/structure/">建築</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/about/design/">意匠</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/about/garden/">季節の庭園</a></li>
+              </ul>
+            </li>
+            <li class="l-headerSp_menuList_item"><a href="/collection/">所蔵品</a>
+              <ul class="l-headerSp_menuSubList">
+                <li class="l-headerSp_menuSubList_item"><a href="/collection/painting/">絵画</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/collection/ceramics/">陶磁器</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/collection/crafts/">工芸</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/collection/sculpture/">彫刻</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/collection/monet/">クロード・モネ</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/collection/kawai-kanjiro/">河井寬次郎</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/collection/hamada-shoji/">濱田庄司</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/collection/leach/">バーナード・リーチ</a></li>
+              </ul>
+            </li>
+            <li class="l-headerSp_menuList_item"><a href="/guide/">ご利用案内</a>
+              <ul class="l-headerSp_menuSubList">
+                <li class="l-headerSp_menuSubList_item"><a href="/guide/#calendar">開館時間・休館日</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/guide/#ticket">入館料</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/guide/access/">アクセス</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/guide/floor/">フロア＆庭園ガイド</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/guide/rest/">喫茶室</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/guide/shop/">ミュージアムショップ</a></li>
+                <li class="l-headerSp_menuSubList_item"><a href="/guide/barrier-free-accessibility/">バリアフリー／アクセシビリティ</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="l-headerSp_menuLink">
+            <li class="l-headerSp_menuLink_item"><a href="/news/">お知らせ</a></li>
+            <li class="l-headerSp_menuLink_item"><a href="/staffblog/">スタッフブログ</a></li>
+            <li class="l-headerSp_menuLink_item"><a href="/about/community/">教育普及</a></li>
+            <li class="l-headerSp_menuLink_item"><a href="/pressroom/">プレスリリース</a></li>
+          </ul>
+          <div class="l-headerSp_sns">
+            <ul class="l-headerSp_sns_list">
+              <li class="l-headerSp_sns_list_item"><a href="https://www.facebook.com/asahibeer.oyamazaki/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+              <li class="l-headerSp_sns_list_item"><a href="https://www.instagram.com/asahibeer.oyamazaki/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li class="l-headerSp_sns_list_item"><a href="https://www.youtube.com/@AsahiGroupOyamazakiMuseum" target="_blank"><img src="/assets/img/icon/youtube.svg" alt=""></a></li>
+              <li class="l-headerSp_sns_list_item"><a href="https://x.com/asahi_oyamazaki" target="_blank"><img src="/assets/img/icon/x-twitter.svg" alt=""></a></li>  
+            </ul>
+          </div>
+          <div class="l-headerSp_lang js-langSelectSp">
+            <div class="l-headerSp_langLabel">LANGUAGE</div><img class="l-headerSp_langArrow" src="/assets/img/icon/arrow-solid-sm-right.svg" alt="">
+            <div class="l-headerSp_langListWrapper">
+              <div class="l-headerSp_langList"><a class="l-headerSp_langItem" href="/english/">ENGLISH</a><a class="l-headerSp_langItem" href="/chinese/">中文</a><a class="l-headerSp_langItem is-active" href="/">日本語</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="l-headerSp_current" href="/guide/#calendar">
+        <div class="l-headerSp_current_date js-current" data-lang="ja"><span class="l-headerSp_current_ym js-current_ym">0000/00/</span><span class="l-headerSp_current_d js-current_d">00</span><span class="l-headerSp_current_dow js-current_dow">（●）</span></div>
+        <div class="l-headerSp_current_status"><span class="js-current-status">開館</span></div>
+    </a>
+    <div class="l-headerSp_gnav">
+      <nav class="l-gnav">
+        <div class="l-gnav_inner">
+          <ul class="l-gnav_list">
+            <li class="l-gnav_item"><a href="/guide/"><span class="l-gnav_itemImg"><img src="/assets/img/icon/calendar.svg" alt=""></span><span class="l-gnav_itemText">開館時間・休館日</span></a></li>
+            <li class="l-gnav_item"><a href="/guide/#ticket"><span class="l-gnav_itemImg"><img src="/assets/img/icon/ticket.svg" alt=""></span><span class="l-gnav_itemText">入館料</span></a></li>
+            <li class="l-gnav_item"><a href="/guide/access/"><span class="l-gnav_itemImg"><img src="/assets/img/icon/access.svg" alt=""></span><span class="l-gnav_itemText">アクセス</span></a></li>
+            <li class="l-gnav_item"><a href="/guide/floor/"><span class="l-gnav_itemImg"><img src="/assets/img/icon/map.svg" alt=""></span><span class="l-gnav_itemText">フロア＆庭園ガイド</span></a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+    </div>
+
+    <main class="l-content">
+      
+
+        <div class="c-breadcrumb">
+          <div class="c-breadcrumb_inner">
+            <ol class="c-breadcrumb_list">
+              <li class="c-breadcrumb_list_item"><a href="/"><img src="/assets/img/icon/home.svg" alt=""></a></li>
+              <li class="c-breadcrumb_list_item"><a href="/news/">お知らせ</a></li>
+              <li class="c-breadcrumb_list_item"><span>
+                  【開館30周年記念展のお知らせ】「没後100年　クロード・モネ展」
+                </span></li>
+            </ol>
+          </div>
+        </div>
+        <div class="l-section u-pb-0">
+          <div class="l-section_inner">
+            <div class="l-section_header">
+              <h1 class="c-title c-title-primary">お知らせ</h1>
+            </div>
+            <div class="l-section_body">
+              <div class="p-news">
+                <div class="p-news_header">
+                  
+                    
+                      
+                        
+                        
+                      <span class="c-label c-label-sm c-label-bg c-label-bg-dark-gray">展覧会</span>
+                      
+                    
+                    <time>
+                      2026年01月23日
+                    </time>
+                </div>
+                <div class="p-news_title">
+                  <p>
+                    【開館30周年記念展のお知らせ】「没後100年　クロード・モネ展」
+                  </p>
+                </div>
+              </div>
+              <div class="c-content_outer">
+                <div class="c-content">
+                    <p>＜次回企画展＞<br>開館30周年記念「没後100年　クロード・モネ展」<br>2026年3月20日(金・祝) － 2027年4月11日(日)<br>※会期中、一部展示替えあり<br><br><a href="https://www.asahigroup-oyamazaki.com/exhibition/monet/" target="_self" title="">企画展詳細はこちらから</a><br><br>プレスリリースや広報画像、取材は以下よりご案内しています。<br><br><a href="https://www.asahigroup-oyamazaki.com/pressroom/" target="_self" title="">プレスリリース・広報画像・取材申請はこちらから</a></p>
+<p><br></p>
+<p><img data-mt-asset-id="2595" src="https://www.asahigroup-oyamazaki.com/assets_c/2026/01/8958efa8a2b4e34a59d268c31dd6c391af23332f-thumb-450xauto-2595.jpg" width="450" height="308" alt="" class="asset asset-image mt-image-center" style="display: block; margin-left: auto; margin-right: auto;"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-content_inner">
+          <div class="p-newsList">
+
+            
+            
+              <section class="p-newsList_item">
+                <div class="p-news p-news-sm">
+                  <div class="p-news_header">
+                    
+                      <span class="c-label c-label-sm c-label-bg c-label-bg-dark-gray">展覧会</span>
+                    
+                    <time>
+                      2026年01月24日
+                    </time>
+                  </div>
+                  <h3 class="p-news_title"><a class="p-news_link" href="https://www.asahigroup-oyamazaki.com/news/2026/01/3060/">【開館30周年記念展のお知らせ】「山本爲三郎・河井寬次郎没後60年記念　共鳴　河井寬次郎×濱田庄司 ―山本爲三郎コレクションより」</a></h3>
+                </div>
+              </section>
+            
+            
+            
+            
+            
+              <section class="p-newsList_item">
+                <div class="p-news p-news-sm">
+                  <div class="p-news_header">
+                    
+                      <span class="c-label c-label-sm c-label-bg c-label-bg-dark-gray">お知らせ</span>
+                    
+                      <span class="c-label c-label-sm c-label-bg c-label-bg-dark-gray">展覧会</span>
+                    
+                    <time>
+                      2025年10月21日
+                    </time>
+                  </div>
+                  <h3 class="p-news_title"><a class="p-news_link" href="https://www.asahigroup-oyamazaki.com/news/2025/10/post-36/">【次回企画展のお知らせ】「くらしに花咲くデザイン ―大正イマジュリィの世界」</a></h3>
+                </div>
+              </section>
+            
+            
+
+            <div class="p-newsList_btn"><a class="c-btn c-btn-lg" href="/news/"><span class="c-btn_text">お知らせ一覧</span><span class="c-btn_icon"><img src="/assets/img/icon/arrow-solid-down.svg" alt=""></span></a></div>
+          </div>
+        </div>
+    </main>
+
+    </div>
+
+<footer class="l-footer">
+    <div class="l-footer_aside"></div>
+    <div class="l-footer_inner">
+      <ul class="l-footer_menuList">
+        <li class="l-footer_menuList_item"><a href="/exhibition/">展覧会</a>
+          <ul class="l-footer_menuSubList">
+            <li class="l-footer_menuSubList_item"><a href="/exhibition/">直近の展覧会</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/exhibition/archive/">展覧会・イベントアーカイブ</a></li>
+          </ul>
+        </li>
+        <li class="l-footer_menuList_item"><a href="/about/">美術館について</a>
+          <ul class="l-footer_menuSubList">
+            <li class="l-footer_menuSubList_item"><a href="/about/history/">歴史</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/about/yamamoto/">山本爲三郎コレクション</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/about/structure/">建築</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/about/design/">意匠</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/about/garden/">季節の庭園</a></li>
+          </ul>
+        </li>
+        <li class="l-footer_menuList_item"><a href="/collection/">所蔵品</a>
+          <ul class="l-footer_menuSubList">
+            <li class="l-footer_menuSubList_item"><a href="/collection/painting/">絵画</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/collection/ceramics/">陶磁器</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/collection/crafts/">工芸</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/collection/sculpture/">彫刻</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/collection/monet/">クロード・モネ</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/collection/kawai-kanjiro/">河井寬次郎</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/collection/hamada-shoji/">濱田庄司</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/collection/leach/">バーナード・リーチ</a></li>
+          </ul>
+        </li>
+        <li class="l-footer_menuList_item"><a href="/guide/">ご利用案内</a>
+          <ul class="l-footer_menuSubList">
+            <li class="l-footer_menuSubList_item"><a href="/guide/#calendar">開館時間・休館日</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/guide/#ticket">入館料</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/guide/access/">アクセス</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/guide/floor/">フロア＆庭園ガイド</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/guide/rest/">喫茶室</a></li>
+            <li class="l-footer_menuSubList_item"><a href="/guide/shop/">ミュージアムショップ</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="l-footer_menuLink">
+        <li class="l-footer_menuLink_item"><a href="/news/">お知らせ</a></li>
+        <li class="l-footer_menuLink_item"><a href="/staffblog/">スタッフブログ</a></li>
+        <li class="l-footer_menuLink_item"><a href="/about/community/">教育普及</a></li>
+        <li class="l-footer_menuLink_item"><a href="/pressroom/">プレスリリース</a></li>
+      </ul>
+      <div class="l-footer_sns">
+        <ul class="l-footer_sns_list">
+          <li class="l-footer_sns_list_item"><a href="https://www.facebook.com/asahibeer.oyamazaki/" target="_blank"><img src="/assets/img/icon/facebook-white.svg" alt=""></a></li>
+          <li class="l-footer_sns_list_item"><a href="https://www.instagram.com/asahibeer.oyamazaki/" target="_blank"><img src="/assets/img/icon/instagram-white.svg" alt=""></a></li>
+          <li class="l-footer_sns_list_item"><a href="https://www.youtube.com/@AsahiGroupOyamazakiMuseum" target="_blank"><img src="/assets/img/icon/youtube-white.svg" alt=""></a></li>
+          <li class="l-footer_sns_list_item"><a href="https://x.com/asahi_oyamazaki" target="_blank"><img src="/assets/img/icon/x-twitter-white.svg" alt=""></a></li> 
+        </ul>
+      </div>
+      <div class="l-footer_external">
+        <ul class="l-footer_external_list">
+          <li class="l-footer_external_list_item"><a href="https://www.asahigroup-holdings.com/privacy_policy/" target="_blank">プライバシーポリシー</a></li>
+          <li class="l-footer_external_list_item"><a href="https://www.asahibeer.co.jp/webuse/" target="_blank">推奨環境</a></li>
+          <li class="l-footer_external_list_item"><a href="https://www.asahigroup-holdings.com/privacy_policy/05/" target="_blank">ご利用規約</a></li>
+          <li class="l-footer_external_list_item"><a href="https://www.asahigroup-japan.co.jp/" target="_blank">アサヒグループジャパン</a></li>
+          <li class="l-footer_external_list_item"><a href="https://www.asahigroup-foundation.com/" target="_blank">アサヒグループ財団</a></li>
+        </ul>
+      </div>
+      <div class="l-footer_contact">
+        <div class="l-footer_contact_desc">
+          <h2>アサヒグループ大山崎山荘美術館</h2>
+          <p>〒618-0071 京都府乙訓郡大山崎町銭原5-3　<br class="only-sp">TEL：075-957-3123(総合案内)　FAX：075-957-3126</p>
+        </div>
+        <!--<div class="l-footer_contact_logo"><a href="/"><img src="/assets/img/common/logo-white.png" srcset="/assets/img/common/logo-white.png 1x, /assets/img/common/logo-white@2x.png 2x" alt="アサヒグループ大山崎山荘美術館"></a></div>-->
+      </div>
+      <div class="l-footer_copyright"><small>Copyright © ASAHI GROUP OYAMAZAKI VILLA MUSEUM OF ART All rights reserved.</small></div>
+    </div>
+  </footer>
+      </body>
+</html>

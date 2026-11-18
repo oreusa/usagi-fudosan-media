@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<!-- Google tag (gtag.js) GA4 -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-7EVCHK325R"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-7EVCHK325R');
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-18552002-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-18552002-1');
+	</script>
+
+		<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-WNLKWNK');</script>
+	<!-- End Google Tag Manager -->
+
+		<meta name="facebook-domain-verification" content="h99zpyvu8wcizmsr1thdf0z6okhyte" />
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<!--OGP-->
+	<meta property="og:locale" content="ja_JP" />
+	<meta property="og:title" content="読書週間 Book＆POP展" />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="京エコロジーセンター (京都市環境保全活動センター)" />
+<!--	<meta property="og:image:alt" content="">-->
+	<meta property="og:url" content="https://www.miyako-eco.jp/event/event-39278/" />
+	<meta property="og:image" content="https://www.miyako-eco.jp/wp-content/uploads/2026/06/db2ecc5661019d1c6eb38cbd0c47573c-960x777.jpg" />
+	<!-- Twitter card -->
+	<meta name="twitter:card" content="summary" />
+	<link rel="shortcut icon" href="https://www.miyako-eco.jp/wp-content/themes/ecocen/images/favicon.ico">
+	<link rel="apple-touch-icon-precomposed" href="https://www.miyako-eco.jp/wp-content/themes/ecocen/images/favicon_152.png">
+	<link rel="stylesheet" href="https://www.miyako-eco.jp/wp-content/themes/ecocen/style.css?ver=1">
+	<script src="//webfont.fontplus.jp/accessor/script/fontplus.js?29EcZd7WVog%3D&box=ue1tUwL3PUc%3D&pm=1&aa=1" charset="utf-8"></script>
+
+	<title>読書週間 Book＆POP展 &#8211; 京エコロジーセンター</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//maps.google.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.miyako-eco.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.miyako-eco.jp%2Fevent%2Fevent-39278%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.miyako-eco.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.miyako-eco.jp%2Fevent%2Fevent-39278%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='contact-form-7-css' href='https://www.miyako-eco.jp/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.2.5' media='all' />
+<link rel='stylesheet' id='dashi_css_pagepart-css' href='https://www.miyako-eco.jp/wp-content/plugins/dashi/assets/css/pagepart.css?ver=1.1' media='all' />
+<link rel='stylesheet' id='dashi_datetimepicker_css-css' href='https://www.miyako-eco.jp/wp-content/plugins/dashi/assets/css/jquery-ui-timepicker-addon.css?ver=1.1' media='all' />
+<link rel='stylesheet' id='dashi_css-css' href='https://www.miyako-eco.jp/wp-content/plugins/dashi/assets/css/css.css?ver=1.1' media='all' />
+<link rel='stylesheet' id='jwp-a11y-frontend-css' href='https://www.miyako-eco.jp/wp-content/plugins/jwp-a11y/assets/css/frontend.css?ver=1792638113' media='all' />
+<script id="jquery-core-js" src="https://www.miyako-eco.jp/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.miyako-eco.jp/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="dashi_google_map_api_key_js-js" src="https://maps.google.com/maps/api/js?key=AIzaSyDnHEDLG15tkNjPwsYFh9tOGctLaSd0Ihs&#038;ver=1.1"></script>
+<script id="my_common_jquery_inc-js" src="https://www.miyako-eco.jp/wp-content/themes/ecocen/js/common/jquery.inc.js?ver=7.1.4"></script>
+<script id="my_jquery_inc-js" src="https://www.miyako-eco.jp/wp-content/themes/ecocen/js/jquery.inc.js?ver=7.1.4"></script>
+<script id="cookie-js" src="https://www.miyako-eco.jp/wp-content/themes/ecocen/js/jquery.cookie.js?ver=7.1.4"></script>
+<link rel="https://api.w.org/" href="https://www.miyako-eco.jp/wp-json/" /></head>
+<body class="wp-singular event-template-default single single-event postid-39278 wp-theme-ecocen event_event-39278">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNLKWNK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div id="container">
+<header id="site_header">
+	<div id="util">
+		<div class="site_header_inner">
+			<div class="col_l link_lst">
+				<a href="#CONTENT_AREA" class="hide_if_small_display">本文へ</a>
+				<dl id="util_fontsize" class="hide_if_small_display">
+					<dt>文字サイズ</dt><dd><button type="button" class="link fontsize_large"><span class="skip">文字を</span>拡大</button> </dd><dd><button type="button" class="link fontsize_default">標準</button></dd>
+					<dd id="google_transrate" class="hide_if_small_display">
+						<div id="google_translate_element"></div>
+						<script src="https://www.miyako-eco.jp/wp-content/themes/ecocen/js/googletranslate.js" async="async"></script>
+					<!-- <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" async="async"></script> -->
+					<script src="//translate.google.com/translate_a/element.js" async="async"></script>
+					<script>
+						// Google翻訳の初期化関数
+						function initializeGoogleTranslate() {
+							new google.translate.TranslateElement({
+								pageLanguage: 'ja', // 翻訳元の言語
+								includedLanguages: 'en,ko,zh-CN,zh-TW,pt,fr,es,ru,ar,ms,vi', // 必要なら翻訳先を限定
+								layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+							}, 'google_translate_element');
+						}
+
+						// スクリプト読み込み後に初期化
+						window.addEventListener('load', function () {
+							if (typeof google !== 'undefined' && google.translate) {
+								initializeGoogleTranslate();
+							}
+						});
+					</script>
+
+					</dd>
+				</dl>
+			</div><!-- .col_l -->
+			<div class="col_r">
+				<dl id="language" class="menu notranslate"  translate="no">
+					<dt><span class="skip">多言語</span></dt>
+<dd><a href="https://www.miyako-eco.jp/about-miyako-ecology-center/">概要</a></dd><dd><a href="https://www.miyako-eco.jp/about-miyako-ecology-center/english/">About us</a></dd><dd><a href="https://www.miyako-eco.jp/about-miyako-ecology-center/korean/">요약</a></dd><dd><a href="https://www.miyako-eco.jp/about-miyako-ecology-center/simple-chinese/">摘要</a></dd>				</dl>
+				<div  class="hide_if_small_display">
+<form role="search" method="get" class="form_search" action="https://www.miyako-eco.jp">
+	<label>
+		<span class="skip">検索</span>
+		<input type="text" class="search_field" value="" name="s" />
+	</label>
+	<button class="bttn">検索</button>
+</form>
+				</div><!-- /.hide_if_small_display -->
+			</div><!-- /.col_r -->
+		</div><!-- /.site_header_inner -->
+	</div><!-- /#util -->
+	<div class="site_header_wrapper">
+		<div class="site_header_inner">
+			<p id="logo"><a href="https://www.miyako-eco.jp"><img src="https://www.miyako-eco.jp/wp-content/themes/ecocen/images/logo.png" alt="京エコロジーセンター (京都市環境保全活動センター)"></a></p>
+
+			<div id="header_info">
+				<div class="col">
+					<div class="dashi_pagepart_wrapper"><p>&nbsp;</p>
+<p class="phonenum phonelink">075-641-0911</p>
+<p>休館：木曜日(祝日の場合は翌平日)・年末年始</p>
+</div>					</div>
+				<div class="col">
+					 <p class="hide_if_small_display bttns"><a href="/ecocen/access/" class="bttn main">アクセス</a> <a href="/contact/" class="bttn">お問合せ</a> </p>
+				</div>
+			</div>
+		</div><!-- /.site_header_inner -->
+		<nav id="headermenu" aria-label="メインメニュー">
+			<button type="button" class="show_if_small_display" aria-expanded="false" data-toggle-text="メニューを開く">
+				<span class="inner" role="presentation"></span>
+				<span class="skip">メニューを閉じる</span>
+			</button>
+			<div class="inner">
+				<p class="show_if_small_display bttns">
+<a href="/ecocen/access/" class="bttn main">アクセス</a> <a href="/contact/" class="bttn">お問合せ</a>				</p>
+				<div id="mainmenu_wrapper">
+<ul id="mainmenu" class="menu lv_0">
+<li class="list_item lv_0 about"><div class="list_item_wrapper"><a href="https://www.miyako-eco.jp/about/"><span class="link_text_wrapper">センター概要</span></a></div><!-- /.list_item_wrapper --></li><li class="list_item lv_0 ecocen"><div class="list_item_wrapper"><a href="https://www.miyako-eco.jp/ecocen/"><span class="link_text_wrapper">施設案内</span></a></div><!-- /.list_item_wrapper --></li><li class="list_item lv_0 fun"><div class="list_item_wrapper"><a href="https://www.miyako-eco.jp/fun/"><span class="link_text_wrapper">エコセンで楽しもう</span></a></div><!-- /.list_item_wrapper --></li><li class="list_item lv_0 event on"><div class="list_item_wrapper"><a href="https://www.miyako-eco.jp/event/" aria-current="page"><span class="link_text_wrapper">イベント</span></a></div><!-- /.list_item_wrapper --></li><li class="list_item lv_0 lecture"><div class="list_item_wrapper"><a href="https://www.miyako-eco.jp/lecture/"><span class="link_text_wrapper">講座</span></a></div><!-- /.list_item_wrapper --></li><li class="list_item lv_0 volunteer"><div class="list_item_wrapper"><a href="https://www.miyako-eco.jp/volunteer/"><span class="link_text_wrapper">ボランティア</span></a></div><!-- /.list_item_wrapper --></li><li class="list_item lv_0 support"><div class="list_item_wrapper"><a href="https://www.miyako-eco.jp/support/"><span class="link_text_wrapper">活動支援</span></a></div><!-- /.list_item_wrapper --></li><li class="list_item lv_0 publication"><div class="list_item_wrapper"><a href="https://www.miyako-eco.jp/publication/"><span class="link_text_wrapper">発行物</span></a></div><!-- /.list_item_wrapper --></li>
+</ul>
+				</div><!-- /#mainmenu_wrapper -->
+				<div id="bottommenu_wrapper">
+					<ul id="bottommenu" class="menu link_lst">
+					<li><a href="https://www.miyako-eco.jp/target/for-general/">一般の方</a></li>
+					<li><a href="https://www.miyako-eco.jp/target/for-group/">団体で見学希望の方</a></li>
+					<li><a href="https://www.miyako-eco.jp/target/for-education/">学校関係の方</a></li>
+					<li><a href="https://www.miyako-eco.jp/target/for-company-ngo-npo/">企業・環境団体の方</a></li>
+					<li><a href="https://www.miyako-eco.jp/target/for-ecomate-volunteer/">エコメイト・京エコサポーターの方</a></li>
+					</ul>
+				</div><!-- /#bottommenu -->
+			<div id="google_translate_element_small" class="show_if_small_display"></div>
+
+			</div><!-- /.inner -->
+		</nav><!-- /#headermenu -->
+	</div><!-- /.site_header_wrapper -->
+</header>
+
+<div id="site_content">
+<div id="wrapper_main">
+<main id="main">
+<a id="CONTENT_AREA" tabindex="-1" class="skip show_if_focus">ここから本文です。</a>
+
+<!-- #content -->
+<section id="content">
+<header id="content_header">
+<div class="title_wrapper"><h1 class="page_title">読書週間 Book＆POP展</h1><p class="tips">		<a href="https://www.miyako-eco.jp/event_target/for-everyone/" class="tag event_target">どなたでも</a>
+		<a href="https://www.miyako-eco.jp/event_category/exhibition/" class="tag event_category">企画展</a>
+		<a href="https://www.miyako-eco.jp/event_condition/free/" class="tag event_condition">無料</a>
+</p></div><!-- /.title_wrapper --><nav id="breadcrumbs"><a href="https://www.miyako-eco.jp">ホーム</a>&nbsp;&gt;&nbsp;<a href="https://www.miyako-eco.jp/event/">イベント</a>&nbsp;&gt;&nbsp;<a href="https://www.miyako-eco.jp/event_category/exhibition/">企画展</a>&nbsp;&gt;&nbsp;読書週間 Book＆POP展</nav><!--/#breadcrumbs--></header>
+<section id="main_column">
+<p>手作りのPOP（図書紹介カード）で本を紹介します。<br />
+お気に入りの本を見つけて、エコについて考えてみましょう。</p>
+<p><img fetchpriority="high" decoding="async" class="wp-image-38041 size-thumbnail aligncenter" src="https://www.miyako-eco.jp/wp-content/uploads/2026/06/db2ecc5661019d1c6eb38cbd0c47573c-290x235.jpg" alt="" width="290" height="235" /></p>
+<p><strong>申込不要・入場無料</strong><br />
+●開催期間：2026年10月13日（火）～11月30日（月）※休館日を除く<br />
+●時間：9:00～21:00（最終日は正午まで）<br />
+●企画・運営：図書グループ（京エコロジーセンター環境ボランティア）</p>
+
+<div class="wp_social_bookmarking_light"><div class="wsbl_twitter"><a href="https://twitter.com/share"
+	  class="twitter-share-button"
+	  data-url="https%3A%2F%2Fwww.miyako-eco.jp%2Fevent%2Fevent-39278%2F"
+	  data-text="シェアするテキスト"
+	  data-lang="ja"
+	  data-show-count="false">
+	Post
+	</a>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div><div class="wsbl_facebook_like"><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.miyako-eco.jp%2Fevent%2Fevent-39278%2F&width=450&layout=button&action=like&size=small&share=true&height=35&appId&show_faces=false" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></div></div></section><!-- /#main_column -->
+<aside id="sub_column"><h1 class="skip">サブメニュー</h1>
+<nav>
+<ul id="sidemenu" class="menu lv_0">
+<li class="list_item lv_0 event on"><h2 class="list_item_title"><a href="https://www.miyako-eco.jp/event/"><span class="link_text_wrapper">イベント</span></a></h2>
+<ul class="lv_1">
+<li class="list_item lv_1 mlregist"><a href="/mlregist/"><span class="link_text_wrapper">おすすめイベント情報配信 (メーリングリスト)</span></a></li>
+</ul>
+</li>
+</ul>
+
+<section>
+	<h2 id="list_item_cats">イベントのカテゴリー</h2>
+	<ul>
+	<li class="cat-item cat-item-53"><a href="https://www.miyako-eco.jp/event_category/exhibition/">企画展</a>
+</li>
+	<li class="cat-item cat-item-46"><a href="https://www.miyako-eco.jp/event_category/lecture/">講座</a>
+</li>
+	<li class="cat-item cat-item-47"><a href="https://www.miyako-eco.jp/event_category/other/">他団体主催</a>
+</li>
+	<li class="cat-item cat-item-77"><a href="https://www.miyako-eco.jp/event_category/host/">主催イベント</a>
+</li>
+	</ul>
+</section>
+</nav>
+</aside>
+</section><!-- /#content -->
+</main>
+</div><!-- /#wrapper_main -->
+
+</div><!-- /#site_content -->
+
+<footer id="site_footer">
+	<section class="banner_lst wrapper">
+		<figure id="footer_character">
+			<img src="https://www.miyako-eco.jp/wp-content/themes/ecocen/images/character.png" alt="キャラクターイラスト">
+			<figcaption>京エコロジーセンター<wbr>イメージキャラクター<wbr>「ちきゅまる」</figcaption>
+		</figure>
+		<div class="inner">
+<div class="dashi_pagepart_wrapper"><ul class="menu">
+<li><a href="http://www.edu.city.kyoto.jp/science/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" class="alignnone" src="https://www.miyako-eco.jp/wp-content/uploads/2018/04/banner_edu_kyoto_science.jpg" alt="京都市青少年科学センター" width="210" height="60" /></a></li>
+<li><a href="https://www.miyako-eco.jp/support/highmoon-gallery/" rel="attachment wp-att-7978"><img loading="lazy" decoding="async" class="alignnone wp-image-7978" src="https://www.miyako-eco.jp/wp-content/uploads/2018/04/side_bnn_gallery.jpg" alt="ハイムーンギャラリー" width="158" height="60" /></a></li>
+<li><a href="https://kyoto-gomigen.jp/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" class="alignnone wp-image-8901 size-full" src="https://www.miyako-eco.jp/wp-content/uploads/2018/04/banner_gomigen.jpg" alt="京都市ごみ減量推進会議" width="210" height="60" /></a></li>
+<li><a href="http://ma21f.sblo.jp/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" class="alignnone wp-image-8902 size-full" src="https://www.miyako-eco.jp/wp-content/uploads/2018/04/azyenda21f_banner.jpg" alt="京のアジェンダ21フォーラム" width="162" height="65" /></a></li>
+<li><a href="https://www.3r-teitanso.jp/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" class="alignnone" src="https://www.miyako-eco.jp/wp-content/uploads/2018/04/banner_3r_teitanso.jpg" alt="３Ｒ・低炭素社会検定" width="210" height="60" /></a></li>
+<li><a href="https://sustaina-kyoto.jp/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" class="alignnone wp-image-10027" src="https://www.miyako-eco.jp/wp-content/uploads/2018/04/192bb2df25d4afba4b6a9ad6aaf19b27-290x83.png" alt="さすてな京都" width="231" height="66" /></a></li>
+<li><a href="https://furusato-kyoto.jp/" target="_blank" rel="noopener"><img loading="lazy" decoding="async" class="alignnone wp-image-16979" src="https://www.miyako-eco.jp/wp-content/uploads/2018/04/furusatokyoto-580x193.png" alt="京都市ふるさと納税" width="231" height="77" /></a></li>
+<li></li>
+</ul>
+</div>		</div><!-- .inner -->
+	</section><!-- /.banner_lst.wrapper -->
+	<section id="pagelist" class="wrapper">
+		<div class="inner">
+<ul id="footermenu" class="menu lv_0">
+<li class="list_item lv_0 about"><h2 class="list_item_title"><a href="https://www.miyako-eco.jp/about/"><span class="link_text_wrapper">センター概要</span></a></h2>
+<ul class="lv_1">
+<li class="list_item lv_1 greeting"><a href="https://www.miyako-eco.jp/about/greeting/"><span class="link_text_wrapper">館長あいさつ</span></a></li><li class="list_item lv_1 history"><a href="https://www.miyako-eco.jp/about/history/"><span class="link_text_wrapper">沿革</span></a></li><li class="list_item lv_1 overview"><a href="https://www.miyako-eco.jp/about/overview/"><span class="link_text_wrapper">事業概要</span></a></li><li class="list_item lv_1 chikyumaru"><a href="https://www.miyako-eco.jp/about/chikyumaru/"><span class="link_text_wrapper">ちきゅまる</span></a></li><li class="list_item lv_1 kes"><a href="https://www.miyako-eco.jp/about/kes/"><span class="link_text_wrapper">環境マネジメントシステムの取り組み</span></a></li><li class="list_item lv_1 global-warming"><a href="https://www.miyako-eco.jp/about/global-warming/"><span class="link_text_wrapper">地球温暖化ってなぁに？</span></a></li><li class="list_item lv_1 about-15285"><a href="https://www.miyako-eco.jp/about/about-15285/"><span class="link_text_wrapper">パートナーシップを通じての事業紹介</span></a></li><li class="list_item lv_1 harassment"><a href="https://www.miyako-eco.jp/about/harassment/"><span class="link_text_wrapper">ハラスメント対策</span></a></li>
+</ul>
+</li><li class="list_item lv_0 ecocen"><h2 class="list_item_title"><a href="https://www.miyako-eco.jp/ecocen/"><span class="link_text_wrapper">施設案内</span></a></h2>
+<ul class="lv_1">
+<li class="list_item lv_1 information"><a href="https://www.miyako-eco.jp/ecocen/information/"><span class="link_text_wrapper">開館情報</span></a></li><li class="list_item lv_1 access"><a href="https://www.miyako-eco.jp/ecocen/access/"><span class="link_text_wrapper">アクセス</span></a></li><li class="list_item lv_1 facility"><a href="https://www.miyako-eco.jp/ecocen/facility/"><span class="link_text_wrapper">バリアフリー情報</span></a></li><li class="list_item lv_1 floormap-1f"><a href="https://www.miyako-eco.jp/ecocen/floormap-1f/"><span class="link_text_wrapper">フロアマップ1階</span></a></li><li class="list_item lv_1 floormap-2f-3f"><a href="https://www.miyako-eco.jp/ecocen/floormap-2f-3f/"><span class="link_text_wrapper">フロアマップ2階・3階</span></a></li><li class="list_item lv_1 floormap-rooftop"><a href="https://www.miyako-eco.jp/ecocen/floormap-rooftop/"><span class="link_text_wrapper">フロアマップ屋上</span></a></li><li class="list_item lv_1 library"><a href="https://www.miyako-eco.jp/ecocen/library/"><span class="link_text_wrapper">かんきょう図書コーナー</span></a></li><li class="list_item lv_1 rental"><a href="https://www.miyako-eco.jp/ecocen/rental/"><span class="link_text_wrapper">貸会場</span></a></li><li class="list_item lv_1 ecocen-32810"><a href="https://www.miyako-eco.jp/ecocen/ecocen-32810/"><span class="link_text_wrapper">資源物の回収</span></a></li>
+</ul>
+</li><li class="list_item lv_0 fun"><h2 class="list_item_title"><a href="https://www.miyako-eco.jp/fun/"><span class="link_text_wrapper">エコセンで楽しもう</span></a></h2>
+<ul class="lv_1">
+<li class="list_item lv_1 fun-outi"><a href="https://www.miyako-eco.jp/fun/fun-outi/"><span class="link_text_wrapper">おうちミュージアム</span></a></li><li class="list_item lv_1 video"><a href="https://www.miyako-eco.jp/fun/video/"><span class="link_text_wrapper">動画コンテンツ</span></a></li><li class="list_item lv_1 wooden_toys"><a href="https://www.miyako-eco.jp/fun/wooden_toys/"><span class="link_text_wrapper">木のおもちゃひろば</span></a></li><li class="list_item lv_1 chikyumaru_box"><a href="https://www.miyako-eco.jp/fun/chikyumaru_box/"><span class="link_text_wrapper">ちきゅまるのはこ</span></a></li><li class="list_item lv_1 tanken_sheet"><a href="https://www.miyako-eco.jp/fun/tanken_sheet/"><span class="link_text_wrapper">たんけんシート</span></a></li><li class="list_item lv_1 eco-mushi"><a href="https://www.miyako-eco.jp/fun/eco-mushi/"><span class="link_text_wrapper">エコ虫を探そう</span></a></li><li class="list_item lv_1 pass-book"><a href="https://www.miyako-eco.jp/fun/pass-book/"><span class="link_text_wrapper">エコセン通い帳</span></a></li><li class="list_item lv_1 exhibition"><a href="https://www.miyako-eco.jp/fun/exhibition/"><span class="link_text_wrapper">企画展情報</span></a></li><li class="list_item lv_1 blog"><a href="https://www.miyako-eco.jp/blog/"><span class="link_text_wrapper">エコセンブログ</span></a>
+</ul>
+</li><li class="list_item lv_0 event on"><h2 class="list_item_title"><a href="https://www.miyako-eco.jp/event/"><span class="link_text_wrapper">イベント</span></a></h2>
+<ul class="lv_1">
+<li class="list_item lv_1 mlregist"><a href="/mlregist/"><span class="link_text_wrapper">おすすめイベント情報配信 (メーリングリスト)</span></a></li>
+</ul>
+</li><li class="list_item lv_0 lecture"><h2 class="list_item_title"><a href="https://www.miyako-eco.jp/lecture/"><span class="link_text_wrapper">講座</span></a></h2>
+<ul class="lv_1">
+<li class="list_item lv_1 lecture-31478"><a href="https://www.miyako-eco.jp/lecture/lecture-31478/"><span class="link_text_wrapper">里山たいけん隊　～京都の自然と、私たちとのつながりを知ろう！～</span></a></li><li class="list_item lv_1 school-of-natural-energy-kyoto"><a href="https://www.miyako-eco.jp/lecture/school-of-natural-energy-kyoto/"><span class="link_text_wrapper">自然エネルギー学校・京都</span></a></li><li class="list_item lv_1 kankyou-powerup"><a href="https://www.miyako-eco.jp/lecture/kankyou-powerup/"><span class="link_text_wrapper">環境活動パワーアップ講座</span></a></li><li class="list_item lv_1 teinei-na-kurashi"><a href="https://www.miyako-eco.jp/lecture/teinei-na-kurashi/"><span class="link_text_wrapper">ていねいに暮らしを創る（アーカイブ）</span></a></li><li class="list_item lv_1 kyoto-environment-education-meeting"><a href="https://www.miyako-eco.jp/lecture/kyoto-environment-education-meeting/"><span class="link_text_wrapper">京都・環境教育ミーティング（アーカイブ）</span></a></li><li class="list_item lv_1 environment-leader-start-up"><a href="https://www.miyako-eco.jp/lecture/environment-leader-start-up/"><span class="link_text_wrapper">環境教育リーダースタートアップ講座（アーカイブ）</span></a></li>
+</ul>
+</li><li class="list_item lv_0 volunteer"><h2 class="list_item_title"><a href="https://www.miyako-eco.jp/volunteer/"><span class="link_text_wrapper">ボランティア</span></a></h2>
+<ul class="lv_1">
+<li class="list_item lv_1 ecomate"><a href="https://www.miyako-eco.jp/volunteer/ecomate/"><span class="link_text_wrapper">エコメイトとは</span></a></li><li class="list_item lv_1 join"><a href="https://www.miyako-eco.jp/volunteer/join/"><span class="link_text_wrapper">エコメイトになる方法</span></a></li><li class="list_item lv_1 training"><a href="https://www.miyako-eco.jp/volunteer/training/"><span class="link_text_wrapper">エコメイト養成講座</span></a></li><li class="list_item lv_1 ecomate-volunteer"><a href="https://www.miyako-eco.jp/volunteer/ecomate-volunteer/"><span class="link_text_wrapper">エコメイト・京エコサポーター(ボランティア専用)</span></a></li>
+</ul>
+</li><li class="list_item lv_0 support"><h2 class="list_item_title"><a href="https://www.miyako-eco.jp/support/"><span class="link_text_wrapper">活動支援</span></a></h2>
+<ul class="lv_1">
+<li class="list_item lv_1 support-27304"><a href="https://www.miyako-eco.jp/support/support-27304/"><span class="link_text_wrapper">インターンシップ</span></a></li><li class="list_item lv_1 kyoto-1mm-project"><a href="https://www.miyako-eco.jp/support/kyoto-1mm-project/"><span class="link_text_wrapper">京都市環境探究プログラム「Kyoto 1mm Project」</span></a></li><li class="list_item lv_1 support-21730"><a href="https://www.miyako-eco.jp/support/support-21730/"><span class="link_text_wrapper">小型展示の貸出し</span></a></li><li class="list_item lv_1 support-33377"><a href="https://www.miyako-eco.jp/support/support-33377/"><span class="link_text_wrapper">環境教育ミーティング</span></a></li><li class="list_item lv_1 exhibition"><a href="https://www.miyako-eco.jp/support/exhibition/"><span class="link_text_wrapper">企画展共同主催者募集</span></a></li><li class="list_item lv_1 event-2"><a href="https://www.miyako-eco.jp/support/event-2/"><span class="link_text_wrapper">イベント共同主催者募集</span></a></li><li class="list_item lv_1 univ"><a href="https://www.miyako-eco.jp/support/univ/"><span class="link_text_wrapper">大学生の環境活動支援</span></a></li><li class="list_item lv_1 event-apply"><a href="https://www.miyako-eco.jp/support/event-apply/"><span class="link_text_wrapper">京エコロジーセンターイベントカレンダーへの掲載</span></a></li><li class="list_item lv_1 tool"><a href="https://www.miyako-eco.jp/support/tool/"><span class="link_text_wrapper">貸出（パネル・紙芝居等）</span></a></li><li class="list_item lv_1 booth-exhibition"><a href="https://www.miyako-eco.jp/support/booth-exhibition/"><span class="link_text_wrapper">ブース出展</span></a></li><li class="list_item lv_1 environment-study-group"><a href="https://www.miyako-eco.jp/support/environment-study-group/"><span class="link_text_wrapper">かんきょう学習会</span></a></li><li class="list_item lv_1 printing-room"><a href="https://www.miyako-eco.jp/support/printing-room/"><span class="link_text_wrapper">印刷室</span></a></li><li class="list_item lv_1 mailbox"><a href="https://www.miyako-eco.jp/support/mailbox/"><span class="link_text_wrapper">メールボックス等</span></a></li><li class="list_item lv_1 highmoon-gallery"><a href="https://www.miyako-eco.jp/support/highmoon-gallery/"><span class="link_text_wrapper">ハイムーンギャラリー</span></a></li>
+</ul>
+</li><li class="list_item lv_0 publication"><h2 class="list_item_title"><a href="https://www.miyako-eco.jp/publication/"><span class="link_text_wrapper">発行物</span></a></h2>
+<ul class="lv_1">
+<li class="list_item lv_1 flyer-group"><a href="https://www.miyako-eco.jp/publication_category/flyer-group/"><span class="link_text_wrapper">団体見学チラシ</span></a></li><li class="list_item lv_1 ecorecipe"><a href="https://www.miyako-eco.jp/publication_category/ecorecipe/"><span class="link_text_wrapper">えこレシピ</span></a></li><li class="list_item lv_1 anniversary"><a href="https://www.miyako-eco.jp/publication_category/anniversary/"><span class="link_text_wrapper">周年記念冊子</span></a></li><li class="list_item lv_1 %e7%92%b0%e5%a2%83%e5%ad%a6%e7%bf%92%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e3%83%a2%e3%83%8b%e3%82%bf%e3%83%bc%e4%bd%93%e9%a8%93%e8%80%85%e5%8b%9f%e9%9b%86"><a href="https://www.miyako-eco.jp/publication_category/%e7%92%b0%e5%a2%83%e5%ad%a6%e7%bf%92%e3%83%97%e3%83%ad%e3%82%b0%e3%83%a9%e3%83%a0%e3%83%a2%e3%83%8b%e3%82%bf%e3%83%bc%e4%bd%93%e9%a8%93%e8%80%85%e5%8b%9f%e9%9b%86/"><span class="link_text_wrapper">環境学習プログラムモニター体験者募集</span></a></li><li class="list_item lv_1 pamphlet"><a href="https://www.miyako-eco.jp/publication_category/pamphlet/"><span class="link_text_wrapper">パンフレット</span></a></li><li class="list_item lv_1 flyer-trial"><a href="https://www.miyako-eco.jp/publication_category/flyer-trial/"><span class="link_text_wrapper">イベント案内チラシ</span></a></li><li class="list_item lv_1 magazine"><a href="https://www.miyako-eco.jp/publication_category/magazine/"><span class="link_text_wrapper">広報誌えこせん（アーカイブ）</span></a></li><li class="list_item lv_1 propagation"><a href="https://www.miyako-eco.jp/publication_category/propagation/"><span class="link_text_wrapper">啓発冊子（アーカイブ）</span></a></li><li class="list_item lv_1 sub-reading"><a href="https://www.miyako-eco.jp/publication_category/sub-reading/"><span class="link_text_wrapper">京都市環境副読本</span></a></li><li class="list_item lv_1 report"><a href="https://www.miyako-eco.jp/publication_category/report/"><span class="link_text_wrapper">事業報告書</span></a></li>
+</ul>
+</li><li class="list_item lv_0 target"><h2 class="list_item_title"><a href="https://www.miyako-eco.jp/target/"><span class="link_text_wrapper">対象者別</span></a></h2>
+<ul class="lv_1">
+<li class="list_item lv_1 for-general"><a href="https://www.miyako-eco.jp/target/for-general/"><span class="link_text_wrapper">一般の方</span></a></li><li class="list_item lv_1 for-group"><a href="https://www.miyako-eco.jp/target/for-group/"><span class="link_text_wrapper">団体で見学希望の方</span></a></li><li class="list_item lv_1 for-education"><a href="https://www.miyako-eco.jp/target/for-education/"><span class="link_text_wrapper">学校関係の方</span></a></li><li class="list_item lv_1 for-company-ngo-npo"><a href="https://www.miyako-eco.jp/target/for-company-ngo-npo/"><span class="link_text_wrapper">企業・環境団体の方</span></a></li><li class="list_item lv_1 for-ecomate-volunteer"><a href="https://www.miyako-eco.jp/target/for-ecomate-volunteer/"><span class="link_text_wrapper">エコメイト・京エコサポーターの方</span></a></li>
+</ul>
+</li><li class="list_item lv_0 information"><h2 class="list_item_title"><a href="https://www.miyako-eco.jp/information/"><span class="link_text_wrapper">インフォメーション</span></a></h2>
+<ul class="lv_1">
+<li class="list_item lv_1 news"><a href="https://www.miyako-eco.jp/information_category/news/"><span class="link_text_wrapper">お知らせ</span></a></li><li class="list_item lv_1 press-release"><a href="https://www.miyako-eco.jp/information_category/press-release/"><span class="link_text_wrapper">プレスリリース</span></a></li><li class="list_item lv_1 media"><a href="https://www.miyako-eco.jp/information_category/media/"><span class="link_text_wrapper">メディア掲載</span></a></li>
+</ul>
+</li>
+</ul>
+		</div><!-- .inner -->
+	</section><!-- /#pagelist.wrapper -->
+	<section id="site_info" class="wrapper">
+		<div class="inner">
+<div class="dashi_pagepart_wrapper"><dl>
+<dt><ruby>京<rp>(</rp><rt>みやこ</rt><rp>)</rp></ruby>エコロジーセンター（京都市環境保全活動センター）</dt>
+<dd>〒612-0031京都市伏見区深草池ノ内町13</dd>
+<dd>TEL: <span class="phonelink">075-641-0911</span>  FAX: 075-641-0912</dd>
+</dl>
+</div><div class="snsbts"><a href="https://www.facebook.com/miyakoeco/?locale=ja_JP"><img src="https://www.miyako-eco.jp/wp-content/themes/ecocen/images/facebook.png" alt="京エコロジーセンター公式facebook"></a><a href="https://x.com/miyako_eco"><img src="https://www.miyako-eco.jp/wp-content/themes/ecocen/images/x.png" alt="京エコロジーセンター公式 X"></a><a href="https://www.instagram.com/miyako_ecology_center/"><img src="https://www.miyako-eco.jp/wp-content/themes/ecocen/images/instagram.png" alt="京エコロジーセンター公式Instagram"></a></div><div class="dashi_pagepart_wrapper"><ul id="footmenu" class="menu">
+<li><a href="/contact/">お問合せ</a></li>
+<li><a href="/link/">リンク集</a></li>
+<li><a href="/sitepolicy/">サイトポリシー</a></li>
+<li><a href="/privacy/">プライバシーポリシー</a></li>
+<li><a href="/accessibility/">アクセシビリティ</a></li>
+</ul>
+</div>		</div><!-- /.inner -->
+	</section><!-- /#site_info.wrapper -->
+</footer>
+</div><!-- /#container -->
+<script>
+<!--
+	document.getElementById('container').classList.add('js');
+// -->
+</script>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/ecocen/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="wp-hooks-js" src="https://www.miyako-eco.jp/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://www.miyako-eco.jp/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="swv-js" src="https://www.miyako-eco.jp/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.2.5"></script>
+<script id="contact-form-7-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2026-10-30 09:04:34+0000","generator":"GlotPress\/4.1.0","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=1; plural=0;","lang":"ja_JP"},"This contact form is placed in the wrong place.":["\u3053\u306e\u30b3\u30f3\u30bf\u30af\u30c8\u30d5\u30a9\u30fc\u30e0\u306f\u9593\u9055\u3063\u305f\u4f4d\u7f6e\u306b\u7f6e\u304b\u308c\u3066\u3044\u307e\u3059\u3002"],"Error:":["\u30a8\u30e9\u30fc:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+</script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/www.miyako-eco.jp\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script id="contact-form-7-js" src="https://www.miyako-eco.jp/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.2.5"></script>
+<script id="jidaikobo-cf7-native-dates-js" src="https://www.miyako-eco.jp/wp-content/plugins/jidaikobo-cf7-native-dates/native-dates.js?ver=1.0.1"></script>
+<script id="dashi_js_pagepart-js" src="https://www.miyako-eco.jp/wp-content/plugins/dashi/assets/js/pagepart.js?ver=1.1"></script>
+<script id="jquery-ui-core-js-before">
+jQuery.uiBackCompat = true;
+//# sourceURL=jquery-ui-core-js-before
+</script>
+<script id="jquery-ui-core-js" src="https://www.miyako-eco.jp/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-datepicker-js" src="https://www.miyako-eco.jp/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-datepicker-js-after">
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"\u9589\u3058\u308b","currentText":"\u4eca\u65e5","monthNames":["1\u6708","2\u6708","3\u6708","4\u6708","5\u6708","6\u6708","7\u6708","8\u6708","9\u6708","10\u6708","11\u6708","12\u6708"],"monthNamesShort":["1\u6708","2\u6708","3\u6708","4\u6708","5\u6708","6\u6708","7\u6708","8\u6708","9\u6708","10\u6708","11\u6708","12\u6708"],"nextText":"\u7fcc\u6708","prevText":"\u5148\u6708","dayNames":["\u65e5\u66dc\u65e5","\u6708\u66dc\u65e5","\u706b\u66dc\u65e5","\u6c34\u66dc\u65e5","\u6728\u66dc\u65e5","\u91d1\u66dc\u65e5","\u571f\u66dc\u65e5"],"dayNamesShort":["\u65e5","\u6708","\u706b","\u6c34","\u6728","\u91d1","\u571f"],"dayNamesMin":["\u65e5","\u6708","\u706b","\u6c34","\u6728","\u91d1","\u571f"],"dateFormat":"yy\u5e74mm\u6708dd\u65e5","firstDay":1,"isRTL":false});});
+//# sourceURL=jquery-ui-datepicker-js-after
+</script>
+<script id="dashi_js_timepicker-js" src="https://www.miyako-eco.jp/wp-content/plugins/dashi/assets/js/jquery-ui-timepicker-addon.js?ver=1.1"></script>
+<script id="dashi_js-js" src="https://www.miyako-eco.jp/wp-content/plugins/dashi/assets/js/js.js?ver=1.1"></script>
+<script id="google-recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6Ld40K4aAAAAADT_iF2atbt85Iu81AlUkhzv7v-W&#038;ver=3.0"></script>
+<script id="wp-polyfill-js" src="https://www.miyako-eco.jp/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"></script>
+<script id="wpcf7-recaptcha-js-before">
+var wpcf7_recaptcha = {
+    "sitekey": "6Ld40K4aAAAAADT_iF2atbt85Iu81AlUkhzv7v-W",
+    "actions": {
+        "homepage": "homepage",
+        "contactform": "contactform"
+    }
+};
+//# sourceURL=wpcf7-recaptcha-js-before
+</script>
+<script id="wpcf7-recaptcha-js" src="https://www.miyako-eco.jp/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=6.2.5"></script>
+</body>
+</html>

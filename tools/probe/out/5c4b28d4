@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr" prefix="og: https://ogp.me/ns#" style="--color--primary-hue:202;--color--primary-saturation:79%;--color--primary-lightness:50">
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="会期2026年（令和8年）10月9日（金）～12月20日（日）※本展は予約制ではありません。※災害などにより、変更となる場合があります。時間午前9時30分〜午後5時（入館は午後4時30分まで）休館日月曜日（ただし、10月12日（月・祝）・11月23日（月・祝）は開館）、10月13日、11月24日※災害などにより臨時で休館となる場合があります。観覧料（税込）一 般 2,000円（1,800円）高大生 1,200円（1,000円）小中生 500円（ 300円）※本展の会期中、展示替えはございません。※（ ）内は前売りおよび20名以上の団体料金。※前売券の販売は、2026年8月6日（木）午前10時から10月8日（木）午後11時59分まで※本展の観覧券で、企画展示もご覧いただけます。（観覧当日のみ）※未就学児、障がい者手帳などをお持ちの方（介護者1名を含む）は無料（要証明）。障がい者手帳などは、日本の法律に基づき交付されたものに限ります。（受給者証は対象外）※大阪市内在住の65歳以上の方も一般料金が必要です。※学生の方は、ご来館時に学生証をご提示ください。" />
+<link rel="canonical" href="https://www.osaka-art-museum.jp/special_exhibition/mindai" />
+<meta name="Generator" content="Drupal 11 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WHV6CMZ9J3"></script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-WHV6CMZ9J3');</script>
+<meta property="og:title" content="大阪市立美術館" />
+<meta property="og:description" content="大阪市立美術館は、特別展（大規模な美術展）や、館蔵品の展覧会などを開催している、歴史ある大阪の美術館です。" />
+<meta property="og:image" content="https://www.osaka-art-museum.jp/themes/custom/osaka_museum/images/ogp.jpg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.osaka-art-museum.jp/special_exhibition/mindai?fbclid=IwZXh0bgNhZW0BMABwZG9mBWFkaWQBqzdw8pkvT3NydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABH-gNsJ5ze_g0WX96HsOmahTUnKQZgqn2W6I8eD51BYn-Pv5pCkydLRZmZUg1_aem_y7EViDvwNgAYAKYamWZTTw&amp;utm_campaign=120250773105260335&amp;utm_content=120250773219650335&amp;utm_id=120250773105260335&amp;utm_medium=paid&amp;utm_source=fb&amp;utm_term=120250773105400335" />
+<meta property="og:site_name" content="大阪市立美術館" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://www.osaka-art-museum.jp/themes/custom/osaka_museum/images/ogp.jpg" />
+<meta name="description" content="大阪市立美術館は、特別展（大規模な美術展）や、館蔵品の展覧会などを開催している、歴史ある大阪の美術館です。" />
+<link rel="icon" href="/themes/custom/osaka_museum/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="ja" href="https://www.osaka-art-museum.jp/special_exhibition/mindai" />
+
+    <title>躍動する明代の書－台北・何創時（かそうじ）コレクションの至宝 | 大阪市立美術館</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_Udyln8XE5xhpb2rtod5wFKcYxIrs3dQzkQhauM2Vyao.css?delta=0&amp;language=ja&amp;theme=osaka_museum&amp;include=eJxtjtEOgjAMRX9oSOIPLXdY50JHl7VI-HsBjYbFpzbnNqdXkD1uOU1ebWXqj70rqIgV5aFOOD2pSh9ZArjbr9IUv_gzL4bA5EQxwudZac59EDG1zXLGd4aVNIy1wTIZFlLJjeb9-B_7lTllIpHJ7z49J0pMg10buKRC1emqRltnKL0ArrNszA" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Ymc0LfiL2dzQNJ9-AL7adnHGA8wgbwVxhPSwxQpTbE4.css?delta=1&amp;language=ja&amp;theme=osaka_museum&amp;include=eJxtjtEOgjAMRX9oSOIPLXdY50JHl7VI-HsBjYbFpzbnNqdXkD1uOU1ebWXqj70rqIgV5aFOOD2pSh9ZArjbr9IUv_gzL4bA5EQxwudZac59EDG1zXLGd4aVNIy1wTIZFlLJjeb9-B_7lTllIpHJ7z49J0pMg10buKRC1emqRltnKL0ArrNszA" />
+<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+<link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-grid.min.css" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-utilities.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_EY9iZetizwPFJfARX-UulqZl9yQ6VzjO7atv-0-ofDg.css?delta=7&amp;language=ja&amp;theme=osaka_museum&amp;include=eJxtjtEOgjAMRX9oSOIPLXdY50JHl7VI-HsBjYbFpzbnNqdXkD1uOU1ebWXqj70rqIgV5aFOOD2pSh9ZArjbr9IUv_gzL4bA5EQxwudZac59EDG1zXLGd4aVNIy1wTIZFlLJjeb9-B_7lTllIpHJ7z49J0pMg10buKRC1emqRltnKL0ArrNszA" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" media="all" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+<link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    
+    
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tooh5k" />
+</noscript>
+  </head>
+  <body class="path-node page-node-type-special-exhibition">
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="deepl-bar" class="deepl-bar" style="display:none;">
+  <div class="container d-flex align-items-center justify-content-between py-1">
+    <span class="deepl-bar-label">翻訳中: <strong id="deepl-bar-lang"></strong></span>
+    <button id="deepl-bar-close" type="button" class="btn btn-sm btn-outline-light ms-3">
+      元の日本語に戻す
+    </button>
+  </div>
+</div>
+<div class="d-flex flex-column min-h-screen">
+  <div class="page-front-end d-flex flex-column flex-1">
+    <header class="flex-shrink-0 sticky-top px-3 py-2 py-lg-3 w-100 no-print">
+      <div id="jump" style="display:none">
+        <a href="#contents">コンテンツにジャンプ/Jump to content</a>
+      </div>
+      <div class="container ps-0">
+        <div class="d-flex flex-wrap align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-5">
+            <div class="logo__image">
+                    <a href="/" title="ホーム" rel="home" class="navbar-brand d-flex">
+              <img src="/sites/default/files/logo_0_0.png" alt="大阪美術館" class="" />
+          </a>
+    
+            </div>
+                                        <div class="box-time d-lg-none">
+                <p>本日開館 <br><span>09:30～17:00</span></p>
+              </div>
+                                    </div>
+          <div class="header__box-menu d-none d-xl-block">
+            <div class="d-flex align-items-center header__menu-top gap-4">
+                              <div class="box-time-wrapper d-flex flex-column">
+                                    <div class="box-time">
+                    <p>本日開館 <span>09:30～17:00</span></p>
+                    <small class="gallery-note">※天王寺ギャラリーは個別にご確認ください</small>
+                  </div>
+                                  </div>
+                            <div class="box_social d-flex align-items-center gap-3 flex-shrink-0">
+                <div class="d-flex flex-column align-items-center justify-content-center gap-2.5">
+                  <a href="https://x.com/ocmfa_since1936" class="react-share__ShareButton" target="_blank" rel="noopener noreferrer" aria-label="X（旧Twitter）公式アカウント">
+                    <img src="/themes/custom/osaka_museum/images/x.png" alt="X（旧Twitter）">
+                  </a>
+                </div>
+                <div class="d-flex flex-column align-items-center justify-content-center gap-2.5">
+                  <a href="https://www.instagram.com/ocmfa_since1936/" class="react-share__ShareButton" target="_blank" rel="noopener noreferrer" aria-label="Instagram公式アカウント">
+                    <img src="/themes/custom/osaka_museum/images/insta.png" alt="Instagram">
+                  </a>
+                </div>
+                <div class="d-flex flex-column align-items-center justify-content-center gap-2.5">
+                  <a href="https://www.youtube.com/channel/UCwavvoD1PqL3kshkwNOuIoA" class="react-share__ShareButton" target="_blank" rel="noopener noreferrer" aria-label="YouTube公式チャンネル">
+                    <img src="/themes/custom/osaka_museum/images/youtube.png" alt="YouTube">
+                  </a>
+                </div>
+              </div>
+              <div class="relative box__access">
+                <button class="btn__access d-flex align-items-center fwb" aria-expanded="false" type="button" tabindex="0">
+                  文字サイズ·色
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="7" viewbox="0 0 10 7" fill="none">
+                    <path d="M8.825 0.158447L5 3.97511L1.175 0.158447L0 1.33345L5 6.33345L10 1.33345L8.825 0.158447Z" fill="white"/>
+                  </svg>
+                </button>
+                <div class="box__content--access box__content--access-pc" tabindex="-1">
+                  <div class="d-flex flex-column">
+                    <div class="d-flex align-items-center justify-content-between gap-4">
+                      <span class="pr-4">文字サイズ</span>
+                      <div class="d-flex align-items-center justify-content-center gap-2 box_font_size">
+                        <button type="button" class="btn btn-outline btn-zoom-in outline-offset-2">拡大</button>
+                        <button type="button" class="btn btn-outline btn-zoom-out outline-offset-2">標準</button>
+                      </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-content-between mt-3 gap-2">
+                      <span class="pr-4">背景色</span>
+                      <div class="d-flex align-items-center justify-content-between box_color">
+                        <button type="button" class="white-theme outline-offset-2">白</button>
+                        <button type="button" class="dark-theme outline-offset-2">黒</button>
+                        <button type="button" class="blue-theme outline-offset-2">青</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-3 d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary btn_close_box_access">閉じる</button>
+                  </div>
+                </div>
+              </div>
+              <div class="box-language">
+                <a href="/language">Language</a>
+              </div>
+            </div>
+
+            <div id="nav-desktop" class="header__menu">
+              <nav role="navigation" aria-labelledby="main-menu" class="primary-nav block block-menu navigation menu--main">
+                  
+    <ul class="nav navbar-nav">
+                              <li class="nav-item dropdown">
+                    <a href="/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-drupal-link-system-path="&lt;front&gt;">訪れる</a>
+
+                      <ul class="dropdown-menu">
+                  <ul class="nav navbar-nav dropdown-menu">
+                              <li class="nav-item">
+                    <a href="/information" class="nav-link" data-drupal-link-system-path="node/10243">開館時間・休館日・観覧料</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/information?tab=floor" class="nav-link" data-drupal-link-query="{&quot;tab&quot;:&quot;floor&quot;}" data-drupal-link-system-path="node/10243">フロアマップ</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/information?tab=manner" class="nav-link" data-drupal-link-query="{&quot;tab&quot;:&quot;manner&quot;}" data-drupal-link-system-path="node/10243">ご来館のお客様へ</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="https://www.e-tix.jp/osaka-art-museum/" class="nav-link" target="_blank" rel="noopener noreferrer">オンラインチケット</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/access" class="nav-link" data-drupal-link-system-path="node/10252">交通アクセス</a>
+
+                  </li>
+                  </ul>
+  
+            </ul>
+                  </li>
+                                          <li class="nav-item dropdown">
+                    <a href="/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-drupal-link-system-path="&lt;front&gt;">発見する</a>
+
+                      <ul class="dropdown-menu">
+                  <ul class="nav navbar-nav dropdown-menu">
+                              <li class="nav-item">
+                    <a href="/special_exhibition" class="nav-link" data-drupal-link-system-path="node/10229">特別展・特別陳列</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/planned_exhibition" class="nav-link" data-drupal-link-system-path="node/10256">企画展示</a>
+
+                  </li>
+                  </ul>
+  
+            </ul>
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/def_evt" class="nav-link" data-drupal-link-system-path="node/10230">体験する</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/collection" class="nav-link" data-drupal-link-system-path="node/10253">調べる</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/info" class="nav-link" data-drupal-link-system-path="node/10223">お知らせ</a>
+
+                  </li>
+                                          <li class="nav-item dropdown">
+                    <a href="/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-drupal-link-system-path="&lt;front&gt;">トピックス</a>
+
+                      <ul class="dropdown-menu">
+                  <ul class="nav navbar-nav dropdown-menu">
+                              <li class="nav-item">
+                    <a href="/about" class="nav-link" data-drupal-link-system-path="node/10241">大阪市立美術館とは</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/ug_evt/today" class="nav-link" data-drupal-link-system-path="ug_evt/today">天王寺ギャラリー</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/biken" class="nav-link" data-drupal-link-system-path="node/10247">美術研究所</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/unique-venue" class="nav-link" data-drupal-link-system-path="node/10250">ユニークべニュー</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/shop" class="nav-link" data-drupal-link-system-path="node/10242">ミュージアムショップ・ カフェ</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/spot" class="nav-link" data-drupal-link-system-path="node/10246">周辺施設と観光</a>
+
+                  </li>
+                  </ul>
+  
+            </ul>
+                  </li>
+                  </ul>
+  
+
+
+  </nav>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="btn-hamburger position-absolute top-50 end-0 translate-middle d-flex d-xl-none align-items-center justify-content-center">
+        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 17.25C3.75 17.0511 3.82902 16.8603 3.96967 16.7197C4.11032 16.579 4.30109 16.5 4.5 16.5H19.5C19.6989 16.5 19.8897 16.579 20.0303 16.7197C20.171 16.8603 20.25 17.0511 20.25 17.25C20.25 17.4489 20.171 17.6397 20.0303 17.7803C19.8897 17.921 19.6989 18 19.5 18H4.5C4.30109 18 4.11032 17.921 3.96967 17.7803C3.82902 17.6397 3.75 17.4489 3.75 17.25ZM3.75 11.25C3.75 11.0511 3.82902 10.8603 3.96967 10.7197C4.11032 10.579 4.30109 10.5 4.5 10.5H19.5C19.6989 10.5 19.8897 10.579 20.0303 10.7197C20.171 10.8603 20.25 11.0511 20.25 11.25C20.25 11.4489 20.171 11.6397 20.0303 11.7803C19.8897 11.921 19.6989 12 19.5 12H4.5C4.30109 12 4.11032 11.921 3.96967 11.7803C3.82902 11.6397 3.75 11.4489 3.75 11.25ZM3.75 5.25C3.75 5.05109 3.82902 4.86032 3.96967 4.71967C4.11032 4.57902 4.30109 4.5 4.5 4.5H19.5C19.6989 4.5 19.8897 4.57902 20.0303 4.71967C20.171 4.86032 20.25 5.05109 20.25 5.25C20.25 5.44891 20.171 5.63968 20.0303 5.78033C19.8897 5.92098 19.6989 6 19.5 6H4.5C4.30109 6 4.11032 5.92098 3.96967 5.78033C3.82902 5.63968 3.75 5.44891 3.75 5.25Z" fill="white"></path>
+        </svg>
+      </div>
+    </header>
+      <aside class="fixed-top w-100 bottom-0">
+        <div class="pb-1">
+          <div class="container px-0">
+            <div class="d-flex flex-column">
+              <div class="d-flex align-items-center justify-content-between p-2">
+                <div class="logo__image">
+                          <a href="/" title="ホーム" rel="home" class="navbar-brand d-flex">
+              <img src="/sites/default/files/logo_0_0.png" alt="大阪美術館" class="" />
+          </a>
+    
+                </div>
+                <div type="button" class="d-flex icon__close">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" class="_h-6 _w-6 ">
+                    <path d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 1 0 5.7 7.11L10.59 12 5.7 16.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 1 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4Z" fill="#fff"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="flex-1 aside__nav d-flex flex-column overflow-y-auto px-10 pt-0">
+                <div class="d-flex flex-column">
+                  <div id="nav-mobile" class="menu__top">
+                    <nav role="navigation" aria-labelledby="main-menu" class="primary-nav block block-menu navigation menu--main">
+                  
+    <ul class="nav navbar-nav">
+                              <li class="nav-item dropdown">
+                    <a href="/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-drupal-link-system-path="&lt;front&gt;">訪れる</a>
+
+                      <ul class="dropdown-menu">
+                  <ul class="nav navbar-nav dropdown-menu">
+                              <li class="nav-item">
+                    <a href="/information" class="nav-link" data-drupal-link-system-path="node/10243">開館時間・休館日・観覧料</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/information?tab=floor" class="nav-link" data-drupal-link-query="{&quot;tab&quot;:&quot;floor&quot;}" data-drupal-link-system-path="node/10243">フロアマップ</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/information?tab=manner" class="nav-link" data-drupal-link-query="{&quot;tab&quot;:&quot;manner&quot;}" data-drupal-link-system-path="node/10243">ご来館のお客様へ</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="https://www.e-tix.jp/osaka-art-museum/" class="nav-link" target="_blank" rel="noopener noreferrer">オンラインチケット</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/access" class="nav-link" data-drupal-link-system-path="node/10252">交通アクセス</a>
+
+                  </li>
+                  </ul>
+  
+            </ul>
+                  </li>
+                                          <li class="nav-item dropdown">
+                    <a href="/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-drupal-link-system-path="&lt;front&gt;">発見する</a>
+
+                      <ul class="dropdown-menu">
+                  <ul class="nav navbar-nav dropdown-menu">
+                              <li class="nav-item">
+                    <a href="/special_exhibition" class="nav-link" data-drupal-link-system-path="node/10229">特別展・特別陳列</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/planned_exhibition" class="nav-link" data-drupal-link-system-path="node/10256">企画展示</a>
+
+                  </li>
+                  </ul>
+  
+            </ul>
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/def_evt" class="nav-link" data-drupal-link-system-path="node/10230">体験する</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/collection" class="nav-link" data-drupal-link-system-path="node/10253">調べる</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/info" class="nav-link" data-drupal-link-system-path="node/10223">お知らせ</a>
+
+                  </li>
+                                          <li class="nav-item dropdown">
+                    <a href="/" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-drupal-link-system-path="&lt;front&gt;">トピックス</a>
+
+                      <ul class="dropdown-menu">
+                  <ul class="nav navbar-nav dropdown-menu">
+                              <li class="nav-item">
+                    <a href="/about" class="nav-link" data-drupal-link-system-path="node/10241">大阪市立美術館とは</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/ug_evt/today" class="nav-link" data-drupal-link-system-path="ug_evt/today">天王寺ギャラリー</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/biken" class="nav-link" data-drupal-link-system-path="node/10247">美術研究所</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/unique-venue" class="nav-link" data-drupal-link-system-path="node/10250">ユニークべニュー</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/shop" class="nav-link" data-drupal-link-system-path="node/10242">ミュージアムショップ・ カフェ</a>
+
+                  </li>
+                                          <li class="nav-item">
+                    <a href="/spot" class="nav-link" data-drupal-link-system-path="node/10246">周辺施設と観光</a>
+
+                  </li>
+                  </ul>
+  
+            </ul>
+                  </li>
+                  </ul>
+  
+
+
+  </nav>
+
+                  </div>
+                  <div class="box_social d-flex align-items-center gap-3">
+                    <a href="https://x.com/ocmfa_since1936" target="_blank" rel="noopener noreferrer" aria-label="X（旧Twitter）公式アカウント">
+                      <img src="/themes/custom/osaka_museum/images/x.png" alt="X（旧Twitter）" width="44" height="44">
+                    </a>
+                    <a href="https://www.instagram.com/ocmfa_since1936/" target="_blank" rel="noopener noreferrer" aria-label="Instagram公式アカウント">
+                      <img src="/themes/custom/osaka_museum/images/insta.png" alt="Instagram" width="44" height="44">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCwavvoD1PqL3kshkwNOuIoA" target="_blank" rel="noopener noreferrer" aria-label="YouTube公式チャンネル">
+                      <img src="/themes/custom/osaka_museum/images/youtube.png" alt="YouTube" width="44" height="44">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            <div class="d-flex align-items-center justify-content-between flex-column box_option_bottom w-100 position-absolute start-0 bottom-0 pt-3 pb-4 px-4">
+              <div class="d-flex align-items-center justify-content-between w-100 flex-wrap">
+                <div class="d-flex items-center justify-content-around gap-md-3 ">
+                  <div class="box__access w-1/2">
+                    <div class="btn__access d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#modal_access_sp">
+                      文字サイズ·色
+                      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24" class="_h-6 _w-6 ml-1 fill-black">
+                        <path d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41Z"></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="box-language">
+                    <a href="/language">Language</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="modal fade" id="modal_access_sp" tabindex="-1" aria-labelledby="modal_access_sp_label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="box__content--access">
+            <div class="d-flex flex-column">
+              <div class="d-flex justify-content-between flex-wrap">
+                <span id="modal_access_sp_label" class="pr-4">文字サイズ</span>
+                <div class="d-flex align-items-center justify-content-center gap-2">
+                  <button type="button" class="btn btn-outline btn-zoom-in">拡大</button>
+                  <button type="button" class="btn btn-outline btn-zoom-out">標準</button>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between mt-3 gap-2 flex-wrap">
+                <span class="pr-4">背景色</span>
+                <div class="d-flex align-items-center justify-content-between box_color">
+                  <button type="button" class="white-theme outline-offset-2">白</button>
+                  <button type="button" class="dark-theme outline-offset-2">黒</button>
+                  <button type="button" class="blue-theme outline-offset-2">青</button>
+                </div>
+              </div>
+            </div>
+            <div class="mt-3 d-flex justify-content-center">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">閉じる</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main id="contents" class="flex-1">
+      
+              
+      
+      
+  <div>
+    <div data-drupal-messages-fallback class="hidden messages-list"></div>
+
+<div id="block-osaka-museum-content" class="block block-system block-system-main-block">
+  
+    
+      <div class="block__content">
+      
+<article data-history-node-id="10343" class="node node--type-special-exhibition special-exhibition is-promoted full clearfix">
+  <div class="exhibit-detail node-detail pt-3">
+    <div class="container">
+      <div class="breadcrumbs d-flex align-items-center flex-wrap p-2 mb-3">
+        <ul class="d-flex align-items-center flex-wrap m-0">
+          <li class="d-flex align-items-center">
+            <svg class="me-2" xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16" fill="none">
+              <path d="M13.3503 15.1503H10.2162C9.51976 15.1503 8.93937 14.5697 8.93937 13.8729V11.3182C8.93937 11.0627 8.73043 10.8537 8.47505 10.8537H6.54816C6.29279 10.8537 6.08385 11.0627 6.08385 11.3182V13.8497C6.08385 14.5464 5.50346 15.127 4.80699 15.127H1.62646C0.929989 15.127 0.349599 14.5464 0.349599 13.8497V5.74431C0.349599 5.39594 0.535324 5.0708 0.837127 4.885L6.96604 1.0065C7.29106 0.797479 7.73216 0.797479 8.05717 1.0065L14.1861 4.885C14.4879 5.0708 14.6504 5.39594 14.6504 5.74431V13.8265C14.6504 14.5697 14.07 15.1503 13.3503 15.1503ZM6.52495 10.0409H8.45184C9.14831 10.0409 9.7287 10.6215 9.7287 11.3182V13.8497C9.7287 14.1052 9.93764 14.3142 10.193 14.3142H13.3503C13.6057 14.3142 13.8146 14.1052 13.8146 13.8497V5.76754C13.8146 5.69786 13.7682 5.62819 13.7218 5.58174L7.61608 1.70324C7.54643 1.65679 7.45357 1.65679 7.40714 1.70324L1.27822 5.58174C1.20858 5.62819 1.18536 5.69786 1.18536 5.76754V13.8729C1.18536 14.1284 1.3943 14.3374 1.64967 14.3374H4.80699C5.06236 14.3374 5.2713 14.1284 5.2713 13.8729V11.3182C5.24809 10.6215 5.82848 10.0409 6.52495 10.0409Z" fill="black"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M7.51145 2.05106L13.465 5.83294V13.8497C13.465 13.912 13.4126 13.9644 13.3503 13.9644H10.193C10.1307 13.9644 10.0783 13.912 10.0783 13.8497V11.3182C10.0783 10.4283 9.34138 9.69112 8.45184 9.69112H6.52495C5.63986 9.69112 4.89529 10.4252 4.9217 11.3237V13.8729C4.9217 13.9352 4.86929 13.9877 4.80699 13.9877H1.64967C1.58738 13.9877 1.53496 13.9352 1.53496 13.8729V5.83311L7.51145 2.05106ZM1.27822 5.58174L7.40714 1.70324C7.45357 1.65679 7.54643 1.65679 7.61608 1.70324L13.7218 5.58174C13.7682 5.62819 13.8146 5.69786 13.8146 5.76754V13.8497C13.8146 14.1052 13.6057 14.3142 13.3503 14.3142H10.193C9.93764 14.3142 9.7287 14.1052 9.7287 13.8497V11.3182C9.7287 10.6215 9.14831 10.0409 8.45184 10.0409H6.52495C5.82848 10.0409 5.24809 10.6215 5.2713 11.3182V13.8729C5.2713 14.1284 5.06236 14.3374 4.80699 14.3374H1.64967C1.3943 14.3374 1.18536 14.1284 1.18536 13.8729V5.76754C1.18536 5.69786 1.20858 5.62819 1.27822 5.58174ZM13.3503 15.5H10.2162C9.32668 15.5 8.58977 14.7628 8.58977 13.8729V11.3182C8.58977 11.2559 8.53735 11.2035 8.47505 11.2035H6.54816C6.48587 11.2035 6.43345 11.2559 6.43345 11.3182V13.8497C6.43345 14.7396 5.69654 15.4768 4.80699 15.4768H1.62646C0.736911 15.4768 0 14.7396 0 13.8497V5.74431C0 5.27131 0.251303 4.83591 0.651944 4.58836L6.77814 0.711575C7.21781 0.429475 7.80541 0.429475 8.24508 0.711576C8.24546 0.711821 8.24584 0.712066 8.24622 0.712311L14.3713 4.58838C14.7853 4.84424 15 5.28759 15 5.74431V13.8265C15 14.7587 14.2671 15.5 13.3503 15.5ZM14.1861 4.885L8.05717 1.0065C7.73216 0.797479 7.29106 0.797479 6.96604 1.0065L0.837127 4.885C0.535324 5.0708 0.349599 5.39594 0.349599 5.74431V13.8497C0.349599 14.5464 0.929989 15.127 1.62646 15.127H4.80699C5.50346 15.127 6.08385 14.5464 6.08385 13.8497V11.3182C6.08385 11.0627 6.29279 10.8537 6.54816 10.8537H8.47505C8.73043 10.8537 8.93937 11.0627 8.93937 11.3182V13.8729C8.93937 14.5697 9.51976 15.1503 10.2162 15.1503H13.3503C14.07 15.1503 14.6504 14.5697 14.6504 13.8265V5.74431C14.6504 5.39594 14.4879 5.0708 14.1861 4.885Z" fill="black"></path>
+            </svg>
+            <a href="/">Home</a>
+          </li>
+          <li class="d-flex align-items-center">
+            <a href="/special_exhibition">特別展・特別陳列</a>
+          </li>
+          <li>躍動する明代の書－台北・何創時（かそうじ）コレクションの至宝</li>
+        </ul>
+      </div>
+
+      <div class="title">
+        <h1 class="py-4">躍動する明代の書－台北・何創時（かそうじ）コレクションの至宝</h1>
+        <div class="type-exhibit">
+          特別展
+        </div>
+                  <div class="box-date d-flex flex-wrap align-items-center mb-2">
+            <svg class="flex-shrink-0" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <g clip-path="url(#clip0_1490_3353)">
+            <rect width="20" height="20" fill="white" fill-opacity="0.01"/>
+            <path d="M17.5024 0.00195312C18.1655 0.0019548 18.8012 0.265536 19.27 0.734375C19.7389 1.20322 20.0024 1.83891 20.0024 2.50195V17.502C20.0024 18.165 19.7389 18.8007 19.27 19.2695C18.8012 19.7384 18.1655 20.002 17.5024 20.002H2.50244C1.8394 20.002 1.2037 19.7384 0.734863 19.2695C0.266022 18.8007 0.00244141 18.165 0.00244141 17.502V2.50195C0.00244141 1.83891 0.266022 1.20322 0.734863 0.734375C1.2037 0.265536 1.8394 0.00195313 2.50244 0.00195312H17.5024ZM2.50244 3.75195C1.81244 3.75195 1.25244 4.23199 1.25244 4.82324V17.6807C1.25244 18.2719 1.81244 18.752 2.50244 18.752H17.5024C18.1924 18.7519 18.7524 18.2719 18.7524 17.6807V4.82324C18.7524 4.23199 18.1924 3.75196 17.5024 3.75195H2.50244ZM4.37744 13.752C4.70896 13.752 5.02681 13.8837 5.26123 14.1182C5.49565 14.3526 5.62744 14.6704 5.62744 15.002C5.62744 15.3335 5.49565 15.6513 5.26123 15.8857C5.02681 16.1202 4.70896 16.252 4.37744 16.252C4.04592 16.252 3.72807 16.1202 3.49365 15.8857C3.25923 15.6513 3.12744 15.3335 3.12744 15.002C3.12744 14.6704 3.25923 14.3526 3.49365 14.1182C3.72807 13.8837 4.04592 13.752 4.37744 13.752ZM8.12744 13.752C8.45896 13.752 8.77681 13.8837 9.01123 14.1182C9.24565 14.3526 9.37744 14.6704 9.37744 15.002C9.37744 15.3335 9.24565 15.6513 9.01123 15.8857C8.77681 16.1202 8.45896 16.252 8.12744 16.252C7.79592 16.252 7.47807 16.1202 7.24365 15.8857C7.00923 15.6513 6.87744 15.3335 6.87744 15.002C6.87744 14.6704 7.00923 14.3526 7.24365 14.1182C7.47807 13.8837 7.79592 13.752 8.12744 13.752ZM11.8774 13.752C12.209 13.752 12.5268 13.8837 12.7612 14.1182C12.9956 14.3526 13.1274 14.6704 13.1274 15.002C13.1274 15.3335 12.9956 15.6513 12.7612 15.8857C12.5268 16.1202 12.209 16.252 11.8774 16.252C11.5459 16.252 11.2281 16.1202 10.9937 15.8857C10.7592 15.6513 10.6274 15.3335 10.6274 15.002C10.6274 14.6704 10.7592 14.3526 10.9937 14.1182C11.2281 13.8837 11.5459 13.752 11.8774 13.752ZM4.37744 10.002C4.70896 10.002 5.02681 10.1337 5.26123 10.3682C5.49565 10.6026 5.62744 10.9204 5.62744 11.252C5.62744 11.5835 5.49565 11.9013 5.26123 12.1357C5.02681 12.3702 4.70896 12.502 4.37744 12.502C4.04592 12.502 3.72807 12.3702 3.49365 12.1357C3.25923 11.9013 3.12744 11.5835 3.12744 11.252C3.12744 10.9204 3.25923 10.6026 3.49365 10.3682C3.72807 10.1337 4.04592 10.002 4.37744 10.002ZM8.12744 10.002C8.45896 10.002 8.77681 10.1337 9.01123 10.3682C9.24565 10.6026 9.37744 10.9204 9.37744 11.252C9.37744 11.5835 9.24565 11.9013 9.01123 12.1357C8.77681 12.3702 8.45896 12.502 8.12744 12.502C7.79592 12.502 7.47807 12.3702 7.24365 12.1357C7.00923 11.9013 6.87744 11.5835 6.87744 11.252C6.87744 10.9204 7.00923 10.6026 7.24365 10.3682C7.47807 10.1337 7.79592 10.002 8.12744 10.002ZM11.8774 10.002C12.209 10.002 12.5268 10.1337 12.7612 10.3682C12.9956 10.6026 13.1274 10.9204 13.1274 11.252C13.1274 11.5835 12.9956 11.9013 12.7612 12.1357C12.5268 12.3702 12.209 12.502 11.8774 12.502C11.5459 12.502 11.2281 12.3702 10.9937 12.1357C10.7592 11.9013 10.6274 11.5835 10.6274 11.252C10.6274 10.9204 10.7592 10.6026 10.9937 10.3682C11.2281 10.1337 11.5459 10.002 11.8774 10.002ZM15.6274 10.002C15.959 10.002 16.2768 10.1337 16.5112 10.3682C16.7456 10.6026 16.8774 10.9204 16.8774 11.252C16.8774 11.5835 16.7456 11.9013 16.5112 12.1357C16.2768 12.3702 15.959 12.502 15.6274 12.502C15.2959 12.502 14.9781 12.3702 14.7437 12.1357C14.5092 11.9013 14.3774 11.5835 14.3774 11.252C14.3774 10.9204 14.5092 10.6026 14.7437 10.3682C14.9781 10.1337 15.2959 10.002 15.6274 10.002ZM8.12744 6.25195C8.45896 6.25196 8.77681 6.38375 9.01123 6.61816C9.24565 6.85258 9.37744 7.17043 9.37744 7.50195C9.37744 7.83347 9.24565 8.15132 9.01123 8.38574C8.77681 8.62016 8.45896 8.75195 8.12744 8.75195C7.79592 8.75195 7.47807 8.62016 7.24365 8.38574C7.00923 8.15132 6.87744 7.83347 6.87744 7.50195C6.87744 7.17043 7.00923 6.85258 7.24365 6.61816C7.47807 6.38375 7.79592 6.25195 8.12744 6.25195ZM11.8774 6.25195C12.209 6.25196 12.5268 6.38375 12.7612 6.61816C12.9956 6.85258 13.1274 7.17043 13.1274 7.50195C13.1274 7.83347 12.9956 8.15132 12.7612 8.38574C12.5268 8.62016 12.209 8.75195 11.8774 8.75195C11.5459 8.75195 11.2281 8.62016 10.9937 8.38574C10.7592 8.15132 10.6274 7.83347 10.6274 7.50195C10.6274 7.17043 10.7592 6.85258 10.9937 6.61816C11.2281 6.38375 11.5459 6.25195 11.8774 6.25195ZM15.6274 6.25195C15.959 6.25196 16.2768 6.38375 16.5112 6.61816C16.7456 6.85258 16.8774 7.17043 16.8774 7.50195C16.8774 7.83347 16.7456 8.15132 16.5112 8.38574C16.2768 8.62016 15.959 8.75195 15.6274 8.75195C15.2959 8.75195 14.9781 8.62016 14.7437 8.38574C14.5092 8.15132 14.3774 7.83347 14.3774 7.50195C14.3774 7.17043 14.5092 6.85258 14.7437 6.61816C14.9781 6.38375 15.2959 6.25195 15.6274 6.25195Z" fill="#212529"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_1490_3353">
+            <rect width="20" height="20" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+            2026.10.09～12.20
+          </div>
+                <div class="box-share" tabindex="0" data-bs-toggle="modal" data-bs-target="#shareModal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+            <rect x="0.5" y="0.5" width="37" height="37" rx="4.3" fill="white" fill-opacity="0.01"/>
+            <rect x="0.5" y="0.5" width="37" height="37" rx="4.3" stroke="#0D6EFD"/>
+            <g clip-path="url(#clip0_1490_3370)">
+              <rect width="22" height="22" transform="translate(8 8)" fill="white" fill-opacity="0.01"/>
+              <path d="M25.9536 8.04785C26.7474 7.90555 27.566 8.04702 28.2661 8.44727C28.9663 8.84753 29.5036 9.48104 29.7837 10.2373C30.0638 10.9936 30.0688 11.8242 29.7983 12.584C29.5279 13.3437 28.9991 13.9844 28.3042 14.3936C27.6092 14.8027 26.7922 14.9545 25.9966 14.8223C25.201 14.69 24.477 14.2819 23.9517 13.6699L14.7144 17.96C14.9267 18.6329 14.9267 19.3553 14.7144 20.0283L23.9517 24.3184C24.5069 23.6726 25.2825 23.2562 26.1274 23.1494C26.9723 23.0427 27.8265 23.253 28.5249 23.7402C29.2234 24.2276 29.7163 24.9572 29.9077 25.7871C30.0991 26.617 29.9755 27.4884 29.561 28.2324C29.1466 28.9764 28.4709 29.5404 27.6646 29.8145C26.8582 30.0885 25.9787 30.0531 25.1968 29.7158C24.4148 29.3784 23.7851 28.7629 23.4312 27.9883C23.0772 27.2136 23.0239 26.3345 23.2808 25.5225L14.0435 21.2324C13.5862 21.7653 12.977 22.1461 12.2974 22.3223C11.6177 22.4984 10.9001 22.4615 10.2417 22.2178C9.58317 21.974 9.01495 21.5343 8.61377 20.958C8.21259 20.3817 7.99756 19.6963 7.99756 18.9941C7.99759 18.292 8.21262 17.6066 8.61377 17.0303C9.01494 16.4541 9.58325 16.0143 10.2417 15.7705C10.9001 15.5268 11.6177 15.4909 12.2974 15.667C12.9769 15.8432 13.5863 16.2231 14.0435 16.7559L23.2808 12.4658C23.1756 12.1312 23.1222 11.7824 23.1226 11.4316C23.1225 10.6252 23.4059 9.84416 23.9233 9.22559C24.4408 8.60697 25.1597 8.1902 25.9536 8.04785Z" fill="#0D6EFD"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_1490_3370">
+                <rect width="22" height="22" fill="white" transform="translate(8 8)"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div class="content">
+        <div class="feature-image">
+                                  <img src="/sites/default/files/2026-08/kasoji_web_banner0805.jpg"
+                 alt="何創時バナー" />
+                  </div>
+
+        <nav id="toc" class="mt-4 mb-5"></nav>
+
+        <div class="body-content">
+          
+          <p></p>
+          <p></p>
+        </div>
+
+        <div class="exhibit_information">
+                    <div class="image my-2">
+          </div>
+
+          <div class="event_details">
+                      </div>
+        </div>
+
+        <div class="event_list">
+                  </div>
+
+        <div>
+          
+            <div class="text-content clearfix field field--name-body field--type-text-with-summary field--label-hidden field__item"><h2>会期</h2><p>2026年（令和8年）10月9日（金）～12月20日（日）<br>※本展は予約制ではありません。<br>※災害などにより、変更となる場合があります。</p><h2>時間</h2><p>午前9時30分〜午後5時（入館は午後4時30分まで）</p><h2>休館日</h2><p>月曜日（ただし、10月12日（月・祝）・11月23日（月・祝）は開館）、10月13日、11月24日<br>※災害などにより臨時で休館となる場合があります。</p><h2>観覧料（税込）</h2><p>一　般　2,000円（1,800円）<br>高大生　1,200円（1,000円）<br>小中生　　500円（　300円）</p><p>※本展の会期中、展示替えはございません。<br>※（　）内は前売りおよび20名以上の団体料金。<br>※前売券の販売は、2026年8月6日（木）午前10時から10月8日（木）午後11時59分まで<br>※本展の観覧券で、企画展示もご覧いただけます。（観覧当日のみ）<br>※未就学児、障がい者手帳などをお持ちの方（介護者1名を含む）は無料（要証明）。障がい者手帳などは、日本の法律に基づき交付されたものに限ります。（受給者証は対象外）<br>※大阪市内在住の65歳以上の方も一般料金が必要です。<br>※学生の方は、ご来館時に学生証をご提示ください。</p><h2>チケット販売</h2><p><a href="https://www.e-tix.jp/mindai/"><img src="/sites/default/files/inline-images/bnr_etix_osaka.png" data-entity-uuid="533b9e7c-bc79-4cd7-b8ef-baff660e666c" data-entity-type="file" width="337" height="92" loading="lazy"></a></p><p><a href="https://www.e-tix.jp/mindai/">公式オンラインチケット</a>（e-tix）<br><a href="https://art-ap.passes.jp/user/e/calligraphy-of-the-ming-dynasty">ART PASS</a><br><a href="https://7ticket.jp/sp/calligraphy-of-the-ming-dynasty/">セブンチケット</a><br><a href="https://l-tike.com/calligraphy-of-the-ming-dynasty/">ローソンチケット</a>（Ｌコード：52237）<br><a href="https://w.pia.jp/t/calligraphy-of-the-ming-dynasty/">チケットぴあ</a>（Ｐコード：687-479）<br><a href="https://eplus.jp/calligraphy-of-the-ming-dynasty/">イープラス</a><br><a href="https://www.cnplayguide.com/calligraphy-of-the-ming-dynasty/">CNプレイガイド</a><br><a href="https://evt.asoview.com/calligraphy-of-the-ming-dynasty">アソビュー！</a></p><p><span style="-webkit-text-stroke-width:0px;background-color:rgb(248, 249, 250);color:rgb(43, 53, 59);display:inline !important;float:none;font-family:&quot;Noto Sans JP&quot;, sans-serif;font-size:16px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">※公式オンラインチケットや各プレイガイドでは、割引制度を適用したチケットは販売しておりません。</span><br><span style="-webkit-text-stroke-width:0px;background-color:rgb(248, 249, 250);color:rgb(43, 53, 59);display:inline !important;float:none;font-family:&quot;Noto Sans JP&quot;, sans-serif;font-size:16px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">※チケットの購入時に手数料がかかる場合があります。</span><br><span style="-webkit-text-stroke-width:0px;background-color:rgb(248, 249, 250);color:rgb(43, 53, 59);display:inline !important;float:none;font-family:&quot;Noto Sans JP&quot;, sans-serif;font-size:16px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">※前売券は、2026年8月6日（木）午前10時00分から2026年10月8日（木）午後11時59分まで販売。</span><br><span style="-webkit-text-stroke-width:0px;background-color:rgb(248, 249, 250);color:rgb(43, 53, 59);display:inline !important;float:none;font-family:&quot;Noto Sans JP&quot;, sans-serif;font-size:16px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">※当日券は、2026年10月9日（金）から12月20日（日）まで以下で販売。</span><br><span style="-webkit-text-stroke-width:0px;background-color:rgb(248, 249, 250);color:rgb(43, 53, 59);display:inline !important;float:none;font-family:&quot;Noto Sans JP&quot;, sans-serif;font-size:16px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">・美術館エントランス：開館日の午前9時30分～午後4時30分まで。</span><br><span style="-webkit-text-stroke-width:0px;background-color:rgb(248, 249, 250);color:rgb(43, 53, 59);display:inline !important;float:none;font-family:&quot;Noto Sans JP&quot;, sans-serif;font-size:16px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">・公式オンラインチケット：12月20日（日）午後3時まで。</span><br><span style="-webkit-text-stroke-width:0px;background-color:rgb(248, 249, 250);color:rgb(43, 53, 59);display:inline !important;float:none;font-family:&quot;Noto Sans JP&quot;, sans-serif;font-size:16px;font-style:normal;font-variant-caps:normal;font-variant-ligatures:normal;font-weight:400;letter-spacing:normal;orphans:2;text-align:start;text-decoration-color:initial;text-decoration-style:initial;text-decoration-thickness:initial;text-indent:0px;text-transform:none;white-space:normal;widows:2;word-spacing:0px;">・各プレイガイド：12月20日（日）午後4時まで。</span><br>&nbsp;</p><h3>先行ペア割チケット</h3><p>前売料金よりもお得なチケットです。2名で1枚づつのご利用やお一人で2回観覧されたい方におすすめです。<br>販売期間：2026年8月6日（木）午前10時から10月8日（木）午後11時59分まで<br>料　　金：3,400円（税込・一般のみ）<br>販売場所：<a href="https://www.e-tix.jp/mindai/">公式オンラインチケット</a>（e-tix）、<a href="https://7ticket.jp/sp/calligraphy-of-the-ming-dynasty/">セブンチケット</a></p><h2>主催</h2><p>大阪市立美術館、毎日新聞社、NHKエンタープライズ近畿</p><h2>特別協力</h2><p>台北・何創時書法芸術基金会</p><h2>後援</h2><p>公益財団法人大阪観光局</p><h2>概要</h2><p>何創時書法芸術基金会は何国慶（かこくけい）氏によって1995年に台北で創設された財団で、昨年30周年を迎えました。明・清時代の書を中心に多数の作品を蒐集し、展覧会・講座などの活動を通じて書芸術の振興を図っています。日本の書家や研究者で訪れる方も多く、注目されています。<br>この度は、そのコレクションの中でも質量ともに最も充実している明代中期から明末清初の書に焦点をあて、日本初公開の作品を多数含む82件を精選して展示します。江戸時代には文徴明（ぶんちょうめい）・董其昌（とうきしょう）らの書をもとに、唐様（からよう）が流行しました。黄檗（おうばく）僧らがもたらした明末清初の書は、今日の書壇でも手本として習われています。<br>明代の書は多様性に富み、個性あふれる作品が揃っています。本展を通じて、躍動する筆墨の美をぜひお楽しみください。</p><p>&nbsp;</p><h3>台北・何創時書法芸術基金会（何創時コレクション）とは</h3><p>台北にある何創時書法芸術基金会は、董事長（とうじちょう、日本でいう理事長）で収蔵家の何国慶氏が、1995年に父の名を冠して設立した財団。所蔵品は明・清時代の書を中核とし、王陽明、徐渭（じょい）、王鐸、張瑞図、黄道周、倪元璐ら明代の賢人たち2,000余人の書画作品2,500余件を収蔵しています。<br>同財団は年間を通じて展覧会や学術講座を開催し、国際的な芸術・文化交流の拡大に積極的に取り組んでいます。これまでに日本をはじめ重要な書の特別展にも作品を貸出し、東アジアの書道交流の架け橋を築いてきました。近年では展示室「創時講堂」や「オンライン博物館」を開設し、学術研究のために収蔵資料を公開することで、書道文化の発展を継承しています。<br>今回、当館で開催する特別展では、同財団が誇る明代の書画コレクションを日本において大規模に展示します。展示作品は合計82件で、その9割近い72件が日本での初公開となります。</p><h2>主な展示作品</h2><p>※作品は全て台北何創時書法芸術基金会蔵</p><p>&nbsp;</p><img src="/sites/default/files/inline-images/%E2%91%A0%E7%A5%9D%E5%85%81%E6%98%8E%20%E8%8D%89%E6%9B%B8%E8%A0%B6%E8%A1%A3%E4%BA%94%E7%AF%87%E5%8D%B7_0.jpg" data-entity-uuid="7e57f2de-c4c0-4692-b708-305f8718495f" data-entity-type="file" width="436" height="190" loading="lazy"><p>祝允明「草書蚕衣五篇」（部分）明時代・嘉靖元年（1522）<br>&nbsp;</p><p>&nbsp;</p><img src="/sites/default/files/inline-images/%E2%91%A1%E6%96%87%E5%BE%B5%E6%98%8E%20%20%E9%99%B6%E6%B7%B5%E6%98%8E%E9%A3%B2%E9%85%92%E8%A9%A9%E5%8D%B7.jpg" data-entity-uuid="61e37224-f4d8-4616-94cd-fb428c16eddc" data-entity-type="file" width="434" height="250" loading="lazy"><p>文徴明「行書陶淵明飲酒詩」（部分）明時代・嘉靖34年（1555）</p><p><br>&nbsp;</p><img src="/sites/default/files/inline-images/%E2%91%A2%E7%8E%8B%E9%99%BD%E6%98%8E%20%E8%8D%89%E6%9B%B8%E4%B8%83%E8%A8%80%E8%A9%A9%E5%8D%B7.jpg" data-entity-uuid="45d764e7-e959-4a00-934a-a72d2abfb127" data-entity-type="file" width="436" height="132" loading="lazy"><p>王陽明「草書七言詩」（部分）明時代・正徳14年（1519）</p><p><br>&nbsp;</p><img src="/sites/default/files/inline-images/%E2%91%A3%E8%91%A3%E5%85%B6%E6%98%8C%20%E8%8D%89%E6%9B%B8%E8%AB%96%E6%9B%B8%E8%88%87%E8%87%A8%E7%8E%8B%E7%BE%B2%E4%B9%8B%E5%8D%81%E4%B8%83%E5%B8%96%E5%8D%B7.jpg" data-entity-uuid="1373f514-f59b-45fb-ad7c-75500fab803c" data-entity-type="file" width="442" height="204" loading="lazy"><p>董其昌「草書論書与臨王羲之十七帖」（部分）明時代・万暦35年（1607）<br>&nbsp;</p><img src="/sites/default/files/inline-images/%E2%91%A4%E5%BC%B5%E7%91%9E%E5%9C%96%20%E8%8D%89%E6%9B%B8%E7%8E%8B%E4%B8%96%E6%87%8B%E8%A9%A9%E6%A2%9D%E5%B9%85.jpg" data-entity-uuid="3af0b62f-2d30-4e33-9a03-3d0486c39f36" data-entity-type="file" width="135" height="468" loading="lazy"><p>張瑞図「草書王世懋詩」明時代・16～17世紀<br>&nbsp;</p><img src="/sites/default/files/inline-images/%E2%91%A5%E7%8E%8B%E9%90%B8%20%E8%8D%89%E6%9B%B8%E8%87%A8%E7%8E%8B%E7%BE%B2%E4%B9%8B%E6%84%8F%E9%81%A9%E5%B8%96%E6%A2%9D%E5%B9%85.jpg" data-entity-uuid="00901a68-e913-40f2-9155-0107ce7ba6f2" data-entity-type="file" width="136" height="708" loading="lazy"><p>王鐸「臨王羲之意適帖」明時代・17世紀<br>&nbsp;</p><img src="/sites/default/files/inline-images/%E2%91%A6%E5%80%AA%E5%85%83%E7%92%90%20%E8%A1%8C%E6%9B%B8%E6%9D%8E%E5%95%86%E9%9A%B1%E8%A9%A9%E6%A2%9D%E5%B9%85.jpg" data-entity-uuid="3b18b7cc-f203-4792-b901-df5d40137a2b" data-entity-type="file" width="136" height="487" loading="lazy"><p>倪元璐「行書李商隠詩」明時代・17世紀<br>&nbsp;</p><img src="/sites/default/files/inline-images/%E2%91%A7%E5%82%85%E5%B1%B1%20%E9%86%89%E5%BE%8C%E6%B5%AA%E6%9B%B8%E6%A2%9D%E5%B9%85.jpg" data-entity-uuid="3d5901ef-6b51-4ed3-8449-875445d5767b" data-entity-type="file" width="137" height="471" loading="lazy"><p>傅山「草書酔後浪書」明～清時代・17世紀<br>&nbsp;</p><img src="/sites/default/files/inline-images/%E2%91%A8%E5%AE%8B%E7%8E%A8%20%E9%9A%B8%E6%9B%B8%E9%BB%91%E5%85%92%E5%83%8F%E8%B4%8A.jpg" data-entity-uuid="a40f6f42-ecda-4aa7-896d-a51f07808e5e" data-entity-type="file" width="136" height="499" loading="lazy"><p>宋玨「隷書黒児像賛」明時代・万暦45年（1617）</p><h2>関連イベント</h2><h3><strong>レクチャー</strong></h3><p>日　時：2026年10月17日（土）、2026年11月7日（土）いずれも午後2時～3時<br>講　師：弓野隆之（当館主任学芸員）<br>会　場：１階じゃおりうむ<br>定　員：100名（先着順）<br>参加費：無料（ただし、当日の特別展の観覧券が必要）<br>※事前申込は不要です。当日の午後1時30分より整理券を配布します。</p><p>&nbsp;</p><h3><strong>席上揮毫会（せきじょうきごうかい）</strong></h3><p>2026年11月21日（土）・22日（日）に、毎日書道会所属の書家が筆を揮う（ふるう）「席上揮毫会」を開催いたします。当日の本展観覧券の提示で鑑賞可能です。ぜひこの機会に圧巻の書の筆づかいをご覧ください。<br>&nbsp;</p><p>日時　：2026年11月21日（土）<br>　　　　①午後1時～午後1時40分（予定）※午後0時15分開場（予定）<br>　　　　②午後3時～午後4時（予定）※午後2時15分開場（予定）</p><p>　　　　2026年11月22日（日）<br>　　　　①午後1時～午後1時40分（予定）※午後0時15分開場（予定）<br>　　　　②午後3時～午後3時40分（予定）※午後2時15分開場（予定）</p><p>揮毫者：2026年11月21日（土）<br>　　　　①森本子星氏（毎日書道展審査会員、北辰書道会）<br>　　　　　藤野北辰氏（毎日書道会参事、八玄青鏡会）<br>　　　　②久保田心耀氏（毎日書道展審査会員、尋牛会）<br>　　　　　神田浩山氏（毎日書道会評議員、滋賀書研）<br>　　　　　岡本正志氏（毎日書道会評議員、奎星会）</p><p>　　　　2026年11月22日（日）<br>　　　　①西野桃笠氏（毎日書道展審査会員、創玄書道会）<br>　　　　　柳谷金平氏（毎日書道展審査会員、独立書人団）<br>　　　　②小林琴水氏（毎日書道会参事、書道芸術院）<br>　　　　　北野攝山氏（毎日書道会理事、書団響）</p><p>司会(両日)：寺田白雲氏（毎日書道展審査会員、書団響）<br>場所　：大阪市立美術館２階南側展示室内<br>参加費：無料<br>※当日の本展観覧券の提示が必要です。<br>※予約不要。各回の開始45分前から、揮毫会場入口にて整理券を配布します。<br>※各回完全入替制です。<br>※会場の混雑状況により、入場を制限する場合があります。</p><p>&nbsp;</p><h3>講演会</h3><h4>講演会①</h4><p>日　時：2026年11月25日（水）午後1時～1時30分<br>登壇者：何　国慶 氏（何創時書法芸術基金会董事長）<br>テーマ：「明代書法中的情感表現（明代書法における感情表現）」<br>&nbsp;</p><h4>講演会②</h4><p>日　時：2026年11月25日（水）午後2時～3時<br>登壇者：富田　淳 氏（九州国立博物館館長）、鍋島　稲子 氏（台東区立書道博物館館長）<br>テーマ：「明代書画の光と闇」&nbsp;<br>&nbsp;</p><h4>講演会③</h4><p>日　時：12月5日（土）午後2時～3時 &nbsp;<br>登壇者：飛田　優樹 氏（黒川古文化研究所研究員）<br>テーマ：「明末の書はなぜ巨大化したのか？ー長条幅誕生の謎に迫るー」&nbsp;<br>&nbsp;</p><h4>講演会④</h4><p>日　時：12月19日（土）午後2時～3時<br>登壇者：中村　史朗 氏（滋賀大学名誉教授）<br>テーマ：「躍動する筆墨の美を味わうー何創時コレクションの至宝―」&nbsp;<br>&nbsp;</p><p>会　場：各日とも　1階じゃおりうむ<br>参加費：各回　無料（ただし、参加当日の本展観覧券の提示が必要）<br>※予約不要、当日30分前よりじゃおりうむ前にて整理券を配布します。&nbsp;<br>&nbsp;</p><h2>注目情報</h2><h3>10月の平日限定プレゼント</h3><img src="/sites/default/files/inline-images/%E3%82%B9%E3%83%86%E3%83%83%E3%82%AB%E3%83%BC%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8.jpg" data-entity-uuid="28e11c24-b8d2-42fb-92e4-343f6f511967" data-entity-type="file" alt="ステッカーイメージ" width="246" height="229" loading="lazy"><p>※画像はイメージです。</p><p><span style="color:black;font-family:メイリオ;font-size:11.0pt;language:ja;mso-ascii-font-family:メイリオ;mso-bidi-font-family:メイリオ;mso-color-index:1;mso-fareast-font-family:メイリオ;mso-font-kerning:1.0pt;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-color:black;mso-style-textfill-fill-themecolor:text1;mso-style-textfill-type:solid;">展覧会オリジナルの黒猫ステッカー（非売品）を10月の平日限定で、各日先着100名様にプレゼント。スマホや手帳に貼って楽しめる、思わず持ち歩きたくなる愛らしいデザインです。</span></p><p><span style="color:black;font-family:メイリオ;font-size:11.0pt;language:ja;mso-ascii-font-family:メイリオ;mso-bidi-font-family:メイリオ;mso-color-index:1;mso-fareast-font-family:メイリオ;mso-font-kerning:1.0pt;mso-style-textfill-fill-alpha:100.0%;mso-style-textfill-fill-color:black;mso-style-textfill-fill-themecolor:text1;mso-style-textfill-type:solid;">本ステッカーは展示作品の宋玨《隷書黒児像賛》に描かれた黒猫「黒児」をモチーフにしており、主人を慕い続けた愛猫の心温まる物語にちなんだ、本展限定の特別デザインです。</span><br>&nbsp;</p><h3>「今日の一文字」をSNSでご紹介</h3><img src="/sites/default/files/inline-images/%E4%BB%8A%E6%97%A5%E3%81%AE%EF%BC%91%E6%96%87%E5%AD%97%E3%80%8C%E7%A2%A7%E3%80%8D.jpg" data-entity-uuid="14d27509-8fa8-4c82-8864-343f610385e7" data-entity-type="file" alt="今日の一文字" width="238" height="317" loading="lazy"><p>※画像はイメージです。</p><p>会期中に毎日、出品作品の中から、展覧会担当者が選ぶ「今日の一文字」を大阪市立美術館の公式X（旧Twitter）（https://x.com/ocmfa_since1936）にて発信します。その日の気分に重ねたり、お気に入りの文字を探したりしながら、書の新たな楽しみ方を発見できます。</p><p>&nbsp;</p><h3>コラボレーションメニュー</h3><p>大阪市立美術館内のカフェENFUSE 大阪では、特別展「躍動する明代の書－台北・何創時（かそうじ）コレクションの至宝」のコラボレーションメニューの販売が決定！コラボレーションメニューは、龍眼・蓮の実・枸杞・棗を合わせた「龍眼と蓮の実の豆花仕立て」、桂花（金木犀）がほのかに香る「米麹甘酒」、香り豊かな「凍頂烏龍茶」の3品で構成されています。<br>特別展「躍動する明代の書―台北・何創時コレクションの至宝」の世界観を、味わいと香りでお楽しみいただける特別なメニューです。</p><img src="/sites/default/files/inline-images/%E4%BD%95%E5%89%B5%E6%99%82%E3%82%B3%E3%83%A9%E3%83%9C%E3%83%87%E3%82%B6%E3%83%BC%E3%83%88.jpg" data-entity-uuid="7cd1064d-830e-4150-8d10-71441489ffd7" data-entity-type="file" width="301" height="223" loading="lazy"><p>&nbsp;</p><p><strong>「書と茶に親しむ、明代の文人の架空の茶会」</strong><br>特別展の余韻とともに味わっていただきたい、ENFUSE 大阪オリジナルのコラボレーションデザートです。</p><p>販売価格：1,600円（税込）<br>販売期間：2026年11月17日（火）から2026年12月20日（日）まで<br>販売場所：ENFUSE 大阪（大阪市立美術館内）<br>&nbsp;</p><h2>図録</h2><img src="/sites/default/files/inline-images/%E5%9B%B3%E9%8C%B2%E3%82%A4%E3%83%A1%E3%83%BC%E3%82%B8.png" data-entity-uuid="74cac5f3-2292-4153-97c0-f4572b9e4244" data-entity-type="file" width="250" height="340" loading="lazy"><p>※画像はイメージです。</p><p>B4判、256ページ<br>販売価格：4,000円（税込）<br>販売場所：展覧会会場内の特設ショップ、通販サイト「まいにち書房」（毎日新聞社運営。<a href="https://www.mainichi.store/">https://www.mainichi.store/</a>）にて、10月9日（金）より販売。</p><p>本展公式図録は、日本初公開を含む貴重な作品群を収録した保存版の一冊です。展示作品すべてのカラー図版に加え、作品の魅力をより深く味わえる拡大図版を多数掲載し、書家たちの巧みな筆づかいや墨色の変化、紙面構成の妙までじっくり鑑賞していただけます。B4判の大型図録で、会場では目に留まりにくい細部まで楽しめる内容となっており、書を学ぶ方や書道愛好家にとって貴重な研究資料となるだけでなく、これから書の魅力に触れる方にも分かりやすい一冊です。<br>また、本展を象徴する力強い作品をあしらった印象的な表紙デザインも見どころの一つ。鑑賞の記念としてはもちろん、ご自宅でも「躍動する明代の書」の世界を何度でも味わえる、長く手元に残したくなる公式図録です。</p><p>&nbsp;</p><h2>相互割引</h2><p>★あべのハルカス美術館との相互割引</p><p>アンドリュー・ワイエス展（2026年10月3日（土）～ 12月6日（日））のチケット（半券可）を当館の窓口でご提示いただくと、特別展「躍動する明代の書－台北・何創時コレクションの至宝」の当日券を100円引きで販売いたします。（1枚につきお一人様1回限り有効、他の割引との併用不可。公式オンラインチケットや各プレイガイドでは割引制度を適用したチケットは販売しておりません。）</p><p>あべのハルカス美術館で、特別展「躍動する明代の書－台北・何創時コレクションの至宝」のチケット（半券可）を窓口でご提示いただきますと、下記展覧会の当日券を100円引きでご購入いただけます。（1枚につきお一人様1回限り有効、他の割引との併用不可）</p><p>・<a href="https://www.aham.jp/exhibition/future/wyeth/">アンドリュー・ワイエス展</a>　2026年10月3日（土）～ 12月6日（日）</p><p>&nbsp;</p><p>あべのハルカス美術館の開館状況につきましては、<a href="https://www.aham.jp/">あべのハルカス美術館ホームページ</a>をご覧ください。</p><h2>チラシ</h2>                <div class="media-document-link"><a href="/sites/default/files/2026-10/A4_omote_0.pdf" target="_blank" rel="noopener noreferrer">チラシ　表面</a></div>
+                <div class="media-document-link"><a href="/sites/default/files/2026-10/A4_ura_0.pdf" target="_blank" rel="noopener noreferrer">チラシ　裏面</a></div>
+<h2>作品リスト</h2>                <div class="media-document-link"><a href="/sites/default/files/2026-10/%E4%BD%95%E5%89%B5%E6%99%82%E5%B1%95_%E5%87%BA%E5%93%81%E3%83%AA%E3%82%B9%E3%83%880924-2%20%28002%29.pdf" target="_blank" rel="noopener noreferrer">作品リスト.pdf</a></div>
+</div>
+      
+        </div>
+
+      </div>
+    </div>
+
+    <div
+      class="modal modal-share fade"
+      id="shareModal"
+      tabindex="-1"
+      aria-labelledby="shareModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-0 rounded-4">
+          <div class="modal-header d-flex justify-content-between">
+            <h5 class="modal-title m-0">シェア</h5>
+            <button
+              type="button"
+              class="btn-close-modal d-flex align-items-center justify-content-center"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                class="_h-6 _w-6 fill-theme-secondary"
+              >
+                <path
+                  d="M18.3 5.71a1 1 0 0 0-1.41 0L12 10.59 7.11 5.7A1 1 0 1 0 5.7 7.11L10.59 12 5.7 16.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 1 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-body mx-2">
+            <div
+              class="d-flex flex-wrap align-items-center justify-content-center gap-5"
+            >
+              <div
+                class="d-flex flex-column align-items-center justify-content-center gap-2.5"
+              >
+                <a
+                  tabindex="0"
+                  href=""
+                  class="react-share__ShareButton mx-auto mb-2 d-flex justify-content-center align-items-center"
+                  onclick="
+                    var width = 550;
+                    var height = 399;
+                    var left = (window.innerWidth - width) / 2;
+                    var top = (window.innerHeight - height) / 2;
+                    window.open('https://x.com/intent/post?url=https://www.osaka-art-museum.jp/special_exhibition/mindai', 'pagename', 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
+                    return false;
+                    "
+                >
+                  <svg viewBox="0 0 64 64" width="48" height="48">
+                    <circle cx="32" cy="32" r="32" fill="#000000"></circle>
+                    <path
+                      d="M 41.116 18.375 h 4.962 l -10.8405 12.39 l 12.753 16.86 H 38.005 l -7.821 -10.2255 L 21.235 47.625 H 16.27 l 11.595 -13.2525 L 15.631 18.375 H 25.87 l 7.0695 9.3465 z m -1.7415 26.28 h 2.7495 L 24.376 21.189 H 21.4255 z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </a>
+                <span class="font-16 font-noto text-theme-secondary">X</span>
+              </div>
+              <div
+                class="d-flex flex-column align-items-center justify-content-centergap-2.5"
+              >
+                <a
+                  tabindex="0"
+                  href=""
+                  class="react-share__ShareButton mx-auto mb-2 d-flex justify-content-center align-items-center"
+                  onclick="
+                    var width = 550;
+                    var height = 399;
+                    var left = (window.innerWidth - width) / 2;
+                    var top = (window.innerHeight - height) / 2;
+                    window.open('https://www.facebook.com/sharer.php?u=https://www.osaka-art-museum.jp/special_exhibition/mindai', 'pagename', 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
+                    return false;
+                    "
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="100"
+                    height="100"
+                    viewBox="0,0,256,256"
+                  >
+                    <g transform="translate(-30.72,-30.72) scale(1.24,1.24)">
+                      <g
+                        fill="none"
+                        fill-rule="nonzero"
+                        stroke="none"
+                        stroke-width="1"
+                        stroke-linecap="butt"
+                        stroke-linejoin="miter"
+                        stroke-miterlimit="10"
+                        stroke-dasharray=""
+                        stroke-dashoffset="0"
+                        font-family="none"
+                        font-weight="none"
+                        font-size="none"
+                        text-anchor="none"
+                        style="mix-blend-mode: normal"
+                      >
+                        <g transform="scale(5.33333,5.33333)">
+                          <path
+                            d="M24,5c-10.49341,0 -19,8.50659 -19,19c0,10.49341 8.50659,19 19,19c10.49341,0 19,-8.50659 19,-19c0,-10.49341 -8.50659,-19 -19,-19z"
+                            fill="#0866ff"
+                          ></path>
+                          <path
+                            d="M26.572,29.036h4.917l0.772,-4.995h-5.69v-2.73c0,-2.075 0.678,-3.915 2.619,-3.915h3.119v-4.359c-0.548,-0.074 -1.707,-0.236 -3.897,-0.236c-4.573,0 -7.254,2.415 -7.254,7.917v3.323h-4.701v4.995h4.701v13.729c0.931,0.14 1.874,0.235 2.842,0.235c0.875,0 1.729,-0.08 2.572,-0.194z"
+                            fill="#ffffff"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+                <span class="font-16 font-noto text-theme-secondary"
+                >Facebook</span
+                >
+              </div>
+              <div
+                class="d-flex flex-column align-items-center justify-content-center"
+              >
+                <a
+                  tabindex="0"
+                  href=""
+                  class="react-share__ShareButton mx-auto mb-2 d-flex justify-content-center align-items-center"
+                  onclick="
+                    var width = 550;
+                    var height = 399;
+                    var left = (window.innerWidth - width) / 2;
+                    var top = (window.innerHeight - height) / 2;
+                    window.open('https://social-plugins.line.me/lineit/share?url=https://www.osaka-art-museum.jp/special_exhibition/mindai', 'pagename', 'width=' + width + ',height=' + height + ',top=' + top + ',left=' + left);
+                    return false;
+                    "
+                >
+                  <svg viewBox="0 0 64 64" width="48" height="48">
+                    <circle cx="32" cy="32" r="32" fill="#00b800"></circle>
+                    <path
+                      d="M52.62 30.138c0 3.693-1.432 7.019-4.42 10.296h.001c-4.326 4.979-14 11.044-16.201 11.972-2.2.927-1.876-.591-1.786-1.112l.294-1.765c.069-.527.142-1.343-.066-1.865-.232-.574-1.146-.872-1.817-1.016-9.909-1.31-17.245-8.238-17.245-16.51 0-9.226 9.251-16.733 20.62-16.733 11.37 0 20.62 7.507 20.62 16.733zM27.81 25.68h-1.446a.402.402 0 0 0-.402.401v8.985c0 .221.18.4.402.4h1.446a.401.401 0 0 0 .402-.4v-8.985a.402.402 0 0 0-.402-.401zm9.956 0H36.32a.402.402 0 0 0-.402.401v5.338L31.8 25.858a.39.39 0 0 0-.031-.04l-.002-.003-.024-.025-.008-.007a.313.313 0 0 0-.032-.026.255.255 0 0 1-.021-.014l-.012-.007-.021-.012-.013-.006-.023-.01-.013-.005-.024-.008-.014-.003-.023-.005-.017-.002-.021-.003-.021-.002h-1.46a.402.402 0 0 0-.402.401v8.985c0 .221.18.4.402.4h1.446a.401.401 0 0 0 .402-.4v-5.337l4.123 5.568c.028.04.063.072.101.099l.004.003a.236.236 0 0 0 .025.015l.012.006.019.01a.154.154 0 0 1 .019.008l.012.004.028.01.005.001a.442.442 0 0 0 .104.013h1.446a.4.4 0 0 0 .401-.4v-8.985a.402.402 0 0 0-.401-.401zm-13.442 7.537h-3.93v-7.136a.401.401 0 0 0-.401-.401h-1.447a.4.4 0 0 0-.401.401v8.984a.392.392 0 0 0 .123.29c.072.068.17.111.278.111h5.778a.4.4 0 0 0 .401-.401v-1.447a.401.401 0 0 0-.401-.401zm21.429-5.287c.222 0 .401-.18.401-.402v-1.446a.401.401 0 0 0-.401-.402h-5.778a.398.398 0 0 0-.279.113l-.005.004-.006.008a.397.397 0 0 0-.111.276v8.984c0 .108.043.206.112.278l.005.006a.401.401 0 0 0 .284.117h5.778a.4.4 0 0 0 .401-.401v-1.447a.401.401 0 0 0-.401-.401h-3.93v-1.519h3.93c.222 0 .401-.18.401-.402V29.85a.401.401 0 0 0-.401-.402h-3.93V27.93h3.93z"
+                      fill="white"
+                    ></path>
+                  </svg>
+                </a
+                ><span class="font-16 font-noto text-theme-secondary"
+                >LINE</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="box-link d-flex align-items-center w-100 position-relative gap-2 px-2 pb-3 pt-4">
+            <input
+              id="current_url"
+              type="text"
+              value="https://www.osaka-art-museum.jp/special_exhibition/mindai"
+              readonly=""
+            />
+            <button type="button" class="btn btn-contained btn-copy p-0 m-0 fw-bold rounded-2">
+              コピー
+            </button>
+            <div id="copy-message"
+                 class="mt-2 text-success position-absolute py-4 px-2 align-items-center justify-content-center rounded-2">
+              コピーしました。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+<script>
+  function generateTOC() {
+    const tocContainer = document.getElementById('toc');
+    const contentHeadings = document.querySelectorAll('.content h2');
+    const tocList = document.createElement('ul');
+
+    contentHeadings.forEach((heading, index) => {
+      if (!heading.id) {
+        heading.id = `section-${index}`;
+      }
+
+      const listItem = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = `#${heading.id}`;
+      link.textContent = heading.textContent;
+
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.getElementById(heading.id);
+        if (target) {
+          const top = target.getBoundingClientRect().top + window.scrollY - 170;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+
+      listItem.appendChild(link);
+      tocList.appendChild(listItem);
+    });
+
+    tocContainer.appendChild(tocList);
+  }
+
+  window.onload = generateTOC;
+
+  // 翻訳完了後にTOCを再生成（翻訳済みの見出しテキストを反映するため）
+  document.addEventListener('deepl:translated', function () {
+    const tocContainer = document.getElementById('toc');
+    if (tocContainer) {
+      tocContainer.innerHTML = '';
+      generateTOC();
+    }
+  });
+</script>
+
+    </div>
+  </div>
+
+  </div>
+
+    </main>
+  </div>
+  <footer class="flex-shrink-0 pt-3 pt-lg-5 no-print">
+    <div class="container">
+      <div class="d-flex flex-column flex-xl-row align-items-start box_footer">
+       <div class="d-flex flex-column align-items-start">
+         <div class="footer__logo">
+           <div href="/" class="logo-block w-100 d-block">
+                   <a href="/" title="ホーム" rel="home" class="navbar-brand d-flex">
+              <img src="/sites/default/files/logo_0_0.png" alt="大阪美術館" class="" />
+          </a>
+    
+           </div>
+         </div>
+         <div class="box_address mt-4">
+           <p>
+             〒 5 4 3 - 0 0 6 3 <br>
+             大阪府大阪市天王寺区茶臼山町 1 - 8 2<br>
+             （天王寺公園内）<br>
+             TEL  0 6 - 6 7 7 1 - 4 8 7 4
+           </p>
+         </div>
+         <div class="box_social d-flex align-items-center justify-content-start w-100 gap-3 mt-3 mt-lg-0 mb-3 mb-xl-0">
+           <div class="d-flex flex-column align-items-center justify-content-center gap-2.5">
+             <a href="https://x.com/ocmfa_since1936" class="react-share__ShareButton" target="_blank" rel="noopener noreferrer" aria-label="X（旧Twitter）公式アカウント">
+               <img src="/themes/custom/osaka_museum/images/x.png" alt="X（旧Twitter）">
+             </a>
+           </div>
+           <div class="d-flex flex-column align-items-center justify-content-center gap-2.5">
+             <a href="https://www.instagram.com/ocmfa_since1936/" class="react-share__ShareButton" target="_blank" rel="noopener noreferrer" aria-label="Instagram公式アカウント">
+               <img src="/themes/custom/osaka_museum/images/insta.png" alt="Instagram">
+             </a>
+           </div>
+           <div class="d-flex flex-column align-items-center justify-content-center gap-2.5">
+             <a href="https://www.youtube.com/channel/UCwavvoD1PqL3kshkwNOuIoA" class="react-share__ShareButton" target="_blank" rel="noopener noreferrer" aria-label="YouTube公式チャンネル">
+               <img src="/themes/custom/osaka_museum/images/youtube.png" alt="YouTube">
+             </a>
+           </div>
+         </div>
+       </div>
+        <div class="box-link-footer d-flex flex-column align-items-start flex-1">
+          <a class="see-more btn" href="/dantai">
+            団体・学校・教育
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M12.175 8.588H1C0.716667 8.588 0.479167 8.49217 0.2875 8.3005C0.0958333 8.10883 0 7.87133 0 7.588C0 7.30467 0.0958333 7.06717 0.2875 6.8755C0.479167 6.68383 0.716667 6.588 1 6.588H12.175L7.275 1.688C7.075 1.488 6.97917 1.25467 6.9875 0.988C6.99583 0.721333 7.1 0.488 7.3 0.288C7.5 0.104667 7.73333 0.00883333 8 0.0005C8.26667 -0.00783333 8.5 0.088 8.7 0.288L15.3 6.888C15.4 6.988 15.4708 7.09633 15.5125 7.213C15.5542 7.32967 15.575 7.45467 15.575 7.588C15.575 7.72133 15.5542 7.84633 15.5125 7.963C15.4708 8.07967 15.4 8.188 15.3 8.288L8.7 14.888C8.51667 15.0713 8.2875 15.163 8.0125 15.163C7.7375 15.163 7.5 15.0713 7.3 14.888C7.1 14.688 7 14.4505 7 14.1755C7 13.9005 7.1 13.663 7.3 13.463L12.175 8.588Z" fill="#212529"></path>
+            </svg>
+          </a>
+          <a class="see-more btn" href="/faq">
+            よくある質問
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M12.175 8.588H1C0.716667 8.588 0.479167 8.49217 0.2875 8.3005C0.0958333 8.10883 0 7.87133 0 7.588C0 7.30467 0.0958333 7.06717 0.2875 6.8755C0.479167 6.68383 0.716667 6.588 1 6.588H12.175L7.275 1.688C7.075 1.488 6.97917 1.25467 6.9875 0.988C6.99583 0.721333 7.1 0.488 7.3 0.288C7.5 0.104667 7.73333 0.00883333 8 0.0005C8.26667 -0.00783333 8.5 0.088 8.7 0.288L15.3 6.888C15.4 6.988 15.4708 7.09633 15.5125 7.213C15.5542 7.32967 15.575 7.45467 15.575 7.588C15.575 7.72133 15.5542 7.84633 15.5125 7.963C15.4708 8.07967 15.4 8.188 15.3 8.288L8.7 14.888C8.51667 15.0713 8.2875 15.163 8.0125 15.163C7.7375 15.163 7.5 15.0713 7.3 14.888C7.1 14.688 7 14.4505 7 14.1755C7 13.9005 7.1 13.663 7.3 13.463L12.175 8.588Z" fill="#212529"></path>
+            </svg>
+          </a>
+          <a class="see-more btn" href="/mailmaga">
+            メルマガ会員募集
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M12.175 8.588H1C0.716667 8.588 0.479167 8.49217 0.2875 8.3005C0.0958333 8.10883 0 7.87133 0 7.588C0 7.30467 0.0958333 7.06717 0.2875 6.8755C0.479167 6.68383 0.716667 6.588 1 6.588H12.175L7.275 1.688C7.075 1.488 6.97917 1.25467 6.9875 0.988C6.99583 0.721333 7.1 0.488 7.3 0.288C7.5 0.104667 7.73333 0.00883333 8 0.0005C8.26667 -0.00783333 8.5 0.088 8.7 0.288L15.3 6.888C15.4 6.988 15.4708 7.09633 15.5125 7.213C15.5542 7.32967 15.575 7.45467 15.575 7.588C15.575 7.72133 15.5542 7.84633 15.5125 7.963C15.4708 8.07967 15.4 8.188 15.3 8.288L8.7 14.888C8.51667 15.0713 8.2875 15.163 8.0125 15.163C7.7375 15.163 7.5 15.0713 7.3 14.888C7.1 14.688 7 14.4505 7 14.1755C7 13.9005 7.1 13.663 7.3 13.463L12.175 8.588Z" fill="#212529"></path>
+            </svg>
+          </a>
+        </div>
+        <div class="footer__menu">
+          <nav role="navigation" aria-labelledby="footer-menu" class="block block-menu navigation menu--footer">
+              <nav class="footer-menu" role="navigation" aria-label="Footer menu">
+    <ul class="footer-menu__list">
+              <li class="footer-menu__item">
+          <a href="/accessibility" class="footer-menu__link">
+            <span class="footer-menu__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                   viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                <path d="M7.5 15C6.4625 15 5.4875 14.8031 4.575 14.4094C3.6625 14.0156 2.86875 13.4813 2.19375 12.8063C1.51875 12.1313 0.984375 11.3375 0.590625 10.425C0.196875 9.5125 0 8.5375 0 7.5C0 6.4625 0.196875 5.4875 0.590625 4.575C0.984375 3.6625 1.51875 2.86875 2.19375 2.19375C2.86875 1.51875 3.6625 0.984375 4.575 0.590625C5.4875 0.196875 6.4625 0 7.5 0C8.5375 0 9.5125 0.196875 10.425 0.590625C11.3375 0.984375 12.1313 1.51875 12.8063 2.19375C13.4813 2.86875 14.0156 3.6625 14.4094 4.575C14.8031 5.4875 15 6.4625 15 7.5C15 8.5375 14.8031 9.5125 14.4094 10.425C14.0156 11.3375 13.4813 12.1313 12.8063 12.8063C12.1313 13.4813 11.3375 14.0156 10.425 14.4094C9.5125 14.8031 8.5375 15 7.5 15ZM7.65 8.25L6.975 8.925C6.8375 9.0625 6.76875 9.2375 6.76875 9.45C6.76875 9.6625 6.8375 9.8375 6.975 9.975C7.1125 10.1125 7.2875 10.1812 7.5 10.1812C7.7125 10.1812 7.8875 10.1125 8.025 9.975L9.975 8.025C10.125 7.875 10.2 7.7 10.2 7.5C10.2 7.3 10.125 7.125 9.975 6.975L8.025 5.025C7.8875 4.8875 7.7125 4.81875 7.5 4.81875C7.2875 4.81875 7.1125 4.8875 6.975 5.025C6.8375 5.1625 6.76875 5.3375 6.76875 5.55C6.76875 5.7625 6.8375 5.9375 6.975 6.075L7.65 6.75H5.25C5.0375 6.75 4.85938 6.82188 4.71562 6.96563C4.57188 7.10938 4.5 7.2875 4.5 7.5C4.5 7.7125 4.57188 7.89063 4.71562 8.03438C4.85938 8.17813 5.0375 8.25 5.25 8.25H7.65Z"
+                      fill="#212529"/>
+              </svg>
+            </span>
+
+            <span class="footer-menu__text">
+              ウェブアクセシビリティ
+            </span>
+          </a>
+        </li>
+              <li class="footer-menu__item">
+          <a href="/policy" class="footer-menu__link">
+            <span class="footer-menu__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                   viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                <path d="M7.5 15C6.4625 15 5.4875 14.8031 4.575 14.4094C3.6625 14.0156 2.86875 13.4813 2.19375 12.8063C1.51875 12.1313 0.984375 11.3375 0.590625 10.425C0.196875 9.5125 0 8.5375 0 7.5C0 6.4625 0.196875 5.4875 0.590625 4.575C0.984375 3.6625 1.51875 2.86875 2.19375 2.19375C2.86875 1.51875 3.6625 0.984375 4.575 0.590625C5.4875 0.196875 6.4625 0 7.5 0C8.5375 0 9.5125 0.196875 10.425 0.590625C11.3375 0.984375 12.1313 1.51875 12.8063 2.19375C13.4813 2.86875 14.0156 3.6625 14.4094 4.575C14.8031 5.4875 15 6.4625 15 7.5C15 8.5375 14.8031 9.5125 14.4094 10.425C14.0156 11.3375 13.4813 12.1313 12.8063 12.8063C12.1313 13.4813 11.3375 14.0156 10.425 14.4094C9.5125 14.8031 8.5375 15 7.5 15ZM7.65 8.25L6.975 8.925C6.8375 9.0625 6.76875 9.2375 6.76875 9.45C6.76875 9.6625 6.8375 9.8375 6.975 9.975C7.1125 10.1125 7.2875 10.1812 7.5 10.1812C7.7125 10.1812 7.8875 10.1125 8.025 9.975L9.975 8.025C10.125 7.875 10.2 7.7 10.2 7.5C10.2 7.3 10.125 7.125 9.975 6.975L8.025 5.025C7.8875 4.8875 7.7125 4.81875 7.5 4.81875C7.2875 4.81875 7.1125 4.8875 6.975 5.025C6.8375 5.1625 6.76875 5.3375 6.76875 5.55C6.76875 5.7625 6.8375 5.9375 6.975 6.075L7.65 6.75H5.25C5.0375 6.75 4.85938 6.82188 4.71562 6.96563C4.57188 7.10938 4.5 7.2875 4.5 7.5C4.5 7.7125 4.57188 7.89063 4.71562 8.03438C4.85938 8.17813 5.0375 8.25 5.25 8.25H7.65Z"
+                      fill="#212529"/>
+              </svg>
+            </span>
+
+            <span class="footer-menu__text">
+              プライバシーポリシー
+            </span>
+          </a>
+        </li>
+              <li class="footer-menu__item">
+          <a href="/policy#legal" class="footer-menu__link">
+            <span class="footer-menu__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                   viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                <path d="M7.5 15C6.4625 15 5.4875 14.8031 4.575 14.4094C3.6625 14.0156 2.86875 13.4813 2.19375 12.8063C1.51875 12.1313 0.984375 11.3375 0.590625 10.425C0.196875 9.5125 0 8.5375 0 7.5C0 6.4625 0.196875 5.4875 0.590625 4.575C0.984375 3.6625 1.51875 2.86875 2.19375 2.19375C2.86875 1.51875 3.6625 0.984375 4.575 0.590625C5.4875 0.196875 6.4625 0 7.5 0C8.5375 0 9.5125 0.196875 10.425 0.590625C11.3375 0.984375 12.1313 1.51875 12.8063 2.19375C13.4813 2.86875 14.0156 3.6625 14.4094 4.575C14.8031 5.4875 15 6.4625 15 7.5C15 8.5375 14.8031 9.5125 14.4094 10.425C14.0156 11.3375 13.4813 12.1313 12.8063 12.8063C12.1313 13.4813 11.3375 14.0156 10.425 14.4094C9.5125 14.8031 8.5375 15 7.5 15ZM7.65 8.25L6.975 8.925C6.8375 9.0625 6.76875 9.2375 6.76875 9.45C6.76875 9.6625 6.8375 9.8375 6.975 9.975C7.1125 10.1125 7.2875 10.1812 7.5 10.1812C7.7125 10.1812 7.8875 10.1125 8.025 9.975L9.975 8.025C10.125 7.875 10.2 7.7 10.2 7.5C10.2 7.3 10.125 7.125 9.975 6.975L8.025 5.025C7.8875 4.8875 7.7125 4.81875 7.5 4.81875C7.2875 4.81875 7.1125 4.8875 6.975 5.025C6.8375 5.1625 6.76875 5.3375 6.76875 5.55C6.76875 5.7625 6.8375 5.9375 6.975 6.075L7.65 6.75H5.25C5.0375 6.75 4.85938 6.82188 4.71562 6.96563C4.57188 7.10938 4.5 7.2875 4.5 7.5C4.5 7.7125 4.57188 7.89063 4.71562 8.03438C4.85938 8.17813 5.0375 8.25 5.25 8.25H7.65Z"
+                      fill="#212529"/>
+              </svg>
+            </span>
+
+            <span class="footer-menu__text">
+              サイトポリシー
+            </span>
+          </a>
+        </li>
+              <li class="footer-menu__item">
+          <a href="/sitemap" class="footer-menu__link">
+            <span class="footer-menu__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                   viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                <path d="M7.5 15C6.4625 15 5.4875 14.8031 4.575 14.4094C3.6625 14.0156 2.86875 13.4813 2.19375 12.8063C1.51875 12.1313 0.984375 11.3375 0.590625 10.425C0.196875 9.5125 0 8.5375 0 7.5C0 6.4625 0.196875 5.4875 0.590625 4.575C0.984375 3.6625 1.51875 2.86875 2.19375 2.19375C2.86875 1.51875 3.6625 0.984375 4.575 0.590625C5.4875 0.196875 6.4625 0 7.5 0C8.5375 0 9.5125 0.196875 10.425 0.590625C11.3375 0.984375 12.1313 1.51875 12.8063 2.19375C13.4813 2.86875 14.0156 3.6625 14.4094 4.575C14.8031 5.4875 15 6.4625 15 7.5C15 8.5375 14.8031 9.5125 14.4094 10.425C14.0156 11.3375 13.4813 12.1313 12.8063 12.8063C12.1313 13.4813 11.3375 14.0156 10.425 14.4094C9.5125 14.8031 8.5375 15 7.5 15ZM7.65 8.25L6.975 8.925C6.8375 9.0625 6.76875 9.2375 6.76875 9.45C6.76875 9.6625 6.8375 9.8375 6.975 9.975C7.1125 10.1125 7.2875 10.1812 7.5 10.1812C7.7125 10.1812 7.8875 10.1125 8.025 9.975L9.975 8.025C10.125 7.875 10.2 7.7 10.2 7.5C10.2 7.3 10.125 7.125 9.975 6.975L8.025 5.025C7.8875 4.8875 7.7125 4.81875 7.5 4.81875C7.2875 4.81875 7.1125 4.8875 6.975 5.025C6.8375 5.1625 6.76875 5.3375 6.76875 5.55C6.76875 5.7625 6.8375 5.9375 6.975 6.075L7.65 6.75H5.25C5.0375 6.75 4.85938 6.82188 4.71562 6.96563C4.57188 7.10938 4.5 7.2875 4.5 7.5C4.5 7.7125 4.57188 7.89063 4.71562 8.03438C4.85938 8.17813 5.0375 8.25 5.25 8.25H7.65Z"
+                      fill="#212529"/>
+              </svg>
+            </span>
+
+            <span class="footer-menu__text">
+              サイトマップ
+            </span>
+          </a>
+        </li>
+              <li class="footer-menu__item">
+          <a href="/social-media-policy" class="footer-menu__link">
+            <span class="footer-menu__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                   viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                <path d="M7.5 15C6.4625 15 5.4875 14.8031 4.575 14.4094C3.6625 14.0156 2.86875 13.4813 2.19375 12.8063C1.51875 12.1313 0.984375 11.3375 0.590625 10.425C0.196875 9.5125 0 8.5375 0 7.5C0 6.4625 0.196875 5.4875 0.590625 4.575C0.984375 3.6625 1.51875 2.86875 2.19375 2.19375C2.86875 1.51875 3.6625 0.984375 4.575 0.590625C5.4875 0.196875 6.4625 0 7.5 0C8.5375 0 9.5125 0.196875 10.425 0.590625C11.3375 0.984375 12.1313 1.51875 12.8063 2.19375C13.4813 2.86875 14.0156 3.6625 14.4094 4.575C14.8031 5.4875 15 6.4625 15 7.5C15 8.5375 14.8031 9.5125 14.4094 10.425C14.0156 11.3375 13.4813 12.1313 12.8063 12.8063C12.1313 13.4813 11.3375 14.0156 10.425 14.4094C9.5125 14.8031 8.5375 15 7.5 15ZM7.65 8.25L6.975 8.925C6.8375 9.0625 6.76875 9.2375 6.76875 9.45C6.76875 9.6625 6.8375 9.8375 6.975 9.975C7.1125 10.1125 7.2875 10.1812 7.5 10.1812C7.7125 10.1812 7.8875 10.1125 8.025 9.975L9.975 8.025C10.125 7.875 10.2 7.7 10.2 7.5C10.2 7.3 10.125 7.125 9.975 6.975L8.025 5.025C7.8875 4.8875 7.7125 4.81875 7.5 4.81875C7.2875 4.81875 7.1125 4.8875 6.975 5.025C6.8375 5.1625 6.76875 5.3375 6.76875 5.55C6.76875 5.7625 6.8375 5.9375 6.975 6.075L7.65 6.75H5.25C5.0375 6.75 4.85938 6.82188 4.71562 6.96563C4.57188 7.10938 4.5 7.2875 4.5 7.5C4.5 7.7125 4.57188 7.89063 4.71562 8.03438C4.85938 8.17813 5.0375 8.25 5.25 8.25H7.65Z"
+                      fill="#212529"/>
+              </svg>
+            </span>
+
+            <span class="footer-menu__text">
+              SNS運用ポリシー
+            </span>
+          </a>
+        </li>
+              <li class="footer-menu__item">
+          <a href="/language" class="footer-menu__link">
+            <span class="footer-menu__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                   viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                <path d="M7.5 15C6.4625 15 5.4875 14.8031 4.575 14.4094C3.6625 14.0156 2.86875 13.4813 2.19375 12.8063C1.51875 12.1313 0.984375 11.3375 0.590625 10.425C0.196875 9.5125 0 8.5375 0 7.5C0 6.4625 0.196875 5.4875 0.590625 4.575C0.984375 3.6625 1.51875 2.86875 2.19375 2.19375C2.86875 1.51875 3.6625 0.984375 4.575 0.590625C5.4875 0.196875 6.4625 0 7.5 0C8.5375 0 9.5125 0.196875 10.425 0.590625C11.3375 0.984375 12.1313 1.51875 12.8063 2.19375C13.4813 2.86875 14.0156 3.6625 14.4094 4.575C14.8031 5.4875 15 6.4625 15 7.5C15 8.5375 14.8031 9.5125 14.4094 10.425C14.0156 11.3375 13.4813 12.1313 12.8063 12.8063C12.1313 13.4813 11.3375 14.0156 10.425 14.4094C9.5125 14.8031 8.5375 15 7.5 15ZM7.65 8.25L6.975 8.925C6.8375 9.0625 6.76875 9.2375 6.76875 9.45C6.76875 9.6625 6.8375 9.8375 6.975 9.975C7.1125 10.1125 7.2875 10.1812 7.5 10.1812C7.7125 10.1812 7.8875 10.1125 8.025 9.975L9.975 8.025C10.125 7.875 10.2 7.7 10.2 7.5C10.2 7.3 10.125 7.125 9.975 6.975L8.025 5.025C7.8875 4.8875 7.7125 4.81875 7.5 4.81875C7.2875 4.81875 7.1125 4.8875 6.975 5.025C6.8375 5.1625 6.76875 5.3375 6.76875 5.55C6.76875 5.7625 6.8375 5.9375 6.975 6.075L7.65 6.75H5.25C5.0375 6.75 4.85938 6.82188 4.71562 6.96563C4.57188 7.10938 4.5 7.2875 4.5 7.5C4.5 7.7125 4.57188 7.89063 4.71562 8.03438C4.85938 8.17813 5.0375 8.25 5.25 8.25H7.65Z"
+                      fill="#212529"/>
+              </svg>
+            </span>
+
+            <span class="footer-menu__text">
+              多言語対応について
+            </span>
+          </a>
+        </li>
+          </ul>
+  </nav>
+
+  </nav>
+
+        </div>
+      </div>
+
+      <div class="text-copyright text-center">(C) Copyright 2025 Osaka City Museum of Fine Arts. All rights reserved.</div>
+    </div>
+  </footer>
+</div>
+
+
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/10343","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"ja"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"26bdf10afb3409f8f9dc72c3f6aa540a661eb1de39d5aee9b125d50501d347a7"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
+<script src="/sites/default/files/js/js_Kx8MQdfwNLcP5WbM4NaSKwVcUyD-5jgSECPPPNzQcoc.js?scope=footer&amp;delta=1&amp;language=ja&amp;theme=osaka_museum&amp;include=eJx9zUEOgCAMBdELSUy8kKlaDfKhhFaNnl62uHD7ZjECf3KRfoNMBKd2w6etE6VAYzyUj9hPIqZWKLe8MGe46klBxm1cK2U_h9Ly3wb03BBa3K5tUAbPNnzw8pnLC21_S5w"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="/sites/default/files/js/js_HmLi0B2CfbqDl6x1KNfEQdDD99Nc608QzQ5eDC87KMk.js?scope=footer&amp;delta=3&amp;language=ja&amp;theme=osaka_museum&amp;include=eJx9zUEOgCAMBdELSUy8kKlaDfKhhFaNnl62uHD7ZjECf3KRfoNMBKd2w6etE6VAYzyUj9hPIqZWKLe8MGe46klBxm1cK2U_h9Ly3wb03BBa3K5tUAbPNnzw8pnLC21_S5w"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+<script src="/sites/default/files/js/js_yH70Wt9OTinF09ajoWVZFugvl5sq_CtDqR9SykO5Q8Q.js?scope=footer&amp;delta=6&amp;language=ja&amp;theme=osaka_museum&amp;include=eJx9zUEOgCAMBdELSUy8kKlaDfKhhFaNnl62uHD7ZjECf3KRfoNMBKd2w6etE6VAYzyUj9hPIqZWKLe8MGe46klBxm1cK2U_h9Ly3wb03BBa3K5tUAbPNnzw8pnLC21_S5w"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="/sites/default/files/js/js_aPcjiDLT9lBvTGe_Cn62v8XNJoXEdq848qrnr0g7UeI.js?scope=footer&amp;delta=10&amp;language=ja&amp;theme=osaka_museum&amp;include=eJx9zUEOgCAMBdELSUy8kKlaDfKhhFaNnl62uHD7ZjECf3KRfoNMBKd2w6etE6VAYzyUj9hPIqZWKLe8MGe46klBxm1cK2U_h9Ly3wb03BBa3K5tUAbPNnzw8pnLC21_S5w"></script>
+
+  </body>
+</html>

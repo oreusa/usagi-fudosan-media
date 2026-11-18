@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QNZDLS0MSR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QNZDLS0MSR');
+</script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xn8aic391q");
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="google-site-verification" content="QYCfE_WsUrgHMFv3AZxAv0nzoJOyn3z_9sXCzxQHNc4" />
+<meta name="description" content="歴史リアル謎解きゲーム（旧：謎の城）は、お城や神社などの歴史スポットを街歩きしながら歴史を追体験する周遊型謎解きイベントです。学芸員監修のストーリーで、謎解きファンはもちろん初めての方でも家族やカップルで気軽に楽しめます。関西を中心に全国で開催中。">
+<title>歴史リアル謎解きゲーム｜街歩きで歴史を体験する周遊型謎解きイベント</title>
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="歴史リアル謎解きゲーム｜街歩きで歴史を体験する周遊型謎解きイベント">
+<meta property="og:type" content="website">
+<meta property="og:description" content="歴史リアル謎解きゲーム（旧：謎の城）は、お城や神社などの歴史スポットを街歩きしながら歴史を追体験する周遊型謎解きイベントです。学芸員監修のストーリーで、謎解きファンはもちろん初めての方でも家族やカップルで気軽に楽しめます。関西を中心に全国で開催中。">
+<meta property="og:url" content="https://rekishirealnazo.com/">
+<meta property="og:image" content="https://rekishirealnazo.com/assets/img/common/ogp.png">
+<meta property="og:site_name" content="周遊型謎解きイベントの歴史リアル謎解きゲーム">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://rekishirealnazo.com/">
+<link rel="alternate" hreflang="ja" href="https://rekishirealnazo.com/">
+<link rel="icon" type="image/svg+xml" href="/assets/img/common/favicon.svg">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/common/favicon-96x96.png">
+<link rel="shortcut icon" href="/assets/img/common/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/common/apple-touch-icon.png">
+<link rel="manifest" href="/assets/img/common/site.webmanifest" crossorigin="use-credentials">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=2">
+<link rel="stylesheet" href="/assets/css/page/top.css?v=2">
+
+<link rel="preload" as="image" href="/assets/img/top/mv_sp.jpg" media="(max-width: 767px)" fetchpriority="high">
+<link rel="preload" as="image" href="/assets/img/top/mv_pc.jpg" media="(min-width: 768px)" fetchpriority="high">
+
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<link rel='stylesheet' id='spider-css' href='https://rekishirealnazo.com/manage/wp-content/plugins/snow-monkey-blocks/dist/packages/spider/dist/css/spider.css?ver=1784616460' media='all' />
+<link rel='stylesheet' id='snow-monkey-blocks-css' href='https://rekishirealnazo.com/manage/wp-content/plugins/snow-monkey-blocks/dist/css/blocks.css?ver=1784616460' media='all' />
+<link rel='stylesheet' id='sass-basis-css' href='https://rekishirealnazo.com/manage/wp-content/plugins/snow-monkey-blocks/dist/css/fallback.css?ver=1784616460' media='all' />
+<link rel='stylesheet' id='snow-monkey-blocks/nopro-css' href='https://rekishirealnazo.com/manage/wp-content/plugins/snow-monkey-blocks/dist/css/nopro.css?ver=1784616460' media='all' />
+<link rel='stylesheet' id='snow-monkey-forms-css' href='https://rekishirealnazo.com/manage/wp-content/plugins/snow-monkey-forms/dist/css/app.css?ver=1784616456' media='all' />
+<link rel='stylesheet' id='snow-monkey-blocks-spider-slider-style-css' href='https://rekishirealnazo.com/manage/wp-content/plugins/snow-monkey-blocks/dist/blocks/spider-slider/style-index.css?ver=1784616460' media='all' />
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<script data-wp-strategy="defer" defer id="fontawesome6-js" src="https://rekishirealnazo.com/manage/wp-content/plugins/snow-monkey-blocks/dist/js/fontawesome-all.js?ver=1784616460"></script>
+<script data-wp-strategy="defer" defer id="spider-js" src="https://rekishirealnazo.com/manage/wp-content/plugins/snow-monkey-blocks/dist/packages/spider/dist/js/spider.js?ver=1784616460"></script>
+<link rel="https://api.w.org/" href="https://rekishirealnazo.com/wp-json/" />
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "ホーム",
+            "item": "https://rekishirealnazo.com/"
+        }
+    ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://rekishirealnazo.com/#organization",
+    "name": "歴史リアル謎解きゲーム",
+    "url": "https://rekishirealnazo.com/",
+    "logo": "https://rekishirealnazo.com/assets/img/common/logo.png",
+    "telephone": "+81-6-6377-7762",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+81-6-6377-7762",
+        "contactType": "customer service",
+        "areaServed": "JP",
+        "availableLanguage": [
+            "ja"
+        ]
+    },
+    "sameAs": [
+        "https://x.com/rekishirealnazo",
+        "https://www.instagram.com/rekishirealnazo/"
+    ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://rekishirealnazo.com/#website",
+    "url": "https://rekishirealnazo.com/",
+    "name": "歴史リアル謎解きゲーム",
+    "publisher": {
+        "@id": "https://rekishirealnazo.com/#organization"
+    }
+}
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "新着の謎解きイベント",
+    "numberOfItems": 3,
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "url": "https://rekishirealnazo.com/event/232/",
+            "name": "歴史リアル謎解きゲーム「謎の城」in高槻・島本「山崎の戦いを突破せよ！～天王山に蠢く決戦の陰謀～」"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "url": "https://rekishirealnazo.com/event/219/",
+            "name": "歴史リアル謎解きゲーム「謎の城」in大阪城「豊臣秀吉と黄金の城　大坂城からはじまる天下人への道」"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "url": "https://rekishirealnazo.com/event/182/",
+            "name": "歴史リアル謎解きゲーム「謎の城」in 郡山城「豊臣秀長　大和大納言と呼ばれた名君」"
+        }
+    ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "所要時間はどのくらいですか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "おおよそ３時間程度でご案内させていただいております。早い人では２時間程度、観光も含めて半日〜１日かかったとおっしゃられる方もいますので、余裕のあるご参加を推奨しています。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "歴史の知識がなくても楽しめますか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "歴史の知識がなくても、謎を解く”ひらめき力”があれば問題ございません！"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "謎が解けないときにヒントはもらえますか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "はい、謎解きに行き詰った時のためにヒントをご用意しておりますのでご安心ください！謎解きキット内にヒントの確認方法を記載していますので、そちらをご確認ください。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "子どもと一緒に参加できますか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "もちろんお楽しみいただけます！歴史の知識がなくてもお楽しみいただけるゲームであり、大切なのは謎を解く”ひらめき”です…！お子様とあれこれ答えを考えながら挑戦してみてください。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "年齢制限はありますか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "年齢制限はございませんが、小学生の方の参加には保護者の同伴が必要です。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "結構歩きますか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "”思ったより歩いた”というお声をいただくことがあります。ですが、ご自身のペースでゆっくり進めていただけますので、体力に自信がない方でも安心してご参加いただけます。"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "普通のリアル脱出ゲームや脱出ゲームと何が違いますか？",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "「歴史リアル謎解きゲーム」は室内の脱出ゲームとは異なり、実際のおお城や城下町などの史跡周辺を歩いて回遊する屋外型の謎解きゲームです。また、単なる謎解きではなく、史実に基づいた歴史ストーリーを追体験できる点が大きな特徴です。歴史の専門家のもと、その土地に起こった出来事や歴史人物の足跡をたどりながら謎を解いていくため、観光や街歩きの要素も楽しめます。制限時間もなく、ご自身のペースでゆっくり進められます。"
+            }
+        }
+    ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "歴史リアル謎解きゲームの遊び方",
+    "description": "謎解きキットを手に、地図をもとに街を巡り、手がかりを集めて謎を解く周遊型謎解きゲームの遊び方。",
+    "step": [
+        {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "謎解きキットを受け取る",
+            "text": "会場で謎解きキットを受け取り、ゲームをスタートします。",
+            "image": "https://rekishirealnazo.com/assets/img/common/step_01.png"
+        },
+        {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "地図をもとに謎を解くヒントとなる謎解きスポットをめぐる",
+            "text": "地図に示された謎解きスポットを巡り、ヒントとなる手がかりを集めます。",
+            "image": "https://rekishirealnazo.com/assets/img/common/step_02.png"
+        },
+        {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "手がかりを集めて謎を解く",
+            "text": "集めた手がかりをもとに、最終的な謎を解き明かします。",
+            "image": "https://rekishirealnazo.com/assets/img/common/step_03.png"
+        }
+    ]
+}
+</script>
+</head>
+<body class="home blog wp-theme-rekishirealnazo is-top is-bg" id="top">
+
+<header class="l-header" id="l-header">
+  <div class="l-header__inner">
+
+    <a class="l-header__logo" href="/" aria-label="歴史リアル謎解きゲーム TOP">
+      <img src="/assets/img/common/logo.svg" alt="歴史リアル謎解きゲーム" width="46" height="46">
+    </a>
+
+    <nav class="l-header__nav-wrap" id="l-header-nav" aria-label="グローバルナビゲーション">
+      <ul class="l-header__nav">
+        <li class="l-header__nav-item"><a class="l-header__nav-link" href="/about/">歴史リアル謎解きゲームとは</a></li>
+        <li class="l-header__nav-item"><a class="l-header__nav-link" href="/beginner/">初めての方へ</a></li>
+        <li class="l-header__nav-item"><a class="l-header__nav-link" href="/column/">謎解きコラム</a></li>
+        <li class="l-header__nav-item"><a class="l-header__nav-link" href="/event/">イベント一覧</a></li>
+      </ul>
+      <ul class="l-header__sns">
+        <li class="l-header__sns-item"><a href="https://x.com/rekishirealnazo" target="_blank" rel="noopener" aria-label="X(Twitter)"><img src="/assets/img/common/icon_x.png" alt="X(Twitter)" width="24" height="24"></a></li>
+        <li class="l-header__sns-item"><a href="https://www.instagram.com/rekishirealnazo/" target="_blank" rel="noopener" aria-label="Instagram"><img src="/assets/img/common/icon_instagram.png" alt="Instagram" width="24" height="24"></a></li>
+      </ul>
+    </nav>
+
+    <button class="l-header__btn" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="l-header-nav">
+      <span class="l-header__btn-open"><img src="/assets/img/common/icon_hamburger.svg" alt="" width="48" height="48" aria-hidden="true"></span>
+      <span class="l-header__btn-close"><img src="/assets/img/common/icon_close.svg" alt="" width="48" height="48" aria-hidden="true"></span>
+    </button>
+
+  </div><!-- /.l-header__inner -->
+
+  <!-- Contact panel: PC は viewport 右端ぴったり / SP メニュー開時はパネル内に表示 -->
+  <div class="l-header__contact">
+    <button class="l-header__web js-contact-open" type="button">
+      <img class="l-header__web-icon" src="/assets/img/common/icon_contact.svg" alt="" width="24" height="24" aria-hidden="true">
+      <span class="l-header__web-text">メールからのお問い合わせ</span>
+    </button>
+    <a class="l-header__tel" href="tel:0663777762">
+      <img class="l-header__tel-icon" src="/assets/img/common/icon_tel.svg" alt="" width="24" height="24" aria-hidden="true">
+      <span class="l-header__tel-body">
+        <span class="l-header__tel-label">お電話でのお問い合わせ</span>
+        <span class="l-header__tel-number">06-6377-7762</span>
+        <span class="l-header__tel-time">（受付時間：平日10:00〜18:00）</span>
+      </span>
+    </a>
+    <a class="l-header__corp" href="/hojin/">
+      <span class="l-header__corp-text">法人の方はこちら</span>
+      <img class="l-header__corp-arrow" src="/assets/img/common/icon_arrow_right.svg" alt="" width="21" height="12" aria-hidden="true">
+    </a>
+  </div><!-- /.l-header__contact -->
+</header><!-- /.l-header -->
+<main>
+  <section class="mv" aria-label="メインビジュアル">
+    <h1 class="mv__catch">周遊型謎解きイベント「歴史リアル謎解きゲーム」</h1>
+    <div class="mv__logo js-mv-logo">
+      <picture>
+        <source srcset="/assets/img/top/mv_logo_sp.png" media="(max-width: 767px)" width="540" height="540">
+        <img src="/assets/img/top/mv_logo_pc.png" alt="歴史リアル謎解きゲーム" width="944" height="946" decoding="async">
+      </picture>
+    </div>
+    <div class="mv__mash">
+      <img src="/assets/img/common/logo_mash.png" alt="MASH" width="114" height="62" decoding="async">
+    </div>
+    <a class="mv__link m-btn-01 js-anim js-anim--pon js-anim-breathe" href="/event/">イベント一覧を見る</a>
+  </section>
+
+  <section class="event-info m-bg-wave is-yellow js-anim-decos" aria-labelledby="event-info-ttl">
+    <div class="event-info__bg u-sm-pt10">
+      <div class="l-inner">
+        <p class="event-info__en m-heading-01__en is-red is-right is-sp-right js-anim js-anim--pon">Event<br class="sp-none"> Information</p>
+        <div class="top-cmn-layout is-reverse">
+          <h2 class="m-heading-01 is-stroke-yellow js-anim js-anim--heading-01" id="event-info-ttl">歴史リアル<span class="is-accent">謎</span>解き<br>ゲーム開催情報</h2>
+          <div class="event-info__body">
+                                    <div class="swiper event-info__swiper js-event-swiper">
+              <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                  <a class="m-card-01" href="https://rekishirealnazo.com/event/182/">
+                    <div class="m-card-01__img">
+                      <img src="https://rekishirealnazo.com/manage/wp-content/uploads/2026/07/【FIX】大和郡山KV-768x1086.jpg" alt="歴史リアル謎解きゲーム「謎の城」in 郡山城「豊臣秀長　大和大納言と呼ばれた名君」" width="470" height="662">
+                    </div>
+                    <div class="m-card-01__body">
+                      <div class="m-card-01__head">
+                                                <h3 class="m-card-01__ttl">歴史リアル謎解きゲーム「謎の城」in 郡山城「豊臣秀長　大和大納言と呼ばれた名君」</h3>
+                      </div>
+                      <dl class="m-card-01__meta">
+                                                  <div class="m-card-01__meta-row">
+                            <dt class="m-card-01__meta-label is-solid">開催期間</dt>
+                            <dd class="m-card-01__meta-val">
+                              2026/08/01（土）〜<br>
+                              2026/12/20（日）                            </dd>
+                          </div>
+                                                                          <div class="m-card-01__meta-row">
+                            <dt class="m-card-01__meta-label">料金</dt>
+                            <dd class="m-card-01__meta-val">1500円</dd>
+                          </div>
+                                                                          <div class="m-card-01__meta-row">
+                            <dt class="m-card-01__meta-label">エリア</dt>
+                            <dd class="m-card-01__meta-val">奈良県</dd>
+                          </div>
+                                              </dl>
+                    </div>
+                  </a>
+                </div>
+                                <div class="swiper-slide">
+                  <a class="m-card-01" href="https://rekishirealnazo.com/event/219/">
+                    <div class="m-card-01__img">
+                      <img src="https://rekishirealnazo.com/manage/wp-content/uploads/2026/09/大阪城_豊臣秀吉KV_04-768x1086.jpg" alt="歴史リアル謎解きゲーム「謎の城」in大阪城「豊臣秀吉と黄金の城　大坂城からはじまる天下人への道」" width="470" height="662">
+                    </div>
+                    <div class="m-card-01__body">
+                      <div class="m-card-01__head">
+                                                <h3 class="m-card-01__ttl">歴史リアル謎解きゲーム「謎の城」in大阪城「豊臣秀吉と黄金の城　大坂城からはじまる天下人への道」</h3>
+                      </div>
+                      <dl class="m-card-01__meta">
+                                                  <div class="m-card-01__meta-row">
+                            <dt class="m-card-01__meta-label is-solid">開催期間</dt>
+                            <dd class="m-card-01__meta-val">
+                              2026/10/02（金）〜<br>
+                              2027/06/30（水）                            </dd>
+                          </div>
+                                                                          <div class="m-card-01__meta-row">
+                            <dt class="m-card-01__meta-label">料金</dt>
+                            <dd class="m-card-01__meta-val">2,000円</dd>
+                          </div>
+                                                                          <div class="m-card-01__meta-row">
+                            <dt class="m-card-01__meta-label">エリア</dt>
+                            <dd class="m-card-01__meta-val">大阪城公園、大阪府</dd>
+                          </div>
+                                              </dl>
+                    </div>
+                  </a>
+                </div>
+                                <div class="swiper-slide">
+                  <a class="m-card-01" href="https://rekishirealnazo.com/event/232/">
+                    <div class="m-card-01__img">
+                      <img src="https://rekishirealnazo.com/manage/wp-content/uploads/2026/10/高槻KV-768x1086.jpg" alt="歴史リアル謎解きゲーム「謎の城」in高槻・島本「山崎の戦いを突破せよ！～天王山に蠢く決戦の陰謀～」" width="470" height="662">
+                    </div>
+                    <div class="m-card-01__body">
+                      <div class="m-card-01__head">
+                                                <h3 class="m-card-01__ttl">歴史リアル謎解きゲーム「謎の城」in高槻・島本「山崎の戦いを突破せよ！～天王山に蠢く決戦の陰謀～」</h3>
+                      </div>
+                      <dl class="m-card-01__meta">
+                                                  <div class="m-card-01__meta-row">
+                            <dt class="m-card-01__meta-label is-solid">開催期間</dt>
+                            <dd class="m-card-01__meta-val">
+                              2026/11/06（金）〜<br>
+                              2027/05/09（日）                            </dd>
+                          </div>
+                                                                          <div class="m-card-01__meta-row">
+                            <dt class="m-card-01__meta-label">料金</dt>
+                            <dd class="m-card-01__meta-val">1,800</dd>
+                          </div>
+                                                                          <div class="m-card-01__meta-row">
+                            <dt class="m-card-01__meta-label">エリア</dt>
+                            <dd class="m-card-01__meta-val">高槻城下町エリア・上宮天満宮・島本町エリア、大阪府</dd>
+                          </div>
+                                              </dl>
+                    </div>
+                  </a>
+                </div>
+                              </div>
+            </div>
+                        <div class="event-info__nav u-mt30">
+              <button class="event-info__nav-btn is-prev js-event-prev" type="button" aria-label="前のイベント"></button>
+              <button class="event-info__nav-btn js-event-next" type="button" aria-label="次のイベント"></button>
+            </div>
+                      </div><!-- /.event-info__body -->
+        </div><!-- /.event-info__inr -->
+      </div><!-- /.l-inner -->
+    </div><!-- /.event-info__bg -->
+  </section>
+
+  <section class="event-search u-pt60 u-sm-pt60 u-pb155 js-anim-decos" aria-labelledby="event-search-ttl">
+    <div class="l-inner">
+      <p class="m-heading-01__en is-cyan js-anim js-anim--pon">Event Search</p>
+      <div class="top-cmn-layout">
+        <h2 class="event-search__ttl m-heading-01 js-anim js-anim--heading-01" id="event-search-ttl">謎解き<br class="pc-none">イベント<br class="sp-none">検索</h2>
+        <div class="event-search__body u-mt40">
+          <div class="event-search__panel">
+            <!-- 開催日から探す -->
+            <div class="event-search__cat is-date">
+              <p class="event-search__cat-ttl">
+                <img class="event-search__cat-icon" src="/assets/img/top/icon_calendar.svg" alt="" aria-hidden="true" width="24" height="24">
+                <span>開催日から探す</span>
+              </p>
+              <div class="event-search__date-btns">
+                <a class="event-search__date-btn is-red" href="https://rekishirealnazo.com/event/today/">開催中の謎解きイベント</a>
+                <a class="event-search__date-btn is-black" href="https://rekishirealnazo.com/event/future/">今後開催予定の謎解きイベント</a>
+              </div>
+            </div>
+            <!-- エリアから探す (area タクソノミーから自動生成 / details でアコーディオン) -->
+                        <div class="event-search__cat is-area">
+              <p class="event-search__cat-ttl">
+                <img class="event-search__cat-icon" src="/assets/img/top/icon_pin.svg" alt="" aria-hidden="true" width="24" height="24">
+                <span>エリアから探す</span>
+              </p>
+              <div>
+                                  <div class="event-search__opts is-major">
+                                      <details class="event-search__opt is-main">
+                    <summary class="event-search__opt-btn is-main">
+                      <span>関西エリア</span>
+                    </summary>
+                    <ul class="event-search__sub">
+                      <li><a class="event-search__sub-link is-parent" href="https://rekishirealnazo.com/event/kansai/">関西</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kansai/osaka/">大阪府</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kansai/nara/">奈良県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kansai/hyogo/">兵庫県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kansai/kyoto/">京都府</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kansai/wakayama/">和歌山県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kansai/shiga/">滋賀県</a></li>
+                                          </ul>
+                  </details>
+                                    <details class="event-search__opt is-main">
+                    <summary class="event-search__opt-btn is-main">
+                      <span>関東エリア</span>
+                    </summary>
+                    <ul class="event-search__sub">
+                      <li><a class="event-search__sub-link is-parent" href="https://rekishirealnazo.com/event/kanto/">関東</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kanto/tokyo/">東京都</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kanto/tochigi/">栃木県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kanto/gunma/">群馬県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kanto/saitama/">埼玉県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kanto/ibaraki/">茨城県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kanto/chiba/">千葉県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kanto/kanagawa/">神奈川県</a></li>
+                                          </ul>
+                  </details>
+                                    </div>
+                                                  <div class="event-search__opts u-mt20">
+                                      <details class="event-search__opt is-arrow">
+                    <summary class="event-search__opt-btn is-arrow">
+                      <span>北海道・東北エリア</span>
+                    </summary>
+                    <ul class="event-search__sub">
+                      <li><a class="event-search__sub-link is-parent" href="https://rekishirealnazo.com/event/hokkaido_tohoku/">北海道・東北</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/hokkaido_tohoku/hokkaido/">北海道</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/hokkaido_tohoku/aomori/">青森県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/hokkaido_tohoku/akita/">秋田県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/hokkaido_tohoku/iwate/">岩手県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/hokkaido_tohoku/yamagata/">山形県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/hokkaido_tohoku/miyagi/">宮城県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/hokkaido_tohoku/fukushima/">福島県</a></li>
+                                          </ul>
+                  </details>
+                                    <details class="event-search__opt is-arrow">
+                    <summary class="event-search__opt-btn is-arrow">
+                      <span>北陸・甲信越エリア</span>
+                    </summary>
+                    <ul class="event-search__sub">
+                      <li><a class="event-search__sub-link is-parent" href="https://rekishirealnazo.com/event/hokuriku_koshinetsu/">北陸・甲信越</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/hokuriku_koshinetsu/niigata/">新潟県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/hokuriku_koshinetsu/toyama/">富山県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/hokuriku_koshinetsu/ishikawa/">石川県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/hokuriku_koshinetsu/fukui/">福井県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/hokuriku_koshinetsu/nagano/">長野県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/hokuriku_koshinetsu/yamanashi/">山梨県</a></li>
+                                          </ul>
+                  </details>
+                                    <details class="event-search__opt is-arrow">
+                    <summary class="event-search__opt-btn is-arrow">
+                      <span>東海エリア</span>
+                    </summary>
+                    <ul class="event-search__sub">
+                      <li><a class="event-search__sub-link is-parent" href="https://rekishirealnazo.com/event/tokai/">東海</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/tokai/aichi/">愛知県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/tokai/gifu/">岐阜県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/tokai/mie/">三重県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/tokai/shizuoka/">静岡県</a></li>
+                                          </ul>
+                  </details>
+                                    <details class="event-search__opt is-arrow">
+                    <summary class="event-search__opt-btn is-arrow">
+                      <span>四国・中国エリア</span>
+                    </summary>
+                    <ul class="event-search__sub">
+                      <li><a class="event-search__sub-link is-parent" href="https://rekishirealnazo.com/event/shikoku_chugoku/">四国・中国</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/shikoku_chugoku/okayama/">岡山県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/shikoku_chugoku/hiroshima/">広島県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/shikoku_chugoku/tottori/">鳥取県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/shikoku_chugoku/shimane/">島根県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/shikoku_chugoku/yamaguchi/">山口県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/shikoku_chugoku/ehime/">愛媛県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/shikoku_chugoku/kagawa/">香川県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/shikoku_chugoku/tokushima/">徳島県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/shikoku_chugoku/kochi/">高知県</a></li>
+                                          </ul>
+                  </details>
+                                    <details class="event-search__opt is-arrow">
+                    <summary class="event-search__opt-btn is-arrow">
+                      <span>九州・沖縄エリア</span>
+                    </summary>
+                    <ul class="event-search__sub">
+                      <li><a class="event-search__sub-link is-parent" href="https://rekishirealnazo.com/event/kyushu_okinawa/">九州・沖縄</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kyushu_okinawa/fukuoka/">福岡県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kyushu_okinawa/saga/">佐賀県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kyushu_okinawa/nagasaki/">長崎県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kyushu_okinawa/oita/">大分県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kyushu_okinawa/kumamoto/">熊本県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kyushu_okinawa/miyazaki/">宮崎県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kyushu_okinawa/kagoshima/">鹿児島県</a></li>
+                                              <li><a class="event-search__sub-link" href="https://rekishirealnazo.com/event/kyushu_okinawa/okinawa/">沖縄県</a></li>
+                                          </ul>
+                  </details>
+                  <a class="event-search__opt-btn" href="https://rekishirealnazo.com/event/other/"><span>その他</span></a>                  </div>
+                              </div>
+            </div>
+            <!-- 難易度から探す (level タクソノミーから自動生成) -->
+                        <div class="event-search__cat is-level">
+              <p class="event-search__cat-ttl">
+                <img class="event-search__cat-icon" src="/assets/img/top/icon_question.svg" alt="" aria-hidden="true" width="24" height="24">
+                <span>難易度から探す</span>
+              </p>
+              <div class="event-search__opts">
+                                  <a class="event-search__opt-btn" href="https://rekishirealnazo.com/event/level/easy/">初心者向け</a>
+                                  <a class="event-search__opt-btn" href="https://rekishirealnazo.com/event/level/normal/">ふつう</a>
+                                  <a class="event-search__opt-btn" href="https://rekishirealnazo.com/event/level/hard/">経験者向け</a>
+                                  <a class="event-search__opt-btn" href="https://rekishirealnazo.com/event/level/%e3%81%a1%e3%82%87%e3%81%a3%e3%81%a8%e9%9b%a3%e3%81%97%e3%81%84/">ちょっと難しい</a>
+                              </div>
+            </div>
+            <!-- フッターリンク -->
+            <div class="event-search__footer">
+              <a class="event-search__all" href="https://rekishirealnazo.com/event/">
+                <span>謎解きイベントをすべて見る</span>
+              </a>
+              <a class="event-search__archive" href="https://rekishirealnazo.com/event/back/">
+                <span>過去の謎解きイベントアーカイブ</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features m-bg-wave is-cyan js-anim-decos" aria-labelledby="features-ttl">
+    <div class="features__bg u-pt65 u-sm-pt10 u-pb80">
+      <div class="l-inner">
+        <p class="m-heading-01__en is-cream is-right is-sp-right js-anim js-anim--pon">Features</p>
+        <div class="top-cmn-layout is-reverse">
+          <div class="features__ttl-wrap">
+            <h2 class="features__ttl m-heading-01 js-anim js-anim--heading-01" id="features-ttl">歴史リアル謎解き<br>ゲームの魅力</h2>
+          </div>
+          <ol class="features__steps js-anim-row-pc" data-stagger="300">
+            <li class="m-step-01 is-01 js-anim js-anim--scroll-h">
+              <div class="m-step-01__img">
+                <img src="/assets/img/common/features_step01.png" alt="街歩きしながら歴史を追体験する周遊型謎解きのイラスト" width="930" height="560">
+              </div>
+              <div class="m-step-01__body">
+                <span class="m-step-01__num" aria-hidden="true">01</span>
+                <h3 class="m-step-01__ttl">街歩きしながら歴史を<br>追体験する周遊型謎解き</h3>
+                <p class="m-step-01__txt">謎解きキットを手に実際の街を歩きながら、歴史上の人物が見た景色や訪れた場所をめぐります。観光とゲームが融合した新しい体験をお楽しみいただけます。</p>
+              </div>
+            </li>
+            <li class="m-step-01 is-02 js-anim js-anim--scroll-h">
+              <div class="m-step-01__img">
+                <img src="/assets/img/common/features_step02.png" alt="歴史の専門家監修のリアルな歴史ストーリーのイラスト" width="930" height="560">
+              </div>
+              <div class="m-step-01__body">
+                <span class="m-step-01__num" aria-hidden="true">02</span>
+                <h3 class="m-step-01__ttl">歴史の専門家監修の<br>リアルな歴史ストーリー</h3>
+                <p class="m-step-01__txt">歴史の専門家が監修した、史実に基づいた本格的なストーリーをご用意。謎解きを通じて、教科書では学べない歴史の奥深さに触れることができます。</p>
+              </div>
+            </li>
+            <li class="m-step-01 is-03 js-anim js-anim--scroll-h">
+              <div class="m-step-01__img">
+                <img src="/assets/img/common/features_step03.png" alt="歴史を知らなくてもゲーム感覚で楽しめる謎解きのイラスト" width="930" height="560">
+              </div>
+              <div class="m-step-01__body">
+                <span class="m-step-01__num" aria-hidden="true">03</span>
+                <h3 class="m-step-01__ttl">歴史を知らなくても<br>ゲーム感覚で楽しめる</h3>
+                <p class="m-step-01__txt">歴史の知識がなくても参加いただけます。謎解きを進めるうちに自然と歴史を学べる仕組みになっています。謎解きファンはもちろん、歴史初心者の方でも十分に楽しめます。</p>
+              </div>
+              
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="voice u-pt90 u-sm-pt15 js-anim-decos" aria-labelledby="voice-ttl">
+    <div class="l-inner">
+      <p class="m-heading-01__en is-red is-right js-anim js-anim--pon">User’s Voice</p>
+      <div class="top-cmn-layout is-reverse">
+        <h2 class="voice__ttl m-heading-01 js-anim js-anim--heading-01" id="voice-ttl">歴史リアル謎解き<br>ゲームの参加者の声</h2>
+        <div class="voice__body">
+          <ul class="m-bubble-list js-anim-row" data-stagger="80">
+            <li class="m-bubble is-01 js-anim js-anim--pon">
+              <div class="m-bubble__inner">
+                <h3 class="m-bubble__txt">最後の謎が更に難しく、解きごたえがありました。本当に楽しいイベントです</h3>
+                <p class="m-bubble__meta">40代/女性</p>
+              </div>
+            </li>
+            <li class="m-bubble is-02 js-anim js-anim--pon">
+              <div class="m-bubble__inner">
+                <h3 class="m-bubble__txt">石垣の積み方など初めて知ることができました！初めて通る場所も多く楽しかったです。</h3>
+                <p class="m-bubble__meta">50代/女性</p>
+              </div>
+            </li>
+            <li class="m-bubble is-03 js-anim js-anim--pon">
+              <p class="m-bubble__txt is-top">街歩きしながら<br>謎解きもでき、</p>
+              <div class="m-bubble__inner">
+                <h3 class="m-bubble__txt">歴史文化にも<br>触れられて良かった</h3>
+                <p class="m-bubble__meta">20代/女性</p>
+              </div>
+            </li>
+            <li class="m-bubble is-04 js-anim js-anim--pon">
+              <div class="m-bubble__inner">
+                <h3 class="m-bubble__txt">同じエリアで別の謎解きにも参加しましたが、歴史を通したスポットに行くことが多く、街の奥深さを感じました。</h3>
+                <p class="m-bubble__meta">30代/男性</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="voice__photos-wrap">
+      <ul class="voice__photos">
+        <li><img src="/assets/img/top/voice_photo_03.jpg" alt="" width="600" height="399"></li>
+        <li><img src="/assets/img/top/voice_photo_01.jpg" alt="" width="600" height="400"></li>
+        <li><img src="/assets/img/top/voice_photo_02.jpg" alt="" width="600" height="400"></li>
+        <li><img src="/assets/img/top/voice_photo_04.jpg" alt="" width="600" height="400"></li>
+        <li aria-hidden="true"><img src="/assets/img/top/voice_photo_03.jpg" alt="" width="600" height="399"></li>
+        <li aria-hidden="true"><img src="/assets/img/top/voice_photo_01.jpg" alt="" width="600" height="400"></li>
+        <li aria-hidden="true"><img src="/assets/img/top/voice_photo_02.jpg" alt="" width="600" height="400"></li>
+        <li aria-hidden="true"><img src="/assets/img/top/voice_photo_04.jpg" alt="" width="600" height="400"></li>
+        <li aria-hidden="true"><img src="/assets/img/top/voice_photo_03.jpg" alt="" width="600" height="399"></li>
+        <li aria-hidden="true"><img src="/assets/img/top/voice_photo_01.jpg" alt="" width="600" height="400"></li>
+        <li aria-hidden="true"><img src="/assets/img/top/voice_photo_02.jpg" alt="" width="600" height="400"></li>
+        <li aria-hidden="true"><img src="/assets/img/top/voice_photo_04.jpg" alt="" width="600" height="400"></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="howto u-pt140" aria-labelledby="howto-ttl">
+    <div class="l-inner">
+      <p class="m-heading-01__en is-cyan is-sp-right js-anim js-anim--pon">How to GAME</p>
+      <div class="top-cmn-layout">
+        <h2 class="howto__ttl m-heading-01 js-anim js-anim--heading-01" id="howto-ttl">歴史リアル謎解き<br>ゲームの遊び方</h2>
+        <ol class="howto__steps u-mt60 u-sm-mt0 js-anim-row" data-stagger="160">
+          <li class="howto__step js-anim js-anim--fadeup">
+            <div class="howto__step-img">
+              <img class="js-anim js-anim--pon" src="/assets/img/common/step_01.png" alt="謎解きキットを受け取るイラスト" width="200" height="200">
+            </div>
+            <div class="howto__step-body">
+              <p class="howto__step-label js-anim js-anim--scroll-h"><span>STEP</span><b>01</b></p>
+              <h3 class="howto__step-ttl">謎解きキットを<br>受け取る</h3>
+            </div>
+          </li>
+          <li class="howto__step js-anim js-anim--fadeup">
+            <div class="howto__step-img">
+              <img class="js-anim js-anim--pon" src="/assets/img/common/step_02.png" alt="地図をもとに謎解きスポットを巡るイラスト" width="200" height="200">
+            </div>
+            <div class="howto__step-body">
+              <p class="howto__step-label js-anim js-anim--scroll-h"><span>STEP</span><b>02</b></p>
+              <h3 class="howto__step-ttl">地図をもとに謎を解く<br class="sp-none">ヒントとなる<br class="sp-none">謎解きスポットをめぐる</h3>
+            </div>
+          </li>
+          <li class="howto__step js-anim js-anim--fadeup">
+            <div class="howto__step-img">
+              <img class="js-anim js-anim--pon" src="/assets/img/common/step_03.png" alt="手がかりを集めて謎を解くイラスト" width="200" height="200">
+            </div>
+            <div class="howto__step-body">
+              <p class="howto__step-label js-anim js-anim--scroll-h"><span>STEP</span><b>03</b></p>
+              <h3 class="howto__step-ttl">手がかりを集めて謎を解き、<br class="sp-none">クリアを目指す</h3>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <div class="m-wave-01" aria-hidden="true"></div>
+
+    <section class="peek u-pb115 u-sm-pb50 u-sm-pt40" aria-labelledby="peek-ttl">
+    <div class="l-inner">
+      <p class="peek__badge js-anim js-anim--pon" id="peek-ttl">歴史リアル謎解きゲームをのぞき見</p>
+      <h2 class="peek__heading">
+        <span class="peek__heading-trial js-anim js-anim--pon">お試し</span>
+        <img class="peek__heading-chars js-anim js-anim--pon js-anim-bounce-small" src="/assets/img/top/peek_chars.png" alt="謎" width="112" height="96">
+      </h2>
+      <p class="peek__lead js-anim js-anim--fadeup">実際のイベントで出題された<br class="pc-none">「謎」を特別にご紹介します。</p>
+      <form class="peek__panel u-mt25 u-sm-mt40 u-txt-center js-peek-form" data-answer-hash="009034eebb12af21034e412d40528fbd8cc2b678208f2dd8f9bac7e1e97c20ce 129b734068ac051fab63a1982ad9fa8530fcd502754172bac2077b43d3a0bac1 49569981024560147e840d262a54cb3fd982119dccc71357c653423df73252ae" novalidate>
+        <div class="js-anim js-anim--fadeup">
+          <p class="peek__label"><span>問題</span></p>
+          <img class="peek__img" src="/assets/img/top/peek_q.jpg" alt="問題" width="718" height="426">
+        </div>
+        <div class="js-anim js-anim--fadeup">
+          <p class="peek__label"><span>てがかり</span></p>
+          <button class="peek__zoom-btn js-peek-hint" type="button" aria-label="ヒント画像を拡大して見る" data-full-src="/assets/img/top/peek_hint_large.jpg">
+            <img class="peek__img" src="/assets/img/top/peek_hint.jpg" alt="ヒント" width="718" height="450">
+            <span class="peek__zoom-hint" aria-hidden="true">タップで拡大</span>
+          </button>
+        </div>
+        <div class="js-anim js-anim--fadeup">
+          <p class="peek__label"><span>ヒント</span></p>
+          <div class="peek__hints js-peek-hints">
+            <details class="peek-hint js-peek-hint-item">
+              <summary class="peek-hint__summary">
+                <span class="peek-hint__label">ヒント</span>
+                <span class="peek-hint__caption">クリックしてヒントを出す</span>
+                <span class="peek-hint__toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="peek-hint__body">
+                <p>刻印の説明を見て、それぞれの刻印が表している場所を確認しましょう。<br>冊子の左側に４つずつ描かれている刻印にはそれぞれ漢字１文字が当てはまり、刻印が重なっている部分には同じ漢字が当てはまります。</p>
+              </div>
+            </details>
+            <details class="peek-hint js-peek-hint-item" hidden>
+              <summary class="peek-hint__summary">
+                <span class="peek-hint__label">さらにヒント</span>
+                <span class="peek-hint__caption">クリックしてヒントを出す</span>
+                <span class="peek-hint__toggle" aria-hidden="true"></span>
+              </summary>
+              <div class="peek-hint__body">
+                <p>右側の刻印の下に書かれている数字は、漢字の何画目を見るかを表しています。<br>右上に書かれているイラストは「イエ」を表しています。<br>「田」の2,4,5画目、「田」の1,2,5画目、「佐」の1,2画目を確認しましょう。</p>
+              </div>
+            </details>
+          </div>
+        </div>
+        <div class="js-anim js-anim--fadeup">
+          <p class="peek__label"><span>回答入力欄</span></p>
+          <div class="peek__input js-anim-shake">
+            <input type="text" class="js-peek-input" aria-label="謎の回答を入力" autocomplete="off">
+          </div>
+          <p class="peek__error js-peek-error" hidden role="alert">もう一度考えてみよう</p>
+        </div>
+        <button class="peek__btn js-anim js-anim--pon" type="submit">謎に答える！</button>
+      </form>
+    </div>
+
+        <dialog class="peek-zoom js-peek-zoom" aria-label="ヒント画像 拡大表示">
+      <div class="peek-zoom__viewport js-peek-zoom-viewport">
+        <img class="peek-zoom__img js-peek-zoom-img" alt="ヒント (拡大)">
+      </div>
+      <div class="peek-zoom__loading js-peek-zoom-loading" role="status" aria-live="polite">
+        <span class="peek-zoom__spinner" aria-hidden="true"></span>
+        <span class="peek-zoom__loading-txt">画像を読み込み中…</span>
+      </div>
+      <form method="dialog">
+        <button class="peek-zoom__close" type="submit" aria-label="閉じる"></button>
+      </form>
+      <p class="peek-zoom__note" aria-hidden="true">画像をタップで原寸 ⇄ フィット</p>
+    </dialog>
+
+        <dialog class="peek-modal js-peek-modal" aria-labelledby="peek-modal-ttl">
+      <div class="peek-modal__panel">
+        <p class="peek-modal__ttl" id="peek-modal-ttl">正解です！</p>
+        <p class="peek-modal__lead">おめでとうございます！<br>ぜひ実際のイベントにも挑戦してみてください。</p>
+        <div class="peek-modal__actions">
+          <a class="peek-modal__share" href="https://twitter.com/intent/tweet?text=%E3%80%8C%E6%AD%B4%E5%8F%B2%E3%83%AA%E3%82%A2%E3%83%AB%E8%AC%8E%E8%A7%A3%E3%81%8D%E3%82%B2%E3%83%BC%E3%83%A0%E3%80%8D%E3%81%AE%E3%81%8A%E8%A9%A6%E3%81%97%E8%AC%8E%E3%81%AB%E6%AD%A3%E8%A7%A3%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%EF%BC%81%F0%9F%92%A1%0D%0A%E3%81%8A%E5%9F%8E%E3%82%84%E7%A5%9E%E7%A4%BE%E3%81%AA%E3%81%A9%E3%81%AE%E6%AD%B4%E5%8F%B2%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88%E3%82%92%E8%A1%97%E6%AD%A9%E3%81%8D%E3%81%97%E3%81%AA%E3%81%8C%E3%82%89%E3%80%81%E6%AD%B4%E5%8F%B2%E3%82%92%E3%83%AA%E3%82%A2%E3%83%AB%E3%81%AB%E4%BD%93%E9%A8%93%E3%81%A7%E3%81%8D%E3%82%8B%E5%91%A8%E9%81%8A%E5%9E%8B%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%A7%E3%81%99%F0%9F%97%BA%EF%B8%8F%F0%9F%8F%AF%0D%0A%E6%AD%B4%E5%8F%B2%E5%A5%BD%E3%81%8D%E3%82%82%E8%AC%8E%E8%A7%A3%E3%81%8D%E5%A5%BD%E3%81%8D%E3%82%82%E6%A5%BD%E3%81%97%E3%82%81%E3%82%8B%EF%BC%81%0D%0A%23%E6%AD%B4%E5%8F%B2%E3%83%AA%E3%82%A2%E3%83%AB%E8%AC%8E%E8%A7%A3%E3%81%8D%E3%82%B2%E3%83%BC%E3%83%A0%0D%0Ahttps%3A%2F%2Frekishirealnazo.com%2F" target="_blank" rel="noopener">
+            <img class="peek-modal__share-icon" src="/assets/img/common/icon_x.png" alt="" width="20" height="20">
+            <span>正解したことをシェアする</span>
+          </a>
+          <details class="peek-modal__answer">
+            <summary class="peek-modal__answer-summary">
+              <span>解説を見る</span>
+              <span class="peek-modal__answer-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="peek-modal__answer-body">
+              <p>刻印の説明を確認して、冊子の左側に描かれている刻印に、該当する漢字を1文字ずつ当てはめましょう。</p>
+              <p>重なっている部分に同じ漢字が入るように当てはめると、<img class="peek-modal__seal" src="/assets/img/top/peek_seal_01.png" alt="" width="60" height="56">が「石見浜田」、<img class="peek-modal__seal" src="/assets/img/top/peek_seal_02.png" alt="" width="110" height="56">が「豊後佐伯」、<img class="peek-modal__seal" src="/assets/img/top/peek_seal_03.png" alt="" width="60" height="56">が「丹後竹田」、<img class="peek-modal__seal" src="/assets/img/top/peek_seal_04.png" alt="" width="42" height="56">が「肥前佐賀」だとわかります。</p>
+              <p>刻印が重なっている部分を確認すると、<img class="peek-modal__seal" src="/assets/img/top/peek_seal_05.png" alt="" width="60" height="56">が「後」、<img class="peek-modal__seal" src="/assets/img/top/peek_seal_06.png" alt="" width="60" height="56">が「佐」、<img class="peek-modal__seal" src="/assets/img/top/peek_seal_07.png" alt="" width="60" height="56">が「田」です。</p>
+              <p>右側の重なった刻印の下に書かれている数字は、対応する漢字の何画目を見るかを表しています。「田」の2,4,5画目、「田」の1,2,5画目、「佐」の1,2画目を順に読んで、答えは「よろい（鎧）」です。</p>
+            </div>
+          </details>
+          <form method="dialog">
+            <button class="peek-modal__close" type="submit">このウィンドウを閉じる</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+  </section>
+
+  <div class="m-wave-01" aria-hidden="true"></div>
+
+  <section class="visitor u-mt105 u-sm-mt35 js-anim-decos" aria-labelledby="visitor-ttl">
+    <div class="l-inner">
+      <p class="m-heading-01__en is-red is-right js-anim js-anim--pon">For visitor</p>
+      <div class="top-cmn-layout is-reverse">
+        <h2 class="visitor__ttl m-heading-01 is-right js-anim js-anim--heading-01" id="visitor-ttl">謎解きゲームが<br>初めての方へ</h2>
+        <div class="visitor__panel">
+          <ul class="visitor__items js-anim-row" data-stagger="100">
+            <li class="visitor__item js-anim js-anim--fadeup">
+              <img class="visitor__icon" src="/assets/img/top/visitor_icon_clothes.svg" alt="" width="144" height="144">
+              <p class="visitor__item-ttl">持ち物や服装</p>
+            </li>
+            <li class="visitor__item js-anim js-anim--fadeup">
+              <img class="visitor__icon" src="/assets/img/top/visitor_icon_timer.svg" alt="" width="144" height="144">
+              <p class="visitor__item-ttl">所要時間の目安</p>
+            </li>
+            <li class="visitor__item js-anim js-anim--fadeup">
+              <img class="visitor__icon" src="/assets/img/top/visitor_icon_level.svg" alt="" width="144" height="144">
+              <p class="visitor__item-ttl">難易度</p>
+            </li>
+            <li class="visitor__item js-anim js-anim--fadeup">
+              <img class="visitor__icon" src="/assets/img/top/visitor_icon_ticket.svg" alt="" width="144" height="144">
+              <p class="visitor__item-ttl">チケットの<br class="pc-none">購入方法</p>
+            </li>
+          </ul>
+          <p class="visitor__lead js-anim js-anim--fadeup">「歴史リアル謎解きゲーム」は、歴史上の人物が訪れた実際のお城や城下町など歴史のある場所を舞台に、リアルに起こった歴史のストーリーに沿って問題を解いていくゲームです。歴史を追体験しながらエリアを周遊し、歴史に基づくヒントを集め、謎を解き明かしましょう！</p>
+          <div class="u-txt-center u-mt35">
+            <a class="m-btn-01 is-white js-anim js-anim--pon" href="/beginner/">初めての方へ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="m-wave-01" aria-hidden="true"></div>
+
+  <section class="faq" aria-labelledby="faq-ttl">
+    <div class="l-inner">
+      <p class="m-heading-01__en is-red is-sp-right js-anim js-anim--pon">FAQ</p>
+      <div class="top-cmn-layout">
+        <h2 class="faq__ttl m-heading-01 js-anim js-anim--heading-01" id="faq-ttl">よくあるご質問</h2>
+        <div class="faq__body u-mt25 u-sm-mt15">
+          <div class="m-faq-01 js-anim-row" data-stagger="60">
+            <details class="m-faq-01__item js-anim js-anim--fadeup">
+              <summary class="m-faq-01__q">
+                <span class="m-faq-01__q-label">Q</span>
+                <h3 class="m-faq-01__q-txt">所要時間はどのくらいですか？</h3>
+                <span class="m-faq-01__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="m-faq-01__a">
+                <span class="m-faq-01__a-label">A</span>
+                <p class="m-faq-01__a-txt">おおよそ３時間程度でご案内させていただいております。早い人では２時間程度、観光も含めて半日〜１日かかったとおっしゃられる方もいますので、余裕のあるご参加を推奨しています。</p>
+              </div>
+            </details>
+            <details class="m-faq-01__item js-anim js-anim--fadeup">
+              <summary class="m-faq-01__q">
+                <span class="m-faq-01__q-label">Q</span>
+                <h3 class="m-faq-01__q-txt">歴史の知識がなくても楽しめますか？</h3>
+                <span class="m-faq-01__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="m-faq-01__a">
+                <span class="m-faq-01__a-label">A</span>
+                <p class="m-faq-01__a-txt">歴史の知識がなくても、謎を解く”ひらめき力”があれば問題ございません！</p>
+              </div>
+            </details>
+            <details class="m-faq-01__item js-anim js-anim--fadeup">
+              <summary class="m-faq-01__q">
+                <span class="m-faq-01__q-label">Q</span>
+                <h3 class="m-faq-01__q-txt">謎が解けないときにヒントはもらえますか？</h3>
+                <span class="m-faq-01__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="m-faq-01__a">
+                <span class="m-faq-01__a-label">A</span>
+                <p class="m-faq-01__a-txt">はい、謎解きに行き詰った時のためにヒントをご用意しておりますのでご安心ください！<br>謎解きキット内にヒントの確認方法を記載していますので、そちらをご確認ください。</p>
+              </div>
+            </details>
+            <details class="m-faq-01__item js-anim js-anim--fadeup">
+              <summary class="m-faq-01__q">
+                <span class="m-faq-01__q-label">Q</span>
+                <h3 class="m-faq-01__q-txt">子どもと一緒に参加できますか？</h3>
+                <span class="m-faq-01__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="m-faq-01__a">
+                <span class="m-faq-01__a-label">A</span>
+                <p class="m-faq-01__a-txt">もちろんお楽しみいただけます！歴史の知識がなくてもお楽しみいただけるゲームであり、大切なのは謎を解く”ひらめき”です…！お子様とあれこれ答えを考えながら挑戦してみてください。</p>
+              </div>
+            </details>
+            <details class="m-faq-01__item js-anim js-anim--fadeup">
+              <summary class="m-faq-01__q">
+                <span class="m-faq-01__q-label">Q</span>
+                <h3 class="m-faq-01__q-txt">年齢制限はありますか？</h3>
+                <span class="m-faq-01__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="m-faq-01__a">
+                <span class="m-faq-01__a-label">A</span>
+                <p class="m-faq-01__a-txt">年齢制限はございませんが、小学生の方の参加には保護者の同伴が必要です。</p>
+              </div>
+            </details>
+            <details class="m-faq-01__item js-anim js-anim--fadeup">
+              <summary class="m-faq-01__q">
+                <span class="m-faq-01__q-label">Q</span>
+                <h3 class="m-faq-01__q-txt">結構歩きますか？</h3>
+                <span class="m-faq-01__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="m-faq-01__a">
+                <span class="m-faq-01__a-label">A</span>
+                <p class="m-faq-01__a-txt">”思ったより歩いた”というお声をいただくことがあります。ですが、ご自身のペースでゆっくり進めていただけますので、体力に自信がない方でも安心してご参加いただけます。</p>
+              </div>
+            </details>
+            <details class="m-faq-01__item js-anim js-anim--fadeup">
+              <summary class="m-faq-01__q">
+                <span class="m-faq-01__q-label">Q</span>
+                <h3 class="m-faq-01__q-txt">普通のリアル脱出ゲームや脱出ゲームと何が違いますか？</h3>
+                <span class="m-faq-01__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="m-faq-01__a">
+                <span class="m-faq-01__a-label">A</span>
+                <p class="m-faq-01__a-txt">「歴史リアル謎解きゲーム」は室内の脱出ゲームとは異なり、実際のお城や城下町などの史跡周辺を歩いて回遊する屋外型の謎解きゲームです。また、単なる謎解きではなく、史実に基づいた歴史ストーリーを追体験できる点が大きな特徴です。歴史の専門家のもと、その土地に起こった出来事や歴史人物の足跡をたどりながら謎を解いていくため、観光や街歩きの要素も楽しめます。制限時間もなく、ご自身のペースでゆっくり進められます。</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="column m-bg-wave is-yellow u-mt120 u-mb25" aria-labelledby="column-ttl">
+    <div class="column__bg u-pt50 u-sm-pt10">
+      <div class="l-inner">
+        <p class="m-heading-01__en is-cream is-right js-anim js-anim--pon">Column</p>
+        <div class="top-cmn-layout is-reverse">
+          <h2 class="column__ttl m-heading-01 js-anim js-anim--heading-01" id="column-ttl">謎解きコラム</h2>
+          <div class="column__body u-mt20">
+            <ul class="m-card-02__list js-anim-row" data-stagger="100">
+                              <li class="js-anim js-anim--fadeup">
+                  <a class="m-card-02" href="https://rekishirealnazo.com/column/244/">
+                    <div class="m-card-02__img">
+                      <img src="https://rekishirealnazo.com/manage/wp-content/uploads/2026/11/image-768x576.png" alt="豊臣秀吉をテーマとした歴史リアル謎解きゲーム「謎の城」in大阪城　好評開催中！" width="624" height="400">
+                    </div>
+                    <time class="m-card-02__date" datetime="2026-11-11">2026.11.11</time>
+                    <h3 class="m-card-02__ttl">豊臣秀吉をテーマとした歴史リアル謎解きゲーム「謎の城」in大阪城　好評開催中！</h3>
+                  </a>
+                </li>
+                              <li class="js-anim js-anim--fadeup">
+                  <a class="m-card-02" href="https://rekishirealnazo.com/column/233/">
+                    <div class="m-card-02__img">
+                      <img src="https://rekishirealnazo.com/manage/wp-content/uploads/2026/10/コラム実績背景_広域実施-pdf.jpg" alt="歴史リアル謎解きゲーム「謎の城」事例｜広域実施編" width="624" height="400">
+                    </div>
+                    <time class="m-card-02__date" datetime="2026-10-21">2026.10.21</time>
+                    <h3 class="m-card-02__ttl">歴史リアル謎解きゲーム「謎の城」事例｜広域実施編</h3>
+                  </a>
+                </li>
+                              <li class="js-anim js-anim--fadeup">
+                  <a class="m-card-02" href="https://rekishirealnazo.com/column/children-nazotoki/">
+                    <div class="m-card-02__img">
+                      <img src="https://rekishirealnazo.com/manage/wp-content/uploads/2026/07/子ども謎解き_サムネ_1200x768_修正版_v2-768x492.png" alt="子供におすすめの謎解きイベントは？一緒に楽しむための選び方も解説" width="624" height="400">
+                    </div>
+                    <time class="m-card-02__date" datetime="2026-10-06">2026.10.06</time>
+                    <h3 class="m-card-02__ttl">子供におすすめの謎解きイベントは？一緒に楽しむための選び方も解説</h3>
+                  </a>
+                </li>
+                          </ul>
+            <a class="m-btn-01 is-black u-mt40 js-anim js-anim--pon" href="/column/">謎解きコラム一覧を見る</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <a class="l-event-fab" href="https://rekishirealnazo.com/event/" aria-label="イベント一覧">
+    <span class="l-event-fab__text">イベント一覧</span>
+    <span class="l-event-fab__arrow" aria-hidden="true"></span>
+  </a>
+
+  <section class="l-contact-cta" aria-labelledby="contact-cta-ttl">
+  <p class="l-contact-cta__en m-heading-01__en is-red js-anim js-anim--pon">Contact</p>
+  <div class="l-inner">
+    <div class="l-contact-cta__panel">
+      <p class="l-contact-cta__ttl js-anim js-anim--pon" id="contact-cta-ttl">お問い合わせ</p>
+      <h2 class="l-contact-cta__lead js-anim js-anim--scroll-h">歴史リアル謎解きゲームへの参加に<br class="pc-none">関するお問い合わせはこちら</h2>
+      <div class="l-contact-cta__btns js-anim-row" data-stagger="120">
+        <button class="l-contact-cta__btn is-web js-anim js-anim--fadeup js-contact-open" type="button">
+          <span class="l-contact-cta__btn-body">
+            <span class="l-contact-cta__btn-label">メールからのお問い合わせ</span>
+          </span>
+        </button>
+        <a class="l-contact-cta__btn is-tel js-anim js-anim--fadeup" href="tel:0663777762">
+          <span class="l-contact-cta__btn-body">
+            <span class="l-contact-cta__btn-label">お電話でのお問い合わせ</span>
+            <span class="l-contact-cta__btn-hours">（受付時間：平日10:00〜18:00）</span>
+            <span class="l-contact-cta__btn-num">Tel：06-6377-7762</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="l-corp-cta" aria-labelledby="corp-cta-ttl">
+  <div class="l-inner">
+    <div class="l-corp-cta__inr">
+      <h2 class="l-corp-cta__ttl js-anim js-anim--scroll-h" id="corp-cta-ttl">
+        謎解きイベントを<br>企画したい法人・団体の方へ
+      </h2>
+      <p class="l-corp-cta__txt js-anim js-anim--fadeup">
+        「歴史リアル謎解きゲーム」の企画・運営ノウハウを活かした、法人・自治体向けのオリジナル謎解きイベントの企画制作も承っております。地域活性化、観光誘致、チームビルディング、販促プロモーションなど、さまざまな目的に応じたカスタマイズが可能です。まずはお気軽にご相談ください。
+      </p>
+      <a class="m-btn-01 is-fill-black js-anim js-anim--pon" href="/hojin/">詳細とお問い合わせ</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<a class="l-footer__floating-cta" href="https://eplus.jp/sf/word/0000125417" target="_blank" rel="noopener" aria-label="チケット購入はこちら">
+  <svg class="l-footer__floating-cta__frame" viewBox="0 0 164 164" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+    <defs>
+      <linearGradient id="cta-g" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0.341" stop-color="#6600FF"/>
+        <stop offset="1" stop-color="#FF5775"/>
+      </linearGradient>
+      <path id="cta-star" d="M164 81.9958C164 88.8922 153.344 94.3 151.641 100.658C149.883 107.239 156.355 117.239 153.025 123.004C149.644 128.849 137.714 128.219 132.97 132.962C128.227 137.705 128.858 149.635 123.013 153.016C117.167 156.397 107.252 149.875 100.667 151.633C94.3042 153.332 88.9006 163.992 82 163.992C75.0994 163.992 69.6958 153.336 63.3376 151.633C56.7566 149.875 46.7568 156.347 40.9916 153.016C35.2264 149.686 35.7772 137.705 31.0338 132.962C26.2905 128.219 14.3605 128.849 10.9796 123.004C7.59867 117.159 14.1208 107.243 12.3631 100.658C10.6053 94.0729 0 88.8922 0 81.9958C0 75.0994 10.6558 69.6916 12.3589 63.3334C14.1166 56.7524 7.64492 46.7526 10.9754 40.9874C14.3563 35.1423 26.2863 35.773 31.0296 31.0296C35.773 26.2863 35.1423 14.3563 40.9874 10.9754C46.8325 7.59446 56.7482 14.1166 63.3334 12.3589C69.6958 10.66 75.0994 0 82 0C88.9006 0 94.3042 10.6558 100.662 12.3589C107.243 14.1166 117.243 7.64492 123.008 10.9754C128.774 14.3058 128.223 26.2863 132.966 31.0296C137.71 35.773 149.639 35.1423 153.02 40.9874C156.401 46.8325 149.879 56.7482 151.637 63.3334C153.336 69.6958 163.996 75.0994 163.996 82L164 81.9958Z"/>
+      <mask id="cta-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="164" height="164">
+        <rect width="164" height="164" fill="#000"/>
+        <use class="l-footer__floating-cta__spin" href="#cta-star" fill="#fff"/>
+      </mask>
+    </defs>
+    <rect width="164" height="164" fill="url(#cta-g)" mask="url(#cta-mask)"/>
+    <use class="l-footer__floating-cta__spin" href="#cta-star" fill="none" stroke="#fff" stroke-width="3"/>
+  </svg>
+  <span class="l-footer__floating-cta__inner">
+    <img class="l-footer__floating-cta__icon" src="/assets/img/common/floating-cta_ticket.svg" alt="" width="43" height="36">
+    <span class="l-footer__floating-cta__text">チケット購入は<br>こちら</span>
+    <span class="l-footer__floating-cta__arrow" aria-hidden="true"></span>
+  </span>
+</a>
+
+<footer class="l-footer">
+  <a class="l-footer__pagetop" href="#top" aria-label="ページトップへ戻る">
+    <span class="l-footer__pagetop-icon" aria-hidden="true">
+      <img src="/assets/img/common/icon_arrow_up.svg" alt="" width="14" height="12">
+    </span>
+    <span class="l-footer__pagetop-text">Page TOP</span>
+  </a>
+  <div class="l-footer__inner">
+    <div class="l-footer__block l-footer__block--left">
+      <div class="l-footer__logo">
+        <img src="/assets/img/common/footer_logo.svg" alt="歴史リアル謎解きゲーム" width="275" height="275">
+      </div>
+      <nav class="l-footer__nav-wrap" aria-label="フッターナビゲーション">
+        <ul class="l-footer__nav">
+          <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="/about/">歴史リアル<br class="pc-none">謎解きゲームとは</a></li>
+          <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="/beginner/">初めての方へ</a></li>
+          <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="/column/">謎解きコラム</a></li>
+          <li class="l-footer__nav-item"><a class="l-footer__nav-link" href="/event/">イベント一覧</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="l-footer__block l-footer__block--right">
+      <div class="l-footer__sublogos">
+        <span class="l-footer__sublogo l-footer__sublogo--castle">
+          <img src="/assets/img/common/logo_nazonoshiro.svg" alt="謎の城" width="127" height="100">
+        </span>
+        <span class="l-footer__sublogo l-footer__sublogo--monde">
+          <img src="/assets/img/common/logo_mondedenkikan.svg" alt="開運なぞ詣" width="105" height="100">
+        </span>
+      </div>
+      <div class="l-footer__contact">
+        <p class="l-footer__contact-lead">歴史リアル謎解きゲームへの参加に<br class="pc-none">関するお問い合わせはこちら</p>
+        <div class="l-footer__contact-btns">
+          <button class="l-footer__web js-contact-open" type="button">メールからのお問い合わせ</button>
+          <a class="l-footer__tel" href="tel:0663777762">
+            <span class="l-footer__tel-label">お電話でのお問い合わせ</span>
+            <span class="l-footer__tel-number">Tel：06-6377-7762</span>
+            <span class="l-footer__tel-time">（受付時間：平日10:00〜18:00）</span>
+          </a>
+        </div>
+      </div>
+      <div class="l-footer__credit">
+        <span class="l-footer__powered-by">Powered by</span>
+        <div class="l-footer__powered-logos">
+          <a class="l-footer__powered-link" href="https://www.mash-japan.com/" target="_blank" rel="noopener" aria-label="MASH">
+            <img src="/assets/img/common/logo_mash.png" alt="MASH" width="114" height="62">
+          </a>
+          <a class="l-footer__powered-link" href="https://nazoxnazo.com/" target="_blank" rel="noopener" aria-label="NAZO×NAZO劇団">
+            <img src="/assets/img/common/logo_nazonazo.svg" alt="NAZO×NAZO劇団" width="180" height="80">
+          </a>
+        </div>
+      </div>
+      <p class="l-footer__copyright"><small>Copyright (c) MASH Corporation. All Rights Reserved.</small></p>
+    </div>
+  </div>
+</footer>
+
+<dialog class="m-contact-modal" id="contact-modal" aria-labelledby="contact-modal-ttl">
+  <div class="m-contact-modal__inner">
+    <button class="m-contact-modal__close js-contact-close" type="button" aria-label="閉じる">
+      <span class="m-contact-modal__close-icon" aria-hidden="true"></span>
+    </button>
+    <h2 class="m-contact-modal__ttl" id="contact-modal-ttl">お問い合わせについて</h2>
+    <p class="m-contact-modal__lead">お問い合わせは、下記の「個人情報保護方針」をご確認・ご同意のうえ、メールソフトを起動してお送りいただく形となります。</p>
+    <p class="m-contact-modal__note">※法人の方は<a class="m-contact-modal__note-link" href="/hojin/">こちらのページ</a>からお問い合わせください。</p>
+    <p class="m-contact-modal__policy">
+      <a class="m-contact-modal__policy-link" href="https://www.mash-japan.com/privacy" target="_blank" rel="noopener">個人情報保護方針を確認する</a>
+    </p>
+    <label class="m-contact-modal__agree">
+      <input class="m-contact-modal__agree-check js-contact-agree" type="checkbox">
+      <span class="m-contact-modal__agree-txt">個人情報保護方針に同意する</span>
+    </label>
+    <button class="m-contact-modal__submit js-contact-submit" type="button" disabled>同意してメールソフトを開く</button>
+  </div>
+</dialog>
+
+<script src="/assets/js/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="/assets/js/common.js"></script>
+<script src="/assets/js/top.js"></script>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/manage/wp-*.php","/manage/wp-admin/*","/manage/wp-content/uploads/*","/manage/wp-content/*","/manage/wp-content/plugins/*","/manage/wp-content/themes/rekishirealnazo/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="snow-monkey-forms-js-before">
+var snowmonkeyforms = {"view_json_url":"https:\/\/rekishirealnazo.com\/wp-json\/snow-monkey-form\/v1\/view?ver=1794976984","nonce":"6d3c26866a"}
+//# sourceURL=snow-monkey-forms-js-before
+</script>
+<script id="snow-monkey-forms-js" src="https://rekishirealnazo.com/manage/wp-content/plugins/snow-monkey-forms/dist/js/app.js?ver=1784616456"></script>
+<script id="google-recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6LeeuzUtAAAAAO2OuR2YT4LBf4nkKWdQgFKfYRjL&#038;ver=3.0"></script>
+<script id="wp-hooks-js" src="https://rekishirealnazo.com/manage/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d"></script>
+<script id="wp-i18n-js" src="https://rekishirealnazo.com/manage/wp-includes/js/dist/i18n.min.js?ver=781d11515ad3d91786ec"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="snow-monkey-forms@recaptcha-js" src="https://rekishirealnazo.com/manage/wp-content/plugins/snow-monkey-forms/dist/js/recaptcha.js?ver=1784616456"></script>
+<script id="snow-monkey-forms@recaptcha-js-after">
+var snowmonkeyforms_recaptcha = {"siteKey":"6LeeuzUtAAAAAO2OuR2YT4LBf4nkKWdQgFKfYRjL"}
+//# sourceURL=snow-monkey-forms%40recaptcha-js-after
+</script>
+</body>
+</html>

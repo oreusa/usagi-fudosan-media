@@ -1,0 +1,891 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head>
+		
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="content-script-type" content="text/script" />
+	<meta http-equiv="content-style-type" content="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+	<link rel="stylesheet" href="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/css/import/common.css?ver=20261118044328" type="text/css" />
+	<link rel="stylesheet" href="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/css/import/design.css?ver=20261118044328" type="text/css" />
+	<link rel="stylesheet" href="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/css/add.css?ver=20261118044328" type="text/css" />
+	<link rel="stylesheet" href="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/css/add2.css?ver=20261118044328" type="text/css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/css/add3.css?ver=20261118044328" type="text/css" />
+	<link rel="stylesheet" href="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/css/cookie.css?ver=20261118044328" type="text/css" />
+
+	<script type="text/javascript" src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/js/rollover.js?type=_on" charset="utf-8"></script>
+	<script type="text/javascript" src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/js/heightLine.js" charset="utf-8"></script>
+	<script type="text/javascript" src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/js/function.js?ver=20261118044328" charset="utf-8"></script>
+	<script type="text/javascript" src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/js/jquery.js"></script>
+	<script type="text/javascript" src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/js/jquery.function.js?ver=20261118044328"></script>
+
+	
+	<title>鈴木崇　もののをかし | 和歌山県立近代美術館</title>
+	
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/favicon.ico">
+	<link rel="apple-touch-icon" href="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/webclip.png">
+	
+	<meta name='robots' content='max-image-preview:large' />
+<meta name="description" content="<p>写真というメディアを介して、視覚と知覚の関係性や認識の変化に注目し、作品を展開する鈴木崇（1971– ）の眼差しを手がかりに、当館コレクションを新たな視点から見直します。
+<br>観覧料：一般600（480）円、大学生330（290）円　（ ）内は20名以上の団体料金
+<br>＊高校生以下、65 歳以上の方、障害者手帳をお持ちの方は無料（介護者の方も無料になる場合があります）</p>" >
+<meta name="keywords" content="鈴木崇　もののをかし,和歌山,近代美術館" >
+<meta property="og:site_name" content="和歌山県立近代美術館" >
+<meta property="og:title" content="鈴木崇　もののをかし" >
+<meta property="og:type" content="article" >
+<meta property="og:url" content="https://www.momaw.jp/exhibit/2026suzuki/" >
+<meta property="og:description" content="<p>写真というメディアを介して、視覚と知覚の関係性や認識の変化に注目し、作品を展開する鈴木崇（1971– ）の眼差しを手がかりに、当館コレクションを新たな視点から見直します。
+<br>観覧料：一般600（480）円、大学生330（290）円　（ ）内は20名以上の団体料金
+<br>＊高校生以下、65 歳以上の方、障害者手帳をお持ちの方は無料（介護者の方も無料になる場合があります）</p>" >
+<meta property="og:image" content="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/09/05.jpg" >
+<meta name="twitter:card" content="summary_large_image">
+<link rel="shortcut icon" href="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/favicon.png">
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.momaw.jp/cms/momaw-management/wp-includes/css/dist/block-library/style.min.css?ver=6.1.16' type='text/css' media='all' />
+<link rel='stylesheet' id='classic-theme-styles-css' href='https://www.momaw.jp/cms/momaw-management/wp-includes/css/classic-themes.min.css?ver=1' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://www.momaw.jp/cms/momaw-management/contents/plugins/contact-form-7/includes/css/styles.css?ver=5.7.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cookie-notice-front-css' href='https://www.momaw.jp/cms/momaw-management/contents/plugins/cookie-notice/css/front.min.css?ver=2.5.5' type='text/css' media='all' />
+<script type='text/javascript' id='cookie-notice-front-js-before'>
+var cnArgs = {"ajaxUrl":"https:\/\/www.momaw.jp\/cms\/momaw-management\/wp-admin\/admin-ajax.php","nonce":"fd1dafab3f","hideEffect":"fade","position":"bottom","onScroll":false,"onScrollOffset":100,"onClick":true,"cookieName":"cookie_notice_accepted","cookieTime":2592000,"cookieTimeRejected":2592000,"globalCookie":false,"redirection":true,"cache":false,"revokeCookies":false,"revokeCookiesOpt":"automatic"};
+</script>
+<script type='text/javascript' src='https://www.momaw.jp/cms/momaw-management/contents/plugins/cookie-notice/js/front.min.js?ver=2.5.5' id='cookie-notice-front-js'></script>
+<link rel="https://api.w.org/" href="https://www.momaw.jp/wp-json/" /><link rel="alternate" type="application/json" href="https://www.momaw.jp/wp-json/wp/v2/exhibit/15389" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.momaw.jp/cms/momaw-management/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.momaw.jp/cms/momaw-management/wp-includes/wlwmanifest.xml" />
+<link rel="canonical" href="https://www.momaw.jp/exhibit/2026suzuki/" />
+<link rel='shortlink' href='https://www.momaw.jp/?p=15389' />
+<link rel="alternate" type="application/json+oembed" href="https://www.momaw.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.momaw.jp%2Fexhibit%2F2026suzuki%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.momaw.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.momaw.jp%2Fexhibit%2F2026suzuki%2F&#038;format=xml" />
+<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+	var inputs = event.detail.inputs;
+	var	label = "";
+
+    for ( var i = 0; i < inputs.length; i++ ) {
+        if ( 'wpcf7conversion' == inputs[i].name ) {
+			label = inputs[i].value;
+            break;
+        }
+    }
+	
+	gtag('event', 'send', {
+	  'event_category': 'Contact Form',
+	  'event_action': 'submit',
+	  'event_label': label
+	});
+}, false );
+</script>
+	<link rel="icon" href="https://www.momaw.jp/cms/momaw-management/contents/uploads/2021/03/cropped-momaw_icon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.momaw.jp/cms/momaw-management/contents/uploads/2021/03/cropped-momaw_icon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.momaw.jp/cms/momaw-management/contents/uploads/2021/03/cropped-momaw_icon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.momaw.jp/cms/momaw-management/contents/uploads/2021/03/cropped-momaw_icon-270x270.png" />
+
+</head>
+<body>
+	<div id="fb-root"></div>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v9.0" nonce="qz7gtL0P"></script>
+
+	<div class="l-sp-menu -slide">
+		<div class="l-sp-menu__content">
+			<div class="l-sp-menu__header">
+				<div>
+										
+						<div class="l-sp-menu__language">
+							<div class="c-dropdown">
+								<div class="c-dropdown__btn">Language</div>
+								<ul class="c-dropdown__content">
+																			<li><a href="https://www.momaw.jp/language/english/">English</a></li>
+																			<li><a href="https://www.momaw.jp/language/chinese/">中文</a></li>
+																			<li><a href="https://www.momaw.jp/language/korean/">한국어</a></li>
+																			<li><a href="https://www.momaw.jp/">日本語</a></li>
+																	</ul>
+							</div>
+						</div>
+					
+					<div>
+						<div class="l-sp-menu__access">
+							<a href="/guide/map/"><span>アクセス</span></a>
+						</div>
+						<p id="js-sp-nav__close-btn" class="l-sp-menu__close-btn">
+							<a href="javascript:void(0);">
+								<span class="text">CLOSE</span>
+							</a>
+						</p>
+					</div>
+				</div>
+
+									<div class="l-sp-menu__keyword-search">
+						<form method="get" action="https://www.momaw.jp/./" class="l-header__keyword-search">
+							<input type="text" name="s" value="" placeholder="キーワードを入力" class="l-header__keyword-search-input">
+							<button class="l-header__keyword-search-btn" type="submit"><img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/ico_search01.svg" alt="検索"></button>
+						</form><!-- / l-header__keyword-search -->
+					</div>
+							</div>
+			<!-- / l-sp-menu__header -->
+			
+			<div>
+				<div class="l-sp-menu__main">
+					<div class="p-sp-menu">
+													<ul class="p-sp-menu__list">
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://www.momaw.jp/exhibit/" title="展覧会"><span>展覧会</span></a>
+																					</div>
+
+																			</li>
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://www.momaw.jp/education/" title="教育普及"><span>教育普及</span></a>
+																							<button type="button" class="menu-btn">
+													<span class="inn">
+														<span class="bar"></span>
+														<span class="bar"></span>
+													</span>
+												</button>
+																					</div>
+
+																					<ul>
+																									<li>
+														<a href="https://www.momaw.jp/education/school/" title="学校団体での来館"><span>学校団体での来館</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/education/summer_museum_project/" title="なつやすみの美術館"><span>なつやすみの美術館</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/education/education-study-group/" title="和歌山美術館<br>教育研究会"><span>和歌山美術館<br>教育研究会</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/education/kodomo/" title="こども美術館部"><span>こども美術館部</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/education/gallery-talk/" title="ギャラリートーク・<br>講演会等"><span>ギャラリートーク・<br>講演会等</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/education/workshop/" title="ワークショップ"><span>ワークショップ</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/education/internship/" title="職場体験"><span>職場体験</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/education/curators_internship/" title="博物館実習"><span>博物館実習</span></a>
+													</li>
+																							</ul>
+																			</li>
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://www.momaw.jp/event/" title="イベント"><span>イベント</span></a>
+																							<button type="button" class="menu-btn">
+													<span class="inn">
+														<span class="bar"></span>
+														<span class="bar"></span>
+													</span>
+												</button>
+																					</div>
+
+																					<ul>
+																									<li>
+														<a href="https://www.momaw.jp/event/?status=future" title="これからのイベント"><span>これからのイベント</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/event/?status=archive" title="終了したイベント"><span>終了したイベント</span></a>
+													</li>
+																							</ul>
+																			</li>
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://www.momaw.jp/publication/" title="出版"><span>出版</span></a>
+																							<button type="button" class="menu-btn">
+													<span class="inn">
+														<span class="bar"></span>
+														<span class="bar"></span>
+													</span>
+												</button>
+																					</div>
+
+																					<ul>
+																									<li>
+														<a href="https://www.momaw.jp/publishing_category/news/" title="和歌山県立近代美術館<br>ニュース"><span>和歌山県立近代美術館<br>ニュース</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/publishing_category/catalogue/" title="図録・パンフレット"><span>図録・パンフレット</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/publishing_category/annual_report/" title="年報"><span>年報</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/publishing_category/kiyou/" title="紀要"><span>紀要</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/publishing_category/other_publication/" title="その他刊行物"><span>その他刊行物</span></a>
+													</li>
+																							</ul>
+																			</li>
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://www.momaw.jp/collection/" title="コレクション"><span>コレクション</span></a>
+																							<button type="button" class="menu-btn">
+													<span class="inn">
+														<span class="bar"></span>
+														<span class="bar"></span>
+													</span>
+												</button>
+																					</div>
+
+																					<ul>
+																									<li>
+														<a href="https://www.momaw.jp/collection/collection_outline/" title="コレクションの概要"><span>コレクションの概要</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/collection/search/" title="所蔵作品検索"><span>所蔵作品検索</span></a>
+													</li>
+																							</ul>
+																			</li>
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://www.momaw.jp/outline/" title="当館について"><span>当館について</span></a>
+																							<button type="button" class="menu-btn">
+													<span class="inn">
+														<span class="bar"></span>
+														<span class="bar"></span>
+													</span>
+												</button>
+																					</div>
+
+																					<ul>
+																									<li>
+														<a href="https://www.momaw.jp/outline/summary/" title="概要"><span>概要</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/outline/detail-outline/" title="沿革の詳細"><span>沿革の詳細</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/outline/record-outline/" title="展覧会開催記録の詳細"><span>展覧会開催記録の詳細</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/outline/mission/" title="和歌山県立近代美術館の<br>使命"><span>和歌山県立近代美術館の<br>使命</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/outline/assessment/" title="博物館評価制度"><span>博物館評価制度</span></a>
+													</li>
+																							</ul>
+																			</li>
+																	<li class="p-sp-menu__item">
+										<div>
+											<a href="https://www.momaw.jp/guide/" title="ご利用案内"><span>ご利用案内</span></a>
+																							<button type="button" class="menu-btn">
+													<span class="inn">
+														<span class="bar"></span>
+														<span class="bar"></span>
+													</span>
+												</button>
+																					</div>
+
+																					<ul>
+																									<li>
+														<a href="https://www.momaw.jp/guide/#basic_info" title="基本情報"><span>基本情報</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/guide/#access" title="アクセス"><span>アクセス</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/guide/#price" title="観覧料"><span>観覧料</span></a>
+													</li>
+																									<li>
+														<a href="https://www.momaw.jp/guide/#barrier-free" title="バリアフリー情報"><span>バリアフリー情報</span></a>
+													</li>
+																							</ul>
+																			</li>
+															</ul>
+											</div>
+				</div>
+				<!-- / l-sp-menu__main -->
+
+				
+				<div class="l-sp-menu__sub">
+											<div class="p-sp-sub-menu">
+															<ul class="p-sp-sub-menu__list">
+																			<li class="p-sp-sub-menu__item"><a href="https://www.momaw.jp/message" title="館長からのメッセージ">館長からのメッセージ</a></li>
+																			<li class="p-sp-sub-menu__item"><a href="https://www.momaw.jp/sns/" title="SNS・メルマガ">SNS・メルマガ</a></li>
+																			<li class="p-sp-sub-menu__item"><a href="https://www.momaw.jp/publication" title="出版">出版</a></li>
+																			<li class="p-sp-sub-menu__item"><a href="https://www.momaw.jp/mshop/" title="ミュージアムショップ">ミュージアムショップ</a></li>
+																			<li class="p-sp-sub-menu__item"><a href="https://www.momaw.jp/tomonokai/" title="友の会">友の会</a></li>
+																			<li class="p-sp-sub-menu__item"><a href="https://www.momaw.jp/cafe/" title="カフェ">カフェ</a></li>
+																			<li class="p-sp-sub-menu__item"><a href="https://www.momaw.jp/supporter-link/" title="サポーターズリンク">サポーターズリンク</a></li>
+																	</ul>
+							
+															<ul class="p-sp-sub-menu__list">
+																			<li class="p-sp-sub-menu__item"><a href="https://www.momaw.jp/press" title="プレスリリース">プレスリリース</a></li>
+																			<li class="p-sp-sub-menu__item"><a href="https://www.momaw.jp/information" title="お知らせ">お知らせ</a></li>
+																			<li class="p-sp-sub-menu__item"><a href="https://www.momaw.jp/bid" title="入札告知">入札告知</a></li>
+																			<li class="p-sp-sub-menu__item"><a href="https://www.momaw.jp/sitemap/" title="サイトマップ">サイトマップ</a></li>
+																			<li class="p-sp-sub-menu__item"><a href="https://www.momaw.jp/privacy-policy/" title="プライバシーポリシー">プライバシーポリシー</a></li>
+																			<li class="p-sp-sub-menu__item"><a href="https://www.momaw.jp/site-policy/" title="サイトポリシー">サイトポリシー</a></li>
+																	</ul>
+													</div>
+						<!-- /p-sp-sub-menu -->
+					
+													<p class="l-footer__info-sns">
+																			<a href="https://x.com/moma_wakayama" target="_blank" rel="nofollow"><img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/btn_x.svg" alt="x" /></a>
+																												<a href="https://www.facebook.com/moma.wakayama" target="_blank" rel="nofollow"><img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/btn_facebook.svg" alt="Facebook" /></a>
+																												<a href="https://www.instagram.com/moma_wakayama/#" target="_blank" rel="nofollow"><img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/btn_Instagram.svg" alt="Instagram" /></a>
+																	</p>
+																		</div>
+				<!-- / l-sp-menu__sub -->
+			</div>
+		</div><!-- / l-sp-menu__content -->
+	</div><!-- / l-sp-menu -->
+
+	<div id="bgzone" class="site-all">
+		<div class="l-header">
+			<div class="c-container -fluid">
+				<div class="l-header__container">
+					<div class="l-header__main">
+												<div class="l-header__information">
+							<span class="date">11/18 <span>[水]</span></span>
+							<span>本日開館</span>
+						</div>
+
+						<div class="l-header__siteID">
+							<h1>
+								<a href="https://www.momaw.jp" title="和歌山県立近代美術館">
+									<!-- <img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/header.svg" alt="和歌山県立近代美術館" /> -->
+									<img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/images/header.png" alt="和歌山県立近代美術館" />
+								</a>
+							</h1>
+						</div>
+					</div>
+					<!-- / l-header__siteID -->
+
+					<div class="l-header__nav">
+						<div>
+								
+								<div class="l-header__language">
+									<ul class="l-header__language-list">
+																					<li class="l-header__language-item"><a href="https://www.momaw.jp/language/english/" title="English">English</a></li>
+																					<li class="l-header__language-item"><a href="https://www.momaw.jp/language/chinese/" title="中文">中文</a></li>
+																					<li class="l-header__language-item"><a href="https://www.momaw.jp/language/korean/" title="한국어">한국어</a></li>
+																					<li class="l-header__language-item"><a href="https://www.momaw.jp/" title="日本語">日本語</a></li>
+																			</ul>
+								</div>
+								<!-- / l-header__language -->
+							
+															<form method="get" action="https://www.momaw.jp/./" class="l-header__keyword-search">
+									<input type="text" name="s" value="" placeholder="キーワードを入力" class="l-header__keyword-search-input">
+									<button class="l-header__keyword-search-btn" type="submit"><img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/ico_search01.svg" alt="検索"></button>
+								</form><!-- / l-header__keyword-search -->
+													</div>
+
+													<nav class="l-main-menu">
+								<ul class="l-main-menu__list">
+																			<li class="l-main-menu__item">
+											<a href="https://www.momaw.jp/exhibit/" title="展覧会"><span>展覧会</span></a>
+																					</li>
+																			<li class="l-main-menu__item">
+											<a href="https://www.momaw.jp/education/" title="教育普及"><span>教育普及</span></a>
+																							<div class="l-main-menu__item-wrapper">
+													<ul>
+																													<li>
+																<a href="https://www.momaw.jp/education/school/" title="学校団体での来館"><span>学校団体での来館</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/education/summer_museum_project/" title="なつやすみの美術館"><span>なつやすみの美術館</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/education/education-study-group/" title="和歌山美術館<br>教育研究会"><span>和歌山美術館<br>教育研究会</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/education/kodomo/" title="こども美術館部"><span>こども美術館部</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/education/gallery-talk/" title="ギャラリートーク・<br>講演会等"><span>ギャラリートーク・<br>講演会等</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/education/workshop/" title="ワークショップ"><span>ワークショップ</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/education/internship/" title="職場体験"><span>職場体験</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/education/curators_internship/" title="博物館実習"><span>博物館実習</span></a>
+															</li>
+																											</ul>
+												</div>
+																					</li>
+																			<li class="l-main-menu__item">
+											<a href="https://www.momaw.jp/event/" title="イベント"><span>イベント</span></a>
+																							<div class="l-main-menu__item-wrapper">
+													<ul>
+																													<li>
+																<a href="https://www.momaw.jp/event/?status=future" title="これからのイベント"><span>これからのイベント</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/event/?status=archive" title="終了したイベント"><span>終了したイベント</span></a>
+															</li>
+																											</ul>
+												</div>
+																					</li>
+																			<li class="l-main-menu__item">
+											<a href="https://www.momaw.jp/publication/" title="出版"><span>出版</span></a>
+																							<div class="l-main-menu__item-wrapper">
+													<ul>
+																													<li>
+																<a href="https://www.momaw.jp/publishing_category/news/" title="和歌山県立近代美術館<br>ニュース"><span>和歌山県立近代美術館<br>ニュース</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/publishing_category/catalogue/" title="図録・パンフレット"><span>図録・パンフレット</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/publishing_category/annual_report/" title="年報"><span>年報</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/publishing_category/kiyou/" title="紀要"><span>紀要</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/publishing_category/other_publication/" title="その他刊行物"><span>その他刊行物</span></a>
+															</li>
+																											</ul>
+												</div>
+																					</li>
+																			<li class="l-main-menu__item">
+											<a href="https://www.momaw.jp/collection/" title="コレクション"><span>コレクション</span></a>
+																							<div class="l-main-menu__item-wrapper">
+													<ul>
+																													<li>
+																<a href="https://www.momaw.jp/collection/collection_outline/" title="コレクションの概要"><span>コレクションの概要</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/collection/search/" title="所蔵作品検索"><span>所蔵作品検索</span></a>
+															</li>
+																											</ul>
+												</div>
+																					</li>
+																			<li class="l-main-menu__item">
+											<a href="https://www.momaw.jp/outline/" title="当館について"><span>当館について</span></a>
+																							<div class="l-main-menu__item-wrapper">
+													<ul>
+																													<li>
+																<a href="https://www.momaw.jp/outline/summary/" title="概要"><span>概要</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/outline/detail-outline/" title="沿革の詳細"><span>沿革の詳細</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/outline/record-outline/" title="展覧会開催記録の詳細"><span>展覧会開催記録の詳細</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/outline/mission/" title="和歌山県立近代美術館の<br>使命"><span>和歌山県立近代美術館の<br>使命</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/outline/assessment/" title="博物館評価制度"><span>博物館評価制度</span></a>
+															</li>
+																											</ul>
+												</div>
+																					</li>
+																			<li class="l-main-menu__item">
+											<a href="https://www.momaw.jp/guide/" title="ご利用案内"><span>ご利用案内</span></a>
+																							<div class="l-main-menu__item-wrapper">
+													<ul>
+																													<li>
+																<a href="https://www.momaw.jp/guide/#basic_info" title="基本情報"><span>基本情報</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/guide/#access" title="アクセス"><span>アクセス</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/guide/#price" title="観覧料"><span>観覧料</span></a>
+															</li>
+																													<li>
+																<a href="https://www.momaw.jp/guide/#barrier-free" title="バリアフリー情報"><span>バリアフリー情報</span></a>
+															</li>
+																											</ul>
+												</div>
+																					</li>
+																	</ul>
+							</nav>
+							<!-- l-main-menu -->
+											</div>
+					<!-- l-header__nav -->
+
+					<div id="js-sp-menu-trigger" class="c-hamburger-btn">
+						<a href="javascript:void(0);">
+							<span>
+								<span class="c-hamburger-btn__bar -first"></span>
+								<span class="c-hamburger-btn__bar -second"></span>
+								<span class="c-hamburger-btn__bar -third"></span>
+							</span>
+							<span class="c-hamburger-btn__text">MENU</span>
+						</a>
+					</div>
+					<!-- / c-hamburger-btn -->
+				</div>
+				<!-- / l-header__container -->
+			</div>
+		</div>
+		<!-- l-header -->
+	
+				<div id="container">
+			<div id="container-layout">
+<div id="main-section" class="heightLine-group-section">
+	<!--コンテンツ一つ分ここから -->
+	<div class="contents">
+		<nav class="p-breadcrumb"><ol class="p-breadcrumb__list"><li class="p-breadcrumb__item -home"><a href="https://www.momaw.jp/">トップページ</a></li><li class="p-breadcrumb__item"><a href="https://www.momaw.jp/exhibit">展覧会</a></li><li class="p-breadcrumb__item">鈴木崇　もののをかし</li></ol></nav>
+		<div class="clear"><img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/images/spacer.gif" width="1" height="1" alt="" /></div>
+		<div class="title-bar-main-outer">
+			<div class="title-bar-main">
+				<h3>鈴木崇　もののをかし</h3>
+			</div>
+		</div>
+		<div class="page-body">
+			
+			<p>会期：2026年10月14日（水）～2027年02月11日（木）</p>							<div class="entry-topimage-full">
+					<p>
+						<img src="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/10/suzuki_hp-07-1400x513.jpg" style="width:100%;" alt="鈴木崇　もののをかし" />
+											</p>
+				</div>
+
+			
+			<div class="cf"><p>&nbsp;</p>
+<p><img decoding="async" loading="lazy" class="alignleft wp-image-15442 size-full" src="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/10/hp-01-scaled.jpg" alt="" width="2560" height="331" srcset="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/10/hp-01-scaled.jpg 2560w, https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/10/hp-01-730x94.jpg 730w, https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/10/hp-01-1400x181.jpg 1400w, https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/10/hp-01-768x99.jpg 768w, https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/10/hp-01-1536x199.jpg 1536w, https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/10/hp-01-2048x265.jpg 2048w" sizes="(max-width: 2560px) 100vw, 2560px" /></p>
+<p class="p1">写真というメディアを介して、視覚と知覚の関係性や認識の変化に注目し、作品を展開する鈴木崇。鈴木の眼差しを手がかりに不確かなこの世界のあり方を探ります。</p>
+<p class="p1">普段の生活のなかで出会う数々のものやイメージ。私たちは視覚を通してさまざまなことを把握しています。しかし、それらは実際どのように理解されているのでしょうか？「All is not as it seems」(すべてが見かけ通りとは限らない)と、鈴木は問いかけます。</p>
+<p class="p1">本展では、鈴木の新旧作品とともに、作家が選んだ当館コレクションもあわせて展示します。「もののをかし」をテーマに構成した会場では、視覚と知覚をめぐる思索へとみなさんを誘います。</p>
+<p>&nbsp;</p>
+<p class="p1"><strong>鈴木崇　Takashi Suzuki</strong><br />
+1971 年、京都府出身。現在は京都市を拠点に活動。1996 年、The Art Institute of Boston 写真学科卒業。2001～02 年、デュッセルドルフ芸術アカデミー、トーマス・ルフ クラス研究生、同時期にトーマス・シュトゥルートのアシスタントとしてドイツに滞在。主な展覧会に、「写真の現在３」（東京国立近代美術館、東京、2006）、「これからの写真」（愛知県美術館、愛知、2014）、「浅間国際フォトフェスティバルPhoto MIYOTA」（御代田写真美術館、長野、2019／2023）、「東アジア文化都市全州・現代美術交流展」（ハンビョク文化センター、全州、韓国、2023）、「BUTSUDORI」（滋賀県立美術館、滋賀、2025）など。</p>
+</div>
+													<div class="p-gallery cf">
+						
+						<div class="p-gallery__item -lg">
+							<img class="mt-image-left" src="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/09/02-1050x1400.jpg" alt="鈴木崇《ARCA 0117-T》2008年　作家蔵" />
+							<span class="p-gallery__item-caption">鈴木崇《ARCA 0117-T》2008年　作家蔵</span>
+						</div><!-- p-gallery__item -->
+
+						
+						<div class="p-gallery__item -lg">
+							<img class="mt-image-left" src="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/09/03.jpg" alt="鈴木崇《BAU grayscale #6976》2014年　作家蔵" />
+							<span class="p-gallery__item-caption">鈴木崇《BAU grayscale #6976》2014年　作家蔵</span>
+						</div><!-- p-gallery__item -->
+
+						
+					</div><!-- p-gallery -->
+
+													<div class="p-gallery cf">
+						
+						<div class="p-gallery__item -lg">
+							<img class="mt-image-left" src="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/09/04.jpg" alt="鈴木崇「CTS 禅と幾何学」より　2020年　作家蔵" />
+							<span class="p-gallery__item-caption">鈴木崇「CTS 禅と幾何学」より　2020年　作家蔵</span>
+						</div><!-- p-gallery__item -->
+
+						
+						<div class="p-gallery__item -lg">
+							<img class="mt-image-left" src="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/09/05.jpg" alt="鈴木崇《lumière géométrique 8212》2025年　作家蔵" />
+							<span class="p-gallery__item-caption">鈴木崇《lumière géométrique 8212》2025年　作家蔵</span>
+						</div><!-- p-gallery__item -->
+
+						
+					</div><!-- p-gallery -->
+
+													<div class="p-gallery cf">
+						
+						<div class="p-gallery__item -xl">
+							<img class="mt-image-left" src="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/09/06-1400x595.jpg" alt="鈴木崇《Fictum cp-0925》2015年　作家蔵" />
+							<span class="p-gallery__item-caption">鈴木崇《Fictum cp-0925》2015年　作家蔵</span>
+						</div><!-- p-gallery__item -->
+
+						
+					</div><!-- p-gallery -->
+
+													<div class="p-gallery cf">
+						
+						<div class="p-gallery__item -xl">
+							<img class="mt-image-left" src="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/09/07.jpg" alt="鈴木崇《KAABA》2017年　作家蔵" />
+							<span class="p-gallery__item-caption">鈴木崇《KAABA》2017年　作家蔵</span>
+						</div><!-- p-gallery__item -->
+
+						
+					</div><!-- p-gallery -->
+
+													<div class="p-gallery cf">
+						
+						<div class="p-gallery__item -lg">
+							<img class="mt-image-left" src="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/09/08.jpg" alt="恩地孝四郎《ポエム No.22 葉っぱと雲》1953年　和歌山県立近代美術館蔵" />
+							<span class="p-gallery__item-caption">恩地孝四郎《ポエム No.22 葉っぱと雲》1953年　和歌山県立近代美術館蔵</span>
+						</div><!-- p-gallery__item -->
+
+						
+						<div class="p-gallery__item -lg">
+							<img class="mt-image-left" src="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/09/09.jpg" alt="林康夫《Focus VI-B》1984年　　和歌山県立近代美術館蔵" />
+							<span class="p-gallery__item-caption">林康夫《Focus VI-B》1984年　　和歌山県立近代美術館蔵</span>
+						</div><!-- p-gallery__item -->
+
+						
+					</div><!-- p-gallery -->
+
+													<div class="p-gallery cf">
+						
+						<div class="p-gallery__item -lg">
+							<img class="mt-image-left" src="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/09/10.jpg" alt="吉田政次《静 No.70》1955年　和歌山県立近代美術館蔵" />
+							<span class="p-gallery__item-caption">吉田政次《静 No.70》1955年　和歌山県立近代美術館蔵</span>
+						</div><!-- p-gallery__item -->
+
+						
+					</div><!-- p-gallery -->
+
+			
+			
+							<div class="cf">
+					<h4>展覧会情報</h4>
+					<table class="exhibition_information">
+						
+										<tr>
+											<th>会場</th>
+											<td>和歌山県立近代美術館　2階展示室</td>
+										</tr>
+										
+										<tr>
+											<th>会期</th>
+											<td>2026年10月14日（水）～2027年02月11日（木）</td>
+										</tr>
+										
+										<tr>
+											<th>開館時間</th>
+											<td>9時30分〜17時（入場は16時30分まで）</td>
+										</tr>
+										
+										<tr>
+											<th>休館日</th>
+											<td>月曜日（祝休日の11月23日、2027年1月11日は開館）、11月24日（火）、年末年始（12月28日～ 1月4日）、2027年1月12日（火）</td>
+										</tr>
+										
+										<tr>
+											<th>観覧料</th>
+											<td>一般600（480）円、大学生330（290）円<br />
+＊（ ）内は20名以上の団体料金<br />
+＊高校生以下、65歳以上の方、障害者手帳をお持ちの方は無料（介護者の方も無料になる場合があります）<br />
+＊毎月第1日曜日は無料。ただし11月は「和歌山県ふるさと誕生日」の11月22日（日）を無料とし、11月1日（日）は有料<br />
+＊11月14日（土）、15日（日）は「関西文化の日」として無料<br />
+＊毎月第4土曜日は「紀陽文化財団の日」として大学生無料<br />
+＊本展観覧料で、MOMAWコレクション「絵画と彫刻」「版画と美術散歩」も観覧可能</td>
+										</tr>
+										
+										<tr>
+											<th>主催</th>
+											<td>和歌山県立近代美術館</td>
+										</tr>
+															</table>
+				</div>
+						
+							<div class="cf">
+					<h4>関連事業</h4>
+					<p style="text-align: left">▶作家によるギャラリートーク<br />
+10月24日（土）14時～　展示室にて　＊要観覧券</p>
+<p>▶<a href="https://www.momaw.jp/event/20261213talkevent/">トークイベント「もののをかしをめぐって」　前川修×鈴木崇</a><br />
+12月13日（日）　14時から15時30分（予定）　13時30分開場　予約不要、先着順（80名）　2階ホールにて</p>
+<p style="text-align: left">
+ほかトークイベントやフロアレクチャーなどを予定。当館ウェブサイト等にて告知。</p>
+<p>&nbsp;</p>
+				</div>
+			
+							<div class="cf">
+					<h4>同時開催</h4>
+					<p>▶<a href="https://www.momaw.jp/exhibit/2026col_painting_sculpture/">MOMAWコレクション「絵画と彫刻」</a><br />
+2期：9月12日(土)〜10月18日(日)<br />
+3期：10月24日(土)〜11月29日(日) <br />
+4<span class="s1">期：</span>12<span class="s1">月</span>5<span class="s1">日</span>(<span class="s1">土</span>)<span class="s1">～</span>2027<span class="s1">年</span>1<span class="s1">月</span>11<span class="s1">日</span>(<span class="s1">月・祝</span>)</p>
+<p>▶<a href="https://www.momaw.jp/exhibit/2026col_prints_3rd/">MOMAWコレクション「版画と美術散歩」</a><br />
+2期：ピカソ《泣く女》と—凹版の小道　9月12日(土)〜10月18日(日)<br />
+3期：マティス『ジャズ』と—孔版の小道　10月24日(土)〜11月29日(日)<span class="s1"><br />
+4</span>期：カンディンスキー『響き』と<span class="s1">—</span>凸版の小道　<span class="s1">12</span>月<span class="s1">5</span>日<span class="s1">(</span>土<span class="s1">)</span>～<span class="s1">2027</span>年<span class="s1">1</span>月<span class="s1">11</span>日<span class="s1">(</span>月・祝<span class="s1">)</span></p>
+<p>&nbsp;</p>
+				</div>
+			
+			
+				<div class="cf">
+				<h4>ダウンロード／File Download</h4>
+				
+		<p class="link"><a href="https://www.momaw.jp/cms/momaw-management/contents/uploads/2026/10/suzuki_list20261106.pdf" target="_blank">鈴木崇展出品目録20261106</a> (ダウンロード / PDFファイル / 239.92KB)</p><p class="link"><a href="" target="_blank"></a> (ダウンロード / ファイル / )</p>	</div>
+				<div class="cf">
+		<!--Facebook-->
+		<div style="float:right;">
+			<a href="http://www.facebook.com/share.php?u=https://www.momaw.jp/exhibit/2026suzuki/" rel="nofollow" target="_blank"><img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/btn_facebook.png" alt="いいねボタン" style="height:30px;"></a>
+		</div>
+		<!--X--->
+		<div style="float:right; margin-right:10px;">
+			<a href="https://twitter.com/share?url=https://www.momaw.jp/exhibit/2026suzuki/&text=鈴木崇　もののをかし" rel="nofollow" target="_blank"><img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/btn_x.svg" alt="ポストボタン" style="height:30px;"></a>
+		</div>
+	</div>
+			
+			<div class="tag_link cf">
+				<p>タグ：<a href="https://www.momaw.jp/tag/%e5%92%8c%e6%ad%8c%e5%b1%b1%e7%9c%8c%e7%ab%8b%e8%bf%91%e4%bb%a3%e7%be%8e%e8%a1%93%e9%a4%a8/" rel="tag">和歌山県立近代美術館</a>, <a href="https://www.momaw.jp/tag/momaw/" rel="tag">momaw</a></p>
+			</div>
+			<div class="post_nav">
+				<div class="cf">
+					<p style="float:left;"><a href="https://www.momaw.jp/exhibit/2026col_prints_2nd/" rel="prev">＜ MOMAWコレクション　版画と美術散歩　第2期 ピカソ《泣く女》と―凹版の小道</a></p>
+					<p style="float:right;"><a href="https://www.momaw.jp/exhibit/2026col_prints_3rd/" rel="next">MOMAWコレクション　版画と美術散歩　第3期　マティス『ジャズ』と―孔版の小道　＞</a></p>
+				</div>
+			</div>
+			
+		</div>
+		<div class="clear"><img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/images/spacer.gif" width="1" height="1" alt="" /></div>
+	</div>
+	<!--コンテンツ一つ分ここまで -->
+</div>
+
+<div id="sub-section-right" class="heightLine-group-section">
+	<div id="sub-section-right-inner">
+					<div class="title-bar-outer">
+				<div class="title-bar">
+					<h3>開催中の展覧会</h3>
+				</div>
+			</div>
+			<div class="bottom20">
+				<ul class="mark_red">
+										<li><a href="https://www.momaw.jp/exhibit/2026col_prints_3rd/">MOMAWコレクション　版画と美術散歩　第3期　マティス『ジャズ』と―孔版の小道</a></li>
+										<li><a href="https://www.momaw.jp/exhibit/2026suzuki/">鈴木崇　もののをかし</a></li>
+										<li><a href="https://www.momaw.jp/exhibit/2026col_painting_sculpture/">MOMAWコレクション 絵画と彫刻</a></li>
+										<li><a href="https://www.momaw.jp/exhibit/architecture_design/">和歌山県立近代美術館・博物館の建築とデザイン</a></li>
+									</ul>
+			</div>
+		
+		
+		<div class="title-bar-outer">
+			<div class="title-bar">
+				<h3>これまでの展覧会</h3>
+			</div>
+		</div>
+		<div class="bottom20">
+			<ul class="mark_red">
+								<li><a href="https://www.momaw.jp/exhibit_years/2026%e5%b9%b4%e5%ba%a6%e3%81%ae%e5%b1%95%e8%a6%a7%e4%bc%9a/">2026年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2025%e5%b9%b4%e5%ba%a6%e3%81%ae%e5%b1%95%e8%a6%a7%e4%bc%9a/">2025年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2024%e5%b9%b4%e5%ba%a6%e3%81%ae%e5%b1%95%e8%a6%a7%e4%bc%9a/">2024年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2023/">2023年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2022/">2022年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2021/">2021年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2020/">2020年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2019/">2019年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2018/">2018年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2017/">2017年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2016/">2016年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2015/">2015年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2014/">2014年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2013/">2013年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2012/">2012年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2011/">2011年度の展覧会</a></li>
+								<li><a href="https://www.momaw.jp/exhibit_years/2010/">2010年度の展覧会</a></li>
+							</ul>
+			<p class="text-right"><a href="https://www.momaw.jp/exhibit/">[すべて表示する]</a></p>
+		</div>
+	</div>
+</div>
+	</div><!--#container-layout-->
+</div><!--#container-->
+
+<!--footer -->
+<div class="l-footer">
+	<div id="js-pagetop" class="p-back-to-top">
+		<a href="#top" aria-label="このページの先頭へ">
+			<img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/images/back_to_top.svg" alt="" />
+		</a>
+	</div>
+
+	<div class="c-container">
+		<div class="l-footer__container">
+			<div class="l-footer__info">
+									<p class="l-footer__info-logo">
+						<a href="https://www.momaw.jp" title="和歌山県立近代美術館"><img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/images/header.png" alt="和歌山県立近代美術館" width="247" height="40" /></a>
+					</p>
+					<p class="l-footer__info-address">
+						〒640-8137 和歌山市吹上1-4-14<br />
+TEL. 073-436-8690					</p>
+					<p class="l-footer__info-opening">
+						開館時間：9:30-17:00（入場は16:30まで）<br />
+休館日：月曜日（祝日の場合は翌日)					</p>
+					<p class="l-footer__info-access">
+						<a href="https://www.momaw.jp/guide/map">
+							周辺マップ／交通アクセス						</a>
+					</p>
+					
+											<p class="l-footer__info-sns">
+																	<a href="https://x.com/moma_wakayama" target="_blank" rel="nofollow"><img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/btn_x.svg" alt="x" /></a>
+																									<a href="https://www.facebook.com/moma.wakayama" target="_blank" rel="nofollow"><img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/btn_facebook.svg" alt="Facebook" /></a>
+																									<a href="https://www.instagram.com/moma_wakayama/#" target="_blank" rel="nofollow"><img src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/tmpl-img/btn_Instagram.svg" alt="Instagram" /></a>
+															</p>
+															</div>
+			<!-- / l-footer__info -->
+
+							<div class="l-footer__nav">
+					<nav class="l-footer__nav-body">
+														<ul class="l-footer__nav-list">
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/" title="トップページ">トップページ</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/exhibit/" title="展覧会">展覧会</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/publishing/" title="出版">出版</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/collection/" title="コレクション">コレクション</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/education/" title="教育普及">教育普及</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/outline/" title="当館について">当館について</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/guide/" title="ご利用案内">ご利用案内</a></li>
+																	</ul>
+															<ul class="l-footer__nav-list">
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/message" title="館長からのメッセージ">館長からのメッセージ</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/sns/" title="SNS・メルマガ">SNS・メルマガ</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/publication" title="出版">出版</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/mshop/" title="ミュージアムショップ">ミュージアムショップ</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/tomonokai/" title="友の会">友の会</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/cafe/" title="カフェ">カフェ</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/supporter-link/" title="サポーターズリンク">サポーターズリンク</a></li>
+																	</ul>
+															<ul class="l-footer__nav-list">
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/press" title="プレスリリース">プレスリリース</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/information" title="お知らせ">お知らせ</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/bid" title="入札公告">入札公告</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/sitemap/" title="サイトマップ">サイトマップ</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/privacy-policy/" title="プライバシーポリシー">プライバシーポリシー</a></li>
+																			<li class="l-footer__nav-item"><a href="https://www.momaw.jp/site-policy/" title="サイトポリシー">サイトポリシー</a></li>
+																	</ul>
+												</nav>
+
+					<small>©和歌山県立近代美術館</small>
+				</div>
+				<!-- / l-footer__nav -->
+					</div>
+		<!-- / l-footer__container -->
+	</div>
+	<!-- /c-container -->
+</div>
+<!-- / l-footer -->
+</div><!--#bgzone-->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+		<script type="text/javascript" src="https://www.momaw.jp/cms/momaw-management/contents/themes/momaw-theme/js/main.js?ver=20261118044328"></script>
+	<script type='text/javascript' src='https://www.momaw.jp/cms/momaw-management/contents/plugins/contact-form-7/includes/swv/js/index.js?ver=5.7.2' id='swv-js'></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/www.momaw.jp\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.momaw.jp/cms/momaw-management/contents/plugins/contact-form-7/includes/js/index.js?ver=5.7.2' id='contact-form-7-js'></script>
+
+		<!-- Cookie Notice plugin v2.5.5 by Hu-manity.co https://hu-manity.co/ -->
+		<div id="cookie-notice" role="dialog" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom" aria-label="Cookie Notice" style="background-color: rgba(50,50,58,1);"><div class="cookie-notice-container" style="color: #fff"><span id="cn-notice-text" class="cn-text-container">当サイトでは、アクセス分析のためクッキー（Cookie）を使用します。<br>
+当サイトのクッキー（Cookie）の使用に関しては、プライバシーポリシーをお読みください。<br>
+閲覧を継続される場合、許可したものとさせていただきます。</span><span id="cn-notice-buttons" class="cn-buttons-container"><a href="#" id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button" aria-label="Cookieを許可する" style="background-color: #00a99d">Cookieを許可する</a><a href="#" id="cn-refuse-cookie" data-cookie-set="refuse" class="cn-set-cookie cn-button" aria-label="Cookieを拒否する" style="background-color: #00a99d">Cookieを拒否する</a><a href="https://www.momaw.jp/privacy-policy/" target="_blank" id="cn-more-info" class="cn-more-info cn-button" aria-label="プライバシーポリシー" style="background-color: #00a99d">プライバシーポリシー</a></span><span id="cn-close-notice" data-cookie-set="accept" class="cn-close-icon" title="Cookieを拒否する"></span></div>
+			
+		</div>
+		<!-- / Cookie Notice plugin -->
+</body>
+
+</html>

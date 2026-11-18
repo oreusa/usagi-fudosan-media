@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
+	<link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet" />
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105005144-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "UA-105005144-3");
+	</script>
+
+	<title>フェスタルーチェ</title>
+	<link rel="icon" href="./favicon.ico?v=1.0" />
+	<meta name="description" content="2017年にスタートした「フェスタ・ルーチェ」もついに今年で10周年を迎えます。これまでの9年間、毎年異なるテーマを掲げ、イルミネーションを中心に、プロジェクションマッピングやランタンフェス、ドローンショーなど、さまざまな光のコンテンツを展開し、進化してきました。和歌山から始まったフェスタ・ルーチェは全国へ広がり、累計115万人を超える方々に楽しんでいただいています。" />
+	<link rel="canonical" href="https://festaluce.jp/" />
+	<meta property="og:locale" content="ja_JP" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="フェスタルーチェ in 和歌山マリーナシティ" />
+	<meta property="og:url" content="https://festaluce.jp/" />
+	<meta property="og:site_name" content="フェスタルーチェ in 和歌山マリーナシティ" />
+	<meta property="og:image" content="https://festaluce.jp/ogp.jpg" />
+	<meta property="og:image:secure_url" content="https://festaluce.jp/wakayama/ogp_fl.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="フェスタルーチェ in 和歌山マリーナシティ" />
+	<meta name="twitter:image" content="https://festaluce.jp/wakayama/ogp_fl.jpg" />
+
+	<link rel="dns-prefetch" href="//unpkg.com" />
+	<link rel="dns-prefetch" href="//code.jquery.com" />
+	<link rel="dns-prefetch" href="//s.w.org" />
+	<script type="text/javascript">
+		window._wpemojiSettings = {
+			baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/",
+			ext: ".png",
+			svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/",
+			svgExt: ".svg",
+			source: {
+				concatemoji:
+					"https:\/\/festaluce.jp\/wakayama\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.15",
+			},
+		};
+		!(function (a, b, c) {
+			function d(a, b) {
+				var c = String.fromCharCode;
+				l.clearRect(0, 0, k.width, k.height),
+					l.fillText(c.apply(this, a), 0, 0);
+				var d = k.toDataURL();
+				l.clearRect(0, 0, k.width, k.height),
+					l.fillText(c.apply(this, b), 0, 0);
+				var e = k.toDataURL();
+				return d === e;
+			}
+			function e(a) {
+				var b;
+				if (!l || !l.fillText) return !1;
+				switch (((l.textBaseline = "top"), (l.font = "600 32px Arial"), a)) {
+					case "flag":
+						return (
+							!(b = d(
+								[55356, 56826, 55356, 56819],
+								[55356, 56826, 8203, 55356, 56819]
+							)) &&
+							((b = d(
+								[
+									55356,
+									57332,
+									56128,
+									56423,
+									56128,
+									56418,
+									56128,
+									56421,
+									56128,
+									56430,
+									56128,
+									56423,
+									56128,
+									56447,
+								],
+								[
+									55356,
+									57332,
+									8203,
+									56128,
+									56423,
+									8203,
+									56128,
+									56418,
+									8203,
+									56128,
+									56421,
+									8203,
+									56128,
+									56430,
+									8203,
+									56128,
+									56423,
+									8203,
+									56128,
+									56447,
+								]
+							)),
+								!b)
+						);
+					case "emoji":
+						return (
+							(b = d(
+								[55358, 56760, 9792, 65039],
+								[55358, 56760, 8203, 9792, 65039]
+							)),
+							!b
+						);
+				}
+				return !1;
+			}
+			function f(a) {
+				var c = b.createElement("script");
+				(c.src = a),
+					(c.defer = c.type = "text/javascript"),
+					b.getElementsByTagName("head")[0].appendChild(c);
+			}
+			var g,
+				h,
+				i,
+				j,
+				k = b.createElement("canvas"),
+				l = k.getContext && k.getContext("2d");
+			for (
+				j = Array("flag", "emoji"),
+				c.supports = { everything: !0, everythingExceptFlag: !0 },
+				i = 0;
+				i < j.length;
+				i++
+			)
+				(c.supports[j[i]] = e(j[i])),
+					(c.supports.everything = c.supports.everything && c.supports[j[i]]),
+					"flag" !== j[i] &&
+					(c.supports.everythingExceptFlag =
+						c.supports.everythingExceptFlag && c.supports[j[i]]);
+			(c.supports.everythingExceptFlag =
+				c.supports.everythingExceptFlag && !c.supports.flag),
+				(c.DOMReady = !1),
+				(c.readyCallback = function () {
+					c.DOMReady = !0;
+				}),
+				c.supports.everything ||
+				((h = function () {
+					c.readyCallback();
+				}),
+					b.addEventListener
+						? (b.addEventListener("DOMContentLoaded", h, !1),
+							a.addEventListener("load", h, !1))
+						: (a.attachEvent("onload", h),
+							b.attachEvent("onreadystatechange", function () {
+								"complete" === b.readyState && c.readyCallback();
+							})),
+					(g = c.source || {}),
+					g.concatemoji
+						? f(g.concatemoji)
+						: g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji)));
+		})(window, document, window._wpemojiSettings);
+	</script>
+
+	<link rel="stylesheet" id="festa-top-css" href="./festa-top.css?v=74.0" type="text/css" media="all" />
+	<script>
+		if (document.location.protocol != "https:") {
+			document.location = document.URL.replace(/^http:/i, "https:");
+		}
+	</script>
+	<link rel="https://api.w.org/" href="https://festaluce.jp/wakayama/wp-json/" />
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://festaluce.jp/wakayama/xmlrpc.php?rsd" />
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml"
+		href="https://festaluce.jp/wakayama/wp-includes/wlwmanifest.xml" />
+
+	<link rel="shortlink" href="https://festaluce.jp/wakayama/?p=376" />
+	<link rel="alternate" type="application/json+oembed"
+		href="https://festaluce.jp/wakayama/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffestaluce.jp%2Fwakayama%2Finformation2020%2F" />
+	<link rel="alternate" type="text/xml+oembed"
+		href="https://festaluce.jp/wakayama/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffestaluce.jp%2Fwakayama%2Finformation2020%2F&#038;format=xml" />
+</head>
+
+<body data-rsssl="1" class="">
+	<div id="content" class="container top-all" style="background: #000;">
+		<div id="" class="content-wrapper">
+			<div class="logo-area">
+				<h1>
+					<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/common/common_logo-festa.png"
+						alt="" class="footer__logo" />
+				</h1>
+			</div>
+			<div class="youtube-wrap">
+				<div class="inner">
+					<iframe style="margin-left:auto;margin-right:auto;" width="560" height="315"
+						src="https://www.youtube.com/embed/qyCSUdPrEk0" title="YouTube video player" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write;
+encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="in-session-wrap">
+				<h2></h2>
+				<ul class="list-in-session">
+					<li>
+						<a href="https://www.aws-s.com/lightparks&nightsafari/lightparks/" target="_blank" rel="noopener noreferrer">
+							<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/2026_2027marina/advw_logo.png"
+								alt="LIGHT PARKS in アドベンチャーワールド" />
+							<p>2026年10月24日（土）- 2027年3月31日（水）</p>
+							<small>公式WEBサイトはこちら</small>
+						</a>
+					</li>
+					<li>
+						<a href="https://festaluce.jp/wakayama/" target="_blank" rel="noopener noreferrer">
+							<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/common/logo_marina2023_2024.png"
+								alt="FESTALUCE in 和歌山マリーナシティ" />
+							<p>2026年10月31日（土）- 2027年2月14日（日）</p>
+							<small>公式WEBサイトはこちら</small>
+						</a>
+					</li>
+					<li>
+						<a href="https://festaluce-ehime.jp/"  target="_blank" rel="noopener noreferrer">
+							<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/common/light_parks_ehime.png"
+								alt="FESTALUCE in えひめこどもの城" />
+							<p>2026年11月14日（土）- 2027年1月31日（日）</p>
+							<small>公式WEBサイトはこちら</small>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="achievements-held">
+				<h3>開催実績</h3>
+				<ul class="list-achievements-held">
+					<li>
+						<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/common/logo_wh_fl_matsue2022-2023.png"
+							alt="FESTALUCE in 松江" />
+						<p>松江<br />（島根県）</p>
+					</li>
+					<li>
+						<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/common/logo_towadako.png"
+							alt="FESTALUCE十和田湖" />
+						<p>国立公園十和田湖 十和田神社<br />（青森県）</p>
+					</li>
+					<li>
+						<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/common/logo_sennan.png"
+							alt="泉南ロングパーク「SENNAN PARK LIGHT UP」×「フェスタ・ルーチェ」" />
+						<p>泉南市<br />（大阪府）</p>
+					</li>
+					<li>
+						<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/common/logo_rindouko.png"
+							alt="FESTALUCEりんどう湖" />
+						<p>那須高原りんどう湖ファミリー牧場<br />（栃木県）</p>
+					</li>
+					<li>
+						<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/common/logo_arai.png"
+							alt="FESTALUCEロッテアライリゾート" />
+						<p>ロッテアライリゾート<br />（新潟県）</p>
+					</li>
+					<li>
+						<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/common/logo_narita_white.png?202111031"
+							alt="成田ビューホテル" />
+						<p>成田ビューホテル<br />（千葉県）</p>
+					</li>
+				</ul>
+			</div>
+			<div class="info">
+				<p>
+					フェスタ・ルーチェ実行委員会事務局<br />
+					TEL: 073-484-3616（月-金 10:00-18:00）<br />
+					MAIL: info@festaluce.jp
+				</p>
+				<small class="copy">©️フェスタルーチェ実行委員会</small>
+			</div>
+		</div>
+
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+		<div class="circle-container">
+			<div class="circle"></div>
+		</div>
+	</div>
+	<!-- #content -->
+
+	<ul class="list-sns">
+		<li>
+			<a href="https://www.facebook.com/festaluce/">
+				<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/common/icn_fb.webp" alt=""
+					class="" />
+			</a>
+		</li>
+		<li>
+			<a href="https://www.instagram.com/festaluce/">
+				<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/common/icn_insta.webp" alt=""
+					class="" />
+			</a>
+		</li>
+		<li>
+			<a href="https://www.tiktok.com/@festaluce">
+				<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/common/icn_tiktok.webp" alt=""
+					class="" />
+			</a>
+		</li>
+	</ul>
+</body>
+
+</html>

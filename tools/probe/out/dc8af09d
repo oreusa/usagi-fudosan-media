@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ガチャガチャ展 in 大阪 | TVO テレビ大阪</title>
+  <meta name="robots" content="index,follow">
+  <meta http-equiv="content-script-type" content="text/javascript" charset="UTF-8">
+  <meta http-equiv="content-style-type" content="text/css">
+  <meta name="description" content="もはや、ガチャガチャは日本の文化です。【ガチャガチャ展 in 大阪】2026年12月3日(木)～2027年1月12日(火) なんばスカイオ 7F コンベンションホールにて開催">
+  <meta name="keywords" content="テレビ大阪,開局45周年,45周年,45th,ナナめ上のワクワクを,ナナめ上,ワクワク,2027,TVO" />
+  <meta property="og:title" content="ガチャガチャ展 in 大阪 | TVO テレビ大阪" />
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.tv-osaka.co.jp/event/gacha/">
+  <meta property="og:image" content="https://www.tv-osaka.co.jp/event/gacha/images/ogp.jpg">
+  <meta property="og:description" content="もはや、ガチャガチャは日本の文化です。【ガチャガチャ展 in 大阪】2026年12月3日(木)～2027年1月12日(火) なんばスカイオ 7F コンベンションホールにて開催">
+  <meta property="og:site_name" content="ガチャガチャ展 in 大阪 | TVO テレビ大阪" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ガチャガチャ展 in 大阪 | TVO テレビ大阪">
+  <meta name="twitter:description" content="もはや、ガチャガチャは日本の文化です。【ガチャガチャ展 in 大阪】2026年12月3日(木)～2027年1月12日(火) なんばスカイオ 7F コンベンションホールにて開催">
+  <meta name="twitter:image:src" content="https://www.tv-osaka.co.jp/event/gacha/images/ogp.jpg">
+  <!--css-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap">
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&display=swap"> -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&display=swap"> -->
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap"> -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/swiper@8.1.6/swiper-bundle.min.css,npm/swiper@8.1.6/modules/autoplay/autoplay.min.css"> -->
+  <link rel="stylesheet" href="/event/gacha/css/style.css">
+  <!--css-->
+  <script type="text/javascript" src="//cdn.tv-osaka.co.jp/rs/src/c.js?rs_mod=common,analyze,overlay,video" charset="utf-8"></script>
+</head>
+
+<body id="top">
+  <script type="text/javascript" src="//cdn.tv-osaka.co.jp/js/get_header.js" charset="shift_jis"></script>
+
+  <main id="page" class="l-main">
+
+    <div class="page_bg"></div><!-- bg fixed用 safari対応 -->
+
+    <!-- インクルード ここから -->
+    <!-- <div id="g_navi"></div> -->
+    <!-- //g_navi.html インクルード -->
+    <!-- // インクルード ここまで -->
+
+    <div id="kv">
+      <div class="logo_wrap">
+        <h1 class="logo">ガチャガチャ展 in 大阪</h1>
+      </div>
+      <div class="date_wrap"><div class="inner_wrap">
+        <h2 class="date">2026年 12月3日(木)～2027年 1月12日(火)</h2>
+      </div></div>
+    </div>
+
+    <div id="sec_past" class="sec_wrap"><div class="inner_wrap">
+      <div class="sec_title_wrap">
+        <div class="sec_title">過去開催</div>
+        <div class="sec_title_sub">※東京会場の様子</div>
+      </div>
+      <div class="container flex past_photo">
+        <div class="cont_item">
+          <div class="img_wrap"><img src="/event/gacha/images/past01.jpg"></div>
+        </div>
+        <div class="cont_item">
+          <div class="img_wrap"><img src="/event/gacha/images/past02.jpg"></div>
+        </div>
+        <div class="cont_item">
+          <div class="img_wrap"><img src="/event/gacha/images/past03.jpg"></div>
+        </div>
+      </div>
+    </div></div>
+
+    <div id="sec_outline" class="sec_wrap"><div class="inner_wrap">
+      <div class="sec_title_wrap">
+        <div class="sec_title">開催概要</div>
+      </div>
+      <div class="container ev_outline">
+        <div class="cont_item flex">
+          <div class="cont_item_head">名&emsp;称</div>
+          <div class="cont_item_detail">
+            <p>ガチャガチャ展 in 大阪</p>
+          </div>
+        </div>
+        <div class="cont_item flex">
+          <div class="cont_item_head">会&emsp;期</div>
+          <div class="cont_item_detail">
+            <p>2026年 12月3日(木)<span class="ib">～2027年 1月12日(火)</span><br>10:00～19:00&nbsp;<span class="ib"><small>(最終入場18:30)</small></span></p>
+            <div class="note">
+              <p><small>※1月1日(金)は休館日</small></p>
+            </div>
+          </div>
+        </div>
+        <div class="cont_item flex">
+          <div class="cont_item_head">会&emsp;場</div>
+          <div class="cont_item_detail">
+            <p>なんばスカイオ 7階&nbsp;<span class="ib">コンベンションホール&nbsp;</span><span class="ib"><small>(南海なんば駅直結)</small></span></p>
+            <p><a class="textlink tvo-analyze tvo-analyze-click" href="https://www.nambaskyo-convention.com/access/" target="_blank">アクセス&nbsp;<i class="fa-solid fa-up-right-from-square"></i></a><small>*なんばスカイオのページを開きます</small></p>
+          </div>
+        </div>
+        <div class="cont_item flex">
+          <div class="cont_item_head">入場料</div>
+          <div class="cont_item_detail">
+            <ul class="ticket_price">
+              <li><mark>一&emsp;般</mark>&ensp;<span class="ib"><b>1,500<small>円</small></b>&ensp;<span class="ib">(前売&nbsp;<b class="red">1,300<small>円</small></b>)</span></span></li>
+              <li><mark>高校生</mark>&ensp;<span class="ib"><b>1,300<small>円</small></b>&ensp;<span class="ib">(前売&nbsp;<b class="red">1,100<small>円</small></b>)</span></span></li>
+              <li><mark>小中学生</mark>&ensp;<span class="ib"><b>1,100<small>円</small></b>&ensp;<span class="ib">(前売&nbsp;<b class="red">&emsp;900<small>円</small></b>)</span></span></li>
+            </ul>
+            <div class="note">
+              <p><small>※未就学児入場無料&emsp;<span class="ib">※消費税込</span></small></p>
+            </div>
+            <div class="btn_wrap btn_ticket"><a class="btn" href="#sec_ticket"><i class="fa-solid fa-arrow-down"></i>&nbsp;チケットのご購入はコチラ&nbsp;<i class="fa-solid fa-arrow-down"></i></a></div>
+          </div>
+        </div>
+        <div class="cont_item flex">
+          <div class="cont_item_head">主&emsp;催</div>
+          <div class="cont_item_detail">
+            <div class="img_wrap logo45th"><img src="/event/gacha/images/logo45th.png"></div>
+          </div>
+        </div>
+        <div class="cont_item flex">
+          <div class="cont_item_head">特別協力</div>
+          <div class="cont_item_detail">
+            <p>日本ガチャガチャ協会、<span class="ib">ガチャガチャ展実行委員会</span></p>
+          </div>
+        </div>
+      </div>
+    </div></div>
+
+    <div class="bg_trigger">
+      <div id="sec_ticket" class="sec_wrap"><div class="inner_wrap">
+        <div class="sec_title_wrap">
+          <div class="sec_title">チケット</div>
+        </div>
+        <div class="ticketLink">
+          <div class="ticketBnr flex">
+            <div class="ticketBnr_item asoview">
+              <a href="https://evt.asoview.com/gachagacha_osaka" class="tvo-analyze tvo-analyze-click" target="_blank"><img src="/event/gacha/images/ticket_asoview.png" alt="アソビュー！"></a>
+              <!-- <h3 class="ticketBnrTitle">アソビュー！</h3> -->
+              <!-- <small class="codeNum">店頭引き換え不要・<span class="ib">発券手数料不要</span></small> -->
+              <!-- <small class="ticketUrl"><a href="#" class="tvo-analyze tvo-analyze-click" target="_blank">#</a></small> -->
+            </div>
+            <div class="ticketBnr_item rakuten">
+              <!-- <a href="●●●●●" class="tvo-analyze tvo-analyze-click" target="_blank"><img src="/event/gacha/images/ticket_rakuten.jpg" alt="RAKUTENチケット"></a> -->
+              <a href="https://experiences.travel.rakuten.co.jp/experiences/63343?scid=we_txp_gacha-osaka-officialsite" class="tvo-analyze tvo-analyze-click" target="_blank"><img src="/event/gacha/images/ticket_rakuten.png" alt="RAKUTENチケット"></a>
+            </div>
+            <div class="ticketBnr_item">
+              <a href="https://l-tike.com/gachagachaten-osaka/" class="tvo-analyze tvo-analyze-click" target="_blank"><img src="/event/gacha/images/ticket01.jpg" alt="ローソンチケット"></a>
+              <!-- <h3 class="ticketBnrTitle">ローソンチケット</h3> -->
+              <small class="codeNum">（ コード：56408 ）</small>
+            </div>
+            <div class="ticketBnr_item">
+              <a href="https://7ticket.jp/s/117920" class="tvo-analyze tvo-analyze-click" target="_blank"><img src="/event/gacha/images/ticket02.jpg" alt="セブンチケット"></a>
+              <!-- <h3 class="ticketBnrTitle">セブンチケット</h3> -->
+              <small class="codeNum">（ コード：117-920 ）</small>
+            </div>
+            <div class="ticketBnr_item">
+              <a href="https://w.pia.jp/t/gachagachaten/" class="tvo-analyze tvo-analyze-click" target="_blank"><img src="/event/gacha/images/ticket03.jpg" alt="チケットぴあ"></a>
+              <!-- <h3 class="ticketBnrTitle">チケットぴあ</h3> -->
+              <small class="codeNum">（ コード：996369 ）</small>
+            </div>
+            <div class="ticketBnr_item">
+              <a href="https://eplus.jp/gachagacha-o/" class="tvo-analyze tvo-analyze-click" target="_blank"><img src="/event/gacha/images/ticket04.jpg" alt="イープラス"></a>
+              <!-- <h3 class="ticketBnrTitle">イープラス</h3> -->
+            </div>
+            <div class="ticketBnr_item">
+              <a href="https://www.cnplayguide.com/gacha_osaka/" class="tvo-analyze tvo-analyze-click" target="_blank"><img src="/event/gacha/images/ticket_cnplayguide.jpg" alt="CNプレイガイド"></a>
+              <!-- <h3 class="ticketBnrTitle">CNプレイガイド</h3> -->
+              <small class="codeNum">電話受付：<a href="tel:0570089999">0570-08-9999</a></small>
+            </div>
+          </div>
+          <div class="note">
+            <p>※<em>前売料金</em>での販売は<em class="ylw">2026年12月2日(水) 23:59</em>まで</p>
+            <p>※<em>当日券</em>は会場でも販売いたします</p>
+            <p>※イベント中止の場合を除きチケットの払い戻しはいたしません</p>
+            <p>※会場の混雑状況により、ご入場をお待ちいただく場合や入場整理を行う場合があります</p>
+          </div>
+        </div>
+      </div></div>
+      
+      <div id="sec_content" class="sec_wrap"><div class="inner_wrap">
+        <div class="sec_title_wrap">
+          <div class="sec_title">コンテンツ</div>
+        </div>
+        <div class="sec_read">
+          <div class="read">
+            <p>みなさまでお楽しみいただける<span class="ib"><em>クイズラリー</em>や</span><br>
+              <em>大阪会場限定の企画</em>も！
+            </p>
+            <div class="btn_wrap btn_base"><a class="btn" href="/event/gacha/content/">詳しくはコチラ&nbsp;<i class="fa-regular fa-circle-right"></i></a></div>
+          </div>
+        </div>
+      </div></div>
+
+      <div id="sec_sns" class="sec_wrap"><div class="inner_wrap">
+        <div class="sec_title_wrap">
+          <div class="sec_title">SNS</div>
+        </div>
+        <div class="sec_read">
+          <div class="read">
+            <div class="sns_area">
+              <ul>
+                  <li><a href="https://x.com/gacha_60thten" class="tvo-analyze tvo-analyze-click" target="_blank"><i class="fa-brands fa-x-twitter"></i></a><div class="sns_name">ガチャガチャ展公式<br>エックス</div></li>
+                  <li><a href="https://x.com/gachagacha_tvo" class="tvo-analyze tvo-analyze-click" target="_blank"><i class="fa-brands fa-x-twitter"></i></a><div class="sns_name">ガチャガチャ展 in 大阪<br>エックス</div></li>
+                  <li><a href="https://www.instagram.com/gachagacha_tvo" class="tvo-analyze tvo-analyze-click" target="_blank"><i class="fa-brands fa-instagram"></i></a><div class="sns_name">ガチャガチャ展 in 大阪<br>Instagram</div></li>
+                  <!-- <li><a href="#" class="tvo-analyze tvo-analyze-click" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div></div>
+
+    </div>
+
+    <div id="sec_contact" class="sec_wrap"><div class="inner_wrap">
+      <div class="sec_title_wrap">
+        <div class="sec_title">お問い合わせ</div>
+      </div>
+      <div class="container">
+        <div class="cont_item flex">
+          <div class="cont_item_head">テレビ大阪 事業局&nbsp;<small>*平日10～18時</small></div>
+          <div class="cont_item_detail">
+            <p>TEL: 06-6947-1912</p>
+            <p>Mail: gachagacha_osaka@tv-osaka.co.jp</p>
+          </div>
+        </div>
+      </div>
+    </div></div>
+
+    <!-- インクルード ここから -->
+    <div id="btm_btn_area" class="p_top"></div><!-- //btm_btn_area.html インクルード -->
+    <!-- // インクルード ここまで -->
+
+  </main>
+
+  <script type="text/javascript" src="//cdn.tv-osaka.co.jp/js/get_footer.js" charset="shift_jis"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8.1.6/swiper-bundle.min.js"></script> -->
+  <script type="text/javascript" src="/event/gacha/js/page_common.js" charset="UTF-8"></script>
+
+</body>
+</html>
