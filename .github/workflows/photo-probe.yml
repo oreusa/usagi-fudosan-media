@@ -17,7 +17,7 @@ jobs:
           if [[ "${{ inputs.words }}" == hyogo* ]]; then
             pip install -q pillow; read -ra W <<< "${{ inputs.words }}"; PW="${{ inputs.w }}" python3 tools/photo/hyogo.py "${W[1]}" tools/photo/probe/hyogo "${W[@]:2}"
           elif [[ "${{ inputs.words }}" == @* ]]; then
-            f="${{ inputs.words }}"; f="${f#@}"; b=$(basename "$f" .tsv); if [ "${{ inputs.tool }}" = best ]; then b="$b-best"; PW="${{ inputs.w }}" python3 tools/photo/best.py "$f" "tools/photo/probe/$b"; elif [ "${{ inputs.tool }}" = ov ]; then b="$b-ov"; python3 tools/photo/openverse.py "$f" "tools/photo/probe/$b"; elif [ "${{ inputs.tool }}" = ig ]; then b="$b-ig"; python3 tools/photo/igfind.py "$f" "tools/photo/probe/$b"; else PW="${{ inputs.w }}" python3 tools/photo/cover.py "$f" "tools/photo/probe/$b"; fi
+            f="${{ inputs.words }}"; f="${f#@}"; b=$(basename "$f" .tsv); if [ "${{ inputs.tool }}" = best ]; then b="$b-best"; PW="${{ inputs.w }}" python3 tools/photo/best.py "$f" "tools/photo/probe/$b"; elif [ "${{ inputs.tool }}" = ov ]; then b="$b-ov"; python3 tools/photo/openverse.py "$f" "tools/photo/probe/$b"; elif [ "${{ inputs.tool }}" = igc ]; then b="$b-igc"; python3 tools/photo/igcheck.py "$f" "tools/photo/probe/$b"; elif [ "${{ inputs.tool }}" = ig ]; then b="$b-ig"; python3 tools/photo/igfind.py "$f" "tools/photo/probe/$b"; else PW="${{ inputs.w }}" python3 tools/photo/cover.py "$f" "tools/photo/probe/$b"; fi
           else
             IFS='|' read -ra W <<< "${{ inputs.words }}"
             python3 tools/photo/commons.py tools/photo/probe "${W[@]}"
