@@ -72,7 +72,8 @@ nav.addEventListener("pointerdown",function(e){var b=e.target.closest("a,button"
   b.classList.remove("tap");void b.offsetWidth;b.classList.add("tap")});
 nav.addEventListener("click",function(e){var b=e.target.closest("[data-a]");if(!b||!navFn)return;navFn(b.dataset.a)});
 function navCur(a){$$("#nav [data-a]").forEach(function(b){b.classList.toggle("cur",b.dataset.a===a)})}
-addEventListener("scroll",function(){var y=scrollY;if(Math.abs(y-ly)>8){nav.classList.toggle("hide",y>ly&&y>300);ly=y}},{passive:true});
+/* 11/19 下へ流す間だけ隠し、指を止めたら（0.8秒）すぐ戻す。押した後に勝手に動いた時もバーが消えたままにならない */
+var nvT;addEventListener("scroll",function(){var y=scrollY;if(Math.abs(y-ly)>8){nav.classList.toggle("hide",y>ly&&y>300);ly=y}clearTimeout(nvT);nvT=setTimeout(function(){nav.classList.remove("hide")},800)},{passive:true});
 var mu=$("#mu");$("#mnb").onclick=function(){mu.classList.add("op")};$(".bk",mu).onclick=function(){mu.classList.remove("op")};
 
 /* ---- 府県の玉（選んだ所へ滑る・周りを光が回る） ---- */
@@ -105,5 +106,11 @@ addEventListener("load",function(){drawn=0;if(H.classList.contains("nt"))stars()
 
 window.SHIN={$:$,$$:$$,el:el,esc:esc,TD:TD,seed:seed,diff:diff,md:md,dd:dd,IC:IC,RM:RM,countUp:countUp,counts:counts,bars:bars,sheet:sheet,closeSheet:closeSheet,seg:seg,
   onNav:function(f){navFn=f},navCur:navCur,main:$("#main"),data:JSON.parse((document.getElementById("d")||{textContent:"{}"}).textContent),
-  ready:function(){apply(H.classList.contains("nt"))}};
+  ready:function(){apply(H.classList.contains("nt"));largeTitle()}};
+/* 11/19 iPhone の設定アプリの形：大きい題は下へ流すと薄れて、上の細い帯に小さく収まる。帯を押すと一番上へ */
+function largeTitle(){var h=$(".h1t");if(!h)return;var tb=document.createElement("button");tb.id="tb";tb.setAttribute("aria-label","一番上へ");tb.textContent=h.textContent;document.body.appendChild(tb);
+  tb.onclick=function(){scrollTo({top:0,behavior:RM?"auto":"smooth"})};var q=0,on=false;
+  function f(){q=0;var r=h.getBoundingClientRect(),p=Math.max(0,Math.min(1,(60-r.top)/70));if(!RM){h.style.opacity=(1-p*.9).toFixed(3);h.style.transform="translateY("+(p*-6).toFixed(1)+"px) scale("+(1-p*.04).toFixed(3)+")"}
+    var o=r.bottom<46;if(o!==on){on=o;tb.classList.toggle("on",o);H.classList.toggle("tbon",o)}}
+  addEventListener("scroll",function(){if(!q)q=requestAnimationFrame(f)},{passive:true});f()}
 })();
