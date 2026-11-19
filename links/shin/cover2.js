@@ -14,15 +14,15 @@ function yen(u){return (u>=100?Math.round(u).toLocaleString("ja-JP"):(Math.round
 function btns(a,b){return '<p class="c3b"><a class="f" href="'+a[1]+'">'+esc(a[0])+'</a>'+(b?'<a href="'+b[1]+'">'+esc(b[0])+'</a>':'')+'</p>'}
 function head(h,s){return '<h2>'+h+'</h2><p class="s">'+s+'</p>'}
 
-var od=D.od,ie=D.ie,ka=D.kau,kai=D.kai,h="";
+var RN=(S_.reg&&S_.reg.n)||"関西",od=D.od,ie=D.ie,ka=D.kau,kai=D.kai,h="";
 /* 1 おでかけ：開催中の写真が静かに切り替わる */
 var ph=od.ph||[];
-h+='<section class="c3u">'+head('関西のおでかけ','いま開催中のイベントが<b>'+od.n+'</b>件。<br>毎朝、公式の発表から集めています。')+btns(['開催中を見る','/odekake'],['今週末','/odekake#we'])+
+h+='<section class="c3u">'+head(RN+'のおでかけ','いま開催中のイベントが<b>'+od.n+'</b>件。<br>毎朝、公式の発表から集めています。')+btns(['開催中を見る','/odekake'],['今週末','/odekake#we'])+
   (ph.length?'<a class="c3v c3ph" id="c3ph" href="'+(ph[0].o?'/o/'+ph[0].o:'/odekake')+'">'+ph.map(function(x,i){return '<img src="'+img(x)+'" alt="" '+(i?'loading="lazy"':'fetchpriority="high"')+' decoding="async" style="background-color:'+avg(x.th)+'"'+(i?'':' class="on"')+'>'}).join("")+
   '</a><p class="c3cap" id="c3cap">'+esc(ph[0].t)+'<span>'+esc(ph[0].p)+'・'+left(ph[0].e)+'</span></p>':'')+'</section>';
 /* 2 家と土地：地価がいちばん上がった街 */
 var tw=ie.tw||[];
-h+='<section class="c3u g">'+head('家と土地の値段','関西'+ie.n+'の街の、実際に売れた値段と<br>住宅地の地価の動き。')+btns(['街をさがす','/fudosan-list'],['いくらで売れる？','/ikura'])+
+h+='<section class="c3u g">'+head('家と土地の値段',RN+(ie.n||'')+'の街の、実際に売れた値段と<br>住宅地の地価の動き。')+btns(['街をさがす','/fudosan-list'],['いくらで売れる？','/ikura'])+
   (tw.length?'<div class="c3v c3st"><p class="c3lb">住宅地の地価が、1年でいちばん上がった街</p><a class="c3n1" href="/machi/'+tw[0].id+'"><b>+'+tw[0].r+'<small>%</small></b><span>'+esc(tw[0].n)+'</span></a>'+
   '<div class="c3n2">'+tw.slice(1).map(function(t){return '<a href="/machi/'+t.id+'"><b>+'+t.r+'<small>%</small></b><span>'+esc(t.n)+'</span></a>'}).join("")+'</div></div>':'')+'</section>';
 /* 3 おかいもの：いちばん安い値段 */
@@ -31,14 +31,14 @@ h+='<section class="c3u k">'+head('日用品の値段くらべ','楽天・Yahoo!
   (ks.length?'<div class="c3v c3ks">'+ks.map(function(k){return '<a href="/okaimono"><svg viewBox="0 0 24 24" aria-hidden="true">'+k.ic+'</svg><span>'+esc(k.nm)+'</span><b>'+yen(k.u)+'</b><small>'+esc(k.unit)+'あたり</small></a>'}).join("")+'</div><p class="c3cap">いま、いちばん安いお店の値段</p>':'')+'</section>';
 /* 4 開店・閉店：次に開くお店 */
 var x=kai.x;
-h+='<section class="c3u">'+head('開店・閉店ニュース','関西で、これから開くお店が<b>'+kai.n+'</b>件。<br>新しいお店と、閉まるお店。')+btns(['これから開くお店','/kaiten'],['閉まるお店','/kaiten#w=close'])+
+h+='<section class="c3u">'+head('開店・閉店ニュース',RN+'で、これから開くお店が<b>'+kai.n+'</b>件。<br>新しいお店と、閉まるお店。')+btns(['これから開くお店','/kaiten'],['閉まるお店','/kaiten#w=close'])+
   (x?'<a class="c3v c3kc" href="'+(x.sp||'/kaiten')+'"><span class="im"><img src="'+img(x)+'" alt="" loading="lazy" decoding="async"></span><small>'+esc(x.big?x.d.replace(/(開店|閉店|期間限定)$/,"")+"・"+x.big:x.d)+'</small><b>'+esc(x.t)+'</b><em>'+esc(x.a||x.p)+'</em></a>':'')+'</section>';
 /* 5 季節：写真の面を2つ */
 function tile(t,s,u,p){return '<a class="c3t" href="'+u+'">'+(p?'<img src="'+img(p)+'" alt="" loading="lazy" decoding="async" style="background-color:'+avg(p.th)+'">':'')+'<span><b>'+t+'</b><small>'+s+'</small><i>見る</i></span></a>'}
-h+='<div class="c3tg"><a class="c3t c3il" href="/illumination"><div class="c3bk" aria-hidden="true">'+Array.apply(null,Array(42)).map(function(_,i){var r=function(k){return ((i+1)*k*9301+49297)%233280/233280};return '<em style="--x:'+(r(7)*100).toFixed(1)+'%;--y:'+(30+r(13)*68).toFixed(1)+'%;--s:'+(i%7?6+r(17)*16:34+r(19)*30).toFixed(0)+'px;--d:'+(r(23)*5).toFixed(1)+'s;--h:'+(i%9?36+r(29)*12:i%2?205:340).toFixed(0)+';--o:'+(i%7?.9:.45)+'"></em>'}).join("")+'</div><span><b>イルミネーション</b><small>関西の光のイベント</small><i>見る</i></span></a>'+tile('紅葉','見ごろの名所','/koyo',D.ko)+'</div>';
+h+='<div class="c3tg"><a class="c3t c3il" href="/illumination"><div class="c3bk" aria-hidden="true">'+Array.apply(null,Array(42)).map(function(_,i){var r=function(k){return ((i+1)*k*9301+49297)%233280/233280};return '<em style="--x:'+(r(7)*100).toFixed(1)+'%;--y:'+(30+r(13)*68).toFixed(1)+'%;--s:'+(i%7?6+r(17)*16:34+r(19)*30).toFixed(0)+'px;--d:'+(r(23)*5).toFixed(1)+'s;--h:'+(i%9?36+r(29)*12:i%2?205:340).toFixed(0)+';--o:'+(i%7?.9:.45)+'"></em>'}).join("")+'</div><span><b>イルミネーション</b><small>'+RN+'の光のイベント</small><i>見る</i></span></a>'+tile('紅葉','見ごろの名所','/koyo',D.ko)+'</div>';
 /* 6 すべてのページ（apple.com の一番下の一覧の形） */
 h+='<nav class="c3f" aria-label="すべてのページ">'+D.ft.map(function(g){return '<div><h3>'+esc(g[0])+'</h3>'+g[1].map(function(a){return '<a href="'+a[1]+'">'+esc(a[0])+'</a>'}).join("")+'</div>'}).join("")+
-  '<div><h3>TOWN NOTE</h3>'+D.sns.map(function(s){return '<a href="'+s[1]+'" target="_blank" rel="noopener">'+esc(s[0])+'</a>'}).join("")+'</div></nav>';
+  '<div><h3>'+esc((S_.reg&&S_.reg.brand)||"TOWN NOTE")+'</h3>'+D.sns.map(function(s){return '<a href="'+s[1]+'" target="_blank" rel="noopener">'+esc(s[0])+'</a>'}).join("")+'</div></nav>';
 S_.main.innerHTML='<div class="c3">'+h+'</div>';
 
 /* 写真が静かに切り替わる（動きを減らす設定の人は切り替えない） */
