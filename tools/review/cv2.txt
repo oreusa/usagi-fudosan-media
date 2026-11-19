@@ -1,0 +1,3 @@
+cv2	https://townnote.pages.dev/shin/cover2
+uru	https://townnote.pages.dev/uru
+ikura	https://townnote.pages.dev/ikura
