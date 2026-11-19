@@ -1,0 +1,14 @@
+top	https://kansai.townnote.app/?mihon=2
+odekake	https://kansai.townnote.app/odekake?mihon=2
+osaka	https://kansai.townnote.app/odekake-osaka?mihon=2
+illumi	https://kansai.townnote.app/illumination?mihon=2
+ima	https://kansai.townnote.app/ima?mihon=2
+flist	https://kansai.townnote.app/fudosan-list?mihon=2
+uru	https://kansai.townnote.app/uru?mihon=2
+okaimono	https://kansai.townnote.app/okaimono?mihon=2
+ktop	https://kanto.townnote.app/?mihon=2
+kodekake	https://kanto.townnote.app/odekake?mihon=2
+ktokyo	https://kanto.townnote.app/odekake-tokyo?mihon=2
+kima	https://kanto.townnote.app/ima?mihon=2
+kkoyo	https://kanto.townnote.app/koyo?mihon=2
+kfudosan	https://kanto.townnote.app/fudosan-list?mihon=2

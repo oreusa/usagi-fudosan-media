@@ -62,7 +62,7 @@ function openOn(o,d){if(o.s&&d<o.s)return false;if(o.e&&d>o.e)return false;var r
   if(r.indexOf("wd:")===0)return (r.indexOf("h")>0&&!!HOL[d])||r.slice(3).indexOf(String(dw(d)))>=0;/* 11/9 夜「月曜休館の美術館が今日行けると出る」→ wd:開く曜日（0=日〜6=土）、h＝祝日も開く */if(r==="sat")return dw(d)===6;if(r==="sun")return dw(d)===0;if(r==="we")return dw(d)===0||dw(d)===6||!!HOL[d];return r.split(",").indexOf(d)>=0;}
 function inRange(o,dk){return D[dk].d.some(function(d){return d>=T&&openOn(o,d);});}
 function isShort(o){if(!o.s||!o.e)return false;return (Date.parse(o.e)-Date.parse(o.s))/864e5<=14||(o.days&&o.days.indexOf(",")>0);}
-function curPref(){var b=F.querySelector("button.on");if(!b)return "";var p=AK?(b.getAttribute("data-p")||""):b.textContent.trim();return p==="すべて"?"":p;}
+function curPref(){var b=F.querySelector("button.on");if(!b||/odekake-[a-z]/.test(location.pathname)){var pm=location.pathname.match(/odekake-([a-z]+)/),J={osaka:"大阪",kyoto:"京都",hyogo:"兵庫",nara:"奈良",shiga:"滋賀",wakayama:"和歌山",tokyo:"東京",kanagawa:"神奈川",saitama:"埼玉",chiba:"千葉",ibaraki:"茨城",tochigi:"栃木",gunma:"群馬"};return pm&&J[pm[1]]||"";}var p=AK?(b.getAttribute("data-p")||""):b.textContent.trim();return p==="すべて"?"":p;}
 /* 状態 */
 var q=new URLSearchParams(location.search),st={d:q.get("d")||(q.get("v2t")?"all":"we"),f:{}};
 if(!D[st.d]&&st.d!=="all")st.d="we";st.k=q.get("k")||"";(q.get("f")||"").split(",").forEach(function(k){if(FL[k])st.f[k]=1;});
@@ -196,7 +196,7 @@ F.addEventListener("click",function(e){var pb=e.target.closest&&e.target.closest
 function up(){var tp=box.closest(".tn-top"),y=sec.getBoundingClientRect().top+scrollY-(tp?tp.offsetHeight:0)-8;if(scrollY>y+4)scrollTo({top:Math.max(0,y),behavior:"smooth"});}
 /* 11/10 #101 #165：地図から ?pref= で来たら、その府県を先に当てる（保存した府県より先） */
 var QP=q.get("pref")||"";if(QP){var qb=[].filter.call(F.querySelectorAll("button"),function(x){return x.textContent.trim()===QP||x.getAttribute("data-p")===QP;})[0];if(qb&&!qb.classList.contains("on"))setTimeout(function(){qb.click();},0);}
-try{var sp=localStorage.getItem("tn_pref"+(AK?"_k":""));var on0=F.querySelector("button.on");if(sp&&sp!=="すべて"&&!QP&&!(on0&&on0!==F.querySelector("button")))[].forEach.call(F.querySelectorAll("button"),function(b){if(b.textContent.trim()===sp&&!b.classList.contains("on"))setTimeout(function(){b.click();},0);});}catch(e){}
+try{var sp=localStorage.getItem("tn_pref"+(AK?"_k":""));var on0=F.querySelector("button.on");/* 11/19 owner「関西おでかけを押したら大阪になるのはなんで」→ 前の府県は覚えない。いつも「すべて」から */if(false&&sp&&sp!=="すべて"&&!QP&&!(on0&&on0!==F.querySelector("button")))[].forEach.call(F.querySelectorAll("button"),function(b){if(b.textContent.trim()===sp&&!b.classList.contains("on"))setTimeout(function(){b.click();},0);});}catch(e){}
 window.addEventListener("load",function(){setTimeout(function(){if(!sheetOpen)render();},400);});
 /* 11/10 オーナー「初めから出てるんじゃなくてスッキリ」：選ぶ欄は最初たたんで1行。押すと開く。開いた後も下に読むとまたたたむ */
 (function(){var tp=box.closest(".tn-top");if(!tp){tp=document.createElement("div");tp.className="wfw";box.parentNode.insertBefore(tp,box);tp.appendChild(box);}var f1=document.createElement("div");f1.className="fold1";tp.appendChild(f1);var ly=scrollY,oy=0;
