@@ -1,0 +1,172 @@
+■ top
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/odekake) ✓
+  story ✓ [hxsv]
+  story-back ✓
+  search ✓ [hxsr]
+    results 40
+  search→item ✓
+  search-back ✓
+  deck ✓ [hxdc]
+  deck-swipe ✓ [hxdc]
+  deck-back ✓
+  bar:/odekake ✓
+  bar-back ✓
+  bar:/fudosan-list ✓
+  bar-back ✓
+  bar:/okaimono ✓
+  bar-back ✓
+■ odekake
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/odekake-osaka) ✓
+  card→sheet ✓ [hxsh]
+  sheet-back ✓
+  deck ✓ [hxdc]
+  deck-swipe ✓ [hxdc]
+  deck-back ✓
+■ osaka
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/odekake-osaka) ✓
+  story ✓ [hxsv]
+  story-back ✓
+  card→sheet ✓ [hxsh]
+  sheet-back ✓
+  deck ✓ [hxdc]
+  deck-swipe ✓ [hxdc]
+  deck-back ✓
+■ illumi
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/odekake-osaka) ✓
+  story ✓ [hxsv]
+  story-back ✓
+  search ✓ [hxsr]
+    results 40
+  search→item ✓
+  search-back ✓
+  card→sheet ✓ [hxsh]
+  sheet-link(/o/81587170) ✓
+  sheet-link-back ✓
+  deck ✓ [hxdc]
+  deck-swipe ✓ [hxdc]
+  deck-back ✓ [hxdc]
+  bar:/odekake ✓
+  bar-back ✓
+  bar:/odekake?d=all&f=fav ✓
+  bar-back ✓
+  bar:/odekake?v2t=map ✓
+  bar-back ✓
+  bar:/tomari.html ✓
+  bar-back ✓
+■ ima
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/odekake-osaka) ✓
+  story ✓ [hxsv]
+  story-back ✓
+  search ✓ [hxsr]
+    results 40
+  search→item ✓
+  search-back ✓
+  card→sheet ✓ [hxsh]
+  sheet-back ✓
+  deck ✓ [hxdc]
+  deck-swipe ✓ [hxdc]
+  deck-back ✓
+  bar:/odekake ✓
+  bar-back ✓
+  bar:/odekake?d=all&f=fav ✓
+  bar-back ✓
+  bar:/odekake?v2t=map ✓
+  bar-back ✓
+  bar:/tomari.html ✓
+  bar-back ✓
+■ flist
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/machi/osaka-24) ✓
+    town: 大阪 都島区 6 位 +8.5 % 住宅地の1年の動き・大阪の72の街で6位 この街で実際に売れた家（2025年度） 中古マンション 3,383万円 268件の平均 中古の一戸建て
+  town ✓
+  bar:# ✓ [hxtq]
+  bar-back ✓
+  bar:# ✓ [hxtq]
+  bar-back ✓
+  bar:/chika-kansai ✓
+  bar-back ✓
+  bar:/uru.html ✓
+  bar-back ✓
+■ uru
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/machi/osaka-24) ✓
+■ okaimono
+  load ✓
+  scroll ✓
+■ ktop
+  load ✓
+  scroll ✓
+■ kodekake
+  load ✓
+  scroll ✓
+■ ktokyo
+  load ✓
+  scroll ✓
+■ kima
+  load ✓
+  scroll ✓
+■ kkoyo
+  load ✓
+  scroll ✓
+■ kfudosan
+  load ✓
+  scroll ✓
+■ kosaka
+  load ✓
+  scroll ✓
+■ ilosaka
+  load ✓
+  scroll ✓
+■ koyo
+  load ✓
+  scroll ✓
+■ kykyoto
+  load ✓
+  scroll ✓
+■ kchiba
+  load ✓
+  scroll ✓
+■ killumi
+  load ✓
+  scroll ✓
+BAD 0
