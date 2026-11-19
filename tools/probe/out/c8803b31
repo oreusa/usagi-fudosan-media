@@ -1,0 +1,178 @@
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="canonical" href="https://duckduckgo.com/">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
+    <meta name="referrer" content="origin">
+    <title>
+        DuckDuckGo
+    </title>
+    <link rel="preload" href="/font/ProximaNova-Reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/font/ProximaNova-Sbold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link title="DuckDuckGo (Lite)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_lite_v2.xml">
+    <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon"/>
+    <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2"/>
+    <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2"/>
+    <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2"/>
+    <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2"/>
+    <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+    <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/l.4db20359cb90b7c3b91a.css" type="text/css"/>
+    <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/lc.e4363f4c4e05cdc2a4be.css" type="text/css"/>
+</head>
+
+<body>
+    <a name="top"></a>
+    <center id="lite_wrapper">
+        <br>
+        <a class="header-url" href="/html/">
+            <span class="header">DuckDuckGo</span>
+        </a>
+        <br><br>
+
+        
+        <iframe name="ifr" width="0" height="0" border="0" class="hidden"></iframe>
+        <form id="img-form" action="//duckduckgo.com/anomaly.js?sv=html&cc=botnet&ti=1795132574&gk=d4cd0dabcf4caa22ad92fab40844c786&p=8318fbaadfe528ae2785564baa144bf0-a5827fb71329038f96cf32d3adec5101-9b553de3253a26da39174c6d3cf4125e-21192e02c01e139ea8cb34c83394fc8a-f5c02fde6f1a5cab5c7dd9fa928c20dc-a5ba9659adad803fb53985c61028eda0-13582088f95037f324f1105756ac2e91-4923621cb563c298f847b6d1ead40d9b-e0aef1735e0ba4725ccb7296740452e0&q=西宮神社 初詣 正月 参拝時間 公式&o=QqRkH8qsTfLwNpZd7ugiZO8sRMvhgNzI%2B4zCRmmeeQ6Ik%2BkdRxAX3wcX0iriqsNA%0A&r=usw" target="ifr" method="POST"></form>
+        <form id="challenge-form" action="//duckduckgo.com/anomaly.js?sv=html&cc=botnet&st=1795132574&gk=d4cd0dabcf4caa22ad92fab40844c786&p=8318fbaadfe528ae2785564baa144bf0-a5827fb71329038f96cf32d3adec5101-9b553de3253a26da39174c6d3cf4125e-21192e02c01e139ea8cb34c83394fc8a-f5c02fde6f1a5cab5c7dd9fa928c20dc-a5ba9659adad803fb53985c61028eda0-13582088f95037f324f1105756ac2e91-4923621cb563c298f847b6d1ead40d9b-e0aef1735e0ba4725ccb7296740452e0&q=西宮神社 初詣 正月 参拝時間 公式&o=QqRkH8qsTfLwNpZd7ugiZO8sRMvhgNzI%2B4zCRmmeeQ6Ik%2BkdRxAX3wcX0iriqsNA%0A&r=usw" method="POST">
+            <div class="anomaly-modal__mask">
+                <div class="anomaly-modal__modal  is-ie" data-testid="anomaly-modal">
+                    <div class="anomaly-modal__title">Unfortunately, bots use DuckDuckGo too.</div>
+                    <div class="anomaly-modal__description">Please complete the following challenge to confirm this search was made by a human.</div>
+                    
+                    <input type="hidden" name="ct" value="AgEAB5vXss6DpPVJjc4tczs9DCaYo3jWyGwtSbbF701HFWFkJRA3bBlJ9S6OO2sjygV1jYAFsIa4pYUEYl-h-DTAZ5xo01sXLxIFe0lVo7rKvsYCaW4D9tUUMO6srV1qF__zle9UA023LccBlJPc9uvjj7RdfEHndq_iWvL9GwzW6Yp5vqKFrgrQaI0KTf7tjWaFjzRulOb7zfFEINh-dAkf2SKWUGhIi620nt9gVX8YYJTilF4kXjejEQQBSmqo2MCnlRf5ttflEJLOLa2UezEkXhLvZ5xYMT6bGbzaguHaR1gV4-298Z63pp_wohK3InayrxJpCE9zlvhfU7VonHrHWGOKvIO7aDDTbT-BDlR3qPMD4AJuk6Xm9G3wYMW4yT8IF3LvWEFALk6q3avsRNVdr67OzB6436aPEfsFVeF_XVeNl_WV7V7c8bkX90sU-u6z0hTIbhGzFsurHQ8T2L_8bKu4-3wDTnluCIJrPZKshRJS0oYuooI0FZWQlz3ydAfJpce_w6mBM57IkVvVRIo0mPftar2XV36vagzTPHZZdf6wwT5OZgPS4c_0EKZ-NRZlrMxK8Vd3mGslFec-8T9JXMMix5tS_GQBpdDo9vP21PvTpte5YsmR4HjG0FygFYFqZGH3zl9lG0iaYnkFvqgLgDr3zQ0lB8oE2Jy2FpnaQaq-1-360w0lxlF8D3OjlxfNK7G-w_MOTzasMcoeSxo_2OfFVSkHNXw6am47udVmYvKyDxjkoGeknss5Whn_YKE_FEcag8KR8sDxV43G">
+                    <div class="anomaly-modal__instructions">Select all squares containing a duck:</div>
+                    <div class="anomaly-modal__puzzle-margins">
+                        <div class="anomaly-modal__puzzle">
+                            
+                                <div class="anomaly-modal__box" data-index="0">
+                                    
+                                    
+                                        <label class="" for="image-check_8318fbaadfe528ae2785564baa144bf0" data-testid="anomaly-modal-tile-0">
+                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_8318fbaadfe528ae2785564baa144bf0" id="image-check_8318fbaadfe528ae2785564baa144bf0">
+                                            <img class="anomaly-modal__image" alt=" " id="image-8318fbaadfe528ae2785564baa144bf0" src="../assets/anomaly/images/challenge/8318fbaadfe528ae2785564baa144bf0.jpg" data-id="8318fbaadfe528ae2785564baa144bf0.jpg" data-testid="anomaly-modal-image-0"></img>
+                                        </label>
+                                    
+                                </div>
+                            
+                                <div class="anomaly-modal__box" data-index="1">
+                                    
+                                    
+                                        <label class="" for="image-check_a5827fb71329038f96cf32d3adec5101" data-testid="anomaly-modal-tile-1">
+                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_a5827fb71329038f96cf32d3adec5101" id="image-check_a5827fb71329038f96cf32d3adec5101">
+                                            <img class="anomaly-modal__image" alt=" " id="image-a5827fb71329038f96cf32d3adec5101" src="../assets/anomaly/images/challenge/a5827fb71329038f96cf32d3adec5101.jpg" data-id="a5827fb71329038f96cf32d3adec5101.jpg" data-testid="anomaly-modal-image-1"></img>
+                                        </label>
+                                    
+                                </div>
+                            
+                                <div class="anomaly-modal__box" data-index="2">
+                                    
+                                    
+                                        <label class="" for="image-check_9b553de3253a26da39174c6d3cf4125e" data-testid="anomaly-modal-tile-2">
+                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_9b553de3253a26da39174c6d3cf4125e" id="image-check_9b553de3253a26da39174c6d3cf4125e">
+                                            <img class="anomaly-modal__image" alt=" " id="image-9b553de3253a26da39174c6d3cf4125e" src="../assets/anomaly/images/challenge/9b553de3253a26da39174c6d3cf4125e.jpg" data-id="9b553de3253a26da39174c6d3cf4125e.jpg" data-testid="anomaly-modal-image-2"></img>
+                                        </label>
+                                    
+                                </div>
+                            
+                                <div class="anomaly-modal__box" data-index="3">
+                                    
+                                    
+                                        <label class="" for="image-check_21192e02c01e139ea8cb34c83394fc8a" data-testid="anomaly-modal-tile-3">
+                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_21192e02c01e139ea8cb34c83394fc8a" id="image-check_21192e02c01e139ea8cb34c83394fc8a">
+                                            <img class="anomaly-modal__image" alt=" " id="image-21192e02c01e139ea8cb34c83394fc8a" src="../assets/anomaly/images/challenge/21192e02c01e139ea8cb34c83394fc8a.jpg" data-id="21192e02c01e139ea8cb34c83394fc8a.jpg" data-testid="anomaly-modal-image-3"></img>
+                                        </label>
+                                    
+                                </div>
+                            
+                                <div class="anomaly-modal__box" data-index="4">
+                                    
+                                    
+                                        <label class="" for="image-check_f5c02fde6f1a5cab5c7dd9fa928c20dc" data-testid="anomaly-modal-tile-4">
+                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_f5c02fde6f1a5cab5c7dd9fa928c20dc" id="image-check_f5c02fde6f1a5cab5c7dd9fa928c20dc">
+                                            <img class="anomaly-modal__image" alt=" " id="image-f5c02fde6f1a5cab5c7dd9fa928c20dc" src="../assets/anomaly/images/challenge/f5c02fde6f1a5cab5c7dd9fa928c20dc.jpg" data-id="f5c02fde6f1a5cab5c7dd9fa928c20dc.jpg" data-testid="anomaly-modal-image-4"></img>
+                                        </label>
+                                    
+                                </div>
+                            
+                                <div class="anomaly-modal__box" data-index="5">
+                                    
+                                    
+                                        <label class="" for="image-check_a5ba9659adad803fb53985c61028eda0" data-testid="anomaly-modal-tile-5">
+                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_a5ba9659adad803fb53985c61028eda0" id="image-check_a5ba9659adad803fb53985c61028eda0">
+                                            <img class="anomaly-modal__image" alt=" " id="image-a5ba9659adad803fb53985c61028eda0" src="../assets/anomaly/images/challenge/a5ba9659adad803fb53985c61028eda0.jpg" data-id="a5ba9659adad803fb53985c61028eda0.jpg" data-testid="anomaly-modal-image-5"></img>
+                                        </label>
+                                    
+                                </div>
+                            
+                                <div class="anomaly-modal__box" data-index="6">
+                                    
+                                    
+                                        <label class="" for="image-check_13582088f95037f324f1105756ac2e91" data-testid="anomaly-modal-tile-6">
+                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_13582088f95037f324f1105756ac2e91" id="image-check_13582088f95037f324f1105756ac2e91">
+                                            <img class="anomaly-modal__image" alt=" " id="image-13582088f95037f324f1105756ac2e91" src="../assets/anomaly/images/challenge/13582088f95037f324f1105756ac2e91.jpg" data-id="13582088f95037f324f1105756ac2e91.jpg" data-testid="anomaly-modal-image-6"></img>
+                                        </label>
+                                    
+                                </div>
+                            
+                                <div class="anomaly-modal__box" data-index="7">
+                                    
+                                    
+                                        <label class="" for="image-check_4923621cb563c298f847b6d1ead40d9b" data-testid="anomaly-modal-tile-7">
+                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_4923621cb563c298f847b6d1ead40d9b" id="image-check_4923621cb563c298f847b6d1ead40d9b">
+                                            <img class="anomaly-modal__image" alt=" " id="image-4923621cb563c298f847b6d1ead40d9b" src="../assets/anomaly/images/challenge/4923621cb563c298f847b6d1ead40d9b.jpg" data-id="4923621cb563c298f847b6d1ead40d9b.jpg" data-testid="anomaly-modal-image-7"></img>
+                                        </label>
+                                    
+                                </div>
+                            
+                                <div class="anomaly-modal__box" data-index="8">
+                                    
+                                    
+                                        <label class="" for="image-check_e0aef1735e0ba4725ccb7296740452e0" data-testid="anomaly-modal-tile-8">
+                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_e0aef1735e0ba4725ccb7296740452e0" id="image-check_e0aef1735e0ba4725ccb7296740452e0">
+                                            <img class="anomaly-modal__image" alt=" " id="image-e0aef1735e0ba4725ccb7296740452e0" src="../assets/anomaly/images/challenge/e0aef1735e0ba4725ccb7296740452e0.jpg" data-id="e0aef1735e0ba4725ccb7296740452e0.jpg" data-testid="anomaly-modal-image-8"></img>
+                                        </label>
+                                    
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <div class="anomaly-modal__controls">
+                        <button name="challenge-submit" class="btn btn--primary anomaly-modal__submit js-anomaly-modal-submit" form="challenge-form" value="d4cd0dabcf4caa22ad92fab40844c786" >Submit</button>
+                        <p></p>
+                        <input class="feedback-toggle" type="checkbox" id="feedback" unchecked />
+                        <label for="feedback" class="feedback-text">Images not loading?</label>
+                        <div class="feedback-content">
+                            <label class="feedback-instructions">Please email the following code to:</label>
+                            <p class="feedback-instructions">error-lite+aab3@duckduckgo.com</p>
+                            <p><label class="feedback-instructions">Code: aab3</label></p>
+                        </div>
+                    </div>
+            </div>
+        </form>
+        
+
+        
+
+        
+
+        
+
+
+        <br>
+        <p class='html-only'>
+            <!--    This is the Lite version. Get the full-JS version <a href="https://duckduckgo.com/">here</a>. //-->
+        </p>
+    </center>
+    
+        <img src="//duckduckgo.com/t/tqadb?3255903&amp;s=lite&amp;sc=1&amp;r=usw&amp;cc=botnet&amp;gk=d4cd0dabcf4caa22ad92fab40844c786&amp;e=0&amp;i=-1&amp;iadb=0&amp;o=QqRkH8qsTfLwNpZd7ugiZO8sRMvhgNzI%2B4zCRmmeeQ6Ik%2BkdRxAX3wcX0iriqsNA%0A&amp;p=8318fbaadfe528ae2785564baa144bf0-a5827fb71329038f96cf32d3adec5101-9b553de3253a26da39174c6d3cf4125e-21192e02c01e139ea8cb34c83394fc8a-f5c02fde6f1a5cab5c7dd9fa928c20dc-a5ba9659adad803fb53985c61028eda0-13582088f95037f324f1105756ac2e91-4923621cb563c298f847b6d1ead40d9b-e0aef1735e0ba4725ccb7296740452e0&amp;c=dadb"/>
+    
+    
+    
+    
+    
+
+</body>
+
+</html>
