@@ -307,6 +307,30 @@ function mjFall(c,cx,top,bot,w,mode,L){const night=mode==2,r=XR(77);
  if(L){if(night){L.push({x:cx,y:(top+bot)/2,r:(bot-top)*.45,c:'255,226,170',a:.16,p:0,sp:.2,soft:1});L.push({x:cx,y:bot,r:w*1.8,c:'255,210,150',a:.32,p:1,sp:.4,soft:1});
    for(let i=0;i<10;i++)L.push({x:cx+(r()-.5)*w*1.6,y:bot-20-r()*40,r:16,c:'255,240,210',a:.7,p:i,sp:3,dot:2})}
   else L.push({x:cx,y:bot,r:w*2,c:'255,255,255',a:.25,p:0,sp:.3,soft:1})}}
+
+// 11/19 owner「使い回し？」：台本に城があれば、景色の奥に白い城（石垣・白壁・灰色の屋根を5段・破風・しゃちほこ）。夜は下から照らされて白く光る
+function mjCastle(c,cx,by,h,mode,L){const night=mode==2,dusk=mode==1;
+ const wall=night?'#dfe6f4':dusk?'#f6e6d4':'#f7f4ec',wallS=night?'#9aa4c0':dusk?'#d8c0a8':'#d6d0c2',roof=night?'#3a4258':dusk?'#5a5560':'#6e7684',roofD=night?'#22283a':'#4a505c',stone=night?'#4a4a5a':dusk?'#9a8a7a':'#a8a090';
+ c.save();c.lineJoin='round';
+ // 石垣（下がゆるく広がる）
+ const sw=h*.62,sh=h*.2;c.fillStyle=stone;c.beginPath();c.moveTo(cx-sw/2,by);c.quadraticCurveTo(cx-sw*.42,by-sh*.5,cx-sw*.36,by-sh);c.lineTo(cx+sw*.36,by-sh);c.quadraticCurveTo(cx+sw*.42,by-sh*.5,cx+sw/2,by);c.closePath();c.fill();
+ c.strokeStyle='rgba(0,0,0,.12)';c.lineWidth=1;for(let y=by-sh+6;y<by;y+=7){const k=(by-y)/sh;c.beginPath();c.moveTo(cx-sw/2+sw*.14*k,y);c.lineTo(cx+sw/2-sw*.14*k,y);c.stroke()}
+ // 5段：下ほど広い。各段＝白壁＋そり屋根
+ let y=by-sh;const tiers=[.56,.46,.37,.29,.21],th=h*.13;
+ tiers.forEach((w0,i)=>{const w=h*w0,top=y-th;
+  const g=c.createLinearGradient(cx-w/2,0,cx+w/2,0);g.addColorStop(0,wall);g.addColorStop(1,wallS);c.fillStyle=g;c.fillRect(cx-w/2,top+th*.25,w,th*.75);
+  // 窓（黒い格子）
+  c.fillStyle=night?'rgba(40,40,60,.7)':'rgba(40,40,40,.55)';for(let k=-2;k<=2;k++){if(Math.abs(k)*w*.18>w*.4)continue;c.fillRect(cx+k*w*.18-3,top+th*.48,6,th*.24)}
+  // そり屋根
+  const rw=w*1.18;c.fillStyle=roof;c.beginPath();c.moveTo(cx-rw/2-8,top+th*.32);c.quadraticCurveTo(cx-rw*.3,top+th*.18,cx-w*.36,top);c.lineTo(cx+w*.36,top);c.quadraticCurveTo(cx+rw*.3,top+th*.18,cx+rw/2+8,top+th*.32);c.quadraticCurveTo(cx,top+th*.4,cx-rw/2-8,top+th*.32);c.fill();
+  // 千鳥破風（三角）を1つおきに
+  if(i%2==0&&i<4){c.fillStyle=wall;c.beginPath();c.moveTo(cx-w*.16,top+th*.22);c.lineTo(cx,top-th*.32);c.lineTo(cx+w*.16,top+th*.22);c.closePath();c.fill();c.strokeStyle=roofD;c.lineWidth=2.4;c.beginPath();c.moveTo(cx-w*.2,top+th*.26);c.lineTo(cx,top-th*.36);c.lineTo(cx+w*.2,top+th*.26);c.stroke()}
+  y=top});
+ // 最上段の大屋根としゃちほこ
+ const tw=h*.24;c.fillStyle=roof;c.beginPath();c.moveTo(cx-tw*.7,y+4);c.quadraticCurveTo(cx-tw*.4,y-2,cx-tw*.3,y-h*.07);c.lineTo(cx+tw*.3,y-h*.07);c.quadraticCurveTo(cx+tw*.4,y-2,cx+tw*.7,y+4);c.closePath();c.fill();
+ c.fillStyle=night?'#e8d8a0':'#c8a850';for(const sx of[-1,1]){c.beginPath();c.ellipse(cx+sx*tw*.3,y-h*.085,3.5,6,sx*.4,0,7);c.fill()}
+ c.restore();
+ if(night&&L){L.push({x:cx,y:by-h*.45,rx:h*.42,ry:h*.55,c:'210,225,255',a:.22,p:0,sp:0,soft:1,ell:1});L.push({x:cx,y:by-6,rx:h*.5,ry:16,c:'255,236,200',a:.35,p:1,sp:0,soft:1,ell:1})}}
 function mjBuild(mode){if(P.kiyo)return kmBuild(mode);if(P.taki)return tkBuild(mode);if(P.icho)return icBuild(mode);const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;
 
  // 11/19 owner「また使い回し？？」：紅葉の日は毎日同じ絵だった。並べ方（P.mjv）で 道→池 / 池→道 を入れ替え、木や雲の形（VSEED）も日ごとに変える
@@ -314,13 +338,14 @@ function mjBuild(mode){if(P.kiyo)return kmBuild(mode);if(P.taki)return tkBuild(m
  if(kind=='path'){if(mode==2){scSky(c,['#04060f','#0b1022','#1e1530'],820);xmStars(c,9);xmMoon(c,mx,200,42)}else if(mode==1){scSky(c,['#e8c6a0','#f4dcc0','#f6e6cc'],760);scClouds(c,7,6,160,520,'#fff4e4',.5)}else{scSky(c,['#9ec4dc','#d6e4e6','#f4e8d0'],820);scClouds(c,4,8,120,560,'#ffffff',.55)}
   c.save();c.globalCompositeOperation='screen';glow(c,330,560,520,'255,226,180',.45);c.restore();
   wash(c,g=>{g.moveTo(-20,760);g.bezierCurveTo(200,690,420,720,600,700);g.bezierCurveTo(760,690,860,720,XW+20,705);g.lineTo(XW+20,860);g.lineTo(-20,860);g.closePath()},'#9aa8b0',{edge:.1,gr:.25,light:false,a:.6});
+  if(P.castle)mjCastle(c,380,790,470,mode,L);
   mjForest(c,730,930,mode,5,.55,L);scFog(c,760,40,'240,236,228',.35);
   mjGround2(c,940,mode);
   // 参道
   wash(c,g=>{g.moveTo(330,960);g.lineTo(430,960);g.lineTo(640,XH+10);g.lineTo(120,XH+10);g.closePath()},'#ddd4c0',{grad:g=>{const q=g.createLinearGradient(0,960,0,XH);q.addColorStop(0,mode==2?'#3a3440':'#e6dfcc');q.addColorStop(1,mode==2?'#5a4a44':'#c8bea6');return q},edge:.2,gr:.4,light:false});
   {const r=XR(44);c.strokeStyle='rgba(120,100,70,.35)';c.lineWidth=1.2;for(let y=980;y<XH;y+=14+(y-960)*.05){const k=(y-960)/(XH-960),x0=330-210*k,x1=430+210*k;c.beginPath();c.moveTo(x0,y);c.lineTo(x1,y);c.stroke();for(let x=x0+r()*30;x<x1;x+=30+k*40){c.beginPath();c.moveTo(x,y);c.lineTo(x,y+12+k*20);c.stroke()}}
    for(let i=0;i<120;i++){const y=960+Math.pow(r(),.7)*(XH-960),k=(y-960)/(XH-960),x=330-210*k+r()*(100+420*k);c.fillStyle=['#c8402c','#e0662f','#ea8a34'][i%3];c.globalAlpha=.85;mjLeaf(c,x,y,4+k*6,r()*6)}c.globalAlpha=1}
-  mjTree(c,40,1020,640,mode,11,L,{n:1500,wide:.95,lean:.12,zone:1});mjTree(c,880,1010,320,mode,12,L,{n:600,wide:.9,zone:1});
+  if(P.castle)mjTree(c,-60,1030,380,mode,11,L,{n:900,wide:.8,lean:.1,zone:1});else mjTree(c,40,1020,640,mode,11,L,{n:1500,wide:.95,lean:.12,zone:1});mjTree(c,880,1010,320,mode,12,L,{n:600,wide:.9,zone:1});
   if(P.gate!==false)mjGate2(T.c,380,1000,400,mode,T.L);T.ax=380;T.ay=1000;T.d=.1;   // 11/16 門は寺社の時だけ
   mjLantern(F.c,150,1190,150,mode,F.L);mjLantern(F.c,650,1190,150,mode,F.L);
   mjTree(F.c,-120,1560,560,mode,21,F.L,{n:900,wide:.7,lean:.3});mjTree(F.c,1060,1580,500,mode,22,F.L,{n:800,wide:.7,lean:-.3});
@@ -331,6 +356,7 @@ function mjBuild(mode){if(P.kiyo)return kmBuild(mode);if(P.taki)return tkBuild(m
   if(n){scSky(c,['#04060f','#0b1022','#1e1530'],820);xmStars(c,9);xmMoon(c,mx,210,42)}
   else if(mode==0){scSky(c,['#9ec4dc','#d6e4e6','#f4e8d0'],760);scClouds(c,5,7,140,520,'#ffffff',.55);c.save();c.globalCompositeOperation='screen';glow(c,640,440,520,'255,236,200',.4);c.restore()}else{scSky(c,['#e8c6a0','#f4dcc0','#f6e6cc'],760);scClouds(c,7,6,160,520,'#fff4e4',.5);c.save();c.globalCompositeOperation='screen';glow(c,700,420,560,'255,214,160',.5);c.restore()}
   wash(c,g=>{g.moveTo(-20,740);g.bezierCurveTo(240,660,480,700,700,672);g.bezierCurveTo(820,660,880,690,XW+20,690);g.lineTo(XW+20,880);g.lineTo(-20,880);g.closePath()},n?'#120e1a':'#b8a088',{edge:.1,gr:.25,light:false,a:n?.9:.55});
+  if(P.castle)mjCastle(c,380,770,470,mode,L);
   mjForest(c,710,900,mode,6,n?0:.4,L);if(!n)scFog(c,730,40,'250,232,210',.4);else scFog(c,900,50,'255,110,60',.12);
   if(P.taki){mjFall(c,330,n?400:420,905,60,mode,L);mjTree(c,90,900,330,mode,49,L,{n:900,wide:1,lean:.1,zone:1});mjTree(c,560,910,300,mode,50,L,{n:800,wide:1,lean:-.05,zone:1})}   // 11/16 箕面大滝（text.taki）：滝の両側の崖の上にもみじ
   mjGround2(c,880,mode);
@@ -339,7 +365,7 @@ function mjBuild(mode){if(P.kiyo)return kmBuild(mode);if(P.taki)return tkBuild(m
   const br=xmCanvas(XW,XH),bc=br.getContext('2d');mjBridge(bc,200,760,1000,72,mode,null);
   mjStream2(c,B.cv,960,1080,mode,br);
   if(n){L.push({x:460,y:1020,rx:520,ry:60,c:'255,120,60',a:.25,p:0,sp:0,soft:1,ell:1})}
-  if(P.taki)mjTree(c,-150,960,620,mode,41,L,{n:1500,wide:.7,lean:.2,zone:1});else mjTree(c,70,960,720,mode,41,L,{n:1900,wide:.82,lean:.12,zone:1});
+  if(P.taki)mjTree(c,-150,960,620,mode,41,L,{n:1500,wide:.7,lean:.2,zone:1});else if(P.castle)mjTree(c,-40,970,400,mode,41,L,{n:1000,wide:.8,lean:.1,zone:1});else mjTree(c,70,960,720,mode,41,L,{n:1900,wide:.82,lean:.12,zone:1});
   mjBridge(T.c,200,760,1000,72,mode,T.L);T.ax=480;T.ay=1000;T.d=.1;
   if(n){mjLantern(F.c,110,1250,130,2,F.L);mjLantern(F.c,700,1300,120,2,F.L);for(const l of F.L){l.r*=.55;l.a*=.75}
    xmPerson(F.c,380,1300,112,'#3a3a4a',2,38,0);xmPerson(F.c,414,1306,100,'#4a2a30',2,39,1);xmPerson(F.c,520,1330,90,'#2a3a4a',2,40,0);}
