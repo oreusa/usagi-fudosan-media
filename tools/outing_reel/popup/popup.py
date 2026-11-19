@@ -20,7 +20,7 @@ def dur(n):
 VD = [dur(n) for n in range(N)]
 T = [0.0]; VDL = [0.55]
 for n in range(1, N):
-    T.append(round(VDL[-1] + VD[n - 1] + .3 + TURN, 3)); VDL.append(T[-1] + .15)
+    T.append(round(VDL[-1] + VD[n - 1] + .2 + TURN, 3)); VDL.append(T[-1] + .15)
 TOTAL = round(VDL[-1] + VD[-1] + 1.7, 3)
 print('見開き', T, '声', [round(x, 2) for x in VDL], '全体', TOTAL)
 html = open(HERE + '/page.html').read().replace('%POP%', 'file://' + HERE).replace('%NM%', 'file://' + NM).replace('%F%', ROOT + '/tools/fonts').replace('%T%', json.dumps(T)).replace('%TOTAL%', str(TOTAL))
