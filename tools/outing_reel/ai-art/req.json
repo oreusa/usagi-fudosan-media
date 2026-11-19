@@ -1,0 +1,7 @@
+{"model":"flux",
+ "style":"illustration from a luxurious classic children's picture book, hand-painted gouache and watercolor on cream textured paper, delicate sepia ink outlines, soft painterly brush strokes, rich warm autumn palette, elegant and magical storybook mood, highly detailed, vertical composition with calm open sky in the upper third, no text, no letters, no signature, no frame",
+ "items":[
+  {"name":"hiru","seeds":[11,12,13,14],"prompt":"Eikando Zenrinji temple in Kyoto in late autumn daytime, a small vermilion two-storied pagoda (tahoto) rising on a forested hillside, curved dark tiled temple roofs below, red and orange Japanese maple trees, a winding stone path, gentle pale blue sky with soft clouds"},
+  {"name":"aki","seeds":[21,22,23,24],"prompt":"a quiet temple pond in Kyoto surrounded by blazing red, orange and golden Japanese maple trees, a small arched stone bridge, a vermilion pagoda peeking above the treetops on the hill, fallen red maple leaves floating on the water, warm late afternoon sunlight"},
+  {"name":"yoru","seeds":[31,32,33,34],"prompt":"night illumination at a Kyoto temple garden: glowing red maple trees lit from below shining over a still pond that mirrors them perfectly, a warmly lit vermilion pagoda on the dark hillside, deep indigo starry night sky, small stone lanterns with soft golden light along the shore"}
+ ]}

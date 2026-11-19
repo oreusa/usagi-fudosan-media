@@ -1,0 +1,20 @@
+name: ai-art
+# 11/19 絵本リールのページの絵を画像AIで描く（作業の枝に req.json を置くと動く）。絵は ai-art の枝へ
+on:
+  push:
+    branches: [claude/project-thread-nccr1s]
+    paths: [tools/outing_reel/ai-art/req.json]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  art:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/outing_reel/ai-art/gen.py tools/outing_reel/ai-art/req.json /tmp/art
+      - run: |
+          git config user.name "ai-art"; git config user.email "actions@users.noreply.github.com"
+          if git fetch -q origin ai-art; then git checkout -qB ai-art FETCH_HEAD; else git checkout -q --orphan ai-art && git rm -rfq .; fi
+          d=art/$(date +%m%d-%H%M); mkdir -p $d && cp /tmp/art/* $d/
+          git add -f art && git commit -qm "ai-art $d" && for i in 1 2 3 4; do git pull -q --rebase origin ai-art 2>/dev/null || true; git push origin ai-art && break; sleep 7; done
