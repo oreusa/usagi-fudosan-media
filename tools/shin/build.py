@@ -8,11 +8,17 @@ L = os.path.join(R, 'links')
 TPL = open(os.path.join(R, 'tools/shin/page.tpl.html'), encoding='utf-8').read()
 ver = lambda f: hashlib.sha1(open(os.path.join(L, 'shin', f), 'rb').read()).hexdigest()[:8]
 J = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
-REL = [['おでかけ', '/shin/odekake'], ['家と土地', '/shin/ie'], ['おかいもの', '/shin/kau'], ['トップへ', '/']]
+# 11/19 owner「入れ替える」：新しいページは今の URL（/odekake・/fudosan-list・/okaimono）で出す（functions/ が /shin/* を読む）
+URL = {'odekake': '/odekake', 'ie': '/fudosan-list', 'kau': '/okaimono'}
+REL = [['おでかけ', '/odekake'], ['家と土地', '/fudosan-list'], ['おかいもの', '/okaimono'], ['トップへ', '/']]
+SITE = 'https://kansai.townnote.app'
 
 def write(name, title, cfg, data):
-    cfg['menu']['rel'] = [r for r in REL if r[1] != '/shin/' + name]
-    page = (TPL.replace('__TITLE__', title).replace('__CFG__', J(cfg)).replace('__DATA__', J(data))
+    cfg['menu']['rel'] = [r for r in REL if r[1] != URL.get(name)]
+    desc = cfg.pop('desc', '')
+    head = (f'<meta name="description" content="{html.escape(desc)}">' if desc else '') + \
+        f'<link rel="canonical" href="{SITE}{URL.get(name, "/shin/" + name)}"><meta property="og:title" content="{html.escape(title.split("｜")[0])}"><meta property="og:image" content="{SITE}/assets/ogp.png"><meta property="og:url" content="{SITE}{URL.get(name, "/shin/" + name)}">'
+    page = (TPL.replace('__TITLE__', html.escape(title)).replace('__HEAD__', head).replace('__CFG__', J(cfg)).replace('__DATA__', J(data))
             .replace('__CV__', ver('shin.css')).replace('__JV__', ver('shin.js')).replace('__PAGE__', name).replace('__PV__', ver(name + '.js')))
     open(os.path.join(L, 'shin', name + '.html'), 'w', encoding='utf-8').write(page)
     print(name, len(page) // 1024, 'KB')
@@ -79,9 +85,10 @@ def odekake():
         items.append(it)
     print('odekake items', len(items), 'photos', sum('im' in i for i in items), 'map', sum('xy' in i for i in items))
     cfg = {'nav': [{'t': '開催中', 'ic': 'now', 'a': 'now'}, {'t': '今週末', 'ic': 'we', 'a': 'we'}, {'t': '地図', 'ic': 'map', 'a': 'map'}, {'t': '泊まり', 'ic': 'inn', 'href': '/tomari'}],
-           'menu': {'k': 'Odekake', 'items': [['関西おでかけ', '/shin/odekake', 1], ['イルミネーション', '/illumination'], ['紅葉', '/koyo'], ['いまから行ける', '/ima'], ['泊まり', '/tomari'], ['初詣', '/hatsumode']]},
+           'menu': {'k': 'Odekake', 'items': [['関西おでかけ', '/odekake', 1], ['イルミネーション', '/illumination'], ['紅葉', '/koyo'], ['いまから行ける', '/ima'], ['泊まり', '/tomari'], ['初詣', '/hatsumode']]},
            'foot': '情報は各公式サイトで確かめてから出かけてください。写真の撮影者は各ページに書いています（ウィキメディア・コモンズ ほか）。<br>券・宿のリンクの一部は広告です。'}
-    write('odekake', '関西おでかけ｜TOWN NOTE', cfg, {'items': items, 'icons': icons, 'map': MAP})
+    cfg['desc'] = '大阪・京都・兵庫・奈良・滋賀・和歌山のおでかけ・イベントを、開催中・今週末・まもなく終了に分けて、公式ページつきでまとめています。写真と地図で探せて、毎朝更新しています。'
+    write('odekake', '関西おでかけリスト｜開催中・今週末のイベント（大阪・京都・兵庫・奈良・滋賀・和歌山）｜TOWN NOTE', cfg, {'items': items, 'icons': icons, 'map': MAP})
 
 odekake()
 if os.path.exists(os.path.join(L, 'shin/ie.js')):

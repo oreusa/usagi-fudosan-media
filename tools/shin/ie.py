@@ -47,6 +47,7 @@ def build(write, MAP, L, R):
         out.append(x)
     print('ie towns', len(out), 'mansion', sum('m' in x for x in out), 'kodate', sum('h' in x for x in out), 'pop', sum('pop' in x for x in out))
     cfg = {'nav': [{'t': '街をさがす', 'ic': 'find', 'a': 'find'}, {'t': 'ランキング', 'ic': 'rank', 'a': 'rank'}, {'t': '売りたい', 'ic': 'sell', 'href': '/uru'}, {'t': 'いくら？', 'ic': 'yen', 'href': '/ikura'}],
-           'menu': {'k': 'Home & Land', 'items': [['家と土地の相場', '/shin/ie', 1], ['家を売る前に', '/uru'], ['いくらで売れる？', '/ikura'], ['実家・空き家', '/jikka/'], ['解体の費用と補助金', '/kaitai'], ['地価ランキング', '/chika-kansai']]},
+           'menu': {'k': 'Home & Land', 'items': [['家と土地の相場', '/fudosan-list', 1], ['家を売る前に', '/uru'], ['いくらで売れる？', '/ikura'], ['実家・空き家', '/jikka/'], ['解体の費用と補助金', '/kaitai'], ['地価ランキング', '/chika-kansai']]},
            'foot': '地価：国土交通省・各府県「令和8年地価公示」。売れた家の値段：近畿レインズ「2025年度 年刊市況レポート」。人口・空き家：総務省統計局。<br>どれも街の平均で、1軒ずつの値段ではありません。「買いたい」のリンクは広告です（Yahoo!不動産）。'}
-    write('ie', '関西の家と土地の相場｜TOWN NOTE', cfg, {'towns': out, 'pa': PA, 'map': MAP})
+    cfg['desc'] = '関西205の街の、中古マンション・中古一戸建て・土地が実際に売れた値段（レインズ）と、地価の動き・人口を、街ごとにまとめました。府県の平均とも比べられます。'
+    write('ie', '関西の家と土地の相場｜205の街の売れた値段と地価｜TOWN NOTE', cfg, {'towns': out, 'pa': PA, 'map': MAP})
