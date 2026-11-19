@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ja" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="gsap.min.js"></script>
+<style>
+@font-face{font-family:MB;src:url(a/ShipporiMincho-Bold.ttf)}@font-face{font-family:M;src:url(a/ShipporiMincho-Medium.ttf)}@font-face{font-family:G;src:url(a/ZenKakuGothicNew-Medium.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
+#root{position:relative;width:1080px;height:1920px;background:url(a/cover.png);overflow:hidden}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,transparent 55%,rgba(10,5,2,.55));pointer-events:none;z-index:20}
+#stage{position:absolute;inset:0}
+#book{position:absolute;left:85px;top:235px;width:925px;height:1425px;perspective:7000px;perspective-origin:30% 50%;background:#efe5d2}
+.sc{position:absolute;inset:0;transform-origin:0 50%;transform-style:preserve-3d}
+.sc .face{position:absolute;inset:0;backface-visibility:hidden;overflow:hidden;background:#f4ecdc}
+.sc .bk{position:absolute;inset:0;backface-visibility:hidden;transform:rotateY(180deg);background:linear-gradient(90deg,#e6dac4,#f2e8d6)}
+/* 切り紙の層：ページに寝ていて、めくると起き上がる */
+.pop{position:absolute;inset:0;perspective:1500px;perspective-origin:50% 38%}
+.pl{position:absolute;left:0;top:0;width:925px;height:1425px}
+.pl.up,.pl.dn,#S3m1{filter:drop-shadow(0 10px 9px rgba(40,18,6,.42))}
+#bus{position:absolute;left:0;top:0;width:240px;height:220px;transform-origin:50% 100%;filter:drop-shadow(0 6px 5px rgba(40,18,6,.4))}
+#ppl{position:absolute;left:0;top:0;width:120px;height:170px;transform-origin:50% 100%}
+#sun{position:absolute;left:-200px;top:-160px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(255,248,220,.75),rgba(255,230,170,.25) 40%,rgba(255,220,150,0) 70%);mix-blend-mode:screen;opacity:0}
+.shine{position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:0;background:radial-gradient(ellipse 40% 30% at 50% 50%,rgba(255,240,200,.9),rgba(255,240,200,0) 70%)}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,20,10,0) 30%,rgba(40,20,10,.65));opacity:0;z-index:5}
+.cast{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,10,5,.7),rgba(20,10,5,.25) 60%,rgba(20,10,5,0));opacity:0;z-index:5}
+.gut{position:absolute;left:0;top:0;bottom:0;width:46px;background:linear-gradient(90deg,rgba(0,0,0,.35),transparent);z-index:4}
+.cap{position:absolute;left:46px;right:60px;top:64px;font-family:MB;color:#fff;font-size:70px;line-height:1.25;text-shadow:0 3px 18px rgba(0,0,0,.7);z-index:3}
+.cap:before{content:'';position:absolute;left:-46px;right:-60px;top:-64px;height:calc(100% + 150px);background:linear-gradient(180deg,rgba(30,10,4,.62),rgba(30,10,4,0));z-index:-1}
+.cap.dk{color:#2a1c14;text-shadow:0 0 12px rgba(255,255,255,.9)}.cap.dk:before{background:linear-gradient(180deg,rgba(255,250,240,.8),rgba(255,250,240,0))}
+.cap .w{display:inline-block}.cap small{display:block;font-family:G;font-size:38px;color:#ffe2b0;margin-top:14px;line-height:1.4}.cap.dk small{color:#6a3a1a}
+.cap .ul{display:block;height:4px;width:420px;margin-top:12px;background:linear-gradient(90deg,#e3c88c,rgba(227,200,140,0));transform-origin:0 50%}
+.cap.dk .ul{background:linear-gradient(90deg,#a5332a,rgba(165,51,42,0))}
+#cover{background:url(a/cvface.png) center/100% 100%}
+#foil{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;background:linear-gradient(115deg,rgba(255,240,200,0) 40%,rgba(255,240,200,.55) 50%,rgba(255,240,200,0) 60%);background-size:300% 100%;background-position:120% 0;opacity:.8}
+.info{position:absolute;inset:0;padding:70px 56px;font-family:M;color:#3a2a20;background:#f4ecdc}
+.info h2{font-family:MB;font-size:66px;margin:0 0 22px}
+.info .r{display:flex;gap:26px;padding:18px 0;border-top:1px solid #d8c8b0;font-size:40px;align-items:baseline}.info .r b{width:150px;flex:none;font-size:28px;color:#8a6a50;font-weight:normal}
+.info small{display:block;font-size:28px;color:#7a6050;margin-top:4px}.info p{font-size:34px;line-height:1.6;color:#7a3a1a;margin:22px 0 0;font-family:MB}
+.info .ph{position:absolute;left:56px;right:56px;bottom:56px;height:300px;border-radius:14px;overflow:hidden}.info .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+#tab{position:absolute;right:130px;top:235px;width:150px;height:0;overflow:hidden;z-index:12}
+#tab div{position:absolute;left:0;right:0;bottom:0;height:280px;background:linear-gradient(180deg,#b03a2c,#8e2a20);clip-path:polygon(0 0,100% 0,100% 100%,50% 86%,0 100%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:70px;font-family:MB;color:#fbe7c0;font-size:34px;writing-mode:vertical-rl;letter-spacing:.2em}
+.hp{position:absolute;inset:0;background:#f4ecdc;font-family:M;color:#3d2a22}
+#h0{position:absolute;left:0;right:0;top:64px;text-align:center}#h0 img{width:96px;height:96px;border-radius:50%}#h0 .en{font:500 26px G;letter-spacing:.42em;color:#8a6a55;margin-top:10px}#h0 .jp{font:700 62px MB;letter-spacing:.12em;margin-top:8px}
+#ph{position:absolute;left:70px;top:330px;width:440px;height:880px;border-radius:58px;background:#2b211c;padding:15px;box-shadow:0 30px 60px rgba(60,35,20,.4)}
+#ph .scr{width:100%;height:100%;border-radius:44px;overflow:hidden;position:relative;background:#fff}#ph img{position:absolute;left:0;top:0;width:100%}
+#pc{position:absolute;left:16px;right:16px;bottom:30px;background:#fff;border-radius:24px;box-shadow:0 12px 30px rgba(60,35,20,.35),0 0 0 3px #a5332a;padding:16px;display:flex;gap:16px;align-items:center}
+#pc .pci{flex:none;width:120px;height:150px;border-radius:14px;background:url(a/S0.jpg) 50% 70%/cover}#pc b{display:inline-block;font:700 19px M;color:#fff;background:#a5332a;border-radius:999px;padding:4px 14px}
+#pc .t{font:700 34px MB;margin-top:8px}#pc .s{font:500 24px M;color:#7a5b4a}#pc .d{font:700 22px M;color:#a5332a;margin-top:4px}
+#h1{position:absolute;right:40px;top:520px;width:340px;text-align:center;font:700 38px MB;letter-spacing:.12em;line-height:1.8;color:#6b4a3a}#h1 span{display:block;font:500 28px M;letter-spacing:.04em;line-height:1.6;margin-top:24px;color:#8a6a55}
+#endb{position:absolute;left:0;right:0;top:1250px;text-align:center}#endb div{display:inline-block;font:700 50px MB;letter-spacing:.14em;color:#f8ecd8;background:#a5332a;border-radius:999px;padding:24px 56px;box-shadow:0 10px 30px rgba(165,51,42,.35)}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="@END@" data-width="1080" data-height="1920">
+ <div id="stage">
+ <div id="book">
+  <div class="sc" id="s5" style="z-index:0"><div class="face"><div class="hp">
+   <div id="h0"><img src="a/logo.png"><div class="en">TOWN NOTE</div><div class="jp">関西おでかけリスト</div></div>
+   <div id="ph"><div class="scr"><img id="ph1" src="a/hp1.jpg"><img id="ph2" src="a/hp2.jpg">
+    <div id="pc"><div class="pci"></div><div><b>今日のおでかけ</b><div class="t">鶏足寺</div><div class="s">散り紅葉</div><div class="d">11/14(土)〜12/3(木)</div></div></div></div></div>
+   <div id="h1">無料・登録なし<br>毎日更新<br><span>関西の府県ごとに<br>今やっている催し</span></div>
+   <div id="endb"><div>プロフィールのリンクから</div></div>
+  </div><div class="cast"></div><div class="gut"></div></div></div>
+  <div class="sc" id="s4" style="z-index:1"><div class="face"><div class="info"><h2>鶏足寺の紅葉</h2>
+   <div class="r"><b>期間</b><span>11/14(土)〜12/3(木)</span></div><div class="r"><b>散策</b><span>8時30分〜16時<small>ライトアップはありません</small></span></div>
+   <div class="r"><b>協力金</b><span>高校生以上500円<small>中学生以下は無料</small></span></div><div class="r"><b>行き方</b><span>JR木ノ本駅からバス約10分<small>「古橋」から歩く・駐車場からは約1km</small></span></div>
+   <div class="r"><b>混む時間</b><span>土日祝の10時〜14時<small>雨具があると安心です</small></span></div><p>保存して、3連休のおでかけに。</p>
+   <div class="ph"><img src="a/S0.jpg"></div></div><div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s3" style="z-index:2"><div class="face">@S3@<div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s2" style="z-index:3"><div class="face">@S2@<div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s1" style="z-index:4"><div class="face">@S1@<div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s0" style="z-index:5"><div class="face">@S0@<div class="shine" id="sh0"></div><div class="shade"></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="cv" style="z-index:6"><div class="face" id="cover"><div id="foil"></div><div class="shade"></div></div><div class="bk"></div></div>
+ </div>
+ <div id="tab"><div>保存してね</div></div>
+ </div>
+ <div id="vig"></div>
+ <audio id="flipcv" src="a/flip.wav" data-start="0.25" data-duration="0.6" data-volume="0.8"></audio>
+@AUDIO@
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const T=@T@,V=@V@,END=@END@,BUS=@BUS@;
+// 層は寝た形から始める
+gsap.set(".pl.up",{rotationX:86});gsap.set(".pl.dn",{rotationX:-86});
+// ===== 1. 前の絵本と同じ始まり：表紙を光の帯が1回走り、表紙が開く =====
+tl.fromTo("#foil",{backgroundPosition:"120% 0"},{backgroundPosition:"-50% 0",duration:1.4,ease:"sine.inOut"},0.3);
+tl.to("#cv",{rotationY:-178,duration:1.25,ease:"power3.inOut"},0.25);
+tl.to("#cv .shade",{opacity:.7,duration:1.25,ease:"power2.in"},0.25);
+// ===== 2. 切り紙が起き上がる（奥から順に・手前ほど遅れて） =====
+const rise=(ids,t)=>ids.forEach((id,i)=>{const el=document.getElementById(id);const dn=el.classList.contains('dn');
+ tl.to(el,{rotationX:dn?-4:4,duration:.55,ease:"power3.out"},t+i*.16);tl.to(el,{rotationX:0,duration:.5,ease:"sine.inOut"},t+i*.16+.55)});
+rise(["S0m","S0n","S0f"],0.75);
+rise(["S1m","S1n","S1f"],T[0]+.2);
+rise(["S2m","S2n","S2f"],T[1]+.2);
+rise(["S3m0","S3n","S3f"],T[2]+.2);
+// ===== 3. ページをめくる =====
+const turns=[["#s0","#s1",T[0]],["#s1","#s2",T[1]],["#s2","#s3",T[2]],["#s3","#s4",T[3]],["#s4","#s5",T[4]]];
+turns.forEach(([a,b,t])=>{tl.to(a,{rotationY:-178,duration:.65,ease:"power3.inOut"},t);tl.to(a+" .shade",{opacity:1,duration:.65,ease:"power2.in"},t);
+ tl.fromTo(b+" .cast",{opacity:.85},{opacity:0,duration:.75,ease:"power2.out"},t+.25)});
+// めくる紙は、めくる時に層を少し寝かせる（紙が閉じる）
+[["S0",T[0]],["S1",T[1]],["S2",T[2]]].forEach(([s,t])=>["m","n","f"].forEach(k=>{const el=document.getElementById(s+k);tl.to(el,{rotationX:el.classList.contains('dn')?-40:40,duration:.5,ease:"power2.in"},t)}));
+tl.to(["#S3m1","#S3n","#S3f"],{rotationX:40,duration:.5,ease:"power2.in"},T[3]);
+// ===== 4. 字：ぼかしから浮かび、金の線が走る =====
+[["#s0",V[0]],["#s1",V[1]],["#s2",V[2]],["#s3",V[3]]].forEach(([id,s])=>{
+ tl.from(id+" .cap .w",{opacity:0,y:34,filter:"blur(10px)",duration:.6,ease:"power3.out",stagger:.22},s);
+ tl.from(id+" .cap .ul",{scaleX:0,duration:.9,ease:"power3.inOut"},s+.4)});
+tl.from("#s4 .info > *",{opacity:0,y:24,duration:.5,ease:"power2.out",stagger:.1},T[3]+.4);
+// ===== 5. 場面の中で動く物 =====
+// 石段：木もれ日がゆっくり動き、手前の枝がそよぐ
+tl.fromTo("#sh0",{opacity:0,backgroundPosition:"0 0"},{opacity:.9,duration:1.2},1.4);
+tl.fromTo("#sh0",{x:-160,y:120},{x:120,y:-40,duration:T[0]-1.4,ease:"sine.inOut"},1.4);
+tl.to("#S0f",{rotationZ:.5,transformOrigin:"50% 100%",duration:1.6,ease:"sine.inOut",yoyo:true,repeat:Math.max(1,Math.floor((T[0]-2)/1.6))},2.0);
+// 里山：バスが山の方から古橋のバス停へ
+gsap.set("#bus",{x:BUS[0].x,y:BUS[0].y,scale:BUS[0].scale,opacity:0});
+tl.to("#bus",{opacity:1,duration:.3},T[0]+.9);
+tl.to("#bus",{keyframes:BUS.slice(1).map(p=>({x:p.x,y:p.y,scale:p.scale})),duration:Math.min(4.2,T[1]-T[0]-1.4),ease:"power1.out"},T[0]+.9);
+// 参道：二人が大門跡から参道を上っていく
+gsap.set("#ppl",{x:330,y:1000,scale:1,opacity:0});
+tl.to("#ppl",{opacity:1,duration:.4},T[1]+.6);
+tl.to("#ppl",{x:395,y:630,scale:.32,duration:T[2]-T[1]-.8,ease:"none"},T[1]+.6);
+tl.to("#ppl",{rotationZ:1.5,duration:.28,ease:"sine.inOut",yoyo:true,repeat:Math.floor((T[2]-T[1])/.28)},T[1]+.6);
+// 古木：色づき始め→見頃の色へ（同じ木の色だけが変わる）
+tl.set("#S3m1",{rotationX:0},T[2]);
+tl.to("#S3m1",{opacity:1,duration:2.6,ease:"sine.inOut"},V[3]+2.2);
+tl.to("#sun",{opacity:1,duration:1.6,ease:"sine.inOut"},T[2]+.8);
+tl.to("#sun",{scale:1.08,duration:2,ease:"sine.inOut",yoyo:true,repeat:2},T[2]+2.4);
+// ===== 6. おでかけリストの紹介（最後の止まりは短く） =====
+const T5=T[4];
+tl.to("#tab",{height:280,duration:.7,ease:"power3.out"},T[3]+1.6);
+tl.to("#tab",{opacity:0,duration:.3},T5);
+tl.from("#h0",{opacity:0,y:-30,duration:.6,ease:"power3.out"},T5+.3);
+tl.from("#ph",{opacity:0,y:80,duration:.8,ease:"power3.out"},T5+.5);
+tl.from("#pc",{opacity:0,y:60,duration:.6,ease:"power3.out"},T5+1.1);
+tl.from("#h1",{opacity:0,x:30,duration:.6,ease:"power2.out"},T5+1.5);
+tl.fromTo("#ph2",{opacity:0},{opacity:1,duration:.8,ease:"sine.inOut"},T5+2.0);tl.to("#ph1",{y:-40,duration:.8,ease:"sine.inOut"},T5+2.0);
+tl.from("#endb",{opacity:0,y:30,duration:.6,ease:"power3.out"},T5+2.3);
+tl.to("#endb div",{scale:1.04,duration:.5,ease:"sine.inOut",yoyo:true,repeat:Math.max(1,Math.floor((END-T5-2.9)/.5))},T5+2.9);
+tl.to("#root",{opacity:1,duration:.1},END-.1);
+window.__timelines["main"] = tl;
+tl.seek(0);
+</script>
+</body>
+</html>
