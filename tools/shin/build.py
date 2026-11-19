@@ -13,13 +13,14 @@ URL = {'odekake': '/odekake', 'ie': '/fudosan-list', 'kau': '/okaimono'}
 REL = [['おでかけ', '/odekake'], ['家と土地', '/fudosan-list'], ['おかいもの', '/okaimono'], ['トップへ', '/']]
 SITE = 'https://kansai.townnote.app'
 
-def write(name, title, cfg, data):
+def write(name, title, cfg, data, js=None):
+    js = js or name
     cfg['menu']['rel'] = [r for r in REL if r[1] != URL.get(name)]
     desc = cfg.pop('desc', '')
     head = (f'<meta name="description" content="{html.escape(desc)}">' if desc else '') + \
         f'<link rel="canonical" href="{SITE}{URL.get(name, "/shin/" + name)}"><meta property="og:title" content="{html.escape(title.split("｜")[0])}"><meta property="og:image" content="{SITE}/assets/ogp.png"><meta property="og:url" content="{SITE}{URL.get(name, "/shin/" + name)}">'
     page = (TPL.replace('__TITLE__', html.escape(title)).replace('__HEAD__', head).replace('__CFG__', J(cfg)).replace('__DATA__', J(data))
-            .replace('__CV__', ver('shin.css')).replace('__JV__', ver('shin.js')).replace('__PAGE__', name).replace('__PV__', ver(name + '.js')))
+            .replace('__CV__', ver('shin.css')).replace('__JV__', ver('shin.js')).replace('__PAGE__', js).replace('__PV__', ver(js + '.js')))
     open(os.path.join(L, 'shin', name + '.html'), 'w', encoding='utf-8').write(page)
     print(name, len(page) // 1024, 'KB')
 
@@ -89,6 +90,89 @@ def odekake():
            'foot': '情報は各公式サイトで確かめてから出かけてください。写真の撮影者は各ページに書いています（ウィキメディア・コモンズ ほか）。<br>券・宿のリンクの一部は広告です。'}
     cfg['desc'] = '大阪・京都・兵庫・奈良・滋賀・和歌山のおでかけ・イベントを、開催中・今週末・まもなく終了に分けて、公式ページつきでまとめています。写真と地図で探せて、毎朝更新しています。'
     write('odekake', '関西おでかけリスト｜開催中・今週末のイベント（大阪・京都・兵庫・奈良・滋賀・和歌山）｜TOWN NOTE', cfg, {'items': items, 'icons': icons, 'map': MAP})
+
+    # ---------- 府県・イルミ・紅葉：同じ形のページ（11/19 owner「全部！」） ----------
+    def fin(it, name):
+        v = byn.get(norm(name)) or byu.get(it['u']) or {}
+        for k in ('hk', 'ds', 'cr', 'cu', 'im'):
+            if v.get(k) and k not in it: it[k] = v[k]
+        if v.get('h') and 'h' not in it: it['h'] = v['h']
+        if it.get('im') and it['im'] in phh: it['th'] = phh[it['im']]
+        if v.get('id') in opages: it['o'] = v['id']
+        g = gn.get(norm(name)) or gn.get(norm(v.get('n', '')))
+        if g and g[0] is not None:
+            x, y = proj((g[1], g[0])); it['xy'] = [round(x, 2), round(y, 2)]
+        return it
+    PFULL = {'大阪': '大阪府', '京都': '京都府', '兵庫': '兵庫県', '奈良': '奈良県', '滋賀': '滋賀県', '和歌山': '和歌山県'}
+    SLUG = {'大阪': 'osaka', '京都': 'kyoto', '兵庫': 'hyogo', '奈良': 'nara', '滋賀': 'shiga', '和歌山': 'wakayama'}
+    import copy, datetime, sys as _s
+    def page(name, url, title, desc, page, its, cur):
+        c = copy.deepcopy(cfg); c['desc'] = desc
+        c['menu']['items'] = [[t, u] + ([1] if u == cur else []) for t, u, *_ in c['menu']['items']]
+        URL[name] = url
+        write(name, title, c, {'items': its, 'icons': icons, 'map': MAP, 'page': page}, 'odekake')
+    for p_ in SLUG:
+        n = sum(1 for i in items if i['p'] == p_)
+        page('odekake-' + SLUG[p_], '/odekake-' + SLUG[p_], f'{p_}のおでかけ・イベント（{PFULL[p_]}）｜開催中・今週末｜TOWN NOTE',
+             f'{PFULL[p_]}のおでかけ・イベントを、開催中・今週末・まもなく終了に分けて、公式ページつきでまとめています。写真と地図で探せて、毎朝更新しています。',
+             {'h1': f'{p_}のおでかけ・イベント', 'sub': f'{PFULL[p_]}・{n}件', 'p': p_}, items, '/odekake')
+    _s.path.insert(0, os.path.join(R, 'tools/illumi'))
+    from data import ITEMS as IL, KOYO as KY, MEISHO as MS
+    TD = datetime.date.today().isoformat()
+    il = []
+    for row in IL:
+        p_, n, m, s_, e_, free, url = row[:7]
+        if not s_: continue
+        e_ = e_ or '2027-03-31'
+        if e_ < TD: continue
+        city, _, ven = m.partition('｜')
+        il.append(fin({'t': n, 'u': url, 'p': p_, 's': s_, 'e': e_, 'a': city, 'v': ven, 'k': 'light', **({'f': 1} if free else {})}, n))
+    ky = []
+    for row in KY:
+        p_, n, m, s_, e_, od, hrs, fee, url = row[:9]
+        if not s_: continue
+        e_ = e_ or s_
+        if e_ < TD: continue
+        city, _, ven = m.partition('｜')
+        it = {'t': n, 'u': url, 'p': p_, 's': s_, 'e': e_, 'a': city, 'v': ven, 'k': 'koyo', 'h': hrs}
+        if fee: it['fe'] = fee
+        if fee and fee.startswith('無料'): it['f'] = 1
+        ky.append(fin(it, n))
+    def prange(t):
+        mm = re.findall(r'(\d+)月(上旬|初旬|中旬|下旬|末)', t)
+        if not mm: return None
+        today = datetime.date.today()
+        def d(mo, k, end):
+            mo = int(mo); y = today.year if mo >= 6 or today.month < 6 else today.year + 1
+            a, b = {'上旬': (1, 10), '初旬': (1, 10), '中旬': (11, 20), '下旬': (21, 0), '末': (21, 0)}[k]
+            if end and b == 0: return datetime.date(y + mo // 12, mo % 12 + 1, 1) - datetime.timedelta(days=1)
+            return datetime.date(y, mo, b if end else a)
+        return d(*mm[0], False), d(*mm[-1], True)
+    for p_, n, city, peak, fee, url, note in MS:
+        r = prange(peak)
+        if not r or r[1].isoformat() < TD: continue
+        it = {'t': n, 'u': url, 'p': p_, 's': r[0].isoformat(), 'e': r[1].isoformat(), 'a': city, 'v': '', 'k': 'koyo', 'pk': peak}
+        if fee: it['fe'] = fee
+        if fee.startswith('無料') or not fee: it['f'] = 1 if fee.startswith('無料') else it.get('f', 0)
+        if note: it['hk'] = note
+        if not it.get('f'): it.pop('f', None)
+        ky.append(fin(it, n))
+    print('illumination', len(il), 'photos', sum('im' in i for i in il), '/ koyo', len(ky), 'photos', sum('im' in i for i in ky))
+    page('illumination', '/illumination', '関西イルミネーション2026-2027｜開催中・無料・今週末（大阪・京都・兵庫・奈良・滋賀・和歌山）｜TOWN NOTE',
+         f'関西のイルミネーション{len(il)}か所を、開催中・これから・無料に分けて、公式ページつきでまとめています。地図と写真で探せて、毎朝更新しています。',
+         {'h1': '関西のイルミネーション', 'sub': f'2026-2027・{len(il)}か所', 'st': 'pref'}, il, '/illumination')
+    page('illumination-muryo', '/illumination-muryo', '関西の無料イルミネーション2026-2027｜TOWN NOTE',
+         '関西の無料で見られるイルミネーションを、開催中・これからに分けてまとめています。',
+         {'h1': '関西の無料イルミネーション', 'sub': f'2026-2027・{sum(1 for i in il if i.get("f"))}か所', 'st': 'pref', 'free': 1}, il, '/illumination')
+    page('koyo', '/koyo', '関西の紅葉2026｜見頃とライトアップ（大阪・京都・兵庫・奈良・滋賀・和歌山）｜TOWN NOTE',
+         f'関西の紅葉の名所と夜のライトアップ{len(ky)}か所を、見頃の時期・料金・時間つきでまとめています。地図と写真で探せて、毎朝更新しています。',
+         {'h1': '関西の紅葉', 'sub': f'見頃とライトアップ・{len(ky)}か所', 'st': 'pref'}, ky, '/koyo')
+    for p_ in SLUG:
+        ni = sum(1 for i in il if i['p'] == p_); nk = sum(1 for i in ky if i['p'] == p_)
+        page('illumination-' + SLUG[p_], '/illumination-' + SLUG[p_], f'{p_}のイルミネーション2026-2027（{PFULL[p_]}）｜TOWN NOTE',
+             f'{PFULL[p_]}のイルミネーション{ni}か所を、開催中・これから・無料に分けてまとめています。', {'h1': f'{p_}のイルミネーション', 'sub': f'2026-2027・{ni}か所', 'p': p_, 'st': 'pref'}, il, '/illumination')
+        page('koyo-' + SLUG[p_], '/koyo-' + SLUG[p_], f'{p_}の紅葉2026｜見頃とライトアップ（{PFULL[p_]}）｜TOWN NOTE',
+             f'{PFULL[p_]}の紅葉の名所とライトアップ{nk}か所を、見頃の時期つきでまとめています。', {'h1': f'{p_}の紅葉', 'sub': f'見頃とライトアップ・{nk}か所', 'p': p_, 'st': 'pref'}, ky, '/koyo')
 
 odekake()
 if os.path.exists(os.path.join(L, 'shin/ie.js')):
