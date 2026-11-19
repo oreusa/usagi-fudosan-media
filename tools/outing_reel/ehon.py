@@ -13,11 +13,15 @@ spec = json.load(open(sys.argv[1])); OUT = os.path.abspath(sys.argv[2]); STILL =
 _t = spec.get('text', {})
 # 11/15 owner「。の使い方変じゃない？」：表紙の題は本の題なので「。」「、」で終えない（2行とも「。」で終わり、縦書きで字の下に浮いた）
 if _t.get('title'): _t['title'] = [l.rstrip('。、．，. ') for l in _t['title']]
-# 11/19 owner「夜のおでかけニュースってなんなん？？」「表紙はいままで通りでええやろ」：表紙に「おでかけニュース」は書かない（声とキャプションだけ）。
-#  台本が ["おでかけニュース","見出し"] でも、表紙は見出しだけを「の」の後ろで2行に分ける（例 夜の／小石川後楽園）
-if _t.get('title') and _t['title'][0].replace(' ', '') == 'おでかけニュース' and len(_t['title']) > 1:
-    _h = ''.join(_t['title'][1:]); _k = _h.find('の')
-    _t['title'] = [_h[:_k + 1], _h[_k + 1:]] if 0 < _k < len(_h) - 1 and len(_h[:_k + 1]) <= 9 and len(_h[_k + 1:]) <= 9 else [_h]
+# 11/19 owner「表紙はいままで通りでええやろ」「なんかバラバラなんよ、表紙にイチョウいれてたりとか」「なんで毎回変えるん」「工夫して統一しろよ」：
+#  表紙は機械が毎日同じ形で作る。題＝1行目「場所」・2行目「見どころ」（台本の place と date_title。date_title に場所が入っていれば point_title）。
+#  台本の title は表紙に使わない（文・日付・「おでかけニュース」が混ざってバラバラだった）。金の絵（イチョウ・家）も出さない。下に期間の金の1行
+_pl0 = re.sub(r'[（(].*?[）)]', '', _t.get('place', '').split('｜')[0]).strip()
+_see = _t.get('date_title', '')
+if not _see or _pl0 and _pl0 in _see: _see = _t.get('point_title', '') or _t.get('seal', '')
+_see = _see.rstrip('。、．，. ')
+if _pl0 and _see and len(_pl0) <= 9 and len(_see) <= 9: _t['title'] = [_pl0, _see]
+elif _t.get('title') and _t['title'][0].replace(' ', '') == 'おでかけニュース' and len(_t['title']) > 1: _t['title'] = [''.join(_t['title'][1:])[:9]]
 _bad = [f'表紙の題の{i + 1}行目「{l}」は{len(l)}字（{m}字まで）' for i, (l, m) in enumerate(zip(_t.get('title', []), (9, 9))) if len(l) > m]
 # 11/16 表紙の1行目が10字（クリスマスマーケット）で下のロゴに重なった。日付ページの大きな題が6字以上で、場所の行（｜の前）が8字以上だと字が重なった
 _pl = _t.get('place', '').split('｜')[0]
@@ -376,7 +380,7 @@ function build(){
   pages.push(`<div class="face cover"><div class="spine"></div><div class="fr1"></div><div class="fr2"></div>
    <div class="gold" style="position:absolute;left:0;right:0;top:138px;text-align:center;font:400 24px J;letter-spacing:.5em">${P.corner}</div>
    ${vtext(P.title,372,250,82,'font-family:MB;color:#e8cf96;line-height:1.75;letter-spacing:.16em','ct')}
-   <svg viewBox="0 0 920 1380" style="opacity:.92">${coverArt()}</svg>
+   <div class="gold" style="position:absolute;left:0;right:0;top:184px;text-align:center;font:400 26px J;letter-spacing:.24em;opacity:.9" data-top="1">${P.d[0]}<span style="opacity:.6;margin:0 .5em">─</span>${P.d[2]}</div>
    <div style="position:absolute;right:108px;bottom:200px;width:216px;height:216px;border-radius:50%;background:#f6efdf;box-shadow:0 0 0 3px #d8b874,0 0 0 10px rgba(216,184,116,.28),0 6px 18px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center"><img src="file://%LOGO%" style="width:166px;height:166px"></div>
    <div class="gold" style="position:absolute;left:0;right:0;bottom:118px;text-align:center;font:500 30px M;letter-spacing:.16em;font-size:23px;line-height:1.7;bottom:104px">${P.cover_sub}</div><div id="foil"></div></div>`);
   pages.push(`<div class="face">${scene(0)}${vtext(P.t1,84,120,58,'','t0')}</div>`);
