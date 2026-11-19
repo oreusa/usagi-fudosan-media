@@ -38,7 +38,7 @@ function tile(t,s,u,p){return '<a class="c3t" href="'+u+'">'+(p?'<img src="'+img
 h+='<div class="c3tg"><a class="c3t c3il" href="/illumination"><div class="c3bk" aria-hidden="true">'+Array.apply(null,Array(42)).map(function(_,i){var r=function(k){return ((i+1)*k*9301+49297)%233280/233280};return '<em style="--x:'+(r(7)*100).toFixed(1)+'%;--y:'+(30+r(13)*68).toFixed(1)+'%;--s:'+(i%7?6+r(17)*16:34+r(19)*30).toFixed(0)+'px;--d:'+(r(23)*5).toFixed(1)+'s;--h:'+(i%9?36+r(29)*12:i%2?205:340).toFixed(0)+';--o:'+(i%7?.9:.45)+'"></em>'}).join("")+'</div><span><b>イルミネーション</b><small>'+RN+'の光のイベント</small><i>見る</i></span></a>'+tile('紅葉','見ごろの名所','/koyo',D.ko)+'</div>';
 /* 6 すべてのページ（apple.com の一番下の一覧の形） */
 h+='<nav class="c3f" aria-label="すべてのページ">'+D.ft.map(function(g){return '<div><h3>'+esc(g[0])+'</h3>'+g[1].map(function(a){return '<a href="'+a[1]+'">'+esc(a[0])+'</a>'}).join("")+'</div>'}).join("")+
-  '<div><h3>TOWN NOTE</h3>'+D.sns.map(function(s){return '<a href="'+s[1]+'" target="_blank" rel="noopener">'+esc(s[0])+'</a>'}).join("")+'</div></nav>';
+  '<div><h3>'+esc((S_.reg&&S_.reg.brand)||"TOWN NOTE")+'</h3>'+D.sns.map(function(s){return '<a href="'+s[1]+'" target="_blank" rel="noopener">'+esc(s[0])+'</a>'}).join("")+'</div></nav>';
 S_.main.innerHTML='<div class="c3">'+h+'</div>';
 
 /* 写真が静かに切り替わる（動きを減らす設定の人は切り替えない） */
