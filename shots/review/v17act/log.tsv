@@ -1,0 +1,168 @@
+00-d	flist https://kansai.townnote.app/fudosan-list?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "flist https://kansai.townnote.app/fudosan-list?mihon=2", waiting until "networkidle"
+
+00-n	flist https://kansai.townnote.app/fudosan-list?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "flist https://kansai.townnote.app/fudosan-list?mihon=2", waiting until "networkidle"
+
+01-d	akiya https://kansai.townnote.app/akiya-ranking?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "akiya https://kansai.townnote.app/akiya-ranking?mihon=2", waiting until "networkidle"
+
+01-n	akiya https://kansai.townnote.app/akiya-ranking?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "akiya https://kansai.townnote.app/akiya-ranking?mihon=2", waiting until "networkidle"
+
+02-d	ranking https://kansai.townnote.app/ranking?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "ranking https://kansai.townnote.app/ranking?mihon=2", waiting until "networkidle"
+
+02-n	ranking https://kansai.townnote.app/ranking?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "ranking https://kansai.townnote.app/ranking?mihon=2", waiting until "networkidle"
+
+03-d	uru https://kansai.townnote.app/uru?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "uru https://kansai.townnote.app/uru?mihon=2", waiting until "networkidle"
+
+03-n	uru https://kansai.townnote.app/uru?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "uru https://kansai.townnote.app/uru?mihon=2", waiting until "networkidle"
+
+04-d	sagasu https://kansai.townnote.app/sagasu?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "sagasu https://kansai.townnote.app/sagasu?mihon=2", waiting until "networkidle"
+
+04-n	sagasu https://kansai.townnote.app/sagasu?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "sagasu https://kansai.townnote.app/sagasu?mihon=2", waiting until "networkidle"
+
+05-d	machi https://kansai.townnote.app/machi/osaka-01?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "machi https://kansai.townnote.app/machi/osaka-01?mihon=2", waiting until "networkidle"
+
+05-n	machi https://kansai.townnote.app/machi/osaka-01?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "machi https://kansai.townnote.app/machi/osaka-01?mihon=2", waiting until "networkidle"
+
+06-d	gyosha https://kansai.townnote.app/gyosha?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "gyosha https://kansai.townnote.app/gyosha?mihon=2", waiting until "networkidle"
+
+06-n	gyosha https://kansai.townnote.app/gyosha?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "gyosha https://kansai.townnote.app/gyosha?mihon=2", waiting until "networkidle"
+
+07-d	kfudosan https://kanto.townnote.app/fudosan-list?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kfudosan https://kanto.townnote.app/fudosan-list?mihon=2", waiting until "networkidle"
+
+07-n	kfudosan https://kanto.townnote.app/fudosan-list?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kfudosan https://kanto.townnote.app/fudosan-list?mihon=2", waiting until "networkidle"
+
+08-d	kuru https://kanto.townnote.app/uru?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kuru https://kanto.townnote.app/uru?mihon=2", waiting until "networkidle"
+
+08-n	kuru https://kanto.townnote.app/uru?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kuru https://kanto.townnote.app/uru?mihon=2", waiting until "networkidle"
+
+09-d	kmachi https://kanto.townnote.app/machi/tokyo-01?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kmachi https://kanto.townnote.app/machi/tokyo-01?mihon=2", waiting until "networkidle"
+
+09-n	kmachi https://kanto.townnote.app/machi/tokyo-01?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kmachi https://kanto.townnote.app/machi/tokyo-01?mihon=2", waiting until "networkidle"
+
+10-d	top https://kansai.townnote.app/?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "top https://kansai.townnote.app/?mihon=2", waiting until "networkidle"
+
+10-n	top https://kansai.townnote.app/?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "top https://kansai.townnote.app/?mihon=2", waiting until "networkidle"
+
+11-d	odekake https://kansai.townnote.app/odekake?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "odekake https://kansai.townnote.app/odekake?mihon=2", waiting until "networkidle"
+
+11-n	odekake https://kansai.townnote.app/odekake?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "odekake https://kansai.townnote.app/odekake?mihon=2", waiting until "networkidle"
+
+12-d	illumi https://kansai.townnote.app/illumination?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "illumi https://kansai.townnote.app/illumination?mihon=2", waiting until "networkidle"
+
+12-n	illumi https://kansai.townnote.app/illumination?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "illumi https://kansai.townnote.app/illumination?mihon=2", waiting until "networkidle"
+
+13-d	kaiten https://kansai.townnote.app/kaiten?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kaiten https://kansai.townnote.app/kaiten?mihon=2", waiting until "networkidle"
+
+13-n	kaiten https://kansai.townnote.app/kaiten?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kaiten https://kansai.townnote.app/kaiten?mihon=2", waiting until "networkidle"
+
+14-d	o1 https://kansai.townnote.app/o/a972a667?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "o1 https://kansai.townnote.app/o/a972a667?mihon=2", waiting until "networkidle"
+
+14-n	o1 https://kansai.townnote.app/o/a972a667?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "o1 https://kansai.townnote.app/o/a972a667?mihon=2", waiting until "networkidle"
+
+15-d	ktop https://kanto.townnote.app/?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "ktop https://kanto.townnote.app/?mihon=2", waiting until "networkidle"
+
+15-n	ktop https://kanto.townnote.app/?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "ktop https://kanto.townnote.app/?mihon=2", waiting until "networkidle"
+
+16-d	kodekake https://kanto.townnote.app/odekake?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kodekake https://kanto.townnote.app/odekake?mihon=2", waiting until "networkidle"
+
+16-n	kodekake https://kanto.townnote.app/odekake?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kodekake https://kanto.townnote.app/odekake?mihon=2", waiting until "networkidle"
+
+17-d	kokaimono https://kanto.townnote.app/okaimono?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kokaimono https://kanto.townnote.app/okaimono?mihon=2", waiting until "networkidle"
+
+17-n	kokaimono https://kanto.townnote.app/okaimono?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kokaimono https://kanto.townnote.app/okaimono?mihon=2", waiting until "networkidle"
+
+18-d	knesage https://kanto.townnote.app/nesage?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "knesage https://kanto.townnote.app/nesage?mihon=2", waiting until "networkidle"
+
+18-n	knesage https://kanto.townnote.app/nesage?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "knesage https://kanto.townnote.app/nesage?mihon=2", waiting until "networkidle"
+
+19-d	kil https://kanto.townnote.app/illumination?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kil https://kanto.townnote.app/illumination?mihon=2", waiting until "networkidle"
+
+19-n	kil https://kanto.townnote.app/illumination?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "kil https://kanto.townnote.app/illumination?mihon=2", waiting until "networkidle"
+
+20-d	okaimono https://kansai.townnote.app/okaimono?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=document-title:1,html-has-lang:1		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "okaimono https://kansai.townnote.app/okaimono?mihon=2", waiting until "networkidle"
+
+20-n	okaimono https://kansai.townnote.app/okaimono?mihon=2	h=844	imgs=0	broken=0	over=false	zero=0	err=1	axe=		goto Error: page.goto: Protocol error (Page.navigate): Cannot navigate to invalid URL
+Call log:
+  - navigating to "okaimono https://kansai.townnote.app/okaimono?mihon=2", waiting until "networkidle"
+
