@@ -4,7 +4,7 @@
 (function(){
 "use strict";
 var S_=window.SHIN,$=S_.$,$$=S_.$$,el=S_.el,esc=S_.esc,TD=S_.TD,diff=S_.diff,md=S_.md,dd=S_.dd,RM=S_.RM,D=S_.data;
-var PREF=["大阪","京都","兵庫","奈良","滋賀","和歌山"],PG=D.page||{},K=PG.K||{},VIEW=PG.view||"grid";
+var RG=S_.reg,PREF=RG.pref,PG=D.page||{},K=PG.K||{},VIEW=PG.view||"grid";
 var IT=D.items.filter(function(x){return !x.e||x.e>=TD}).map(function(x,i){x.i=i;x.st=x.s?(x.s<=TD?"now":"up"):"";x.left=x.e?diff(TD,x.e):null;x.g=K[x.k]||["",PG.c||"#6E6E73"];return x});
 var BYI={};IT.forEach(function(x){BYI[x.i]=x});
 function avg(b){try{var h=Uint8Array.from(atob(b),function(c){return c.charCodeAt(0)}),hd=h[0]|h[1]<<8|h[2]<<16,l=(hd&63)/63,p=((hd>>6)&63)/31.5-1,q=((hd>>12)&63)/31.5-1,bb=l-2/3*p,r=(3*l-bb+q)/2,g=r-q;
@@ -48,7 +48,7 @@ S_.main.innerHTML='<div class="wrap"><section class="hero"><h1 class="h1t">'+esc
  (PG.also?'<nav class="also2" aria-label="あわせて見る"><small>あわせて見る</small>'+PG.also.map(function(a){return '<a href="'+a[1]+'">'+esc(a[0])+'<i>→</i></a>'}).join("")+'</nav>':"")+'</div>';
 S_.counts(S_.main);
 
-var setSeg=$("#seg")&&S_.seg($("#seg"),[["","関西"]].concat(PREF.filter(function(p){return IT.some(function(x){return x.p===p})}).map(function(p){return [p,p]})),S.p,function(v){S.p=v;S.n=24;sync();go(true)});
+var setSeg=$("#seg")&&S_.seg($("#seg"),[["",RG.n]].concat(PREF.filter(function(p){return IT.some(function(x){return x.p===p})}).map(function(p){return [p,p]})),S.p,function(v){S.p=v;S.n=24;sync();go(true)});
 if(PG.tabs)S_.seg($("#tab"),PG.tabs.map(function(t){return [t[0],t[1]]}),S.w,function(v){S.w=v;S.n=24;sync();go(true)});
 if(PG.near){S_.seg($("#mseg"),[[30,"30分"],[60,"1時間"],[90,"1時間半"],[0,"すべて"]],String(S.m),function(v){S.m=+v;S.n=24;go(true)});
   var drawOrg=function(){$("#org").textContent=S.o[0];$("#orgs").innerHTML=ORG.map(function(o){return '<button class="chip'+(o[0]===S.o[0]?" on":"")+'" data-o="'+o[0]+'">'+o[0]+'</button>'}).join("");$("#sun").textContent=sunset()};
@@ -83,7 +83,7 @@ function card(x){var key=x.i+(PG.near?"|"+S.o[0]:"");if(cache[key])return cache[
   var im=$("img",a);if(im){if(im.complete)im.classList.add("ld");else im.onload=function(){im.classList.add("ld")}}
   return cache[key]=a}
 var grid=$("#grid"),first=true;
-function go(anim){var L=pick(),show=L.slice(0,S.n),pr=S.p||"関西";
+function go(anim){var L=pick(),show=L.slice(0,S.n),pr=S.p||RG.n;
   var tl=PG.tabs&&S.w?PG.tabs.filter(function(t){return t[0]===S.w})[0][1].replace(/\s\d+$/,""):(PG.near?(S.m?(S.m<60?S.m+"分":S.m/60+"時間").replace(".5時間","時間半")+"で行ける":"きょう開いている"):(PG.unit||"ぜんぶ"));
   $("#ch").innerHTML=esc(pr)+"・"+esc(tl)+" <b>"+L.length+"</b>"+(PG.cnt||"件");$("#cs").textContent=S.k==="_fav"?"保存した物":S.k&&K[S.k]?K[S.k][0]:(PG.near?S.o[0]+"から近い順":"");
   if(PG.near)$("#nn").textContent=L.length;

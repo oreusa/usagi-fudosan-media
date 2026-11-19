@@ -5,7 +5,7 @@ var S_=window.SHIN,$=S_.$,$$=S_.$$,el=S_.el,esc=S_.esc,TD=S_.TD,diff=S_.diff,md=
 var dow=dd(TD).getUTCDay(),SAT=new Date(dd(TD).getTime()+((6-dow+7)%7)*864e5).toISOString().slice(0,10),SUN=new Date(dd(SAT).getTime()+864e5).toISOString().slice(0,10);
 if(dow===0){SAT=TD;SUN=TD}
 var G={art:["ART","#3B5BA5","#EEF1F8","アート・展示"],light:["LIGHT","#B7862A","#F8F2E6","光・イルミ"],koyo:["KOYO","#C0532B","#F9EEEA","紅葉"],flower:["FLOWER","#C2557A","#F9EDF2","花"],fes:["MATSURI","#B23A2E","#F8ECEB","まつり"],quest:["NAZOTOKI","#5B4B8A","#F0EEF6","謎とき"],play:["PLAY","#2E8B6E","#EAF4F0","あそぶ"],spot:["SPOT","#2F7D9A","#EAF3F6","スポット"],food:["FOOD","#C9702A","#FAF0E7","グルメ"],animal:["ANIMAL","#6F7F33","#F1F3E8","いきもの"],xmas:["XMAS","#2F7A4F","#EAF4EE","クリスマス"],hallo:["HALLOWEEN","#B45F1F","#FAEFE6","ハロウィン"],shop:["MARKET","#8A6A3F","#F5F0E8","マーケット"],hatsu:["HATSUMODE","#A23B3B","#F7ECEC","初詣"]};
-var PREF=["大阪","京都","兵庫","奈良","滋賀","和歌山"],PG=D.page||{};
+var RG=S_.reg,PREF=RG.pref,PG=D.page||{};
 var IT=D.items.filter(function(x){return x.e>=TD}).map(function(x,i){x.i=i;x.st=x.s<=TD?"now":"up";x.left=diff(TD,x.e);x.g=G[x.k]||G.spot;return x});
 var BYI={};IT.forEach(function(x){BYI[x.i]=x});
 function avg(b){try{var h=Uint8Array.from(atob(b),function(c){return c.charCodeAt(0)}),hd=h[0]|h[1]<<8|h[2]<<16,l=(hd&63)/63,p=((hd>>6)&63)/31.5-1,q=((hd>>12)&63)/31.5-1,bb=l-2/3*p,r=(3*l-bb+q)/2,g=r-q;
@@ -28,7 +28,7 @@ var nNow=IT.filter(function(x){return x.st==="now"}).length;
 var nEnd=IT.filter(function(x){return x.st==="now"&&x.left<=7}).length,nTd=IT.filter(function(x){return x.st==="now"&&x.left===0}).length,
  nWe=IT.filter(function(x){return x.s<=SUN&&x.e>=SAT}).length,nNew=IT.filter(function(x){return x.st==="up"&&diff(TD,x.s)<=7}).length,DT=dd(TD),EN=["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"][DT.getUTCDay()];
 var T1=nTd?["きょうまで",nTd,"td"]:["7日以内に始まる",nNew,"new"];
-S_.main.innerHTML='<div class="wrap"><section class="hero"><h1 class="h1t">'+esc(PG.h1||"関西のおでかけ・イベント")+'</h1><p class="h1p">'+esc(PG.sub||"大阪・京都・兵庫・奈良・滋賀・和歌山")+'</p>'+
+S_.main.innerHTML='<div class="wrap"><section class="hero"><h1 class="h1t">'+esc(PG.h1||RG.n+"のおでかけ・イベント")+'</h1><p class="h1p">'+esc(PG.sub||RG.pfs)+'</p>'+
  '<p class="dl">'+(DT.getUTCMonth()+1)+'月'+DT.getUTCDate()+'日（'+"日月火水木金土"[DT.getUTCDay()]+'）<span>いま開催中 <b data-n="'+nNow+'">0</b>件</span></p>'+
  '</section>'+
  '<div class="st" id="st"></div><div class="sec"><h2>今週末のおすすめ</h2><small id="fno"></small></div></div>'+
@@ -70,7 +70,7 @@ fanTick();addEventListener("resize",fanTick);
 fan.addEventListener("click",function(e){var a=e.target.closest(".fc");if(!a)return;e.preventDefault();openItem(BYI[a.dataset.i],$(".in",a))});
 
 /* 絞り込み */
-var setSeg=S_.seg($("#seg"),[["","関西"]].concat(PREF.map(function(p){return [p,p]})),S.p,function(v){S.p=v;S.n=24;sync();go(true)});
+var setSeg=S_.seg($("#seg"),[["",RG.n]].concat(PREF.map(function(p){return [p,p]})),S.p,function(v){S.p=v;S.n=24;sync();go(true)});
 function kinds(){var c={};IT.forEach(function(x){if(!S.p||x.p===S.p)c[x.k]=(c[x.k]||0)+1});return Object.keys(G).filter(function(k){return c[k]})}
 function drawChips(){var ks=kinds();$("#chips").style.display=ks.length<2?"none":"";$("#chips").innerHTML='<button class="chip'+(S.g?"":" on")+'" data-g="">すべて</button>'+kinds().map(function(k){return '<button class="chip'+(S.g===k?" on":"")+'" data-g="'+k+'" style="--c:'+G[k][1]+'"><i></i>'+G[k][3]+'</button>'}).join("")}
 $("#chips").addEventListener("click",function(e){var b=e.target.closest(".chip");if(!b)return;S.g=b.dataset.g;S.n=24;sync();go(true)});
@@ -82,7 +82,7 @@ function card(x){if(cache[x.i])return cache[x.i];
   var im=$("img",a);if(im){if(im.complete)im.classList.add("ld");else im.onload=function(){im.classList.add("ld")}}
   return cache[x.i]=a}
 var grid=$("#grid"),first=true;
-function go(anim){var L=pick(),show=L.slice(0,S.n),pr=S.p||"関西",wl={now:"開催中",we:"今週末",up:"これから",end:"7日以内に終わる",td:"きょうまで",new:"7日以内に始まる"}[S.w];
+function go(anim){var L=pick(),show=L.slice(0,S.n),pr=S.p||RG.n,wl={now:"開催中",we:"今週末",up:"これから",end:"7日以内に終わる",td:"きょうまで",new:"7日以内に始まる"}[S.w];
   $("#ch").innerHTML=esc(pr)+"・"+wl+" <b data-n='"+L.length+"'>"+L.length+"</b>件";$("#cs").textContent=S.g?G[S.g][3]:(S.w==="we"?md(SAT)+"・"+md(SUN).replace(/（.）/,""):"");
   if(anim&&!first)S_.countUp($("#ch b"));
   var old={};if(anim&&!RM)$$(".cd",grid).forEach(function(c){old[c.dataset.i]=c.getBoundingClientRect()});
@@ -113,11 +113,11 @@ function openItem(x,from){if(!x)return;var tot=Math.max(1,diff(x.s,x.e)),gone=Ma
 grid.addEventListener("click",function(e){var a=e.target.closest(".cd");if(!a||e.metaKey||e.ctrlKey)return;e.preventDefault();openItem(BYI[a.dataset.i],$(".im",a))});
 
 /* ---- 地図（府県の色の地図はそのまま・まわりを作り直し）。いまの絞り込みと同じ物が出る ---- */
-var PC={"大阪":"#D9775A","京都":"#9C7BB8","兵庫":"#4F86C6","奈良":"#5FA06A","滋賀":"#3FA3B5","和歌山":"#E09A3E"},FL={"大阪":"#F7D9CC","京都":"#E6DBF1","兵庫":"#D6E4F5","奈良":"#D8ECD4","滋賀":"#D0EBEF","和歌山":"#F8E4C4"};
-var LB={"兵庫":[62,105],"京都":[122,78],"滋賀":[176,92],"大阪":[118,165],"奈良":[156,178],"和歌山":[118,215]};
+var PC=RG.pc,FL=RG.fl;
+var LB=RG.lb;
 var mp=null,vb={x:10,y:15,w:200,h:250},mpL=[],mpSel=-1,moved=false;
-function mapOpen(){if(!mp){mp=el('<div class="mp" id="mp"><div class="mph"><b>関西おでかけマップ</b><small id="mpn"></small><button class="mpx" aria-label="閉じる">×</button></div>'+
-  '<svg id="mps" viewBox="10 15 200 250" preserveAspectRatio="xMidYMid meet"><g id="mpg"><g class="nb">'+D.map.nb.map(function(d){return '<path d="'+d+'"/>'}).join("")+'</g>'+
+function mapOpen(){if(!mp){mp=el('<div class="mp" id="mp"><div class="mph"><b>'+RG.n+'おでかけマップ</b><small id="mpn"></small><button class="mpx" aria-label="閉じる">×</button></div>'+
+  '<svg id="mps" viewBox="'+RG.vb+'" preserveAspectRatio="xMidYMid meet"><g id="mpg"><g class="nb">'+D.map.nb.map(function(d){return '<path d="'+d+'"/>'}).join("")+'</g>'+
   Object.keys(D.map.pref).map(function(p){return '<path class="pf" data-p="'+p+'" d="'+D.map.pref[p]+'" style="--f:'+FL[p]+';--c:'+PC[p]+'"/>'}).join("")+
   Object.keys(LB).map(function(p){return '<text class="pl" x="'+LB[p][0]+'" y="'+LB[p][1]+'" style="fill:'+PC[p]+'">'+p+'</text>'}).join("")+'<g id="mpp"></g></g></svg>'+
   '<div class="mpz"><button data-z="1.6">＋</button><button data-z="0.625">－</button><button data-z="0">全体</button></div><div class="mpc" id="mpc"></div></div>');document.getElementById("app").appendChild(mp);
@@ -130,7 +130,7 @@ function mapOpen(){if(!mp){mp=el('<div class="mp" id="mp"><div class="mph"><b>�
   if(S.p){var f=$('.pf[data-p="'+S.p+'"]',mp),bb=f.getBBox();fit(bb.x-6,bb.y-6,bb.width+12,bb.height+12,true)}else fit(10,15,200,250,true)}
 function mapClose(back){if(!mp||!mp.classList.contains("op"))return;mp.classList.remove("op");document.body.style.overflow="";if(back!==false&&history.state&&history.state.mp)history.back();S_.navCur(S.w)}
 addEventListener("popstate",function(){if(mp&&mp.classList.contains("op")&&!(history.state&&(history.state.mp||history.state.sh)))mapClose(false)});
-function drawPins(){mpL=pick().filter(function(x){return x.xy});$("#mpn").textContent=(S.p||"関西")+"・"+{now:"開催中",we:"今週末",up:"これから",end:"まもなく終わる",td:"きょうまで",new:"もうすぐ始まる"}[S.w]+" "+mpL.length+"か所";
+function drawPins(){mpL=pick().filter(function(x){return x.xy});$("#mpn").textContent=(S.p||RG.n)+"・"+{now:"開催中",we:"今週末",up:"これから",end:"まもなく終わる",td:"きょうまで",new:"もうすぐ始まる"}[S.w]+" "+mpL.length+"か所";
   $$(".pf",mp).forEach(function(f){f.classList.toggle("dim",!!S.p&&f.dataset.p!==S.p)});
   $("#mpp").innerHTML=mpL.map(function(x,k){return '<g class="pin" data-k="'+k+'" transform="translate('+x.xy[0]+' '+x.xy[1]+')"><g class="pi" style="animation-delay:'+Math.min(k,40)*18+'ms"><circle class="ring" r="4.2" style="stroke:'+x.g[1]+'"/><circle class="dt2" r="2.1" style="fill:'+x.g[1]+'"/></g></g>'}).join("");
   $("#mpc").innerHTML=mpL.map(function(x){return '<a class="mcd" href="#" data-i="'+x.i+'" style="--gc:'+x.g[1]+'"><span class="mim" style="background-color:'+(x.th?avg(x.th):x.g[2])+'">'+(x.im?'<img src="'+img(x)+'" alt="" loading="lazy">':tile(x))+'</span><span class="mtx"><span class="lb"><span class="g">'+x.g[3]+'</span><span>'+esc(x.p)+'</span>'+lt(x)+'</span><b>'+esc(x.t)+'</b><small>'+when(x)+'・'+esc(x.v||x.a)+'</small></span></a>'}).join("");
