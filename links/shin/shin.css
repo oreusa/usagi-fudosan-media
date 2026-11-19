@@ -497,3 +497,16 @@ html.nt{--line:#222A3A}
 .h1t{font-size:min(30px,7.2vw)}
 .cnt{flex-wrap:wrap;gap:2px 10px}
 .cnt h3{flex:1 1 auto;min-width:0}
+/* ===== 11/19 動きの工夫（Apple 型）：大きい題→上の帯・流れに合わせて静かに浮かぶ ===== */
+.h1t{transform-origin:0 100%;will-change:opacity,transform}
+#tb{position:fixed;left:0;right:0;top:0;z-index:40;height:44px;padding:0 60px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);font:600 15px/1 var(--sans);color:var(--ink);letter-spacing:-.005em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:0;transform:translateY(-100%);transition:opacity .25s,transform .35s cubic-bezier(.2,.9,.25,1);pointer-events:none}
+#tb.on{opacity:1;transform:none;pointer-events:auto}
+html.nt #tb{background:rgba(10,14,24,.96)}
+.bar{top:44px}
+.bar.stuck{border-bottom:0}
+@keyframes rise{from{opacity:0;transform:translateY(26px) scale(.985)}to{opacity:1;transform:none}}
+@supports (animation-timeline:view()){
+ @media (prefers-reduced-motion:no-preference){
+  .cd,.kc,.rk li,.of,.sec h2,.pc{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 35%}
+ }
+}
