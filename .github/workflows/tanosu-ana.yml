@@ -1,0 +1,18 @@
+name: tanosu-ana
+# 11/19 相手（tanosu）の使いやすさを解析：iPhone の幅で撮る＋形・字・色の数字（作業環境から届かないため GitHub で）
+on: {workflow_dispatch: {}}
+permissions: {contents: write}
+jobs:
+  ana:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm i --no-save playwright@1.49.1 && npx playwright install --with-deps chromium
+      - run: sudo apt-get install -y -qq fonts-noto-cjk >/dev/null 2>&1 || true
+      - run: node tools/review/tanosu.js /tmp/tn || true
+      - run: |
+          git config user.name "review-shot"; git config user.email "actions@users.noreply.github.com"
+          if git fetch -q origin review; then git checkout -qB review FETCH_HEAD; else git checkout -q --orphan review && git rm -rfq .; fi
+          rm -rf shots/review/tanosu; mkdir -p shots/review/tanosu && cp /tmp/tn/* shots/review/tanosu/
+          git add -f shots/review && git commit -qm "tanosu ana" && for i in 1 2 3 4; do git pull -q --rebase origin review 2>/dev/null || true; git push origin review && break; sleep 7; done
