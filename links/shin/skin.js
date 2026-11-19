@@ -27,14 +27,22 @@ var KAI={nav:[["これから","now","/kaiten?w=soon"],["開いた","we","/kaiten
   k:"New Shops",menu:[["関西の開店・閉店","/kaiten"],["関東の開店・閉店","https://kanto.townnote.app/kaiten"]],rel:[["おでかけ","/odekake"],["家と土地","/fudosan-list"],["トップへ","/"]]};
 var TOP={nav:[["おでかけ","now","/odekake"],["家と土地","find","/fudosan-list"],["おかいもの","yen","/okaimono"],["開店閉店","buy","/kaiten"]],
   k:"Town Note",menu:[["トップ","/"],["関西のおでかけ","/odekake"],["家と土地の相場","/fudosan-list"],["日用品の値段くらべ","/okaimono"],["開店・閉店","/kaiten"]],rel:[]};
-var C=/^\/(o|odekake|illumination|koyo|ima|tomari|hatsumode)\b/.test(P)?ODE:/^\/kaiten/.test(P)?KAI:/^\/(machi|jikka|kaitai|chika|uru|ikura|moushikomi|gyosha|sagasu|shindan|akiya|fudosan|koe|ranking|townnotes)/.test(P)?FUD:TOP;
+/* 関東（kanto.townnote.app）も同じ物を読む。関東にあるページだけを出す */
+var KT=/kanto|lifenote|life-note|usagi-life/.test(location.hostname);
+if(KT){FUD.nav[1]=["地価","rank","/chika-kanto"];FUD.menu=[["家と土地の相場","/fudosan-list"],["家を売る前に","/uru"],["いくらで売れる？","/ikura"],["実家・空き家","/jikka/"],["解体の費用と補助金","/kaitai"],["地価ランキング","/chika-kanto"]];
+  ODE.nav=[["おでかけ","now","/odekake"],["いまから","map","/ima"],["紅葉","we","/koyo"],["開店閉店","buy","/kaiten"]];ODE.menu=[["関東おでかけ","/odekake"],["いまから行ける","/ima"],["紅葉","/koyo"],["開店・閉店","/kaiten"]];
+  KAI.menu=[["関東の開店・閉店","/kaiten"],["関西の開店・閉店","https://kansai.townnote.app/kaiten"]];}
+var BR=KT?"LIFE NOTE":"TOWN NOTE",LG=KT?["/logo-s.png","/logo-s-night.png"]:["/assets/logo-s.png?v=2","/assets/logo-s-night.png"];
+var OKA={nav:[["品物","find","/okaimono"],["値下がり","down","/nesage"],["お得","yen","/otoku"],["ふるさと納税","buy","/furusato"]],
+  k:"Shopping",menu:[["日用品の値段くらべ","/okaimono"],["値下がりした物","/nesage"],["お得な物","/otoku"],["ふるさと納税","/furusato"]],rel:[["おでかけ","/odekake"],["家と土地","/fudosan-list"],["トップへ","/"]]};
+var C=/^\/(okaimono|nesage|otoku|furusato|kaimawari|tanka)/.test(P)?OKA:/^\/(o|odekake|illumination|koyo|ima|tomari|hatsumode)\b/.test(P)?ODE:/^\/kaiten/.test(P)?KAI:/^\/(machi|jikka|kaitai|chika|uru|ikura|moushikomi|gyosha|sagasu|shindan|akiya|fudosan|koe|ranking|townnotes)/.test(P)?FUD:TOP;
 var here=function(u){return u.split("?")[0]===P.replace(/\.html$/,"")};
 
 function build(){
   if(H.classList.contains("night"))H.classList.add("nt");
   var n=H.classList.contains("nt");
   var top=document.createElement("div");top.className="skc";
-  top.innerHTML='<div class="wrap"><header class="top"><a class="brand" href="/" aria-label="トップへ"><img id="logo" src="'+(n?"/assets/logo-s-night.png":"/assets/logo-s.png?v=2")+'" alt="TOWN NOTE"><b>TOWN NOTE</b></a>'+
+  top.innerHTML='<div class="wrap"><header class="top"><a class="brand" href="/" aria-label="トップへ"><img id="logo" src="'+(n?LG[1]:LG[0])+'" alt="'+BR+'"><b>'+BR+'</b></a>'+
    '<button class="tg" id="tg" role="switch" aria-checked="'+n+'" aria-label="夜の画面にする"><i class="kn"></i><span class="su"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path class="sp" d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg></span><span class="mo"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span></button></header></div>';
   document.body.insertBefore(top,document.body.firstChild);
   var sk=document.createElement("div");sk.className="skc";sk.id="sk";
@@ -57,7 +65,7 @@ function build(){
   /* 昼夜：今までの夜（night.js）と新しい夜空を一緒に切り替える */
   $("#tg").addEventListener("click",function(){var n=!H.classList.contains("nt");
     var go=function(){H.classList.toggle("nt",n);try{if(window.usagiTheme)usagiTheme.set(n?"night":"day");else{H.classList.toggle("night",n);localStorage.setItem("usagi_theme",n?"night":"day")}}catch(e){}
-      $("#logo").src=n?"/assets/logo-s-night.png":"/assets/logo-s.png?v=2";$("#tg").setAttribute("aria-checked",n?"true":"false");var m=$('meta[name="theme-color"]');if(m)m.content=n?"#0A0E18":"#FFFFFF";if(n){stars();shoot()}};
+      $("#logo").src=n?LG[1]:LG[0];$("#tg").setAttribute("aria-checked",n?"true":"false");var m=$('meta[name="theme-color"]');if(m)m.content=n?"#0A0E18":"#FFFFFF";if(n){stars();shoot()}};
     if(!document.startViewTransition||RM){go();return}
     var kr=$("#tg .kn").getBoundingClientRect(),x=kr.left+kr.width/2+(n?34:-34),y=kr.top+kr.height/2,r=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));H.classList.add("vtt");
     var t=document.startViewTransition(go);t.ready.then(function(){H.animate({clipPath:["circle(0px at "+x+"px "+y+"px)","circle("+r+"px at "+x+"px "+y+"px)"]},{duration:760,easing:"cubic-bezier(.4,0,.2,1)",pseudoElement:"::view-transition-new(root)"})});
