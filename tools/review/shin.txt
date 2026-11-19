@@ -1,2 +1,2 @@
-https://townnote.pages.dev/shin/odekake
-https://kansai.townnote.app/shin/odekake
+pd	https://townnote.pages.dev/shin/odekake
+kt	https://kansai.townnote.app/shin/odekake
