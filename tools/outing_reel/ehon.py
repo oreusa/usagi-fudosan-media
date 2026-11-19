@@ -93,62 +93,11 @@ VD = [dur(n) for n in range(N)]
 OPEN = 1.5          # 表紙が開ききる時刻（11/16 2.7→1.5：最初の2秒で景色が見えるように。リールは最初の1〜2秒で見るかが決まる）
 TURN = 0.95         # めくる長さ
 LEAD = 0.45         # ページが見えてから声まで
-# 11/19 大型アップグレード（UP）：owner「保存した道具を使いこなして絵本を大型アップグレード」「TikTok・YouTube にも出せる品質」
-#  ①声の1行目を表紙の上で始める（最初の1秒で何のニュースか分かる）②めくりを曲の拍に合わせる（librosa）③声に合わせた字幕 ④上にニュースの札
-#  ⑤めくる音・本を開く音（Kenney RPG Audio・CC0）⑥光のにじみ・色・周りを暗く・粒（映画の仕上げ）⑦音の大きさを -14 LUFS（TikTok・YouTube の基準）
-UP = bool(os.environ.get('EHON_UP') or T.get('up'))
-BEATS = []
-if UP:
-    try:
-        import librosa, numpy as _np
-        subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-ss', '0.2', '-i', f'{ROOT}/tools/brand/reel_bgm.m4a', '-t', '80', '-ac', '1', '-ar', '22050', f'{W}/bgm_mono.wav'], check=True)
-        _y, _sr = librosa.load(f'{W}/bgm_mono.wav', sr=22050)
-        _tempo, _bf = librosa.beat.beat_track(y=_y, sr=_sr)
-        BEATS = [float(x) for x in librosa.frames_to_time(_bf, sr=_sr)]
-        print('拍', round(float(_np.atleast_1d(_tempo)[0]), 1), 'BPM', len(BEATS), '拍')
-    except Exception as e: print('拍を取れない（拍なしで作る）', e)
-# 11/19 v2 owner「何が変わったの？？」→ 見た目を変える：⑧最初の2秒は夜のページを画面いっぱいに（伸びている旅の縦動画は「最初の2秒で一番の見せ場」）→紙をめくる音で表紙へ
-#  ⑨表紙が開いたら本を大きく（画面の幅いっぱい）。めくる間は大きさを変えない（11/15 owner「めくる時に画面が動くのは嫌」）
-COLD = 2.0 if UP else 0.0
-def snap(x):
-    c = [b - COLD for b in BEATS if x - 0.05 <= b - COLD <= x + 0.75]
-    return c[0] if c else x
-VDL = []
 ST = []; t = OPEN
 for n in range(N):
-    ST.append(t)
-    if UP and n == 0:
-        VDL.append(0.35); t = max(OPEN + 3.2, 0.35 + VD[0] + 1.1 - COLD)
-    else:
-        VDL.append(t + LEAD + COLD)
-        # 11/16 オーナー「伸ばそう」：1ページ+1秒（絵を見る時間）
-        t += max(4.3, LEAD + VD[n] + 1.5) + (0.6 if n == 2 else 0) + (0.8 if n == 5 else 0)  # 11/16 41.6秒→39秒前後に（ページの間を0.25秒・最後を0.8秒短く）
-    if UP and n < N - 1: t = snap(t)   # 次のページがめくれ終わる時を拍に
-BTOTAL = t + 0.6; TOTAL = BTOTAL + COLD   # BTOTAL＝本の中の時間、TOTAL＝動画の長さ（最初の COLD 秒を足す）
-# 字幕：声の行を「、」「。」で区切り、VOICEVOX の1音ずつの長さ（*.q.json）で出る時を決める
-CAP = []
-def _moras(n):
-    qp = f'{VDIR}/{SP}-{n:02d}.q.json'
-    if not (VDIR and os.path.exists(qp)): return None
-    q = json.load(open(qp)); tm = [q.get('prePhonemeLength', .05)]; sc = q.get('speedScale', 1.0) or 1.0
-    for ap in q['accent_phrases']:
-        for m in ap['moras']: tm.append(tm[-1] + ((m.get('consonant_length') or 0) + m['vowel_length']) / sc)
-        if ap.get('pause_mora'): tm[-1] += ap['pause_mora']['vowel_length'] * (q.get('pauseLengthScale', 1) or 1) / sc
-    return tm
-if UP:
-    _sp = lambda x: [c for c in re.split(r'(?<=[、。！？])', x) if c.strip()]
-    for n, (v, vy) in enumerate(zip(spec.get('voice') or [], spec.get('voice_yomi') or [])):
-        a, b = _sp(v), _sp(vy)
-        if len(a) != len(b): a, b = [v], [vy]
-        tm = _moras(n); tot = sum(len(re.sub('[、。！？ー]', '', x)) for x in b) or 1; acc = 0
-        for ca, cb in zip(a, b):
-            f0 = acc / tot; acc += len(re.sub('[、。！？ー]', '', cb)); f1 = acc / tot
-            if tm: i0, i1 = round(f0 * (len(tm) - 1)), round(f1 * (len(tm) - 1)); s0, s1 = tm[i0], tm[i1]
-            else: s0, s1 = f0 * VD[n], f1 * VD[n]
-            if n < 4: CAP.append(dict(t0=round(VDL[n] + s0, 3), t1=round(VDL[n] + s1, 3), x=ca.rstrip('、。')))   # 案内と最後のページは字がページにあるので字幕なし（重なる）
-    for i in range(len(CAP) - 1): CAP[i]['t1'] = min(CAP[i]['t1'] + .35, CAP[i + 1]['t0'] - .02)
-    if CAP: CAP[-1]['t1'] += .4
-
+    # 11/16 オーナー「伸ばそう」：1ページ+1秒（絵を見る時間）
+    ST.append(t); t += max(4.3, LEAD + VD[n] + 1.5) + (0.6 if n == 2 else 0) + (0.8 if n == 5 else 0)  # 11/16 41.6秒→39秒前後に（ページの間を0.25秒・最後を0.8秒短く）
+TOTAL = t + 0.6
 F = ROOT + '/tools/fonts'
 d = T['date']
 info = T.get('info', [])
@@ -208,15 +157,12 @@ await p.screenshot({path:process.argv[3],type:'jpeg',quality:92});await p.evalua
             BR['hp1'], BR['hp2'] = a, b; print('スマホの画面', u); return
     print('スマホの画面：撮れないので今までの絵')
 if not os.environ.get('EHON_NO_HP'): hp_shots()
-# 11/19 owner「絵だけ画像AIで描く」：EHON_ART に 昼・秋・夜 の絵（hiru/aki/yoru.jpg）があれば、ページの絵をそれにする。本・めくり・光・字・声は今まで通り
-_ART = os.environ.get('EHON_ART', '')
-PAGE['art'] = ['file://' + os.path.abspath(f'{_ART}/{n}.jpg') for n in ('hiru', 'aki', 'yoru')] if _ART else []
 PAGE['popup'] = bool(T.get('popup') or os.environ.get('EHON_POP'))   # 11/16 飛び出す絵本の版（紙の切り絵が立つ）
 PAGE['globe'] = T.get('globe', '')   # スノードームの台の文字（英字）
 PAGE['magic'] = bool(T.get('magic')) or BR['scene'] in ('xmas', 'momiji', 'hama')   # 11/15 魔法の絵本（光の粒・雪・そり・スノードーム）
 PAGE.update({k: BR[k] for k in ('top_en', 'top_jp', 'cover_sub', 'hp_en', 'hp_jp', 't5', 'seal', 'motif', 'peaks', 'scene')})
-# 11/19 owner「また使い回し？？」：関東 11/18 偕楽園と 11/19 小石川後楽園が同じ絵だった（紅葉の絵が1種類だけ）。
-#  日ごとに絵の並べ方を変える：mjv＝昼・秋・夜のページの 道／池 を毎日交互に（前の日とは3ページとも違う）、vseed＝木・雲・星の形（7日の中で同じにならない）。関東は関西と1つずらす
+# 11/19 owner「また使い回し？？」：関東 11/18 偕楽園と 11/19 小石川後楽園のページの絵が同じだった（紅葉の絵が1種類だけ）。
+#  日ごとに絵の並べ方を変える：mjv＝昼・秋・夜のページの 道／池 を毎日交互に（前の日とは3ページとも違う）、vseed＝木・雲・星・月の位置。関東は関西と1つずらす
 def _variant(d, kanto):
     o = d.toordinal() + (1 if kanto else 0)
     return {'mjv': o % 2, 'vseed': (o * 37) % 997 + 1}
@@ -275,17 +221,6 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 .num{font-family:J;font-weight:300;letter-spacing:.02em}
 .row{position:absolute;left:150px;right:120px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(110,80,60,.35);padding-bottom:16px;font:500 40px M;color:#4a3328;letter-spacing:.12em;opacity:0}
 .row b{font:500 46px M;letter-spacing:.06em}
-#chip{position:absolute;z-index:5;left:50%;top:104px;transform:translateX(-50%);display:none;align-items:center;gap:16px;height:60px;padding:0 30px 0 26px;border-radius:30px;background:rgba(20,12,8,.55);backdrop-filter:blur(10px);box-shadow:0 6px 24px rgba(0,0,0,.35),inset 0 0 0 1.5px rgba(255,236,200,.22);white-space:nowrap}
-#chip i{width:16px;height:16px;border-radius:50%;background:#e0392b;box-shadow:0 0 14px #ff5a40}
-#chip b{font:700 31px G;letter-spacing:.12em;color:#fff4e0}
-#chip span{font:500 30px G;letter-spacing:.06em;color:#f3d9a8;padding-left:18px;border-left:1.5px solid rgba(255,236,200,.35)}
-#head{position:absolute;z-index:6;left:0;right:0;top:300px;text-align:center;display:none;pointer-events:none}
-#head b{display:block;font:900 92px/1.25 G;letter-spacing:.04em;color:#fff;text-shadow:0 4px 30px rgba(0,0,0,.7),0 0 2px rgba(0,0,0,.6);opacity:0}
-#head b+b{font-size:104px;color:#ffd27a;margin-top:6px}
-#flash{position:absolute;inset:0;z-index:7;background:#fff6e6;opacity:0;pointer-events:none}
-#cap{position:absolute;z-index:6;left:70px;right:70px;top:1408px;display:none;justify-content:center}
-#capt{max-width:940px;padding:16px 30px 18px;border-radius:18px;background:linear-gradient(180deg,rgba(18,10,6,.62),rgba(18,10,6,.72));box-shadow:0 10px 30px rgba(0,0,0,.35);font:600 46px MB;line-height:1.35;letter-spacing:.06em;color:#fff;text-align:center;opacity:0}
-#capt em{font-style:normal;color:#ffd27a}
 </style>
 <div id="desk"></div><div id="tint"></div>
 <svg id="pat" viewBox="0 0 1080 1920"><defs><pattern id="sp" width="96" height="96" patternUnits="userSpaceOnUse"><g fill="none" stroke="#e3c88c" stroke-width="1.6"><circle cx="48" cy="48" r="48"/><circle cx="0" cy="0" r="48"/><circle cx="96" cy="0" r="48"/><circle cx="0" cy="96" r="48"/><circle cx="96" cy="96" r="48"/></g></pattern>
@@ -294,7 +229,6 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 <div id="top"></div>
 <div id="cam"><canvas id="dks" width="1080" height="1920" style="position:absolute;left:0;top:0"></canvas><canvas id="dkd" width="1080" height="1920" style="position:absolute;left:0;top:0"></canvas><div id="book"><div id="shadow"></div><div id="ribbon"></div><div id="block"></div><div id="pages"></div></div><canvas id="mg" width="1080" height="1920" style="position:absolute;left:0;top:0;pointer-events:none"></canvas></div>
 <svg id="deco" viewBox="0 0 1080 1920"></svg><div id="pg"></div><div id="lamp"></div>
-<div id="head"><b>%H1%</b><b>%H2%</b></div><div id="flash"></div><div id="chip"><i></i><b>%CHIP_A%</b><span>%CHIP_B%</span></div><div id="cap"><div id="capt"></div></div>
 <svg id="grain"><filter id="gn"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 .5  0 0 0 0 .5  0 0 0 0 .5  0 0 0 .55 0"/></filter><rect width="100%" height="100%" filter="url(#gn)"/></svg>
 <script>
 %XMAS%
@@ -373,7 +307,6 @@ const LP=(UMI||XM||P.scene=='hama')?'M0,-1Q.1,-.1 1,0Q.1,.1 0,1Q-.1,.1 -1,0Q-.1,
 function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>(l.match(/[0-9][0-9.,:]*[0-9]|./gu)||[]).map(c=>c.length==2?`<span class="tcy">${c}</span>`:c.length>2?[...c].map(d=>`<span class="ud">${d}</span>`).join(''):`<span>${/[!-~]/.test(c)?String.fromCharCode(c.charCodeAt(0)+65248):c}</span>`).join('')).join('<br>')+`</div>`}
 function scene(mode){ // 0 昼 1 秋 2 夜
   // 11/15 クリスマスの絵（tools/outing_reel/xmas.js）。電球は毎コマまたたく
-  if(P.art&&P.art.length)return `<svg viewBox="0 0 920 1380">${DEFS}<image class="aiart" data-m="${mode}" href="${P.art[mode]}" width="920" height="1380" preserveAspectRatio="xMidYMid slice"/>${PAPER}</svg>`;
   if(CVS)return `<svg viewBox="0 0 920 1380">${DEFS}<image class="xmi" data-m="${mode}" href="${xmPage(mode,0)}" width="920" height="1380"/><g class="lv"></g>${PAPER}</svg>`;
   const sky=[['#f7f0df','#f3e3bf'],['#fbeede','#f6cfa0'],['#10152f','#343a6c']][mode];
   const far=['#c3cfc0','#e0b08c','#1b2142'][mode],mid=['#9db794','#cf7f55','#171a36'][mode],near=['#7c9f6c','#b9513a','#11132a'][mode];
@@ -438,7 +371,6 @@ function coverArt(){
   return `<g transform="translate(300,1168) scale(.86)" fill="${G}">${motif(0,0,.5,false).replace(/fill="#[0-9a-f]{6}"/g,'fill="'+G+'"').replace(/stroke="#[0-9a-f]{3,6}"/g,'stroke="'+D+'"')}</g>
    <g transform="translate(236,960) scale(22) rotate(18)"><path d="${LP}" fill="${G}" opacity=".8"/></g>`}
 function build(){
-  if(P.art&&P.art.length){const st=document.createElement('style');st.textContent='#t0,#t1{text-shadow:0 0 6px #f6efdf,0 0 14px #f6efdf,0 0 26px rgba(246,239,223,.95),0 0 44px rgba(246,239,223,.8)}';document.head.appendChild(st)}   // 11/19 AIの絵の上でも字が読めるように（紙の色でふちどる）
   const pages=[];const HOLLY=MG&&XM?mgHolly():'';
   // 表紙
   pages.push(`<div class="face cover"><div class="spine"></div><div class="fr1"></div><div class="fr2"></div>
@@ -493,22 +425,6 @@ function build(){
 }
 function chars(id,t,t0,step=.07){const el=document.getElementById(id);if(!el)return;el.querySelectorAll('span').forEach((c,i)=>{const k=eo(sm(t,t0+i*step,t0+i*step+.45));c.style.opacity=k;c.style.transform=`translateY(${(1-k)*14}px)`})}
 function fade(id,t,t0,d=.6,dy=18){const el=document.getElementById(id);if(!el)return;const k=eo(sm(t,t0,t0+d));el.style.opacity=k;el.style.transform=`translateY(${(1-k)*dy}px)`}
-const UP=%UP%,CAP=%CAP%,COLD=%COLD%,HEAD=%HEAD%,ATOTAL=TOTAL+COLD;let _capi=-2;
-// 動画の時刻 T → 最初の COLD 秒は夜のページを大きく、あとは本の時間（T-COLD）で今までどおり
-function renderA(T){if(!UP){render(T);return}
-  const cold=T<COLD;['t3','n1'].forEach(id=>{const e=document.getElementById(id);if(e)e.style.visibility=cold?'hidden':''});   // 夜のページの字は見出しと重なるので最初の2秒は隠す
-  if(cold){render(ST[3]+1.6+T*.35);const z=1.42-.06*eio(sm(T,0,COLD));$('#cam').style.transform=`scale(${z}) translateY(40px)`;$('#pg').style.visibility='hidden'}
-  else{render(T-COLD);$('#pg').style.visibility=''}
-  upDraw(T);const h=$('#head');h.style.display=T<COLD+.3?'block':'none';
-  const k=eo(sm(T,-.2,.15));h.style.opacity=k*(1-sm(T,COLD-.25,COLD));h.querySelectorAll('b').forEach((b,i)=>{const q=eo(sm(T,-.1+i*.15,.25+i*.15));b.style.opacity=q;b.style.transform=`scale(${1.25-.25*q})`});
-  const f=$('#flash');f.style.opacity=(T>COLD-.12&&T<COLD+.35)?(1-sm(T,COLD,COLD+.35))*.85:0}
-function upDraw(t){if(!UP)return;const TOTAL=ATOTAL;const ch=$('#chip');ch.style.display='flex';$('#top').style.display='none';
-  const k=eo(sm(t,-.2,.2));ch.style.opacity=k;ch.style.transform=`translateX(-50%) translateY(${(1-k)*-16}px)`;ch.querySelector('i').style.opacity=.55+.45*Math.cos(t*4.2);
-  if(t>TOTAL-2.4)ch.style.opacity=k*(1-sm(t,TOTAL-2.4,TOTAL-1.8));
-  const c=$('#cap');c.style.display='flex';const el=$('#capt');let ci=-1;for(let i=0;i<CAP.length;i++)if(t>=CAP[i].t0-.06&&t<CAP[i].t1)ci=i;
-  let out=1;if(ci<0){for(let i=0;i<CAP.length;i++)if(CAP[i].t1<=t)ci=i;if(ci<0){el.style.opacity=0;return}out=1-sm(t,CAP[ci].t1,CAP[ci].t1+.22)}  // コマは時刻だけで決まる（何人かで分けて撮る）
-  const C=CAP[ci],q=cl((t-C.t0)/Math.max(.2,C.t1-C.t0-.25),0,1),n=Math.round(q*C.x.length);
-  el.innerHTML='<em>'+C.x.slice(0,n)+'</em>'+C.x.slice(n);const a=eo(sm(t,C.t0-.06,C.t0+.12))*out;el.style.opacity=a;el.style.transform=`translateY(${(1-a)*10}px) scale(${.97+.03*a})`}
 function render(t){
   if(MG)mgDraw(t);dkDraw(t);
   // めくる
@@ -530,11 +446,8 @@ function render(t){
       xe+=920/SN*Math.cos(r);st=st.children[2];k++}
     const cs=c.children[0];cs.style.left=Math.max(0,xe).toFixed(1)+'px';cs.style.opacity=(xe>0?Math.sin(Math.PI*q)*1.1:0).toFixed(3)}
   // カメラ
-  let z=t<OPEN?1.0+.05*eio(sm(t,0,OPEN)):1.05+.012*Math.sin(t*.5);
-  let ty=t<OPEN?(1-eio(sm(t,0,OPEN)))*10:0;
-  if(UP){const big=eio(sm(t,OPEN-.2,OPEN+.6));z=1.0+.05*eio(sm(t,0,OPEN))+.11*big;ty+=46*big;   // 本を画面の幅いっぱいに（開き終わってから。めくる間は変えない）
-    const a0=ST[3],a1=ST[4]-TURN;z+=.08*eio(sm(t,a0+.2,a1-1.0))*(1-eio(sm(t,a1-.9,a1-.05)))}  // 夜のページは読んでいる間だけ少しずつ寄る
-  $('#cam').style.transform=`scale(${z}) translateY(${ty}px)`;$('#foil').style.backgroundPosition=(120-170*sm(t,.3,1.7))+'% 0';$('#ribbon').style.transform=`rotate(${(2.2*Math.sin(t*1.3)).toFixed(2)}deg)`;
+  const z=t<OPEN?1.0+.05*eio(sm(t,0,OPEN)):1.05+.012*Math.sin(t*.5);
+  $('#cam').style.transform=`scale(${z}) translateY(${t<OPEN?(1-eio(sm(t,0,OPEN)))*10:0}px)`;$('#foil').style.backgroundPosition=(120-170*sm(t,.3,1.7))+'% 0';$('#ribbon').style.transform=`rotate(${(2.2*Math.sin(t*1.3)).toFixed(2)}deg)`;
   document.querySelectorAll('.dl').forEach(l=>{const d=l.dataset,i=+d.i,k=1;
     l.setAttribute('transform',`translate(${(+d.x+Math.sin(t*.6+i)*3).toFixed(1)},${(+d.y-(1-k)*120+Math.cos(t*.5+i*2)*2).toFixed(1)}) rotate(${(+d.r+(1-k)*90+Math.sin(t*.7+i)*3).toFixed(1)}) scale(${d.z})`);l.style.opacity=k});
   document.querySelectorAll('#bk circle').forEach(c=>{const d=c.dataset;c.setAttribute('cx',(+d.x+Math.sin(t*.25+ +d.p)*40).toFixed(1));c.setAttribute('cy',(((+d.y-t*14)%1920+1920)%1920).toFixed(1));c.style.opacity=(.07+.07*Math.sin(t*.8+d.p*3)).toFixed(3)});
@@ -567,22 +480,15 @@ function render(t){
 }
 $('#top').innerHTML=P.top_en+'<b>'+P.top_jp+'</b>';build();render(0);
 </script>"""
-HEAD = None
-_tt = T.get('title', ['', ''])
-H1, H2 = (T.get('cold') or [(T.get('ehon1') or [''])[0], re.sub('^おでかけニュース$', '', _tt[-1]) or _tt[0]])[:2]   # 最初の2秒の大きな見出し（書かなければ 1ページ目の1行目＋表紙の題）
-_wd = {'MON': '月', 'TUE': '火', 'WED': '水', 'THU': '木', 'FRI': '金', 'SAT': '土', 'SUN': '日'}
-_pl0 = re.sub(r'（.*?）', '', T.get('place', '').split('｜')[0])
-try: _m, _d = d[0].split('.'); CHIP_B = f"{spec.get('tab', '')}・{_pl0}　{int(_m)}/{int(_d)}({_wd.get(d[1], '')})から"
-except Exception: CHIP_B = f"{spec.get('tab', '')}・{_pl0}"
 html = (html.replace('%XMAS%', open(ROOT + '/tools/outing_reel/xmas.js').read() + '\n' + open(ROOT + '/tools/outing_reel/scenes.js').read()).replace('%MAGIC%', open(ROOT + '/tools/outing_reel/magic.js').read()).replace('%DESK%', open(ROOT + '/tools/outing_reel/desk.js').read()).replace('%F%', F).replace('%LOGO%', BR['logo']).replace('%HP1%', BR['hp1']).replace('%HP2%', BR['hp2']).replace('%PAGE%', json.dumps(PAGE, ensure_ascii=False)).replace('%ST%', json.dumps(ST))
-        .replace('%UP%', 'true' if UP else 'false').replace('%CAP%', json.dumps(CAP, ensure_ascii=False)).replace('%CHIP_A%', 'おでかけニュース').replace('%H1%', H1).replace('%H2%', H2).replace('%CHIP_B%', CHIP_B).replace('%OPEN%', str(OPEN)).replace('%TURN%', str(TURN)).replace('%TOTAL%', f'{BTOTAL:.3f}').replace('%COLD%', str(COLD)).replace('%HEAD%', json.dumps(HEAD, ensure_ascii=False)))
+        .replace('%OPEN%', str(OPEN)).replace('%TURN%', str(TURN)).replace('%TOTAL%', f'{TOTAL:.3f}'))
 open(f'{W}/ehon.html', 'w').write(html)
 open(f'{W}/rec.js', 'w').write(f"""const {{chromium}}=require('playwright');(async()=>{{const b=await chromium.launch();const p=await b.newPage({{viewport:{{width:1080,height:1920}}}});
 p.setDefaultTimeout(240000);p.on('pageerror',e=>console.log('ERR',e.message));await p.goto('file://{W}/ehon.html',{{timeout:240000}});await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(400);
 for(let i=1;i<6;i++){{const t=await p.evaluate(i=>ST[i]-TURN-0.001,i);await p.evaluate(t=>{{render(t);document.querySelectorAll('#deco,#lamp,#pg,#bk,#top,#mg').forEach(e=>e.style.visibility='hidden');document.getElementById('cam').style.transform='none'}},t);
  const buf=await p.locator('#p'+i).screenshot({{type:'jpeg',quality:94}});await p.evaluate(a=>{{(window.SNAP=window.SNAP||{{}})[a[0]]=a[1];document.querySelectorAll('#deco,#lamp,#pg,#bk,#top,#mg').forEach(e=>e.style.visibility='')}},[i,'data:image/jpeg;base64,'+buf.toString('base64')])}}
-const only=process.argv[2];if(only){{for(const t of only.split(',')){{await p.evaluate(t=>renderA(t),+t);await p.screenshot({{path:'{W}/c-'+t+'.jpg',type:'jpeg',quality:85}});}}await b.close();return}}
-const fs=require('fs');const A=+(process.env.FR0||0),B=+(process.env.FR1||1e9);for(let i=A;i<30*{TOTAL:.3f}&&i<B;i++){{if(fs.existsSync('{W}/fr/'+String(i).padStart(4,'0')+'.jpg'))continue;await p.evaluate(t=>renderA(t),i/30);await p.screenshot({{path:'{W}/fr/'+String(i).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}});}}await b.close()}})();""")
+const only=process.argv[2];if(only){{for(const t of only.split(',')){{await p.evaluate(t=>render(t),+t);await p.screenshot({{path:'{W}/c-'+t+'.jpg',type:'jpeg',quality:85}});}}await b.close();return}}
+const fs=require('fs');const A=+(process.env.FR0||0),B=+(process.env.FR1||1e9);for(let i=A;i<30*{TOTAL:.3f}&&i<B;i++){{if(fs.existsSync('{W}/fr/'+String(i).padStart(4,'0')+'.jpg'))continue;await p.evaluate(t=>render(t),i/30);await p.screenshot({{path:'{W}/fr/'+String(i).padStart(4,'0')+'.jpg',type:'jpeg',quality:92}});}}await b.close()}})();""")
 print('場面', [round(x, 2) for x in ST], '全体', round(TOTAL, 1), '声', [round(x, 2) for x in VD])
 if STILL:
     subprocess.run(['node', f'{W}/rec.js', STILL], check=True); sys.exit()
@@ -597,26 +503,11 @@ if not (VDIR and os.path.exists(f'{VDIR}/{SP}-00.wav')):
     print(OUT, '（声なし）'); sys.exit()
 ins = []; flt = []
 for n in range(N):
-    ins += ['-i', f'{VDIR}/{SP}-{n:02d}.wav']; flt.append(f'[{n+2}:a]aresample=48000,adelay={int(VDL[n]*1000)}:all=1[v{n}]')
+    ins += ['-i', f'{VDIR}/{SP}-{n:02d}.wav']; flt.append(f'[{n+2}:a]aresample=48000,adelay={int((ST[n]+LEAD)*1000)}:all=1[v{n}]')
 flt.append(''.join(f'[v{n}]' for n in range(N)) + f'amix=inputs={N}:normalize=0:duration=longest,volume={os.environ.get("VVOL", "1.7")},apad=whole_dur={TOTAL + 1:.2f},asplit=2[vo][sc]')  # 声が終わった後も曲を最後まで流す（声の長さで曲が切れていた）
 flt.append(f'[1:a]afade=t=in:d=0.4,afade=t=out:st={TOTAL-2.2}:d=2.2[bg0]')
 flt.append('[bg0][sc]sidechaincompress=threshold=0.02:ratio=5:attack=40:release=600:makeup=1[bg]')
-if not UP:
-    flt.append('[bg][vo]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.95[a]')
-    subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-framerate', '30', '-i', f'{W}/fr/%04d.jpg', '-i', f'{W}/bgm.wav'] + ins +
-                   ['-filter_complex', ';'.join(flt), '-map', '0:v', '-map', '[a]', '-t', f'{TOTAL:.2f}'] + enc, check=True)
-    print(OUT); sys.exit()
-# UP：めくる音・開く音（Kenney RPG Audio CC0 tools/outing_reel/sfx）を足し、映画の仕上げ（光のにじみ・色・周り暗く・粒）
-SFX = ROOT + '/tools/outing_reel/sfx'; k = N + 2; fx = []
-ev = [('bookFlip2', COLD - .18, .6), ('bookOpen', COLD + OPEN - 1.25, .55)] + [(f'bookFlip{(i % 3) + 1}', COLD + ST[i] - TURN + .05, .5) for i in range(1, N)] + [('bookPlace1', COLD + ST[N - 1] + 3.15, .35)]
-for nm, at, vol in ev:
-    ins += ['-i', f'{SFX}/{nm}.ogg']; flt.append(f'[{k}:a]aresample=48000,volume={vol},adelay={int(max(0, at) * 1000)}:all=1[s{k}]'); fx.append(f'[s{k}]'); k += 1
-flt.append(''.join(fx) + f'amix=inputs={len(fx)}:normalize=0,apad=whole_dur={TOTAL + 1:.2f}[fx]')
-flt.append('[bg][vo][fx]amix=inputs=3:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]')
-# 光のにじみは夜のページだけ（紙の白までにじんで白っぽくなるため）。色は RGB のまま混ぜる（yuv で混ぜると全体が桃色になった）
-flt.append(f"[0:v]format=gbrp,split[va][vb];[vb]curves=all='0/0 0.9/0 1/1',gblur=sigma=24[vg];[va][vg]blend=all_mode=screen:all_opacity=0.7:enable='between(t,0,{COLD:.2f})+between(t,{COLD + ST[3] - TURN:.2f},{COLD + ST[4]:.2f})',"
-           "eq=contrast=1.05:saturation=1.06,colorbalance=rs=-0.015:bs=0.025:rh=0.02:bh=-0.015,vignette=angle=PI/6,noise=alls=3:allf=t,format=yuv420p[vo2]")
-enc = ['-c:v', 'libx264', '-preset', 'slow', '-pix_fmt', 'yuv420p', '-crf', '17', '-c:a', 'aac', '-b:a', '256k', '-movflags', '+faststart', OUT]
+flt.append('[bg][vo]amix=inputs=2:normalize=0:duration=first,alimiter=limit=0.95[a]')
 subprocess.run(['ffmpeg', '-loglevel', 'error', '-y', '-framerate', '30', '-i', f'{W}/fr/%04d.jpg', '-i', f'{W}/bgm.wav'] + ins +
-               ['-filter_complex', ';'.join(flt), '-map', '[vo2]', '-map', '[a]', '-t', f'{TOTAL:.2f}'] + enc, check=True)
+               ['-filter_complex', ';'.join(flt), '-map', '0:v', '-map', '[a]', '-t', f'{TOTAL:.2f}'] + enc, check=True)
 print(OUT)
