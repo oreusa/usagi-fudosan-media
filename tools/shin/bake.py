@@ -20,7 +20,7 @@ PF = ["osaka", "kyoto", "hyogo", "nara", "shiga", "wakayama"]
 # 元の道 → 新しい土台のファイル（functions/_middleware.js の SHIN と functions/*.js と同じ）
 MAP = {"index": "cover", "odekake": "odekake", "fudosan-list": "ie", "okaimono": "kau",
        "illumination": "illumination", "illumination-muryo": "illumination-muryo",
-       "koyo": "koyo", "hatsumode": "hatsumode", "tomari": "tomari", "ima": "ima", "kaiten": "kaiten", "ranking": "ranking"}
+       "koyo": "koyo", "hatsumode": "hatsumode", "tomari": "tomari", "ima": "ima", "kaiten": "kaiten", "ranking": "ranking", "uru": "uru", "ikura": "ikura"}
 for x in PF:
     MAP["odekake-" + x] = "odekake-" + x
     MAP["illumination-" + x] = "illumination-" + x
