@@ -180,22 +180,38 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
         c['foot'] = 'おでかけの券・宿と、おかいものリストのリンクには広告（PR）があります。'
         c['desc'] = '関西の不動産屋が、街を調べて見つけたことをまとめています。開催中のおでかけ・イベント、205の街の家と土地の値段、日用品の値段くらべ、開店・閉店を、公式の発表と数字で。'
         URL['cover'] = '/'
-        write('cover', 'TOWN NOTE（タウンノート）｜関西のおでかけと、家と土地の値段', c,
+        write('cover1', 'TOWN NOTE（タウンノート）｜関西のおでかけと、家と土地の値段（前の表紙）', c,
               {'pc': pc, 'top': top, 'go': go, 'more': more, 'map': MAP,
-               'sns': [['インスタ', 'https://www.instagram.com/fudousan_ai_si/'], ['Threads', 'https://www.threads.com/@fudousan_ai_si'], ['X', 'https://x.com/fudosan_ai_si']]})
-        # 11/19 23時 owner「トップださ」「地図適当すぎ」→ 新しい表紙の見本 /shin/cover2（写真を大きく・本物の地図 MapLibre）。OK が出たら / と入れ替える
-        pins = []
-        for x in now:
-            if not x.get('xy'): continue
-            q = {k: x[k] for k in ('t', 'p', 'e', 'im', 'th', 'o', 'k') if k in x}
-            q['ll'] = [round(36 - x['xy'][1] / 100, 4), round(x['xy'][0] / 82.2 + 134, 4)]
-            pins.append(q)
-        c2 = copy.deepcopy(c); c2['menu']['items'][0] = ['トップ', '/', 1]
-        write('cover2', 'TOWN NOTE（タウンノート）｜関西のおでかけ・イベント（見本）', c2,
-              {'h1': '関西のおでかけ・イベント', 'sub': '大阪・京都・兵庫・奈良・滋賀・和歌山で、いま開催中のおでかけを毎日まとめています。',
-               'top': top, 'pins': pins, 'pc': pc, 'kc': {k: v[1] for k, v in cfg_kinds(items, None).items()}, 'bb': [[134.25, 33.45], [136.45, 35.75]],
-               'ie': {'n': len(ie['towns']), 's': f"{len(ie['towns'])}の街の、実際に売れた値段と地価の動き。"}, 'kau': {'n': len(kau['cats'])}, 'kai': {'n': cn['soon']},
-               'more': more, 'sns': [['インスタ', 'https://www.instagram.com/fudousan_ai_si/'], ['Threads', 'https://www.threads.com/@fudousan_ai_si'], ['X', 'https://x.com/fudosan_ai_si']]}, js='cover2')
+               'sns': [['インスタ', 'https://www.instagram.com/fudousan_ai_si/'], ['Threads', 'https://www.threads.com/@fudousan_ai_si'], ['X', 'https://x.com/fudosan_ai_si']]}, js='cover')
+        # 11/19 23:16 owner「表紙ほぼおでかけじゃん」「地図も変」「全然お洒落でもAppleっぽくもない」→ apple.com の表紙の形：
+        # 分野ごとに同じ大きさの面（見出し・1行・ボタン2つ・大きい絵）を縦に並べる。地図は表紙に置かない（おでかけのページにある）。
+        def pick_ph(f, n):
+            r, u = [], set()
+            RK = {'koyo': 0, 'flower': 1, 'spot': 2, 'animal': 3, 'play': 4}
+            for x in sorted(now, key=lambda x: (RK.get(x.get('k'), 9), x['e'])):
+                if x.get('im') and f(x) and x['im'] not in u: r.append({k: x[k] for k in ('t', 'p', 'e', 'im', 'th', 'o') if k in x}); u.add(x['im'])
+                if len(r) >= n: break
+            return r
+        tw = sorted([t_ for t_ in ie['towns'] if t_.get('r8') is not None], key=lambda t_: -t_['r8'])[:3]
+        KS = {c_['k']: c_ for c_ in kau['cats']}
+        ks = [{'k': k, 'nm': KS[k]['nm'], 'unit': KS[k]['unit'], 'u': KS[k]['o'][0]['u'], 'ic': kau['ic'].get(k, '')} for k in ('rice', 'water', 'tissue') if k in KS and KS[k].get('o')]
+        if len(ks) < 3: ks = [{'k': c_['k'], 'nm': c_['nm'], 'unit': c_['unit'], 'u': c_['o'][0]['u'], 'ic': kau['ic'].get(c_['k'], '')} for c_ in kau['cats'][:3] if c_.get('o')]
+        ka = next(({k: x[k] for k in ('t', 'a', 'd', 'im', 'big', 'sp', 'p') if k in x} for x in reversed(kt) if x['w'] == 'soon' and x.get('im')), None)
+        c2 = copy.deepcopy(c)
+        c2['nav'] = [{'t': 'おでかけ', 'ic': 'now', 'href': '/odekake'}, {'t': '家と土地', 'ic': 'find', 'href': '/fudosan-list'}, {'t': 'おかいもの', 'ic': 'yen', 'href': '/okaimono'}, {'t': '開店閉店', 'ic': 'buy', 'href': '/kaiten'}]
+        c2['menu'] = {'k': 'Town Note', 'items': [['トップ', '/', 1], ['関西のおでかけ', '/odekake'], ['家と土地の相場', '/fudosan-list'], ['日用品の値段くらべ', '/okaimono'], ['開店・閉店', '/kaiten'], ['まちランキング', '/ranking'], ['実家・空き家', '/jikka/'], ['ふるさと納税', '/furusato']]}
+        D2 = {'od': {'n': len(now), 'ph': pick_ph(lambda x: True, 5)},
+               'ie': {'n': len(ie['towns']), 'tw': [{'n': t_['n'], 'r': t_['r8'], 'id': t_['id']} for t_ in tw]},
+               'kau': {'n': len(kau['cats']), 'ks': ks},
+               'kai': {'n': cn['soon'], 'x': ka},
+               'ko': (pick_ph(lambda x: x.get('k') == 'koyo' and x.get('im') not in {q['im'] for q in pick_ph(lambda x: True, 5)}, 1) or pick_ph(lambda x: x.get('k') == 'koyo', 1) or [None])[0],
+               'ft': [['おでかけ', [['関西のおでかけ', '/odekake'], ['イルミネーション', '/illumination'], ['紅葉', '/koyo'], ['いまから行ける', '/ima'], ['泊まりで行く', '/tomari'], ['初詣', '/hatsumode']]],
+                      ['家と土地', [['家と土地の相場', '/fudosan-list'], ['まちランキング', '/ranking'], ['いくらで売れる？', '/ikura'], ['家を売る前に', '/uru'], ['実家・空き家', '/jikka/']]],
+                      ['おかいもの', [['日用品の値段くらべ', '/okaimono'], ['開店・閉店ニュース', '/kaiten'], ['ふるさと納税', '/furusato']]]],
+               'sns': [['インスタ', 'https://www.instagram.com/fudousan_ai_si/'], ['Threads', 'https://www.threads.com/@fudousan_ai_si'], ['X', 'https://x.com/fudosan_ai_si']]}
+        # 11/19 23:15 owner「朝9時には反映」→ この形を表紙（/）に。前の表紙は /shin/cover1 に残す
+        write('cover', 'TOWN NOTE（タウンノート）｜関西のおでかけと、家と土地の値段', c2, D2, js='cover2')
+        write('cover2', 'TOWN NOTE（タウンノート）｜関西のおでかけと、家と土地の値段', c2, D2, js='cover2')
 
 
 def cfg_kinds(items, icons):
