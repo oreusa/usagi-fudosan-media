@@ -24,11 +24,14 @@ var IC={sun:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M1
  rank:'<svg viewBox="0 0 24 24"><path d="M5 20V11M12 20V5M19 20v-6"/></svg>',
  sell:'<svg viewBox="0 0 24 24"><path d="M3 12l9-8 9 8"/><path d="M6 10v10h12V10"/><path d="M10 15h4"/></svg>',
  buy:'<svg viewBox="0 0 24 24"><path d="M4 7h16l-1.5 11.5a2 2 0 0 1-2 1.5H7.5a2 2 0 0 1-2-1.5z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>',
- yen:'<svg viewBox="0 0 24 24"><path d="M6 4l6 8 6-8M12 12v8M8 13h8M8 16.5h8"/></svg>'};
+ yen:'<svg viewBox="0 0 24 24"><path d="M6 4l6 8 6-8M12 12v8M8 13h8M8 16.5h8"/></svg>',
+ down:'<svg viewBox="0 0 24 24"><path d="M4 6l6 6 4-4 6 7"/><path d="M15 15h5v-5"/></svg>',
+ star:'<svg viewBox="0 0 24 24"><path d="M12 4l2.4 5 5.4.6-4 3.7 1.1 5.3L12 16l-4.9 2.6 1.1-5.3-4-3.7 5.4-.6z"/></svg>',
+ gift:'<svg viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3 9h18M12 9v11M12 9c-1.5-3-5-4-5-1.5S10 9 12 9zm0 0c1.5-3 5-4 5-1.5S14 9 12 9z"/></svg>'};
 
 /* ---- 骨組み ---- */
 app.innerHTML='<div class="wrap"><header class="top"><a class="brand" href="/" aria-label="トップへ"><img id="logo" src="/assets/logo-s.png?v=2" alt="TOWN NOTE"><b>TOWN NOTE</b></a>'+
- '<button class="tg" id="tg" role="switch" aria-checked="false" aria-label="夜の画面にする"><i class="cl"></i><i class="kn"></i><i class="sr"></i><i class="sr"></i><i class="sr"></i><i class="sr"></i></button></header></div>'+
+ '<button class="tg" id="tg" role="switch" aria-checked="false" aria-label="夜の画面にする"><i class="kn"></i><span class="su"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path class="sp" d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg></span><span class="mo"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span></button></header></div>'+
  '<main id="main"></main>'+
  '<div class="wrap"><footer class="ft">'+(CFG.foot||"")+'<br><a href="/">TOWN NOTE トップ</a>　<a href="/privacy">プライバシー</a></footer></div>'+
  '<nav class="nav" id="nav" aria-label="すぐ移動">'+CFG.nav.map(function(n,i){return n.href?'<a href="'+n.href+'"'+(n.cur?' class="cur"':'')+'>'+IC[n.ic]+'<span>'+n.t+'</span></a>':'<button data-a="'+n.a+'"'+(i===0?' class="cur"':'')+'>'+IC[n.ic]+'<span>'+n.t+'</span></button>'}).join("")+'<button class="mn" id="mnb" aria-label="メニュー"><em></em><span>MENU</span></button></nav>'+
@@ -94,7 +97,7 @@ function apply(n){H.classList.toggle("nt",n);try{localStorage.setItem("usagi_the
   if(n){stars();shoot()}}
 $("#tg").addEventListener("click",function(e){var n=!H.classList.contains("nt");
   if(!document.startViewTransition||RM){apply(n);return}
-  var kr=$("#tg .kn").getBoundingClientRect(),x=kr.left+kr.width/2+(n?38:-38),y=kr.top+kr.height/2,r=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));H.classList.add("vtt");
+  var kr=$("#tg .kn").getBoundingClientRect(),x=kr.left+kr.width/2+(n?34:-34),y=kr.top+kr.height/2,r=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));H.classList.add("vtt");
   var t=document.startViewTransition(function(){apply(n)});
   t.ready.then(function(){H.animate({clipPath:["circle(0px at "+x+"px "+y+"px)","circle("+r+"px at "+x+"px "+y+"px)"]},{duration:760,easing:"cubic-bezier(.4,0,.2,1)",pseudoElement:"::view-transition-new(root)"})});
   t.finished.then(function(){H.classList.remove("vtt")})});

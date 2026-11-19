@@ -51,20 +51,16 @@ html.nt #sky .au,html.nt #sky .gr,html.nt #sky .fade,html.nt #sky .fade2{opacity
 .brand img{width:40px;height:40px}
 .brand b{font:600 11px/1 var(--lat);letter-spacing:.28em;color:var(--ink)}
 /* 昼夜のスイッチ（前の形を進化：中が小さな空。昼は光、夜は星がまたたいて玉が月になる） */
-.tg{position:relative;width:78px;height:40px;border-radius:999px;overflow:hidden;background:linear-gradient(135deg,#BFE0FF,#FFE3CC);box-shadow:inset 0 0 0 1px rgba(0,0,0,.06),0 6px 16px -10px rgba(40,60,120,.5);transition:background .6s}
-.tg::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#0D1B3D,#2B2F6B);opacity:0;transition:opacity .6s}
-html.nt .tg::before{opacity:1}
-.tg .cl{position:absolute;right:9px;top:13px;width:22px;height:9px;border-radius:9px;background:#fff;opacity:.9;box-shadow:-7px 3px 0 -1px #fff;transition:transform .6s,opacity .4s}
-html.nt .tg .cl{opacity:0;transform:translateX(20px)}
-.tg .sr{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:0;transform:scale(0);transition:opacity .4s,transform .4s}
-html.nt .tg .sr{opacity:1;transform:scale(1);animation:tw 2.4s ease-in-out infinite}
-.tg .sr:nth-child(3){left:12px;top:10px;transition-delay:.15s}.tg .sr:nth-child(4){left:22px;top:24px;transition-delay:.25s;animation-delay:-.8s}.tg .sr:nth-child(5){left:34px;top:9px;width:1.5px;height:1.5px;transition-delay:.35s;animation-delay:-1.6s}.tg .sr:nth-child(6){left:16px;top:30px;width:1.5px;height:1.5px;transition-delay:.3s;animation-delay:-.4s}
-@keyframes tw{50%{opacity:.3}}
-.tg .kn{position:absolute;left:4px;top:4px;width:32px;height:32px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFF6C8,#FFC845 60%,#FFA62B);box-shadow:0 0 0 4px rgba(255,214,102,.25),0 0 18px rgba(255,190,70,.8);transition:transform .55s cubic-bezier(.3,1.4,.5,1),background .5s,box-shadow .5s}
-html.nt .tg .kn{transform:translateX(38px) rotate(-30deg);background:radial-gradient(circle at 40% 35%,#FFFFFF,#E4E9F5 70%);box-shadow:inset -7px -2px 0 0 #C9D2E6,0 0 14px rgba(200,215,255,.6)}
-.tg .kn::after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;left:9px;top:16px;background:#C9D2E6;opacity:0;transition:opacity .4s;box-shadow:8px -7px 0 -1px #C9D2E6}
-html.nt .tg .kn::after{opacity:.8}
-.tg:active .kn{width:36px}
+/* 昼夜スイッチ：11/19 owner「前のがオシャレ」→ 前の形（白い枠に黒い玉が滑る・太陽と月の線）に戻す */
+.tg{position:relative;width:76px;height:42px;border-radius:999px;border:1px solid #DADADA;background:rgba(255,255,255,.94);box-shadow:0 2px 10px rgba(0,0,0,.07);transition:background-color .4s,border-color .4s}
+.tg .kn{position:absolute;top:4px;left:4px;width:32px;height:32px;border-radius:50%;background:#2B2622;transition:transform .35s cubic-bezier(.3,.7,.2,1),background-color .4s}
+html.nt .tg{background:#121826;border-color:#2A3346;box-shadow:none}
+html.nt .tg .kn{transform:translateX(34px);background:#ECE8E1}
+.tg svg{position:absolute;top:11px;width:18px;height:18px;fill:none;stroke:#8C7B6E;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s,transform .5s}
+.tg .su svg{left:11px}.tg .mo svg{right:11px}.tg .sp{stroke-width:1.2}
+html:not(.nt) .tg .su svg{stroke:#fff;transform:rotate(90deg)}
+html.nt .tg .mo svg{stroke:#0A0E18;transform:rotate(-15deg)}
+html.nt .tg .su svg{stroke:#7D8697}
 .hero{padding:22px 0 8px}
 .kick{font:500 11px/1 var(--lat);letter-spacing:.32em;color:var(--mut);text-transform:uppercase}
 .h1{margin:12px 0 0;font:600 34px/1.22 var(--serif);letter-spacing:.02em}
@@ -298,3 +294,189 @@ html.nt #mps .pl{fill:#D9DDE6!important}
 .mtx{min-width:0;display:flex;flex-direction:column}
 .mtx b{margin-top:4px;font-size:14.5px;line-height:1.4;font-weight:800;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .mtx small{margin-top:auto;font-size:11.5px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ===== 家と土地 ===== */
+.fnd{position:relative;margin-top:18px}
+.fin{display:flex;align-items:center;gap:10px;height:54px;padding:0 16px;border-radius:16px;background:var(--card);border:1.5px solid var(--ink);box-shadow:0 10px 26px -18px rgba(20,20,60,.6)}
+.fin svg{width:20px;height:20px;flex:none;fill:none;stroke:var(--ink);stroke-width:1.8;stroke-linecap:round}
+.fin input{flex:1;min-width:0;border:0;background:none;outline:none;font:600 16px var(--sans);color:var(--ink)}
+.fin input::placeholder{color:var(--mut);font-weight:500;font-size:14.5px}
+.sug{position:absolute;left:0;right:0;top:60px;z-index:30;border-radius:16px;background:var(--card);border:1px solid var(--line);box-shadow:0 20px 40px -20px rgba(0,0,0,.4);overflow:hidden;display:none}
+.sug.op{display:block}
+.sug button{display:flex;align-items:center;gap:8px;width:100%;padding:13px 16px;border-bottom:1px solid var(--line);text-align:left}
+.sug button b{font-size:15px}.sug button small{font-size:11.5px;color:var(--mut)}.sug button span{margin-left:auto;font-weight:800;color:#137A4B;font-variant-numeric:tabular-nums}
+.sug p{margin:0;padding:14px 16px;font-size:13px;color:var(--mut)}
+.geo{display:flex;align-items:center;gap:6px;margin-top:10px;font-size:13px;font-weight:700;color:var(--sub)}
+.geo svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8}
+.geo.ld svg{animation:pulse 1.2s infinite}
+.tiles b u{text-decoration:none;font-size:11px;font-weight:700;color:var(--sub);margin-left:2px}
+.tiles button[data-o] b{font-size:22px}
+.rk{list-style:none;margin:0;padding:0}
+.rk li button{display:flex;align-items:center;gap:12px;width:100%;padding:13px 2px;border-bottom:1px solid var(--line);text-align:left}
+.rk em{flex:none;width:26px;font:italic 400 18px/1 var(--lat);color:var(--mut);text-align:center}
+.rk li:nth-child(-n+3) em{color:var(--pc);font-weight:600}
+.rk .tn{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.rk .tn b{font-size:15px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rk .tn small{font-size:11.5px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rk .br{display:block;height:4px;border-radius:4px;background:var(--line);overflow:hidden;margin-top:3px}
+.rk .br i{display:block;height:100%;border-radius:4px;background:var(--pc);transform-origin:0 50%;transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.9,.25,1)}
+.rk .br.neg i{background:#9AA3B5}
+.rk strong{flex:none;font-size:16px;font-weight:800;font-variant-numeric:tabular-nums}
+.up{color:#137A4B}.dn{color:#B23A2E}
+html.nt .up{color:#8FE0B5}html.nt .dn{color:#FF9C8C}
+.tw h2{margin-top:6px}
+.hero2{display:flex;align-items:flex-end;gap:14px;margin:16px 0 0;padding:16px;border-radius:18px;background:var(--chip)}
+.hero2 small{display:block;font-size:11.5px;font-weight:700;color:var(--sub)}
+.hero2 b{display:block;margin-top:6px;font:800 40px/1 var(--sans);font-variant-numeric:tabular-nums}
+.hero2 p{margin:0;font-size:12.5px;line-height:1.6;color:var(--sub)}
+.pc{margin:22px 0 0}
+.pc h3{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin:0;font-size:15px;font-weight:800}
+.pc h3 small{font-size:11px;font-weight:600;color:var(--mut)}
+.pc .big{margin-top:8px;font:800 34px/1 var(--sans);font-variant-numeric:tabular-nums}
+.pc .big u{text-decoration:none;font-size:14px;margin-left:3px;color:var(--sub)}
+.four,.three{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.four li,.three li{padding:9px 8px;border-radius:12px;background:var(--chip);font-size:13px;font-weight:800;line-height:1.3}
+.four small,.three small{display:block;font-size:10px;font-weight:700;color:var(--mut);margin-bottom:3px}
+.three b{display:block;font-size:15px}.three span{display:block;font-size:10.5px;margin-top:3px;color:var(--mut)}
+.cmp{margin-top:12px}
+.cmp>div{display:grid;grid-template-columns:76px 1fr 82px;align-items:center;gap:8px;margin-top:6px;font-size:11.5px;color:var(--sub);font-weight:700}
+.cmp>div>i{display:block;height:10px;border-radius:6px;background:var(--line);overflow:hidden}
+.cmp>div>i>i{display:block;height:100%;border-radius:6px;background:#B9B3AC;transform-origin:0 50%;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.9,.25,1) .2s}
+.cmp>div b{text-align:right;color:var(--ink);font-variant-numeric:tabular-nums}
+.cmp p{margin:8px 0 0;font-size:12.5px;font-weight:700}
+.tw .acts{grid-template-columns:1fr 1fr}
+.buy{grid-column:1/-1;padding:12px;border-radius:14px;border:1px solid var(--line)}
+.buy small{display:block;font-size:11.5px;color:var(--mut);font-weight:700}
+.buy div{display:flex;gap:6px;margin-top:8px}
+.buy a{flex:1;height:40px;font-size:13px}
+
+/* ===== おかいもの：いちばん安いお店が光る ===== */
+.kg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.kc{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px 12px 12px;border-radius:18px;border:1px solid var(--line);background:var(--card);text-align:left;min-width:0;transition:transform .2s}
+.kc:active{transform:scale(.98)}
+.ki{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;background:var(--chip)}
+.ki svg{width:24px;height:24px;fill:none;stroke:var(--ink);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.kc .dr{position:absolute;top:12px;right:10px}
+.dr{display:inline-block;padding:2px 8px;border-radius:99px;background:#E6F3EC;color:#137A4B;font-size:10.5px;font-weight:800;font-style:normal}
+html.nt .dr{background:#12301F;color:#8FE0B5}
+.knm{font-size:15px;font-weight:800}
+.kp{display:flex;flex-direction:column}.kp small{font-size:10.5px;color:var(--mut);font-weight:700}
+.kp strong{font:800 24px/1.1 var(--sans);font-variant-numeric:tabular-nums}
+.ks{display:flex;flex-direction:column;gap:4px;width:100%;margin-top:2px}
+.ks>span{display:grid;grid-template-columns:42px 1fr;align-items:center;gap:6px;font-size:10px;font-weight:700;color:var(--mut)}
+.ks em{font-style:normal}
+.ks i{display:block;height:5px;border-radius:5px;background:var(--line);overflow:hidden}
+.ks i i{height:100%;background:#BDB7B0;transform-origin:0 50%;transform:scaleX(0);transition:transform .9s cubic-bezier(.2,.9,.25,1)}
+.ks .win{color:var(--ink)}
+.ks .win i i{background:linear-gradient(90deg,#E9B949,#F6DC8A,#E9B949);background-size:200% 100%;animation:shine 2.6s linear infinite}
+@keyframes shine{to{background-position:-200% 0}}
+.kcr{margin-top:14px}
+.bfx,.myx{margin-bottom:8px}
+.bfs{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:4px}
+.bfs::-webkit-scrollbar{display:none}
+.bfs a{flex:0 0 70%;max-width:280px;scroll-snap-align:start;display:flex;flex-direction:column;gap:4px;padding:12px;border-radius:16px;background:#111;color:#F4F1EA}
+.bfs b{font-size:13.5px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bfs small{font-size:11px;opacity:.75}.bfs strong{font-size:20px;font-weight:800;color:#F6DC8A}
+.bfs em{font-style:normal;font-size:11.5px;font-weight:700;color:#FFB4A8}.bfs i{font-style:normal;font-size:10.5px;opacity:.6}
+.sp{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:800;color:var(--sub)}
+.sp:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sc)}
+.kw h2{display:flex;align-items:center;gap:10px}
+.cmpS{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.srow{position:relative;display:grid;grid-template-columns:62px 1fr auto;align-items:center;gap:10px;padding:12px;border-radius:14px;background:var(--chip);isolation:isolate}
+.srow .sn{font-size:13px;font-weight:800;display:flex;align-items:center;gap:6px}
+.srow .sn:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sc,#999)}
+.sb{display:block;height:8px;border-radius:6px;background:var(--line);overflow:hidden}
+.sb i{display:block;height:100%;border-radius:6px;background:#BDB7B0;transform-origin:0 50%;transform:scaleX(0);transition:transform 1s cubic-bezier(.2,.9,.25,1) .15s}
+.srow .ssv{display:flex;flex-direction:column;align-items:flex-end;text-align:right}
+.srow .ssv b{font-size:16px;font-weight:800;font-variant-numeric:tabular-nums}
+.srow .ssv em{font-style:normal;font-size:10.5px;font-weight:700;color:var(--mut)}
+.srow.amz{grid-template-columns:62px 1fr}.srow.amz .ssv{align-items:flex-start;text-align:left}
+.srow.amz .lk{font-size:14px;color:#B36A00}html.nt .srow.amz .lk{color:#FFC266}
+.srow.no .ssv{grid-column:2/-1;align-items:flex-start;font-size:12px;color:var(--mut)}
+/* いちばん安いお店：金の光がまわる */
+.srow.win{background:var(--card)}
+.srow.win{overflow:hidden}
+.srow.win:before{content:"";position:absolute;left:50%;top:50%;width:200%;aspect-ratio:1;z-index:-2;margin:-50% 0 0 -50%;transform-origin:50% 50%;background:conic-gradient(#E9B949,#FFF1C2,#E9B949 25%,rgba(233,185,73,.15) 50%,#E9B949 75%,#FFF1C2,#E9B949);animation:srspin 4.5s linear infinite}
+.srow.win:after{content:"";position:absolute;inset:1.5px;z-index:-1;border-radius:12.5px;background:var(--card)}
+.srow.win .sb i{background:linear-gradient(90deg,#E9B949,#F6DC8A,#E9B949);background-size:200% 100%;animation:shine 2.6s linear infinite}
+.srow.win .ssv em{color:#9A6B00}html.nt .srow.win .ssv em{color:#F6DC8A}
+.best{margin:22px 0 0;padding:16px;border-radius:20px;border:1px solid var(--line);background:var(--card)}
+.bt{display:flex;align-items:center;justify-content:space-between}
+.cr2{padding:3px 10px;border-radius:99px;background:linear-gradient(90deg,#E9B949,#F6DC8A);color:#3A2A00;font-size:11px;font-weight:800}
+.bb{display:flex;gap:12px;margin-top:12px}
+.bb img{flex:none;width:88px;height:88px;object-fit:contain;border-radius:12px;background:#fff;border:1px solid var(--line)}
+.bb div{min-width:0;display:flex;flex-direction:column;gap:3px}.bb b{font-size:14px;line-height:1.45}.bb small{font-size:11.5px;color:var(--mut)}
+.bp{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.bp>div{padding:10px;border-radius:12px;background:var(--chip)}.bp small{display:block;font-size:10.5px;font-weight:700;color:var(--mut)}
+.bp strong{font:800 22px/1.2 var(--sans);font-variant-numeric:tabular-nums}
+.hs{margin-top:12px}.hs small{font-size:11px;color:var(--mut);font-weight:700}
+.spk{display:block;width:100%;height:36px;margin-top:4px}.spk polyline{fill:none;stroke:var(--ink);stroke-width:1.6;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.go{display:flex;align-items:center;justify-content:center;height:50px;margin-top:14px;border-radius:14px;background:var(--on);color:var(--ont);font-size:15px;font-weight:800}
+.ofs{display:flex;flex-direction:column;margin-top:8px}
+.of{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}
+.oi{flex:none;display:grid;place-items:center;width:56px;height:56px;border-radius:10px;background:#fff;border:1px solid var(--line);overflow:hidden}
+.oi img{width:100%;height:100%;object-fit:contain}.oi svg{width:24px;height:24px;fill:none;stroke:#111;stroke-width:1.3}
+.ot{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.ot b{font-size:13px;line-height:1.4;font-weight:700;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.ot small{font-size:11px;color:var(--mut)}.ot .dr{align-self:flex-start;margin-top:2px}
+.oprc{flex:none;display:flex;flex-direction:column;align-items:flex-end}
+.oprc strong{font-size:15px;font-weight:800;font-variant-numeric:tabular-nums}.oprc small{font-size:10.5px;color:var(--mut);white-space:nowrap}
+.lead2{margin:8px 0 0;font-size:13px;line-height:1.7;color:var(--sub)}
+.tiles button[data-a] b{font-size:22px}
+@keyframes srspin{to{transform:rotate(360deg)}}
+.srow{grid-template-columns:74px 1fr auto}.srow.amz{grid-template-columns:74px minmax(0,1fr)}
+.srow .sn:before{flex:none}
+.srow.amz .ssv em{display:block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ===== 11/19 19:30 オーナー「シンプルだけどお洒落」「なんか古い」→ 字はゴシック1つ・色は白と黒（色は写真に任せる）・影と箱をやめて細い線と余白 ===== */
+:root{--serif:var(--sans);--lat:var(--sans);--line:#EBEBEB;--chip:#F5F5F5;--sub:#5E5E5E;--mut:#767676}
+html.nt{--line:#222A3A}
+#sky .au,#sky .gr,#sky .fade,#sky .fade2{display:none}
+.hero{padding:28px 0 4px}
+.h1t{font:800 30px/1.25 var(--sans);letter-spacing:-.02em;text-wrap:balance}
+.h1p{font-weight:600;letter-spacing:0;font-size:12.5px}
+.dl{display:flex;align-items:baseline;gap:12px;margin:14px 0 0;font-size:13px;font-weight:700;color:var(--ink)}
+.dl span{color:var(--sub);font-weight:600}.dl b{color:var(--ink);font-size:15px;font-variant-numeric:tabular-nums}
+/* 数の並び：箱ではなく細い線で区切る */
+.tiles{gap:0;margin-top:20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tiles button,html.nt .tiles button{padding:14px 12px 13px;border-radius:0;background:none;border:0;box-shadow:none;gap:4px}
+.tiles button+button{border-left:1px solid var(--line)}
+.tiles button:first-child{padding-left:0}
+.tiles small{font-size:11px;color:var(--sub)}
+.tiles b,.tiles button[data-o] b,.tiles button[data-a] b{font:800 24px/1 var(--sans);letter-spacing:-.02em}
+.tiles button[data-w=td] b,.tiles button[data-w=new] b,html.nt .tiles button[data-w=td] b,html.nt .tiles button[data-w=new] b{color:var(--ink)}
+.tiles i{right:10px;top:14px;bottom:auto}
+.upd{display:none}
+.sec{margin:34px 0 12px}
+.sec h2{font:800 19px/1.3 var(--sans);letter-spacing:-.01em}
+.sec small{font-variant-numeric:tabular-nums}
+.cnt h3{font-weight:800}
+/* 今週末のおすすめ：大きな写真を横にめくる（立体はやめる） */
+.fan{gap:12px;padding:0 16px 6px;perspective:none;scroll-padding:0 16px}
+.fan .pad{display:none}
+.fc{flex:0 0 84%;max-width:420px;scroll-snap-align:start;transform:none!important;opacity:1!important}
+.fc .in{border-radius:18px;box-shadow:none;aspect-ratio:4/5}
+.fc .cap{padding:60px 16px 16px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.62))}
+.fc .cap small{display:block;font-size:11.5px;font-weight:700;opacity:.9}
+.fc .cap b{font:800 21px/1.35 var(--sans);margin-top:4px;letter-spacing:-.01em}
+/* 絞り込み：色の点をやめる */
+.chip i{display:none}
+.chip{border-color:var(--line);font-weight:700}
+/* カード：色は写真だけ。字は黒と灰色 */
+.cd .im{border-radius:12px}
+.cd .im::after{display:none}
+.lb .g{color:var(--sub);letter-spacing:0}.lb .g::before{display:none}
+.lb span+span:not(.lt)::before{content:"・";margin-right:2px}
+.lb .lt,.lb .lt.now,html.nt .lb .lt,html.nt .lb .lt.now{background:none;padding:0;color:var(--ink);font-weight:800}
+.lb .lt.now{display:none}
+.cd h4{font-size:15px;letter-spacing:-.005em}
+.cd .dt,html.nt .cd .dt{color:var(--ink);font-weight:700}
+.bar.stuck{box-shadow:none;border-bottom:1px solid var(--line)}
+.tag{background:rgba(255,255,255,.95);color:#111;font:700 11px/1 var(--sans);letter-spacing:0}
+.tile{background:var(--chip)!important;color:var(--sub)!important}
+.tile svg{stroke:var(--sub)!important}
+.qk{margin-top:26px}
+.h1t{font-size:28px;text-wrap:wrap;word-break:keep-all}
+.tiles i{display:none}
+.lb span+span:not(.lt)::before{content:none}

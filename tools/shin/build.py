@@ -8,7 +8,7 @@ L = os.path.join(R, 'links')
 TPL = open(os.path.join(R, 'tools/shin/page.tpl.html'), encoding='utf-8').read()
 ver = lambda f: hashlib.sha1(open(os.path.join(L, 'shin', f), 'rb').read()).hexdigest()[:8]
 J = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
-REL = [['おでかけ', '/shin/odekake'], ['家と土地', '/shin/ie'], ['おかいもの', '/okaimono'], ['トップへ', '/']]
+REL = [['おでかけ', '/shin/odekake'], ['家と土地', '/shin/ie'], ['おかいもの', '/shin/kau'], ['トップへ', '/']]
 
 def write(name, title, cfg, data):
     cfg['menu']['rel'] = [r for r in REL if r[1] != '/shin/' + name]
@@ -88,3 +88,6 @@ if os.path.exists(os.path.join(L, 'shin/ie.js')):
     import importlib.util
     sp = importlib.util.spec_from_file_location('ie', os.path.join(R, 'tools/shin/ie.py')); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
     m.build(write, MAP, L, R)
+if os.path.exists(os.path.join(L, 'shin/kau.js')):
+    sp = importlib.util.spec_from_file_location('kau', os.path.join(R, 'tools/shin/kau.py')); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
+    m.build(write, L, R)

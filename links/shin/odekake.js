@@ -11,7 +11,7 @@ var BYI={};IT.forEach(function(x){BYI[x.i]=x});
 function avg(b){try{var h=Uint8Array.from(atob(b),function(c){return c.charCodeAt(0)}),hd=h[0]|h[1]<<8|h[2]<<16,l=(hd&63)/63,p=((hd>>6)&63)/31.5-1,q=((hd>>12)&63)/31.5-1,bb=l-2/3*p,r=(3*l-bb+q)/2,g=r-q;
   var f=function(v){return Math.round(255*Math.max(0,Math.min(1,v)))};return "rgb("+f(r)+","+f(g)+","+f(bb)+")"}catch(e){return ""}}
 function img(x){return "/assets/ph/"+x.im}
-function tile(x){return '<div class="tile" style="--gc:'+x.g[1]+';--gt:'+x.g[2]+'"><svg viewBox="0 0 24 24">'+(D.icons[x.k]||D.icons.spot||"")+'</svg><b>'+x.g[0]+'</b></div>'}
+function tile(x){return '<div class="tile" style="--gc:'+x.g[1]+';--gt:'+x.g[2]+'"><svg viewBox="0 0 24 24">'+(D.icons[x.k]||D.icons.spot||"")+'</svg><b>'+x.g[3]+'</b></div>'}
 function lt(x){if(x.st==="up"){var n=diff(TD,x.s);return '<span class="lt">'+(n<=1?"あしたから":n+"日後から")+'</span>'}
   if(x.left===0)return '<span class="lt">きょうまで</span>';if(x.left<=7)return '<span class="lt">あと'+x.left+'日</span>';return '<span class="lt now">開催中</span>'}
 function when(x){return x.st==="up"?md(x.s)+"から":md(x.e)+"まで"}
@@ -28,13 +28,11 @@ var nEnd=IT.filter(function(x){return x.st==="now"&&x.left<=7}).length,nTd=IT.fi
  nWe=IT.filter(function(x){return x.s<=SUN&&x.e>=SAT}).length,nNew=IT.filter(function(x){return x.st==="up"&&diff(TD,x.s)<=7}).length,DT=dd(TD),EN=["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"][DT.getUTCDay()];
 var T1=nTd?["きょうまで",nTd,"td"]:["7日以内に始まる",nNew,"new"];
 S_.main.innerHTML='<div class="wrap"><section class="hero"><h1 class="h1t">関西のおでかけ・イベント</h1><p class="h1p">大阪・京都・兵庫・奈良・滋賀・和歌山</p>'+
- '<div class="mast"><span class="dn">'+(DT.getUTCMonth()+1)+'.'+DT.getUTCDate()+'</span><span class="dw"><b>'+EN+'</b><span>いま開催中 <em data-n="'+nNow+'">0</em>件</span></span></div>'+
- 
- '<div class="tiles"><button data-w="'+T1[2]+'"><small>'+T1[0]+'</small><b data-n="'+T1[1]+'">0</b><i>→</i></button><button data-w="end"><small>7日以内に終わる</small><b data-n="'+nEnd+'">0</b><i>→</i></button><button data-w="we"><small>この週末に行ける</small><b data-n="'+nWe+'">0</b><i>→</i></button></div>'+
- '<p class="upd"><i class="dot"></i>毎朝、公式の発表をもとに更新　'+md(TD)+'</p></section>'+
- '<div class="st" id="st"></div><div class="sec"><h2>今週末のおすすめ<i>Pick up</i></h2><small>横にめくる →</small></div></div>'+
+ '<p class="dl">'+(DT.getUTCMonth()+1)+'月'+DT.getUTCDate()+'日（'+"日月火水木金土"[DT.getUTCDay()]+'）<span>いま開催中 <b data-n="'+nNow+'">0</b>件</span></p>'+
+ '</section>'+
+ '<div class="st" id="st"></div><div class="sec"><h2>今週末のおすすめ</h2><small id="fno"></small></div></div>'+
  '<div class="fan" id="fan"></div>'+
- '<div class="wrap"><div id="sent"></div><div class="bar" id="bar"><div class="seg" id="seg"></div><div class="chips" id="chips"></div></div>'+
+ '<div class="wrap">'+'<div class="tiles qk"><button data-w="'+T1[2]+'"><small>'+T1[0]+'</small><b data-n="'+T1[1]+'">0</b><i>→</i></button><button data-w="end"><small>7日以内に終わる</small><b data-n="'+nEnd+'">0</b><i>→</i></button><button data-w="we"><small>この週末に行ける</small><b data-n="'+nWe+'">0</b><i>→</i></button></div>'+'<div id="sent"></div><div class="bar" id="bar"><div class="seg" id="seg"></div><div class="chips" id="chips"></div></div>'+
  '<div class="cnt"><h3 id="ch"></h3><small id="cs"></small></div><div class="grid" id="grid"></div><div id="mr"></div></div>'+
  '<div class="sv" id="sv"><div class="bars"></div><div class="hd"><img data-logo src="/assets/logo-s.png?v=2" alt=""><span></span><button aria-label="閉じる">×</button></div><div class="fr"></div><div class="tx"></div><i class="tp l"></i><i class="tp r"></i></div>';
 S_.counts(S_.main);
@@ -48,7 +46,7 @@ var sv=$("#sv"),svS=null,svI=0,svA=null;
 function svShow(){var s=ST[svS],x=s.l[svI];$(".hd span",sv).textContent=s.t+"　"+(svI+1)+"/"+s.l.length;
   $(".bars",sv).innerHTML=s.l.map(function(_,i){return '<i><b style="transform:scaleX('+(i<svI?1:0)+')"></b></i>'}).join("");
   $(".fr",sv).innerHTML=x.im?'<img src="'+img(x)+'" alt="">':tile(x);
-  $(".tx",sv).innerHTML='<span class="tag" style="--gc:'+x.g[1]+'">'+x.g[0]+'</span><h3>'+esc(x.t)+'</h3><p>'+esc(x.hk||x.v||x.a)+'　'+when(x)+'</p><button data-i="'+x.i+'">くわしく見る</button>';
+  $(".tx",sv).innerHTML='<span class="tag" style="--gc:'+x.g[1]+'">'+x.g[3]+'</span><h3>'+esc(x.t)+'</h3><p>'+esc(x.hk||x.v||x.a)+'　'+when(x)+'</p><button data-i="'+x.i+'">くわしく見る</button>';
   try{var se=JSON.parse(localStorage.getItem("hx_seen")||"{}");se[x.t]=TD;localStorage.setItem("hx_seen",JSON.stringify(se))}catch(e){}
   if(svA)svA.cancel();var b=$$(".bars b",sv)[svI];svA=b.animate([{transform:"scaleX(0)"},{transform:"scaleX(1)"}],{duration:5200,fill:"forwards"});svA.onfinish=function(){svGo(1)}}
 function svGo(d){var n=svI+d;if(n<0)n=0;if(n>=ST[svS].l.length){svClose();return}svI=n;svShow()}
@@ -63,10 +61,9 @@ sv.addEventListener("touchend",function(e){var dy=e.changedTouches[0].clientY-(s
 /* 今週の顔（扇のように重なり、めくると立体で回る） */
 var FAN=IT.filter(function(x){return x.im&&x.s<=SUN&&x.e>=TD}).sort(function(a,b){return (b.hk?1:0)-(a.hk?1:0)||((a.i*7919+S_.seed)%97)-((b.i*7919+S_.seed)%97)}).slice(0,8);
 var fan=$("#fan");
-fan.innerHTML='<i class="pad"></i>'+FAN.map(function(x){return '<a class="fc" href="#" data-i="'+x.i+'"><span class="in" style="background-color:'+avg(x.th)+'"><img src="'+img(x)+'" alt="" loading="lazy" decoding="async"><span class="tag" style="--gc:'+x.g[1]+'">'+x.g[0]+'</span><span class="cap"><b>'+esc(x.t)+'</b><span>'+esc(x.p)+'・'+when(x)+'</span></span></span></a>'}).join("")+'<i class="pad"></i>';
+fan.innerHTML='<i class="pad"></i>'+FAN.map(function(x){return '<a class="fc" href="#" data-i="'+x.i+'"><span class="in" style="background-color:'+avg(x.th)+'"><img src="'+img(x)+'" alt="" loading="lazy" decoding="async"><span class="cap"><small>'+x.g[3]+'・'+esc(x.p)+'</small><b>'+esc(x.t)+'</b><span>'+when(x)+'</span></span></span></a>'}).join("")+'<i class="pad"></i>';
 var fcs=$$(".fc",fan),fq=0;
-function fanTick(){fq=0;var c=fan.scrollLeft+fan.clientWidth/2;fcs.forEach(function(f){var m=f.offsetLeft+f.offsetWidth/2,o=(m-c)/f.offsetWidth;o=Math.max(-2,Math.min(2,o));
-  f.style.transform="translateX("+(-o*14)+"%) rotateY("+(-o*24)+"deg) translateZ("+(-Math.abs(o)*90)+"px)";f.style.zIndex=10-Math.round(Math.abs(o)*3);f.style.opacity=1-Math.min(.45,Math.abs(o)*.25)})}
+function fanTick(){fq=0;var k=Math.round(fan.scrollLeft/((fcs[0]&&fcs[0].offsetWidth+12)||1));$("#fno").textContent=Math.min(fcs.length,k+1)+" / "+fcs.length}
 fan.addEventListener("scroll",function(){if(!fq)fq=requestAnimationFrame(fanTick)},{passive:true});
 fanTick();addEventListener("resize",fanTick);
 fan.addEventListener("click",function(e){var a=e.target.closest(".fc");if(!a)return;e.preventDefault();openItem(BYI[a.dataset.i],$(".in",a))});
@@ -80,7 +77,7 @@ function sync(){drawChips();S_.navCur(S.w);saveQ()}
 var cache={};
 function card(x){if(cache[x.i])return cache[x.i];
   var a=el('<a class="cd" href="'+(x.o?"/o/"+x.o:esc(x.u))+'" data-i="'+x.i+'" style="--gc:'+x.g[1]+'"><div class="im" style="background-color:'+(x.th?avg(x.th):x.g[2])+'">'+(x.im?'<img alt="" loading="lazy" decoding="async" src="'+img(x)+'">':tile(x))+'</div>'+
-   '<div class="lb"><span class="g">'+x.g[0]+'</span><span>'+esc(x.p)+'</span>'+lt(x)+'</div><h4>'+esc(x.t)+'</h4><div class="dt">'+when(x)+'</div><div class="vn">'+esc(x.v||x.a)+'</div></a>');
+   '<div class="lb"><span class="g">'+x.g[3]+'</span><span>'+esc(x.p)+'</span>'+lt(x)+'</div><h4>'+esc(x.t)+'</h4><div class="dt">'+when(x)+'</div><div class="vn">'+esc(x.v||x.a)+'</div></a>');
   var im=$("img",a);if(im){if(im.complete)im.classList.add("ld");else im.onload=function(){im.classList.add("ld")}}
   return cache[x.i]=a}
 var grid=$("#grid"),first=true;
@@ -100,12 +97,12 @@ $("#mr").addEventListener("click",function(e){if(e.target.closest(".more")){S.n+
 sync();go(false);
 new IntersectionObserver(function(e){$("#bar").classList.toggle("stuck",!e[0].isIntersecting)}).observe($("#sent"));
 function lit(e){var c=e.target.closest&&e.target.closest(".cd");if(!c)return;var r=$(".im",c).getBoundingClientRect();c.style.setProperty("--x",(e.clientX-r.left)+"px");c.style.setProperty("--y",(e.clientY-r.top)+"px");c.classList.add("lit");clearTimeout(c._t);c._t=setTimeout(function(){c.classList.remove("lit")},700)}
-grid.addEventListener("pointerdown",lit);grid.addEventListener("pointermove",function(e){if(e.pointerType==="mouse")lit(e)});
+grid.addEventListener("pointermove",function(e){if(e.pointerType==="mouse")lit(e)});
 
 /* 1件の板 */
 function openItem(x,from){if(!x)return;var tot=Math.max(1,diff(x.s,x.e)),gone=Math.max(0,Math.min(tot,diff(x.s,TD))),pc=x.st==="now"?gone/tot:0,mq=encodeURIComponent((x.v||"")+" "+(x.a||x.p));
   S_.sheet('<div class="pim" style="background-color:'+(x.th?avg(x.th):x.g[2])+'">'+(x.im?'<img src="'+img(x)+'" alt="">':tile(x))+'</div><div class="bd" style="--gc:'+x.g[1]+'">'+
-   '<div class="lb"><span class="g">'+x.g[0]+'</span><span>'+esc(x.p)+'・'+esc(x.a)+'</span></div><h2>'+esc(x.t)+'</h2>'+(x.hk?'<p class="hk">'+esc(x.hk)+'</p>':"")+
+   '<div class="lb"><span class="g">'+x.g[3]+'</span><span>'+esc(x.p)+'・'+esc(x.a)+'</span></div><h2>'+esc(x.t)+'</h2>'+(x.hk?'<p class="hk">'+esc(x.hk)+'</p>':"")+
    '<div class="per"><div class="row"><span>'+md(x.s)+'</span><span>'+md(x.e)+'</span></div><div class="tr"><i data-w="'+pc.toFixed(3)+'" style="background:'+x.g[1]+'"></i>'+(x.st==="now"?'<b style="left:'+(pc*100)+'%;border-color:'+x.g[1]+'"></b>':"")+'</div>'+
    '<div class="big">'+(x.st==="up"?"あと"+diff(TD,x.s)+"日で始まります":x.left===0?"きょうまで":"終わりまで あと"+x.left+"日")+'</div></div>'+
    '<dl class="kv">'+(x.v?'<dt>会場</dt><dd>'+esc(x.v)+'</dd>':"")+'<dt>場所</dt><dd>'+esc(x.a||x.p)+'</dd>'+(x.h?'<dt>時間</dt><dd>'+esc(x.h)+'</dd>':"")+(x.f?'<dt>料金</dt><dd>無料</dd>':"")+'</dl>'+
@@ -135,7 +132,7 @@ addEventListener("popstate",function(){if(mp&&mp.classList.contains("op")&&!(his
 function drawPins(){mpL=pick().filter(function(x){return x.xy});$("#mpn").textContent=(S.p||"関西")+"・"+{now:"開催中",we:"今週末",up:"これから",end:"まもなく終わる",td:"きょうまで",new:"もうすぐ始まる"}[S.w]+" "+mpL.length+"か所";
   $$(".pf",mp).forEach(function(f){f.classList.toggle("dim",!!S.p&&f.dataset.p!==S.p)});
   $("#mpp").innerHTML=mpL.map(function(x,k){return '<g class="pin" data-k="'+k+'" transform="translate('+x.xy[0]+' '+x.xy[1]+')"><g class="pi" style="animation-delay:'+Math.min(k,40)*18+'ms"><circle class="ring" r="4.2" style="stroke:'+x.g[1]+'"/><circle class="dt2" r="2.1" style="fill:'+x.g[1]+'"/></g></g>'}).join("");
-  $("#mpc").innerHTML=mpL.map(function(x){return '<a class="mcd" href="#" data-i="'+x.i+'" style="--gc:'+x.g[1]+'"><span class="mim" style="background-color:'+(x.th?avg(x.th):x.g[2])+'">'+(x.im?'<img src="'+img(x)+'" alt="" loading="lazy">':tile(x))+'</span><span class="mtx"><span class="lb"><span class="g">'+x.g[0]+'</span><span>'+esc(x.p)+'</span>'+lt(x)+'</span><b>'+esc(x.t)+'</b><small>'+when(x)+'・'+esc(x.v||x.a)+'</small></span></a>'}).join("");
+  $("#mpc").innerHTML=mpL.map(function(x){return '<a class="mcd" href="#" data-i="'+x.i+'" style="--gc:'+x.g[1]+'"><span class="mim" style="background-color:'+(x.th?avg(x.th):x.g[2])+'">'+(x.im?'<img src="'+img(x)+'" alt="" loading="lazy">':tile(x))+'</span><span class="mtx"><span class="lb"><span class="g">'+x.g[3]+'</span><span>'+esc(x.p)+'</span>'+lt(x)+'</span><b>'+esc(x.t)+'</b><small>'+when(x)+'・'+esc(x.v||x.a)+'</small></span></a>'}).join("");
   mpSel=-1;if(mpL.length)selPin(0,false,true);pinScale()}
 function selPin(k,fromPin,quiet){mpSel=k;$$(".pin",mp).forEach(function(p){p.classList.toggle("on",+p.dataset.k===k)});var on=$('.pin[data-k="'+k+'"]',mp);if(on)on.parentNode.appendChild(on);
   if(fromPin){var c=$("#mpc"),a=c.children[k];if(a)c.scrollTo({left:a.offsetLeft-(c.clientWidth-a.offsetWidth)/2,behavior:"smooth"})}
