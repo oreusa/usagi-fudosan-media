@@ -51,20 +51,16 @@ html.nt #sky .au,html.nt #sky .gr,html.nt #sky .fade,html.nt #sky .fade2{opacity
 .brand img{width:40px;height:40px}
 .brand b{font:600 11px/1 var(--lat);letter-spacing:.28em;color:var(--ink)}
 /* 昼夜のスイッチ（前の形を進化：中が小さな空。昼は光、夜は星がまたたいて玉が月になる） */
-.tg{position:relative;width:78px;height:40px;border-radius:999px;overflow:hidden;background:linear-gradient(135deg,#BFE0FF,#FFE3CC);box-shadow:inset 0 0 0 1px rgba(0,0,0,.06),0 6px 16px -10px rgba(40,60,120,.5);transition:background .6s}
-.tg::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#0D1B3D,#2B2F6B);opacity:0;transition:opacity .6s}
-html.nt .tg::before{opacity:1}
-.tg .cl{position:absolute;right:9px;top:13px;width:22px;height:9px;border-radius:9px;background:#fff;opacity:.9;box-shadow:-7px 3px 0 -1px #fff;transition:transform .6s,opacity .4s}
-html.nt .tg .cl{opacity:0;transform:translateX(20px)}
-.tg .sr{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:0;transform:scale(0);transition:opacity .4s,transform .4s}
-html.nt .tg .sr{opacity:1;transform:scale(1);animation:tw 2.4s ease-in-out infinite}
-.tg .sr:nth-child(3){left:12px;top:10px;transition-delay:.15s}.tg .sr:nth-child(4){left:22px;top:24px;transition-delay:.25s;animation-delay:-.8s}.tg .sr:nth-child(5){left:34px;top:9px;width:1.5px;height:1.5px;transition-delay:.35s;animation-delay:-1.6s}.tg .sr:nth-child(6){left:16px;top:30px;width:1.5px;height:1.5px;transition-delay:.3s;animation-delay:-.4s}
-@keyframes tw{50%{opacity:.3}}
-.tg .kn{position:absolute;left:4px;top:4px;width:32px;height:32px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFF6C8,#FFC845 60%,#FFA62B);box-shadow:0 0 0 4px rgba(255,214,102,.25),0 0 18px rgba(255,190,70,.8);transition:transform .55s cubic-bezier(.3,1.4,.5,1),background .5s,box-shadow .5s}
-html.nt .tg .kn{transform:translateX(38px) rotate(-30deg);background:radial-gradient(circle at 40% 35%,#FFFFFF,#E4E9F5 70%);box-shadow:inset -7px -2px 0 0 #C9D2E6,0 0 14px rgba(200,215,255,.6)}
-.tg .kn::after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;left:9px;top:16px;background:#C9D2E6;opacity:0;transition:opacity .4s;box-shadow:8px -7px 0 -1px #C9D2E6}
-html.nt .tg .kn::after{opacity:.8}
-.tg:active .kn{width:36px}
+/* 昼夜スイッチ：11/19 owner「前のがオシャレ」→ 前の形（白い枠に黒い玉が滑る・太陽と月の線）に戻す */
+.tg{position:relative;width:76px;height:42px;border-radius:999px;border:1px solid #DADADA;background:rgba(255,255,255,.94);box-shadow:0 2px 10px rgba(0,0,0,.07);transition:background-color .4s,border-color .4s}
+.tg .kn{position:absolute;top:4px;left:4px;width:32px;height:32px;border-radius:50%;background:#2B2622;transition:transform .35s cubic-bezier(.3,.7,.2,1),background-color .4s}
+html.nt .tg{background:#121826;border-color:#2A3346;box-shadow:none}
+html.nt .tg .kn{transform:translateX(34px);background:#ECE8E1}
+.tg svg{position:absolute;top:11px;width:18px;height:18px;fill:none;stroke:#8C7B6E;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .3s,transform .5s}
+.tg .su svg{left:11px}.tg .mo svg{right:11px}.tg .sp{stroke-width:1.2}
+html:not(.nt) .tg .su svg{stroke:#fff;transform:rotate(90deg)}
+html.nt .tg .mo svg{stroke:#0A0E18;transform:rotate(-15deg)}
+html.nt .tg .su svg{stroke:#7D8697}
 .hero{padding:22px 0 8px}
 .kick{font:500 11px/1 var(--lat);letter-spacing:.32em;color:var(--mut);text-transform:uppercase}
 .h1{margin:12px 0 0;font:600 34px/1.22 var(--serif);letter-spacing:.02em}
@@ -432,3 +428,55 @@ html.nt .dr{background:#12301F;color:#8FE0B5}
 .srow{grid-template-columns:74px 1fr auto}.srow.amz{grid-template-columns:74px minmax(0,1fr)}
 .srow .sn:before{flex:none}
 .srow.amz .ssv em{display:block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+/* ===== 11/19 19:30 オーナー「シンプルだけどお洒落」「なんか古い」→ 字はゴシック1つ・色は白と黒（色は写真に任せる）・影と箱をやめて細い線と余白 ===== */
+:root{--serif:var(--sans);--lat:var(--sans);--line:#EBEBEB;--chip:#F5F5F5;--sub:#5E5E5E;--mut:#767676}
+html.nt{--line:#222A3A}
+#sky .au,#sky .gr,#sky .fade,#sky .fade2{display:none}
+.hero{padding:28px 0 4px}
+.h1t{font:800 30px/1.25 var(--sans);letter-spacing:-.02em;text-wrap:balance}
+.h1p{font-weight:600;letter-spacing:0;font-size:12.5px}
+.dl{display:flex;align-items:baseline;gap:12px;margin:14px 0 0;font-size:13px;font-weight:700;color:var(--ink)}
+.dl span{color:var(--sub);font-weight:600}.dl b{color:var(--ink);font-size:15px;font-variant-numeric:tabular-nums}
+/* 数の並び：箱ではなく細い線で区切る */
+.tiles{gap:0;margin-top:20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tiles button,html.nt .tiles button{padding:14px 12px 13px;border-radius:0;background:none;border:0;box-shadow:none;gap:4px}
+.tiles button+button{border-left:1px solid var(--line)}
+.tiles button:first-child{padding-left:0}
+.tiles small{font-size:11px;color:var(--sub)}
+.tiles b,.tiles button[data-o] b,.tiles button[data-a] b{font:800 24px/1 var(--sans);letter-spacing:-.02em}
+.tiles button[data-w=td] b,.tiles button[data-w=new] b,html.nt .tiles button[data-w=td] b,html.nt .tiles button[data-w=new] b{color:var(--ink)}
+.tiles i{right:10px;top:14px;bottom:auto}
+.upd{display:none}
+.sec{margin:34px 0 12px}
+.sec h2{font:800 19px/1.3 var(--sans);letter-spacing:-.01em}
+.sec small{font-variant-numeric:tabular-nums}
+.cnt h3{font-weight:800}
+/* 今週末のおすすめ：大きな写真を横にめくる（立体はやめる） */
+.fan{gap:12px;padding:0 16px 6px;perspective:none;scroll-padding:0 16px}
+.fan .pad{display:none}
+.fc{flex:0 0 84%;max-width:420px;scroll-snap-align:start;transform:none!important;opacity:1!important}
+.fc .in{border-radius:18px;box-shadow:none;aspect-ratio:4/5}
+.fc .cap{padding:60px 16px 16px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.62))}
+.fc .cap small{display:block;font-size:11.5px;font-weight:700;opacity:.9}
+.fc .cap b{font:800 21px/1.35 var(--sans);margin-top:4px;letter-spacing:-.01em}
+/* 絞り込み：色の点をやめる */
+.chip i{display:none}
+.chip{border-color:var(--line);font-weight:700}
+/* カード：色は写真だけ。字は黒と灰色 */
+.cd .im{border-radius:12px}
+.cd .im::after{display:none}
+.lb .g{color:var(--sub);letter-spacing:0}.lb .g::before{display:none}
+.lb span+span:not(.lt)::before{content:"・";margin-right:2px}
+.lb .lt,.lb .lt.now,html.nt .lb .lt,html.nt .lb .lt.now{background:none;padding:0;color:var(--ink);font-weight:800}
+.lb .lt.now{display:none}
+.cd h4{font-size:15px;letter-spacing:-.005em}
+.cd .dt,html.nt .cd .dt{color:var(--ink);font-weight:700}
+.bar.stuck{box-shadow:none;border-bottom:1px solid var(--line)}
+.tag{background:rgba(255,255,255,.95);color:#111;font:700 11px/1 var(--sans);letter-spacing:0}
+.tile{background:var(--chip)!important;color:var(--sub)!important}
+.tile svg{stroke:var(--sub)!important}
+.qk{margin-top:26px}
+.h1t{font-size:28px;text-wrap:wrap;word-break:keep-all}
+.tiles i{display:none}
+.lb span+span:not(.lt)::before{content:none}

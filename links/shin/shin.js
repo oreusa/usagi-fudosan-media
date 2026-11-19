@@ -31,7 +31,7 @@ var IC={sun:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M1
 
 /* ---- 骨組み ---- */
 app.innerHTML='<div class="wrap"><header class="top"><a class="brand" href="/" aria-label="トップへ"><img id="logo" src="/assets/logo-s.png?v=2" alt="TOWN NOTE"><b>TOWN NOTE</b></a>'+
- '<button class="tg" id="tg" role="switch" aria-checked="false" aria-label="夜の画面にする"><i class="cl"></i><i class="kn"></i><i class="sr"></i><i class="sr"></i><i class="sr"></i><i class="sr"></i></button></header></div>'+
+ '<button class="tg" id="tg" role="switch" aria-checked="false" aria-label="夜の画面にする"><i class="kn"></i><span class="su"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path class="sp" d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg></span><span class="mo"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span></button></header></div>'+
  '<main id="main"></main>'+
  '<div class="wrap"><footer class="ft">'+(CFG.foot||"")+'<br><a href="/">TOWN NOTE トップ</a>　<a href="/privacy">プライバシー</a></footer></div>'+
  '<nav class="nav" id="nav" aria-label="すぐ移動">'+CFG.nav.map(function(n,i){return n.href?'<a href="'+n.href+'"'+(n.cur?' class="cur"':'')+'>'+IC[n.ic]+'<span>'+n.t+'</span></a>':'<button data-a="'+n.a+'"'+(i===0?' class="cur"':'')+'>'+IC[n.ic]+'<span>'+n.t+'</span></button>'}).join("")+'<button class="mn" id="mnb" aria-label="メニュー"><em></em><span>MENU</span></button></nav>'+
@@ -97,7 +97,7 @@ function apply(n){H.classList.toggle("nt",n);try{localStorage.setItem("usagi_the
   if(n){stars();shoot()}}
 $("#tg").addEventListener("click",function(e){var n=!H.classList.contains("nt");
   if(!document.startViewTransition||RM){apply(n);return}
-  var kr=$("#tg .kn").getBoundingClientRect(),x=kr.left+kr.width/2+(n?38:-38),y=kr.top+kr.height/2,r=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));H.classList.add("vtt");
+  var kr=$("#tg .kn").getBoundingClientRect(),x=kr.left+kr.width/2+(n?34:-34),y=kr.top+kr.height/2,r=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y));H.classList.add("vtt");
   var t=document.startViewTransition(function(){apply(n)});
   t.ready.then(function(){H.animate({clipPath:["circle(0px at "+x+"px "+y+"px)","circle("+r+"px at "+x+"px "+y+"px)"]},{duration:760,easing:"cubic-bezier(.4,0,.2,1)",pseudoElement:"::view-transition-new(root)"})});
   t.finished.then(function(){H.classList.remove("vtt")})});
