@@ -12,8 +12,15 @@ def load(R):
     p = os.path.join(os.path.dirname(R), 'akari-auto', 'site', 'okai-shin.json')
     if os.path.exists(p):
         return json.load(open(p, encoding='utf-8'))
-    with urllib.request.urlopen(LIVE, timeout=20) as r:
-        return json.loads(r.read().decode('utf-8'))
+    # 11/20 GitHub の機械からは kanto.townnote.app が 403 を返す日がある → 燈のリポジトリの物 → 前に作った物の順で使う（止めない）
+    for u in (LIVE, 'https://raw.githubusercontent.com/oreusa/akari-auto/main/site/okai-shin.json'):
+        try:
+            q = urllib.request.Request(u, headers={'User-Agent': 'Mozilla/5.0 (townnote build)'})
+            with urllib.request.urlopen(q, timeout=20) as r:
+                return json.loads(r.read().decode('utf-8'))
+        except Exception as e:
+            print('kau: 取れない', u, e)
+    raise RuntimeError('okai-shin.json が取れない')
 
 
 def build(write, L, R):

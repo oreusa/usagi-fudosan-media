@@ -186,7 +186,10 @@ if os.path.exists(os.path.join(L, 'shin/ie.js')):
     m.build(write, MAP, L, R)
 if os.path.exists(os.path.join(L, 'shin/kau.js')):
     sp = importlib.util.spec_from_file_location('kau', os.path.join(R, 'tools/shin/kau.py')); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
-    m.build(write, L, R)
+    try:  # 11/20 おかいものの値段が取れなくても、ほかのページと bake（頭とバー・新しい見た目）は必ず最後まで作る
+        m.build(write, L, R)
+    except Exception as e:
+        print('kau: 作り直さず前の物のまま', e)
 # 11/19 23時 owner「その他も本気でやり直せ」：売る前に・いくら？ など読む・入れるページ（tools/shin/docs.py・links/shin/doc.js）
 if os.path.exists(os.path.join(L, 'shin/doc.js')):
     sp = importlib.util.spec_from_file_location('docs', os.path.join(R, 'tools/shin/docs.py')); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
