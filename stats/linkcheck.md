@@ -1,23 +1,22 @@
-# リンクの確かめ（2026-11-18 13:39 JST・1239件・HPの全ページ）
+# リンクの確かめ（2026-11-19 09:25 JST・1287件・HPの全ページ）
 
-種類ごと（見た数／開けない数）：不動産 769／4・泊まり 25／0・紅葉 22／2・イルミ 110／9・初もうで 12／0・おでかけ 252／5・ほか 49／0
+種類ごと（見た数／開けない数）：不動産 771／4・紅葉 22／2・イルミ 110／7・初もうで 12／0・おでかけ 298／6・ほか 74／0
 行き先の分からないアフィリエイトの入口 0本（押さないので見ていない）
 
 ## 開けない（直す）
 - ✗ [おでかけ] 魯山人の宇宙 魂を刳る美がほしい（links/index.html）TimeoutError https://www.mistore.jp/store/kyoto/museum/event_list/event21.html
+- ✗ [おでかけ] アドベンチャーワールド LIGHT PARKS（links/index.html）503 https://www.aws-s.com/lightparks&nightsafari/lightparks/
 - ✗ [おでかけ] 大阪ステーションシティ×ドラマチック謎解きゲーム（links/index.html）URLError https://osakastationcity-nazo.com/
 - ✗ [おでかけ] アニタッチ OSAKA なんば（links/index.html）404 https://www.afpbb.com/articles/-/3648165
 - ✗ [おでかけ] 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
-- ✗ [おでかけ] おでかけ掲載新しいお店や、毎年のイベント。うさぎがご紹介します。ご相談はこちら（links/index.html）429 https://ig.me/m/fudousan_ai_si
+- ✗ [おでかけ] おでかけ掲載新しいお店や、毎年のイベント。うさぎがご紹介します。ご相談はこちら（links/index.html）URLError https://ig.me/m/fudousan_ai_si
 - ✗ [イルミ] 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
 - ✗ [イルミ] 宝厳院 紅葉ライトアップ（links/illumination-kyoto.html）URLError https://hogonin.jp/
 - ✗ [イルミ] HERBIS CHRISTMAS（links/illumination-muryo.html）URLError https://www.herbis.jp/
 - ✗ [イルミ] HEP FIVE クリスマスイルミネーション（links/illumination-muryo.html）URLError https://www.hepfive.jp/
 - ✗ [イルミ] 大阪梅田ツインタワーズ・ノース クリスマスイルミネーション（links/illumination-muryo.html）URLError https://www.hhp.co.jp/
 - ✗ [イルミ] UMEDA MEETS HEART（links/illumination-muryo.html）URLError https://umedameetsheart.com/
-- ✗ [イルミ] 天理市 光の祭典（links/illumination-muryo.html）404 https://www.city.tenri.nara.jp/kakuka/shichoukoushitsu/sougouseisakuka/teijyujirituken/teijujiritsukenibentojoho/15242.html
 - ✗ [イルミ] 勝尾寺 錦秋の宵詣り2026（links/illumination-osaka.html）URLError https://katsuo-ji-temple.or.jp/autumn/
-- ✗ [イルミ] 和歌山城 西之丸庭園（紅葉渓庭園）ライトアップ（links/illumination-wakayama.html）522 https://wakayamajo.jp/
 - ✗ [不動産] https://www.pref.shiga.lg.jp/file/attach（links/chika-kansai.html）404 https://www.pref.shiga.lg.jp/file/attachment/5598454.pdf
 - ✗ [不動産] 紀美野町（国勢調査 速報）紀美野町 人口 7,235人2025年10月1日の国勢（links/fudosan-list.html）404 https://www.pref.wakayama.lg.jp/prefg/020300/d00219934_d/fil/R7sokuho.pdf
 - ✗ [不動産] 奈良市奈良市 耐震改修の補助 上限50万円木造住宅の耐震改修に、工事費の1/3を（links/fudosan-list.html）404 https://www.pref.nara.lg.jp/documents/8512/20260727155339.pdf

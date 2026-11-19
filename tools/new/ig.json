@@ -859,5 +859,17 @@
   "acc": [
    "heijokyusekirekisikouen"
   ]
+ },
+ "アドベンチャーワールド LIGHT PARKS": {
+  "acc": [
+   "festaluce"
+  ],
+  "auto": 1
+ },
+ "ライドアラウンドin岸和田": {
+  "acc": [
+   "osaka_landscape"
+  ],
+  "auto": 1
  }
 }

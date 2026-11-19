@@ -1,9 +1,10 @@
-# 不動産リストの新着の候補（2026-11-18・22ページを見た）
+# 不動産リストの新着の候補（2026-11-19・22ページを見た）
 
 月曜と木曜の 19:47 の回が、上から公式ページで確かめ、合う物を tools/fudosan_list/facts.json に足して make.py を回す。
 足した物・合わない物は stats/fudosan-watch.json の done に URL を入れる（次から出ない）。
 
-## 候補（42件）
+## 候補（43件）
+- 2026-11-19｜南海 ニュース｜[dekiru] 栂・美木多 昭和48年(1973)12月7日に開業したこの駅は、泉北ニュータウンの栂地区にあります。 周辺は閑静な住宅街となっており、駅名は周辺の地名である「栂」と「美木多」から取られており、南海駅名で唯一中黒（・）が入っているのが特徴です。｜https://www.nankai.co.jp/community/station/toga_mikita.html
 - 2026-11-17｜大阪市｜[seido] 2026年11月17日 放置自動車の除却について（大阪港湾局）｜https://www.city.osaka.lg.jp/port/page/0000690413.html
 - 2026-11-17｜兵庫県｜[seido] UJIターン就職相談窓口「ひょうご移住・しごとプラザ」｜https://web.pref.hyogo.lg.jp/sr05/comeback/hhw.html
 - 2026-11-16｜国土交通省 近畿地方整備局｜[dekiru] まちづくり・建設産業へ｜https://www.kkr.mlit.go.jp/kensei/index.html
