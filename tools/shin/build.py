@@ -187,6 +187,10 @@ if os.path.exists(os.path.join(L, 'shin/ie.js')):
 if os.path.exists(os.path.join(L, 'shin/kau.js')):
     sp = importlib.util.spec_from_file_location('kau', os.path.join(R, 'tools/shin/kau.py')); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
     m.build(write, L, R)
+# 11/19 23時 owner「その他も本気でやり直せ」：売る前に・いくら？ など読む・入れるページ（tools/shin/docs.py・links/shin/doc.js）
+if os.path.exists(os.path.join(L, 'shin/doc.js')):
+    sp = importlib.util.spec_from_file_location('docs', os.path.join(R, 'tools/shin/docs.py')); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
+    m.build(write, L, R, URL)
 LISTS.COVER()
 
 # ---------- 今までのページにかぶせる見た目（links/shin/skin.css）：shin.css の 頭・下のバー・MENU・夜空 を .sk の中だけに効く形にして＋skin.tail.css ----------
