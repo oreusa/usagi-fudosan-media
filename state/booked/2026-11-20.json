@@ -1,0 +1,79 @@
+{
+ "n1": {
+  "time": "07:00",
+  "digest": "92571e3c4052226c",
+  "at": "2026-11-20T06:30:00+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x07": {
+  "time": "07:00",
+  "digest": "5472fb01b3ad0f75",
+  "at": "2026-11-20T06:30:00+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "S1": {
+  "time": "08:00",
+  "digest": "922ba56991d0a419",
+  "at": "2026-11-20T06:30:00+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n2": {
+  "time": "09:00",
+  "digest": "a9958560d12332aa",
+  "at": "2026-11-20T06:30:00+09:00",
+  "threads": "6aff6a5a8ec824f4cec17ad8"
+ },
+ "x09": {
+  "time": "09:00",
+  "digest": "3b6830ecebc133cf",
+  "at": "2026-11-20T06:30:00+09:00",
+  "threads": "X だけの枠",
+  "twitter": "6aff6a5b6e5bb62d74cf50bf"
+ },
+ "n3": {
+  "time": "12:00",
+  "digest": "ed2a4fedcf068875",
+  "at": "2026-11-20T06:30:00+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x12": {
+  "time": "12:00",
+  "digest": "ca4eee7aba299a2e",
+  "at": "2026-11-20T06:30:00+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n8": {
+  "time": "13:00",
+  "digest": "16a1db355df4ac39",
+  "at": "2026-11-20T06:30:00+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n5": {
+  "time": "15:00",
+  "digest": "bec51b5d868f3760",
+  "at": "2026-11-20T06:30:00+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x15": {
+  "time": "15:00",
+  "digest": "d64aa95f2eb958b6",
+  "at": "2026-11-20T06:30:00+09:00",
+  "threads": "X だけの枠",
+  "twitter": "6aff6a5d8ba5b0cdc4af97f5"
+ },
+ "n6": {
+  "time": "18:00",
+  "digest": "a62390b5fdbc5872",
+  "at": "2026-11-20T06:30:00+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x18": {
+  "time": "18:00",
+  "digest": "14d2d3e48f1d4999",
+  "at": "2026-11-20T06:30:00+09:00",
+  "threads": "X だけの枠",
+  "twitter": "6aff6a5e8ec824f4cec18286"
+ }
+}
