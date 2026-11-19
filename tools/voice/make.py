@@ -63,6 +63,7 @@ def main():
             kana[f"{s}-{n:02d}"] = q.get("kana", "")
             wav = req(f"/synthesis?speaker={s}", json.dumps(q).encode(), "POST")
             open(os.path.join(out, f"{s}-{n:02d}.wav"), "wb").write(wav)
+            json.dump(q, open(os.path.join(out, f"{s}-{n:02d}.q.json"), "w", encoding="utf-8"), ensure_ascii=False)   # 11/19 声の1音ずつの長さ（字を声に合わせて出す）
     json.dump(kana, open(os.path.join(out, "kana.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     print("voice", spec["name"], len(ids), "話者", len(spec["lines"]), "行")
 
