@@ -1,0 +1,387 @@
+■ flist
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/machi/osaka-24) ✓
+    town: 大阪 都島区 6 位 +8.5 % 住宅地の1年の動き・大阪の72の街で6位 この街で実際に売れた家（2025年度） 中古マンション 3,383万円 268件の平均 中古の一戸建て
+  town ✓
+  bar:# ✓ [hxtq]
+  bar-back ✓
+  bar:# ✓ [hxtq]
+  bar-back ✓
+  bar:/chika-kansai ✓
+  bar-back ✓
+  bar:/uru.html ✓
+  bar-back ✓
+■ akiya
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/machi/osaka-24) ✓
+  bar:/fudosan-list?fq=q ✓ [hxtq]
+  bar-back ✓
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+  bar:/chika-kansai ✓
+  bar-back ✓
+  bar:/uru.html ✓
+  bar-back ✓
+■ ranking
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/machi/osaka-24) ✓
+  bar:/fudosan-list?fq=q ✓ [hxtq]
+  bar-back ✓
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+  bar:/chika-kansai ✓
+  bar-back ✓
+  bar:/uru.html ✓
+  bar-back ✓
+■ uru
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/machi/osaka-24) ✓
+    town: 大阪 都島区 6 位 +8.5 % 住宅地の1年の動き・大阪の72の街で6位 この街で実際に売れた家（2025年度） 中古マンション 3,383万円 268件の平均 中古の一戸建て
+  town ✓
+  bar:/fudosan-list?fq=q ✓ [hxtq]
+  bar-back ✓
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+  bar:/chika-kansai ✓
+  bar-back ✓
+  bar:/uru.html ✓
+  bar-back ✓
+■ sagasu
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/machi/osaka-24) ✓
+  bar:/fudosan-list?fq=q ✓ [hxtq]
+  bar-back ✓
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+  bar:/chika-kansai ✓
+  bar-back ✓
+  bar:/uru.html ✓
+  bar-back ✓
+■ machi
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/machi/osaka-24) ✓
+  bar:/fudosan-list?fq=q ✓ [hxtq]
+  bar-back ✓
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+  bar:/chika-kansai ✓
+  bar-back ✓
+  bar:/uru.html ✓
+  bar-back ✓
+■ gyosha
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/machi/osaka-24) ✓
+  bar:/fudosan-list?fq=q ✓ [hxtq]
+  bar-back ✓
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+  bar:/chika-kansai ✓
+  bar-back ✓
+  bar:/uru.html ✓
+  bar-back ✓
+■ kfudosan
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/machi/tokyo-03) ✓
+    town: 東京 千代田区 14 位 +10.7 % 住宅地の1年の動き・東京の51の街で14位 この街の数字をぜんぶ見る この街で、いくらで売れるか聞く 無料・名前だけ・約1分
+  town ✓
+  bar:# ✓ [hxtq]
+  bar-back ✓
+  bar:# ✓ [hxtq]
+  bar-back ✓
+  bar:/chika-kanto ✓
+  bar-back ✓
+  bar:/uru.html ✓
+  bar-back ✓
+■ kuru
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/machi/tokyo-03) ✓
+    town: 東京 千代田区 14 位 +10.7 % 住宅地の1年の動き・東京の51の街で14位 この街の数字をぜんぶ見る この街で、いくらで売れるか聞く 無料・名前だけ・約1分
+  town ✓
+  bar:/fudosan-list?fq=q ✓ [hxtq]
+  bar-back ✓
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+  bar:/chika-kanto ✓
+  bar-back ✓
+  bar:/uru.html ✓
+  bar-back ✓
+■ kmachi
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/machi/tokyo-03) ✓
+  bar:/fudosan-list?fq=q ✓ [hxtq]
+  bar-back ✓
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+  bar:/chika-kanto ✓
+  bar-back ✓
+  bar:/uru.html ✓
+  bar-back ✓
+■ top
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/ima) ✓
+  story ✓ [hxsv]
+  story-back ✓
+  search ✓ [hxsr]
+    results 40
+  search→item ✓
+  search-back ✓
+  deck ✓ [hxdc]
+  deck-swipe ✓ [hxdc]
+  deck-back ✓
+  bar:/odekake ✓
+  bar-back ✓
+  bar:/fudosan-list ✓
+  bar-back ✓
+  bar:/fudosan.html ✓
+  bar-back ✓
+■ odekake
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/ima) ✓
+  story ✓ [hxsv]
+  story-back ✓
+  card→sheet ✓ [hxsh]
+  sheet-back ✓
+  deck ✓ [hxdc]
+  deck-swipe ✓ [hxdc]
+  deck-back ✓
+■ illumi
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/ima) ✓
+  story ✓ [hxsv]
+  story-back ✓
+  search ✓ [hxsr]
+    results 40
+  search→item ✓
+  search-back ✓
+  card→sheet ✓ [hxsh]
+  sheet-link(/o/81587170) ✓
+  sheet-link-back ✓
+  deck ✓ [hxdc]
+  deck-swipe ✓ [hxdc]
+  deck-back ✓ [hxdc]
+  bar:/odekake ✓
+  bar-back ✓
+  bar:/odekake?d=all&f=fav ✓
+  bar-back ✓
+  bar:/odekake?v2t=map ✓
+  bar-back ✓
+  bar:/tomari.html ✓
+  bar-back ✓
+■ kaiten
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/ima) ✓
+  bar:/odekake ✓
+  bar-back ✓
+  bar:/odekake?d=all&f=fav ✓
+  bar-back ✓
+  bar:/odekake?v2t=map ✓
+  bar-back ✓
+  bar:/tomari.html ✓
+  bar-back ✓
+■ o1
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/ima) ✓
+  story ✓ [hxsv]
+  story-back ✓
+  card→sheet ✓ [hxsh]
+  sheet-back ✓
+  bar:/odekake ✓
+  bar-back ✓
+  bar:/odekake?d=all&f=fav ✓
+  bar-back ✓
+  bar:/odekake?v2t=map ✓
+  bar-back ✓
+  bar:/tomari.html ✓
+  bar-back ✓
+■ ktop
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/ima) ✓
+  story ✓ [hxsv]
+  story-back ✓
+  search ✓ [hxsr]
+    results 2
+  search→item ✓
+  search-back ✓
+  deck ✓ [hxdc]
+  deck-swipe ✓ [hxdc]
+  deck-back ✓
+  bar:/odekake ✓
+  bar-back ✓
+  bar:/fudosan-list ✓
+  bar-back ✓
+  bar:/moushikomi ✓
+  bar-back ✓
+■ kodekake
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/ima) ✓
+  story ✓ [hxsv]
+  story-back ✓
+  card→sheet ✓ [hxsh]
+  sheet-link(/o/3cc296a4) ✓
+  sheet-link-back ✓
+  deck ✓ [hxdc]
+  deck-swipe ✓ [hxdc]
+  deck-back ✓
+■ kokaimono
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/okaimono) ✓
+    category items 0
+  okai-cat ✓ [hxos]
+  bar:/okaimono ✓
+  bar-back ✓
+  bar:/nesage ✓
+  bar-back ✓
+  bar:/kaimawari ✓
+  bar-back ✓
+  bar:/furusato ✓
+  bar-back ✓
+■ knesage
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/okaimono) ✓
+  bar:/okaimono ✓
+  bar-back ✓
+  bar:/nesage ✓
+  bar-back ✓
+  bar:/kaimawari ✓
+  bar-back ✓
+  bar:/furusato ✓
+  bar-back ✓
+■ kil
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/ima) ✓
+  story ✓ [hxsv]
+  story-back ✓
+  search ✓ [hxsr]
+    results 2
+  search→item ✓
+  search-back ✓
+  deck ✓ [hxdc]
+  deck-swipe ✓ [hxdc]
+  deck-back ✓
+  bar:/odekake ✓
+  bar-back ✓
+  bar:/odekake?d=all&f=fav ✓
+  bar-back ✓
+  bar:/odekake?v2t=map ✓
+  bar-back ✓
+  bar:/tomari ✓
+  bar-back ✓
+■ okaimono
+  load ✓
+  scroll ✓
+  menu-open ✓ [hxmu]
+  menu-tabs ✓ [hxmu]
+  menu-close ✓
+  menu-back ✓
+  menu-link→back(/okaimono) ✓
+    category items 0
+  okai-cat ✓ [hxos]
+  bar:/okaimono ✓
+  bar-back ✓
+  bar:/nesage ✓
+  bar-back ✓
+  bar:/kaimawari ✓
+  bar-back ✓
+  bar:/furusato ✓
+  bar-back ✓
+BAD 0
