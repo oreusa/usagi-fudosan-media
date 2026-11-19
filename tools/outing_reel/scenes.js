@@ -308,25 +308,28 @@ function mjFall(c,cx,top,bot,w,mode,L){const night=mode==2,r=XR(77);
    for(let i=0;i<10;i++)L.push({x:cx+(r()-.5)*w*1.6,y:bot-20-r()*40,r:16,c:'255,240,210',a:.7,p:i,sp:3,dot:2})}
   else L.push({x:cx,y:bot,r:w*2,c:'255,255,255',a:.25,p:0,sp:.3,soft:1})}}
 function mjBuild(mode){if(P.kiyo)return kmBuild(mode);if(P.taki)return tkBuild(mode);if(P.icho)return icBuild(mode);const B=xmLayer(),T=xmLayer(),F=xmLayer();const c=B.c,L=B.L;
- if(mode==0){scSky(c,['#9ec4dc','#d6e4e6','#f4e8d0'],820);scClouds(c,4,8,120,560,'#ffffff',.55);
+
+ // 11/19 owner「また使い回し？？」：紅葉の日は毎日同じ絵だった。並べ方（P.mjv）で 道→池 / 池→道 を入れ替え、木や雲の形（VSEED）も日ごとに変える
+ const MJT=[['path','pond','pond'],['pond','path','path']],kind=MJT[(P.mjv||0)%2][mode],mx=190+((P.vseed||0)*53)%480;   // 毎日交互＝前の日とは3ページとも違う並べ方・月の位置や木の形も日ごとに変わる
+ if(kind=='path'){if(mode==2){scSky(c,['#04060f','#0b1022','#1e1530'],820);xmStars(c,9);xmMoon(c,mx,200,42)}else if(mode==1){scSky(c,['#e8c6a0','#f4dcc0','#f6e6cc'],760);scClouds(c,7,6,160,520,'#fff4e4',.5)}else{scSky(c,['#9ec4dc','#d6e4e6','#f4e8d0'],820);scClouds(c,4,8,120,560,'#ffffff',.55)}
   c.save();c.globalCompositeOperation='screen';glow(c,330,560,520,'255,226,180',.45);c.restore();
   wash(c,g=>{g.moveTo(-20,760);g.bezierCurveTo(200,690,420,720,600,700);g.bezierCurveTo(760,690,860,720,XW+20,705);g.lineTo(XW+20,860);g.lineTo(-20,860);g.closePath()},'#9aa8b0',{edge:.1,gr:.25,light:false,a:.6});
-  mjForest(c,730,930,0,5,.55,L);scFog(c,760,40,'240,236,228',.35);
-  mjGround2(c,940,0);
+  mjForest(c,730,930,mode,5,.55,L);scFog(c,760,40,'240,236,228',.35);
+  mjGround2(c,940,mode);
   // 参道
-  wash(c,g=>{g.moveTo(330,960);g.lineTo(430,960);g.lineTo(640,XH+10);g.lineTo(120,XH+10);g.closePath()},'#ddd4c0',{grad:g=>{const q=g.createLinearGradient(0,960,0,XH);q.addColorStop(0,'#e6dfcc');q.addColorStop(1,'#c8bea6');return q},edge:.2,gr:.4,light:false});
+  wash(c,g=>{g.moveTo(330,960);g.lineTo(430,960);g.lineTo(640,XH+10);g.lineTo(120,XH+10);g.closePath()},'#ddd4c0',{grad:g=>{const q=g.createLinearGradient(0,960,0,XH);q.addColorStop(0,mode==2?'#3a3440':'#e6dfcc');q.addColorStop(1,mode==2?'#5a4a44':'#c8bea6');return q},edge:.2,gr:.4,light:false});
   {const r=XR(44);c.strokeStyle='rgba(120,100,70,.35)';c.lineWidth=1.2;for(let y=980;y<XH;y+=14+(y-960)*.05){const k=(y-960)/(XH-960),x0=330-210*k,x1=430+210*k;c.beginPath();c.moveTo(x0,y);c.lineTo(x1,y);c.stroke();for(let x=x0+r()*30;x<x1;x+=30+k*40){c.beginPath();c.moveTo(x,y);c.lineTo(x,y+12+k*20);c.stroke()}}
    for(let i=0;i<120;i++){const y=960+Math.pow(r(),.7)*(XH-960),k=(y-960)/(XH-960),x=330-210*k+r()*(100+420*k);c.fillStyle=['#c8402c','#e0662f','#ea8a34'][i%3];c.globalAlpha=.85;mjLeaf(c,x,y,4+k*6,r()*6)}c.globalAlpha=1}
-  mjTree(c,40,1020,640,0,11,L,{n:1500,wide:.95,lean:.12,zone:1});mjTree(c,880,1010,320,0,12,L,{n:600,wide:.9,zone:1});
-  if(P.gate!==false)mjGate2(T.c,380,1000,400,0,T.L);T.ax=380;T.ay=1000;T.d=.1;   // 11/16 門は寺社の時だけ
-  mjLantern(F.c,150,1190,150,0,F.L);mjLantern(F.c,650,1190,150,0,F.L);
-  mjTree(F.c,-120,1560,560,0,21,F.L,{n:900,wide:.7,lean:.3});mjTree(F.c,1060,1580,500,0,22,F.L,{n:800,wide:.7,lean:-.3});
-  xmPerson(F.c,352,1110,64,'#5a4a5e',0,51,0);xmPerson(F.c,404,1116,60,'#6a5a3a',0,52,1);
-  xmPerson(F.c,300,1250,104,'#4a4a5e',0,31,0);xmPerson(F.c,336,1256,96,'#7a4a3a',0,32,1);xmPerson(F.c,500,1290,112,'#8a5a4a',0,34,0);xmPerson(F.c,534,1298,80,'#e2b84a',0,35,2);
+  mjTree(c,40,1020,640,mode,11,L,{n:1500,wide:.95,lean:.12,zone:1});mjTree(c,880,1010,320,mode,12,L,{n:600,wide:.9,zone:1});
+  if(P.gate!==false)mjGate2(T.c,380,1000,400,mode,T.L);T.ax=380;T.ay=1000;T.d=.1;   // 11/16 門は寺社の時だけ
+  mjLantern(F.c,150,1190,150,mode,F.L);mjLantern(F.c,650,1190,150,mode,F.L);
+  mjTree(F.c,-120,1560,560,mode,21,F.L,{n:900,wide:.7,lean:.3});mjTree(F.c,1060,1580,500,mode,22,F.L,{n:800,wide:.7,lean:-.3});
+  xmPerson(F.c,352,1110,64,'#5a4a5e',mode,51,0);xmPerson(F.c,404,1116,60,'#6a5a3a',mode,52,1);
+  xmPerson(F.c,300,1250,104,'#4a4a5e',mode,31,0);xmPerson(F.c,336,1256,96,'#7a4a3a',mode,32,1);xmPerson(F.c,500,1290,112,'#8a5a4a',mode,34,0);xmPerson(F.c,534,1298,80,'#e2b84a',mode,35,2);
   F.ax=420;F.ay=1290;F.d=.4;
  }else{const n=mode==2;
-  if(n){scSky(c,['#04060f','#0b1022','#1e1530'],820);xmStars(c,9);xmMoon(c,190,210,42)}
-  else{scSky(c,['#e8c6a0','#f4dcc0','#f6e6cc'],760);scClouds(c,7,6,160,520,'#fff4e4',.5);c.save();c.globalCompositeOperation='screen';glow(c,700,420,560,'255,214,160',.5);c.restore()}
+  if(n){scSky(c,['#04060f','#0b1022','#1e1530'],820);xmStars(c,9);xmMoon(c,mx,210,42)}
+  else if(mode==0){scSky(c,['#9ec4dc','#d6e4e6','#f4e8d0'],760);scClouds(c,5,7,140,520,'#ffffff',.55);c.save();c.globalCompositeOperation='screen';glow(c,640,440,520,'255,236,200',.4);c.restore()}else{scSky(c,['#e8c6a0','#f4dcc0','#f6e6cc'],760);scClouds(c,7,6,160,520,'#fff4e4',.5);c.save();c.globalCompositeOperation='screen';glow(c,700,420,560,'255,214,160',.5);c.restore()}
   wash(c,g=>{g.moveTo(-20,740);g.bezierCurveTo(240,660,480,700,700,672);g.bezierCurveTo(820,660,880,690,XW+20,690);g.lineTo(XW+20,880);g.lineTo(-20,880);g.closePath()},n?'#120e1a':'#b8a088',{edge:.1,gr:.25,light:false,a:n?.9:.55});
   mjForest(c,710,900,mode,6,n?0:.4,L);if(!n)scFog(c,730,40,'250,232,210',.4);else scFog(c,900,50,'255,110,60',.12);
   if(P.taki){mjFall(c,330,n?400:420,905,60,mode,L);mjTree(c,90,900,330,mode,49,L,{n:900,wide:1,lean:.1,zone:1});mjTree(c,560,910,300,mode,50,L,{n:800,wide:1,lean:-.05,zone:1})}   // 11/16 箕面大滝（text.taki）：滝の両側の崖の上にもみじ
@@ -341,7 +344,7 @@ function mjBuild(mode){if(P.kiyo)return kmBuild(mode);if(P.taki)return tkBuild(m
   if(n){mjLantern(F.c,110,1250,130,2,F.L);mjLantern(F.c,700,1300,120,2,F.L);for(const l of F.L){l.r*=.55;l.a*=.75}
    xmPerson(F.c,380,1300,112,'#3a3a4a',2,38,0);xmPerson(F.c,414,1306,100,'#4a2a30',2,39,1);xmPerson(F.c,520,1330,90,'#2a3a4a',2,40,0);}
   else if(P.taki){mjLantern(F.c,700,1300,120,1,F.L);xmPerson(F.c,400,1300,116,'#5a5a6e',1,36,0);xmPerson(F.c,440,1306,104,'#7a4a3a',1,37,1);xmPerson(F.c,560,1330,96,'#3e5a7e',1,38,0)}   // 11/16 滝道：茶席の代わりに歩く人
-  else{mjBench2(F.c,480,1310,330,1,F.L);xmPerson(F.c,430,1312,118,'#5a5a6e',1,36,0);xmPerson(F.c,330,1300,110,'#7a4a3a',1,37,1)}
+  else{mjBench2(F.c,480,1310,330,mode,F.L);xmPerson(F.c,430,1312,118,'#5a5a6e',mode,36,0);xmPerson(F.c,330,1300,110,'#7a4a3a',mode,37,1)}
   mjTree(F.c,-140,1600,620,mode,45,F.L,{n:900,wide:.7,lean:.35,noLight:1});F.ax=520;F.ay=1300;F.d=.4;
  }
  return scFinish(mode,B,T,F,[940,880,880][mode])}
