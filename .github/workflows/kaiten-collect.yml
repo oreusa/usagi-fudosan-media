@@ -14,10 +14,12 @@ jobs:
       - uses: actions/checkout@v4
       - run: python3 tools/kaiten/collect.py kansai
       - run: python3 tools/kaiten/build.py "$(TZ=Asia/Tokyo date +%F)"
+      # 11/19 新しい土台の /kaiten（links/shin/kaiten.html）も同じ回で作り直す。止まっても集めた物は保存する
+      - run: python3 tools/shin/build.py || true
       - name: save
         run: |
           git config user.name "kaiten-collect"; git config user.email "actions@users.noreply.github.com"
-          git add tools/kaiten/kansai.json tools/kaiten/seen-kansai.json links/kaiten.html links/kaiten links/sitemap.xml links/sitemap-all.xml
+          git add tools/kaiten/kansai.json tools/kaiten/seen-kansai.json links/kaiten.html links/kaiten links/shin links/sitemap.xml links/sitemap-all.xml
           git diff --cached --quiet && exit 0
           git commit -qm "開店・閉店ニュース：公式の発表から集めた"
           for i in 1 2 3 4; do

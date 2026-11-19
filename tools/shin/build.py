@@ -173,6 +173,10 @@ def odekake():
              f'{PFULL[p_]}のイルミネーション{ni}か所を、開催中・これから・無料に分けてまとめています。', {'h1': f'{p_}のイルミネーション', 'sub': f'2026-2027・{ni}か所', 'p': p_, 'st': 'pref'}, il, '/illumination')
         page('koyo-' + SLUG[p_], '/koyo-' + SLUG[p_], f'{p_}の紅葉2026｜見頃とライトアップ（{PFULL[p_]}）｜TOWN NOTE',
              f'{PFULL[p_]}の紅葉の名所とライトアップ{nk}か所を、見頃の時期つきでまとめています。', {'h1': f'{p_}の紅葉', 'sub': f'見頃とライトアップ・{nk}か所', 'p': p_, 'st': 'pref'}, ky, '/koyo')
+    # ---------- 初詣・泊まり・いまから・開店閉店・ランキング（links/shin/list.js） ----------
+    import importlib.util as _iu
+    _sp = _iu.spec_from_file_location('lists', os.path.join(R, 'tools/shin/lists.py')); _m = _iu.module_from_spec(_sp); _sp.loader.exec_module(_m)
+    _m.build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm)
 
 odekake()
 if os.path.exists(os.path.join(L, 'shin/ie.js')):

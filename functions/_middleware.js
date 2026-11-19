@@ -19,4 +19,5 @@ const PF = ["osaka", "kyoto", "hyogo", "nara", "shiga", "wakayama"];
 const SHIN = new Set([
   ...PF.map(x => "/odekake-" + x), "/illumination", "/illumination-muryo", ...PF.map(x => "/illumination-" + x),
   "/koyo", ...PF.map(x => "/koyo-" + x),
+  "/hatsumode", "/tomari", "/ima", "/kaiten", "/ranking",
 ]);
