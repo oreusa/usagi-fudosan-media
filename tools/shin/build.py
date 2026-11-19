@@ -188,3 +188,50 @@ if os.path.exists(os.path.join(L, 'shin/kau.js')):
     sp = importlib.util.spec_from_file_location('kau', os.path.join(R, 'tools/shin/kau.py')); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
     m.build(write, L, R)
 LISTS.COVER()
+
+# ---------- 今までのページにかぶせる見た目（links/shin/skin.css）：shin.css の 頭・下のバー・MENU・夜空 を .sk の中だけに効く形にして＋skin.tail.css ----------
+def skin():
+    src = re.sub(r'/\*.*?\*/', '', open(os.path.join(L, 'shin', 'shin.css'), encoding='utf-8').read(), flags=re.S)
+    KEYS = ('.top', '.brand', '.tg', '.nav', '#nav', '.mn', '.mu', '#tb', '.tw', '.shoot', '#stars', '#sky', '#logo', '.vtt', 'view-transition')
+    BAD = ('.tw h2', '.tw .acts', '.vn .mn', '#sky .a', '#sky .gr', '#sky .fade', '#sky .au')
+    def blocks(t):
+        out, i, n = [], 0, len(t)
+        while i < n:
+            j = t.find('{', i)
+            if j < 0: break
+            sel = t[i:j].strip(); d, k = 1, j + 1
+            while d and k < n:
+                d += {'{': 1, '}': -1}.get(t[k], 0); k += 1
+            out.append((sel, t[j + 1:k - 1])); i = k
+        return out
+    def scope(sel):
+        r = []
+        for x in sel.split(','):
+            x = x.strip()
+            if x.startswith('::view-transition') or x.startswith('html.vtt') or x.startswith('html.tbon'):
+                r.append(x); continue
+            m = re.match(r'(html(?:\.nt|:not\(\.nt\))?)\s+(.*)', x)
+            r.append((m.group(1) + ' .skc ' + m.group(2)) if m else '.skc ' + x)
+        return ','.join(r)
+    def take(sel):
+        return any(k in sel for k in KEYS) and not any(b in sel for b in BAD)
+    css, used, kf = [], set(), {}
+    for sel, body in blocks(src):
+        if sel.startswith('@keyframes'):
+            kf[sel.split()[1]] = '%s{%s}' % (sel, body); continue
+        if sel.startswith('@media') or sel.startswith('@supports'):
+            inner = [(a, b) for a, b in blocks(body) if take(a)]
+            if inner: css.append(sel + '{' + ''.join(scope(a) + '{' + b + '}' for a, b in inner) + '}')
+            for a, b in inner: used.update(re.findall(r'animation(?:-name)?:\s*([\w-]+)', b))
+            continue
+        if sel in (':root', 'html.nt', 'html'):
+            v = ';'.join(d.strip() for d in body.split(';') if d.strip().startswith('--'))
+            if v: css.append(('html.nt .skc' if sel == 'html.nt' else '.skc') + '{' + v + '}')
+            continue
+        if take(sel):
+            css.append(scope(sel) + '{' + body + '}'); used.update(re.findall(r'animation(?:-name)?:\s*([\w-]+)', body))
+    css += [kf[k] for k in sorted(used) if k in kf]
+    tail = open(os.path.join(R, 'tools/shin/skin.tail.css'), encoding='utf-8').read()
+    open(os.path.join(L, 'shin', 'skin.css'), 'w', encoding='utf-8').write('/* 作り：tools/shin/build.py skin()。直す時は shin.css か tools/shin/skin.tail.css を直す */\n' + '\n'.join(css) + '\n' + tail)
+    print('skin.css', len(css), 'rules')
+skin()
