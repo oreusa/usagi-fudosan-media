@@ -1,0 +1,2 @@
+pd	https://townnote.pages.dev/shin/odekake
+kt	https://kansai.townnote.app/shin/odekake

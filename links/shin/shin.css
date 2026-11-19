@@ -1,10 +1,10 @@
 /* 新しいHP（11/19）。昼と夜の2つ。夜は反転ではなく、夜の色を持つ（まぶしい白を出さない）。
    決まり：普通の役目＋こだわり1つ。動かすのは transform と opacity だけ。ぼかしは使わない。 */
 :root{
-  --bg:#FFFFFF;--ink:#111111;--sub:#6E6A66;--mut:#9B958F;--line:#ECE9E5;--card:#FFFFFF;--chip:#F4F2EF;--chipt:#2A2623;
+  --bg:#FFFFFF;--ink:#111111;--sub:#625D58;--mut:#77716B;--line:#ECE9E5;--card:#FFFFFF;--chip:#F4F2EF;--chipt:#2A2623;
   --on:#111111;--ont:#FFFFFF;--glow:#E9C46A;--shadow:0 1px 0 rgba(0,0,0,.04);
-  --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP",serif;
-  --sans:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic",sans-serif;
+  --serif:"Hiragino Mincho ProN","Yu Mincho","YuMincho","Noto Serif JP","Noto Serif CJK JP",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Noto Sans CJK JP","Yu Gothic",sans-serif;
   --lat:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
   --safe:env(safe-area-inset-bottom,0px);
 }
@@ -122,7 +122,7 @@ html.nt .tile{background:color-mix(in srgb,var(--gc) 16%,#121826)}
 .lb{display:flex;align-items:center;gap:6px;margin-top:9px;font-size:11px;font-weight:700;color:var(--sub);white-space:nowrap;overflow:hidden}
 .lb .g{color:var(--gc);letter-spacing:.06em}
 .lb .g::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:currentColor;margin-right:5px;vertical-align:1px}
-.lb .lt{margin-left:auto;padding:2px 7px;border-radius:999px;background:#FDECEA;color:#C23B2A}
+.lb .lt{margin-left:auto;padding:2px 7px;border-radius:999px;background:#FDECEA;color:#A92E1F}
 .lb .lt.now{background:#E7F5EE;color:#137A4B}
 html.nt .lb .lt{background:#3A1C1C;color:#FFB3A8}html.nt .lb .lt.now{background:#123024;color:#8FE0B5}
 .cd h4{margin:5px 0 0;font-size:14.5px;line-height:1.42;font-weight:800;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-wrap:pretty}
