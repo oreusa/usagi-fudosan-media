@@ -183,6 +183,19 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
         write('cover', 'TOWN NOTE（タウンノート）｜関西のおでかけと、家と土地の値段', c,
               {'pc': pc, 'top': top, 'go': go, 'more': more, 'map': MAP,
                'sns': [['インスタ', 'https://www.instagram.com/fudousan_ai_si/'], ['Threads', 'https://www.threads.com/@fudousan_ai_si'], ['X', 'https://x.com/fudosan_ai_si']]})
+        # 11/19 23時 owner「トップださ」「地図適当すぎ」→ 新しい表紙の見本 /shin/cover2（写真を大きく・本物の地図 MapLibre）。OK が出たら / と入れ替える
+        pins = []
+        for x in now:
+            if not x.get('xy'): continue
+            q = {k: x[k] for k in ('t', 'p', 'e', 'im', 'th', 'o', 'k') if k in x}
+            q['ll'] = [round(36 - x['xy'][1] / 100, 4), round(x['xy'][0] / 82.2 + 134, 4)]
+            pins.append(q)
+        c2 = copy.deepcopy(c); c2['menu']['items'][0] = ['トップ', '/', 1]
+        write('cover2', 'TOWN NOTE（タウンノート）｜関西のおでかけ・イベント（見本）', c2,
+              {'h1': '関西のおでかけ・イベント', 'sub': '大阪・京都・兵庫・奈良・滋賀・和歌山で、いま開催中のおでかけを毎日まとめています。',
+               'top': top, 'pins': pins, 'pc': pc, 'kc': {k: v[1] for k, v in cfg_kinds(items, None).items()}, 'bb': [[134.25, 33.45], [136.45, 35.75]],
+               'ie': {'n': len(ie['towns']), 's': f"{len(ie['towns'])}の街の、実際に売れた値段と地価の動き。"}, 'kau': {'n': len(kau['cats'])}, 'kai': {'n': cn['soon']},
+               'more': more, 'sns': [['インスタ', 'https://www.instagram.com/fudousan_ai_si/'], ['Threads', 'https://www.threads.com/@fudousan_ai_si'], ['X', 'https://x.com/fudosan_ai_si']]}, js='cover2')
 
 
 def cfg_kinds(items, icons):
