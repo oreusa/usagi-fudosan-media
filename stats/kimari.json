@@ -1,6 +1,6 @@
 {
  "day": "2026-11-19",
- "at": "2026-11-19T09:24:14+09:00",
+ "at": "2026-11-19T11:35:48+09:00",
  "bad": 0,
  "rows": [
   {
@@ -64,7 +64,7 @@
    "purpose": "夜（GPT）が毎日たくさん載せる",
    "kimari": "台本は毎日・40件より多く（11/13 オーナー「100倍楽天roomやれ」）",
    "ok": true,
-   "detail": "台本の日付 2026-11-19・238件",
+   "detail": "台本の日付 2026-11-19・250件",
    "te": "akari scripts/room_auto.py と page.yml を見る"
   },
   {
@@ -72,7 +72,7 @@
    "purpose": "載せられる新しい商品が毎日ある",
    "kimari": "台本に前の14日に出していない商品が毎日20件以上（11/16 台本が出し済みばかりで0件になった）",
    "ok": true,
-   "detail": "新しい商品 200件",
+   "detail": "新しい商品 212件",
    "te": "akari data/room-rank.json の日付（ranking.yml が毎晩）と scripts/room_auto.py の rank_cands を見る"
   },
   {
