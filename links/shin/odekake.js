@@ -26,7 +26,7 @@ function pick(){return IT.filter(function(x){
 var nNow=IT.filter(function(x){return x.st==="now"}).length;
 S_.main.innerHTML='<div class="wrap"><section class="hero"><div class="kick">Kansai · Odekake</div><h1 class="h1">関西の、<em>今週どこ行く？</em></h1>'+
  '<div class="live"><i class="dot"></i>いま開催中 <b data-n="'+nNow+'">0</b>件<span style="margin-left:auto;font-size:11.5px;color:var(--mut)">'+md(TD)+' 更新</span></div></section>'+
- '<div class="st" id="st"></div><div class="sec"><h2>今週の顔<i>This week</i></h2><small>横にめくる</small></div></div>'+
+ '<div class="st" id="st"></div><div class="sec"><h2>今週末のおすすめ<i>Pick up</i></h2><small>横にめくる →</small></div></div>'+
  '<div class="fan" id="fan"></div>'+
  '<div class="wrap"><div id="sent"></div><div class="bar" id="bar"><div class="seg" id="seg"></div><div class="chips" id="chips"></div></div>'+
  '<div class="cnt"><h3 id="ch"></h3><small id="cs"></small></div><div class="grid" id="grid"></div><div id="mr"></div></div>'+
