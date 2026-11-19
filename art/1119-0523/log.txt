@@ -1,0 +1,45 @@
+/tmp/art/hiru-11.jpg 115464 image/jpeg
+/tmp/art/hiru-12.jpg 失敗0 HTTP Error 402: Payment Required
+/tmp/art/hiru-12.jpg 失敗1 HTTP Error 402: Payment Required
+/tmp/art/hiru-12.jpg 失敗2 HTTP Error 402: Payment Required
+/tmp/art/hiru-12.jpg 106048 image/jpeg
+/tmp/art/hiru-13.jpg 失敗0 HTTP Error 402: Payment Required
+/tmp/art/hiru-13.jpg 失敗1 HTTP Error 402: Payment Required
+/tmp/art/hiru-13.jpg 失敗2 HTTP Error 402: Payment Required
+/tmp/art/hiru-13.jpg 100307 image/jpeg
+/tmp/art/hiru-14.jpg 失敗0 HTTP Error 402: Payment Required
+/tmp/art/hiru-14.jpg 失敗1 HTTP Error 402: Payment Required
+/tmp/art/hiru-14.jpg 失敗2 HTTP Error 402: Payment Required
+/tmp/art/hiru-14.jpg 99642 image/jpeg
+/tmp/art/aki-21.jpg 失敗0 HTTP Error 402: Payment Required
+/tmp/art/aki-21.jpg 失敗1 HTTP Error 402: Payment Required
+/tmp/art/aki-21.jpg 失敗2 HTTP Error 402: Payment Required
+/tmp/art/aki-21.jpg 94156 image/jpeg
+/tmp/art/aki-22.jpg 失敗0 HTTP Error 402: Payment Required
+/tmp/art/aki-22.jpg 失敗1 HTTP Error 402: Payment Required
+/tmp/art/aki-22.jpg 失敗2 HTTP Error 402: Payment Required
+/tmp/art/aki-22.jpg 116522 image/jpeg
+/tmp/art/aki-23.jpg 失敗0 HTTP Error 402: Payment Required
+/tmp/art/aki-23.jpg 失敗1 HTTP Error 402: Payment Required
+/tmp/art/aki-23.jpg 失敗2 HTTP Error 402: Payment Required
+/tmp/art/aki-23.jpg 124548 image/jpeg
+/tmp/art/aki-24.jpg 失敗0 HTTP Error 402: Payment Required
+/tmp/art/aki-24.jpg 失敗1 HTTP Error 402: Payment Required
+/tmp/art/aki-24.jpg 失敗2 HTTP Error 402: Payment Required
+/tmp/art/aki-24.jpg 111431 image/jpeg
+/tmp/art/yoru-31.jpg 失敗0 HTTP Error 402: Payment Required
+/tmp/art/yoru-31.jpg 失敗1 HTTP Error 402: Payment Required
+/tmp/art/yoru-31.jpg 失敗2 HTTP Error 402: Payment Required
+/tmp/art/yoru-31.jpg 78979 image/jpeg
+/tmp/art/yoru-32.jpg 失敗0 HTTP Error 402: Payment Required
+/tmp/art/yoru-32.jpg 失敗1 HTTP Error 402: Payment Required
+/tmp/art/yoru-32.jpg 失敗2 HTTP Error 402: Payment Required
+/tmp/art/yoru-32.jpg 64276 image/jpeg
+/tmp/art/yoru-33.jpg 失敗0 HTTP Error 402: Payment Required
+/tmp/art/yoru-33.jpg 失敗1 HTTP Error 402: Payment Required
+/tmp/art/yoru-33.jpg 失敗2 HTTP Error 402: Payment Required
+/tmp/art/yoru-33.jpg 84236 image/jpeg
+/tmp/art/yoru-34.jpg 失敗0 HTTP Error 402: Payment Required
+/tmp/art/yoru-34.jpg 失敗1 HTTP Error 402: Payment Required
+/tmp/art/yoru-34.jpg 失敗2 HTTP Error 402: Payment Required
+/tmp/art/yoru-34.jpg 69787 image/jpeg
