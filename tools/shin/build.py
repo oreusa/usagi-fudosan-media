@@ -235,3 +235,6 @@ def skin():
     open(os.path.join(L, 'shin', 'skin.css'), 'w', encoding='utf-8').write('/* 作り：tools/shin/build.py skin()。直す時は shin.css か tools/shin/skin.tail.css を直す */\n' + '\n'.join(css) + '\n' + tail)
     print('skin.css', len(css), 'rules')
 skin()
+# 11/19 functions が上限で止まっても新しい形が出るように（bake.py）
+import importlib.util as _iu
+_s = _iu.spec_from_file_location('bake', os.path.join(R, 'tools/shin/bake.py')); _b = _iu.module_from_spec(_s); _s.loader.exec_module(_b); _b.main(L)
