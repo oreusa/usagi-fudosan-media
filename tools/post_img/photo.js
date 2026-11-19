@@ -1,7 +1,7 @@
 // 投稿の写真の表紙（11/19 オーナー「投稿に使う写真も劇的に変えれる」）。HPの激変版（?mihon=2）と同じ写真・同じ作り。
 // HP の写真 links/assets/ph/<im>（mihon.json の im・cr）を上に大きく、下に暗い帯と明朝の見出し、大きい日付。写真の人の名前と許可は必ず右上に出す。
 // 使い方：node tools/post_img/photo.js <spec.json>   spec＝[{name, im, cr, pos?, zoom?, pill, head, big?, unit?, cap?}]
-//   im は links/assets/ph のファイル名、cr はクレジットそのまま（mihon.json の cr）。pos は写真の見せる所（CSS object-position。例 "50% 40%"）。
+//   im は links/assets/ph のファイル名か、media/post/ph/<file>（投稿用に集めた写真・credits.json に cr）、cr はクレジットそのまま（mihon.json の cr）。pos は写真の見せる所（CSS object-position。例 "50% 40%"）。
 //   pill は左上の札（例 "京都　11/21（土）から"）。head は <br> と <em> だけ。
 //   出来上がり：card.js と同じ media/post/card-<name>.jpg と cards.json。
 const {chromium}=require('playwright');const fs=require('fs');const path=require('path');
@@ -9,7 +9,8 @@ const CFG=require('./card-config.js');const PH=path.join(__dirname,'../../links/
 const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
 const head=s=>esc(s).replace(/&lt;br&gt;/g,'<br>').replace(/&lt;em&gt;/g,'<em>').replace(/&lt;\/em&gt;/g,'</em>');
 const logo='data:image/png;base64,'+fs.readFileSync(CFG.logo).toString('base64');
-const img=f=>'data:image/webp;base64,'+fs.readFileSync(path.join(PH,f)).toString('base64');
+const R=path.join(__dirname,'../..');const fp=f=>f.includes('/')?path.join(R,f):path.join(PH,f);
+const img=f=>'data:image/'+(/\.webp$/.test(f)?'webp':'jpeg')+';base64,'+fs.readFileSync(fp(f)).toString('base64');
 const HTML=x=>`<!doctype html><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;500&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
 <style>*{margin:0;box-sizing:border-box}body{width:1080px;height:1350px;background:#16120F;position:relative;overflow:hidden;font-family:"Zen Kaku Gothic New",sans-serif;color:#fff}
 .ph{position:absolute;left:0;top:0;width:1080px;height:1010px;object-fit:cover;object-position:${x.pos||'50% 50%'};transform:scale(${x.zoom||1});transform-origin:${x.pos||'50% 50%'};filter:saturate(1.06) contrast(1.04)}
@@ -34,7 +35,7 @@ ${x.big||x.cap?`<div class="rw">${x.big?`<div class="big">${esc(x.big)}${x.unit?
  const idxf=path.join(out,'cards.json');let idx={};try{idx=JSON.parse(fs.readFileSync(idxf,'utf8')).items||{}}catch(e){}
  const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1350}});let n=0;
  for(const x of specs){if(!/^[a-z0-9-]+$/.test(x.name||'')){console.log('× name：',x.name);process.exitCode=1;continue}
-  if(!x.im||!fs.existsSync(path.join(PH,x.im))){console.log('× 写真が無い：',x.name,x.im);process.exitCode=1;continue}
+  if(!x.im||!fs.existsSync(fp(x.im))){console.log('× 写真が無い：',x.name,x.im);process.exitCode=1;continue}
   if(!x.cr){console.log('× クレジットが無い（写真は出さない）：',x.name);process.exitCode=1;continue}
   await p.setContent(HTML(x),{waitUntil:'networkidle'});await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(300);
   // 見出しが写真の真ん中まで上がる（4行以上）時は止める

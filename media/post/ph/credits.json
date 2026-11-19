@@ -1,0 +1,77 @@
+{
+ "about": "投稿の写真の表紙用の写真（コモンズの許可つき）。photo.js の im に media/post/ph/<file> を書く。cr を必ず表紙に出す",
+ "items": {
+  "ishiyamadera-koyo.jpg": {
+   "what": "石山寺 紅葉（昼）",
+   "cr": "Bariston（CC BY-SA 4.0・Wikimedia Commons）",
+   "page": "https://commons.wikimedia.org/wiki/File:Ishiyama_temple.jpg",
+   "w": 1920
+  },
+  "kiyomizu-night2.jpg": {
+   "what": "清水寺 夜",
+   "cr": "Haibo Lu（CC BY-SA 4.0・Wikimedia Commons）",
+   "page": "https://commons.wikimedia.org/wiki/File:Kiyoumizudera2.JPG",
+   "w": 1920
+  },
+  "kiyomizu-night.jpg": {
+   "what": "清水寺 紅葉の夜",
+   "cr": "lumoplank（CC0・Wikimedia Commons）",
+   "page": "https://commons.wikimedia.org/wiki/File:Kiyomizu-dera_autumn_night.jpg",
+   "w": 1920
+  },
+  "eikando-night.jpg": {
+   "what": "永観堂 夜の池と橋",
+   "cr": "lumoplank（CC0・Wikimedia Commons）",
+   "page": "https://commons.wikimedia.org/wiki/File:Eikando,_Kyoto_-_Eikando7378.jpg",
+   "w": 1920
+  },
+  "eikando-night2.jpg": {
+   "what": "永観堂 夜",
+   "cr": "Suicasmo（CC BY-SA 4.0・Wikimedia Commons）",
+   "page": "https://commons.wikimedia.org/wiki/File:Zenrinji_Eikando_20161113-3.jpg",
+   "w": 1920
+  },
+  "tanzan-koyo.jpg": {
+   "what": "談山神社 紅葉と灯籠",
+   "cr": "Hiroaki Kaneko（CC BY-SA 3.0・Wikimedia Commons）",
+   "page": "https://commons.wikimedia.org/wiki/File:%E9%8C%A6%E7%A7%8B%E3%81%AE%E8%AB%87%E5%B1%B1%E7%A5%9E%E7%A4%BE_(Tanzan_shrine_in_autumn)_25_Nov,_2012_-_panoramio.jpg",
+   "w": 1920
+  },
+  "tanzan-night.jpg": {
+   "what": "談山神社 夜",
+   "cr": "ONO Masanobu（CC0・Wikimedia Commons）",
+   "page": "https://commons.wikimedia.org/wiki/File:Tanzan_Shrine_night_view_with_bamboo_lantern_illumination_and_thirteen-story_pagoda.jpg",
+   "w": 1920
+  },
+  "kokoen-koyo.jpg": {
+   "what": "好古園 紅葉",
+   "cr": "Oilstreet（CC BY 2.5・Wikimedia Commons）",
+   "page": "https://commons.wikimedia.org/wiki/File:Koko-en_Garden,_Himeji01.JPG",
+   "w": 1920
+  },
+  "minoo-koyo.jpg": {
+   "what": "箕面 紅葉",
+   "cr": "lumoplank（CC0・Wikimedia Commons）",
+   "page": "https://commons.wikimedia.org/wiki/File:Minoh_-_Minoh6687.jpg",
+   "w": 1920
+  },
+  "minoo-koyo2.jpg": {
+   "what": "箕面 渓谷の紅葉",
+   "cr": "663highland（CC BY 2.5・Wikimedia Commons）",
+   "page": "https://commons.wikimedia.org/wiki/File:Meiji_no_Mori_Minoh_Quasi-National_Park_Minoh_Osaka_pref_Japan26n.jpg",
+   "w": 1920
+  },
+  "tofukuji-koyo.jpg": {
+   "what": "東福寺 紅葉",
+   "cr": "Luka Peternel（CC BY-SA 4.0・Wikimedia Commons）",
+   "page": "https://commons.wikimedia.org/wiki/File:Tofukuji-autumn-foliage-2017-Luka-Peternel.jpg",
+   "w": 1920
+  },
+  "tofukuji-tsutenkyo.jpg": {
+   "what": "東福寺 通天橋",
+   "cr": "Luka Peternel（CC BY-SA 4.0・Wikimedia Commons）",
+   "page": "https://commons.wikimedia.org/wiki/File:Tofukuji-bridge-autumn-2017-Luka-Peternel.jpg",
+   "w": 1920
+  }
+ }
+}

@@ -1,5 +1,5 @@
 {
- "about": "投稿の表紙の絵（card.js が作る）。投稿の image_url に url を使う",
+ "about": "投稿の表紙の絵（card.js・photo.js が作る）。投稿の image_url に url を使う",
  "items": {
   "card-open-1114-x07": {
    "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1114-x07.jpg?v=mwfhk0jp",
@@ -224,6 +224,12 @@
   "card-open-1119-x12": {
    "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1119-x12.jpg?v=mwmmqvw4",
    "made": "2026-11-19"
+  },
+  "card-photo-1119-x21": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-photo-1119-x21.jpg?v=mwmy7vsi",
+   "made": "2026-11-19",
+   "photo": "media/post/ph/ishiyamadera-koyo.jpg",
+   "cr": "Bariston（CC BY-SA 4.0・Wikimedia Commons）"
   }
  }
 }
