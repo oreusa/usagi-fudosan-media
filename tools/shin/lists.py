@@ -11,7 +11,7 @@ ALSO = [['関西のおでかけ・イベント', '/odekake'], ['関西のイル�
         ['いまから行けるおでかけ', '/ima'], ['泊まりで行くおでかけ', '/tomari'], ['関西の初詣', '/hatsumode']]
 
 
-def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm):
+def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
     TD = datetime.date.today().isoformat()
 
     def ode(name, url, title, desc, page, its, cur):
@@ -151,6 +151,38 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm):
           {'items': rl, 'page': {'h1': '関西まちランキング', 'sub': f'駅・地価・人口の順位を、公式の数字で・{len(rl)}本', 'view': 'list', 'cnt': '本',
                                  'K': {k[0]: [k[1], k[2]] for k in KIND if any(x['k'] == k[0] for x in rl)},
                                  'note': '数字は国土交通省・各府県・鉄道会社などの公式の発表です。押すと順位の全部と、出どころの公式ページが出ます。'}}, js='list')
+
+    global COVER
+    def COVER():
+        # ---------- 表紙（/）：ie・kau を作った後に build.py の最後から呼ぶ ----------
+        def dj(name):
+            t = open(os.path.join(L, 'shin', name + '.html'), encoding='utf-8').read()
+            return json.loads(html.unescape(re.search(r'id="d" type="application/json">(.*?)</script>', t, re.S).group(1)).replace('<\\/', '</'))
+        now = [x for x in items if x['s'] <= TD <= x['e']]
+        pc = {p: sum(1 for x in now if x['p'] == p) for p in PREFS}
+        ph = [x for x in sorted(now, key=lambda x: x['e']) if x.get('im')]
+        top, used = [], set()
+        while len(top) < 8 and ph:
+            for p in PREFS:
+                c_ = next((x for x in ph if x['p'] == p and x['t'] not in used), None)
+                if c_ and len(top) < 8: top.append({k: c_[k] for k in ('t', 'p', 'e', 'im', 'th', 'o') if k in c_}); used.add(c_['t'])
+            if all(x['t'] in used for x in ph): break
+        ie = dj('ie'); kau = dj('kau')
+        go = [{'t': '関西のおでかけ・イベント', 's': '開催中・今週末・まもなく終わる', 'n': str(len(now)), 'nu': '開催中', 'u': '/odekake', 'ic': 'now'},
+              {'t': '家と土地の相場', 's': f"{len(ie['towns'])}の街の売れた値段と地価", 'n': str(len(ie['towns'])), 'nu': '街', 'u': '/fudosan-list', 'ic': 'find'},
+              {'t': '日用品の値段くらべ', 's': '楽天・Yahoo!・Amazon を1つの画面で', 'n': str(len(kau['cats'])), 'nu': '種類', 'u': '/okaimono', 'ic': 'yen'},
+              {'t': '開店・閉店', 's': '新しいお店・閉まるお店', 'n': str(cn['soon']), 'nu': 'これから開く', 'u': '/kaiten', 'ic': 'buy'}]
+        more = [['関西のイルミネーション', '/illumination'], ['関西の紅葉', '/koyo'], ['いまから行けるおでかけ', '/ima'], ['泊まりで行くおでかけ', '/tomari'],
+                ['関西の初詣', '/hatsumode'], ['関西まちランキング', '/ranking'], ['実家・空き家', '/jikka/'], ['ふるさと納税', '/furusato']]
+        c = copy.deepcopy(cfg)
+        c['nav'] = [{'t': 'おでかけ', 'ic': 'now', 'href': '/odekake'}, {'t': '家と土地', 'ic': 'find', 'href': '/fudosan-list'}, {'t': 'おかいもの', 'ic': 'yen', 'href': '/okaimono'}, {'t': '地図', 'ic': 'map', 'a': 'map'}]
+        c['menu'] = {'k': 'Town Note', 'items': [['トップ', '/', 1], ['関西のおでかけ', '/odekake'], ['家と土地の相場', '/fudosan-list'], ['日用品の値段くらべ', '/okaimono'], ['開店・閉店', '/kaiten'], ['まちランキング', '/ranking']]}
+        c['foot'] = 'おでかけの券・宿と、おかいものリストのリンクには広告（PR）があります。'
+        c['desc'] = '関西の不動産屋が、街を調べて見つけたことをまとめています。開催中のおでかけ・イベント、205の街の家と土地の値段、日用品の値段くらべ、開店・閉店を、公式の発表と数字で。'
+        URL['cover'] = '/'
+        write('cover', 'TOWN NOTE（タウンノート）｜関西のおでかけと、家と土地の値段', c,
+              {'pc': pc, 'top': top, 'go': go, 'more': more, 'map': MAP,
+               'sns': [['インスタ', 'https://www.instagram.com/fudousan_ai_si/'], ['Threads', 'https://www.threads.com/@fudousan_ai_si'], ['X', 'https://x.com/fudosan_ai_si']]})
 
 
 def cfg_kinds(items, icons):

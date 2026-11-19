@@ -176,7 +176,8 @@ def odekake():
     # ---------- 初詣・泊まり・いまから・開店閉店・ランキング（links/shin/list.js） ----------
     import importlib.util as _iu
     _sp = _iu.spec_from_file_location('lists', os.path.join(R, 'tools/shin/lists.py')); _m = _iu.module_from_spec(_sp); _sp.loader.exec_module(_m)
-    _m.build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm)
+    global LISTS; LISTS = _m
+    _m.build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP)
 
 odekake()
 if os.path.exists(os.path.join(L, 'shin/ie.js')):
@@ -186,3 +187,4 @@ if os.path.exists(os.path.join(L, 'shin/ie.js')):
 if os.path.exists(os.path.join(L, 'shin/kau.js')):
     sp = importlib.util.spec_from_file_location('kau', os.path.join(R, 'tools/shin/kau.py')); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
     m.build(write, L, R)
+LISTS.COVER()
