@@ -1,0 +1,12 @@
+cafe https://tanosu.com/cafe/ page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://tanosu.com/cafe/", waiting until "networkidle"
+
+top https://tanosu.com/ page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://tanosu.com/", waiting until "networkidle"
+
+gourmet https://tanosu.com/gourmet/ page.goto: Timeout 60000ms exceeded.
+Call log:
+  - navigating to "https://tanosu.com/gourmet/", waiting until "networkidle"
+
