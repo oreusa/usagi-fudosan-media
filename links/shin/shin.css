@@ -829,3 +829,12 @@ html.iro.nt .c3g{background:rgba(28,28,32,.55);box-shadow:0 1px 0 rgba(255,255,2
 html.iro.nt .c3g a{border-top-color:rgba(255,255,255,.08)}
 html.iro.nt .c3g::after{opacity:.28}
 html.iro .c3g2 a,html.iro .c3g3 a{font-size:12.5px;letter-spacing:-.01em;padding-right:12px}html.iro .c3g2 a::after,html.iro .c3g3 a::after{right:2px}
+/* 11/20 見本：MENU にも分野の光（今いる所はグラデーションの字・分野の入口は色の点） */
+.mu .rel:empty{display:none}
+html.iro .mu .pn{overflow:hidden}
+html.iro .mu .pn::before{content:"";position:absolute;left:-20%;right:-20%;top:-120px;height:220px;background:var(--ga,var(--g-top));filter:blur(60px);opacity:.28;pointer-events:none}
+html.iro .mu .pn>*{position:relative}
+html.iro .mu li a.here{background:var(--ga,var(--g-top));-webkit-background-clip:text;background-clip:text;color:transparent}
+html.iro .mu li a.here small{-webkit-text-fill-color:rgba(255,255,255,.45)}
+html.iro .mu li a::after{content:"";margin-left:auto;align-self:center;width:8px;height:8px;border-radius:9px;background:var(--md,transparent);box-shadow:0 0 12px var(--mc,transparent)}
+html.iro .mu li a[href="/odekake"]{--md:var(--g-od);--mc:#FF3D7F}html.iro .mu li a[href="/fudosan-list"]{--md:var(--g-ie);--mc:#3B6CFF}html.iro .mu li a[href="/okaimono"]{--md:var(--g-kau);--mc:#00B37E}html.iro .mu li a[href="/kaiten"]{--md:var(--g-kai);--mc:#8B5CF6}
