@@ -17,10 +17,9 @@ if _t.get('title'): _t['title'] = [l.rstrip('。、．，. ') for l in _t['title
 #  表紙は機械が毎日同じ形で作る。題＝1行目「場所」・2行目「見どころ」（台本の place と date_title。date_title に場所が入っていれば point_title）。
 #  台本の title は表紙に使わない（文・日付・「おでかけニュース」が混ざってバラバラだった）。金の絵（イチョウ・家）も出さない。下に期間の金の1行
 _pl0 = re.sub(r'[（(].*?[）)]', '', _t.get('place', '').split('｜')[0]).strip()
-_see = _t.get('date_title', '')
-if not _see or _pl0 and _pl0 in _see: _see = _t.get('point_title', '') or _t.get('seal', '')
-_see = _see.rstrip('。、．，. ')
+_see = next((x.rstrip('。、．，. ') for x in (_t.get('date_title', ''), _t.get('point_title', ''), _t.get('seal', '')) if x and len(x.rstrip('。、．，. ')) <= 9 and not (_pl0 and _pl0 in x)), '')
 if _pl0 and _see and len(_pl0) <= 9 and len(_see) <= 9: _t['title'] = [_pl0, _see]
+elif _pl0 and len(_pl0) > 9 and _t.get('date_title') and _t.get('point_title') and len(_t['date_title']) <= 9 and len(_t['point_title']) <= 9: _t['title'] = [_t['date_title'], _t['point_title']]   # 場所の名前が長い日（クリスマスマーケット）は 催し／見どころ
 elif _t.get('title') and _t['title'][0].replace(' ', '') == 'おでかけニュース' and len(_t['title']) > 1: _t['title'] = [''.join(_t['title'][1:])[:9]]
 _bad = [f'表紙の題の{i + 1}行目「{l}」は{len(l)}字（{m}字まで）' for i, (l, m) in enumerate(zip(_t.get('title', []), (9, 9))) if len(l) > m]
 # 11/16 表紙の1行目が10字（クリスマスマーケット）で下のロゴに重なった。日付ページの大きな題が6字以上で、場所の行（｜の前）が8字以上だと字が重なった
@@ -165,6 +164,13 @@ PAGE['popup'] = bool(T.get('popup') or os.environ.get('EHON_POP'))   # 11/16 飛
 PAGE['globe'] = T.get('globe', '')   # スノードームの台の文字（英字）
 PAGE['magic'] = bool(T.get('magic')) or BR['scene'] in ('xmas', 'momiji', 'hama')   # 11/15 魔法の絵本（光の粒・雪・そり・スノードーム）
 PAGE.update({k: BR[k] for k in ('top_en', 'top_jp', 'cover_sub', 'hp_en', 'hp_jp', 't5', 'seal', 'motif', 'peaks', 'scene')})
+# 11/19 owner「絵入れないの？」：表紙の金の絵は毎日1つ、同じ場所・同じ大きさ・同じ金の線。絵柄だけ中身に合わせる（前は出る日と出ない日・場所も大きさもバラバラ）
+_tt = T.get('date_title', '') + T.get('point_title', '') + T.get('seal', '') + ''.join(T.get('title', []))
+PAGE['emblem'] = ('icho' if re.search('イチョウ|銀杏|いちょう|黄色', _tt) or T.get('icho') else
+                  'star' if re.search('イルミ|ツリー|クリスマス|光|灯', _tt) and not re.search('もみじ|紅葉|モミジ', _tt) else
+                  'wave' if BR.get('scene') == 'hama' or re.search('浜|海', _tt) else
+                  'taki' if T.get('taki') or re.search('滝', _tt) else
+                  'tou' if re.search('寺|堂|塔|舞台', ALLTXT) else 'momiji')
 # 11/19 owner「また使い回し？？」：関東 11/18 偕楽園と 11/19 小石川後楽園のページの絵が同じだった（紅葉の絵が1種類だけ）。
 #  日ごとに絵の並べ方を変える：mjv＝昼・秋・夜のページの 道／池 を毎日交互に（前の日とは3ページとも違う）、vseed＝木・雲・星・月の位置。関東は関西と1つずらす
 def _variant(d, kanto):
@@ -351,6 +357,14 @@ function umi(mode,far,tc){
     for(let i=0;i<11;i++){const x=50+i*82,y=1200+Math.sin(i*1.3)*26;s+=`<circle class="lan" cx="${x}" cy="${y}" r="40" fill="${cols[i%7]}" opacity=".55" filter="url(#bl)"/><circle cx="${x}" cy="${y}" r="6" fill="#fff"/>`}}
   return s+`</g><g class="lv"></g>${PAPER}</svg>`}
 const NUMS=['一','二','三','四','五','六'];
+function coverEmblem(){   // 11/19 表紙の金の絵：いつも左下の同じ枠（中心 250,1110・高さ約230）に1つ
+  const G='#e3c88c',D='#7c2a22',k=P.emblem||'momiji';
+  if(k=='icho')return `<g transform="translate(250,1210) scale(11)"><path d="M-.9,0 L-2.2,-3.2 C-9,-6 -14.5,-12 -13,-18 Q-7,-22.5 -.6,-19.6 L0,-15.5 L.6,-19.6 Q7,-22.5 13,-18 C14.5,-12 9,-6 2.2,-3.2 L.9,0Z" fill="${G}"/><path d="M0,-3.5 L-6,-17 M0,-3.5 L-2.4,-18.6 M0,-3.5 L2.4,-18.6 M0,-3.5 L6,-17 M0,-3.5 L-10,-15 M0,-3.5 L10,-15" stroke="${D}" stroke-width=".3" opacity=".5"/><path d="M0,0 Q.3,4 1.4,7" fill="none" stroke="${G}" stroke-width=".9" stroke-linecap="round"/></g>`;
+  if(k=='taki')return `<g stroke="${G}" stroke-linecap="round" stroke-linejoin="round"><path d="M-110,0 L-104,-60 L-90,-84 L-86,-130 L-66,-150 L-60,-190 L-30,-205 L-18,-195 L-22,-120 L-16,-50 L-24,-20 L-110,-8Z" fill="${G}" stroke-width="3"/><path d="M110,0 L104,-50 L92,-76 L88,-120 L70,-144 L64,-186 L32,-204 L18,-195 L22,-120 L16,-50 L24,-20 L110,-8Z" fill="${G}" stroke-width="3"/>${[-2,-1,0,1,2].map(i=>`<path d="M${i*4},-200 Q${i*5},-120 ${i*6},-34" fill="none" stroke-width="${i?2.2:3.4}" opacity="${1-Math.abs(i)*.2}"/>`).join('')}<ellipse cx="0" cy="-22" rx="60" ry="11" fill="none" stroke-width="3"/></g>`;
+  if(k=='star')return `<g transform="translate(250,1110) scale(105)" fill="${G}"><path d="M0,-1Q.12,-.12 1,0Q.12,.12 0,1Q-.12,.12 -1,0Q-.12,-.12 0,-1Z"/><circle cx=".7" cy="-.7" r=".07"/><circle cx="-.75" cy=".6" r=".05"/></g>`;
+  if(k=='wave')return `<g transform="translate(250,1110)" fill="none" stroke="${G}" stroke-width="7" stroke-linecap="round"><circle cx="0" cy="-40" r="52" fill="${G}" stroke="none" opacity=".9"/><path d="M-110,40 Q-80,10 -50,40 T10,40 T70,40 T110,30"/><path d="M-110,80 Q-80,50 -50,80 T10,80 T70,80 T110,70" opacity=".7"/></g>`;
+  if(k=='tou')return `<g transform="translate(250,1225) scale(.52)" fill="${G}">${motif(0,0,.5,false).replace(/fill="#[0-9a-f]{6}"/g,'fill="'+G+'"').replace(/stroke="#[0-9a-f]{3,6}"/g,'stroke="'+D+'"')}</g>`;
+  return `<g transform="translate(250,1110) scale(118) rotate(-12)"><path d="${leafPath(1)}" fill="${G}"/><path d="M0,.9 L0,-.75 M0,.15 L-.55,-.4 M0,.15 L.55,-.4 M0,.45 L-.6,.15 M0,.45 L.6,.15" stroke="${D}" stroke-width=".03" fill="none" opacity=".55"/></g>`}
 function coverArt(){
   // 11/16 表紙の金の絵を場所ごとに（毎日同じ屋根の絵だった）。滝＝崖から一筋に落ちる滝とつぼ・もみじ／イチョウ並木＝イチョウの葉と並木の一本道
   const G='#e3c88c',D='#7c2a22';
@@ -380,6 +394,7 @@ function build(){
   pages.push(`<div class="face cover"><div class="spine"></div><div class="fr1"></div><div class="fr2"></div>
    <div class="gold" style="position:absolute;left:0;right:0;top:138px;text-align:center;font:400 24px J;letter-spacing:.5em">${P.corner}</div>
    ${vtext(P.title,372,250,82,'font-family:MB;color:#e8cf96;line-height:1.75;letter-spacing:.16em','ct')}
+   <svg viewBox="0 0 920 1380" style="opacity:.92"><g id="emb"><g>${coverEmblem()}</g></g></svg>
    <div class="gold" style="position:absolute;left:0;right:0;top:184px;text-align:center;font:400 26px J;letter-spacing:.24em;opacity:.9" data-top="1">${P.d[0]}<span style="opacity:.6;margin:0 .5em">─</span>${P.d[2]}</div>
    <div style="position:absolute;right:108px;bottom:200px;width:216px;height:216px;border-radius:50%;background:#f6efdf;box-shadow:0 0 0 3px #d8b874,0 0 0 10px rgba(216,184,116,.28),0 6px 18px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center"><img src="file://%LOGO%" style="width:166px;height:166px"></div>
    <div class="gold" style="position:absolute;left:0;right:0;bottom:118px;text-align:center;font:500 30px M;letter-spacing:.16em;font-size:23px;line-height:1.7;bottom:104px">${P.cover_sub}</div><div id="foil"></div></div>`);
@@ -420,6 +435,7 @@ function build(){
   // 11/15 星の飾り：葉の筋と水彩のゆがみを外す（溶けた葉のように見えた）
   if(DK){$('#desk').style.background={momiji:'#2e1a10',xmas:'#0e2219',hama:'#cfc3b0'}[DK];$('#pat').style.display='none';$('#bk').style.display='none';if(DK=='hama'){$('#top').style.color='#6b5440';$('#top').style.setProperty('--tb','#4a3328');$('#pg').style.color='#7a6450'}}
   dkBuild();
+  {const g=document.getElementById('emb');if(g){const bb=g.firstChild.getBBox();if(bb.width&&bb.height){const k=Math.min(190/bb.width,190/bb.height);g.setAttribute('transform',`translate(240,1110) scale(${k}) translate(${-(bb.x+bb.width/2)},${-(bb.y+bb.height/2)})`)}}}   // 11/19 表紙の金の絵：どの絵柄も同じ 190px の枠に収める
   if(MG&&!DK){$('#desk').style.background='radial-gradient(120% 80% at 50% 42%,#2c3566 0%,#171c3d 55%,#0a0c1e 100%)'}if(MG){$('#deco').style.display='none';document.querySelectorAll('.lv').forEach(e=>e.style.display='none')}
   if(XM){document.querySelectorAll('.dl path:nth-child(2)').forEach(e=>e.remove());document.querySelectorAll('[filter="url(#wc3)"]').forEach(e=>e.removeAttribute('filter'))}
   if(XM)document.querySelectorAll('.face:not(.cover) path').forEach((e,i)=>{if(e.getAttribute('d')==LP&&!e.closest('.lv'))e.setAttribute('fill',XHK[i%5])});
