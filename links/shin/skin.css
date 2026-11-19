@@ -62,8 +62,7 @@ html.nt .skc{--line:#222A3A}
 .skc #tb{position:fixed;left:0;right:0;top:0;z-index:40;height:44px;padding:0 60px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);font:600 15px/1 var(--sans);color:var(--ink);letter-spacing:-.005em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:0;transform:translateY(-100%);transition:opacity .25s,transform .35s cubic-bezier(.2,.9,.25,1);pointer-events:none}
 .skc #tb.on{opacity:1;transform:none;pointer-events:auto}
 html.nt .skc #tb{background:rgba(10,14,24,.96)}
-.skc html.iro .nav .cur{color:var(--acl)}
-.skc html.iro .nav .cur::before{background:var(--acl);box-shadow:0 0 10px var(--acl)}
+.skc html.iro .nav .cur::before{width:26px;margin-left:-13px;background:var(--ga);box-shadow:0 0 12px var(--gc)}
 @keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(-24px,-40px,0)}}
 @keyframes pop{40%{transform:scale(.82)}100%{transform:scale(1)}}
 @keyframes ring{to{--ra:360deg}}

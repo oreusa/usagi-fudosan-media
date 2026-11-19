@@ -511,25 +511,38 @@ html.sk.nt[data-k] .fsn a span{color:var(--sub)!important}
 /* 11/20 夜：skin.css の色反転（前のページを夜にする仕組み）を kyu のページでは使わない。kyu は自分で夜の色を持つ */
 html.sk.night[data-k] body>*:not(.skc){filter:none!important}
 html.sk[data-k] body{color:var(--ink)}
-/* 11/20 見本：分野ごとに1色の目印（html.iro・data-f）。色は字・数字・選んでいる所・下のバーの今いる所だけ。地は白黒のまま */
-html.iro{--c-od:#C8452B;--c-ie:#0A66C2;--c-kau:#1E7F4F;--c-kai:#C2306B;--l-od:#FF8F70;--l-ie:#6EB2FF;--l-kau:#5FD39B;--l-kai:#FF7FB2}
-html.iro[data-f=od]{--ac:var(--c-od);--acl:var(--l-od)}html.iro[data-f=ie]{--ac:var(--c-ie);--acl:var(--l-ie)}
-html.iro[data-f=kau]{--ac:var(--c-kau);--acl:var(--l-kau)}html.iro[data-f=kai]{--ac:var(--c-kai);--acl:var(--l-kai)}html.iro[data-f=top]{--ac:var(--ink);--acl:#fff}
-html.iro.nt{--c-od:var(--l-od);--c-ie:var(--l-ie);--c-kau:var(--l-kau);--c-kai:var(--l-kai)}
-html.iro .chip.on,html.iro .nro .chip.on{background:var(--ac);border-color:var(--ac);color:#fff}
-html.iro.nt .chip.on,html.iro.nt .nro .chip.on{color:#0A0E18}
-html.iro .seg .pill{background:var(--ac)}html.iro .seg button.on{color:#fff}html.iro.nt .seg button.on{color:#0A0E18}
-html.iro .fseg button[aria-selected=true]{color:var(--ac)}
-html.iro .nav .cur{color:var(--acl)}html.iro .nav .cur::before{background:var(--acl);box-shadow:0 0 10px var(--acl)}
-html.iro .h1p b,html.iro .flead b,html.iro .fv b{color:var(--ac)}
-/* 表紙：面ごとにその分野の色（おでかけ・家と土地・おかいもの・開店閉店） */
-html.iro .c3>section:nth-of-type(1){--sc:var(--c-od)}html.iro .c3>section:nth-of-type(2){--sc:var(--c-ie)}
-html.iro .c3>section:nth-of-type(3){--sc:var(--l-kau)}html.iro .c3>section:nth-of-type(4){--sc:var(--c-kai)}
-html.iro .c3u .s b,html.iro .c3n1 b,html.iro .c3n2 b,html.iro .c3ks b,html.iro .c3kc small{color:var(--sc)}
-html.iro .c3u .c3b a.f{background:var(--sc);border-color:var(--sc);color:#fff}
-html.iro .c3u .c3b a:not(.f){border-color:var(--sc);color:var(--sc)}
-html.iro .c3u.k .c3b a.f{color:#0A0E18}html.iro.nt .c3u .c3b a.f{color:#0A0E18}
-html.iro .c3f h3{color:var(--ink)}
+/* 11/20 見本v2：近未来のグラデーション（html.iro・data-f）。owner「ちゃっちい」「グラデーション」「近未来のお洒落」。
+   分野ごとに2色のグラデーション：おでかけ＝夕焼け（コーラル→ローズ）・家と土地＝空（コバルト→シアン）・おかいもの＝若葉（エメラルド→ライム）・開店閉店＝夜明け（バイオレット→ピンク）。表紙の頭はオーロラ（全部の色）。
+   使う所：表紙の面の後ろの光・大きい数字（グラデーションの字）・ボタン（光の玉）・選んでいる所・下のバーの今いる所の光の線。地は白黒のまま */
+html.iro{--g-od:linear-gradient(120deg,#FF7A45 0%,#FF3D7F 100%);--g-ie:linear-gradient(120deg,#3B6CFF 0%,#00C6D7 100%);--g-kau:linear-gradient(120deg,#00B37E 0%,#9AD93C 100%);--g-kai:linear-gradient(120deg,#8B5CF6 0%,#F25FB0 100%);--g-top:linear-gradient(110deg,#FF7A45,#FF3D7F 30%,#8B5CF6 55%,#3B6CFF 75%,#00C6D7)}
+html.iro[data-f=od]{--ga:var(--g-od);--gc:#FF3D7F}html.iro[data-f=ie]{--ga:var(--g-ie);--gc:#3B6CFF}html.iro[data-f=kau]{--ga:var(--g-kau);--gc:#00B37E}html.iro[data-f=kai]{--ga:var(--g-kai);--gc:#8B5CF6}html.iro[data-f=top]{--ga:var(--g-top);--gc:#8B5CF6}
+/* 選んでいる所：グラデーションの玉＋うすい光 */
+html.iro .chip.on,html.iro .nro .chip.on{background:var(--ga);border-color:transparent;color:#fff;box-shadow:0 6px 18px -8px var(--gc)}
+html.iro .seg .pill{background:var(--ga);box-shadow:0 6px 18px -8px var(--gc)}html.iro .seg button.on{color:#fff}
+html.iro .fseg button[aria-selected=true]{background:var(--ga);color:#fff;box-shadow:0 6px 18px -8px var(--gc)}
+html.iro .nav .cur::before{width:26px;margin-left:-13px;background:var(--ga);box-shadow:0 0 12px var(--gc)}
+html.iro .h1p b,html.iro .flead b,html.iro .fv b{background:var(--ga);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* 表紙：面ごとの光（後ろにぼんやり）・数字はグラデーションの字・ボタンは光の玉 */
+html.iro .c3>section:nth-of-type(1){--sg:var(--g-od);--sc:#FF5A62;--s1:#FF7A45;--s2:#FF3D7F}
+html.iro .c3>section:nth-of-type(2){--sg:var(--g-ie);--sc:#3B6CFF;--s1:#3B6CFF;--s2:#00C6D7}
+html.iro .c3>section:nth-of-type(3){--sg:var(--g-kau);--sc:#00B37E;--s1:#00B37E;--s2:#9AD93C}
+html.iro .c3>section:nth-of-type(4){--sg:var(--g-kai);--sc:#B05CE0;--s1:#8B5CF6;--s2:#F25FB0}
+html.iro .c3u::before{content:"";position:absolute;z-index:0;left:50%;top:-80px;width:560px;height:300px;margin-left:-280px;border-radius:50%;background:radial-gradient(closest-side at 35% 55%,color-mix(in srgb,var(--s1) 34%,transparent),transparent),radial-gradient(closest-side at 68% 45%,color-mix(in srgb,var(--s2) 30%,transparent),transparent);filter:blur(28px);opacity:.7;pointer-events:none}
+html.iro .c3u>*{position:relative;z-index:1}
+html.iro.nt .c3u::before{opacity:1}
+html.iro .c3u.k::before{opacity:.9}
+html.iro .c3u .s b,html.iro .c3n1 b,html.iro .c3n2 b,html.iro .c3ks b,html.iro .c3kc small{background:var(--sg);-webkit-background-clip:text;background-clip:text;color:transparent}
+html.iro .c3n1 b small,html.iro .c3n2 b small{color:transparent}
+html.iro .c3u .c3b a.f{position:relative;background:var(--sg);border-color:transparent;color:#fff;box-shadow:0 10px 24px -12px var(--sc),inset 0 1px 0 rgba(255,255,255,.35)}
+html.iro .c3u .c3b a:not(.f){border:1px solid transparent;background:linear-gradient(var(--bg),var(--bg)) padding-box,var(--sg) border-box;color:var(--ink)}
+html.iro .c3u.g .c3b a:not(.f){background:linear-gradient(#F5F5F7,#F5F5F7) padding-box,var(--sg) border-box}
+html.iro.nt .c3u.g .c3b a:not(.f){background:linear-gradient(#141a28,#141a28) padding-box,var(--sg) border-box}
+html.iro .c3u.k .c3b a:not(.f),html.iro.nt .c3u .c3b a:not(.f){background:linear-gradient(#000,#000) padding-box,var(--sg) border-box}
+html.iro.nt .c3u:not(.k) .c3b a:not(.f){background:linear-gradient(#0A0E18,#0A0E18) padding-box,var(--sg) border-box}
+html.iro .c3ks svg{color:var(--s2)}
+/* 頭の下にオーロラの細い線（ゆっくり流れる） */
+html.iro body::after{content:"";position:fixed;z-index:60;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,#FF7A45,#FF3D7F,#8B5CF6,#3B6CFF,#00C6D7,#9AD93C,#FF7A45);background-size:200% 100%;animation:iroflow 12s linear infinite;opacity:.85;pointer-events:none}
+@keyframes iroflow{to{background-position:200% 0}}
+@media (prefers-reduced-motion:reduce){html.iro body::after{animation:none}}
 /* 前のページ（kyu）の選んでいる所 */
-html.iro[data-k] .flt .on,html.iro[data-k] .kt-f button.on,html.iro[data-k] .kt-tab button.on,html.iro[data-k] .kt-q button.on,html.iro[data-k] .kd button.on,html.iro[data-k] .bc button.on,html.iro[data-k] .pf button.on{background:var(--ac)!important;border-color:var(--ac)!important;color:#fff!important}
-html.iro.nt[data-k] .flt .on,html.iro.nt[data-k] .kt-f button.on,html.iro.nt[data-k] .kt-tab button.on,html.iro.nt[data-k] .kt-q button.on,html.iro.nt[data-k] .kd button.on,html.iro.nt[data-k] .bc button.on,html.iro.nt[data-k] .pf button.on{color:#0A0E18!important}
+html.iro[data-k] .flt .on,html.iro[data-k] .kt-f button.on,html.iro[data-k] .kt-tab button.on,html.iro[data-k] .kt-q button.on,html.iro[data-k] .kd button.on,html.iro[data-k] .bc button.on,html.iro[data-k] .pf button.on{background:var(--ga)!important;border-color:transparent!important;color:#fff!important;box-shadow:0 6px 18px -8px var(--gc)}
