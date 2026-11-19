@@ -20,21 +20,28 @@ function saveQ(){var u=new URLSearchParams(location.search);["p","w","g"].forEac
   history.replaceState(history.state,"",location.pathname+(u.toString()?"?"+u:""))}
 function pick(){return IT.filter(function(x){
   if(S.p&&x.p!==S.p)return false;if(S.g&&x.k!==S.g)return false;
-  if(S.w==="now")return x.st==="now";if(S.w==="we")return x.s<=SUN&&x.e>=SAT;return x.st==="up"}).sort(function(a,b){
-  if(S.w==="up")return a.s<b.s?-1:a.s>b.s?1:0;
+  if(S.w==="now")return x.st==="now";if(S.w==="end")return x.st==="now"&&x.left<=7;if(S.w==="td")return x.st==="now"&&x.left===0;if(S.w==="new")return x.st==="up"&&diff(TD,x.s)<=7;if(S.w==="we")return x.s<=SUN&&x.e>=SAT;return x.st==="up"}).sort(function(a,b){
+  if(S.w==="up"||S.w==="new")return a.s<b.s?-1:a.s>b.s?1:0;if(S.w==="end"||S.w==="td")return a.e<b.e?-1:a.e>b.e?1:0;
   var pa=a.im?0:1,pb=b.im?0:1;if(pa!==pb)return pa-pb;return a.e<b.e?-1:a.e>b.e?1:0})}
 var nNow=IT.filter(function(x){return x.st==="now"}).length;
-S_.main.innerHTML='<div class="wrap"><section class="hero"><div class="kick">Kansai · Odekake</div><h1 class="h1">関西の、<em>今週どこ行く？</em></h1>'+
- '<div class="live"><i class="dot"></i>いま開催中 <b data-n="'+nNow+'">0</b>件<span style="margin-left:auto;font-size:11.5px;color:var(--mut)">'+md(TD)+' 更新</span></div></section>'+
+var nEnd=IT.filter(function(x){return x.st==="now"&&x.left<=7}).length,nTd=IT.filter(function(x){return x.st==="now"&&x.left===0}).length,
+ nWe=IT.filter(function(x){return x.s<=SUN&&x.e>=SAT}).length,nNew=IT.filter(function(x){return x.st==="up"&&diff(TD,x.s)<=7}).length,DT=dd(TD),EN=["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"][DT.getUTCDay()];
+var T1=nTd?["きょうまで",nTd,"td"]:["7日以内に始まる",nNew,"new"];
+S_.main.innerHTML='<div class="wrap"><section class="hero"><h1 class="h1t">関西のおでかけ・イベント</h1><p class="h1p">大阪・京都・兵庫・奈良・滋賀・和歌山</p>'+
+ '<div class="mast"><span class="dn">'+(DT.getUTCMonth()+1)+'.'+DT.getUTCDate()+'</span><span class="dw"><b>'+EN+'</b><span>いま開催中 <em data-n="'+nNow+'">0</em>件</span></span></div>'+
+ 
+ '<div class="tiles"><button data-w="'+T1[2]+'"><small>'+T1[0]+'</small><b data-n="'+T1[1]+'">0</b><i>→</i></button><button data-w="end"><small>7日以内に終わる</small><b data-n="'+nEnd+'">0</b><i>→</i></button><button data-w="we"><small>この週末に行ける</small><b data-n="'+nWe+'">0</b><i>→</i></button></div>'+
+ '<p class="upd"><i class="dot"></i>毎朝、公式の発表をもとに更新　'+md(TD)+'</p></section>'+
  '<div class="st" id="st"></div><div class="sec"><h2>今週末のおすすめ<i>Pick up</i></h2><small>横にめくる →</small></div></div>'+
  '<div class="fan" id="fan"></div>'+
  '<div class="wrap"><div id="sent"></div><div class="bar" id="bar"><div class="seg" id="seg"></div><div class="chips" id="chips"></div></div>'+
  '<div class="cnt"><h3 id="ch"></h3><small id="cs"></small></div><div class="grid" id="grid"></div><div id="mr"></div></div>'+
  '<div class="sv" id="sv"><div class="bars"></div><div class="hd"><img data-logo src="/assets/logo-s.png?v=2" alt=""><span></span><button aria-label="閉じる">×</button></div><div class="fr"></div><div class="tx"></div><i class="tp l"></i><i class="tp r"></i></div>';
 S_.counts(S_.main);
+$(".tiles").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;S.w=b.dataset.w;S.n=24;sync();go(true);var top=$("#sent").getBoundingClientRect().top+scrollY;scrollTo({top:top,behavior:"smooth"})});
 
 /* ストーリー（虹の輪のまま。見た印は前と同じ hx_seen に残す） */
-var ST=[["今週末",function(x){return x.s<=SUN&&x.e>=SAT}],["まもなく終了",function(x){return x.st==="now"&&x.left<=10}],["夜の光",function(x){return x.k==="light"}],["紅葉",function(x){return x.k==="koyo"}],["アート",function(x){return x.k==="art"}],["家族で",function(x){return x.k==="play"||x.k==="animal"}],["無料",function(x){return x.f}],["もうすぐ",function(x){return x.st==="up"&&diff(TD,x.s)<=21}]]
+var ST=[["今週末",function(x){return x.s<=SUN&&x.e>=SAT}],["まもなく終了",function(x){return x.st==="now"&&x.left<=10}],["イルミ",function(x){return x.k==="light"}],["紅葉",function(x){return x.k==="koyo"}],["アート",function(x){return x.k==="art"}],["子どもと",function(x){return x.k==="play"||x.k==="animal"}],["無料",function(x){return x.f}],["近日開始",function(x){return x.st==="up"&&diff(TD,x.s)<=21}]]
  .map(function(s){var l=IT.filter(s[1]).sort(function(a,b){return (a.im?0:1)-(b.im?0:1)}).slice(0,10);return {t:s[0],l:l}}).filter(function(s){return s.l.length>=2});
 $("#st").innerHTML=ST.map(function(s,i){var c=s.l[0];return '<button data-s="'+i+'"><span class="rg">'+(c.im?'<img src="'+img(c)+'" alt="" loading="lazy">':'<span class="ph" style="display:block"></span>')+'</span><span>'+esc(s.t)+'</span></button>'}).join("");
 var sv=$("#sv"),svS=null,svI=0,svA=null;
@@ -77,8 +84,8 @@ function card(x){if(cache[x.i])return cache[x.i];
   var im=$("img",a);if(im){if(im.complete)im.classList.add("ld");else im.onload=function(){im.classList.add("ld")}}
   return cache[x.i]=a}
 var grid=$("#grid"),first=true;
-function go(anim){var L=pick(),show=L.slice(0,S.n),pr=S.p||"関西",wl={now:"開催中",we:"今週末",up:"これから"}[S.w];
-  $("#ch").innerHTML=esc(pr)+"の"+wl+" <b data-n='"+L.length+"'>"+L.length+"</b>件";$("#cs").textContent=S.g?G[S.g][3]:(S.w==="we"?md(SAT)+"・"+md(SUN).replace(/（.）/,""):"");
+function go(anim){var L=pick(),show=L.slice(0,S.n),pr=S.p||"関西",wl={now:"開催中",we:"今週末",up:"これから",end:"7日以内に終わる",td:"きょうまで",new:"7日以内に始まる"}[S.w];
+  $("#ch").innerHTML=esc(pr)+"・"+wl+" <b data-n='"+L.length+"'>"+L.length+"</b>件";$("#cs").textContent=S.g?G[S.g][3]:(S.w==="we"?md(SAT)+"・"+md(SUN).replace(/（.）/,""):"");
   if(anim&&!first)S_.countUp($("#ch b"));
   var old={};if(anim&&!RM)$$(".cd",grid).forEach(function(c){old[c.dataset.i]=c.getBoundingClientRect()});
   var frag=document.createDocumentFragment();show.forEach(function(x){frag.appendChild(card(x))});grid.replaceChildren(frag);
@@ -125,7 +132,7 @@ function mapOpen(){if(!mp){mp=el('<div class="mp" id="mp"><div class="mph"><b>�
   if(S.p){var f=$('.pf[data-p="'+S.p+'"]',mp),bb=f.getBBox();fit(bb.x-6,bb.y-6,bb.width+12,bb.height+12,true)}else fit(10,15,200,250,true)}
 function mapClose(back){if(!mp||!mp.classList.contains("op"))return;mp.classList.remove("op");document.body.style.overflow="";if(back!==false&&history.state&&history.state.mp)history.back();S_.navCur(S.w)}
 addEventListener("popstate",function(){if(mp&&mp.classList.contains("op")&&!(history.state&&(history.state.mp||history.state.sh)))mapClose(false)});
-function drawPins(){mpL=pick().filter(function(x){return x.xy});$("#mpn").textContent=(S.p||"関西")+"・"+{now:"開催中",we:"今週末",up:"これから"}[S.w]+" "+mpL.length+"か所";
+function drawPins(){mpL=pick().filter(function(x){return x.xy});$("#mpn").textContent=(S.p||"関西")+"・"+{now:"開催中",we:"今週末",up:"これから",end:"まもなく終わる",td:"きょうまで",new:"もうすぐ始まる"}[S.w]+" "+mpL.length+"か所";
   $$(".pf",mp).forEach(function(f){f.classList.toggle("dim",!!S.p&&f.dataset.p!==S.p)});
   $("#mpp").innerHTML=mpL.map(function(x,k){return '<g class="pin" data-k="'+k+'" transform="translate('+x.xy[0]+' '+x.xy[1]+')"><g class="pi" style="animation-delay:'+Math.min(k,40)*18+'ms"><circle class="ring" r="4.2" style="stroke:'+x.g[1]+'"/><circle class="dt2" r="2.1" style="fill:'+x.g[1]+'"/></g></g>'}).join("");
   $("#mpc").innerHTML=mpL.map(function(x){return '<a class="mcd" href="#" data-i="'+x.i+'" style="--gc:'+x.g[1]+'"><span class="mim" style="background-color:'+(x.th?avg(x.th):x.g[2])+'">'+(x.im?'<img src="'+img(x)+'" alt="" loading="lazy">':tile(x))+'</span><span class="mtx"><span class="lb"><span class="g">'+x.g[0]+'</span><span>'+esc(x.p)+'</span>'+lt(x)+'</span><b>'+esc(x.t)+'</b><small>'+when(x)+'・'+esc(x.v||x.a)+'</small></span></a>'}).join("");

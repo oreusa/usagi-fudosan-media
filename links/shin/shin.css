@@ -69,6 +69,28 @@ html.nt .tg .kn::after{opacity:.8}
 .kick{font:500 11px/1 var(--lat);letter-spacing:.32em;color:var(--mut);text-transform:uppercase}
 .h1{margin:12px 0 0;font:600 34px/1.22 var(--serif);letter-spacing:.02em}
 .h1 em{display:block;font-style:normal;color:var(--sub);font-weight:400}
+/* ページの名前（何のページか一目で） */
+.h1t{margin:6px 0 0;font:700 26px/1.35 var(--serif);letter-spacing:.04em}
+.h1p{margin:6px 0 0;font-size:12px;font-weight:700;color:var(--sub);letter-spacing:.06em}
+.mast .dw span{font-size:13px;color:var(--sub)}
+.mast .dw em{font:700 20px/1 var(--sans);font-style:normal;color:var(--ink);margin:0 2px;font-variant-numeric:tabular-nums}
+/* 頭：毎日かわる「きょうの関西」（日付の大きな数字＋きょうの数） */
+.mast{display:flex;align-items:flex-end;gap:14px;margin-top:18px}
+.mast .dn{font:italic 400 76px/0.9 var(--lat);letter-spacing:-.02em;color:var(--ink)}
+.mast .dw{display:flex;flex-direction:column;gap:4px;padding-bottom:8px;font-size:12px;font-weight:700;color:var(--sub)}
+.mast .dw b{font:600 11px/1 var(--lat);letter-spacing:.3em;color:var(--ink)}
+.h1s{margin:16px 0 0;font:500 21px/1.55 var(--serif);letter-spacing:.02em}
+.h1s b{font:700 30px/1 var(--sans);font-variant-numeric:tabular-nums;margin:0 3px;color:var(--ink)}
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:18px}
+.tiles button{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:12px 10px 10px;border-radius:16px;background:rgba(255,255,255,.72);border:1px solid rgba(0,0,0,.06);text-align:left;box-shadow:0 8px 20px -16px rgba(40,40,80,.5);transition:transform .2s}
+html.nt .tiles button{background:#121826;border-color:#1F2636}
+.tiles button:active{transform:scale(.97)}
+.tiles small{font-size:10.5px;font-weight:700;color:var(--sub);line-height:1.3}
+.tiles b{font:700 28px/1 var(--sans);font-variant-numeric:tabular-nums}
+.tiles button[data-w=td] b{color:#C23B2A}html.nt .tiles button[data-w=td] b{color:#FF9C8C}.tiles button[data-w=new] b{color:#137A4B}html.nt .tiles button[data-w=new] b{color:#8FE0B5}
+.tiles i{position:absolute;right:10px;bottom:10px;font-style:normal;font-size:12px;color:var(--mut)}
+.upd{display:flex;align-items:center;gap:7px;margin:14px 0 0;font-size:11.5px;color:var(--mut)}
+.upd .dot{width:7px;height:7px;border-radius:50%;background:#1E9E62;animation:pulse 2.4s ease-out infinite}
 .live{display:flex;align-items:center;gap:8px;margin-top:14px;font-size:13px;color:var(--sub)}
 .live .dot{width:7px;height:7px;border-radius:50%;background:#1E9E62;box-shadow:0 0 0 0 rgba(30,158,98,.5);animation:pulse 2.4s ease-out infinite}
 @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(30,158,98,.45)}70%{box-shadow:0 0 0 8px rgba(30,158,98,0)}100%{box-shadow:0 0 0 0 rgba(30,158,98,0)}}
