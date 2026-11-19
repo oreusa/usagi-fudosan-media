@@ -242,3 +242,46 @@ skin()
 # 11/19 functions が上限で止まっても新しい形が出るように（bake.py）
 import importlib.util as _iu
 _s = _iu.spec_from_file_location('bake', os.path.join(R, 'tools/shin/bake.py')); _b = _iu.module_from_spec(_s); _s.loader.exec_module(_b); _b.main(L)
+# 11/19 owner「その他も本気でやり直せ」：おでかけ1件のページ（/o/*）の一番上に、その催しの写真（撮影者つき）を入れる。
+def _ophoto():
+    import html as _h
+    t = open(os.path.join(L, 'shin', 'odekake.html'), encoding='utf-8').read()
+    d = json.loads(_h.unescape(re.search(r'id="d" type="application/json">(.*?)</script>', t, re.S).group(1)).replace('<\\/', '</'))
+    n = 0
+    for x in d['items']:
+        if not (x.get('o') and x.get('im')): continue
+        p = os.path.join(L, 'o', x['o'] + '.html')
+        if not os.path.exists(p): continue
+        h = open(p, encoding='utf-8').read()
+        if 'class="kph"' in h or '<div class="big">' not in h: continue
+        src = x['im'] if '/' in x['im'] else '/assets/ph/' + x['im']
+        cr = (' 写真：' + (f'<a href="{_h.escape(x["cu"])}" target="_blank" rel="noopener">{_h.escape(x["cr"])}</a>' if x.get('cu') else _h.escape(x['cr']))) if x.get('cr') else ''
+        fig = f'<figure class="kph"><img src="{src}" alt="" fetchpriority="high" decoding="async"><figcaption>{cr}</figcaption></figure>'
+        h = h.replace('<div class="big">', fig + '<div class="big">', 1)
+        open(p, 'w', encoding='utf-8').write(h); n += 1
+    print('o ページに写真', n, '枚')
+try:
+    _ophoto()
+except Exception as e:
+    print('o 写真：入れられなかった', repr(e))
+# 開店・閉店の1店のページ（/kaiten/*）にも、その場所の写真（撮影者つき）を題の下に入れる。
+def _kphoto():
+    import html as _h
+    t = open(os.path.join(L, 'shin', 'kaiten.html'), encoding='utf-8').read()
+    d = json.loads(_h.unescape(re.search(r'id="d" type="application/json">(.*?)</script>', t, re.S).group(1)).replace('<\\/', '</'))
+    n = 0
+    for x in d['items']:
+        if not (x.get('sp') and x.get('im')): continue
+        p = os.path.join(L, x['sp'].strip('/') + '.html')
+        if not os.path.exists(p): continue
+        h = open(p, encoding='utf-8').read()
+        if 'class="sp-ph"' in h or '<div class="sp-when"' not in h: continue
+        src = x['im'] if '/' in x['im'] else '/assets/ph/' + x['im']
+        cr = (' 写真：' + (f'<a href="{_h.escape(x["cu"])}" target="_blank" rel="noopener">{_h.escape(x["cr"])}</a>' if x.get('cu') else _h.escape(x['cr']))) if x.get('cr') else ''
+        h = h.replace('<div class="sp-when"', f'<figure class="sp-ph"><img src="{src}" alt="" fetchpriority="high" decoding="async"><figcaption>{cr}</figcaption></figure><div class="sp-when"', 1)
+        open(p, 'w', encoding='utf-8').write(h); n += 1
+    print('開店閉店の1店に写真', n, '枚')
+try:
+    _kphoto()
+except Exception as e:
+    print('開店閉店 写真：入れられなかった', repr(e))
