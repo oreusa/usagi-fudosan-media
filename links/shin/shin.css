@@ -756,41 +756,25 @@ html.nt .fcg{background:rgba(255,255,255,.08)}
 .fno p{margin:8px 0 0;font-size:13px;line-height:1.8;color:var(--sub)}
 .fst{white-space:nowrap}
 .tiles:has(>button:nth-child(2):last-child){grid-template-columns:1fr 1fr}
-/* 11/20 見本v2：近未来のグラデーション（html.iro・data-f）。owner「ちゃっちい」「グラデーション」「近未来のお洒落」。
-   分野ごとに2色のグラデーション：おでかけ＝夕焼け（コーラル→ローズ）・家と土地＝空（コバルト→シアン）・おかいもの＝若葉（エメラルド→ライム）・開店閉店＝夜明け（バイオレット→ピンク）。表紙の頭はオーロラ（全部の色）。
-   使う所：表紙の面の後ろの光・大きい数字（グラデーションの字）・ボタン（光の玉）・選んでいる所・下のバーの今いる所の光の線。地は白黒のまま */
-html.iro{--g-od:linear-gradient(120deg,#FF7A45 0%,#FF3D7F 100%);--g-ie:linear-gradient(120deg,#3B6CFF 0%,#00C6D7 100%);--g-kau:linear-gradient(120deg,#00B37E 0%,#9AD93C 100%);--g-kai:linear-gradient(120deg,#8B5CF6 0%,#F25FB0 100%);--g-top:linear-gradient(110deg,#FF7A45,#FF3D7F 30%,#8B5CF6 55%,#3B6CFF 75%,#00C6D7)}
-html.iro[data-f=od]{--ga:var(--g-od);--gc:#FF3D7F}html.iro[data-f=ie]{--ga:var(--g-ie);--gc:#3B6CFF}html.iro[data-f=kau]{--ga:var(--g-kau);--gc:#00B37E}html.iro[data-f=kai]{--ga:var(--g-kai);--gc:#8B5CF6}html.iro[data-f=top]{--ga:var(--g-top);--gc:#8B5CF6}
-/* 選んでいる所：グラデーションの玉＋うすい光 */
-html.iro .chip.on,html.iro .nro .chip.on{background:var(--ga);border-color:transparent;color:#fff;box-shadow:0 6px 18px -8px var(--gc)}
-html.iro .seg .pill{background:var(--ga);box-shadow:0 6px 18px -8px var(--gc)}html.iro .seg button.on{color:#fff}
-html.iro .fseg button[aria-selected=true]{background:var(--ga);color:#fff;box-shadow:0 6px 18px -8px var(--gc)}
-html.iro .nav .cur::before{width:26px;margin-left:-13px;background:var(--ga);box-shadow:0 0 12px var(--gc)}
-html.iro .h1p b,html.iro .flead b,html.iro .fv b{background:var(--ga);-webkit-background-clip:text;background-clip:text;color:transparent}
-/* 表紙：面ごとの光（後ろにぼんやり）・数字はグラデーションの字・ボタンは光の玉 */
-html.iro .c3>section:nth-of-type(1){--sg:var(--g-od);--sc:#FF5A62;--s1:#FF7A45;--s2:#FF3D7F}
-html.iro .c3>section:nth-of-type(2){--sg:var(--g-ie);--sc:#3B6CFF;--s1:#3B6CFF;--s2:#00C6D7}
-html.iro .c3>section:nth-of-type(3){--sg:var(--g-kau);--sc:#00B37E;--s1:#00B37E;--s2:#9AD93C}
-html.iro .c3>section:nth-of-type(4){--sg:var(--g-kai);--sc:#B05CE0;--s1:#8B5CF6;--s2:#F25FB0}
-html.iro .c3u::before{content:"";position:absolute;z-index:0;left:50%;top:-80px;width:560px;height:300px;margin-left:-280px;border-radius:50%;background:radial-gradient(closest-side at 35% 55%,color-mix(in srgb,var(--s1) 34%,transparent),transparent),radial-gradient(closest-side at 68% 45%,color-mix(in srgb,var(--s2) 30%,transparent),transparent);filter:blur(28px);opacity:.7;pointer-events:none}
+/* 11/20 見本v3「ほんのり」：owner 8:56「色合い嫌」「めっちゃ色ない感じに少し色つけたいだけ」。
+   地・字・ボタン・選んでいる所は白黒のまま。色は 後ろの薄い光・細い線・小さな点 だけ（淡いパステルのグラデーション） */
+html.iro{--g-od:linear-gradient(120deg,#FFC3A0,#FFAFCC);--g-ie:linear-gradient(120deg,#A8D8FF,#B8F2E6);--g-kau:linear-gradient(120deg,#B5EAD7,#E2F0CB);--g-kai:linear-gradient(120deg,#CDB4FF,#FFC8DD);--g-top:linear-gradient(110deg,#FFC3A0,#FFAFCC 30%,#CDB4FF 55%,#A8D8FF 78%,#B8F2E6)}
+html.iro[data-f=od]{--ga:var(--g-od);--gc:#FFAFCC}html.iro[data-f=ie]{--ga:var(--g-ie);--gc:#A8D8FF}html.iro[data-f=kau]{--ga:var(--g-kau);--gc:#B5EAD7}html.iro[data-f=kai]{--ga:var(--g-kai);--gc:#CDB4FF}html.iro[data-f=top]{--ga:var(--g-top);--gc:#CDB4FF}
+/* 下のバーの今いる所：細い光の線だけ */
+html.iro .nav .cur::before{width:22px;margin-left:-11px;background:var(--ga);box-shadow:0 0 10px var(--gc)}
+/* 表紙：面の後ろにうすい光（字・数字・ボタンは白黒のまま） */
+html.iro .c3>section:nth-of-type(1){--s1:#FFC3A0;--s2:#FFAFCC}
+html.iro .c3>section:nth-of-type(2){--s1:#A8D8FF;--s2:#B8F2E6}
+html.iro .c3>section:nth-of-type(3){--s1:#B5EAD7;--s2:#E2F0CB}
+html.iro .c3>section:nth-of-type(4){--s1:#CDB4FF;--s2:#FFC8DD}
+html.iro .c3u::before{content:"";position:absolute;z-index:0;left:50%;top:-90px;width:600px;height:320px;margin-left:-300px;border-radius:50%;background:radial-gradient(closest-side at 35% 55%,color-mix(in srgb,var(--s1) 55%,transparent),transparent),radial-gradient(closest-side at 68% 45%,color-mix(in srgb,var(--s2) 50%,transparent),transparent);filter:blur(36px);opacity:.55;pointer-events:none}
 html.iro .c3u>*{position:relative;z-index:1}
-html.iro.nt .c3u::before{opacity:1}
-html.iro .c3u.k::before{opacity:.9}
-html.iro .c3u .s b,html.iro .c3n1 b,html.iro .c3n2 b,html.iro .c3ks b,html.iro .c3kc small{background:var(--sg);-webkit-background-clip:text;background-clip:text;color:transparent}
-html.iro .c3n1 b small,html.iro .c3n2 b small{color:transparent}
-html.iro .c3u .c3b a.f{position:relative;background:var(--sg);border-color:transparent;color:#fff;box-shadow:0 10px 24px -12px var(--sc),inset 0 1px 0 rgba(255,255,255,.35)}
-html.iro .c3u .c3b a:not(.f){border:1px solid transparent;background:linear-gradient(var(--bg),var(--bg)) padding-box,var(--sg) border-box;color:var(--ink)}
-html.iro .c3u.g .c3b a:not(.f){background:linear-gradient(#F5F5F7,#F5F5F7) padding-box,var(--sg) border-box}
-html.iro.nt .c3u.g .c3b a:not(.f){background:linear-gradient(#141a28,#141a28) padding-box,var(--sg) border-box}
-html.iro .c3u.k .c3b a:not(.f),html.iro.nt .c3u .c3b a:not(.f){background:linear-gradient(#000,#000) padding-box,var(--sg) border-box}
-html.iro.nt .c3u:not(.k) .c3b a:not(.f){background:linear-gradient(#0A0E18,#0A0E18) padding-box,var(--sg) border-box}
-html.iro .c3ks svg{color:var(--s2)}
-/* 頭の下にオーロラの細い線（ゆっくり流れる） */
-html.iro body::after{content:"";position:fixed;z-index:60;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,#FF7A45,#FF3D7F,#8B5CF6,#3B6CFF,#00C6D7,#9AD93C,#FF7A45);background-size:200% 100%;animation:iroflow 12s linear infinite;opacity:.85;pointer-events:none}
+html.iro.nt .c3u::before{opacity:.22}
+html.iro .c3u.k::before{opacity:.25}
+/* 頭の下に、ごく細いパステルの線（ゆっくり流れる） */
+html.iro body::after{content:"";position:fixed;z-index:60;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,#FFC3A0,#FFAFCC,#CDB4FF,#A8D8FF,#B8F2E6,#E2F0CB,#FFC3A0);background-size:200% 100%;animation:iroflow 14s linear infinite;opacity:.9;pointer-events:none}
 @keyframes iroflow{to{background-position:200% 0}}
 @media (prefers-reduced-motion:reduce){html.iro body::after{animation:none}}
-/* 前のページ（kyu）の選んでいる所 */
-html.iro[data-k] .flt .on,html.iro[data-k] .kt-f button.on,html.iro[data-k] .kt-tab button.on,html.iro[data-k] .kt-q button.on,html.iro[data-k] .kd button.on,html.iro[data-k] .bc button.on,html.iro[data-k] .pf button.on{background:var(--ga)!important;border-color:transparent!important;color:#fff!important;box-shadow:0 6px 18px -8px var(--gc)}
 /* 11/20 見本：表紙の写真を指で横にめくる（owner「ここスライドでも良かった・お洒落に」） */
 .c3sl{margin:30px -20px 0;position:relative}
 .c3tr{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 7vw 4px;scrollbar-width:none;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
@@ -805,18 +789,18 @@ html.iro[data-k] .flt .on,html.iro[data-k] .kt-f button.on,html.iro[data-k] .kt-
 .c3dt{display:flex;justify-content:center;gap:6px;padding:14px 0 34px}
 .c3dt i{width:6px;height:6px;border-radius:9px;background:var(--line);transition:width .4s,background .4s;cursor:pointer}
 .c3dt i.on{width:22px;background:var(--ink)}
-html.iro .c3dt i.on{background:var(--g-od)}
+
 @media (min-width:800px){.c3tr{padding:0 calc(50% - 320px)}.c3sd{flex-basis:640px;aspect-ratio:16/11}}
 @media (prefers-reduced-motion:reduce){.c3sd{transition:none}}
 /* 11/20 見本：一番下の一覧を分野ごとのガラスのカードに（owner「今も好きだけど他にないか」） */
 html.iro .c3f{grid-template-columns:1fr 1fr;gap:10px;padding:30px 16px 0}
 html.iro .c3g{position:relative;padding:16px 16px 10px;border-radius:20px;background:rgba(255,255,255,.62);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);border:1px solid transparent;background-clip:padding-box;box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 12px 30px -18px rgba(0,0,0,.25)}
-html.iro .c3g::before{content:"";position:absolute;inset:-1px;border-radius:21px;padding:1px;background:var(--cg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.55;pointer-events:none}
-html.iro .c3g::after{content:"";position:absolute;z-index:-1;inset:20% 10% -10%;background:var(--cg);filter:blur(36px);opacity:.16;border-radius:50%}
+html.iro .c3g::before{content:"";position:absolute;inset:-1px;border-radius:21px;padding:1px;background:var(--cg);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:.9;pointer-events:none}
+html.iro .c3g::after{content:"";position:absolute;z-index:-1;inset:20% 10% -10%;background:var(--cg);filter:blur(36px);opacity:.3;border-radius:50%}
 html.iro .c3g0{--cg:var(--g-od);grid-column:1/-1}html.iro .c3g1{--cg:var(--g-ie);grid-column:1/-1}html.iro .c3g2{--cg:var(--g-kau)}html.iro .c3g3{--cg:var(--g-kai)}html.iro .c3gs{--cg:var(--g-top);grid-column:1/-1}
 html.iro .c3g0>a,html.iro .c3g1>a{display:inline-block;width:50%;vertical-align:top}
 html.iro .c3f h3{display:flex;align-items:center;gap:8px;margin:0 0 6px;font:600 13px/1.4 var(--sans);letter-spacing:.02em}
-html.iro .c3f h3::before{content:"";width:8px;height:8px;border-radius:9px;background:var(--cg);box-shadow:0 0 10px var(--gc,#8B5CF6)}
+html.iro .c3f h3::before{content:"";width:8px;height:8px;border-radius:9px;background:var(--cg);box-shadow:0 0 8px var(--gc,#CDB4FF)}
 html.iro .c3g a{position:relative;padding:8px 14px 8px 0;font-size:13.5px;color:var(--ink);border-top:1px solid rgba(0,0,0,.06)}
 html.iro .c3g a::after{content:"›";position:absolute;right:8px;top:50%;transform:translateY(-52%);color:var(--sub);font-size:16px}
 html.iro .c3g h3+a,html.iro .c3g0>h3+a+a,html.iro .c3g1>h3+a+a{border-top:0}
@@ -827,14 +811,13 @@ html.iro .c3gs a{border:1px solid var(--line);border-radius:999px;padding:8px 16
 html.iro .c3gs a::after{content:none}
 html.iro.nt .c3g{background:rgba(28,28,32,.55);box-shadow:0 1px 0 rgba(255,255,255,.06) inset,0 12px 30px -18px rgba(0,0,0,.6)}
 html.iro.nt .c3g a{border-top-color:rgba(255,255,255,.08)}
-html.iro.nt .c3g::after{opacity:.28}
+html.iro.nt .c3g::after{opacity:.12}
 html.iro .c3g2 a,html.iro .c3g3 a{font-size:12.5px;letter-spacing:-.01em;padding-right:12px}html.iro .c3g2 a::after,html.iro .c3g3 a::after{right:2px}
 /* 11/20 見本：MENU にも分野の光（今いる所はグラデーションの字・分野の入口は色の点） */
 .mu .rel:empty{display:none}
 html.iro .mu .pn{overflow:hidden}
-html.iro .mu .pn::before{content:"";position:absolute;left:-20%;right:-20%;top:-120px;height:220px;background:var(--ga,var(--g-top));filter:blur(60px);opacity:.28;pointer-events:none}
+html.iro .mu .pn::before{content:"";position:absolute;left:-20%;right:-20%;top:-120px;height:220px;background:var(--ga,var(--g-top));filter:blur(60px);opacity:.14;pointer-events:none}
 html.iro .mu .pn>*{position:relative}
-html.iro .mu li a.here{background:var(--ga,var(--g-top));-webkit-background-clip:text;background-clip:text;color:transparent}
-html.iro .mu li a.here small{-webkit-text-fill-color:rgba(255,255,255,.45)}
+html.iro .mu li a.here{color:#fff}
 html.iro .mu li a::after{content:"";margin-left:auto;align-self:center;width:8px;height:8px;border-radius:9px;background:var(--md,transparent);box-shadow:0 0 12px var(--mc,transparent)}
-html.iro .mu li a[href="/odekake"]{--md:var(--g-od);--mc:#FF3D7F}html.iro .mu li a[href="/fudosan-list"]{--md:var(--g-ie);--mc:#3B6CFF}html.iro .mu li a[href="/okaimono"]{--md:var(--g-kau);--mc:#00B37E}html.iro .mu li a[href="/kaiten"]{--md:var(--g-kai);--mc:#8B5CF6}
+html.iro .mu li a[href="/odekake"]{--md:var(--g-od);--mc:#FFAFCC}html.iro .mu li a[href="/fudosan-list"]{--md:var(--g-ie);--mc:#A8D8FF}html.iro .mu li a[href="/okaimono"]{--md:var(--g-kau);--mc:#B5EAD7}html.iro .mu li a[href="/kaiten"]{--md:var(--g-kai);--mc:#CDB4FF}
