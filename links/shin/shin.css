@@ -27,15 +27,19 @@ img{display:block;max-width:100%}
 #stars{position:absolute;left:0;top:0;width:100%;opacity:0;transition:opacity .8s}
 html.nt #stars{opacity:1;animation:drift 150s linear infinite alternate}
 @keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(-24px,-40px,0)}}
-.sun{position:absolute;top:-120px;width:180px;height:820px;transform-origin:50% 0;border-radius:50%;
-  background:linear-gradient(180deg,rgba(255,214,150,.42),rgba(255,226,180,.16) 45%,rgba(255,240,220,0) 80%);
-  opacity:.9;transition:opacity .8s;will-change:transform}
-.sun.s1{right:4%;transform:rotate(28deg);animation:sway 14s ease-in-out infinite alternate}
-.sun.s2{right:22%;width:110px;transform:rotate(34deg);opacity:.65;animation:sway 18s ease-in-out -6s infinite alternate}
-.sun.s3{right:-10%;width:260px;transform:rotate(22deg);opacity:.5;animation:sway 22s ease-in-out -3s infinite alternate}
-@keyframes sway{from{transform:rotate(var(--r0,26deg)) translateX(0)}to{transform:rotate(var(--r1,32deg)) translateX(18px)}}
-.sun.s2{--r0:31deg;--r1:37deg}.sun.s3{--r0:20deg;--r1:25deg}
-html.nt .sun{opacity:0}
+/* 昼：朝の空の色が溶け合って、ゆっくり動く（メッシュの光）＋細かい粒。上だけ・下は白へ消える */
+#sky .au{position:absolute;border-radius:50%;opacity:.9;transition:opacity .8s;will-change:transform}
+#sky .a1{left:-30%;top:-260px;width:520px;height:520px;background:radial-gradient(closest-side,rgba(200,186,255,.75),rgba(200,186,255,0));animation:au1 18s ease-in-out infinite alternate}
+#sky .a2{right:-35%;top:-200px;width:560px;height:560px;background:radial-gradient(closest-side,rgba(255,206,178,.72),rgba(255,206,178,0));animation:au2 22s ease-in-out infinite alternate}
+#sky .a3{left:10%;top:60px;width:460px;height:460px;background:radial-gradient(closest-side,rgba(176,232,214,.62),rgba(176,232,214,0));animation:au3 26s ease-in-out infinite alternate}
+#sky .a4{right:-10%;top:180px;width:380px;height:380px;background:radial-gradient(closest-side,rgba(182,214,255,.55),rgba(182,214,255,0));animation:au1 30s ease-in-out -8s infinite alternate}
+@keyframes au1{to{transform:translate3d(90px,60px,0) scale(1.15)}}
+@keyframes au2{to{transform:translate3d(-110px,90px,0) scale(.9)}}
+@keyframes au3{to{transform:translate3d(70px,-50px,0) scale(1.2)}}
+#sky .gr{position:absolute;left:0;top:0;width:100%;height:760px;background:url(/townnotes/grain.png);opacity:.07;mix-blend-mode:multiply;-webkit-mask:linear-gradient(#000 40%,transparent);mask:linear-gradient(#000 40%,transparent)}
+#sky .fade{position:absolute;left:0;right:0;top:420px;height:360px;background:linear-gradient(rgba(255,255,255,0),var(--bg))}
+#sky .fade2{position:absolute;left:0;right:0;top:780px;bottom:0;background:var(--bg)}
+html.nt #sky .au,html.nt #sky .gr,html.nt #sky .fade,html.nt #sky .fade2{opacity:0}
 .shoot{position:absolute;width:120px;height:1.5px;background:linear-gradient(90deg,rgba(255,255,255,0),#fff);border-radius:2px;opacity:0;transform:rotate(-24deg);animation:shoot 1.1s ease-out forwards}
 @keyframes shoot{0%{opacity:0;translate:0 0}15%{opacity:1}100%{opacity:0;translate:-260px 116px}}
 
@@ -46,8 +50,21 @@ html.nt .sun{opacity:0}
 .brand{display:flex;align-items:center;gap:10px}
 .brand img{width:40px;height:40px}
 .brand b{font:600 11px/1 var(--lat);letter-spacing:.28em;color:var(--ink)}
-.tg{position:relative;display:flex;align-items:center;gap:6px;height:34px;padding:0 12px 0 10px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:12px;font-weight:600;color:var(--sub)}
-.tg svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round}
+/* 昼夜のスイッチ（前の形を進化：中が小さな空。昼は光、夜は星がまたたいて玉が月になる） */
+.tg{position:relative;width:78px;height:40px;border-radius:999px;overflow:hidden;background:linear-gradient(135deg,#BFE0FF,#FFE3CC);box-shadow:inset 0 0 0 1px rgba(0,0,0,.06),0 6px 16px -10px rgba(40,60,120,.5);transition:background .6s}
+.tg::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,#0D1B3D,#2B2F6B);opacity:0;transition:opacity .6s}
+html.nt .tg::before{opacity:1}
+.tg .cl{position:absolute;right:9px;top:13px;width:22px;height:9px;border-radius:9px;background:#fff;opacity:.9;box-shadow:-7px 3px 0 -1px #fff;transition:transform .6s,opacity .4s}
+html.nt .tg .cl{opacity:0;transform:translateX(20px)}
+.tg .sr{position:absolute;width:2px;height:2px;border-radius:50%;background:#fff;opacity:0;transform:scale(0);transition:opacity .4s,transform .4s}
+html.nt .tg .sr{opacity:1;transform:scale(1);animation:tw 2.4s ease-in-out infinite}
+.tg .sr:nth-child(3){left:12px;top:10px;transition-delay:.15s}.tg .sr:nth-child(4){left:22px;top:24px;transition-delay:.25s;animation-delay:-.8s}.tg .sr:nth-child(5){left:34px;top:9px;width:1.5px;height:1.5px;transition-delay:.35s;animation-delay:-1.6s}.tg .sr:nth-child(6){left:16px;top:30px;width:1.5px;height:1.5px;transition-delay:.3s;animation-delay:-.4s}
+@keyframes tw{50%{opacity:.3}}
+.tg .kn{position:absolute;left:4px;top:4px;width:32px;height:32px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#FFF6C8,#FFC845 60%,#FFA62B);box-shadow:0 0 0 4px rgba(255,214,102,.25),0 0 18px rgba(255,190,70,.8);transition:transform .55s cubic-bezier(.3,1.4,.5,1),background .5s,box-shadow .5s}
+html.nt .tg .kn{transform:translateX(38px) rotate(-30deg);background:radial-gradient(circle at 40% 35%,#FFFFFF,#E4E9F5 70%);box-shadow:inset -7px -2px 0 0 #C9D2E6,0 0 14px rgba(200,215,255,.6)}
+.tg .kn::after{content:"";position:absolute;width:6px;height:6px;border-radius:50%;left:9px;top:16px;background:#C9D2E6;opacity:0;transition:opacity .4s;box-shadow:8px -7px 0 -1px #C9D2E6}
+html.nt .tg .kn::after{opacity:.8}
+.tg:active .kn{width:36px}
 .hero{padding:22px 0 8px}
 .kick{font:500 11px/1 var(--lat);letter-spacing:.32em;color:var(--mut);text-transform:uppercase}
 .h1{margin:12px 0 0;font:600 34px/1.22 var(--serif);letter-spacing:.02em}
@@ -225,3 +242,37 @@ html.nt .mu .pn{background:#121826}
 html.vtt::view-transition-old(root),html.vtt::view-transition-new(root){animation:none;mix-blend-mode:normal}
 ::view-transition-group(ph){animation-duration:.5s;animation-timing-function:cubic-bezier(.2,.9,.25,1)}
 .sh.nov .pn,.sh.nov .bk{transition:none}
+
+/* ===== 地図（全画面・府県の色はオーナーと決めた色） ===== */
+.mp{position:fixed;inset:0;z-index:45;display:none;flex-direction:column;background:var(--bg)}
+.mp.op{display:flex}
+.mph{display:flex;align-items:baseline;gap:10px;padding:calc(14px + env(safe-area-inset-top,0px)) 16px 8px}
+.mph b{font:600 19px/1.3 var(--serif)}
+.mph small{font-size:12px;color:var(--sub);font-weight:700}
+.mpx{margin-left:auto;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);font-size:20px;line-height:34px;text-align:center;background:var(--card)}
+#mps{flex:1 1 0;display:block;height:auto;width:100%;min-height:0;touch-action:none;background:#EEF3F7;cursor:grab}
+html.nt #mps{background:#0E1424}
+#mps .nb path{fill:#E4E8EC;stroke:#fff;stroke-width:.4}
+html.nt #mps .nb path{fill:#151C2C;stroke:#0E1424}
+#mps .pf{fill:var(--f);stroke:#fff;stroke-width:.7;stroke-linejoin:round;transition:opacity .4s}
+html.nt #mps .pf{fill:color-mix(in srgb,var(--c) 30%,#121826);stroke:#0E1424}
+#mps .pf.dim{opacity:.35}
+#mps .pl{font:600 9px var(--serif);letter-spacing:.2em;text-anchor:middle;pointer-events:none;opacity:.9}
+html.nt #mps .pl{fill:#D9DDE6!important}
+.pin{cursor:pointer}
+.pin .dt2{stroke:#fff;stroke-width:.8}
+.pin .ring{fill:none;stroke-width:.9;opacity:0}
+.pin.on .ring{opacity:1;animation:pring 1.6s ease-out infinite}
+@keyframes pring{from{r:2.4;opacity:1}to{r:8;opacity:0}}
+.mpz{position:absolute;right:12px;top:calc(70px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:8px}
+.mpz button{width:42px;height:42px;border-radius:12px;background:var(--card);border:1px solid var(--line);font-size:16px;font-weight:700;box-shadow:0 4px 12px -6px rgba(0,0,0,.3)}
+.mpz button:last-child{font-size:11px}
+.mpc{position:relative;flex:none;display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:12px 16px calc(96px + var(--safe));background:var(--bg)}
+.mpc::-webkit-scrollbar{display:none}
+.mcd{flex:0 0 82%;max-width:420px;scroll-snap-align:center;display:flex;gap:12px;padding:10px;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+.mim{position:relative;flex:0 0 92px;height:92px;border-radius:12px;overflow:hidden}
+.mim img{width:100%;height:100%;object-fit:cover}
+.mim .tile svg{width:28px;height:28px}
+.mtx{min-width:0;display:flex;flex-direction:column}
+.mtx b{margin-top:4px;font-size:14.5px;line-height:1.4;font-weight:800;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mtx small{margin-top:auto;font-size:11.5px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
