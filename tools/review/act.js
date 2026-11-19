@@ -38,7 +38,7 @@ for(const [nm,url] of L){const c=await b.newContext({...devices['iPhone 13'],dev
  await p.goto(url);await wait(2000);
  const card=await p.$('.wrap a.card[data-hx], .ec[data-id], [data-hxo]');
  // town widget
- if(await p.$('.hxtw input')){await p.fill('.hxtw input',/8788/.test(url)?'ちよだ':'みやこじま').catch(()=>{});await wait(800);await tap('.hxtw .h-sg button');await wait(1200);const t=await p.evaluate(()=>{const c=document.querySelector('.hxtw .h-tc.on');return c?c.innerText.replace(/\s+/g,' ').slice(0,90):''});out.push('  town: '+(t||'✗ カードが出ない'));if(!t)bad++;await ok('town')}
+ if(await p.$('.hxtw input')){await p.fill('.hxtw input',/8788|kanto|lifenote/.test(url)?'ちよだ':'みやこじま').catch(()=>{});await wait(800);await tap('.hxtw .h-sg button');await wait(1200);const t=await p.evaluate(()=>{const c=document.querySelector('.hxtw .h-tc.on');return c?c.innerText.replace(/\s+/g,' ').slice(0,90):''});out.push('  town: '+(t||'✗ カードが出ない'));if(!t)bad++;await ok('town')}
  // town full search
  if(await tap('[data-hx-town]:not([style*="none"])')){await wait(800);let s=await ok('tsearch');if(/hxtq/.test(s.open)){await p.keyboard.type('なにわ');await wait(600);await p.goBack();await wait(700);s=await ok('tsearch-back');if(s.url!==home){out.push('  ✗ 街さがしの戻るでページを出た');bad++;await p.goto(url);await wait(2000)}}}
  // okaimono rail

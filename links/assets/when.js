@@ -71,7 +71,7 @@ function pass(o,dk,f,pf){if(pf&&o.pref!==pf)return false;if(st.k&&dk!=="all"&&ki
 function count(dk,f,pf){var n=0;ALL.forEach(function(o){if(pass(o,dk,f,pf))n++;});return n;}
 function nf(){return Object.keys(st.f).length;}
 function syncUrl(){try{var u=new URLSearchParams(location.search);u.delete("v2t");if(st.d==="we")u.delete("d");else u.set("d",st.d);if(st.k)u.set("k",st.k);else u.delete("k");var fk=Object.keys(st.f);if(fk.length)u.set("f",fk.join(","));else u.delete("f");
-  var s=u.toString();history.replaceState(null,"",location.pathname+(s?"?"+s:"")+location.hash);}catch(e){}}
+  var s=u.toString();history.replaceState(history.state,"",location.pathname+(s?"?"+s:"")+location.hash);}catch(e){}}
 /* 見た目 */
 var css=document.createElement("style");css.textContent=
 '.wn{margin:12px 0 6px;font-family:"Zen Kaku Gothic New",sans-serif;color:#2B2622}'+
