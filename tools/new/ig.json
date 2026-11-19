@@ -871,5 +871,59 @@
    "osaka_landscape"
   ],
   "auto": 1
+ },
+ "住吉大社": {
+  "acc": [
+   "sumiyoshitaisha_shrine"
+  ],
+  "auto": 1
+ },
+ "今宮戎神社": {
+  "acc": [
+   "imamiya.ebisu.jinja"
+  ],
+  "auto": 1
+ },
+ "八坂神社": {
+  "acc": [
+   "kyotogionyasaka"
+  ],
+  "auto": 1
+ },
+ "湊川神社": {
+  "acc": [
+   "minatogawa_jinja_kobe"
+  ],
+  "auto": 1
+ },
+ "生田神社": {
+  "acc": [
+   "ikuta_jinja"
+  ],
+  "auto": 1
+ },
+ "春日大社": {
+  "acc": [
+   "kasugataisha.official"
+  ],
+  "auto": 1
+ },
+ "大神神社": {
+  "acc": [
+   "oomiwajinja.official"
+  ],
+  "auto": 1
+ },
+ "近江神宮": {
+  "acc": [
+   "oumijingu_official"
+  ],
+  "auto": 1
+ },
+ "熊野那智大社": {
+  "acc": [
+   "kumanonachitaisha_official"
+  ],
+  "auto": 1
  }
 }
