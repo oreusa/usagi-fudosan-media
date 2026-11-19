@@ -135,6 +135,7 @@ PAGE['engetsu'] = bool(re.search('白浜|白良浜|円月島', ALLTXT))      # �
 PAGE['taki'] = bool(T.get('taki'))
 PAGE['kiyo'] = bool(T.get('kiyo'))   # 11/17 清水の舞台（清水寺）：舞台と柱・仁王門と三重塔・夜の青い光
 PAGE['icho'] = bool(T.get('icho'))   # 11/16 イチョウ並木（昭和記念公園など）：黄色い並木の3枚   # 11/16 もみじの景色に滝（箕面大滝）を描く
+PAGE['castle'] = bool(spec.get('castle'))   # 11/19 owner「中身から部品を選ぶ仕組みはやめろ」→ 自動では選ばない。その日の台本に月が手で castle:true を書いた時だけ
 PAGE['gate'] = bool(re.search('寺|神社|天満宮|八幡宮|大社|神宮|院', ALLTXT))   # もみじ：門は寺社の時だけ（公園・庭園は木と道だけ）
 # 11/16 スマホの画面は、その回の県のおでかけページを毎回撮る（古い画面・違う県の画面が出ていた）。撮れなければ今までの絵
 def hp_shots():
