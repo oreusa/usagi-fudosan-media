@@ -111,5 +111,7 @@ S_.onNav(function(a){if(a==="find"){S_.navCur("find");scrollTo({top:0,behavior:"
 /* 新しい値段を取りに行く（ページに入れた物より新しければ差し替える） */
 if(D.live&&window.fetch)fetch(D.live,{cache:"no-cache"}).then(function(r){return r.ok?r.json():null}).then(function(n){
   if(!n||!n.cats||n.made<=D.made)return;["at","made","cats","bf","bfEnd"].forEach(function(k){D[k]=n[k]});BY={};D.cats.forEach(function(c){BY[c.k]=c});ST=stat();head();bfBox();myBox();grid(false);S_.bars($("#myx"))}).catch(function(){});
+/* 今までの /okaimono?k=water などから来た人は、その品物をすぐ開く */
+var K0=new URLSearchParams(location.search).get("k");if(K0&&BY[K0])setTimeout(function(){openKind(BY[K0])},300);
 S_.ready();
 })();
