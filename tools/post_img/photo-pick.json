@@ -1,0 +1,195 @@
+{
+ "about": "関西の写真の表紙に使う写真（月が目で見て選んだ物だけ）。schedule の odekake の1行目に all が全部・any が1つ入り、日付が from〜to の時に使う（tools/book/photo_auto.py）。昼の写真に「夜」と書かない。足す時は①催しそのもの②季節が合う③幅900px以上④cr あり",
+ "items": [
+  {
+   "file": "media/post/ph/ishiyamadera-koyo.jpg",
+   "cr": "Bariston（CC BY-SA 4.0・Wikimedia Commons）",
+   "what": "石山寺 紅葉（昼）",
+   "all": [
+    "石山寺"
+   ],
+   "any": [
+    "紅葉",
+    "もみじ",
+    "秋"
+   ],
+   "from": "10-25",
+   "to": "12-10",
+   "area": "滋賀・大津",
+   "head": "<em>石山寺</em>の紅葉",
+   "en": "AUTUMN LEAVES",
+   "pos": "50% 50%",
+   "cap": "紫式部ゆかりのお寺"
+  },
+  {
+   "file": "media/post/ph/kiyomizu-night.jpg",
+   "cr": "lumoplank（CC0・Wikimedia Commons）",
+   "what": "清水寺 紅葉の夜",
+   "all": [
+    "清水寺"
+   ],
+   "any": [
+    "夜",
+    "ライトアップ",
+    "特別拝観"
+   ],
+   "from": "10-25",
+   "to": "12-10",
+   "area": "京都・東山",
+   "head": "<em>清水寺</em>の<br>秋の夜間特別拝観",
+   "en": "AUTUMN NIGHT",
+   "pos": "50% 50%",
+   "cap": ""
+  },
+  {
+   "file": "media/post/ph/kiyomizu-night.jpg",
+   "cr": "lumoplank（CC0・Wikimedia Commons）",
+   "what": "清水寺 紅葉の夜",
+   "all": [
+    "清水寺"
+   ],
+   "any": [
+    "紅葉",
+    "もみじ",
+    "秋"
+   ],
+   "from": "10-25",
+   "to": "12-10",
+   "area": "京都・東山",
+   "head": "<em>清水寺</em>の紅葉",
+   "en": "AUTUMN LEAVES",
+   "pos": "50% 50%",
+   "cap": ""
+  },
+  {
+   "file": "media/post/ph/eikando-night.jpg",
+   "cr": "lumoplank（CC0・Wikimedia Commons）",
+   "what": "永観堂 夜の池と橋",
+   "all": [
+    "永観堂"
+   ],
+   "any": [
+    "夜",
+    "ライトアップ"
+   ],
+   "from": "10-25",
+   "to": "12-10",
+   "area": "京都・左京",
+   "head": "<em>永観堂</em>の<br>夜の紅葉",
+   "en": "AUTUMN NIGHT",
+   "pos": "50% 50%",
+   "cap": ""
+  },
+  {
+   "file": "media/post/ph/eikando-night.jpg",
+   "cr": "lumoplank（CC0・Wikimedia Commons）",
+   "what": "永観堂 夜の池と橋",
+   "all": [
+    "永観堂"
+   ],
+   "any": [
+    "紅葉",
+    "もみじ",
+    "秋"
+   ],
+   "from": "10-25",
+   "to": "12-10",
+   "area": "京都・左京",
+   "head": "<em>永観堂</em>の紅葉",
+   "en": "AUTUMN LEAVES",
+   "pos": "50% 50%",
+   "cap": ""
+  },
+  {
+   "file": "media/post/ph/tanzan-night.jpg",
+   "cr": "ONO Masanobu（CC0・Wikimedia Commons）",
+   "what": "談山神社 夜",
+   "all": [
+    "談山神社"
+   ],
+   "any": [
+    "夜",
+    "ライトアップ"
+   ],
+   "from": "10-25",
+   "to": "12-10",
+   "area": "奈良・桜井",
+   "head": "<em>談山神社</em>の<br>夜の紅葉",
+   "en": "AUTUMN NIGHT",
+   "pos": "50% 50%",
+   "cap": ""
+  },
+  {
+   "file": "media/post/ph/tanzan-koyo.jpg",
+   "cr": "Hiroaki Kaneko（CC BY-SA 3.0・Wikimedia Commons）",
+   "what": "談山神社 紅葉と灯籠",
+   "all": [
+    "談山神社"
+   ],
+   "any": [
+    "紅葉",
+    "もみじ",
+    "秋"
+   ],
+   "from": "10-25",
+   "to": "12-10",
+   "area": "奈良・桜井",
+   "head": "<em>談山神社</em>の紅葉",
+   "en": "AUTUMN LEAVES",
+   "pos": "50% 50%",
+   "cap": ""
+  },
+  {
+   "file": "media/post/ph/kokoen-koyo.jpg",
+   "cr": "Oilstreet（CC BY 2.5・Wikimedia Commons）",
+   "what": "好古園 紅葉",
+   "all": [
+    "好古園"
+   ],
+   "any": [],
+   "from": "10-25",
+   "to": "12-10",
+   "area": "兵庫・姫路",
+   "head": "<em>好古園</em>の紅葉",
+   "en": "AUTUMN LEAVES",
+   "pos": "50% 50%",
+   "cap": ""
+  },
+  {
+   "file": "media/post/ph/minoo-koyo.jpg",
+   "cr": "lumoplank（CC0・Wikimedia Commons）",
+   "what": "箕面 紅葉",
+   "all": [
+    "箕面"
+   ],
+   "any": [
+    "紅葉",
+    "もみじ",
+    "秋"
+   ],
+   "from": "10-25",
+   "to": "12-10",
+   "area": "大阪・箕面",
+   "head": "<em>箕面</em>の紅葉",
+   "en": "AUTUMN LEAVES",
+   "pos": "50% 50%",
+   "cap": ""
+  },
+  {
+   "file": "media/post/ph/tofukuji-tsutenkyo.jpg",
+   "cr": "Luka Peternel（CC BY-SA 4.0・Wikimedia Commons）",
+   "what": "東福寺 通天橋",
+   "all": [
+    "東福寺"
+   ],
+   "any": [],
+   "from": "10-25",
+   "to": "12-10",
+   "area": "京都・東山",
+   "head": "<em>東福寺</em>の紅葉",
+   "en": "AUTUMN LEAVES",
+   "pos": "50% 50%",
+   "cap": ""
+  }
+ ]
+}
