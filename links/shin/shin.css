@@ -639,3 +639,41 @@ html.nt .cmap .pl{fill:#D9DDE6!important}html.nt .cmap .pn{fill:#F5F5F7}
 .dc .drel{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
 .dc .drel a{display:block;padding:16px;border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--ink);font:500 15px/1.4 var(--sans)}
 .dc .drel a small{display:block;color:var(--mut);font-size:12.5px;font-weight:400;margin-top:4px}
+/* ---------- 新しい表紙（見本 cover2.js）11/19 owner「トップださ」「地図適当すぎ」 ---------- */
+.c2{padding-bottom:120px}
+.c2hero{padding-top:18px}
+.c2d{font-size:13px;color:var(--sub);margin:0 0 10px;font-variant-numeric:tabular-nums}.c2d b{color:var(--ink);font-weight:600}
+.c2hero h1{font:600 28px/1.25 var(--sans);word-break:keep-all;letter-spacing:-.02em;margin:0;color:var(--ink)}
+.c2s{font-size:15px;line-height:1.7;color:var(--sub);margin:10px 0 0}
+.c2r{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:22px 16px 4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.c2r::-webkit-scrollbar{display:none}
+.c2c{flex:none;width:78%;max-width:340px;aspect-ratio:4/5;border-radius:20px;overflow:hidden;position:relative;scroll-snap-align:center;text-decoration:none;color:#fff}
+.c2c img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.9,.25,1)}
+.c2c:active img{transform:scale(1.03)}
+.c2g{position:absolute;left:0;right:0;bottom:0;padding:60px 18px 18px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.62))}
+.c2g small{display:block;font-size:12.5px;opacity:.9;margin-bottom:4px}.c2g b{display:block;font:600 19px/1.35 var(--sans);letter-spacing:-.01em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.c2dots{display:flex;justify-content:center;gap:6px;margin:12px 0 0}.c2dots i{width:6px;height:6px;border-radius:3px;background:var(--line);transition:width .3s,background .3s}.c2dots i.on{width:18px;background:var(--ink)}
+.c2all{display:flex;justify-content:space-between;align-items:center;margin:20px 0 0;padding:16px 18px;border-radius:14px;background:var(--on);color:var(--ont);text-decoration:none;font:600 15.5px var(--sans)}
+.c2all i{font-style:normal;font-weight:400;opacity:.75;font-size:13.5px}
+.c2sec{padding-top:40px}
+.c2sec h2{font:600 22px/1.3 var(--sans);letter-spacing:-.01em;margin:0 0 6px;color:var(--ink)}
+.c2p{font-size:14px;color:var(--sub);margin:0 0 14px;line-height:1.6}
+.c2pf{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -16px 12px;padding:0 16px}.c2pf::-webkit-scrollbar{display:none}
+.c2pf button{flex:none;height:38px;padding:0 14px;border-radius:19px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:500 14px var(--sans)}
+.c2pf button small{margin-left:5px;color:var(--mut);font-size:12px}
+.c2pf button.on{background:var(--on);color:var(--ont);border-color:var(--on)}.c2pf button.on small{color:inherit;opacity:.7}
+.c2map{position:relative;height:min(62vh,440px);border-radius:18px;overflow:hidden;background:#EEF0F2;border:1px solid var(--line)}
+.c2map.nt .maplibregl-canvas{filter:invert(1) hue-rotate(180deg) brightness(.85) contrast(.92)}
+.c2ml{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--mut)}
+.c2pin{width:16px;height:16px;border-radius:50%;background:var(--c);border:2.5px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.3);padding:0;cursor:pointer;transition:transform .2s}
+.c2pin.on{transform:scale(1.5);z-index:2}
+.c2pk{min-height:0}
+.c2pc{display:flex;gap:12px;align-items:center;margin-top:12px;padding:10px;border:1px solid var(--line);border-radius:16px;background:var(--card);text-decoration:none;color:var(--ink)}
+.c2pc .im{flex:none;width:84px;height:84px;border-radius:12px;overflow:hidden}.c2pc .im img{width:100%;height:100%;object-fit:cover}
+.c2pc .tx small{display:block;font-size:12px;color:var(--mut)}.c2pc .tx b{display:block;font:600 15.5px/1.4 var(--sans);margin:2px 0 4px}.c2pc .tx em{font-style:normal;font-size:13px;color:var(--sub)}
+.c2row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 0;border-top:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.c2row:last-child{border-bottom:1px solid var(--line)}
+.c2row b{font:500 16px var(--sans)}.c2row span{font-size:13.5px;color:var(--mut);white-space:nowrap}.c2row span::after{content:"  →"}
+.c2more{display:flex;flex-wrap:wrap;gap:8px}.c2more a{padding:10px 14px;border-radius:20px;border:1px solid var(--line);text-decoration:none;color:var(--ink);font-size:14px}
+.c2sns{display:flex;gap:18px;justify-content:center}.c2sns a{color:var(--sub);font-size:13.5px;text-decoration:none}
+.maplibregl-ctrl-attrib{font-size:10px}
