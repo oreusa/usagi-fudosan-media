@@ -1,0 +1,7 @@
+t-top	https://lifenote-kanto.pages.dev/
+t-ode	https://lifenote-kanto.pages.dev/odekake
+t-tokyo	https://lifenote-kanto.pages.dev/odekake-tokyo
+t-illu	https://lifenote-kanto.pages.dev/illumination
+t-koyo	https://lifenote-kanto.pages.dev/koyo
+t-ima	https://lifenote-kanto.pages.dev/ima
+t-uru	https://lifenote-kanto.pages.dev/uru
