@@ -13,6 +13,11 @@ spec = json.load(open(sys.argv[1])); OUT = os.path.abspath(sys.argv[2]); STILL =
 _t = spec.get('text', {})
 # 11/15 owner「。の使い方変じゃない？」：表紙の題は本の題なので「。」「、」で終えない（2行とも「。」で終わり、縦書きで字の下に浮いた）
 if _t.get('title'): _t['title'] = [l.rstrip('。、．，. ') for l in _t['title']]
+# 11/19 owner「夜のおでかけニュースってなんなん？？」「表紙はいままで通りでええやろ」：表紙に「おでかけニュース」は書かない（声とキャプションだけ）。
+#  台本が ["おでかけニュース","見出し"] でも、表紙は見出しだけを「の」の後ろで2行に分ける（例 夜の／小石川後楽園）
+if _t.get('title') and _t['title'][0].replace(' ', '') == 'おでかけニュース' and len(_t['title']) > 1:
+    _h = ''.join(_t['title'][1:]); _k = _h.find('の')
+    _t['title'] = [_h[:_k + 1], _h[_k + 1:]] if 0 < _k < len(_h) - 1 and len(_h[:_k + 1]) <= 9 and len(_h[_k + 1:]) <= 9 else [_h]
 _bad = [f'表紙の題の{i + 1}行目「{l}」は{len(l)}字（{m}字まで）' for i, (l, m) in enumerate(zip(_t.get('title', []), (9, 9))) if len(l) > m]
 # 11/16 表紙の1行目が10字（クリスマスマーケット）で下のロゴに重なった。日付ページの大きな題が6字以上で、場所の行（｜の前）が8字以上だと字が重なった
 _pl = _t.get('place', '').split('｜')[0]
@@ -210,6 +215,14 @@ PAGE['popup'] = bool(T.get('popup') or os.environ.get('EHON_POP'))   # 11/16 飛
 PAGE['globe'] = T.get('globe', '')   # スノードームの台の文字（英字）
 PAGE['magic'] = bool(T.get('magic')) or BR['scene'] in ('xmas', 'momiji', 'hama')   # 11/15 魔法の絵本（光の粒・雪・そり・スノードーム）
 PAGE.update({k: BR[k] for k in ('top_en', 'top_jp', 'cover_sub', 'hp_en', 'hp_jp', 't5', 'seal', 'motif', 'peaks', 'scene')})
+# 11/19 owner「また使い回し？？」：関東 11/18 偕楽園と 11/19 小石川後楽園が同じ絵だった（紅葉の絵が1種類だけ）。
+#  日ごとに絵の並べ方を変える：mjv＝昼・秋・夜のページの 道／池 を毎日交互に（前の日とは3ページとも違う）、vseed＝木・雲・星の形（7日の中で同じにならない）。関東は関西と1つずらす
+def _variant(d, kanto):
+    o = d.toordinal() + (1 if kanto else 0)
+    return {'mjv': o % 2, 'vseed': (o * 37) % 997 + 1}
+if _base:
+    PAGE.update(_variant(_base, spec.get('brand') == 'kanto'))
+    print('絵の並べ方：', PAGE['mjv'], PAGE['vseed'])
 html = r"""<!doctype html><meta charset="utf-8"><style>
 @font-face{font-family:M;src:url(file://%F%/ShipporiMincho-Medium.ttf)}
 @font-face{font-family:MB;src:url(file://%F%/ShipporiMincho-Bold.ttf)}
@@ -286,7 +299,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#2b211c}
 <script>
 %XMAS%
 %MAGIC%
-const P=%PAGE%,ST=%ST%,OPEN=%OPEN%,TURN=%TURN%,TOTAL=%TOTAL%,N=6;
+const P=%PAGE%,ST=%ST%,OPEN=%OPEN%,TURN=%TURN%,TOTAL=%TOTAL%,N=6;var VSEED=P.vseed||0;
 const $=s=>document.querySelector(s);
 %DESK%
 function rng(a){return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}

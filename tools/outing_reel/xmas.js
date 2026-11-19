@@ -1,6 +1,6 @@
 // クリスマスの絵（scene: 'xmas'）。水彩の絵本のように canvas に描く。mode 0 昼の赤レンガ／1 夕方のツリー／2 夜
 // 下絵（重い）は1回だけ描いてしまっておき、毎コマは電球・星のまたたきだけを上に重ねる。
-function XR(a){return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function XR(a){a+=(typeof VSEED!='undefined'?VSEED:0);return()=>{a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
 function xmCanvas(w,h){const c=document.createElement('canvas');c.width=w;c.height=h;return c}
 const XW=920,XH=1380;
 function xmHex(h){h=h.replace('#','');return[parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)]}
