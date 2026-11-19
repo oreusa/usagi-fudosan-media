@@ -85,13 +85,35 @@ function seg(box,list,cur,on){box.innerHTML='<i class="pill"></i>'+list.map(func
 
 /* ---- 昼と夜 ---- */
 var cv=document.getElementById("stars"),drawn=0;
+/* 11/19 owner「もっとリアルな小さな星の夜空と流れ星」→ 本物の空の決まりで描く：
+   ・暗い星ほど数が多い（等級が1つ下がると約3倍）。ほとんどは髪の毛より細い点
+   ・星の色は温度で違う（青白・白・薄い黄・橙）
+   ・斜めに天の川（とても淡い光の帯＋細かい星の集まり＋暗い筋）
+   ・明るい星だけ、空気のゆらぎで静かにまたたく（CSS の opacity だけ・軽い）
+   ・流れ星は一瞬（0.5〜0.9秒）。頭が光って尾が細い。向きと長さは毎回ちがう。たまに明るい火球 */
+var SC=["255,255,255","255,255,255","255,255,255","235,242,255","210,225,255","255,246,228","255,232,200","255,214,170"];
 function stars(){var w=innerWidth,h=Math.min(document.body.scrollHeight,innerHeight*8),dp=Math.min(2,devicePixelRatio||1);if(drawn===w+"x"+h)return;drawn=w+"x"+h;
-  cv.width=w*dp;cv.height=h*dp;cv.style.height=h+"px";var c=cv.getContext("2d");c.scale(dp,dp);var n=Math.round(w*h/2600),r=seed;
+  cv.width=w*dp;cv.height=h*dp;cv.style.height=h+"px";var c=cv.getContext("2d");c.scale(dp,dp);var r=seed,x,y,bb,rr,g,m;
   function rnd(){r=(r*16807)%2147483647;return r/2147483647}
-  for(var i=0;i<n;i++){var x=rnd()*w,y=rnd()*h,s=rnd(),a=.25+rnd()*.6;c.fillStyle="rgba(255,255,255,"+a+")";c.beginPath();c.arc(x,y,s<.92?.55+rnd()*.5:1.1+rnd()*.6,0,7);c.fill();
-    if(s>.985){var g=c.createRadialGradient(x,y,0,x,y,7);g.addColorStop(0,"rgba(200,215,255,.5)");g.addColorStop(1,"rgba(200,215,255,0)");c.fillStyle=g;c.fillRect(x-7,y-7,14,14);c.fillStyle="rgba(255,255,255,.55)";c.fillRect(x-5,y-.4,10,.8);c.fillRect(x-.4,y-5,.8,10)}}}
+  function band(y,x){return Math.exp(-Math.pow((x*.62-y+y*.5+w*.15)/(w*.32),2))}
+  for(var y0=0;y0<h;y0+=innerHeight){
+    for(m=0;m<26;m++){x=rnd()*w;y=y0+rnd()*innerHeight;bb=band(y-y0,x);if(bb<.25)continue;
+      rr=40+rnd()*110;g=c.createRadialGradient(x,y,0,x,y,rr);g.addColorStop(0,"rgba(190,200,235,"+(.035*bb).toFixed(3)+")");g.addColorStop(1,"rgba(190,200,235,0)");c.fillStyle=g;c.fillRect(x-rr,y-rr,rr*2,rr*2)}
+    for(m=0;m<10;m++){x=rnd()*w;y=y0+rnd()*innerHeight;bb=band(y-y0,x);if(bb<.5)continue;
+      rr=18+rnd()*40;g=c.createRadialGradient(x,y,0,x,y,rr);g.addColorStop(0,"rgba(5,8,16,.18)");g.addColorStop(1,"rgba(5,8,16,0)");c.fillStyle=g;c.fillRect(x-rr,y-rr,rr*2,rr*2)}}
+  var n=Math.round(w*h/520);
+  for(var i=0;i<n;i++){x=rnd()*w;y=rnd()*h;bb=band(y%innerHeight,x);if(rnd()>.35+bb*.65)continue;
+    var mag=Math.pow(rnd(),3.2),sz=.22+mag*1.25,a=.18+mag*.8+rnd()*.12,col=SC[(rnd()*SC.length)|0];
+    c.fillStyle="rgba("+col+","+Math.min(1,a).toFixed(3)+")";c.beginPath();c.arc(x,y,sz,0,7);c.fill();
+    if(mag>.82){g=c.createRadialGradient(x,y,0,x,y,sz*6);g.addColorStop(0,"rgba("+col+",.28)");g.addColorStop(1,"rgba("+col+",0)");c.fillStyle=g;c.fillRect(x-sz*6,y-sz*6,sz*12,sz*12)}}
+  twinkle(w,h)}
+function twinkle(w,h){$$("#sky .tw").forEach(function(e){e.parentNode.removeChild(e)});var r=seed+7,sky=$("#sky"),hh=Math.min(h,innerHeight*3);function rnd(){r=(r*16807)%2147483647;return r/2147483647}
+  var n=Math.round(w*hh/9000);for(var i=0;i<n;i++){var e=document.createElement("i");e.className="tw";var big=rnd()>.8;
+    e.style.cssText="left:"+(rnd()*w).toFixed(1)+"px;top:"+(rnd()*hh).toFixed(1)+"px;--s:"+(big?2.4:1.5)+"px;--c:rgb("+SC[(rnd()*SC.length)|0]+");animation-duration:"+(2.5+rnd()*4).toFixed(2)+"s;animation-delay:-"+(rnd()*6).toFixed(2)+"s";sky.appendChild(e)}}
 var shootT;function shoot(){clearTimeout(shootT);if(!H.classList.contains("nt")||RM)return;
-  shootT=setTimeout(function(){var s=document.createElement("i");s.className="shoot";s.style.left=(innerWidth*.45+Math.random()*innerWidth*.6)+"px";s.style.top=(scrollY+30+Math.random()*innerHeight*.4)+"px";$("#sky").appendChild(s);setTimeout(function(){s.remove()},1300);shoot()},(12+Math.random()*20)*1e3)}
+  shootT=setTimeout(function(){var s=document.createElement("i"),big=Math.random()<.15,ang=18+Math.random()*34,len=big?220:110+Math.random()*90,dur=big?1.1:.5+Math.random()*.4;
+    s.className="shoot"+(big?" big":"");s.style.cssText="left:"+(innerWidth*(.3+Math.random()*.75)).toFixed(0)+"px;top:"+(scrollY+20+Math.random()*innerHeight*.45).toFixed(0)+"px;--a:"+ang.toFixed(1)+"deg;--l:"+len.toFixed(0)+"px;--d:"+(len*1.6).toFixed(0)+"px;animation-duration:"+dur.toFixed(2)+"s";
+    $("#sky").appendChild(s);setTimeout(function(){if(s.parentNode)s.parentNode.removeChild(s)},dur*1000+200);shoot()},(6+Math.random()*16)*1e3)}
 function apply(n){H.classList.toggle("nt",n);try{localStorage.setItem("usagi_theme",n?"night":"day")}catch(e){}
   var src=n?"/assets/logo-s-night.png":"/assets/logo-s.png?v=2";$$("img[data-logo],#logo").forEach(function(i){i.src=src});
   $("#tg").setAttribute("aria-checked",n?"true":"false");var m=$('meta[name="theme-color"]');if(m)m.content=n?"#0A0E18":"#FFFFFF";

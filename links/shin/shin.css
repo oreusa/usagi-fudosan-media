@@ -40,8 +40,16 @@ html.nt #stars{opacity:1;animation:drift 150s linear infinite alternate}
 #sky .fade{position:absolute;left:0;right:0;top:420px;height:360px;background:linear-gradient(rgba(255,255,255,0),var(--bg))}
 #sky .fade2{position:absolute;left:0;right:0;top:780px;bottom:0;background:var(--bg)}
 html.nt #sky .au,html.nt #sky .gr,html.nt #sky .fade,html.nt #sky .fade2{opacity:0}
-.shoot{position:absolute;width:120px;height:1.5px;background:linear-gradient(90deg,rgba(255,255,255,0),#fff);border-radius:2px;opacity:0;transform:rotate(-24deg);animation:shoot 1.1s ease-out forwards}
-@keyframes shoot{0%{opacity:0;translate:0 0}15%{opacity:1}100%{opacity:0;translate:-260px 116px}}
+/* 11/19 流れ星：一瞬・頭が光り尾は細く・向きと長さは毎回ちがう（--a 角度・--l 尾の長さ・--d 進む長さ） */
+.shoot{position:absolute;width:var(--l);height:1.2px;transform-origin:100% 50%;transform:rotate(calc(180deg - var(--a)));opacity:0;animation:shoot .7s cubic-bezier(.3,0,.6,1) forwards;pointer-events:none}
+.shoot::before{content:"";position:absolute;inset:0;border-radius:2px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(210,225,255,.35) 60%,#fff)}
+.shoot::after{content:"";position:absolute;right:-2px;top:50%;width:4px;height:4px;margin-top:-2px;border-radius:50%;background:#fff;box-shadow:0 0 6px 2px rgba(220,232,255,.9)}
+.shoot.big{height:2px}.shoot.big::after{width:6px;height:6px;margin-top:-3px;box-shadow:0 0 12px 4px rgba(255,236,200,.9)}
+@keyframes shoot{0%{opacity:0;translate:0 0}12%{opacity:1}70%{opacity:1}100%{opacity:0;translate:calc(cos(var(--a)) * var(--d) * -1) calc(sin(var(--a)) * var(--d))}}
+/* 明るい星だけ静かにまたたく */
+.tw{position:absolute;width:calc(var(--s) * 3);height:calc(var(--s) * 3);margin:calc(var(--s) * -1.5) 0 0 calc(var(--s) * -1.5);border-radius:50%;background:radial-gradient(circle,#fff 0,var(--c) 18%,transparent 62%);opacity:0;animation:twk 4s ease-in-out infinite;pointer-events:none}
+html:not(.nt) .tw{display:none}
+@keyframes twk{0%,100%{opacity:.25}35%{opacity:.95}50%{opacity:.5}70%{opacity:.85}}
 
 #app{position:relative;z-index:1;padding-bottom:calc(110px + var(--safe))}
 
