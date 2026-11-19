@@ -5,6 +5,8 @@
 "use strict";
 var H=document.documentElement,app=document.getElementById("app");
 var CFG=JSON.parse(document.getElementById("cfg").textContent);
+/* 11/19 関東も同じ土台で作る：地域の違い（名前・府県・色・地図・ロゴ）は CFG.reg。無ければ関西 */
+var REG=CFG.reg||{n:"関西",brand:"TOWN NOTE",logo:"/assets/logo-s.png?v=2",logon:"/assets/logo-s-night.png",pref:["大阪","京都","兵庫","奈良","滋賀","和歌山"],pfs:"大阪・京都・兵庫・奈良・滋賀・和歌山",pc:{"大阪":"#D9775A","京都":"#9C7BB8","兵庫":"#4F86C6","奈良":"#5FA06A","滋賀":"#3FA3B5","和歌山":"#E09A3E"},fl:{"大阪":"#F7D9CC","京都":"#E6DBF1","兵庫":"#D6E4F5","奈良":"#D8ECD4","滋賀":"#D0EBEF","和歌山":"#F8E4C4"},lb:{"兵庫":[62,105],"京都":[122,78],"滋賀":[176,92],"大阪":[118,165],"奈良":[156,178],"和歌山":[118,215]},sl:{"大阪":"osaka","京都":"kyoto","兵庫":"hyogo","奈良":"nara","滋賀":"shiga","和歌山":"wakayama"},vb:"10 15 200 250"};
 var RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
 var $=function(s,r){return (r||document).querySelector(s)},$$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
 function el(h){var t=document.createElement("template");t.innerHTML=h.trim();return t.content.firstChild}
@@ -30,10 +32,10 @@ var IC={sun:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M1
  gift:'<svg viewBox="0 0 24 24"><rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3 9h18M12 9v11M12 9c-1.5-3-5-4-5-1.5S10 9 12 9zm0 0c1.5-3 5-4 5-1.5S14 9 12 9z"/></svg>'};
 
 /* ---- 骨組み ---- */
-app.innerHTML='<div class="wrap"><header class="top"><a class="brand" href="/" aria-label="トップへ"><img id="logo" src="/assets/logo-s.png?v=2" alt="TOWN NOTE"><b>TOWN NOTE</b></a>'+
+app.innerHTML='<div class="wrap"><header class="top"><a class="brand" href="/" aria-label="トップへ"><img id="logo" src="'+REG.logo+'" alt="'+REG.brand+'"><b>'+REG.brand+'</b></a>'+
  '<button class="tg" id="tg" role="switch" aria-checked="false" aria-label="夜の画面にする"><i class="kn"></i><span class="su"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path class="sp" d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/></svg></span><span class="mo"><svg viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg></span></button></header></div>'+
  '<main id="main"></main>'+
- '<div class="wrap"><footer class="ft">'+(CFG.foot||"")+'<br><a href="/">TOWN NOTE トップ</a>　<a href="/privacy">プライバシー</a></footer></div>'+
+ '<div class="wrap"><footer class="ft">'+(CFG.foot||"")+'<br><a href="/">'+REG.brand+' トップ</a>　<a href="/privacy">プライバシー</a></footer></div>'+
  '<nav class="nav" id="nav" aria-label="すぐ移動">'+CFG.nav.map(function(n,i){return n.href?'<a href="'+n.href+'"'+(n.cur?' class="cur"':'')+'>'+IC[n.ic]+'<span>'+n.t+'</span></a>':'<button data-a="'+n.a+'"'+(i===0?' class="cur"':'')+'>'+IC[n.ic]+'<span>'+n.t+'</span></button>'}).join("")+'<button class="mn" id="mnb" aria-label="メニュー"><em></em><span>MENU</span></button></nav>'+
  '<div class="sh" id="sh" aria-hidden="true"><div class="bk"></div><div class="pn" role="dialog" aria-modal="true"><div class="grab"><i></i></div><button class="x" aria-label="閉じる">×</button><div id="shc"></div></div></div>'+
  '<div class="mu" id="mu"><div class="bk"></div><div class="pn"><div class="k">'+CFG.menu.k+'</div><ol>'+
@@ -115,7 +117,7 @@ var shootT;function shoot(){clearTimeout(shootT);if(!H.classList.contains("nt")|
     s.className="shoot"+(big?" big":"");s.style.cssText="left:"+(innerWidth*(.3+Math.random()*.75)).toFixed(0)+"px;top:"+(scrollY+20+Math.random()*innerHeight*.45).toFixed(0)+"px;--a:"+ang.toFixed(1)+"deg;--l:"+len.toFixed(0)+"px;--d:"+(len*1.6).toFixed(0)+"px;animation-duration:"+dur.toFixed(2)+"s";
     $("#sky").appendChild(s);setTimeout(function(){if(s.parentNode)s.parentNode.removeChild(s)},dur*1000+200);shoot()},(6+Math.random()*16)*1e3)}
 function apply(n){H.classList.toggle("nt",n);try{localStorage.setItem("usagi_theme",n?"night":"day")}catch(e){}
-  var src=n?"/assets/logo-s-night.png":"/assets/logo-s.png?v=2";$$("img[data-logo],#logo").forEach(function(i){i.src=src});
+  var src=n?REG.logon:REG.logo;$$("img[data-logo],#logo").forEach(function(i){i.src=src});
   $("#tg").setAttribute("aria-checked",n?"true":"false");var m=$('meta[name="theme-color"]');if(m)m.content=n?"#0A0E18":"#FFFFFF";
   if(n){stars();shoot()}}
 $("#tg").addEventListener("click",function(e){var n=!H.classList.contains("nt");
@@ -126,7 +128,7 @@ $("#tg").addEventListener("click",function(e){var n=!H.classList.contains("nt");
   t.finished.then(function(){H.classList.remove("vtt")})});
 addEventListener("load",function(){drawn=0;if(H.classList.contains("nt"))stars()});
 
-window.SHIN={$:$,$$:$$,el:el,esc:esc,TD:TD,seed:seed,diff:diff,md:md,dd:dd,IC:IC,RM:RM,countUp:countUp,counts:counts,bars:bars,sheet:sheet,closeSheet:closeSheet,seg:seg,
+window.SHIN={reg:REG,$:$,$$:$$,el:el,esc:esc,TD:TD,seed:seed,diff:diff,md:md,dd:dd,IC:IC,RM:RM,countUp:countUp,counts:counts,bars:bars,sheet:sheet,closeSheet:closeSheet,seg:seg,
   onNav:function(f){navFn=f},navCur:navCur,main:$("#main"),data:JSON.parse((document.getElementById("d")||{textContent:"{}"}).textContent),
   ready:function(){apply(H.classList.contains("nt"));largeTitle()}};
 /* 11/19 iPhone の設定アプリの形：大きい題は下へ流すと薄れて、上の細い帯に小さく収まる。帯を押すと一番上へ */
