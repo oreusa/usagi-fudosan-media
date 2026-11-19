@@ -28,9 +28,9 @@ export function S_night(B,Lprev,L){const F='far',N='near';
  // うさぎ
  const rab=(c,w,h,m)=>rabbitShape(c,w*.42,h*.98,h*.66,'#f6efe2','#d8402a',m);
  const rp=B.piece(L,N,B.plane(art(1.1,1.2,(c,w,h)=>rab(c,w,h)),1.1,1.2,{glow:glowArt(1.1,1.2,(c,w,h)=>rab(c,w,h,'glow')),gi:3}),-1.2,2.1);
- B.lamp(L,N,-.95,.85,2.15,0xffb060,1.2,1.6);
+ const lm=B.lamp(L,N,-.95,.85,2.15,0xffb060,1.2,1.6);rp.userData.rabbit=1;rp.userData.x0=-1.2;rp.userData.lamp=lm;rp.userData.lx=.25;
  for(const x of[-1.4,1.4])B.lamp(L,N,x*.95,.7,.45,0xffa040,1.2,1.8);B.lamp(Lprev,F,0,1.6,.5,0xffb060,2.5,3);
  return {rabbit:rp}}
 export function page_night(W,D){return pageArt((c,w,h)=>{c.fillStyle='#e9dcc0';c.beginPath();c.moveTo(w*.42,0);c.lineTo(w*.58,0);c.lineTo(w*.66,h*.34);c.lineTo(w*.34,h*.34);c.fill();
- textOn(c,'あすの夜から 永観堂の',w/2,h*.45,`${h*.042}px MB`,'#3a2418');textOn(c,'もみじに 灯りが ともります',w/2,h*.51,`${h*.042}px MB`,'#3a2418');
- textOn(c,'京都・永観堂　11月20日 ― 12月6日',w/2,h*.565,`${h*.026}px MB`,'#9a6a2a')},W,D)}
+ textOn(c,'あすの夜から 永観堂の',w/2,h*.45,`${h*.031}px MB`,'#3a2418');textOn(c,'もみじに 灯りが ともります',w/2,h*.5,`${h*.031}px MB`,'#3a2418');
+ textOn(c,'京都・永観堂　11月20日 ― 12月6日',w/2,h*.55,`${h*.024}px MB`,'#9a6a2a')},W,D)}

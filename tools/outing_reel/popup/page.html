@@ -20,11 +20,21 @@ window.render=t=>{const al=Ls.map((L,j)=>0);
  al[0]=lerp(2.05,Math.PI,eo(sm(t,0,1.0)));
  al[6]=lerp(0,.55,eio(sm(t,TOTAL-1.1,TOTAL)));
  for(let s=1;s<T.length;s++){const q=eio(sm(t,T[s]-TURN,T[s]));if(q>0)al[s]=lerp(al[s],Math.PI,q)}
- let sp=0;for(let s=0;s<T.length;s++)if(t>=T[s]-TURN*.5)sp=s;
+ let sp=0;for(let s=0;s<T.length;s++)if(t>=T[s])sp=s;
  B.pose(al);U.forEach((u,s)=>u.upd&&u.upd(t-T[s]));B.pose(al);
- // カメラ：開いた直後に寄り、めくる時に少し引く
- const ts=t-T[sp],turn=Math.max(...T.slice(1).map(x=>1-Math.min(1,Math.abs(t-(x-TURN*.5))/0.9)));
- const k=eo(sm(ts,0,4));const z=lerp(10.6,9.4,k)+turn*1.6,y=lerp(4.6,4.1,k)+turn*.8,x=Math.sin(t*.35)*.5;
- B.cam.position.set(x,y,z);B.cam.lookAt(x*.3,1.3,.8);B.cam.fov=42;B.cam.updateProjectionMatrix();B.draw(t)};
+ // うさぎが歩く（見開きごとに少し進む・ぴょこぴょこ）
+ Ls.forEach((L,j)=>{if(j<1)return;const a=t-T[j-1];(L.nearP||[]).forEach(p=>{if(!p.userData.rabbit)return;const w=sm(a,.4,3.6);p.position.x=p.userData.x0+.7*eio(w);p.position.y=.006+(w>0&&w<1?Math.abs(Math.sin(a*8))*.06:0);if(p.userData.lamp)p.userData.lamp.position.x=p.position.x+p.userData.lx})});
+ // カメラ：見開きごとに見せ場へ大きく寄る（始め→終わり）。めくる間は引いて本全体
+ const CAMS=[[[0,4.6,10.6,0,1.3,.8],[.3,3.0,7.4,0,1.3,.4]],
+  [[0,3.6,8.6,0,1.5,0],[.2,3.1,7.4,.1,1.1,0]],
+  [[-.6,3.4,8.2,0,1.2,.6],[.3,2.4,6.3,.15,.8,1.5]],
+  [[0,7.2,7.0,0,0,1.4],[0,5.0,8.2,0,.4,1.5]],
+  [[0,1.3,7.4,0,1.2,0],[0,3.0,8.8,0,1.4,.2]],
+  [[0,3.0,7.0,0,1.0,.8],[0,5.6,12.0,0,1.4,.4]]];
+ const ts=t-T[sp],dur=(T[sp+1]??TOTAL)-T[sp];const kk=eio(sm(ts,-.1,Math.max(2.2,dur-TURN*.4)));const C0=CAMS[sp][0],C1=CAMS[sp][1];const c=C0.map((v,i)=>lerp(v,C1[i],kk));
+ // めくり：前の見開きの終わり位置から次の始めへ、少し引いて
+ const nx=T[sp+1];let cam=c;if(nx&&t>nx-TURN*1.1){const q=eio(sm(t,nx-TURN*1.1,nx+.05));const N0=CAMS[sp+1][0];cam=c.map((v,i)=>lerp(v,N0[i],q));const lift=Math.sin(Math.PI*q);cam[1]+=lift*1.2;cam[2]+=lift*2.0}
+ 
+ const sw=Math.sin(t*.4)*.18;B.cam.position.set(cam[0]+sw,cam[1],cam[2]);B.cam.lookAt(cam[3],cam[4],cam[5]);B.cam.fov=42;B.cam.updateProjectionMatrix();B.draw(t)};
 window.shot=t=>render(t);window.ok=1;
 </script>

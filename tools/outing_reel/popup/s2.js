@@ -13,7 +13,7 @@ const sky=(top,bot,moon,seed)=>art(6.2,4.6,(c,w,h)=>{const g=c.createLinearGradi
  if(moon){c.fillStyle='#fff3d0';c.beginPath();c.arc(w*moon[0],h*moon[1],h*.07,0,7);c.fill()}const r=R_(seed||4);if(seed)for(let i=0;i<90;i++){c.fillStyle='#fff6e0';c.beginPath();c.arc(r()*w,r()*h*.7,1.5+r()*3,0,7);c.fill()}});
 const skyGlow=(moon,seed)=>glowArt(6.2,4.6,(c,w,h)=>{const r=R_(seed||4);if(seed)for(let i=0;i<90;i++){c.fillStyle=`rgba(255,240,210,${.4+r()*.6})`;c.beginPath();c.arc(r()*w,r()*h*.7,1.5+r()*3,0,7);c.fill()}if(moon){c.fillStyle='#fff3d0';c.beginPath();c.arc(w*moon[0],h*moon[1],h*.07,0,7);c.fill()}});
 const rab=(c,w,h,m,flip)=>{if(flip){c.translate(w,0);c.scale(-1,1)}rabbitShape(c,w*.42,h*.98,h*.66,'#f6efe2','#d8402a',m)};
-function rabbit(B,L,x,d,flip,lampInt){const p=B.piece(L,'near',B.plane(art(1.1,1.2,(c,w,h)=>rab(c,w,h,0,flip)),1.1,1.2,{glow:glowArt(1.1,1.2,(c,w,h)=>rab(c,w,h,'glow',flip)),gi:2.2}),x,d);B.lamp(L,'near',x+(flip?-.25:.25),.85,d+.05,0xffb060,lampInt??.9,1.4);return p}
+function rabbit(B,L,x,d,flip,lampInt){const p=B.piece(L,'near',B.plane(art(1.1,1.2,(c,w,h)=>rab(c,w,h,0,flip)),1.1,1.2,{glow:glowArt(1.1,1.2,(c,w,h)=>rab(c,w,h,'glow',flip)),gi:2.2}),x,d);const lm=B.lamp(L,'near',x+(flip?-.25:.25),.85,d+.05,0xffb060,lampInt??.9,1.4);p.userData.rabbit=1;p.userData.x0=x;p.userData.lamp=lm;p.userData.lx=flip?-.25:.25;return p}
 
 // ---- 2. 夕方→夜・懐中時計（受付の時間） ----
 export function S_clock(B,Lprev,L){const F='far',N='near';
@@ -42,8 +42,8 @@ export function S_clock(B,Lprev,L){const F='far',N='near';
   lamps.forEach((l,i)=>l.material.opacity=sm(q,i/7*.85,i/7*.85+.12));
   key.color.set(mix('#ffb070','#ffd9a8',q));key.intensity=70+20*(1-q);hemi.color.set(mix('#a070a0','#5a6aa8',q))}}}
 export function page_clock(W,D){return pageArt((c,w,h)=>{c.fillStyle='rgba(60,70,120,.18)';c.fillRect(0,0,w,h*.3);
- textOn(c,'受付は 夕方5時半から 夜8時半まで',w/2,h*.43,`${h*.034}px MB`,INK);
- textOn(c,'17:30 ― 20:30',w/2,h*.51,`${h*.066}px MB`,'#a8302a');textOn(c,'12月6日まで 毎晩',w/2,h*.565,`${h*.028}px MB`,'#9a6a2a')},W,D)}
+ textOn(c,'受付は 夕方5時半から',w/2,h*.43,`${h*.034}px MB`,INK);
+ textOn(c,'17:30 ― 20:30',w/2,h*.505,`${h*.058}px MB`,'#a8302a');textOn(c,'夜8時半まで（12月6日まで）',w/2,h*.56,`${h*.028}px MB`,'#9a6a2a')},W,D)}
 
 // ---- 3. 昼と夜は入れ替え制・前売りなし ----
 export function S_ticket(B,Lprev,L){const F='far',N='near';
@@ -73,7 +73,7 @@ export function S_ticket(B,Lprev,L){const F='far',N='near';
  const sm_=new THREE.MeshBasicMaterial({map:new THREE.CanvasTexture(st),transparent:true,depthWrite:false,opacity:0});sm_.map.colorSpace=THREE.SRGBColorSpace;const sd=new THREE.Mesh(new THREE.PlaneGeometry(.66,.66),sm_);sd.position.set(.86,.63,.03);tkp.userData.me.add(sd);
  return {upd(a){const q=sm(a,1.5,1.72);sd.material.opacity=q>0?.9:0;const s=1+(1-eo(q))*1.8;sd.scale.set(s,s,1);sd.position.z=.03+(1-eo(q))*.6;sd.rotation.z=-.2;
   tkp.userData.k=1}}}
-export function page_ticket(W,D){return pageArt((c,w,h)=>{textOn(c,'昼とは 入れ替え制',w*.42,h*.45,`${h*.042}px MB`,INK);textOn(c,'前売り券は ありません',w*.42,h*.51,`${h*.042}px MB`,INK);textOn(c,'券は その夜 受付で',w*.42,h*.565,`${h*.028}px MB`,'#9a6a2a')},W,D)}
+export function page_ticket(W,D){return pageArt((c,w,h)=>{textOn(c,'昼とは 入れ替え制',w*.5,h*.45,`${h*.036}px MB`,INK);textOn(c,'前売り券は ありません',w*.5,h*.505,`${h*.036}px MB`,'#a8302a');textOn(c,'券は その夜 受付で',w*.5,h*.555,`${h*.026}px MB`,'#9a6a2a')},W,D)}
 
 // ---- 4. 地図：京都駅→市バス5系統→永観堂・車は× ----
 const ROUTE=[[-1.9,1.95],[-1.2,1.75],[-.4,1.7],[.2,1.35],[.9,1.1],[1.5,.75]];
@@ -92,18 +92,18 @@ export function S_map(B,Lprev,L){const F='far',N='near';
  // バス（立つ・道を走る）
  const bus=art(1.0,.62,(c,w,h)=>{c.fillStyle='#2f8a5a';c.beginPath();c.roundRect(w*.02,h*.08,w*.96,h*.72,h*.16);c.fill();c.fillStyle='#f5ecd6';for(let i=0;i<4;i++)c.fillRect(w*(.08+i*.18),h*.2,w*.13,h*.24);c.fillStyle='#f6c64a';c.beginPath();c.arc(w*.86,h*.32,h*.12,0,7);c.fill();textOn(c,'5',w*.86,h*.4,`${h*.2}px MB`,'#2f6a4a');
   c.fillStyle='#222';c.beginPath();c.arc(w*.24,h*.82,h*.13,0,7);c.arc(w*.76,h*.82,h*.13,0,7);c.fill()});
- const bp=B.piece(L,N,B.plane(bus,1.0,.62),ROUTE[0][0],ROUTE[0][1]);
+ const bp=B.piece(L,N,B.plane(bus,1.3,.8),ROUTE[0][0],ROUTE[0][1]);
  // 車に×（後で起き上がる）
  const car=art(1.1,.75,(c,w,h)=>{c.fillStyle='#5a5a68';c.beginPath();c.roundRect(w*.05,h*.4,w*.9,h*.38,h*.1);c.fill();c.beginPath();c.roundRect(w*.25,h*.18,w*.5,h*.28,h*.08);c.fill();c.fillStyle='#222';c.beginPath();c.arc(w*.27,h*.8,h*.1,0,7);c.arc(w*.73,h*.8,h*.1,0,7);c.fill();
   c.strokeStyle='#c0302a';c.lineWidth=h*.1;c.lineCap='round';c.beginPath();c.moveTo(w*.15,h*.08);c.lineTo(w*.85,h*.9);c.moveTo(w*.85,h*.08);c.lineTo(w*.15,h*.9);c.stroke()});
- const cp=B.piece(L,N,B.plane(car,1.0,.68),-.55,2.3);cp.userData.k=0;
+ const cp=B.piece(L,N,B.plane(car,1.0,.68),-.9,1.35);cp.userData.k=0;
  return {upd(a){const q=eio(sm(a,.5,2.6));const[x,z]=rpt(q);bp.position.x=x;bp.position.z=z;bp.position.y=.006+Math.abs(Math.sin(a*14))*.02*(q>0&&q<1);cp.userData.k=eo(sm(a,2.7,3.1))}}}
 export function page_map(W,D){return pageArt((c,w,h)=>{const X=x=>(x+W/2)/W*w,Z=z=>z/D*h;
  c.fillStyle='rgba(120,160,190,.55)';c.beginPath();c.moveTo(X(-.9),0);c.bezierCurveTo(X(-1.2),h*.3,X(-.5),h*.5,X(-1.0),h);c.lineTo(X(-.75),h);c.bezierCurveTo(X(-.25),h*.5,X(-.95),h*.3,X(-.65),0);c.fill();
  c.fillStyle='rgba(60,90,110,.8)';textOn(c,'鴨川',X(-.55),Z(1.2),`${h*.028}px MB`,'rgba(50,80,100,.85)');
  c.strokeStyle='rgba(58,36,24,.18)';c.lineWidth=h*.012;for(const z of[.9,1.8]){c.beginPath();c.moveTo(0,Z(z));c.lineTo(w,Z(z));c.stroke()}for(const x of[-2,0,1.8]){c.beginPath();c.moveTo(X(x),0);c.lineTo(X(x),h);c.stroke()}
  c.setLineDash([h*.004,h*.018]);c.lineCap='round';c.strokeStyle='#b0302a';c.lineWidth=h*.012;c.beginPath();ROUTE.forEach((p,i)=>i?c.lineTo(X(p[0]),Z(p[1])):c.moveTo(X(p[0]),Z(p[1])));c.stroke();c.setLineDash([]);
- textOn(c,'京都駅から 市バス5系統で',w*.5,h*.5,`${h*.04}px MB`,INK);textOn(c,'車では 入れません',w*.5,h*.56,`${h*.04}px MB`,'#a8302a')},W,D)}
+ textOn(c,'京都駅から 市バス5系統で',w*.5,h*.5,`${h*.034}px MB`,INK);textOn(c,'車では 入れません',w*.5,h*.555,`${h*.034}px MB`,'#a8302a')},W,D)}
 
 // ---- 5. 11月後半は大変な人出（人が列で起き上がる） ----
 export function S_crowd(B,Lprev,L){const F='far',N='near';
@@ -115,7 +115,7 @@ export function S_crowd(B,Lprev,L){const F='far',N='near';
   const p=B.piece(L,N,B.plane(ppl,6,1.0+k*.12),0,.5+k*.55);p.userData.k=0;rows.push(p)}
  const lam=[];for(const x of[-2.6,2.6]){B.piece(L,N,B.plane(art(.5,1.0,(c,w,h)=>lanternShape(c,w/2,h,h*.92,'#2a2228','#6a5030')),.5,1.0,{glow:glowArt(.5,1.0,(c,w,h)=>lanternShape(c,w/2,h,h*.92,'#000','#ffd890')),gi:2.4}),x,1.0)}
  return {upd(a){rows.forEach((p,k)=>p.userData.k=eo(sm(a,.3+k*.45,.75+k*.45)))}}}
-export function page_crowd(W,D){return pageArt((c,w,h)=>{textOn(c,'11月の後半は',w/2,h*.5,`${h*.04}px MB`,INK);textOn(c,'大変な人出に なりそうです',w/2,h*.56,`${h*.044}px MB`,'#a8302a')},W,D)}
+export function page_crowd(W,D){return pageArt((c,w,h)=>{textOn(c,'11月の後半は',w/2,h*.5,`${h*.04}px MB`,INK);textOn(c,'大変な人出に なりそうです',w/2,h*.56,`${h*.036}px MB`,'#a8302a')},W,D)}
 
 // ---- 6. おわり：あしたは どこへ ----
 export function S_end(B,Lprev,L){const F='far',N='near';
