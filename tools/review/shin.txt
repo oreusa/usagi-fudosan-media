@@ -1,2 +1,4 @@
 pd	https://townnote.pages.dev/shin/odekake
 kt	https://kansai.townnote.app/shin/odekake
+kau-pd	https://townnote.pages.dev/shin/kau
+ie-pd	https://townnote.pages.dev/shin/ie
