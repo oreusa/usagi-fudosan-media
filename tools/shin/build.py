@@ -191,6 +191,11 @@ if os.path.exists(os.path.join(L, 'shin/kau.js')):
 if os.path.exists(os.path.join(L, 'shin/doc.js')):
     sp = importlib.util.spec_from_file_location('docs', os.path.join(R, 'tools/shin/docs.py')); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
     m.build(write, L, R, URL)
+# 11/19 ふるさと納税・値下がり（燈のデータ）を新しい土台で
+try:
+    _sf = __import__('importlib.util').util.spec_from_file_location('furu', os.path.join(R, 'tools/shin/furu.py')); _mf = __import__('importlib.util').util.module_from_spec(_sf); _sf.loader.exec_module(_mf); _mf.build(write, URL)
+except Exception as e:
+    print('furu: 読み込めなかった', repr(e))
 LISTS.COVER()
 
 # ---------- 今までのページにかぶせる見た目（links/shin/skin.css）：shin.css の 頭・下のバー・MENU・夜空 を .sk の中だけに効く形にして＋skin.tail.css ----------
