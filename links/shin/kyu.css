@@ -511,3 +511,25 @@ html.sk.nt[data-k] .fsn a span{color:var(--sub)!important}
 /* 11/20 夜：skin.css の色反転（前のページを夜にする仕組み）を kyu のページでは使わない。kyu は自分で夜の色を持つ */
 html.sk.night[data-k] body>*:not(.skc){filter:none!important}
 html.sk[data-k] body{color:var(--ink)}
+/* 11/20 見本：分野ごとに1色の目印（html.iro・data-f）。色は字・数字・選んでいる所・下のバーの今いる所だけ。地は白黒のまま */
+html.iro{--c-od:#C8452B;--c-ie:#0A66C2;--c-kau:#1E7F4F;--c-kai:#C2306B;--l-od:#FF8F70;--l-ie:#6EB2FF;--l-kau:#5FD39B;--l-kai:#FF7FB2}
+html.iro[data-f=od]{--ac:var(--c-od);--acl:var(--l-od)}html.iro[data-f=ie]{--ac:var(--c-ie);--acl:var(--l-ie)}
+html.iro[data-f=kau]{--ac:var(--c-kau);--acl:var(--l-kau)}html.iro[data-f=kai]{--ac:var(--c-kai);--acl:var(--l-kai)}html.iro[data-f=top]{--ac:var(--ink);--acl:#fff}
+html.iro.nt{--c-od:var(--l-od);--c-ie:var(--l-ie);--c-kau:var(--l-kau);--c-kai:var(--l-kai)}
+html.iro .chip.on,html.iro .nro .chip.on{background:var(--ac);border-color:var(--ac);color:#fff}
+html.iro.nt .chip.on,html.iro.nt .nro .chip.on{color:#0A0E18}
+html.iro .seg .pill{background:var(--ac)}html.iro .seg button.on{color:#fff}html.iro.nt .seg button.on{color:#0A0E18}
+html.iro .fseg button[aria-selected=true]{color:var(--ac)}
+html.iro .nav .cur{color:var(--acl)}html.iro .nav .cur::before{background:var(--acl);box-shadow:0 0 10px var(--acl)}
+html.iro .h1p b,html.iro .flead b,html.iro .fv b{color:var(--ac)}
+/* 表紙：面ごとにその分野の色（おでかけ・家と土地・おかいもの・開店閉店） */
+html.iro .c3>section:nth-of-type(1){--sc:var(--c-od)}html.iro .c3>section:nth-of-type(2){--sc:var(--c-ie)}
+html.iro .c3>section:nth-of-type(3){--sc:var(--l-kau)}html.iro .c3>section:nth-of-type(4){--sc:var(--c-kai)}
+html.iro .c3u .s b,html.iro .c3n1 b,html.iro .c3n2 b,html.iro .c3ks b,html.iro .c3kc small{color:var(--sc)}
+html.iro .c3u .c3b a.f{background:var(--sc);border-color:var(--sc);color:#fff}
+html.iro .c3u .c3b a:not(.f){border-color:var(--sc);color:var(--sc)}
+html.iro .c3u.k .c3b a.f{color:#0A0E18}html.iro.nt .c3u .c3b a.f{color:#0A0E18}
+html.iro .c3f h3{color:var(--ink)}
+/* 前のページ（kyu）の選んでいる所 */
+html.iro[data-k] .flt .on,html.iro[data-k] .kt-f button.on,html.iro[data-k] .kt-tab button.on,html.iro[data-k] .kt-q button.on,html.iro[data-k] .kd button.on,html.iro[data-k] .bc button.on,html.iro[data-k] .pf button.on{background:var(--ac)!important;border-color:var(--ac)!important;color:#fff!important}
+html.iro.nt[data-k] .flt .on,html.iro.nt[data-k] .kt-f button.on,html.iro.nt[data-k] .kt-tab button.on,html.iro.nt[data-k] .kt-q button.on,html.iro.nt[data-k] .kd button.on,html.iro.nt[data-k] .bc button.on,html.iro.nt[data-k] .pf button.on{color:#0A0E18!important}
