@@ -1,5 +1,5 @@
 {
- "about": "投稿の表紙の絵（card.js が作る）。投稿の image_url に url を使う",
+ "about": "投稿の表紙の絵（card.js・photo.js が作る）。投稿の image_url に url を使う",
  "items": {
   "card-open-1114-x07": {
    "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1114-x07.jpg?v=mwfhk0jp",
@@ -266,6 +266,18 @@
   "card-open-1120-x12": {
    "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1120-x12.jpg?v=mwo29or2",
    "made": "2026-11-20"
+  },
+  "card-photo-1120-n2": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-photo-1120-n2.jpg?v=mwo2cifm",
+   "made": "2026-11-20",
+   "photo": "media/post/ph/tofukuji-tsutenkyo.jpg",
+   "cr": "Luka Peternel（CC BY-SA 4.0・Wikimedia Commons）"
+  },
+  "card-photo-1120-x18": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-photo-1120-x18.jpg?v=mwo2cjtj",
+   "made": "2026-11-20",
+   "photo": "media/post/ph/tofukuji-tsutenkyo.jpg",
+   "cr": "Luka Peternel（CC BY-SA 4.0・Wikimedia Commons）"
   }
  }
 }
