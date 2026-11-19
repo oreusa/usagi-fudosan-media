@@ -1,0 +1,184 @@
+■ top
+  load ✓
+  scroll ✓
+■ odekake
+  load ✓
+  scroll ✓
+■ ima
+  load ✓
+  scroll ✓
+■ illum
+  load ✓
+  scroll ✓
+■ koyo
+  load ✓
+  scroll ✓
+■ o1
+  load ✓
+  scroll ✓
+  card→sheet ✓
+    ✗ カードで板が出ない
+  bar:/odekake ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない /o/82d3724b
+  bar:/odekake?d=all&f=fav ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない /o/82d3724b
+  bar:/odekake?v2t=map ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない /o/82d3724b
+  bar:/tomari ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない /o/82d3724b
+■ fudosan
+  load ✓
+  scroll ✓
+■ machi
+  load ✓
+  scroll ✓
+  bar:/fudosan-list?fq=q ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/chika-kanto ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/uru.html ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+■ chika
+  load ✓
+  scroll ✓
+  bar:/fudosan-list?fq=q ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/chika-kanto ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/uru.html ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+■ akiya
+  load ✓
+  scroll ✓
+  bar:/fudosan-list?fq=q ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/chika-kanto ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/uru.html ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+■ ikura
+  load ✓
+  scroll ✓
+■ uru
+  load ✓
+  scroll ✓
+■ jikka
+  load ✓
+  scroll ✓
+  bar:/jikka/ ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/moushikomi?want=%E7%9B%B8%E7%B6%9A%E3%81%97%E3%81%9F%E5%AE%B6%E3%81%AE%E3%81%93%E3%81%A8 ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+■ jikka1
+  load ✓
+  scroll ✓
+  bar:/jikka/ ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:#steps ✓
+  bar-back ✓
+  bar:/moushikomi?machi=tokyo-03&want=%E7%9B%B8%E7%B6%9A%E3%81%97%E3%81%9F%E5%AE%B6%E3%81%AE%E3%81%93%E3%81%A8 ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+■ kaitai
+  load ✓
+  scroll ✓
+  bar:/fudosan-list?fq=q ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/chika-kanto ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/uru.html ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+■ kaitairank
+  load ✓
+  scroll ✓
+  bar:/fudosan-list?fq=q ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/chika-kanto ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/uru.html ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+■ sagasu
+  load ✓
+  scroll ✓
+  bar:/fudosan-list?fq=q ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/fudosan-list?fq=map ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/chika-kanto ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/uru.html ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+■ okaimono
+  load ✓
+  scroll ✓
+■ okai1
+  load ✓
+  scroll ✓
+  bar:/okaimono ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/nesage ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/kaimawari ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+  bar:/furusato ✓
+  bar-back ✓
+    ✗ 下のバーから戻れない blank
+■ furusato
+  load ✓
+  scroll ✓
+■ nesage
+  load ✓
+  scroll ✓
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+page.waitForTimeout: Target page, context or browser has been closed
+    at wait (/home/runner/work/usagi-fudosan-media/usagi-fudosan-media/tools/review/act.js:12:18)
+    at /home/runner/work/usagi-fudosan-media/usagi-fudosan-media/tools/review/act.js:39:26
+
+Node.js v24.22.3
