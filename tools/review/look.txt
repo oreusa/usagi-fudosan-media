@@ -1,0 +1,10 @@
+ktop	https://kanto.townnote.app/?mihon=2
+kokaimono	https://kanto.townnote.app/okaimono?mihon=2
+knesage	https://kanto.townnote.app/nesage?mihon=2
+kfurusato	https://kanto.townnote.app/furusato?mihon=2
+kotoku	https://kanto.townnote.app/otoku?mihon=2
+kfudosan	https://kanto.townnote.app/fudosan-list?mihon=2
+top	https://kansai.townnote.app/?mihon=2
+odekake	https://kansai.townnote.app/odekake?mihon=2
+flist	https://kansai.townnote.app/fudosan-list?mihon=2
+okaimono	https://kansai.townnote.app/okaimono?mihon=2
