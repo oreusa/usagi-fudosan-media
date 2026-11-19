@@ -203,6 +203,9 @@ await p.screenshot({path:process.argv[3],type:'jpeg',quality:92});await p.evalua
             BR['hp1'], BR['hp2'] = a, b; print('スマホの画面', u); return
     print('スマホの画面：撮れないので今までの絵')
 if not os.environ.get('EHON_NO_HP'): hp_shots()
+# 11/19 owner「絵だけ画像AIで描く」：EHON_ART に 昼・秋・夜 の絵（hiru/aki/yoru.jpg）があれば、ページの絵をそれにする。本・めくり・光・字・声は今まで通り
+_ART = os.environ.get('EHON_ART', '')
+PAGE['art'] = ['file://' + os.path.abspath(f'{_ART}/{n}.jpg') for n in ('hiru', 'aki', 'yoru')] if _ART else []
 PAGE['popup'] = bool(T.get('popup') or os.environ.get('EHON_POP'))   # 11/16 飛び出す絵本の版（紙の切り絵が立つ）
 PAGE['globe'] = T.get('globe', '')   # スノードームの台の文字（英字）
 PAGE['magic'] = bool(T.get('magic')) or BR['scene'] in ('xmas', 'momiji', 'hama')   # 11/15 魔法の絵本（光の粒・雪・そり・スノードーム）
@@ -357,6 +360,7 @@ const LP=(UMI||XM||P.scene=='hama')?'M0,-1Q.1,-.1 1,0Q.1,.1 0,1Q-.1,.1 -1,0Q-.1,
 function vtext(lines,x,y,size,ex,id){return `<div class="vt" id="${id}" style="right:${x}px;top:${y}px;font-size:${size}px;${ex||''}">`+lines.map(l=>(l.match(/[0-9][0-9.,:]*[0-9]|./gu)||[]).map(c=>c.length==2?`<span class="tcy">${c}</span>`:c.length>2?[...c].map(d=>`<span class="ud">${d}</span>`).join(''):`<span>${/[!-~]/.test(c)?String.fromCharCode(c.charCodeAt(0)+65248):c}</span>`).join('')).join('<br>')+`</div>`}
 function scene(mode){ // 0 昼 1 秋 2 夜
   // 11/15 クリスマスの絵（tools/outing_reel/xmas.js）。電球は毎コマまたたく
+  if(P.art&&P.art.length)return `<svg viewBox="0 0 920 1380">${DEFS}<image class="aiart" data-m="${mode}" href="${P.art[mode]}" width="920" height="1380" preserveAspectRatio="xMidYMid slice"/>${PAPER}</svg>`;
   if(CVS)return `<svg viewBox="0 0 920 1380">${DEFS}<image class="xmi" data-m="${mode}" href="${xmPage(mode,0)}" width="920" height="1380"/><g class="lv"></g>${PAPER}</svg>`;
   const sky=[['#f7f0df','#f3e3bf'],['#fbeede','#f6cfa0'],['#10152f','#343a6c']][mode];
   const far=['#c3cfc0','#e0b08c','#1b2142'][mode],mid=['#9db794','#cf7f55','#171a36'][mode],near=['#7c9f6c','#b9513a','#11132a'][mode];

@@ -5,7 +5,7 @@ import json, os, shutil, sys, time
 from gradio_client import Client
 req = json.load(open(sys.argv[1])); out = sys.argv[2]; os.makedirs(out, exist_ok=True)
 style = req['style']; log = []
-c = Client(req.get('space', 'black-forest-labs/FLUX.1-schnell'))
+c = Client(req.get('space', 'black-forest-labs/FLUX.1-schnell'), hf_token=os.environ.get('HF_TOKEN') or None)   # 鍵が無いと1回3枚まで
 for it in req['items']:
     for s in it.get('seeds', [1, 2, 3]):
         p = f"{it['prompt']}. {style}"; f = f"{out}/{it['name']}-{s}.webp"

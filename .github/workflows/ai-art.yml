@@ -13,7 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: pip install -q gradio_client
-      - run: python3 tools/outing_reel/ai-art/gen.py tools/outing_reel/ai-art/req.json /tmp/art
+      - env: {HF_TOKEN: "${{ secrets.HF_TOKEN }}"}
+        run: python3 tools/outing_reel/ai-art/gen.py tools/outing_reel/ai-art/req.json /tmp/art
       - run: |
           git config user.name "ai-art"; git config user.email "actions@users.noreply.github.com"
           if git fetch -q origin ai-art; then git checkout -qB ai-art FETCH_HEAD; else git checkout -q --orphan ai-art && git rm -rfq .; fi
