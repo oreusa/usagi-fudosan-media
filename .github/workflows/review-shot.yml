@@ -18,7 +18,7 @@ jobs:
       - run: sudo apt-get install -y -qq fonts-noto-cjk >/dev/null 2>&1 || true
       - run: node tools/review/shots.js "${{ inputs.list }}" /tmp/rv
       - if: ${{ inputs.act == 'yes' }}
-        run: timeout 1500 node tools/review/act.js "${{ inputs.list }}" > /tmp/rv/act.log 2>&1 || true
+        run: timeout 2400 node tools/review/tap2.js "${{ inputs.list }}" > /tmp/rv/act.log 2>&1 || true
       - run: |
           git config user.name "review-shot"; git config user.email "actions@users.noreply.github.com"
           if git fetch -q origin review; then git checkout -qB review FETCH_HEAD; else git checkout -q --orphan review && git rm -rfq .; fi
