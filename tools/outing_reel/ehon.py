@@ -425,6 +425,7 @@ function coverArt(){
   return `<g transform="translate(300,1168) scale(.86)" fill="${G}">${motif(0,0,.5,false).replace(/fill="#[0-9a-f]{6}"/g,'fill="'+G+'"').replace(/stroke="#[0-9a-f]{3,6}"/g,'stroke="'+D+'"')}</g>
    <g transform="translate(236,960) scale(22) rotate(18)"><path d="${LP}" fill="${G}" opacity=".8"/></g>`}
 function build(){
+  if(P.art&&P.art.length){const st=document.createElement('style');st.textContent='#t0,#t1{text-shadow:0 0 6px #f6efdf,0 0 14px #f6efdf,0 0 26px rgba(246,239,223,.95),0 0 44px rgba(246,239,223,.8)}';document.head.appendChild(st)}   // 11/19 AIの絵の上でも字が読めるように（紙の色でふちどる）
   const pages=[];const HOLLY=MG&&XM?mgHolly():'';
   // 表紙
   pages.push(`<div class="face cover"><div class="spine"></div><div class="fr1"></div><div class="fr2"></div>
