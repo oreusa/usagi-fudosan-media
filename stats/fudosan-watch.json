@@ -2234,7 +2234,18 @@
 "https://www.recruit-osakametro.jp/"
 ]
 },
-"done": [],
+"done": [
+"https://web.pref.hyogo.lg.jp/sr05/comeback/hhw.html",
+"https://www.city.osaka.lg.jp/port/page/0000690413.html",
+"https://www.kkr.mlit.go.jp/kensei/index.html",
+"https://www.moj.go.jp/MINJI/fudousantouki.html",
+"https://www.moj.go.jp/MINJI/houjintouki.html",
+"https://www.moj.go.jp/MINJI/minji05_00688.html",
+"https://www.moj.go.jp/MINJI/minji25.html",
+"https://www.moj.go.jp/MINJI/souzokutouki-gimuka/index.html",
+"https://www.nankai.co.jp/community/station/toga_mikita.html",
+"https://www.nta.go.jp/taxes/sake/boshujoho/hojojigyo.htm"
+],
 "new": [
 {
 "date": "2026-11-16",
