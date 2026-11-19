@@ -1,0 +1,30 @@
+<!doctype html><meta charset="utf-8"><body style="margin:0;background:#000">
+<script type="importmap">{"imports":{"three":"%NM%/three/build/three.module.js","three/addons/":"%NM%/three/examples/jsm/"}}</script>
+<script type="module">
+import {Book,pageArt,sm,eo,eio,cl,R_,leafShape} from '%POP%/popup.js';import {S_night,page_night} from '%POP%/s1.js';import * as S from '%POP%/s2.js';
+const f=new FontFace('MB','url(file://%F%/ShipporiMincho-Bold.ttf)');await f.load();document.fonts.add(f);
+const B=new Book({});const W=6,D=5.6;const blank=()=>pageArt(null,W,D);
+const pages=[page_night,S.page_clock,S.page_ticket,S.page_map,S.page_crowd,S.page_end];const fns=[S_night,S.S_clock,S.S_ticket,S.S_map,S.S_crowd,S.S_end];
+const title=pageArt((c,w,h)=>{c.fillStyle='#1d2350';c.fillRect(w*.08,h*.06,w*.84,h*.88);c.strokeStyle='#c9a35a';c.lineWidth=w*.006;c.strokeRect(w*.11,h*.085,w*.78,h*.83);
+ const r=R_(3);for(let i=0;i<70;i++){c.fillStyle='rgba(246,226,168,.8)';c.beginPath();c.arc(w*(.12+r()*.76),h*(.1+r()*.5),1+r()*3,0,7);c.fill()}
+ c.fillStyle='#f6e2a8';c.font=`${h*.032}px MB`;c.textAlign='center';c.fillText('おでかけ絵本',w/2,h*.3);c.font=`${h*.075}px MB`;c.fillText('よるの えいかんどう',w/2,h*.42);
+ c.font=`${h*.03}px MB`;c.fillText('京都 ・ 11月20日から',w/2,h*.5);for(let i=0;i<9;i++){c.fillStyle=['#c8452a','#e0682e','#d9a23a'][i%3];leafShape(c,w*(.3+i*.05),h*(.62+Math.sin(i)*.02),w*.025,i)}},W,D);
+const back=(top)=>pageArt((c,w,h)=>{const g=c.createLinearGradient(0,0,0,h);g.addColorStop(0,top);g.addColorStop(1,'#2a3270');c.fillStyle=g;c.fillRect(0,0,w,h);const r=R_(9);for(let i=0;i<120;i++){c.fillStyle='rgba(246,226,168,.7)';c.beginPath();c.arc(r()*w,r()*h,1+r()*2.5,0,7);c.fill()}},W,D,'#1d2350');
+const Ls=[B.addLeaf(title,back('#141a40'))];const tops=['#3a2a5a','#2a4a7a','#3a6aa0','#141a40','#141a40','#141a40'];pages.forEach((pg,i)=>Ls.push(B.addLeaf(pg(W,D),back(tops[i]))));
+const U=fns.map((fn,j)=>fn(B,Ls[j],Ls[j+1]));
+// 見開きの始まり（めくり終わり）の時刻
+const T=%T%,TOTAL=%TOTAL%;const TURN=.95;
+const lerp=(a,b,k)=>a+(b-a)*k;
+window.render=t=>{const al=Ls.map((L,j)=>0);
+ // 開く：題のページがめくれて最初の見開きが起き上がる
+ al[0]=lerp(2.05,Math.PI,eo(sm(t,0,1.0)));
+ al[6]=lerp(0,.55,eio(sm(t,TOTAL-1.1,TOTAL)));
+ for(let s=1;s<T.length;s++){const q=eio(sm(t,T[s]-TURN,T[s]));if(q>0)al[s]=lerp(al[s],Math.PI,q)}
+ let sp=0;for(let s=0;s<T.length;s++)if(t>=T[s]-TURN*.5)sp=s;
+ B.pose(al);U.forEach((u,s)=>u.upd&&u.upd(t-T[s]));B.pose(al);
+ // カメラ：開いた直後に寄り、めくる時に少し引く
+ const ts=t-T[sp],turn=Math.max(...T.slice(1).map(x=>1-Math.min(1,Math.abs(t-(x-TURN*.5))/0.9)));
+ const k=eo(sm(ts,0,4));const z=lerp(10.6,9.4,k)+turn*1.6,y=lerp(4.6,4.1,k)+turn*.8,x=Math.sin(t*.35)*.5;
+ B.cam.position.set(x,y,z);B.cam.lookAt(x*.3,1.3,.8);B.cam.fov=42;B.cam.updateProjectionMatrix();B.draw(t)};
+window.shot=t=>render(t);window.ok=1;
+</script>
