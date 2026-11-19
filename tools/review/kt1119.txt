@@ -5,3 +5,5 @@ t-illu	https://lifenote-kanto.pages.dev/illumination
 t-koyo	https://lifenote-kanto.pages.dev/koyo
 t-ima	https://lifenote-kanto.pages.dev/ima
 t-uru	https://lifenote-kanto.pages.dev/uru
+t-kaiten	https://lifenote-kanto.pages.dev/kaiten
+t-okai	https://lifenote-kanto.pages.dev/okaimono
