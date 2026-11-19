@@ -1,0 +1,9 @@
+cover	https://townnote.pages.dev/shin/cover
+odekake-osaka	https://townnote.pages.dev/shin/odekake-osaka
+illumination	https://townnote.pages.dev/shin/illumination
+koyo	https://townnote.pages.dev/shin/koyo
+hatsumode	https://townnote.pages.dev/shin/hatsumode
+tomari	https://townnote.pages.dev/shin/tomari
+ima	https://townnote.pages.dev/shin/ima
+kaiten	https://townnote.pages.dev/shin/kaiten
+ranking	https://townnote.pages.dev/shin/ranking

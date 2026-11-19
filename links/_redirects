@@ -1,0 +1,32 @@
+# 作り：tools/shin/build.py → bake.py（毎回作り直す。直す時は bake.py の MAP）
+# functions が上限で止まった時だけ効く。いつもは functions/_middleware.js と functions/*.js が同じ物を出す。
+/ /shin/cover 200
+/odekake /shin/odekake 200
+/fudosan-list /shin/ie 200
+/okaimono /shin/kau 200
+/illumination /shin/illumination 200
+/illumination-muryo /shin/illumination-muryo 200
+/koyo /shin/koyo 200
+/hatsumode /shin/hatsumode 200
+/tomari /shin/tomari 200
+/ima /shin/ima 200
+/kaiten /shin/kaiten 200
+/ranking /shin/ranking 200
+/odekake-osaka /shin/odekake-osaka 200
+/illumination-osaka /shin/illumination-osaka 200
+/koyo-osaka /shin/koyo-osaka 200
+/odekake-kyoto /shin/odekake-kyoto 200
+/illumination-kyoto /shin/illumination-kyoto 200
+/koyo-kyoto /shin/koyo-kyoto 200
+/odekake-hyogo /shin/odekake-hyogo 200
+/illumination-hyogo /shin/illumination-hyogo 200
+/koyo-hyogo /shin/koyo-hyogo 200
+/odekake-nara /shin/odekake-nara 200
+/illumination-nara /shin/illumination-nara 200
+/koyo-nara /shin/koyo-nara 200
+/odekake-shiga /shin/odekake-shiga 200
+/illumination-shiga /shin/illumination-shiga 200
+/koyo-shiga /shin/koyo-shiga 200
+/odekake-wakayama /shin/odekake-wakayama 200
+/illumination-wakayama /shin/illumination-wakayama 200
+/koyo-wakayama /shin/koyo-wakayama 200
