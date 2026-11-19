@@ -72,7 +72,8 @@ nav.addEventListener("pointerdown",function(e){var b=e.target.closest("a,button"
   b.classList.remove("tap");void b.offsetWidth;b.classList.add("tap")});
 nav.addEventListener("click",function(e){var b=e.target.closest("[data-a]");if(!b||!navFn)return;navFn(b.dataset.a)});
 function navCur(a){$$("#nav [data-a]").forEach(function(b){b.classList.toggle("cur",b.dataset.a===a)})}
-addEventListener("scroll",function(){var y=scrollY;if(Math.abs(y-ly)>8){nav.classList.toggle("hide",y>ly&&y>300);ly=y}},{passive:true});
+/* 11/19 下へ流す間だけ隠し、指を止めたら（0.8秒）すぐ戻す。押した後に勝手に動いた時もバーが消えたままにならない */
+var nvT;addEventListener("scroll",function(){var y=scrollY;if(Math.abs(y-ly)>8){nav.classList.toggle("hide",y>ly&&y>300);ly=y}clearTimeout(nvT);nvT=setTimeout(function(){nav.classList.remove("hide")},800)},{passive:true});
 var mu=$("#mu");$("#mnb").onclick=function(){mu.classList.add("op")};$(".bk",mu).onclick=function(){mu.classList.remove("op")};
 
 /* ---- 府県の玉（選んだ所へ滑る・周りを光が回る） ---- */
