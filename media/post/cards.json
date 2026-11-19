@@ -1,5 +1,5 @@
 {
- "about": "投稿の表紙の絵（card.js・photo.js が作る）。投稿の image_url に url を使う",
+ "about": "投稿の表紙の絵（card.js が作る）。投稿の image_url に url を使う",
  "items": {
   "card-open-1114-x07": {
    "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1114-x07.jpg?v=mwfhk0jp",
@@ -230,6 +230,42 @@
    "made": "2026-11-19",
    "photo": "media/post/ph/ishiyamadera-koyo.jpg",
    "cr": "Bariston（CC BY-SA 4.0・Wikimedia Commons）"
+  },
+  "card-r38": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-r38.jpg?v=mwo29iac",
+   "made": "2026-11-20"
+  },
+  "card-r39": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-r39.jpg?v=mwo29j71",
+   "made": "2026-11-20"
+  },
+  "card-jikka-1120-s1": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-jikka-1120-s1.jpg?v=mwo29k3g",
+   "made": "2026-11-20"
+  },
+  "card-open-1120-n3": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1120-n3.jpg?v=mwo29l0c",
+   "made": "2026-11-20"
+  },
+  "card-odekake-1120-n5": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-odekake-1120-n5.jpg?v=mwo29lx9",
+   "made": "2026-11-20"
+  },
+  "card-open-1120-n6": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1120-n6.jpg?v=mwo29mlz",
+   "made": "2026-11-20"
+  },
+  "card-hitoeki-1120-n7": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-hitoeki-1120-n7.jpg?v=mwo29nbx",
+   "made": "2026-11-20"
+  },
+  "card-open-1120-x07": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1120-x07.jpg?v=mwo29o1o",
+   "made": "2026-11-20"
+  },
+  "card-open-1120-x12": {
+   "url": "https://oreusa.github.io/usagi-fudosan-media/media/post/card-open-1120-x12.jpg?v=mwo29or2",
+   "made": "2026-11-20"
   }
  }
 }
