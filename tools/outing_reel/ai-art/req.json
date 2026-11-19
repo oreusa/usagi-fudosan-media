@@ -1,0 +1,16 @@
+{
+ "run": 5,
+ "style": "Storybook illustration from a luxurious classic Japanese children's picture book. Hand-painted watercolor and gouache on cream textured paper, delicate sepia ink linework, soft visible brush strokes, paper grain, gentle warm light, rich red and amber autumn palette, elegant, magical, cozy. Vertical composition, the upper third is calm open sky. No text, no letters, no people",
+ "items": [
+  {
+   "name": "yoru",
+   "seeds": [
+    31,
+    32,
+    33,
+    34
+   ],
+   "prompt": "Night illumination at a Kyoto temple garden: red and orange maple trees lit warmly from below glow against a deep indigo starry sky and are mirrored perfectly in a still dark pond, high on the dark hillside a softly lit small vermilion pagoda with only two roofs, small stone lanterns with golden light along the shore"
+  }
+ ]
+}
