@@ -34,8 +34,13 @@ def after(L, key, n=1):
     return ""
 
 
-def main(src, out):
+CSSV = "1"
+
+
+def main(src, out, prod=False):
     h = open(src, encoding="utf-8").read()
+    if 'data-m2="1"' in h:
+        return "skip"
     L = text(h)
     kt = "LIFE NOTE" in L[-3:] or "kanto.townnote" in h
     tid = re.search(r'/machi/([a-z]+-\d+)', re.search(r'<link rel="canonical" href="([^"]+)"', h).group(1)).group(1)
@@ -117,12 +122,15 @@ def main(src, out):
         a, u = num(avgp); cards.insert(1, card("住宅地の平均（1㎡）", a, u, "2026年の地価公示", ""))
     if len(cards) < 4 and ak:
         cards.append(card("空き家の割合", ak, "%", "2023年", ""))
+    if len(cards) < 4 and old:
+        cards.append(card("65歳以上の割合", old, "%", "2025年", ""))
     cards = cards[:4]
 
     tabs = (f'<nav class="mt" aria-label="{E(name)}のページ"><a class="on" aria-current="page">値段と地価</a>'
             f'<a href="/jikka/{tid}">実家・空き家</a><a href="{kai or "/kaitai"}">{"解体の補助金" if kai else "解体・片付け"}</a></nav>')
     yrow = "".join(f'<a href="{x}" rel="sponsored noopener" target="_blank">{lab}<i>↗</i></a>' for x, lab in zip(yh, ["中古マンション", "中古一戸建て", "土地"]))
     rows = [("人口", f"{pop}人" if pop else "—", "2025年"), ("5年の人口の増減", pop5, ""), ("65歳以上の割合", f"{old}%" if old else "—", ""), ("空き家の割合", f"{ak}%" if ak else "—", "2023年")]
+    rows = [r for r in rows if r[1] and r[1] != "—"]
     body = f'''<main class="m2">
 <header class="m2h"><p class="pf">{E(pref)}</p><h1>{E(name)}</h1><p class="sb">家と土地の値段・地価・くらしの数字</p></header>
 <section class="mcs" aria-label="数字">{"".join(cards)}</section>
@@ -142,15 +150,48 @@ def main(src, out):
 <section class="sec faq"><h2>よくある質問</h2>{"".join(f"<details><summary>{E(q)}</summary><p>{E(a)}</p></details>" for q, a in faq)}</section>
 <footer class="src"><h2>出典</h2>{"".join(f"<p>{E(x)}</p>" for x in srcs)}</footer>
 </main>'''
-    css = open(__file__.replace("machi_mihon.py", "machi2.css"), encoding="utf-8").read()
-    page = f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>{E(name)}の家と土地の値段（見本）</title><meta name="robots" content="noindex">
+    if prod:
+        keep = re.findall(r'<title>[\s\S]*?</title>|<meta (?:name="description"|property="og:[^"]+"|name="twitter:[^"]+"|name="theme-color")[^>]*>|<link rel="(?:canonical|icon|apple-touch-icon|manifest)"[^>]*>|<script type="application/ld\+json">[\s\S]*?</script>', h)
+        head = "\n".join(keep)
+        css = '<link rel="stylesheet" href="/shin/machi2.css?v=' + CSSV + '">'
+    else:
+        head = f'<title>{E(name)}の家と土地の値段（見本）</title><meta name="robots" content="noindex">'
+        css = "<style>" + open(__file__.replace("machi2.py", "machi2.css"), encoding="utf-8").read() + "</style>"
+    page = f'''<!doctype html><html lang="ja" data-m2="1"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+{head}
 <script>window.TN_P="/machi/{tid}";document.documentElement.dataset.k="m2";document.documentElement.classList.add("sk");try{{if(localStorage.getItem("usagi_theme")==="night")document.documentElement.classList.add("nt")}}catch(e){{}}</script>
 <link rel="stylesheet" href="/shin/skin.css"><script src="/shin/skin.js" defer></script>
-<style>{css}</style></head><body>{body}</body></html>'''
+{css}</head><body>{body}</body></html>'''
     open(out, "w", encoding="utf-8").write(page)
-    print("ok", out, len(cards), "cards", len(faq), "faq", "kanto" if kt else "kansai")
+    return len(cards)
+
+
+def batch(src_dir, out_dir):
+    """全部の街：src_dir/<id>.html → out_dir/<id>.html（本番の形）。読めないページは書かない（前のページのまま）"""
+    import os
+    os.makedirs(out_dir, exist_ok=True)
+    ok = ng = 0
+    for fn in sorted(os.listdir(src_dir)):
+        if not re.match(r"[a-z]+-\d+\.html$", fn):
+            continue
+        try:
+            r = main(os.path.join(src_dir, fn), os.path.join(out_dir, fn) + ".tmp", prod=True)
+            if r == "skip":
+                continue
+            if r < 2:
+                raise ValueError("cards " + str(r))
+            os.replace(os.path.join(out_dir, fn) + ".tmp", os.path.join(out_dir, fn)); ok += 1
+        except Exception as e:
+            ng += 1; print("machi2: そのまま", fn, e)
+            try:
+                os.remove(os.path.join(out_dir, fn) + ".tmp")
+            except OSError:
+                pass
+    print(f"machi2: 新しい形 {ok} 枚・前のまま {ng} 枚")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    if sys.argv[1] == "all":
+        batch(sys.argv[2], sys.argv[3])
+    else:
+        print(main(sys.argv[1], sys.argv[2]))

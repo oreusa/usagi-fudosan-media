@@ -13,6 +13,12 @@ export async function onRequest(ctx) {
     const u = new URL(request.url); u.pathname = "/shin" + p;
     return ctx.env.ASSETS.fetch(new Request(u.toString(), request));
   }
+  // 11/20 owner「月が決めていいよ」→ 街のページ（/machi/<id>）は新しい形（links/shin/machi/<id>.html・tools/shin/machi2.py）。無ければ前のページ
+  if ((request.method === "GET" || request.method === "HEAD") && /^\/machi\/[a-z]+-\d+$/.test(p)) {
+    const u = new URL(request.url); u.pathname = "/shin" + p;
+    const r2 = await ctx.env.ASSETS.fetch(new Request(u.toString(), request));
+    if (r2.ok) return r2;
+  }
   const res = await ctx.next();
   // 11/19 owner「他ページもぜんぶ」→ 新しい土台で作り直していない今までのページに、新しい土台の 頭・下のバー・MENU・文字・夜空 をかぶせる（links/shin/skin.*）。
   // 戻す時はこの if から下の3行を消す（ページの中身は何も変えていない）。
