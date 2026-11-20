@@ -15,7 +15,7 @@ def pop(k, layers, extra=''):
     h = f'<img class="pl kb" src="a/H{k}-b.png">'
     for name, org, cls in layers:
         h += f'<img class="pl {cls}" id="S{k}{name}" src="a/H{k}-{name}.png" style="transform-origin:50% {org}">'
-    return f'<div class="pop">{h}{extra}</div>'
+    return f'<div class="pop">{h}{extra}<div class="fx" id="fx{k}"></div></div>'
 S0 = pop(0, [('m', '830px', 'up'), ('n', '1425px', 'up'), ('f', '0px', 'fl')])
 S1 = pop(1, [('m', '1425px', 'up'), ('n', '1425px', 'up'), ('f', '1425px', 'fl')])
 S2 = pop(2, [('m', '1425px', 'up'), ('n', '980px', 'drop'), ('f', '0px', 'lt')])

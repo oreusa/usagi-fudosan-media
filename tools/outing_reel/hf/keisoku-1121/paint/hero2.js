@@ -1,5 +1,5 @@
 // 11/20 H1 見上げた赤い天井 / H2 足もとの苔と散り紅葉 / H3 朝の光の参道（H0 と同じ描き方）
-const PAL2=['#c8301e','#d9441f','#e8622a','#f08a2c','#b52418','#f2a33a','#a51c16'];
+const PAL2=['#b3121e','#c8241f','#d93a22','#e2582a','#9c0f1c','#eb8a3a','#7e0c18'];
 function glow(x,cx,cy,r,a,col='255,240,200'){const g=x.createRadialGradient(cx,cy,0,cx,cy,r);g.addColorStop(0,`rgba(${col},${a})`);g.addColorStop(1,`rgba(${col},0)`);x.fillStyle=g;x.fillRect(cx-r,cy-r,r*2,r*2)}
 // 主役の1枚：本物に近いもみじ（7裂・ふちのぎざぎざ・切れ込みは浅め）
 function mapleBig(x,S){const lob=[[-90,1],[-38,.9],[-142,.9],[8,.72],[-188,.72],[52,.42],[-232,.42]].sort((a,b)=>a[0]-b[0]);x.beginPath();
@@ -10,6 +10,7 @@ function mapleBig(x,S){const lob=[[-90,1],[-38,.9],[-142,.9],[8,.72],[-188,.72],
   for(let k=1;k<=8;k++){const t=k/8;const aa=a+t*14,rr=(r-t*(r-.42))*(1+(k%2?.05:0));pts.push(P(aa,rr))}
   const mid=(a+an)/2;if(an-a>30)pts.push(P(mid,.36))}
  pts.forEach((p,i)=>i?x.lineTo(...p):x.moveTo(...p));x.closePath()}
+function mleaf(x,px,py,S,rot,col){x.save();x.translate(px,py);x.rotate(rot);x.fillStyle=col;mapleBig(x,S);x.fill();x.restore()}
 function H1(){const L={};const cx=520,cy=560;const LT=[cx,cy,620];
  {const c=cv(),x=c.getContext('2d');
   const g=x.createRadialGradient(cx,cy,0,cx,cy,900);g.addColorStop(0,'#fffbe8');g.addColorStop(.1,'#ffe6a8');g.addColorStop(.3,'#f2953c');g.addColorStop(.6,'#a8301c');g.addColorStop(1,'#3e0e0a');x.fillStyle=g;x.fillRect(0,0,W,H);
@@ -45,7 +46,7 @@ function H2(){const L={};const LT=[160,-60,1500];
  {const c=cv(),x=c.getContext('2d');const q=rng(211);
   // 散ったもみじ：下ほど厚く、上はぱらぱら（緑と赤の対比）
   for(let i=0;i<2600;i++){const yy=Math.pow(q(),.55)*H,k=yy/H,xx=q()*W;if(q()>.18+k*.9)continue;const d=Math.hypot(xx-LT[0],yy-LT[1])/LT[2];const s=12+k*18+q()*8;
-   leaf(x,xx+3,yy+4,s,q()*6,'rgba(20,30,6,.35)',7);leaf(x,xx,yy,s,q()*6,mix(mix(PAL2[i%7],'#ffe6a8',Math.max(0,.8-d)*.4),'#2a0604',q()*.3),7)}
+   const r0=q()*6;mleaf(x,xx+3,yy+4,s,r0,'rgba(20,30,6,.35)');mleaf(x,xx,yy,s,r0,mix(mix(PAL2[i%7],'#ffe6a8',Math.max(0,.8-d)*.4),'#2a0604',q()*.3))}
   L.m=finish(c,802,{rim:false,g:5,blot:0})}
  {const c=cv(),x=c.getContext('2d');
   // 主役の1枚（大きく・葉脈あり）

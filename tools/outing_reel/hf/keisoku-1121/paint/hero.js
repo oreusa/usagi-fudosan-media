@@ -5,9 +5,9 @@ function leafCloud(x,cx,cy,rx,ry,n,sz,pal,seed,{light=null,alpha=1,shape}={}){co
  for(let i=0;i<n;i++){let u,v;do{u=q()*2-1;v=q()*2-1}while(shape?!shape(u,v):(u*u+v*v>1));const px=cx+u*rx,py=cy+v*ry;let col=pal[Math.floor(q()*pal.length)];
   if(light){const d=Math.hypot(px-light[0],py-light[1])/light[2];col=mix(col,'#ffe08a',Math.max(0,.75-d)*.55);col=mix(col,'#3a0806',Math.max(0,Math.min(1,d-.5))*.55)}
   const s=sz*(.6+q()*.8);x.globalAlpha=alpha*(.55+q()*.45);
-  if(q()<.72){x.fillStyle=col;x.beginPath();x.ellipse(px,py,s*.9,s*(.6+q()*.3),q()*3,0,7);x.fill()}else leaf(x,px,py,s,q()*6,col,7)}x.globalAlpha=1}
+  if(q()<.28){x.fillStyle=col;x.beginPath();x.ellipse(px,py,s*.9,s*(.6+q()*.3),q()*3,0,7);x.fill()}else{leaf(x,px+s*.12,py+s*.18,s*1.05,q()*6,'rgba(60,8,10,.35)',7);leaf(x,px,py,s*1.15,q()*6,col,7)}}x.globalAlpha=1}
 function H0(){const L={};const {x:vx,y:vy}=HV;const LT=[vx,vy-60,700];
- const PAL=['#c8301e','#d9441f','#e8622a','#f08a2c','#b52418','#f2a33a','#a51c16'];
+ const PAL=['#b3121e','#c8241f','#d93a22','#e2582a','#9c0f1c','#eb8a3a','#7e0c18'];
  // ---- b：光の奥・遠い木・石段 ----
  {const c=cv(),x=c.getContext('2d');
   const g=x.createRadialGradient(vx,vy-40,10,vx,vy-40,900);g.addColorStop(0,'#fff8e0');g.addColorStop(.12,'#ffd98e');g.addColorStop(.35,'#e98a3c');g.addColorStop(.7,'#9a2c1a');g.addColorStop(1,'#4a120c');x.fillStyle=g;x.fillRect(0,0,W,H);
