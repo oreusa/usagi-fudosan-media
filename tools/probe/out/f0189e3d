@@ -193,7 +193,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <button type="button" class="header-lang__item en" data-lang="zh-TW">TW</button>
     <button type="button" class="header-lang__item en" data-lang="ko">KR</button>
 
-		<div class="gtranslate_wrapper" id="gt-wrapper-49070046"></div>  </div>
+		<div class="gtranslate_wrapper" id="gt-wrapper-23600079"></div>  </div>
 
 </div>
 				</li>
@@ -1071,10 +1071,10 @@ var wpcf7 = {
 //# sourceURL=contact-form-7-js-before
 </script>
 <script id="contact-form-7-js" src="https://hikari-kyoen.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.2.3"></script>
-<script id="gt_widget_script_49070046-js-before">
-window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {};window.gtranslateSettings['49070046'] = {"default_language":"ja","languages":["zh-CN","zh-TW","en","ja","ko"],"url_structure":"sub_directory","native_language_names":1,"detect_browser_language":1,"wrapper_selector":"#gt-wrapper-49070046","select_language_label":"Select Language","horizontal_position":"inline","flags_location":"\/wp-content\/plugins\/gtranslate\/flags\/"};
-//# sourceURL=gt_widget_script_49070046-js-before
-</script><script src="https://hikari-kyoen.com/wp-content/plugins/gtranslate/js/dropdown.js?ver=5.0.1" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/core/midosuji/" data-gt-orig-domain="hikari-kyoen.com" data-gt-widget-id="49070046" defer></script><script id="wp-emoji-settings" type="application/json">
+<script id="gt_widget_script_23600079-js-before">
+window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {};window.gtranslateSettings['23600079'] = {"default_language":"ja","languages":["zh-CN","zh-TW","en","ja","ko"],"url_structure":"sub_directory","native_language_names":1,"detect_browser_language":1,"wrapper_selector":"#gt-wrapper-23600079","select_language_label":"Select Language","horizontal_position":"inline","flags_location":"\/wp-content\/plugins\/gtranslate\/flags\/"};
+//# sourceURL=gt_widget_script_23600079-js-before
+</script><script src="https://hikari-kyoen.com/wp-content/plugins/gtranslate/js/dropdown.js?ver=5.0.1" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/core/midosuji/" data-gt-orig-domain="hikari-kyoen.com" data-gt-widget-id="23600079" defer></script><script id="wp-emoji-settings" type="application/json">
 {"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://hikari-kyoen.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.5"}}
 </script>
 <script type="module">

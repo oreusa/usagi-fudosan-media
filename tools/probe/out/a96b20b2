@@ -1,0 +1,360 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="Description" content="天台宗別格本山 書寫山圓教寺 のWEBサイトです" />
+<meta name="Keywords" content="書寫山,圓教寺,天台宗,姫路,西国二十七番札所" />
+<title>天台宗別格本山 西国二十七番札所 | 書寫山圓教寺</title>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-WG40GMS14Z"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-WG40GMS14Z');
+	</script>
+<!-- Google 構造化データ マークアップ支援ツールが生成した JSON-LD マークアップです。 -->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "name": "天台宗別格本山 西国二十七番札所 書寫山圓教寺",
+  "image": "http://www.shosha.or.jp/images/shosha_w.svg",
+  "telephone": [
+    "079-266-3327",
+    "079-266-3240"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2968",
+    "addressLocality": "姫路市書写",
+    "addressRegion": "兵庫県",
+    "addressCountry": "日本",
+    "postalCode": "〒671-2201"
+  }
+}
+</script><link rel="stylesheet" href="css_js/style.css">
+<link rel="stylesheet" href="css_js/index.css">
+<!-- swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Jarallax -->
+<link href="https://cdn.jsdelivr.net/npm/jarallax@3/dist/jarallax.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/jarallax@3/dist/jarallax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jarallax@3/dist/jarallax-video.min.js"></script>
+<script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<header>
+	<h1>
+		<a href="http://www.shosha.or.jp/"><img src="http://www.shosha.or.jp/images/shosha_w.svg" alt="〈天台宗別格本山 西国二十七番札所〉書寫山圓教寺" /></a>
+	</h1>
+	<div id="lang"><!--<a href="#">English</a>--></div>
+	<!--nav-->
+	<div id="nav_btn">
+		<div id="nav_bar"><span></span><span></span></div>
+		<div id="open"></div>
+	</div>
+	<!---->
+	<div id="drawer" class="menu">
+		<nav>
+			<ul>
+				<li><a href="http://www.shosha.or.jp/">トップページ</a></li>
+				<li><a href="http://www.shosha.or.jp/history/">書寫山圓教寺について</a></li>
+				<li><a href="http://www.shosha.or.jp/map/">伽藍配置</a></li>
+				<li><a href="http://www.shosha.or.jp/cultural_properties/">文化財・史跡</a></li>
+				<li><a href="http://www.shosha.or.jp/keidaiannai">モデルコース</a></li>
+				<li><a href="http://www.shosha.or.jp/seals/">御朱印</a></li>
+				<li><a href="http://www.shosha.or.jp/experience/">修行体験</a></li>
+				<li><a href="http://www.shosha.or.jp/memorials/">ご回向・ご供養のご案内</a></li>
+				<li><a href="http://www.shosha.or.jp/schedule2/">ご供養とご祈祷</a></li>
+				<li><a href="http://www.shosha.or.jp/schedule/">行事スケジュール</a></li>
+			</ul>
+			<hr />
+			<ul class="nav_sub">
+				<li><a href="http://www.shosha.or.jp/access/">アクセス</a></li>
+				<li><a href="http://www.shosha.or.jp/contact/">お問い合わせ</a></li>
+				<li><a href="http://www.shosha.or.jp/guidelines_for_photography/">撮影に関するお願い</a></li>
+			</ul>
+			<hr />
+			<ul class="other_nav">
+				<li><a href="https://www.instagram.com/shoshazan_engyouji/" target="_blank"><img src="http://www.shosha.or.jp/images/instagram-brands-solid.svg" alt="instagram" /></a></li>
+				<li><a href="https://www.facebook.com/ShoshazanEngyoji/" target="_blank"><img src="http://www.shosha.or.jp/images/facebook-brands-solid-full.svg" alt="facebook" /></a></li>
+				<li><a href="https://x.com/engyouji_shosha" target="_blank"><img src="http://www.shosha.or.jp/images/x-twitter-brands-solid.svg" alt="X" /></a></li>
+			</ul>
+			<!--<ul class="lang">
+				<li>JP</li>
+				<li><a href="">EG</a></li>
+			</ul>-->
+		</nav>
+	</div>
+</header>	<main>
+		<div id="index_1st">
+			<video autoplay muted loop src="images/shosha.mp4"></video>
+			<!---->
+			<div class="i1copy1 i1_fade"><img src="images/i1copy1.svg" alt="千年の静寂に、出会う。" /></div>
+			<div class="i1copy2 i1_fade"><img src="images/i1copy2.svg" alt="A Thousand Years of Stillness." /></div>
+			<div class="japan_heritage i1_fade">
+			  <a href="https://japan-heritage.bunka.go.jp/ja/" target="_blank"><img src="images/japan_heritage.svg" alt="日本遺産" /></a>
+			  <a href="https://jh-saikoku33.jp" target="_blank"><img src="images/saigoku.svg" alt="観音巡礼" /></a>
+			</div>
+		</div>
+		<!---->
+		<article id="index_2nd">
+			<h3 class="tate fadein">昨日も祈り、<br />今日も祈る。<br />ただそれだけの日々が、<br />いつしか千年。</h3>
+			<p class="fadein">ここでは、時は流れるものではない。<br />積み重ねられるもの。<br />その繰り返しが、千年という時間を育んできた。</p>
+			<div class="i_btn fadein"><a href="schedule2/annual_events.php">書寫山のものがたり<img src="images/arrow.svg" alt="" /></a></div>
+		</article>
+		<!---->
+		<div id="index_slide" class="swiper mySwiper fadein">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="images/index_slide1-1.jpg" alt="" /></div>
+				<div class="swiper-slide"><img src="images/index_slide1-2.jpg" alt="" /></div>
+				<div class="swiper-slide"><img src="images/index_slide1-3.jpg" alt="" /></div>
+				<div class="swiper-slide"><img src="images/index_slide1-4.jpg" alt="" /></div>
+				<div class="swiper-slide"><img src="images/index_slide1-5.jpg" alt="" /></div>
+				<div class="swiper-slide"><img src="images/index_slide1-6.jpg" alt="" /></div>
+				<div class="swiper-slide"><img src="images/index_slide1-7.jpg" alt="" /></div>
+				<div class="swiper-slide"><img src="images/index_slide1-8.jpg" alt="" /></div>
+				<div class="swiper-slide"><img src="images/index_slide1-9.jpg" alt="" /></div>
+				<div class="swiper-slide"><img src="images/index_slide1-10.jpg" alt="" /></div>
+			</div>
+		</div>
+		<script>
+			var swiper = new Swiper('.mySwiper', {
+				watchSlidesProgress: true,
+				centeredSlides: true,
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+					reverseDirection: true,
+				},
+				loop: true,
+				slidesPerView: 3,
+				breakpoints: {
+					// スライドの表示枚数：500px以上の場合
+					520: {
+						slidesPerView: 4,
+					}
+				}
+			});
+		</script>
+		<!--news-->
+				<article id="index_news" class="fadein">
+			<div id="news_ropeway">
+				<h4>書写山ロープウェイ大規模改修工事に伴う運休のお知らせ</h4>
+				<p>運休期間：令和9年（2027年）2月5日（金）～10月28日（木）</p>
+				<p>書写山ロープウェイは、大規模改修工事のため、上記の期間、運休となります。運休期間中も、書寫山圓教寺は変わらず皆さまをお迎えいたします。<br />ロープウェイはご利用いただけませんが、徒歩での登拝が可能です。<br />登山道や参拝方法、納経・御朱印の受付など、詳しくは下記をご覧ください。</p>
+				<p id="nr_btn" class="open-modal">〈 運休期間中の参拝について詳しくはこちら 〉</p>
+			</div>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<h3>書写山ロープウェイ大規模改修工事に伴う運休のお知らせ</h3>
+					<div class="kikan">
+						<p>運休期間</p>
+						<p>令和9年（2027年）<br /><strong>2月5日（金）～10月28日（木）</strong></p>
+					</div>
+					<h4>徒歩での登拝について</h4>
+					<p>書寫山には、東坂・西坂・刀出坂・六角坂・鯰尾坂・片手坂の主に6つの登山道があり、徒歩での登拝が可能です。<br />所要時間は経路によって異なりますが、片道約30分から1時間が目安となります。<br />書寫山は、古来、多くの人々が祈りを捧げながら歩みを進めてきた信仰の山です。<br />この機会に、四季折々の自然に親しみながら、往時の参詣者と同じく山道を歩き、千年の祈りが息づく書寫山圓教寺へお参りいただければ幸いです。</p>
+					<h4>山内シャトルバスの運休について</h4>
+					<p>ロープウェイの運休に伴い、山内シャトルバスも運休いたします。</p>
+					<h4>納経・御朱印について</h4>
+					<p>西国三十三所第二十七番札所・書寫山圓教寺の納経・御朱印につきましては、運休期間中も山内にて通常どおり承ります。<br />受付時間：午前9時～午後4時30分<br />なお、ロープウェイ山麓駅等での出開帳（臨時納経所の開設）は行いません。</p>
+					<p>ご参拝の皆さまにはご不便をおかけいたしますが、何卒ご理解とご協力を賜りますようお願い申し上げます。</p>
+					<p>書寫山圓教寺</p>
+					<div id="closeModal">
+						<div class="pc-close"><span></span><span></span></div>
+						<div class="sp-close">閉じる</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				var modal = document.getElementById("myModal");
+				var btn = document.getElementById("nr_btn");
+				var span = document.getElementById("closeModal");
+				btn.onclick = function() {
+					modal.style.display = "block";
+				}
+				span.onclick = function() {
+					modal.style.display = "none";
+				}
+				window.onclick = function(event) {
+					if (event.target == modal) {
+						modal.style.display = "none";
+					}
+				}
+			</script>
+			<h3>お知らせ</h3>
+			
+			<article id="postID_2" class="cat-0 clearfix news_block">
+				<p class="n_day">2026/11/18（水）</p>
+				<p class="n_title"><a href="news/news-detail.php?id=2">11/21~23 書写山もみじ祭り</a></p>
+				<div class="n_category"><span class="catName">お知らせ</span></div>
+			</article>
+			
+			<article id="postID_6" class="cat-0 clearfix news_block">
+				<p class="n_day">2026/11/17（火）</p>
+				<p class="n_title"><a href="news/news-detail.php?id=6">月例坐禅会 11/21（土）</a></p>
+				<div class="n_category"><span class="catName">お知らせ</span></div>
+			</article>
+			
+			<article id="postID_4" class="cat-0 clearfix news_block">
+				<p class="n_day">2026/11/17（火）</p>
+				<p class="n_title"><a href="news/news-detail.php?id=4">毎月28日はお不動様の御縁日</a></p>
+				<div class="n_category"><span class="catName">お知らせ</span></div>
+			</article>
+			
+			<article id="postID_5" class="cat-0 clearfix news_block">
+				<p class="n_day">2026/11/15（日）</p>
+				<p class="n_title"><a href="news/news-detail.php?id=5">毎月24日はお地蔵様の御縁日</a></p>
+				<div class="n_category"><span class="catName">お知らせ</span></div>
+			</article>
+			
+			<article id="postID_3" class="cat-1 clearfix news_block">
+				<p class="n_day">2026/11/11（水）</p>
+				<p class="n_title"><a href="news/news-detail.php?id=3">書写山ロープウェイ「年末年始の夜間・早朝運行」のお知らせ</a></p>
+				<div class="n_category"><span class="catName">ロープウェイ</span></div>
+			</article>
+						<span id="pn00158" style="display:none"></span>			<ul id="schedule_btn">
+				<li><a href="schedule/">行事スケジュール</a></li>
+				<li><a href="schedule2/">ご供養とご祈祷</a></li>
+			</ul>
+		</article>
+		<!---->
+		<article id="index_3rd">
+			<h3 class="fadein">山を歩けば、物語に出会う</h3>
+			<p class="fadein">木々に包まれた道を歩き、門をくぐり、祈りの場所を巡る。<br />その一歩一歩の先に、千年を超えて受け継がれてきた<br />歴史や伝承、人々の祈りがあります。<br />歩くほどに、この山の物語は深くなっていきます。</p>
+			<div class="i_btn"><a href="keidaiannai/">モデルコース<img src="images/arrow.svg" alt="" /></a></div>
+		</article>
+		<!--map-->
+		<article id="index_map">
+			<h3>書寫山圓教寺境内MAP</h3>
+			<div class="map_img">
+				<div class="fadein"><img src="images/index_map.png" usemap="#ImageMap" alt="書寫山圓教寺境内MAP" class="areaMap01" /></div>
+				<map name="ImageMap">
+					<area shape="rect" coords="59,180,135,211" href="cultural_properties/no5-1.php" alt="奥之院" data-src="images/index_map4.png" />
+					<area shape="rect" coords="338,178,413,209" href="cultural_properties/no4-1.php" alt="三之堂" data-src="images/index_map3.png" />
+					<area shape="rect" coords="557,158,639,193" href="cultural_properties/no3-1.php" alt="摩尼殿" data-src="images/index_map2.png" />
+					<area shape="rect" coords="1199,655,1330,722" href="https://www.mt-shosha.info" alt="ロープウェイ" data-src="images/index_map1.png" target="_blank" />
+				</map>
+			</div>
+			<div id="karan_link"><a href="map/">伽藍配置<img src="images/arrow.svg" alt="" /></a></div>
+			<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const mapImg = document.querySelector('.areaMap01');
+  const areas = document.querySelectorAll(
+    'map[name="ImageMap"] area'
+  );
+
+  if (!mapImg) return;
+
+  const defaultSrc = mapImg.getAttribute('src');
+
+  areas.forEach(function (area) {
+    area.addEventListener('mouseenter', function () {
+      const onSrc = area.getAttribute('data-src');
+
+      if (onSrc) {
+        mapImg.setAttribute('src', onSrc);
+      }
+    });
+
+    area.addEventListener('mouseleave', function () {
+      mapImg.setAttribute('src', defaultSrc);
+    });
+  });
+});			
+			</script>
+		</article>
+		<!---->
+		<article id="index_area">
+			<ul>
+				<li class="fadein">
+					<a href="cultural_properties/area-east.php">
+						<span><img src="images/index_area1.jpg" alt="" /></span>
+						<span>祈りの山へ入る</span>
+						<span>東谷｜西国巡礼の道へ<img src="images/arrow.svg" alt="" /></span>
+					</a>
+				</li>
+				<!---->
+				<li class="fadein">
+					<a href="cultural_properties/area-central.php">
+						<span><img src="images/index_area2.jpg" alt="" /></span>
+						<span>観音の祈りが息づく場所</span>
+						<span>中谷｜摩尼殿へ<img src="images/arrow.svg" alt="" /></span>
+					</a>
+				</li>
+				<!---->
+				<li class="fadein">
+					<a href="cultural_properties/area-west.php">
+						<span><img src="images/index_area3.jpg" alt="" /></span>
+						<span>学び、修し、祈った場所</span>
+						<span>西谷｜三之堂へ<img src="images/arrow.svg" alt="" /></span>
+					</a>
+				</li>
+			</ul>
+		</article>
+		<!---->
+		<article id="index_4th" class="fadein">
+			<section id="i4_image">
+				<div class="i4i_img"><img src="images/ShokuShonin.jpg" alt="Shoku Shonin" /></div>
+				<div class="i4i_text"><p>Shoku Shonin</p></div>
+			</section>
+			<section id="i4_block" class="fadein">
+				<h3 class="tate">性空上人の<br />祈りが、<br />今もここに</h3>
+				<p>山の最奥、静寂に包まれた奥之院。<br />ここは、書寫山を開いた<br />性空上人の祈りと生涯にふれる場所です。<br />千年の時を超えて、その志と祈りは<br />今もこの山に息づいています。</p>
+			<div class="i_btn"><a href="cultural_properties/no5-1.php">奥之院<img src="images/arrow.svg" alt="" /></a></div>
+			</section>
+		</article>
+		<!---->
+		<article id="index_5th" class="fadein">
+			<h3>時を超えて、ここに眠る。</h3>
+			<p>長い時の中で、書寫山に深い縁を結んだ人々。<br />静かな山の一角に残る墓所は、<br />その生涯と祈りを今へ伝えています。<br />ここにもまた、千年の歴史に重なる人々の物語があります。</p>
+			<div class="i_btn"><a href="cultural_properties/no6.php">墓所<img src="images/arrow.svg" alt="" /></a></div>
+		</article>
+		<!---->
+		<article id="index_bottom" class="fadein">
+			<div class="fadein bottomtext">
+				<p>ここでは、歴史は過去ではありません</p>
+				<h3>物語は、今も続いている</h3>
+			</div>
+		</article>
+	</main>
+	<footer>
+	<div id="f_flex">
+		<ul class="f_nav">
+			<li><a href="http://www.shosha.or.jp/access/">アクセス</a></li>
+			<li><a href="http://www.shosha.or.jp/contact/">お問い合わせ</a></li>
+			<li><a href="http://www.shosha.or.jp/guidelines_for_photography/">撮影に関するお願い</a></li>
+		</ul>
+		<ul class="f_sns">
+			<li><a href="https://www.instagram.com/shoshazan_engyouji/" target="_blank"><img src="http://www.shosha.or.jp/images/instagram-brands-solid.svg" alt="instagram" /></a></li>
+			<li><a href="https://www.facebook.com/ShoshazanEngyoji/" target="_blank"><img src="http://www.shosha.or.jp/images/facebook-brands-solid-full.svg" alt="facebook" /></a></li>
+			<li><a href="https://x.com/engyouji_shosha" target="_blank"><img src="http://www.shosha.or.jp/images/x-twitter-brands-solid.svg" alt="X" /></a></li>
+		</ul>
+	</div>
+	<div>
+		<h3>天台宗別格本山 西国二十七番札所 <span>書寫山圓教寺</span></h3>
+		<p>〒671-2201 兵庫県姫路市書写2968</p>
+		<ul class="f_data">
+			<li>本坊寺務所</li>
+			<li>TEL: 079-266-3327</li>
+			<li>FAX: 079-266-4908</li>
+		</ul>
+		<ul class="f_data">
+			<li>円教寺会館</li>
+			<li>TEL: 079-266-3240</li>
+			<li>FAX: 079-266-9731</li>
+		</ul>
+	</div>
+</footer>	<script>
+		jarallax(document.querySelectorAll(".jarallax"));
+	</script>
+</div>
+<script src="css_js/common.js"></script>
+<script>imageMapResize();</script>
+</body>
+</html>

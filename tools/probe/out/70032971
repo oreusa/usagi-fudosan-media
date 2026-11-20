@@ -35,7 +35,7 @@
 
   <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
-	<!-- This site is optimized with the Yoast SEO plugin v28.8 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<!-- This site is optimized with the Yoast SEO plugin v28.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
 	<link rel="canonical" href="https://www.kiboupark-shiga.or.jp/important/156423.html" />
 	<meta property="og:locale" content="ja_JP" />
 	<meta property="og:type" content="article" />
@@ -85,11 +85,11 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </style>
 <style id="wp-block-image-inline-css">
 .wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:rgba(90,90,90,.25);border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto rgba(90,90,90,.25);outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:rgba(90,90,90,.25);border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .wp-lightbox-close-button{align-items:center;cursor:pointer;display:flex;font-family:inherit;gap:8px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 4px;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .wp-lightbox-close-button:focus,.wp-lightbox-overlay .wp-lightbox-close-button:hover,.wp-lightbox-overlay .wp-lightbox-close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .wp-lightbox-close-button:has(.wp-lightbox-close-text:not([hidden])) .wp-lightbox-close-icon svg{height:1em;width:1em}.wp-lightbox-overlay .wp-lightbox-close-icon svg{display:block}.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{align-items:center;bottom:16px;cursor:pointer;display:flex;font-family:inherit;gap:4px;justify-content:center;line-height:1;min-height:40px;min-width:40px;padding:0 8px;position:absolute;z-index:2000002}.wp-lightbox-overlay .wp-lightbox-navigation-button-next[hidden],.wp-lightbox-overlay .wp-lightbox-navigation-button-prev[hidden]{display:none}@media (min-width:960px){.wp-lightbox-overlay .wp-lightbox-navigation-button-next,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{bottom:50%;transform:translateY(-50%)}}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-next:not(:hover):not(:active):not(.has-background),.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:focus,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:hover,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:not(:hover):not(:active):not(.has-background){background:none;border:none;padding:0 8px}.wp-lightbox-overlay .wp-lightbox-navigation-button-next:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg,.wp-lightbox-overlay .wp-lightbox-navigation-button-prev:has(.wp-lightbox-navigation-text:not([hidden])) .wp-lightbox-navigation-icon svg{display:block;height:1.5em;width:1.5em}.wp-lightbox-overlay .wp-lightbox-navigation-button-prev{left:calc(env(safe-area-inset-left) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-button-next{right:calc(env(safe-area-inset-right) + 16px)}.wp-lightbox-overlay .wp-lightbox-navigation-icon svg{vertical-align:middle}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:2000001}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
-/*# sourceURL=https://c0.wp.com/c/7.1.4/wp-includes/blocks/image/style.min.css */
+/*# sourceURL=https://c0.wp.com/c/7.1.5/wp-includes/blocks/image/style.min.css */
 </style>
 <style id="wp-block-spacer-inline-css">
 .wp-block-spacer{clear:both}
-/*# sourceURL=https://c0.wp.com/c/7.1.4/wp-includes/blocks/spacer/style.min.css */
+/*# sourceURL=https://c0.wp.com/c/7.1.5/wp-includes/blocks/spacer/style.min.css */
 </style>
 
 <style id="classic-theme-styles-inline-css">
@@ -110,11 +110,11 @@ img#wpstats{display:none}
 /*# sourceURL=jetpack-stats-inline-css */
 </style>
 <link rel='stylesheet' id='addtoany-css' href='https://www.kiboupark-shiga.or.jp/wp-content/plugins/add-to-any/addtoany.min.css?ver=1.16' media='all' />
-<link rel='stylesheet' id='my-calendar-frontend-admin-style-css' href='https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/css/mc-admin.css?ver=3.8.13' media='all' />
-<link rel='stylesheet' id='dashicons-css' href='https://c0.wp.com/c/7.1.4/wp-includes/css/dashicons.min.css' media='all' />
-<link rel='stylesheet' id='my-calendar-lists-css' href='https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/css/list-presets.css?ver=3.8.13' media='all' />
-<link rel='stylesheet' id='my-calendar-reset-css' href='https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/css/reset.css?ver=3.8.13' media='all' />
-<link rel='stylesheet' id='my-calendar-style-css' href='https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/styles/twentytwentytwo.css?ver=3.8.13-twentytwentytwo-css' media='all' />
+<link rel='stylesheet' id='my-calendar-frontend-admin-style-css' href='https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/css/mc-admin.css?ver=3.8.14' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://c0.wp.com/c/7.1.5/wp-includes/css/dashicons.min.css' media='all' />
+<link rel='stylesheet' id='my-calendar-lists-css' href='https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/css/list-presets.css?ver=3.8.14' media='all' />
+<link rel='stylesheet' id='my-calendar-reset-css' href='https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/css/reset.css?ver=3.8.14' media='all' />
+<link rel='stylesheet' id='my-calendar-style-css' href='https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/styles/twentytwentytwo.css?ver=3.8.14-twentytwentytwo-css' media='all' />
 <style id="my-calendar-style-inline-css">
 
 /* Styles by My Calendar - Joe Dolson https://www.joedolson.com/ */
@@ -122,8 +122,8 @@ img#wpstats{display:none}
 .mc-main, .mc-event, .my-calendar-modal, .my-calendar-modal-overlay, .mc-event-list {--primary-dark: #313233; --primary-light: #fff; --secondary-light: #fff; --secondary-dark: #000; --highlight-dark: #666; --highlight-light: #efefef; --close-button: #b32d2e; --search-highlight-bg: #f5e6ab; --main-background: transparent; --main-color: inherit; --navbar-background: transparent; --nav-button-bg: #fff; --nav-button-color: #313233; --nav-button-border: #313233; --nav-input-border: #313233; --nav-input-background: #fff; --nav-input-color: #313233; --grid-cell-border: #0000001f; --grid-header-border: #313233; --grid-header-color: #313233; --grid-weekend-color: #313233; --grid-header-bg: #fff; --grid-weekend-bg: #fff; --grid-cell-background: transparent; --current-day-border: #313233; --current-day-color: #313233; --current-day-bg: transparent; --date-has-events-bg: #313233; --date-has-events-color: #f6f7f7; --calendar-heading: clamp( 1.125rem, 24px, 2.5rem ); --event-title: clamp( 1.25rem, 24px, 2.5rem ); --grid-date: 16px; --grid-date-heading: clamp( .75rem, 16px, 1.5rem ); --modal-title: 1.5rem; --navigation-controls: clamp( .75rem, 16px, 1.5rem ); --card-heading: 1.125rem; --list-date: clamp( 1rem, 20px, 2.0rem ); --author-card: clamp( .75rem, 14px, 1.5rem); --single-event-title: clamp( 1.25rem, 24px, 2.5rem ); --mini-time-text: clamp( .75rem, 14px 1.25rem ); --list-event-date: 1.25rem; --list-event-title: 1.2rem; --grid-max-width: 1260px; --main-margin: 0 auto; --list-preset-border-color: #000000; --list-preset-stripe-background: rgba( 0,0,0,.04 ); --list-preset-date-badge-background: #000; --list-preset-date-badge-color: #fff; --list-preset-background: transparent; }
 /*# sourceURL=my-calendar-style-inline-css */
 </style>
-<link rel='stylesheet' id='wp-block-paragraph-css' href='https://c0.wp.com/c/7.1.4/wp-includes/blocks/paragraph/style.min.css' media='all' />
-<link rel='stylesheet' id='wp-block-heading-css' href='https://c0.wp.com/c/7.1.4/wp-includes/blocks/heading/style.min.css' media='all' />
+<link rel='stylesheet' id='wp-block-paragraph-css' href='https://c0.wp.com/c/7.1.5/wp-includes/blocks/paragraph/style.min.css' media='all' />
+<link rel='stylesheet' id='wp-block-heading-css' href='https://c0.wp.com/c/7.1.5/wp-includes/blocks/heading/style.min.css' media='all' />
 <link rel='stylesheet' id='sharedaddy-css' href='https://c0.wp.com/p/jetpack/16.4/modules/sharedaddy/sharing.css' media='all' />
 <link rel='stylesheet' id='social-logos-css' href='https://c0.wp.com/p/jetpack/16.4/_inc/build/social-logos/social-logos.css' media='all' />
 <!--n2css--><!--n2js--><script id="addtoany-core-js-before">
@@ -154,8 +154,8 @@ window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overl
 //# sourceURL=addtoany-core-js-before
 </script>
 <script id="addtoany-core-js" defer src="https://static.addtoany.com/menu/page.js"></script>
-<script id="jquery-core-js" src="https://c0.wp.com/c/7.1.4/wp-includes/js/jquery/jquery.min.js"></script>
-<script id="jquery-migrate-js" src="https://c0.wp.com/c/7.1.4/wp-includes/js/jquery/jquery-migrate.min.js"></script>
+<script id="jquery-core-js" src="https://c0.wp.com/c/7.1.5/wp-includes/js/jquery/jquery.min.js"></script>
+<script id="jquery-migrate-js" src="https://c0.wp.com/c/7.1.5/wp-includes/js/jquery/jquery-migrate.min.js"></script>
 <script id="addtoany-jquery-js" defer src="https://www.kiboupark-shiga.or.jp/wp-content/plugins/add-to-any/addtoany.min.js?ver=1.1"></script>
 <script id="foobox-free-min-js-before">
 /* Run FooBox FREE (v2.8.8) */
@@ -514,8 +514,8 @@ var FOOBOX = window.FOOBOX = {
 	<script type="text/javascript">
 		window.WPCOM_sharing_counts = {"https://www.kiboupark-shiga.or.jp/important/156423.html":156423};
 	</script>
-				<script id="wp-hooks-js" src="https://c0.wp.com/c/7.1.4/wp-includes/js/dist/hooks.min.js"></script>
-<script id="wp-i18n-js" src="https://c0.wp.com/c/7.1.4/wp-includes/js/dist/i18n.min.js"></script>
+				<script id="wp-hooks-js" src="https://c0.wp.com/c/7.1.5/wp-includes/js/dist/hooks.min.js"></script>
+<script id="wp-i18n-js" src="https://c0.wp.com/c/7.1.5/wp-includes/js/dist/i18n.min.js"></script>
 <script id="wp-i18n-js-after">
 wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 //# sourceURL=wp-i18n-js-after
@@ -546,7 +546,7 @@ _stq.push([ "clickTrackerInit", "192545418", "156423" ]);
 //# sourceURL=jetpack-stats-js-before
 </script>
 <script data-wp-strategy="defer" defer fetchpriority="low" id="jetpack-stats-js" src="https://stats.wp.com/e-202647.js"></script>
-<script id="wp-dom-ready-js" src="https://c0.wp.com/c/7.1.4/wp-includes/js/dist/dom-ready.min.js"></script>
+<script id="wp-dom-ready-js" src="https://c0.wp.com/c/7.1.5/wp-includes/js/dist/dom-ready.min.js"></script>
 <script id="wp-a11y-js-translations">
 ( function( domain, translations ) {
 	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
@@ -555,18 +555,18 @@ _stq.push([ "clickTrackerInit", "192545418", "156423" ]);
 } )( "default", {"translation-revision-date":"2026-10-31 01:56:46+0000","generator":"GlotPress\/4.1.0","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=1; plural=0;","lang":"ja_JP"},"Notifications":["\u901a\u77e5"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
 //# sourceURL=wp-a11y-js-translations
 </script>
-<script id="wp-a11y-js" src="https://c0.wp.com/c/7.1.4/wp-includes/js/dist/a11y.min.js"></script>
+<script id="wp-a11y-js" src="https://c0.wp.com/c/7.1.5/wp-includes/js/dist/a11y.min.js"></script>
 <script id="mc.mcjs-js-extra">
-var my_calendar = {"grid":"modal","list":"true","mini":"modal","ajax":"true","links":"false","newWindow":"\u65b0\u898f\u30bf\u30d6","subscribe":"\u8cfc\u8aad","export":"\u30a8\u30af\u30b9\u30dd\u30fc\u30c8","action":"mcjs_action","security":"9d56b9d188","ajaxurl":"https://www.kiboupark-shiga.or.jp/wp-admin/admin-ajax.php"};
+var my_calendar = {"grid":"modal","list":"true","mini":"modal","ajax":"true","links":"false","newWindow":"\u65b0\u898f\u30bf\u30d6","subscribe":"\u8cfc\u8aad","export":"\u30a8\u30af\u30b9\u30dd\u30fc\u30c8","action":"mcjs_action","security":"4ef00bc87f","ajaxurl":"https://www.kiboupark-shiga.or.jp/wp-admin/admin-ajax.php"};
 //# sourceURL=mc.mcjs-js-extra
 </script>
-<script id="mc.mcjs-js" src="https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/js/mcjs.min.js?ver=3.8.13"></script>
-<script id="mc.legacy-js" src="https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/js/legacy-disclosure.js?ver=3.8.13"></script>
+<script id="mc.mcjs-js" src="https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/js/mcjs.min.js?ver=3.8.14"></script>
+<script id="mc.legacy-js" src="https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/js/legacy-disclosure.js?ver=3.8.14"></script>
 <script id="mc-modal-js-extra">
 var mcm = {"context":""};
 //# sourceURL=mc-modal-js-extra
 </script>
-<script id="mc-modal-js" src="https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/js/modal/accessible-modal-window-aria.min.js?ver=3.8.13"></script>
+<script id="mc-modal-js" src="https://www.kiboupark-shiga.or.jp/wp-content/plugins/my-calendar/js/modal/accessible-modal-window-aria.min.js?ver=3.8.14"></script>
 <script id="sharing-js-js-extra">
 var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
 //# sourceURL=sharing-js-js-extra
@@ -580,7 +580,7 @@ window.WPCOM_sharing_popups[ "x" ] = "menubar=1,resizable=1,width=600,height=350
 //# sourceURL=sharing-js-js-after
 </script>
 <script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.kiboupark-shiga.or.jp/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4"}}
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.kiboupark-shiga.or.jp/wp-includes/js/wp-emoji-release.min.js?ver=7.1.5"}}
 </script>
 <script type="module">
 /*! This file is auto-generated */

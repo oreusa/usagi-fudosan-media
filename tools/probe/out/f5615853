@@ -103,7 +103,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 
 <link rel='stylesheet' id='bogo-css' href='https://www.kobe-port-tower.com/wp-content/plugins/bogo/includes/css/style.css?ver=3.9.3' media='all' />
 <link rel="https://api.w.org/" href="https://www.kobe-port-tower.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.kobe-port-tower.com/wp-json/wp/v2/info/2149" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.kobe-port-tower.com/xmlrpc.php?rsd" />
-<meta name="generator" content="WordPress 7.1.4" />
+<meta name="generator" content="WordPress 7.1.5" />
 <link rel="canonical" href="https://www.kobe-port-tower.com/info/moomin/" />
 <link rel='shortlink' href='https://www.kobe-port-tower.com/?p=2149' />
 <script src="//assets.adobedtm.com/89840c864fe8/930e62a3601f/launch-3ea4c5948a0f.min.js" async></script><style id="core-block-supports-inline-css">
@@ -1586,7 +1586,7 @@ h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-backg
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/kpt/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
 <script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.kobe-port-tower.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4"}}
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.kobe-port-tower.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.5"}}
 </script>
 <script type="module">
 /*! This file is auto-generated */
