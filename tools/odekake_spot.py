@@ -93,7 +93,8 @@ for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', SRC, re.S):
 
 d0 = datetime.date.fromisoformat(TODAY); upd = f"{d0.year}年{d0.month}月{d0.day}日"
 CSS = open(glob.glob("links/machi/*.html")[0], encoding="utf-8").read()
-CSS = re.search(r"<style>(.*?)</style>", CSS, re.S).group(1)
+# 11/20 機械の点検：11/19 の描き直し（#1028）で街ページの <style> が <style data-kyu-old …> になり、ここで止まっていた（毎朝の作り直しが全部止まる）。印つきの style も読む
+CSS = (re.search(r"<style(?:\s[^>]*)?>(.*?)</style>", CSS, re.S) or [None, ""])[1]
 CSS += """.act{display:grid;gap:8px;margin:22px 0 0}.act a{display:block;text-align:center;text-decoration:none;padding:13px;font-size:14px;font-weight:700;border-radius:12px}
 .act .o{background:#3A2F28;color:#fff}.act .g{border:1px solid #D5D8DD;color:#2B2622;background:#fff}
 .lead{font-size:14px;line-height:2;color:#3A3330;margin:22px 0 0}
@@ -133,7 +134,7 @@ for sp in spots:
     for lb, kk in (("時間", "time"), ("料金", "price"), ("駐車場", "park")):
         if kv.get(lb) and not mo.get(kk) and "公式" not in kv[lb]: mo[kk] = kv[lb]
     if kv.get("メモ") and not mo.get("note"): mo["note"] = kv["メモ"].rstrip("。") + "。"
-    if kv.get("休み") and not mo.get("note"): mo["note"] = "休みは" + kv["休み"].rstrip("。") + "。"
+    if kv.get("休み") and not mo.get("note"): mo["note"] = ("開くのは" if "のみ" in kv["休み"].split("・")[0] else "休みは") + kv["休み"].rstrip("。") + "。"  # 11/20「休みは金土日祝のみ」と逆の意味に読めていた
     has = [x for x, k in (("時間", "time"), ("料金", "price"), ("駐車場", "park")) if mo.get(k)]
     if mo.get("time"): lead += f"時間は{mo['time']}です。"
     if mo.get("price"): lead += f"料金は{mo['price']}です。"
@@ -156,7 +157,8 @@ for sp in spots:
     big = f'<div class="w"><span>日程</span><b>{e(when)}</b></div>'
     # 11/9 全文点検：「いまは／公式ページで」は意味が通らない → 開催の状態が分かる時だけ出す
     if stat: big += f'<div><span>いまは</span><b style="color:{pc};font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700">{e(stat)}</b></div>'
-    big += f'<div><span>入場</span><b style="color:#2B2622;font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700">{("無料（一部有料）" if sp.get("part") else "無料") if sp["free"] else "公式で確認"}</b></div>'
+    # 11/20 料金が分かる時は「入場：公式で確認」を出さない（下の「料金」の行で分かる）
+    if sp["free"] or not mo.get("price"): big += f'<div><span>入場</span><b style="color:#2B2622;font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700">{("無料（一部有料）" if sp.get("part") else "無料") if sp["free"] else "公式で確認"}</b></div>'
     for lb, k in (("時間", "time"), ("料金", "price"), ("駐車場", "park")):
         if mo.get(k): big += f'<div class="w"><span>{lb}</span><b style="font-size:15px;font-family:\'Zen Kaku Gothic New\';font-weight:700;line-height:1.7">{e(mo[k])}</b></div>'
     big += f'<div class="w"><span>場所</span><b>{e(where if where.startswith(fu) else fu + where)}</b></div>'

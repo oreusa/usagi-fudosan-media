@@ -214,6 +214,347 @@
    "note": "2歳以下は無料。アトラクションは別料金です。",
    "src": "https://eigamura.com/feature/yokai2026/",
    "day": "2026-11-19"
+  },
+  "NHK日曜美術館50年展": {
+   "time": "10:00〜17:00（入館は16:30まで）",
+   "src": "https://nichibiten50.jp/overview.html",
+   "day": "2026-11-20"
+  },
+  "躍動する明代の書台北何創時コレクション": {
+   "time": "9:30〜17:00（入館は16:30まで）",
+   "price": "一般 2,000円、高大生 1,200円、小中生 500円（未就学児は無料）",
+   "src": "https://www.osaka-art-museum.jp/special_exhibition/mindai",
+   "day": "2026-11-20"
+  },
+  "つくる女性の100年": {
+   "time": "10:00〜17:00（入場は16:30まで）",
+   "price": "一般 1,900円、高大生 1,200円、中学生以下は無料",
+   "src": "https://nakka-art.jp/exhibition-post/paving-the-way100/",
+   "day": "2026-11-20"
+  },
+  "秋のフラワーコンサート": {
+   "time": "10:00〜17:00（入園は16:00まで）",
+   "price": "観覧は無料（花の文化園の入園料が別に要ります）",
+   "src": "https://hanabun-osaka.witc-pm.jp/event/2026flwcon-au/",
+   "day": "2026-11-20"
+  },
+  "宇治十帖スタンプラリー": {
+   "time": "9:00〜17:00",
+   "src": "https://www.city.uji.kyoto.jp/site/murasaki/104428.html",
+   "day": "2026-11-20"
+  },
+  "仮面ライダー×自然のチカラ展": {
+   "price": "観覧料 700円（別に入館料 大人 900円、小・中・高校生 400円）",
+   "src": "https://kobe-maritime-museum.com/exhibition/exhibition-866/",
+   "day": "2026-11-20"
+  },
+  "灘の酒蔵謎解き探訪2026": {
+   "price": "参加は無料",
+   "src": "https://jellyroom.jp/nada/",
+   "day": "2026-11-20"
+  },
+  "須磨デジタルスタンプラリー": {
+   "price": "参加は無料",
+   "src": "https://event.city.kobe.lg.jp/event/uBivEyKaeDKvLtYvqYFx",
+   "day": "2026-11-20"
+  },
+  "企画展平城遷都": {
+   "time": "9:00〜17:00（入館は16:30まで）",
+   "src": "https://www.heijo-park.jp/event/heijyosento/",
+   "day": "2026-11-20"
+  },
+  "おふさ観音秋のバラまつり": {
+   "time": "8:30〜16:30（閉門は17:00）",
+   "price": "境内は無料（本堂内の拝観料は500円）",
+   "src": "https://www.ofusa.jp/highlights/rose",
+   "day": "2026-11-20"
+  },
+  "飛鳥資料館秋期特別展": {
+   "time": "9:00〜16:30（入館は16:00まで）",
+   "price": "一般 350円、大学生 200円、高校生・18歳未満・70歳以上は無料",
+   "src": "https://www.nabunken.go.jp/asuka/info/2026/08/post-560.html",
+   "day": "2026-11-20"
+  },
+  "草津周遊謎解き青ばな善右衛門": {
+   "time": "10:00〜17:00",
+   "price": "参加は無料",
+   "src": "https://www.city.kusatsu.shiga.jp/citysales/odekakenavi/shokan20260930.html",
+   "day": "2026-11-20"
+  },
+  "羽柴兄弟謎解き立志伝": {
+   "time": "9:00〜17:00（施設によって違います）",
+   "price": "参加は無料",
+   "src": "https://kitabiwako.jp/event/event_61844",
+   "day": "2026-11-20"
+  },
+  "キッチンカーグランプリin希望が丘": {
+   "time": "9:30〜16:00（29日は15:30まで）",
+   "src": "https://www.kiboupark-shiga.or.jp/important/156423.html",
+   "day": "2026-11-20"
+  },
+  "紀の川市産業まつり・食育フェア": {
+   "time": "11月22日（日）9:30〜15:30",
+   "src": "https://www.wakayama-kanko.or.jp/events/detail_4480.html",
+   "day": "2026-11-20"
+  },
+  "和歌山城光と幻想の夜": {
+   "time": "17:00〜21:00",
+   "src": "https://www.city.wakayama.wakayama.jp/kankou/1010182/1065599.html",
+   "day": "2026-11-20"
+  },
+  "紀州根来寺かくばん祭り": {
+   "time": "11月21日（土）9:30〜15:00",
+   "price": "当日は根來寺の入山料も無料",
+   "note": "駐車場と会場を結ぶ無料シャトルバスがあります。",
+   "src": "https://www.city.iwade.lg.jp/soshiki/16/1603.html",
+   "day": "2026-11-20"
+  },
+  "企画展くらひらく": {
+   "time": "9:30〜17:00（入場は16:30まで）",
+   "src": "https://hakubutu.wakayama.jp/exhibit/",
+   "day": "2026-11-20"
+  },
+  "鈴木崇もののをかし": {
+   "time": "9:30〜17:00（入場は16:30まで）",
+   "note": "高校生以下・65歳以上は無料。11月22日（日）はどなたも無料です。",
+   "src": "https://www.momaw.jp/exhibit/2026suzuki/",
+   "day": "2026-11-20"
+  },
+  "豊臣兄弟！大和郡山大河ドラマ館": {
+   "time": "10:00〜17:00（最終入場16:30）",
+   "note": "未就学児は無料です。",
+   "src": "https://www.hidenaga-yamatokoriyama.jp/exhibition/",
+   "day": "2026-11-20"
+  },
+  "アドベンチャーワールドLIGHTPARKS": {
+   "time": "17:00〜19:30",
+   "price": "大人・シニア 1,800円、中高生・小人（4歳〜小学生）1,000円",
+   "src": "https://www.aws-s.com/lightparks&nightsafari/lightparks/",
+   "day": "2026-11-20"
+  },
+  "万博の森どんぐりフェス": {
+   "time": "10:00〜16:00",
+   "price": "参加は無料（入園料が別に要ります）",
+   "src": "https://www.expo70-park.jp/event/77654/",
+   "day": "2026-11-20"
+  },
+  "南大阪リアル謎解きゲームきくなーれのなぞとき大冒険": {
+   "time": "謎解きスポットは 9:00〜17:00",
+   "src": "https://www.pref.osaka.lg.jp/o120180/senshunm/tyokubaijo/nazo_event/event.html",
+   "day": "2026-11-20"
+  },
+  "南海旅なぞTRAIN2026～謎解きは旅の途中で～": {
+   "price": "大人 2,700円（謎解きキット付き）、小児 500円（キットなし）",
+   "src": "https://www.nankai.co.jp/traffic/digital/nazotoki_2026.html",
+   "day": "2026-11-20"
+  },
+  "ライドアラウンドin岸和田": {
+   "price": "参加は無料",
+   "src": "https://tour-de-nippon.jp/ridearound-kishiwada/",
+   "day": "2026-11-20"
+  },
+  "ドーンセンター周遊謎解き「キラリ町と不思議なつぼみ」": {
+   "time": "火〜土 9:00〜21:30、日・祝 9:00〜17:00",
+   "src": "https://www.tokitokievent.com/dawn2026",
+   "day": "2026-11-20"
+  },
+  "ガチャガチャ展in大阪": {
+   "time": "10:00〜19:00（最終入場18:30）",
+   "price": "一般 1,500円、高校生 1,300円、小中学生 1,100円（未就学児は無料）",
+   "src": "https://www.tv-osaka.co.jp/event/gacha/",
+   "day": "2026-11-20"
+  },
+  "虎屋所蔵品展「心なごむ動物たち」": {
+   "time": "10:00〜17:00",
+   "price": "無料",
+   "src": "https://www.toraya-group.co.jp/news/20261009",
+   "day": "2026-11-20"
+  },
+  "ジュエリーは、誰を夢みる": {
+   "time": "10:00〜18:00（金曜は20:00まで）",
+   "price": "一般 2,000円、大学生 1,300円、高校生 600円、中学生以下は無料",
+   "src": "https://www.momak.go.jp/Japanese/exhibitionarchive/2026/468.html",
+   "day": "2026-11-20"
+  },
+  "読書週間Book＆POP展": {
+   "time": "9:00〜21:00（最終日は正午まで）",
+   "price": "無料",
+   "src": "https://www.miyako-eco.jp/event/event-39278/",
+   "day": "2026-11-20"
+  },
+  "須磨離宮公園秋のバラ観賞会": {
+   "time": "9:00〜17:00（入園は16:30まで）。11/7〜12/6の土日祝は20:00まで（入園は19:30まで）",
+   "src": "https://www.kobe-park.or.jp/rikyu/event/event-27232/",
+   "day": "2026-11-20"
+  },
+  "ドイツ祭り2026Beer&WineFest": {
+   "time": "11:00〜16:00（ナイター営業の日は20:00まで）",
+   "src": "https://www.kobeherb.com/topics/40131",
+   "day": "2026-11-20"
+  },
+  "斑鳩文化財センター秋季特別展「華麗なる王族」": {
+   "time": "9:00〜17:00（入館は16:30まで）",
+   "src": "https://www.town.ikaruga.nara.jp/0000003368.html",
+   "day": "2026-11-20"
+  },
+  "没後25年上村松篁展": {
+   "time": "10:00〜17:00（入館は16:00まで）",
+   "price": "大人（高校・大学生を含む）820円、小・中学生 410円",
+   "src": "https://www.kintetsu-g-hd.co.jp/culture/shohaku/exhibition/uemura-shoko-25th-memorial/",
+   "day": "2026-11-20"
+  },
+  "特別展「高照らすみやこ描かれた飛鳥・藤原の宮都」": {
+   "price": "一般 1,200円、高・大学生 500円（国内の18歳未満は無料）",
+   "src": "https://www.pref.nara.lg.jp/n046/p107032.html",
+   "day": "2026-11-20"
+  },
+  "米原奇譚謎解き「白イノシシの絆と優しい嘘」": {
+   "time": "9:00〜17:00",
+   "price": "キット 2,000円（施設の入場料 300円が別に要ります）",
+   "src": "https://kitabiwako.jp/event/event_64748",
+   "day": "2026-11-20"
+  },
+  "ひこにゃん彦根城に眠る謎を解け！（謎解き）": {
+   "time": "キットの販売は 8:30〜16:30（17:00には退出）",
+   "price": "キット 1,000円",
+   "src": "https://p-con.iroawase.jp/hikonyan/",
+   "day": "2026-11-20"
+  },
+  "丸木スマ展73歳からのアーティスト": {
+   "time": "9:30〜17:00（入場は16:30まで）",
+   "price": "一般 1,200円、高校・大学生 800円、小・中学生 600円（未就学児は無料）",
+   "src": "https://shigamuseum.jp/exhibitions/12995",
+   "day": "2026-11-20"
+  },
+  "秋期企画展「湖・川が育む水との暮らし」": {
+   "time": "9:00〜17:00（最終入館16:30）",
+   "src": "https://www.city.yasu.lg.jp/soshiki/rekishiminzoku/museum.html",
+   "day": "2026-11-20"
+  },
+  "有田みかんスタンプラリー": {
+   "price": "参加は無料（お店での買い物代は別）",
+   "src": "https://asoboyo-arida.com/2026/08/17/aridamikanstamprally/",
+   "day": "2026-11-20"
+  },
+  "ONSEN・ガストロノミーウォーキングin那智勝浦": {
+   "price": "参加費 6,000円（食事・ドリンク・温泉チケット・保険を含む）",
+   "src": "https://www.wakayama-kanko.or.jp/events/detail_4410.html",
+   "day": "2026-11-20"
+  },
+  "2026年企画展II「熊楠の結婚」": {
+   "time": "10:00〜17:00（最終入館16:30）",
+   "src": "https://www.minakata.org/2026_exh2",
+   "day": "2026-11-20"
+  },
+  "ハーベストの丘WonderNightHill": {
+   "time": "17:30〜21:00（最終受付20:30）",
+   "src": "https://farm.or.jp/illumination_2026",
+   "day": "2026-11-20"
+  },
+  "Himeji大手前通り・姫路城イルミネーション": {
+   "time": "17:00〜22:00（予定）",
+   "src": "https://www.city.himeji.lg.jp/sangyo/0000028413.html",
+   "day": "2026-11-20"
+  },
+  "ネスタリゾート神戸NESTAILLUMINA": {
+   "time": "18:00〜22:00",
+   "note": "小学生以下と愛犬は入場無料です。",
+   "src": "https://nesta.co.jp/event/580/",
+   "day": "2026-11-20"
+  },
+  "神戸ルミナリエ": {
+   "price": "当日券 平日 1,000円・土日 1,500円（前売券 平日 500円・土日 750円）",
+   "src": "https://www.city.kobe.lg.jp/a64051/284690987078.html",
+   "day": "2026-11-20"
+  },
+  "HIKARIUM冬のファンタジーガーデン": {
+   "price": "おとな 1,000円、こども 500円",
+   "src": "https://www.illumi.rb-tawada.com/",
+   "day": "2026-11-20"
+  },
+  "けやきライトパレード": {
+   "time": "24:00まで点灯",
+   "src": "https://keyaki-light-parade.jp/",
+   "day": "2026-11-20"
+  },
+  "ほしだ園地星のブランコ光の架け橋": {
+   "time": "日没〜21:00",
+   "price": "大人 1,500円、小学生以下 800円、未就学児は無料",
+   "src": "https://o-wonderforest.com/hoshida/",
+   "day": "2026-11-20"
+  },
+  "長居植物園チームラボボタニカルガーデン大阪": {
+   "time": "18:30〜21:30（最終入場20:30）",
+   "src": "https://www.teamlab.art/jp/e/botanicalgarden/",
+   "day": "2026-11-20"
+  },
+  "なんば光旅": {
+   "time": "17:00〜24:00",
+   "price": "観覧は無料",
+   "src": "https://www.nankai.co.jp/news/261030.html",
+   "day": "2026-11-20"
+  },
+  "イルミナイト万博〜2026WINTER〜": {
+   "time": "9:30〜21:00（最終入園20:30）",
+   "price": "観覧は無料（自然文化園の入園料が要ります）",
+   "src": "https://www.expo70-park.jp/event/78001/",
+   "day": "2026-11-20"
+  },
+  "堺イルミネーション2026": {
+   "time": "17:00〜23:30",
+   "src": "https://sakai-machi.com/illumination/",
+   "day": "2026-11-20"
+  },
+  "明石海峡大橋ライトアップ": {
+   "time": "平日 日没〜23:00、土日祝 日没〜24:00",
+   "src": "https://www.jb-honshi.co.jp/customer_index/kanko_event/lightup/lightup-akashi.html",
+   "day": "2026-11-20"
+  },
+  "神戸メリケンクリスマス": {
+   "price": "入場は無料",
+   "src": "https://kobemerikenxmas.com/",
+   "day": "2026-11-20"
+  },
+  "竹あかりと紅葉のライトアップ": {
+   "time": "17:30〜20:00（最終入園19:30）",
+   "price": "夜の入園料 大人・高校生 300円（中学生以下は無料）",
+   "note": "荒天の日は中止です。夜は花の文化園前の駐車場が無料です。",
+   "src": "https://hanabun-osaka.witc-pm.jp/event/2026momiji/",
+   "day": "2026-11-20"
+  },
+  "高台寺秋の夜間特別拝観": {
+   "time": "9:00〜22:00（受付は21:30まで。17:00に点灯）",
+   "src": "https://www.kodaiji.com/saiji.html",
+   "day": "2026-11-20"
+  },
+  "須磨離宮公園もみじ観賞会": {
+   "time": "9:00〜17:00（入園は16:30まで）。11/7〜12/6の土日祝は20:00まで（入園は19:30まで）",
+   "src": "https://www.kobe-park.or.jp/rikyu/event/event-27324/",
+   "day": "2026-11-20"
+  },
+  "醍醐寺秋期夜間拝観": {
+   "time": "18:00〜20:50（受付は20:10まで。昼と夜は入れ替え）",
+   "price": "中学生以上 1,500円",
+   "src": "https://www.daigoji.or.jp/event/detail7.html",
+   "day": "2026-11-20"
+  },
+  "青蓮院門跡秋の夜間特別拝観": {
+   "time": "18:00〜22:00（受付は21:30まで）",
+   "price": "大人 1,500円、小学生 1,000円",
+   "src": "https://www.shorenin.com/night/",
+   "day": "2026-11-20"
+  },
+  "仁和寺紅葉雲海ライトアップ": {
+   "time": "18:30〜21:00（受付は20:30まで）",
+   "price": "大人 2,800円、高校生以下は無料",
+   "src": "https://ninnaji.jp/news/event-34-2/",
+   "day": "2026-11-20"
+  },
+  "貴船神社": {
+   "time": "6:00〜20:00",
+   "price": "参拝は無料",
+   "src": "https://kifunejinja.jp/",
+   "day": "2026-11-20"
   }
  }
 }
