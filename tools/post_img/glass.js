@@ -57,19 +57,24 @@ ${N||P?'.hd em{background-image:linear-gradient(90deg,rgba(255,182,92,.0),rgba(2
 .ft{position:absolute;left:72px;bottom:56px;font:500 20px Inter;letter-spacing:.32em;color:${P||N?'rgba(255,255,255,.6)':'rgba(29,29,31,.42)'}}
 </style><body>
 ${P?`<div class="ph"><img src="${img(P.im)}"></div>`:`<div class="hero"><i></i><i></i><i></i><i></i><i></i></div>${N?`<div class="st">${stars(x.name)}</div>`:''}`}
-<div class="top"><img src="${logo}"><div class="br">KANSAI TOWN NOTE</div>${x.pill?`<div class="pl">${esc(x.pill)}</div>`:''}</div>
+<div class="top"><img src="${logo}"><div class="br">${esc(CFG.name||"KANSAI TOWN NOTE")}</div>${x.pill?`<div class="pl">${esc(x.pill)}</div>`:''}</div>
 ${x.en?`<div class="en">${esc(x.en)}</div>`:''}<div class="hd">${head(x.head)}</div>
 <div class="gl">${x.big?`<div class="big">${esc(x.big)}${x.unit?`<small>${esc(x.unit)}</small>`:''}</div>`:''}${x.cap?`<div class="cap">${esc(x.cap)}</div>`:''}
 ${(x.rows||[]).length?`<div class="rw">${x.rows.slice(0,3).map(r=>`<div class="r${r[3]?' hi':''}"><i>${esc(r[0])}</i><span>${esc(r[1])}</span><b>${esc(r[2])}</b></div>`).join('')}</div>`:''}</div>
-${P?`<div class="cr">写真：${esc(P.cr)}</div>`:''}<div class="ft">TOWN NOTE</div></body>`};
+${P?`<div class="cr">写真：${esc(P.cr)}</div>`:''}<div class="ft">${esc(CFG.brand||"TOWN NOTE")}</div></body>`};
 (async()=>{const specs=[].concat(JSON.parse(fs.readFileSync(process.argv[2],'utf8')));fs.mkdirSync(OUT,{recursive:true});
  const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1350}});let n=0;
  for(const x of specs){if(!/^[a-z0-9-]+$/.test(x.name||'')){console.log('× name：',x.name);continue}
   if(x.photo&&!x.photo.cr){console.log('× 写真のクレジットが無い：',x.name);continue}
-  await p.setContent(HTML(x),{waitUntil:'networkidle'});await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(400);
-  // 見出しがガラスのカードに重なる・横にはみ出す時は作らない
-  const bad=await p.evaluate(()=>{const h=document.querySelector('.hd').getBoundingClientRect(),g=document.querySelector('.gl').getBoundingClientRect();
+  // 見出しがガラスのカードに重なる・横にはみ出す時は、字を小さくして（92→84→76）もう一度。それでも入らなければ作らない
+  // （前の道具の hs 50〜66 は明朝の大きさなので、70 より小さい時はこの道具の大きさで始める）
+  let bad=true;for(const hs of [x.hs&&x.hs>=70?x.hs:92,84,76]){
+   await p.setContent(HTML(Object.assign({},x,{hs})),{waitUntil:'networkidle'});await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(400);
+   bad=await p.evaluate(()=>{const h=document.querySelector('.hd').getBoundingClientRect(),g=document.querySelector('.gl').getBoundingClientRect();
     const wide=[...document.querySelectorAll('.hd,.r span,.cap')].some(e=>e.scrollWidth>e.clientWidth+2);return h.bottom>g.top-24||g.top<300||wide});
+   if(!bad)break}
   if(bad){console.log('× 見出しか表が入らない：',x.name);process.exitCode=1;continue}
-  await p.screenshot({path:path.join(OUT,`card-${x.name}.jpg`),type:'jpeg',quality:90});n++}
+  await p.screenshot({path:path.join(OUT,`card-${x.name}.jpg`),type:'jpeg',quality:90});n++
+  if(!process.env.OUT_DIR||process.env.OUT_DIR===CFG.out){const f=path.join(OUT,'cards.json');let j={};try{j=JSON.parse(fs.readFileSync(f,'utf8'))}catch(e){}j.items=j.items||{};
+   j.items[`card-${x.name}`]={url:CFG.base+`card-${x.name}.jpg?v=`+Date.now().toString(36),made:new Date(Date.now()+9*3600e3).toISOString().slice(0,10)};fs.writeFileSync(f,JSON.stringify(j,null,1))}}
  await b.close();console.log(`作った ${n} 枚`)})();
