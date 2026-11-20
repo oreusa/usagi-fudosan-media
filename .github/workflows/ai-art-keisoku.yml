@@ -1,0 +1,23 @@
+name: ai-art（鶏足寺リールの絵・枝だけ）
+# 11/20 owner「何一つ綺麗に見えない」「クオリティ上げろ」→ 本のページの絵を画像AI（FLUX.1-schnell・Apache-2.0）で描く。tools/outing_reel/ai-art/gen.py を使う
+on:
+  push:
+    branches: [claude/project-thread-iniiic]
+    paths: ["tools/outing_reel/ai-art/keisoku/req.json"]
+permissions:
+  contents: write
+jobs:
+  gen:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - run: pip install -q gradio_client huggingface_hub pillow
+      - env: {HF_TOKEN: "${{ secrets.HF_TOKEN }}"}
+        run: python3 tools/outing_reel/ai-art/gen.py tools/outing_reel/ai-art/keisoku/req.json shots/ai-art/keisoku-1121
+      - run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add shots/ai-art/keisoku-1121; git commit -m "[CF-Pages-Skip] ai-art: 鶏足寺の絵" || exit 0
+          for i in 1 2 3; do git pull --rebase -q origin claude/project-thread-iniiic && git push -q origin HEAD:claude/project-thread-iniiic && break; sleep 5; done
