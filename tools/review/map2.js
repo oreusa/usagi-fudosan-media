@@ -21,3 +21,4 @@ for(const [n,u,lat,lon] of [['ka','https://kansai.townnote.app/odekake',34.7025,
  }catch(e){log.push(t+' FAIL '+e.message.split('\n')[0]+' errs='+JSON.stringify(errs))}
  await ctx.close()}}
 fs.writeFileSync(out+'/log.txt',log.join('\n'));console.log(log.join('\n'));await b.close()})();
+// 11/20 20:00 関東の公開後にもう一度
