@@ -1,0 +1,21 @@
+name: map2-check
+# 11/20 作業の枝だけ：新しい地図を本番で押して撮る（main には入れない）
+on:
+  push:
+    branches: [claude/project-thread-gbk25m]
+permissions:
+  contents: write
+jobs:
+  shot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm i --no-save playwright@1.49.1 && (timeout 150 npx playwright install --with-deps chromium || npx playwright install chromium)
+      - run: sudo apt-get install -y -qq fonts-noto-cjk >/dev/null 2>&1 || true
+      - run: node tools/review/map2.js /tmp/rv || true
+      - run: |
+          git config user.name "review-shot"; git config user.email "actions@users.noreply.github.com"
+          git fetch -q origin review && git checkout -qB review FETCH_HEAD
+          mkdir -p shots/review/map2 && cp /tmp/rv/* shots/review/map2/
+          git add -f shots/review && git commit -qm "review map2" && for i in 1 2 3 4; do git pull -q --rebase origin review 2>/dev/null || true; git push origin review && break; sleep 7; done
