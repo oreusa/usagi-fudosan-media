@@ -1,0 +1,36 @@
+tanosu-top	https://tanosu.com/	ok	7727
+tanosu-event	https://tanosu.com/event/	ok	5751
+walker-ev	https://www.walkerplus.com/event_list/ar0700/	ok	10844
+walker-ev1	https://www.walkerplus.com/event_list/today/ar0700/	page.screenshot: Timeout 30000ms exceeded.
+Call log:
+  - taking page screenshot
+
+walker-ev1	https://web.archive.org/web/2026/https://www.walkerplus.com/event_list/today/ar0700/	ok	7561
+jalan-ev	https://www.jalan.net/event/270000/	ok	10521
+illumi	https://illumi.walkerplus.com/list/ar0700/	ok	13727
+koyo	https://koyo.walkerplus.com/list/ar0700/	ok	14059
+hatsu	https://hatsumode.walkerplus.com/list/ar0700/	page.goto: net::ERR_NAME_NOT_RESOLVED at https://hatsumode.walkerplus.com/list/a
+hatsu	https://web.archive.org/web/2026/https://hatsumode.walkerplus.com/list/ar0700/	status 404
+tokyo-tl	https://www.timeout.jp/tokyo/ja	ok	24327
+souba-homes	https://www.homes.co.jp/souba/osaka/	status 404
+souba-homes	https://web.archive.org/web/2026/https://www.homes.co.jp/souba/osaka/	status 404
+souba-suumo	https://suumo.jp/kanto/	ok	4811
+tochidai	https://tochidai.info/osaka/	ok	33450
+satei-homes	https://www.homes.co.jp/satei/	ok	22669
+ieul	https://www.ieul.jp/	page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.ieul.jp/
+Call log:
+  - navi
+ieul	https://web.archive.org/web/2026/https://www.ieul.jp/	ok	10697
+akiya-athome	https://www.akiya-athome.jp/	status 403
+akiya-athome	https://web.archive.org/web/2026/https://www.akiya-athome.jp/	ok	12445
+kaitai	https://www.kaitai-guide.com/	ok	1668
+kakaku	https://kakaku.com/	ok	7568
+satofull	https://www.satofull.jp/	page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to "https://www.sa
+satofull	https://web.archive.org/web/2026/https://www.satofull.jp/	page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to "https://web.ar
+furusato	https://www.furusato-tax.jp/	ok	11392
+kaiten	https://kaiten-heiten.com/	ok	8665
+apple	https://www.apple.com/jp/iphone/	ok	7642
