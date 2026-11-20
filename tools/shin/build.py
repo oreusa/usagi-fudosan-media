@@ -318,6 +318,8 @@ def skin():
         return any(k in sel for k in KEYS) and not any(b in sel for b in BAD)
     css, used, kf = [], set(), {}
     for sel, body in blocks(src):
+        if sel.startswith('@property'):
+            css.append('%s{%s}' % (sel, body)); continue  # 11/20 MENU の回る光が前の形のページで止まっていた（--ra の登録が無いと角度が一気に飛ぶ）
         if sel.startswith('@keyframes'):
             kf[sel.split()[1]] = '%s{%s}' % (sel, body); continue
         if sel.startswith('@media') or sel.startswith('@supports'):
@@ -336,6 +338,17 @@ def skin():
     open(os.path.join(L, 'shin', 'skin.css'), 'w', encoding='utf-8').write('/* 作り：tools/shin/build.py skin()。直す時は shin.css か tools/shin/skin.tail.css を直す */\n' + '\n'.join(css) + '\n' + tail)
     print('skin.css', len(css), 'rules')
 skin()
+# 11/20 19:07 owner「月が決めていいよ・使いやすさ→デザイン」→ 街のページ（/machi/<id>）を新しい形に。links/machi は前のまま残し、
+# links/shin/machi/<id>.html を作る（functions/_middleware.js が /machi/<id> で出す）。作り：tools/shin/machi2.py・machi2.css
+try:
+    import shutil as _sh
+    _sh.copy(os.path.join(R, 'tools/shin/machi2.css'), os.path.join(L, 'shin', 'machi2.css'))
+    _s2 = _iu2 = None
+    import importlib.util as _iu2
+    _s2 = _iu2.spec_from_file_location('machi2', os.path.join(R, 'tools/shin/machi2.py')); _m2 = _iu2.module_from_spec(_s2); _s2.loader.exec_module(_m2)
+    _m2.batch(os.path.join(L, 'machi'), os.path.join(L, 'shin', 'machi'))
+except Exception as _e:
+    print('machi2: 作れなかった', _e)
 # 11/19 functions が上限で止まっても新しい形が出るように（bake.py）
 import importlib.util as _iu
 _s = _iu.spec_from_file_location('bake', os.path.join(R, 'tools/shin/bake.py')); _b = _iu.module_from_spec(_s); _s.loader.exec_module(_b); _b.main(L)

@@ -3,6 +3,8 @@
    決まり：普通の役目＋こだわり1つ。動かすのは transform と opacity だけ。 */
 (function(){
 "use strict";
+/* 11/20 19:20 見た目の見本 ?look=a|b|c（この端末で覚える・?look=0 で外す）→ look.css・look.js */
+try{var _lk=location.search.match(/[?&]look=([abcd0])/);if(_lk)localStorage.setItem("tn_lk",_lk[1]);var _lv=localStorage.getItem("tn_lk")||"d";if(_lv&&_lv!=="0"&&!document.getElementById("lkcss")){document.documentElement.classList.add("lk","lk-"+_lv);if(_lv==="d")document.documentElement.classList.add("lk-a");var _l=document.createElement("link");_l.rel="stylesheet";_l.href="/shin/look.css?v=4";document.head.appendChild(_l);var _s=document.createElement("script");_s.src="/shin/look.js?v=4";_s.defer=true;document.head.appendChild(_s)}}catch(e){}
 var H=document.documentElement,app=document.getElementById("app");
 /* 11/20 owner「いいと思う」：分野ごとの色の線（iro）をふだんの見た目に。?iro=0 で外せる（この端末で覚える） */
 try{var _q=location.search.match(/[?&]iro=([01])/);if(_q)localStorage.setItem("tn_iro",_q[1]);if(localStorage.getItem("tn_iro")!=="0"){var _p=location.pathname,_f=/^\/(shin\/cover\d?)?$|^\/index/.test(_p)?"top":/kaiten/.test(_p)?"kai":/okaimono|furusato|nesage|otoku|tanka|kaimawari|shin\/kau/.test(_p)?"kau":/fudosan|ikura|uru|ranking|machi|jikka|chika|akiya|kaitai|sagasu|moushikomi|gyosha|koe|shin\/ie/.test(_p)?"ie":"od";document.documentElement.classList.add("iro");document.documentElement.setAttribute("data-f",_f)}}catch(e){}
@@ -10,9 +12,9 @@ var CFG=JSON.parse(document.getElementById("cfg").textContent);
 /* 11/20 owner「不動産・実家・空き家 ごっちゃになる・バラバラすぎる 整理して」：家と土地のページを3つの目的に分ける。
    上＝3つの目的の切りかえ（街の相場／売る・買う／実家・空き家）、下のバー＝今の目的のページだけ、MENU＝3つの見出しで全部。
    関西・関東とも同じ物（関東に無いページ＝まちランキング は出さない。相談は 11/10 から関東も同じ）。
-   見本の間は ?seiri=1 の時だけ（この端末で覚える・?seiri=0 で外す）。 */
+   11/20 17:14 owner「月に任せる・他社と比べて勝つ」→ ふだんの見た目に（?seiri=0 でこの端末だけ前の形）。 */
 function ieOrg(P,kt){
-  var on=false;try{var q=location.search.match(/[?&]seiri=([01])/);if(q)localStorage.setItem("tn_seiri",q[1]);on=localStorage.getItem("tn_seiri")==="1"}catch(e){}
+  var on=false;try{var q=location.search.match(/[?&]seiri=([01])/);if(q)localStorage.setItem("tn_seiri",q[1]);on=localStorage.getItem("tn_seiri")!=="0"}catch(e){}
   if(!on)return null;
   var p=P.replace(/\.html$/,"").replace(/\/index$/,"/");
   if(!/^\/(fudosan-list|machi\/|chika-|ranking|uru|ikura|sagasu|moushikomi|gyosha|fudosan$|jikka|kaitai|akiya|shindan)/.test(p))return null;
@@ -26,24 +28,30 @@ function ieOrg(P,kt){
    check:'<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 12.5l2.7 2.7L16.5 9"/>',
    calc:'<rect x="5" y="3" width="14" height="18" rx="2.5"/><path d="M8 7.5h8M8.5 12h0M12 12h0M15.5 12h0M8.5 16h0M12 16h0M15.5 16h0"/>',
    gift:'<rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3 9h18M12 9v11M12 9c-1.5-3-5-4-5-1.5S10 9 12 9zm0 0c1.5-3 5-4 5-1.5S14 9 12 9z"/>',
+   box:'<path d="M3.5 8l8.5-4 8.5 4v9l-8.5 4-8.5-4z"/><path d="M3.5 8l8.5 4 8.5-4M12 12v9"/>',
    home:'<path d="M4 11l8-6 8 6v9H4z"/><path d="M9 20v-4.5h6V20"/><path d="M15.5 6.5V4h2v4"/>'};
-  var G=[{t:"街の相場",h:"街の相場をしらべる",u:"/fudosan-list",i:[["街の家と土地の相場","街の相場","find","/fudosan-list"],["いまいる場所の近くの街","近くの街","pin","/fudosan-list?geo=1"],["地価ランキング","地価","rank",kt?"/chika-kanto":"/chika-kansai"]].concat(kt?[]:[["まちランキング","まち","star","/ranking"]])},
-   {t:"売る・買う",h:"売る・買う",u:"/uru",i:[["家を売る前に","売る前に","sell","/uru"],["いくらで売れる？","いくら？","tag","/ikura"],["家を買いたい","買いたい","key","/sagasu"],["売却・査定のご相談","相談する","chat","/moushikomi"]]},
-   {t:"実家・空き家",h:"実家・空き家",u:"/jikka/",i:[["実家・空き家ノート","ノート","note","/jikka/"],["3問でわかる実家の診断","診断","check","/jikka/shindan/"],["解体・片付けの費用","解体の費用","calc","/kaitai"],["解体の補助金ランキング","補助金","gift","/kaitai-ranking"],["空き家が多い街ランキング","空き家の街","home","/akiya-ranking"]]}];
+  /* 17:27 owner「こんな項目いっぱいいるかな？一緒に出来るやつもある」→ 13を7つに（18:28 owner「片付けだけの反響あるかも」→ 片付けを名前に出し、片付けだけの見積りを足して8つ）。ページの中から行ける物（近くの街＝街をさがすのボタン・
+     売る前に＝いくら？の中・診断と空き家の多い街＝実家・空き家の中・補助金ランキング＝解体の中）は並べない。まちランキング（駅・人口）は家と土地の並びから外す（ページの下のバーは同じ4つ）。 */
+  var G=[{t:"街の相場",i:[["街の値段と地価","街をさがす","find","/fudosan-list"],["地価ランキング","地価","rank",kt?"/chika-kanto":"/chika-kansai"]]},
+   {t:"売る・買う",i:[["いくらで売れる？","いくら？","tag","/ikura"],["家を買いたい","買いたい","key","/sagasu"],["無料の相談","相談する","chat","/moushikomi"]]},
+   {t:"実家・空き家",i:[["実家・空き家","実家・空き家","note","/jikka/"],["片付け・解体の費用と補助金","解体","calc","/kaitai"],["片付け・遺品整理の無料見積り","片付け","box","/moushikomi?want=%E7%89%87%E4%BB%98%E3%81%91%E3%83%BB%E9%81%BA%E5%93%81%E6%95%B4%E7%90%86%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A"]]}];
   var want="";try{want=new URLSearchParams(location.search).get("want")||""}catch(e){}
   var g=/^\/(jikka|kaitai|akiya|shindan)/.test(p)||(/^\/moushikomi/.test(p)&&/片付|解体|実家|空き家/.test(want))?2:/^\/(uru|ikura|sagasu|moushikomi|gyosha|fudosan$)/.test(p)?1:0;
-  var cu=p==="/jikka/shindan/"||p==="/shindan"?"/jikka/shindan/":/^\/jikka\//.test(p)?"/jikka/":/^\/machi\//.test(p)?"/fudosan-list":/^\/kaitai-(?!ranking)./.test(p)?"/kaitai-ranking":/^\/chika-/.test(p)?(kt?"/chika-kanto":"/chika-kansai"):p;
+  var cu=/^\/(jikka|shindan|akiya)/.test(p)?"/jikka/":/^\/machi\//.test(p)?"/fudosan-list":/^\/kaitai/.test(p)?"/kaitai":/^\/chika-/.test(p)?(kt?"/chika-kanto":"/chika-kansai"):/^\/uru/.test(p)?"/ikura":p;
   var svg=function(k){return '<svg viewBox="0 0 24 24">'+I[k]+'</svg>'};
-  var seg='<nav class="topsg" aria-label="家と土地のページ"><div class="topsg-k">家と土地</div><div class="topsg-b">'+G.map(function(x,j){return '<a href="'+x.u+'"'+(j===g?' class="on" aria-current="true"':'')+'>'+x.t+'</a>'}).join("")+'</div></nav>';
-  var bi=G[g].i.slice(0,4),ci=G[g].i.filter(function(x){return x[3]===cu})[0];if(ci&&bi.indexOf(ci)<0)bi[3]=ci;
-  var nav=bi.map(function(x){return {t:x[1],ic:x[2],svg:svg(x[2]),href:x[3],cur:x[3]===cu}});
-  var menu=[];G.forEach(function(x){menu.push([x.h,"#"]);x.i.forEach(function(y){menu.push([y[0],y[3]].concat(y[3]===cu?[1]:[]))})});
-  return {g:g,seg:p==="/fudosan-list"?"":seg,nav:nav,menu:menu};
+  /* 11/20 17:25 owner「めっちゃ使いにくい」「何をするにもたどり着くには経由がいる」：上の切りかえと、目的ごとに変わる下のバーで
+     行き先が2重・どこでも違う形だった → 上の切りかえは消す。下のバーはどの家と土地のページでも同じ4つ（よく使う行き先へ1回）。
+     そのほかは入口（/fudosan-list）に全部並べる＋MENU。 */
+  var ja=cu==="/jikka/"||cu==="/kaitai";
+  var bi=[["街をさがす","find","/fudosan-list",cu==="/fudosan-list"],["いくら？","tag","/ikura",cu==="/ikura"],["実家・空き家","note","/jikka/",ja],["相談する","chat","/moushikomi",cu==="/moushikomi"&&!ja]];
+  var nav=bi.map(function(x){return {t:x[0],ic:x[1],svg:svg(x[1]),href:x[2],cur:x[3]}});
+  var menu=[];G.forEach(function(x){x.i.forEach(function(y){menu.push([y[0],y[3]].concat(y[3]===cu?[1]:[]))})});
+  return {g:g,seg:"",nav:nav,menu:menu,G:G};
 }
 /* MENU の並び：["#","見出し"] は見出しの行（番号は数えない） */
 function muList(items){var n=0;return items.map(function(m){if(m[1]==="#")return '<li class="mg">'+m[0]+'</li>';n++;return '<li><a href="'+m[1]+'"'+(m[2]?' class="here"':'')+' style="transition-delay:'+(60+n*30)+'ms"><small>'+(n<10?'0':'')+n+'</small>'+m[0]+'</a></li>'}).join("")}
 var IEO=ieOrg(location.pathname,(CFG.reg&&CFG.reg.n==="関東")||/kanto|lifenote|life-note|usagi-life/.test(location.hostname));
-if(IEO){var _fa=(CFG.nav||[]).filter(function(n){return n.a==="find"})[0];CFG.nav=IEO.nav.map(function(n){return _fa&&n.href==="/fudosan-list"&&n.cur?{t:n.t,svg:n.svg,a:"find",cur:1}:_fa&&n.href==="/fudosan-list?geo=1"?{t:n.t,svg:n.svg,a:"geo"}:n});CFG.menu.items=IEO.menu;document.documentElement.classList.add("ieo")}
+if(IEO){var _fa=(CFG.nav||[]).filter(function(n){return n.a==="find"})[0];CFG.nav=IEO.nav.map(function(n){return _fa&&n.href==="/fudosan-list"&&n.cur?{t:n.t,svg:n.svg,a:"find",cur:1}:_fa&&n.href==="/fudosan-list?geo=1"?{t:n.t,svg:n.svg,a:"geo"}:n});CFG.menu.items=IEO.menu;window.TN_IEG=IEO.G;document.documentElement.classList.add("ieo")}
 /* 11/19 関東も同じ土台で作る：地域の違い（名前・府県・色・地図・ロゴ）は CFG.reg。無ければ関西 */
 var REG=CFG.reg||{n:"関西",brand:"TOWN NOTE",logo:"/assets/logo-s.png?v=2",logon:"/assets/logo-s-night.png",pref:["大阪","京都","兵庫","奈良","滋賀","和歌山"],pfs:"大阪・京都・兵庫・奈良・滋賀・和歌山",pc:{"大阪":"#D9775A","京都":"#9C7BB8","兵庫":"#4F86C6","奈良":"#5FA06A","滋賀":"#3FA3B5","和歌山":"#E09A3E"},fl:{"大阪":"#F7D9CC","京都":"#E6DBF1","兵庫":"#D6E4F5","奈良":"#D8ECD4","滋賀":"#D0EBEF","和歌山":"#F8E4C4"},lb:{"兵庫":[62,105],"京都":[122,78],"滋賀":[176,92],"大阪":[118,165],"奈良":[156,178],"和歌山":[118,215]},sl:{"大阪":"osaka","京都":"kyoto","兵庫":"hyogo","奈良":"nara","滋賀":"shiga","和歌山":"wakayama"},vb:"10 15 200 250"};
 var RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
