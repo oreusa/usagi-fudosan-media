@@ -34,7 +34,7 @@ var TOP={nav:[["おでかけ","now","/odekake"],["家と土地","find","/fudosan
 /* 関東（kanto.townnote.app）も同じ物を読む。関東にあるページだけを出す */
 var KT=/kanto|lifenote|life-note|usagi-life/.test(location.hostname);
 if(KT){FUD.nav[1]=["地価","rank","/chika-kanto"];FUD.menu=[["家と土地の相場","/fudosan-list"],["地価ランキング","/chika-kanto"],["家を売る前に","/uru"],["いくらで売れる？","/ikura"],["実家・空き家","/jikka/"],["解体の費用と補助金","/kaitai"]];
-  ODE.nav=[["おでかけ","now","/odekake"],["いまから","map","/ima"],["紅葉","we","/koyo"],["開店閉店","buy","/kaiten"]];ODE.menu=[["関東おでかけ","/odekake"],["いまから行ける","/ima"],["紅葉","/koyo"],["開店・閉店","/kaiten"]];
+  ODE.nav=[["おでかけ","now","/odekake"],["いまから","map","/ima"],["紅葉","we","/koyo"],["開店閉店","buy","/kaiten"]];ODE.menu=[["関東おでかけ","/odekake"],["イルミネーション","/illumination"],["紅葉","/koyo"],["いまから行ける","/ima"]];
   KAI.menu=[["関東の開店・閉店","/kaiten"],["関西の開店・閉店","https://kansai.townnote.app/kaiten"]];}
 var BR=KT?"LIFE NOTE":"TOWN NOTE",LG=KT?["/logo-s.png","/logo-s-night.png"]:["/assets/logo-s.png?v=2","/assets/logo-s-night.png"];
 var OKA={nav:[["品物","find","/okaimono"],["値下がり","down","/nesage"],["お得","yen","/otoku"],["ふるさと納税","buy","/furusato"]],
