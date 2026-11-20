@@ -13,6 +13,8 @@ URL = {'odekake': '/odekake', 'ie': '/fudosan-list', 'kau': '/okaimono'}
 REL = [['おでかけ', '/odekake'], ['家と土地', '/fudosan-list'], ['おかいもの', '/okaimono'], ['開店・閉店', '/kaiten'], ['トップへ', '/']]
 SEC = {'Odekake': '/odekake', 'Home & Land': '/fudosan-list', 'Shopping': '/okaimono', 'New Shops': '/kaiten'}
 SITE = 'https://kansai.townnote.app'
+# 11/20 今週末のおすすめに出してよい写真（月が目で選んだ・行きたくなる写真だけ）
+PHOK = set(json.load(open(os.path.join(R, 'tools/shin/photo_ok.json'), encoding='utf-8'))['ok'])
 
 # 11/20 owner「統一されてない・整理されてない」：MENU の項目と並び順は分野ごとにここ1か所だけ（skin.js の FUD・ODE・OKA・KAI も同じ順）
 MENUS = {
@@ -94,6 +96,7 @@ def odekake():
         for k in ('hk', 'ds', 'h', 'cr', 'cu', 'im'):
             if v.get(k): it[k] = v[k]
         if v.get('im') and v['im'] in phh: it['th'] = phh[v['im']]
+        if v.get('im') in PHOK: it['ok'] = 1
         if v.get('id') in opages: it['o'] = v['id']
         g = gn.get(norm(t)) or gn.get(norm(v.get('n', '')))
         if g and g[0] is not None:
@@ -113,6 +116,7 @@ def odekake():
             if v.get(k) and k not in it: it[k] = v[k]
         if v.get('h') and 'h' not in it: it['h'] = v['h']
         if it.get('im') and it['im'] in phh: it['th'] = phh[it['im']]
+        if it.get('im') in PHOK: it['ok'] = 1
         if v.get('id') in opages: it['o'] = v['id']
         g = gn.get(norm(name)) or gn.get(norm(v.get('n', '')))
         if g and g[0] is not None:
