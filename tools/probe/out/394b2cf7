@@ -562,10 +562,10 @@
                 <span>難易度から探す</span>
               </p>
               <div class="event-search__opts">
+                                  <a class="event-search__opt-btn" href="https://rekishirealnazo.com/event/level/%e3%81%a1%e3%82%87%e3%81%a3%e3%81%a8%e9%9b%a3%e3%81%97%e3%81%84/">ちょっと難しい</a>
                                   <a class="event-search__opt-btn" href="https://rekishirealnazo.com/event/level/easy/">初心者向け</a>
                                   <a class="event-search__opt-btn" href="https://rekishirealnazo.com/event/level/normal/">ふつう</a>
                                   <a class="event-search__opt-btn" href="https://rekishirealnazo.com/event/level/hard/">経験者向け</a>
-                                  <a class="event-search__opt-btn" href="https://rekishirealnazo.com/event/level/%e3%81%a1%e3%82%87%e3%81%a3%e3%81%a8%e9%9b%a3%e3%81%97%e3%81%84/">ちょっと難しい</a>
                               </div>
             </div>
             <!-- フッターリンク -->
@@ -1145,7 +1145,7 @@
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/manage/wp-*.php","/manage/wp-admin/*","/manage/wp-content/uploads/*","/manage/wp-content/*","/manage/wp-content/plugins/*","/manage/wp-content/themes/rekishirealnazo/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
 <script id="snow-monkey-forms-js-before">
-var snowmonkeyforms = {"view_json_url":"https:\/\/rekishirealnazo.com\/wp-json\/snow-monkey-form\/v1\/view?ver=1794976984","nonce":"6d3c26866a"}
+var snowmonkeyforms = {"view_json_url":"https:\/\/rekishirealnazo.com\/wp-json\/snow-monkey-form\/v1\/view?ver=1795142500","nonce":"e1664f9cc0"}
 //# sourceURL=snow-monkey-forms-js-before
 </script>
 <script id="snow-monkey-forms-js" src="https://rekishirealnazo.com/manage/wp-content/plugins/snow-monkey-forms/dist/js/app.js?ver=1784616456"></script>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAKED meets 二条城 2026</title>
+    <meta name="description" content="秋の京都・世界遺産 二条城で開催する『NAKED meets 二条城 2026』。寛永行幸から400年の節目に、ライトアップやアートを通して、400年前の美と文化を体感する夜のアート展。" />
+    
+    <!-- LLMO対策: AI検索エンジン向けメタタグ -->
+    <meta name="keywords" content="NAKED,二条城,寛永行幸,ライトアップ,プロジェクションマッピング,京都,世界遺産,アート,イベント,2026,秋,和のデザイン,寛永文化" />
+    <meta name="author" content="NAKED, INC." />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="language" content="ja" />
+    <meta name="geo.region" content="JP-26" />
+    <meta name="geo.placename" content="京都府京都市" />
+    <meta name="geo.position" content="35.0116;135.7681" />
+    <meta name="ICBM" content="35.0116, 135.7681" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://event.naked.works/nijojo/" />
+    <meta property="og:title" content="NAKED meets 二条城 2026" />
+    <meta property="og:description" content="秋の京都・世界遺産 二条城で開催する『NAKED meets 二条城 2026』。寛永行幸から400年の節目に、ライトアップやアートを通して、400年前の美と文化を体感する夜のアート展。" />
+    <meta property="og:image" content="https://event.naked.works/nijojo/autumn/Images/ogp/2026_10_nijojoautumn_OGP_JP_1200x630_0810.jpg" />
+    <meta property="og:site_name" content="NAKED meets 二条城" />
+    <meta property="og:locale" content="ja_JP" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://event.naked.works/nijojo/" />
+    <meta property="twitter:title" content="NAKED meets 二条城 2026" />
+    <meta property="twitter:description" content="秋の京都・世界遺産 二条城で開催する『NAKED meets 二条城 2026』。寛永行幸から400年の節目に、ライトアップやアートを通して、400年前の美と文化を体感する夜のアート展。" />
+    <meta property="twitter:image" content="https://event.naked.works/nijojo/autumn/Images/ogp/2026_10_nijojoautumn_OGP_JP_1200x630_0810.jpg" />
+    
+    <!-- 構造化データ (JSON-LD) - イベント一覧ページ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "NAKED meets 二条城",
+        "description": "世界遺産・二条城を舞台に、NAKEDが贈る四季折々のアート体験イベント一覧",
+        "url": "https://event.naked.works/nijojo/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "NAKED, INC.",
+            "url": "https://naked.co.jp"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://event.naked.works/nijojo/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        .contents {
+            width: 87%;
+        }
+
+
+        @media screen and (min-width:600px) {
+            .contents{
+                width: 600px;
+            }
+        }
+        @media screen and (min-width:960px) {
+            .contents{
+                width: 800px;
+            }
+        }
+
+        .announce {
+            text-align: center;
+            margin: 20px 20px 60px;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .title {
+            font-size: 1.7em;
+            text-align: center;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #1f1f1f;
+            border: 1px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 100%;
+            margin: 10px;
+            text-decoration: none;
+            transition: transform 0.2s;
+            background: #f2f2f2;
+        }
+
+        @media screen and (min-width: 600px) {
+            .card {
+                width: 300px;
+            }
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-image {
+            width: 100%;
+            position: relative;
+            height: 0;
+            width: 100%;
+            padding-top: 56%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #111111;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            position: absolute;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+
+        .card-content {
+            padding: 20px;
+            color: #121212;
+        }
+
+        .card-title {
+            font-size: 1.1em;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .card-details {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .credit {
+            width: 270px;
+            margin-bottom: 20px;
+        }
+
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+    </style>
+    <meta name="google-site-verification" content="rPjtYmr75qWkz0tlp0D-m99UBdHjMWbrBSaunmeIvfI" />
+</head>
+
+<body>
+    <header role="banner">
+        <nav role="navigation" aria-label="メインナビゲーション">
+            <!-- ナビゲーション要素 -->
+        </nav>
+    </header>
+
+    <main role="main">
+        <div class="contents">
+            <section aria-labelledby="event-announcement">
+                <p class="announce" id="event-announcement">
+                    開催中のイベントは下記です。<br>
+                    リンクを選択しない場合は、15秒後にNAKED公式ページへ遷移します。<br>
+                    Automatically move to NAKED's Official website in 15 seconds without clicking the links below.
+                </p>
+            </section>
+            
+            <section aria-labelledby="current-events">
+                <h1 class="title" id="current-events">開催中、または開催予定のイベント</h1>
+                
+                <!-- AI検索向けの詳細情報 -->
+                <div style="display: none;" aria-hidden="true">
+                    <h2>NAKED meets 二条城 2026 詳細情報</h2>
+                    <p>寛永行幸から400年の節目を迎える世界遺産・二条城。着物や生活意匠など、現代へ繋がる「和のデザイン文化」を飛躍的に進化させた寛永文化の美学を、アートを通じて紐解く体感型アート展です。</p>
+                    <h3>開催情報</h3>
+                    <p>開催期間: 2026年10月23日(金)〜12月5日(土)</p>
+                    <p>開催時間: 18:00〜22:00（最終入場 21:00）</p>
+                    <p>開催場所: 元離宮二条城（京都府京都市中京区二条通堀川西入二条城町541）</p>
+                    <p>主催: NAKED meets 二条城 制作委員会</p>
+                </div>
+                
+                <div class="card-container" role="list" aria-label="イベント一覧">
+                    <article class="card" role="listitem">
+                        <a href="https://event.naked.works/nijojo/autumn/" aria-label="NAKED meets 二条城 2026の詳細ページへ">
+                            <div class="card-image">
+                                <img src="/nijojo/autumn/Images/ogp/2026_10_nijojoautumn_OGP_JP_1200x630_0810.jpg" 
+                                     alt="NAKED meets 二条城 2026のメインビジュアル" 
+                                     loading="lazy"
+                                     width="800" 
+                                     height="450">
+                            </div>
+                            <div class="card-content">
+                                <h2 class="card-title">NAKED meets 二条城 2026</h2>
+                                <div class="card-details">
+                                    <time datetime="2026-10-23/2026-12-05">イベント期間: 2026年10月23日(金)〜12月5日(土)</time>
+                                </div>
+                                <div class="card-details">
+                                    <address>開催場所: 元離宮二条城</address>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="credit">
+            <img class="logo" src="/nijojo/asset/NAKED,INC._Logotype_w.svg" alt="NAKED, INC. ロゴマーク" width="270" height="auto">
+        </div>
+        <p>
+            <a href="https://naked.co.jp" aria-label="NAKED, INC. 公式サイトへ">&copy; 2026 NAKED, INC.</a>
+        </p>
+    </footer>
+    <meta http-equiv="refresh" content="15; URL=https://naked.co.jp">
+</body>
+
+</html>

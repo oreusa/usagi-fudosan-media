@@ -268,14 +268,24 @@ fixed: false
 <div class="lobgbox lorecommend">
 <h2 class="h2txt">このページを見ている人はこんなページも見ています</h2>
 <ul>
-<li class="pagelinkin"><a href="/bunka/rekishitobunkazai/ritsukyodoshiryokan/kyodo-tenji/tokuten2026nishi.html"> 【9月12日～10月25日】特別展示「にしはくコレクション－学び、近代の風景、くらし－」</a></li>
-<li class="pagelinkin"><a href="/bunka/shogaigakushu/nishinomiyayukawa/kagaku/R08kagakuseminar.html"> 令和8年度&nbsp;西宮湯川記念科学セミナー</a></li>
+<li class="pagelinkin"><a href="/kotsu/kankyo/akichitaisaku/tekiseikanri/akiyahoukaisei.html"> 空家法（空家等対策の推進に関する特別措置法）の改正（2023年12月）</a></li>
+<li class="pagelinkin"><a href="/kurashi/shizei/tochi/koteishisanzei.html"> 固定資産税・都市計画税とは</a></li>
 <li class="pagelinkin"><a href="/kurashi/suido/jogesuidokyoku/pr_event/miyatan.html"> 水道及び下水道のPR動画　公開中！</a></li>
 </ul>
 </div>
 
 <!-- △レコメンド△ -->
 <!-- ▽類似▽ -->
+
+<div class="lobgbox losimilarpage">
+<h2 class="h2txt">類似ページ</h2>
+<ul>
+<li class="pagelinkin"><a href="/shisei/koho/kishahappyoshiryo/2022/202210/sitei_tokushu.html" class="simipar_page"> 令和4年度指定文化財公開・第53回特集展示の開催について</a></li>
+<li class="pagelinkin"><a href="/soshiki/00750017/0088001730/009300173050/index.html" class="simipar_page"> 文化財課</a></li>
+<li class="pagelinkin"><a href="/shisei/koho/shashin-news/2023/202308/20230801photonews.html" class="simipar_page"> 特別展示「高畑町遺跡展-出土木器と古墳時代の津門遺跡群-」を郷土資料館で開催中</a></li>
+
+</ul>
+</div>
 
 <!-- △類似△ -->
 <p class="linkbttxt lojoho"><a href="/aboutweb/infoloss.html">情報が見つからないときは</a></p>
@@ -349,5 +359,5 @@ fixed: false
 <script src="/js/jquery.lightbox-0.5.min.js"></script>
 <script src="/js/2023_common.js"></script>
 
-<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1521745920" async></script></body>
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=13779070" async></script></body>
 </html>

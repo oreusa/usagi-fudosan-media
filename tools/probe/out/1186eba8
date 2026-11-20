@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+        <meta name="format-detection" content="telephone=no">
+        <title>紅葉・お花MAP｜大阪城秋まつり2026</title>
+        <meta name="description" content="大阪城秋まつり・黄葉の宴・紅葉の宴。みんなのこころに色が舞う。期間中は特別公開やステージなど、催しが盛り沢山。紅葉狩りと一緒にイベントも楽しめます。">
+
+        <meta property="og:title" content="紅葉・お花MAP｜大阪城秋まつり2026">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://www.osakacastlepark.jp/autumnfes/map/">
+        <meta property="og:image" content="https://www.osakacastlepark.jp/autumnfes/ogp.jpg">
+        <meta property="og:description" content="大阪城秋まつり・黄葉の宴・紅葉の宴。みんなのこころに色が舞う。期間中は特別公開やステージなど、催しが盛り沢山。紅葉狩りと一緒にイベントも楽しめます。">
+        <meta property="og:site_name" content="大阪城秋まつり2026">
+        <meta property="og:locale" content="ja_JP">
+        <meta name="twitter:card" content="summary_large_image">
+        <link rel="canonical" href="https://www.osakacastlepark.jp/autumnfes/map/">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : '';
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-P35547C');
+        </script>
+        <!-- End Google Tag Manager -->
+
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Noto+Sans+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600;700&display=swap">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.1.0/dist/css/yakuhanjp.min.css">
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/base.css">
+        <link rel="stylesheet" href="../css/map.css">
+    </head>
+
+    <body id="subpage" class="map">
+
+        <div id="wrapper" class="wrapper">
+
+            <header id="header" class="header"></header>
+
+            <main role="main" class="main">
+
+                <section class="contents">
+                    <div class="inner">
+                        <h2>
+                            <img src="../images/map/map_ttl.png" alt="大阪城公園 紅葉・お花MAP">
+                        </h2>
+                        <figure class="map_img">
+                            <img src="../images/map/map_img01.jpg" alt="大阪城公園 紅葉・お花MAP">
+                        </figure>
+                        <figure class="map_guide">
+                            <img src="../images/map/map_img02.png" alt="凡例一覧">
+                        </figure>
+                        <ul class="contents_list">
+                            <li id="map-01" class="color_a">
+                                <h3>
+                                    <em>1</em>
+                                    <span>キンモクセイ</span>
+                                </h3>
+                                <figure>
+                                    <img src="../images/map/01.png" alt="キンモクセイ">
+                                </figure>
+                                <p class="best">花期：10月～11月中旬</p>
+                                <div class="contents_list_txt">
+                                    <p>秋の風物詩となるキンモクセイ。オレンジ色の小花を沢山つけ、香りのよい花が咲きます。</p>
+                                </div>
+                            </li>
+                            <li id="map-02" class="color_b">
+                                <h3>
+                                    <em>2</em>
+                                    <span>ギンモクセイ</span>
+                                </h3>
+                                <figure>
+                                    <img src="../images/map/02.png" alt="ギンモクセイ">
+                                </figure>
+                                <p class="best">花期：10月～11月中旬</p>
+                                <div class="contents_list_txt">
+                                    <p>小枝の先端にひとつずつ白い花を咲かせ、年に数回花を咲かせることもあります。</p>
+                                </div>
+                            </li>
+                            <li id="map-03" class="color_c">
+                                <h3>
+                                    <em>3</em>
+                                    <span>ジュウガツザクラ</span>
+                                </h3>
+                                <figure>
+                                    <img src="../images/map/03.png" alt="ジュウガツザクラ">
+                                </figure>
+                                <p class="best">花期：10月～4月</p>
+                                <div class="contents_list_txt">
+                                    <p>白に薄く紅色が混ざった花弁が特徴で、秋から冬にかけて断続的に小さな花を咲かせます。</p>
+                                </div>
+                            </li>
+                            <li id="map-04" class="color_d">
+                                <h3>
+                                    <em>4</em>
+                                    <span>イチョウ</span>
+                                </h3>
+                                <figure>
+                                    <img src="../images/map/04.png" alt="イチョウ">
+                                </figure>
+                                <p class="best">紅葉の見頃：11月下旬～12月上旬</p>
+                                <div class="contents_list_txt">
+                                    <p>中国原産の裸子植物。恐竜の時代からあったと言われていて、銀杏（ギンナン）実がなります。黄色に色づき、マラソンコースを彩ります。</p>
+                                </div>
+                            </li>
+                            <li id="map-05" class="color_e">
+                                <h3>
+                                    <em>5</em>
+                                    <span>イロハモミジ</span>
+                                </h3>
+                                <figure>
+                                    <img src="../images/map/05.png" alt="イロハモミジ">
+                                </figure>
+                                <p class="best">紅葉の見頃：11月中旬～11月下旬</p>
+                                <div class="contents_list_txt">
+                                    <p>紅葉の代表種。ムクロジ科カエデ属の落葉高木で、日本庭園などに多く植栽されており、西ノ丸豊松庵、モミジ谷で見られます。</p>
+                                </div>
+                            </li>
+                            <li id="map-06" class="color_e">
+                                <h3>
+                                    <em>6</em>
+                                    <span>フウ</span>
+                                </h3>
+                                <figure>
+                                    <img src="../images/map/06.png" alt="フウ">
+                                </figure>
+                                <p class="best">紅葉の見頃：11月中旬～12月上旬</p>
+                                <div class="contents_list_txt">
+                                    <p>フウ科フウ属の落葉高木。3枚に分かれた葉が特徴で、紅葉は目の覚める色を演出。樹高20mほどになり、古くから公園などに植栽されてきました。</p>
+                                </div>
+                            </li>
+                            <li id="map-07" class="color_e">
+                                <h3>
+                                    <em>7</em>
+                                    <span>ハゼ</span>
+                                </h3>
+                                <figure>
+                                    <img src="../images/map/07.png" alt="ハゼ">
+                                </figure>
+                                <p class="best">紅葉の見頃：11月中旬～12月上旬</p>
+                                <div class="contents_list_txt">
+                                    <p>ウルシ科ウルシ属の落葉小高木。早期に赤く染まり、汁が付着するとかぶれやすいので注意が必要です。玉造口、本丸エリアにあります。</p>
+                                </div>
+                            </li>
+                            <li id="map-08" class="color_f">
+                                <h3>
+                                    <em>8</em>
+                                    <span>サクラ</span>
+                                </h3>
+                                <figure>
+                                    <img src="../images/map/08.png" alt="サクラ">
+                                </figure>
+                                <p class="best">紅葉の見頃：10月下旬～11月中旬</p>
+                                <div class="contents_list_txt">
+                                    <p>サクラは春だけではありません。サクラモミジという言葉があるくらい紅葉が美しく、大阪城公園でも一番最初に赤く染まります。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+            </main>
+
+            <footer id="footer" class="footer"></footer>
+
+        </div>
+        <!-- /.wrapper -->
+
+        <script src="../js/base.js"></script>
+
+    </body>
+
+</html>

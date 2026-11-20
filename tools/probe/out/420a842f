@@ -102,7 +102,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 /*# sourceURL=global-styles-inline-css */
 </style>
 
-<script id="jquery-js" src="//code.jquery.com/jquery-1.11.3.min.js?ver=7.1.4"></script>
+<script id="jquery-js" src="//code.jquery.com/jquery-1.11.3.min.js?ver=7.1.5"></script>
 <link rel="https://api.w.org/" href="https://www.expo70-park.jp/wp-json/" /><link rel="canonical" href="https://www.expo70-park.jp/event/77753/" />
 <link rel='shortlink' href='https://www.expo70-park.jp/?p=77753' />
 <link rel="icon" href="https://www.expo70-park.jp/sys/wp-content/uploads/cropped-apple-touch-icon-180x180-precomposed-32x32.png" sizes="32x32" />
@@ -1336,9 +1336,9 @@ $('#takahash-posts').takahash({
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/sys/wp-*.php","/sys/wp-admin/*","/sys/wp-content/uploads/*","/sys/wp-content/*","/sys/wp-content/plugins/*","/sys/wp-content/themes/pc/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-<script id="common-script-js" src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/js/common.js?ver=7.1.4"></script>
+<script id="common-script-js" src="https://www.expo70-park.jp/sys/wp-content/themes/pc/src/js/common.js?ver=7.1.5"></script>
 <script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.expo70-park.jp/sys/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4"}}
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.expo70-park.jp/sys/wp-includes/js/wp-emoji-release.min.js?ver=7.1.5"}}
 </script>
 <script type="module">
 /*! This file is auto-generated */
@@ -1348,7 +1348,7 @@ var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof H
 </body>
 </html>
 <!-- Quick Cache file path: /cache/quick-cache/cache/https/www-expo70-park-jp/event/77753.html -->
-<!-- Quick Cache file built for (https://www.expo70-park.jp/event/77753/) in 0.11688 seconds, on: Nov 18th, 2026 @ 4:41 am UTC. -->
-<!-- This Quick Cache file will auto-expire (and be rebuilt) on: Nov 18th, 2026 @ 4:51 am UTC (based on your configured expiration time). -->
+<!-- Quick Cache file built for (https://www.expo70-park.jp/event/77753/) in 0.14212 seconds, on: Nov 20th, 2026 @ 2:40 am UTC. -->
+<!-- This Quick Cache file will auto-expire (and be rebuilt) on: Nov 20th, 2026 @ 2:50 am UTC (based on your configured expiration time). -->
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<!-- Quick Cache fully functional :-) Cache file served for (https://www.expo70-park.jp/event/77753/) in 0.00030 seconds, on: Nov 18th, 2026 @ 4:43 am UTC. -->
+<!-- Quick Cache fully functional :-) Cache file served for (https://www.expo70-park.jp/event/77753/) in 0.00025 seconds, on: Nov 20th, 2026 @ 2:44 am UTC. -->

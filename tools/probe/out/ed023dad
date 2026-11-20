@@ -57,13 +57,13 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		<!-- css -->
 		<link rel="stylesheet" href="https://osaka-craftpark.com/wpapp/wp-content/themes/craftpark2026/css/reset.css">
 				<link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
-		<link rel="stylesheet" href="https://osaka-craftpark.com/wpapp/wp-content/themes/craftpark2026/css/style.css?20261118044238">
+		<link rel="stylesheet" href="https://osaka-craftpark.com/wpapp/wp-content/themes/craftpark2026/css/style.css?20261120024017">
 		
-    <link rel="stylesheet" type="text/css" href="https://osaka-craftpark.com/wpapp/wp-content/themes/craftpark2026/css/style_news.css?20261118044238"/>
+    <link rel="stylesheet" type="text/css" href="https://osaka-craftpark.com/wpapp/wp-content/themes/craftpark2026/css/style_news.css?20261120024017"/>
 
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-		<script src="https://osaka-craftpark.com/wpapp/wp-content/themes/craftpark2026/js/common.js?20261118044238"></script>
+		<script src="https://osaka-craftpark.com/wpapp/wp-content/themes/craftpark2026/js/common.js?20261120024017"></script>
 			</head>
 
 	

@@ -318,10 +318,10 @@ ul_widget('init', { 'id': '34ab2c7a537d4cdd4e1e', 'lg_id': '' });
 
 			<div class="information">
 				<div class="information__inner">
-					<section class="today-schedule holiday">
-						<h2 class="today-schedule__heading"><span class="today-schedule__heading-inner">本日2026年11月18日(水) は<span class="red-text">休園</span>いたします。</span></h2>
+					<section class="today-schedule ">
+						<h2 class="today-schedule__heading"><span class="today-schedule__heading-inner">本日の営業時間<span class="day">2026.11.20 Fri</span></span></h2>
 						<div class="today-schedule__content">
-							
+							<div class="today-schedule__time">10:00<span>～</span>17:00</div>
 							<a href="/guide/opening_hours/" class="today-schedule__link">
 								<span class="today-schedule__link-normal">明日以降の営業カレンダー</span>
 								<span class="today-schedule__link-short">明日以降はこちら</span>
@@ -998,6 +998,33 @@ ul_widget('init', { 'id': '34ab2c7a537d4cdd4e1e', 'lg_id': '' });
 
 				<ul class="top-topics">
 										<li>
+						<a href="/topics/detail?id=top4797">
+							<div class="top-topics__photo"><img src="/getImage.php?path=top4797_1.jpg" alt=""></div>
+							<div class="top-topics__content">
+								<div class="top-topics__content-date">2026年11月20日（金） <span class="icon-text3">お知らせ</span></div>
+								<div class="top-topics__content-title">PINGU™ʼs meets アドベンチャーワールド 「A5 クリアファイル」の誤配布に関するお詫びとお知らせ</div>
+							</div>
+						</a>
+					</li>
+										<li>
+						<a href="/topics/detail?id=top4796">
+							<div class="top-topics__photo"><img src="/getImage.php?path=top4796_1.jpg" alt=""></div>
+							<div class="top-topics__content">
+								<div class="top-topics__content-date">2026年11月19日（木） <span class="icon-text3">お知らせ</span></div>
+								<div class="top-topics__content-title">動物たちをいつもそばに☆２０２７年版アドベンチャーワールドオリジナルカレンダー４種を販売します！</div>
+							</div>
+						</a>
+					</li>
+										<li>
+						<a href="/topics/detail?id=top4795">
+							<div class="top-topics__photo"><img src="/getImage.php?path=top4795_1.jpg" alt=""></div>
+							<div class="top-topics__content">
+								<div class="top-topics__content-date">2026年11月19日（木） <span class="icon-text3">お知らせ</span></div>
+								<div class="top-topics__content-title">【人間以外で受賞初】コウテイペンギンペア「パパ」「ママ」の「いい夫婦 パートナー・オブ・ザ・イヤー ２０２６」特別賞 授賞式をアドベンチャーワールドで開催！</div>
+							</div>
+						</a>
+					</li>
+										<li>
 						<a href="/topics/detail?id=top4794">
 							<div class="top-topics__photo"><img src="/getImage.php?path=top4794_1.jpg" alt=""></div>
 							<div class="top-topics__content">
@@ -1021,33 +1048,6 @@ ul_widget('init', { 'id': '34ab2c7a537d4cdd4e1e', 'lg_id': '' });
 							<div class="top-topics__content">
 								<div class="top-topics__content-date">2026年11月16日（月） <span class="icon-text3">お知らせ</span></div>
 								<div class="top-topics__content-title">「かわいい」のその先にある秘密とは？夜のペンギンワールドへようこそ！いのちのドラマに出会う『ナイトペンギンツアー２０２７』開催決定！２０２６年１１月１７日（火）よりチケット販売開始</div>
-							</div>
-						</a>
-					</li>
-										<li>
-						<a href="/topics/detail?id=top4791">
-							<div class="top-topics__photo"><img src="/getImage.php?path=top4791_1.jpg" alt=""></div>
-							<div class="top-topics__content">
-								<div class="top-topics__content-date">2026年11月16日（月） <span class="icon-text3">お知らせ</span></div>
-								<div class="top-topics__content-title">Terravie　12～1月分プレミアムカバフィーディング販売のお知らせ</div>
-							</div>
-						</a>
-					</li>
-										<li>
-						<a href="/topics/detail?id=top4790">
-							<div class="top-topics__photo"><img src="/getImage.php?path=top4790_1.jpg" alt=""></div>
-							<div class="top-topics__content">
-								<div class="top-topics__content-date">2026年11月14日（土） <span class="icon-text3">お知らせ</span></div>
-								<div class="top-topics__content-title">アドベンチャーワールドでヒゲパパに会おう！１２月１９日（土）・２０日（日）「ヒゲパパ２０２６ クリスマスライブ」を開催いたします！</div>
-							</div>
-						</a>
-					</li>
-										<li>
-						<a href="/topics/detail?id=top4789">
-							<div class="top-topics__photo"><img src="/getImage.php?path=top4789_1.jpg" alt=""></div>
-							<div class="top-topics__content">
-								<div class="top-topics__content-date">2026年11月13日（金） <span class="icon-text3">お知らせ</span></div>
-								<div class="top-topics__content-title">本日スタート！動物たちの堆肥で育った「近大ICTイチゴ」約１０ｋｇをアフリカゾウへプレゼント！明日・明後日も、イチゴの山を届けるイベントを開催します！</div>
 							</div>
 						</a>
 					</li>
@@ -1211,7 +1211,7 @@ ul_widget('init', { 'id': '34ab2c7a537d4cdd4e1e', 'lg_id': '' });
 			<th class="saturday">土</th>
 			</tr>
 			</thead>
-			<tbody><tr><td class="sunday"><span class="day-text">1</span></td><td class="normal-day"><span class="day-text">2</span></td><td class="holiday"><span class="day-text">3</span></td><td class="normal-day closed-day"><span class="day-text">4</span></td><td class="normal-day"><span class="day-text">5</span></td><td class="normal-day"><span class="day-text">6</span></td><td class="saturday"><span class="day-text">7</span></td></tr><tr><td class="sunday"><span class="day-text">8</span></td><td class="normal-day"><span class="day-text">9</span></td><td class="normal-day"><span class="day-text">10</span></td><td class="normal-day closed-day"><span class="day-text">11</span></td><td class="normal-day"><span class="day-text">12</span></td><td class="normal-day"><span class="day-text">13</span></td><td class="saturday"><span class="day-text">14</span></td></tr><tr><td class="sunday"><span class="day-text">15</span></td><td class="normal-day"><span class="day-text">16</span></td><td class="normal-day"><span class="day-text">17</span></td><td class="normal-day closed-day today"><span class="day-text">18</span></td><td class="normal-day"><span class="day-text">19</span></td><td class="normal-day"><span class="day-text">20</span></td><td class="saturday"><span class="day-text">21</span></td></tr><tr><td class="sunday"><span class="day-text">22</span></td><td class="holiday"><span class="day-text">23</span></td><td class="normal-day"><span class="day-text">24</span></td><td class="normal-day closed-day"><span class="day-text">25</span></td><td class="normal-day"><span class="day-text">26</span></td><td class="normal-day"><span class="day-text">27</span></td><td class="saturday"><span class="day-text">28</span></td></tr><tr><td class="sunday"><span class="day-text">29</span></td><td class="normal-day"><span class="day-text">30</span></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td></tr><tr><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td></tr></tbody></table></section></div>
+			<tbody><tr><td class="sunday"><span class="day-text">1</span></td><td class="normal-day"><span class="day-text">2</span></td><td class="holiday"><span class="day-text">3</span></td><td class="normal-day closed-day"><span class="day-text">4</span></td><td class="normal-day"><span class="day-text">5</span></td><td class="normal-day"><span class="day-text">6</span></td><td class="saturday"><span class="day-text">7</span></td></tr><tr><td class="sunday"><span class="day-text">8</span></td><td class="normal-day"><span class="day-text">9</span></td><td class="normal-day"><span class="day-text">10</span></td><td class="normal-day closed-day"><span class="day-text">11</span></td><td class="normal-day"><span class="day-text">12</span></td><td class="normal-day"><span class="day-text">13</span></td><td class="saturday"><span class="day-text">14</span></td></tr><tr><td class="sunday"><span class="day-text">15</span></td><td class="normal-day"><span class="day-text">16</span></td><td class="normal-day"><span class="day-text">17</span></td><td class="normal-day closed-day"><span class="day-text">18</span></td><td class="normal-day"><span class="day-text">19</span></td><td class="normal-day today"><span class="day-text">20</span></td><td class="saturday"><span class="day-text">21</span></td></tr><tr><td class="sunday"><span class="day-text">22</span></td><td class="holiday"><span class="day-text">23</span></td><td class="normal-day"><span class="day-text">24</span></td><td class="normal-day closed-day"><span class="day-text">25</span></td><td class="normal-day"><span class="day-text">26</span></td><td class="normal-day"><span class="day-text">27</span></td><td class="saturday"><span class="day-text">28</span></td></tr><tr><td class="sunday"><span class="day-text">29</span></td><td class="normal-day"><span class="day-text">30</span></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td><td class="space"></td></tr><tr><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td><td class="space">　</td></tr></tbody></table></section></div>
 			<div class="top-calendar-slider__content">
 			<section>
 			<h4 class="calendar-heading">2026年12月</h4>

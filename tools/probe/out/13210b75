@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="description"
+    content="大阪のシンボルストリート・御堂筋を美しく彩る「御堂筋イルミネーション」、中之島で繰り広げられる光のアートフェスティバル「OSAKA光のルネサンス」、これら２つのコアプログラムに加え、大阪府内の様々な場所に開催エリアを拡大し、さらに広がりを増したエリアプログラムが、大阪の夜を美しく幻想的に輝かせます。">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TWDYFXRT6C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TWDYFXRT6C');
+</script>
+  <link rel="stylesheet" href="https://hikari-kyoen.com/wp-content/themes/kyoen2026/css/reset.css">
+  <link rel="stylesheet" href="https://hikari-kyoen.com/wp-content/themes/kyoen2026/css/style.css">
+
+  <!-- jquery -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" href="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/apple-touch-icon.png">
+  
+		<!-- All in One SEO 5.0.3 - aioseo.com -->
+		<title>OSAKA光のルネサンス | 大阪・光の饗宴2026</title>
+	<meta name="robots" content="max-image-preview:large" />
+	<link rel="canonical" href="https://hikari-kyoen.com/core/renaissance/" />
+		<meta name="generator" content="All in One SEO (AIOSEO) 5.0.3" />
+		<meta property="og:locale" content="ja_JP" />
+		<meta property="og:site_name" content="大阪・光の饗宴2026 | 大阪・光の饗宴は、大阪の冬を代表する光の祭典です。 大阪のシンボルストリート・御堂筋を舞台にした「御堂筋イルミネーション」と、水都大阪を象徴する中之島エリアで開催される「OSAKA光のルネサンス」をコアプログラムとし、大阪府内各地で展開される「エリアプログラム」と連携しながら開催されています。" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="OSAKA光のルネサンス | 大阪・光の饗宴2026" />
+		<meta property="og:url" content="https://hikari-kyoen.com/core/renaissance/" />
+		<meta property="og:image" content="https://test.hikari-kyoen.com/wp-content/uploads/2026/10/ogp.jpg" />
+		<meta property="og:image:secure_url" content="https://test.hikari-kyoen.com/wp-content/uploads/2026/10/ogp.jpg" />
+		<meta property="article:published_time" content="2026-09-29T03:07:42+00:00" />
+		<meta property="article:modified_time" content="2026-09-29T03:07:42+00:00" />
+		<meta property="article:publisher" content="https://www.facebook.com/osaka.hikarikyouen/" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@hikari_kyouen" />
+		<meta name="twitter:title" content="OSAKA光のルネサンス | 大阪・光の饗宴2026" />
+		<meta name="twitter:creator" content="@hikari_kyouen" />
+		<meta name="twitter:image" content="http://test.hikari-kyoen.com/wp-content/uploads/2026/10/ogp.jpg" />
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https:\/\/hikari-kyoen.com\/core\/renaissance\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/hikari-kyoen.com\/#listItem","position":1,"name":"Home","item":"https:\/\/hikari-kyoen.com\/","nextItem":{"@type":"ListItem","@id":"https:\/\/hikari-kyoen.com\/core\/#listItem","name":"\u30b3\u30a2\u30d7\u30ed\u30b0\u30e9\u30e0"}},{"@type":"ListItem","@id":"https:\/\/hikari-kyoen.com\/core\/#listItem","position":2,"name":"\u30b3\u30a2\u30d7\u30ed\u30b0\u30e9\u30e0","item":"https:\/\/hikari-kyoen.com\/core\/","nextItem":{"@type":"ListItem","@id":"https:\/\/hikari-kyoen.com\/core\/renaissance\/#listItem","name":"OSAKA\u5149\u306e\u30eb\u30cd\u30b5\u30f3\u30b9"},"previousItem":{"@type":"ListItem","@id":"https:\/\/hikari-kyoen.com\/#listItem","name":"Home"}},{"@type":"ListItem","@id":"https:\/\/hikari-kyoen.com\/core\/renaissance\/#listItem","position":3,"name":"OSAKA\u5149\u306e\u30eb\u30cd\u30b5\u30f3\u30b9","previousItem":{"@type":"ListItem","@id":"https:\/\/hikari-kyoen.com\/core\/#listItem","name":"\u30b3\u30a2\u30d7\u30ed\u30b0\u30e9\u30e0"}}]},{"@type":"Organization","@id":"https:\/\/hikari-kyoen.com\/#organization","name":"\u5927\u962a\u30fb\u5149\u306e\u9957\u5bb42026","description":"\u5927\u962a\u30fb\u5149\u306e\u9957\u5bb4\u306f\u3001\u5927\u962a\u306e\u51ac\u3092\u4ee3\u8868\u3059\u308b\u5149\u306e\u796d\u5178\u3067\u3059\u3002 \u5927\u962a\u306e\u30b7\u30f3\u30dc\u30eb\u30b9\u30c8\u30ea\u30fc\u30c8\u30fb\u5fa1\u5802\u7b4b\u3092\u821e\u53f0\u306b\u3057\u305f\u300c\u5fa1\u5802\u7b4b\u30a4\u30eb\u30df\u30cd\u30fc\u30b7\u30e7\u30f3\u300d\u3068\u3001\u6c34\u90fd\u5927\u962a\u3092\u8c61\u5fb4\u3059\u308b\u4e2d\u4e4b\u5cf6\u30a8\u30ea\u30a2\u3067\u958b\u50ac\u3055\u308c\u308b\u300cOSAKA\u5149\u306e\u30eb\u30cd\u30b5\u30f3\u30b9\u300d\u3092\u30b3\u30a2\u30d7\u30ed\u30b0\u30e9\u30e0\u3068\u3057\u3001\u5927\u962a\u5e9c\u5185\u5404\u5730\u3067\u5c55\u958b\u3055\u308c\u308b\u300c\u30a8\u30ea\u30a2\u30d7\u30ed\u30b0\u30e9\u30e0\u300d\u3068\u9023\u643a\u3057\u306a\u304c\u3089\u958b\u50ac\u3055\u308c\u3066\u3044\u307e\u3059\u3002","url":"https:\/\/hikari-kyoen.com\/","logo":{"@type":"ImageObject","url":"http:\/\/test.hikari-kyoen.com\/wp-content\/uploads\/2026\/10\/logo-bg.jpg","@id":"https:\/\/hikari-kyoen.com\/core\/renaissance\/#organizationLogo"},"image":{"@id":"https:\/\/hikari-kyoen.com\/core\/renaissance\/#organizationLogo"},"sameAs":["https:\/\/www.facebook.com\/osaka.hikarikyouen\/","https:\/\/x.com\/hikari_kyouen","https:\/\/www.instagram.com\/hikari_kyouen\/","https:\/\/www.youtube.com\/@hikarikyouen"]},{"@type":"WebPage","@id":"https:\/\/hikari-kyoen.com\/core\/renaissance\/#webpage","url":"https:\/\/hikari-kyoen.com\/core\/renaissance\/","name":"OSAKA\u5149\u306e\u30eb\u30cd\u30b5\u30f3\u30b9 | \u5927\u962a\u30fb\u5149\u306e\u9957\u5bb42026","inLanguage":"ja","isPartOf":{"@id":"https:\/\/hikari-kyoen.com\/#website"},"breadcrumb":{"@id":"https:\/\/hikari-kyoen.com\/core\/renaissance\/#breadcrumblist"},"datePublished":"2026-09-29T12:07:42+09:00","dateModified":"2026-09-29T12:07:42+09:00"},{"@type":"WebSite","@id":"https:\/\/hikari-kyoen.com\/#website","url":"https:\/\/hikari-kyoen.com\/","name":"\u5927\u962a\u30fb\u5149\u306e\u9957\u5bb42026","description":"\u5927\u962a\u30fb\u5149\u306e\u9957\u5bb4\u306f\u3001\u5927\u962a\u306e\u51ac\u3092\u4ee3\u8868\u3059\u308b\u5149\u306e\u796d\u5178\u3067\u3059\u3002 \u5927\u962a\u306e\u30b7\u30f3\u30dc\u30eb\u30b9\u30c8\u30ea\u30fc\u30c8\u30fb\u5fa1\u5802\u7b4b\u3092\u821e\u53f0\u306b\u3057\u305f\u300c\u5fa1\u5802\u7b4b\u30a4\u30eb\u30df\u30cd\u30fc\u30b7\u30e7\u30f3\u300d\u3068\u3001\u6c34\u90fd\u5927\u962a\u3092\u8c61\u5fb4\u3059\u308b\u4e2d\u4e4b\u5cf6\u30a8\u30ea\u30a2\u3067\u958b\u50ac\u3055\u308c\u308b\u300cOSAKA\u5149\u306e\u30eb\u30cd\u30b5\u30f3\u30b9\u300d\u3092\u30b3\u30a2\u30d7\u30ed\u30b0\u30e9\u30e0\u3068\u3057\u3001\u5927\u962a\u5e9c\u5185\u5404\u5730\u3067\u5c55\u958b\u3055\u308c\u308b\u300c\u30a8\u30ea\u30a2\u30d7\u30ed\u30b0\u30e9\u30e0\u300d\u3068\u9023\u643a\u3057\u306a\u304c\u3089\u958b\u50ac\u3055\u308c\u3066\u3044\u307e\u3059\u3002","inLanguage":"ja","publisher":{"@id":"https:\/\/hikari-kyoen.com\/#organization"}}]}
+		</script>
+		<!-- All in One SEO -->
+
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://hikari-kyoen.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhikari-kyoen.com%2Fcore%2Frenaissance%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://hikari-kyoen.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhikari-kyoen.com%2Fcore%2Frenaissance%2F&#038;format=xml" />
+		<!-- This site uses the Google Analytics by MonsterInsights plugin v11.3.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+		<!-- Note: MonsterInsights is not currently configured on this site. The site owner needs to authenticate with Google Analytics in the MonsterInsights settings panel. -->
+					<!-- No tracking code set -->
+				<!-- / Google Analytics by MonsterInsights -->
+		<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-break:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style^=border-color],[style*=";border-color"],[style*="; border-color"]){border-style:solid}html :where([style^=border-top-color],[style*=";border-top-color"],[style*="; border-top-color"]){border-top-style:solid}html :where([style^=border-right-color],[style*=";border-right-color"],[style*="; border-right-color"]){border-right-style:solid}html :where([style^=border-bottom-color],[style*=";border-bottom-color"],[style*="; border-bottom-color"]){border-bottom-style:solid}html :where([style^=border-left-color],[style*=";border-left-color"],[style*="; border-left-color"]){border-left-style:solid}html :where([style^=border-width],[style*=";border-width"],[style*="; border-width"]){border-style:solid}html :where([style^=border-top-width],[style*=";border-top-width"],[style*="; border-top-width"]){border-top-style:solid}html :where([style^=border-right-width],[style*=";border-right-width"],[style*="; border-right-width"]){border-right-style:solid}html :where([style^=border-bottom-width],[style*=";border-bottom-width"],[style*="; border-bottom-width"]){border-bottom-style:solid}html :where([style^=border-left-width],[style*=";border-left-width"],[style*="; border-left-width"]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='contact-form-7-css' href='https://hikari-kyoen.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.2.3' media='all' />
+<link rel="https://api.w.org/" href="https://hikari-kyoen.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://hikari-kyoen.com/wp-json/wp/v2/pages/13" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://hikari-kyoen.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.5" />
+<link rel='shortlink' href='https://hikari-kyoen.com/?p=13' />
+<link rel="icon" href="https://hikari-kyoen.com/wp-content/uploads/2026/10/cropped-apple-touch-icon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://hikari-kyoen.com/wp-content/uploads/2026/10/cropped-apple-touch-icon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://hikari-kyoen.com/wp-content/uploads/2026/10/cropped-apple-touch-icon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://hikari-kyoen.com/wp-content/uploads/2026/10/cropped-apple-touch-icon-270x270.png" />
+<!-- 	<script type="text/javascript">(function(){var e=document.createElement('script');e.async=true;e.defer=true;e.setAttribute("type","text/javascript");e.setAttribute("src","https://dashboard.accessilens.com/unitoolbar.js?lang=jp");document.getElementsByTagName("head")[0].appendChild(e);})();</script> -->
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header-wrapper">
+      <div class="page-width">
+        <div class="header-flex">
+          <div class="header-logo">
+            <a href="/">
+              <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/logo.png" alt="logo">
+            </a>
+          </div>
+
+          <div class="sp-menu">
+
+            <button class="hamburger" id="hamburger">
+              <span></span>
+              <span></span>
+              <span class="en notranslate">MENU</span>
+            </button>
+
+          </div>
+
+          <div class="header-nav" id="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="https://hikari-kyoen.com/core" class="nav-link nav-column">
+                  <span class="nav-en en notranslate">CORE PROGRAM</span>
+                  <span class="nav-ja sans">コアプログラム</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://hikari-kyoen.com/area" class="nav-link nav-column">
+                  <span class="nav-en en notranslate">AREA PROGRAM</span>
+                  <span class="nav-ja sans">エリアプログラム</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://hikari-kyoen.com/events" class="nav-link nav-column">
+                  <span class="nav-en en notranslate">EVENTS</span>
+                  <span class="nav-ja sans">周辺イベント</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://hikari-kyoen.com/movies" class="nav-link nav-column">
+                  <span class="nav-en en notranslate">MOVIES</span>
+                  <span class="nav-ja sans">関連ムービー</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://hikari-kyoen.com/information" class="nav-link nav-column">
+                  <span class="nav-en en notranslate">INFORMATION</span>
+                  <span class="nav-ja sans">お知らせ</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="https://hikari-kyoen.com/faq" class="nav-link nav-column">
+                  <span class="nav-en en notranslate">FAQ and INQUIRY</span>
+                  <span class="nav-ja sans">よくあるご質問・お問い合わせ</span>
+                </a>
+              </li>
+              <li class="nav-item nav-border">
+                <a href="https://hikari-kyoen.com/application" class="nav-link nav-column">
+                  <span class="nav-en en notranslate">MEDIA AND STAKEHOLDERS</span>
+                  <span class="nav-ja sans">メディアおよび関係者の皆様</span>
+                </a>
+              </li>
+				<li>
+					<div class="header-lang notranslate" id="js-lang">
+
+  <button type="button" class="header-lang__head js-lang-trigger en">
+    <span class="header-lang__current">JP</span>
+    <span class="header-lang__arrow"></span>
+  </button>
+
+  <div class="header-lang__body js-lang-content">
+    <button type="button" class="header-lang__item en" data-lang="ja">JP</button>
+    <button type="button" class="header-lang__item en" data-lang="en">EN</button>
+    <button type="button" class="header-lang__item en" data-lang="zh-CN">CN</button>
+    <button type="button" class="header-lang__item en" data-lang="zh-TW">TW</button>
+    <button type="button" class="header-lang__item en" data-lang="ko">KR</button>
+
+		<div class="gtranslate_wrapper" id="gt-wrapper-11865099"></div>  </div>
+
+</div>
+				</li>
+              <li class="sp-sns-list">
+                <ul class="sns-list">
+                  <li class="sns-item">
+                    <a href="https://x.com/hikari_kyouen" target="_blank" rel="noopener noreferrer">
+                      <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/icon-x.svg" alt="icon">
+                    </a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="https://www.youtube.com/@hikarikyouen" target="_blank" rel="noopener noreferrer">
+                      <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/icon-youtube.svg" alt="icon">
+                    </a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="https://www.instagram.com/hikari_kyouen/" target="_blank" rel="noopener noreferrer">
+                      <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/icon-instagram.svg" alt="icon">
+                    </a>
+                  </li>
+                  <li class="sns-item">
+                    <a href="https://www.facebook.com/osaka.hikarikyouen/" target="_blank" rel="noopener noreferrer">
+                      <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/icon-facebook.svg" alt="icon">
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-sns">
+      <div class="page-width">
+        <ul class="sns-list">
+          <li class="sns-item">
+            <a href="https://x.com/hikari_kyouen" target="_blank" rel="noopener noreferrer">
+              <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/icon-x.svg" alt="icon">
+            </a>
+          </li>
+          <li class="sns-item">
+            <a href="https://www.youtube.com/@hikarikyouen" target="_blank" rel="noopener noreferrer">
+              <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/icon-youtube.svg" alt="icon">
+            </a>
+          </li>
+          <li class="sns-item">
+            <a href="https://www.instagram.com/hikari_kyouen/" target="_blank" rel="noopener noreferrer">
+              <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/icon-instagram.svg" alt="icon">
+            </a>
+          </li>
+          <li class="sns-item">
+            <a href="https://www.facebook.com/osaka.hikarikyouen/" target="_blank" rel="noopener noreferrer">
+              <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/icon-facebook.svg" alt="icon">
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
+
+  <!----- main ----->
+  <main>    <div class="page renaissance">
+
+      <section class="page-ttl">
+        <div class="page-width">
+          <h1 class="en notranslate">CORE PROGRAM</h1>
+          <p class="sans">コアプログラム</p>
+        </div>
+      </section>
+
+      <section class="program">
+        <div class="page-width">
+          <div class="program-flex">
+            <div class="program-info">
+              <h2 class="program-ttl serif">OSAKA光のルネサンス 2026</h2>
+              <p>
+				  大阪・中之島を舞台に、水辺と歴史的建築が織りなす幻想的な光景を楽しめる「OSAKA光のルネサンス」。<br>
+				  大阪市中央公会堂をはじめとする中之島エリア一帯が美しい光に包まれ、ここでしか体験できない冬の風景が広がります。光のアート作品やイルミネーション、水辺の演出など、多彩なコンテンツが来場者を非日常の世界へと誘います。歴史と文化、そして光が融合する大阪ならではの冬の風物詩をお楽しみください。
+              </p>
+              <div class="program-table">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>開催期間</th>
+                      <td>2026.12.11（金）〜12.25（金）<br>※開催時間はコンテンツによって異なる</td>
+                    </tr>
+                    <tr>
+                      <th>開催場所</th>
+                      <td>大阪市役所周辺 〜 中之島公園</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="program-img">
+              <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/kv-renaissance.jpg" alt="renaissance">
+            </div>
+
+          </div>
+		  </div>
+      </section>
+		
+		<section class="over fadein fadein-bottom">
+        <div class="page-width">
+          <h2 class="over-ttl serif center">OSAKA光のルネサンス 2026 <br class="sp-only">特設サイトはこちら</h2>
+          <div class="over-btn">
+            <a href="https://hikari-no-marche.com/" target="_blank" rel="noopener noreferrer" class="btn en notranslate"><span>More</span></a>
+          </div>
+        </div>
+      </section>
+		
+		<section class="pickup-l">
+			<div class="page-width little-width">
+				<div class="sub-ttl center fadein fadein-bottom">
+            <h2 class="en notranslate">PICK UP</h2>
+            <p class="sans">ピックアップ</p>
+          </div>
+				<div class="m-cont-flex">
+					<div class="m-cont-img fadein fadein-bottom">
+						<img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/pickup-l-01.jpg" alt="pickup" loading="lazy">
+					</div>
+					<div class="m-cont-info fadein fadein-bottom">
+						<h3 class="third-ttl serif">大阪市役所正面<br>イルミネーションファサード</h3>
+						<p>LEDによる立体感ある3Dマッピングが、OSAKA光のルネサンスの玄関口を彩ります。12/11（金）～12/25（金）は特別プログラムとして、動画を上映します。</p>
+						<div class="m-cont-table serif">
+							<table>
+								<tbody>
+									<tr>
+										<th>開催時間</th>
+										<td>17:00～25:00<span class="small">※特別プログラムは、21:50頃まで10分毎に約2分間実施</span></td>
+									</tr>
+									<tr>
+										<th>開催場所</th>
+										<td>大阪市役所正面</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<div class="m-cont-flex reverse">
+					<div class="m-cont-img fadein fadein-bottom">
+						<img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/pickup-l-02.jpg" alt="pickup" loading="lazy">
+					</div>
+					<div class="m-cont-info fadein fadein-bottom">
+						<h3 class="third-ttl serif">大阪市中央公会堂 プロジェクションマッピング</h3>
+						<p>宝石のように煌めく光の窓や降り注ぐ雪と星の幻想的な世界、夜空を駆けるサンタクロースなど、中央公会堂が約７分間で様々な表情を見せます。2026年のテーマ「大阪、光の祝夜祭」のもと、光と人が共鳴する特別な冬の夜をお楽しみください。</p>
+						<div class="m-cont-table serif">
+							<table>
+								<tbody>
+									<tr>
+										<th>開催時間</th>
+										<td>17:30～21:30<span class="small">※12分毎に上映（予定） ※21時20分から最終上映</span></td>
+									</tr>
+									<tr>
+										<th>開催場所</th>
+										<td>大阪市中央公会堂東側正面</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+        </div>
+      </section>
+
+      <section class="pickup">
+        <div class="page-width little-width">
+          <ul class="pickup-list">
+            <li class="pickup-item fadein fadein-bottom">
+              <div class="pickup-img">
+                <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/pickup-l-03.jpg" alt="pickup" loading="lazy">
+              </div>
+				<p class="pickup-att"></p>
+              <h4 class="pickup-ttl serif">光のコンサート </h4>
+              <p class="third-txt">
+                子供たちの合唱等、多彩なステージで光と音に包まれながら憩いのひとときを提供します。後援にFM802が入り、DJがMCを務めます。
+※雨風が強い場合は中止の可能性あり</p>
+				<div class="m-cont-table serif">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>開催時間</th>
+                      <td>①17:30～ ②18:30～ ③19:30～ ④20:30～</td>
+                    </tr>
+                    <tr>
+                      <th>開催場所</th>
+                      <td>大阪市役所 1階 正面玄関前</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+            <li class="pickup-item fadein fadein-bottom">
+              <div class="pickup-img">
+                <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/pickup-l-04.jpg" alt="pickup" loading="lazy">
+              </div>
+				<p class="pickup-att"></p>
+              <h4 class="pickup-ttl serif">中之島イルミネーションストリート</h4>
+              <p class="third-txt">OSAKA光のルネサンスを象徴する、全長約150メートルのケヤキ並木のイルミネーションストリート。</p>
+				<div class="m-cont-table serif">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>開催時間</th>
+                      <td>17:00～25:00</td>
+                    </tr>
+                    <tr>
+                      <th>開催場所</th>
+                      <td>みおつくしプロムナード</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+			  <li class="pickup-item fadein fadein-bottom">
+              <div class="pickup-img">
+                <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/pickup-l-05.jpg" alt="pickup" loading="lazy">
+              </div>
+				<p class="pickup-att"></p>
+              <h4 class="pickup-ttl serif">光のマルシェ</h4>
+              <p class="third-txt">「光」に「食」を加えたおもてなしで皆様をお出迎え。プロジェクションマッピングを間近で見ながら、こだわりの味と共に特別なひとときを満喫できます。</p>
+				<div class="m-cont-table serif">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>開催時間</th>
+                      <td>16:00〜22:00</td>
+                    </tr>
+                    <tr>
+                      <th>開催場所</th>
+                      <td>なにわ橋駅周辺</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+			  <li class="pickup-item fadein fadein-bottom">
+              <div class="pickup-img">
+                <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/pickup-l-06.jpg" alt="pickup" loading="lazy">
+              </div>
+				<p class="pickup-att"></p>
+              <h4 class="pickup-ttl serif">クリスマスハンドメイドマルシェ</h4>
+              <p class="third-txt">クリスマスのプレゼントやお土産に出合えるハンドメイドマルシェを開催！アクセサリーや雑貨など手作り作品のぬくもりを感じてください。</p>
+				<div class="m-cont-table serif">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>開催時間</th>
+                      <td>16:00〜22:00</td>
+                    </tr>
+                    <tr>
+                      <th>開催場所</th>
+                      <td>中之島公園 リバーサイド</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+			  <li class="pickup-item fadein fadein-bottom">
+              <div class="pickup-img">
+                <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/pickup-l-07.jpg" alt="pickup" loading="lazy">
+              </div>
+				<p class="pickup-att">※雨風が強い場合は中止の可能性あり</p>
+              <h4 class="pickup-ttl serif"><span class="small">「UMEDA MEETS HEART 2026」連携</span><br>BIGスノーマンin中之島</h4>
+              <p class="third-txt">中之島にBIGスノーマンとco-BIGスノーマンの親子が登場。梅田から中之島にやってくるかわいい雪だるまと記念撮影をぜひ!</p>
+				<div class="m-cont-table serif">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>開催時間</th>
+                      <td>17:00～22:00</td>
+                    </tr>
+                    <tr>
+                      <th>開催場所</th>
+                      <td>なにわ橋駅周辺</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+			  <li class="pickup-item fadein fadein-bottom">
+              <div class="pickup-img">
+                <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/pickup-l-08.jpg" alt="pickup" loading="lazy">
+              </div>
+				<p class="pickup-att"></p>
+              <h4 class="pickup-ttl serif">リバーサイドイルミネーション</h4>
+              <p class="third-txt">水の都・大阪で、かつて水運でにぎわった土佐堀川の水辺を彩るイルミネーションが、バラ園へと導きます。</p>
+				<div class="m-cont-table serif">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>開催時間</th>
+                      <td>17:00～22:00</td>
+                    </tr>
+                    <tr>
+                      <th>開催場所</th>
+                      <td>中之島公園 リバーサイド</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+			  <li class="pickup-item fadein fadein-bottom">
+              <div class="pickup-img">
+                <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/pickup-l-09.jpg" alt="pickup" loading="lazy">
+              </div>
+				<p class="pickup-att">※雨風が強い場合は一部中止の可能性あり</p>
+              <h4 class="pickup-ttl serif">リバーサイドフルムーン</h4>
+              <p class="third-txt">中之島の夜空にfull MOONが登場。満月の神秘的な姿を感じてください。</p>
+				<div class="m-cont-table serif">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>開催時間</th>
+                      <td>17:00〜22:00</td>
+                    </tr>
+                    <tr>
+                      <th>開催場所</th>
+                      <td>なにわ橋駅周辺</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+			  <li class="pickup-item fadein fadein-bottom">
+              <div class="pickup-img">
+                <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/pickup-l-10.jpg" alt="pickup" loading="lazy">
+              </div>
+				<p class="pickup-att">※雨風が強い場合は一部中止の可能性あり</p>
+              <h4 class="pickup-ttl serif"><span class="small">大阪芸術大学 学生作品</span><br>OSAKAばいきんぐ</h4>
+              <p class="third-txt">中之島が光の海賊船に変身!楽しさとユニークさが溢れる冒険の開幕だ!<br>巨大タコやヒョウ柄くじら、タコ焼きバルーンが踊る、光の海へ飛び込もう!</p>
+				<div class="m-cont-table serif">
+                <table>
+                  <tbody>
+                    <tr>
+                      <th>開催時間</th>
+                      <td>17:00～21:30<span class="small">※12/25（金）のみ20:00まで</span></td>
+                    </tr>
+                    <tr>
+                      <th>開催場所</th>
+                      <td>中之島公園 バラ園西側</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </li>
+          </ul>
+			<div class="event-btn fadein fadein-bottom">
+                <a href="https://hikari-kyoen.com/events" class="btn box-btn sans"><span>周辺のイベント情報はこちらをチェック</span></a>
+              </div>
+        </div>
+      </section>
+		
+		<section id="road" class="road fadein fadein-bottom">
+			<div class="page-width">
+				<div class="road-flex">
+						<div class="road-info">
+							<h3 class="pickup-ttl serif">車両通行止めのお知らせ</h3>
+							<div class="m-cont-table serif">
+								<table>
+									<tbody>
+										<tr>
+											<th>実施期間</th>
+											<td>12.11（金）〜12.25（金）</td>
+										</tr>
+										<tr>
+											<th>実施時間</th>
+											<td>16:00～22:00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="road-img">
+							<img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/road.png" alt="road" loading="lazy">
+						</div>
+					</div>
+			</div>
+		</section>
+
+      
+
+    </div>
+ </main>
+  <!----- /main ----->
+  <!----- footer ----->
+  <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/kyoen2026/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script id="wp-hooks-js" src="https://hikari-kyoen.com/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://hikari-kyoen.com/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="swv-js" src="https://hikari-kyoen.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.2.3"></script>
+<script id="contact-form-7-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2026-10-06 03:34:05+0000","generator":"GlotPress\/4.1.0","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=1; plural=0;","lang":"ja_JP"},"This contact form is placed in the wrong place.":["\u3053\u306e\u30b3\u30f3\u30bf\u30af\u30c8\u30d5\u30a9\u30fc\u30e0\u306f\u9593\u9055\u3063\u305f\u4f4d\u7f6e\u306b\u7f6e\u304b\u308c\u3066\u3044\u307e\u3059\u3002"],"Error:":["\u30a8\u30e9\u30fc:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+</script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/hikari-kyoen.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script id="contact-form-7-js" src="https://hikari-kyoen.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.2.3"></script>
+<script id="gt_widget_script_11865099-js-before">
+window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {};window.gtranslateSettings['11865099'] = {"default_language":"ja","languages":["zh-CN","zh-TW","en","ja","ko"],"url_structure":"sub_directory","native_language_names":1,"detect_browser_language":1,"wrapper_selector":"#gt-wrapper-11865099","select_language_label":"Select Language","horizontal_position":"inline","flags_location":"\/wp-content\/plugins\/gtranslate\/flags\/"};
+//# sourceURL=gt_widget_script_11865099-js-before
+</script><script src="https://hikari-kyoen.com/wp-content/plugins/gtranslate/js/dropdown.js?ver=5.0.1" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/core/renaissance/" data-gt-orig-domain="hikari-kyoen.com" data-gt-widget-id="11865099" defer></script><script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://hikari-kyoen.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.5"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://hikari-kyoen.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+  <footer class="footer">
+    <div class="page-width">
+      <ul class="banner-list">
+<!-- 		  <li class="banner-item">
+          <a href="https://osaka-kitena.jp/event/artlights2026/" target="_blank" rel="noopener noreferrer">
+            <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/banner13.jpg" alt="banner" loading="lazy">
+          </a>
+        </li> -->
+        <li class="banner-item">
+          <a href="https://hanatouro.kyoto.travel/" target="_blank" rel="noopener noreferrer">
+            <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/banner01.png" alt="banner" loading="lazy">
+          </a>
+        </li>
+        <li class="banner-item">
+          <a href="http://kobe-luminarie.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/banner02.png" alt="banner" loading="lazy">
+          </a>
+        </li>
+        <li class="banner-item">
+          <a href="https://rurie.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/banner03.png" alt="banner" loading="lazy">
+          </a>
+        </li>
+        <li class="banner-item">
+          <a href="https://osaka-info.jp/" target="_blank" rel="noopener noreferrer">
+			  <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/banner04.png" alt="banner" loading="lazy">
+          </a>
+        </li>
+        <li class="banner-item">
+          <a href="https://www.kankeiren.or.jp/hanayakakansai.html" target="_blank" rel="noopener noreferrer">
+            <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/banner05.png" alt="banner" loading="lazy">
+          </a>
+        </li>
+        <li class="banner-item">
+          <a href="http://www.osaka-hikari.com/" target="_blank" rel="noopener noreferrer">
+            <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/banner06.png" alt="banner" loading="lazy">
+          </a>
+        </li>
+        <li class="banner-item">
+          <a href="https://www.suito-osaka.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/banner07.png" alt="banner" loading="lazy">
+          </a>
+        </li>
+        <li class="banner-item">
+          <a href="https://www.osaka-museum.com/index.html" target="_blank" rel="noopener noreferrer">
+            <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/banner08.png" alt="banner" loading="lazy">
+          </a>
+        </li>
+        <li class="banner-item">
+          <a href="https://www.takarakuji-official.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/banner09.png" alt="banner" loading="lazy">
+          </a>
+        </li>
+        <li class="banner-item">
+          <a href="https://osaka-chuokokaido.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/banner10.png" alt="banner" loading="lazy">
+          </a>
+        </li>
+        <li class="banner-item">
+          <a href="https://osaka-kitena.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/banner11.png" alt="banner" loading="lazy">
+          </a>
+        </li>
+        <li class="banner-item">
+          <a href="https://www.city.osaka.lg.jp/kankyo/page/0000666719.html" target="_blank" rel="noopener noreferrer">
+            <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/banner12.png" alt="banner" loading="lazy">
+          </a>
+        </li>
+      </ul>
+      <div class="footer-flex">
+        <div class="footer-logo">
+          <a href="https://hikari-kyoen.com/">
+            <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/logo.png" alt="logo" loading="lazy">
+          </a>
+        </div>
+        <div class="footer-link">
+          <ul class="footer-list">
+            <li class="footer-item">
+              <a href="https://hikari-kyoen.com/core" class="sans">コアプログラム</a>
+            </li>
+            <li class="footer-item">
+              <a href="https://hikari-kyoen.com/area" class="sans">エリアプログラム</a>
+            </li>
+            <li class="footer-item">
+              <a href="https://hikari-kyoen.com/events" class="sans">周辺イベント</a>
+            </li>
+            <li class="footer-item">
+              <a href="https://hikari-kyoen.com/movies" class="sans">関連ムービー</a>
+            </li>
+            <li class="footer-item">
+              <a href="https://hikari-kyoen.com/information" class="sans">お知らせ</a>
+            </li>
+            <li class="footer-item">
+              <a href="https://hikari-kyoen.com/faq" class="sans">よくあるご質問・お問い合わせ</a>
+            </li>
+            <li class="footer-item">
+              <a href="https://hikari-kyoen.com/application" class="sans">メディアおよび関係者の皆様</a>
+            </li>
+            <li class="footer-item">
+              <a href="https://hikari-kyoen.com/usage" class="sans">サイト利用にあたって </a>
+            </li>
+            <li class="footer-item">
+              <a href="https://hikari-kyoen.com/privacy-policy" class="sans">個人情報について</a>
+            </li>
+            <li class="footer-item">
+              <a href="https://hikari-kyoen.com/committee" class="sans">大阪・光の饗宴実行委員会</a>
+            </li>
+            <li class="footer-item">
+              <a href="https://hikari-kyoen.com/rights" class="sans">著作権・免責事項</a>
+            </li>
+          </ul>
+          <ul class="sns-list">
+            <li class="sns-item">
+              <a href="https://x.com/hikari_kyouen" target="_blank" rel="noopener noreferrer">
+                <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/icon-x.svg" alt="icon" loading="lazy">
+              </a>
+            </li>
+            <li class="sns-item">
+              <a href="https://www.youtube.com/@hikarikyouen" target="_blank" rel="noopener noreferrer">
+                <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/icon-youtube.svg" alt="icon" loading="lazy">
+              </a>
+            </li>
+            <li class="sns-item">
+              <a href="https://www.instagram.com/hikari_kyouen/" target="_blank" rel="noopener noreferrer">
+                <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/icon-instagram.svg" alt="icon" loading="lazy">
+              </a>
+            </li>
+            <li class="sns-item">
+              <a href="https://www.facebook.com/osaka.hikarikyouen/" target="_blank" rel="noopener noreferrer">
+                <img src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/images/icon-facebook.svg" alt="icon" loading="lazy">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-copy sans center">本事業は、宿泊税を活用し実施しています。<br>Copyright ©大阪・光の饗宴実行委員会 All Right Reserved.</p>
+    </div>
+  </footer>
+  <!----- /footer ----->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+  <script src="https://hikari-kyoen.com/wp-content/themes/kyoen2026/js/script.js"></script>
+
+</body>
+</html>

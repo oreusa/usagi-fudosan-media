@@ -1,0 +1,1927 @@
+<!doctype html>
+<html class="fontM" lang="ja">
+<head><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PX3ZTPQ');</script><!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="本四高速（本州四国連絡高速道路株式会社）公式サイト | 観光・イベント | 明石海峡大橋、大鳴門橋、瀬戸大橋、新尾道大橋、来島海峡大橋のライトアップのご案内です。">
+<meta name="keywords" content="ライトアップ,時間,橋,明石,瀬戸,しまなみ">
+<title>明石海峡大橋 | 観光・イベント | JB本四高速</title>
+<link rel="shortcut icon" href="/favicon.ico">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/customer_index/css/reset.css" media="all">
+<link rel="stylesheet" href="/customer_index/css/common.css" media="all">
+<link rel="stylesheet" href="/customer_index/css/contents.css" media="all">
+<link rel="stylesheet" href="/css/swiper-bundle.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/desvg@1.0.2/desvg.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="/js/swiper-bundle.min.js"></script>
+<script src="/js/common.js"></script>
+<script src="/customer_index/js/common.js"></script>
+
+<script src="/customer_index/js/kanko_event-lightup-lightup-akashi.js"></script>
+
+<script>
+$(window).load(function (){ if(top.location.href.match(/\#lightdown$/)){ top.location.href = "lightup-akashi.html#lightdown" } });
+</script>
+
+</head>
+
+<body><!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PX3ZTPQ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
+
+<!-- ヘッダー include -->
+<header role="banner" class="header">
+	<div class="header_inner">
+		<div class="header_logo">
+			<a href="/customer_index/">
+				<h1><img src="/img/common/logo.svg" alt="本四高速 本州四国連絡高速道路株式会社" class="svg" decoding="async"></h1>
+			</a>
+		</div>
+		<div class="header_info">
+			<ul class="header_info_sns">
+				<li class="header_info_sns_item">
+					<a href="/customer_index/socialmedia/#x"><img src="/img/common/icn_x.svg" alt="x" class="svg" decoding="async"></a>
+				</li>
+				<li class="header_info_sns_item">
+					<a href="/customer_index/socialmedia/#instagram"><img src="/img/common/icn_instagram.svg" alt="Instagram" class="svg" decoding="async"></a>
+				</li>
+				<li class="header_info_sns_item">
+					<a href="/customer_index/socialmedia/#youtube"><img src="/img/common/icn_youtube.svg" alt="YouTube" class="svg" decoding="async"></a>
+				</li>
+			</ul>
+			<div class="header_info_corp">
+				<p class="header_info_corp_btn">
+					<a href="/corp_index/">
+						<i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.25 14.39"><path d="M1750 1427.52a.58.58 0 0 0 0-.81l-6.62-6.62a.58.58 0 0 0-.81 0l-1.48 1.48a.567.567 0 0 0 0 .8l4.74 4.74-4.74 4.74a.58.58 0 0 0 0 .81l1.48 1.48a.58.58 0 0 0 .81 0Z" transform="translate(-1740.94 -1419.94)" fill="currentColor"/></svg></i>
+						<span>企業情報</span>
+						<i><img src="/img/common/icn_blank.svg" alt="（外部リンク）" class="svg" decoding="async"></i>
+					</a>
+				</p>
+			</div>
+		</div>
+		<div class="header_sub">
+			<ul class="header_sub_list">
+				<li class="header_sub_list_item">
+					<a href="/customer_index/contact/index.html#faq">
+						<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+						<span>よくあるご質問</span>
+					</a>
+				</li>
+				<li class="header_sub_list_item">
+					<a href="/customer_index/contact/">
+						<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+						<span>お問い合わせ</span>
+					</a>
+				</li>
+				<li class="header_sub_list_item">
+					<a href="/sitemap.html">
+						<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+						<span>サイトマップ</span>
+					</a>
+				</li>
+			</ul>
+			<dl class="header_fontsize">
+				<dt>
+					<i><img src="/customer_index/img/common/icn_fontsize.svg" alt="" decoding="async"></i>
+					<span>文字サイズ<em>：</em></span>
+				</dt>
+				<dd>
+					<ul>
+						<li class="fontS">小</li>
+						<li class="fontM is_current">中</li>
+						<li class="fontL">大</li>
+					</ul>
+				</dd>
+			</dl>
+			<div class="header_search">
+				<script>
+				(function() {
+					var cx = '002107076284624548423:yn0wuxzf6hc';
+					var gcse = document.createElement('script');
+					gcse.type = 'text/javascript';
+					gcse.async = true;
+					gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+						'//cse.google.com/cse.js?cx=' + cx;
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(gcse, s);
+				})();
+				</script>
+				<gcse:searchbox-only></gcse:searchbox-only>	
+			</div>
+			<div class="header_sub_lang">
+				<ul class="header_sub_lang_list">
+					<li class="header_sub_lang_list_item is_current"><a href="/"><span>JP</span></a></li>
+					<li class="header_sub_lang_list_item"><a href="/english/"><span>EN</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="header_navi">
+		<nav>
+			<ul class="header_navi_list">
+				<li class="header_navi_list_item">
+					<a href="/customer_index/traffic/">
+						<figure><svg xmlns="http://www.w3.org/2000/svg" width="25.43" height="24" viewBox="0 0 25.43 24"><path d="m25.32,22.21l-1.63-2.56c-.2-.35-.57-.56-.97-.54h-1.16l-.9-2.25H4.78l-.9,2.25h-1.16c-.4-.02-.77.19-.97.54L.12,22.21c-.2.4-.14.88.15,1.22.33.37.8.58,1.3.57h22.29c.5,0,.97-.2,1.3-.57.29-.34.35-.82.16-1.22Zm-8.83-15.75l-2.16-5.37c-.35-.89-1.36-1.32-2.25-.97-.44.18-.79.53-.97.97l-1.57,3.91-.59,1.45h7.53s.01.01.01.01Zm-10.31,6.92v.02h13.1l-1.39-3.47H7.57l-1.01,2.52-.38.93h0Z" fill="currentColor" fill-rule="evenodd"/></svg></figure>
+						<p>交通情報</p>
+					</a>
+				</li>
+				<li class="header_navi_list_item">
+					<a href="/customer_index/guide/">
+						<figure><svg xmlns="http://www.w3.org/2000/svg" width="20.24" height="25"><path d="M1160.14 1739h-5.45l-4.69 8.56-4.69-8.56h-5.45l5.5 10.05h-4.69v3.8h6.45v2.48h-6.45v3.81h6.45v4.86h5.76v-4.86h6.45v-3.81h-6.45v-2.48h6.45v-3.8h-4.69Z" transform="translate(-1139.88 -1739)" fill="currentColor" fill-rule="evenodd"/></svg></figure>
+						<p>料金・道路案内</p>
+					</a>
+				</li>
+				<li class="header_navi_list_item">
+					<a href="/customer_index/etc/">
+						<figure><svg xmlns="http://www.w3.org/2000/svg" width="35.41" height="23"><path d="M1393.7 1761a2.021 2.021 0 0 1-2.03 2.01h-30.35a2.021 2.021 0 0 1-2.03-2.01v-17.99a2.021 2.021 0 0 1 2.03-2.01h30.35a2.021 2.021 0 0 1 2.03 2.01V1761Z" transform="translate(-1358.78 -1740.5)" stroke="currentColor" stroke-width="1px" fill="none" fill-rule="evenodd"/><path d="M1359.29 1747.71h34.41v8.59h-34.41v-8.59Zm3.17-4 4.24 1.12v-2.24Z" transform="translate(-1358.78 -1740.5)" fill="currentColor" fill-rule="evenodd"/><path class="mainColor" fill="#004097" fill-rule="evenodd" d="M1373.92 1754.21a6.167 6.167 0 0 0-.88-.04h-1.68c-.4 0-.55.01-.78.02a5.149 5.149 0 0 0 .04-.77v-2.88a5.88 5.88 0 0 0-.04-.77c.22.01.37.01.78.01h1.7c.36 0 .54-.01.79-.03v.98c-.24-.02-.43-.03-.79-.03h-1.38v.77h1.15a5.164 5.164 0 0 0 .8-.04v.98a5.977 5.977 0 0 0-.8-.04h-1.15v.89h1.37a6.464 6.464 0 0 0 .87-.04v.99Zm2.81-.83a4.7 4.7 0 0 0 .05.79h-1.18a6.007 6.007 0 0 0 .04-.79v-2.66h-.63a7.589 7.589 0 0 0-.8.03v-1c.18.02.47.03.79.03h2.34c.37 0 .58-.01.83-.03v1c-.24-.02-.45-.03-.83-.03h-.61v2.66Zm4.69-2.07a.8.8 0 0 0-.84-.72 1.133 1.133 0 0 0-1.03 1.38 1.154 1.154 0 0 0 1.05 1.39.84.84 0 0 0 .7-.34.85.85 0 0 0 .16-.45l1.11.16a2.034 2.034 0 0 1-.44.97 1.935 1.935 0 0 1-1.49.57 2.178 2.178 0 0 1-1.58-.58 2.423 2.423 0 0 1-.62-1.72 2.354 2.354 0 0 1 .65-1.73 2.114 2.114 0 0 1 1.52-.55 1.844 1.844 0 0 1 1.57.69 1.6 1.6 0 0 1 .33.72Z" transform="translate(-1358.78 -1740.5)"/><path class="mainColor" fill="#004097" fill-rule="evenodd" d="M1368.35 1754.16a1.152 1.152 0 0 1-1.16 1.15h-5.22a1.152 1.152 0 0 1-1.16-1.15v-4.32a1.159 1.159 0 0 1 1.16-1.15h5.22a1.159 1.159 0 0 1 1.16 1.15v4.32Z" transform="translate(-1358.78 -1740.5)"/></svg></figure>
+						<p>ETC情報</p>
+					</a>
+				</li>
+				<li class="header_navi_list_item">
+					<a href="/customer_index/safety/">
+						<figure><svg xmlns="http://www.w3.org/2000/svg" width="39.43" height="38.2" viewBox="0 0 39.43 38.2"><path d="m37.52,19.15h-.74c-.18-.39-.52-1.02-1.11-2.14-.15-.29-.32-.59-.48-.91-.11.05.54-.32,1.35-.76h.98c1.05,0,1.9.85,1.9,1.9s-.85,1.9-1.9,1.9Zm.2,2.18c.67.71.62,1.33.62,1.95v7.12c0,1.33-.24,2.06-1.81,2.06H2.89c-1.57,0-1.81-.73-1.81-2.06v-7.12c0-.62-.05-1.24.62-1.95.12-.13,1.7-1.7,1.7-1.7-.13.04,4.75-8.91,4.98-9.4.62-1.28,2.14-2.06,3.62-2.06h9.88c.02.43.1.73.24,1.61h-9.23c-.92,0-1.82.46-2.14,1.09-.19.37-3.32,6.01-3.32,6.01-.29.52-.04,1.49.82,1.49h22.92c.82,0,1.09-.9.84-1.43-.25.02,2.53-.56,2.36-.51.94,1.76,1.7,3.21,1.65,3.19,0,0,1.58,1.57,1.7,1.7Zm-30.71,2.35c-1.59,0-2.88,1.29-2.88,2.88s1.29,2.88,2.88,2.88,2.88-1.29,2.88-2.88-1.29-2.88-2.88-2.88Zm17.07,3.02c0-.21-.17-.38-.38-.38h-7.98c-.21,0-.38.17-.38.38v3.52c0,.21.17.38.38.38h7.98c.21,0,.38-.17.38-.38v-3.52Zm8.32-3.02c-1.59,0-2.88,1.29-2.88,2.88s1.29,2.88,2.88,2.88,2.88-1.29,2.88-2.88-1.29-2.88-2.88-2.88ZM2.64,19.15h-.74c-1.05,0-1.9-.85-1.9-1.9s.85-1.9,1.9-1.9h2.74c-.31.58-.62,1.15-.89,1.66-.6,1.12-.93,1.75-1.11,2.14Zm5.52,16.49c0,1.42-1.15,2.56-2.57,2.56s-2.57-1.15-2.57-2.56v-2.43h5.13v2.43Zm28.23,0c0,1.42-1.15,2.56-2.57,2.56s-2.57-1.15-2.57-2.56v-2.43h5.13v2.43Z" fill="currentColor" fill-rule="evenodd"/><path d="m31.25,0c-4.09,0-7.41,3.32-7.41,7.41s3.32,7.41,7.41,7.41,7.41-3.32,7.41-7.41-3.32-7.41-7.41-7.41Zm2.59,8.73c-.72.79-2.16,2.18-2.53,2.52h-.02c-.37-.34-1.8-1.72-2.52-2.52-.75-.83-1.48-1.73-1.48-2.96,0-1.03.87-1.85,1.95-1.85.91,0,1.72.47,2.05,1.43h.02c.33-.97,1.15-1.43,2.07-1.43,1.1,0,1.94.84,1.94,1.85,0,1.22-.73,2.13-1.48,2.96Z" fill="currentColor" fill-rule="evenodd"/></svg></figure>
+						<p>安全なご利用</p>
+					</a>
+				</li>
+				<li class="header_navi_list_item">
+					<a href="/customer_index/kanko_event/">
+						<figure><svg xmlns="http://www.w3.org/2000/svg" width="27.94" height="24"><path d="M1658.51 1741.7a.749.749 0 0 1 .62-.52 14.63 14.63 0 0 1 3.74 0 .749.749 0 0 1 .62.52v1.14h1.84v-1.42c0-1.21-.21-2.42-4.33-2.42s-4.33 1.21-4.33 2.42v1.42h1.84v-1.14Zm-11.47 2.96h4.58V1763h-4.58v-18.34Zm23.34 0h4.58V1763h-4.58v-18.34Zm-12.06 3.82a.435.435 0 0 0 0-.63.441.441 0 0 0-.62 0 .453.453 0 0 0 0 .63.441.441 0 0 0 .62 0Zm-3.65 14.52h12.66v-18.34h-12.66V1763Zm1.82-15.77a.591.591 0 0 1 .59-.59h2.17a.6.6 0 0 1 .42.18l3.37 3.37a.585.585 0 0 1 0 .83l-2.17 2.18a.6.6 0 0 1-.84 0l-3.37-3.37a.607.607 0 0 1-.17-.42v-2.18Z" transform="translate(-1647.03 -1739)" fill="currentColor" fill-rule="evenodd"/></svg></figure>
+						<p>観光・イベント</p>
+					</a>
+				</li>
+				<li class="header_navi_list_item">
+					<a href="https://www.jb-highway.co.jp/index.html" target="_blank">
+						<figure><svg xmlns="http://www.w3.org/2000/svg" width="30.75" height="31"><path d="M1849.02 1739.9a5.169 5.169 0 0 0-3.14-3.31 8.8 8.8 0 0 0-3.21-.57c-3.66-.02-7.32-.01-10.98-.02-.21 0-.27.04-.27.26.01 3.45 0 6.89 0 10.34s.01 6.92 0 10.38c0 .22.06.26.26.26q3.03-.015 6.06 0c.2 0 .27-.03.27-.26q-.015-3.7-.01-7.41c0-.18.05-.22.22-.22 1.31 0 2.61.02 3.92-.01a9.367 9.367 0 0 0 4.09-.92 5.45 5.45 0 0 0 2.73-3.12 8.261 8.261 0 0 0 .06-5.4Zm-6.73 1.04a2.6 2.6 0 0 0-1.54-.57c-.85-.09-1.71-.03-2.56-.05-.16-.01-.19.05-.19.2.01.72 0 1.44 0 2.16s.01 1.46 0 2.18c0 .17.05.21.2.2.44-.01.89 0 1.33 0a6.772 6.772 0 0 0 1.95-.24 2.076 2.076 0 0 0 1.5-1.6 2.3 2.3 0 0 0-.69-2.28Zm19.8 18.61a1.594 1.594 0 0 0-1.37-1.52c-.14-.02-.28-.03-.42-.04a.241.241 0 0 1-.19-.27c-.01-.12.12-.06.18-.06.28-.01.56 0 .84-.01a.613.613 0 0 0 .67-.68v-.57a.613.613 0 0 0-.7-.69c-.53 0-1.06-.01-1.58 0a.222.222 0 0 1-.25-.17c-.28-.77-.55-1.54-.86-2.29a2.065 2.065 0 0 0-1.68-1.38 6.928 6.928 0 0 0-.91-.04h-8.49c-.26 0-.52.01-.78.02a1.685 1.685 0 0 0-1.58 1.17c-.29.84-.59 1.66-.88 2.49a.24.24 0 0 1-.28.2c-.5-.01-.99-.01-1.49 0a.586.586 0 0 0-.65.6 4.416 4.416 0 0 0 0 .63.625.625 0 0 0 .74.71h.89a.308.308 0 0 1-.34.36 1.366 1.366 0 0 0-.71.18 1.731 1.731 0 0 0-.9 1.66c-.01 1.18-.01 2.35 0 3.53a1.992 1.992 0 0 0 .19.93 1.711 1.711 0 0 0 1.66.93c.16 0 .2.05.19.2-.01.35-.01.71 0 1.06a.434.434 0 0 0 .5.49c.32.01.65.01.97 0a.414.414 0 0 0 .47-.47q.015-.54 0-1.08c0-.15.03-.19.19-.19h12.42c.14 0 .19.03.19.17-.01.35-.01.69-.01 1.04a.453.453 0 0 0 .53.53c.32.01.65.01.97 0a.4.4 0 0 0 .44-.45c.01-.34.01-.67.01-1 0-.29 0-.29.28-.3a1.662 1.662 0 0 0 1.74-1.58 40.246 40.246 0 0 0 0-4.11Zm-3.18-1.72c-.57-1.59-1.14-3.18-1.69-4.78a.243.243 0 0 0-.27-.19c-3.49.01-6.99.01-10.48 0a.233.233 0 0 0-.26.19q-.84 2.385-1.68 4.76c-.08.22-.08.22.17.22h7v.01h7.05c.18 0 .22-.02.16-.21Zm.19 1.83a1.125 1.125 0 0 0-1.12 1.12 1.11 1.11 0 0 0 1.11 1.12 1.125 1.125 0 0 0 1.13-1.11 1.14 1.14 0 0 0-1.12-1.13Zm-14.73 0a1.125 1.125 0 0 0-1.12 1.12 1.115 1.115 0 1 0 2.23.01 1.131 1.131 0 0 0-1.11-1.13Z" transform="translate(-1831.41 -1736)" fill="currentColor" fill-rule="evenodd"/></svg></figure>
+						<p>SA・PA</p>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<div id="btn_hamburger">
+	<u></u>
+	<u></u>
+	<u></u>
+	<span></span>
+</div>
+
+<div class="hamburger">
+	<div class="hamburger_inner">
+		<div class="hamburger_image">
+			<figure>
+				<img src="/img/common/hamburger.jpg" alt="" decoding="async">
+				<figcaption>
+					<span><img src="/img/common/logo.svg" alt=" 本四高速" class="svg" decoding="async"></span>
+					<em>ドライバーズサイト</em>
+				</figcaption>
+			</figure>
+		</div>
+		<div class="hamburger_text">
+			<div class="hamburger_text_inner inner_scroller">
+				<ul class="hamburger_text_list">
+					<li class="hamburger_text_list_item"><p><a href="/customer_index/"><em>ドライバーズサイト</em></a></p></li>
+					<li class="hamburger_text_list_item">
+						<p class="hamburger_text_list_item_btn"><a href="/customer_index/traffic/"><span><em>交通情報</em></span></a><u></u></p>
+						<ul class="hamburger_text_list_item_menu">
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/traffic/tsukodome/"><em>通行止め情報</em></a></li>
+							<!--<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/traffic/bike/"><em>二輪車通行止め情報</em></a></li>-->
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/traffic/past/"><em>通行止め実績</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/traffic/etc_close/"><em>ETCレーン閉鎖情報</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/traffic/habahiro_close/"><em>幅広レーン閉鎖情報</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="https://www.jartic.or.jp/?p=A08&amp;z=8" target="_blank"><em class="target-blank-blue">交通情報（JARTIC）</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="https://honshi.drivingweather.wni.com/app" target="_blank"><em class="target-blank-blue">天気予測</em></a></li>
+                            <li class="hamburger_text_list_item_menu_item"><a href="https://www.8405.jp/" target="_blank"><em class="target-blank-blue">阪神高速道路の交通情報サイト</em></a></li>
+                             <li class="hamburger_text_list_item_menu_item"><a href="https://ihighway.jp/pcsite/" target="_blank"><em class="target-blank-blue">NEXCO西日本高速道路の交通情報サイト</em></a></li>
+						</ul>
+					</li>
+					<li class="hamburger_text_list_item">
+						<p class="hamburger_text_list_item_btn"><a href="/customer_index/guide/"><span><em>料金・道路案内</em></span></a><u></u></p>
+						<ul class="hamburger_text_list_item_menu">
+							<li class="hamburger_text_list_item_menu_item">
+								<p class="hamburger_text_list_item_menu_item_btn"><span><a href="/customer_index/guide/ryokin-guide/ryokin2014.html"><em>料金のご案内</em></a></span><u></u></p>
+								<ul>
+									<li><p><a href="/customer_index/guide/ryokin-search/"><em>料金検索</em></a></p></li>
+									<li><a href="/customer_index/guide/ryokin-table/"><em>通行料金表</em></a></li>
+									<li><a href="/customer_index/guide/ryokinjyo/"><em>ETCサービス料金所</em></a></li>
+									<li><a href="/customer_index/guide/kubun/kubun.html"><em>車種区分表</em></a></li>
+									<li><a href="/customer_index/guide/hinan/shinsai.html"><em>原発事故により避難されている方に対する無料措置</em></a></li>
+									<li><a href="/customer_index/guide/kinkyusyaryo/shinsai.html"><em>緊急通行車両、災害派遣等従事車両における料金の取り扱い</em></a></li>
+								</ul>
+							</li>
+							<li class="hamburger_text_list_item_menu_item">
+								<p class="hamburger_text_list_item_menu_item_btn"><span>料金割引のご案内</span><u></u></p>
+								<ul>
+									<li><a href="/customer_index/guide/mileage/"><em>ETCマイレージサービス</em></a></li>
+									<li><a href="/customer_index/guide/oguchi-tahindo-waribiki/"><em>大口・多頻度割引</em></a></li>
+									<li><a href="/customer_index/guide/shogai-waribiki/"><em>障害者割引</em></a></li>
+									<li><a href="/customer_index/guide/kikaku-waribiki/"><em>企画割引</em></a></li>
+									<li><a href="/customer_index/guide/refund/"><em>払戻し</em></a></li>
+								</ul>
+							</li>
+							<li class="hamburger_text_list_item_menu_item">
+								<p class="hamburger_text_list_item_menu_item_btn"><span>本四道路のご案内</span><u></u></p>
+								<ul>
+									<li><a href="/customer_index/guide/route-guide/"><em>道路の概要</em></a></li>
+									<li><a href="/customer_index/guide/jct-ic/"><em>JCT・IC</em></a></li>
+									<li><a href="/customer_index/guide/jct-ic/awaji-kita.html"><em>淡路北スマートICの利用方法</em></a></li>
+									<li><a href="/customer_index/guide/keiro/"><em>明石海峡大橋からの経路選択のご案内</em></a></li>
+									<li><a href="/customer_index/guide/zihodo/"><em>原付道・自転車歩行者道</em></a></li>
+									<li><a href="/customer_index/guide/tokusyu/"><em>特殊車両通行許可制度</em></a></li>
+									<li><a href="/customer_index/guide/syaryo-seigen/"><em>車両制限令</em></a></li>
+									<li><a href="/customer_index/guide/kiyaku/"><em>本四道路のご利用に関する規約</em></a></li>
+									<li><a href="/customer_index/guide/faq/"><em>料金・道路案内 FAQ</em></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="hamburger_text_list_item">
+						<p class="hamburger_text_list_item_btn"><a href="/customer_index/etc/"><span><em>ETC情報</em></span></a><u></u></p>
+						<ul class="hamburger_text_list_item_menu">
+							<li class="hamburger_text_list_item_menu_item">
+								<p class="hamburger_text_list_item_menu_item_btn"><span><a href="/customer_index/etc/riyo/"><em>ETCの利用方法</em></a></span><u></u></p>
+								<ul>
+									<li><a href="/customer_index/etc/chui/"><em>ETC利用上の注意事項</em></a></li>
+									<li><a href="/customer_index/etc/shikumi/"><em>ETCとは</em></a></li>
+									<li><a href="https://www.go-etc.jp/support/card" target="_blank"><em class="target-blank-blue">ETCカードのお申込み</em></a></li>
+									<li><a href="https://www.go-etc.jp/support/setup" target="_blank"><em class="target-blank-blue">車載器取付とセットアップ</em></a></li>
+									<li><a href="https://www.go-etc.jp/motorcycle/index.html" target="_blank"><em class="target-blank-blue">二輪車ETCの利用方法</em></a></li>
+									<li><a href="/customer_index/etc/kitei/"><em>ETCシステム利用規程</em></a></li>
+									<li><a href="/customer_index/etc/antenna/"><em>ETCカード未挿入お知らせアンテナ</em></a></li>
+                                    <li><a href="/customer_index/etc/re_antenna/"><em>再通信アンテナについて</em></a></li>
+									<li><a href="/customer_index/etc/etccard_hunshitsu/"><em>ETCカード紛失時のお願い</em></a></li>
+									<li><a href="/customer_index/etc/etc_only/"><em>ETC専用料金所</em></a></li>
+									<li><a href="/customer_index/etc/sic/"><em>スマートIC</em></a></li>
+									<li><a href="/customer_index/etc/fusei/fusei.html"><em>不正通行対策の取組</em></a></li>
+									<li><a href="/customer_index/etc/faq/"><em>ETC FAQ</em></a></li>
+									<li><a href="/customer_index/etc/etc_security/"><em>セキュリティ規格の変更について</em></a></li>
+									<li><a href="/customer_index/etc/spurious_etc/"><em>旧スプリアス規格のETC車載器について</em></a></li>
+									<li><a href="/customer_index/etc/etc_credit/"><em>一体型ETCクレジットカードの取扱い見直しについて</em></a></li>
+									<li><a href="https://www.jrc.co.jp/jp/product/roads_railways/its/search/index.html" target="_blank"><em class="target-blank-blue">二輪車用車載器に関するお知らせ</em></a></li>
+								</ul>
+							</li>
+							<li class="hamburger_text_list_item_menu_item">
+								<p class="hamburger_text_list_item_menu_item_btn"><span>ETCサービス各種</span><u></u></p>
+								<ul>
+									<li><a href="https://www.etc-pasoca.jp/" target="_blank"><em class="target-blank-blue">ETCパーソナルカード</em></a></li>
+									<li><a href="http://www.etc-meisai.jp/" target="_blank"><em class="target-blank-blue">ETC利用照会サービス</em></a></li>
+									<li><a href="/customer_index/etc/printer/"><em>ETC利用履歴発行プリンター</em></a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="hamburger_text_list_item">
+						<p class="hamburger_text_list_item_btn"><a href="/customer_index/safety/"><span><em>安全にご利用<br>いただくために</em></span></a><u></u></p>
+						<ul class="hamburger_text_list_item_menu">
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/safety/onegai/"><em>交通安全のためのお願い</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/safety/gyakuso/"><em>無くそう逆走</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/safety/torikumi/"><em>安全への取組</em></a></li>
+                            <li class="hamburger_text_list_item_menu_item"><a href="/customer_index/safety/onegai/snd_sdd.html"><em>SNDプロジェクト・SDDプロジェクト</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/safety/sos/"><em>緊急時の対処について</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/safety/er_dial/"><em>道路緊急ダイヤル[＃9910]</em></a></li>
+                            <li class="hamburger_text_list_item_menu_item"><a href="/customer_index/safety/onegai/zukeijohoban.html"><em>図形情報板の見方について</em></a></li>
+                            <li class="hamburger_text_list_item_menu_item"><a href="/customer_index/safety/onegai/johoban.html"><em>情報板での渋滞情報提供について</em></a></li>
+                            <li class="hamburger_text_list_item_menu_item"><a href="/customer_index/safety/onegai/etc_safety.html"><em>ETCレーンの安全な走行について</em></a></li>
+                            <li class="hamburger_text_list_item_menu_item"><a href="/customer_index/safety/onegai/kisei.html"><em>道路維持作業におけるお願いについて</em></a></li>
+						</ul>
+					</li>
+					<li class="hamburger_text_list_item">
+						<p class="hamburger_text_list_item_btn"><a href="/customer_index/kanko_event/"><span><em>観光・イベント</em></span></a><u></u></p>
+						<ul class="hamburger_text_list_item_menu">
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/event_topics"><em>イベント情報</em></a></li>
+                            <li class="hamburger_text_list_item_menu_item"><a href="https://www.love-setouchi.jp/" target="_blank"><em>せとうち魅力発見</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/kanko_event/anniversary/"><em>アニバーサリー</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/kanko_event/sahopa/awaji.html"><em>あわじSAHOぱイベントカレンダー</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/kanko_event/lightup/"><em>ライトアップ情報</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/kanko_event/infra/"><em>インフラツーリズム</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/bridgeworld/"><em>明石海峡大橋塔頂体験ブリッジワールド</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/skytour/"><em>瀬戸大橋塔頂体験スカイツアー</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/shimanamicycling/"><em>しまなみ海道サイクリング</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/miniiko/"><em>橋を見に行こう</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/museum/"><em>せとうち美術館ネットワーク</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/kanko/"><em>観光情報（瀬戸マーレ）・ぶらり社員紀行</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="https://www.hashinokagakukan.jp/" target="_blank"><em class="target-blank-blue">橋の科学館</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/kanko_event/minecraft/"><em>マインクラフト(Minecraft)</em></a></li>
+                            <li class="hamburger_text_list_item_menu_item"><a href="/customer_index/kanko_event/enjoy-guide/"><em>橋の楽しみ方ガイド</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/kanko_event/park/"><em>日本遺産オフィシャルパートナーシップ</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/kanko_event/tieup/"><em>JR四国・JB本四高速連携事業</em></a></li>
+                            <li class="hamburger_text_list_item_menu_item"><a href="https://www.kanseto.jp/" target="_blank"><em class="target-blank-blue">環瀬戸内地域交流促進協議会</em></a></li>
+                            <li class="hamburger_text_list_item_menu_item"><a href="https://shikoku-tourism.com/" target="_blank"><em class="target-blank-blue">四国ツーリズム創造機構</em></a></li>
+                             <li class="hamburger_text_list_item_menu_item"><a href="https://www.setouchi.travel/jp/" target="_blank"><em class="target-blank-blue">せとうちDMO(瀬戸内Finder)</em></a></li>
+						</ul>
+					</li>
+					<li class="hamburger_text_list_item">
+						<p class="hamburger_text_list_item_btn"><a href="https://www.jb-highway.co.jp/index.html" target="_blank"><span><em>SA・PA</em></span></a><u></u></p>
+						<ul class="hamburger_text_list_item_menu">
+							<li class="hamburger_text_list_item_menu_item"><a href="https://www.jb-highway.co.jp/index.html" target="_blank"><em class="target-blank-blue">SA・PA情報</em></a></li>
+							<!--<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/sapa/shimanamipin/"><em>来島海峡SA しまなみ海道ロゴオブジェ「しまなみピン」</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/sapa/kanransha/"><em>大観覧車（淡路SA下り）</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/sapa/lovers/lovers.html"><em>恋人の聖地（淡路SA上り）</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/sapa/hashinomieruoka/"><em>橋のみえる丘ギャラリー（淡路SA上り）</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/sapa/dogrun/"><em>ドッグラン</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/sapa/evstand/"><em>EV急速充電スタンド</em></a></li>-->
+						</ul>
+					</li>
+					<li class="hamburger_text_list_item">
+						<p class="hamburger_text_list_item_btn"><span>ピックアップ</span><u></u></p>
+						<ul class="hamburger_text_list_item_menu">
+							<li class="hamburger_text_list_item_menu_item"><a href="/letter/"><em>わたる便り</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/seto-ohashi/"><em>瀬戸大橋</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/shimanami/"><em>しまなみ海道</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/gallery/"><em>ギャラリー</em></a></li>
+							<li class="hamburger_text_list_item_menu_item"><a href="/customer_index/generalroad/"><em>異常気象が予想される場合の道路利用者へのお知らせ</em></a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="hamburger_text_slist">
+					<ul class="hamburger_text_slist_langlist">
+						<li class="hamburger_text_slist_langlist_item is_current"><a href="/">JP</a></li>
+						<li class="hamburger_text_slist_langlist_item"><a href="/english/">EN</a></li>
+					</ul>
+					<ul class="hamburger_text_slist_menu">
+						<li class="hamburger_text_slist_menu_item"><a href="/customer_index/contact/index.html#faq">よくあるご質問</a></li>
+						<li class="hamburger_text_slist_menu_item"><a href="/customer_index/contact/">お問い合わせ</a></li>
+						<li class="hamburger_text_slist_menu_item"><a href="/sitemap.html">サイトマップ</a></li>
+					</ul>
+				</div>
+				<div class="hamburger_text_sub">
+					<dl class="header_fontsize">
+						<dt>
+							<i><img src="/customer_index/img/common/icn_fontsize.svg" alt="" decoding="async"></i>
+							<span>文字サイズ<em>：</em></span>
+						</dt>
+						<dd>
+							<ul>
+								<li class="fontS">小</li>
+								<li class="fontM is_current">中</li>
+								<li class="fontL">大</li>
+							</ul>
+						</dd>
+					</dl>
+					<div class="header_search">
+						<gcse:searchbox-only></gcse:searchbox-only>	
+					</div>
+				</div>
+				<ul class="hamburger_text_index">
+					<li class="hamburger_text_index_item">
+						<a href="/corp_index/">
+							<span>企業情報サイト</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<main role="main">
+<article class="main_content">
+
+	<section class="detail_wrap">
+		<div class="bread">
+			<ol>
+			<li><a href="/customer_index/">ドライバーズサイト</a></li>
+			<li><a href="/customer_index/kanko_event/">観光・イベント</a></li>
+            <li><a href="/customer_index/kanko_event/lightup/">ライトアップ情報</a></li>
+            <li>明石海峡大橋</li>
+			</ol>
+		</div>
+
+	<h1 class="h1-detail"><span>明石海峡大橋　ライトアップスケジュール</span></h1>
+
+		<ul class="border-list mb30">
+			<li><a href="#future_speciallightup">特別ライトアップ</a></li>
+			<li><a href="#usuallightup">標準ライトアップ</a>(<a href="#weekday">平日</a>┆<a href="#weekend">土・日・祝</a>┆<a href="#time">時報</a>┆<a href="#event">特定日</a>)</li>
+			<li><a href="#pattern">ライトアップパターン</a></li>
+            
+		</ul>								
+
+	<h2 class="h2 h2-detail mt10" id="future_speciallightup"><span>特別ライトアップのご案内</span></h2>
+		
+<!--特別ライトアップここから　※過去イベントのソースは最下部にコメントアウト中　終了時はコメントアウトして下部に移動-->
+
+		<div class="box border double blue mb20">
+		<p>JB本四高速では、関係する自治体等と連携し、地域の交流、活性化を目的として、各種行事の趣旨に賛同し特別ライトアップを行っています。</p>
+	    </div>
+        
+    <!--特別ライトアップがない時-->	
+        <!--<p class="t-indent">現在、予定している特別ライトアップはございません。</p>
+		<p class="t-indent mb30">今後決まりましたら、このページでお知らせします。</p>-->
+    <!--特別ライトアップがない時-->	
+        
+    <p class="t-center btn-deco-blue mb40"><a href="/customer_index/kanko_event/lightup/lightup-akashi_special.html">10月～12月はこちら</a></p>
+        
+    <!--万博カラーライトアップ-->
+	<!--<h3 class="b box bg-blue mb0" style="background: #d0daf7;">「万博カラーライトアップ」</h3>
+	        <div class="box border bold mb30" style="border-color: #d0daf7;">
+		    <p class="t-indent mb20">大阪・関西万博の機運醸成を目的として 下記の日程で明石海峡大橋特別ライトアップを実施します。</p>
+
+		    <p class="b">【点灯日】</p>
+            <div class="ml10 mb20">
+		    <p>&ensp;4月　12日(土)　13日(日)　14日(月)　26日(土)　27日(日)</p>
+            <p>&ensp;5月　&ensp;3日(土)　&ensp;4日(日)　31日(土)</p>
+            <p>&ensp;6月　&ensp;1日(日)　28日(土)　29日(日)</p>
+            <p>&ensp;7月　19日(土)　20日(日)　21日(月)　26日(土)　27日(日)</p>
+            <p>&ensp;8月　16日(土)　17日(日)　30日(土)　31日(日)</p>
+            <p>&ensp;9月　27日(土)　28日(日)</p>
+            <p>10月　&ensp;4日(土)　&ensp;5日(日)　13日(月)　14日(火)　15日(水)</p>
+		    </div>
+                
+		    <p class="b">【点灯時間・パターン】</p>
+		    <p>・日没～24:00</p>
+            <p class="t-indent-1em mb20">・万博のイメージカラーである「赤」「青」「グレー」を表現した3色の光が織り交ざり変化する3パターン(下図)と単色での3色が10分間隔で変化し、約2時間で1周するパターン</p>
+                <p class="ml5">「流れる」</p>
+                <p class="t-center mb10"><img src="/customer_index/kanko_event/lightup/img/banpaku1.png" alt="ライトアップパターン 万博カラーライトアップ　流れる"></p>
+                <p class="ml5">「増える」</p>
+                <p class="t-center mb10"><img src="/customer_index/kanko_event/lightup/img/banpaku2.png" alt="ライトアップパターン 万博カラーライトアップ　増える"></p>	
+                <p class="ml5">「形を変える」</p>
+                <p class="t-center"><img src="/customer_index/kanko_event/lightup/img/banpaku3.png" alt="ライトアップパターン 万博カラーライトアップ　形を変える"></p>	
+            </div>-->
+    <!--万博カラーライトアップ end-->
+        
+	<!--<p class="t-right mb30"><a href="#past_eventlightup">▼終了した特別ライトアップはこちら▼</a></p>-->
+	        
+    <h2 class="h2 h2-detail" id="usuallightup"><span>標準ライトアップのご案内</span></h2>
+
+        <h3 class="b box bg-blue mb0" id="weekday" style="background: #d0daf7;">平日　点灯時間／日没～23:00</h3>
+            <div class="box border bold mb20" style="border-color: #d0daf7;">
+				<p class="mb10">季節ごとに彩りを変えるライトアップ。パールカラーが夜を華やかに演出します。</p>
+				<div class="box-wrap mb0">
+				<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+				    <p class="mr5 ml5 mt5 px11">【春(平日) 4月,5月,6月】</p>
+				    <p class="t-center"><img src="/customer_index/kanko_event/lightup/img/pearlgreen_s.jpg" alt="ライトアップパターン 平日・春"></p>
+				    <p class="t-right px11 mr5 mb5">パールグリーン</p>
+				</div>
+				<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+				    <p class="mr5 ml5 mt5 px11">【夏(平日) 7月,8月,9月】</p>
+				    <p class="t-center"><img src="/customer_index/kanko_event/lightup/img/pearlblue_s.jpg" alt="ライトアップパターン 平日・夏"></p>
+				    <p class="t-right px11 mr5 mb5">パールブルー</p>
+				</div>
+				<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+				    <p class="mr5 ml5 mt5 px11">【秋(平日) 10月,11月,12月】</p>
+				    <p class="t-center"><img src="/customer_index/kanko_event/lightup/img/pearlpink_s.jpg" alt="ライトアップパターン 平日・秋"></p>
+				    <p class="t-right px11 mr5 mb5">パールピンク</p>
+				</div>
+				<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+					<p class="mr5 ml5 mt5 px11">【冬(平日) 1月,2月,3月】</p>
+				    <p class="t-center"><img src="/customer_index/kanko_event/lightup/img/pearlyellow_s.jpg" alt="ライトアップパターン 平日・冬"></p>
+				    <p class="t-right px11 mr5 mb5">パールイエロー</p>
+				</div>
+				</div>
+            </div>
+
+        <h3 class="b box bg-blue mb0" id="weekend" style="background: #d0daf7;">土・日・祝　点灯時間／日没～24:00</h3>
+				<div class="box border bold mb20" style="border-color: #d0daf7;">
+					<p class="mb10">週末は、鮮やかさの中にも落ち着きのあるパターンでくつろぎのシーンを提供します。</p>
+					<div class="box-wrap mb0">
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+							<p class="mr5 ml5 mt5 px11">【一年を通じて、土・日・祝】</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/greenblue_s.jpg" alt="ライトアップパターン 土日祝"></p>
+							<p class="t-right px11 mr5 mb5">グリーンブルー</p>
+						</div>
+					</div>
+				</div>
+
+        <h3 class="b box bg-blue mb0" id="time" style="background: #d0daf7;">時報　毎正時(5分間)　虹</h3>
+				<div class="box border bold mb20" style="border-color: #d0daf7;">
+					<p class="mb10">1時間ごとに光の変化で時刻をお知らせします。<br>虹色に輝く橋を一度ご覧になりませんか。</p>
+					<div class="box-wrap mb0">
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+							<p class="mr5 ml5 mt5 px11">【夕方／5時,6時,7時】</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/rainbow_1_s.jpg" alt="ライトアップパターン 時報・夕方"></p>
+							<p class="t-right px11 mr5 mb5">虹-1</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+							<p class="mr5 ml5 mt5 px11">【夜／8時,9時】</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/rainbow_2_s.jpg" alt="ライトアップパターン 時報・夜"></p>
+							<p class="t-right px11 mr5 mb5">虹-2</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+							<p class="mr5 ml5 mt5 px11">【夜間／10時,11時】</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/rainbow_3_s.jpg" alt="ライトアップパターン 時報・夜間"></p>
+							<p class="t-right px11 mr5 mb5">虹-3</p>
+						</div>
+					</div>
+				</div>
+
+        <h3 class="b box bg-blue mb0" id="jewel" style="background: #d0daf7;">時報　毎30分(5分間)　宝石</h3>
+				<div class="box border bold mb20" style="border-color: #d0daf7;">
+					<p class="mb10">30分ごとに光の変化で時刻をお知らせします。<br>あなたの誕生石色に輝く橋を一度ご覧になりませんか。</p>
+					<div class="box-wrap mb0">
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+							<p class="mr5 ml5 mt5 px11">【1月(ガーネット),7月(ルビー)】</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/jewel_1_s.jpg" alt="ライトアップパターン 時報30分・1月"></p>
+							<p class="t-right px11 mr5 mb5">宝石-1</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+							<p class="mr5 ml5 mt5 px11">【2月(アメジスト),10月(オパール)】</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/jewel_2_s.jpg" alt="ライトアップパターン 時報30分・2月"></p>
+							<p class="t-right px11 mr5 mb5">宝石-2</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+							<p class="mr5 ml5 mt5 px12">【3月(アクアマリン),9月(サファイア)】</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/jewel_3_s.jpg" alt="イトアップパターン 時報30分・3月"></p>
+							<p class="t-right px11 mr5 mb5">宝石-3</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+							<p class="mr5 ml5 mt5 px11">【4月(ダイヤモンド),11月(トパーズ)】</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/jewel_4_s.jpg" alt="ライトアップパターン 時報30分・4月"></p>
+							<p class="t-right px11 mr5 mb5">宝石-4</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+							<p class="mr5 ml5 mt5 px11">【5月(エメラルド),8月(ペリドット)】</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/jewel_5_s.jpg" alt="ライトアップパターン 時報30分・5月"></p>
+							<p class="t-right px11 mr5 mb5">宝石-5</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+							<p class="mr5 ml5 mt5 px11">【6月(パール)】</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/jewel_6_s.jpg" alt="イトアップパターン 時報30分・6月"></p>
+							<p class="t-right px11 mr5 mb5">宝石-6</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10">
+							<p class="mr5 ml5 mt5 px11">【12月(トルコ石)】</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/jewel_7_s.jpg" alt="ライトアップパターン 時報30分・12月"></p>
+							<p class="t-right px11 mr5 mb5">宝石-7</p>
+						</div>
+					</div>
+				</div>
+
+    <!--お知らせ ※IDあり-->
+        <!--<h3 class="b box bg-blue mb0" style="background: #d0daf7;" id="news">【お知らせ】</h3>
+            <div class="box border bold mb20" style="border-color: #d0daf7;">
+            <div class="mb0">
+				<p class="mb10">11月18日(月)、19日(火)、25日(月)は、施設の調整・確認のため、標準ライトアップパターンと異なる場合があります。</p>
+            </div>
+            </div>-->
+    <!--お知らせ end-->
+        
+		<h3 class="b box bg-blue" id="event" style="background: #d0daf7;">特定日　点灯時間／日没～24:00</h3>
+				<div class="box border bold mb0" style="border-color: #d0daf7;">
+					<p class="mb10">下記の日程は、鮮やかな点灯パターンを用意しています。<br>(他のイベントと重複する場合は変更になることがあります。)</p>
+					<div class="box-wrap mb0 fixHeight">
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10 fixHeightChild">
+							<p class="mr5 ml5 mt5 px11">＜年始＞1月1日～3日</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/redtop_s.jpg" alt="ライトアップパターン イベント・年始"></p>
+							<p class="t-right px11 mr5 mb5">レッドトップ</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10 fixHeightChild">
+							<p class="mr5 ml5 mt5 px11">＜震災記念日＞1月17日(早朝)、1月17日、3月11日</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/pearlwhite_s.jpg" alt="ライトアップパターン イベント・1.17"></p>
+							<p class="t-right px11 mr5 mb5">パールホワイト(時報パターンは入りません)</p>
+						</div>
+                        <div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10 fixHeightChild">
+							<p class="mr5 ml5 mt5 px11">＜神戸ルミナリエ期間＞<!--1月30日～2月8日-->1月下旬(予定)<br></p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/lumirarie_s.jpg" alt="ライトアップパターン イベント・ルミナリエ"></p>
+							<p class="t-right px11 mr5 mb5">神戸ルミナリエパターン</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10 fixHeightChild">
+							<p class="mr5 ml5 mt5 px11">＜水仙の季節＞2月上旬<!--2月9日～10日--></p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/suisen_s.jpg" alt="ライトアップパターン イベント・水仙"></p>
+							<p class="t-right px11 mr5 mb5">スイセン</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10 fixHeightChild">
+							<p class="mr5 ml5 mt5 px11">＜桜の季節＞4月上旬</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/pink_s.jpg" alt="ライトアップパターン イベント・桜"></p>
+							<p class="t-right px11 mr5 mb5">ピンク</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10 fixHeightChild">
+							<p class="mr5 ml5 mt5 px11">＜GW前期＞4月下旬</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/greentop_s.jpg" alt="ライトアップパターン イベント・GW前期"></p>
+							<p class="t-right px11 mr5 mb5">グリーントップ＋全31パターン<!--基本28パターン全点灯--></p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10 fixHeightChild">
+							<p class="mr5 ml5 mt5 px11">＜GW後期＞5月上旬</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/green_s.jpg" alt="ライトアップパターン イベント・GW後期"></p>
+							<p class="t-right px11 mr5 mb5">グリーン＋全31パターン<!--基本28パターン全点灯--></p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10 fixHeightChild">
+							<p class="mr5 ml5 mt5 px11">＜神戸まつり＞5月下旬</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/ajisai_s.jpg" alt="ライトアップパターン イベント・神戸まつり"></p>
+							<p class="t-right px11 mr5 mb5">アジサイ</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10 fixHeightChild">
+							<p class="mr5 ml5 mt5 px11">＜海の日＞7月第3月曜日</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/blue_s.jpg" alt="ライトアップパターン イベント・海の日"></p>
+							<p class="t-right px11 mr5 mb5">ブルー</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10 fixHeightChild" id="natuyasumi">
+							<p class="mr5 ml5 mt5 px11">＜夏休み前期＞7月下旬～8月中旬</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/skybluetop_s.jpg" alt="ライトアップパターン イベント・夏休み前期"></p>
+							<p class="t-right px11 mr5 mb5">スカイブルートップ+28パターン</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10 fixHeightChild">
+							<p class="mr5 ml5 mt5 px11">＜夏休み後期＞8月中旬～8月下旬</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/skyblue_s.jpg" alt="ライトアップパターン イベント・夏休み後期"></p>
+							<p class="t-right px11 mr5 mb5">スカイブルー+28パターン</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10 fixHeightChild">
+                            <p class="mr5 ml5 mt5 px11">＜紅葉の季節＞11月2日、4日、5日、6日、9日、10日</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/orange_s.jpg" alt="ライトアップパターン イベント・紅葉"></p>
+							<p class="t-right px11 mr5 mb5">オレンジ</p>
+						</div>
+						<div class="box w2-part bg-blue pt0 pr0 pb0 pl0 mb10 fixHeightChild">
+							<p class="mr5 ml5 mt5 px11">＜年末＞12月29日～31日</p>
+							<p class="t-center"><img src="/customer_index/kanko_event/lightup/img/red_s.jpg" alt="ライトアップパターン イベント・年末"></p>
+							<p class="t-right px11 mr5 mb5">レッド</p>
+						</div>
+					</div>
+					<div class="box bg-blue mt10 mb15">
+						<p class="b">＜神戸プロポーズの日＞毎月第一日曜日<!--　※2026年4月は、別プログラムを点灯。--></p>
+						<p class="mb10">日没～24:00 レッドトップ。<br>19:59～20:00の間消灯。毎正時は虹を点灯。毎30分は宝石-1を点灯。</p>
+						<p><img src="/customer_index/kanko_event/lightup/img/redtop_s.jpg" alt="ライトアップパターン イベント・神戸プロポーズの日"></p>
+					</div>
+					<div class="box bg-blue mb15">
+						<p class="b">＜開通記念日＞4月5日</p>
+						<p>日没より21:00まで28パターンを各5分間ずつ点灯。<br>21:00以降は、ピンクを点灯。</p>
+					</div>
+					<div class="box bg-blue mb15">
+						<p class="b">＜ゴールデンウィーク期間＞4月下旬～5月上旬</p>
+						<p>日没～24:00 グリーン(トップ)<br>
+					  全31パターンを点灯。<!--うち20:00～21:00 基本の28パターン全てを一定時間ずつ点灯。--><br>次々と美しく色を変えるライトアップをお届けします。</p>
+					</div>
+                    <div class="box bg-blue mt10 mb15" id="lightdown">
+						<p class="b">＜クールアース・デー＞7月7日<br></p>
+						<p class="mb10">20:00～22:00　ライトダウン<br>ライトダウン以外の時間帯は標準ライトアップパターンを点灯。<br>※道路照明は通常どおり点灯(ライトダウンは行いません)。</p>
+						<p><img src="/customer_index/kanko_event/lightup/img/lightdown_s.png" alt="ライトアップパターン イベント・神戸プロポーズの日"></p>
+					</div>
+				<div class="box bg-blue mb15">
+						<p class="b">＜夏休み期間の土・日・祝＞7月下旬～8月下旬<!--
+<br>7月18日、19日、25日、26日、8月8日、9日、11日、15日、16日、22日、23日、29日、30日7月下旬～8月下旬--></p>
+						<p>日没～24:00 スカイブルー(トップ)<br>
+				  全31パターンを点灯。<!--うち20:00～21:00 基本の28パターン全てを一定時間ずつ点灯。--><br>次々と美しく色を変えるライトアップをお届けします。</p>
+					</div>
+					<div class="box bg-blue mb15">
+						<p class="b">＜クリスマス＞12月19日～12月25日</p>
+						<p>クリスマス用プログラムを用意しています。ご期待ください。</p>
+					</div>
+					<div class="box bg-blue mb15">
+						<p class="b">＜大晦日・元旦＞12月31日～1月1日(日の出まで点灯)</p>
+						<!--<p>12月31日(月)から1月1日(火)日の出は「大晦日・元旦用プログラム」を用意しています。ご期待下さい。<br>なお、31日(月)23:30からは、「新年へのカウントダウン用プログラム」を用意しています。</p>-->
+						<p>大晦日23:30からは、新年へのカウントダウン用プログラムを用意しています。ご期待ください。</p>
+						<!--<p class="fc-red">(令和2年度はカウンダウン用プログラムを中止しました。)</p>-->
+						<!--<p class="fc-red">(令和2年度はカウントダウン用プログラムを中止します。大晦日当日は赤色のライトアップを点灯し、24時で消灯します。)</p>-->
+					</div>
+					<div class="box bg-blue">
+						<p class="b">＜その他＞</p>
+						<p>その時々の行事に合わせた点灯を用意します。ご期待ください。</p>
+					</div>
+			  </div>
+        
+         <div class="box border bold mb20 mt20" style="border-color: #d0daf7;">
+            <div class="mb0">
+                <div class="box bg-blue">
+						<p>※諸事情により、日程、パターン等が変更となる場合がございます。あらかじめご了承ください。</p>
+                    </div>
+				</div>
+             </div>
+        
+	<h2 class="h2 h2-detail mt20" id="pattern"><span>ライトアップパターンのご紹介</span></h2>
+    	
+    	<div class="box border bold mb15" style="border-color: #d0daf7;">
+    	<p class="b ml5 mb5">基本28パターン</p>
+		<p class="t-center mb10"><img src="/customer_index/kanko_event/lightup/img/pearlgreen.jpg" alt="ライトアップパターン" name="war"></p>
+    	</div>
+    	
+    	<div class="box border bold mb10" style="border-color: #d0daf7;">
+      	<p class="b ml5 mb5" id="lightupzenpattern">全31パターン(基本28パターン＋次の3パターン)</p>
+      	<p class="px11 t-center">【煌めき】… 夜空の星の煌めき、星に願いをかけたくなるような美しい雰囲気を演出</p>
+        <p class="mb10 t-center"><img src="/customer_index/kanko_event/lightup/img/kirameki.png" alt="ライトアップパターン イベント・煌めき"></p>
+        
+        <p class="px11 t-center">【オーロラ】… 夜空に浮かぶ虹の橋、見る人を癒しの気持ちにしてくれるような演出</p>
+        <p class="mb10 t-center"><img src="/customer_index/kanko_event/lightup/img/aurora.png" alt="ライトアップパターン イベント・オーロラ"></p>
+        
+        <p class="px11 t-center">【桜】… 風にそよぐ花びら、太陽のめぐみを浴びて輝く桜、夜景に浮かび上がる幻想的な雰囲気を演出</p>
+        <p class="mb20 t-center"><img src="/customer_index/kanko_event/lightup/img/sakura.png" alt="ライトアップパターン イベント・桜"></p>
+
+		<p class="t-indent-1em ml5 px13">・煌めき、オーロラ、桜の各パターンを19時、21時、23時から各1時間内で繰り返し点灯</p>
+		<p class="t-indent-1em ml5 px13">・基本28パターンの各パターンを1分間隔で20時、22時から各1時間繰り返し点灯</p>
+        </div>
+        
+	</section>
+
+	<!-- サイドバー include -->
+	
+<aside class="sidebar">
+
+<!--
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+
+※本番サイト更新前に「'parent' => '73'」のID部分を「73」から「72」に修正する※
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+-->     
+    
+	
+	
+	
+	
+		<dl class="sidebar_list kanko_event_aside">
+		<div class="sidebar_list_item">
+			<p class="sidebar_list_item_ttl"><a href="/customer_index/kanko_event/">観光・イベント</a></p>
+			<ul class="sidebar_list_item_menu">
+				<li class="sidebar_list_item_menu_item"><a href="/customer_index/event_topics">イベント情報</a></li>
+                <li class="sidebar_list_item_menu_item"><a href="https://www.love-setouchi.jp/" target="_blank">せとうち魅力発見</a></li>
+				<li class="sidebar_list_item_menu_item"><a href="/customer_index/kanko_event/anniversary/">アニバーサリー</a></li>
+				<li class="sidebar_list_item_menu_item"><a href="/customer_index/kanko_event/sahopa/awaji.html">あわじSAHOぱイベントカレンダー</a></li>
+				<li class="sidebar_list_item_menu_item"><a href="/customer_index/kanko_event/lightup/">ライトアップ情報</a></li>
+				<li class="sidebar_list_item_menu_item"><a href="/customer_index/kanko_event/infra/">インフラツーリズム</a></li>
+				<li class="sidebar_list_item_menu_item"><a href="/bridgeworld/">明石海峡大橋塔頂体験ブリッジワールド</a></li>
+				<li class="sidebar_list_item_menu_item"><a href="/skytour/">瀬戸大橋塔頂体験スカイツアー</a></li>
+				<li class="sidebar_list_item_menu_item"><a href="/shimanamicycling/">しまなみ海道サイクリング</a></li>
+				<li class="sidebar_list_item_menu_item"><a href="/miniiko/">橋を見に行こう</a></li>
+				<li class="sidebar_list_item_menu_item"><a href="/museum/">せとうち美術館ネットワーク</a></li>
+				<li class="sidebar_list_item_menu_item"><a href="/kanko/">観光情報(瀬戸マーレ)・ぶらり社員紀行</a></li>
+				<li class="sidebar_list_item_menu_item"><a href="https://www.hashinokagakukan.jp/" target="_blank"><span class="target-blank-blue">橋の科学館</span></a></li>
+				<li class="sidebar_list_item_menu_item"><a href="/customer_index/kanko_event/minecraft/"><span>マインクラフト(Minecraft)</span></a></li>  
+                <li class="sidebar_list_item_menu_item"><a href="/customer_index/kanko_event/enjoy-guide/">橋の楽しみ方ガイド</a></li>
+				<li class="sidebar_list_item_menu_item"><a href="/customer_index/kanko_event/park/">日本遺産オフィシャルパートナーシップ</a></li>
+				<li class="sidebar_list_item_menu_item"><a href="/customer_index/kanko_event/tieup/">JR四国・JB本四高速連携事業</a></li>
+                <li class="sidebar_list_item_menu_item"><a href="https://www.kanseto.jp/" target="_blank"><span class="target-blank-blue">環瀬戸内地域交流促進協議会</span></a></li>
+                <li class="sidebar_list_item_menu_item"><a href="https://shikoku-tourism.com/" target="_blank"><span class="target-blank-blue">四国ツーリズム創造機構</span></a></li>
+                <li class="sidebar_list_item_menu_item"><a href="https://www.setouchi.travel/jp/" target="_blank"><span class="target-blank-blue">せとうちDMO(瀬戸内Finder)</span></a></li>
+			</ul>
+		</div>
+	</dl>
+	
+	
+	
+		
+	
+	
+    
+	
+</aside>
+</article>
+
+<!-- フッター include -->
+
+<!-- 通行止め情報 -->
+<div class="common_tsukodome">
+	<div class="common_tsukodome_inner">
+			<h2 class="common_tsukodome_ttl">通行止め情報<span>11月20日11時49分 現在</span></h2><ul class="common_tsukodome_list">
+	<li class="common_tsukodome_list_item">
+		<p class="common_tsukodome_list_item_illust"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 73.755 34"><path d="M1047.22 1471.92a6.04 6.04 0 1 1-6.05 6.04 6.043 6.043 0 0 1 6.05-6.04Zm0 9a2.96 2.96 0 1 0-2.97-2.96 2.968 2.968 0 0 0 2.97 2.96Zm-42.11-9a6.04 6.04 0 1 1-6.047 6.04 6.052 6.052 0 0 1 6.047-6.04Zm0 9a2.96 2.96 0 1 0-2.97-2.96 2.968 2.968 0 0 0 2.97 2.96Zm42.11-3.87a.91.91 0 1 1-.9.91.913.913 0 0 1 .9-.91Zm-42.11 0a.91.91 0 1 1-.91.91.913.913 0 0 1 .91-.91Zm-14.459-8.45 9.8-5.18s15.87-13.42 30.81-13.42 22.97 7.27 22.97 7.27l6.34 5.71a3.956 3.956 0 0 1 1.31 2.95v10.96a2.377 2.377 0 0 1-2.38 2.37h-4.55a6.986 6.986 0 0 0 .12-1.3 7.845 7.845 0 0 0-15.69 0 7.955 7.955 0 0 0 .11 1.3h-26.65a6.985 6.985 0 0 0 .11-1.3 7.84 7.84 0 0 0-15.679 0 7.74 7.74 0 0 0 .111 1.3H990.5a2.375 2.375 0 0 1-2.381-2.37v-4.09a4.755 4.755 0 0 1 2.532-4.2Zm42.749-13.47v8.06a.8.8 0 0 0 .8.79h19.42a.792.792 0 0 0 .79-.79v-1.63a.773.773 0 0 0-.26-.59l-1.8-1.63c-.06-.05-5.86-5.09-16.5-6.29-.79-.08-1.59-.13-1.59-.13a.82.82 0 0 0-.6.21.809.809 0 0 0-.26.59v1.41Zm-27.34 8.29a.8.8 0 0 0 .76.56h21.31a.792.792 0 0 0 .79-.79v-9.36a.794.794 0 0 0-.9-.79s-.71.07-1.51.22c-6.57 1.21-13.03 4.62-17.63 7.55a27.392 27.392 0 0 0-2.51 1.72.812.812 0 0 0-.31.89Zm-15.614 8.66c.234.49 1.157.53 2.526.23 1.979-.43 3.471-1.49 2.87-2.76s-2.366-.8-3.962.44c-1.105.87-1.663 1.6-1.434 2.09Z" transform="translate(-988.125 -1450)" fill="currentColor" fill-rule="evenodd"/></svg></p>
+		<div class="common_tsukodome_list_item_text">
+			<p>通行止めはありません</p>
+		</div>
+	</li>	<li class="common_tsukodome_list_item is_error">
+		<a href="/customer_index/traffic/tsukodome/#bike">
+			<p class="common_tsukodome_list_item_illust"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 44"><path d="M1224.7 1456.38v-3.53a36.93 36.93 0 0 0-15.56 2.56c-8.51 3.28-14.71 2.43-15.56 1.58s-4.74-4.63-5.35-5.11-1.82-2.44-3.16-1.22a2.125 2.125 0 0 1-.73.43l1.35-2.8a1.31 1.31 0 0 1 1.18-.73h7.32c.7 0 .66-.58.66-1.28s.04-1.28-.66-1.28h-7.32a3.844 3.844 0 0 0-3.47 2.17l-1.68 3.46a13.83 13.83 0 0 0-7.41-2.65v8.52s2.93-.26 4.71-.56l-2.06 3.47a17.177 17.177 0 0 0-17.02.12l.81 2.43a15.151 15.151 0 0 1 5.9-1.68 15.329 15.329 0 0 1 8.82 1.64l-2.35 3.96a12.107 12.107 0 1 0 2.49 1.52l2.24-3.77c2.26 2.06 4.03 5.09 5.4 9.12.04.14 1.63 1.5 1.64 1.64l.2-.44c.21 3.91 3.26 3.97 3.26 3.97h11.43c4.38-16.67 22.01-20.69 24.92-21.54Zm-49.36 20.51a7.231 7.231 0 1 1-4.72-6.79l-2.55 4.3a2.49 2.49 0 1 0 2.53 2.49 2.754 2.754 0 0 0-.14-.81l2.63-4.43a7.183 7.183 0 0 1 2.25 5.24Zm4.03-15.83 1.88-3.16a69.518 69.518 0 0 1 2.54 8.56 17.155 17.155 0 0 0-4.42-5.4Zm36.52 3.72a12.11 12.11 0 1 0 12.1 12.11 12.106 12.106 0 0 0-12.1-12.11Zm0 19.35a7.24 7.24 0 1 1 7.23-7.24 7.23 7.23 0 0 1-7.23 7.24Zm0-9.74a2.5 2.5 0 1 0 2.49 2.5 2.492 2.492 0 0 0-2.49-2.5Z" transform="translate(-1156 -1445)" fill="currentColor" fill-rule="evenodd"/></svg></p>
+			<div class="common_tsukodome_list_item_text">
+				<p>二輪車のみ 通行止めがあります</p>
+			</div>
+		</a>
+	</li></ul>
+
+		<!-- // テスト表示用 -->
+		<!-- <h2 class="common_tsukodome_ttl">通行止め情報<span>11月17日16時34分現在</span></h2>
+		<ul class="common_tsukodome_list">
+			<li class="common_tsukodome_list_item is_error">
+				<a href="/customer_index/traffic/tsukodome/">
+					<p class="common_tsukodome_list_item_illust"><img src="/customer_index/img/common/icn_trafficinfo_tsukodome_car.svg" alt="車のイラスト" class="svg" decoding="async"></p>
+					<div class="common_tsukodome_list_item_text">
+						<p>通行止めがあります</p>
+					</div>
+				</a>
+			</li>
+			<li class="common_tsukodome_list_item is_error">
+				<a href="/customer_index/traffic/bike/">
+					<p class="common_tsukodome_list_item_illust"><img src="/customer_index/img/common/icn_trafficinfo_tsukodome_bike.svg" alt="二輪車のイラスト" class="svg" decoding="async"></p>
+					<div class="common_tsukodome_list_item_text">
+						<p>二輪車 通行止めがあります</p>
+					</div>
+				</a>
+			</li>
+		</ul> -->
+		<div class="common_tsukodome_text">
+			<ul class="common_tsukodome_text_slist">
+				<li class="common_tsukodome_text_slist_item">
+					<a href="/customer_index/traffic/past/">
+						<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+						<span>通行止め実績（過去3ヶ月）</span>
+					</a>
+				</li>
+				<li class="common_tsukodome_text_slist_item">
+					<a href="/customer_index/disaster.html">
+						<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+						<span>異常気象等に伴う通行止めの関連情報</span>
+					</a>
+				</li>
+			</ul>
+			<div class="common_tsukodome_text_bnr">
+				<ul class="common_tsukodome_text_bnr_list">
+					
+                    <li class="common_tsukodome_text_bnr_list_item common_tsukodome_text_bnr_list_item_other">
+						<a href="https://www.jartic.or.jp/?p=A08&z=8" rel="noopener" target="_blank">
+							<i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" class="svg replaced-svg"><path d="M540.25 634.75h-2.5V631h-10v40h10v-3.75h2.5V671h10v-40h-10v3.75Zm0 26h-2.5v-6.5h2.5v6.5Zm0-13h-2.5v-6.5h2.5v6.5ZM519 631h5v40h-5v-40Zm35 0h5v40h-5v-40Z" transform="translate(-519 -631)" fill="currentColor" fill-rule="evenodd"></path></svg></i>
+							<p>日本道路交通情報センター<br><span>JARTIC</span>はこちら</p></a>
+					</li>
+                    
+					<li class="common_tsukodome_text_bnr_list_item common_tsukodome_text_bnr_list_item_crosswind">
+						<a href="/customer_index/safety/onegai/safety_onegai.html#16">
+							<i><svg xmlns="http://www.w3.org/2000/svg" width="50" height="40" viewBox="0 0 40.59 32"><path d="m1203.87 1588.72 8.54-3.66a.226.226 0 0 1 .14.01l-1.56 1.13-6.74 2.89 3.45 6.6.23 1.45-.03-.06-4.03-7.68v27.6h-2.17v-28.4l2.17.01v.11Zm6.74 9.23a6.418 6.418 0 0 1-1.65-.41.905.905 0 0 1-.57-.53c-.67-1.55.41-4.87.82-6.01 1.37-3.84 2.39-5.13 3.42-5.43a1.751 1.751 0 0 1 .91-.01 7.389 7.389 0 0 1 2.73 1.62l.56-.16s-2.61-2.47-4.29-1.95c-.94.29-2 1.01-3.77 5.69-.43 1.13-1.64 4.69-.74 6.58.38.8 1.91 1.14 4.32 1.27l.19-.5c-.5-.02-1.21-.06-1.93-.16Zm10.44-8.94s-2.6-2.5-4.45-1.95c-.91.27-1.93.93-3.7 5.36-.43 1.08-1.54 4.76-.5 6.31a1.627 1.627 0 0 0 .4.48c.61.42 1.88.69 4.03.86 0 0-1.28-1.85.75-6.54 1.79-4.13 3.47-4.52 3.47-4.52Zm-1.5 11.68a10.758 10.758 0 0 1-1.71-.37 1.563 1.563 0 0 1-.86-.64c-.63-1.52.05-3.84.38-4.84 1.13-3.43 2.17-4.9 3.16-5.27a1.887 1.887 0 0 1 .89-.08 8.159 8.159 0 0 1 3.13 1.67l.62-.1s-3.47-3.03-4.88-1.81c-.75.65-1.91 1.08-3.27 5.24-.32 1.01-.99 3.82-.36 5.57.25.68 2.26 1.19 4.4 1.3l.33-.46a11.792 11.792 0 0 1-1.83-.21Zm9.73-7.77s-2.44-2.08-4.14-1.91a1.879 1.879 0 0 0-.53 0c-.86.33-2.15 1.54-3.38 5.03-.34.98-1.18 4.03-.18 5.34a1.3 1.3 0 0 0 .62.66 12.959 12.959 0 0 0 3.69.83 9.933 9.933 0 0 1 .68-5.68c1.68-4.27 3.24-4.27 3.24-4.27Zm-.85 10.73a14.038 14.038 0 0 1-1.51-.35 1.757 1.757 0 0 1-1.06-.58c-.8-1.04-.31-3.27-.02-4.19.93-2.97 1.98-4.67 2.88-4.98a2.207 2.207 0 0 1 .91-.14c1.33.08 3.34 1.63 3.34 1.63l.77-.03s-3.74-3.01-5.1-1.83c-.85.73-2.07 1.37-3.11 5.17-.25.93-.93 3.04-.17 4.52.51.99 3.22 1.36 4.61 1.5l.18-.47c-.43-.04-1.01-.12-1.72-.25Zm9.63-6.62s-2.72-2.21-4.32-2.02a4.391 4.391 0 0 0-.68-.09c-.8.31-2 1.35-3.12 4.47-.31.86-1.09 3.65.01 4.99a1.186 1.186 0 0 0 .46.5 12.7 12.7 0 0 0 4.14 1.04 8.679 8.679 0 0 1 .62-5.08c1.53-3.81 2.89-3.81 2.89-3.81Zm-.86 9.47a11.241 11.241 0 0 1-1.33-.33 1.53 1.53 0 0 1-.95-.53c-.66-.88-.25-2.9.01-3.71 1.04-3.19 1.73-3.94 2.49-4.3a1.6 1.6 0 0 1 .82-.14 7.6 7.6 0 0 1 2.94 1.38l.69-.03s-3.31-2.68-4.52-1.63c-.75.65-1.83 1.22-2.74 4.59-.22.82-.83 2.7-.15 4.01.45.88 2.63 1.2 4.09 1.39l.15-.47a14.384 14.384 0 0 1-1.5-.23Zm4.61-7.77c-.73-.29-2.02 1.39-2.9 3.74s-.99 4.48-.27 4.77 2.02-1.39 2.89-3.74 1-4.48.28-4.77Zm-.7 4.57c-.78 2.08-1.89 3.57-2.28 3.42-.37-.15-.24-2.03.53-4.11s1.89-3.58 2.27-3.42.25 2.03-.52 4.11Z" transform="translate(-1201.69 -1585)" fill="currentColor" fill-rule="evenodd"/></svg></i>
+							<p>トラックドライバーの皆様へ<br><span>横風注意！</span></p>
+						</a>
+					</li>
+				</ul>
+			</div>
+            
+           
+            
+		</div>
+	</div>
+</div>
+
+<!-- 自動車道ごとの情報 -->
+
+<!-- お知らせ・観光イベント・工事情報 -->
+<div class="common_information">
+	<div class="common_information_inner">
+		<div class="common_information_anchor">
+			<ul class="common_information_anchor_list">
+								<li class="common_information_anchor_list_item">
+					<a href="#commonConstruction">
+						<i><img src="/customer_index/img/common/icn_anchor_construction.svg" alt="" class="svg" decoding="async"></i>
+						<span>工事情報等</span>
+					</a>
+				</li>
+												<li class="common_information_anchor_list_item">
+					<a href="#commonEvent">
+						<i><img src="/customer_index/img/common/icn_anchor_event.svg" alt="" class="svg" decoding="async"></i>
+						<span>観光・イベント</span>
+					</a>
+				</li>
+												<li class="common_information_anchor_list_item">
+					<a href="#commonNews">
+						<i><img src="/customer_index/img/common/icn_anchor_news.svg" alt="" class="svg" decoding="async"></i>
+						<span>お知らせ</span>
+					</a>
+				</li>
+							</ul>
+		</div>
+
+				<div class="common_information_content is_construction" id="commonConstruction">
+			<div class="common_information_content_inner">
+				<div class="common_information_content_top">
+					<i class="common_information_content_top_icon"><img src="/customer_index/img/common/icn_anchor_ttl_construction.svg" alt="" decoding="async"></i>
+					<span class="common_information_content_top_en">CONSTRUCTION</span>
+					<h2 class="common_information_content_top_ttl">工事情報等</h2>
+					<p class="common_information_content_top_btn">
+						<a href="/customer_index/customer_topics/banner_customer_topics_type/banner_customer_topics_type_construction/">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>バナー一覧を見る</span>
+						</a>
+					</p>
+				</div>
+				<div class="common_information_content_swiper swiper">
+					<div class="common_information_content_list swiper-wrapper">
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/corp_index/news/pdf/2026/261006news-1.pdf">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2026/10/3781_awajisaminami_riyoseigen.jpg" alt="【工事情報等】淡路島南PA(下り)駐車エリアの拡幅工事に伴う一部エリアの利用制限" decoding="async">
+																	</figure>
+							</a>
+						</div>
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/corp_index/news/pdf/2026/260929news-2.pdf">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2026/09/3768_awajisa_kisei.png" alt="【工事情報等】淡路サービスエリア(下り線)工事に伴う駐車スペースの利用制限" decoding="async">
+																	</figure>
+							</a>
+						</div>
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/corp_index/news/pdf/2026/260924news-1.pdf">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2026/09/3620_kyoryohosyu.png" alt="【工事情報等】大三島IC～伯方島IC間(上下線)橋梁補修工事に伴う昼夜連続片側交互通行規制(月・水・金)のお知らせ" decoding="async">
+																	</figure>
+							</a>
+						</div>
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/corp_index/news/pdf/2026/260828news-1.pdf">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2026/08/3566_awajisa_zousetsu.png" alt="【工事情報等】淡路サービスエリア(上り線)障がい者用駐車ます増設工事に伴う駐車場の利用制限のお知らせ" decoding="async">
+																	</figure>
+							</a>
+						</div>
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/corp_index/news/pdf/2026/261106news-1.pdf">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2026/07/3644_kojima_tsukodome.png" alt="【工事情報等】児島IC(岡山方面出口(上り)および香川方面入口(下り))夜間一部通行止め" decoding="async">
+																	</figure>
+							</a>
+						</div>
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/customer_index/guide/keiro/"target="_blank">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2023/11/bnr_keiro.jpg" alt="【工事情報等】明石海峡大橋から各種経路のご案内" decoding="async">
+																	</figure>
+							</a>
+						</div>
+											</div>
+					<div class="common_information_content_swiper_navi">
+						<ul class="common_information_content_swiper_navi_button">
+							<li class="common_information_content_swiper_navi_button_prev">
+								<img src="/customer_index/img/common/icn_slider_arrow_white.svg" alt="前のスライドへ" class="svg" decoding="async">
+							</li>
+							<li class="common_information_content_swiper_navi_button_next">
+								<img src="/customer_index/img/common/icn_slider_arrow_white.svg" alt="次のスライドへ" class="svg" decoding="async">
+							</li>
+						</ul>
+					</div>
+					<div class="is_loader">Loading...</div>
+				</div>
+			</div>
+		</div>
+		
+				<div class="common_information_content is_event" id="commonEvent">
+			<div class="common_information_content_inner">
+				<div class="common_information_content_top">
+					<i class="common_information_content_top_icon"><img src="/customer_index/img/common/icn_anchor_ttl_event.svg" alt="" decoding="async"></i>
+					<span class="common_information_content_top_en">EVENT</span>
+					<h2 class="common_information_content_top_ttl">観光・イベント</h2>
+					<p class="common_information_content_top_btn">
+						<a href="/customer_index/customer_topics/banner_customer_topics_type/banner_customer_topics_type_event/">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>バナー一覧を見る</span>
+						</a>
+					</p>
+				</div>
+				<div class="common_information_content_swiper swiper">
+					<div class="common_information_content_list swiper-wrapper">
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/customer_index/event_topics">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2025/05/bnr_event_topics.png" alt="【観光・イベント】イベント開催情報" decoding="async">
+																	</figure>
+							</a>
+						</div>
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/customer_index/kanko_event/infra/">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2024/07/bnr_infra.png" alt="【観光・イベント】インフラツーリズム" decoding="async">
+																	</figure>
+							</a>
+						</div>
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/customer_index/kanko_event/sahopa/awaji.html"target="_blank">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2023/02/bnr_awajikitasic.png" alt="【観光・イベント】あわじSAHOぱ" decoding="async">
+																	</figure>
+							</a>
+						</div>
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/museum/"target="_blank">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2024/07/bnr_museum_l.png" alt="【観光・イベント】せとうち美術館ネットワーク" decoding="async">
+																	</figure>
+							</a>
+						</div>
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="https://www.kanseto.jp/"target="_blank">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2023/02/bnr_kanseto.png" alt="【観光・イベント】かんせと" decoding="async">
+																	</figure>
+							</a>
+						</div>
+											</div>
+					<div class="common_information_content_swiper_navi">
+						<ul class="common_information_content_swiper_navi_button">
+							<li class="common_information_content_swiper_navi_button_prev">
+								<img src="/customer_index/img/common/icn_slider_arrow_white.svg" alt="前のスライドへ" class="svg" decoding="async">
+							</li>
+							<li class="common_information_content_swiper_navi_button_next">
+								<img src="/customer_index/img/common/icn_slider_arrow_white.svg" alt="次のスライドへ" class="svg" decoding="async">
+							</li>
+						</ul>
+					</div>
+					<div class="is_loader">Loading...</div>
+				</div>
+			</div>
+		</div>
+		
+				<div class="common_information_content is_news" id="commonNews">
+			<div class="common_information_content_inner">
+				<div class="common_information_content_top">
+					<i class="common_information_content_top_icon"><img src="/customer_index/img/common/icn_anchor_ttl_news.svg" alt="" decoding="async"></i>
+					<span class="common_information_content_top_en">INFO</span>
+					<h2 class="common_information_content_top_ttl">お知らせ</h2>
+					<p class="common_information_content_top_btn">
+						<a href="/customer_index/customer_topics/banner_customer_topics_type/banner_customer_topics_type_info/">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>バナー一覧を見る</span>
+						</a>
+					</p>
+				</div>
+				<div class="common_information_content_swiper swiper">
+					<div class="common_information_content_list swiper-wrapper">
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/customer_index/guide/kikaku-waribiki/cycling_free.html">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2024/03/bnr_cyclingfree.jpg" alt="【お知らせ】しまなみサイクリングフリー" decoding="async">
+																	</figure>
+							</a>
+						</div>
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/customer_index/etc/etc_only/">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2025/06/bnr_etc_only.jpg" alt="【お知らせ】ETC専用料金所のご案内" decoding="async">
+																	</figure>
+							</a>
+						</div>
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="https://www.youtube.com/@honshi-sapa/featured"target="_blank">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2023/10/bnr_hs_sapa.jpg" alt="【お知らせ】SA・PA紹介動画" decoding="async">
+																	</figure>
+							</a>
+						</div>
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/customer_index/kanko_event/lightup/">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2023/02/bnr_lightup.png" alt="【お知らせ】ライトアップ情報" decoding="async">
+																	</figure>
+							</a>
+						</div>
+																		<div class="common_information_content_list_item swiper-slide">
+							<a href="/customer_index/phishing.html">
+								<figure>
+																		<img src="https://www.jb-honshi.co.jp/wp-content/uploads/2023/02/1845_phishing.png" alt="【お知らせ】フィッシングサイト・不審なメールにご注意ください" decoding="async">
+																	</figure>
+							</a>
+						</div>
+											</div>
+					<div class="common_information_content_swiper_navi">
+						<ul class="common_information_content_swiper_navi_button">
+							<li class="common_information_content_swiper_navi_button_prev">
+								<img src="/customer_index/img/common/icn_slider_arrow_white.svg" alt="前のスライドへ" class="svg" decoding="async">
+							</li>
+							<li class="common_information_content_swiper_navi_button_next">
+								<img src="/customer_index/img/common/icn_slider_arrow_white.svg" alt="次のスライドへ" class="svg" decoding="async">
+							</li>
+						</ul>
+					</div>
+					<div class="is_loader">Loading...</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<!-- 通行止め関連情報 -->
+
+<!-- 新着情報 -->
+<div class="common_news">
+	<div class="common_news_inner">
+		<div class="common_news_top">
+			<div class="common_news_top_ttl">
+				<i>NEWS</i>
+				<h2>新着情報</h2>
+			</div>
+			<p class="common_news_top_btn">
+				<a href="/customer_index/customer_topics/">
+					<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+					<span>一覧を見る</span>
+				</a>
+			</p>
+		</div>
+		<dl class="common_news_list">
+									<div class="common_news_list_item">
+				<dt>2026年11月20日									</dt>
+				<dd>
+					<a href="https://www.jb-honshi.co.jp/corp_index/corp_news/corp_news_2026/261120news-1-12228?ref=single7">E76 西瀬戸自動車道　来島海峡SA(上下一体型)電気設備の定期点検に伴う停電は終了しました【PDF】</a>				</dd>
+			</div>
+									<div class="common_news_list_item">
+				<dt>2026年11月18日									</dt>
+				<dd>
+					<a href="https://www.jb-honshi.co.jp/corp_index/corp_press/corp_press_2026/261118press-1-12226?ref=single7">無人の休憩施設のゴミ箱の運用廃止について～営業施設の無い休憩施設からゴミ箱がなくなります～【PDF】</a>				</dd>
+			</div>
+									<div class="common_news_list_item">
+				<dt>2026年11月18日									</dt>
+				<dd>
+					<a href="https://www.jb-honshi.co.jp/corp_index/corp_news/corp_news_2026/261118news-1-12224?ref=single7">【再掲】E30 瀬戸中央自動車道　鴻ノ池サービスエリア(上り線、下り線)「ドッグラン」一時閉鎖のお知らせ【PDF】</a>				</dd>
+			</div>
+									<div class="common_news_list_item">
+				<dt>2026年11月17日											<span class="event">イベント</span>									</dt>
+				<dd>
+					<a href="https://www.jb-honshi.co.jp/corp_index/corp_press/corp_press_2026/261117press-1-12221?ref=single7">お客様感謝デー「しまなみご縁日」を開催します!【11月23日(月・祝)】【PDF】</a>				</dd>
+			</div>
+									<div class="common_news_list_item">
+				<dt>2026年11月16日									</dt>
+				<dd>
+					<a href="https://www.jb-honshi.co.jp/corp_index/corp_news/corp_news_2026/261116news-1-12218?ref=single7">E30 瀬戸中央自動車道　粒江PA(上り)男子トイレ大便器ご利用停止のお知らせ【PDF】</a>				</dd>
+			</div>
+									<div class="common_news_list_item">
+				<dt>2026年11月16日											<span class="event">イベント</span>									</dt>
+				<dd>
+					<a href="https://www.jb-honshi.co.jp/corp_index/corp_news/corp_news_2026/261116link-12216?ref=single7">【橋の科学館・明石海峡大橋クリスマスパーク2026】を開催します！【外部リンク】</a>				</dd>
+			</div>
+									<div class="common_news_list_item">
+				<dt>2026年11月13日									</dt>
+				<dd>
+					<a href="https://www.jb-honshi.co.jp/corp_index/corp_news/corp_news_2026/261113news-2-12214?ref=single7">【一部イベント中止のお知らせ(11月14日～15日)】せとうち収穫祭2026【PDF】</a>				</dd>
+			</div>
+									<div class="common_news_list_item">
+				<dt>2026年11月13日									</dt>
+				<dd>
+					<a href="https://www.jb-honshi.co.jp/corp_index/corp_news/corp_news_2026/261113news-1-12212?ref=single7">E76 西瀬戸自動車道　瀬戸田PA(上り・下り)電気設備の定期点検に伴う停電のお知らせ【12月4日(金)3時00分～5時00分】【PDF】</a>				</dd>
+			</div>
+									<div class="common_news_list_item">
+				<dt>2026年11月12日									</dt>
+				<dd>
+					<a href="https://www.jb-honshi.co.jp/corp_index/corp_news/corp_news_2026/261112link-12207?ref=single7">京阪神圏の13箇所で特殊車両の一斉取締りを実施しました(近畿地方整備局)【外部リンク】</a>				</dd>
+			</div>
+									<div class="common_news_list_item">
+				<dt>2026年11月12日									</dt>
+				<dd>
+					<a href="https://www.jb-honshi.co.jp/corp_index/corp_press/corp_press_2026/261112press-1-12205?ref=single7">第8回「橋のみえる丘絵画賞」の作品を募集します!【2027年1月7日(木)～3月26日(金)】【PDF】</a>				</dd>
+			</div>
+					</dl>
+		
+		<!--<ul class="common_news_listkotei">
+			<li><a href="/corp_index/news/pdf/2022/221213news-2-a.pdf">新型コロナウイルス感染予防対策ガイドライン(12月13日改正)【PDF】</a></li>
+			
+			<li><a href="/corp_index/corp_news/corp_news_2023/230126news-1-00/?ref=single7">国土交通省からの新型コロナウイルス感染症対策に関するお願い</a></li>
+			
+			<li><a href="/corp_index/corp_news/corp_news_2020/200227news-1-00/?ref=single7">国土交通省、厚生労働省から新型コロナウイルス感染症対策に関するお願いのお知らせ</a></li>
+		</ul>-->
+	</div>
+</div>
+
+<!-- 共通コンテンツナビ -->
+<div class="common_pagenavi">
+	<div class="common_pagenavi_inner">
+		<ul class="common_pagenavi_list">
+			<li class="common_pagenavi_list_item">
+				<a href="https://www.jartic.or.jp/?p=A08&z=8" rel="noopener" target="_blank">
+					<i><img src="/customer_index/img/common/icn_pagenavi_jartic.svg" alt="" class="svg" decoding="async"></i>
+					<span>交通情報（JARTIC）<u class="target-blank-blue"></u></span>
+				</a>
+			</li>
+			<li class="common_pagenavi_list_item">
+				<a href="/customer_index/etc/">
+					<i><img src="/customer_index/img/common/icn_pagenavi_etc.svg" alt="" class="svg" decoding="async"></i>
+					<span>ETC情報</span>
+				</a>
+			</li>
+			<li class="common_pagenavi_list_item">
+				<a href="/customer_index/traffic/etc_close/">
+					<i><img src="/customer_index/img/common/icn_pagenavi_etc_close.svg" alt="" class="svg" decoding="async"></i>
+					<span>ETCレーン閉鎖情報</span>
+				</a>
+			</li>
+			<li class="common_pagenavi_list_item">
+				<a href="/customer_index/guide/ryokin-table/">
+					<i><img src="/customer_index/img/common/icn_pagenavi_ryokin-table.svg" alt="" class="svg" decoding="async"></i>
+					<span>通行料金表</span>
+				</a>
+			</li>
+			<li class="common_pagenavi_list_item">
+				<a href="/customer_index/safety/">
+					<i><img src="/customer_index/img/common/icn_pagenavi_safety.svg" alt="" class="svg" decoding="async"></i>
+					<span>安全なご利用について</span>
+				</a>
+			</li>
+			<li class="common_pagenavi_list_item">
+				<a href="https://honshi.drivingweather.wni.com/app" rel="noopener" target="_blank">
+					<i><img src="/customer_index/img/common/icn_pagenavi_rdhonshi.svg" alt="" class="svg" decoding="async"></i>
+					<span>天気予測<u class="target-blank-blue"></u></span>
+				</a>
+			</li>
+			<li class="common_pagenavi_list_item">
+				<a href="/customer_index/guide/jct-ic/">
+					<i><img src="/customer_index/img/common/icn_pagenavi_jctic.svg" alt="" class="svg" decoding="async"></i>
+					<span>JCT・IC情報</span>
+				</a>
+			</li>
+			<li class="common_pagenavi_list_item">
+				<a href="/shimanamicycling/">
+					<i><img src="/customer_index/img/common/icn_pagenavi_shimanami.svg" alt="" class="svg" decoding="async"></i>
+					<span>しまなみ海道サイクリング</span>
+				</a>
+			</li>
+			<li class="common_pagenavi_list_item">
+				<a href="/corp_index/recruit/">
+					<i><img src="/customer_index/img/common/icn_pagenavi_recruit.svg" alt="" class="svg" decoding="async"></i>
+					<span>採用情報</span>
+				</a>
+			</li>
+			<li class="common_pagenavi_list_item">
+				<a href="/corp_index/technology/">
+					<i><img src="/customer_index/img/common/icn_pagenavi_technology.svg" alt="" class="svg" decoding="async"></i>
+					<span>本四高速の「長大橋技術」</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- バナーメニュー -->
+<div class="common_bnrmenu">
+	<div class="common_bnrmenu_inner">
+		<h2 class="common_bnrmenu_ttl">ピックアップ</h2>
+		<ul class="common_bnrmenu_list">
+			<li class="common_bnrmenu_list_item">
+				<a href="/letter/" rel="noopener">
+					<div class="common_bnrmenu_list_item_image">
+						<figure>
+							<img src="/customer_index/img/common/bnrmenu/letter.jpg" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="common_bnrmenu_list_item_text">
+						<p class="common_bnrmenu_list_item_text_ttl">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>わたる便り</span>
+						</p>
+						<p class="common_bnrmenu_list_item_text_caption">本四高速のシンボルキャラクターである「わたる」が旬の情報をお伝えします。</p>
+					</div>
+				</a>
+			</li>
+			<li class="common_bnrmenu_list_item">
+				<a href="/seto-ohashi/" rel="noopener">
+					<div class="common_bnrmenu_list_item_image">
+						<figure>
+							<img src="/customer_index/img/common/bnrmenu/seto-ohashi.jpg" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="common_bnrmenu_list_item_text">
+						<p class="common_bnrmenu_list_item_text_ttl">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>瀬戸大橋</span>
+						</p>
+						<p class="common_bnrmenu_list_item_text_caption">瀬戸大橋（瀬戸中央自動車道）のご紹介、瀬戸大橋見学、イベント情報、瀬戸大橋で働く社員のブログをご覧いただけます。</p>
+					</div>
+				</a>
+			</li>
+			<li class="common_bnrmenu_list_item">
+				<a href="/shimanami/" rel="noopener">
+					<div class="common_bnrmenu_list_item_image">
+						<figure>
+							<img src="/customer_index/img/common/bnrmenu/shimanami.jpg" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="common_bnrmenu_list_item_text">
+						<p class="common_bnrmenu_list_item_text_ttl">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>しまなみ海道</span>
+						</p>
+						<p class="common_bnrmenu_list_item_text_caption">しまなみ海道（西瀬戸自動車道）のご紹介、観光・イベント情報、しまなみ海道で働く社員のブログをご覧いただけます。</p>
+					</div>
+				</a>
+			</li>
+			<li class="common_bnrmenu_list_item">
+				<a href="/customer_index/gallery/" rel="noopener">
+					<div class="common_bnrmenu_list_item_image">
+						<figure>
+							<img src="/customer_index/img/common/bnrmenu/gallery.jpg" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="common_bnrmenu_list_item_text">
+						<p class="common_bnrmenu_list_item_text_ttl">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>ギャラリー</span>
+
+						</p>
+						<p class="common_bnrmenu_list_item_text_caption">本州四国連絡橋の風景を、フォトギャラリー、壁紙、ムービーでお楽しみいただけます。</p>
+					</div>
+				</a>
+			</li>
+			<li class="common_bnrmenu_list_item">
+				<a href="/customer_index/generalroad/">
+					<div class="common_bnrmenu_list_item_image">
+						<figure>
+							<img src="/customer_index/img/common/bnrmenu/generalroad.jpg" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="common_bnrmenu_list_item_text">
+						<p class="common_bnrmenu_list_item_text_ttl">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>異常気象が予想される場合の道路利用者へのお知らせ</span>
+						</p>
+						<p class="common_bnrmenu_list_item_text_caption">国土交通省等からの異常気象が予想される場合の道路利用者へのお知らせをまとめています。</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="common_bnrmenu_inner">
+		<h2 class="common_bnrmenu_ttl">ETC・割引案内</h2>
+		<ul class="common_bnrmenu_list">
+			<li class="common_bnrmenu_list_item">
+				<a href="/customer_index/guide/ryokin-guide/ryokin2014.html" target="_blank">
+					<div class="common_bnrmenu_list_item_image">
+						<figure>
+							<img src="/customer_index/img/common/bnrmenu/ryokin-guide.jpg" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="common_bnrmenu_list_item_text">
+						<p class="common_bnrmenu_list_item_text_ttl">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>料金のご案内</span>
+						</p>
+						<p class="common_bnrmenu_list_item_text_caption">本四道路の通行料金及び割引等をご案内します。</p>
+					</div>
+				</a>
+			</li>
+			<li class="common_bnrmenu_list_item">
+				<a href="/customer_index/guide/mileage/" target="_blank">
+					<div class="common_bnrmenu_list_item_image">
+						<figure>
+							<img src="/customer_index/img/common/bnrmenu/mileage.jpg" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="common_bnrmenu_list_item_text">
+						<p class="common_bnrmenu_list_item_text_ttl">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>ETCマイレージサービス</span>
+						</p>
+						<p class="common_bnrmenu_list_item_text_caption">利用実績に応じてポイントを還元する方式により割引を行う制度をご案内します。</p>
+					</div>
+				</a>
+			</li>
+			<li class="common_bnrmenu_list_item">
+				<a href="/customer_index/safety/onegai/etc_safety.html" target="_blank">
+					<div class="common_bnrmenu_list_item_image">
+						<figure>
+							<img src="/customer_index/img/common/bnrmenu/etc_safety.jpg" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="common_bnrmenu_list_item_text">
+						<p class="common_bnrmenu_list_item_text_ttl">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>ETC安全通行のためのお願い</span>
+						</p>
+						<p class="common_bnrmenu_list_item_text_caption">ETCレーンを安全に通行いただくためのお願いです。</p>
+					</div>
+				</a>
+			</li>
+			<li class="common_bnrmenu_list_item">
+				<a href="/customer_index/etc/faq/">
+					<div class="common_bnrmenu_list_item_image">
+						<figure>
+							<img src="/customer_index/img/common/bnrmenu/etc_faq.jpg" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="common_bnrmenu_list_item_text">
+						<p class="common_bnrmenu_list_item_text_ttl">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>ETC FAQ</span>
+						</p>
+						<p class="common_bnrmenu_list_item_text_caption">ETCに関するよくあるお問い合わせをご紹介しています。</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="common_bnrmenu_inner">
+		<h2 class="common_bnrmenu_ttl">安全にご走行いただくために</h2>
+		<ul class="common_bnrmenu_list">
+			<li class="common_bnrmenu_list_item">
+				<a href="/customer_index/safety/sos/" target="_blank">
+					<div class="common_bnrmenu_list_item_image">
+						<figure>
+							<img src="/customer_index/img/common/bnrmenu/sos.jpg" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="common_bnrmenu_list_item_text">
+						<p class="common_bnrmenu_list_item_text_ttl">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>非常電話</span>
+						</p>
+						<p class="common_bnrmenu_list_item_text_caption">受話器を取ると、本四高速管制室へ繋がります。</p>
+					</div>
+				</a>
+			</li>
+			<li class="common_bnrmenu_list_item">
+				<a href="/customer_index/safety/er_dial/" target="_blank">
+					<div class="common_bnrmenu_list_item_image">
+						<figure>
+							<img src="/customer_index/img/common/bnrmenu/er_dial.jpg" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="common_bnrmenu_list_item_text">
+						<p class="common_bnrmenu_list_item_text_ttl">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>道路緊急ダイヤル【#9910】</span>
+						</p>
+						<p class="common_bnrmenu_list_item_text_caption">#9910の短縮番号を押し、音声ガイダンスに従い本四道路の番号を押すことで、本四高速管制室へ繋がります。</p>
+					</div>
+				</a>
+			</li>
+			<li class="common_bnrmenu_list_item">
+				<a href="/customer_index/safety/gyakuso/">
+					<div class="common_bnrmenu_list_item_image">
+						<figure>
+							<img src="/customer_index/img/common/bnrmenu/gyakuso.jpg" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="common_bnrmenu_list_item_text">
+						<p class="common_bnrmenu_list_item_text_ttl">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>無くそう逆走</span>
+						</p>
+						<p class="common_bnrmenu_list_item_text_caption">道路標識、路面標示を十分に確認してください。本線や料金所付近では、バックやUターンはおやめください。</p>
+					</div>
+				</a>
+			</li>
+			<li class="common_bnrmenu_list_item">
+				<a href="/customer_index/safety/onegai/snd_sdd.html">
+					<div class="common_bnrmenu_list_item_image">
+						<figure>
+							<img src="/customer_index/img/common/bnrmenu/snd_sdd.png" alt="" decoding="async">
+						</figure>
+					</div>
+					<div class="common_bnrmenu_list_item_text">
+						<p class="common_bnrmenu_list_item_text_ttl">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="SNDプロジェクト・SDDプロジェクト" class="svg" decoding="async"></i>
+							<span>SNDプロジェクト・SDDプロジェクト</span>
+						</p>
+						<p class="common_bnrmenu_list_item_text_caption">本四高速が取り組んでいる交通安全啓発プロジェクトです。</p>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<!--<ul class="common_bnrmenu_slist">
+			<li class="common_bnrmenu_slist_item">
+				<a href="/corp_index/corp_news/corp_news_2016/160727news-1-1888/?ref=single7" target="_blank">
+					<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+					<span>ポケモントレーナーのみなさまへ</span>
+				</a>
+			</li>
+			<li class="common_bnrmenu_slist_item">
+				<a href="/customer_index/safety/onegai/safety_onegai.html" target="_blank">
+					<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+					<span>落下物防止にご協力ください</span>
+				</a>
+			</li>
+			<li class="common_bnrmenu_slist_item">
+				<a href="/customer_index/safety/sos/index.html#tunnel">
+					<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+					<span>トンネル内で火災に遭遇したら</span>
+				</a>
+			</li>
+			<li class="common_bnrmenu_slist_item">
+				<a href="/customer_index/safety/onegai/nouyaku.html">
+					<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+					<span>農薬（除草剤）散布にご理解ください</span>
+				</a>
+			</li>
+		</ul>-->
+	</div>
+</div>
+
+<!-- 企業情報サイト -->
+<div class="common_corp">
+	<a href="/corp_index/">
+		<div class="common_corp_inner">
+			<div class="common_corp_text">
+				<p class="common_corp_text_ttl">企業情報サイト</p>
+				<p class="common_corp_text_caption">会社・事業案内、採用情報、IR、<br>技術情報などはこちらへ</p>
+			</div>
+		</div>
+	</a>
+</div>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+	<div class="footer_inner">
+		<div class="footer_content">
+			<dl class="footer_list is_pc">
+								<div class="footer_list_item">
+					<dt>
+						<a href="/customer_index/traffic/">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>交通情報</span>
+						</a>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="/customer_index/traffic/tsukodome/"><span>通行止め情報</span></a></li>
+							<!--<li><a href="/customer_index/traffic/bike/"><span>二輪車通行止め情報</span></a></li>-->
+							<li><a href="/customer_index/traffic/past/"><span>通行止め実績</span></a></li>
+							<li><a href="/customer_index/traffic/etc_close/"><span>ETCレーン閉鎖情報</span></a></li>
+							<li><a href="/customer_index/traffic/habahiro_close/"><span>幅広レーン閉鎖情報</span></a></li>
+							<li><a href="https://www.jartic.or.jp/?p=A08&amp;z=8" target="_blank"><span class="target-blank-blue">交通情報（JARTIC）</span></a></li>
+							<li><a href="https://honshi.drivingweather.wni.com/app" target="_blank"><span class="target-blank-blue">天気予測</span></a></li>
+                            <li><a href="https://www.8405.jp/" target="_blank"><span class="target-blank-blue">阪神高速道路の交通情報サイト</span></a></li>
+                            <li><a href="https://ihighway.jp/pcsite/" target="_blank"><span class="target-blank-blue">NEXCO西日本高速道路の交通情報サイト</span></a></li>
+						</ul>
+					</dd>
+				</div>
+				<div class="footer_list_item">
+					<dt>
+						<a href="/customer_index/guide/">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>料金・道路案内</span>
+						</a>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="/customer_index/guide/ryokin-guide/ryokin2014.html"><span>料金のご案内</span></a></li>
+							<li><p><a href="/customer_index/guide/ryokin-search/"><span>料金検索</span></a></p></li>
+							<li><a href="/customer_index/guide/ryokin-table/"><span>通行料金表</span></a></li>
+							<li><a href="/customer_index/guide/ryokinjyo/"><span>ETCサービス料金所</span></a></li>
+							<li><a href="/customer_index/guide/kubun/kubun.html"><span>車種区分表</span></a></li>
+							<li><a href="/customer_index/guide/hinan/shinsai.html"><span>原発事故により避難されている方に対する無料措置</span></a></li>
+							<li><a href="/customer_index/guide/kinkyusyaryo/shinsai.html"><span>緊急通行車両、災害派遣等従事車両における料金の取り扱い</span></a></li>
+							<li><a href="/customer_index/guide/mileage/"><span>ETCマイレージサービス</span></a></li>
+							<li><a href="/customer_index/guide/oguchi-tahindo-waribiki/"><span>大口・多頻度割引</span></a></li>
+							<li><a href="/customer_index/guide/shogai-waribiki/"><span>障害者割引</span></a></li>
+							<li><a href="/customer_index/guide/kikaku-waribiki/"><span>企画割引</span></a></li>
+							<li><a href="/customer_index/guide/refund/"><span>払戻し</span></a></li>
+							<li><a href="/customer_index/guide/route-guide/"><span>道路の概要</span></a></li>
+							<li><a href="/customer_index/guide/jct-ic/"><span>JCT・IC</span></a></li>
+							<li><a href="/customer_index/guide/jct-ic/awaji-kita.html"><span>淡路北スマートICの利用方法</span></a></li>
+							<li><a href="/customer_index/guide/keiro/"><span>明石海峡大橋からの経路選択のご案内</span></a></li>
+							<li><a href="/customer_index/guide/zihodo/"><span>原付道・自転車歩行者道</span></a></li>
+							<li><a href="/customer_index/guide/tokusyu/"><span>特殊車両通行許可制度</span></a></li>
+							<li><a href="/customer_index/guide/syaryo-seigen/"><span>車両制限令</span></a></li>
+							<li><a href="/customer_index/guide/kiyaku/"><span>本四道路のご利用に関する規約</span></a></li>
+							<li><a href="/customer_index/guide/faq/"><span>料金・道路案内 FAQ</span></a></li>
+						</ul>
+					</dd>
+				</div>
+				<div class="footer_list_item">
+					<dt>
+						<a href="/customer_index/etc/">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>ETC情報</span>
+						</a>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="/customer_index/etc/riyo/"><span>ETCの利用方法</span></a></li>
+							<li><a href="/customer_index/etc/chui/"><span>ETC利用上の注意事項</span></a></li>
+							<li><a href="/customer_index/etc/shikumi/"><span>ETCとは</span></a></li>
+							<li><a href="https://www.go-etc.jp/support/card" target="_blank"><span class="target-blank-blue">ETCカードのお申込み</span></a></li>
+							<li><a href="https://www.go-etc.jp/support/setup" target="_blank"><span class="target-blank-blue">車載器取付とセットアップ</span></a></li>
+							<li><a href="https://www.go-etc.jp/motorcycle/index.html" target="_blank"><span class="target-blank-blue">二輪車ETCの利用方法</span></a></li>
+							<li><a href="/customer_index/etc/kitei/"><span>ETCシステム利用規程</span></a></li>
+							<li><a href="/customer_index/etc/antenna/"><span>ETCカード未挿入お知らせアンテナ</span></a></li>
+                            <li><a href="/customer_index/etc/re_antenna/"><span>再通信アンテナについて</span></a></li>
+							<li><a href="/customer_index/etc/etccard_hunshitsu/"><span>ETCカード紛失時のお願い</span></a></li>
+							<li><a href="/customer_index/etc/etc_only/"><span>ETC専用料金所</span></a></li>
+							<li><a href="/customer_index/etc/sic/"><span>スマートIC</span></a></li>
+							<li><a href="/customer_index/etc/fusei/fusei.html"><span>不正通行対策の取組</span></a></li>
+							<li><a href="/customer_index/etc/faq/"><span>ETC FAQ</span></a></li>
+							<li><a href="/customer_index/etc/etc_security/"><span>セキュリティ規格の変更について</span></a></li>
+							<li><a href="/customer_index/etc/spurious_etc/"><span>旧スプリアス規格のETC車載器について</span></a></li>
+							<li><a href="/customer_index/etc/etc_credit/"><span>一体型ETCクレジットカードの取扱い見直しについて</span></a></li>
+							<li><a href="https://www.jrc.co.jp/jp/product/roads_railways/its/search/index.html" target="_blank"><span class="target-blank-blue">二輪車用車載器に関するお知らせ</span></a></li>
+							<li><a href="https://www.etc-pasoca.jp/" target="_blank"><span class="target-blank-blue">ETCパーソナルカード</span></a></li>
+							<li><a href="http://www.etc-meisai.jp/" target="_blank"><span class="target-blank-blue">ETC利用照会サービス</span></a></li>
+							<li><a href="/customer_index/etc/printer/"><span>ETC利用履歴発行プリンター</span></a></li>
+						</ul>
+					</dd>
+				</div>
+				<div class="footer_list_item">
+					<dt>
+						<a href="/customer_index/safety/">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>安全にご利用いただくために</span>
+						</a>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="/customer_index/safety/onegai/"><span>交通安全のためのお願い</span></a></li>
+							<li><a href="/customer_index/safety/gyakuso/"><span>無くそう逆走</span></a></li>
+							<li><a href="/customer_index/safety/torikumi/"><span>安全への取組</span></a></li>
+                            <li><a href="/customer_index/safety/onegai/snd_sdd.html"><span>SNDプロジェクト・SDDプロジェクト</span></a></li>
+							<li><a href="/customer_index/safety/sos/"><span>緊急時の対処について</span></a></li>
+							<li><a href="/customer_index/safety/er_dial/"><span>道路緊急ダイヤル[＃9910]</span></a></li>
+                            <li><a href="/customer_index/safety/onegai/zukeijohoban.html"><span>図形情報板の見方について</span></a></li>
+                            <li><a href="/customer_index/safety/onegai/johoban.html"><span>情報板での渋滞情報提供について</span></a></li>
+                            <li><a href="/customer_index/safety/onegai/etc_safety.html"><span>ETCレーンの安全な走行について</span></a></li>
+                            <li><a href="/customer_index/safety/onegai/kisei.html"><span>道路維持作業におけるお願いについて</span></a></li>
+						</ul>
+					</dd>
+				</div>
+				<div class="footer_list_item">
+					<dt>
+						<a href="/customer_index/kanko_event/">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>観光・イベント</span>
+						</a>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="/customer_index/event_topics"><span>イベント情報</span></a></li>
+                            <li><a href="https://www.love-setouchi.jp/" target="_blank"><span>せとうち魅力発見</span></a></li>
+							<li><a href="/customer_index/kanko_event/anniversary/"><span>アニバーサリー</span></a></li>
+							<li><a href="/customer_index/kanko_event/sahopa/awaji.html"><span>あわじSAHOぱイベントカレンダー</span></a></li>
+							<li><a href="/customer_index/kanko_event/lightup/"><span>ライトアップ情報</span></a></li>
+							<li><a href="/customer_index/kanko_event/infra/"><span>インフラツーリズム</span></a></li>
+							<li><a href="/bridgeworld/"><span>明石海峡大橋塔頂体験ブリッジワールド</span></a></li>
+							<li><a href="/skytour/"><span>瀬戸大橋塔頂体験スカイツアー</span></a></li>
+							<li><a href="/shimanamicycling/"><span>しまなみ海道サイクリング</span></a></li>
+							<li><a href="/miniiko/"><span>橋を見に行こう</span></a></li>
+							<li><a href="/museum/"><span>せとうち美術館ネットワーク</span></a></li>
+							<li><a href="/kanko/"><span>観光情報（瀬戸マーレ）・ぶらり社員紀行</span></a></li>
+							<li><a href="https://www.hashinokagakukan.jp/" target="_blank"><span class="target-blank-blue">橋の科学館</span></a></li>
+							<li><a href="/customer_index/kanko_event/minecraft/"><span>マインクラフト(Minecraft)</span></a></li>
+                            <li><a href="/customer_index/kanko_event/enjoy-guide/"><span>橋の楽しみ方ガイド</span></a></li>
+							<li><a href="/customer_index/kanko_event/park/"><span>日本遺産オフィシャルパートナーシップ</span></a></li>
+							<li><a href="/customer_index/kanko_event/tieup/"><span>JR四国・JB本四高速連携事業</span></a></li>
+                            <li><a href="https://www.kanseto.jp/" target="_blank"><span class="target-blank-blue">環瀬戸内地域交流促進協議会</span></a></li>
+                            <li><a href="https://shikoku-tourism.com/" target="_blank"><span class="target-blank-blue">四国ツーリズム創造機構</span></a></li>
+                            <li><a href="https://www.setouchi.travel/jp/" target="_blank"><span class="target-blank-blue">せとうちDMO(瀬戸内Finder)</span></a></li>                           
+						</ul>
+					</dd>
+				</div>
+				<div class="footer_list_item">
+					<dt>
+						<a href="https://www.jb-highway.co.jp/index.html" target="_blank">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>SA・PA</span>
+						</a>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="https://www.jb-highway.co.jp/index.html" target="_blank"><span class="target-blank-blue">SA・PA情報</span></a></li>
+							<!--<li><a href="/customer_index/sapa/shimanamipin/"><span>来島海峡SA しまなみ海道ロゴオブジェ「しまなみピン」</span></a></li>
+							<li><a href="/customer_index/sapa/kanransha/"><span>大観覧車（淡路SA下り）</span></a></li>
+							<li><a href="/customer_index/sapa/lovers/lovers.html"><span>恋人の聖地（淡路SA上り）</span></a></li>
+							<li><a href="/customer_index/sapa/hashinomieruoka/"><span>橋のみえる丘ギャラリー（淡路SA上り）</span></a></li>
+							<li><a href="/customer_index/sapa/dogrun/"><span>ドッグラン</span></a></li>
+							<li><a href="/customer_index/sapa/evstand/"><span>EV急速充電スタンド</span></a></li>-->
+						</ul>
+					</dd>
+				</div>
+				<div class="footer_list_item">
+					<dt>
+						<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+						<span>ピックアップ</span>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="/letter/"><span>わたる便り</span></a></li>
+							<li><a href="/seto-ohashi/"><span>瀬戸大橋</span></a></li>
+							<li><a href="/shimanami/"><span>しまなみ海道</span></a></li>
+							<li><a href="/customer_index/gallery/"><span>ギャラリー</span></a></li>
+							<li><a href="/customer_index/generalroad/"><span>異常気象が予想される場合の道路利用者へのお知らせ</span></a></li>
+						</ul>
+					</dd>
+				</div>			</dl>
+			<dl class="footer_list is_sp">
+								<div class="footer_list_item">
+					<dt>
+						<a href="/customer_index/traffic/">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>交通情報</span>
+						</a>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="/customer_index/traffic/tsukodome/"><span>通行止め情報</span></a></li>
+							<!--<li><a href="/customer_index/traffic/bike/"><span>二輪車通行止め情報</span></a></li>-->
+							<li><a href="/customer_index/traffic/past/"><span>通行止め実績</span></a></li>
+							<li><a href="/customer_index/traffic/etc_close/"><span>ETCレーン閉鎖情報</span></a></li>
+							<li><a href="/customer_index/traffic/habahiro_close/"><span>幅広レーン閉鎖情報</span></a></li>
+							<li><a href="https://www.jartic.or.jp/?p=A08&amp;z=8" target="_blank"><span class="target-blank-blue">交通情報（JARTIC）</span></a></li>
+							<li><a href="https://honshi.drivingweather.wni.com/app" target="_blank"><span class="target-blank-blue">天気予測</span></a></li>
+                            <li><a href="https://www.8405.jp/" target="_blank"><span class="target-blank-blue">阪神高速道路の交通情報サイト</span></a></li>
+                            <li><a href="https://ihighway.jp/pcsite/" target="_blank"><span class="target-blank-blue">NEXCO西日本高速道路の交通情報サイト</span></a></li>
+						</ul>
+					</dd>
+				</div>
+				<div class="footer_list_item">
+					<dt>
+						<a href="/customer_index/guide/">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>料金・道路案内</span>
+						</a>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="/customer_index/guide/ryokin-guide/ryokin2014.html"><span>料金のご案内</span></a></li>
+							<li><p><a href="/customer_index/guide/ryokin-search/"><span>料金検索</span></a></p></li>
+							<li><a href="/customer_index/guide/ryokin-table/"><span>通行料金表</span></a></li>
+							<li><a href="/customer_index/guide/ryokinjyo/"><span>ETCサービス料金所</span></a></li>
+							<li><a href="/customer_index/guide/kubun/kubun.html"><span>車種区分表</span></a></li>
+							<li><a href="/customer_index/guide/hinan/shinsai.html"><span>原発事故により避難されている方に対する無料措置</span></a></li>
+							<li><a href="/customer_index/guide/kinkyusyaryo/shinsai.html"><span>緊急通行車両、災害派遣等従事車両における料金の取り扱い</span></a></li>
+							<li><a href="/customer_index/guide/mileage/"><span>ETCマイレージサービス</span></a></li>
+							<li><a href="/customer_index/guide/oguchi-tahindo-waribiki/"><span>大口・多頻度割引</span></a></li>
+							<li><a href="/customer_index/guide/shogai-waribiki/"><span>障害者割引</span></a></li>
+							<li><a href="/customer_index/guide/kikaku-waribiki/"><span>企画割引</span></a></li>
+							<li><a href="/customer_index/guide/refund/"><span>払戻し</span></a></li>
+							<li><a href="/customer_index/guide/route-guide/"><span>道路の概要</span></a></li>
+							<li><a href="/customer_index/guide/jct-ic/"><span>JCT・IC</span></a></li>
+							<li><a href="/customer_index/guide/jct-ic/awaji-kita.html"><span>淡路北スマートICの利用方法</span></a></li>
+							<li><a href="/customer_index/guide/keiro/"><span>明石海峡大橋からの経路選択のご案内</span></a></li>
+							<li><a href="/customer_index/guide/zihodo/"><span>原付道・自転車歩行者道</span></a></li>
+							<li><a href="/customer_index/guide/tokusyu/"><span>特殊車両通行許可制度</span></a></li>
+							<li><a href="/customer_index/guide/syaryo-seigen/"><span>車両制限令</span></a></li>
+							<li><a href="/customer_index/guide/kiyaku/"><span>本四道路のご利用に関する規約</span></a></li>
+							<li><a href="/customer_index/guide/faq/"><span>料金・道路案内 FAQ</span></a></li>
+						</ul>
+					</dd>
+				</div>
+				<div class="footer_list_item">
+					<dt>
+						<a href="/customer_index/etc/">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>ETC情報</span>
+						</a>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="/customer_index/etc/riyo/"><span>ETCの利用方法</span></a></li>
+							<li><a href="/customer_index/etc/chui/"><span>ETC利用上の注意事項</span></a></li>
+							<li><a href="/customer_index/etc/shikumi/"><span>ETCとは</span></a></li>
+							<li><a href="https://www.go-etc.jp/support/card" target="_blank"><span class="target-blank-blue">ETCカードのお申込み</span></a></li>
+							<li><a href="https://www.go-etc.jp/support/setup" target="_blank"><span class="target-blank-blue">車載器取付とセットアップ</span></a></li>
+							<li><a href="https://www.go-etc.jp/motorcycle/index.html" target="_blank"><span class="target-blank-blue">二輪車ETCの利用方法</span></a></li>
+							<li><a href="/customer_index/etc/kitei/"><span>ETCシステム利用規程</span></a></li>
+							<li><a href="/customer_index/etc/antenna/"><span>ETCカード未挿入お知らせアンテナ</span></a></li>
+                            <li><a href="/customer_index/etc/re_antenna/"><span>再通信アンテナについて</span></a></li>
+							<li><a href="/customer_index/etc/etccard_hunshitsu/"><span>ETCカード紛失時のお願い</span></a></li>
+							<li><a href="/customer_index/etc/etc_only/"><span>ETC専用料金所</span></a></li>
+							<li><a href="/customer_index/etc/sic/"><span>スマートIC</span></a></li>
+							<li><a href="/customer_index/etc/fusei/fusei.html"><span>不正通行対策の取組</span></a></li>
+							<li><a href="/customer_index/etc/faq/"><span>ETC FAQ</span></a></li>
+							<li><a href="/customer_index/etc/etc_security/"><span>セキュリティ規格の変更について</span></a></li>
+							<li><a href="/customer_index/etc/spurious_etc/"><span>旧スプリアス規格のETC車載器について</span></a></li>
+							<li><a href="/customer_index/etc/etc_credit/"><span>一体型ETCクレジットカードの取扱い見直しについて</span></a></li>
+							<li><a href="https://www.jrc.co.jp/jp/product/roads_railways/its/search/index.html" target="_blank"><span class="target-blank-blue">二輪車用車載器に関するお知らせ</span></a></li>
+							<li><a href="https://www.etc-pasoca.jp/" target="_blank"><span class="target-blank-blue">ETCパーソナルカード</span></a></li>
+							<li><a href="http://www.etc-meisai.jp/" target="_blank"><span class="target-blank-blue">ETC利用照会サービス</span></a></li>
+							<li><a href="/customer_index/etc/printer/"><span>ETC利用履歴発行プリンター</span></a></li>
+						</ul>
+					</dd>
+				</div>
+				<div class="footer_list_item">
+					<dt>
+						<a href="/customer_index/safety/">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>安全にご利用いただくために</span>
+						</a>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="/customer_index/safety/onegai/"><span>交通安全のためのお願い</span></a></li>
+							<li><a href="/customer_index/safety/gyakuso/"><span>無くそう逆走</span></a></li>
+							<li><a href="/customer_index/safety/torikumi/"><span>安全への取組</span></a></li>
+                            <li><a href="/customer_index/safety/onegai/snd_sdd.html"><span>SNDプロジェクト・SDDプロジェクト</span></a></li>
+							<li><a href="/customer_index/safety/sos/"><span>緊急時の対処について</span></a></li>
+							<li><a href="/customer_index/safety/er_dial/"><span>道路緊急ダイヤル[＃9910]</span></a></li>
+                            <li><a href="/customer_index/safety/onegai/zukeijohoban.html"><span>図形情報板の見方について</span></a></li>
+                            <li><a href="/customer_index/safety/onegai/johoban.html"><span>情報板での渋滞情報提供について</span></a></li>
+                            <li><a href="/customer_index/safety/onegai/etc_safety.html"><span>ETCレーンの安全な走行について</span></a></li>
+                            <li><a href="/customer_index/safety/onegai/kisei.html"><span>道路維持作業におけるお願いについて</span></a></li>
+						</ul>
+					</dd>
+				</div>
+				<div class="footer_list_item">
+					<dt>
+						<a href="/customer_index/kanko_event/">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>観光・イベント</span>
+						</a>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="/customer_index/event_topics"><span>イベント情報</span></a></li>
+                            <li><a href="https://www.love-setouchi.jp/" target="_blank"><span>せとうち魅力発見</span></a></li>
+							<li><a href="/customer_index/kanko_event/anniversary/"><span>アニバーサリー</span></a></li>
+							<li><a href="/customer_index/kanko_event/sahopa/awaji.html"><span>あわじSAHOぱイベントカレンダー</span></a></li>
+							<li><a href="/customer_index/kanko_event/lightup/"><span>ライトアップ情報</span></a></li>
+							<li><a href="/customer_index/kanko_event/infra/"><span>インフラツーリズム</span></a></li>
+							<li><a href="/bridgeworld/"><span>明石海峡大橋塔頂体験ブリッジワールド</span></a></li>
+							<li><a href="/skytour/"><span>瀬戸大橋塔頂体験スカイツアー</span></a></li>
+							<li><a href="/shimanamicycling/"><span>しまなみ海道サイクリング</span></a></li>
+							<li><a href="/miniiko/"><span>橋を見に行こう</span></a></li>
+							<li><a href="/museum/"><span>せとうち美術館ネットワーク</span></a></li>
+							<li><a href="/kanko/"><span>観光情報（瀬戸マーレ）・ぶらり社員紀行</span></a></li>
+							<li><a href="https://www.hashinokagakukan.jp/" target="_blank"><span class="target-blank-blue">橋の科学館</span></a></li>
+							<li><a href="/customer_index/kanko_event/minecraft/"><span>マインクラフト(Minecraft)</span></a></li>
+                            <li><a href="/customer_index/kanko_event/enjoy-guide/"><span>橋の楽しみ方ガイド</span></a></li>
+							<li><a href="/customer_index/kanko_event/park/"><span>日本遺産オフィシャルパートナーシップ</span></a></li>
+							<li><a href="/customer_index/kanko_event/tieup/"><span>JR四国・JB本四高速連携事業</span></a></li>
+                            <li><a href="https://www.kanseto.jp/" target="_blank"><span class="target-blank-blue">環瀬戸内地域交流促進協議会</span></a></li>
+                            <li><a href="https://shikoku-tourism.com/" target="_blank"><span class="target-blank-blue">四国ツーリズム創造機構</span></a></li>
+                            <li><a href="https://www.setouchi.travel/jp/" target="_blank"><span class="target-blank-blue">せとうちDMO(瀬戸内Finder)</span></a></li>                           
+						</ul>
+					</dd>
+				</div>
+				<div class="footer_list_item">
+					<dt>
+						<a href="https://www.jb-highway.co.jp/index.html" target="_blank">
+							<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+							<span>SA・PA</span>
+						</a>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="https://www.jb-highway.co.jp/index.html" target="_blank"><span class="target-blank-blue">SA・PA情報</span></a></li>
+							<!--<li><a href="/customer_index/sapa/shimanamipin/"><span>来島海峡SA しまなみ海道ロゴオブジェ「しまなみピン」</span></a></li>
+							<li><a href="/customer_index/sapa/kanransha/"><span>大観覧車（淡路SA下り）</span></a></li>
+							<li><a href="/customer_index/sapa/lovers/lovers.html"><span>恋人の聖地（淡路SA上り）</span></a></li>
+							<li><a href="/customer_index/sapa/hashinomieruoka/"><span>橋のみえる丘ギャラリー（淡路SA上り）</span></a></li>
+							<li><a href="/customer_index/sapa/dogrun/"><span>ドッグラン</span></a></li>
+							<li><a href="/customer_index/sapa/evstand/"><span>EV急速充電スタンド</span></a></li>-->
+						</ul>
+					</dd>
+				</div>
+				<div class="footer_list_item">
+					<dt>
+						<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+						<span>ピックアップ</span>
+					</dt>
+					<dd>
+						<ul>
+							<li><a href="/letter/"><span>わたる便り</span></a></li>
+							<li><a href="/seto-ohashi/"><span>瀬戸大橋</span></a></li>
+							<li><a href="/shimanami/"><span>しまなみ海道</span></a></li>
+							<li><a href="/customer_index/gallery/"><span>ギャラリー</span></a></li>
+							<li><a href="/customer_index/generalroad/"><span>異常気象が予想される場合の道路利用者へのお知らせ</span></a></li>
+						</ul>
+					</dd>
+				</div>			</dl>
+			<ul class="footer_slist">
+				<li class="footer_slist_item">
+					<a href="/customer_index/private/">
+						<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+						<span>プライバシーポリシー</span>
+					</a>
+				</li>
+				<li class="footer_slist_item">
+					<a href="/customer_index/security/">
+						<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+						<span>情報セキュリティポリシー</span>
+					</a>
+				</li>
+				<li class="footer_slist_item">
+					<a href="/customer_index/siteinfo/">
+						<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+						<span>サイトのご利用について</span>
+					</a>
+				</li>
+				<li class="footer_slist_item">
+					<a href="/customer_index/link/">
+						<i><img src="/img/common/icn_arrow_right.svg" alt="" class="svg" decoding="async"></i>
+						<span>リンク</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer_info">
+		<div class="footer_info_inner">
+			<div class="footer_info_logo">
+				<a href="/customer_index/">
+					<h1><img src="/img/common/logo.svg" alt=" 本四高速" class="svg" decoding="async"></h1>
+				</a>
+			</div>
+			<div class="footer_info_copy">
+				<p>JB本四高速 - 本州四国連絡高速道路株式会社 -<br>&copy; 2005 Honshu-Shikoku Bridge Expressway Company Limited.</p>
+			</div>
+		</div>
+	</div>
+</footer>
+
+
+<div class="snavi">
+	<div class="snavi_inner">
+		<ul class="snavi_list">
+			<li class="snavi_list_item">
+				<a href="/customer_index/">
+					<i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.5 25"><path d="m510.14 185.384-5.44-5.439-4.946-4.945-4.946 4.945-5.442 5.442-3.866 3.865 2.226 2.226 3.866-3.865 5.442-5.442 2.72-2.719 2.72 2.719 5.439 5.439 3.869 3.868 2.226-2.226Zm-19.867 6.257V200H500.8v-6.624h3.832V200h4.605v-8.362l-9.48-9.479Z" transform="translate(-485.5 -175)" fill="currentColor" fill-rule="evenodd"/></svg></i>
+					<span>ホーム</span>
+				</a>
+			</li>
+			<li class="snavi_list_item">
+				<a href="/customer_index/traffic/tsukodome/">
+					<i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.28 22"><path d="m1517.88 1444.36-1.49-2.35a.986.986 0 0 0-.89-.5h-1.07l-.82-2.05h-14.56l-.82 2.05h-1.07a.986.986 0 0 0-.89.5l-1.49 2.35a1.028 1.028 0 0 0 .14 1.11 1.554 1.554 0 0 0 1.2.53h20.43a1.533 1.533 0 0 0 1.19-.53 1.009 1.009 0 0 0 .14-1.11Zm-8.1-14.44-1.98-4.92a1.58 1.58 0 0 0-2.94 0l-1.44 3.58-.54 1.33v.01h6.9Zm-9.45 6.35v.01h12l-1.27-3.18h-9.46l-.92 2.31-.35.86Z" transform="translate(-1494.69 -1424)" fill="currentColor" fill-rule="evenodd"/></svg></i>
+					<span>通行止め情報</span>
+				</a>
+			</li>
+			<li class="snavi_list_item">
+				<a href="/customer_index/guide/ryokin-search/">
+					<i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.82 22"><path d="M1537.92 1481h-4.8l-4.12 7.53-4.12-7.53h-4.8l4.84 8.84h-4.13v3.35h5.67v2.18h-5.67v3.35h5.67v4.28h5.08v-4.28h5.67v-3.35h-5.67v-2.18h5.67v-3.35h-4.13Z" transform="translate(-1520.09 -1481)" fill="currentColor" fill-rule="evenodd"/></svg></i>
+					<span>料金検索</span>
+				</a>
+			</li>
+			<li class="snavi_list_item">
+				<a href="https://www.jb-highway.co.jp/index.html" target="_blank">
+					<i><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.59 21.75"><path d="M1532.77 1525.74a3.581 3.581 0 0 0-2.2-2.32 6.031 6.031 0 0 0-2.26-.41c-2.57-.01-5.14 0-7.71-.01-.14 0-.19.03-.19.18q.015 3.63.01 7.26t-.01 7.28c0 .16.05.19.19.19 1.42-.01 2.84-.01 4.25 0 .14 0 .19-.03.19-.18-.01-1.74 0-3.47-.01-5.21 0-.12.04-.15.16-.15.92 0 1.83.01 2.75-.01a6.5 6.5 0 0 0 2.87-.64 3.9 3.9 0 0 0 1.92-2.19 5.793 5.793 0 0 0 .04-3.79Zm-4.73.73a1.745 1.745 0 0 0-1.07-.4c-.6-.07-1.2-.02-1.8-.04-.12 0-.14.04-.14.14.01.51.01 1.02.01 1.52s0 1.02-.01 1.53c0 .12.04.14.14.14.32-.01.63 0 .94 0a4.787 4.787 0 0 0 1.36-.17 1.445 1.445 0 0 0 1.06-1.12 1.607 1.607 0 0 0-.49-1.6Zm13.9 13.06a1.122 1.122 0 0 0-.96-1.07l-.3-.03c-.11 0-.11-.11-.12-.18-.01-.09.07-.05.12-.05.2-.01.39 0 .59-.01a.427.427 0 0 0 .47-.47v-.4a.439.439 0 0 0-.49-.49h-1.11a.142.142 0 0 1-.17-.11c-.2-.54-.39-1.08-.61-1.61a1.444 1.444 0 0 0-1.18-.97 4.5 4.5 0 0 0-.64-.03h-5.96c-.18 0-.36.01-.55.02a1.158 1.158 0 0 0-1.1.82c-.21.58-.42 1.16-.62 1.75a.186.186 0 0 1-.2.14c-.35-.01-.69-.01-1.04-.01a.426.426 0 0 0-.46.42 3.379 3.379 0 0 0 0 .45.447.447 0 0 0 .52.5h.62a.215.215 0 0 1-.24.25.938.938 0 0 0-.49.12 1.231 1.231 0 0 0-.64 1.17v2.48a1.616 1.616 0 0 0 .14.65 1.182 1.182 0 0 0 1.16.65c.12 0 .14.04.14.14q-.015.375 0 .75a.3.3 0 0 0 .35.34c.23.01.45.01.68 0a.288.288 0 0 0 .33-.33c0-.25.01-.51 0-.76 0-.1.02-.13.13-.13h8.72c.1 0 .13.02.13.12-.01.24 0 .49 0 .73a.311.311 0 0 0 .37.37c.22.01.45.01.68 0a.283.283 0 0 0 .31-.32c.01-.23 0-.46 0-.7 0-.2 0-.2.2-.21a1.154 1.154 0 0 0 1.22-1.11 25.155 25.155 0 0 0 0-2.88Zm-2.23-1.21c-.4-1.11-.8-2.23-1.19-3.35a.169.169 0 0 0-.19-.14q-3.675.015-7.35 0a.159.159 0 0 0-.18.14c-.39 1.11-.79 2.23-1.18 3.34-.06.15-.06.16.12.16h9.86c.12 0 .16-.01.11-.15Zm.14 1.29a.785.785 0 1 0 .78.79.8.8 0 0 0-.78-.79Zm-10.34 0a.79.79 0 0 0-.79.78.777.777 0 0 0 .78.79.785.785 0 1 0 .01-1.57Z" transform="translate(-1520.41 -1523)" fill="currentColor" fill-rule="evenodd"/></svg></i>
+					<span>SA・PA情報</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<p class="pagetop is_hide"><i><img src="/img/common/icn_pagetop.svg" alt="ページトップへ戻る" class="svg" decoding="async"></i></p>
+
+</body>
+</html>

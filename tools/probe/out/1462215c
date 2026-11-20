@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JWRG0QNGZZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JWRG0QNGZZ');
+</script>
+<meta charset="utf-8">
+<style>
+<!--
+*{
+	border: 0;
+font-family: arial, sans-serif;
+	font-size: 0;
+	font-weight: normal;
+color: #fff;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+	box-sizing:border-box;
+	list-style: none;
+	text-decoration: none;
+	letter-spacing: .05em;
+	line-height: 1;
+}
+body{
+	width: 100%;
+	  background:url(img/pcBg.jpg);
+	position: relative;
+	background-attachment: fixed; 
+}
+::selection {
+  color: #fff;
+  background-color: #053495;
+}
+
+header{
+	width:100%;
+	max-width: 430px;
+padding-top: 16px;	height: auto;
+
+	position: sticky;
+  top: 0;
+	margin: 0 auto;
+	z-index: 8;background-color: #fff;
+
+background-size: 100%;
+background-repeat: no-repeat;
+	left: 0;
+}
+.headerContent{
+	padding: 0 24px;
+	height: 64px;
+	position: relative;
+	z-index: 5;
+}
+.ccl-1{
+	  width: 100%;
+  height: 56px;
+  position: absolute;
+  top: 72px;
+  z-index: 1;
+  background: url(img/headerBg.png);
+  background-repeat: no-repeat;
+background-size: 100%;
+
+}
+.ccl-2{
+	  width: 100%;
+  height: 56px;
+  top: 72px;
+  z-index: 1;
+  background: url(img/headerBg.png);
+  background-repeat: no-repeat;
+  transform: translate3d(0px, 1px, 0px) rotate(180deg);
+
+background-size: 100%;
+
+}
+
+.menuBtn{
+	
+ cursor: pointer;
+	display: flex;
+	border-radius: 2px;
+z-index: 9;
+justify-content: center;
+   align-items: center;
+	width: 48px;
+	height: 48px;
+line-height: 	 calc(100vmin * .08);
+}
+.linArea{
+	display: block;
+	width:  16px;
+text-align: center;
+position: relative;
+font-size: 0;
+}
+.menuLine{
+	
+    display: block;
+    height:1px;
+    width: 100%;
+  transition: all .2s ease-out;
+    background-color: #ffffff;
+  
+}
+#menuLineTop{
+	
+	margin-bottom:33%;
+}
+#menuLineBtm{
+		margin-top:33%;
+
+}
+#menuLineBtm{
+		margin-top:33%;
+
+}
+nav{
+	width: 100%;
+	height: calc(100vmax * 1);
+overflow: hidden;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	right: 0;
+	background: #071550;
+	transform:  translate3d(-200%,-20%,0) rotate(-30deg) scale(1.5);
+	transition: all .6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+nav.open{
+	transform:translate3d(0,0,0) rotate(0deg);
+}
+
+
+#mainNavUl{
+width: 100%;overflow: hidden;
+padding-top: 120px;
+opacity: 0;
+margin-bottom: 15%;
+transform:translate3d(0,20px,0);
+transition: all .4s ease-out;
+transition-delay: .4s;
+}
+#mainNav .footerLogo{
+width: 40%;
+margin-bottom: 15%;
+}
+#mainNavUl li{
+border-bottom: 1px solid #02091e;
+}
+#mainNavUl li a{
+	padding-left: 16px;
+	display: block;
+	height: 64px;
+	line-height:64px;
+font-size: 16px;
+color: #fff;
+}
+.kv{
+	
+	padding: 0 16px;
+	position: relative;
+	padding-top: 200px;
+}
+.kvlogo{
+	
+	display: block;
+	margin: 0 auto 40px;
+	width: 90%;
+	position: relative;
+	z-index: 4;
+	bottom: 0;
+}
+
+.bottomBtnArea{
+	transition: 0.8s;
+	opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+main{
+	width:100%;
+	background: url(img/bg2.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	max-width: 430px;margin: 0 auto;
+}
+img{
+	opacity: 1;
+	
+}
+img.lazyloaded{
+	opacity: 1;
+}
+.headerDate{
+	width: 30%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+
+}h1{
+	display: block;
+	position: absolute;
+	
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 64px;
+	text-align: center;
+}
+h1 img{
+	height: 64px;
+}
+
+
+
+.headerMenu{
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+background: url(img/headerMenuBg.svg);
+	right: 16px;
+	margin: auto;
+	height: 48px;
+	width: 48px;
+	text-align: center;
+}
+.headerMenuBorder{
+	display: block;
+	height: 48px;
+	width: 48px;
+}
+
+section{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 64px;
+	position: relative;
+}
+.contents{
+	padding: 0 24px;
+}
+	.aboutH2{
+	font-size: 20px;
+
+}
+
+.ribonBg{
+	width: 160px;
+	height: 40px;
+	line-height: 40px;
+	background: #f00;
+	text-align: center;
+	margin: 40px auto 24px;
+	font-size: 14px;
+	font-weight: bold;
+	position: relative;
+	z-index: 3;
+	background: url(img/h3ribon.svg);
+	background-repeat: no-repeat;
+}
+.minc{
+	font-family: "Noto Serif JP", serif;
+}
+.foodandstage{
+	font-size: 12px;
+	margin-top: 8px;
+}
+p{
+	font-size: 16px;
+	letter-spacing: 0.1em;
+	line-height: 160%;
+	position: relative;
+	z-index: 2;
+}
+h4{
+	font-weight: bold;
+	font-size: 16px;line-height: 160%;
+	margin-bottom: 16px;
+}
+
+.mainH2{
+	width: 80%;
+	text-align: center;
+	margin: 0 auto 40px;
+	position: relative;
+	z-index: 4;
+}
+
+#light01{
+	width: 100%;
+	position: absolute;
+	z-index: 0;
+	right: 0;
+	transform: translate3d(0px, 0px, 0px);
+}
+#light02{
+	width: 100%;
+	position: absolute;
+	z-index: 0;
+	right: 0;
+	transform: translate3d(0px, 0px, 0px);
+}
+#light03{
+	width: 100%;
+	position: absolute;
+	z-index: 0;
+	right: 0;
+	transform: translate3d(0px, 0px, 0px);
+}
+#light04{
+	width: 100%;
+	position: absolute;
+	z-index: 4;
+	right: 0;right: 0;animation: opacity 5s ease-in-out infinite;
+	transform: translate3d(0px, 0px, 0px);
+}
+#light05{
+	width: 100%;
+	position: absolute;
+	z-index: 4;
+	right: 0;
+	transform: translate3d(0px, 0px, 0px);
+	  animation: opacity 3s ease-in-out infinite;
+}
+@keyframes opacity {
+  0% { opacity:0 }
+  50% { opacity:1 }
+  100% { opacity:0 }
+}
+.instaBtn{
+	width: 300px;
+	height: 64px;
+	line-height: 64px;
+	background: #fff;
+	display: block;
+	position: relative;
+	z-index: 2;
+	margin: 0 auto 24px;
+	font-size: 18px;
+	color: #053495;
+	font-weight: bold;
+	background: url(img/btn.svg);
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+.xBtn{
+	width: 300px;
+	height: 64px;
+	line-height: 64px;
+	background: #fff;
+	display: block;
+	position: relative;
+	z-index: 2;
+	margin: 0 auto;
+	font-size: 18px;
+	color: #053495;
+	font-weight: bold;
+	background: url(img/btn.svg);
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+.icon{
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	display: block;
+	top: 0;
+	bottom: 0;
+	right: 24px;
+	margin: auto;
+}.icon2{
+	position: absolute;
+	width: 16px;
+	height: 16px;
+	display: block;
+	top: 0;
+	bottom: 0;
+	right: 24px;
+	margin: auto;
+}
+.scdP{
+	margin-bottom: 32px;
+}
+
+.areaLogo{
+	width: 100%;
+	display: block;
+	margin: 0 auto 32px;
+}
+
+.areaP{
+	font-size: 16px;
+line-height: 180%;
+margin-bottom: 48px;
+letter-spacing: 0.05em;
+}
+.areaH3{
+	width: 200px;
+	margin: 0 auto 24px;
+}
+.areaP{
+	margin-bottom: 40px;
+}
+.dsImg{
+	width: 100%;
+	display: block;
+	margin-bottom: 24px;
+}
+.contentP1{
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+.contentP2{
+	font-size: 11px;
+	margin-bottom: 40px;
+	line-height: 180%;
+}.contentP3{
+	font-size: 11px;
+	margin-bottom: 24px;
+	line-height: 180%;
+}
+.srArea{
+	border: 1px solid #fff;
+	padding: 40px 24px;
+	position: relative;
+
+}
+
+
+.stageUl {
+    width: 100%;
+    position: relative;
+    z-index: 4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+
+.stageUl li{
+	font-size: 13px;
+}
+
+.stageUl li img {
+    width: 100%;
+    display: block;
+}
+.stageP{
+	margin-top: 8px;
+	font-size: 11px;
+}
+
+
+.placementH4{
+	font-size: 10px;
+padding-top: 6px;
+	margin: 0 auto 24px;
+	line-height: 1.3;
+	background: url("img/h3ribon.svg");
+	background-repeat: no-repeat;
+	width: 160px;
+    height: 40px;
+}
+.placementH42{
+	font-size: 10px;
+
+	margin: 0 auto 24px;
+	line-height: 40px;
+	background: url("img/h3ribon.svg");
+	background-repeat: no-repeat;
+	width: 160px;
+    height: 40px;
+}
+.srHowto{
+	font-size: 10px;
+	text-align: left;
+	margin-bottom: 8px;
+}
+.placement{
+	font-size: 14px;line-height: 1.5;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+.placementDtl{
+	font-size: 10px;
+	display: block;
+}
+.placementMargin{
+	margin-bottom: 16px;
+}
+.placementMargin2{
+	margin-bottom: 32px;
+}
+.placementCaution{
+	font-size: 10px;
+	text-align: left;
+}
+.sponsoersUl{
+	width: 100%;
+position: relative;
+z-index: 4; display: grid;
+grid-template-columns: repeat(2, 1fr);
+ gap: 16px;
+}
+
+
+.sponsoersUl li img{width: 100%;display: block;}
+
+.addBg{
+	width:100%;
+	background: url(img/addbg.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	max-width: 430px;margin: 0 auto;
+}
+
+.noteP{
+	font-size: 12px;
+	text-align: justify;
+	margin-bottom: 8px;
+}
+.cooperation{
+	font-size: 13px;
+	margin: 40px auto 24px;
+}
+.footerLogo{
+	width: 240px;
+	display: block;
+	margin: 40px auto 0;
+}
+
+.contact{
+	font-size: 16px;
+	font-weight: bold;
+}
+.contact:after{
+	content:"";
+	height: 2px;
+	display: block;
+	width: 64px;
+	background: #fff;
+	margin: 24px auto 40px;
+}
+.tel1,.tel2{
+	font-size: 16px;
+}
+.or{
+	font-size: 13px;
+	margin: 0 8px;
+}
+.telTime{
+	font-size: 11px;
+	margin-bottom: 32px;
+}
+
+.mailContact{
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 64px;background: #fff;
+	display: block;
+	color: #053495;
+	margin: 0 auto;
+	position: relative;
+	font-size: 14px;
+	font-weight: bold;
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+.copyrightArea{
+	position: relative;
+	padding: 0 16px 24px 16px;
+	background: #fff;
+}
+.kobecity{
+	width: 96px;display: inline-block;
+	vertical-align: middle;
+}
+
+.copyright{
+	position: relative;
+	display: inline-block;
+	width: calc(100% - 96px);
+	vertical-align: middle;
+	font-size: 10px;
+	text-align: right;
+	color: #121212;
+}
+
+.bottomBtnArea{
+	height: 88px;
+	width: 100%;
+	padding: 16px 24px;
+	background: #053495;
+	position: sticky;
+	margin: 0 auto;
+	max-width: 430px;
+	bottom: 0;
+	z-index: 8;
+}
+.bInfo{
+
+	font-size: 14px;
+	height: 14px;
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 24px;
+	margin: auto;
+	line-height: 1;
+}
+
+.instaBtmBtn{
+	width: 200px;
+	height: 40px;
+	line-height: 40px;
+	background: #fff;
+	text-align: center;
+	display: block;
+	z-index: 2;
+	font-size: 14px;
+	color: #053495;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 24px;
+	margin: auto;
+	font-weight: bold;
+	background: url(img/btn2.svg);
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.kmyLogo{
+	width: 130px;
+	margin-bottom: 16px;
+	position: relative;
+	z-index: 3;
+}
+.redcliff{
+	width: 130px;
+}
+.footerRedcliff{
+	width: 130px;
+margin-bottom: 80px;
+}
+.avexlivecreative{
+		width: 130px;
+		vertical-align: middle;
+}
+.vanillacity{
+		width: 130px;
+		vertical-align: middle;
+		margin-bottom: 24px;
+}
+.kmyP{
+	font-size: 11px;
+}
+.hiroyoshiurumaP{
+	display: inline-block;
+	width: 160px;
+	vertical-align: middle;
+	line-height: 1;
+}
+.hiroyoshiuruma{
+
+	font-size: 13px;
+}
+.hiroyoshiurumaSub{
+	font-size: 11px;
+}
+
+
+
+
+
+
+.faq{
+	width: 100%;
+    margin: 0 auto;
+    padding: 56px 5% 0;
+}
+.faqBox{
+	width: 100%;
+    background: #fff;
+    margin: 0 auto 24px;
+    padding: 24px 5%;
+    cursor: pointer;
+    position: relative;
+    border-top: 8px solid #053495;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+.ques{
+	font-size: 18px;
+	color:#053495;
+	font-weight: bold;
+	line-height: 160%;
+	display: inline-block;
+	width: calc(100% - 24px);
+	padding-right: 16px;
+	vertical-align: middle;
+	margin-bottom: 0;
+	text-align: left;
+}
+.answerArea{
+	border-top: 2px solid #053495;
+	margin-top: 24px;
+	padding-top: 16px;
+	min-height: 40px;
+	max-height: 0;
+	overflow: hidden;
+	position: relative;
+	transition: all 1s ease;
+}
+.answerArea.open{
+	max-height: 250px;
+	transition: all 1s ease;
+}
+.transp{
+	display: block;
+	width: 100%;
+	height: 56px;
+	position: absolute;
+	z-index: 4;
+	bottom: 24px;
+	left: 0;
+	opacity: 1;
+	transition: all 1s ease;
+	 background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),  /* 上：赤 80%不透明 */
+    rgba(255, 255, 255, 1)     /* 下：赤 0%不透明 */
+  );
+}
+.transp.open{
+	opacity: 0;
+}
+.tgrb{
+		display: inline-block;
+	vertical-align: middle;
+	width: 24px;
+	transition: all .4s ease;
+}
+.tgrb.open{
+	transform: scaleY(-1);
+}.tgrb.instagramTgrb{
+	transform: scaleY(-1);
+	margin-left: 4px;
+}
+.answer{
+	font-size: 16px;
+	line-height: 160%;
+	color: #121212;
+	display: block;
+text-align: left;
+}
+.faqStr{
+	font-size: 16px;
+	line-height: 160%;
+	font-weight: bold;
+color: #121212;
+}
+.mainContent{
+
+	box-shadow: 0 0 32px rgba(0, 0, 0, 0.4);
+	max-width: 430px;
+	margin: 0 auto;
+ }
+.pcLogo{
+	display: none;
+}
+
+@media (min-width: 768px) {
+
+nav{
+	width: 430px;
+	height: 180%;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	right: 0;
+	left: 0;
+	margin: auto;
+	background: #071550;
+	transform:  translate3d(0%,100%,0) rotate(0deg) scale(1);
+	transition: all 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+nav.open{
+	transform:translate3d(0,0,0) rotate(0deg);
+}
+}
+
+@media (min-width: 1280px) {
+  /* ここに1024px以上で適用したいCSSを書く */
+ .mainContent{
+ 	position: absolute;
+ 	right: 10%;box-shadow: 0 0 32px rgba(0, 0, 0, 0.4);
+ }
+ .pcLogoArea{
+	width: calc(90% - 430px);
+	height: calc(100vmin *1);
+	position: fixed;
+}
+ .pcLogo{
+ 	display: block;
+ 	width: 460px;
+ 	height: 460px;
+ 	position: absolute;
+ 	bottom: 0;
+ 	left: 0;
+ 	top: 0;
+ 	right: 0;
+ 	margin: auto;
+
+ }
+nav{
+	width: 430px;
+	height: 180%;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	left: auto;
+	margin: auto;
+	right: auto;
+}
+
+
+
+
+}
+@media (min-width: 1680px) {
+
+.pcLogo{
+ 	width: 640px;
+ 	height: 640px;
+
+ }
+    .mainContent {
+        right: 15%;
+    }
+
+ .pcLogoArea{
+	width: calc(85% - 430px);
+}
+
+}@media (min-width: 1920px) {
+
+    .mainContent {
+        right: 20%;
+    }
+    .pcLogoArea{
+	width: calc(80% - 430px);
+}
+}-->
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<script>
+ /*! lazysizes - v5.2.2 */
+!function(e){var t=function(u,D,f){"use strict";var k,H;if(function(){var e;var t={lazyClass:"lazyload",loadedClass:"lazyloaded",loadingClass:"lazyloading",preloadClass:"lazypreload",errorClass:"lazyerror",autosizesClass:"lazyautosizes",srcAttr:"data-src",srcsetAttr:"data-srcset",sizesAttr:"data-sizes",minSize:40,customMedia:{},init:true,expFactor:1.5,hFac:.8,loadMode:2,loadHidden:true,ricTimeout:0,throttleDelay:125};H=u.lazySizesConfig||u.lazysizesConfig||{};for(e in t){if(!(e in H)){H[e]=t[e]}}}(),!D||!D.getElementsByClassName){return{init:function(){},cfg:H,noSupport:true}}var O=D.documentElement,a=u.HTMLPictureElement,P="addEventListener",$="getAttribute",q=u[P].bind(u),I=u.setTimeout,U=u.requestAnimationFrame||I,l=u.requestIdleCallback,j=/^picture$/i,r=["load","error","lazyincluded","_lazyloaded"],i={},G=Array.prototype.forEach,J=function(e,t){if(!i[t]){i[t]=new RegExp("(\\s|^)"+t+"(\\s|$)")}return i[t].test(e[$]("class")||"")&&i[t]},K=function(e,t){if(!J(e,t)){e.setAttribute("class",(e[$]("class")||"").trim()+" "+t)}},Q=function(e,t){var i;if(i=J(e,t)){e.setAttribute("class",(e[$]("class")||"").replace(i," "))}},V=function(t,i,e){var a=e?P:"removeEventListener";if(e){V(t,i)}r.forEach(function(e){t[a](e,i)})},X=function(e,t,i,a,r){var n=D.createEvent("Event");if(!i){i={}}i.instance=k;n.initEvent(t,!a,!r);n.detail=i;e.dispatchEvent(n);return n},Y=function(e,t){var i;if(!a&&(i=u.picturefill||H.pf)){if(t&&t.src&&!e[$]("srcset")){e.setAttribute("srcset",t.src)}i({reevaluate:true,elements:[e]})}else if(t&&t.src){e.src=t.src}},Z=function(e,t){return(getComputedStyle(e,null)||{})[t]},s=function(e,t,i){i=i||e.offsetWidth;while(i<H.minSize&&t&&!e._lazysizesWidth){i=t.offsetWidth;t=t.parentNode}return i},ee=function(){var i,a;var t=[];var r=[];var n=t;var s=function(){var e=n;n=t.length?r:t;i=true;a=false;while(e.length){e.shift()()}i=false};var e=function(e,t){if(i&&!t){e.apply(this,arguments)}else{n.push(e);if(!a){a=true;(D.hidden?I:U)(s)}}};e._lsFlush=s;return e}(),te=function(i,e){return e?function(){ee(i)}:function(){var e=this;var t=arguments;ee(function(){i.apply(e,t)})}},ie=function(e){var i;var a=0;var r=H.throttleDelay;var n=H.ricTimeout;var t=function(){i=false;a=f.now();e()};var s=l&&n>49?function(){l(t,{timeout:n});if(n!==H.ricTimeout){n=H.ricTimeout}}:te(function(){I(t)},true);return function(e){var t;if(e=e===true){n=33}if(i){return}i=true;t=r-(f.now()-a);if(t<0){t=0}if(e||t<9){s()}else{I(s,t)}}},ae=function(e){var t,i;var a=99;var r=function(){t=null;e()};var n=function(){var e=f.now()-i;if(e<a){I(n,a-e)}else{(l||r)(r)}};return function(){i=f.now();if(!t){t=I(n,a)}}},e=function(){var v,m,c,h,e;var y,z,g,p,C,b,A;var n=/^img$/i;var d=/^iframe$/i;var E="onscroll"in u&&!/(gle|ing)bot/.test(navigator.userAgent);var _=0;var w=0;var N=0;var M=-1;var x=function(e){N--;if(!e||N<0||!e.target){N=0}};var W=function(e){if(A==null){A=Z(D.body,"visibility")=="hidden"}return A||!(Z(e.parentNode,"visibility")=="hidden"&&Z(e,"visibility")=="hidden")};var S=function(e,t){var i;var a=e;var r=W(e);g-=t;b+=t;p-=t;C+=t;while(r&&(a=a.offsetParent)&&a!=D.body&&a!=O){r=(Z(a,"opacity")||1)>0;if(r&&Z(a,"overflow")!="visible"){i=a.getBoundingClientRect();r=C>i.left&&p<i.right&&b>i.top-1&&g<i.bottom+1}}return r};var t=function(){var e,t,i,a,r,n,s,l,o,u,f,c;var d=k.elements;if((h=H.loadMode)&&N<8&&(e=d.length)){t=0;M++;for(;t<e;t++){if(!d[t]||d[t]._lazyRace){continue}if(!E||k.prematureUnveil&&k.prematureUnveil(d[t])){R(d[t]);continue}if(!(l=d[t][$]("data-expand"))||!(n=l*1)){n=w}if(!u){u=!H.expand||H.expand<1?O.clientHeight>500&&O.clientWidth>500?500:370:H.expand;k._defEx=u;f=u*H.expFactor;c=H.hFac;A=null;if(w<f&&N<1&&M>2&&h>2&&!D.hidden){w=f;M=0}else if(h>1&&M>1&&N<6){w=u}else{w=_}}if(o!==n){y=innerWidth+n*c;z=innerHeight+n;s=n*-1;o=n}i=d[t].getBoundingClientRect();if((b=i.bottom)>=s&&(g=i.top)<=z&&(C=i.right)>=s*c&&(p=i.left)<=y&&(b||C||p||g)&&(H.loadHidden||W(d[t]))&&(m&&N<3&&!l&&(h<3||M<4)||S(d[t],n))){R(d[t]);r=true;if(N>9){break}}else if(!r&&m&&!a&&N<4&&M<4&&h>2&&(v[0]||H.preloadAfterLoad)&&(v[0]||!l&&(b||C||p||g||d[t][$](H.sizesAttr)!="auto"))){a=v[0]||d[t]}}if(a&&!r){R(a)}}};var i=ie(t);var B=function(e){var t=e.target;if(t._lazyCache){delete t._lazyCache;return}x(e);K(t,H.loadedClass);Q(t,H.loadingClass);V(t,L);X(t,"lazyloaded")};var a=te(B);var L=function(e){a({target:e.target})};var T=function(t,i){try{t.contentWindow.location.replace(i)}catch(e){t.src=i}};var F=function(e){var t;var i=e[$](H.srcsetAttr);if(t=H.customMedia[e[$]("data-media")||e[$]("media")]){e.setAttribute("media",t)}if(i){e.setAttribute("srcset",i)}};var s=te(function(t,e,i,a,r){var n,s,l,o,u,f;if(!(u=X(t,"lazybeforeunveil",e)).defaultPrevented){if(a){if(i){K(t,H.autosizesClass)}else{t.setAttribute("sizes",a)}}s=t[$](H.srcsetAttr);n=t[$](H.srcAttr);if(r){l=t.parentNode;o=l&&j.test(l.nodeName||"")}f=e.firesLoad||"src"in t&&(s||n||o);u={target:t};K(t,H.loadingClass);if(f){clearTimeout(c);c=I(x,2500);V(t,L,true)}if(o){G.call(l.getElementsByTagName("source"),F)}if(s){t.setAttribute("srcset",s)}else if(n&&!o){if(d.test(t.nodeName)){T(t,n)}else{t.src=n}}if(r&&(s||o)){Y(t,{src:n})}}if(t._lazyRace){delete t._lazyRace}Q(t,H.lazyClass);ee(function(){var e=t.complete&&t.naturalWidth>1;if(!f||e){if(e){K(t,"ls-is-cached")}B(u);t._lazyCache=true;I(function(){if("_lazyCache"in t){delete t._lazyCache}},9)}if(t.loading=="lazy"){N--}},true)});var R=function(e){if(e._lazyRace){return}var t;var i=n.test(e.nodeName);var a=i&&(e[$](H.sizesAttr)||e[$]("sizes"));var r=a=="auto";if((r||!m)&&i&&(e[$]("src")||e.srcset)&&!e.complete&&!J(e,H.errorClass)&&J(e,H.lazyClass)){return}t=X(e,"lazyunveilread").detail;if(r){re.updateElem(e,true,e.offsetWidth)}e._lazyRace=true;N++;s(e,t,r,a,i)};var r=ae(function(){H.loadMode=3;i()});var l=function(){if(H.loadMode==3){H.loadMode=2}r()};var o=function(){if(m){return}if(f.now()-e<999){I(o,999);return}m=true;H.loadMode=3;i();q("scroll",l,true)};return{_:function(){e=f.now();k.elements=D.getElementsByClassName(H.lazyClass);v=D.getElementsByClassName(H.lazyClass+" "+H.preloadClass);q("scroll",i,true);q("resize",i,true);q("pageshow",function(e){if(e.persisted){var t=D.querySelectorAll("."+H.loadingClass);if(t.length&&t.forEach){U(function(){t.forEach(function(e){if(e.complete){R(e)}})})}}});if(u.MutationObserver){new MutationObserver(i).observe(O,{childList:true,subtree:true,attributes:true})}else{O[P]("DOMNodeInserted",i,true);O[P]("DOMAttrModified",i,true);setInterval(i,999)}q("hashchange",i,true);["focus","mouseover","click","load","transitionend","animationend"].forEach(function(e){D[P](e,i,true)});if(/d$|^c/.test(D.readyState)){o()}else{q("load",o);D[P]("DOMContentLoaded",i);I(o,2e4)}if(k.elements.length){t();ee._lsFlush()}else{i()}},checkElems:i,unveil:R,_aLSL:l}}(),re=function(){var i;var n=te(function(e,t,i,a){var r,n,s;e._lazysizesWidth=a;a+="px";e.setAttribute("sizes",a);if(j.test(t.nodeName||"")){r=t.getElementsByTagName("source");for(n=0,s=r.length;n<s;n++){r[n].setAttribute("sizes",a)}}if(!i.detail.dataAttr){Y(e,i.detail)}});var a=function(e,t,i){var a;var r=e.parentNode;if(r){i=s(e,r,i);a=X(e,"lazybeforesizes",{width:i,dataAttr:!!t});if(!a.defaultPrevented){i=a.detail.width;if(i&&i!==e._lazysizesWidth){n(e,r,a,i)}}}};var e=function(){var e;var t=i.length;if(t){e=0;for(;e<t;e++){a(i[e])}}};var t=ae(e);return{_:function(){i=D.getElementsByClassName(H.autosizesClass);q("resize",t)},checkElems:t,updateElem:a}}(),t=function(){if(!t.i&&D.getElementsByClassName){t.i=true;re._();e._()}};return I(function(){H.init&&t()}),k={cfg:H,autoSizer:re,loader:e,init:t,uP:Y,aC:K,rC:Q,hC:J,fire:X,gW:s,rAF:ee}}(e,e.document,Date);e.lazySizes=t,"object"==typeof module&&module.exports&&(module.exports=t)}("undefined"!=typeof window?window:{});
+  
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600" rel="stylesheet">
+<link rel="shortcut icon" href="img/favicon.ico" type="image/vnd.microsoft.icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://kobemerikenxmas.com/img/ogp2026.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:site_name" content="神戸メリケンクリスマス2026公式ウェブサイト">
+<meta property="og:type" content="website"><style>
+  <!--
+#loading{
+  width: 100%;
+
+  position: fixed;
+  background: blue;
+  z-index: 15;
+  top: 0;
+}
+#loadingLogo{
+display: block;
+width: 80px;
+height: 80px;
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right:0;
+marigin:auto;
+}
+
+
+  -->
+</style>
+<meta name="description" content="神戸メリケンクリスマスは異国情緒漂う神戸・メリケンパークを舞台に光と音が織りなす特別なクリスマス体験を届けるイベントです。ドローンショー、フード＆ダイニングエリアを中心にツリーやイルミネーション、ステージコンテンツで皆様をお待ちしております。">
+<meta name="keywords" content="神戸市,ドローンショー,クリスマス,神戸メリケンクリスマス,メリケンパーク,イベント">
+<title>神戸メリケンクリスマス2026公式ウェブサイト</title>
+<meta property="og:url" content="https://kobemerikenxmas.com/">
+<meta property="og:title" content="神戸メリケンクリスマス2026公式ウェブサイト">
+<meta property="og:description" content="神戸メリケンクリスマスは異国情緒漂う神戸・メリケンパークを舞台に光と音が織りなす特別なクリスマス体験を届けるイベントです。ドローンショー、フード＆ダイニングエリアを中心にツリーやイルミネーション、ステージコンテンツで皆様をお待ちしております。">
+</head>
+
+
+<body id="top">
+ <!--<div id="loading">
+  <img src="img/loadingLogo.png" id="loadingLogo">
+</div>-->
+  <div class="mainContent">
+<header><div class="headerContent">
+<h1><a href="#top"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/logo-blue2026.svg" class="headerLogo lazyload" alt="神戸メリケンクリスマス2026"></a></h1><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="神戸メリケンクリスマス2026開催日時" data-src="img/headerDate2026.svg" class="headerDate lazyload"><div class="headerMenu">
+<p class="menuBtn" id="menuBtn">
+  <span class="linArea">
+  <span class="menuLine" id="menuLineTop"></span>
+    <span class="menuLine" id="menuLineMid"></span>
+    <span class="menuLine" id="menuLineBtm"></span>
+  </span>
+</p>
+
+
+</div></div>
+
+<div class="ccl-1"></div>
+</header>
+<nav id="mainNav">
+<ul id="mainNavUl">
+  <li><a onclick="closeBtn()" href="#top">ページトップ</a></li>
+  <li><a onclick="closeBtn()" href="#about">イベント概要</a></li>
+  <li><a onclick="closeBtn()" href="#information">お知らせ</a></li>
+
+  </ul>
+</nav>
+<main id="main"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/light-4.png" id="light04" class="lazyload"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/light-5.png" id="light05" class="lazyload">
+<div class="kv"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/KV-logo.png" class="kvlogo lazyload" alt="神戸メリケンクリスマス2026"></div>
+<section class="aboutSec" id="about"><div class="contents">
+<h2 class="aboutH2">神戸メリケンクリスマス 2026</h2>
+<h3 class="ribonBg minc">開催日時</h3>
+<p>2026年12月19日(土)〜12月25日(金)</p>
+<p>全日16:00〜21:00</p>
+<h3 class="ribonBg minc">開催場所</h3>
+
+
+<p>兵庫県神戸市中央区波止場<br>(メリケンパーク)</p>
+<h3 class="ribonBg minc">コンテンツ</h3>
+<h4>ドローンショー<p>期間中全日程で2回/日実施予定</p></h4>
+<p>花火、フード&ダイニングエリア、</p>
+<p>ステージ、ツリー展示など</p>
+<h3 class="ribonBg minc">入場料</h3>
+<p>無料</p>
+
+</section>
+<section class="infoSec" id="information"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/light-1.png" id="light01" class="lazyload"><div class="contents">
+<h2 class="mainH2"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/h2-info.svg" alt="最新情報" class="lazyload"></h2>
+<p class="scdP">最新情報は公式SNSをご覧ください。</p>
+<a href="https://www.instagram.com/kobe_meriken_xmas/" target="_blank" class="instaBtn">公式instagram<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/istaIcon.svg" class="icon lazyload"></a>
+<a href="https://x.com/KobeMerikenXmas" target="_blank" class="xBtn">公式X<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/xIcon.svg" class="icon lazyload"></a>
+</div>
+</section>
+<section class="areaSec" id="map"><div class="contents">
+<h2 class="mainH2"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/h2-area.svg" alt="エリアマップ＆出店・出演情報" class="lazyload"></h2>
+<p class="scdP">Coming Soon</p>
+</section>
+<section class="sponsorshipSec" id="sponsoers"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/light-2.png" id="light02" class="lazyload"><div class="contents">
+<h2 class="mainH2"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/h2-sponsoers.svg" class="lazyload" alt="協賛"></h2><p class="scdP">Coming Soon</p>
+</section>
+<section class="faqSec" id="faq"><div class="contents">
+<h2 class="mainH2"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/h2-faq.svg" alt="よくあるご質問" class="lazyload"></h2>
+<div class="faqBox tglClass"><h3 class="ques">ドローンショーはどこからが<br>
+綺麗に見れますか?</h3><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" data-src="img/tgrIcon.svg" class="tgrb lazyload">
+<div class="answerArea"><p class="answer"><strong class="faqStr">メリケンパーク内は全てビュースポットとなっています。</strong></p></div><span class="transp"></span></div>
+
+<div class="faqBox tglClass"><h3 class="ques">雨天の場合も<br>
+ドローンショーはありますか?</h3><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" data-src="img/tgrIcon.svg" class="tgrb lazyload">
+<div class="answerArea"><p class="answer"><strong class="faqStr">天候状況により中止となる場合がございます。</strong>
+当日の公演情報は公式Xまたは公式インスタグラムのストーリーにて発信します。</p></div><span class="transp"></span></div>
+
+<div class="faqBox tglClass"><h3 class="ques">会場に駐車場はありますか?</h3><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" data-src="img/tgrIcon.svg" class="tgrb lazyload">
+<div class="answerArea"><p class="answer"><strong class="faqStr">近隣の駐車場をご利用ください。</strong>
+ただしかなりの混雑が予想されますので公共交通機関
+でのご来場を推奨しています。</p></div><span class="transp"></span></div>
+
+</section>
+<div class="addBg">
+<section class="noteSec" id="note"><div class="contents">
+<h2 class="ribonBg minc">注意事項</h2>
+<p class="noteP">・本イベントは無料でご入場いただけます。</p>
+<p class="noteP">・ドローンショー、花火は雨天中止、また基準を超える風速を観測した際も中止となります。</p>
+<p class="noteP">・当日の公演情報は公式Instagramより発信いたします。</p>
+<p class="noteP">・アルコール類の購入には年齢を証明できる身分証明書のご提示が必要となります。身分証は顔写真付き身分証明書をご用意ください。顔写真付き身分証明書は運転免許証・学生証（生年月日が手書の場合は不可）■パスポート■身体障害者手帳 ■マイナンバーカード（通知カード不可）■在留カード■特別永住者証明書■住民基本台帳カード■外国人登録証明書になります。</p>
+<p class="noteP">・ゴミのポイ捨ては絶対にお止めください。必ず分別の上、会場の指定のゴミ箱に捨ててください。</p>
+<p class="noteP">・会場内にクロークはございません。周辺施設のコインロッカーをご利用ください。</p>
+<p class="noteP">・周辺道路・商業施設・店舗・近隣の住民に迷惑になる行為は、絶対におやめください。</p>
+<p class="noteP">・会場内での場所取りは禁止とさせていただきます。発覚した場合、スタッフにて回収させていただきます。予めご了承下さい。</p>
+<p class="noteP">・立入禁止、制限されている区域内に立ち入る等の行為は、危険ですので絶対におやめ下さい。</p>
+<p class="noteP">・会場周辺への小型無人飛行機（ドローン等）の持ち込み・飛行は固くお断り致します。</p>
+<p class="noteP">・以下の行為は禁止とさせていただきます。発覚、判断した場合、退場等の厳重な措置を取らせていただきますので、ご了承ください。</p>
+<p class="noteP">（1）法律で禁止されている物品、可燃性、爆発等のおそれのあるものを持ち込むこと。</p>
+<p class="noteP">（2）会場内や会場近くの草木、施設その他の物を破損、または移動すること。</p>
+<p class="noteP">（3）集会行為、宗教などの勧誘行為、デモンストレーションといった示威行為を行なうこと。</p>
+<p class="noteP">（4）主催者の許可を得ていないビラ類を配布、貼付すること。</p>
+<p class="noteP">（5）その他、風紀を乱す行為等、運営上支障があると認められる行為を行なうこと。</p>
+<p class="noteP">・会場内における盗難、紛失、負傷およびお客様同士のトラブルにつきましては、主催事務局では一切の責任を負いません。</p>
+<p class="noteP">・会場内では安全管理および他のお客様が楽しめますようスタッフの指示にお従いください。なお指示にお従いいただけない場合においてはご退場いただくことがございますので予めご了承ください。</p>
+<p class="noteP">・お客様が会場内で撮影した画像、動画をインターネット上に公開される際には他の方の映り込みがないよう十分にご注意ください。</p>
+<p class="noteP">・会場内で運営側による撮影がございます。撮影された写真等は、今後の広報活動に使用する場合がございます。予めご了承ください。</p>
+
+<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="神戸メリケンクリスマス2026" data-src="img/logo-footer2026.svg" class="footerLogo lazyload">
+<h3 class="ribonBg minc">主催</h3>
+<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/KobeMInatoYoru_logo.svg" class="kmyLogo lazyload" alt="“こうべ みなとの夜”実行委員会">
+<p class="kmyP">“こうべ みなとの夜”実行委員会</p>
+<h3 class="ribonBg minc">企画・運営</h3>
+<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/avexlivecreative.png" class="avexlivecreative lazyload">
+<p class="hiroyoshiurumaP"><span class="hiroyoshiuruma">株式会社ヒロヨシウルマ</span><span class="hiroyoshiurumaSub">(潤間大仁)</span></p>
+<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/vanillacity.png" class="vanillacity lazyload" alt="エイベックス・ライヴ・クリエイティヴ株式会社">
+<h4>ドローンショー演出</h4>
+<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/redcliff.png" class="footerRedcliff lazyload" alt="株式会社レッドクリフ">
+<h3 class="contact" id="contact">神戸メリケンクリスマス運営事務局</h3>
+<a href="mailto:info@stork-kobe.com" target="_blank" class="mailContact">お問合せ<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/mail.svg" class="icon2 lazyload"></a>
+</div>
+</section>
+<div class="ccl-2"></div>
+<div class="copyrightArea"><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/kobecity.svg" class="kobecity lazyload" alt="“神戸市ロゴ"><p class="copyright">&copy; 2026 “こうべ みなとの夜”実行委員会</p></div>
+</div><!-- addBg-->
+</main>
+<div class="bottomBtnArea" id="bottomBtnArea"><p class="bInfo">最新情報はこちら</p><a href="https://www.instagram.com/kobe_meriken_xmas/" target="_blank" class="instaBtmBtn">公式instagram<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/instagram.svg" class="icon2 lazyload"></a></div>
+
+</div><!-- mainContent -->
+<div class="pcLogoArea">
+<img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/pcLogo2026.png" class="pcLogo lazyload" alt="神戸メリケンクリスマス2026">
+</div>
+  <script>
+  let chk = false;
+  const elm = document.getElementsByClassName('tglClass');
+  triggers = Array.from(elm);
+
+
+triggers.forEach(function (target) {
+target.addEventListener('click', function () {
+      console.log(target.children[1]);
+      if (target.children[1].classList.contains("open")) {
+        target.children[1].classList.remove("open");
+      target.children[2].classList.remove("open");
+      target.children[3].classList.remove("open");
+      } else if (!target.children[1].classList.contains("open")) {
+        target.children[1].classList.add("open");
+       target.children[2].classList.add("open");
+       target.children[3].classList.add("open");
+      }
+
+    });
+  })
+
+
+
+
+
+  let easeOut = {
+    easeInOut: t => t < .5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
+  }
+  let d = 1000;
+  window.addEventListener('DOMContentLoaded', () => {
+    let smoothScroll = document.querySelectorAll('a[href^="#"]');
+    smoothScroll.forEach(function (trigger) {
+      trigger.addEventListener('click', function (e) {
+        let href = trigger.getAttribute('href');
+        let cPostion = document.documentElement.scrollTop || document.body.scrollTop;
+        let target = document.getElementById(href.replace('#', ''));
+        if (target) {
+          e.preventDefault();
+          e.stopPropagation();
+          let targetP = window.pageYOffset + target.getBoundingClientRect().top - 150;
+          let start = performance.now();
+          let loop = function (nowTime) {
+            let time = nowTime - start;
+            let nTime = time / d;
+            if (nTime < 1) {
+              window.scrollTo(0, cPostion + ((targetP - cPostion) * easeOut.easeInOut(nTime)));
+              requestAnimationFrame(loop);
+            } else {
+              window.scrollTo(0, targetP);
+            }
+          }
+          requestAnimationFrame(loop);
+        }
+      });
+    });
+  });
+
+
+ // const load = () => {
+    //const loadingArea = document.getElementById('loadingArea');
+    //const loadingLogoArea = document.getElementById('loadingLogoArea');
+    //const mvImg = document.getElementById('mvImg');
+    //const copy = document.getElementById('copy');
+    //const loadingContents = document.getElementById('loadingContents');
+    //const mainCopy = document.getElementById('mainCopy');
+    //loadingContents.style.opacity = 0;
+    //loadingLogoArea.style = "opacity:0;"
+
+   // window.setTimeout(function () {
+      // mainCopy.style="opacity :1;transform:translate3d(0,0,0)"
+      //loadingArea.style = "transform:translate3d(0,100%,0);background-color:#A19671;";
+     // mvImg.classList.add("view");
+      //copy.classList.add("view");
+    //}, 600);
+
+
+  //}
+ // window.onload = load;
+
+
+
+
+let flg = false;
+const mainNavUl = document.getElementById('mainNavUl');
+const menuBtn = document.getElementById('menuBtn');
+  const menuLineTop = document.getElementById('menuLineTop');
+  const menuLineMid = document.getElementById('menuLineMid');
+  const menuLineBtm = document.getElementById('menuLineBtm');
+const mainNav = document.getElementById('mainNav');
+
+  menuBtn.addEventListener('click', function(event) {
+if(flg == false){
+
+
+menuLineTop.style = "margin-bottom:-1px;transform:rotate(45deg)";
+menuLineBtm.style = "margin-top:-1px;transform:rotate(-45deg)";
+menuLineMid.style = "opacity:0";
+mainNav.classList.add("open");
+mainNavUl.style="transform:translate3d(0,0,0); opacity:1;";
+return flg = true;
+}
+if(flg == true){
+menuLineTop.style = "margin-bottom:33%;transform:rotate(0deg)";
+menuLineBtm.style = "margin-top:33%;transform:rotate(0deg)";
+menuLineMid.style = "opacity:1";
+mainNav.classList.remove("open");
+mainNavUl.style="transform:translate3d(0,20px,0); opacity:0;";
+return flg = false;
+}
+
+}); 
+
+const closeBtn = () =>{
+  menuLineTop.style = "margin-bottom:33%;transform:rotate(0deg)";
+menuLineBtm.style = "margin-top:33%;transform:rotate(0deg)";
+menuLineMid.style = "opacity:1";
+mainNav.classList.remove("open");
+mainNavUl.style="transform:translate3d(0,20px,0); opacity:0;";
+return flg = false;
+
+}
+
+const windowInHeight = window.innerHeight;
+const main = document.getElementById('main');
+const light01 = document.getElementById('light01');
+const light02 = document.getElementById('light02');
+const light03 = document.getElementById('light03');
+const light04 = document.getElementById('light04');
+const light05 = document.getElementById('light05');
+
+
+const bottomBtnArea = document.getElementById('bottomBtnArea');
+
+let ticking = false;
+
+const  scrollFunc = () =>{
+  if (!ticking) {
+    requestAnimationFrame(function() {
+      ticking = false;
+
+y = window.scrollY;
+
+n = y * .3;
+
+if(y > 300){
+bottomBtnArea.style="opacity:1;";
+}else{
+  bottomBtnArea.style="opacity:0;";
+}
+
+
+main.style.backgroundPositionY = n +"px";
+
+
+const light01B = light01.getBoundingClientRect();
+const light01BChk = 0 < light01B.bottom && light01B.top < windowInHeight;
+if(light01BChk == true){
+let light01BTop = Math.round(light01B.top) 
+let fmp = windowInHeight - light01BTop;
+fmp = fmp / -6;
+light01.style="transform:translate3d(0,"+ fmp +"px,0);";
+}
+
+
+const light02B = light02.getBoundingClientRect();
+const light02BChk = 0 < light02B.bottom && light02B.top < windowInHeight;
+if(light02BChk == true){
+let light02BTop = Math.round(light02B.top) 
+let fmp = windowInHeight - light02BTop;
+fmp = fmp / -6;
+light02.style="transform:translate3d(0,"+ fmp +"px,0);";
+}
+
+/*
+const light03B = light03.getBoundingClientRect();
+const light03BChk = 0 < light03B.bottom && light03B.top < windowInHeight;
+if(light03BChk == true){
+let light03BTop = Math.round(light03B.top) 
+let fmp = windowInHeight - light03BTop;
+fmp = fmp / -6;
+light03.style="transform:translate3d(0,"+ fmp +"px,0);";
+}
+
+
+const light04B = light04.getBoundingClientRect();
+const light04BChk = 0 < light04B.bottom && light04B.top < windowInHeight;
+if(light04BChk == true){
+let light04BTop = Math.round(light04B.top) 
+let fmp = windowInHeight - light04BTop;
+fmp = fmp / -9;
+light04.style="transform:translate3d(0,"+ fmp +"px,0);";
+}
+
+
+
+const light05B = light05.getBoundingClientRect();
+const light05BChk = 0 < light05B.bottom && light05B.top < windowInHeight;
+if(light05BChk == true){
+let light05BTop = Math.round(light05B.top) 
+let fmp = windowInHeight - light05BTop;
+fmp = fmp / -3;
+light05.style="transform:translate3d(0,"+ fmp +"px,0);";
+}
+
+*/
+
+
+
+  });
+    ticking = true;
+  }
+}
+
+document.addEventListener('scroll', scrollFunc, {passive: true});
+
+</script>
+</body>
+</html>

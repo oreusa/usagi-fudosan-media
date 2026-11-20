@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- Google アナリティクス スニペット (Site Kit が追加) -->
+<script type='text/javascript' src='https://www.googletagmanager.com/gtag/js?id=GT-57SW2T4B' id='google_gtagjs-js' async></script>
+<script type='text/javascript' id='google_gtagjs-js-after'>
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["www.daigoji.or.jp"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-57SW2T4B");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); } 
+</script>
+
+<!-- Site Kit によって追加された終了 Google タグ（gtag.js）スニペット -->
+<meta charset="UTF-8">
+<meta http-equiv="content-language" content="ja">
+<meta name="viewport" content="width=device-width">
+<title>秋期夜間拝観｜年中行事｜世界遺産　京都　醍醐寺</title>
+<meta name="Keywords" content="世界遺産,京都,醍醐寺,五重塔,金堂,重要文化財,拝観">
+<meta name="Description" content="世界遺産醍醐寺。真言宗醍醐派總本山。京都市伏見区。国宝五重塔をはじめ数々の国宝・重要文化財を蔵する醍醐寺の境内、行事、略縁起などを紹介。">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta http-equiv="imagetoolbar" content="no">
+<link href="../css/html5reset-1.6.1.css" rel="stylesheet">
+<link href="../css/layout.css" rel="stylesheet">
+<link href="../css/contents.css" rel="stylesheet">
+<link href="../css/event.css" rel="stylesheet">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/jquery.easing.1.3.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/jquery.bxslider/jquery.bxslider.js" charset="utf-8"></script>
+<script type="text/javascript" src="../js/func.js" charset="utf-8"></script>
+
+<!--[if lt IE 9]>
+  <script type="text/javascript" src="../js/excanvas/excanvas.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../js/spinners/spinners.min.js"></script>
+<script type="text/javascript" src="../js/lightview/lightview.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/lightview/lightview.css" />
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZBWFNK"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header id="header">
+	<div id="h-inner" class="clearfix">
+		<div id="logo"><a href="../"><img src="../img/common/logo.png" alt="世界遺産　京都　醍醐寺"></a></div>
+		<nav id="h-btn">
+			<ul id="h-lang" class="clearfix">
+				<li class="select"><a href="../">JAPAN</a></li>
+				<li><a href="https://www.daigoji.or.jp/en/" target="_blank">ENGLISH</a></li>
+				<li><a href="http://www.daigoji.or.jp/index_k.html" target="_blank">KOREA</a></li>
+				<li><a href="http://www.daigoji.or.jp/index_c.html" target="_blank">CHINESE - CN</a></li>
+				<li><a href="http://www.daigoji.or.jp/index_t.html" target="_blank">CHINESE - TW</a></li>
+			</ul>
+			<ul id="h-sns" class="clearfix">
+				<li><a href="https://www.facebook.com/daigoji" target="_blank"><img src="../img/common/h-facebook.png" alt="facebook"></a></li>
+				<li><a class="twitter btn fade" href="http://twitter.com/share?url=http://www.daigoji.or.jp/&text=世界遺産　京都　醍醐寺" target="_blank"><img src="../img/common/h-twitter.png" alt="twitter"></a></li>
+				<!--<li><a href="https://www.pinterest.com/" target="_blank"><img src="img/common/h-pinterest.png" alt="pinterest"></a></li>
+				<li><a href="https://www.instagram.com/" target="_blank"><img src="img/common/h-instagram.png" alt="instagram"></a></li>-->
+			</ul>
+		</nav>
+		<div id="h-menu"><a href="#"><img src="../img/common/h-menu.png" alt=""></a></div>
+	</div>
+	<nav id="sNavi">
+		<div id="sNavi-btn" class="clearfix">
+			<div id="closeBtn"><a href="#"><img src="../img/common/close.png" alt=""><span>CLOSE</span></a></div>
+			<ul id="sns2">
+				<li><a href="https://www.facebook.com/daigoji" target="_blank"><img src="../img/common/h-facebook.png" alt="facebook"></a></li>
+				<li><a class="twitter btn fade" href="http://twitter.com/share?url=http://www.daigoji.or.jp/&text=世界遺産　京都　醍醐寺" target="_blank"><img src="../img/common/h-twitter.png" alt="twitter"></a></li>
+				<!--<li><a href="https://www.pinterest.com/" target="_blank"><img src="img/common/h-pinterest.png" alt="pinterest"></a></li>
+				<li><a href="https://www.instagram.com/" target="_blank"><img src="img/common/h-instagram.png" alt="instagram"></a></li>-->
+			</ul>
+			<ul>
+				<li style="margin-right:11vw; display:flex; justify-content: flex-end;"><a href="/limited-contents/"><img style="height:auto; width:20vw;" src="../img/sinpen/sinpen.png" alt="sinpen"></a></li>
+			</ul>
+		</div>
+		<ul>
+			<li>
+				<h3><a href="../">HOME</a></h3>
+				<ul>
+					<li><a href="/news/">・醍醐寺からのお知らせ</a></li>
+				</ul>
+			</li>
+			<li class="clearfix">
+				<h3><a href="../about/index.html">醍醐寺について</a></h3>
+				<ul>
+					<li><a href="../about/history.html">・歴史 / 縁起 / 祖師</a></li>
+					<li><a href="../about/doctrine.html">・祈り / 教え</a></li>
+					<li><a href="../about/cultural_asset.html">・寺宝 / 文化財</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3><a href="../guide/index.html">朱印・拝観案内</a></h3>
+				<ul>
+					<li><a href="../guide/time.html">・拝観時間 / 料金</a></li>
+					<li><a href="../guide/kitou.html">・ご祈祷 / ご回向 / 写経</a></li>
+					<li><a href="../guide/syuin.html">・霊場 / 朱印</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3><a href="../grounds/index.html">境内案内</a></h3>
+				<ul>
+					<li><a href="../grounds/sanboin.html">・三宝院</a></li>
+					<li><a href="../grounds/garan.html">・伽藍</a></li>
+					<li><a href="../grounds/reihoukan.html">・霊宝館</a></li>
+					<li><a href="../grounds/kamidaigo.html">・上醍醐</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3><a href="../event/index.html">年中行事</a></h3>
+				<ul>
+					<li><a href="../event/list.html">・年中行事一覧</a></li>
+					<li><a href="../event/detail1.html">・五大力尊仁王会</a></li>
+					<li><a href="../event/detail2.html">・豊太閤花見行列</a></li>
+					<li><a href="../event/detail3.html">・准胝観世音菩薩ご開扉法要</a></li>
+					<li><a href="../event/detail4.html">・醍醐寺万灯会</a></li>
+					<li><a href="../event/detail5.html">・秀吉が果たせなかったモミジ狩りの名所</a></li>
+					<li><a href="../event/detail6.html"><span>・五重大塔開扉 納経法要</span></a></li>
+				</ul>
+			</li>
+			<li>
+				<h3><a href="../shop/index.html">食事・売店</a></h3>
+				<ul>
+					<li><a href="../shop/ugetsu.html">・恩賜館</a></li>
+					<li><a href="../shop/sous-le-cerisier.html">・スゥ・ル・スリジェ　～桜の樹の下で～</a></li>
+					<li><a href="../shop/jyuan.html">・阿闍梨寮「寿庵」</a></li>
+					<li><a href="../shop/sanboin-baiten.html">・三宝院売店</a></li>
+					<li><a href="../shop/ugetsu-baiten.html">・醍醐寺売店</a></li>
+				</ul>
+			</li>
+			<li>
+				<h3><a href="../access/index.html">交通案内</a></h3>
+			</li>
+			<li>
+				<h3><a href="../faq/index.html">FAQ</a></h3>
+			</li>
+			<li>
+				<h3><a href="../contact/index.html">お問い合わせ</a></h3>
+				<ul>
+					<li><a href="../contact/privacy.html">・個人情報保護方針</a></li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<li><a href="http://www.daigoji.or.jp/donation/index.html" target="_blank">・生かされてこそ文化財<br />「指定寄付対象事業」</a></li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<li><a href="http://www.daigoji.or.jp/fun/index.html" target="_blank">・今月の醍醐寺「醍醐寺FUN！」</a></li>
+					<li><a href="../event/detail6.html">・五重大塔開扉 納経法要 / 醍醐市</a></li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<li><a href="/photo-gallery/">・フォトギャラリー</a></li>
+					<li><a href="http://www.daigoji.or.jp/fun/others/exeo.html" target="_blank">・スマホアプリ 醍醐寺ナビ</a></li>
+					<!--<li><a href="http://www.daigoji.or.jp/wp/momiji" target="_blank">・醍醐寺ブログ</a></li>-->
+					<li><a href="https://daigoji.or.jp/tomonokai/" target="_blank">・醍醐寺友の会</a></li>
+						<!--<li><a href="https://daigoji.jp/daigo/entry_mag" target="_blank">・メルマガ配信</a></li>-->
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<li><a href="http://www.daigoji.or.jp/archives/" target="_blank">・文化財アーカイブス</a></li>
+					<li><a href="../kyonomori/index.html">・京の杜プロジェクト</a></li>
+					<li><a href="https://www.daigoji.or.jp/collabo/diners/jp/" target="_blank">・ダイナースクラブ<br />「文化財修復プロジェクト」</a></li>
+				</ul>
+			</li>
+			<li>
+				<ul>
+					<li><a href="../link/index.html">・リンク</a></li>
+				</ul>
+			</li>
+			<li class="lng">
+				<ul>
+					<li class="select"><a href="../">・JAPAN</a></li>
+					<li><a href="https://www.daigoji.or.jp/en/" target="_blank">・ENGLISH</a></li>
+					<li><a href="http://www.daigoji.or.jp/index_k.html" target="_blank">・KOREA</a></li>
+					<li><a href="http://www.daigoji.or.jp/index_c.html" target="_blank">・CHINESE - CN</a></li>
+					<li><a href="http://www.daigoji.or.jp/index_t.html" target="_blank">・CHINESE - TW</a></li>
+				</ul>
+			</li>
+			<li>
+				<div>Copyright &copy; 2018 DAIGOJI Temple.<br>All Rights Reserved.</div>
+			</li>
+		</ul>
+	</nav>
+	<nav id="gNavi" class="clearfix">
+		<ul>
+			<li><a href="../">HOME</a></li>
+			<li><a href="../about/index.html">醍醐寺について</a>
+				<ul class="gNavi-sub">
+					<li><a href="../about/history.html">・歴史 / 縁起 / 祖師</a></li>
+					<li><a href="../about/doctrine.html">・祈り / 教え</a></li>
+					<li><a href="../about/cultural_asset.html">・寺宝 / 文化財</a></li>
+				</ul>
+			</li>
+			<li><a href="../guide/index.html">朱印・拝観案内</a>
+				<ul class="gNavi-sub">
+					<li><a href="../guide/time.html">・拝観時間 / 料金</a></li>
+					<li><a href="../guide/kitou.html">・ご祈祷 / ご回向 / 写経</a></li>
+					<li><a href="../guide/syuin.html">・霊場 / 朱印</a></li>
+				</ul>
+			</li>
+			<li><a href="../grounds/index.html">境内案内</a>
+				<ul class="gNavi-sub">
+					<li><a href="../grounds/sanboin.html">・三宝院</a></li>
+					<li><a href="../grounds/garan.html">・伽藍</a></li>
+					<li><a href="../grounds/reihoukan.html">・霊宝館</a></li>
+					<li><a href="../grounds/kamidaigo.html">・上醍醐</a></li>
+				</ul>
+			</li>
+			<li><a href="../event/index.html">年中行事</a>
+				<ul class="gNavi-sub">
+					<li><a href="../event/list.html">・年中行事一覧</a></li>
+					<li><a href="../event/detail1.html">・五大力尊仁王会</a></li>
+					<li><a href="../event/detail2.html">・豊太閤花見行列</a></li>
+					<li><a href="../event/detail3.html">・准胝観世音菩薩ご開扉法要</a></li>
+					<li><a href="../event/detail4.html">・醍醐寺万灯会</a></li>
+					<li><a href="../event/detail5.html">・秀吉が果たせなかった<br>　モミジ狩りの名所</a></li>
+					<!--<li><a href="../event/detail6.html">・五重大塔開扉 納経法要</a></li>-->
+				</ul>
+			</li>
+			<li><a href="../shop/index.html">食事・売店</a>
+				<ul class="gNavi-sub">
+					<li><a href="../shop/ugetsu.html">・恩賜館</a></li>
+					<li><a href="../shop/sous-le-cerisier.html">・スゥ・ル・スリジェ<br>　～桜の樹の下で～</a></li>
+					<li><a href="../shop/jyuan.html">・阿闍梨寮「寿庵」</a></li>
+					<li><a href="../shop/sanboin-baiten.html">・三宝院売店</a></li>
+					<li><a href="../shop/ugetsu-baiten.html">・醍醐寺売店</a></li>
+				</ul>
+			</li>
+			<li><a href="../access/index.html">交通案内</a></li>
+		</ul>
+		<ul>
+			<li><a href="../faq/index.html">FAQ</a></li>
+			<li><a href="../contact/index.html">お問い合わせ</a></li>
+			<li><a href="/limited-contents/"><img src="/img/sinpen/sinpen.png" alt="sinpen"></a></li>
+		</ul>
+	</nav>
+</header>
+<section id="sub-img"><img src="img/common/sub-img.jpg" alt=""></section>
+<div class="contents-wrap top">
+	<div class="footmark clearfix">
+		<ul>
+			<li><a href="../">HOME</a></li>
+			<li><a href="../event/index.html">年中行事</a></li>
+			<li>秋期夜間拝観</li>
+		</ul>
+	</div>
+	<div class="page-ttl top">
+		<h1><img src="img/top/title.png" alt="年中行事" width="460" height="31"></h1>
+	</div>
+	<div class="contents sub">
+		<div class="event-wrap">
+			<div class="left-block">
+				<div class="lNavi-ttl">
+					<h2><img src="img/common/title.png" alt="四季折々の醍醐寺"></h2>
+				</div>
+				<div class="lNavi-cont">
+					<ul class="lNavi">
+						<li><a href="list.html">年中行事一覧</a></li>
+						<li><a href="detail1.html">五大力尊仁王会（2月23日）</a></li>
+						<li><a href="detail2.html">豊太閤花見行列（４月第2日曜日）</a></li>
+						<li><a href="detail3.html">准胝観世音菩薩ご開扉法要（5月18日）</a></li>
+						<li><a href="detail4.html">醍醐寺万灯会（8月5日）</a></li>
+						<li><a href="detail5.html">秀吉が果たせなかった<br>モミジ狩りの名所（11月〜）</a></li>
+						<li><a href="detail6.html">五重大塔開扉 納経法要（毎月29日）</a></li>
+						<li><a href="detail7.html">秋期夜間拝観（11月〜）</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="right-block">
+				<section class="sec-block">
+					<div class="sec-cont">
+						
+						<div class="sec-cont clearfix">
+						
+<div align="center">
+								<img src="img/detail7/mainbaner6.jpg" alt="">
+							</div>                        
+						  <br>
+							<div class="sec-cont clearfix">
+						<h3 class="midashi large">秋期夜間拝観のご案内</h3>
+						<p>醍醐寺では、平成22年より秋期夜間拝観を行い、多くの皆様にご参拝頂いております。<br>夜間照明により鮮やかに映し出される紅葉と伽藍の昼とは違った醍醐寺の姿をお楽しみください。
+									<br></p><br>
+								<ul class="indent">
+									<li>●期間：令和8年11月20日（金）～12月6日（日）</li>
+									<li>●拝観時間：午後6時～午後8時50分 (受付終了午後8時10分) ※昼夜完全入替制</li>
+									<li>●受付場所：三宝院拝観受付</li>
+									<li>●拝観料：1,500円（中学生以上） 団体20名以上は1,200円</li>
+									
+									<li>●チケット購入は<a href="https://ja.kyoto.travel/event/single.php?event_id=3779" target="_blank" rel="noopener noreferrer" style="color:#c00; text-decoration:underline; font-weight:bold;">こちら</a>をご利用ください</li>
+
+                                    <li>●なるべく公共交通機関をご利用ください</li>
+								
+								</ul>
+					         </div>
+						<br>
+                        <h3 class="midashi large">Event Flyer / イベント案内チラシ</h3>
+                        <ul>
+                            <li>・日本語版：<a href="./pdf/night_v_2026.pdf" target="_blank" rel="noopener noreferrer" style="color:#c00; font-weight:bold;">［PDFを見る］</a></li>
+                            <li>・English Version：<a href="./pdf/night_v_2026_en.pdf" target="_blank" rel="noopener noreferrer" style="color:#c00; font-weight:bold;">［View PDF］</a></li>
+                        </ul>
+                        <br>
+                        <h3 class="midashi large">紅葉特別企画</h3>
+                             <a href="https://tabichat.jp/engine/hotels/ekoin/plans/8841/be2d04c72f8ad89f95ea" target="_blank" rel="noopener noreferrer"><img src="https://www.daigoji.or.jp/wp-content/themes/daigoji/library/images/top/shojin.png" alt="紅葉特別企画 特別精進料理"></a>
+						
+						<br><br>
+					<div><h3 class="midashi large">御朱印のご案内</h3>
+                        <!-- <br><div class="spOnly"><p align="center"><font size="-1"><b>醍醐寺開創1150年記念御朱印も用意しています。</b></font></p></div> -->
+						<!-- <div class="pcOnly"><p align="left"><font size="-1"><b>醍醐寺開創1150年記念御朱印も用意しています。</b></font></p></div> -->
+						<div class="pcOnly"><div class="img-container2">
+<!--     <figure><img src="img/detail7/syuin01.jpg" alt=""> <figcaption><b>醍醐寺開創1150年記念御朱印</b></figcaption></figure>
+    <figure><img src="img/detail7/syuin02.jpg" alt="">  <figcaption><b>醍醐寺開創1150年記念御朱印</b></figcaption></figure> -->
+    <figure><img src="img/detail7/img2.jpg" alt="" style="border:1px solid #eee;"> <figcaption><b>夜間拝観限定御朱印</b></figcaption></figure>
+</div></div>
+						<div class="spOnly"><div class="img-container3">
+<!--     <figure><img src="img/detail7/syuin01.jpg" alt=""> <figcaption><b>醍醐寺開創1150年記念御朱印</b></figcaption></figure>
+    <figure><img src="img/detail7/syuin02.jpg" alt="">  <figcaption><b>醍醐寺開創1150年記念御朱印</b></figcaption></figure> -->
+    <figure><img src="img/detail7/img2.jpg" alt=""> <figcaption><b>夜間拝観限定御朱印</b></figcaption></figure>
+</div></div>
+
+						</div><br><br>
+					<div class="sec-cont clearfix">
+						<div class="flL">
+							<div class="img-container">
+								<figure><img src="img/detail7/img01.jpg" alt=""></figure>
+								<div class="cap-box" align="center">
+									<p>弁天堂</p>
+								</div>
+							</div>
+						</div>
+						<div class="flR">
+							<div class="img-container">
+								<figure><img src="img/detail7/img02.jpg" alt=""></figure>
+								<div class="cap-box" align="center">
+									<p>弁天堂</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				    <div class="sec-cont clearfix">
+						<div class="flL">
+							<div class="img-container">
+								<figure><img src="img/detail7/img03.jpg" alt=""></figure>
+								<div class="cap-box" align="center">
+									<p>五重塔</p>
+								</div>
+							</div>
+						</div>
+						<div class="flR">
+							<div class="img-container">
+								<figure><img src="img/detail7/img04.jpg" alt="" ></figure>
+								<div class="cap-box" align="center">
+									<p>仁王門参道</p>
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					
+							
+						
+						
+					</div>
+				  </div>	
+				</section><br>
+             
+				<br>
+				<div class="sec-cont">
+						<div class="clearfix">
+							<div class="flR" style="width:250px;">
+								<div class="img-container">
+									<figure><a href="img/detail7/img4L.jpg" class="lightview" data-lightview-group="photo"><img src="img/detail7/img4.jpg" alt="" style="width:250px;"></a></figure>
+								</div>
+							</div>
+							<div class="flL " style="width:470px;"><h3 class="midashi large" >醍醐寺声明公演</h3>
+								<p>午後7時より国宝・金堂で開催<br>醍醐寺では「法流顕彰法要」として毎年声明公演を行っております。<br>醍醐寺僧侶が仏教音楽である声明と平安朝より多くの人々に歌い継がれてきた国宝・金堂内でご披露します。<br>夜間拝観に入場された方は、自由に参座できます。</p>
+                                
+                                <p>《実施日》<br>１１月２１日（土）<br>１１月２２日（日）<br>１１月２３日（月・祝）<br>１２月　５日（土）<br>１２月　６日（日）</p>
+                                <p>《実施時間》<br>声明１８：３０ー１８：５０<br>護摩１９：１５ー１９：３０<br>声明２０：００ー２０：２０</p>
+                                <p>《実施場所》<br>声明＝金堂　　護摩祈願＝不動堂前護摩道場</p>
+							</div>
+						</div>
+					</div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<nav id="fNavi">
+	<div class="inner clearfix">
+		<div class="f-block">
+			<div class="glo-block">
+				<div class="ttl-block">
+					<h3><a href="../about/index.html">醍醐寺について</a></h3>
+				</div>
+				<div class="page-block">
+					<ul>
+						<li><a href="../about/history.html">・歴史 / 縁起 / 祖師</a></li>
+						<li><a href="../about/doctrine.html">・祈り / 教え</a></li>
+						<li><a href="../about/cultural_asset.html">・寺宝 / 文化財</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="glo-block">
+				<div class="ttl-block">
+					<h3><a href="../guide/index.html">朱印・拝観案内</a></h3>
+				</div>
+				<div class="page-block">
+					<ul>
+						<li><a href="../guide/time.html">・拝観時間 / 料金</a></li>
+						<li><a href="../guide/kitou.html">・ご祈祷 / ご回向 / 写経</a></li>
+						<li><a href="../guide/syuin.html">・霊場 / 朱印</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="f-block">
+			<div class="ttl-block">
+				<h3><a href="../grounds/index.html">境内案内</a></h3>
+			</div>
+			<div class="page-block clearfix">
+				<div class="flL">
+					<h4><a href="../grounds/sanboin.html">●三宝院</a></h4>
+					<ul>
+						<li><a href="../grounds/sanboin.html#sanbo02">・葵の間</a></li>
+						<li><a href="../grounds/sanboin.html#sanbo03">・秋草の間</a></li>
+						<li><a href="../grounds/sanboin.html#sanbo04">・勅使の間</a></li>
+						<li><a href="../grounds/sanboin.html#sanbo05">・唐門</a></li>
+						<li><a href="../grounds/sanboin.html#sanbo06">・表書院<br />（・襖絵）</a></li>
+						<li><a href="../grounds/sanboin.html#sanbo07">・三宝院庭園<br />（・亀島・鶴島・賀茂の三石<br />・藤戸石・豊国大明神<br />・枕流亭・三段の滝）</a></li>
+						<li><a href="../grounds/sanboin.html#sanbo15">・純浄観 ※通常非公開</a></li>
+						<li><a href="../grounds/sanboin.html#sanbo16">・本堂 ※通常非公開<br />（・苔庭）</a></li>
+						<li><a href="../grounds/sanboin.html#sanbo18">・奥宸殿 ※通常非公開</a></li>
+						<li><a href="../grounds/sanboin.html#sanbo19">・松月亭 ※通常非公開</a></li>
+					</ul>
+				</div>
+				<div class="flL">
+					<h4><a href="../grounds/garan.html">●伽藍</a></h4>
+					<ul>
+						<li><a href="../grounds/garan.html#garan02">・西大門（仁王門）</a></li>
+						<li><a href="../grounds/garan.html#garan03">・清瀧宮本殿 / 清瀧宮拝殿</a></li>
+						<li><a href="../grounds/garan.html#garan04">・金堂</a></li>
+						<li><a href="../grounds/garan.html#garan05">・五重塔</a></li>
+						<li><a href="../grounds/garan.html#garan06">・不動堂 / 護摩道場</a></li>
+						<li><a href="../grounds/garan.html#garan07">・真如三昧耶堂</a></li>
+						<li><a href="../grounds/garan.html#garan08">・祖師堂</a></li>
+						<li><a href="../grounds/garan.html#garan09">・観音堂</a></li>
+						<li><a href="../grounds/garan.html#garan10">・弁天堂</a></li>
+						<li><a href="../grounds/garan.html#garan11">・報恩院</a></li>
+					</ul>
+					<h4><a href="../grounds/reihoukan.html">●霊宝館</a></h4>
+				</div>
+				<div class="flL">
+					<h4><a href="../grounds/kamidaigo.html">●上醍醐</a></h4>
+					<ul>
+						<li><a href="../grounds/kamidaigo.html#kamidaigo01">・醍醐水</a></li>
+						<li><a href="../grounds/kamidaigo.html#kamidaigo02">・清瀧宮拝殿</a></li>
+						<li><a href="../grounds/kamidaigo.html#kamidaigo03">・薬師堂</a></li>
+						<li><a href="../grounds/kamidaigo.html#kamidaigo04">・五大堂</a></li>
+						<li><a href="../grounds/kamidaigo.html#kamidaigo05">・如意輪堂</a></li>
+						<li><a href="../grounds/kamidaigo.html#kamidaigo06">・開山堂</a></li>
+						<li><a href="../grounds/kamidaigo.html#kamidaigo07">・成身院通称「女人堂」</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="f-block">
+			<div class="glo-block">
+				<div class="ttl-block">
+					<h3><a href="../event/index.html">年中行事</a></h3>
+				</div>
+				<div class="page-block">
+					<ul>
+						<li><a href="../event/list.html">・年中行事一覧</a></li>
+						<li><a href="../event/detail1.html">・五大力尊仁王会</a></li>
+						<li><a href="../event/detail2.html">・豊太閤花見行列</a></li>
+						<li><a href="../event/detail3.html">・准胝観世音菩薩ご開扉法要</a></li>
+						<li><a href="../event/detail4.html">・醍醐寺万灯会</a></li>
+						<li><a href="../event/detail5.html">・秀吉が果たせなかった<br>モミジ狩りの名所</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="glo-block">
+				<div class="ttl-block">
+					<h3><a href="../shop/index.html">食事・売店</a></h3>
+				</div>
+				<div class="ttl-block">
+					<h3><a href="../access/index.html">交通案内・駐車場</a></h3>
+				</div>
+				<div class="ttl-block">
+					<h3><a href="../faq/index.html">FAQ</a></h3>
+				</div>
+				<div class="ttl-block">
+					<h3><a href="../contact/index.html">お問い合わせ</a></h3>
+					<ul>
+						<li><a href="../contact/privacy.html">・個人情報保護方針</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="f-block">
+			<div>
+				<div class="page-block">
+					<ul>
+						<li><a href="http://www.daigoji.or.jp/donation/index.html" target="_blank">・生かされてこそ文化財<br />「指定寄付対象事業」</a></li>
+					</ul>
+				</div>
+				<div class="page-block">
+					<ul>
+						<li><a href="http://www.daigoji.or.jp/fun/index.html" target="_blank">・今月の醍醐寺「醍醐寺FUN！」</a></li>
+						<li><a href="../event/detail6.html">・五重大塔開扉 納経法要 / 醍醐市</a></li>
+					</ul>
+				</div>
+				<div class="page-block">
+					<ul>
+						<li><a href="/photo-gallery/">・フォトギャラリー</a></li>
+						<li><a href="http://www.daigoji.or.jp/fun/others/exeo.html" target="_blank">・スマホアプリ 醍醐寺ナビ</a></li>
+						<li><a href="http://www.daigoji.or.jp/wp/momiji" target="_blank">・醍醐寺ブログ</a></li>
+						<li><a href="https://daigoji.or.jp/tomonokai/" target="_blank">・醍醐寺友の会</a></li>
+						<!--<li><a href="https://daigoji.jp/daigo/entry_mag" target="_blank">・メルマガ配信</a></li>-->
+					</ul>
+				</div>
+				<div class="page-block">
+					<ul>
+						<li><a href="http://www.daigoji.or.jp/archives/" target="_blank">・文化財アーカイブス</a></li>
+						<li><a href="../kyonomori/index.html">・京の杜プロジェクト</a></li>
+						<li><a href="https://www.daigoji.or.jp/collabo/diners/jp/" target="_blank">・ダイナースクラブ<br />「文化財修復プロジェクト」</a></li>
+					</ul>
+				</div>
+				<div class="page-block">
+					<ul>
+						<li><a href="../link/index.html">・リンク</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+<footer id="footer">
+	<div id="f-logo"><a href="../"><img src="../img/common/f-logo.png" alt="世界遺産　京都　醍醐寺"></a></div>
+	<div id="f-addr">
+		<ul>
+			<li>〒601-1325　京都市伏見区醍醐東大路町22</li>
+			<li>TEL：075-571-0002</li>
+			<li>FAX：075-571-0101</li>
+		</ul>
+	</div>
+	<div id="copyright">Copyright &copy; 2018 DAIGOJI Temple. All Rights Reserved.</div>
+</footer>
+</body>
+</html>

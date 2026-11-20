@@ -339,8 +339,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
 
-オブジェクトキャッシュ 59/83 オブジェクトが Disk を使用中
+オブジェクトキャッシュ 59/86 オブジェクトが Disk を使用中
 遅延読み込み
 
-Served from: www.heijo-park.jp @ 2026-11-18 13:43:02 by W3 Total Cache
+Served from: www.heijo-park.jp @ 2026-11-20 11:41:37 by W3 Total Cache
 -->

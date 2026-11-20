@@ -103,7 +103,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='my-css' href='https://higashiomi-j.com/wp/wp-content/themes/higashiomi/assets/css/style.min.css?ver=1.0.9' media='all' />
 <script id="jquery-js" src="https://code.jquery.com/jquery-3.4.1.min.js?ver=3.4.1"></script>
 <link rel="https://api.w.org/" href="https://higashiomi-j.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://higashiomi-j.com/wp-json/wp/v2/oodakokaikan_event/4556" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://higashiomi-j.com/wp/xmlrpc.php?rsd" />
-<meta name="generator" content="WordPress 7.0.8" />
+<meta name="generator" content="WordPress 7.0.9" />
 <link rel='shortlink' href='https://higashiomi-j.com/?p=4556' />
 <link rel="icon" href="https://higashiomi-j.com/wp/wp-content/uploads/2025/04/cropped-favicon-1-32x32.gif" sizes="32x32" />
 <link rel="icon" href="https://higashiomi-j.com/wp/wp-content/uploads/2025/04/cropped-favicon-1-192x192.gif" sizes="192x192" />
@@ -493,7 +493,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script id="slick.js-js" src="https://higashiomi-j.com/wp/wp-content/themes/higashiomi/assets/js/slick.js?ver=1.0.0"></script>
 <script id="my-js" src="https://higashiomi-j.com/wp/wp-content/themes/higashiomi/assets/js/script.js?ver=1.0.0"></script>
 <script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://higashiomi-j.com/wp/wp-includes/js/wp-emoji-release.min.js?ver=7.0.8"}}
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://higashiomi-j.com/wp/wp-includes/js/wp-emoji-release.min.js?ver=7.0.9"}}
 </script>
 <script type="module">
 /*! This file is auto-generated */

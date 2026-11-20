@@ -1,0 +1,1915 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QPHE751RSR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QPHE751RSR');
+</script>
+
+<!-- AIチャット固定 -->
+<script>
+  (function (c, n, s) {
+      if (c[n] === void 0) {c['ULObject'] = n;
+      c[n] = c[n] || function () {(c[n].q = c[n].q || []).push(arguments)};
+      c[n].l = 1 * new Date();var e = document.createElement('script');
+      e.async = 1;e.src = s + "/chatbot.js";
+      var t = document.getElementsByTagName('script')[0];t.parentNode.insertBefore(e, t);}
+  })(window, 'ul_widget', 'https://support-widget.userlocal.jp');
+  ul_widget('init', { 'id': '172e99abf85a7443a1fe', 'lg_id': '' });
+</script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="ハーベストの丘,ハーベスト,堺・緑のミュージアム,堺市,カピバラ,体験教室,農業公園,シルバニア,シルバニアパーク,イルミネーション" />
+    <!-- all -->
+        <title>Wonder Night Hill 2026 | 堺・緑のミュージアム ハーベストの丘</title>
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta name="robots" content="max-image-preview:large">
+    <meta name="generator" content="max-image-preview:large">
+    <meta name="description" content="【ハーベストの丘で今年も開催！】樹木や地形を包み込む幻想的な光と、カピバラや羊など人気の動物たちをモチーフにしたイルミネーションが広がる「Wonder Night Hill」。昼間の賑やかさとは一味違う、光輝く丘の魅力にあふれた特別な夜をお届けします。【2月14日までの特定日開催】">
+    <meta propery="og:site_name" content="Wonder Night Hill 2026 | 堺・緑のミュージアム ハーベストの丘">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Wonder Night Hill 2026 | 堺・緑のミュージアム ハーベストの丘">
+    <meta property="og:image" content="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/ogp.jpg">
+    <meta property="og:image:secure_url" content="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/ogp.jpg">
+    <meta property="og:description" content="【ハーベストの丘で今年も開催！】樹木や地形を包み込む幻想的な光と、カピバラや羊など人気の動物たちをモチーフにしたイルミネーションが広がる「Wonder Night Hill」。昼間の賑やかさとは一味違う、光輝く丘の魅力にあふれた特別な夜をお届けします。【2月14日までの特定日開催】">
+    <meta property="og:url" content="https://farm.or.jp/illumination_2026">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Wonder Night Hill 2026 | 堺・緑のミュージアム ハーベストの丘">
+    <meta name="twitter:description" content="【ハーベストの丘で今年も開催！】樹木や地形を包み込む幻想的な光と、カピバラや羊など人気の動物たちをモチーフにしたイルミネーションが広がる「Wonder Night Hill」。昼間の賑やかさとは一味違う、光輝く丘の魅力にあふれた特別な夜をお届けします。【2月14日までの特定日開催】">
+    <meta name="twitter:image" content="https://farm.or.jp/assets/img/illumination_2026/ogp.jpg">
+    <link rel="canonical" href="https://farm.or.jp/illumination_2026">
+
+    <link rel="stylesheet" href="https://farm.or.jp/wp-content/themes/harvest_renew/assets/css/common.css">
+
+    <link rel="shortcut icon" href="https://farm.or.jp/assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="https://farm.or.jp/assets/img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://farm.or.jp/assets/img/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://farm.or.jp/assets/img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://farm.or.jp/assets/img/favicon/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://farm.or.jp/assets/img/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://farm.or.jp/assets/img/favicon/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://farm.or.jp/assets/img/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://farm.or.jp/assets/img/favicon/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://farm.or.jp/assets/img/favicon/apple-touch-icon-180x180.png">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="https://farm.or.jp/wp-content/themes/harvest_renew/assets/css/libs/modaal.min.css">
+    <link rel="stylesheet" href="https://farm.or.jp/wp-content/themes/harvest_renew/assets/css/libs/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://farm.or.jp/wp-content/themes/harvest_renew/assets/css/illumination_2026.css">
+
+  </head>
+  <body>
+    <header>
+      <div class="header_wrapper">
+	<p class="logo">
+		<a class="hover" href="https://farm.or.jp/">
+			<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/logo_main.avif" alt="ハーベストの丘">
+		</a>
+	</p>
+	<div class="translate-box">
+		<div id="google_translate_element"></div>
+		<script type="text/javascript" defer>
+			function googleTranslateElementInit() {
+				new google.translate.TranslateElement({pageLanguage: 'ja', includedLanguages: 'en,es,fr,ja,ko,ms,zh-CN,zh-TW'}, 'google_translate_element');
+			}
+		</script>
+		<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" defer></script>
+	</div>
+	<div class="humberger_menu">
+		<p class="electronic_ticket">
+			<a class="hover electronic_ticket_link" href="https://book.farm.or.jp/top/category.addmission" target="_blank">電子チケット</a>
+		</p>
+		<div class="hover humberger">
+			<span></span>
+			<span></span>
+			<span></span>
+			<p class="menu_txt">MENU</p>
+		</div>
+	</div>
+
+	<div class="navi_area">
+		<div class="inner">
+			<!-- <h1 class="logo">
+				<a class="hover" href="https://farm.or.jp/">
+					<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/logo_main.avif" alt="ハーベストの丘">
+				</a>
+			</h1> -->
+
+
+			<div class="header_area">
+				<ul class="first_area">
+					<li class="first_area_item event">
+						<a class="first_area_link hover" href="https://farm.or.jp/event/">
+							<div class="img">
+								<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_icon_event.avif" alt="イベント" loading="lazy">
+							</div>
+							<div class="caption">
+								<p class="txt">イベント</p>
+							</div>
+						</a>
+					</li>
+					<li class="first_area_item animal">
+						<a class="first_area_link hover" href="https://farm.or.jp/animals">
+							<div class="img">
+								<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_icon_animal.avif" alt="動物ふれあい" loading="lazy">
+							</div>
+							<div class="caption">
+								<p class="txt">動物ふれあい</p>
+							</div>
+						</a>
+					</li>
+					<li class="first_area_item calendar">
+						<a class="first_area_link hover" href="https://farm.or.jp/flowercalendar">
+							<div class="img">
+								<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_icon_flower_calendar.avif" alt="花ごよみ" loading="lazy">
+							</div>
+							<div class="caption">
+								<p class="txt">花ごよみ</p>
+							</div>
+						</a>
+					</li>
+					<li class="first_area_item activity">
+						<a class="first_area_link hover" href="https://farm.or.jp/attraction/">
+							<div class="img">
+								<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_icon_flower_activity.avif" alt="遊具アクティビティ" loading="lazy">
+							</div>
+							<div class="caption">
+								<p class="txt">遊具<br>アクティビティ</p>
+							</div>
+						</a>
+					</li>
+					<li class="first_area_item experience">
+						<a class="first_area_link hover" href="https://farm.or.jp/create/">
+							<div class="img">
+								<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_icon_experience.avif" alt="手作り体験" loading="lazy">
+							</div>
+							<div class="caption">
+								<p class="txt">手作り体験</p>
+							</div>
+						</a>
+					</li>
+					<li class="first_area_item sylvanian">
+						<a class="first_area_link hover" href="https://farm.or.jp/sylvanian/">
+							<div class="img">
+								<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_icon_sylvanian.avif" alt="シルバニアパーク" loading="lazy">
+							</div>
+							<div class="caption">
+								<p class="txt">シルバニア<br>パーク</p>
+							</div>
+						</a>
+					</li>
+					
+					<li class="first_area_item homemade">
+						<a class="first_area_link hover" href="https://farm.or.jp/restaurant_shop/">
+							<div class="img">
+								<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_icon_shop.avif" alt="レストラン&ショップ" loading="lazy">
+							</div>
+							<div class="caption">
+								<p class="txt">レストラン<br>&amp;ショップ</p>
+							</div>
+						</a>
+					</li>
+					<li class="first_area_item dogs">
+						<a class="first_area_link hover" href="https://farm.or.jp/withmydog">
+							<div class="img">
+								<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_icon_dog.avif" alt="愛犬と一緒に" loading="lazy">
+							</div>
+							<div class="caption">
+								<p class="txt">愛犬と一緒に</p>
+							</div>
+						</a>
+					</li>
+					<li class="first_area_item products">
+						<a class="first_area_link hover" href="https://farm.or.jp/food">
+							<div class="img">
+								<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_icon_product.avif" alt="園内製造製品" loading="lazy">
+							</div>
+							<div class="caption">
+								<p class="txt">園内製造製品</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<div class="second_area">
+					<a href="https://farm.or.jp/illumination_2026" class="illumination_link hover">
+						<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/banner_nav_illumination_2026.avif" alt="Wonder Night Hill 2026" width="358" height="88" loading="lazy">
+					</a>
+					<nav class="second_area_nav">
+						<ul class="second_area_column">
+							<li class="grouptsecond_area_item">
+								<a class="grouptsecond_area_link hover" href="https://farm.or.jp/news/">
+									<p class="grouptsecond_area_text">NEWS</p>
+								</a>
+							</li>
+							<li class="grouptsecond_area_item">
+								<a class="grouptsecond_area_link hover" href="https://farm.or.jp/guide/">
+									<p class="grouptsecond_area_text">営業時間</p>
+								</a>
+							</li>
+							<li class="grouptsecond_area_item grouptsecond_area_shop">
+								<a class="grouptsecond_area_link hover" href="https://harvesthill.official.ec/" target="_blank">
+									<p class="grouptsecond_area_text">ネットショップ<br>おとりよせ館</p>
+								</a>
+							</li>
+							<li class="grouptsecond_area_item">
+								<a class="grouptsecond_area_link hover" href="https://farm.or.jp/grouptour">
+									<p class="grouptsecond_area_text">団体のお客様</p>
+								</a>
+							</li>
+						</ul>
+						<ul class="second_area_column">
+							<li class="grouptsecond_area_item">
+								<a class="grouptsecond_area_link hover" href="https://farm.or.jp/access">
+									<p class="grouptsecond_area_text">アクセス</p>
+								</a>
+							</li>
+							<li class="grouptsecond_area_item">
+								<a class="grouptsecond_area_link hover" href="https://farm.or.jp/price">
+									<p class="grouptsecond_area_text">ご利用料金</p>
+								</a>
+							</li>
+							<li class="grouptsecond_area_item">
+								<a class="grouptsecond_area_link hover" href="https://farm.or.jp/parkmap">
+									<div class="caption">
+										<p class="grouptsecond_area_text">園内マップ</p>
+									</div>
+								</a>
+							</li>
+							<li class="grouptsecond_area_item">
+								<a class="grouptsecond_area_link hover" href="https://farm.or.jp/contact">
+									<p class="grouptsecond_area_text">お問い合わせ</p>
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="header_block">
+						<ul class="header_block_column">
+							<li class="header_block_item">
+								<a class="header_block_link hover" href="https://farm.or.jp/corporation/">
+									<p class="header_block_text">企業情報</p>
+								</a>
+							</li>
+							<li class="header_block_item">
+								<a class="header_block_link hover" href="https://saiyo.page/580375" target="_blank">
+									<p class="header_block_text">採用情報</p>
+								</a>
+							</li>
+							<li class="header_block_item">
+								<a class="header_block_link hover" href="https://www3.11489.jp/sakai/user/Home" target="_blank">
+									<p class="header_block_text">貸し会議室のご予約</p>
+								</a>
+							</li>
+						</ul>
+						<div class="header_block_privacy">
+							<a class="header_block_link hover" href="https://farm.or.jp/privacy/">
+								<p class="header_block_text">プライバシーポリシー</p>
+							</a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="header_sns">
+				<p class="header_sns_text">ハーベストの丘公式SNS</p>
+				<ul class="header_sns_column">
+					<li class="header_sns_item">
+						<a class="hover" href="https://www.instagram.com/harvesthill_sakai/" target="_blank">                
+							<picture> 
+                <source srcset="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_sns01_sp.avif" type="image/avif" media="(max-width: 767px)">
+								<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_sns01.avif" alt="instagram" loading="lazy">
+							</picture>
+						</a>
+					</li>
+					<li class="header_sns_item">
+						<a class="hover" href="https://page.line.me/471skusn" target="_blank">                
+							<picture> 
+                <source srcset="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_sns02_sp.avif" type="image/avif" media="(max-width: 767px)">
+								<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_sns02.avif" alt="LINE" loading="lazy">
+							</picture>
+						</a>
+					</li>
+					<li class="header_sns_item">
+						<a class="hover" href="https://x.com/harvest_no_oka/" target="_blank">                
+							<picture> 
+                <source srcset="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_sns03_sp.avif" type="image/avif" media="(max-width: 767px)">
+								<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_sns03.avif" alt="X" loading="lazy">
+							</picture>
+						</a>
+					</li>
+					<li class="header_sns_item">
+						<a class="hover" href="https://www.youtube.com/channel/UC_4I2r_xj-YS250nENiWrmw" target="_blank">                
+							<picture> 
+                <source srcset="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_sns04_sp.avif" type="image/avif" media="(max-width: 767px)">
+								<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/header_sns04.avif" alt="YouTube" loading="lazy">
+							</picture>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<a href="https://farm.or.jp/passport" class="passport_link">
+				<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/banner_nav_passport.avif" alt="おトクで便利！年間パスポート お得な会員特典について詳しくはこちら" width="330" height="105" loading="lazy">
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="btn_to_block">
+	<!-- 	<div class="btn_to_ticket">
+		<a class="hover btn_to_ticket_link" href="https://book.farm.or.jp/top/category.addmission" target="_blank">
+			<p class="text">入園チケット</p> -->
+			<!-- <div class="line"></div> -->
+		<!-- </a>
+	</div>
+	 -->
+	<div class="btn_to_top">
+		<a class="hover">
+			<img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/btn_to_top.avif" alt="トップ" loading="lazy">
+		</a>
+	</div>
+</div>
+
+      <div class="btn_to_block">
+                <div class="btn_to_ticket">
+          <a class="hover btn_to_ticket_link" href="https://book.farm.or.jp/top/category.addmission" target="_blank">
+            <p class="text">入園チケット</p>
+            <!-- <div class="line"></div> -->
+          </a>
+        </div>
+                <div class="btn_to_top">
+          <a class="hover">
+            <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/common/btn_to_top.avif" alt="トップに戻るボタン" width="70" height="70">
+          </a>
+        </div>
+      </div>
+
+    </header>
+
+    <main>
+      <section class="kv">
+        <h1 class="kv_img">
+          <picture>
+            <source srcset="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/kv_img_sp.avif" width="750" height="1210" media="(max-width: 767px)">
+            <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/kv_img.avif" alt="光の丘であそぶ夜。Wonder Night Hill 2026-2027" width="1366" height="768">
+          </picture>
+        </h1>
+        <div class="kv-date">
+                            <div class="kv-dl">
+            <div class="kv-dt">開催期間<br class="sp"><p class="kv-dd">2026年10月30日(金)〜2027年2月14日(日)</p><br class="pc_none">の特定日</div>
+            <div class="kv-dt">営業時間<br class="sp"><p class="kv-dd">17:30-21:00 (最終受付20:30)</p></div>
+          </div>
+                          </div>
+        <div class="kv-sale-btn">
+          <a href="https://book.farm.or.jp/top/products/86949a5e-5b12-5248-ad88-51b7e26a43de?lng=ja" class="hover" target="_blank">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/kv_btn.avif" alt="並ばず事前に購入！前売りチケットはこちらのリンクボタン" width="156" height="142">
+            </figure>
+          </a>
+        </div>
+      </section>
+
+
+
+      <div class="wrapper">
+        <div class="bg_inner01">
+          <div class="deco_top">
+            <picture>
+              <source srcset="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/deco_top_sp.avif" width="1500" height="3850" media="(max-width: 767px)">
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/deco_top.avif" alt="" width="2732" height="2464" loading="lazy">
+            </picture>
+          </div>
+
+          <div class="twinkle_star star_01">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_02.avif" alt="" width="566" height="566" loading="lazy">
+            </figure>
+          </div>
+          <div class="twinkle_star star_02">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_01.avif" alt="" width="547" height="547" loading="lazy">
+            </figure>
+          </div>
+          <div class="twinkle_star star_03">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_01.avif" alt="" width="547" height="547" loading="lazy">
+            </figure>
+          </div>
+          <div class="twinkle_star star_04">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_01.avif" alt="" width="547" height="547" loading="lazy">
+            </figure>
+          </div>
+
+          <section class="movie">
+            <div class="movie-container">
+              <h2 class="movie-title fadeUp-inview">ハーベストの丘の<br class="pc_none">イルミネーションは<br>おかげさまで<br class="pc_none">5年目を迎えました。</h2>
+              <p class="movie-text fadeUp-inview">
+                樹木や地形を包み込む幻想的な光と、<br>
+                カピバラや羊など人気の動物たちをモチーフにした<br class="pc_none">イルミネーションが広がる<br class="pc_none">「Wonder Night Hill」。<br>
+                昼間の賑やかさとは一味違う、光輝く丘の魅力に<br class="pc_none">あふれた特別な夜をお届けします。<br>
+                色彩豊かな光の世界で、大人も子供も心躍る<br class="pc_none">ひとときをお過ごしください。<br>
+                皆様のお越しを心よりお待ちしております。
+              </p>
+            </div>
+            <div class="movie-modal fadeUp-inview">
+              <a href="https://www.youtube.com/embed/dUESPHi4vyE?si=AdPYqybuBPWDb3Hu" class="modal-colorbox">
+                <picture>
+                  <source srcset="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2025/02_movie/movie-img-sp.avif" type="image/webp" media=BP>
+                  <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2025/02_movie/movie-img.avif" alt="Wonder Night Hill 2026の動画モーダル画像" width="690" height="388" loading="lazy">
+                </picture>
+                <figure class="movie-close">
+                  <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2025/02_movie/btn-close.avif" alt="close button" width="200" height="200" loading="lazy">
+                </figure>
+              </a>
+              <p class="movie_caution">※こちらは2025年度の展示映像です。</p>
+              <a href="#calendar" class="movie_btn no-scroll">
+                <i class="icon_movie_btn_arrow">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 16" fill="none">
+                    <path d="M21.5 1.5L11.5 14L1.5 1.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </i>
+                <p class="movie_btn_text">イルミネーションの開催日はこちら </p>
+              </a>
+            </div>
+          </section>
+
+
+
+          <section class="pickup">
+            <div class="title-block">
+              <h2 class="title fadeUp-inview">PICK UP EVENT</h2>
+            </div>
+            <div class="swiper swiper_pickup fadeUp-inview">
+              <div class="swiper-wrapper">
+                                <a href="https://farm.or.jp/event/16157" class="swiper-slide pickup_card card_04 hover">
+                  <div class="pickup_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/pickup_img_04.avif" alt="シルバニアファミリーのフォトスポットが登場！の画像" width="388.178" height="254.864" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="pickup_title_box row_3">
+                    <h3 class="pickup_title">
+                      シルバニアファミリーの<br>
+                      イルミネーションが<br>
+                      ハーベストの丘に初登場！
+                    </h3>
+                  </div>
+                  <div class="pickup_text_box card_04">
+                    <p class="pickup_text">
+                      クイズラリーに参加してオリジナル<br>ウィンターオーナメントを受け取ろう♪<br>
+                    </p>
+                  </div>
+                  <div class="hover pickup_link">
+                    <p class="pickup_link_text">詳細はこちら</p>
+                  </div>
+                </a>
+                <a href="https://farm.or.jp/event/14372" class="swiper-slide pickup_card card_01 hover">
+                  <div class="pickup_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/pickup_img_01.avif" alt="集いのヤマモモ ミュージックショーの画像" width="388.178" height="254.864" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="pickup_title_box">
+                    <h3 class="pickup_title">
+                      集いのヤマモモ<br>
+                      ミュージックショー
+                    </h3>
+                  </div>
+                  <div class="pickup_text_box">
+                    <p class="pickup_text">
+                      メインステージ広場にそびえる大きなヤマモモの木が音楽に合わせて鮮やかに表情を変えます。昨年から光のエリアがぐっと広がり、まるで光の森に迷い込んだような没入感。心に残る光と音のエンターテインメントをお届けします。
+                    </p>
+                  </div>
+                  <div class="hover pickup_link">
+                    <p class="pickup_link_text">詳細はこちら</p>
+                  </div>
+                </a>
+                <a href="https://farm.or.jp/event/14372" class="swiper-slide pickup_card card_02 hover">
+                  <div class="pickup_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/pickup_img_02.avif" alt="イルミネーション イベント情報の画像" width="388.178" height="254.864" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="pickup_title_box">
+                    <h3 class="pickup_title">
+                      イルミネーション<br>
+                      イベント情報
+                    </h3>
+                  </div>
+                  <div class="pickup_text_box">
+                    <p class="pickup_text">
+                      イルミネーションに合わせたイベントを開催いたします！
+                    </p>
+                  </div>
+                  <div class="hover pickup_link">
+                    <p class="pickup_link_text">詳細はこちら</p>
+                  </div>
+                </a>
+                <a href="https://farm.or.jp/withmydog" class="swiper-slide pickup_card card_03 hover">
+                  <div class="pickup_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/pickup_img_03.avif" alt="ワンちゃんと一緒にの画像" width="388.178" height="254.864" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="pickup_title_box">
+                    <h3 class="pickup_title">
+                      ワンちゃんと一緒に
+                    </h3>
+                  </div>
+                  <div class="pickup_text_box">
+                    <p class="pickup_text">
+                      ハーベストの丘のイルミネーションは<br>
+                      ワンちゃんと一緒に♪
+                    </p>
+                  </div>
+                  <div class="hover pickup_link">
+                    <p class="pickup_link_text">詳細はこちら</p>
+                  </div>
+                </a>
+                                <a href="https://farm.or.jp/event/16157" class="swiper-slide pickup_card card_04 hover">
+                  <div class="pickup_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/pickup_img_04.avif" alt="シルバニアファミリーのフォトスポットが登場！の画像" width="388.178" height="254.864" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="pickup_title_box row_3">
+                    <h3 class="pickup_title">
+                      シルバニアファミリーの<br>
+                      イルミネーションが<br>
+                      ハーベストの丘に初登場！
+                    </h3>
+                  </div>
+                  <div class="pickup_text_box card_04">
+                    <p class="pickup_text">
+                      クイズラリーに参加してオリジナル<br>ウィンターオーナメントを受け取ろう♪<br>
+                    </p>
+                  </div>
+                  <div class="hover pickup_link">
+                    <p class="pickup_link_text">詳細はこちら</p>
+                  </div>
+                </a>
+                <a href="https://farm.or.jp/event/14372" class="swiper-slide pickup_card card_01 hover">
+                  <div class="pickup_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/pickup_img_01.avif" alt="集いのヤマモモ ミュージックショーの画像" width="388.178" height="254.864" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="pickup_title_box">
+                    <h3 class="pickup_title">
+                      集いのヤマモモ<br>
+                      ミュージックショー
+                    </h3>
+                  </div>
+                  <div class="pickup_text_box">
+                    <p class="pickup_text">
+                      メインステージ広場にそびえる大きなヤマモモの木が音楽に合わせて鮮やかに表情を変えます。昨年から光のエリアがぐっと広がり、まるで光の森に迷い込んだような没入感。心に残る光と音のエンターテインメントをお届けします。
+                    </p>
+                  </div>
+                  <div class="hover pickup_link">
+                    <p class="pickup_link_text">詳細はこちら</p>
+                  </div>
+                </a>
+                <a href="https://farm.or.jp/event/14372" class="swiper-slide pickup_card card_02 hover">
+                  <div class="pickup_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/pickup_img_02.avif" alt="イルミネーション イベント情報の画像" width="388.178" height="254.864" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="pickup_title_box">
+                    <h3 class="pickup_title">
+                      イルミネーション<br>
+                      イベント情報
+                    </h3>
+                  </div>
+                  <div class="pickup_text_box">
+                    <p class="pickup_text">
+                      イルミネーションに合わせたイベントを開催いたします！
+                    </p>
+                  </div>
+                  <div class="hover pickup_link">
+                    <p class="pickup_link_text">詳細はこちら</p>
+                  </div>
+                </a>
+                <a href="https://farm.or.jp/withmydog" class="swiper-slide pickup_card card_03 hover">
+                  <div class="pickup_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/pickup_img_03.avif" alt="ワンちゃんと一緒にの画像" width="388.178" height="254.864" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="pickup_title_box">
+                    <h3 class="pickup_title">
+                      ワンちゃんと一緒に
+                    </h3>
+                  </div>
+                  <div class="pickup_text_box">
+                    <p class="pickup_text">
+                      ハーベストの丘のイルミネーションは<br>
+                      ワンちゃんと一緒に♪
+                    </p>
+                  </div>
+                  <div class="hover pickup_link">
+                    <p class="pickup_link_text">詳細はこちら</p>
+                  </div>
+                </a>
+                              </div>
+              <div class="swiper_nav_btns">
+                <div class="nav_btn_prev pickup_prev">
+                  <figure>
+                    <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/swiper_nav_btn.avif" alt="戻るボタン" width="50" height="50" loading="lazy">
+                  </figure>
+                </div>
+                <div class="nav_btn_next pickup_next">
+                  <figure>
+                    <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/swiper_nav_btn.avif" alt="次へボタン" width="50" height="50" loading="lazy">
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+          <section class="event">
+            <div class="deco_event">
+              <picture>
+                <source srcset="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/deco_event_sp.avif" width="384" height="11343" media=BP>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/deco_event.avif" width="2694" height="3776" alt="" loading="lazy">
+              </picture>
+            </div>
+            <div class="twinkle_star star_05">
+              <figure>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_03.avif" alt="" width="245" height="245" loading="lazy">
+              </figure>
+            </div>
+            <div class="twinkle_star star_06">
+              <figure>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_04.avif" alt="" width="172" height="172" loading="lazy">
+              </figure>
+            </div>
+            <div class="twinkle_star star_07">
+              <figure>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_03.avif" width="245" height="245" alt="" loading="lazy">
+              </figure>
+            </div>
+            <div class="twinkle_star star_08">
+              <figure>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_04.avif" width="172" height="172" alt="" loading="lazy">
+              </figure>
+            </div>
+            <div class="twinkle_star star_09">
+              <figure>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_04.avif" width="172" height="172" alt="" loading="lazy">
+              </figure>
+            </div>
+            <div class="twinkle_star star_10">
+              <figure>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_03.avif" width="245" height="245" alt="" loading="lazy">
+              </figure>
+            </div>
+            <div class="twinkle_star star_11">
+              <figure>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_04.avif" width="172" height="172" alt="" loading="lazy">
+              </figure>
+            </div>
+            <div class="twinkle_star star_12">
+              <figure>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_03.avif" width="245" height="245" alt="" loading="lazy">
+              </figure>
+            </div>
+            <div class="twinkle_star star_13">
+              <figure>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_04.avif" width="172" height="172" alt="" loading="lazy">
+              </figure>
+            </div>
+
+            <ul class="event_colunm">
+                                                                      <li class="event_contents event-js">
+                <ul class="swiper swiper_event_img">
+                  <div class="swiper-wrapper">
+                                                                                
+                                          <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_01_01-1024x720.png" alt="はじまりの放牧場" width="470" height="330" loading="lazy">
+                      </li>
+                                                                                                  </div>
+                </ul>
+                <div class="event_title_box">
+                  <h3 class="event_title">はじまりの放牧場</h3>
+                </div>
+              </li>
+              							                            <li class="event_contents event-js">
+                <ul class="swiper swiper_event_img">
+                  <div class="swiper-wrapper">
+                                                                                
+                                          <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_02_01-1024x720.png" alt="色彩のセコイア" width="470" height="330" loading="lazy">
+                      </li>
+                                          
+                      <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_02_02-1024x720.png" alt="色彩のセコイア" width="470" height="330" loading="lazy">
+                      </li>
+                                                              <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_02_01-1024x720.png" alt="色彩のセコイア" width="470" height="330" loading="lazy">
+                      </li>
+                                                              <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_02_02-1024x720.png" alt="色彩のセコイア" width="470" height="330" loading="lazy">
+                      </li>
+                                      </div>
+                </ul>
+                <div class="event_title_box">
+                  <h3 class="event_title">色彩のセコイア</h3>
+                </div>
+              </li>
+              							                            <li class="event_contents event-js">
+                <ul class="swiper swiper_event_img">
+                  <div class="swiper-wrapper">
+                                                                                
+                                          <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_03_01-1024x720.png" alt="集いのヤマモモ" width="470" height="330" loading="lazy">
+                      </li>
+                                                                                                  </div>
+                </ul>
+                <div class="event_title_box">
+                  <h3 class="event_title">集いのヤマモモ</h3>
+                </div>
+              </li>
+              							                            <li class="event_contents event-js">
+                <ul class="swiper swiper_event_img">
+                  <div class="swiper-wrapper">
+                                                                                
+                                          <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_04_01-1024x720.png" alt="クリスタルマウンテン" width="470" height="330" loading="lazy">
+                      </li>
+                                          
+                      <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_04_02-1024x720.png" alt="クリスタルマウンテン" width="470" height="330" loading="lazy">
+                      </li>
+                                                              <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_04_01-1024x720.png" alt="クリスタルマウンテン" width="470" height="330" loading="lazy">
+                      </li>
+                                                              <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_04_02-1024x720.png" alt="クリスタルマウンテン" width="470" height="330" loading="lazy">
+                      </li>
+                                      </div>
+                </ul>
+                <div class="event_title_box">
+                  <h3 class="event_title">クリスタルマウンテン</h3>
+                </div>
+              </li>
+              							                            <li class="event_contents event-js">
+                <ul class="swiper swiper_event_img">
+                  <div class="swiper-wrapper">
+                                                                                
+                                          <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_05_01-1024x720.png" alt="星落ちる青の森" width="470" height="330" loading="lazy">
+                      </li>
+                                          
+                      <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_05_02-1024x720.png" alt="星落ちる青の森" width="470" height="330" loading="lazy">
+                      </li>
+                                                              <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_05_01-1024x720.png" alt="星落ちる青の森" width="470" height="330" loading="lazy">
+                      </li>
+                                                              <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_05_02-1024x720.png" alt="星落ちる青の森" width="470" height="330" loading="lazy">
+                      </li>
+                                      </div>
+                </ul>
+                <div class="event_title_box">
+                  <h3 class="event_title">星落ちる青の森</h3>
+                </div>
+              </li>
+              							                            <li class="event_contents event-js">
+                <ul class="swiper swiper_event_img">
+                  <div class="swiper-wrapper">
+                                                                                
+                                          <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_06_01-1024x720.png" alt="光の架け橋" width="470" height="330" loading="lazy">
+                      </li>
+                                                                                                  </div>
+                </ul>
+                <div class="event_title_box">
+                  <h3 class="event_title">光の架け橋</h3>
+                </div>
+              </li>
+              							                            <li class="event_contents event-js">
+                <ul class="swiper swiper_event_img">
+                  <div class="swiper-wrapper">
+                                                                                
+                                          <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_07_01-1024x720.png" alt="うずまきトンネル" width="470" height="330" loading="lazy">
+                      </li>
+                                                                                                  </div>
+                </ul>
+                <div class="event_title_box">
+                  <h3 class="event_title">うずまきトンネル</h3>
+                </div>
+              </li>
+              							                            <li class="event_contents event-js">
+                <ul class="swiper swiper_event_img">
+                  <div class="swiper-wrapper">
+                                                                                
+                                          <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_08_01-1024x720.png" alt="光の遊び場" width="470" height="330" loading="lazy">
+                      </li>
+                                          
+                      <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_08_02-1024x720.png" alt="光の遊び場" width="470" height="330" loading="lazy">
+                      </li>
+                                                              <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_08_03-1024x720.png" alt="光の遊び場" width="470" height="330" loading="lazy">
+                      </li>
+                                                              <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_08_04-1024x720.png" alt="光の遊び場" width="470" height="330" loading="lazy">
+                      </li>
+                                      </div>
+                </ul>
+                <div class="event_title_box">
+                  <h3 class="event_title">光の遊び場</h3>
+                </div>
+              </li>
+              							                            <li class="event_contents event-js">
+                <ul class="swiper swiper_event_img">
+                  <div class="swiper-wrapper">
+                                                                                
+                                          <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/event_img_09_01-1024x720.png" alt="花の天の川" width="470" height="330" loading="lazy">
+                      </li>
+                                          
+                      <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/amanogawa1.png" alt="花の天の川" width="470" height="330" loading="lazy">
+                      </li>
+                                                                              </div>
+                </ul>
+                <div class="event_title_box">
+                  <h3 class="event_title">花の天の川</h3>
+                </div>
+              </li>
+              							                            <li class="event_contents event-js">
+                <ul class="swiper swiper_event_img">
+                  <div class="swiper-wrapper">
+                                                                                
+                                          <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/Group-250-1024x720.png" alt="竹彩の鏡池" width="470" height="330" loading="lazy">
+                      </li>
+                                                                                                  </div>
+                </ul>
+                <div class="event_title_box">
+                  <h3 class="event_title">竹彩の鏡池</h3>
+                </div>
+              </li>
+              							                            <li class="event_contents event-js">
+                <ul class="swiper swiper_event_img">
+                  <div class="swiper-wrapper">
+                                                                                
+                                          <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/Sylvanian_1.png" alt="シルバニアファミリー<br>フォトスポット" width="470" height="330" loading="lazy">
+                      </li>
+                                          
+                      <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/Sylvanian_2.png" alt="シルバニアファミリー<br>フォトスポット" width="470" height="330" loading="lazy">
+                      </li>
+                                                              <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/Sylvanian_3.png" alt="シルバニアファミリー<br>フォトスポット" width="470" height="330" loading="lazy">
+                      </li>
+                                                              <li class="swiper-slide">
+                        <img src="https://farm.or.jp/wp-content/uploads/2026/09/Sylvanian_4.png" alt="シルバニアファミリー<br>フォトスポット" width="470" height="330" loading="lazy">
+                      </li>
+                                      </div>
+                </ul>
+                <div class="event_title_box">
+                  <h3 class="event_title">シルバニアファミリー<br>フォトスポット</h3>
+                </div>
+              </li>
+              																					            </ul>
+          </section>
+        </div>
+
+
+        <section class="wonder_night_swipers">
+          <div class="twinkle_star star_14">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_04.avif" alt="" width="172" height="172" loading="lazy">
+            </figure>
+          </div>
+          <div class="twinkle_star star_15">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_04.avif" alt="" width="172" height="172" loading="lazy">
+            </figure>
+          </div>
+          <div class="twinkle_star star_16">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_03.avif" alt="" width="245" height="245" loading="lazy">
+            </figure>
+          </div>
+          <div class="twinkle_star star_17">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_04.avif" alt="" width="172" height="172" loading="lazy">
+            </figure>
+          </div>
+
+          <div class="wonder_night_area activity_area">
+            <div class="title-block">
+              <h2 class="title fadeUp-inview">Wonder Night <br class="pc_none">Activity</h2>
+            </div>
+            <div class="swiper swiper_activity fadeUp-inview">
+              <div class="swiper-wrapper">
+                                <a href="https://farm.or.jp/event/11807" class="swiper-slide wonder_night_card card_01 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/activity_img_01.avif" alt="芝すべりの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP16</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      芝すべり
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">400円/15分　4歳以上</span>
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11807" class="swiper-slide wonder_night_card card_02 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/activity_img_02.avif" width="398" height="260.624" alt="おもしろ自転車の画像" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP17</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      おもしろ自転車
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">400円/15分　小学生以上</span>
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11807" class="swiper-slide wonder_night_card card_03 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/activity_img_03.avif" width="398" height="260.624" alt="ハーベストトレインの画像" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP24・40</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      ハーベストトレイン
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">400円　4歳以上</span><br>
+                      土曜・金曜のみ運行
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11807" class="swiper-slide wonder_night_card card_04 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/activity_img_04.avif" width="398" height="260.624" alt="世界の昆虫爬虫類館の画像" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP6</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      世界の昆虫爬虫類館
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">700円～　3歳以上</span>
+                    </p>
+                  </div>
+                </a>
+                                <a href="https://farm.or.jp/event/11807" class="swiper-slide wonder_night_card card_01 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/activity_img_01.avif" alt="芝すべりの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP16</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      芝すべり
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">400円/15分　4歳以上</span>
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11807" class="swiper-slide wonder_night_card card_02 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/activity_img_02.avif" width="398" height="260.624" alt="おもしろ自転車の画像" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP17</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      おもしろ自転車
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">400円/15分　小学生以上</span>
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11807" class="swiper-slide wonder_night_card card_03 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/activity_img_03.avif" width="398" height="260.624" alt="ハーベストトレインの画像" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP24・40</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      ハーベストトレイン
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">400円　4歳以上</span><br>
+                      土曜・金曜のみ運行
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11807" class="swiper-slide wonder_night_card card_04 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/activity_img_04.avif" width="398" height="260.624" alt="世界の昆虫爬虫類館の画像" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP6</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      世界の昆虫爬虫類館
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">700円～　3歳以上</span>
+                    </p>
+                  </div>
+                </a>
+                              </div>
+              <p class="wonder_night_caution">
+                ※毎日営業ではありません。営業日時は画像をタップして、<br class="pc_none">営業日カレンダーからご確認ください。
+              </p>
+              <div class="swiper_nav_btns">
+                <div class="nav_btn_prev activity_prev">
+                  <figure>
+                    <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/swiper_nav_btn.avif" alt="戻るボタン" width="50" height="50" loading="lazy" loading="lazy">
+                  </figure>
+                </div>
+                <div class="nav_btn_next activity_next">
+                  <figure>
+                    <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/swiper_nav_btn.avif" alt="次へボタン" width="50" height="50" loading="lazy">
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wonder_night_area food_area">
+            <div class="title-block">
+              <h2 class="title fadeUp-inview">Wonder Night <br class="pc_none">Food</h2>
+            </div>
+            <div class="swiper swiper_food fadeUp-inview">
+              <div class="swiper-wrapper">
+                                <a href="https://farm.or.jp/event/11805" class="swiper-slide wonder_night_card card_01 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/food_img_01.avif" alt="マルゲリータの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">石窯テラス</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      マルゲリータ
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">1,000円</span>
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11805" class="swiper-slide wonder_night_card card_02 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/food_img_02.avif" alt="自家製スモークチキンの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">クリスマス<br>マーケット</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      自家製スモークチキン
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">850円</span>
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11805" class="swiper-slide wonder_night_card card_03 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/food_img_03.avif" alt="ヒルズカフェの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">ヒルズカフェ</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      ラーメン
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">1,000円</span>
+                    </p>
+                  </div>
+                </a>
+                                <a href="https://farm.or.jp/event/11805" class="swiper-slide wonder_night_card card_01 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/food_img_01.avif" alt="マルゲリータの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">石窯テラス</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      マルゲリータ
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">1,000円</span>
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11805" class="swiper-slide wonder_night_card card_02 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/food_img_02.avif" alt="自家製スモークチキンの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">クリスマス<br>マーケット</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      自家製スモークチキン
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">850円</span>
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11805" class="swiper-slide wonder_night_card card_03 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/food_img_03.avif" alt="ヒルズカフェの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">ヒルズカフェ</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      ラーメン
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">1,000円</span>
+                    </p>
+                  </div>
+                </a>
+                              </div>
+              <p class="wonder_night_caution">
+                ※上記以外のメニューもございます。詳細は画像をタップしてください。<br>
+                ※毎日営業ではありません。営業日時は画像をタップして、<br class="pc_none">営業日カレンダーからご確認ください。
+              </p>
+              <div class="swiper_nav_btns">
+                <div class="nav_btn_prev food_prev">
+                  <figure>
+                    <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/swiper_nav_btn.avif" alt="戻るボタン" width="50" height="50" loading="lazy">
+                  </figure>
+                </div>
+                <div class="nav_btn_next food_next">
+                  <figure>
+                    <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/swiper_nav_btn.avif" alt="次へボタン" width="50" height="50" loading="lazy">
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="wonder_night_area shop_area">
+            <div class="title-block">
+              <h2 class="title fadeUp-inview">Wonder Night <br class="pc_none">Shop</h2>
+            </div>
+            <div class="swiper swiper_shop fadeUp-inview">
+              <div class="swiper-wrapper">
+                                <a href="https://farm.or.jp/event/11806" class="swiper-slide wonder_night_card card_01 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/shop_img_01.avif" alt="ハーベストショップの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP2</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      ハーベストショップ
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">自家製品やお土産、あったかグッズなどを販売</span>
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11806" class="swiper-slide wonder_night_card card_02 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/shop_img_02.avif" alt="森のマーケットの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP9</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      森のマーケット
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">シルバニアファミリーのショップ</span><br>
+                      11月の土曜、12月の土曜・日曜・24日・25日、<br>
+                      1月2日・3日のみ営業
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11806" class="swiper-slide wonder_night_card card_03 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/shop_img_03.avif" alt="街のパン屋の画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP14</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      街のパン屋
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">店内の工房で焼いた美味しいパンの販売</span>
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11806" class="swiper-slide wonder_night_card card_04 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/shop_img_04.avif" alt="クリスマスマーケットの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text"></p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      クリスマスマーケット
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">きらきらのスノードームや光るグッズを販売</span><br>
+                      雨天お休み
+                    </p>
+                  </div>
+                </a>
+                                <a href="https://farm.or.jp/event/11806" class="swiper-slide wonder_night_card card_01 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/shop_img_01.avif" alt="ハーベストショップの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP2</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      ハーベストショップ
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">自家製品やお土産、あったかグッズなどを販売</span>
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11806" class="swiper-slide wonder_night_card card_02 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/shop_img_02.avif" alt="森のマーケットの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP9</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      森のマーケット
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">シルバニアファミリーのショップ</span><br>
+                      11月の土曜、12月の土曜・日曜・24日・25日、<br>
+                      1月2日・3日のみ営業
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11806" class="swiper-slide wonder_night_card card_03 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/shop_img_03.avif" alt="街のパン屋の画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text">MAP14</p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      街のパン屋
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">店内の工房で焼いた美味しいパンの販売</span>
+                    </p>
+                  </div>
+                </a>
+
+                <a href="https://farm.or.jp/event/11806" class="swiper-slide wonder_night_card card_04 hover">
+                  <div class="wonder_night_img">
+                    <figure>
+                      <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/shop_img_04.avif" alt="クリスマスマーケットの画像" width="398" height="260.624" loading="lazy">
+                    </figure>
+                  </div>
+                  <div class="wonder_night_place_box">
+                    <p class="wonder_night_place_text"></p>
+                  </div>
+                  <div class="wonder_night_title_box">
+                    <h3 class="wonder_night_title">
+                      クリスマスマーケット
+                    </h3>
+                  </div>
+                  <div class="wonder_night_text_box">
+                    <p class="wonder_night_text">
+                      <span class="under_line">きらきらのスノードームや光るグッズを販売</span><br>
+                      雨天お休み
+                    </p>
+                  </div>
+                </a>
+                              </div>
+              <p class="wonder_night_caution">
+                ※毎日営業ではありません。営業日時は画像をタップして、<br class="pc_none">営業日カレンダーからご確認ください。
+              </p>
+              <div class="swiper_nav_btns">
+                <div class="nav_btn_prev shop_prev">
+                  <figure>
+                    <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/swiper_nav_btn.avif" alt="戻るボタン" width="50" height="50" loading="lazy">
+                  </figure>
+                </div>
+                <div class="nav_btn_next shop_next">
+                  <figure>
+                    <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/swiper_nav_btn.avif" alt="次へボタン" width="50" height="50" loading="lazy">
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section class="calendar" id="calendar">
+          <div class="twinkle_star star_17">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_04.avif" alt="" width="172" height="172" loading="lazy">
+            </figure>
+          </div>
+          <div class="twinkle_star star_18">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_04.avif" alt="" width="172" height="172" loading="lazy">
+            </figure>
+          </div>
+          <div class="title-block">
+            <h2 class="title fadeUp-inview">Calendar</h2>
+          </div>
+          <p class="calendar_text fadeUp-inview">
+            開催期間<br class="pc_none">2026年10月30日(金)〜2027年2月14日(日)<br class="pc_none">の特定日<br>
+            営業時間<br class="pc_none">17:30-21:00 (最終受付20:30)
+          </p>
+          <div class="calendar_notice_box fadeUp-inview">
+            <i class="icon_business_day">
+              <figure>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/icon_business_day.svg" alt="イルミネーション営業日のアイコン" width="24" height="24" loading="lazy">
+              </figure>
+            </i>
+            <p class="notice_text">イルミネーション営業日</p>
+            <i class="icon_bus">
+              <figure>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/icon_bus.svg" alt="直通バス営業日のアイコン" width="20" height="23" loading="lazy">
+              </figure>
+            </i>
+            <p class="notice_text">直通バス営業日</p>
+          </div>
+          <div class="swiper swiper_calendar fadeUp-inview">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide calendar_box">
+                <figure>
+                  <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/calendar_10.avif" alt="10月のカレンダー画像" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide calendar_box">
+                <figure>
+                  <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/calendar_11.avif" alt="11月のカレンダー画像" width="448" height="480" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide calendar_box">
+                <figure>
+                  <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/calendar_12.avif" alt="12月のカレンダー画像" width="448" height="480" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide calendar_box">
+                <figure>
+                  <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/calendar_01.avif" alt="1月のカレンダー画像" width="448" height="480" loading="lazy">
+                </figure>
+              </div>
+              <div class="swiper-slide calendar_box">
+                <figure>
+                  <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/calendar_02.avif" alt="2月のカレンダー画像" width="448" height="480" loading="lazy">
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="calendar_prev">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/swiper_nav_btn_02.avif" width="50" height="50" alt="戻るボタン" loading="lazy">
+            </figure>
+          </div>
+          <div class="calendar_next">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/swiper_nav_btn_02.avif" width="50" height="50" alt="進むボタン" loading="lazy">
+            </figure>
+          </div>
+        </section>
+
+
+
+        <section class="price">
+          <div class="twinkle_star star_19">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_04.avif" alt="" width="172" height="172" loading="lazy">
+            </figure>
+          </div>
+          <div class="title-block">
+            <h4 class="title fadeUp-inview">Price</h4>
+          </div>
+          <p class="price-text fadeUp-inview">イルミネーションイベント専用チケット<br>当日17:15より入園ゲート前券売機にて<br class="pc_none">販売いたします。<br>電子チケットは10/17から販売開始</p>
+          <div class="price-contents">
+            <table class="fadeUp-inview sp_none">
+              <thead class="table-thead">
+                <tr>
+                  <th> </th>
+                  <th>
+                    <p>◆一般料金</p>
+                  </th>
+                  <th> 
+                    <p>◆年間パスポート割引</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th> 
+                    <p class="table-test">おとな<br class="sp"><span>(中学生以上)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">1,500円<br><span>※12月の金曜・土曜・日曜、<br class="sp">12/23・24のみ1,800円</span></p>
+                  </td>
+                  <td> 
+                    <p class="table-test">1,200円<br><span>※12月の金曜・土曜・日曜、<br class="sp">12/23・24のみ1,500円</span></p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">こども<br class="sp"><span>(4歳以上)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">800円</p>
+                  </td>
+                  <td> 
+                    <p class="table-test">600円</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">障がい者<br class="sp"><span>(中学生以上おとな)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">750円<br><span>※12月の金曜・土曜・日曜、<br class="sp">12/23・24のみ900円</span></p>
+                  </td>
+                  <td> 
+                    <p class="table-test">600円<br><span>※12月の金曜・土曜・日曜、<br class="sp">12/23・24のみ750円</span></p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">障がい者<br class="sp"><span>(4歳以上こども)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">400円</p>
+                  </td>
+                  <td> 
+                    <p class="table-test">300円</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">介添え<br class="sp"><span>(18歳以上)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">750円<br><span>※12月の金曜・土曜・日曜、<br class="sp">12/23・24のみ900円</span></p>
+                  </td>
+                  <td> 
+                    <p class="table-test">600円<br><span>※12月の金曜・土曜・日曜、<br class="sp">12/23・24のみ750円</span></p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">
+                      ワンちゃん
+                      <a href="https://farm.or.jp/withmydog" class="hover table-test_link">※利用規約あり</a>
+                    </p>
+                  </th>
+                  <td> 
+                    <p class="table-test">600円</p>
+                  </td>
+                  <td class="table-last">ー</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="fadeUp-inview pc_none">
+              <thead class="table-thead">
+                <tr>
+                  <th colspan="2">
+                    <p>◆一般料金</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th> 
+                    <p class="table-test">おとな<br class="sp"><span>(中学生以上)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">1,500円<br><span>※12月の金曜・土曜・日曜、<br class="sp">12/23・24のみ1,800円</span></p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">こども<br class="sp"><span>(4歳以上)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">800円</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">障がい者<br class="sp"><span>(中学生以上おとな)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">750円<br><span>※12月の金曜・土曜・日曜、<br class="sp">12/23・24のみ900円</span></p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">障がい者<br class="sp"><span>(4歳以上こども)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">400円</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">介添え<br class="sp"><span>(18歳以上)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">750円<br><span>※12月の金曜・土曜・日曜、<br class="sp">12/23・24のみ900円</span></p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">
+                      ワンちゃん
+                      <a href="https://farm.or.jp/withmydog" class="hover table-test_link">※利用規約あり</a>
+                    </p>
+                  </th>
+                  <td> 
+                    <p class="table-test">600円</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="fadeUp-inview pc_none">
+              <thead class="table-thead">
+                <tr>
+                  <th colspan="2">
+                    <p>◆年間パスポート割引</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th> 
+                    <p class="table-test">おとな<br class="sp"><span>(中学生以上)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">1,200円<br><span>※12月の金曜・土曜・日曜、<br class="sp">12/23・24のみ1,500円</span></p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">こども<br class="sp"><span>(4歳以上)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">600円</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">障がい者<br class="sp"><span>(中学生以上おとな)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">600円<br><span>※12月の金曜・土曜・日曜、<br class="sp">12/23・24のみ750円</span></p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">障がい者<br class="sp"><span>(4歳以上こども)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">300円</p>
+                  </td>
+                </tr>
+                <tr>
+                  <th> 
+                    <p class="table-test">介添え<br class="sp"><span>(18歳以上)</span></p>
+                  </th>
+                  <td> 
+                    <p class="table-test">600円<br><span>※12月の金曜・土曜・日曜、<br class="sp">12/23・24のみ750円</span></p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="price_example_box fadeUp-inview">
+              <p class="price_example_text indent">料金例：大人1名</p>
+              <p class="price_example_text mt indent">①10:00〜17:00の日中のみ遊ぶ<br class="pc_none">→通常チケット1,500円</p>
+              <p class="price_example_text mt indent">②17:30〜21:00のイルミネーションのみ観覧する→<br class="pc_none">イルミネーションチケット1,500〜1,800円</p>
+              <p class="price_example_text mt indent">③17:00までの日中も遊んで、イルミネーションも観覧する<br>→通常チケット1,500円＋イルミネーションチケット1,500〜1,800円</p>
+            </div>
+            <div class="price-container fadeUp-inview">
+              <p>※障がい者割引きは「障害者手帳」「療育手帳」「精神障害者保健福祉手帳」「ミライロID」をお持ちの方を対象とさせていただきます。<br>また、介添え割引きは、手帳をお持ちの方1名につき大人1名が対象です。</p>
+              <p>※年間パスポートでのご入園はできません。</p>
+              <p>※年間パスポート割引は、年間パスポートをお持ちのご本人様のみ対象となります。</p>
+              <p>※イルミネーション営業中は年間パスポートの作成ができません。通常営業中（10時～17時）にご作成のうえお越しください。</p>
+              <p>※イルミネーションの専用チケットが必要です。<br>通常のハーベストの丘営業時間（10時～17時）用の各種チケットではご入場できません。<br>例:コンビニチケット、イルミネーション用以外の電子チケット、ご招待券</p>
+              <p>※17時で一度閉園いたします。そのまま園内に留まることはできません。通常営業時間（10時～17時）とイルミネーションの両方で遊ばれる方は、それぞれの入園チケットが必要です。</p>
+              <p>※イルミネーションの観覧には上記以外の料金はかかりません<br class="sp">(アクティビティの利用には別途料金が必要)</p>
+              <p>※小学生以下のお子様のみでのご入園はできません。必ず18歳以上の保護者の方と一緒にご来園ください。</p>
+              <p>※ワンちゃんの入園には1年以内に接種した「5種以上の混合ワクチン」と「狂犬病ワクチン」接種証明書が必要<br><a class="price-container-link hover" href="https://farm.or.jp/withmydog" target="_blank">→来園前に利用規約等をご確認ください </a></p>
+            </div>
+          </div>
+        </section>
+
+
+
+        <section class="ticket" id="ticket">
+          <h2 class="ticket_title fadeUp-inview">前売りチケット</h2>
+          <p class="ticket-text fadeUp-inview">イルミネーションイベント専用チケット</p>
+          <a href="https://book.farm.or.jp/top/products/86949a5e-5b12-5248-ad88-51b7e26a43de?lng=ja" class="ticket_link_btn fadeUp-inview">
+            <p class="ticket_link_btn_text">前売り電子チケットの購入はこちら</p>
+          </a>
+          <p class="ticket-comm indent fadeUp-inview">※予約確定後の変更・キャンセルは、当日20：00までであれば可能です。以降はキャンセル料100％がかかります。</p>
+          <p class="ticket-comm indent fadeUp-inview">※障がい者手帳をお持ちの方、ハーベストの丘年間パスポートをお持ちの方は、入園割引がございますので、直接ハーベストの丘窓口で入園チケットをお買い求めください。</p>
+          <p class="ticket-comm indent fadeUp-inview">※本チケットはイルミネーションイベント専用チケットです。通常営業(10時~17時)ではご利用いただけません。</p>
+        </section>
+
+
+
+        <section class="access">
+          <div class="twinkle_star star_20">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_04.avif" alt="" width="172" height="172" loading="lazy">
+            </figure>
+          </div>
+          <div class="twinkle_star star_21">
+            <figure>
+              <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_04.avif" alt="" width="172" height="172" loading="lazy">
+            </figure>
+          </div>
+          <div class="title-block">
+            <h2 class="title fadeUp-inview">Access</h2>
+          </div>
+          <p class="access-text fadeUp-inview">〒590-0125&emsp;<br class="pc_none">大阪府堺市南区鉢ヶ峯寺2405-1<br>TEL：072-296-9911</p>
+          <p class="access-map fadeUp-inview">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6579.654430914763!2d135.5113654!3d34.4565337!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000d1470907a28b%3A0xc492f5ef77fa7e9e!2z44OP44O844OZ44K544OI44Gu5LiY!5e0!3m2!1sja!2sjp!4v1502253453328" width="" height="" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+          </p>
+
+          <div class="transportation_area car_area">
+            <h3 class="area_title fadeUp-inview">車でお越しの方</h3>
+            <p class="area_desc fadeUp-inview">
+              カーナビゲーション・グーグルマップを使用する場合は<br class="sp_none">
+              <span class="underline">「ハーベストの丘駐車場」</span>または<br class="pc_none"><span class="underline">「またきて菜」</span>を目的地設定してください。
+            </p>
+            <h4 class="transportation_caption fadeUp-inview">◆阪和自動車道から</h4>
+            <p class="transportation_text fadeUp-inview">
+              阪和自動車道｢堺IC」を出て、泉北2号線（府道61号線）を南へ約15分。<br>
+              「ハーベストの丘前交差点」を左折後、約2分で左手に駐車場。
+            </p>
+            <h4 class="transportation_caption fadeUp-inview">◆阪神高速湾岸線から</h4>
+            <p class="transportation_text fadeUp-inview">
+              阪神高速湾岸線「助松JCT」から堺･泉北有料道路へ入る。料金所出てすぐの「太平寺出口」を出たのちすぐの交差点「平井大橋」を右折し、泉北2号線（府道61号線）を南へ約15分。<br>
+              「ハーベストの丘前交差点」を左折後、約2分で左手に駐車場。
+            </p>
+            <h4 class="transportation_caption fadeUp-inview">◆外環状線（府道170号線）から</h4>
+            <p class="transportation_text fadeUp-inview">
+              福瀬町東の交差点を右折（岸和田方面からお越しの場合は左折）、旧道に入り横山小学校前交差点右折、別所の交差点を右折。<br>
+              「ハーベストの丘前交差点」を右折後、約2分で左手に駐車場。
+            </p>
+            <h4 class="transportation_caption no_border fadeUp-inview">◆駐車場のご案内: 約1,800台（無料）</h4>
+          </div>
+
+          <div class="transportation_area bus_area">
+            <h3 class="area_title fadeUp-inview">バスをご利用の方</h3>
+            <h4 class="transportation_caption fadeUp-inview">
+              ◆南海電鉄泉北線「泉ヶ丘駅」から（特定日のみの運行・直行便）
+            </h4>
+            <p class="transportation_text fadeUp-inview">
+              バスターミナル6番乗り場「ハーベストの丘」行、南海路線バスにて約20分。（イルミネーションのバス運行に限り直行便となります。）<br>
+              泉ヶ丘駅へは、南海なんば駅より「泉北線 和泉中央行」にて約22分。
+            </p>
+            <p class="transportation_text fadeUp-inview">
+              ◆運行日<br>
+              11/7(土)、11/14(土)、11/21(土)、11/22(日)、11/23(月)、11/28(土)<br>
+              12/5(土)、12/12(土)、12/19(土)、12/24(木)、12/25(金)、12/26(土)<br>
+              2/13(土)、2/14(日)
+            </p>
+            <div class="time_table fadeUp-inview">
+              <div class="time_table_box">
+                <h4 class="time_table_caption">泉ヶ丘→ハーベストの丘</h4>
+                <table class="table">
+                  <tr class="row">
+                    <td class="data">17時20分</td>
+                    <td class="data">18時00分</td>
+                    <td class="data">19時00分</td>
+                    <td class="data right">20時00分</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="time_table_box">
+                <h4 class="time_table_caption">ハーベストの丘→泉ヶ丘</h4>
+                <table class="table">
+                  <tr class="row">
+                    <td class="data">18時30分</td>
+                    <td class="data">19時30分</td>
+                    <td class="data">20時30分</td>
+                    <td class="data right">21時15分</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <p class="transportation_text caution_text indent fadeUp-inview">
+              ※「泉ヶ丘駅→ハーベストの丘」の9：20～15：30の運行、「ハーベストの丘→泉ヶ丘駅」12：00～17：10の運行は、ハーベストの丘の営業日は毎日ございます。運行スケジュールは<a href="https://farm.or.jp/access" class="transportation_link hover">アクセスページ</a>をご確認ください
+            </p>
+            <p class="transportation_text caution_text mt_0 indent fadeUp-inview">
+              ※路線バスの運賃は、おとな(中学生以上)320円、こども(小学生)160円、小学生未満は1人目は無料・2人目からはこども料金です。
+            </p>
+            <div class="transportation_img" fadeUp-inview>
+              <figure>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/transportation_img_01.avif" alt="路線バスの案内画像" width="505" height="164" loading="lazy">
+              </figure>
+            </div>
+            <h4 class="transportation_caption fadeUp-inview">
+              ◆南海電鉄泉北線「栂・美木多駅(とがみきたえき)」から（上記運行日以外）
+            </h4>
+            <p class="transportation_text fadeUp-inview">
+              バスターミナル4番乗り場、南海路線バスにて約12分「御池台(みいけだい)5丁」にて下車。徒歩約20分（バス停からハーベストの丘までは急な下り坂・上り坂がございます）<br>
+              栂・美木多駅へは、南海なんば駅より「泉北線 和泉中央行」にて約25分。
+            </p>
+            <p class="transportation_text caution_text indent fadeUp-inview">
+              ※「栂・美木多駅」「御池台5丁」間の<a href="https://transfer-cloud.navitime.biz/nankaibus" class="transportation_link hover" target="_blank">南海バス運行時間の検索はこちら</a>
+            </p>
+            <p class="transportation_text caution_text mt_0 indent fadeUp-inview">
+              ※路線バスの運賃は、おとな(中学生以上)250円、こども(小学生)130円、小学生未満は1人目は無料・2人目からはこども料金です。
+            </p>
+            <div class="transportation_img fadeUp-inview">
+              <figure>
+                <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/transportation_img_02.avif" alt="路線バスの案内画像" width="505" height="164" loading="lazy">
+              </figure>
+            </div>
+          </div>
+        </section>
+
+
+        <a href="https://farm.or.jp/" class="bottom_logo hover fadeUp-inview">
+          <figure>
+            <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/bottom_logo.avif" alt="ハーベストの丘" width="176" height="54.732" loading="lazy">
+          </figure>
+        </a>
+
+        <div class="twinkle_star star_99">
+          <figure>
+            <img src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/img/illumination_2026/star_03.avif" alt="" width="245" height="245" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </main>
+
+    <footer class="illumi_footer">
+      <p class="copyright">Copyright © 2007-2026 Farm corporation.All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/js/libs/jquery-3.7.1.min.js"></script>
+    <script src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/js/libs/modaal.min.js"></script>
+    <script src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/js/libs/swiper.min.js"></script>
+    <script src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/js/libs/jquery.inview.js"></script>
+    <script src="https://farm.or.jp/wp-content/themes/harvest_renew/assets/js/illumination_2026.js"></script>
+  </body>
+</html>

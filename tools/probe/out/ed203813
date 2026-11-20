@@ -6,8 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<link href="https://fonts.googleapis.com/css?family=Spectral&display=swap" rel="stylesheet" />
-
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-105005144-3"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-HXY9ZMRG6G"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() {
@@ -15,12 +14,13 @@
 		}
 		gtag("js", new Date());
 
-		gtag("config", "UA-105005144-3");
+		gtag("config", "G-HXY9ZMRG6G");
 	</script>
 
 	<title>フェスタルーチェ</title>
 	<link rel="icon" href="./favicon.ico?v=1.0" />
-	<meta name="description" content="2017年にスタートした「フェスタ・ルーチェ」もついに今年で10周年を迎えます。これまでの9年間、毎年異なるテーマを掲げ、イルミネーションを中心に、プロジェクションマッピングやランタンフェス、ドローンショーなど、さまざまな光のコンテンツを展開し、進化してきました。和歌山から始まったフェスタ・ルーチェは全国へ広がり、累計115万人を超える方々に楽しんでいただいています。" />
+	<meta name="description"
+		content="2017年にスタートした「フェスタ・ルーチェ」もついに今年で10周年を迎えます。これまでの9年間、毎年異なるテーマを掲げ、イルミネーションを中心に、プロジェクションマッピングやランタンフェス、ドローンショーなど、さまざまな光のコンテンツを展開し、進化してきました。和歌山から始まったフェスタ・ルーチェは全国へ広がり、累計115万人を超える方々に楽しんでいただいています。" />
 	<link rel="canonical" href="https://festaluce.jp/" />
 	<meta property="og:locale" content="ja_JP" />
 	<meta property="og:type" content="article" />
@@ -210,7 +210,8 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				<h2></h2>
 				<ul class="list-in-session">
 					<li>
-						<a href="https://www.aws-s.com/lightparks&nightsafari/lightparks/" target="_blank" rel="noopener noreferrer">
+						<a href="https://www.aws-s.com/lightparks&nightsafari/lightparks/" target="_blank"
+							rel="noopener noreferrer">
 							<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/2026_2027marina/advw_logo.png"
 								alt="LIGHT PARKS in アドベンチャーワールド" />
 							<p>2026年10月24日（土）- 2027年3月31日（水）</p>
@@ -226,7 +227,7 @@ encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 						</a>
 					</li>
 					<li>
-						<a href="https://festaluce-ehime.jp/"  target="_blank" rel="noopener noreferrer">
+						<a href="https://festaluce-ehime.jp/" target="_blank" rel="noopener noreferrer">
 							<img src="https://festaluce.jp/wakayama/wp-content/themes/theme-os/img/common/light_parks_ehime.png"
 								alt="FESTALUCE in えひめこどもの城" />
 							<p>2026年11月14日（土）- 2027年1月31日（日）</p>

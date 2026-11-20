@@ -269,7 +269,34 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 			</div>
 			
 							
-										
+								<div class="acf-place acf-place-01">
+						<p class="acf-place-name"><strong>「ジュエリーは、誰を夢みる」展示風景</strong></p>
+									<div class="acf-gallery-single">
+				<a href="#" class="acf-modal-trigger" data-gallery="acf-gallery-01" data-index="0">
+					<img src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-02_261107-031-2-1024x682.jpg"
+					     alt="">
+				</a>
+			</div>
+						<p class="acf-caption">「ジュエリーは、誰を夢みる」展示風景　撮影：渞忠之</p>
+						<div class="acf-gallery-data" id="acf-gallery-01" hidden>
+								<div data-src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-02_261107-031-2.jpg"
+				     data-alt=""
+				     data-caption="「ジュエリーは、誰を夢みる」展示風景　撮影：渞忠之"></div>
+								<div data-src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-03_261107-207-2.jpg"
+				     data-alt=""
+				     data-caption="「ジュエリーは、誰を夢みる」展示風景　撮影：渞忠之"></div>
+								<div data-src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-04_1_261107-485-2.jpg"
+				     data-alt=""
+				     data-caption="「ジュエリーは、誰を夢みる」展示風景　撮影：渞忠之"></div>
+								<div data-src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-05_261107-055-2.jpg"
+				     data-alt=""
+				     data-caption="「ジュエリーは、誰を夢みる」展示風景　撮影：渞忠之"></div>
+								<div data-src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-01_261107-610-2.jpg"
+				     data-alt=""
+				     data-caption="「ジュエリーは、誰を夢みる」展示風景　撮影：渞忠之"></div>
+							</div>
+					</div><!-- .acf-place-01 -->
+						
 
 			</div><!-- .wrap -->
 
@@ -611,7 +638,69 @@ JEWELRY JOURNAL
 		</section><!-- #scDocument -->
 
 <section id="scPlaceArea" class="col-4 pos-2">
-						</section>
+								<div class="acf-place acf-place-02">
+						<p class="acf-place-name"><strong>「ジュエリーは、誰を夢みる」展示風景</strong></p>
+									<ul class="acf-gallery-thumbs">
+								<li>
+					<a href="#" class="acf-modal-trigger"
+					   data-gallery="acf-gallery-02"
+					   data-index="0">
+						<img src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-02_261107-031-2-300x200.jpg"
+						     alt="">
+					</a>
+				</li>
+								<li>
+					<a href="#" class="acf-modal-trigger"
+					   data-gallery="acf-gallery-02"
+					   data-index="1">
+						<img src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-03_261107-207-2-300x200.jpg"
+						     alt="">
+					</a>
+				</li>
+								<li>
+					<a href="#" class="acf-modal-trigger"
+					   data-gallery="acf-gallery-02"
+					   data-index="2">
+						<img src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-04_1_261107-485-2-300x200.jpg"
+						     alt="">
+					</a>
+				</li>
+								<li>
+					<a href="#" class="acf-modal-trigger"
+					   data-gallery="acf-gallery-02"
+					   data-index="3">
+						<img src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-05_261107-055-2-300x200.jpg"
+						     alt="">
+					</a>
+				</li>
+								<li>
+					<a href="#" class="acf-modal-trigger"
+					   data-gallery="acf-gallery-02"
+					   data-index="4">
+						<img src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-01_261107-610-2-300x200.jpg"
+						     alt="">
+					</a>
+				</li>
+							</ul>
+			<div class="acf-gallery-data" id="acf-gallery-02" hidden>
+								<div data-src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-02_261107-031-2.jpg"
+				     data-alt=""
+				     data-caption="「ジュエリーは、誰を夢みる」展示風景　撮影：渞忠之"></div>
+								<div data-src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-03_261107-207-2.jpg"
+				     data-alt=""
+				     data-caption="「ジュエリーは、誰を夢みる」展示風景　撮影：渞忠之"></div>
+								<div data-src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-04_1_261107-485-2.jpg"
+				     data-alt=""
+				     data-caption="「ジュエリーは、誰を夢みる」展示風景　撮影：渞忠之"></div>
+								<div data-src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-05_261107-055-2.jpg"
+				     data-alt=""
+				     data-caption="「ジュエリーは、誰を夢みる」展示風景　撮影：渞忠之"></div>
+								<div data-src="https://www.momak.go.jp/wp-content/uploads/2026/11/20261107-01_261107-610-2.jpg"
+				     data-alt=""
+				     data-caption="「ジュエリーは、誰を夢みる」展示風景　撮影：渞忠之"></div>
+							</div>
+					</div><!-- .acf-place-02 -->
+		</section>
 		
 		<section id="scEventInfo03" class="col-4 pos-2"><p><strong>巡回</strong><br>
 <a href="https://www.grandtoit.jp/museum/" target="_blank" rel="noopener noreferrer">島根県立石見美術館</a>　2027年3月20日（土）～6月14日（月）<br>

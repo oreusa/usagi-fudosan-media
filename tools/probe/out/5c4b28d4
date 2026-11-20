@@ -14,7 +14,7 @@
 <meta property="og:description" content="大阪市立美術館は、特別展（大規模な美術展）や、館蔵品の展覧会などを開催している、歴史ある大阪の美術館です。" />
 <meta property="og:image" content="https://www.osaka-art-museum.jp/themes/custom/osaka_museum/images/ogp.jpg" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.osaka-art-museum.jp/special_exhibition/mindai?fbclid=IwZXh0bgNhZW0BMABwZG9mBWFkaWQBqzdw8pkvT3NydGMGYXBwX2lkDDM1MDY4NTUzMTcyOAABH-gNsJ5ze_g0WX96HsOmahTUnKQZgqn2W6I8eD51BYn-Pv5pCkydLRZmZUg1_aem_y7EViDvwNgAYAKYamWZTTw&amp;utm_campaign=120250773105260335&amp;utm_content=120250773219650335&amp;utm_id=120250773105260335&amp;utm_medium=paid&amp;utm_source=fb&amp;utm_term=120250773105400335" />
+<meta property="og:url" content="https://www.osaka-art-museum.jp/special_exhibition/mindai" />
 <meta property="og:site_name" content="大阪市立美術館" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="https://www.osaka-art-museum.jp/themes/custom/osaka_museum/images/ogp.jpg" />
@@ -23,8 +23,8 @@
 <link rel="alternate" hreflang="ja" href="https://www.osaka-art-museum.jp/special_exhibition/mindai" />
 
     <title>躍動する明代の書－台北・何創時（かそうじ）コレクションの至宝 | 大阪市立美術館</title>
-    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_Udyln8XE5xhpb2rtod5wFKcYxIrs3dQzkQhauM2Vyao.css?delta=0&amp;language=ja&amp;theme=osaka_museum&amp;include=eJxtjtEOgjAMRX9oSOIPLXdY50JHl7VI-HsBjYbFpzbnNqdXkD1uOU1ebWXqj70rqIgV5aFOOD2pSh9ZArjbr9IUv_gzL4bA5EQxwudZac59EDG1zXLGd4aVNIy1wTIZFlLJjeb9-B_7lTllIpHJ7z49J0pMg10buKRC1emqRltnKL0ArrNszA" />
-<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Ymc0LfiL2dzQNJ9-AL7adnHGA8wgbwVxhPSwxQpTbE4.css?delta=1&amp;language=ja&amp;theme=osaka_museum&amp;include=eJxtjtEOgjAMRX9oSOIPLXdY50JHl7VI-HsBjYbFpzbnNqdXkD1uOU1ebWXqj70rqIgV5aFOOD2pSh9ZArjbr9IUv_gzL4bA5EQxwudZac59EDG1zXLGd4aVNIy1wTIZFlLJjeb9-B_7lTllIpHJ7z49J0pMg10buKRC1emqRltnKL0ArrNszA" />
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_sEWPICYIihHAOXAc0PcgF4NJjTtyvDbCeap-1enlCL0.css?delta=0&amp;language=ja&amp;theme=osaka_museum&amp;include=eJxtjtEOgjAMRX9oSOIPLXdY50JHl7VI-HsBjYbFpzbnNqdXkD1uOU1ebWXqj70rqIgV5aFOOD2pSh9ZArjbr9IUv_gzL4bA5EQxwudZac59EDG1zXLGd4aVNIy1wTIZFlLJjeb9-B_7lTllIpHJ7z49J0pMg10buKRC1emqRltnKL0ArrNszA" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_M8qh6Yr7t1KxqV6VdFCWrvf5gKWt3sgBSZQiqtLb8jU.css?delta=1&amp;language=ja&amp;theme=osaka_museum&amp;include=eJxtjtEOgjAMRX9oSOIPLXdY50JHl7VI-HsBjYbFpzbnNqdXkD1uOU1ebWXqj70rqIgV5aFOOD2pSh9ZArjbr9IUv_gzL4bA5EQxwudZac59EDG1zXLGd4aVNIy1wTIZFlLJjeb9-B_7lTllIpHJ7z49J0pMg10buKRC1emqRltnKL0ArrNszA" />
 <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" />
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -43,7 +43,7 @@
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/metropolis/Metropolis-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/core/themes/olivero/fonts/lora/lora-v14-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?tooh5k" />
+    <noscript><link rel="stylesheet" href="/core/themes/olivero/css/components/navigation/nav-primary-no-js.css?topnxh" />
 </noscript>
   </head>
   <body class="path-node page-node-type-special-exhibition">
@@ -68,7 +68,7 @@
         <div class="d-flex flex-wrap align-items-center justify-content-between">
           <div class="d-flex align-items-center gap-5">
             <div class="logo__image">
-                    <a href="/" title="ホーム" rel="home" class="navbar-brand d-flex">
+                    <a href="/index.php/" title="ホーム" rel="home" class="navbar-brand d-flex">
               <img src="/sites/default/files/logo_0_0.png" alt="大阪美術館" class="" />
           </a>
     
@@ -254,7 +254,7 @@
             <div class="d-flex flex-column">
               <div class="d-flex align-items-center justify-content-between p-2">
                 <div class="logo__image">
-                          <a href="/" title="ホーム" rel="home" class="navbar-brand d-flex">
+                          <a href="/index.php/" title="ホーム" rel="home" class="navbar-brand d-flex">
               <img src="/sites/default/files/logo_0_0.png" alt="大阪美術館" class="" />
           </a>
     
@@ -763,7 +763,7 @@
        <div class="d-flex flex-column align-items-start">
          <div class="footer__logo">
            <div href="/" class="logo-block w-100 d-block">
-                   <a href="/" title="ホーム" rel="home" class="navbar-brand d-flex">
+                   <a href="/index.php/" title="ホーム" rel="home" class="navbar-brand d-flex">
               <img src="/sites/default/files/logo_0_0.png" alt="大阪美術館" class="" />
           </a>
     
@@ -929,7 +929,7 @@
     
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/10343","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"ja"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"user":{"uid":0,"permissionsHash":"26bdf10afb3409f8f9dc72c3f6aa540a661eb1de39d5aee9b125d50501d347a7"}}</script>
 <script src="/core/assets/vendor/jquery/jquery.min.js?v=4.0.0"></script>
-<script src="/sites/default/files/js/js_Kx8MQdfwNLcP5WbM4NaSKwVcUyD-5jgSECPPPNzQcoc.js?scope=footer&amp;delta=1&amp;language=ja&amp;theme=osaka_museum&amp;include=eJx9zUEOgCAMBdELSUy8kKlaDfKhhFaNnl62uHD7ZjECf3KRfoNMBKd2w6etE6VAYzyUj9hPIqZWKLe8MGe46klBxm1cK2U_h9Ly3wb03BBa3K5tUAbPNnzw8pnLC21_S5w"></script>
+<script src="/sites/default/files/js/js_1Ryj0jH6m-RcKt3MJueYnJKLCGPac28_0wm6e5RZANM.js?scope=footer&amp;delta=1&amp;language=ja&amp;theme=osaka_museum&amp;include=eJx9zUEOgCAMBdELSUy8kKlaDfKhhFaNnl62uHD7ZjECf3KRfoNMBKd2w6etE6VAYzyUj9hPIqZWKLe8MGe46klBxm1cK2U_h9Ly3wb03BBa3K5tUAbPNnzw8pnLC21_S5w"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script src="/sites/default/files/js/js_HmLi0B2CfbqDl6x1KNfEQdDD99Nc608QzQ5eDC87KMk.js?scope=footer&amp;delta=3&amp;language=ja&amp;theme=osaka_museum&amp;include=eJx9zUEOgCAMBdELSUy8kKlaDfKhhFaNnl62uHD7ZjECf3KRfoNMBKd2w6etE6VAYzyUj9hPIqZWKLe8MGe46klBxm1cK2U_h9Ly3wb03BBa3K5tUAbPNnzw8pnLC21_S5w"></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

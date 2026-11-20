@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!-- [if IEMobile 7 ]>
+<html lang="ja-JP" class="no-js iem7"><![endif] -->
+<!-- [if lt IE 7]>
+<html lang="ja-JP" class="no-js lt-ie9 lt-ie8 lt-ie7 ie6"><![endif] -->
+<!-- [if IE 7]>
+<html lang="ja-JP" class="no-js lt-ie9 lt-ie8 ie7"><![endif] -->
+<!-- [if IE 8]>
+<html lang="ja-JP" class="no-js lt-ie9 ie8"><![endif] -->
+<!-- [if (gte IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html lang="ja-JP" class="no-js"><!--<![endif]-->
+<html lang="ja">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40180203-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-40180203-1');
+	</script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Google Tag Manager -->
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PWJWLVT');</script>
+	<!-- End Google Tag Manager -->	
+	<meta charset="UTF-8">
+	<meta id="viewport" content="width=device-width" name="viewport">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v27.6 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>貴布禰総本宮 貴船神社</title>
+	<meta name="description" content="貴船神社は万物の命の源である水の神を祀る、全国二千社を数える水神の総本宮です。" />
+	<link rel="canonical" href="https://kifunejinja.jp/" />
+	<meta property="og:locale" content="ja_JP" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="貴布禰総本宮 貴船神社" />
+	<meta property="og:description" content="貴船神社は万物の命の源である水の神を祀る、全国二千社を数える水神の総本宮です。" />
+	<meta property="og:url" content="https://kifunejinja.jp/" />
+	<meta property="og:site_name" content="貴布禰総本宮 貴船神社" />
+	<meta property="og:image" content="https://kifunejinja.jp/production/wp-content/uploads/2020/11/ogp.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="貴布禰総本宮 貴船神社" />
+	<meta name="twitter:description" content="貴船神社は万物の命の源である水の神を祀る、全国二千社を数える水神の総本宮です。" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"CollectionPage","@id":"https:\/\/kifunejinja.jp\/","url":"https:\/\/kifunejinja.jp\/","name":"貴布禰総本宮 貴船神社","isPartOf":{"@id":"https:\/\/kifunejinja.jp\/#website"},"description":"Just another WordPress site","breadcrumb":{"@id":"https:\/\/kifunejinja.jp\/#breadcrumb"},"inLanguage":"ja"},{"@type":"BreadcrumbList","@id":"https:\/\/kifunejinja.jp\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https:\/\/kifunejinja.jp\/#website","url":"https:\/\/kifunejinja.jp\/","name":"貴布禰総本宮 貴船神社","description":"Just another WordPress site","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/kifunejinja.jp\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"ja"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='wp-block-library-inline-css' type='text/css'>
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}.has-text-align-center{text-align:center}.has-text-align-left{text-align:left}.has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*wp_block_styles_on_demand_placeholder:6affb5acf36ae*/
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='style-css' href='https://kifunejinja.jp/production/wp-content/themes/kifune_theme/assets/build/css/style.css?ver=6.9.12' type='text/css' media='all' />
+<link rel='stylesheet' id='page-forest-css' href='https://kifunejinja.jp/production/wp-content/themes/kifune_theme/assets/build/css/page-forest.css?ver=6.9.12' type='text/css' media='all' />
+<script type="text/javascript" src="https://kifunejinja.jp/production/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://kifunejinja.jp/production/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://kifunejinja.jp/wp-json/" /><link rel="icon" href="https://kifunejinja.jp/production/wp-content/uploads/2020/11/cropped-siteicon_new-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://kifunejinja.jp/production/wp-content/uploads/2020/11/cropped-siteicon_new-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://kifunejinja.jp/production/wp-content/uploads/2020/11/cropped-siteicon_new-180x180.png" />
+<meta name="msapplication-TileImage" content="https://kifunejinja.jp/production/wp-content/uploads/2020/11/cropped-siteicon_new-270x270.png" />
+	<link rel="shortcut icon" href="https://kifunejinja.jp/production/wp-content/themes/kifune_theme/assets/build/images/favicon.ico">
+</head>
+<body data-rsssl=1 class="home blog wp-theme-kifune_theme jp ja" id="top">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWJWLVT"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="p-loading">
+	<div class="p-loading-line"></div>
+</div>
+<div class="l-fixed-lang-switcher js-fixed-lang-switcher">
+	<div class="c-lang-bar">
+		<a class="ja" href="https://kifunejinja.jp">JP</a>
+		<a class="en" href="https://kifunejinja.jp/en/">EN</a>
+	</div>
+</div>
+<a class="l-fixed-logo js-fixed-logo" href="https://kifunejinja.jp">
+	<h1>貴船神社</h1>
+</a>
+<nav class="c-spnavi" id="spnavi">
+	<div id="scroller" class="c-spnavi-inner">
+		<ul class="main_list">
+									<li>
+							<a href="https://kifunejinja.jp/info/" title="参拝のご案内"
+							   target="_self">
+								<span class="c-flowing-border yoko">参拝のご案内</span>
+							</a>
+						</li>
+												<li>
+							<a href="https://kifunejinja.jp/event/" title="祭典・神事"
+							   target="_self">
+								<span class="c-flowing-border yoko">祭典・神事</span>
+							</a>
+						</li>
+												<li>
+							<a href="https://kifunejinja.jp/pray/" title="御祈祷・御守"
+							   target="_self">
+								<span class="c-flowing-border yoko">御祈祷・御守</span>
+							</a>
+						</li>
+												<li>
+							<a href="https://kifunejinja.jp/forest/" title="貴船の杜づくり"
+							   target="_self">
+								<span class="c-flowing-border yoko">貴船の杜づくり</span>
+							</a>
+						</li>
+												<li>
+							<a href="https://kifunejinja.jp/shrine/" title="貴船神社について"
+							   target="_self">
+								<span class="c-flowing-border yoko">貴船神社について</span>
+							</a>
+						</li>
+												<li>
+							<a href="https://kifunejinja.jp/access/" title="交通・アクセス"
+							   target="_self">
+								<span class="c-flowing-border yoko">交通・アクセス</span>
+							</a>
+						</li>
+								</ul>
+		<div class="sub_list_wrap">
+			<ul class="sub_list">
+											<li>
+								<a href="https://kifunejinja.jp/news/" title="お知らせ"
+								   target="_self">
+									<span class="c-flowing-border yoko">お知らせ</span>
+								</a>
+							</li>
+														<li>
+								<a href="https://kifunejinja.jp/contact/" title="お問い合わせ"
+								   target="_self">
+									<span class="c-flowing-border yoko">お問い合わせ</span>
+								</a>
+							</li>
+											<li>
+					<div class="c-lang-bar"><a href="https://kifunejinja.jp">JP</a><a href="https://kifunejinja.jp/en/">EN</a></div>
+				</li>
+			</ul>
+		</div>
+					<div class="sub_list_wrap soundscape-banner-type">
+				<ul class="sub_list">
+					<li><a class="soundscape-banner" href="https://kifunejinja.jp/soundscape/"></a></li>
+				</ul>
+			</div>
+					<div class="sub_list_wrap only_en">
+			<ul class="sub_list">
+				<li><a class="c-has_lick_icon black" href="https://kifunejinja.jp/wedding/" target="_blank"><span class="c-flowing-border yoko">貴船神社の結婚式</span></a></li>
+				<li><a class="c-has_lick_icon black" href="https://www.paceandspace.net/kifune-kodomo" target="_blank"><span class="c-flowing-border yoko">初宮詣・七五三詣のフォトプラン</span></a></li>
+			</ul>
+		</div>
+					<ul class="sns_list">
+				<li class="insta"><a href="https://www.instagram.com/kifunejinja/" target="_blank"></a></li><li class="fb"><a href="https://www.facebook.com/kifunejinja" target="_blank"></a></li><li class="tw"><a href="https://twitter.com/kifunejinja" target="_blank"></a></li><li class="yt"><a href="https://www.youtube.com/user/kifunejinja" target="_blank"></a></li>			</ul>
+				</div>
+</nav>
+<div class="c-btn_sp_navi_wrap js-spnavi-btn"><a class="c-btn_sp_navi nosc nosms" href="#sp"><span
+			class="line"></span><span class="line"></span></a></div>
+<div id="wrap">
+	<header class="global_header" id="global_header"></header>
+	<main class="l-main">
+	<section class="p-hero js-has-visual-mv">
+		<div class="p-hero_inner">
+							<div class="p-hero_nav">
+					<div class="p-hero_nav-logo"></div>
+					<ul>
+														<li>
+									<a href="https://kifunejinja.jp/info/" title="参拝のご案内"
+									   target="_self">
+										参拝のご案内										<span class="c-flowing-border"></span>
+									</a>
+								</li>
+																<li>
+									<a href="https://kifunejinja.jp/event/" title="祭典・神事"
+									   target="_self">
+										祭典・神事										<span class="c-flowing-border"></span>
+									</a>
+								</li>
+																<li>
+									<a href="https://kifunejinja.jp/pray/" title="御祈祷・御守"
+									   target="_self">
+										御祈祷・御守										<span class="c-flowing-border"></span>
+									</a>
+								</li>
+																<li>
+									<a href="https://kifunejinja.jp/forest/" title="貴船の杜づくり"
+									   target="_self">
+										貴船の杜づくり										<span class="c-flowing-border"></span>
+									</a>
+								</li>
+																<li>
+									<a href="https://kifunejinja.jp/shrine/" title="貴船神社について"
+									   target="_self">
+										貴船神社について										<span class="c-flowing-border"></span>
+									</a>
+								</li>
+																<li>
+									<a href="https://kifunejinja.jp/access/" title="交通・アクセス"
+									   target="_self">
+										交通・アクセス										<span class="c-flowing-border"></span>
+									</a>
+								</li>
+													</ul>
+				</div>
+							<div class="p-hero_mv">
+									<div class="p-hero_mv-nav">
+						<ul>
+																<li><a href="https://kifunejinja.jp/news/" title="お知らせ"
+										   target="_self">お知らせ</a></li>
+																		<li><a href="https://kifunejinja.jp/contact/" title="お問い合わせ"
+										   target="_self">お問い合わせ</a></li>
+															</ul>
+					</div>
+									<div class="p-hero_mv-slide js-home_mv_slide">
+												<div class="p-hero_mv-slide-item js-home_mv_slide_target active">
+								<div class="img js-moving-img pc"
+									 style="background-image: url(https://kifunejinja.jp/production/wp-content/uploads/2026/10/kifune_top01_2610_pc.jpg)"></div>
+								<div class="img js-moving-img sp"
+									 style="background-image: url(https://kifunejinja.jp/production/wp-content/uploads/2026/10/kifune_top01_2610_sp.jpg)"></div>
+								<div class="border js-mv-flowing-border"></div>
+							</div>
+														<div class="p-hero_mv-slide-item js-home_mv_slide_target ">
+								<div class="img js-moving-img pc"
+									 style="background-image: url(https://kifunejinja.jp/production/wp-content/uploads/2026/10/kifune_top02_2610_pc.jpg)"></div>
+								<div class="img js-moving-img sp"
+									 style="background-image: url(https://kifunejinja.jp/production/wp-content/uploads/2026/10/kifune_top02_2610_sp.jpg)"></div>
+								<div class="border js-mv-flowing-border"></div>
+							</div>
+													<div class="p-hero_mv-slide-item js-home_mv_slide_target is-video">
+							<div class="movie-logo"></div>
+							<div class="player-wrap">
+								<video class="player pc" src="https://kifunejinja.jp/production/wp-content/uploads/2021/10/honguu-pc_0928_02.mp4"
+									   muted webkit-playsinline playsinline autoplay></video>
+								<video class="player sp" src="https://kifunejinja.jp/production/wp-content/uploads/2021/10/honguu-sp_0928_02.mp4"
+									   muted webkit-playsinline playsinline autoplay></video>
+							</div>
+							<div class="border js-mv-flowing-border"></div>
+							<div class="button" style="z-index:1;"><a class="c-btn" href="https://kifunejinja.jp/soundscape"><span class="c-btn-text">もっと見る</span></a></div>
+						</div>
+												<div class="p-hero_mv-slide-item js-home_mv_slide_target is-video">
+							<div class="forest-logo">
+								<img src="https://kifunejinja.jp/production/wp-content/themes/kifune_theme/assets/build/images/forest_ttl.png" alt="">
+							</div>
+							<div class="img js-moving-img pc"
+									style="background-image: url(https://kifunejinja.jp/production/wp-content/uploads/2024/09/Container-1.webp)"></div>
+							<div class="img js-moving-img sp"
+									style="background-image: url(https://kifunejinja.jp/production/wp-content/uploads/2024/09/kifune_top04_2407_sp-2.jpg)"></div>
+							<div class="border js-mv-flowing-border"></div>
+							<div class="button"><a class="c-btn" href="https://kifunejinja.jp/forest"><span class="c-btn-text">貴船の杜づくり</span></a></div>
+						</div>
+										</div>
+			</div>
+		</div>
+	</section>
+	<section class="p-news_list-wrap">
+		<div class="c-absolute-bg"></div>
+		<ul class="p-news_list">
+							<li class="p-news_list-item">
+				<a href="https://kifunejinja.jp/news/%e3%80%90%e8%b2%b4%e8%88%b9%e7%b4%85%e8%91%89%e3%80%9111%e6%9c%8818%e6%97%a5%e6%92%ae%e5%bd%b1">
+												<span class="text">【貴船紅葉】11月18日撮影</span>
+						<span class="date">2026.11.18</span>
+					</a>
+				</li>
+								<li class="p-news_list-item">
+				<a href="https://kifunejinja.jp/news/%e3%80%90%e8%b2%b4%e8%88%b9%e7%b4%85%e8%91%89%e3%80%9111%e6%9c%8813%e6%97%a5%e6%92%ae%e5%bd%b1">
+												<span class="text">【貴船紅葉】11月13日撮影</span>
+						<span class="date">2026.11.13</span>
+					</a>
+				</li>
+								<li class="p-news_list-item">
+				<a href="https://kifunejinja.jp/news/%e6%96%b0%e7%a9%80%e6%84%9f%e8%ac%9d%e7%a5%ad%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6">
+												<span class="text">新穀感謝祭について</span>
+						<span class="date">2026.11.12</span>
+					</a>
+				</li>
+								<li class="p-news_list-item">
+				<a href="https://kifunejinja.jp/news/%e3%83%a9%e3%82%a4%e3%83%88%e3%82%a2%e3%83%83%e3%83%97%e6%9c%9f%e9%96%93%e3%81%ae%e3%83%90%e3%82%b9%e6%99%82%e5%88%bb%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6">
+												<span class="text">ライトアップ期間のバス時刻について</span>
+						<span class="date">2026.11.07</span>
+					</a>
+				</li>
+								<li class="p-news_list-item">
+				<a href="https://kifunejinja.jp/news/%e8%b2%b4%e8%88%b9%e7%a5%9e%e7%a4%be%e7%b4%85%e8%91%89%e3%83%a9%e3%82%a4%e3%83%88%e3%82%a2%e3%83%83%e3%83%97%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6-2">
+												<span class="text">貴船神社紅葉ライトアップについて</span>
+						<span class="date">2026.11.06</span>
+					</a>
+				</li>
+						</ul>
+
+		<div class="c-btn-wrap">
+			<a class="c-btn" href="https://kifunejinja.jp/news"><span class="c-btn-text">もっと見る</span></a>
+		</div>
+	</section>
+		<section class="l-section" id="anchor-1">
+		<div class="l-section-inner basic">
+			<h2 class="c-page-title js-inview-element">
+				<div class="c-flowing-border"></div>
+				<span>参拝のご案内</span>
+			</h2>
+							<div class="p-home_info js-inview-element">
+					<div class="p-home_info-inner c-flex-wrap">
+																<div class="p-home_info-col">
+																							<div class="title">本宮 参拝時間（水占みくじ含む）</div>
+																								<div class="content">
+																											<div class="date">
+															<span class="time">6:00~20:00</span>
+															<span class="period">（5/1～11/30）</span>
+														</div>
+																												<ul>
+																																<li><span>年中無休・参拝料無料</span>
+																	</li>
+																																		<li><span>正月三が日は20:00</span>
+																	</li>
+																															</ul>
+																										</div>
+																						</div>
+																				<div class="p-home_info-col">
+											<div class="title">境内案内</div>
+											<a class="content" href="https://kifunejinja.jp/info#anchor-1">
+																									<span class="img">
+												<img src="https://kifunejinja.jp/production/wp-content/uploads/2020/10/p-home_info-img_01.jpg"
+													 alt="">
+											</span>
+																										<span class="text">貴船神社の参拝は三社詣といい、貴船山の麓にある本宮、奥宮、結社を参ります。</span>
+																								</a>
+										</div>
+																				<div class="p-home_info-col">
+																							<div class="title">貴船神社の自然</div>
+																							<a class="content" href="https://kifunejinja.jp/info#anchor-3">
+																									<span class="img"><img src="https://kifunejinja.jp/production/wp-content/uploads/2020/08/p-home_info-img_02.jpg"
+																		   alt=""></span>
+																										<span class="text">元来、気の生ずる根源として「気生根」とも記された自然豊かな貴船を紹介します。</span>
+																								</a>
+										</div>
+															</div>
+				</div>
+						</div>
+	</section>
+					<section class="l-section _has-bg">
+					<div class="l-section-inner basic">
+						<div class="p-home_lightup js-inview-element">
+							<div class="c-flex-wrap p-home_lightup-inner">
+								<div class="c-flex-wrap p-home_lightup-left">
+									<div class="p-home_lightup-title"><span>夜間特別ライトアップ</span></div>
+																				<div class="p-home_lightup-img"
+												 style="background-image:url(https://kifunejinja.jp/production/wp-content/uploads/2020/10/lightup_03.jpg)"></div>
+																			</div>
+								<div class="p-home_lightup-right">
+																			<div class="p-home_lightup-content-title">
+											<span>貴船神社紅葉ライトアップ</span></div>
+																				<ul class="p-home_lightup-content-list">
+																								<li>
+														<span>日程</span><span></span><span>11月7日（土）ー  11月24日（火）</span>
+													</li>
+																										<li>
+														<span>時間</span><span></span><span>日の入りから20:30まで</span>
+													</li>
+																							</ul>
+																		</div>
+							</div>
+						</div>
+					</div>
+				</section>
+					<section class="l-section">
+		<div class="l-section-inner basic">
+			<h2 class="c-page-title js-inview-element">
+				<div class="c-flowing-border"></div><span>Soundscape</span>
+			</h2>
+			<div class="c-section-lead _p-home_soundscape"><span>湧き出づる水、山々の呼吸、鳥たちの鳴き声―。<br />
+貴船神社を取り巻く大いなる自然、その環境を<br />
+「音の風景」としてお届けします。</span></div>
+			<div class="p-home_soundscape js-home_soundscape-modal-btn">
+				<div class="img" style="background-image: url(https://kifunejinja.jp/production/wp-content/themes/kifune_theme/assets/build/images/home-soundscape.jpg)"></div>
+				<div class="movie-play"></div>
+				<div class="text">湧き出づる水、山々の呼吸、鳥たちの鳴き声―。<br />
+貴船神社を取り巻く大いなる自然、その環境を<br />
+「音の風景」としてお届けします。</div>
+			</div>
+			<div class="c-btn-wrap">
+				<a class="c-btn" href="https://kifunejinja.jp/soundscape/">
+					<span class="c-btn-text">もっと見る</span>
+				</a>
+			</div>
+		</div>
+	</section>
+			<div class="remodal js-home_soundscape-modal-target p-home_soundscape_modal"
+			 data-yt-id="QL8XtWSuZO4">
+			<div class="js-yt-player"></div>
+			<button data-remodal-action="close" class="remodal-close"></button>
+		</div>
+			<section class="l-section _has-bg" id="anchor-5">
+		<div class="l-section-inner basic">
+			<h2 class="c-page-title js-inview-element">
+				<div class="c-flowing-border"></div>
+				<span>貴船神社について</span>
+			</h2>
+			<div class="p-home_about c-flex-wrap js-inview-element">
+				<div class="p-home_about-img"></div>
+				<div class="p-home_about-text">
+					<p>貴船神社は万物の命の源である水の神を祀る、全国二千社を数える水神の総本宮です。<br />
+創建年代は極めて古く、その始まりは不詳ですが約一三〇〇年前の白鳳六年にはすでに社殿造替の記録があることから、日本でも指折りの古社に数えられます。</p>
+					<div class="c-btn-wrap">
+						<a class="c-btn" href="https://kifunejinja.jp/shrine/">
+							<span class="c-btn-text">
+								もっと見る							</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		<section class="l-section p-home_thumbnail-link">
+		<div class="l-section-inner basic js-inview-element">
+			<div class="p-home_thumbnail-link-content c-flex-wrap">
+				<div class="c-has-thumbnail-link" id="anchor-2">
+					<div class="c-has-thumbnail-link-img">
+						<img src="https://kifunejinja.jp/production/wp-content/themes/kifune_theme/assets/build/images/p-home_thumbnail-link_01.jpg" alt="祭典・神事">
+					</div>
+					<h2 class="c-has-thumbnail-link-title">祭典・神事</h2>
+					<p class="c-has-thumbnail-link-text">古来より国の豊穣と人々の安寧を願い、水の恵みを祈念し続けた神事を今に伝えます。</p>
+					<div class="c-btn-wrap">
+						<a class="c-btn" href="https://kifunejinja.jp/event/">
+							<span class="c-btn-text">もっと見る</span>
+						</a>
+					</div>
+				</div>
+				<div class="c-has-thumbnail-link" id="anchor-3">
+					<div class="c-has-thumbnail-link-img">
+						<img src="https://kifunejinja.jp/production/wp-content/themes/kifune_theme/assets/build/images/p-home_thumbnail-link_02.jpg" alt="御祈祷・御守">
+					</div>
+					<h2 class="c-has-thumbnail-link-title">御祈祷・御守</h2>
+					<p class="c-has-thumbnail-link-text">祈祷は神様に祈りを捧げる作法として最も丁寧なお参りの一つです。皆様のお願い事を御神前にお届けします。</p>
+					<div class="c-btn-wrap">
+						<a class="c-btn" href="https://kifunejinja.jp/pray/">
+							<span class="c-btn-text">もっと見る</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		<section class="l-section _has-bg p-home_thumbnail-items">
+		<div class="l-section-inner basic js-inview-element">
+			<h2 class="c-page-title js-inview-element">
+				<div class="c-flowing-border"></div>
+				<span>貴船の杜づくり</span>
+			</h2>
+
+			<div class="p-forest_point-picture js-inview-element">
+				<picture>
+					<source srcset="https://kifunejinja.jp/production/wp-content/themes/kifune_theme/assets/build/images/home_forest_sp.png" media="(max-width: 768px)">
+					<img src="https://kifunejinja.jp/production/wp-content/themes/kifune_theme/assets/build/images/home_forest.webp" alt="">
+				</picture>
+
+			<div class="c-btn-wrap"><a class="c-btn" href="https://kifunejinja.jp/forest"><span
+						class="c-btn-text">もっと見る</span></a></div>
+		</div>
+	</section>
+	<section class="l-section p-home_access" id="anchor-6">
+		<div class="l-section-inner basic js-inview-element">
+			<h2 class="c-page-title js-inview-element">
+				<div class="c-flowing-border"></div>
+				<span>交通・アクセス</span>
+			</h2>
+			<div class="c-flex-wrap js-inview-element">
+				<div class="p-home_access-map">
+					<!--<div id="homeGMap"></div>-->
+											<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13053.59797047133!2d135.762889!3d35.121703!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1d021ae4b564548b!2z6LK06Ii556We56S-!5e0!3m2!1sja!2sjp!4v1608804546532!5m2!1sja!2sjp" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+										</div>
+									<div class="p-home_access-desc">
+
+						<ul class="p-home_access-desc-list">
+															<li class="p-home_access-desc-list-item">
+									<a href="https://kifunejinja.jp/access#anchor-1">公共交通機関でお越しの方へ</a>
+								</li>
+																<li class="p-home_access-desc-list-item">
+									<a href="https://kifunejinja.jp/access#anchor-2">車でお越しの方へ</a>
+								</li>
+																<li class="p-home_access-desc-list-item">
+									<a href="https://kifunejinja.jp/access#anchor-3">大型バスについて</a>
+								</li>
+														</ul>
+						<div class="p-home_access-desc-route">
+<div class="p-home_access-desc-route-col">
+<p>最寄り駅：叡山電車「貴船口」駅</p>
+<ul class="c-basic-ul">
+<li>貴船口駅下車、京都バスに乗り換え「貴船」下車</li>
+<li>貴船口駅から徒歩の場合は約30分（2km）です</li>
+</ul>
+</div>
+<div class="p-home_access-desc-route-col">
+<p>最寄りのバス停：京都バス（33番）「貴船」</p>
+<ul class="c-basic-ul">
+<li>貴船下車、貴船神社までは徒歩約5分です</li>
+</ul>
+</div>
+</div>
+					</div>
+								</div>
+					</div>
+	</section>
+	</main>
+<footer class="l-global_footer" id="global_footer">
+	<div class="l-global_footer-inner l-section-inner basic c-flex-wrap">
+		<div class="l-global_footer-col">
+							<div class="l-global_footer-logo">
+					<p>貴布禰総本宮 貴船神社</p>
+				</div>
+								<div class="l-global_footer-place">
+					<p>〒601-1112 京都市左京区鞍馬貴船町180</p>
+				</div>
+						</div>
+					<div class="l-global_footer-col">
+				<address>
+					<p>
+													<a href="https://kifunejinja.jp/contact" title="Contact"
+							   target="_self">お問い合わせ</a>
+														<a href="tel:075-741-2016" title="TelephoneNumber">075-741-2016</a>
+												</p>
+				</address>
+									<small>&copy; 2020 貴布禰総本宮 貴船神社 All Rights Reserved.</small>
+								</div>
+				</div>
+</footer>
+<div id="responsive_flg"></div>
+<div class="l-totop" id="totop"><a href="#top">トップ</a></div>
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/production/wp-*.php","/production/wp-admin/*","/production/wp-content/uploads/*","/production/wp-content/*","/production/wp-content/plugins/*","/production/wp-content/themes/kifune_theme/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/javascript" src="https://kifunejinja.jp/production/wp-includes/js/dist/vendor/lodash.min.js?ver=4.17.21" id="lodash-js"></script>
+<script type="text/javascript" id="lodash-js-after">
+/* <![CDATA[ */
+window.lodash = _.noConflict();
+//# sourceURL=lodash-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://kifunejinja.jp/production/wp-content/themes/kifune_theme/assets/build/js/vendor.bundle.js?ver=1.0" id="vendor.bundle-js"></script>
+<script type="text/javascript" src="https://kifunejinja.jp/production/wp-content/themes/kifune_theme/assets/build/js/bundle.js?ver=1.0" id="bundle-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://kifunejinja.jp/production/wp-includes/js/wp-emoji-release.min.js?ver=6.9.12"}}
+</script>
+<script type="module">
+/* <![CDATA[ */
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://kifunejinja.jp/production/wp-includes/js/wp-emoji-loader.min.js
+/* ]]> */
+</script>
+</html>

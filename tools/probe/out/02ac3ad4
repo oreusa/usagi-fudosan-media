@@ -84,9 +84,9 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script id="jquery-core-js" src="https://www.miyako-eco.jp/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
 <script id="jquery-migrate-js" src="https://www.miyako-eco.jp/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
 <script id="dashi_google_map_api_key_js-js" src="https://maps.google.com/maps/api/js?key=AIzaSyDnHEDLG15tkNjPwsYFh9tOGctLaSd0Ihs&#038;ver=1.1"></script>
-<script id="my_common_jquery_inc-js" src="https://www.miyako-eco.jp/wp-content/themes/ecocen/js/common/jquery.inc.js?ver=7.1.4"></script>
-<script id="my_jquery_inc-js" src="https://www.miyako-eco.jp/wp-content/themes/ecocen/js/jquery.inc.js?ver=7.1.4"></script>
-<script id="cookie-js" src="https://www.miyako-eco.jp/wp-content/themes/ecocen/js/jquery.cookie.js?ver=7.1.4"></script>
+<script id="my_common_jquery_inc-js" src="https://www.miyako-eco.jp/wp-content/themes/ecocen/js/common/jquery.inc.js?ver=7.1.5"></script>
+<script id="my_jquery_inc-js" src="https://www.miyako-eco.jp/wp-content/themes/ecocen/js/jquery.inc.js?ver=7.1.5"></script>
+<script id="cookie-js" src="https://www.miyako-eco.jp/wp-content/themes/ecocen/js/jquery.cookie.js?ver=7.1.5"></script>
 <link rel="https://api.w.org/" href="https://www.miyako-eco.jp/wp-json/" /></head>
 <body class="wp-singular event-template-default single single-event postid-39278 wp-theme-ecocen event_event-39278">
 

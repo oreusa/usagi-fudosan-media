@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja-JP" data-bs-theme="auto">
+  <head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="description" content="京都　浄土宗西山禅林寺派総本山永観堂禅林寺 秋の永観堂 特別寺宝展 11月11日から12月6日  紅葉も見どころ">
+<meta name="author" content="京都 秋の永観堂 特別寺宝展 11月11日から12月6日 浄土宗西山禅林寺派総本山永観堂禅林寺">
+<meta property="og:title" content="京都　秋の永観堂 特別寺宝展 京都 2026年11月11日から12月6日 ">
+<meta property="og:site_name" content="京都 秋の永観堂 特別寺宝展 特設サイト">
+<meta property="og:description" content="浄土宗西山禅林寺派総本山永観堂禅林寺 秋の永観堂 特別寺宝展 11月11日から12月6日 京都 紅葉も見どころ 夜もライトアップで見学できます。">
+ <meta property="og:url" content="https://www.eikando.or.jp/lp/2026/index.html">
+<meta property="og:image" content="https://www.eikando.or.jp/lp/2026/2026_eikando_autumnExhibition.jpg">
+<meta property="og:type" content="website">
+<title>京都 秋の永観堂 特別寺宝展 11月11日から12月6日 総本山永観堂禅林寺</title>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+ <link href="assets/css/style.css" rel="stylesheet"> 
+<link rel="icon" href="eikando.ico">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage", 
+  "image": "https://www.eikando.or.jp/lp/2026/2026_eikando_autumnExhibition.jpg", 
+  "url": "https://www.eikando.or.jp/lp/2026/index.html", 
+  "headline": "京都 秋の永観堂 特別寺宝展 2026年11月11日から12月6日 浄土宗西山禅林寺派総本山永観堂禅林寺",
+  "description": "禅林寺に受け継がれる重要文化財の数々が咲き誇る歴史の深みと西山国師の尊き足跡をここに紡ぐ。特別寺宝展で公開される所蔵文化財の一部をご紹介します。",
+  "name": "浄土宗西山禅林寺派総本山永観堂禅林寺",
+  "publisher": {
+    "@type": "Organization",
+    "name": "浄土宗西山禅林寺派総本山永観堂禅林寺",
+    "address" : "京都市左京区永観堂町48",
+    "telephone" : "+81-75-761-0007"
+  },
+  "datePublished": "2026-09-01"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  "@type" : "Event",
+  "name" : "京都 秋の永観堂 特別寺宝展",
+  "startDate" : "2026-11-11T09:00:00+09:00",
+  "endDate" : "2026-12-06T17:00:00+09:00",
+  "description" : "京都 秋の永観堂 特別寺宝展 禅林寺に受け継がれる重要文化財の数々が咲き誇る歴史の深みと西山国師の尊き足跡をここに紡ぐ。特別寺宝展で公開される所蔵文化財の一部をご紹介します",
+  "image": "https://www.eikando.or.jp/lp/2026/2026_eikando_autumnExhibition.jpg",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location" : {
+    "@type" : "Place",
+    "name" : "浄土宗西山禅林寺派総本山永観堂禅林寺",
+    "address" : "京都市左京区永観堂町48"
+  }, 
+  "organizer": {
+    "@type": "Organization",
+    "name": "浄土宗西山禅林寺派総本山永観堂禅林寺",
+    "url": "https://www.eikando.or.jp/"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context" : "https://schema.org",
+  "@type" : "Event",
+  "name" : "京都 夜の永観堂 神秘的 夜間紅葉ライトアップ",
+  "startDate" : "2026-11-20T17:30:00+09:00",
+  "endDate" : "2026-12-06T21:00:00+09:00",
+  "description" : "京都 秋の永観堂 神秘的 夜間紅葉ライトアップ 秋風にふかれ夜の紅葉も幻想的で神秘的！〈本堂拝観と御本尊みかえり阿弥陀如来拝観〉",
+  "image": "https://www.eikando.or.jp/lp/2026/2026_eikando_autumnExhibition.jpg",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "location" : {
+    "@type" : "Place",
+    "name" : "浄土宗西山禅林寺派総本山永観堂禅林寺",
+    "address" : "京都市左京区永観堂町48"
+  }, 
+  "organizer": {
+    "@type": "Organization",
+    "name": "浄土宗西山禅林寺派総本山永観堂禅林寺",
+    "url": "https://www.eikando.or.jp/"
+  }
+}
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0D6D9ZX9N0"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-0D6D9ZX9N0');
+	</script>
+  </head>
+
+  <body>
+<div id="top-link"></div>
+
+<nav class="">
+    <div class="fixedmenu">
+      <ul style="padding-left:0;">
+        <li >
+		<a aria-current="page" href="#top-link"><i class="bi bi-house-door-fill mobbig"></i><br>topに戻る</a>
+        </li>
+        <li>
+          <a aria-current="page" href="#night-link"><i class="bi bi-moon-stars-fill mobbig"></i><br>夜の永観堂</a>
+        </li>
+		<li>
+          <a aria-current="page" href="#access-link"><i class="bi bi-geo-alt-fill mobbig"></i><br>アクセス</a>
+        </li>
+         <li>
+            <a aria-current="page" href="index_en.html"><i class="bi bi-globe2 mobbig"></i><br>English</a>
+          </li>
+      </ul>
+    </div>
+</nav>
+
+<header class="" style="background-color:#fff;">
+  <div class="container-xl  text-center" style="max-width:1200px;">
+    <a class="navbar-brand" href="#"><img src="images/header01.png" class="img-fluid" alt="浄土宗西山禅林寺派 総本山永観堂禅林寺"></a>
+ </div>
+</header>
+<main>
+
+<section>
+			<div class="container-xl text-center" style="padding:0;max-width:1200px">
+<img src="images/topimage01.jpg" class="img-fluid d-none d-md-block" alt="秋の永観堂 特別寺宝展 2026年11月11日から12月6日">
+ <img src="images/topimage01s.jpg" class="img-fluid d-md-none" alt="秋の永観堂 特別寺宝展 2026年11月11日から12月6日"> 
+<img src="images/admission.svg" class="my-3 mx-auto d-none d-md-block" style="max-width:940px;width:90%;" alt="9時〜16時（受付）／17時閉門 入場料 一般 1,500円">
+<img src="images/admission_s.svg" class="mt-0 mb-3 d-md-none" style="max-width:780px;width:90%;" alt="特別寺宝展 2026年11月11日から12月6日9時〜16時（受付）17時閉門 入場料 一般 1,000円">
+</div>
+<div class="container-lg" style="padding:24px;max-width:992px">
+<h3  class="shippori-mincho-medium main_copy">禅林寺に受け継がれる重要文化財の数々が咲き誇る<br>
+歴史の深みと西山国師の尊き足跡をここに紡ぐ。<br>
+特別寺宝展で公開される所蔵文化財の一部をご紹介します。</h3>
+
+</div>
+			
+</section>
+
+<section>
+<div class="container-xl text-center">
+<img src="images/dot_line.svg" class="my-3" alt="line" style="padding:0;max-width:992px;width:100%;">
+</div>
+<div class="container-lg  text-center" style="padding:24px;max-width:992px">
+
+<div class="py-5">
+					<img src="images/zihou01.jpg" class="my-3 w40_img" alt="証空上人像 （思惟像）">
+					<h3 class="shippori-mincho-semibold my-3 zihou_item">証空上人像 （思惟像）
+						<span>〈室町時代〉</span></h3>
+					<p class="shippori-mincho-medium my-3 text-start zihou_item">浄土宗西山派祖。頭に領帽をかぶり両手を下げて念珠を取る姿は思想哲学の深さを感じさせる。本図は思惟像と呼ばれるが、臨終の様子にも似ている。上人は西に向かい念仏称え合掌して眠るように息絶えたと伝わる。</p>
+</div>
+
+<div class="py-5">
+					<img src="images/zihou02.jpg" class="my-3 w40_img" alt="善導大師像">
+					<h3 class="shippori-mincho-semibold my-3 zihou_item">善導大師像
+						<span>〈室町時代〉</span></h3>
+					<p class="shippori-mincho-medium my-3 text-start zihou_item">唐代浄土教の大成者である善導の肖像。善導像の特徴として、わずかな髭や頭髪の痕が表現されることが多いが、本図にも認められる。念仏を唱える口から化仏が湧出する姿は長安の光明寺止住時代に表した奇瑞と言われる。</p>
+</div>
+
+<div class="py-5">
+					<img src="images/bunkazai.svg" class="my-3 mx-auto"  style="max-width:128px; display:block;" alt="重要文化財">
+					<img src="images/zihou03.jpg" class="my-3 w80_img"  alt="当麻曼荼羅縁起">
+					<h3 class="shippori-mincho-semibold my-3 zihou_item">当麻曼荼羅縁起
+<span>〈鎌倉・弘長2年（1262）〉</span></h3>
+					<p class="shippori-mincho-medium my-3 text-start zihou_item">道観証慧（1195～1264）筆。現在、証慧の著作は２つ知られているがそのうちの1つで、自筆とされる。奈良・当麻寺に伝わる綴織当麻曼陀羅の由来が説かれる。証慧は証空の高弟で、浄土宗西山流における嵯峨義の祖。</p>
+</div>
+
+<div class="py-5">
+					<img src="images/bunkazai.svg" class="my-3 mx-auto" style="max-width:128px; display:block;" alt="重要文化財">
+					<img src="images/zihou04.jpg" class="my-3 w100_img" alt="十界図">
+					<h3 class="shippori-mincho-semibold my-3 zihou_item">十界図
+<span>〈鎌倉時代〉</span></h3>
+					<p class="shippori-mincho-medium my-3 text-start zihou_item">地獄、餓鬼、畜生、修羅、人、天の六道に佛、菩薩、縁覚、声聞の四聖界を加えた十界を二幅対に表す。阿弥陀如来を中尊とする阿弥陀幅と地蔵菩薩を中尊とする地蔵幅からなり、特に人道と地獄の描写が過半を占め、源信の『往生要集』に説く内容と『地蔵十王経』に説く地獄の様が表される。</p>
+</div>
+<div class="py-5">
+					<img src="images/bunkazai.svg" class="my-3 mx-auto" style="max-width:128px; display:block;" alt="重要文化財">
+					<img src="images/zihou05.jpg" class="my-3 w50_img" alt="二十五菩薩来迎図">
+					<h3 class="shippori-mincho-semibold my-3 zihou_item">二十五菩薩来迎図
+<span>〈鎌倉時代〉</span></h3>
+					<p class="shippori-mincho-medium my-3 text-start zihou_item">観音菩薩・勢至菩薩を除いた二十五菩薩が描かれる来迎図。諸菩薩が画面いっぱいにまんべんなく配置され、顔や体の向きがまちまちであることから、恐らく、彫像の阿弥陀三尊像の後ろに掛けられていたと考えられる。</p>
+</div>
+
+					
+</div>
+</section>
+<div id="night-link"></div>
+<section>
+<div class="container-xl text-center" style="padding:0;max-width:1200px;background-color:#000">
+<h2><img src="images/night01.jpg" class="img-fluid" alt="夜の永観堂">
+					<img src="images/night02.svg" class="my-3 mx-auto" style="max-width:670px;width:90%;display:block" alt="神秘的夜間紅葉ライトアップ　11月20日から12月6日 ◎17時30分〜20時30分（受付）／21時閉門◎一般 1,000円 （中学生以上）"><br>
+</h2>
+</div>
+</section>
+<div id="access-link"></div>
+<section>
+<div class="container-lg  text-center my-5" style="padding:24px;max-width:992px">
+<h2 class="shippori-mincho-semibold my-3" style="font-size:34px;line-height:42px;">アクセス</h2>
+					<a class="btn_eikando" href="https://maps.app.goo.gl/989bsnAuNa6gbDB77" role="button" target="_blank"><span>総本山永観堂禅林寺</span><br>
+Google Mapで表示<i class="bi bi-arrow-right"></i></a>
+
+              <table class="respon-tableA shippori-mincho-medium">
+                <tr>
+                  <th>JR・近鉄</th>
+						<td>「京都」駅から市バス5系統で「南禅寺・永観堂道」下車 徒歩3分
+						</td>
+                </tr>
+                <tr>
+                  <th>京阪電車</th>
+<td>「三条」駅から市バス5系統で「南禅寺・永観堂道」下車 徒歩3分<br>
+「神宮丸太町」駅から市バス204、93系統「東天王町」下車 徒歩8分
+				</td>
+                </tr>
+                <tr>
+                  <th>阪急電車</th>
+                  <td>「京都河原町」駅から市バス5系統で「南禅寺・永観堂道」下車 徒歩3分
+				</td>
+                </tr>
+				  <tr>
+                  <th>地下鉄</th>
+                  <td>東西線「蹴上」駅下車 徒歩15分
+				</td>
+                </tr>
+              </table>
+					<p>※拝観にお越しの方は下足袋をご持参ください。 ※マイカーでのご来訪は、ご遠慮願います。</p>
+<a class="btn_eikando" href="https://www.eikando.or.jp/" role="button" target="_blank">総本山永観堂禅林寺サイト<i class="bi bi-arrow-right"></i></a>
+
+<a class="mt-5 color-overlay-btn" href="https://promise.kyoto.travel/ja/" target="_blank"><img src="images/kyoto_moral.png" style="width:100%;max-width:620px;hight:auto;" alt="京都観光モラル宣言"></a>
+</div>
+</section>
+</main>
+
+<footer class="footer mt-auto py-3">
+  <div class="container text-center">
+				<h2 class="shippori-mincho-semibold  footer_name"><span>浄土宗西山禅林寺派 </span><br class="d-md-none">総本山永観堂禅林寺</h2>
+					<p  class="shippori-mincho-semibold">京都市左京区永観堂町48 <br class="d-md-none">電話：075（761）0007</p>
+					<p>●後援：京都府・京都市・京都文化交流コンベンションビューロー・（公社）京都府観光連盟・（公社）京都市観光協会</p>
+  </div>
+</footer>
+<script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

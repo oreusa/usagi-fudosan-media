@@ -80,7 +80,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </style>
 
 <link rel="https://api.w.org/" href="https://www.hirakatapark.co.jp/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.hirakatapark.co.jp/wp-json/wp/v2/pages/15" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hirakatapark.co.jp/xmlrpc.php?rsd" />
-<meta name="generator" content="WordPress 7.1.4" />
+<meta name="generator" content="WordPress 7.1.5" />
 <link rel='shortlink' href='https://www.hirakatapark.co.jp/' />
 <noscript><style>.lazyload[data-src]{display:none !important;}</style></noscript><style>.lazyload{background-image:none !important;}.lazyload:before{background-image:none !important;}</style><style class="wp-fonts-local">
 @font-face{font-family:"Zen Kaku Gothic New";font-style:light;font-weight:300;font-display:fallback;src:url('https://www.hirakatapark.co.jp/wp-content/themes/Hirakata%20Park/public/fonts/Zen_Kaku_Gothic_New/zen-kaku-gothic-new-v17-japanese-300.woff2') format('woff2');}
@@ -114,14 +114,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="nav__language">
         <div class="nav__lang-switcher">
           <div class="nav__lang-current notranslate">🌐 JA</div>
-          <div class="gtranslate_wrapper" id="gt-wrapper-12499852"></div>        </div>
+          <div class="gtranslate_wrapper" id="gt-wrapper-70932453"></div>        </div>
       </div>
       <div class="nav__wrapper js-nav-menu">
         <nav class="nav__link-block">
           <div class="nav__link-ctr nav__link-ctr--blue">
             <div class="nav__info-block">
               <div class="nav__info-date-block">
-                <span class="nav__info-date">2026.11.18 (水)の営業時間</span>
+                <span class="nav__info-date">2026.11.20 (金)の営業時間</span>
               </div>
               <div class="nav__info-time-block">
                 <div class="nav__info-time-icon"><img class="image image--contain lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Time" data-src="https://www.hirakatapark.co.jp/wp-content/themes/Hirakata%20Park/public/img/icons/clock.svg" decoding="async"><noscript><img class="image image--contain" src="https://www.hirakatapark.co.jp/wp-content/themes/Hirakata%20Park/public/img/icons/clock.svg" alt="Time" data-eio="l"></noscript></div><span class="nav__info-time"></span>
@@ -203,7 +203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="top__mv-info-block sp">
             <div class="top__mv-info-date-block">
               <!-- <span class="top__mv-info-text-jp">本日の営業時間</span> -->
-              <span class="top__mv-info-date">2026.11.18 の営業時間</span>
+              <span class="top__mv-info-date">2026.11.20 の営業時間</span>
             </div>
             <div class="top__mv-info-time-block">
               <div class="top__mv-info-time-icon"><img class="image image--contain lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Time" data-src="https://www.hirakatapark.co.jp/wp-content/themes/Hirakata%20Park/public/img/icons/clock-2.svg" decoding="async"><noscript><img class="image image--contain" src="https://www.hirakatapark.co.jp/wp-content/themes/Hirakata%20Park/public/img/icons/clock-2.svg" alt="Time" data-eio="l"></noscript></div><span class="top__mv-info-time"></span>
@@ -353,7 +353,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="top__info-sched" href="https://www.hirakatapark.co.jp/information/calendar/#calendar">
                   <div class="top__info-sched-block">
                     <!-- <span class="top__info-sched-heading">本日の営業時間</span> -->
-                    <span class="top__info-date">2026.11.18 の営業時間</span>
+                    <span class="top__info-date">2026.11.20 の営業時間</span>
                   </div>
                   <div class="top__info-sched-icon-box">
                     <img class="top__sched-info-icon lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="本日の営業時間" data-src="https://www.hirakatapark.co.jp/wp-content/themes/Hirakata%20Park/public/img/icons/clock-blue-border.svg" decoding="async"><noscript><img class="top__sched-info-icon" src="https://www.hirakatapark.co.jp/wp-content/themes/Hirakata%20Park/public/img/icons/clock-blue-border.svg" alt="本日の営業時間" data-eio="l"></noscript>
@@ -483,19 +483,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="top__ea-main-block">
             <div class="container-980">
-              <a class="top__ea-main-link" href="https://www.neppa-event.com/hirakatapark-bakidou/" >
+              <a class="top__ea-main-link" href="https://www.hirakatapark.co.jp/topics/boonboom_26fall/" >
                 <article class="top__ea-main">
                 <div class="top__ea-main-image">
-                  <img class="image lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAR6AQAAAACCOFeJAAAAAnRSTlMAAHaTzTgAAAEiSURBVHja7cExAQAAAMKg9U9tDB+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Gk3FgABNfDKtwAAAABJRU5ErkJggg==" alt="ひらかたパーク×刃牙道 最強剣豪決闘計画" data-src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/09/刃牙道_イベントバナー_修_web.jpg" decoding="async" data-eio-rwidth="1960" data-eio-rheight="1170"><noscript><img class="image" src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/09/刃牙道_イベントバナー_修_web.jpg" alt="ひらかたパーク×刃牙道 最強剣豪決闘計画" data-eio="l"></noscript>
+                  <img class="image lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAR6AQAAAACCOFeJAAAAAnRSTlMAAHaTzTgAAAEiSURBVHja7cExAQAAAMKg9U9tDB+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Gk3FgABNfDKtwAAAABJRU5ErkJggg==" alt="爆上戦隊ブンブンジャー スペシャルショー" data-src="https://www.hirakatapark.co.jp/wp-content/uploads/2025/12/25win_boonboom_980.jpg" decoding="async" data-eio-rwidth="1960" data-eio-rheight="1170"><noscript><img class="image" src="https://www.hirakatapark.co.jp/wp-content/uploads/2025/12/25win_boonboom_980.jpg" alt="爆上戦隊ブンブンジャー スペシャルショー" data-eio="l"></noscript>
                 </div>
 
                   <div class="top__ea-main-content">
                     <div class="top__ea-main-info">
                       <div class="top__ea-main-category-list">
-                      <span class="top__ea-main-category js-topics_tag" data-startday="20261031" data-endday="20261129" data-holiday="20261119,20261126"></span>                      </div>
-                      <h3 class="top__ea-main-title">ひらかたパーク×刃牙道 最強剣豪決闘計画</h3>
+                      <span class="top__ea-main-category js-topics_tag" data-startday="20261121" data-endday="20261121" data-holiday=""></span>                      </div>
+                      <h3 class="top__ea-main-title">爆上戦隊ブンブンジャー スペシャルショー</h3>
                     </div>
-                    <div class="top__ea-main-date"><span>2026/10/31(土)〜2026/11/29(日)</span></div>
+                    <div class="top__ea-main-date"><span>2026/11/21(土)</span></div>
                   </div>
                 </article>
               </a>
@@ -503,6 +503,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="container-980">
                           <article class="top__ea-list">
+                                  <a class="top__ea-link" href="https://www.hirakatapark.co.jp/topics/26win-violin-vol1/" >
+                    <article class="top__ea-item">
+                      <div class="top__ea-image">
+                        <img class="image lazy lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAR6AQAAAACCOFeJAAAAAnRSTlMAAHaTzTgAAAEiSURBVHja7cExAQAAAMKg9U9tDB+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Gk3FgABNfDKtwAAAABJRU5ErkJggg==" alt="白熱のヴァイオリン生演奏ライブ vol.1" data-src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/11/26win_violin_vol1-01_pc.jpg" decoding="async" data-eio-rwidth="1960" data-eio-rheight="1170"><noscript><img class="image lazy" src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/11/26win_violin_vol1-01_pc.jpg" alt="白熱のヴァイオリン生演奏ライブ vol.1" data-eio="l"></noscript>
+                      </div>
+                      <div class="top__ea-content">
+                        <h4 class="top__ea-title">白熱のヴァイオリン生演奏ライブ vol.1</h4>
+                        <div class="top__ea-date"><span>2026/11/21(土)〜2026/11/22(日)</span></div>
+                        <div class="top__ea-category-list">
+                          <span class="top__ea-category js-topics_tag" data-startday="20261121" data-endday="20261122" data-holiday=""></span>                        </div>
+                      </div>
+                    </article>
+                  </a>
+                                  <a class="top__ea-link" href="https://www.hirakatapark.co.jp/topics/photo-day-rose/" >
+                    <article class="top__ea-item">
+                      <div class="top__ea-image">
+                        <img class="image lazy lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAR6AQAAAACCOFeJAAAAAnRSTlMAAHaTzTgAAAEiSURBVHja7cExAQAAAMKg9U9tDB+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Gk3FgABNfDKtwAAAABJRU5ErkJggg==" alt="秋バラをきれいに撮ろう！プロカメラマンと巡るフォトツアー" data-src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/11/photo_atm_day980.jpg" decoding="async" data-eio-rwidth="1960" data-eio-rheight="1170"><noscript><img class="image lazy" src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/11/photo_atm_day980.jpg" alt="秋バラをきれいに撮ろう！プロカメラマンと巡るフォトツアー" data-eio="l"></noscript>
+                      </div>
+                      <div class="top__ea-content">
+                        <h4 class="top__ea-title">秋バラをきれいに撮ろう！プロカメラマンと巡るフォトツアー</h4>
+                        <div class="top__ea-date"><span>2026/11/21(土)</span></div>
+                        <div class="top__ea-category-list">
+                          <span class="top__ea-category js-topics_tag" data-startday="20261121" data-endday="19700101" data-holiday=""></span>                        </div>
+                      </div>
+                    </article>
+                  </a>
+                                  <a class="top__ea-link" href="https://www.hirakatapark.co.jp/topics/photo-night-ill/" >
+                    <article class="top__ea-item">
+                      <div class="top__ea-image">
+                        <img class="image lazy lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAR6AQAAAACCOFeJAAAAAnRSTlMAAHaTzTgAAAEiSURBVHja7cExAQAAAMKg9U9tDB+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Gk3FgABNfDKtwAAAABJRU5ErkJggg==" alt="イルミネーションをきれいに撮ろう！プロカメラマンと巡るフォトツアー" data-src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/11/photo_atm_night980.jpg" decoding="async" data-eio-rwidth="1960" data-eio-rheight="1170"><noscript><img class="image lazy" src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/11/photo_atm_night980.jpg" alt="イルミネーションをきれいに撮ろう！プロカメラマンと巡るフォトツアー" data-eio="l"></noscript>
+                      </div>
+                      <div class="top__ea-content">
+                        <h4 class="top__ea-title">イルミネーションをきれいに撮ろう！プロカメラマンと巡るフォトツアー</h4>
+                        <div class="top__ea-date"><span>2026/11/21(土)</span></div>
+                        <div class="top__ea-category-list">
+                          <span class="top__ea-category js-topics_tag" data-startday="20261121" data-endday="19700101" data-holiday=""></span>                        </div>
+                      </div>
+                    </article>
+                  </a>
+                                  <a class="top__ea-link" href="https://www.hirakatapark.co.jp/topics/26aut-win-m78-1/" >
+                    <article class="top__ea-item">
+                      <div class="top__ea-image">
+                        <img class="image lazy lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAR6AQAAAACCOFeJAAAAAnRSTlMAAHaTzTgAAAEiSURBVHja7cExAQAAAMKg9U9tDB+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Gk3FgABNfDKtwAAAABJRU5ErkJggg==" alt="ウルトラマンテオショー" data-src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/10/26aut-m78-1_mv_pc.jpg" decoding="async" data-eio-rwidth="1960" data-eio-rheight="1170"><noscript><img class="image lazy" src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/10/26aut-m78-1_mv_pc.jpg" alt="ウルトラマンテオショー" data-eio="l"></noscript>
+                      </div>
+                      <div class="top__ea-content">
+                        <h4 class="top__ea-title">ウルトラマンテオショー</h4>
+                        <div class="top__ea-date"><span>2026/11/22(日)</span></div>
+                        <div class="top__ea-category-list">
+                          <span class="top__ea-category js-topics_tag" data-startday="20261122" data-endday="20261122" data-holiday=""></span>                        </div>
+                      </div>
+                    </article>
+                  </a>
+                                  <a class="top__ea-link" href="https://www.neppa-event.com/hirakatapark-bakidou/" >
+                    <article class="top__ea-item">
+                      <div class="top__ea-image">
+                        <img class="image lazy lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAR6AQAAAACCOFeJAAAAAnRSTlMAAHaTzTgAAAEiSURBVHja7cExAQAAAMKg9U9tDB+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Gk3FgABNfDKtwAAAABJRU5ErkJggg==" alt="ひらかたパーク×刃牙道 最強剣豪決闘計画" data-src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/09/刃牙道_イベントバナー_修_web.jpg" decoding="async" data-eio-rwidth="1960" data-eio-rheight="1170"><noscript><img class="image lazy" src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/09/刃牙道_イベントバナー_修_web.jpg" alt="ひらかたパーク×刃牙道 最強剣豪決闘計画" data-eio="l"></noscript>
+                      </div>
+                      <div class="top__ea-content">
+                        <h4 class="top__ea-title">ひらかたパーク×刃牙道 最強剣豪決闘計画</h4>
+                        <div class="top__ea-date"><span>2026/10/31(土)〜2026/11/29(日)</span></div>
+                        <div class="top__ea-category-list">
+                          <span class="top__ea-category js-topics_tag" data-startday="20261031" data-endday="20261129" data-holiday="20261126"></span>                        </div>
+                      </div>
+                    </article>
+                  </a>
                                   <a class="top__ea-link" href="https://www.hirakatapark.co.jp/topics/ao-eva/" >
                     <article class="top__ea-item">
                       <div class="top__ea-image">
@@ -512,72 +577,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <h4 class="top__ea-title">30周年記念展「ALL OF EVANGELION」</h4>
                         <div class="top__ea-date"><span>2026/10/18(日)〜2027/01/11(月)</span></div>
                         <div class="top__ea-category-list">
-                          <span class="top__ea-category js-topics_tag" data-startday="20261018" data-endday="20270111" data-holiday="20261119,20261126,20261130,20261201,20261202,20261203,20261204,20261207,20261208,20261209,20261210,20261211,20261217,20270101,20270107"></span>                        </div>
-                      </div>
-                    </article>
-                  </a>
-                                  <a class="top__ea-link" href="https://www.hirakatapark.co.jp/topics/boonboom_26fall/" >
-                    <article class="top__ea-item">
-                      <div class="top__ea-image">
-                        <img class="image lazy lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAR6AQAAAACCOFeJAAAAAnRSTlMAAHaTzTgAAAEiSURBVHja7cExAQAAAMKg9U9tDB+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Gk3FgABNfDKtwAAAABJRU5ErkJggg==" alt="爆上戦隊ブンブンジャー スペシャルショー" data-src="https://www.hirakatapark.co.jp/wp-content/uploads/2025/12/25win_boonboom_980.jpg" decoding="async" data-eio-rwidth="1960" data-eio-rheight="1170"><noscript><img class="image lazy" src="https://www.hirakatapark.co.jp/wp-content/uploads/2025/12/25win_boonboom_980.jpg" alt="爆上戦隊ブンブンジャー スペシャルショー" data-eio="l"></noscript>
-                      </div>
-                      <div class="top__ea-content">
-                        <h4 class="top__ea-title">爆上戦隊ブンブンジャー スペシャルショー</h4>
-                        <div class="top__ea-date"><span>2026/11/21(土)</span></div>
-                        <div class="top__ea-category-list">
-                          <span class="top__ea-category js-topics_tag" data-startday="20261121" data-endday="20261121" data-holiday=""></span>                        </div>
-                      </div>
-                    </article>
-                  </a>
-                                  <a class="top__ea-link" href="/attractions/illumination/" >
-                    <article class="top__ea-item">
-                      <div class="top__ea-image">
-                        <img class="image lazy lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAR6AQAAAACCOFeJAAAAAnRSTlMAAHaTzTgAAAEiSURBVHja7cExAQAAAMKg9U9tDB+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Gk3FgABNfDKtwAAAABJRU5ErkJggg==" alt="光の遊園地 〜Flowering Illumination〜" data-src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/11/ill2026_980_2.jpg" decoding="async" data-eio-rwidth="1960" data-eio-rheight="1170"><noscript><img class="image lazy" src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/11/ill2026_980_2.jpg" alt="光の遊園地 〜Flowering Illumination〜" data-eio="l"></noscript>
-                      </div>
-                      <div class="top__ea-content">
-                        <h4 class="top__ea-title">光の遊園地 〜Flowering Illumination〜</h4>
-                        <div class="top__ea-date"><span>2026/10/31(土)〜2027/04/04(日)</span></div>
-                        <div class="top__ea-category-list">
-                          <span class="top__ea-category js-topics_tag" data-startday="20261031" data-endday="20270404" data-holiday="20261118,20261119,20261120,20261124,20261125,20261126,20261127,20261130,20261201,20261202,20261203,20261204,20261207,20261208,20261209,20261210,20261211,20261214,20261215,20261216,20261217,20261218,20261231,20270101,20270106,20270107,20270108,20270112,20270113,20270114,20270115,20270118,20270119,20270120,20270121,20270122,20270125,20270126,20270127,20270128,20270129,20270201,20270202,20270203,20270204,20270205,20270208,20270209,20270210,20270212,20270215,20270216,20270217,20270218,20270219,20270222,20270224,20270225,20270226,20270301,20270302,20270303,20270304,20270305,20270308,20270309,20270310,20270311,20270312,20270315,20270316,20270317,20270318,20270319"></span>                        </div>
-                      </div>
-                    </article>
-                  </a>
-                                  <a class="top__ea-link" href="https://www.hirakatapark.co.jp/topics/pepandjoy_26fw/" >
-                    <article class="top__ea-item">
-                      <div class="top__ea-image">
-                        <img class="image lazy lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAR6AQAAAACCOFeJAAAAAnRSTlMAAHaTzTgAAAEiSURBVHja7cExAQAAAMKg9U9tDB+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Gk3FgABNfDKtwAAAABJRU5ErkJggg==" alt="ノームとあそぼう！ペップ&amp;ジョイ" data-src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/09/pepandjoy_1960x1170_1.jpg" decoding="async" data-eio-rwidth="1960" data-eio-rheight="1170"><noscript><img class="image lazy" src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/09/pepandjoy_1960x1170_1.jpg" alt="ノームとあそぼう！ペップ&amp;ジョイ" data-eio="l"></noscript>
-                      </div>
-                      <div class="top__ea-content">
-                        <h4 class="top__ea-title">ノームとあそぼう！ペップ&amp;ジョイ</h4>
-                        <div class="top__ea-date"><span>2026/10/03(土)〜2027/03/28(日)</span></div>
-                        <div class="top__ea-category-list">
-                          <span class="top__ea-category js-topics_tag" data-startday="20261003" data-endday="20270328" data-holiday="20261118,20261119,20261120,20261124,20261125,20261126,20261127,20261130,20261201,20261202,20261203,20261204,20261207,20261208,20261209,20261210,20261211,20261214,20261215,20261216,20261217,20261218,20261221,20261222,20261223,20261224,20261225,20261228,20261229,20261230,20261231,20270101,20270104,20270105,20270106,20270107,20270108,20270112,20270113,20270114,20270115,20270118,20270119,20270120,20270121,20270122,20270125,20270126,20270127,20270128,20270129,20270201,20270202,20270203,20270204,20270205,20270208,20270209,20270210,20270212,20270215,20270216,20270217,20270218,20270219,20270222,20270224,20270225,20270226,20270301,20270302,20270303,20270304,20270305,20270308,20270309,20270310,20270311,20270312,20270315,20270316,20270317,20270318,20270319,20270323,20270324,20270325,20270326"></span>                        </div>
-                      </div>
-                    </article>
-                  </a>
-                                  <a class="top__ea-link" href="https://www.hirakatapark.co.jp/topics/30th-gnomesfriends/" >
-                    <article class="top__ea-item">
-                      <div class="top__ea-image">
-                        <img class="image lazy lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAR6AQAAAACCOFeJAAAAAnRSTlMAAHaTzTgAAAEiSURBVHja7cExAQAAAMKg9U9tDB+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Gk3FgABNfDKtwAAAABJRU5ErkJggg==" alt="「ノームのなかまたち」30周年アニバーサリー" data-src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/10/30th_gnome_960_re.jpg" decoding="async" data-eio-rwidth="1960" data-eio-rheight="1170"><noscript><img class="image lazy" src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/10/30th_gnome_960_re.jpg" alt="「ノームのなかまたち」30周年アニバーサリー" data-eio="l"></noscript>
-                      </div>
-                      <div class="top__ea-content">
-                        <h4 class="top__ea-title">「ノームのなかまたち」30周年アニバーサリー</h4>
-                        <div class="top__ea-date"><span>2026/10/31(土)〜2027/12/31(金)</span></div>
-                        <div class="top__ea-category-list">
-                          <span class="top__ea-category js-topics_tag" data-startday="20261031" data-endday="20271231" data-holiday="20261119,20261126,20261130,20261201,20261202,20261203,20261204,20261207,20261208,20261209,20261210,20261211,20261217,20270101,20270107,20270112,20270113,20270114,20270115,20270118,20270119,20270120,20270121,20270122,20270128,20270204,20270218,20270225,20270304,20270311"></span>                        </div>
-                      </div>
-                    </article>
-                  </a>
-                                  <a class="top__ea-link" href="http://hirapar.senritsuxr.abal.jp"  target="_blank">
-                    <article class="top__ea-item">
-                      <div class="top__ea-image">
-                        <img class="image lazy lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAR6AQAAAACCOFeJAAAAAnRSTlMAAHaTzTgAAAEiSURBVHja7cExAQAAAMKg9U9tDB+gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Gk3FgABNfDKtwAAAABJRU5ErkJggg==" alt="戦慄迷宮：迷 怪異覚醒" data-src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/07/srk_1960px_1170px.jpg" decoding="async" data-eio-rwidth="1960" data-eio-rheight="1170"><noscript><img class="image lazy" src="https://www.hirakatapark.co.jp/wp-content/uploads/2026/07/srk_1960px_1170px.jpg" alt="戦慄迷宮：迷 怪異覚醒" data-eio="l"></noscript>
-                      </div>
-                      <div class="top__ea-content">
-                        <h4 class="top__ea-title">戦慄迷宮：迷 怪異覚醒</h4>
-                        <div class="top__ea-date"><span>2026/07/11(土)〜2027/02/28(日)</span></div>
-                        <div class="top__ea-category-list">
-                          <span class="top__ea-category js-topics_tag" data-startday="20260711" data-endday="20270228" data-holiday="20261119,20261126,20261130,20261201,20261202,20261203,20261204,20261207,20261208,20261209,20261210,20261211,20261217,20270101,20270107,20270112,20270113,20270114,20270115,20270118,20270119,20270120,20270121,20270122,20270128,20270204,20270218,20270225,20270304,20270311"></span>                        </div>
+                          <span class="top__ea-category js-topics_tag" data-startday="20261018" data-endday="20270111" data-holiday="20261126,20261130,20261201,20261202,20261203,20261204,20261207,20261208,20261209,20261210,20261211,20261217,20270101,20270107"></span>                        </div>
                       </div>
                     </article>
                   </a>
@@ -870,11 +870,11 @@ const eio_lazy_vars = {"bg_min_dpr":1.1,"exactdn_domain":"","safe_paths":["\/wp-
 //# sourceURL=eio-lazy-load-js-before
 </script>
 <script async data-wp-strategy="async" id="eio-lazy-load-js" src="https://www.hirakatapark.co.jp/wp-content/plugins/ewww-image-optimizer/includes/lazysizes.min.js?ver=892"></script>
-<script id="gt_widget_script_12499852-js-before">
-window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {};window.gtranslateSettings['12499852'] = {"default_language":"ja","languages":["zh-TW","zh-CN","en","ko","th","vi","tl","ja"],"url_structure":"none","native_language_names":1,"wrapper_selector":"#gt-wrapper-12499852","horizontal_position":"inline","flags_location":"\/wp-content\/plugins\/gtranslate\/flags\/"};
-//# sourceURL=gt_widget_script_12499852-js-before
-</script><script src="https://www.hirakatapark.co.jp/wp-content/plugins/gtranslate/js/ln.js?ver=5.0.2" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/" data-gt-orig-domain="www.hirakatapark.co.jp" data-gt-widget-id="12499852" defer></script><script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.hirakatapark.co.jp/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4"}}
+<script id="gt_widget_script_70932453-js-before">
+window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {};window.gtranslateSettings['70932453'] = {"default_language":"ja","languages":["zh-TW","zh-CN","en","ko","th","vi","tl","ja"],"url_structure":"none","native_language_names":1,"wrapper_selector":"#gt-wrapper-70932453","horizontal_position":"inline","flags_location":"\/wp-content\/plugins\/gtranslate\/flags\/"};
+//# sourceURL=gt_widget_script_70932453-js-before
+</script><script src="https://www.hirakatapark.co.jp/wp-content/plugins/gtranslate/js/ln.js?ver=5.0.2" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/" data-gt-orig-domain="www.hirakatapark.co.jp" data-gt-widget-id="70932453" defer></script><script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.hirakatapark.co.jp/wp-includes/js/wp-emoji-release.min.js?ver=7.1.5"}}
 </script>
 <script type="module">
 /*! This file is auto-generated */

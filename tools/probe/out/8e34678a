@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-JP" />
+<meta name="robots" content="index,follow" />
+<meta name="description" content="京都市東山区粟田口に位置する天台宗の門跡寺院、青蓮院門跡。拝観案内、夜間拝観の他、飛地境内「将軍塚」、国宝「青不動尊」の紹介等。" />
+<meta name="keywords" content="青蓮院,門跡,将軍塚,寺院,天台宗,京都,不動明王,夜間拝観,ライトアップ" />
+<meta name="author" content="天台宗　青蓮院門跡" />
+<meta name="copyright" content="Copyright (C) Shorenin Temple" />
+<link href="../css/common.css" rel="stylesheet" type="text/css" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../css/thickbox.css" />
+<link rel="icon" type="image/png" href="../img/shoreninicon.png" />
+<script type="text/javascript" src="../js/rollover.js"></script>
+<script src="../js/jquery.js" type="text/javascript"></script>
+<script src="../js/yuga.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/thickbox.js" type="text/javascript"></script>
+<script src="../js/swfobject.js" type="text/javascript"></script>
+<title>夜間の特別拝観 ｜ 天台宗 青蓮院門跡</title>
+</head>
+
+<body>
+<a name="top" id="top"></a>
+<div id="containerBg">
+  <div id="container">
+    <div id="head">
+      <h1><a href="/"><img src="../img/logo.jpg" alt="天台宗　青蓮院門跡" /></a></h1>
+      <p>｜&nbsp;<a href="/">トップ</a>&nbsp;｜&nbsp;<a href="../sitemap.html">サイトマップ</a>&nbsp;｜&nbsp;<a href="../link.html">リンク集</a>&nbsp;｜&nbsp;<a href="http://www.shorenin.com/english/index.html" target="_blank">English</a>&nbsp;｜</p>
+      <br class="clear" />
+    </div>
+    <div id="navi">
+      <p><a href="http://www.shogunzuka.com/" target="_blank"><img src="../img/navi_shogunzuka.png" alt="将軍塚清龍殿サイト" width="185" height="60" class="roll" /></a></p>
+      <ul>
+        <li><a href="/info/" id="navi_01" name="navi_01">青蓮院について</a></li>
+	<li><a href="/haikan/" id="navi_02" name="navi_02">拝観のご案内</a></li>
+        <li><a href="/temple/" id="navi_05" name="navi_05">境内と庭園</a></li>
+        <!--<li><a href="/shogun/" id="navi_07" name="navi_07">将軍塚青龍殿</a></li>-->
+        <li><a href="/aofudo2/index.html" id="navi_06" name="navi_06">国宝青不動明王</a></li>
+        <li><a href="/aofudo2/gomakyo.html" id="navi_04" name="navi_04">月護摩供</a></li>
+        <li><a href="/info/event.html" id="navi_03" name="navi_03">年間行事</a></li>
+        <li><a href="/kobuntei/" id="navi_08" name="navi_08">茶室 好文亭</a></li>
+        <li><a href="/ganzan/" id="navi_09" name="navi_09">元三大師</a></li>
+        <li><a href="/shuyokai/" id="navi_10" name="navi_10">修道会(体験学習)</a></li>
+        <li><a href="/info/fudo36.html" id="navi_11" name="navi_11">近畿三十六不動尊霊場</a></li>
+      </ul>
+      	<p><a href="/noukotsu/"><img src="../img/nokotsudo1.jpg" alt="納骨堂からのご案内" class="roll" /></a></p>
+                <p><a href="/english/"><img src="../img/English.jpg" alt="Shorenin English site" class="roll" /></a></p>
+		<p><a href="/night/"><img src="../img/night.jpg" alt="夜間の特別拝観" class="roll" /></a></p>
+		<p><a href="/gohonzon/"><img src="../img/gohonzon.jpg" alt="御本尊「熾盛光如来曼荼羅」" class="roll" /></a></p>
+		<p><a href="/gokaicho/"><img src="../img/navi_gokaicho01.png" alt="青龍殿落慶記念国宝青不動明王御開帳（会期は終了しております）" class="roll" /></a></p>
+		<p><a href="/blog/"><img src="../img/blog.jpg" alt="門主のブログ" class="roll" /></a></p>
+</div>
+    <div id="main">
+      <h2><img src="img/night_h2.jpg" alt="夜間の特別拝観" /></h2>
+      <p><a href="/">トップ</a>&nbsp;＞&nbsp;夜間の特別拝観</p>
+      <h3><img src="img/shougunduka_h3_03.jpg" alt="青蓮院門跡夜間の特別拝観" width="600" height="32" /></h3>
+
+      <h4>青蓮院門跡　夜の特別拝観のご案内</h4>
+      <div class="haikan">
+        <p><img src="img/night_haikan.jpg" alt="夜間の特別拝観" /></p>
+        <dl>
+          <dt>開催期間</dt>
+          <dd>2026年11月6日（金）〜12月6日（日）</dd>
+          <dt>開催時間</dt>
+          <dd>18:00〜22:00（21:30 受付終了）</dd>
+          <dt>拝観料金</dt>
+          <dd>大人1,500円／小学生1,000円</dd>
+          <dt>備考</dt>
+          <dd>本院のみの開催で、将軍塚青龍殿は実施いたしませんのでご注意ください。</dd>
+        </dl>
+        <br class="clear" />
+      </div>
+
+      <!--<h4><font style="color: #ff0000; font-weight: bold;">京都・東山花灯路期間中の夜間拝観の開催のお知らせ</font></h4>
+      <p>京都・東山花灯路の開催に伴い、京都・東山花灯路期間中 ３月４日（金）〜３月１３日（日） に夜間拝観を実施いたします。</p>-->
+      
+      <h4>熾盛光如来の「光」をあらわすライトアップ</h4>
+      <p>青蓮院門跡では、毎年春と秋に、<strong>夜の特別拝観</strong>、<strong>ライトアップ</strong>を開催しております。既に恒例となっておりますが、一体何故青蓮院で夜の特別拝観を実施するのでしょうか。</p>
+      <p>ご本尊の<strong>熾盛光如来</strong>は、<strong>光そのもの</strong>であり、その化身の<strong>不動明王</strong>（国宝青不動明王を祀る）も<strong>炎の光</strong>を背負っておられ、当院は光との関係が大変深いのです。</p>
+      <p>大小1,000の照明器具による芸術的なレベルの高い景観照明です。青蓮院は、江戸時代に仮御所となった事から、<strong>粟田御所</strong>とも呼ばれています。その貴品と格調高い<strong>池泉廻遊式庭園</strong>や、境内全域をあますところなくライトアップいたします。諸堂の内部を拝観され、その後、ライトアップされた庭園を直接散策できます。</p>
+      <p>闇に浮かんでは消える木々や花々の幽玄な世界、光の中で雄大な力を感じる天然記念物の大クスノキ５本、青く光る静清な竹林、一面の苔庭の海に浮かぶ光の星。皆様お１人お１人の光がご本尊の功力によって、夜空に光のたばとなって駆け上がり世の中を明るく照らしていただきたいとの願いを込めております。<br />
+      </p>
+      <!--<p>本院での開催に加えて、当院飛び地境内である東山山頂の将軍塚大日堂の庭園も、夜間一般公開いたします。<br />
+		本院(青蓮院)と将軍塚では、開催時間、拝観料金が異なりますのでご注意下さい。</p>-->
+
+      <div class="mozo2">
+        <p class="imgL"><a href="img/1.jpg"><img src="img/night_01.jpg" alt="夜間の特別拝観" width="286" height="196" /></a></p>
+        <p class="imgR"><a href="img/2.jpg"><img src="img/night_02.jpg" alt="夜間の特別拝観" width="286" height="196" /></a></p>
+        <p class="imgL"><a href="img/3.jpg"><img src="img/night_03.jpg" alt="夜間の特別拝観" width="286" height="196" /></a></p>
+        <p class="imgR"><a href="img/4.jpg"><img src="img/night_04.jpg" alt="夜間の特別拝観" width="286" height="196"/></a></p>
+      </div>
+      <br class="clear" />
+      <h3><img src="img/shougunduka_h3_02.jpg" alt="将軍塚青龍殿ライトアップ" width="600" height="32" /></h3>
+      
+      <!--<p class="son_waku"><strong>国宝青不動御開帳</strong><br />
+2014.10.8　（水）→12.23　（火・祝）<br />
+9：00〜21：30　（夜間ライトアップ17：00〜）<br /><br />
+
+将軍塚青龍殿　（京都・東山山頂　　青龍殿飛地境内）<br /><br />
+
+平安時代から信仰されてきた秘仏青不動を３年間の修復後初の御開帳日本三大不動の一つ。<br />
+宮中から下賜され、平安時代から秘仏として、青龍殿に代々受け継がれる。<br />
+信仰上も美術史上も至高の仏教絵画。ご開帳中は、毎日護摩を修し「祈願」の成就を願って<br />
+修法いたします。ぜひ、青不動明王の強いお力を感じながらお参りください。<br /><br />
+
+将軍塚青龍殿へは、青蓮院からシャトルバスでお越しください。<br />
+青蓮院より、３０分毎にシャトルバス運行　（片道100円/8時30分〜20時30分）<br /><br />
+
+国宝青不動明王御開帳に関しまして　特設サイトを開設しております。<br />
+<a href="http://shorenin.com/gokaicho/">■青龍殿落慶記念　国宝青不動明王御開帳</a><br /></p>
+
+		<h4>大日堂庭園・展望台ライトアップ</h4>
+		<p>比叡山から大阪まで２７０度の眼下に広がる百万ドルの夜景。<br />
+		春は<strong>染井吉野</strong>、<strong>垂れ桜</strong>、<strong>山桜</strong>、<strong>変わり咲き桃</strong>、<strong>藤</strong>、<strong>サツキ</strong>、<strong>しゃくなげ</strong>など春爛漫の花の饗宴を、秋は一面を真っ赤に染める<strong>紅葉</strong>をライトアップいたします。</p>
+		<p>東山山頂（東山ドライブウエーの先）にある将軍塚大日堂には展望台が２ヶ所あり、眼下に京都市内を一望できます。手前にある市営駐車場先からの展望では充分見えませんのでご注意下さい。中央を流れる鴨川の流れ、比叡山から北山、西山の山々。京都盆地が大パノラマとなって広がり、あたかも空中散歩をしているようです。散策を楽しめる広々とした庭園では、桜、桃、藤、サツキなど春の花が４月から５月まで楽しめます。桓武天皇平安京造営時、都の安泰を念じて将軍の像を埋めた大きな将軍塚が境内にあり見所です。将軍塚の地名はこの塚のことです。</p>-->
+      
+      <h4>将軍塚　夜間の特別拝観のご案内</h4>
+      <div class="haikan">
+        <p><img src="img/night_haikan2.jpg" alt="夜間の特別拝観" /></p>
+        <dl>
+          <dt>開催期間</dt>
+          <dd><font style="color: #ff0000; font-weight: bold;">未定</font></dd>
+          <dt>開催時間</dt>
+          <dd></dd>
+          <dt>拝観料金</dt>
+          <dd></dd>
+          <dd><a href="http://www.shogunzuka.com/">「将軍塚青龍殿堂」特設サイトはこちら</a></dd>
+        </dl>
+      </div>
+      <br class="clear" />
+      <div class="mozo2">
+        <p class="imgL"><a href="img/5.jpg"><img src="img/night_05.jpg" alt="将軍塚" width="286" height="196" /></a></p>
+        <p class="imgR"><a href="img/6.jpg"><img src="img/night_06.jpg" alt="将軍塚" width="286" height="196" /></a></p>
+        <p><a href="img/7.jpg"><img src="img/night_07.jpg" alt="将軍塚" width="600" height="150"/></a></p>
+      </div>
+    </div>
+    <br class="clear" />
+    <div id="pagetop"><a href="#top"><img src="../img/pagetop.jpg" alt="ページトップ" class="roll" /></a></div>
+  </div>
+</div>
+<div id="bottom">
+  <div id="footer">
+    <p>
+    <a href="http://www.shogunzuka.com/">将軍塚青龍殿</a>&nbsp;｜&nbsp;
+    <a href="../info/">青蓮院について</a>&nbsp;｜&nbsp;
+    <a href="../haikan/">拝観のご案内</a>&nbsp;｜&nbsp;
+    <a href="../temple/">境内と庭園</a>&nbsp;&nbsp;｜&nbsp;
+    <a href="../aofudo2/index.html">国宝青不動明王</a>&nbsp;｜&nbsp;
+    <a href="../aofudo2/gomakyo.html">月護摩供</a>&nbsp;｜&nbsp;
+    <a href="../info/event.html">年中行事</a>&nbsp;｜&nbsp;<br />
+    <a href="../kobuntei/">茶室 好文亭</a>&nbsp;｜&nbsp;
+    <a href="../ganzan/">元三大師</a>&nbsp;｜&nbsp;
+    <a href="../shuyokai/">修養会（体験学習）</a>&nbsp;｜&nbsp;
+    <a href="../info/fudo36.html">近畿三十六不動尊霊場</a>&nbsp;｜&nbsp;
+    <a href="../blog/">門主のブログ</a>&nbsp;｜&nbsp;
+    <a href="index.html">夜間特別拝観</a>&nbsp;｜&nbsp;
+    <a href="../gohonzon/index.html">御本尊</a>&nbsp;｜&nbsp;<br />
+    <a href="../sitemap.html">サイトマップ</a>&nbsp;｜&nbsp;
+    <a href="../link.html">リンク集</a>&nbsp;｜&nbsp;
+    <a href="http://www.shorenin.com/english/index.html" target="_blank">English&nbsp;</a>｜</p>
+    <p>当ホームページで使用している写真及びデータを、無断で複写・複製・転用することを禁じます。</p>
+    <address>
+    Copyright (c)  TENDAI SECT SHORENIN. All Rights Reserved.<br />
+    京都市東山区粟田口三条坊町 075-561-2345　E-mail：awata@shorenin.com
+    </address>
+  </div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11949026-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

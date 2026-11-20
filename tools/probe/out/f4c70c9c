@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="ja" class="is-Home ">
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Google Tag Manager -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NPQH3NP0Z1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NPQH3NP0Z1');
+</script><!-- End Google Tag Manager -->
+
+<meta name="description" content="臨済宗大本山 南禅寺 公式サイト">
+<meta name="keywords" content="南禅寺,南禅,なんぜん,なんぜんじ,nanzen,nanzenji,nanzen-ji,temple,京都,kyoto,japan,zen,Nanzenji Temple,禅寺,禅,Nanzen-ji Temple,京都市左京区">
+<meta name="format-detection" content="telephone=no,address=no,email=no">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="臨済宗大本山 南禅寺">
+<meta property="og:image" content="//www.nanzenji.or.jp/_assets/img/common/ogp.png">
+<meta property="og:title" content="臨済宗大本山 南禅寺">
+<meta property="og:description" content="臨済宗大本山 南禅寺 公式サイト">
+<meta property="og:url" content="//www.nanzenji.or.jp/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="//www.nanzenji.or.jp/">
+<link rel="alternate" hreflang="ja" href="//www.nanzenji.or.jp/">
+<link rel="shortcut icon" href="/application/themes/nanzenji/_assets/common/img/favicon.ico">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Libre+Caslon+Text:400,700">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Sans+JP:400,700&subset=japanese">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Serif+JP:500,700&subset=japanese">
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/css/perfect-scrollbar.min.css">
+<link rel="stylesheet" href="/application/themes/nanzenji/_assets/css/common/style.css?=20261120115131" />
+<link rel="stylesheet" href="/application/themes/nanzenji/_assets/css/common/media.css?=20261120115131" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.5.0/perfect-scrollbar.min.js" ></script>
+<script src="/application/themes/nanzenji/_assets/js/common/script.js?=20261120115131"></script>
+
+	<link rel="stylesheet" href="/application/themes/nanzenji/_assets/css/home/style.css?=20261120115131" />
+	<link rel="stylesheet" href="/application/themes/nanzenji/_assets/css/home/media.css?=20261120115131" />
+
+
+<title>臨済宗大本山 南禅寺 公式サイト :: 南禅寺</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="generator" content="concrete5 - 8.5.0"/>
+<link rel="canonical" href="https://nanzenji.or.jp/">
+<script type="text/javascript">
+    var CCM_DISPATCHER_FILENAME = "/index.php";
+    var CCM_CID = 1;
+    var CCM_EDIT_MODE = false;
+    var CCM_ARRANGE_MODE = false;
+    var CCM_IMAGE_PATH = "/concrete/images";
+    var CCM_TOOLS_PATH = "/index.php/tools/required";
+    var CCM_APPLICATION_URL = "https://nanzenji.or.jp";
+    var CCM_REL = "";
+    var CCM_ACTIVE_LOCALE = "ja_JP";
+</script>
+
+<style type="text/css" data-area-style-area-handle="Main" data-block-style-block-id="70" data-style-set="12">.ccm-custom-style-container.ccm-custom-style-main-70{margin-bottom:80px}</style>
+<script type="text/javascript" src="/concrete/js/jquery.js?ccm_nocache=4b93082bc539c4485cfaaa7e074181bcddb610d9"></script>
+<link href="/application/blocks/autonav/templates/responsive_header_navigation/view.css?ccm_nocache=4b93082bc539c4485cfaaa7e074181bcddb610d9" rel="stylesheet" type="text/css" media="all">
+<link href="/concrete/css/responsive-slides.css?ccm_nocache=4b93082bc539c4485cfaaa7e074181bcddb610d9" rel="stylesheet" type="text/css" media="all">
+<link href="/concrete/blocks/image_slider/view.css?ccm_nocache=4b93082bc539c4485cfaaa7e074181bcddb610d9" rel="stylesheet" type="text/css" media="all">
+.movie-wrap {
+     position: relative;
+     padding-bottom: 56.25%; /*アスペクト比 16:9の場合の縦幅*/
+     height: 0;
+     overflow: hidden;
+}
+ 
+.movie-wrap iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+}<!-- ==================================================================================================== -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+<link rel="stylesheet" href="/application/themes/nanzenji/_assets/css/home/style.css?=20261120115131">
+<link rel="stylesheet" href="/application/themes/nanzenji/_assets/css/home/media.css?=20261120115131">
+<script src="//www.youtube.com/iframe_api"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<!-- ==================================================================================================== -->
+</head>
+
+<body class="g-Body" oncontextmenu="return false;">
+
+    <div class="ccm-page page-type-home page-template-home">
+
+        <div class="g-RootContainer">
+
+            
+	<header class="g-Header">
+		<p class="g-Header__title">
+			<a href="/" class="u-Flex u-Flex__middle">
+				<img src="/application/themes/nanzenji/_assets/img/common/logo-01.png" alt="臨済宗大本山 南禅寺" class="g-Header__title-mark">
+				<img src="/application/themes/nanzenji/_assets/img/common/logo-02.png" alt="臨済宗大本山 南禅寺" class="g-Header__title-name">
+			</a>
+		</p>
+		<p class="g-Header__visitor-button">
+			<a href="/about_rinzaishu/visit" class="u-Text-deco__none u-Basic-Arrow">
+				<em class="u-Color__white u-Font__serif u-Font__bold">拝観案内</em>
+				<i class="u-Basic-Arrow__line u-Basic-Arrow__line-white"></i>
+			</a>
+		</p>
+		<div class="g-Header__nav-button js-Nav-button u-Show__tablet">
+			<span class="g-Header__nav-button-line"></span>
+			<span class="g-Header__nav-button-line"></span>
+			<span class="g-Header__nav-button-line"></span>
+		</div>
+	</header>
+
+
+
+
+    
+
+<h2 class="u-Title__hi u-Font__serif">秋の南禅寺　早朝拝観のご案内</h2>
+
+
+
+    
+
+<nav class="g-Nav">
+	<ul class="g-Nav__items u-Flex u-Flex__middle u-Flex__right">
+                                <li class="g-Nav__item ">
+                <a href="https://nanzenji.or.jp/about_rinzaishu" class="u-Text-deco__none u-Link__underline u-Basic-Arrow " target="_self">
+                    <em class="u-Font__serif_h">寺院概要</em>
+                    <i class="u-Basic-Arrow__line u-Show__tablet"></i>
+                </a>
+            </li>
+                                <li class="g-Nav__item ">
+                <a href="https://nanzenji.or.jp/equipment" class="u-Text-deco__none u-Link__underline u-Basic-Arrow " target="_self">
+                    <em class="u-Font__serif_h">境内案内</em>
+                    <i class="u-Basic-Arrow__line u-Show__tablet"></i>
+                </a>
+            </li>
+                                <li class="g-Nav__item ">
+                <a href="https://nanzenji.or.jp/juyohin" class="u-Text-deco__none u-Link__underline u-Basic-Arrow " target="_self">
+                    <em class="u-Font__serif_h">南禅寺授与品</em>
+                    <i class="u-Basic-Arrow__line u-Show__tablet"></i>
+                </a>
+            </li>
+                                <li class="g-Nav__item ">
+                <a href="https://nanzenji.or.jp/event" class="u-Text-deco__none u-Link__underline u-Basic-Arrow " target="_self">
+                    <em class="u-Font__serif_h">行事･体験会</em>
+                    <i class="u-Basic-Arrow__line u-Show__tablet"></i>
+                </a>
+            </li>
+                                <li class="g-Nav__item ">
+                <a href="https://nanzenji.or.jp/nanzen-kaikan" class="u-Text-deco__none u-Link__underline u-Basic-Arrow " target="_self">
+                    <em class="u-Font__serif_h">宿泊(南禅会館)</em>
+                    <i class="u-Basic-Arrow__line u-Show__tablet"></i>
+                </a>
+            </li>
+                                <li class="g-Nav__item ">
+                <a href="https://nanzenji.or.jp/faq" class="u-Text-deco__none u-Link__underline u-Basic-Arrow " target="_self">
+                    <em class="u-Font__serif_h">拝観時のお願い</em>
+                    <i class="u-Basic-Arrow__line u-Show__tablet"></i>
+                </a>
+            </li>
+                                <li class="g-Nav__item ">
+                <a href="https://nanzenji.or.jp/profile" class="u-Text-deco__none u-Link__underline u-Basic-Arrow " target="_self">
+                    <em class="u-Font__serif_h">アクセス</em>
+                    <i class="u-Basic-Arrow__line u-Show__tablet"></i>
+                </a>
+            </li>
+        		<li class="g-Nav__item-instagram u-Show__tablet">
+			<a href="https://www.instagram.com/daihonzan_nanzenji/?hl=ja" target="_blank" class="u-Basic-Arrow">
+				<img src="/application/themes/nanzenji/_assets/img/common/nanzenshot-01.png" alt="NANZEN SHOT for Instagram">
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+	</ul>
+	<p class="g-Nav__item-instagram u-Hide__tablet">
+		<a href="https://www.instagram.com/daihonzan_nanzenji/?hl=ja" target="_blank" class="u-Basic-Arrow">
+			<img src="/application/themes/nanzenji/_assets/img/common/icon-insta-01.png" alt="NANZEN SHOT for Instagram">
+		</a>
+	</p>
+</nav>
+
+
+            
+            <div id="ANC-PAGETOP" class="g-Wrapper">
+                
+
+    <script>
+$(document).ready(function(){
+    $(function () {
+        $("#ccm-image-slider-2110").responsiveSlides({
+            prevText: "",   // String: Text for the "previous" button
+            nextText: "",
+				nav:true,
+		            timeout: 4000,            speed: 500,                                            });
+    });
+});
+</script>
+
+<div class="ccm-image-slider-container ccm-block-image-slider-arrows" >
+    <div class="ccm-image-slider">
+        <div class="ccm-image-slider-inner">
+
+                <ul class="rslides" id="ccm-image-slider-2110">
+                            <li>
+                                                <img src="/application/files/8216/1121/1813/slide4.jpg" alt="slide" width="1500" height="530">                                <div class="ccm-image-slider-text">
+                                                        </div>
+                </li>
+                            <li>
+                                                <img src="/application/files/4616/1121/1515/slide7.jpg" alt="slide" width="1500" height="530">                                <div class="ccm-image-slider-text">
+                                                        </div>
+                </li>
+                            <li>
+                                                <img src="/application/files/7616/1121/1816/slide8.jpg" alt="slide" width="1500" height="530">                                <div class="ccm-image-slider-text">
+                                                        </div>
+                </li>
+                            <li>
+                                                <img src="/application/files/8616/1121/1814/slide6.jpg" alt="slide" width="1500" height="530">                                <div class="ccm-image-slider-text">
+                                                        </div>
+                </li>
+                    </ul>
+                </div>
+
+    </div>
+</div>
+
+
+
+    <div class="overlay"></div>
+<div id="yt_player"></div>
+
+
+    
+
+    
+
+<div class="u-Text"></div>
+
+
+                <!--
+
+    
+<section class="c-Keyvisual">
+	<h1 class="u-Title__page u-Inner">
+		<img src="https://nanzenji.or.jp/application/files/6815/8616/5142/kv-copy.png" alt="ただ、あるがまま。ただ、なすがままであり続ける。">
+	</h1>
+	<figure class="c-Keyvisual__image" style="background-image: url(https://nanzenji.or.jp/application/files/6316/0205/5957/17.jpg)"></figure>
+	<span class="c-Keyvisual__scroll-button">
+		<a href="#ANC-START" class="u-Text-deco__none">
+			<em class="u-Font__serif">Scroll</em>
+			<i class="u-Basic-Arrow__line"></i>
+		</a>
+	</span>
+</section>
+
+-->
+
+                <main id="ANC-START" class="g-Container">
+                    <article class="g-Content">
+
+                        <section class="c-home-corner c-News u-Contents">
+                            <div class="u-Inner">
+
+                                <div class="c-News__inner">
+                                    <h2 class="c-News__title">
+                                        <em class="u-Font__serif">お知らせ</em>
+                                    </h2>
+									
+
+    
+<div class="c-News__list">
+    <ul class="c-News__items">
+                                <li class="c-News__item u-Flex">
+                <mark data-color="green" class="c-News__category u-Align__center">行事･体験会</mark>
+                <time class="c-News__time u-Font__serif">2026.10.31</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/202601101-1" class="u-Text-deco__none u-Icon u-Icon__">令和8年　11月拝観時間と行事のご案内</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="green" class="c-News__category u-Align__center">行事･体験会</mark>
+                <time class="c-News__time u-Font__serif">2026.10.01</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/202609024" class="u-Text-deco__none u-Icon u-Icon__">【南禅院庭園・法堂内陣】令和8年　秋の特別拝観のご案内</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="green" class="c-News__category u-Align__center">行事･体験会</mark>
+                <time class="c-News__time u-Font__serif">2026.10.01</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/20210930-4-2-2-2-2-2-3-2-2-2-2-3-3-2-3" class="u-Text-deco__none u-Icon u-Icon__">令和8年　秋の南禅寺　早朝拝観のご案内</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="green" class="c-News__category u-Align__center">行事･体験会</mark>
+                <time class="c-News__time u-Font__serif">2026.09.27</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/20260927" class="u-Text-deco__none u-Icon u-Icon__">令和8年　南禅寺文化講座のご案内</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="green" class="c-News__category u-Align__center">行事･体験会</mark>
+                <time class="c-News__time u-Font__serif">2026.09.25</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/202609024-1" class="u-Text-deco__none u-Icon u-Icon__">令和8年　10月の拝観時間と行事のご案内</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="green" class="c-News__category u-Align__center">行事･体験会</mark>
+                <time class="c-News__time u-Font__serif">2026.08.22</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/20260922" class="u-Text-deco__none u-Icon u-Icon__">令和8年　9月の拝観時間と行事のご案内</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="blue" class="c-News__category u-Align__center">お知らせ</mark>
+                <time class="c-News__time u-Font__serif">2026.01.08</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/20260108" class="u-Text-deco__none u-Icon u-Icon__">南禅院の拝観停止についてのお知らせ</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="green" class="c-News__category u-Align__center">行事･体験会</mark>
+                <time class="c-News__time u-Font__serif">2025.12.17</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/20241217" class="u-Text-deco__none u-Icon u-Icon__">令和８年（2026年）寧日会（南禅寺独秀流ご詠歌の会）開催日のご案内</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="blue" class="c-News__category u-Align__center">お知らせ</mark>
+                <time class="c-News__time u-Font__serif">2024.02.29</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/20230101-3-3-3-2-3-2-2" class="u-Text-deco__none u-Icon u-Icon__">令和五年　師範会献詠</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="green" class="c-News__category u-Align__center">行事･体験会</mark>
+                <time class="c-News__time u-Font__serif">2023.12.19</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/20230101-3-3-3-2-3-2" class="u-Text-deco__none u-Icon u-Icon__">第60回「禅をきく」講演会が行われました</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="yellow" class="c-News__category u-Align__center">ご注意</mark>
+                <time class="c-News__time u-Font__serif">2023.06.19</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/20260203" class="u-Text-deco__none u-Icon u-Icon__">※ご注意ください：撮影後金銭要求</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="green" class="c-News__category u-Align__center">行事･体験会</mark>
+                <time class="c-News__time u-Font__serif">2022.06.01</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/goeika_preparation" class="u-Text-deco__none u-Icon u-Icon__">独秀流御詠歌の動画をアップロードしました「新曲　面影を偲ぶ御和讃」</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="green" class="c-News__category u-Align__center">行事･体験会</mark>
+                <time class="c-News__time u-Font__serif">2022.04.28</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/about_rinzaishu/song/goeika_preparation" class="u-Text-deco__none u-Icon u-Icon__">独秀流御詠歌の動画をアップロードしました</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="blue" class="c-News__category u-Align__center">お知らせ</mark>
+                <time class="c-News__time u-Font__serif">2021.02.01</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/20210201" class="u-Text-deco__none u-Icon u-Icon__">南禅寺のホームページが新しくなりました</a>
+                </em>
+            </li>
+                                <li class="c-News__item u-Flex">
+                <mark data-color="green" class="c-News__category u-Align__center">行事･体験会</mark>
+                <time class="c-News__time u-Font__serif">2020.05.26</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/20200526" class="u-Text-deco__none u-Icon u-Icon__">南禅寺写経会のご案内</a>
+                </em>
+            </li>
+            </ul>
+</div>
+
+
+
+    
+
+<div class="u-Text">
+    <a href="https://nanzenji.or.jp/information" target="_self"><p style="text-align: right;">お知らせ一覧＞</p>
+</a>
+</div>
+
+                                </div>
+
+                                <div class="c-News__inner">
+                                    <h2 class="c-News__title">
+                                        <em class="u-Font__serif">拝観時のお願い</em>
+                                    </h2>
+									
+
+    
+
+    
+<div class="c-News__list">
+    <ul class="c-News__items">
+                    <li class="c-News__item u-Flex">
+                <time class="c-News__time u-Font__serif">2026.07.06</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/notices/20260706" class="u-Text-deco__none u-Icon u-Icon__">拝観時の靴袋について</a>
+                </em>
+            </li>
+                    <li class="c-News__item u-Flex">
+                <time class="c-News__time u-Font__serif">2020.09.02</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/notices/20260706" class="u-Text-deco__none u-Icon u-Icon__">バス駐車場について</a>
+                </em>
+            </li>
+                    <li class="c-News__item u-Flex">
+                <time class="c-News__time u-Font__serif">2020.07.16</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/notices/20200716" class="u-Text-deco__none u-Icon u-Icon__">車椅子でご拝観の方へ</a>
+                </em>
+            </li>
+                    <li class="c-News__item u-Flex">
+                <time class="c-News__time u-Font__serif">2019.10.01</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/notices/20191001" class="u-Text-deco__none u-Icon u-Icon__">南禅寺の境内についてお願いとご注意</a>
+                </em>
+            </li>
+                    <li class="c-News__item u-Flex">
+                <time class="c-News__time u-Font__serif">2019.10.01</time>
+                <em class="c-News__text">
+                    <a href="https://www.nanzenji.or.jp/information/notices/20191001-2" class="u-Text-deco__none u-Icon u-Icon__">大方丈障壁画について</a>
+                </em>
+            </li>
+            </ul>
+</div>
+
+
+                                </div>
+                            </div>
+                            <figure class="c-News__image"></figure>
+                        </section>
+
+                
+
+                            <section class="">
+                            <div class="u-Inner">
+                                <div class="c-banner__inner">
+                                    <ul class="c-banner__items u-Flex">
+                                        <li class="c-banner__item u-Align__center">
+                                            <a href="/about_rinzaishu" target="_blank" class="u-Text-deco__none">
+                                                <figure>
+                                                    <img src="/application/files/9616/0387/1499/banner_top1.jpg" alt="南禅寺を知る">
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="c-banner__item u-Align__center">
+                                            <a href="/equipment" target="_blank" class="u-Text-deco__none">
+                                                <figure>
+                                                    <img src="/application/files/7616/0387/1517/banner_top2.jpg" alt="南禅寺を感じる">
+                                                </figure>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+<br>
+                            <div class="u-Inner">
+                                <div class="c-banner__inner">
+                                    <ul class="c-banner__items u-Flex">
+                                        <li class="c-banner__item u-Align__center">
+                                            <a href="/event" target="_blank" class="u-Text-deco__none">
+                                                <figure>
+                                                    <img src="/application/files/1316/0387/1518/banner_top3.jpg" alt="南禅寺を体験する">
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="c-banner__item u-Align__center">
+                                            <a href="/about_rinzaishu/song" target="_blank" class="u-Text-deco__none">
+                                                <figure>
+                                                    <img src="/application/files/9916/0387/1518/banner_top4.jpg" alt="独秀流御詠歌">
+                                                </figure>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="c-banner2 u-Contents">
+                            <div class="u-Inner">
+                                <div class="c-banner__inner">
+                                    <ul class="c-banner2__items u-Flex">
+                                        <li class="c-banner2__item u-Align__center">
+                                            <a href="https://nanzenji.or.jp/nanzen-kaikan" target="_blank" class="u-Text-deco__none">
+                                                <figure>
+                                                    <img src="/application/themes/nanzenji/_assets/img/common/banner-nanzen_kaikan.jpg" alt="南禅会館" width="300">
+                                                    <figcaption class="u-Font__serif">南禅会館</figcaption>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="c-banner2__item u-Align__center">
+                                            <a href="https://www.nanzen.net/about_nanzenjiha.html" target="_blank" class="u-Text-deco__none">
+                                                <figure>
+                                                    <img src="/application/themes/nanzenji/_assets/img/common/banner-nanzenjiha.jpg" alt="南禅寺派寺院専用" width="300">
+                                                    <figcaption class="u-Font__serif">南禅寺派寺院専用</figcaption>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                        <li class="c-banner2__item u-Align__center">
+                                            <a href="http://www.rinnou.net/" target="_blank" class="u-Text-deco__none">
+                                                <figure>
+                                                    <img src="/application/themes/nanzenji/_assets/img/common/banner-rinnou.jpg" alt="臨黄ネット" width="300">
+                                                    <figcaption class="u-Font__serif">臨黄ネット</figcaption>
+                                                </figure>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="c-Nanzen-shot u-Contents">
+                            <a href="https://www.instagram.com/daihonzan_nanzenji/?hl=ja" target="_blank" class="u-Basic-Arrow">
+                                <h2 class="c-Nanzen-shot__title">
+                                    <strong class="c-Nanzen-shot__title-name">
+                                        <img src="/application/themes/nanzenji/_assets/img/common/nanzenshot-01.png" alt="NANZEN SHOT for Instagram">
+                                        <img src="/application/themes/nanzenji/_assets/img/common/nanzenshot-01@white.png" alt="NANZEN SHOT for Instagram">
+                                    </strong>
+                                    <i class="u-Basic-Arrow__line"></i>
+                                </h2>
+                                <figure class="c-Nanzen-shot__image u-Flex">
+                                    <img src="/application/themes/nanzenji/_assets/img/home/insta-01.jpg" alt="NANZEN SHOT for Instagram">
+                                    <img src="/application/themes/nanzenji/_assets/img/home/insta-02.jpg" alt="NANZEN SHOT for Instagram">
+                                    <img src="/application/themes/nanzenji/_assets/img/home/insta-03.jpg" alt="NANZEN SHOT for Instagram">
+                                    <img src="/application/themes/nanzenji/_assets/img/home/insta-04.jpg" alt="NANZEN SHOT for Instagram">
+                                    <img src="/application/themes/nanzenji/_assets/img/home/insta-05.jpg" alt="NANZEN SHOT for Instagram">
+                                    <img src="/application/themes/nanzenji/_assets/img/home/insta-06.jpg" alt="NANZEN SHOT for Instagram">
+                                    <img src="/application/themes/nanzenji/_assets/img/home/insta-07.jpg" alt="NANZEN SHOT for Instagram">
+                                    <img src="/application/themes/nanzenji/_assets/img/home/insta-08.jpg" alt="NANZEN SHOT for Instagram">
+                                </figure>
+                            </a>
+                        </section>
+
+                    </article><!-- g-content -->
+                </main><!-- g-Container -->
+            </div><!-- g-Wrapper -->
+
+            		<footer class="g-Footer u-Color__white">
+			<div class="u-Inner">
+<!--
+				<p class="g-Footer__sitename">
+					<a href="" class="u-Text-deco__none">
+						<span class="u-Font__serif u-Flex u-Flex__middle">
+							<em>臨済宗 大本山</em>
+							<strong>南禅寺</strong>
+						</span>
+					</a>
+				</p>
+-->
+				<div class="g-Footer__menu u-Flex">
+					<div>
+<!--?php include(ROOT . '/_assets/inc/common/_nav-profile.php'); ?-->
+<!-- ?= (new GlobalArea('side_navigation'))->display() ? -->
+
+<div>
+	<aside class="g-Menu">
+		<p class="g-Menu__trigger u-Show__tablet js-Menu__trigger">
+			<em class="g-Menu__trigger-name u-Color__white">臨済宗大本山 南禅寺 公式サイト</em>
+		</p>
+		<div class="g-Menu__inner">
+			<p class="g-Menu__title">
+				<a href="/" class="u-Text-deco__none u-Color__white u-Link__underline u-Basic-Arrow">
+					<em>トップページ</em>
+					<i class="u-Basic-Arrow__line u-Basic-Arrow__line-white"></i>
+				</a>
+			</p>
+			<ul class="g-Menu__items">
+				<li class="g-Menu__item">
+					<a href="/about_rinzaishu" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+						<em>寺院概要</em>
+						<i class="u-Basic-Arrow__line"></i>
+					</a>
+				</li>
+				<li class="g-Menu__item">
+					<a href="/equipment" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+						<em>境内案内</em>
+						<i class="u-Basic-Arrow__line"></i>
+					</a>
+				</li>
+				<li class="g-Menu__item">
+					<a href="/event" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+						<em>行事･体験会</em>
+						<i class="u-Basic-Arrow__line"></i>
+					</a>
+				</li>
+				<li class="g-Menu__item">
+					<a href="/nanzen-kaikan" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+						<em>宿泊(南禅会館)</em>
+						<i class="u-Basic-Arrow__line"></i>
+					</a>
+				</li>
+				<li class="g-Menu__item">
+					<a href="/information" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+						<em>お知らせ</em>
+						<i class="u-Basic-Arrow__line"></i>
+					</a>
+				</li>
+				<li class="g-Menu__item">
+					<a href="/faq" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+						<em>拝観時のご注意</em>
+						<i class="u-Basic-Arrow__line"></i>
+					</a>
+				</li>
+				<li class="g-Menu__item">
+					<a href="/profile" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+						<em>アクセス</em>
+						<i class="u-Basic-Arrow__line"></i>
+					</a>
+				</li>
+				<li class="g-Menu__item">
+
+					<a href="http://www.nanzen.net/about_nanzenjiha.html" class="u-Text-deco__none u-Link__underline u-Basic-Arrow" target="_blank">
+						<em>南禅寺派寺院専用</em>
+						<i class="u-Basic-Arrow__line"></i>
+					</a>
+				</li>
+
+			</ul>
+		</div>
+	</aside>
+
+</div>					</div>
+					<div>
+<aside class="g-Menu">
+	<p class="g-Menu__trigger u-Show__tablet js-Menu__trigger">
+		<em class="g-Menu__trigger-name u-Color__white">境内案内</em>
+	</p>
+	<p class="g-Menu__title">
+		<a href="/equipment/" class="u-Text-deco__none u-Color__white u-Link__underline u-Basic-Arrow">
+			<em>境内案内</em>
+			<i class="u-Basic-Arrow__line u-Basic-Arrow__line-white"></i>
+		</a>
+	</p>
+	<ul class="g-Menu__items">
+		<li class="g-Menu__item">
+			<a href="/equipment/chokushimon" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+				<em>勅使門</em>
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+		<li class="g-Menu__item">
+			<a href="/equipment/sanmon" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+				<em>三門</em>
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+		<li class="g-Menu__item">
+			<a href="/equipment/hatto" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+				<em>法堂</em>
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+		<li class="g-Menu__item">
+			<a href="/equipment/honbou" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+				<em>本坊</em>
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+		<li class="g-Menu__item">
+			<a href="/equipment/houjo" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+				<em>方丈</em>
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+		<li class="g-Menu__item">
+			<a href="/equipment/garden" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+				<em>庭園</em>
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+		<li class="g-Menu__item">
+			<a href="/equipment/nanzenin" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+				<em>南禅院</em>
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+		<li class="g-Menu__item">
+			<a href="/equipment/sosui" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+				<em>疎水</em>
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+		<li class="g-Menu__item">
+			<a href="/equipment/nanzen-kaikan" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+				<em>南禅会館</em>
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+		<li class="g-Menu__item">
+			<a href="/equipment/kanmontei" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+				<em>観門亭</em>
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+		<li class="g-Menu__item">
+			<a href="/faq" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+				<em>参拝に関するQ&amp;A</em>
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+	</ul>
+</aside>
+					</div>
+					<div>
+<aside class="g-Menu">
+	<p class="g-Menu__trigger u-Show__tablet js-Menu__trigger">
+		<em class="g-Menu__trigger-name u-Color__white">行事･体験会</em>
+	</p>
+	<p class="g-Menu__title">
+		<a href="/event/" class="u-Text-deco__none u-Color__white u-Link__underline u-Basic-Arrow">
+			<em>行事･体験会</em>
+			<i class="u-Basic-Arrow__line u-Basic-Arrow__line-white"></i>
+		</a>
+	</p>
+<!--
+	<ul class="g-Menu__items">
+		<li class="g-Menu__item">
+			<a href="/event/calender" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+				<em>体験会カレンダー</em>
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+		<li class="g-Menu__item">
+			<a href="/event/group" class="u-Text-deco__none u-Link__underline u-Basic-Arrow">
+				<em>団体様向けご案内</em>
+				<i class="u-Basic-Arrow__line"></i>
+			</a>
+		</li>
+	</ul>
+-->
+</aside>
+<aside class="g-Menu">
+	<p class="g-Menu__trigger u-Show__tablet js-Menu__trigger">
+		<em class="g-Menu__trigger-name u-Color__white">お知らせ</em>
+	</p>
+	<p class="g-Menu__title">
+		<a href="/information/" class="u-Text-deco__none u-Color__white u-Link__underline u-Basic-Arrow">
+			<em>お知らせ</em>
+			<i class="u-Basic-Arrow__line u-Basic-Arrow__line-white"></i>
+		</a>
+	</p>
+	<!--ul class="g-Menu__items">
+		<li class="g-Menu__item">
+			<a href="">
+				<em></em>
+			</a>
+		</li>
+	</ul-->
+</aside>
+						<ul class="g-Footer__menu-sub">
+							<li>
+								<a href="/nanzen-kaikan" class="u-Text-deco__none u-Link__underline">
+									<em class="u-Font__serif">南禅会館</em>
+								</a>
+							</li>
+							<li>
+								<a href="/about_rinzaishu/song" class="u-Text-deco__none u-Link__underline">
+									<em class="u-Font__serif">独秀流御詠歌</em>
+								</a>
+							</li>
+
+							<li>
+								<a href="/sitemap" class="u-Text-deco__none u-Link__underline">
+									<em class="u-Font__serif">サイトマップ</em>
+								</a>
+							</li>
+							<li>
+								<a href="https://nanzenji.or.jp/trademark" class="u-Text-deco__none u-Link__underline">
+									<em class="u-Font__serif">南禅寺の登録商標</em>
+								</a>
+							</li>
+
+						</ul>
+					</div>
+					<div>
+						<p class="g-Footer__visitor-button">
+							<a href="/about_rinzaishu/visit" class="u-Color__black u-Align__center u-Text-deco__none">
+								<em class="u-Font__serif">拝観案内</em>
+							</a>
+						</p>
+						<p class="g-Footer__instagram">
+							<a href="https://www.instagram.com/daihonzan_nanzenji/" target="_blank" class="u-Basic-Arrow">
+								<img src="/application/themes/nanzenji/_assets/img/common/nanzenshot-01@white.png" alt="NANZEN SHOT for Instagram">
+								<i class="u-Basic-Arrow__line u-Basic-Arrow__line-white"></i>
+							</a>
+						</p>
+						<br><br><br><br>
+						<p align="right">
+							<a href="https://www.facebook.com/KyotoNanzenji/" class="u-Text-deco__none u-Link__underline" target="_blank">
+								<em class="u-Font__serif">Facebook</em>
+							</a>
+						</p>
+						<p align="right">
+							<a href="https://twitter.com/nanzenji_kyoto" class="u-Text-deco__none u-Link__underline" target="_blank">
+								<em class="u-Font__serif">Twitter</em>
+							</a>
+
+						</p>
+
+					</div>
+
+					<p class="g-Footer__logo u-Align_center u-Hide__mobile">
+						<a href="/">
+							<img src="/application/themes/nanzenji/_assets/img/common/logo-01@white.png" alt="臨済宗大本山 南禅寺">
+							<img src="/application/themes/nanzenji/_assets/img/common/logo-02@white.png" alt="臨済宗大本山 南禅寺">
+						</a>
+					</p>
+				</div>
+				<small class="g-Copyright u-Align__right u-Font__serif">Copyright © NANZEN-JI TEMPLE. <br class="u-Show__mobile">All rights reserved.</small>
+			</div>
+		</footer>
+		<span class="g-Pagetop">
+			<a href="#ANC-PAGETOP" class="u-Align__center"></a>
+		</span>
+
+<div class="u-Cover"></div>
+<script>
+	$(function(){
+		var moreNum = 5;
+		$('.js-News__items li:nth-child(n + ' + (moreNum + 1) + ')').addClass('is-Hide');
+		$('.js-News__items-button > *').on('click', function() {
+			$('.js-News__items li.is-Hide').slice(0, moreNum).removeClass('is-Hide');
+			if ($('.js-News__items li.is-Hide').length == 0) {
+				$('.js-News__items-button').fadeOut();
+			}
+		});
+	}); //END jQuery
+</script>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="/application/blocks/autonav/templates/responsive_header_navigation/view.js?ccm_nocache=4b93082bc539c4485cfaaa7e074181bcddb610d9"></script>
+<script type="text/javascript" src="/concrete/js/responsive-slides.js?ccm_nocache=4b93082bc539c4485cfaaa7e074181bcddb610d9"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta name="format-detection" content="telephone=no">
+<title>鷲峰山 高台寺：催事</title>
+<script src="js/jquery-3.7.1.min.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="js/totop.js"></script>
+<!--<script src="js/tel-link.js"></script>-->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NHPNRJXM85"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NHPNRJXM85');
+</script>
+</head>
+
+<body>
+<header class="sec_header">
+<div class="names">
+<a href="index.html">
+<img src="img/kikukirimon_kikyo.png" alt="菊桐紋">
+<div class="name_yoko"><img src="img/name_yoko.png" alt="高台寺"></div>
+</a>
+</div>
+<div class="navi_box">
+<div class="menumark"><span></span><span></span><span></span></div>
+<nav>
+<ul>
+<li class="sp-only"><a href="https://www.instagram.com/kodaiji_zen_temple/" target="_blank"><img src="img/instagram_logo.png" alt="kodaiji_zen_temple" class="nocircle"></a></li>
+<li class="sp-only"><a href="https://twitter.com/KodaijiFb" target="_blank"><img src="img/x_icon.png" alt="@KodaijiFb"></a></li>
+<li class="sp-only"><a href="https://www.facebook.com/kodaiji" target="_blank"><img src="img/facebook_logo.png" alt="@kodaiji"></a></li>
+<li class="menu01"><a href="./saiji.html">催事<br /><span>Event</span></a></li>
+<li class="menu02"><a href="./chakai.html">茶会<br /><span>Tea ceremony</span></a></li>
+<li class="menu03"><a href="./taiken.html">体験<br /><span>Experience</span></a></li>
+<li class="menu04"><a href="./houmon.html">訪問<br /><span>Access</span></a></li>
+<li class="menu05"><a href="./haikan.html">拝観<br /><span>Visit</span></a></li>
+<li class="menu06"><a href="./rekishi.html">歴史<br /><span>About us</span></a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="wrapper bg01">
+<div class="split">
+<div class="side_menu">
+<aside>
+<div class="catch"><img src="img/saiji_tl.png" alt="催事"><br />Event</div>
+<div class="naiyou">
+<ul>
+<li><a href="#autumn_trip">秋の夜間特別拝観</a></li>
+</ul>
+</div>
+</aside>
+</div>
+<div class="main_contents">
+<!--<article>
+<a class="anchor" id="autumn_top"></a>
+<div class="title_header" id="saiji"><img src="img/summer_img_t.jpg" alt="催事"></div>
+<div class="content">
+<h1>特別展・特別拝観</h1>
+<a id="autumn_day" class="anchor"></a>-->
+<article>
+<a id="sp_event" class="anchor"></a>
+<div class="title_header"><img src="img/saiji_img_t.jpg" alt="秋"></div>
+<div class="content">
+<h1>秋の高台寺</h1>
+
+<a id="autumn_trip" class="anchor"></a>
+<div class="event last" style="margin-bottom: 30px;">
+<h2>秋の夜間特別拝観</h2>
+<div class="event_img"><img src="img/aki_yakan2026.jpg" alt=""></div>
+<p class="text_l"><b>日時：</b>2026年<span>10月23日</span>（金）～ <span>12月13日</span>（日）</p>
+<p class="text_l" style="margin-left: 5em; text-indent: -5em;"><b>拝観時間：</b>午前9時〜午後9時30分受付終了（午後10時閉門）<br>
+※午後5時点灯</p>
+<p class="text_l"><b>拝観料：</b>昼夜同じ</p>
+<p style="margin-left: 1em; text-indent: -1em;">※「客殿」は日中（9：00〜16：30）のみの公開です。<u>夜間拝観時間にはご覧いただけません。</u></p>
+<p style="margin-left: 1em; text-indent: -1em;">※入替制ではありませんが、一度出口から退出すると<strong style="color: purple">同じ券で再入山はできません</strong>。</p>
+</div>
+
+</div>
+</article>
+</div><!--#main_contents-->
+
+<div class="bg_box"></div>
+
+</div><!--#split-->
+
+</div><!--#wrapper-->
+</main>
+
+<div id="totop">
+<p><a id="move_top">ページトップへ</a></p>
+ </div>
+
+<footer>
+<div class="footer_inner">
+<div class="footer_contents">
+<div class="footer_menu">
+<div><a href="./policy.html">プライバシーポリシー</a></div>
+<div><a href="./policy.html#toiawase">お問い合わせ</a></div>
+<div><a href="./link.html">関連リンク</a></div>
+</div>
+<div id="sns_box">
+<a href="https://www.facebook.com/kodaiji" target="_blank"><img src="img/facebook_logo.png" alt="@kodaiji"></a><a href="https://twitter.com/KodaijiFb" target="_blank"><img src="img/x_icon.png" alt="@KodaijiFb"></a><a href="https://www.instagram.com/kodaiji_zen_temple/" target="_blank"><img src="img/instagram_logo.png" alt="kodaiji_zen_temple" class="nocircle"></a>
+</div>
+
+<div class="name_box"><span>鷲峰山</span>高台寺</div>
+<div class="photo_copyright">このサイトの写真の多くは スギスタ横浜 杉山様の撮影です。</div>
+</div>
+</div>
+<div class="footer_obi">&copy;Kodaiji Temple All Rights Reserved.</div>
+</footer>
+<!--<script src="slick/slick.min.js"></script>
+<script src="js/slide.js"></script>-->
+<script src="js/menu.js"></script>
+<script src="js/scroll_in.js"></script>
+<script src="js/toggle.js"></script>
+</body>
+</html>

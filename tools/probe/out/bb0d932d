@@ -79,8 +79,8 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 </style>
 
 <link rel='stylesheet' id='wp-pagenavi-css' href='https://asoboyo-arida.com/wp/wp-content/plugins/wp-pagenavi/css/wp-pagenavi.css?ver=3.0.1' media='all' />
-<link rel='stylesheet' id='blankslate-style-css' href='https://asoboyo-arida.com/wp/wp-content/themes/blankslate/style.css?ver=2dd6868d5f71a25af37aee0f38622617' media='all' />
-<link rel='stylesheet' id='fancybox-css' href='https://asoboyo-arida.com/wp/wp-content/plugins/easy-fancybox/fancybox/1.5.4/jquery.fancybox.min.css?ver=2dd6868d5f71a25af37aee0f38622617' media='screen' />
+<link rel='stylesheet' id='blankslate-style-css' href='https://asoboyo-arida.com/wp/wp-content/themes/blankslate/style.css?ver=d814b07dc1440ecb54d064ec8ed85c1f' media='all' />
+<link rel='stylesheet' id='fancybox-css' href='https://asoboyo-arida.com/wp/wp-content/plugins/easy-fancybox/fancybox/1.5.4/jquery.fancybox.min.css?ver=d814b07dc1440ecb54d064ec8ed85c1f' media='screen' />
 <script id="jquery-core-js" src="https://asoboyo-arida.com/wp/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
 <script id="jquery-migrate-js" src="https://asoboyo-arida.com/wp/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
 <link rel="https://api.w.org/" href="https://asoboyo-arida.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://asoboyo-arida.com/wp-json/wp/v2/posts/4765" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://asoboyo-arida.com/wp/xmlrpc.php?rsd" />
@@ -863,12 +863,12 @@ $("html").addClass("opera");
 <script type="text/javascript">
 var sbiajaxurl = "https://asoboyo-arida.com/wp/wp-admin/admin-ajax.php";
 </script>
-<script id="fancybox-purify-js" src="https://asoboyo-arida.com/wp/wp-content/plugins/easy-fancybox/vendor/purify.min.js?ver=2dd6868d5f71a25af37aee0f38622617"></script>
+<script id="fancybox-purify-js" src="https://asoboyo-arida.com/wp/wp-content/plugins/easy-fancybox/vendor/purify.min.js?ver=d814b07dc1440ecb54d064ec8ed85c1f"></script>
 <script id="jquery-fancybox-js-extra">
 var efb_i18n = {"close":"Close","next":"Next","prev":"Previous","startSlideshow":"Start slideshow","toggleSize":"Toggle size"};
 //# sourceURL=jquery-fancybox-js-extra
 </script>
-<script id="jquery-fancybox-js" src="https://asoboyo-arida.com/wp/wp-content/plugins/easy-fancybox/fancybox/1.5.4/jquery.fancybox.min.js?ver=2dd6868d5f71a25af37aee0f38622617"></script>
+<script id="jquery-fancybox-js" src="https://asoboyo-arida.com/wp/wp-content/plugins/easy-fancybox/fancybox/1.5.4/jquery.fancybox.min.js?ver=d814b07dc1440ecb54d064ec8ed85c1f"></script>
 <script id="jquery-fancybox-js-after">
 var fb_timeout, fb_opts={'autoScale':true,'showCloseButton':true,'margin':20,'pixelRatio':'false','padding':1,'centerOnScroll':false,'enableEscapeButton':true,'speedIn':600,'speedOut':600,'overlayShow':true,'hideOnOverlayClick':true,'minVpHeight':320,'disableCoreLightbox':'true','enableBlockControls':'true','fancybox_openBlockControls':'true' };
 if(typeof easy_fancybox_handler==='undefined'){
@@ -890,7 +890,7 @@ jQuery(easy_fancybox_handler);jQuery(document).on('post-load',easy_fancybox_hand
 //# sourceURL=jquery-fancybox-js-after
 </script>
 <script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://asoboyo-arida.com/wp/wp-includes/js/wp-emoji-release.min.js?ver=2dd6868d5f71a25af37aee0f38622617"}}
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://asoboyo-arida.com/wp/wp-includes/js/wp-emoji-release.min.js?ver=d814b07dc1440ecb54d064ec8ed85c1f"}}
 </script>
 <script type="module">
 /*! This file is auto-generated */

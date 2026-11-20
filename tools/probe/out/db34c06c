@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-GWQV8BFFBG"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-GWQV8BFFBG");
+    </script>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="author" content="クリスマスマーケット in 大阪 てんしば 2026" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta
+      property="og:title"
+      content="クリスマスマーケット in 大阪 てんしば 2026 公式サイト"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://osaka-christmasmarket.com/" />
+    <meta
+      property="og:image"
+      content="https://osaka-christmasmarket.com/images/ogp.png"
+    />
+    <meta
+      property="og:site_name"
+      content="クリスマスマーケット in 大阪 てんしば 2026 公式サイト"
+    />
+    <meta
+      property="og:description"
+      content="クリスマスマーケット in 大阪 てんしば 2026 公式サイト。【入場無料】2025年11月28日（金）～12月25日（木）まで、大阪 天王寺公園・天王寺動物園 「てんしば」「てんしばi:na」にて開催！"
+    />
+    <meta name="robots" content="ALL" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="icon" href="/images/favicon.ico" />
+
+    <link
+      href="/css/reset.css?2026"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="/css/base.css?2026"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="/css/print.css?2026"
+      rel="stylesheet"
+      type="text/css"
+      media="print"
+    />
+    <link
+      href="/css/drawer.min.css?2026"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="/css/layout.css?202610"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="/js/drawer.min.js"></script>
+    <script src="/js/waypoints.js"></script>
+    <script src="/js/iscroll.js"></script>
+    <script src="/js/common.js"></script>
+
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+      <script src="/js/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script type="text/javascript" src="/js/selectivizr-min.js"></script>
+    <![endif]-->
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: "672886327761211",
+          xfbml: true,
+          version: "v17.0",
+        });
+        FB.AppEvents.logPageView();
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+          return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+    <script>
+      $(document).ready(function () {
+        $(".drawer").drawer();
+        $(".drawer-nav ul li a").on("click", function () {
+          $(".drawer").drawer("close");
+        });
+      });
+    </script>
+  </head>
+</html>
+<meta name="description" content="クリスマスマーケット in 大阪 てんしば 2026 公式サイト。【入場無料】2025年11月28日（金）～12月25日（木）まで、大阪 天王寺公園・天王寺動物園 「てんしば」「てんしばi:na」にて開催！" />
+<meta name="keywords" content="大阪,クリスマスマーケット,2026,てんしば,大阪クリスマスマーケット,大阪クリスマス,クリスマス,天王寺公園,天王寺動物園" />
+<title>クリスマスマーケット in 大阪 てんしば 2026 公式サイト</title>
+<link href="/css/home.css?2026" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<body id="home" class="drawer drawer--top">
+  <div id="loading"></div>
+  <div id="fade"></div>
+  <div id="pageTop"></div>
+  <div id="wrapper">
+    <div class="headArea">
+      <div class="inner clearfix">
+        <div class="fL">
+          <h1><a href="/" class="alpha"><img src="/images/top/logo.svg" alt="クリスマスマーケット in 大阪 てんしば 2026"></a></h1>
+        </div>
+        <div class="fR">
+          <div class="sns">
+            <div class="ttl">最新情報はSNSをチェック！</div>
+            <ul>
+              <li><a href="https://twitter.com/osaka_christmas" target="_blank" class="alpha"><img src="/images/common/icon_tw.svg" alt="クリスマスマーケットin大阪公式ツイッター" /></a></li>
+              <li><a href="https://www.facebook.com/osakachristmasmarket" target="_blank" class="alpha"><img src="/images/common/icon_fb.svg" alt="クリスマスマーケットin大阪公式facebookページ" /></a></li>
+              <li><a href="https://www.instagram.com/osaka_christmasmarket/" target="_blank" class="alpha"><img src="/images/common/icon_is.svg" alt="クリスマスマーケットin大阪公式インスタグラム" /></a></li>
+            </ul>
+          </div>
+          <div class="ttl02"><img src="images/top/ttl_02.png" alt="ドイツの冬の風物詩「クリスマスマーケット」が今年もてんしばで開催" /></div>
+          <div class="ttlTx"><img src="images/top/ttl.svg" alt="クリスマスマーケット in 大阪 てんしば 2026" /></div>
+          <div class="tx01"><img src="images/top/head_icon01.png" alt="入場料無料" /></div>
+          <div class="tx02"><img src="images/top/tx_date.svg" alt="2026.11.20(Fri)～12.25（Fri）開催！11/20（Fri）16:00～21:00（Lo.20:30）、11/21（Fri）～12/18（Fri）11:00～21:00（Lo.20:30）、12/19（Sat）～12/25（Fri）11:00～21:30（Lo.21:00） ※雨天決行（荒天中止）会場：天王寺公園「てんしば」「てんしばi:na」" /></div>
+        </div>
+      </div>
+      <div class="clouds"></div>
+    </div>
+    <header>
+  <div id="header">
+    <nav id="gnavi">
+      <div class="inner">
+        <ul class="menu">
+          <li class="TOP"><a href="/">TOP</a></li>
+          <li class="outline"><a href="/#outline">開催概要</a></li>
+          <li class="shop"><a href="/shop/">お店一覧</a></li>
+          <li class="about"><a href="/about/">クリスマスマーケットの楽しみ方</a></li>
+          <li class="faq"><a href="/faq/">よくあるご質問</a></li>
+          <li class="contact"><a href="/contact/">お問い合わせ</a></li>
+        </ul>
+      </div>
+    </nav>
+    <button type="button" class="drawer-toggle drawer-hamburger"><span class="drawer-hamburger-icon"></span></button>
+    <div class="drowerBox">
+      <nav class="drawer-nav" role="navigation">
+        <div class="drawer-menu">
+          <div id="gnav" class="clearfix">
+            <div class="inner">
+              <div class="sp-only ttl">MENU</div>
+              <ul class="drawer-menu">
+                <li class="top"><a href="/">TOP</a></li>
+                <li class="outline"><a href="/#outline">開催概要</a></li>
+                <li class="shop"><a href="/shop/">お店一覧</a></li>
+                <li class="about"><a href="/about/">クリスマスマーケットの楽しみ方</a></li>
+                <li class="faq"><a href="/faq/">よくあるご質問</a></li>
+                <li class="contact"><a href="/contact/">お問い合わせ</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+    <div id="breadCrumb">
+      <div id="breadCrumb">
+        <ul itemscope itemtype="https://schema.org/BreadcrumbList" class="inner">
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href="https://osaka-christmasmarket.com/"><span itemprop="name">クリスマスマーケットin大阪 TOP</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+        </ul>
+      </div>
+    </div>
+    <article>
+      <section>
+        <div id="sec01" class="">
+          <div class="inner">
+            <div class="box">
+              <div class="boxInner extra">
+                <h2 class="headding01">お知らせ</h2>
+                <ul>
+                  <li>
+                    <p class="date">2026.11.17<span class="newIcon">NEW</span></p>
+                    <p><a href="/about/#sec02">ご飲食券</a>、<a href="/about/#sec02-04">オリジナルグッズ</a>、<a href="/about/#sec02-05">クリスマスカプセルトイ</a>、<a href="/about/#sec04">近隣施設との周遊特典 情報</a>を公開いたしました。</p>
+                  </li>
+                  <li>
+                    <p class="date">2026.11.09<span class="newIcon">NEW</span></p>
+                    <p><a href="/about/#sec02-03">点灯式</a>、<a href="/about/#sec02-02">サンタクロース情報</a>、<a href="/about/#sec03">パフォーマンス情報</a>を公開いたしました。</p>
+                  </li>
+                  <li>
+                    <p class="date">2026.11.04<span class="newIcon">NEW</span></p>
+                    <p><a href="/shop/#ws">ワークショップの事前予約を開始しました！</a>！</p>
+                  </li>
+                  <li>
+                    <p class="date">2026.10.23</p>
+                    <p>今年も盛りだくさん！<a href="/shop/" target="_blank">お店一覧</a>を公開いたしました！</p>
+                  </li>
+                  <li>
+                    <p class="date">2026.10.2</p>
+                    <p><a href="https://www.kkday.com/ja/product/153534?cid=17198" target="_blank">オリジナルマグカップの事前予約</a>を開始しました！</p>
+                  </li>
+                  <li>
+                    <p class="date">2026.9.5</p>
+                    <p>2026年の開催決定！<br>
+                      皆様のご来場お待ちしております！</p>
+                  </li>
+                </ul>
+                <div class="banner">
+                  <p class="aC" style="margin: 20px 0;padding: 20px;border: 2px solid #dfbc5d;
+    background-color: #fff;color: #d01127;">数量限定！マグカップの確実な購入には<a href="https://www.kkday.com/ja/product/153534?cid=17198" target="_blank" style="color: #54733c;text-decoration: underline">Web事前予約</a>がおすすめ！<br>
+                    さらに、2個セットなら通常2,000円のところ、事前予約限定で1,900円に！</p>
+                  <a href="https://www.kkday.com/ja/product/153534?cid=17198" target="_blank"> <img src="images/about/about_banner_mag.png" alt="オリジナルマグカップでホットドリンクを楽しもう！" /></a>
+                  <p class="aC" style="margin: 20px 0;padding: 20px;border: 2px solid #dfbc5d;
+                                     background-color: #fff;color: #d01127;">会場にて、毎日ワークショップを開催！詳しくはこちら！</p>
+                  <a href="https://www.kkday.com/ja-jp/affiliate/whlb/osaka_christmasmarke" target="_blank"><img src="images/top/banner_ws2026_top.png" width="1000" height="385" alt="" /></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/sec01-->
+      </section>
+      <section>
+        <div id="sec02" class="fadein">
+          <div class="inner" id="outline">
+            <div class="box">
+              <div class="boxInner">
+                <h2 class="headding02">開催概要</h2>
+                <div class="main"> <img src="/images/top/main.png?2026" alt="クリスマスマーケット in 大阪 てんしば 2026 入場無料" style="border:3px solid #dfbc5e"> </div>
+                <table>
+                  <tbody>
+                    <tr>
+                      <th><span>名称</span></th>
+                      <td>クリスマスマーケット in 大阪 てんしば 2026</td>
+                    </tr>
+                    <tr>
+                      <th><span>日時</span></th>
+                      <td>2026年11月20日（金）～12月25日（金）<br>
+                        <span>11/20（Fri）16:00～21:00（Lo.20:30）<br>
+                          11/21（Sat）～12/18（Fri）11:00～21:00（Lo.20:30）<br>
+                          12/19（Sat）～12/25（Fri）11:00～21:30（Lo.21:00） <br>
+                          ※雨天決行(荒天中止)</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th><span>会場</span></th>
+                      <td>
+                        <p>天王寺公園「てんしば」、「てんしばi:na」</p>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th><span>アクセス</span></th>
+                      <td>大阪メトロ御堂筋線・谷町線「天王寺」駅、JR「天王寺」駅、近鉄「大阪阿部野橋」駅、<br>
+                        阪堺上町線「天王寺駅前」駅各駅から徒歩すぐ</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="map aC"><a href="https://www.tennoji-park.jp/access" target="_blank" class="button">アクセスマップ</a><br>
+                  <a href="https://www.tennoji-park.jp/access" target="_blank" class="tenshiba">てんしば・てんしばi:naサイトへ</a>
+                </div>
+                <h2 class="headding02">会場内でのお願い</h2>
+                <ul class="attention">
+                  <li>飲酒運転および20歳未満の方の飲酒は固くお断りしております。20歳未満の方の飲酒防止のため、スタッフが年齢確認をさせていただく場合がございます。</li>
+                  <li>会場および公園内は禁煙です。喫煙は公園所定の場所にてお願いいたします。</li>
+                  <li>お客様のお手荷物、貴重品管理には十分ご注意ください。会場内での紛失、盗難、事故やお客様同士のトラブルについて主催者では一切責任を負いません。</li>
+                  <li>私物等を置いてのお席確保はご遠慮ください。長時間放置されている場合は撤去させていただく場合がございますので、あらかじめご了承ください。</li>
+                  <li>会場内はセルフサービスです。食事等の片付けはゴミステーションに各自でお持ちください。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/sec02-->
+      </section>
+      <section>
+        <div id="sec04">
+          <div class="inner fadein">
+            <div class="box">
+              <div class="boxInner">
+                <h2>クリスマスマーケットとは</h2>
+                <p>「クリスマスマーケット」とは、クリスマスまでの約4週間、<br class="sp-none">
+                  ドイツをはじめヨーロッパ各地で開催される伝統的なお祭りです。</p>
+                <div class="aR ">
+                  <div class="buttonWrap"> <a href="/about/" class="button">マーケットの楽しみ方へ</a> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/sec04-->
+      </section>
+    </article>
+  </div>
+  <!--/wrapper-->
+  <div id="footerInfo">
+  <div class="inner">
+    <ul class="credit">
+      <li>主催：<span>クリスマスマーケット in 大阪 実行委員会</span></li>
+      <li>協力：<span>近鉄不動産株式会社</span></li>
+      <li>後援：<span>大阪・神戸ドイツ連邦共和国総領事館／ドイツ観光局／天王寺区／公益財団法人大阪観光局</span></li>
+    </ul>
+    <ul class="logoList">
+      <li class="firstChild"><img src="../images/common/german2026.png" alt="大阪・神戸ドイツ連邦共和国総領事館"></li>
+      <li class="even"><a href="https://twitter.com/GermanyTravelJP" target="_blank"><img src="/images/common/german2.png" alt="ドイツ観光局"></a></li>
+      <li class="sp-none lastChild">
+        <div class="thumb"><img src="../images/common/stop.png" alt="ストップ！未成年者飲酒・飲酒運転"></div>
+        <div class="txt">ストップ！未成年者飲酒・飲酒運転。<br>
+          お酒は楽しく適量で。<br>
+          妊娠中・授乳期の飲酒はやめましょう。</div>
+      </li>
+    </ul>
+  </div>
+</div>
+<footer>
+  <div id="footer">
+    <div class="footerSns sp-only">
+      <div class="ttl">最新情報はSNSをチェック！</div>
+      <ul>
+        <li class="firstChild"><a href="https://twitter.com/osaka_christmas" target="_blank" class="alpha"><img src="/images/common/icon_tw.svg" alt="クリスマスマーケット in 大阪公式ツイッター"></a></li>
+        <li class="even"><a href="https://www.facebook.com/osakachristmasmarket" target="_blank" class="alpha"><img src="/images/common/icon_fb.svg" alt="クリスマスマーケット in 大阪公式facebookページ"></a></li>
+        <li class="lastChild"><a href="https://www.instagram.com/osaka_christmasmarket/" target="_blank" class="alpha"><img src="/images/common/icon_is.svg" alt="クリスマスマーケット in 大阪公式インスタグラム"></a></li>
+      </ul>
+    </div>
+    <p class="copyright">Copyright&copy; 主催：クリスマスマーケット in 大阪 実行委員会<br>
+      COPYRIGHT©Osaka Christmasmarket.ALL RIGHTS RESERVED.</p>
+  </div>
+</footer>
+<div class="sns">
+  <div class="ttl">最新情報はSNSをチェック！</div>
+  <ul>
+    <li> <a href="https://twitter.com/osaka_christmas" target="_blank" class="alpha"><img src="/images/common/icon_tw.svg" alt="クリスマスマーケット in 大阪 公式ツイッター" /></a> </li>
+    <li> <a href="https://www.facebook.com/osakachristmasmarket" target="_blank" class="alpha"><img src="/images/common/icon_fb.svg" alt="クリスマスマーケット in 大阪 公式facebookページ" /></a> </li>
+    <li> <a href="https://www.instagram.com/osaka_christmasmarket/" target="_blank" class="alpha"><img src="/images/common/icon_is.svg" alt="クリスマスマーケット in 大阪 公式インスタグラム" /></a> </li>
+  </ul>
+</div>
+<a href="#pageTop" class="goTop">トップへ戻る</a></body>
+
+</html>

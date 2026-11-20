@@ -581,7 +581,7 @@
             <h3 class="eventParade__event__title -marginTop-8-pc -marginTop-6-sp">振付師TERUPOPによる<br>百鬼夜行ダンスレクチャー動画</h3>
              <div class="movies -rotate -marginTop-6-pc -marginTop-4-sp">
               <div class="iframeWrap -textCenter">
-                <iframe width="974" height="548" src="https://www.youtube.com/embed/KjBkUMxE1J0" title="振付師TERUPOP・かちん太による妖怪☆ダンスライブ！ ダンス動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe loading="lazy" width="974" height="548" src="https://www.youtube.com/embed/KjBkUMxE1J0" title="振付師TERUPOP・かちん太による妖怪☆ダンスライブ！ ダンス動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
 
@@ -706,7 +706,7 @@
           <h3 class="foodHeading -marginTop-6-pc -marginTop-4-sp">振付師TERUPOPによる<br>妖怪☆ダンスライブ！ レクチャー動画</h3>
           <div class="movies -rotate -marginTop-6-pc -marginTop-4-sp">
             <div class="iframeWrap -textCenter -marginTop-6-pc -marginTop-4-sp">
-              <iframe width="974" height="548" src="https://www.youtube.com/embed/dC5DtWFjGyM" title="振付師TERUPOPによる妖怪☆ダンスライブ！ レクチャー動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe loading="lazy" width="974" height="548" src="https://www.youtube.com/embed/dC5DtWFjGyM" title="振付師TERUPOPによる妖怪☆ダンスライブ！ レクチャー動画" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
 
@@ -1419,11 +1419,85 @@
 </p>
 
              
-                 <table class="table -spVertical">
+                 <table class="table -spVertical -marginTop-9-pc -marginTop-7-sp">
               <colgroup>
                 <col width="30%">
               </colgroup>
-                            <tr>
+                            
+              <tr>
+                <th>登壇者</th>
+                <td>
+
+
+                  <div class="event__detail__imgBox -marginTop-9-pc -marginTop-7-sp">
+                    <img src="img/spot-yokaisummit/img-koizumi.webp" srcset="img/spot-yokaisummit/img-koizumi.webp 1x,img/spot-yokaisummit/img-koizumi@2x.webp 2x" alt="小泉 凡" width="300" height="387">
+                   <div>
+                   <p class="modal__subtitle">小泉八雲記念館 館長／島根県立大学短期大学部 名誉教授</p>
+                   <h2 class="modal__title">小泉 凡</h2>
+                  <p class="-marginTop-5-pc -marginTop-3-sp">1961年東京生まれ。成城大学・同大学院で民俗学を専攻後、1987年に松江へ赴任。妖怪、怪談を切り口に、文化資源を発掘し観光・文化創造に生かす実践活動や、小泉八雲の「オープン・マインド」を社会に活かすプロジェクトを世界のゆかりの地で展開する。2022年度全国日本学士会アカデミア賞を受賞。小泉八雲記念館館長・焼津小泉八雲記念館名誉館長・島根県立大学短期大学部名誉教授。主著に『民俗学者・小泉八雲』（恒文社）、『怪談四代記―八雲のいたずら』（講談社）、『小泉八雲と妖怪』（玉川大学出版）、『セツと八雲』(朝日新書)ほか。小泉八雲（ラフカディオ・ハーン）曾孫、日本ペンクラブ会員。</p>
+                   </div>
+                  </div>
+
+
+                  <div class="event__detail__imgBox -marginTop-9-pc -marginTop-7-sp">
+                    <img src="img/spot-yokaisummit/img-yumoto.webp" srcset="img/spot-yokaisummit/img-yumoto.webp 1x,img/spot-yokaisummit/img-yumoto@2x.webp 2x" alt="湯本 豪一" width="300" height="387">
+                   <div>
+                   <p class="modal__subtitle">湯本豪一記念日本妖怪博物館 名誉館長</p>
+                   <h2 class="modal__title">湯本 豪一</h2>
+                  <p class="-marginTop-5-pc -marginTop-3-sp">1950年 東京都墨田区生まれ。<br>1977年 法政大学大学院(日本史学)修士課程修了。<br>川崎市市民ミュージアム学芸員、学芸室長を歴任。<br>現在妖怪研究・蒐集を行うかたわら大学院や大学で教鞭をとる。妖怪に関する書籍を含め多数の著書を執筆。<br>民俗学者・妖怪研究家。</p>
+                   </div>
+                  </div>
+
+
+                    <div class="event__detail__imgBox -marginTop-9-pc -marginTop-7-sp">
+                    <img src="img/spot-yokaisummit/img-toritengu.webp?202611" srcset="img/spot-yokaisummit/img-toritengu.webp?202611 1x,img/spot-yokaisummit/img-toritengu@2x.webp?202611 2x" alt="三次の烏天狗" width="300" height="387">
+                   <div>
+                    <p class="modal__subtitle">三次観光アンバサダー</p>
+                   <h2 class="modal__title">三次の烏天狗</h2>
+                  <p class="-marginTop-5-pc -marginTop-3-sp">2017年地域おこし協力隊として広島県三次(みよし)市に移住。2020年卒業後も、妖怪として三次もののけミュージアムを中心とした市の観光PRに携わる。地域イベントや妖怪企画などさまざまな場所に出現している。</p>
+                   </div>
+                  </div>
+
+
+                  <div class="event__detail__imgBox -marginTop-9-pc -marginTop-7-sp">
+                    <img src="img/spot-yokaisummit/img-fujita.webp" srcset="img/spot-yokaisummit/img-fujita.webp 1x,img/spot-yokaisummit/img-fujita@2x.webp 2x" alt="藤田 裕文" width="300" height="387">
+                   <div>
+                   <p class="modal__subtitle">福崎町 地域振興課 副課長</p>
+                   <h2 class="modal__title">藤田 裕文</h2>
+                  <p class="-marginTop-5-pc -marginTop-3-sp">昭和50年生まれ<br>所属：福崎町役場　地域振興課　副課長<br>　　　企画調整係長・観光推進係長　兼務<br>経歴：平成10年4月　福崎町役場入庁<br>　　　令和4年4月～　地域振興課　所属　（5年目）<br>妖怪を活かした観光や地域活性化施策などを展開している。<br>イベント時には河童のガジロウのアクターや通訳として活動している。</p>
+                   </div>
+                  </div>
+
+
+                  <div class="event__detail__imgBox -marginTop-9-pc -marginTop-7-sp">
+                    <img src="img/spot-yokaisummit/img-gajiro.webp" srcset="img/spot-yokaisummit/img-gajiro.webp 1x,img/spot-yokaisummit/img-gajiro@2x.webp 2x" alt="ガジロウ" width="300" height="387">
+                   <div>
+                   <p class="modal__subtitle">福崎町キャラクター</p>
+                   <h2 class="modal__title">河童のガジロウ</h2>
+                  <p class="-marginTop-5-pc -marginTop-3-sp">性別：オス<br>年齢：不詳<br>生年月日(発見日)：平成26年2月14日<br>兵庫県福崎町に棲む日本一の勤労河童「ガジロウ」。平成26年2月14日、機嫌よく散歩していたところ福崎町に捕獲され、その日から毎日、福崎町の観光のために15分おきに池から飛び出す業務を命じられている。令和元年には福崎駅前にアクリル水槽が完成。そこにも15分おきに顔を出す業務が追加され、多忙を極める毎日。最近では、イベントにも呼ばれるようになり、サインのために字の練習をするなど影での努力も怠らない、なんともいじらしい勤労河童。ストレスでハゲてると誤解されることが多いが、実はハゲではない。河童特有の皿である。いっぱい働いていつかキュウリを腹いっぱい食べられる日を夢みて活動しています。</p>
+                   </div>
+                  </div>
+
+
+                   <div class="event__detail__imgBox  -marginTop-9-pc -marginTop-7-sp">
+                    <img src="img/spot-yokaisummit/img-kawano.webp" srcset="img/spot-yokaisummit/img-kawano.webp 1x,img/spot-yokaisummit/img-kawano@2x.webp 2x" alt="河野隼也" width="300" height="387">
+                   <div>
+                    <p class="modal__subtitle">株式会社百妖箱 代表取締役／妖怪文化研究家</p>
+                   <h2 class="modal__title">河野隼也</h2>
+                  <p class="-marginTop-5-pc -marginTop-3-sp">幼い頃から妖怪に惹かれ、京都の芸術系大学在学中に京都の妖怪伝説の観光利用についての実践的研究を行う。妖怪をテーマに仮面や、グラフィックアートの制作などの創作活動と共に、数々の妖怪イベント「一条百鬼夜行」「モノノケ市」「嵐電妖怪電車」「伏見妖怪酒祭」「三井寺妖怪ナイト」、2025年は大阪・関西万博にて「大江山酒呑百鬼夜行」などを手掛ける。著書に「きみのとなりにいるリアル妖怪図鑑」(西東社)、レギュラー出演番組に「妖怪とあそぶ」（エンタメ〜テレ）がある。近年は地元京都を本拠に地域振興イベントを手がけつつ、日本の妖怪文化の海外への発信をライフワークとして活動している。</p>
+                   </div>
+                  </div>
+
+
+
+
+
+
+                </td>
+              </tr>
+
+             
+              <tr>
                 <th>開催日</th>
                 <td>11/23(月・祝)</td>
               </tr>
@@ -1436,18 +1510,7 @@
                 <th>場所</th>
                 <td>太秦城</td>
               </tr>
-              <tr>
-                <th>登壇者</th>
-                <td>
-                  <ul class="listDisc">
-                  <li class="listDisc__item">小泉 凡（小泉八雲記念館 館長／島根県立大学短期大学部 名誉教授）</li>
-                  <li class="listDisc__item">湯本 豪一（湯本豪一記念日本妖怪博物館 名誉館長）</li>
-                  <li class="listDisc__item">藤田 裕文（福崎町 地域振興課 副課長）</li>
-                  <li class="listDisc__item">ガジロウ（福崎町キャラクター）</li>
-                  <li class="listDisc__item">三次の烏天狗（三次観光アンバサダー）</li>
-                  <li class="listDisc__item">河野 隼也（株式会社百妖箱 代表取締役／妖怪文化研究家）</li>
-                </ul></td>
-              </tr>
+             
                    
             </table>
               <ul class="listNote -marginTop-4-pc -marginTop-4-sp -white">
@@ -2028,85 +2091,85 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/1-bpXNRVr00" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="1-bpXNRVr00" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/1-bpXNRVr00/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">百鬼夜行ダンス ver1</p>
             </div>
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/f7ThdnXhTpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="f7ThdnXhTpI" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/f7ThdnXhTpI/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
              <p class="movie-swiper-title">百鬼夜行ダンス ver2</p>
             </div>
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/6UmAovpOw7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="6UmAovpOw7M" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/6UmAovpOw7M/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">百鬼夜行ダンス ver3</p>
             </div>
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/RkrCdbplNFE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="RkrCdbplNFE" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/RkrCdbplNFE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">百鬼夜行ダンス ver4</p>
             </div>
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/5515nsRBBEM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="5515nsRBBEM" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/5515nsRBBEM/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">百鬼夜行ダンス 夜行童子ver</p>
             </div>
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/mIb8uj1ai3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="mIb8uj1ai3k" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/mIb8uj1ai3k/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">百鬼夜行ダンス ひょうすべver</p>
             </div>
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/WG0jMbT1nbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="WG0jMbT1nbg" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/WG0jMbT1nbg/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">百鬼夜行ダンス 手の目ver</p>
             </div>
             
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/ONq98BbiqVU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="ONq98BbiqVU" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/ONq98BbiqVU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">百鬼夜行ダンス 見越し入道ver</p>
                </div>
 
                <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/9B5hAMVWfko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="9B5hAMVWfko" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/9B5hAMVWfko/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">百鬼夜行ダンス 舌長姥ver</p>
                </div>
 
                <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/l-4W-qO3C0k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="l-4W-qO3C0k" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/l-4W-qO3C0k/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">百鬼夜行ダンス アマビエver</p>
                </div>
 
                <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/R7kqXYq-woU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="R7kqXYq-woU" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/R7kqXYq-woU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">百鬼夜行ダンス ひょうすべ・手の目・見越し入道ver</p>
                </div>
 
                <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/MDkFZ3Q9U0s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="MDkFZ3Q9U0s" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/MDkFZ3Q9U0s/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">百鬼夜行ダンス 夜行童子・アマビエver</p>
                </div>
 
                 <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/DoLLADOz_eo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="DoLLADOz_eo" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/DoLLADOz_eo/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">百鬼夜行ダンス 夜行童子・舌長姥ver</p>
                </div>
@@ -2170,32 +2233,32 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/EuFfI0IfJUE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="EuFfI0IfJUE" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/EuFfI0IfJUE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">きのホ。×夜行童子・山姥・青行燈</p>
             </div>
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/glzzmDWT_iI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="glzzmDWT_iI" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/glzzmDWT_iI/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">人力車えびす屋×夜行童子・火車</p>
             </div>
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/WKe5BONPPa0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="WKe5BONPPa0" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/WKe5BONPPa0/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
              <p class="movie-swiper-title">大丸京都×夜行童子・けらけら女</p>
             </div>
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/FbNrJGTFF2A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="FbNrJGTFF2A" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/FbNrJGTFF2A/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">MISAMARU×夜行童子・けらけら女・山姥</p>
             </div>
            
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/ZYUPu8k8XlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="ZYUPu8k8XlM" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/ZYUPu8k8XlM/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">京都鉄道博物館×夜行童子・青行燈</p>
             </div>
@@ -2203,7 +2266,7 @@
 
              <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/LXTqQLA5tkE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="LXTqQLA5tkE" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/LXTqQLA5tkE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">京都ハンナリーズ×夜行童子・火車・野狐</p>
                </div>
@@ -2212,41 +2275,41 @@
             
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/o-j_Hs61AGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="o-j_Hs61AGE" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/o-j_Hs61AGE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">京都鉄道博物館×夜行童子・青行燈</p>
             </div>
             
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/k6XyW6v3Yss" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="k6XyW6v3Yss" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/k6XyW6v3Yss/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">嵯峨野トロッコ×夜行童子・山姥①</p>
             </div>
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/rMUmY3wUl7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="rMUmY3wUl7Q" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/rMUmY3wUl7Q/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">嵯峨野トロッコ×夜行童子・山姥②</p>
             </div>
             
             <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/3sov-ulzW7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="3sov-ulzW7Q" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/3sov-ulzW7Q/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">嵯峨野トロッコ×夜行童子・山姥③</p>
                </div>
 
                <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/HUkjde0QgNo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="HUkjde0QgNo" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/HUkjde0QgNo/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">SOU・SOU×夜行童子・山爺・野狐</p>
                </div>
 
                 <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/F3oN_e2x2Zw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="F3oN_e2x2Zw" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/F3oN_e2x2Zw/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">京都サンガF.C.×夜行童子・天狗</p>
                </div>
@@ -2254,7 +2317,7 @@
 
               <div class="swiper-slide">
               <div class="swiper-movieWrapper">
-                <iframe width="548" height="974" src="https://www.youtube.com/embed/iJt06A2e7Pk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <button type="button" class="ytFacade" data-yt-id="iJt06A2e7Pk" aria-label="動画を再生"><img src="https://i.ytimg.com/vi/iJt06A2e7Pk/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async"></button>
               </div>
               <p class="movie-swiper-title">やさいのようせい<br>白ナス×夜行童子・手の目・泥田坊</p>
                </div>
@@ -2428,6 +2491,74 @@
 <!-- <p id="pageTop" class="pageTop"><span></span></p> -->
 
 <script src="/feature/yokai2026/common/js/common.js"></script>
+<style>
+  .ytFacade {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    background: #000;
+    cursor: pointer;
+  }
+  .ytFacade img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .ytFacade::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 68px;
+    height: 48px;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    background: rgba(255, 0, 0, .9) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5v14l11-7z' fill='%23fff'/%3E%3C/svg%3E") center / 28px no-repeat;
+  }
+  .swiper-movieWrapper > iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>
+<script>
+  (function () {
+    var active = null;
+
+    function restore(iframe) {
+      var id = iframe.getAttribute('data-yt-id');
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'ytFacade';
+      btn.setAttribute('data-yt-id', id);
+      btn.setAttribute('aria-label', '動画を再生');
+      btn.innerHTML = '<img src="https://i.ytimg.com/vi/' + id + '/hqdefault.jpg" alt="" width="480" height="360" decoding="async">';
+      iframe.parentNode.replaceChild(btn, iframe);
+    }
+
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest ? e.target.closest('.ytFacade') : null;
+      if (!btn) return;
+      e.preventDefault();
+      if (active && active.parentNode) restore(active);
+
+      var id = btn.getAttribute('data-yt-id');
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&playsinline=1';
+      iframe.title = 'YouTube video player';
+      iframe.setAttribute('data-yt-id', id);
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+      iframe.setAttribute('allowfullscreen', '');
+      btn.parentNode.replaceChild(iframe, btn);
+      active = iframe;
+    });
+  })();
+</script>
 <script>
 
 </script>

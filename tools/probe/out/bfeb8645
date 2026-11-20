@@ -1,0 +1,1413 @@
+<div class="follow">
+  <a href="/ticket/" class="btn_orange">
+    <div>チケット購入はこちら<span></span></div>
+  </a>
+</div>
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 2023-04-06 DD -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K3RZXWS');</script>
+<!-- End Google Tag Manager -->    <!-- facebook ビジネスマネージャ ドメイン認証 2023-07-04 -->
+<meta name="facebook-domain-verification" content="ljaund2qtdri6y1tfg6efwsbgy0jgd" />
+
+    <meta charset="utf-8">
+<title>ネスタイルミナ | アクティビティ | NESTA RESORT KOBE ネスタリゾート神戸</title>
+<meta name="description" content="大自然を舞台にしたアクティビティをはじめ、手ぶらで楽しめる本格BBQ、天然温泉、プールなど日帰りでも宿泊でも楽しめる大自然の冒険テーマパークです。">
+<meta name="keywords" content="">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://nesta.co.jp/activity/illumination/">
+<meta property="og:url" content="https://nesta.co.jp/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/images/common/ogp.png">
+<meta property="og:title" content="ネスタイルミナ | アクティビティ | NESTA RESORT KOBE ネスタリゾート神戸">
+<meta property="og:description" content="大自然を舞台にしたアクティビティをはじめ、手ぶらで楽しめる本格BBQ、天然温泉、プールなど日帰りでも宿泊でも楽しめる大自然の冒険テーマパークです。">
+<link rel="shortcut icon" href="/images/common/favicon.ico">
+<link rel="apple-touch-icon" href="/images/common/apple_touch_icon.png">
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="/assets/css/photoswipe.css">
+<link rel="stylesheet" href="/assets/css/style.css?v=1792391339">
+
+
+    <meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@nestaresortkobe" />
+	<meta name="twitter:title" content="NESTA RESORT KOBE" />
+	<meta name="twitter:description" content="ネスタリゾート神戸へようこそ！　ここは兵庫県三木市の旧グリーンピア三木に、2016年7月オープンしたNESTA RESORT KOBEの公式ウェブサイト。広大な自然の中に、ホテル（ホテル・ザ・パヴォーネ）、WATER FORT（プール）、グランプBBQパーク、などの家族でもカップルでも遊べるリゾートが盛りだくさん。" />
+	<meta name="twitter:image" content="https://nesta.co.jp/images/common/twitter_card.jpg" />
+</head>
+<body id="activity" class="illumination">
+    <!-- 2023-04-06 DD -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K3RZXWS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!-- header -->
+<header role="banner" class="l-header" id="header">
+    <div class="p-header">
+
+        <div class="p-headerBar">
+        <div class="p-headerBarInner">
+            <h1 class="c-siteLogo"><a href="/"><img src="/images/common/site_logo.png" width="307" height="auto" alt="NESTA RESORT KOBE ネスタリゾート神戸"></a></h1>
+            <a href="/business-time/" class="c-mobileNavButton -time"><img src="/images/common/svg/icon_time.svg" alt="営業時間"><h1>営業時間</h1></a>
+            <a href="/ticket/" class="c-mobileNavButton -ticket"><img src="/images/common/svg/icon_ticket.svg" alt="チケット購入"><h1>チケット</h1></a>
+            <button class="c-mobileNavButton -stay c-openReserveModal"><img src="/images/common/svg/icon_reserve.svg" alt="宿泊予約"><h1>宿泊予約</h1></button>
+            <button class="p-mobileNavButton" id="headerSwitch"><span></span><span></span><span></span><span>MENU</span><span>CLOSE</span></button>
+        </div>
+        </div>
+
+        <!-- mobile menu -->
+        <div class="p-headerMenu">
+        <div class="p-headerMenuInner">
+        <div class="p-headerMenuContent l-headerGrid">
+
+        <div class="l-headerGridCol__1">
+        <ul class="c-guideNavList -access">
+            <li><a href="/images/common/areamap/area-map.pdf" class="c-iconButton -areamap" target="_blank"><img src="/images/common/svg/icon_areamap.svg" alt="アクセス">ガイドマップ</a></li>
+            <li><a href="/access/" class="c-iconButton -access"><img src="/images/common/svg/icon_access.svg" alt="アクセス">アクセス</a></li>
+            <li><a href="/business-time/" class="c-iconButton -time"><img src="/images/common/svg/icon_time.svg" alt="営業時間">営業時間</a></li>
+        </ul>
+        </div>
+
+        <div class="l-headerGridCol__2">
+        <div class="c-langNav">
+            <input type="checkbox" name="lang_switch" id="lang_switch">
+            <label class="c-langNavTitle" for="lang_switch"><span>Language</span>
+            <ul class="c-langNavList">
+                <li><a href="/">日本語</a></li>
+                <li><a href="/en/">English</a></li>
+                <li><a href="/cn/">简体中文</a></li>
+                <li><a href="/tw/">繁體中文</a></li>
+                <li><a href="/kr/">한국어</a></li>
+            </ul></label>
+        </div>
+        </div>
+
+        <div class="l-headerGridCol__3">
+        <div class="c-userAction">
+            <a href="/ticket/" class="c-userActionButton -ticket"><img src="/images/common/svg/icon_ticket.svg" alt="料金・チケット購入"><h1>料金・チケット購入</h1></a>
+            <button class="c-userActionButton -stay c-openReserveModal"><img src="/images/common/svg/icon_reserve.svg" alt="宿泊予約"><h1>宿泊予約</h1></button>
+        </div>
+        </div>
+
+        <div class="l-headerGridCol__4">
+        <div class="p-headerCategoryNav">
+            <input type="radio" name="header_category_check" id="headerCategoryNav01" checked>
+            <div class="p-headerCategoryNavCol -activity"><a href="/activity/"><label for="headerCategoryNav01"><img src="/images/common/svg/icon_activity.svg" alt="アクティビティ" class="c-headerCategoryNavImg -activity"><h1>アクティ<br class="u-sp--br">ビティ</h1></label></a>
+            <div class="p-headerCategoryNavLevel">
+            <div class="p-headerCategoryNavLevelInner">
+            <a href="/activity/" class="c-arwLink -lg">アクティビティ一覧はこちら</a>
+            <!-- <hr class="c-partition"> -->
+            <div class="p-headerCategoryNavWrapper c-scrollX">
+            <div class="p-headerCategoryNavList l-grid">
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/illumination/">
+                                        <img src="/uploads/images/activity/images/16891131866adb1349d54e4058964049-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">ネスタイルミナ</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/canyon-skywalk/">
+                                        <img src="/uploads/images/activity/images/11015380006ae5c4c4d8a67224334648-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">【NEW!】キャニオン・スカイウォーク</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/sky-eagle/">
+                                        <img src="/uploads/images/activity/images/20299431746ae5c514af075001844185-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">スカイ・イーグル</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/buggy-tour/">
+                                        <img src="/uploads/images/activity/images/18863334246a18fa3631cd1682965137-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">ネスタ･バギーツアー（別途有料）</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/buggy-level-s/">
+                                        <img src="/uploads/images/activity/images/57309401269e098f61eb1a713532002-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">ライジング・バギー Level S</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/rising-buggy/">
+                                        <img src="/uploads/images/activity/images/151472745369b7c09608cd4212364111-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">ライジング・バギー</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/candy-cart/">
+                                        <img src="/uploads/images/activity/images/87249947969b7bfe58d4a8326386659-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">キャンディー・カート＜1Dayパス不要＞</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/blaster-battle-field/">
+                                        <img src="/uploads/images/activity/images/42089256369ae71f4ecf0e098547040-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">ブラスター・バトルフィールド</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/harvest-terrace/">
+                                        <img src="/uploads/images/activity/images/13722896026abcd10a348c1528298286-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">ハーベスト・テラス</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/wild-canoe/">
+                                        <img src="/uploads/images/activity/images/1246514747673d0f09e5372874833929-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">ワイルド・カヌー</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/skyjungle-thrill/">
+                                        <img src="/uploads/images/activity/images/1743187127694898d5388d4425324037-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">スカイジャングル スリルコース</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/skyjungle-fan/">
+                                        <img src="/uploads/images/activity/images/14238898466948991179323990227328-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">スカイジャングル ファンコース</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/skyjungle-zipline/">
+                                        <img src="/uploads/images/activity/images/13155994466948994e6b57d469325612-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">スカイジャングル ジップライン</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/animal-friends/">
+                                        <img src="/uploads/images/activity/images/1523701532673d0f395f768498540418-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">アニマル・フレンズ</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/heroes/">
+                                        <img src="/uploads/images/activity/images/52094392068b1090e607e1281837454-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">レジェンドスポーツ ヒーローズ</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/kids-airgym/">
+                                        <img src="/uploads/images/activity/images/9244252756902b874ef2c0628131273-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">キッズ・エアジム</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/kids-field/">
+                                        <img src="/uploads/images/activity/images/52934051569aa40390bbdb981888417-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">キッズ・フィールド＜1Dayパス不要＞</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/billiards/">
+                                        <img src="/uploads/images/activity/images/470701022696752fe0dfb4938210326-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">ビリヤード</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/table-tennis/">
+                                        <img src="/uploads/images/activity/images/123365802696752d2483a8001027162-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">卓球</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/game-corner/">
+                                        <img src="/uploads/images/activity/images/16966057866ad576f43efb5502077959-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">ゲームコーナー＜1Dayパス不要＞</h1>
+                </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                <a href="https://nesta.co.jp/activity/kids/">
+                                        <img src="/uploads/images/activity/images/1930690475673d11717bed5597485994-780x392.webp" alt="">
+                                        <h1 class="c-gridColTitle">キッズ・アドベンチャータワー＜1Dayパス不要＞</h1>
+                </a>
+                </div>
+                            </div>
+            </div>
+            <!-- <div class="c-pushLink"><a href="" class="c-iconLink"><img src="/images/common/svg/icon_clock.svg" alt="">待ち時間検索</a></div> -->
+            <div class="c-scrollGuide">横スクロールで<br>さらに表示できます<img src="/images/common/svg/icon_swipe.svg" alt="横スクロール"></div>
+            </div>
+            </div>
+        </div>
+
+
+        <!-- <input type="radio" name="header_category_check" id="headerCategoryNav02">
+        <div class="p-headerCategoryNavCol -illumination"><a href="/activity/illumination/"><label for="headerCategoryNav02"><img src="/images/common/svg/icon_illumination.svg" alt="ネスタイルミナ" class="c-headerCategoryNavImg -illumination"><h1>ネスタ<br>イルミナ</h1></label></a>
+        <div class="p-headerCategoryNavLevel">
+            <div class="p-headerCategoryNavLevelInner">
+            <a href="/activity/" class="c-arwLink -lg">アクティビティ一覧はこちら</a>
+                <div class="p-headerCategoryNavList">
+                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="/activity/illumination/"><img src="/uploads/images/activity/images/897134546673d10134c15f138841552-780x392.webp" alt="ネスタイルミナ">
+                    <h1 class="c-gridColTitle">ネスタイルミナ（2/28まで営業）</h1>
+                    </a>
+                </div>
+                </div>
+                <div class="c-pushLink">
+                <a href="/ticket/" class="c-iconLink -ticket"><img src="/images/common/svg/icon_ticket.svg" alt="">おすすめチケット</a>
+                </div>
+            </div>
+            </div>
+        </div> -->
+
+        <input type="radio" name="header_category_check" id="headerCategoryNav02">
+        <div class="p-headerCategoryNavCol -pool">
+            <a href="/activity/illumination/">
+                <label for="headerCategoryNav02">
+                    <img src="/images/common/svg/icon_illumination.svg" alt="ネスタイルミナ" class="c-headerCategoryNavImg -pool">
+                    <h1>ネスタイルミナ</h1>
+                </label>
+            </a>
+            <div class="p-headerCategoryNavLevel">
+            <div class="p-headerCategoryNavLevelInner">
+                <div class="p-headerCategoryNavList">
+                    <div class="p-headerCategoryNavListCol l-gridCol">
+                        <a href="/activity/illumination/"><img src="/images/activity/illumination/header_illumination_thumb_1.jpg" alt="ネスタイルミナ">
+                        <h1 class="c-gridColTitle">ネスタイルミナ</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <!-- <a href="/pool/">
+                <label for="headerCategoryNav02">
+                    <img src="/images/common/svg/icon_pool.svg" alt="プール" class="c-headerCategoryNavImg -pool">
+                    <h1 style="display: block;">プール<br><span style="font-size: 9px;">今期営業終了<span></h1>
+                </label>
+            </a> -->
+            <!-- <div class="p-headerCategoryNavLevel">
+            <div class="p-headerCategoryNavLevelInner">
+                <div class="p-headerCategoryNavList">
+                    <div class="p-headerCategoryNavListCol l-gridCol">
+                        <a href="/pool/"><img src="/images/pool/header_pool_thumb_1.jpg" alt="プール TOP">
+                        <h1 class="c-gridColTitle">プール TOP</h1>
+                        </a>
+                    </div>
+                    <div class="p-headerCategoryNavListCol l-gridCol">
+                        <a href="/pool/#waterslider"><img src="/images/pool/header_pool_thumb_2.jpg" alt="ウォータースライダー" style="opacity: 0.6;">
+                        <h1 class="c-gridColTitle">ウォータースライダー</h1>
+                        </a>
+                    </div>
+                    <div class="p-headerCategoryNavListCol l-gridCol">
+                        <a href="/pool/#standardpool"><img src="/images/pool/header_pool_thumb_3.jpg" alt="プール" style="opacity: 0.6;">
+                        <h1 class="c-gridColTitle">プール</h1>
+                        </a>
+                    </div>
+                    <div class="p-headerCategoryNavListCol l-gridCol">
+                        <a href="/pool/#indoorpool"><img src="/images/pool/header_pool_thumb_4.jpg" alt="屋内キッズプール" style="opacity: 0.6;">
+                        <h1 class="c-gridColTitle">屋内キッズプール</h1>
+                        </a>
+                    </div>
+                    <div class="p-headerCategoryNavListCol l-gridCol">
+                        <a href="/pool/#reservedseats"><img src="/images/pool/header_pool_thumb_5.jpg" alt="プール有料席" style="opacity: 0.6;">
+                        <h1 class="c-gridColTitle">プール有料席</h1>
+                        </a>
+                    </div>
+                    <div class="p-headerCategoryNavListCol l-gridCol">
+                        <a href="/pool/#food"><img src="/images/pool/header_pool_thumb_6.jpg" alt="プールフード" style="opacity: 0.6;">
+                        <h1 class="c-gridColTitle">プールフード</h1>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div> -->
+        </div>
+
+        <input type="radio" name="header_category_check" id="headerCategoryNav03">
+        <div class="p-headerCategoryNavCol -hotel"><a href="/hotel/"><label for="headerCategoryNav03"><img src="/images/common/svg/icon_hotel.svg" alt="宿泊" class="c-headerCategoryNavImg -hotel"><h1>宿泊</h1></label></a>
+            <div class="p-headerCategoryNavLevel">
+            <div class="p-headerCategoryNavLevelInner">
+                <div class="p-headerCategoryNavHeader">
+                    <a href="/hotel/" class="c-arwLink -lg">ホテル・グランピング TOP</a>
+                    <hr class="c-partition u-pc--br">
+                    <button class="c-iconLink -reserve c-openReserveModal" data-target-tab="reserveTab2"><img src="/images/common/svg/icon_reserve.svg" alt="宿泊予約">レンタカー付き宿泊プラン</button>
+                    <button class="c-iconLink -reserve c-openReserveModal" data-target-tab="reserveTab3"><img src="/images/common/svg/icon_reserve.svg" alt="宿泊予約">航空券付き宿泊プラン</button>
+                    <button class="c-iconLink -reserve c-openReserveModal" data-target-tab="reserveTab4"><img src="/images/common/svg/icon_reserve.svg" alt="宿泊予約">新幹線付き宿泊プラン</button>
+                </div>
+                <div class="p-headerCategoryNavList -hotelList">
+
+                    <div class="p-headerCategoryNavListCol l-gridCol">
+                    <h1 class="c-gridColCategoryTitle">ホテル</h1>
+                    <div class="c-gridColContent">
+                        <a href="/hotel/hotel-the-nesta-spa/"><img src="/images/hotel/header_hotel_thumb_hotelthenestaspa.jpg" alt="ホテル ザ・ネスタ＆スパ"></a>
+                        <a href="/hotel/hotel-the-nesta-spa/"><h2 class="c-gridColTitle">ホテル ザ・ネスタ＆スパ</h2></a>
+                        <div class="c-gridColLinks">
+                            <a href="/hotel/hotel-the-nesta-spa/" class="c-arwLink -md">詳しくはこちら</a>
+                            <a href="https://go-nesta.reservation.jp/ja/hotels/nesta-h/rooms?ra=3537_7856.3537_7857.3537_7858&after_days=3" class="c-arwLink -md -reserve" target="_blank">ご予約はこちら</a>
+                        </div>
+                    </div>
+                    <div class="c-gridColContent">
+                        <a href="/hotel/premiere-terrace/"><img src="/images/hotel/header_hotel_thumb_premiereterrace.jpg" alt="プレミアテラス"></a>
+                        <a href="/hotel/premiere-terrace/"><h2 class="c-gridColTitle">プレミアテラス</h2></a>
+                        <div class="c-gridColLinks">
+                            <a href="/hotel/premiere-terrace/" class="c-arwLink -md">詳しくはこちら</a>
+                            <a href="https://go-nesta.reservation.jp/ja/hotels/nesta-h/rooms?ra=3538_7859.3538_78608&after_days=3" class="c-arwLink -md -reserve" target="_blank">ご予約はこちら</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <h1 class="c-gridColCategoryTitle">ラグジュアリー・ステイ</h1>
+                    <div class="c-gridColContent">
+                    <a href="/hotel/maisonette-sweet-villa/"><img src="/images/hotel/header_hotel_thumb_maisonettesweetvilla.jpg" alt="メゾネットスイートヴィラ"></a>
+                    <a href="/hotel/maisonette-sweet-villa/"><h2 class="c-gridColTitle">メゾネットスイートヴィラ</h2></a>
+                    <div class="c-gridColLinks">
+                        <a href="/hotel/maisonette-sweet-villa/" class="c-arwLink -md">詳しくはこちら</a>
+                        <a href="https://go-nesta.reservation.jp/ja/hotels/nesta-h/rooms?ra=3540_7868" class="c-arwLink -md -reserve" target="_blank">ご予約はこちら</a>
+                    </div>
+                    </div>
+                    <div class="c-gridColContent">
+                    <a href="/hotel/royal-sweet-villa/"><img src="/images/hotel/header_hotel_thumb_royalsweetvilla.jpg" alt="ロイヤルスイートヴィラ"></a>
+                    <a href="/hotel/royal-sweet-villa/"><h2 class="c-gridColTitle">ロイヤルスイートヴィラ</h2></a>
+                    <div class="c-gridColLinks">
+                        <a href="/hotel/royal-sweet-villa/" class="c-arwLink -md">詳しくはこちら</a>
+                        <a href="https://go-nesta.reservation.jp/ja/hotels/royal-s/rooms?ra=3541_7869.3541_7870.3541_7871.3541_78728&after_days=3" class="c-arwLink -md -reserve" target="_blank">ご予約はこちら</a>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <h1 class="c-gridColCategoryTitle">グランピング</h1>
+                    <div class="c-gridColContent">
+                    <a href="/hotel/glamping-cabin/"><img src="/images/hotel/header_hotel_thumb_glampingcabin.jpg" alt="グランピングキャビン"></a>
+                    <a href="/hotel/glamping-cabin/"><h2 class="c-gridColTitle">グランピングキャビン</h2></a>
+                    <div class="c-gridColLinks">
+                        <a href="/hotel/glamping-cabin/" class="c-arwLink -md">詳しくはこちら</a>
+                        <a href="https://go-nesta.reservation.jp/ja/hotels/glamp-c/rooms?ra=3539_7861.3539_7863.3539_7864.3539_7865.3539_7867.3539_79588&after_days=3" class="c-arwLink -md -reserve" target="_blank">ご予約はこちら</a>
+                    </div>
+                    </div>
+                    <div class="c-gridColContent">
+                    <a href="/hotel/casual-cottage/"><img src="/images/hotel/header_hotel_thumb_casualcottage.jpg" alt="カジュアルコテージ"></a>
+                    <a href="/hotel/casual-cottage/"><h2 class="c-gridColTitle">カジュアルコテージ</h2></a>
+                    <div class="c-gridColLinks">
+                        <a href="/hotel/casual-cottage/" class="c-arwLink -md">詳しくはこちら</a>
+                        <a href="https://go-nesta.reservation.jp/ja/hotels/nesta-h/rooms?ra=3591_7989.3591_79908&after_days=3" class="c-arwLink -md -reserve" target="_blank">ご予約はこちら</a>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+        <input type="radio" name="header_category_check" id="headerCategoryNav04">
+        <div class="p-headerCategoryNavCol -spa"><a href="/spa/"><label for="headerCategoryNav04"><img src="/images/common/svg/icon_spa.svg" alt="天然温泉" class="c-headerCategoryNavImg -spa"><h1>天然温泉</h1></label></a>
+            <div class="p-headerCategoryNavLevel">
+                <div class="p-headerCategoryNavLevelInner has-note">
+                <a href="/spa/" class="c-arwLink -lg">スパ（温泉）TOP</a>
+                <hr class="c-partition">
+                <div class="p-headerCategoryNavList l-grid">
+                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="/spa/onsen/"><img src="/images/spa/header_spa_thumb_onsen.jpg" alt="温泉">
+                    <h1 class="c-gridColTitle">温泉</h1>
+                    </a>
+                </div>
+                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="/spa/sauna/"><img src="/images/spa/header_spa_thumb_sauna.jpg" alt="岩盤浴（着衣サウナ）">
+                    <h1 class="c-gridColTitle">岩盤浴（着衣サウナ）</h1>
+                    </a>
+                </div>
+                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="/spa/meal/"><img src="/images/spa/header_spa_thumb_meal.jpg" alt="お食事">
+                    <h1 class="c-gridColTitle">お食事</h1>
+                    </a>
+                </div>
+                <!-- <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="/spa/recommend-plan/"><img src="/images/spa/header_spa_thumb_recommend_plan.jpg" alt="おすすめの過ごし方">
+                    <h1 class="c-gridColTitle">おすすめの過ごし方</h1>
+                    </a>
+                </div> -->
+                </div>
+                <div class="c-pushLink"><a href="/spa/facilities/" class="c-arwLink -md">施設案内</a><a href="/spa/guide/" class="c-arwLink -md">ご利用料金</a></div>
+            </div>
+            </div>
+        </div>
+        <input type="radio" name="header_category_check" id="headerCategoryNav05">
+        <div class="p-headerCategoryNavCol -gourmet"><a href="/restaurant/"><label for="headerCategoryNav05"><img src="/images/common/svg/icon_gourmet.svg" alt="フード" class="c-headerCategoryNavImg -gourmet"><h1>フード</h1></label></a>
+            <div class="p-headerCategoryNavLevel">
+            <div class="p-headerCategoryNavLevelInner has-note">
+                <a href="/restaurant/" class="c-arwLink -lg">グルメ＆BBQ TOP</a>
+                <div class="p-headerCategoryNavList">
+
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="https://nesta.co.jp/restaurant/buffet/">
+                                                <img src="/uploads/images/restaurants/images/15710027956a96259683a07137741833-780x392.webp" alt="">
+                                                <h1 class="c-gridColTitle">ホテルブッフェ(朝食・夕食)</h1>
+                    </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="https://nesta.co.jp/restaurant/all.day.dining_grandish/">
+                                                <img src="/uploads/images/restaurants/images/309396583680848f6106d6790292617-780x392.webp" alt="">
+                                                <h1 class="c-gridColTitle">ALL DAY DINING GRANDISH</h1>
+                    </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="https://nesta.co.jp/restaurant/glamping-day/">
+                                                <img src="/uploads/images/restaurants/images/20425921896a9625d9880e8648369044-780x392.webp" alt="">
+                                                <h1 class="c-gridColTitle">GLAMP BBQ</h1>
+                    </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="https://nesta.co.jp/restaurant/glamp-lunch/">
+                                                <img src="/uploads/images/restaurants/images/1757493311673d9346c23bc273040899-780x392.webp" alt="">
+                                                <h1 class="c-gridColTitle">GLAMP LUNCH</h1>
+                    </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="https://nesta.co.jp/restaurant/sazanka/">
+                                                <img src="/uploads/images/restaurants/images/20695980376a1cda84946d1577765387-780x392.webp" alt="">
+                                                <h1 class="c-gridColTitle">日本料理 さざんか</h1>
+                    </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="https://nesta.co.jp/restaurant/harima/">
+                                                <img src="/uploads/images/restaurants/images/381104106a8d076cd4a16399836360-780x392.webp" alt="">
+                                                <h1 class="c-gridColTitle">酒バー はりま ※休業中</h1>
+                    </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="https://nesta.co.jp/restaurant/minouya/">
+                                                <img src="/uploads/images/restaurants/images/13899671026a961fad6343d967678874-780x392.webp" alt="">
+                                                <h1 class="c-gridColTitle">美嚢舎</h1>
+                    </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="https://nesta.co.jp/restaurant/shichiriba/">
+                                                <img src="/uploads/images/restaurants/images/1685480979673fe2a204df9771651635-780x392.webp" alt="">
+                                                <h1 class="c-gridColTitle">七厘場</h1>
+                    </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="https://nesta.co.jp/restaurant/okibi/">
+                                                <img src="/uploads/images/restaurants/images/133097976569a3897f9216b317480679-780x392.webp" alt="">
+                                                <h1 class="c-gridColTitle">熾火</h1>
+                    </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="https://nesta.co.jp/restaurant/shiratsuyu/">
+                                                <img src="/uploads/images/restaurants/images/8254878726abb7e7ceaae4738027990-780x392.webp" alt="">
+                                                <h1 class="c-gridColTitle">白露</h1>
+                    </a>
+                </div>
+                                <div class="p-headerCategoryNavListCol l-gridCol">
+                    <a href="https://nesta.co.jp/restaurant/minouya_hanare/">
+                                                <img src="/uploads/images/restaurants/images/2361669206a31f16fdd0ca739613173-780x392.webp" alt="">
+                                                <h1 class="c-gridColTitle">離れ</h1>
+                    </a>
+                </div>
+                
+                </div>
+                <div class="c-pushLink">
+                <a href="https://bot.talkappi.com/faq/cat?facility_cd=nesta-qa&member_id=3242d2e1-a3b3-c3ec-316c-0386f73dd954&h=&q=%E3%82%A2%E3%83%AC%E3%83%AB%E3%82%AE%E3%83%BC&size=87.5%" class="c-arwLink -sm" target="_blank">食物アレルギーについて</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        </div>
+
+        <div class="l-headerGridCol__5">
+        <ul class="c-guideNavList -push">
+            <li><a href="/event/" class="c-iconLinkMain -event"><img src="/images/common/svg/icon_calendar.svg" alt="">イベント・トピックス</a></li>
+            <li><a href="/enjoy-plan/" class="c-iconLinkMain -enjoy"><img src="/images/common/svg/icon_sparkle.svg" alt="">パークの楽しみ方</a></li>
+            <li><a href="/corp/" class="c-iconLinkMain">団体利用</a></li>
+            <li><a href="https://nesta.co.jp/event/548/" class="c-iconLinkMain">場所貸し</a></li>
+        </ul>
+        </div>
+
+        <div class="l-headerGridCol__6">
+        <div class="p-headerSubNav">
+            <ul class="c-headerSubNavList">
+            <li class="u-pc--none"><a href="/business-time/">営業時間カレンダー</a></li>
+            <li><a href="/recruit/">採用情報</a></li>
+            <li class="u-pc--none"><a href="/hometown-tax/">ふるさと納税</a></li>
+            <li class="u-pc--none"><a href="/company/">企業・採用情報</a></li>
+            <li class="u-sp--none u-pcOrder--1"><a href="/news/">お知らせ</a></li>
+            <li class="u-pcOrder--1"><a href="javascript:TalkappiApp.showfaq('','');">よくあるご質問</a></li>
+            <li><a href="/application-form/">申請書様式ダウンロード</a></li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="l-headerGridCol__7">
+        <ul class="c-headerSubNavList">
+            <li><a href="/release/">プレスリリース</a></li>
+            <li><a href="javascript:TalkappiApp.showfaq('','');">お問い合わせ</a></li>
+            <li><a href="/sitemap/">サイトマップ</a></li>
+        </ul>
+        <div class="c-snsNav">
+            <h3 class="c-snsNavTitle">Official SNS</h3>
+            <ul class="c-snsNavList">
+                <li><a href="https://www.instagram.com/nestaresortkobe/" target="_blank"><img src="/images/common/svg/icon_sns_instagram.svg" alt="公式Instagram"></a></li>
+                <li><a href="https://x.com/NESTARESORTKOBE" target="_blank"><img src="/images/common/svg/icon_sns_x.svg" alt="公式X" class="c-snsIcon__x"></a></li>
+                <li><a href="https://www.facebook.com/NESTARESORTKOBE/" target="_blank"><img src="/images/common/svg/icon_sns_facebook.svg" alt="公式Facebook"></a></li>
+                <li><a href="https://www.tiktok.com/@nestaresortkobe" target="_blank"><img src="/images/common/svg/icon_sns_tiktok.svg" alt="公式TikTok"></a></li>
+            </ul>
+        </div>
+        <ul class="c-headerSubNavList -guideline">
+            <li><a href="/terms-of-use/"><h2>パーク利用約款</h2></a></li>
+              <li><a href="/images/common/terms-of-use-for-accommodation-facilities.pdf" target="_blank"><h2>宿泊者利用規約</h2></a></li>
+              <li><a href="/privacy-policy/"><h2>個人情報の取扱いについて</h2></a></li>
+              <li><a href="/images/common/payment-services-act.pdf" target="_blank"><h2>資金決済法に基づく情報提供について</h2></a></li>
+        </ul>
+        </div>
+
+
+            
+        </div>
+        </div>
+        </div>
+        <!-- mobile menu -->
+
+    </div>
+</header>
+<!-- header -->
+    <!-- main -->
+    <main role="main" class="l-main" id="main">
+     <section class="p-importantInfo">
+    <div class="l-container -width--1200">
+
+      <div class="p-homeInformation">
+          <h1 class="p-homeInformationTitle"><img src="/images/common/svg/icon_caution.svg" class="c-importantIcon">Information</h1>
+          <ul class="p-homeInformationList">
+              <li><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=LPXyWn1bPUCP-SeDGwfbR-5ywsrUhX1Dl7sMBAQzk-lUMExLQ0xZUFlBMVQ3NlBLWk5XRUIyWlcyWSQlQCN0PWcu" target="_blank"><span>忘れ物フォームはこちら</span></a></li>
+          </ul>
+      </div>
+
+  </div>
+</section>        <div class="p-breadcrumbNav">
+    <div class="l-container -width--1100">
+        <ol class="p-breadcrumbNavList">
+        <li class="home"><a href="/"><span>HOME</span></a></li>
+                                <li><a href="/activity/">アクティビティ</a></li>
+                                        <li><b>ネスタイルミナ</b></li>
+                		</ol>
+    </div>
+</div>
+
+        <section class="p-areaHeading">
+    <div class="p-areaHeadingImg">
+        <div class="l-container -width--1230">
+            <picture>
+                <source srcset="/images/activity/illumination/heading_illumination_sp.jpg" media="(max-width: 600px)" type="image/jpg">
+                <img src="/images/activity/illumination/heading_illumination_pc.jpg" alt="ネスタイルミナ イメージ">
+            </picture>
+        </div>
+        
+
+
+    </div>
+    <div class="l-container -width--1100">
+        <div class="p-areaMeta">
+            <h1 class="p-areaTitle ">
+                                <img src="/images/activity/illumination/logo_illumination.png" alt="ネスタイルミナ" class="c-areaLogo">
+                                                    <span class="c-areaName">ネスタイルミナ</span>
+                            </h1>
+            <div class="p-areaOption">
+                <ul class="c-articleOptionList">
+                                                                                                </ul>
+            </div>
+        </div>
+
+        
+<div class="p-areaAction">
+    <a href="https://nestaresortkobe.jp/" class="c-iconLink c-arwLink -lg -ticket"><img src="/images/common/svg/icon_ticket.svg" alt="">チケット購入</a>
+</div>
+<div class="p-areaPush">
+    <h2 class="c-areaPushTitle">光と自然が織り成す、<br>ネスタリゾート神戸だけの幻想空間。</h2>
+    <p class="c-areaPushCopy">ネスタのイルミネーションは、小学生以下のお子さまと愛犬<span class="c-note -sm">※1</span>入場無料。<br>ご家族と、カップルやご友人と、愛犬と。<br>みんなで楽しむ秋冬の特別な夜。</p>
+</div>
+<div class="p-areaHour">
+    <h2 class="c-areaHourTitle">開催期間</h2>
+    <p class="u-font__z--20 u-mg__t--0">2026年11月14日（土）～2027年2月28日（日）</p>
+    <p class="c-note -sm c-noteIndent u-mg__t--10">※2027年2月1日（月）～2月10日（水）は休業</p>
+    <h2 class="c-areaHourTitle u-mg__t--20"><img src="/images/common/svg/icon_clock.svg" alt="">本日の営業時間</h2>
+    <p class="c-areaHourCopy"><b><span class="c-areaHourTime">18:00〜22:00</span><br><span class="c-areaHourOption">最終入場21:00</span></b></p>
+    <h3 class="c-areaHourTitle u-mg__t--20">雲海演出期間</h3>
+    <p class="u-mg__t--0"><b>2026年11月14日（土）～12月31日（木）（予定）</b></p>
+</div>
+
+        
+    </div>
+</section>        
+        <section class="p-areaContents">
+    <div class="-hasArea--bg">
+        <div class="l-container -width--800">
+            <img src="/images/activity/illumination/illumination_img2.jpg" alt="">
+            <h4 class="u-font__z--20 u-mg__b--10"><b>ルミナストンネル</b></h4>
+            <p>頭上いっぱいに広がる光のアーチ。きらめきに包まれながら、特別なひとときを演出します。</p>
+            <img src="/images/activity/illumination/illumination_img1.jpg" alt="">
+            <h4 class="u-font__z--20 u-mg__b--10"><b>ファンタジーラグーン</b></h4>
+            <p>最深部では、雲海×イルミネーションの景色が待っています。その時でしか見られない雲海の形と光の表情をお楽しみください。<br><span class="c-note -sm">※雲海演出は12/31までの予定です。気温や天候などによっては雲海演出を中止する場合がございます。</span></p>
+        </div>
+    </div>
+</section>
+
+
+<div class="p-ticketContents">
+    <div class="c-has--bg">
+    <div class="l-container -width--1000">
+
+        <div class="p-spaHeading">
+            <h1 class="c-sectionTitle -lg">チケット</h1>
+            <div class="c-sectionDesc u-mg__b--30">
+            <p>1Dayパスをお持ちの方はネスタイルミナにご入場いただけます。</p>
+            </div>
+        </div>
+
+        <!-- p-ticketSection  id="ticket02"-->
+        <section class="p-ticketSection" id="illumination-ticket01">
+            <div class="c-ticketRecommend"><span>オススメ！</span></div>
+            <div class="p-ticketImg"><img src="/images/activity/illumination/ticket_1.jpg" alt="イルミネーションパス イメージ"></div>
+            <div class="p-ticketCol">
+                <h1 class="c-ticketTitle">【前売券】イルミネーションチケット</h1>
+                <p>今年リニューアルの雄大な自然を活かしたイルミネーションを堪能。</p>
+                <div class="c-ticketTerm">11月14日～12月31日（特定日を除く）</div>
+                <dl class="c-priceTable">
+                    <dt>大人<span>（中学生以上）</span></dt>
+                    <dd><span class="u-font__z--16" style="text-decoration: line-through;">1,700円</span>→ <span class="u-color--pink u-font__z--16">1,500</span><span>円</span></dd>
+                    <dt>小学生以下</dt>
+                    <dd><span class="u-color--pink u-font__z--16">無料</span></dd>
+                </dl>
+                <div class="c-ticketTerm">12月24日～27日（特定日）</div>
+                <dl class="c-priceTable">
+                    <dt>大人<span>（中学生以上）</span></dt>
+                    <dd><span class="u-font__z--16" style="text-decoration: line-through;">1,900円</span>→ <span class="u-color--pink u-font__z--16">1,700</span><span>円</span></dd>
+                    <dt>小学生以下</dt>
+                    <dd><span class="u-color--pink u-font__z--16">無料</span></dd>
+                </dl>
+                <div class="c-ticketTerm">1月1日～2月28日（2月1日～10日の休園期間を除く）</div>
+                <dl class="c-priceTable">
+                    <dt>大人<span>（中学生以上）</span></dt>
+                    <dd><span lass="u-font__z--16" style="text-decoration: line-through;">1,400円</span>→ <span class="u-color--pink u-font__z--16">1,200</span><span>円</span></dd>
+                    <dt>小学生以下</dt>
+                    <dd><span class="u-color--pink u-font__z--16">無料</span></dd>
+                </dl>
+                <p class="c-link"><b><span class="u-color--pink">90日前～前日23:59まで</span>WEBチケット限定で販売</b></p>
+                <a href="https://nestaresortkobe.jp/ticket/detail/70" class="c-arwLinkButton -ticket" target="_blank">チケット購入はこちら</a>
+            </div>
+        </section>
+
+        <section class="p-ticketSection" id="illumination-ticket02">
+            <!-- <div class="c-ticketRecommend"><span>オススメ！</span></div> -->
+            <div class="p-ticketImg"><img src="/images/activity/illumination/ticket_2.jpg" alt="イルミネーション＋温泉パス イメージ"></div>
+            <div class="p-ticketCol">
+                <h1 class="c-ticketTitle">イルミネーション＋温泉パス</h1>
+                <p>イルミネーション入場と、贅沢露天風呂のある十界の湯入浴券がセットになったお得なチケット！</p>
+                <p>●十界の湯：10:00～入館可能<br>
+                ●イルミネーション：18:00～21:00入場可能</p>
+                <dl class="c-priceTable">
+                    <dt>大人<span>（中学生以上）</span></dt>
+                    <dd>2,700<span>円</span>〜</dd>
+                    <dt>子供<span>（4歳〜小学生）</span></dt>
+                    <dd>650<span>円</span>〜</dd>
+                </dl>
+                <p class="c-link"><b><span class="u-color--pink">90日前～前日23:59まで</span>WEBチケット限定で販売</b><br><span style="color: #000;">（1月1日以降は後日販売開始）</span></p>
+                <a href="https://nestaresortkobe.jp/ticket/detail/73" class="c-arwLinkButton -ticket" target="_blank">チケット購入はこちら</a>
+            </div>
+        </section>
+
+        <section class="p-ticketSection" id="illumination-ticket03">
+            <!-- <div class="c-ticketRecommend"><span>オススメ！</span></div> -->
+            <div class="p-ticketImg"><img src="/images/activity/illumination/ticket_3.jpg" alt="イルミネーション＋ディナーブッフェパス イメージ"></div>
+            <div class="p-ticketCol">
+                <h1 class="c-ticketTitle">イルミネーション＋<br>ディナーブッフェパス</h1>
+                <p>イルミネーション入場と、ひょうご五国のディナーブッフェがセットになったお得なセット！</p>
+                <p>●ディナーブッフェ：17:30～20:00入場可能<br>
+                ●イルミネーション：18:00～21:00入場可能</p>
+                <div class="c-ticketTerm">11月14日～12月31日（特定日を除く）</div>
+                <dl class="c-priceTable">
+                    <dt>大人<span>（中学生以上）</span></dt>
+                    <dd>6,000<span>円</span></dd>
+                    <dt>子ども（小学生) </dt>
+                    <dd>3,150<span>円</span></dd>
+                    <dt>子ども（4歳～6歳）</dt>
+                    <dd>2,250<span>円</span></dd>
+                </dl>
+                <div class="c-ticketTerm">12月24日～27日（特定日）</div>
+                <dl class="c-priceTable">
+                    <dt>大人<span>（中学生以上）</span></dt>
+                    <dd>6,200<span>円</span></dd>
+                    <dt>子ども（小学生) </dt>
+                    <dd>3,150<span>円</span></dd>
+                    <dt>子ども（4歳～6歳）</dt>
+                    <dd>2,250<span>円</span></dd>
+                </dl>
+                <div class="c-ticketTerm">1月1日～2月28日（2月1日～10日の休園期間を除く）</div>
+                <dl class="c-priceTable">
+                    <dt>大人<span>（中学生以上）</span></dt>
+                    <dd>5,700<span>円</span></dd>
+                    <dt>子ども（小学生) </dt>
+                    <dd>3,150<span>円</span></dd>
+                    <dt>子ども（4歳～6歳）</dt>
+                    <dd>2,250<span>円</span></dd>
+                </dl>
+                <!-- <p><b class="u-color--pink">当日朝6時まで</b><b>WEBチケット限定で販売</b></p> -->
+                <a href="https://nestaresortkobe.jp/ticket/detail/72" class="c-arwLinkButton -ticket" target="_blank">チケット購入はこちら</a>
+            </div>
+        </section>
+
+        <!-- p-ticketSection  id="ticket02"-->
+
+        </div>
+    </div>
+</div>
+
+
+        <section class="p-areaInfo">
+    <div class="l-container -width--1000">
+
+        <div class="p-areaData">
+
+            
+            <div class="p-areaTable">
+
+    <div class="p-areaTableCol">
+        <h2>営業期間</h2>
+        <p><b>2026年11月14日（土）～2027年2月28日（日）</b><br>※雲海演出は12月31日（木）までを予定しております。<br>※2月1日（月）～2月10日（水）は休園日のため休業</p>
+    </div>
+
+    <div class="p-areaTableCol">
+        <h2>営業時間</h2>
+        <p><b>18:00～22:00（最終入場21:00）</b></p>
+    </div>
+
+    <div class="p-areaTableCol">
+        <h2>体験受付</h2>
+        <p><b>ネスタイルミナ受付（第1駐車場方面）</b></p>
+    </div>
+
+ </div>
+
+                                                    <div class="p-areaNote u-mg__b--20">
+    <h2>注意事項</h2>
+    <p class="c-txt--md"><span class="c-note">※1.入場可能なワンちゃんは、体重15kg以下の小型犬に限ります。</span></p>
+    <p class="c-txt--md"><span class="c-note">※ネスタリゾート神戸の利用約款を確認し、同意の上でご利用ください。 未成年者が体験する際は、事前に保護者の同意を得てください。</span></p>
+    <p class="c-txt--md"><span class="c-note">※7歳未満のお子様の体験には、16歳以上の同伴者が必要です。</span></p>
+    <p class="c-txt--md"><span class="c-note">※駐車料金は2時間まで無料／以降1日1,500円（アプリによる決済、詳しくは園内看板をご確認ください）</span></p>
+    <p class="c-txt--md"><span class="c-note">※本ページに掲載の画像はイメージです。</span></p>
+    <p class="c-txt--md"><span class="c-note">※天候、その他安全上の理由により、予告なく運営を変更・中止または待ち時間を延長する場合があります。その場合、料金の一部返金等は行いません。</span></p>
+    <p class="c-txt--md"><span class="c-note">※場内での転倒やケガなどに関しては責任を負いかねますので、くれぐれもご注意ください。</span></p>
+    <p class="c-txt--md"><span class="c-note">※場内での盗難・紛失については一切の責任を負いかねます。貴重品等はお客様ご自身で管理してください。</span></p>
+    <p class="c-txt--md"><span class="c-note">※お子様からは常に目を離さないようにしてください。</span></p>
+</div>
+<!-- <div class="u-mg__b--50">
+<p class="c-txt--sm"><span class="c-note">※天候、その他安全上の理由により、予告なく運営を変更・中止または待ち時間を延長する場合があります。その場合、料金の一部返金等は行いません。</span></p>
+<p class="c-txt--sm u-mg__t--10"><span class="c-note">※安全上のルール、バディ（スタッフ）の指示等に従わない方は体験できません。また、掲示してあるルール（注意事項）、バディ（スタッフ）の指示等に従わないことに起因する事故に関しては、一切の責任を負いかねます。</span></p>
+<p class="c-txt--sm u-mg__t--10"><span class="c-note">※体調の優れない方は、体験をお控えください。</span></p>
+<p class="c-txt--sm u-mg__t--10"><span class="c-note">※飲酒されている方、妊娠されている方は、危険防止のため体験できない施設があります。</span></p>
+<p class="c-txt--sm u-mg__t--10"><span class="c-note">※場内での転倒やケガなどに関しては責任を負いかねますので、くれぐれもご注意ください。</span></p>
+<p class="c-txt--sm u-mg__t--10"><span class="c-note">※場内での盗難・紛失については一切の責任を負いかねます。貴重品等はお客様ご自身で管理してください。</span></p>
+<p class="c-txt--sm u-mg__t--10"><span class="c-note">※お子様からは常に目を離さないようにしてください。</span></p>
+</div> -->
+                            
+            <div class="u-text--center u-mg__b--30">
+                <a href="/activity/" class="c-backListButton">アクティビティ一覧ページへ</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+        <section class="p-recommendArea">
+    <div class="l-container -width--1000">
+        <h1 class="p-recommendAreaTitle"><span><img src="/images/common/svg/icon_activity.svg" alt="">おすすめアクティビティ</span></h1>
+    </div>
+    <div class="l-container -width--1160 p-recommendSliderWrapper">
+        <div class="p-recommendSlider swiper">
+            <div class="p-recommendSliderList swiper-wrapper is-short">
+                <div class="c-recommendSliderCol swiper-slide"><a href="/activity/buggy-level-s/"><figure class="c-recommendSliderThumb"><img src="/images/activity/recommend_activity_risingbuggy-level-s.jpg" alt="ライジング・バギー Level S イメージ"></figure><h3 class="c-recommendSliderCaption">ライジング・バギー Level S</h3><p class="c-recommendSliderCopy">大自然の"アップダウン"を楽しみ尽くせ。<br>これが「Level S」だ。</p></a></div>
+                <div class="c-recommendSliderCol swiper-slide"><a href="/activity/rising-buggy/"><figure class="c-recommendSliderThumb"><img src="/images/activity/recommend_activity_risingbuggy.jpg" alt="ライジング・バギー イメージ"></figure><h3 class="c-recommendSliderCaption">ライジング・バギー</h3><p class="c-recommendSliderCopy">さあ、走りだそう。バギーと共に。</p></a></div>
+                <div class="c-recommendSliderCol swiper-slide"><a href="/activity/heroes/"><figure class="c-recommendSliderThumb"><img src="/images/activity/recommend_activity_heroes.jpg" alt="レジェンドスポーツ ヒーローズ イメージ"></figure><h3 class="c-recommendSliderCaption">レジェンドスポーツ ヒーローズ</h3><p class="c-recommendSliderCopy">選んで遊べる屋内型バーチャルスポーツ</p></a></div>
+                <div class="c-recommendSliderCol swiper-slide"><a href="/activity/buggy-level-s/"><figure class="c-recommendSliderThumb"><img src="/images/activity/recommend_activity_risingbuggy-level-s.jpg" alt="ライジング・バギー Level S イメージ"></figure><h3 class="c-recommendSliderCaption">ライジング・バギー Level S</h3><p class="c-recommendSliderCopy">大自然の"アップダウン"を楽しみ尽くせ。<br>これが「Level S」だ。</p></a></div>
+                <div class="c-recommendSliderCol swiper-slide"><a href="/activity/rising-buggy/"><figure class="c-recommendSliderThumb"><img src="/images/activity/recommend_activity_risingbuggy.jpg" alt="ライジング・バギー イメージ"></figure><h3 class="c-recommendSliderCaption">ライジング・バギー</h3><p class="c-recommendSliderCopy">さあ、走りだそう。バギーと共に。</p></a></div>
+                <div class="c-recommendSliderCol swiper-slide"><a href="/activity/heroes/"><figure class="c-recommendSliderThumb"><img src="/images/activity/recommend_activity_heroes.jpg" alt="レジェンドスポーツ ヒーローズ イメージ"></figure><h3 class="c-recommendSliderCaption">レジェンドスポーツ ヒーローズ</h3><p class="c-recommendSliderCopy">選んで遊べる屋内型バーチャルスポーツ</p></a></div>
+            </div>
+        </div>
+        <div class="swiper-button-prev c-recommendSlider-button-prev"></div>
+        <div class="swiper-button-next c-recommendSlider-button-next"></div>
+    </div>
+</section>    </main>
+    <!-- main -->
+
+    <!-- footer -->
+<footer role="contentinfo" class="l-footer" id="footer">
+  <div class="p-footer l-container -width--1200">
+
+  <div class="p-footerLogo">
+    <h1 class="c-siteLogo"><a href="/"><img src="/images/common/site_logo_default.png" width="307" height="auto" alt="NESTA RESORT KOBE ネスタリゾート神戸"></a></h1>
+    <p class="c-note">※ネスタリゾート神戸のHP内はすべて税込み表記です。</p>
+  </div>
+
+  <div class="l-grid u-align--strech">
+
+    <div class="l-footerGrid --1">
+
+      <div class="l-footerGridCol">
+        <div class="p-footerCategoryNavCol">
+          <input type="checkbox" name="footer_category_check" id="footerCategoryNav01">
+          <label class="p-footerCategoryNavButton" for="footerCategoryNav01"><span></span></label>
+          <a href="/activity/"><figure><img src="/images/common/svg/icon_activity.svg" alt="アクティビティ" class="c-footerCategoryNavImg -activity"></figure><h1>アクティビティ</h1></a>
+          <div class="p-footerCategoryNavContents">
+            <ul class="p-footerCategoryNavList">
+                            <li><a href="https://nesta.co.jp/activity/illumination/"><h2>ネスタイルミナ</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/canyon-skywalk/"><h2>【NEW!】キャニオン・スカイウォーク</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/sky-eagle/"><h2>スカイ・イーグル</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/buggy-tour/"><h2>ネスタ･バギーツアー（別途有料）</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/buggy-level-s/"><h2>ライジング・バギー Level S</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/rising-buggy/"><h2>ライジング・バギー</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/candy-cart/"><h2>キャンディー・カート＜1Dayパス不要＞</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/blaster-battle-field/"><h2>ブラスター・バトルフィールド</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/harvest-terrace/"><h2>ハーベスト・テラス</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/wild-canoe/"><h2>ワイルド・カヌー</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/skyjungle-thrill/"><h2>スカイジャングル スリルコース</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/skyjungle-fan/"><h2>スカイジャングル ファンコース</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/skyjungle-zipline/"><h2>スカイジャングル ジップライン</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/animal-friends/"><h2>アニマル・フレンズ</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/heroes/"><h2>レジェンドスポーツ ヒーローズ</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/kids-airgym/"><h2>キッズ・エアジム</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/kids-field/"><h2>キッズ・フィールド＜1Dayパス不要＞</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/billiards/"><h2>ビリヤード</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/table-tennis/"><h2>卓球</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/game-corner/"><h2>ゲームコーナー＜1Dayパス不要＞</h2></a></li>
+                            <li><a href="https://nesta.co.jp/activity/kids/"><h2>キッズ・アドベンチャータワー＜1Dayパス不要＞</h2></a></li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="l-footerGridCol">
+        <div class="p-footerCategoryNavCol">
+          <a href="/activity/illumination/"><figure><img src="/images/common/svg/icon_illumination.svg" alt="ネスタイルミナ" class="c-footerCategoryNavImg -pool"></figure><h1>ネスタイルミナ</h1></a>
+        </div>
+      </div>
+
+      <!-- <div class="l-footerGridCol">
+        <div class="p-footerCategoryNavCol">
+          <input type="checkbox" name="footer_category_check" id="footerCategoryNav02">
+          <label class="p-footerCategoryNavButton" for="footerCategoryNav02"><span></span></label>
+          <a href="/pool/"><figure><img src="/images/common/svg/icon_pool.svg" alt="プール" class="c-footerCategoryNavImg -pool"></figure><h1>プール 今期営業終了</h1></a>
+          <div class="p-footerCategoryNavContents">
+            <ul class="p-footerCategoryNavList">
+              <li><a href="/pool/#waterslider"><h2>ウォータースライダー</h2></a></li>
+              <li><a href="/pool/#standardpool"><h2>プール</h2></a></li>
+              <li><a href="/pool/#indoorpool"><h2>屋内キッズプール</h2></a></li>
+              <li><a href="/pool/#reservedseats"><h2>レンタル席</h2></a></li>
+              <li><a href="/pool/#food"><h2>フード</h2></a></li>
+              <li><a href="/pool/#ticketpool"><h2>おすすめチケット</h2></a></li>
+            </ul>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="l-footerGrid --2">
+      <div class="l-footerGridCol">
+        <div class="p-footerCategoryNavCol">
+          <input type="checkbox" name="footer_category_check" id="footerCategoryNav03">
+          <label class="p-footerCategoryNavButton" for="footerCategoryNav03"><span></span></label>
+          <a href="/hotel/"><figure><img src="/images/common/svg/icon_hotel.svg" alt="ホテル・グランピング" class="c-footerCategoryNavImg -hotel"></figure><h1>ホテル・グランピング</h1></a>
+          <div class="p-footerCategoryNavContents">
+            <ul class="p-footerCategoryNavList">
+              <li><a href="/hotel/hotel-the-nesta-spa/"><h2>ホテル ザ・ネスタ＆スパ</h2></a></li>
+              <li><a href="/hotel/glamping-cabin/"><h2>グランピングキャビン</h2></a></li>
+              <li><a href="/hotel/premiere-terrace/"><h2>プレミアテラス</h2></a></li>
+              <li><a href="/hotel/maisonette-sweet-villa/"><h2>メゾネットスイートヴィラ</h2></a></li>
+              <li><a href="/hotel/royal-sweet-villa/"><h2>ロイヤルスイートヴィラ</h2></a></li>
+              <li><a href="/hotel/casual-cottage/"><h2>カジュアルコテージ</h2></a></li>
+              <!-- <li><a href=""><h2>ネイチャー･キャンプフィールド</h2></a></li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="l-footerGridCol">
+        <div class="p-footerCategoryNavCol">
+          <input type="checkbox" name="footer_category_check" id="footerCategoryNav04">
+          <label class="p-footerCategoryNavButton" for="footerCategoryNav04"><span></span></label>
+          <a href="/spa/"><figure><img src="/images/common/svg/icon_spa.svg" alt="スパ" class="c-footerCategoryNavImg -spa"></figure><h1>スパ</h1></a>
+          <div class="p-footerCategoryNavContents">
+            <ul class="p-footerCategoryNavList">
+              <li><a href="/spa/onsen/"><h2>温泉</h2></a></li>
+              <li><a href="/spa/sauna/"><h2>岩盤浴（着衣サウナ）</h2></a></li>
+              <li><a href="/spa/meal/"><h2>お食事</h2></a></li>
+              <li><a href="/spa/facilities/"><h2>施設案内</h2></a></li>
+              <!-- <li><a href=""><h2>おすすめの過ごし方</h2></a></li> -->
+              <li><a href="/spa/guide/"><h2>ご利用料金</h2></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="l-footerGrid --3">
+      <div class="l-footerGridCol">
+        <div class="p-footerCategoryNavCol">
+          <input type="checkbox" name="footer_category_check" id="footerCategoryNav05">
+          <label class="p-footerCategoryNavButton" for="footerCategoryNav05"><span></span></label>
+          <a href="/restaurant/"><figure><img src="/images/common/svg/icon_gourmet.svg" alt="グルメ＆BBQ" class="c-footerCategoryNavImg -gourmet"></figure><h1>グルメ＆BBQ</h1></a>
+          <div class="p-footerCategoryNavContents">
+            <ul class="p-footerCategoryNavList">
+                            <li><a href="https://nesta.co.jp/restaurant/buffet/"><h2>ホテルブッフェ(朝食・夕食)</h2></a></li>
+                            <li><a href="https://nesta.co.jp/restaurant/all.day.dining_grandish/"><h2>ALL DAY DINING GRANDISH</h2></a></li>
+                            <li><a href="https://nesta.co.jp/restaurant/glamping-day/"><h2>GLAMP BBQ</h2></a></li>
+                            <li><a href="https://nesta.co.jp/restaurant/glamp-lunch/"><h2>GLAMP LUNCH</h2></a></li>
+                            <li><a href="https://nesta.co.jp/restaurant/sazanka/"><h2>日本料理 さざんか</h2></a></li>
+                            <li><a href="https://nesta.co.jp/restaurant/harima/"><h2>酒バー はりま ※休業中</h2></a></li>
+                            <li><a href="https://nesta.co.jp/restaurant/minouya/"><h2>美嚢舎</h2></a></li>
+                            <li><a href="https://nesta.co.jp/restaurant/shichiriba/"><h2>七厘場</h2></a></li>
+                            <li><a href="https://nesta.co.jp/restaurant/okibi/"><h2>熾火</h2></a></li>
+                            <li><a href="https://nesta.co.jp/restaurant/shiratsuyu/"><h2>白露</h2></a></li>
+                            <li><a href="https://nesta.co.jp/restaurant/minouya_hanare/"><h2>離れ</h2></a></li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="l-footerGridCol">
+        <div class="p-footerCategoryNavCol">
+          <input type="checkbox" name="footer_category_check" id="footerCategoryNav06">
+          <label class="p-footerCategoryNavButton" for="footerCategoryNav06"><span></span></label>
+          <a href="/enjoy-plan/"><h1>パークの楽しみ方</h1></a>
+                    <div class="p-footerCategoryNavContents">
+            <ul class="p-footerCategoryNavList">
+                            <li><a href="/enjoy-plan/full-day-with-friends/"><h2>アクティブ・プラン</h2></a></li>
+                            <li><a href="/enjoy-plan/full-day-with-family/"><h2>ファミリー・プラン</h2></a></li>
+                            <li><a href="/enjoy-plan/rainy-day/"><h2>雨の日プラン</h2></a></li>
+                            <li><a href="/enjoy-plan/dantai_union/"><h2>【団体向け！】労働組合ファミリー交流イベントプラン</h2></a></li>
+                            <li><a href="/enjoy-plan/dantai_kidsclub/"><h2>【団体向け！】子ども会プラン</h2></a></li>
+                            <li><a href="/enjoy-plan/school_trip/"><h2>修学旅行プラン！</h2></a></li>
+                            <li><a href="/enjoy-plan/excursion/"><h2>校外学習プラン！</h2></a></li>
+                            <li><a href="/enjoy-plan/excursion_team/"><h2>校外学習！～チームビルディングプラン～</h2></a></li>
+                            <li><a href="/enjoy-plan/dantai_tamtrip/"><h2>【団体向け！】社員旅行プラン</h2></a></li>
+                          </ul>
+          </div>
+                  </div>
+      </div>
+
+      <div class="l-footerGridCol">
+        <div class="p-footerCategoryNavCol">
+          <a href="/corp/"><h1>団体利用</h1></a>
+        </div>
+      </div>
+
+      <div class="l-footerGridCol">
+        <div class="p-footerCategoryNavCol">
+          <a href="/event/"><h1>イベント・トピックス</h1></a>
+        </div>
+      </div>
+
+      <div class="l-footerGridCol">
+        <div class="p-footerCategoryNavCol">
+          <a href="/news/"><h1>お知らせ</h1></a>
+        </div>
+      </div>
+      
+      <div class="l-footerGridCol p-footerSns">
+        <div class="c-snsNav">
+          <h3 class="c-snsNavTitle">Official SNS</h3>
+          <ul class="c-snsNavList">
+            <li><a href="https://www.instagram.com/nestaresortkobe/" target="_blank"><img src="/images/common/svg/icon_sns_instagram.svg" alt="公式Instagram"></a></li>
+            <li><a href="https://x.com/NESTARESORTKOBE" target="_blank"><img src="/images/common/svg/icon_sns_x.svg" alt="公式X" class="c-snsIcon__x"></a></li>
+            <li><a href="https://www.facebook.com/NESTARESORTKOBE/" target="_blank"><img src="/images/common/svg/icon_sns_facebook.svg" alt="公式Facebook"></a></li>
+            <li><a href="https://www.tiktok.com/@nestaresortkobe" target="_blank"><img src="/images/common/svg/icon_sns_tiktok.svg" alt="公式TikTok"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="l-footerGrid --4">
+      <div class="l-footerGridCol">
+        <div class="p-footerCategoryNavCol">
+          <input type="checkbox" name="footer_category_check" id="footerCategoryNav07">
+          <label class="p-footerCategoryNavButton" for="footerCategoryNav07"><span></span></label>
+          <b><h1>ご利用案内</h1></b>
+          <div class="p-footerCategoryNavContents">
+            <ul class="p-footerCategoryNavList">
+              <li><a href="/ticket/"><h2>チケット購入・料金案内</h2></a></li>
+              <li><a href="/access/"><h2>交通アクセス</h2></a></li>
+              <li><a href="/business-time/"><h2>営業時間カレンダー</h2></a></li>
+              <li><a href="/hometown-tax/"><h2>ふるさと納税</h2></a></li>
+              <li><a href="javascript:TalkappiApp.showfaq('','');"><h2>よくある質問</h2></a></li>
+              <li><a href="/application-form/"><h2>申請書様式ダウンロード</h2></a></li>
+              <li><a href="javascript:TalkappiApp.showfaq('','');"><h2>お問い合わせ</h2></a></li>
+              <li><a href="/terms-of-use/"><h2>ネスタリゾート神戸 利用約款</h2></a></li>
+              <li><a href="/images/common/terms-of-use-for-accommodation-facilities.pdf" target="_blank"><h2>宿泊者利用規約</h2></a></li>
+              <li><a href="/privacy-policy/"><h2>個人情報の取扱いについて</h2></a></li>
+              <li><a href="/images/common/customer-harassment.pdf" target="_blank"><h2>カスタマーハラスメントに対する基本方針</h2></a></li> 
+              <li><a href="/images/common/payment-services-act.pdf" target="_blank"><h2>資金決済法に基づく情報提供について</h2></a></li>
+              <li><a href="/sitemap/"><h2>サイトマップ</h2></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="l-footerGridCol">
+        <div class="p-footerCategoryNavCol">
+          <input type="checkbox" name="footer_category_check" id="footerCategoryNav08">
+          <label class="p-footerCategoryNavButton" for="footerCategoryNav08"><span></span></label>
+          <a href="/corp/"><h1>団体利用</h1></a>
+          <div class="p-footerCategoryNavContents">
+            <ul class="p-footerCategoryNavList">
+              <li><a href="/corp/"><h2>一般団体<br>（法人旅行や20名様以上の集まり）</h2></a></li>
+              <li><a href="https://contents.bownow.jp/files/index/sid_adc4d70ce11ae88c74e0?access_token=&referer=https%3A%2F%2Fnesta.co.jp%2Fcorp&client_id=fff2735a-4c66-476b-a473-854c747c34d2" target="_blank"><h2>学校団体</h2></a></li>
+            </ul>
+          </div>
+        </div>
+      </div> -->
+
+      <div class="l-footerGridCol">
+        
+        <div class="p-footerCategoryNavCol">
+          <input type="checkbox" name="footer_category_check" id="footerCategoryNav09">
+          <label class="p-footerCategoryNavButton" for="footerCategoryNav09"><span></span></label>
+          <b><h1>企業・採用情報</h1></b>
+          <div class="p-footerCategoryNavContents">
+            <ul class="p-footerCategoryNavList">
+              <li><a href="/company/"><h2>企業情報</h2></a></li>
+              <li><a href="/recruit/"><h2>採用情報</h2></a></li>
+              <li><a href="/release/"><h2>プレスリリース</h2></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="l-footerGrid --5">
+
+      <div class="l-footerGridCol">
+        <p class="p-copyright">Copyright © NESTA RESORT KOBE Co., Ltd. All Rights Reserved.</p>
+      </div>
+
+      <div class="l-footerGridCol">
+        <div class="c-langNav">
+          <h2 class="c-langNavTitle"><span>LANGUAGE</span></h2>
+            <ul class="c-langNavList">
+              <li><a href="/en/">English</a></li>
+              <li><a href="/cn/">简体中文</a></li>
+              <li><a href="/tw/">繁體中文</a></li>
+              <li><a href="/kr/">한국어</a></li>
+            </ul>
+        </div>
+      </div>
+
+    </div>
+
+  
+  </div>
+</div>
+</footer>
+<!-- footer -->
+
+<!-- <div class="p-fixedBnr">
+  <a href="https://jtbp.meclib.jp/rurubu-nestaresort-202411-nesta/book/index.html" target="_blank"><img src="/images/common/svg/bnr_rurubu.svg" alt="るるぶ電子版"></a>
+</div> -->
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/pikaday@1.8.0/css/pikaday.css">
+<style>
+    .pika-lendar th:first-child,
+    .pika-lendar td:first-child .pika-button {
+        color: #f00;
+    }
+    .pika-lendar th:last-child,
+    .pika-lendar td:last-child .pika-button {
+        color: #00f;
+    }
+    .has-event .pika-button {
+        color: #f00;
+        font-weight: normal;
+        background: #f5f5f5;
+        box-shadow:none;
+    }
+    .is-selected .pika-button {
+        color: #fff;
+        font-weight: bold;
+        background: #33aaff;
+        box-shadow: inset 0 1px 3px #178fe5;
+        border-radius: 3px;
+    }
+    .pika-button:hover,
+    .pika-row.pick-whole-week:hover .pika-button {
+        color: #fff;
+        background: #ff8000;
+        box-shadow: none;
+        border-radius: 3px;
+    }
+    .is-disabled .pika-button{
+        background: #D5E9F7 !important;
+    }
+    @media screen and (max-width: 767px) {
+        .p-reserveModalTab {
+            padding-left: 13px;
+            padding-right: 13px;
+        }
+    }
+    #reserveTab4:checked ~ #reserveTabContent4 {
+        display: block;
+    }
+    #reserveTabContent4 .p-reserveRailLink--pc {
+        display: none;
+    }
+    @media screen and (min-width: 768px) {
+        #reserveTabContent4 .p-reserveRailLink--pc {
+            display: inline-flex;
+        }
+        #reserveTabContent4 .p-reserveRailLink--sp {
+            display: none;
+        }
+    }
+</style>
+
+
+<div class="p-reserveModal" id="reserveModal">
+<div class="c-closeButton">&times;</div>
+<div class="p-reserveModalContent">
+<div class="l-container -width--1100">
+
+  <h2 class="c-sectionTitle -lg u-mg__b--20"><img src="/images/common/svg/icon_reserve.svg" alt="宿泊予約" class="">宿泊予約検索</h2>
+
+  <div class="p-reserveModalTabs">
+
+    <input type="radio" name="reserveTab" id="reserveTab1" checked>
+    <label class="p-reserveModalTab" for="reserveTab1">宿泊プラン</label>
+    
+    <input type="radio" name="reserveTab" id="reserveTab2">
+    <label class="p-reserveModalTab" for="reserveTab2">レンタカー付き宿泊プラン</label>
+    
+    <input type="radio" name="reserveTab" id="reserveTab3">
+    <label class="p-reserveModalTab" for="reserveTab3">航空券付き宿泊プラン</label>
+
+    <input type="radio" name="reserveTab" id="reserveTab4">
+    <label class="p-reserveModalTab" for="reserveTab4">新幹線付き宿泊プラン</label>
+
+    <!-- reserveTabContent1 -->
+    <div class="p-reserveModalTabsContent" id="reserveTabContent1">
+
+      <h2 class="c-sectionTitle -md u-mg__b--30">宿泊プラン</h2>
+      <a href="https://go-nesta.reservation.jp/ja" class="c-arwLinkButton" target="_blank">プラン検索はこちら</a>
+
+    </div>
+    <!-- reserveTabContent1 -->
+
+    <!-- reserveTabContent2 -->
+    <div class="p-reserveModalTabsContent" id="reserveTabContent2">
+
+      <h2 class="c-sectionTitle -md u-mg__b--30">レンタカー付き宿泊プラン</h2>
+
+      <div class="p-partitionBoxSet">
+
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">ホテル ザ・ネスタ＆スパ（7タイプ）</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://rcdp.tour-list.com/rc/search/?hotelcode=OS750&typefilter=RoomName_724095-RoomName_724089-RoomName_7240885-RoomName_817122-RoomName_8171202-RoomName_817121-RoomName_817123" class="c-arwLinkButton" target="_blank">プラン検索</a>
+                </div>
+            </div>
+      </div>
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">プレミアテラス（4タイプ）</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://rcdp.tour-list.com/rc/search/?hotelcode=OS750&typefilter=RoomName_817115-RoomName_817116-RoomName_817119=RoomName_817124" class="c-arwLinkButton" target="_blank">プラン検索</a>
+                </div>
+            </div>
+      </div>
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">メゾネットスイートヴィラ（2タイプ）</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://rcdp.tour-list.com/rc/search/?hotelcode=OS750&typefilter=RoomName_817117" class="c-arwLinkButton" target="_blank">プラン検索</a>
+                </div>
+            </div>
+      </div>
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">ロイヤルスイートヴィラ</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://rcdp.tour-list.com/rc/search/?hotelcode=HC64073585" class="c-arwLinkButton" target="_blank">プラン検索</a>
+                </div>
+            </div>
+      </div>
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">グランピングキャビン</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://rcdp.tour-list.com/rc/search/?hotelcode=HC64003505" class="c-arwLinkButton" target="_blank">プラン検索</a>
+                </div>
+            </div>
+      </div>
+
+      </div>
+
+    </div>
+    <!-- reserveTabContent2 -->
+
+    <!-- reserveTabContent3 -->
+    <div class="p-reserveModalTabsContent" id="reserveTabContent3">
+
+      <h2 class="c-sectionTitle -md u-mg__b--30">航空券付き宿泊プラン</h2>
+
+      <div class="p-partitionBoxSet">
+
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">ホテル ザ・ネスタ＆スパ（7タイプ）</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://www.tour-list.com/TL/?hc=OS750&typefilter=RoomName_724095-RoomName_724089-RoomName_7240885-RoomName_817122-RoomName_8171202-RoomName_817121-RoomName_817123" class="c-arwLinkButton" target="_blank">プラン検索</a>
+                </div>
+            </div>
+      </div>
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">プレミアテラス（4タイプ）</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://www.tour-list.com/TL/?hc=OS750&typefilter=RoomName_817115-RoomName_817116-RoomName_817119=RoomName_817124" class="c-arwLinkButton" target="_blank">プラン検索</a>
+                </div>
+            </div>
+      </div>
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">メゾネットスイートヴィラ（2タイプ）</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://www.tour-list.com/TL/?hc=OS750&typefilter=RoomName_817117" class="c-arwLinkButton" target="_blank">プラン検索</a>
+                </div>
+            </div>
+      </div>
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">ロイヤルスイートヴィラ</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://www.tour-list.com/TL/?hc=HC64073585" class="c-arwLinkButton" target="_blank">プラン検索</a>
+                </div>
+            </div>
+      </div>
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">グランピングキャビン</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://www.tour-list.com/TL/?hc=HC64003505" class="c-arwLinkButton" target="_blank">プラン検索</a>
+                </div>
+            </div>
+      </div>
+
+      </div>
+
+    </div>
+    <!-- reserveTabContent3 -->
+
+    <!-- reserveTabContent4 -->
+    <div class="p-reserveModalTabsContent" id="reserveTabContent4">
+
+      <h2 class="c-sectionTitle -md u-mg__b--30">新幹線付き宿泊プラン</h2>
+
+      <div class="p-partitionBoxSet">
+
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">ホテル ザ・ネスタ＆スパ（7タイプ）</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://rdp.tour-list.com/railway/search/?hotelcode=OS750" class="c-arwLinkButton p-reserveRailLink--pc" target="_blank" rel="noopener noreferrer">プラン検索</a>
+                    <a href="https://srdp.tour-list.com/railway/search/?hotelcode=OS750" class="c-arwLinkButton p-reserveRailLink--sp" target="_blank" rel="noopener noreferrer">プラン検索</a>
+                </div>
+            </div>
+      </div>
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">プレミアテラス（4タイプ）</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://rdp.tour-list.com/railway/search/?hotelcode=OS750" class="c-arwLinkButton p-reserveRailLink--pc" target="_blank" rel="noopener noreferrer">プラン検索</a>
+                    <a href="https://srdp.tour-list.com/railway/search/?hotelcode=OS750" class="c-arwLinkButton p-reserveRailLink--sp" target="_blank" rel="noopener noreferrer">プラン検索</a>
+                </div>
+            </div>
+      </div>
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">メゾネットスイートヴィラ（2タイプ）</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://rdp.tour-list.com/railway/search/?hotelcode=OS750" class="c-arwLinkButton p-reserveRailLink--pc" target="_blank" rel="noopener noreferrer">プラン検索</a>
+                    <a href="https://srdp.tour-list.com/railway/search/?hotelcode=OS750" class="c-arwLinkButton p-reserveRailLink--sp" target="_blank" rel="noopener noreferrer">プラン検索</a>
+                </div>
+            </div>
+      </div>
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">ロイヤルスイートヴィラ</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://rdp.tour-list.com/railway/search/?hotelcode=HC64073585" class="c-arwLinkButton p-reserveRailLink--pc" target="_blank" rel="noopener noreferrer">プラン検索</a>
+                    <a href="https://srdp.tour-list.com/railway/search/?hotelcode=HC64073585" class="c-arwLinkButton p-reserveRailLink--sp" target="_blank" rel="noopener noreferrer">プラン検索</a>
+                </div>
+            </div>
+      </div>
+      <div class="p-partitionBox">
+            <div class="l-grid -has--gap u-align--center">
+                <div class="l-gridCol -col--6">
+                    <h1 class="c-sectionTitle -sm">グランピングキャビン</h1>
+                </div>
+                <div class="l-gridCol -col--6 u-display--flex u-justify--end">
+                    <a href="https://rdp.tour-list.com/railway/search/?hotelcode=HC64003505" class="c-arwLinkButton p-reserveRailLink--pc" target="_blank" rel="noopener noreferrer">プラン検索</a>
+                    <a href="https://srdp.tour-list.com/railway/search/?hotelcode=HC64003505" class="c-arwLinkButton p-reserveRailLink--sp" target="_blank" rel="noopener noreferrer">プラン検索</a>
+                </div>
+            </div>
+      </div>
+
+      </div>
+
+    </div>
+    <!-- reserveTabContent4 -->
+
+  </div>
+
+</div>
+</div>
+</div>
+    <script src="/assets/js/swiper-bundle.min.js"></script>
+<script src="/assets/js/photoswipe-lightbox.umd.min.js"></script>
+<script src="/assets/js/photoswipe.umd.min.js"></script>
+<script src="/assets/js/app.js?v=1791941506"></script>
+
+<div id="fb-root"></div>
+
+<script src="https://bot.talkappi.com/assets/talkappi/talkappi.js?tid=nesta-hp" defer="defer"></script>
+
+</body>
+</html>

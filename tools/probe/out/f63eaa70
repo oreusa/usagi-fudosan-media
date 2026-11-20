@@ -1131,10 +1131,7 @@ img.emoji {
 <link rel="stylesheet" href="/common/css/flexslider.css" type="text/css" />
 <link rel="stylesheet" href="/common/css/smart.css" type="text/css" />
 
-<!-- <script src="https://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
-<script src="https://maps.google.com/maps/api/js?key=AIzaSyB7M3jQgLirj9IXG5XTeoaw1qhNN-yQ69o&language=ja"></script> -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADKp_jMREaD2PotWoWILkUBGOpUbUy1Yw"></script>
-
+<script src="/common/js/osm-gmaps-shim.js?v=20261118"></script>
 
 <!-- Google Tag Manager -->
 <script>

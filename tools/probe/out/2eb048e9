@@ -14,7 +14,7 @@
 
 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 
-	<!-- This site is optimized with the Yoast SEO Premium plugin v28.8 (Yoast SEO v28.8) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<!-- This site is optimized with the Yoast SEO Premium plugin v28.9 (Yoast SEO v28.9) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
 	<title>丸木スマ展　73歳からのアーティスト | 滋賀県立美術館</title>
 	<link rel="canonical" href="https://www.shigamuseum.jp/exhibitions/12995/" />
 	<meta property="og:locale" content="ja_JP" />
@@ -96,7 +96,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     <!-- #"sm_header_opening-info -->
     <div id="sm_header_opening-info" class="sm-l-header_opening-info">
       <div>
-        <div class="sm-l-header_opening-info-date">11/18</div><div class="sm-l-header_opening-info-time">9:30〜17:00</div>
+        <div class="sm-l-header_opening-info-date">11/20</div><div class="sm-l-header_opening-info-time">9:30〜17:00</div>
       </div>
       <div>
         <div class="sm-l-header_opening-info-status">本日開館</div>
@@ -260,7 +260,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <div class="sm-l-header_information_status">
               本日開館            </div>
             <div class="sm-l-header_information_date">
-              11/18            </div>
+              11/20            </div>
           </div>
           <div class="sm-l-header_information_hour">
             9:30〜17:00          </div>

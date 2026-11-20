@@ -27,24 +27,24 @@
 <meta name="twitter:card" content="summary">
 <!-- / SEO SIMPLE PACK -->
 
-<link rel='stylesheet' id='wp-block-library-css'  href='https://rekihaku.pref.hyogo.lg.jp/wp-includes/css/dist/block-library/style.min.css?ver=5.6.23' type='text/css' media='all' />
-<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://rekihaku.pref.hyogo.lg.jp/wp-includes/css/dist/block-library/theme.min.css?ver=5.6.23' type='text/css' media='all' />
-<link rel='stylesheet' id='dashicons-css'  href='https://rekihaku.pref.hyogo.lg.jp/wp-includes/css/dashicons.min.css?ver=5.6.23' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://rekihaku.pref.hyogo.lg.jp/wp-includes/css/dist/block-library/style.min.css?ver=5.6.24' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://rekihaku.pref.hyogo.lg.jp/wp-includes/css/dist/block-library/theme.min.css?ver=5.6.24' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://rekihaku.pref.hyogo.lg.jp/wp-includes/css/dashicons.min.css?ver=5.6.24' type='text/css' media='all' />
 <link rel='stylesheet' id='xo-event-calendar-css'  href='https://rekihaku.pref.hyogo.lg.jp/wp-content/plugins/xo-event-calendar/css/xo-event-calendar.css?ver=2.2.7' type='text/css' media='all' />
 <link rel='stylesheet' id='theme-style-css'  href='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/css/style.css?ver=1716943043' type='text/css' media='all' />
 <link rel='stylesheet' id='add-style-css'  href='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/css/add-style.css?ver=1774515629' type='text/css' media='all' />
 <link rel='stylesheet' id='mode-css'  href='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/css/none.css?ver=1614692676' type='text/css' media='all' />
 <link rel='stylesheet' id='block-style-css'  href='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/css/block-style.css?ver=1716943042' type='text/css' media='all' />
-<link rel='stylesheet' id='luminous-css-css'  href='//cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.3/luminous-basic.min.css?ver=5.6.23' type='text/css' media='all' />
-<link rel='stylesheet' id='swiper-css-css'  href='//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css?ver=5.6.23' type='text/css' media='all' />
-<link rel='stylesheet' id='basictable-css-css'  href='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/css/basictable.min.css?ver=5.6.23' type='text/css' media='all' />
+<link rel='stylesheet' id='luminous-css-css'  href='//cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.3/luminous-basic.min.css?ver=5.6.24' type='text/css' media='all' />
+<link rel='stylesheet' id='swiper-css-css'  href='//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css?ver=5.6.24' type='text/css' media='all' />
+<link rel='stylesheet' id='basictable-css-css'  href='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/css/basictable.min.css?ver=5.6.24' type='text/css' media='all' />
 <script type='text/javascript' id='xo-event-calendar-ajax-js-extra'>
 /* <![CDATA[ */
 var xo_event_calendar_object = {"ajax_url":"https:\/\/rekihaku.pref.hyogo.lg.jp\/wp-admin\/admin-ajax.php","action":"xo_event_calendar_month"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://rekihaku.pref.hyogo.lg.jp/wp-content/plugins/xo-event-calendar/js/ajax.js?ver=2.2.7' id='xo-event-calendar-ajax-js'></script>
-<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js?ver=5.6.23' id='ofi-js-js'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js?ver=5.6.24' id='ofi-js-js'></script>
 <link rel="https://api.w.org/" href="https://rekihaku.pref.hyogo.lg.jp/wp-json/" /><link rel="alternate" type="application/json" href="https://rekihaku.pref.hyogo.lg.jp/wp-json/wp/v2/exhibition/21536" /><link rel="alternate" type="application/json+oembed" href="https://rekihaku.pref.hyogo.lg.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Frekihaku.pref.hyogo.lg.jp%2Fexhibition%2F21536%2F" />
 <link rel="alternate" type="text/xml+oembed" href="https://rekihaku.pref.hyogo.lg.jp/wp-json/oembed/1.0/embed?url=https%3A%2F%2Frekihaku.pref.hyogo.lg.jp%2Fexhibition%2F21536%2F&#038;format=xml" />
   <link rel="apple-touch-icon" sizes="180x180" href="https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/img/icons/apple-touch-icon.png">
@@ -1044,15 +1044,15 @@ var vkLtc = {"ajaxurl":"https:\/\/rekihaku.pref.hyogo.lg.jp\/wp-admin\/admin-aja
 /* ]]> */
 </script>
 <script type='text/javascript' src='https://rekihaku.pref.hyogo.lg.jp/wp-content/plugins/vk-link-target-controller/js/script.min.js?ver=1.5.0' id='vk-ltc-js-js'></script>
-<script type='text/javascript' src='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/js/viewportExtra.min.js?ver=5.6.23' id='viewportExtra-js'></script>
-<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js?ver=5.6.23' id='rwdImageMaps-js'></script>
+<script type='text/javascript' src='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/js/viewportExtra.min.js?ver=5.6.24' id='viewportExtra-js'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js?ver=5.6.24' id='rwdImageMaps-js'></script>
 <script type='text/javascript' src='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/js/jquery.cookie.min.js?ver=1614692715' id='cookie-script-js'></script>
-<script type='text/javascript' src='//typesquare.com/3/tsst/script/ja/typesquare.js?7fe9b50458c044b184d6216790eed707&#038;ver=5.6.23' id='morisawa-js'></script>
+<script type='text/javascript' src='//typesquare.com/3/tsst/script/ja/typesquare.js?7fe9b50458c044b184d6216790eed707&#038;ver=5.6.24' id='morisawa-js'></script>
 <script type='text/javascript' src='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/js/stickynavi.js?ver=1614692715' id='stickynavi-script-js'></script>
 <script type='text/javascript' src='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/js/jquery.smoothscroll.js?ver=1614692715' id='smoothscroll-script-js'></script>
-<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.3/Luminous.min.js?ver=5.6.23' id='luminous-js-js'></script>
-<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js?ver=5.6.23' id='swiper-js-js'></script>
-<script type='text/javascript' src='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/js/jquery.basictable.min.js?ver=5.6.23' id='basictable-js-js'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/luminous-lightbox/2.3.3/Luminous.min.js?ver=5.6.24' id='luminous-js-js'></script>
+<script type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js?ver=5.6.24' id='swiper-js-js'></script>
+<script type='text/javascript' src='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/js/jquery.basictable.min.js?ver=5.6.24' id='basictable-js-js'></script>
 <script type='text/javascript' id='basictable-js-js-after'>
 $(function(){
   const tables = $('.post-content .wp-block-table.responsive > table');
@@ -1065,7 +1065,7 @@ $(function(){
 });
 </script>
 <script type='text/javascript' src='https://rekihaku.pref.hyogo.lg.jp/wp-content/themes/rekihaku/assets/js/common.js?ver=1629425412' id='common-script-js'></script>
-<script type='text/javascript' src='https://rekihaku.pref.hyogo.lg.jp/wp-includes/js/wp-embed.min.js?ver=5.6.23' id='wp-embed-js'></script>
+<script type='text/javascript' src='https://rekihaku.pref.hyogo.lg.jp/wp-includes/js/wp-embed.min.js?ver=5.6.24' id='wp-embed-js'></script>
 
 
 

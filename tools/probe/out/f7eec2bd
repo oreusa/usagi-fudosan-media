@@ -50,7 +50,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='meteor-slides-css' href='https://www.himejibungakukan.jp/wordpress/wp-content/plugins/meteor-slides/css/meteor-slides.css?ver=1.0' media='all' />
 <link rel='stylesheet' id='wp-pagenavi-css' href='https://www.himejibungakukan.jp/wordpress/wp-content/plugins/wp-pagenavi/css/wp-pagenavi.css?ver=3.0.1' media='all' />
 <link rel='stylesheet' id='megamenu-css' href='https://www.himejibungakukan.jp/wordpress/wp-content/uploads/maxmegamenu/style.css?ver=126c80' media='all' />
-<link rel='stylesheet' id='dashicons-css' href='https://www.himejibungakukan.jp/wordpress/wp-includes/css/dashicons.min.css?ver=7.1.4' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://www.himejibungakukan.jp/wordpress/wp-includes/css/dashicons.min.css?ver=7.1.5' media='all' />
 <script id="jquery-core-js" src="https://www.himejibungakukan.jp/wordpress/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
 <script id="jquery-migrate-js" src="https://www.himejibungakukan.jp/wordpress/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
 <script id="biz-cal-script-js-extra">
@@ -58,16 +58,16 @@ var bizcalOptions = {"holiday_title":"\u4f11\u9928\u65e5","mon":"on","temp_holid
 //# sourceURL=biz-cal-script-js-extra
 </script>
 <script id="biz-cal-script-js" src="https://www.himejibungakukan.jp/wordpress/wp-content/plugins/biz-calendar/calendar.js?ver=2.2.0"></script>
-<script id="jquery-cycle-js" src="https://www.himejibungakukan.jp/wordpress/wp-content/plugins/meteor-slides/js/jquery.cycle.all.js?ver=7.1.4"></script>
-<script id="jquery-metadata-js" src="https://www.himejibungakukan.jp/wordpress/wp-content/plugins/meteor-slides/js/jquery.metadata.v2.js?ver=7.1.4"></script>
-<script id="jquery-touchwipe-js" src="https://www.himejibungakukan.jp/wordpress/wp-content/plugins/meteor-slides/js/jquery.touchwipe.1.1.1.js?ver=7.1.4"></script>
+<script id="jquery-cycle-js" src="https://www.himejibungakukan.jp/wordpress/wp-content/plugins/meteor-slides/js/jquery.cycle.all.js?ver=7.1.5"></script>
+<script id="jquery-metadata-js" src="https://www.himejibungakukan.jp/wordpress/wp-content/plugins/meteor-slides/js/jquery.metadata.v2.js?ver=7.1.5"></script>
+<script id="jquery-touchwipe-js" src="https://www.himejibungakukan.jp/wordpress/wp-content/plugins/meteor-slides/js/jquery.touchwipe.1.1.1.js?ver=7.1.5"></script>
 <script id="meteorslides-script-js-extra">
 var meteorslidessettings = {"meteorslideshowspeed":"1000","meteorslideshowduration":"3000","meteorslideshowheight":"161","meteorslideshowwidth":"940","meteorslideshowtransition":"fade"};
 //# sourceURL=meteorslides-script-js-extra
 </script>
-<script id="meteorslides-script-js" src="https://www.himejibungakukan.jp/wordpress/wp-content/plugins/meteor-slides/js/slideshow.js?ver=7.1.4"></script>
+<script id="meteorslides-script-js" src="https://www.himejibungakukan.jp/wordpress/wp-content/plugins/meteor-slides/js/slideshow.js?ver=7.1.5"></script>
 <link rel="https://api.w.org/" href="https://www.himejibungakukan.jp/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.himejibungakukan.jp/wordpress/xmlrpc.php?rsd" />
-<meta name="generator" content="WordPress 7.1.4" />
+<meta name="generator" content="WordPress 7.1.5" />
 <link rel="canonical" href="https://www.himejibungakukan.jp/events/event/2026yanasetakashi/" />
 <link rel='shortlink' href='https://www.himejibungakukan.jp/?p=4675' />
 <style data-context="foundation-flickity-css">/*! Flickity v2.0.2
@@ -328,7 +328,7 @@ http://flickity.metafizzy.co
 <!-- Powered by WPtouch: 4.3.62 --><script id="hoverIntent-js" src="https://www.himejibungakukan.jp/wordpress/wp-includes/js/hoverIntent.min.js?ver=1.10.2"></script>
 <script id="megamenu-js" src="https://www.himejibungakukan.jp/wordpress/wp-content/plugins/megamenu/js/maxmegamenu.min.js?ver=3.10.10"></script>
 <script id="wp-emoji-settings" type="application/json">
-{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.himejibungakukan.jp/wordpress/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4"}}
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.himejibungakukan.jp/wordpress/wp-includes/js/wp-emoji-release.min.js?ver=7.1.5"}}
 </script>
 <script type="module">
 /*! This file is auto-generated */

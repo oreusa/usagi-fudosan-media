@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <meta name="format-detection" content="telephone=no">
+
+  <title>いばらきイルミフェスタ灯</title>
+  <meta name="description" content="いばらきイルミフェスタ灯(AKARI)は「まち」「ひと」「灯り」をテーマにいばらきのまちを明るく彩る、冬のイルミネーションイベントです。">
+
+  <!-- ogp -->
+  <meta property="og:title" content="いばらきイルミフェスタ灯">
+  <meta property="og:description" content="いばらきイルミフェスタ灯(AKARI)は「まち」「ひと」「灯り」をテーマにいばらきのまちを明るく彩る、冬のイルミネーションイベントです。">
+  <meta property="og:url" content="https://ibaraki-akari.osaka.jp/public/index.php">
+  <meta property="og:image" content="https://ibaraki-akari.osaka.jp/public/img/common/ogp.png">
+
+  <!-- canonical -->
+  <link rel="canonical" href="https://ibaraki-akari.osaka.jp/" />
+
+  <!-- stylesheet -->
+  <link rel="stylesheet" type="text/css" href="./css/index.css?20261120114902">
+
+  <!-- 共有ヘッダー -->
+  
+<!-- ogp -->
+<meta property='og:locale' content='ja_JP'>
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://ibaraki-akari.osaka.jp/public/img/common/ogp.png">
+
+<!--thumbnail-->
+<meta name="thumbnail" content="https://ibaraki-akari.osaka.jp/public/img/common/thumbnail.png">
+<!--
+  <PageMap>
+    <DataObject type="thumbnail">
+      <Attribute name="src" value="https://ibaraki-akari.osaka.jp/public/img/common/thumbnail.png”>
+      <Attribute name="width" value="120"/>
+      <Attribute name="height" value="120"/>
+    </DataObject>
+  </PageMap>
+-->
+
+<!--twitter-->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://ibaraki-akari.osaka.jp/public/img/common/ogp.png">
+<meta name="twitter:title" content="いばらきイルミフェスタ灯" />
+<meta name="twitter:description" content="大阪府茨木市の冬のイルミネーションイベント「いばらきイルミフェスタ灯(あかり)。市内各所のイルミネーションを専用WEBアプリでまわれば豪華ギフト券に応募できます。いばらきのイルミは見るだけじゃもったいない！" />
+
+<!--icon-->
+<link rel="icon" href="img/common/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="img/common/icon.png">
+<meta name="apple-mobile-web-app-title" content="いばらきイルミフェスタ灯">
+
+<!-- stylesheet -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/header.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/footer.css" rel="stylesheet" type="text/css" media="all">
+
+<!-- js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='js/style.js'></script>
+
+<!-- lightbox-->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
+
+<!-- particles -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script type='text/javascript' src='js/particles.js'></script>
+
+<!-- fontawesome -->
+<link rel="stylesheet" href="js/fontawesome/css/fontawesome.css">
+<link rel="stylesheet" href="js/fontawesome/css/solid.css">
+<link rel="stylesheet" href="js/fontawesome/css/brands.css">
+
+<!-- font -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Alef&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700;800;900&family=Sarala:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-51936959-20"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-51936959-20');
+</script>
+
+
+<!-- juicer -->
+<script src="//kitchen.juicer.cc/?color=rRk/y5JLC8g=" async></script>
+
+</head>
+
+<body>
+
+  <div id="top">
+
+      <header>
+
+  <div id="pc-nav" class="container-XL">
+    <a class="logo" href="index.php">
+      <img class="pc-logo" src="img/common/header-logo2026.png">
+      <img class="sp-logo" src="img/common/header-logo-sp.png">
+    </a>
+
+    <div class="period-wrap">
+      <div class="period-date">
+        <i class="icon fa-regular fa-calendar"></i>
+        <div class="period-box">
+          <span>
+            2026<small>年</small>
+          </span>
+          <span>
+            11<small>月</small>
+            27<small>日</small>
+          </span>
+        </div>
+        〜
+        <div class="period-box">
+          <span>
+            2027<small>年</small>
+          </span>
+          <span>
+            01<small>月</small>
+            11<small>日</small>
+          </span>
+        </div>
+      </div>
+
+      <div class="lighting-time">
+        <i class="icon fa-regular fa-clock"></i>
+        <strong>点灯時間</strong>
+        <div class="time-box">
+            <span>
+              17:00            </span>
+            〜
+            <span>
+              23:00            </span>
+            <p class="comment">※スポットによって異なります。</p>
+        </div>
+      </div>
+    </div>
+
+    <a class="citybanner" href="http://www.city.ibaraki.osaka.jp/" target="_blank">
+      <img src="img/common/next_ibaraki.jpg" alt="">
+    </a>
+
+  </div>
+
+
+  
+<!-- PCメニュー -->
+<div id="pc-menu" class="header-menu-wrap">
+    <ul class="header-menu container-XL">
+      <li class=""><a href="index.php"><span>トップ</span><small></small></a></li>
+      <li class=""><a href="about.php"><span>ご案内</span><small></small></a></li>
+      <li class=""><a href="webapp.php"><span>WEBアプリ</span><small></small></a></li>
+      <li class=""><a href="spot.php"><span>スポット一覧</span><small></small></a></li>
+      <li class=""><a href="contest.php"><span>コンテスト</span><small></small></a></li>
+      <!--
+      <li class=""><a href="workshop.php"><span>ワークショップ</span><small></small></a></li>
+      -->
+      <li class=""><a href="past_gallery.php"><span>過去ギャラリー</span><small></small></a></li>
+      <li class=""><a href="proposal.php"><span>企業の方へ</span><small></small></a></li>
+    </ul>
+</div>
+
+
+
+<!-- SPメニュー -->
+<div id="sp-menu">
+  <span class="trigger">
+    <i class="trigger-bar open top"></i>
+    <i class="trigger-bar open middle"></i>
+    <i class="trigger-bar open bottom"></i>
+
+    <i class="trigger-bar close right"></i>
+    <i class="trigger-bar close left"></i>
+  </span>
+
+  <div class="inner-container">
+    <div class="menu-bg-wrap">
+      <i class="menu-bg top"></i>
+      <i class="menu-bg middle"></i>
+      <i class="menu-bg bottom"></i>
+    </div>
+
+    <div class="menu-container">
+
+
+      <a class="sp-nav-logo" href="index.php">
+        <img src="img/common/header-logo2026.png">
+      </a>
+
+
+      <ul>
+        <li class=""><a href="index.php"><span>トップ</span><small></small></a></li>
+        <li class=""><a href="about.php"><span>ご案内</span><small></small></a></li>
+        <li class=""><a href="webapp.php"><span>WEBアプリ</span><small></small></a></li>
+        <li class=""><a href="spot.php"><span>スポット一覧</span><small></small></a></li>
+        <li class=""><a href="contest.php"><span>コンテスト</span><small></small></a></li>
+        <!--
+        <li class=""><a href="workshop.php"><span>ワークショップ</span><small></small></a></li>
+        -->
+        <li class=""><a href="past_gallery.php"><span>過去ギャラリー</span><small></small></a></li>
+        <li class=""><a href="proposal.php"><span>企業の方へ</span><small></small></a></li>
+      </ul>
+
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<link href="css/sp-menu.css" rel="stylesheet" type="text/css" media="all">
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TimelineMax.min.js'></script>
+
+
+</header>
+
+
+      <div class="top-wrap container-XL">
+
+        <div class="image-wrap">
+          <img class="tree" src="img/top/tree.png">
+          <img class="doji-1" src="img/top/doji-1.png">
+          <img class="doji-2" src="img/top/doji-2.png">
+
+          <img class="star star-1" src="img/top/star.png">
+          <img class="star star-2" src="img/top/star.png">
+          <img class="star star-3" src="img/top/star.png">
+          <img class="star star-4" src="img/top/star.png">
+          <img class="star star-5" src="img/top/star.png">
+        </div>
+
+
+        <div class="menu-wrap">
+          <div class="menu">
+          <a href="about.php" class="menu-box">
+            <img src="img/icon/menu-7.png">
+            <span>イベントご案内</span>
+          </a>
+          <a href="webapp.php" class="menu-box">
+            <img src="img/icon/menu-2.png">
+            <span>ウェブアプリ</span>
+          </a>
+          <a href="spot.php" class="menu-box">
+            <img src="img/icon/menu-3.png">
+            <span>スポット一覧</span>
+          </a>
+          <a href="proposal.php" class="menu-box">
+            <img src="img/icon/menu-4.png">
+            <span>企業の方へ</span>
+          </a>
+          <a href="contest.php" class="menu-box">
+            <img src="img/icon/menu-5.png">
+            <span>コンテスト</span>
+          </a>
+          <a href="workshop.php" class="menu-box">
+            <img src="img/icon/menu-10.png">
+            <span>ワークショップ</span>
+          </a>
+          <a href="past_gallery.php" class="menu-box">
+            <img src="img/icon/menu-6.png">
+            <span>過去ギャラリー</span>
+          </a>
+
+          <!-- column3：横1列に3つ並んで表示 / column2：2カラムに2段で表示 -->
+          <div class="banner-menu column2">
+            <!-- 光物園 -->
+            <!--<a class="kobutsuen" href="kobutsuen2022.php" target="blank">
+              <img src="img/top/banner_kobutsuen.png">
+            </a>-->
+
+            <!-- youtube -->
+            <a class="banner_youtube" href="https://youtube.com/playlist?list=PLGWO4p7UF1zNpF5Y7_vQyfkaUhFQOx8f4" target="blank">
+              <img src="img/top/banner_youtube.png">
+            </a>
+
+            <!-- 受賞作品発表 -->
+            
+            <!-- マップ表示 -->
+            
+            <!-- 冬あそび -->
+            <a class="banner_winter" href="https://ibaraki-fuyuasobi.com/" target="_blank">
+              <img src="img/top/banner_winter.png">
+            </a>
+
+
+          </div><!--banner-wrap-->
+
+        </div><!--menu-->
+        </div><!--menu-wrap-->
+
+        <div class="scroll-down">
+          <span></span>
+          <small>SCROLL</small>
+        </div>
+
+      </div>
+
+
+        <div class="news-wrap container-M">
+          <p>\　　お知らせ　　/</p>
+            <div class="news-box">
+              <!--
+              <span><em>タイトルああああああ</em>2024/00/00</span>
+              本文ああああああああああああああああああああ
+              ああああああああああああああああああああああ
+              <hr>
+              -->
+              <!-- 【以下のように入力してください】<br><span><em>タイトルああああああ</em>2024/00/00</span><br>本文ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ<br><hr><br>--><br><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><br><span><em>ウォーカープラス・イルミネーション特集に掲載されました</em>2026/11/1</span><br>掲載内容は<a href="https://illumi.walkerplus.com/detail/ar0727e397426/" target="_blank">こちら</a><br><a href="https://illumi.walkerplus.com/detail/ar0727e397426/" target="_blank"><br><center><img src="../public/img/news/out_ban_illumi.jpg" alt="ウォーカープラスに掲載されました" width="300px" height="auto"></center><br></a><br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>いばらきイルミフェスタ灯開催のお知らせ</em>2026/11/1</span><br>いばらきの冬の夜空を灯すイルミネーション！<br>今年は過去最大球『約50万球以上』！！<br>イルミネーションスポットを散策する「イルミスポットラリー」も引き続き実施予定です。<br><br>抽選でイルミギフト券が当たります！<br>アプリを片手に、いばらきの街にみんなで出かけましょう！！<br><br><br>○開催期間<br>　2026年11月27日(金) ～ 2027年1月11日(月祝)<br>　点灯時間：17:00 ～ 23:00<br>　※スポットの点灯時間は、店舗によって異なります。事前にホームページ等でご確認ください。<br>　※スポット店舗は、定休日は点灯していない場合がございます。予めご了承ください。<br><br>○開催場所<br>　JR茨木駅前、阪急茨木市駅前、元茨木川緑地高橋周辺<br>　市内の一部商店街・店舗など<br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>プロポーザル募集のお知らせ</em>2026/6/1　</span><br>イルミネーションの実施にあたり、創造性、企画力、経験等を有する優れた事業者をプロポーザル方式により広く募集し、最も適した事業者を選定するため、事業者を募集いたします。<br>応募期間：2026年６月８日(月)から６月１８日(木)17時まで<br>申込詳細は<a href="proposal.php" style="color: red; text-decoration: underline;">こちら</a>をご覧ください。<br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><br><span><em>いばらきイルミフェスタ灯開催のお知らせ</em>2025/11/1</span><br>いばらきの冬の夜空を灯すイルミネーション！<br>今年は過去最大球『約50万球以上』！！<br>イルミネーションスポットを散策する「イルミスポットラリー」も引き続き実施予定です。<br><br>ポイントをたくさん集めて、いっぱい応募！抽選でイルミギフト券が当たります！<br>アプリを片手に、いばらきの街にみんなで出かけましょう！！<br><br><br>○開催期間<br>　2025年11月28日(金) ～ 2026年1月12日(月祝)<br>　点灯時間：17:00 ～ 23:00<br>　※スポットの点灯時間は、店舗によって異なります。事前にホームページ等でご確認ください。<br>　※スポット店舗は、定休日は点灯していない場合がございます。予めご了承ください。<br><br>○開催場所<br>　JR茨木駅前、阪急茨木市駅前、元茨木川緑地高橋周辺<br>　市内の一部商店街・店舗など<br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>FM85.1 intense!の「オオサカマンスリージャーニー」で取り上げていただきました。</em>2025/01/13</span><br>掲載内容は<a href="https://www.fmosaka.net/_ct/17743125/" target="_blank">こちら</a><br><a href="https://www.fmosaka.net/_ct/17743125/" target="_blank"><br><center><img src="../public/img/news/20250113_intense!.jpg"  alt="「オオサカマンスリージャーニー」で取り上げていただきました" width="200px"></center><br></a><br><hr><br><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>ウォーカープラス・イルミネーション特集に掲載されました</em>2024/11/1</span><br>掲載内容は<a href="https://illumi.walkerplus.com/detail/ar0727e397426/" target="_blank">こちら</a><br><a href="https://illumi.walkerplus.com/detail/ar0727e397426/" target="_blank"><br><center><img src="../public/img/news/out_ban_illumi.jpg" alt="ウォーカープラスに掲載されました" width="300px" height="auto"></center><br></a><br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>いばらきイルミフェスタ灯開催のお知らせ</em>2024/11/1</span><br>いばらきの冬の夜空を灯すイルミネーション！<br>今年は過去最大球『約60万球以上』！！<br>イルミネーションスポットを散策する「イルミスポットラリー」も引き続き実施予定です。<br><br>ポイントをたくさん集めて、いっぱい応募！抽選でイルミギフト券が当たります！<br>アプリを片手に、いばらきの街にみんなで出かけましょう！！<br><br><br>○開催期間<br>　2024年12月1日(日) ～ 2024年1月26日(日)<br>　点灯時間：17:00 ～ 23:00<br>　※スポットの点灯時間は、店舗によって異なります。事前にホームページ等でご確認ください。<br>　※スポット店舗は、定休日は点灯していない場合がございます。予めご了承ください。<br><br>○開催場所<br>　JR茨木駅前、阪急茨木市駅前、元茨木川緑地高橋周辺<br>　市内の一部商店街・店舗など<br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>いばらきイルミフェスタ灯開催のお知らせ</em>2024/05/30</span><br>いばらきの冬の夜空を灯すイルミネーション！<br>今年も開催いたします。<br>もちろん、イルミネーションスポットを散策する「イルミスポットラリー」も引き続き実施予定です。<br><br>ポイントをたくさん集めて、いっぱい応募！抽選でイルミギフト券が当たります！<br>アプリを片手に、いばらきの街にみんなで出かけましょう！！<br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>希望の泉広場にバルーン登場</em>2024/01/08</span><br>1/12(金)より、市役所前の希望の泉広場に、スカイパレットに現れる予定だった『USAFO（ウサホー）』こと、うさぎが乗っているUFOが出現します。<br>全幅7ｍのバルーンを是非ご覧ください。<br><br>引き続き、ＪＲ茨木のスカイパレット内では、スカイパレット光物園として、光る動物を設置しています。こちらも見ごたえたっぷりです。<br><br>1/21(日)までの設置となります。お気を付けください。<br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>お知らせ</em>2023/12/26</span><br><strong>スカイパレット光物園は、現在準備中です。</strong><br>準備が出来次第、順次公開予定とさせていただきます。<br>完成後、公式ホームページ、SNSにてお知らせいたします。<br>準備が遅れており大変申し訳ございません。<br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>ウォーカープラス・イルミネーション特集に掲載されました</em>　</span><br>掲載内容は<a href="https://illumi.walkerplus.com/detail/ar0727e397426/">こちら</a><br><a href="https://illumi.walkerplus.com/detail/ar0727e397426/" target="_blank"><br><center><img src="../public/img/news/out_ban_illumi.jpg" alt="ウォーカープラスに掲載されました" width="300px" height="auto"></center><br></a><br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>いばらきイルミフェスタ灯開催のお知らせ</em>　</span><br>いばらきの冬の夜空を灯すイルミネーション！<br>今年は過去最大球『約62万球以上』！！<br>イルミネーションスポットを散策する「イルミスポットラリー」も引き続き実施予定です。<br><br>ポイントをたくさん集めて、いっぱい応募！抽選でイルミギフト券が当たります！<br>アプリを片手に、いばらきの街にみんなで出かけましょう！！<br><br><br>○開催期間<br>　2023年12月1日(金) ～ 2024年1月21日(日)<br>　点灯時間：17:00 ～ 23:00<br>　※スポットの点灯時間は、店舗によって異なります。事前にホームページ等でご確認ください。<br>　※スポット店舗は、定休日は点灯していない場合がございます。予めご了承ください。<br><br>○開催場所<br>　JR茨木駅前、阪急茨木市駅前、南茨木駅、<br>　市内の一部商店街・店舗など<br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>プロポーザル募集のお知らせ</em>　</span><br>イルミネーションの実施にあたり、創造性、企画力、経験等を有する優れた事業者をプロポーザル方式により広く募集し、最も適した事業者を選定するため、事業者を募集いたします。<br>応募期間：2023年６月１２日(月)から６月２１日(水)17時まで<br>申込詳細は<a href="proposal_entry.php">こちら</a>をご覧ください。<br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>お知らせ</em>　</span><br>いばらき冬のイルミネーション。<br>約１ヶ月半の点灯期間もたっぷりとお楽しみいただけましたか？<br>関係各所、市民の皆様のご協力により、無事に最終日を迎える事ができました。<br>ありがとうございました。<br><br>さて、イルミ点灯は終了しましたが・・・そうです！<br>まだまだ、いばらきのイルミイベントはお楽しみがいっぱい！<br>多数応募いただいております、スタンプラリー賞や各種フォトコンテスト、ポイント賞の抽選、発表があります。<br>２月上旬より順次発表させて頂きますので、お楽しみに❗️<br>※当選者の発表はメール連絡、賞品の発送をもってかえさせていただいております。ご了承ください。<br><br>⭐️事務局からのお願い⭐️<br>各当選者様、フォトコンテストの入賞者様へ<br>メールにてご連絡をさせていただいておりますが、お返事のいただけない方が、毎年多数いらっしゃいます。<br>迷惑メールフォルダなどに移動している場合もございますので、迷惑メールフォルダの確認、応募いただきましたメールアドレスの受信設定、フィルターの設定などのご確認をお願いいたします。<br>残念ながら返信期日までにお返事が頂けない場合は、いかなる場合でも当選無効とさせていただきます。ご了承ください。<br>宜しくお願いします。<br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>点灯時間の短縮のお知らせ</em>　</span><br>政府による節電要請に基づき、イルミネーション点灯時間を以下のとおり短縮いたします。<br><br>◎灯スポット(商店街・各施設・学校など)<br>◎イルミスポット(店舗・コミニュティセンター)<br>　　2022年12月中より順次短縮<br>　　　　変更前　17:00～24:00<br>　　　　変更後　17:00～23:00<br><br>◎メインスポット(JR茨木駅・阪急茨木市駅・南茨木駅付近・岩倉公園など)<br>　　１月12日(木)から<br>　　　　変更前　17:00～24:00<br>　　　　変更後　18:00～23:00<br><br>※都合により23:00以前に消灯していた施設については変更ございません。<br>※WEBアプリによるスポットラリー(17:00～24:00)は変更ございません。<br>引き続き、期間内いばらきの街を灯すイルミネーションをお楽しみください。<br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>ウォーカープラス・イルミネーション特集に掲載されました</em>　</span><br>掲載内容は<a href="https://illumi.walkerplus.com/detail/ar0727e397426/">こちら</a><br><a href="https://illumi.walkerplus.com/detail/ar0727e397426/" target="_blank"><br><center><img src="../public/img/news/out_ban_illumi.jpg" alt="ウォーカープラスに掲載されました" width="300px" height="auto"></center><br></a><br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>いばらきイルミフェスタ灯開催のお知らせ</em>　</span><br>いばらきの冬の夜空を灯すイルミネーション！<br>今年も、新型コロナウイルス感染症対策として、新生活様式・ガイドラインに準じたカタチでの開催を目指し、今年も約60万球以上のあかりを、いばらきの街を灯す予定です！！<br><br>また、イルミネーションスポットを散策する「イルミスポットラリー」など<br>企画も実施予定です。<br><br>○開催期間<br>　2022年12月2日(金) ～ 2023年1月22日(日)<br>　点灯時間：17:00 ～ 24:00<br>　※スポットの点灯時間は、店舗によって異なります。事前にホームページ等でご確認ください。<br>　※スポット店舗は、定休日は点灯していない場合がございます。予めご了承ください。<br><br>○開催場所<br>　JR茨木駅前、阪急茨木市駅前、南茨木駅、<br>　市内の一部商店街・店舗など<br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br><span><em>いばらきイルミフェスア灯2022 プロポーザル募集開始のお知らせ</em>　</span><br>新型コロナウィルス感染拡大防止に努めた、新生活様式に順応したイベントの開催に向けて、<br>プロポーザル募集を６月１３日より（月）開始いたします。<br>申込詳細は<a href="proposal_entry.php">こちら</a><br><hr><br><!--<br>-----------------------------------------------------------------------------------------------------------------------<br>--><br>            </div>
+        </div>
+
+
+  <script>
+    //スクロールダウン
+    $(window).scroll(function() {
+      var scrollY = $(window).scrollTop();
+      if (scrollY >= 200) {
+        $(".scroll-down").addClass("hidden");
+      } else {
+        $(".scroll-down").removeClass("hidden");
+      }
+    });
+  </script>
+
+
+
+<!-- star -->
+<div id="particles-js"></div>
+
+<!-- footer -->
+
+
+<a href="#" class="toTop-btn">
+  <i class="fa fa-2x fa-angle-double-up"></i>
+  <span>PAGE<br>TOP</span>
+</a>
+
+
+<footer>
+  <span class="city-bg"></span>
+  <div class="footer-wrap container-XL">
+    <div class="page-footer">
+      <img src="img/common/logo-circle.png">
+      <strong>いばらきイルミフェスタ実行委員会</strong>
+      <p><i class="fa-regular fa-clock"></i>10:00〜17:00（土日祝定休）</p>
+      <p><i class="fa-solid fa-phone-volume"></i>072-646-9761</p>
+      <small>※都合により不在にする場合がございます</small>
+    </div>
+
+    <div class="footer-menu">
+      <a href="sponsor.php" class="banner sponsor">主催・協賛・協力</a>
+      <a href="privacy.php" class="banner privacy">個人情報保護方針</a>
+      <a href="contact.php" class="banner contact">お問い合わせ</a>
+    </div>
+    <span class="copyright">Copyright©︎ いばらきイルミフェスタ実行委員会 All Right Reserved.</span>
+  </div>
+</footer>
+
+</div><!--proposal-->
+</body>
+
+</html>

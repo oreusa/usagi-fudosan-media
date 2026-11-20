@@ -235,7 +235,7 @@ new google.translate.TranslateElement({pageLanguage: 'ja', includedLanguages: 'j
 	
 	
 	
-											<p class="a-right mbg-0"><i class="far fa-calendar-alt"></i> 2026年11月13日</p>
+											<p class="a-right mbg-0"><i class="far fa-calendar-alt"></i> 2026年11月19日</p>
 	
 	
 											<div class="box bdc-e78b77 bdw-5 mgb-30">
@@ -257,18 +257,18 @@ new google.translate.TranslateElement({pageLanguage: 'ja', includedLanguages: 'j
 	<tr>
 		<td rowspan="2" class="center">奥千本</td>
 		<td class="center">西行庵付近</td>
-		<td class="center">散り始め</td>
-		<td class="center">見頃近し</td>
+		<td class="center">落葉</td>
+		<td class="center">見頃</td>
 	</tr>
 	<tr>
 		<td class="center">高城山展望台</td>
-		<td class="center">散り始め</td>
+		<td class="center">落葉</td>
 		<td class="center">見頃</td>
 	</tr>
 	<tr>
 		<td class="center">上千本</td>
 		<td class="center">花矢倉展望台</td>
-		<td class="center">見頃</td>
+		<td class="center">落葉</td>
 		<td class="center">見頃近し</td>
 	</tr>
 	<tr>
@@ -279,14 +279,14 @@ new google.translate.TranslateElement({pageLanguage: 'ja', includedLanguages: 'j
   中千本操車場付近
   </td>
 		<td class="center">落葉</td>
-		<td class="center">色づき始め</td>
+		<td class="center">見頃近し</td>
 	</tr>
 	<tr>
 		<td class="center">
   蔵王堂周辺
   </td>
+		<td class="center">落下盛ん</td>
 		<td class="center">見頃</td>
-		<td class="center">色づき始め</td>
 	</tr>
 	<tr>
 		<td rowspan="3" class="center">
@@ -296,27 +296,27 @@ new google.translate.TranslateElement({pageLanguage: 'ja', includedLanguages: 'j
   七曲り付近
   </td>
 		<td class="center">落葉</td>
-		<td class="center">見頃近し</td>
+		<td class="center">見頃</td>
 	</tr>
 	<tr>
 		<td class="center">
   下千本駐車場付近
   </td>
-		<td class="center">見頃～散り始め</td>
-		<td class="center">色づき始め</td>
+		<td class="center">落葉</td>
+		<td class="center">見頃近し～見頃</td>
 	</tr>
 	<tr>
 		<td class="center">
   吉野神宮
   </td>
-		<td class="center">落下盛ん</td>
+		<td class="center">落葉</td>
 		<td class="center">見頃</td>
 	</tr>
 
 </table>
 	
 	
-											<p><p>寒暖差が激しくなってきて、楓の紅葉が吉野山各地で進んできました。高城山のカエデの綺麗なグラデーションをご覧いただけます。町内で熊の目撃情報がありますので、クマ鈴を携帯するなど対策のうえお越しください。西行庵付近の道は滑りやすいのでお気をつけください。<br><br />
+											<p><p>楓の紅葉が吉野山各地で見頃を迎え、鮮やかに紅葉した木々をご覧いただけます。町内で熊の目撃情報がありますので、クマ鈴を携帯するなど対策のうえお越しください。西行庵付近の道は滑りやすいのでお気をつけください。<br><br />
 ■【開始】紅葉ライトアップ《令和8年10月23日（金）～11月30日（月）16：30～22：00》<br />
 　場所：下千本公園・黒門・銅の鳥居・金峯山寺本坊中庭・妙法殿・二天門跡・東南院多宝塔・𠮷水神社参道・勝手神社・喜蔵院山門・桜本坊仁王門・竹林院　　山門・大塔の宮<br /></p>
 
@@ -325,26 +325,26 @@ new google.translate.TranslateElement({pageLanguage: 'ja', includedLanguages: 'j
 											<ul class="imagelist c3 clearfix">
 												<li>
 	
-													<p class="image"><img src="https://yoshino-kankou.jp/upload/6b4ba971b26c4a0a8e9955d4d5cdc1c4728283ba.JPEG" alt="images" class="ofi zoom" /></p>
+													<p class="image"><img src="https://yoshino-kankou.jp/upload/006d06617cfb7a98ce1530cd764c441e9cd17f4d.jpeg" alt="images" class="ofi zoom" /></p>
 	
 	
-													<p class="caption s">下千本　七曲り付近（11月13日時点）</p>
-	
-												</li>
-												<li>
-	
-													<p class="image"><img src="https://yoshino-kankou.jp/upload/c60195e420cbe401e9a47de1270550bdb9e5380d.JPEG" alt="images" class="ofi zoom" /></p>
-	
-	
-													<p class="caption s">上千本　花矢倉展望台付近（11月13日時点）</p>
+													<p class="caption s">下千本　七曲り付近（11月19日時点）</p>
 	
 												</li>
 												<li>
 	
-													<p class="image"><img src="https://yoshino-kankou.jp/upload/be5ae4e81f06f7b1b13f82cc54d9e8f27408d6bc.JPEG" alt="images" class="ofi zoom" /></p>
+													<p class="image"><img src="https://yoshino-kankou.jp/upload/9fa3aea8545464e5944536a680a84772786dfba8.JPG" alt="images" class="ofi zoom" /></p>
 	
 	
-													<p class="caption s">奥千本　高城山展望台（11月13日時点）</p>
+													<p class="caption s">奥千本　高城山展望台（11月19日時点）</p>
+	
+												</li>
+												<li>
+	
+													<p class="image"><img src="https://yoshino-kankou.jp/upload/2f3220c2f34a7f981e0eb52f90022e205ca4b30a.JPG" alt="images" class="ofi zoom" /></p>
+	
+	
+													<p class="caption s">奥千本　西行庵（11月19日時点）</p>
 	
 												</li>
 											</ul>
