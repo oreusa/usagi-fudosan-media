@@ -1,5 +1,5 @@
 name: map2-check
-# 11/20 作業の枝だけ：新しい地図を本番で押して撮る（main には入れない）
+# 11/20 新しい地図を本番で押して撮る。動くのはこの作業の枝に push した時だけ（main では動かない）
 on:
   push:
     branches: [claude/project-thread-gbk25m]

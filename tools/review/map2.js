@@ -11,8 +11,8 @@ for(const [n,u,lat,lon] of [['ka','https://kansai.townnote.app/odekake',34.7025,
  await p.evaluate(()=>scrollTo(0,document.querySelector('#sent').getBoundingClientRect().top+scrollY-260));await S('1list');
  await p.click('#tomap');await S('2map');
  const pf=await p.$$('.pin.pref .pc');if(pf[1])await pf[1].click();await S('3pref');
- const g=await p.$('.pin.grp .pc');if(g){await g.click();await S('4grp')}
- const o=await p.$('.pin.one .pc');if(o){await o.click();await S('5one')}
+ const gg=await p.evaluate(()=>{const W=innerWidth,H=innerHeight;const o=[...document.querySelectorAll('.pin.grp .pc')].find(e=>{const r=e.getBoundingClientRect();return r.left>20&&r.right<W-70&&r.top>200&&r.bottom<H-260});if(o){o.click();return 1}return 0});if(gg)await S('4grp');
+ const ok=await p.evaluate(()=>{const W=innerWidth,H=innerHeight;const o=[...document.querySelectorAll('.pin.one .pc')].find(e=>{const r=e.getBoundingClientRect();return r.left>20&&r.right<W-70&&r.top>200&&r.bottom<H-260});if(o){o.click();return 1}return 0});if(ok)await S('5one');
  await p.click('#m2w button[data-w="we"]');await S('6we');
  await p.click('.m2z button[data-z="me"]');await S('7me');
  const c=await p.$('#m2c .mcd');if(c){await c.click();await S('8sheet');await p.goBack()}
@@ -21,4 +21,3 @@ for(const [n,u,lat,lon] of [['ka','https://kansai.townnote.app/odekake',34.7025,
  }catch(e){log.push(t+' FAIL '+e.message.split('\n')[0]+' errs='+JSON.stringify(errs))}
  await ctx.close()}}
 fs.writeFileSync(out+'/log.txt',log.join('\n'));console.log(log.join('\n'));await b.close()})();
-// 11/20 20:00 関東の公開後にもう一度
