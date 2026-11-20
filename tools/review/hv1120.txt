@@ -1,0 +1,4 @@
+odekake	https://kansai.townnote.app/odekake
+illumi	https://kansai.townnote.app/illumination
+koyo	https://kansai.townnote.app/koyo
+osaka	https://kansai.townnote.app/odekake-osaka
