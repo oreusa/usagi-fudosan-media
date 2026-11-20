@@ -33,7 +33,7 @@ function look(res) {
   if (!(res.headers.get("content-type") || "").includes("text/html")) return res;
   return new HTMLRewriter().on("head", { element(e) { e.append(LOOK, { html: true }); } }).transform(res);
 }
-const LOOK = '<script>try{var v=localStorage.getItem("tn_lk")||"d",m=location.search.match(/[?&]look=([abcd0])/);if(m){v=m[1];localStorage.setItem("tn_lk",v)}if(v!=="0"){var h=document.documentElement;h.classList.add("lk","lk-"+v);if(v==="d")h.classList.add("lk-a")}}catch(e){}</script><link rel="stylesheet" href="/shin/look.css?v=4" id="lkcss"><script src="/shin/look.js?v=4" defer></script>';
+const LOOK = '<script>try{var v=localStorage.getItem("tn_lk")||"d",m=location.search.match(/[?&]look=([abcd0])/);if(m){v=m[1];localStorage.setItem("tn_lk",v)}if(v!=="0"){var h=document.documentElement;h.classList.add("lk","lk-"+v);if(v==="d")h.classList.add("lk-a")}}catch(e){}</script><link rel="stylesheet" href="/shin/look.css?v=5" id="lkcss"><script src="/shin/look.js?v=5" defer></script>';
 const SKIN = '<script>document.documentElement.classList.add("sk");try{if(localStorage.getItem("usagi_theme")==="night")document.documentElement.classList.add("nt")}catch(e){}</script><link rel="stylesheet" href="/shin/skin.css"><script src="/shin/skin.js" defer></script>';
 const PF = ["osaka", "kyoto", "hyogo", "nara", "shiga", "wakayama"];
 const SHIN = new Set([
