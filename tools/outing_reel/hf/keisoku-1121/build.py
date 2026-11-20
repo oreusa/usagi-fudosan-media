@@ -9,33 +9,28 @@ for k in range(5):
     T.append(round(v[k] + D[k] + .35, 2)); v.append(round(T[-1] + .6, 2))
 END = round(v[5] + D[5] + 1.2, 2)
 print("END", END, "T", T, "v", v)
-# バスの道（b に描いた道の中心線）
-def bz(t, P):
-    a = 1 - t; return [a**3*P[0][i] + 3*a*a*t*P[1][i] + 3*a*t*t*P[2][i] + t**3*P[3][i] for i in (0, 1)]
-P = [(250, 1425), (400, 1150), (520, 900), (461, 692)]
-bus = []
-for k in range(9):
-    t = 1 - k / 8 * .62; x, y = bz(t, P); s = .07 + (y - 692) / (1425 - 692) * .9
-    bus.append(dict(x=round(x - 120, 1), y=round(y - 210, 1), scale=round(s, 3)))
 cap = lambda dk, a, b, sm: f'<div class="cap{" dk" if dk else ""}"><span class="w">{a}</span><span class="w">{b}</span><i class="ul"></i><small class="w">{sm}</small></div>'
-def pop(sid, layers):
-    h = f'<img class="pl" src="a/{sid}-b.png">'
-    for name, org in layers:
-        h += f'<img class="pl up" id="{sid}{name}" src="a/{sid}-{name}.png" style="transform-origin:50% {org}">'
-    return f'<div class="pop">{h}</div>'
-S0 = pop('S0', [('m', '830px'), ('n', '1425px'), ('f', '1425px')])
-S1 = '<div class="pop"><img class="pl" src="a/S1-b.png"><img class="pl up" id="S1m" src="a/S1-m.png" style="transform-origin:50% 760px"><img id="bus" src="a/S1-bus.png"><img class="pl up" id="S1n" src="a/S1-n.png" style="transform-origin:50% 1240px"><img class="pl up" id="S1f" src="a/S1-f.png" style="transform-origin:50% 1425px"></div>'
-S2 = '<div class="pop"><img class="pl" src="a/S2-b.png"><img id="ppl" src="a/S2-ppl.png"><img class="pl up" id="S2m" src="a/S2-m.png" style="transform-origin:50% 1165px"><img class="pl up" id="S2n" src="a/S2-n.png" style="transform-origin:50% 1425px"><img class="pl dn" id="S2f" src="a/S2-f.png" style="transform-origin:50% 0px"></div>'
-S3 = '<div class="pop"><img class="pl" src="a/S3-b.png"><img class="pl up" id="S3m0" src="a/S3-m0.png" style="top:60px;transform-origin:50% 930px"><img class="pl" id="S3m1" src="a/S3-m1.png" style="top:60px;opacity:0;transform-origin:50% 930px"><img class="pl up" id="S3n" src="a/S3-n.png" style="transform-origin:50% 1160px"><img class="pl up" id="S3f" src="a/S3-f.png" style="transform-origin:50% 1425px"><div id="sun"></div></div>'
+# 11/20 作り直し：4場面とも H（光と空気で描いた絵）。層は奥から起き上がる
+def pop(k, layers, extra=''):
+    h = f'<img class="pl kb" src="a/H{k}-b.png">'
+    for name, org, cls in layers:
+        h += f'<img class="pl {cls}" id="S{k}{name}" src="a/H{k}-{name}.png" style="transform-origin:50% {org}">'
+    return f'<div class="pop">{h}{extra}</div>'
+S0 = pop(0, [('m', '830px', 'up'), ('n', '1425px', 'up'), ('f', '0px', 'fl')])
+S1 = pop(1, [('m', '1425px', 'up'), ('n', '1425px', 'up'), ('f', '1425px', 'fl')])
+S2 = pop(2, [('m', '1425px', 'up'), ('n', '980px', 'drop'), ('f', '0px', 'lt')])
+S3 = pop(3, [('m', '1425px', 'up'), ('n', '1425px', 'up'), ('f', '0px', 'fl')])
 html = open(HERE + "/src/tpl.txt").read()
-R = {'@S0@': S0 + cap(0, '石段が、', 'もみじの赤い道に', '滋賀・長浜 鶏足寺　12月3日まで'),
-     '@S1@': S1 + cap(1, '駅からバス、', '古橋から歩いて', 'JR木ノ本駅からバスで約10分'),
-     '@S2@': S2 + cap(0, '大門跡から見る、', 'もみじの参道', '約200本のもみじの古木が並ぶ'),
-     '@S3@': S3 + cap(1, '見頃は', '11月下旬から', '19日は色づき始め・混むのは土日祝の10〜14時'),
-     '@END@': str(END), '@T@': json.dumps(T), '@V@': json.dumps(v), '@BUS@': json.dumps(bus)}
+R = {'@S0@': S0 + cap(0, '真っ赤な', '石段をのぼる', '滋賀・長浜 鶏足寺　12月3日まで'),
+     '@S1@': S1 + cap(0, '見上げれば、', 'もみじの天井', '約200本のもみじの古木'),
+     '@S2@': S2 + cap(0, '苔の緑に、', '散った赤', '見頃は11月下旬からの予想'),
+     '@S3@': S3 + cap(0, '朝のうちに、', '光の参道へ', '混むのは晴れた土日祝の10〜14時'),
+     '@END@': str(END), '@T@': json.dumps(T), '@V@': json.dumps(v)}
 aud = '\n'.join(f' <audio id="v{i}" src="a/v{i}.wav" data-start="{v[i]}" data-duration="{round(D[i], 2)}" data-volume="1.7"></audio>' for i in range(6))
 aud += '\n' + '\n'.join(f' <audio id="flip{j}" src="a/flip.wav" data-start="{t}" data-duration="0.6" data-volume="0.7"></audio>' for j, t in enumerate(T))
 R['@AUDIO@'] = aud
+import random; rr = random.Random(1121)
+R['@DUST@'] = ''.join(f'<i style="left:{rr.uniform(20,900):.0f}px;top:{rr.uniform(300,1500):.0f}px;width:{(s:=rr.uniform(8,26)):.0f}px;height:{s:.0f}px" data-d="{rr.uniform(160,520):.0f}" data-x="{rr.uniform(-80,80):.0f}"></i>' for _ in range(26))
 for a, b in R.items():
     assert html.count(a) >= 1, a; html = html.replace(a, b)
 open(HERE + "/index.html", "w").write(html)

@@ -17,10 +17,9 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
 /* 切り紙の層：ページに寝ていて、めくると起き上がる */
 .pop{position:absolute;inset:0;perspective:1500px;perspective-origin:50% 38%}
 .pl{position:absolute;left:0;top:0;width:925px;height:1425px}
-.pl.up,.pl.dn,#S3m1{filter:drop-shadow(0 10px 9px rgba(40,18,6,.42))}
-#bus{position:absolute;left:0;top:0;width:240px;height:220px;transform-origin:50% 100%;filter:drop-shadow(0 6px 5px rgba(40,18,6,.4))}
-#ppl{position:absolute;left:0;top:0;width:120px;height:170px;transform-origin:50% 100%}
-#sun{position:absolute;left:-200px;top:-160px;width:760px;height:760px;border-radius:50%;background:radial-gradient(circle,rgba(255,248,220,.75),rgba(255,230,170,.25) 40%,rgba(255,220,150,0) 70%);mix-blend-mode:screen;opacity:0}
+.pl.up{filter:drop-shadow(0 10px 9px rgba(40,18,6,.42))}.pl.drop{filter:drop-shadow(0 14px 10px rgba(20,24,6,.35))}.pl.lt{mix-blend-mode:screen}
+#dust{position:absolute;left:85px;top:235px;width:925px;height:1425px;overflow:hidden;pointer-events:none;z-index:8;opacity:0}
+#dust i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,246,214,.95),rgba(255,226,160,.35) 45%,rgba(255,220,150,0) 70%)}
 .shine{position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:0;background:radial-gradient(ellipse 40% 30% at 50% 50%,rgba(255,240,200,.9),rgba(255,240,200,0) 70%)}
 .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,20,10,0) 30%,rgba(40,20,10,.65));opacity:0;z-index:5}
 .cast{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,10,5,.7),rgba(20,10,5,.25) 60%,rgba(20,10,5,0));opacity:0;z-index:5}
@@ -45,7 +44,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
 #ph{position:absolute;left:70px;top:330px;width:440px;height:880px;border-radius:58px;background:#2b211c;padding:15px;box-shadow:0 30px 60px rgba(60,35,20,.4)}
 #ph .scr{width:100%;height:100%;border-radius:44px;overflow:hidden;position:relative;background:#fff}#ph img{position:absolute;left:0;top:0;width:100%}
 #pc{position:absolute;left:16px;right:16px;bottom:30px;background:#fff;border-radius:24px;box-shadow:0 12px 30px rgba(60,35,20,.35),0 0 0 3px #a5332a;padding:16px;display:flex;gap:16px;align-items:center}
-#pc .pci{flex:none;width:120px;height:150px;border-radius:14px;background:url(a/S0.jpg) 50% 70%/cover}#pc b{display:inline-block;font:700 19px M;color:#fff;background:#a5332a;border-radius:999px;padding:4px 14px}
+#pc .pci{flex:none;width:120px;height:150px;border-radius:14px;background:url(a/H0.jpg) 50% 70%/cover}#pc b{display:inline-block;font:700 19px M;color:#fff;background:#a5332a;border-radius:999px;padding:4px 14px}
 #pc .t{font:700 34px MB;margin-top:8px}#pc .s{font:500 24px M;color:#7a5b4a}#pc .d{font:700 22px M;color:#a5332a;margin-top:4px}
 #h1{position:absolute;right:40px;top:520px;width:340px;text-align:center;font:700 38px MB;letter-spacing:.12em;line-height:1.8;color:#6b4a3a}#h1 span{display:block;font:500 28px M;letter-spacing:.04em;line-height:1.6;margin-top:24px;color:#8a6a55}
 #endb{position:absolute;left:0;right:0;top:1250px;text-align:center}#endb div{display:inline-block;font:700 50px MB;letter-spacing:.14em;color:#f8ecd8;background:#a5332a;border-radius:999px;padding:24px 56px;box-shadow:0 10px 30px rgba(165,51,42,.35)}
@@ -66,13 +65,14 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
    <div class="r"><b>期間</b><span>11/14(土)〜12/3(木)</span></div><div class="r"><b>散策</b><span>8時30分〜16時<small>ライトアップはありません</small></span></div>
    <div class="r"><b>協力金</b><span>高校生以上500円<small>中学生以下は無料</small></span></div><div class="r"><b>行き方</b><span>JR木ノ本駅からバス約10分<small>「古橋」から歩く・駐車場からは約1km</small></span></div>
    <div class="r"><b>混む時間</b><span>土日祝の10時〜14時<small>雨具があると安心です</small></span></div><p>保存して、3連休のおでかけに。</p>
-   <div class="ph"><img src="a/S0.jpg"></div></div><div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
+   <div class="ph"><img src="a/H0.jpg"></div></div><div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
   <div class="sc" id="s3" style="z-index:2"><div class="face">@S3@<div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
   <div class="sc" id="s2" style="z-index:3"><div class="face">@S2@<div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
   <div class="sc" id="s1" style="z-index:4"><div class="face">@S1@<div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
   <div class="sc" id="s0" style="z-index:5"><div class="face">@S0@<div class="shine" id="sh0"></div><div class="shade"></div><div class="gut"></div></div><div class="bk"></div></div>
   <div class="sc" id="cv" style="z-index:6"><div class="face" id="cover"><div id="foil"></div><div class="shade"></div></div><div class="bk"></div></div>
  </div>
+ <div id="dust">@DUST@</div>
  <div id="tab"><div>保存してね</div></div>
  </div>
  <div id="vig"></div>
@@ -82,7 +82,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
 <script>
 window.__timelines = window.__timelines || {};
 const tl = gsap.timeline({ paused: true });
-const T=@T@,V=@V@,END=@END@,BUS=@BUS@;
+const T=@T@,V=@V@,END=@END@;
 // 層は寝た形から始める
 gsap.set(".pl.up",{rotationX:86});gsap.set(".pl.dn",{rotationX:-86});
 // ===== 1. 前の絵本と同じ始まり：表紙を光の帯が1回走り、表紙が開く =====
@@ -92,41 +92,36 @@ tl.to("#cv .shade",{opacity:.7,duration:1.25,ease:"power2.in"},0.25);
 // ===== 2. 切り紙が起き上がる（奥から順に・手前ほど遅れて） =====
 const rise=(ids,t)=>ids.forEach((id,i)=>{const el=document.getElementById(id);const dn=el.classList.contains('dn');
  tl.to(el,{rotationX:dn?-4:4,duration:.55,ease:"power3.out"},t+i*.16);tl.to(el,{rotationX:0,duration:.5,ease:"sine.inOut"},t+i*.16+.55)});
-rise(["S0m","S0n","S0f"],0.75);
-rise(["S1m","S1n","S1f"],T[0]+.2);
-rise(["S2m","S2n","S2f"],T[1]+.2);
-rise(["S3m0","S3n","S3f"],T[2]+.2);
+rise(["S0m","S0n"],0.75);
+rise(["S1m","S1n"],T[0]+.2);
+rise(["S2m"],T[1]+.2);
+rise(["S3m","S3n"],T[2]+.2);
 // ===== 3. ページをめくる =====
 const turns=[["#s0","#s1",T[0]],["#s1","#s2",T[1]],["#s2","#s3",T[2]],["#s3","#s4",T[3]],["#s4","#s5",T[4]]];
 turns.forEach(([a,b,t])=>{tl.to(a,{rotationY:-178,duration:.65,ease:"power3.inOut"},t);tl.to(a+" .shade",{opacity:1,duration:.65,ease:"power2.in"},t);
  tl.fromTo(b+" .cast",{opacity:.85},{opacity:0,duration:.75,ease:"power2.out"},t+.25)});
 // めくる紙は、めくる時に層を少し寝かせる（紙が閉じる）
-[["S0",T[0]],["S1",T[1]],["S2",T[2]]].forEach(([s,t])=>["m","n","f"].forEach(k=>{const el=document.getElementById(s+k);tl.to(el,{rotationX:el.classList.contains('dn')?-40:40,duration:.5,ease:"power2.in"},t)}));
-tl.to(["#S3m1","#S3n","#S3f"],{rotationX:40,duration:.5,ease:"power2.in"},T[3]);
+[["S0",T[0]],["S1",T[1]],["S3",T[3]]].forEach(([s,t])=>tl.to(["#"+s+"m","#"+s+"n"],{rotationX:40,duration:.5,ease:"power2.in"},t));
+tl.to("#S2m",{rotationX:40,duration:.5,ease:"power2.in"},T[2]);
 // ===== 4. 字：ぼかしから浮かび、金の線が走る =====
 [["#s0",V[0]],["#s1",V[1]],["#s2",V[2]],["#s3",V[3]]].forEach(([id,s])=>{
  tl.from(id+" .cap .w",{opacity:0,y:34,filter:"blur(10px)",duration:.6,ease:"power3.out",stagger:.22},s);
  tl.from(id+" .cap .ul",{scaleX:0,duration:.9,ease:"power3.inOut"},s+.4)});
 tl.from("#s4 .info > *",{opacity:0,y:24,duration:.5,ease:"power2.out",stagger:.1},T[3]+.4);
-// ===== 5. 場面の中で動く物 =====
-// 石段：木もれ日がゆっくり動き、手前の枝がそよぐ
-tl.fromTo("#sh0",{opacity:0,backgroundPosition:"0 0"},{opacity:.9,duration:1.2},1.4);
+// ===== 5. 場面の中の空気：絵がゆっくり近づき、手前の葉がそよぎ、光の粒が舞う =====
+const S=[[1.0,T[0]],[T[0],T[1]],[T[1],T[2]],[T[2],T[3]]];
+S.forEach(([a,b],k)=>{tl.fromTo("#s"+k+" .pop",{scale:1},{scale:1.07,transformOrigin:k==1?"56% 40%":"50% 45%",duration:b-a+.8,ease:"none"},a);
+ const f=document.getElementById("S"+k+"f");if(f&&f.classList.contains('fl')){tl.fromTo(f,{x:-10,rotationZ:-.6},{x:10,rotationZ:.6,transformOrigin:"50% 0%",duration:1.8,ease:"sine.inOut",yoyo:true,repeat:Math.max(1,Math.floor((b-a)/1.8))},a)}});
+// 石段：木もれ日がゆっくり動く
+tl.fromTo("#sh0",{opacity:0},{opacity:.8,duration:1.2},1.4);
 tl.fromTo("#sh0",{x:-160,y:120},{x:120,y:-40,duration:T[0]-1.4,ease:"sine.inOut"},1.4);
-tl.to("#S0f",{rotationZ:.5,transformOrigin:"50% 100%",duration:1.6,ease:"sine.inOut",yoyo:true,repeat:Math.max(1,Math.floor((T[0]-2)/1.6))},2.0);
-// 里山：バスが山の方から古橋のバス停へ
-gsap.set("#bus",{x:BUS[0].x,y:BUS[0].y,scale:BUS[0].scale,opacity:0});
-tl.to("#bus",{opacity:1,duration:.3},T[0]+.9);
-tl.to("#bus",{keyframes:BUS.slice(1).map(p=>({x:p.x,y:p.y,scale:p.scale})),duration:Math.min(4.2,T[1]-T[0]-1.4),ease:"power1.out"},T[0]+.9);
-// 参道：二人が大門跡から参道を上っていく
-gsap.set("#ppl",{x:330,y:1000,scale:1,opacity:0});
-tl.to("#ppl",{opacity:1,duration:.4},T[1]+.6);
-tl.to("#ppl",{x:395,y:630,scale:.32,duration:T[2]-T[1]-.8,ease:"none"},T[1]+.6);
-tl.to("#ppl",{rotationZ:1.5,duration:.28,ease:"sine.inOut",yoyo:true,repeat:Math.floor((T[2]-T[1])/.28)},T[1]+.6);
-// 古木：色づき始め→見頃の色へ（同じ木の色だけが変わる）
-tl.set("#S3m1",{rotationX:0},T[2]);
-tl.to("#S3m1",{opacity:1,duration:2.6,ease:"sine.inOut"},V[3]+2.2);
-tl.to("#sun",{opacity:1,duration:1.6,ease:"sine.inOut"},T[2]+.8);
-tl.to("#sun",{scale:1.08,duration:2,ease:"sine.inOut",yoyo:true,repeat:2},T[2]+2.4);
+// 足もと：主役のもみじが1枚、くるりと舞って苔の上に落ちる（1回だけ）
+tl.fromTo("#S2n",{y:-1000,x:-120,rotationZ:-160,opacity:0},{y:0,x:0,rotationZ:0,opacity:1,duration:2.2,ease:"power2.out"},T[1]+.6);
+tl.fromTo("#S2f",{opacity:0},{opacity:1,duration:1.5},T[1]+.3);
+tl.to("#S2f",{opacity:.6,duration:1.4,ease:"sine.inOut",yoyo:true,repeat:Math.max(1,Math.floor((T[2]-T[1])/1.4)-1)},T[1]+1.8);
+// 光の粒：ゆっくり上へ漂う（場面のあいだだけ）
+tl.to("#dust",{opacity:1,duration:1.2},1.4);tl.to("#dust",{opacity:0,duration:.6},T[3]-.2);
+document.querySelectorAll("#dust i").forEach((el,i)=>{const d=+el.dataset.d,dx=+el.dataset.x;tl.fromTo(el,{y:0,x:0},{y:-d,x:dx,duration:T[3],ease:"none"},0);tl.to(el,{opacity:.25,duration:1.3+(i%5)*.3,ease:"sine.inOut",yoyo:true,repeat:Math.floor(T[3]/(1.3+(i%5)*.3))},0)});
 // ===== 6. おでかけリストの紹介（最後の止まりは短く） =====
 const T5=T[4];
 tl.to("#tab",{height:280,duration:.7,ease:"power3.out"},T[3]+1.6);
