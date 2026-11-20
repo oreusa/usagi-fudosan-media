@@ -10,13 +10,27 @@ ver = lambda f: hashlib.sha1(open(os.path.join(L, 'shin', f), 'rb').read()).hexd
 J = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 # 11/19 owner「入れ替える」：新しいページは今の URL（/odekake・/fudosan-list・/okaimono）で出す（functions/ が /shin/* を読む）
 URL = {'odekake': '/odekake', 'ie': '/fudosan-list', 'kau': '/okaimono'}
-REL = [['おでかけ', '/odekake'], ['家と土地', '/fudosan-list'], ['おかいもの', '/okaimono'], ['トップへ', '/']]
+REL = [['おでかけ', '/odekake'], ['家と土地', '/fudosan-list'], ['おかいもの', '/okaimono'], ['開店・閉店', '/kaiten'], ['トップへ', '/']]
+SEC = {'Odekake': '/odekake', 'Home & Land': '/fudosan-list', 'Shopping': '/okaimono', 'New Shops': '/kaiten'}
 SITE = 'https://kansai.townnote.app'
+
+# 11/20 owner「統一されてない・整理されてない」：MENU の項目と並び順は分野ごとにここ1か所だけ（skin.js の FUD・ODE・OKA・KAI も同じ順）
+MENUS = {
+    'Odekake': [['関西おでかけ', '/odekake'], ['イルミネーション', '/illumination'], ['紅葉', '/koyo'], ['いまから行ける', '/ima'], ['泊まり', '/tomari'], ['初詣', '/hatsumode']],
+    'Home & Land': [['家と土地の相場', '/fudosan-list'], ['地価ランキング', '/chika-kansai'], ['まちランキング', '/ranking'], ['家を売る前に', '/uru'], ['いくらで売れる？', '/ikura'], ['実家・空き家', '/jikka/'], ['解体の費用と補助金', '/kaitai']],
+    'Shopping': [['日用品の値段くらべ', '/okaimono'], ['値下がりした物', '/nesage'], ['お得な物', '/otoku'], ['ふるさと納税', '/furusato']],
+    'New Shops': [['関西の開店・閉店', '/kaiten'], ['関東の開店・閉店', 'https://kanto.townnote.app/kaiten']],
+}
 
 def write(name, title, cfg, data, js=None):
     js = js or name
+    m = cfg['menu']
+    if m.get('k') in MENUS:
+        cur = next((x[1] for x in m['items'] if len(x) > 2 and x[2]), None)
+        m['items'] = [[t, u] + ([1] if u == cur else []) for t, u in MENUS[m['k']]]
     # 11/20 表紙の MENU は分野の入口そのものなので、下の重なるボタンは出さない
-    cfg['menu']['rel'] = [] if name.startswith('cover') else [r for r in REL if r[1] != URL.get(name)]
+    # MENU の下のボタンは「ほかの分野＋トップへ」をどのページでも同じ順で（自分の分野は出さない）
+    cfg['menu']['rel'] = [] if name.startswith('cover') else [r for r in REL if r[1] != SEC.get(m.get('k'), URL.get(name))]
     desc = cfg.pop('desc', '')
     head = (f'<meta name="description" content="{html.escape(desc)}">' if desc else '') + \
         f'<link rel="canonical" href="{SITE}{URL.get(name, "/shin/" + name)}"><meta property="og:title" content="{html.escape(title.split("｜")[0])}"><meta property="og:image" content="{SITE}/assets/ogp.png"><meta property="og:url" content="{SITE}{URL.get(name, "/shin/" + name)}">'
