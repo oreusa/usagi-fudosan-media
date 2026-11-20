@@ -21,8 +21,15 @@ PHHR = set(json.load(open(os.path.join(R, 'tools/shin/photo_ok.json'), encoding=
 _PMF = os.path.join(R, 'tools/shin/photo_m.json')
 try: _PM = json.load(open(_PMF, encoding='utf-8'))
 except Exception: _PM = {}
+# 11/20 暗い昼の写真（木陰の寺など）を「夜の写真」と取り違えていた → 暗い所の割合・上の方（空）の暗さ・青空の割合も量る
+def NIGHT(px):
+    lum = [0.299*r + 0.587*g + 0.114*b for r, g, b in px]; top = lum[:64*12]
+    return [round(sum(v < 35 for v in lum)/len(lum), 2), round(sum(v < 40 for v in top)/len(top), 2),
+            round(sum(1 for r, g, b in px[:64*12] if b > r + 15 and b > 110)/len(top), 2)]
+def IS_NIGHT(m):
+    return (m[4] >= .5 or (m[5] >= .35 and m[6] < .2)) if len(m) > 6 else m[0] < 75
 def PHM(f):
-    if f in _PM and len(_PM[f]) > 3: return _PM[f]
+    if f in _PM and len(_PM[f]) > 6: return _PM[f]
     try:
         import colorsys
         from PIL import Image
@@ -33,6 +40,7 @@ def PHM(f):
             if sa > .35 and v > .25 and (h < .11 or h > .95): w += 1
             if sa > .25 and v > .2 and .17 < h < .45: gr += 1
         _PM[f] = [round(lum), round(w/len(px), 2), round(gr/len(px), 2), Image.open(os.path.join(L, 'assets/ph', f)).size[0]]
+        _PM[f] += NIGHT(px)
         json.dump(_PM, open(_PMF, 'w', encoding='utf-8'))
         return _PM[f]
     except Exception:
@@ -43,7 +51,7 @@ def FIT(it, kind):
     if not m: return it
     lum, warm, green = m[:3]
     if kind == 'illumination':
-        it['ok'] = 2 if lum < 75 else -1
+        it['ok'] = 2 if IS_NIGHT(m) else -1
     elif kind == 'koyo':
         it['ok'] = 2 if warm >= .2 else (-1 if green >= .3 and warm < .1 else (1 if it.get('ok') else 0))
     if not it.get('ok'): it.pop('ok', None)
