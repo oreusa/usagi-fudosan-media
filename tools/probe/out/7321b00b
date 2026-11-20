@@ -1,178 +1,626 @@
-<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
 <head>
-    <link rel="canonical" href="https://duckduckgo.com/">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
-    <meta name="referrer" content="origin">
-    <title>
-        DuckDuckGo
-    </title>
-    <link rel="preload" href="/font/ProximaNova-Reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/font/ProximaNova-Sbold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link title="DuckDuckGo (Lite)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_lite_v2.xml">
-    <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon"/>
-    <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2"/>
-    <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2"/>
-    <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2"/>
-    <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2"/>
-    <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
-    <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/l.4db20359cb90b7c3b91a.css" type="text/css"/>
-    <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/lc.e4363f4c4e05cdc2a4be.css" type="text/css"/>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" />
+  <meta name="referrer" content="origin" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>石清水八幡宮 初詣 正月 参拝時間 公式 at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml" />
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon" />
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon" />
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2"/>
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2"/>
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2"/>
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2"/>
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.5e485425356583f3072f.css" type="text/css"/>
 </head>
 
-<body>
-    <a name="top"></a>
-    <center id="lite_wrapper">
-        <br>
-        <a class="header-url" href="/html/">
-            <span class="header">DuckDuckGo</span>
-        </a>
-        <br><br>
+<body class="body--html">
+  <a name="top" id="top"></a>
+
+  <form action="/html/" method="post">
+    <input type="text" name="state_hidden" id="state_hidden" />
+  </form>
+
+  <div>
+    <div class="site-wrapper-border"></div>
+
+    <div id="header" class="header cw header--html">
+      <a title="DuckDuckGo" href="/html/" class="header__logo-wrap"></a>
+
+      <form name="x" class="header__form" action="/html/" method="post">
+        <div class="search search--header">
+          <input name="q" autocomplete="off" class="search__input" id="search_form_input_homepage" type="text" value="石清水八幡宮 初詣 正月 参拝時間 公式" />
+          <input name="b" id="search_button_homepage" class="search__button search__button--html" value="" title="Search" alt="Search" type="submit" />
+        </div>
 
         
-        <iframe name="ifr" width="0" height="0" border="0" class="hidden"></iframe>
-        <form id="img-form" action="//duckduckgo.com/anomaly.js?sv=html&cc=botnet&ti=1795132574&gk=d4cd0dabcf4caa22ad92fab40844c786&p=13582088f95037f324f1105756ac2e91-1d8028e560ddd0f1b1ffb2c9167e71c6-d6b4642fabe209017fb2700a23bf3cf9-393ec9411ba7b347f6135c29ba523749-6fd4783e3acc47ee60d1c662989038af-5f87c0ff5b0cdfbad633f57e196f4a11-5d138f8429a18ebb87def6234fff6f36-8fcbde260394d5c8e4f39f0fcb915bce-2dc9290de0f9d500236a18a9d6f9154b&q=石清水八幡宮 初詣 正月 参拝時間 公式&o=x%2Bj33%2BrDYj01oJJ6IMDRfYfhI5RCGbRMHX%2FZhA5noutNlFOwgvDaeX6shryF2eyU%0A&r=usw" target="ifr" method="POST"></form>
-        <form id="challenge-form" action="//duckduckgo.com/anomaly.js?sv=html&cc=botnet&st=1795132574&gk=d4cd0dabcf4caa22ad92fab40844c786&p=13582088f95037f324f1105756ac2e91-1d8028e560ddd0f1b1ffb2c9167e71c6-d6b4642fabe209017fb2700a23bf3cf9-393ec9411ba7b347f6135c29ba523749-6fd4783e3acc47ee60d1c662989038af-5f87c0ff5b0cdfbad633f57e196f4a11-5d138f8429a18ebb87def6234fff6f36-8fcbde260394d5c8e4f39f0fcb915bce-2dc9290de0f9d500236a18a9d6f9154b&q=石清水八幡宮 初詣 正月 参拝時間 公式&o=x%2Bj33%2BrDYj01oJJ6IMDRfYfhI5RCGbRMHX%2FZhA5noutNlFOwgvDaeX6shryF2eyU%0A&r=usw" method="POST">
-            <div class="anomaly-modal__mask">
-                <div class="anomaly-modal__modal  is-ie" data-testid="anomaly-modal">
-                    <div class="anomaly-modal__title">Unfortunately, bots use DuckDuckGo too.</div>
-                    <div class="anomaly-modal__description">Please complete the following challenge to confirm this search was made by a human.</div>
+        
+        
+        
+
+        <div class="frm__select">
+          <select name="kl">
+            
+              <option value="" >All Regions</option>
+            
+              <option value="ar-es" >Argentina</option>
+            
+              <option value="au-en" >Australia</option>
+            
+              <option value="at-de" >Austria</option>
+            
+              <option value="be-fr" >Belgium (fr)</option>
+            
+              <option value="be-nl" >Belgium (nl)</option>
+            
+              <option value="br-pt" >Brazil</option>
+            
+              <option value="bg-bg" >Bulgaria</option>
+            
+              <option value="ca-en" >Canada (en)</option>
+            
+              <option value="ca-fr" >Canada (fr)</option>
+            
+              <option value="ct-ca" >Catalonia</option>
+            
+              <option value="cl-es" >Chile</option>
+            
+              <option value="cn-zh" >China</option>
+            
+              <option value="co-es" >Colombia</option>
+            
+              <option value="hr-hr" >Croatia</option>
+            
+              <option value="cz-cs" >Czech Republic</option>
+            
+              <option value="dk-da" >Denmark</option>
+            
+              <option value="ee-et" >Estonia</option>
+            
+              <option value="fi-fi" >Finland</option>
+            
+              <option value="fr-fr" >France</option>
+            
+              <option value="de-de" >Germany</option>
+            
+              <option value="gr-el" >Greece</option>
+            
+              <option value="hk-tzh" >Hong Kong</option>
+            
+              <option value="hu-hu" >Hungary</option>
+            
+              <option value="is-is" >Iceland</option>
+            
+              <option value="in-en" >India (en)</option>
+            
+              <option value="id-en" >Indonesia (en)</option>
+            
+              <option value="ie-en" >Ireland</option>
+            
+              <option value="il-en" >Israel (en)</option>
+            
+              <option value="it-it" >Italy</option>
+            
+              <option value="jp-jp" >Japan</option>
+            
+              <option value="kr-kr" >Korea</option>
+            
+              <option value="lv-lv" >Latvia</option>
+            
+              <option value="lt-lt" >Lithuania</option>
+            
+              <option value="my-en" >Malaysia (en)</option>
+            
+              <option value="mx-es" >Mexico</option>
+            
+              <option value="nl-nl" >Netherlands</option>
+            
+              <option value="nz-en" >New Zealand</option>
+            
+              <option value="no-no" >Norway</option>
+            
+              <option value="pk-en" >Pakistan (en)</option>
+            
+              <option value="pe-es" >Peru</option>
+            
+              <option value="ph-en" >Philippines (en)</option>
+            
+              <option value="pl-pl" >Poland</option>
+            
+              <option value="pt-pt" >Portugal</option>
+            
+              <option value="ro-ro" >Romania</option>
+            
+              <option value="ru-ru" >Russia</option>
+            
+              <option value="xa-ar" >Saudi Arabia</option>
+            
+              <option value="sg-en" >Singapore</option>
+            
+              <option value="sk-sk" >Slovakia</option>
+            
+              <option value="sl-sl" >Slovenia</option>
+            
+              <option value="za-en" >South Africa</option>
+            
+              <option value="es-ca" >Spain (ca)</option>
+            
+              <option value="es-es" >Spain (es)</option>
+            
+              <option value="se-sv" >Sweden</option>
+            
+              <option value="ch-de" >Switzerland (de)</option>
+            
+              <option value="ch-fr" >Switzerland (fr)</option>
+            
+              <option value="tw-tzh" >Taiwan</option>
+            
+              <option value="th-en" >Thailand (en)</option>
+            
+              <option value="tr-tr" >Turkey</option>
+            
+              <option value="us-en" >US (English)</option>
+            
+              <option value="us-es" >US (Spanish)</option>
+            
+              <option value="ua-uk" >Ukraine</option>
+            
+              <option value="uk-en" >United Kingdom</option>
+            
+              <option value="vn-en" >Vietnam (en)</option>
+            
+          </select>
+        </div>
+
+        <div class="frm__select frm__select--last">
+          <select class="" name="df">
+            
+              <option value="" selected>Any Time</option>
+            
+              <option value="d" >Past Day</option>
+            
+              <option value="w" >Past Week</option>
+            
+              <option value="m" >Past Month</option>
+            
+              <option value="y" >Past Year</option>
+            
+          </select>
+        </div>
+      </form>
+    </div>
+
+    
+
+    
+      <!-- Web results are present -->
+      <div>
+        <div class="serp__results">
+          <div id="links" class="results">
+            
+
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
                     
-                    <input type="hidden" name="ct" value="AgEAB5vXBgW7XebrT_nsUi5Asfwi-VQFg5QxVLERfHXqcasdN3GCBJDsZ3xQfFZEx7qzI9EsAvliFU_dvuWeoc0N28ARhj_H0VWHtQZX94sc-YV4aw0_p39o7-Pq3H1QIsY8xhO0UJD5ZHPYy_uaaHK7cfNyebL3mGzsWsh7W2zCSs_ULBi1eiqdUrnjC7-g4u3Am30gcjqUDvEw8i9-dLRjT8n4K9dk-TapDS7vSf2zQDCVWszwsQ8A6tWpuFOg5qS4c1GnRi2wWFGyl98wvuTTslhm968ZCw3FFvzz36WQlT25hbh3_RMNp5UetXwohCzdWMUh4uAAlfQ6nixoCk6UpE0Cu9Jiu2dVN4jgKDH3U4GeYBa2ADHhHY0zMh9_7h4HHaC405onMZroWXQpK5aw0KRiDa76tbEMR9jgAMstvZddrzLEY0bQjYiWSztjm2Cry8E2lk7VmHDaxboZccdYDPpAtJ1RUYq7rkwwpUCZEAERJLy_Y-e6TCZwZuUDSCp2S6tD0GjB976VmqEHblqJxK2fgR26ar6M38GiKW8xDyA6bWVSBt14bkEZo8NHv_OzCrdMF3wuOYFmiCXQSJ_eNiDDnuCV9k0Ph7VfJXeTuEi7J_lJpThxJgCgPS6yzLVkpqiEp25sbwGKYdMGxVAjER7W0pv2D7NfaG4Uc3mxjL40slE3L8Kcqzr2xdyxtXXR2RUzRE9EFTWj198WbTdMgM4fz3fGTvrIPlRpC-94p6VJXUMfmrGNzhaaZru7toir91RPa4MhdQbNZxYB">
-                    <div class="anomaly-modal__instructions">Select all squares containing a duck:</div>
-                    <div class="anomaly-modal__puzzle-margins">
-                        <div class="anomaly-modal__puzzle">
-                            
-                                <div class="anomaly-modal__box" data-index="0">
-                                    
-                                    
-                                        <label class="" for="image-check_13582088f95037f324f1105756ac2e91" data-testid="anomaly-modal-tile-0">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_13582088f95037f324f1105756ac2e91" id="image-check_13582088f95037f324f1105756ac2e91">
-                                            <img class="anomaly-modal__image" alt=" " id="image-13582088f95037f324f1105756ac2e91" src="../assets/anomaly/images/challenge/13582088f95037f324f1105756ac2e91.jpg" data-id="13582088f95037f324f1105756ac2e91.jpg" data-testid="anomaly-modal-image-0"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="1">
-                                    
-                                    
-                                        <label class="" for="image-check_1d8028e560ddd0f1b1ffb2c9167e71c6" data-testid="anomaly-modal-tile-1">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_1d8028e560ddd0f1b1ffb2c9167e71c6" id="image-check_1d8028e560ddd0f1b1ffb2c9167e71c6">
-                                            <img class="anomaly-modal__image" alt=" " id="image-1d8028e560ddd0f1b1ffb2c9167e71c6" src="../assets/anomaly/images/challenge/1d8028e560ddd0f1b1ffb2c9167e71c6.jpg" data-id="1d8028e560ddd0f1b1ffb2c9167e71c6.jpg" data-testid="anomaly-modal-image-1"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="2">
-                                    
-                                    
-                                        <label class="" for="image-check_d6b4642fabe209017fb2700a23bf3cf9" data-testid="anomaly-modal-tile-2">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_d6b4642fabe209017fb2700a23bf3cf9" id="image-check_d6b4642fabe209017fb2700a23bf3cf9">
-                                            <img class="anomaly-modal__image" alt=" " id="image-d6b4642fabe209017fb2700a23bf3cf9" src="../assets/anomaly/images/challenge/d6b4642fabe209017fb2700a23bf3cf9.jpg" data-id="d6b4642fabe209017fb2700a23bf3cf9.jpg" data-testid="anomaly-modal-image-2"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="3">
-                                    
-                                    
-                                        <label class="" for="image-check_393ec9411ba7b347f6135c29ba523749" data-testid="anomaly-modal-tile-3">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_393ec9411ba7b347f6135c29ba523749" id="image-check_393ec9411ba7b347f6135c29ba523749">
-                                            <img class="anomaly-modal__image" alt=" " id="image-393ec9411ba7b347f6135c29ba523749" src="../assets/anomaly/images/challenge/393ec9411ba7b347f6135c29ba523749.jpg" data-id="393ec9411ba7b347f6135c29ba523749.jpg" data-testid="anomaly-modal-image-3"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="4">
-                                    
-                                    
-                                        <label class="" for="image-check_6fd4783e3acc47ee60d1c662989038af" data-testid="anomaly-modal-tile-4">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_6fd4783e3acc47ee60d1c662989038af" id="image-check_6fd4783e3acc47ee60d1c662989038af">
-                                            <img class="anomaly-modal__image" alt=" " id="image-6fd4783e3acc47ee60d1c662989038af" src="../assets/anomaly/images/challenge/6fd4783e3acc47ee60d1c662989038af.jpg" data-id="6fd4783e3acc47ee60d1c662989038af.jpg" data-testid="anomaly-modal-image-4"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="5">
-                                    
-                                    
-                                        <label class="" for="image-check_5f87c0ff5b0cdfbad633f57e196f4a11" data-testid="anomaly-modal-tile-5">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_5f87c0ff5b0cdfbad633f57e196f4a11" id="image-check_5f87c0ff5b0cdfbad633f57e196f4a11">
-                                            <img class="anomaly-modal__image" alt=" " id="image-5f87c0ff5b0cdfbad633f57e196f4a11" src="../assets/anomaly/images/challenge/5f87c0ff5b0cdfbad633f57e196f4a11.jpg" data-id="5f87c0ff5b0cdfbad633f57e196f4a11.jpg" data-testid="anomaly-modal-image-5"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="6">
-                                    
-                                    
-                                        <label class="" for="image-check_5d138f8429a18ebb87def6234fff6f36" data-testid="anomaly-modal-tile-6">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_5d138f8429a18ebb87def6234fff6f36" id="image-check_5d138f8429a18ebb87def6234fff6f36">
-                                            <img class="anomaly-modal__image" alt=" " id="image-5d138f8429a18ebb87def6234fff6f36" src="../assets/anomaly/images/challenge/5d138f8429a18ebb87def6234fff6f36.jpg" data-id="5d138f8429a18ebb87def6234fff6f36.jpg" data-testid="anomaly-modal-image-6"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="7">
-                                    
-                                    
-                                        <label class="" for="image-check_8fcbde260394d5c8e4f39f0fcb915bce" data-testid="anomaly-modal-tile-7">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_8fcbde260394d5c8e4f39f0fcb915bce" id="image-check_8fcbde260394d5c8e4f39f0fcb915bce">
-                                            <img class="anomaly-modal__image" alt=" " id="image-8fcbde260394d5c8e4f39f0fcb915bce" src="../assets/anomaly/images/challenge/8fcbde260394d5c8e4f39f0fcb915bce.jpg" data-id="8fcbde260394d5c8e4f39f0fcb915bce.jpg" data-testid="anomaly-modal-image-7"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="8">
-                                    
-                                    
-                                        <label class="" for="image-check_2dc9290de0f9d500236a18a9d6f9154b" data-testid="anomaly-modal-tile-8">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_2dc9290de0f9d500236a18a9d6f9154b" id="image-check_2dc9290de0f9d500236a18a9d6f9154b">
-                                            <img class="anomaly-modal__image" alt=" " id="image-2dc9290de0f9d500236a18a9d6f9154b" src="../assets/anomaly/images/challenge/2dc9290de0f9d500236a18a9d6f9154b.jpg" data-id="2dc9290de0f9d500236a18a9d6f9154b.jpg" data-testid="anomaly-modal-image-8"></img>
-                                        </label>
-                                    
-                                </div>
-                            
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fblog.kanko.jp%2Fkyoto%2Dsightseeing%2Fevent1%2Fhatsumoude%2F2iwashimizu%2Dshrine&amp;rut=95ff0aed3231872368ad55cc21d134aee0962e84cb4df3c55aa9030668e121eb">京都で初日の出[石清水八幡宮初詣2026]混雑,駐車場&amp;交通規制,屋台 - 京都観光旅行ガイド Kyoto Blog Guide</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fblog.kanko.jp%2Fkyoto%2Dsightseeing%2Fevent1%2Fhatsumoude%2F2iwashimizu%2Dshrine&amp;rut=95ff0aed3231872368ad55cc21d134aee0962e84cb4df3c55aa9030668e121eb">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/blog.kanko.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fblog.kanko.jp%2Fkyoto%2Dsightseeing%2Fevent1%2Fhatsumoude%2F2iwashimizu%2Dshrine&amp;rut=95ff0aed3231872368ad55cc21d134aee0962e84cb4df3c55aa9030668e121eb">
+                            blog.kanko.jp/kyoto-sightseeing/event1/hatsumoude/2iwashimizu-shrine
+                          </a>
+                          
                         </div>
-                    </div>
-                    <div class="anomaly-modal__controls">
-                        <button name="challenge-submit" class="btn btn--primary anomaly-modal__submit js-anomaly-modal-submit" form="challenge-form" value="d4cd0dabcf4caa22ad92fab40844c786" >Submit</button>
-                        <p></p>
-                        <input class="feedback-toggle" type="checkbox" id="feedback" unchecked />
-                        <label for="feedback" class="feedback-text">Images not loading?</label>
-                        <div class="feedback-content">
-                            <label class="feedback-instructions">Please email the following code to:</label>
-                            <p class="feedback-instructions">error-lite+aab3@duckduckgo.com</p>
-                            <p><label class="feedback-instructions">Code: aab3</label></p>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fblog.kanko.jp%2Fkyoto%2Dsightseeing%2Fevent1%2Fhatsumoude%2F2iwashimizu%2Dshrine&amp;rut=95ff0aed3231872368ad55cc21d134aee0962e84cb4df3c55aa9030668e121eb">京都で初日の出【石清水八幡宮初詣2026】参拝時間・混雑&amp;混雑回避・駐車場＆交通規制・屋台・見どころ・アクセスなどを案内します 京都・八幡市の男山の山上に鎮座する「石清水八幡宮」は、毎年正月は多くの初詣でにぎわいます。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ffukubukurohunter29.com%2Fiwashimizuhachimangu%2D2026%2F&amp;rut=72b3a363b75bc3467d91da625b2eecebcd8dde71d812e5d7d3008ae003573f6f">石清水八幡宮の初詣2026完全ガイド!屋台はいつまで？参拝時間・混雑状況・駐車場情報まとめ | 初売り・福袋情報</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ffukubukurohunter29.com%2Fiwashimizuhachimangu%2D2026%2F&amp;rut=72b3a363b75bc3467d91da625b2eecebcd8dde71d812e5d7d3008ae003573f6f">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/fukubukurohunter29.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ffukubukurohunter29.com%2Fiwashimizuhachimangu%2D2026%2F&amp;rut=72b3a363b75bc3467d91da625b2eecebcd8dde71d812e5d7d3008ae003573f6f">
+                            fukubukurohunter29.com/iwashimizuhachimangu-2026/
+                          </a>
+                          
                         </div>
-                    </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ffukubukurohunter29.com%2Fiwashimizuhachimangu%2D2026%2F&amp;rut=72b3a363b75bc3467d91da625b2eecebcd8dde71d812e5d7d3008ae003573f6f">本記事では、 石清水八幡宮の初詣2026を完全ガイド として、公式発表をもとに最新情報を整理しつつ、2025-2026年の情報が未公表の部分については 2024-2025年の実績から現実的に予測 しています。 「屋台はいつまで出ているの？ 」「一番空いている時間は？</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fblog.kanko.jp%2Fkyoto%2Dsightseeing%2Fkyoto%2Dshrine%2Fiwashimizuhachimangu%2Dhatsumoude2026&amp;rut=1f67c28b127bfd80e614977078e676e369a5bf86d033448c3312cb798476639e">京都【石清水八幡宮 初詣2026】三が日を避けて1月5日にお詣り - 京都観光旅行ガイド Kyoto Blog Guide</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fblog.kanko.jp%2Fkyoto%2Dsightseeing%2Fkyoto%2Dshrine%2Fiwashimizuhachimangu%2Dhatsumoude2026&amp;rut=1f67c28b127bfd80e614977078e676e369a5bf86d033448c3312cb798476639e">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/blog.kanko.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fblog.kanko.jp%2Fkyoto%2Dsightseeing%2Fkyoto%2Dshrine%2Fiwashimizuhachimangu%2Dhatsumoude2026&amp;rut=1f67c28b127bfd80e614977078e676e369a5bf86d033448c3312cb798476639e">
+                            blog.kanko.jp/kyoto-sightseeing/kyoto-shrine/iwashimizuhachimangu-hatsumoude2026
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fblog.kanko.jp%2Fkyoto%2Dsightseeing%2Fkyoto%2Dshrine%2Fiwashimizuhachimangu%2Dhatsumoude2026&amp;rut=1f67c28b127bfd80e614977078e676e369a5bf86d033448c3312cb798476639e">この標高143mの男山の山上にあるのが石清水八幡宮｡ 山全体が石清水八幡宮と共に広く尊崇の対象となってきました。 京都・八幡市の男山の山上に鎮座する「石清水八幡宮」は、毎年正月は多くの初詣でにぎわいます。 2026年の石清水八幡宮の初詣は1月5日。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.keihan.co.jp%2Fhatsumoude%2Fspot%2Fiwashimizuhachimangu.html&amp;rut=9f53324641ecb80bd8de780423400582b34cd2da7cb8e46d5b603cd851a9bda7">石清水八幡宮（京都）の初詣情報 | 京阪沿線の初詣2026 | 京阪グループ</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.keihan.co.jp%2Fhatsumoude%2Fspot%2Fiwashimizuhachimangu.html&amp;rut=9f53324641ecb80bd8de780423400582b34cd2da7cb8e46d5b603cd851a9bda7">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/www.keihan.co.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.keihan.co.jp%2Fhatsumoude%2Fspot%2Fiwashimizuhachimangu.html&amp;rut=9f53324641ecb80bd8de780423400582b34cd2da7cb8e46d5b603cd851a9bda7">
+                            www.keihan.co.jp/hatsumoude/spot/iwashimizuhachimangu.html
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.keihan.co.jp%2Fhatsumoude%2Fspot%2Fiwashimizuhachimangu.html&amp;rut=9f53324641ecb80bd8de780423400582b34cd2da7cb8e46d5b603cd851a9bda7">社殿10棟が国宝の歴史ある神社。男山の竹を使った「ジャンボ御神矢（ごしんや）」が節分まで本殿前に設置されます。大みそかは23時まで、1日（木・祝）は0時から参拝できます。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fiwashimizu.or.jp%2F&amp;rut=cd0289bc7fccf524cbd87e8076e845ff7bf6b183b67f86778ebce40465ea1085">石清水八幡宮</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fiwashimizu.or.jp%2F&amp;rut=cd0289bc7fccf524cbd87e8076e845ff7bf6b183b67f86778ebce40465ea1085">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/iwashimizu.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fiwashimizu.or.jp%2F&amp;rut=cd0289bc7fccf524cbd87e8076e845ff7bf6b183b67f86778ebce40465ea1085">
+                            iwashimizu.or.jp
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fiwashimizu.or.jp%2F&amp;rut=cd0289bc7fccf524cbd87e8076e845ff7bf6b183b67f86778ebce40465ea1085">〒614-8588 京都府八幡市八幡高坊30 TEL 075-981-3001 FAX 075-981-9808 石清水八幡宮について 歴史と信仰 境内のご案内 国宝指定について 八幡宮の文化財 はちまんさんのデジタル図書館 御本殿釣灯籠奉納のご案内 石清水八幡宮にまつわる話 ご祈祷・授与品 ご祈祷のご ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fiwashimizu.or.jp%2Fnews%2Fr6_hatumoude%2F&amp;rut=739114c5962f123fadb5376afaa79aa873f5df3993a6a5f3eca134af97e7ea10">最新情報｜石清水八幡宮 - iwashimizu.or.jp</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fiwashimizu.or.jp%2Fnews%2Fr6_hatumoude%2F&amp;rut=739114c5962f123fadb5376afaa79aa873f5df3993a6a5f3eca134af97e7ea10">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/iwashimizu.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fiwashimizu.or.jp%2Fnews%2Fr6_hatumoude%2F&amp;rut=739114c5962f123fadb5376afaa79aa873f5df3993a6a5f3eca134af97e7ea10">
+                            iwashimizu.or.jp/news/r6_hatumoude/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fiwashimizu.or.jp%2Fnews%2Fr6_hatumoude%2F&amp;rut=739114c5962f123fadb5376afaa79aa873f5df3993a6a5f3eca134af97e7ea10">上記の期間は、 ①京阪電車「石清水八幡宮駅」周辺および ②当宮山上・山麓周辺 （＝山上車両進入不可） の車両交通規制が実施されます。 当宮駐車場への駐車はできませんのでご注意ください。 八幡市橋本地区にお住まいの皆様の生活にご迷惑になら ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyoto%2Dkankou.or.jp%2Fevent%2F600&amp;rut=3a317367d344a38fe599d056e86cc2840db04497b6b9d6425e1ba37ac6fbf41b">石清水八幡宮初詣 | イベント一覧 | 京都府観光連盟公式サイト</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyoto%2Dkankou.or.jp%2Fevent%2F600&amp;rut=3a317367d344a38fe599d056e86cc2840db04497b6b9d6425e1ba37ac6fbf41b">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/www.kyoto-kankou.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyoto%2Dkankou.or.jp%2Fevent%2F600&amp;rut=3a317367d344a38fe599d056e86cc2840db04497b6b9d6425e1ba37ac6fbf41b">
+                            www.kyoto-kankou.or.jp/event/600
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyoto%2Dkankou.or.jp%2Fevent%2F600&amp;rut=3a317367d344a38fe599d056e86cc2840db04497b6b9d6425e1ba37ac6fbf41b"><b>石清水八幡宮</b> 1. 1（祝）〜 2. 3（水） 元日午前0時の開門とともに始まります。 初詣期間は長く、節分まで様々な祭典行事が行われます。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F53988%2Fkizuhachimanguu%2F&amp;rut=3a7e48aeeeec6d6a64f6793a5edb5280d558a5bf864ffe68a95effe3df1e6ae6">京都府八幡市の石清水八幡宮の初詣ガイド｜2025年度最新情報 | 来たhub 観光 イベント 祭り お得情報</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F53988%2Fkizuhachimanguu%2F&amp;rut=3a7e48aeeeec6d6a64f6793a5edb5280d558a5bf864ffe68a95effe3df1e6ae6">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/kt-hub.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F53988%2Fkizuhachimanguu%2F&amp;rut=3a7e48aeeeec6d6a64f6793a5edb5280d558a5bf864ffe68a95effe3df1e6ae6">
+                            kt-hub.com/53988/kizuhachimanguu/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F53988%2Fkizuhachimanguu%2F&amp;rut=3a7e48aeeeec6d6a64f6793a5edb5280d558a5bf864ffe68a95effe3df1e6ae6">京都府八幡市の石清水八幡宮の初詣ガイド｜2025年度最新情報石清水八幡宮は由緒ある八幡神の名社で、毎年多くの方が初詣に訪れます。2025年度の初詣では交通規制が実施され、例年約20万人の参拝客が訪れます。 電話番号：075-981-0110...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkakure%2Dkyoto.com%2Fyawata%2F7136%2F&amp;rut=2563ad852ad1f23d670b5c26ad0be616ba9d9b2391101a5a9ca45ad4a83cb4e9">【石清水八幡宮】初詣2026の駐車場と交通規制図!出店はある？ | かくれkyoto</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkakure%2Dkyoto.com%2Fyawata%2F7136%2F&amp;rut=2563ad852ad1f23d670b5c26ad0be616ba9d9b2391101a5a9ca45ad4a83cb4e9">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/kakure-kyoto.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkakure%2Dkyoto.com%2Fyawata%2F7136%2F&amp;rut=2563ad852ad1f23d670b5c26ad0be616ba9d9b2391101a5a9ca45ad4a83cb4e9">
+                            kakure-kyoto.com/yawata/7136/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkakure%2Dkyoto.com%2Fyawata%2F7136%2F&amp;rut=2563ad852ad1f23d670b5c26ad0be616ba9d9b2391101a5a9ca45ad4a83cb4e9">お正月の恒例行事といえば「初詣」。 新年のはじまりに神社やお寺にお参りして、お祈りしたりおみくじを引くのが定番。 京都の初詣スポットのひとつである・・・ 「石清水八幡宮の初詣2026」 についてご紹介! 京都の超人気初詣スポット。 毎年多く</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyosei%2Dtairyu.jp%2Fomiyamairi%2Fjinnja%2Fkyoto%2D1224.html&amp;rut=6d4cb3c801eb25cd259bfafb746700a94737782985dc6ba89bcd90bb85ed7e10">石清水八幡宮のお宮参り完全ガイド｜初穂料10,000円~・男山山上の国宝社殿で初宮詣【2026年最新】</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyosei%2Dtairyu.jp%2Fomiyamairi%2Fjinnja%2Fkyoto%2D1224.html&amp;rut=6d4cb3c801eb25cd259bfafb746700a94737782985dc6ba89bcd90bb85ed7e10">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/www.kyosei-tairyu.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyosei%2Dtairyu.jp%2Fomiyamairi%2Fjinnja%2Fkyoto%2D1224.html&amp;rut=6d4cb3c801eb25cd259bfafb746700a94737782985dc6ba89bcd90bb85ed7e10">
+                            www.kyosei-tairyu.jp/omiyamairi/jinnja/kyoto-1224.html
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyosei%2Dtairyu.jp%2Fomiyamairi%2Fjinnja%2Fkyoto%2D1224.html&amp;rut=6d4cb3c801eb25cd259bfafb746700a94737782985dc6ba89bcd90bb85ed7e10">石清水八幡宮でお宮参りをしたいけれど、「山の上の神社に赤ちゃん連れで行けるの?」「ケーブルカーは使える?」「初穂料はいくら?」――京都府八幡市の男山 (おとこやま)山上に鎮座する石清水八幡宮は、宇佐神宮・鶴岡八幡宮と並ぶ 日本三大八幡宮 の一つ。2016年に社殿10棟が国宝に指定さ ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+
+            
+              
+              
+                <div class="nav-link">
+                  <form action="/html/" method="post">
+                    <input type="submit" class='btn btn--alt' value="Next" />
+                    <input type="hidden" name="q" value="石清水八幡宮 初詣 正月 参拝時間 公式" />
+                    <input type="hidden" name="s" value="10" />
+                    <input type="hidden" name="nextParams" value="" />
+                    <input type="hidden" name="v" value="l" />
+                    <input type="hidden" name="o" value="json" />
+                    <input type="hidden" name="dc" value="11" />
+                    <input type="hidden" name="api" value="d.js" />
+                    <input type="hidden" name="vqd" value="4-337774409154336157114486468220051308345" />
+
+                    
+                    
+                    
+                      <input name="kl" value="wt-wt" type="hidden" />
+                    
+                    
+                    
+                    
+                  </form>
+                </div>
+              
+            
+
+            <div class="feedback-btn">
+              <a rel="nofollow" href="//duckduckgo.com/feedback.html" target="_new">Feedback</a>
             </div>
-        </form>
-        
-
-        
-
-        
-
-        
-
-
-        <br>
-        <p class='html-only'>
-            <!--    This is the Lite version. Get the full-JS version <a href="https://duckduckgo.com/">here</a>. //-->
-        </p>
-    </center>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div> <!-- links wrapper //-->
     
-        <img src="//duckduckgo.com/t/tqadb?9896579&amp;s=lite&amp;r=usw&amp;c=dadb&amp;cc=botnet&amp;i=-1&amp;iadb=0&amp;e=0&amp;o=x%2Bj33%2BrDYj01oJJ6IMDRfYfhI5RCGbRMHX%2FZhA5noutNlFOwgvDaeX6shryF2eyU%0A&amp;sc=1&amp;p=13582088f95037f324f1105756ac2e91-1d8028e560ddd0f1b1ffb2c9167e71c6-d6b4642fabe209017fb2700a23bf3cf9-393ec9411ba7b347f6135c29ba523749-6fd4783e3acc47ee60d1c662989038af-5f87c0ff5b0cdfbad633f57e196f4a11-5d138f8429a18ebb87def6234fff6f36-8fcbde260394d5c8e4f39f0fcb915bce-2dc9290de0f9d500236a18a9d6f9154b&amp;gk=d4cd0dabcf4caa22ad92fab40844c786"/>
-    
-    
-    
-    
-    
+  </div>
 
+  <div id="bottom_spacing2"></div>
+
+  
+    <img src="//duckduckgo.com/t/sl_h"/>
+  
 </body>
-
 </html>

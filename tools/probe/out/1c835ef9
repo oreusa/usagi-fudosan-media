@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>枚岡神社（河内国一之宮 太古の聖域）</title>
+    <meta name="keywords" content="枚岡神社, 御祈祷, 神事, 祭典, 御由緒, 結婚式" />
+    <meta name="description" content="太古の聖域　河内国一宮　枚岡神社公式ウェブサイト。大阪府東大阪市にある枚岡神社をご紹介します。" />
+    <meta name="thumbnail" content="http://www.hiraoka-jinja.org/assets/images/common/ogimage.jpg">
+    <meta property="og:title" content="枚岡神社（河内国一之宮 太古の聖域）">
+    <meta property="og:description" content="太古の聖域　河内国一宮　枚岡神社公式ウェブサイト。大阪府東大阪市にある枚岡神社をご紹介します。">
+    <meta property="og:image" content="http://www.hiraoka-jinja.org/assets/images/common/ogimage.jpg">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <!--ページ共通読み込みCSS（編集禁止）-->
+    <link rel="stylesheet" href="assets/css/common.css">
+    <!--/ページ共通読み込みCSS（編集禁止）-->
+    <!--ページ固有読み込みCSS-->
+    <link rel="stylesheet" href="assets/css/root/index.css">
+    <!--/ページ固有読み込みCSS-->
+</head>
+
+<body>
+
+
+    <header class="l-header">
+        <div class="l-header__lgContents u-visible_lg">
+            <h1 class="l-header__lgContents__logo">
+                <a href="">
+                    <img src="assets/images/common/logo_lg.png" alt="太古の聖域 枚岡神社">
+                </a>
+            </h1>
+            <div class="l-header__lgContents__menus">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="treasures/index.html">
+                                    <span>宝</span>
+                                    <span>物</span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="prayers/index.html">
+                                    <span>御</span>
+                                    <span>祈</span>
+                                    <span>祷</span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="rituals/index.html">
+                                    <span>神</span>
+                                    <span>事</span>
+                                    <span>・</span>
+                                    <span>祭</span>
+                                    <span>典</span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="history/index.html">
+                                    <span>御</span>
+                                    <span>由</span>
+                                    <span>緒</span>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="http://blog.goo.ne.jp/shinkimichimichi" target="_blank">
+                                    <span>日</span>
+                                    <span>記</span>
+                                    <span class="l-header__lgContents__menus__startKakko">(</span>
+                                    <span>ブ</span>
+                                    <span>ロ</span>
+                                    <span>グ</span>
+                                    <span class="l-header__lgContents__menus__endKakko">(</span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="access/index.html">
+                                    <span>交</span>
+                                    <span>通</span>
+                                    <span>ア</span>
+                                    <span>ク</span>
+                                    <span>セ</span>
+                                    <span>ス</span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="grounds-of-a-shrine/index.html">
+                                    <span>境</span>
+                                    <span>内</span>
+                                    <span>の</span>
+                                    <span>ご</span>
+                                    <span>案</span>
+                                    <span>内</span>
+                                </a>
+                            </td>
+                            <td>
+                                <a href="greeting/index.html">
+                                    <span>宮</span>
+                                    <span>司</span>
+                                    <span>よ</span>
+                                    <span>り</span>
+                                    <span>ひ</span>
+                                    <span>と</span>
+                                    <span>こ</span>
+                                    <span>と</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="l-header__xsContents u-visible_xs">
+            <div class="l-header__xsContents__holder">
+                <h1 class="l-header__xsContents__holder__logo">
+                    <a href=""><img src="assets/images/common/logo_xs.svg" alt="太古の聖域 枚岡神社"></a>
+                </h1>
+                <a href="#" class="l-header__xsContents__holder__menuBtn">
+                    <img src="assets/images/common/icon_menu-default.svg" alt="メニューを開く">
+                </a>
+            </div>
+            <div class="l-header__xsContents__xsMenu">
+                <div class="l-header__xsContents__xsMenu__holder">
+                    <h1 class="l-header__xsContents__xsMenu__holder__logo">
+                        <a href="">
+                            <img src="assets/images/common/logo_xs.svg" alt="太古の聖域 枚岡神社">
+                        </a>
+                    </h1>
+                    <a href="#" class="l-header__xsContents__xsMenu__holder__closeBtn">
+                        <img src="assets/images/common/icon_menu-close.svg" alt="メニューを閉じる">
+                    </a>
+                </div>
+                <div class="l-header__xsContents__xsMenu__menus">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="treasures/index.html">
+                                        <span>宝</span>
+                                        <span>物</span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="prayers/index.html">
+                                        <span>御</span>
+                                        <span>祈</span>
+                                        <span>祷</span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="rituals/index.html">
+                                        <span>神</span>
+                                        <span>事</span>
+                                        <span>・</span>
+                                        <span>祭</span>
+                                        <span>典</span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="history/index.html">
+                                        <span>御</span>
+                                        <span>由</span>
+                                        <span>緒</span>
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="https://blog.goo.ne.jp/shinkimichimichi" target="_blank">
+                                        <span>日</span>
+                                        <span>記</span>
+                                        <span class="l-header__xsContents__xsMenu__menus__startKakko">(</span>
+                                        <span>ブ</span>
+                                        <span>ロ</span>
+                                        <span>グ</span>
+                                        <span class="l-header__xsContents__xsMenu__menus__endKakko">(</span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="access/index.html">
+                                        <span>交</span>
+                                        <span>通</span>
+                                        <span>ア</span>
+                                        <span>ク</span>
+                                        <span>セ</span>
+                                        <span>ス</span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="grounds-of-a-shrine/index.html">
+                                        <span>境</span>
+                                        <span>内</span>
+                                        <span>の</span>
+                                        <span>ご</span>
+                                        <span>案</span>
+                                        <span>内</span>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="greeting/index.html">
+                                        <span>宮</span>
+                                        <span>司</span>
+                                        <span>よ</span>
+                                        <span>り</span>
+                                        <span>ひ</span>
+                                        <span>と</span>
+                                        <span>こ</span>
+                                        <span>と</span>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="l-container">
+        <!--ページに合わせてここのid名とクラス名を変更する-->
+        <div id="index" class="root l-pageSelector">
+
+            <div class="mv">
+                <div class="mv__slider">
+                    <div class="mv__slider__eachSlide mv__slider__eachSlide--num01">
+
+                    </div>
+                    <div class="mv__slider__eachSlide mv__slider__eachSlide--num02">
+
+                    </div>
+                    <div class="mv__slider__eachSlide mv__slider__eachSlide--num03">
+
+                    </div>
+                    <div class="mv__slider__eachSlide mv__slider__eachSlide--num04">
+
+                    </div>
+                </div>
+                <div class="mv__logo">
+                    <img src="assets/images/index/mv_logo.png" alt="「ひらおかは神気 満ち満ちた聖地なり」">
+                </div>
+            </div>
+            <div class="section u-mb_30"></div>
+
+            <div class="c-inner c-inner_920 document-container">
+                <header class="document-header">
+                    <h2 class="main-title">＜枚岡神社からのお知らせ＞</h2>
+                </header>
+
+                    <hr class="section-divider">
+                    <section class="info-section">
+                        <h3 class="info-title red-dot"><a href="special/owarai-shinji.html">『注連掛神事・お笑い神事』日程変更のお知らせ</a></h3>
+                        <ul>
+                            <li>
+                                <ul>
+                                    <li>毎年十二月二十三日に行われておりました、注連掛神事・お笑い神事は<br><b style="font-weight: 800;">令和八年度より十二月の第三日曜日</b>に開催する運びとなりました。</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <!--<hr class="section-divider">
+
+                    <section class="info-section">
+                        <h3 class="info-title red-dot">秋郷祭日程変更のお知らせ</h3>
+                        <ul>
+                            <li>
+                                <ul>
+                                    <li>令和六年度より秋の収穫感謝祭「秋郷祭」の日程が下記の通り変更となりました。
+                                        <ul>
+                                            <li><b>〔以前まで〕</b></li>
+                                            <li><b style="font-weight: 800;">14日　秋郷祭宵宮<br>15日　秋郷祭本宮祭、神幸</b></li>
+                                        </ul>↓
+                                        <ul>
+                                            <li><b>〔令和6年度以降〕</b></li>
+                                            <li><b style="font-weight: 800;">スポーツの日の前々日の土曜日　秋郷祭前祭〈太鼓台宮入〉<br>スポーツの日の前日の日曜日　秋郷祭前祭〈神幸祭・太鼓台宮入〉</b></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>-->
+            </div>
+                    
+                    
+
+            <!--<hr class="section-divider">
+
+                    <section class="info-section">
+                        <h3 class="info-title red-dot">今月の宮司講話は23日天長祭　祭典終了後開催いたします。皆様ご参加下さい。</h3>
+                    </section>
+
+                    <hr class="section-divider">
+
+                    <section class="info-section special-section">
+                        <div class="main-content__leftarea">
+                            <h3 class="info-title red-dot">中東宮司　出版記念講演会のお知らせ</h3>
+                            <p><a href="https://peatix.com/event/4800451" target="_blank">https://peatix.com/event/4800451</a></p>
+                        </div>
+
+                        <aside class="side-image-container__rightarea">
+                            <a href="https://peatix.com/event/4800451" target="_blank"><img src="_common/img/home/event_publishing.jpg" alt="中東宮司　出版記念講演会のお知らせ" class="side-image-container__image"></a>
+                            </aside>
+                    </section>
+
+                    <hr class="section-divider">
+
+                    <section class="info-section special-section">
+                        <div class="main-content__leftarea">
+                            <h3 class="info-title red-dot">中東宮司　出版記念講演会のお知らせ</h3>
+                            <p><a href="https://peatix.com/event/4800451" target="_blank">https://peatix.com/event/4800451</a></p>
+                        </div>
+
+                        <aside class="side-image-container__rightarea">
+                            <a href="https://peatix.com/event/4800451" target="_blank"><img src="_common/img/home/event_publishing.jpg" alt="中東宮司　出版記念講演会のお知らせ" class="side-image-container__image"></a>
+                            </aside>
+                    </section>
+			<div class="notice section u-mb_30">
+				<div class="c-inner c-inner_920 u-clearfix">
+					<div class="notice__worship">
+						<h2 class="notice__worship__hl">枚岡神社　令和8年度初詣へご参拝予定の方へ</h2>
+						<p class="notice__worship__rt03">混雑状況をライブカメラにて<br class="u-visible_xs">リアルタイムでご覧いただけます。</p>
+						<p class="notice__worship__live"><iframe width="560" height="315" src="https://www.youtube.com/embed/1WtItKYIVA4?si=MN3-xJEkDEInpqB7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+					</div>
+				</div>
+			</div>-->
+
+            <div class="info">
+                <div class="c-inner c-inner_920 u-clearfix">
+                    <div class="info__notice">
+                        <h2 class="info__notice__hl c-hl c-hl_type01">お知らせ</h2>
+                        <div class="info__notice__items">
+                            <ul class="info__notice__items__list">
+                                <li class="info__notice__items__list__item">
+                                    <table>
+                                        <tbody>
+                                            <th>2026年11月4日</th>
+                                            <td><a href="special/housyuku.html">『ご奉賛のお願い』</a></td>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li class="info__notice__items__list__item">
+                                    <table>
+                                        <tbody>
+                                            <th>2026年11月4日</th>
+                                            <td>枚岡神社からのお知らせ更新<a href="special/owarai-shinji.html">『注連掛神事・お笑い神事』日程変更のお知らせ</a></td>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li class="info__notice__items__list__item">
+                                    <table>
+                                        <tbody>
+                                            <th>2026年11月1日</th>
+                                            <td><a href="./rituals/index.html#november">神事・祭典【11月】</a></td>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li class="info__notice__items__list__item">
+                                    <table>
+                                        <tbody>
+                                            <th>2026年6月22日</th>
+                                            <td><a href="./special/miko_recruit.html">巫女募集の御案内</a></td>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li class="info__notice__items__list__item">
+                                    <table>
+                                        <tbody>
+                                            <th>2025年12月8日</th>
+                                            <td><a href="./special/owarai-shinji.html">令和七年お笑い神事の御案内</a></td>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li class="info__notice__items__list__item">
+                                    <table>
+                                        <tbody>
+                                            <th>2025年12月8日</th>
+                                            <td><a href="./special/miko.html">令和八年巫女体験の御案内</a></td>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li class="info__notice__items__list__item">
+                                    <table>
+                                        <tbody>
+                                            <th>2025年12月8日</th>
+                                            <td><a href="./special/misogi.html">令和八年禊研修の御案内</a></td>
+                                        </tbody>
+                                    </table>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="#" class="info__notice__btn">お知らせをもっと見る</a>
+                    </div>
+                    <div class="info__nextEvents">
+                        <h2 class="info__nextEvents__hl c-hl c-hl_type01">次の行事</h2>
+                        <div class="info__nextEvents__items">
+                            <ul class="info__nextEvents__items__list u-clearfix">
+								
+                                <li class="info__nextEvents__items__list__item">
+                                    <a href="rituals/index.html#november">
+                                        <dl>
+                                            <dt>11月1日</dt>
+                                            <dd>お一日祭</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li class="info__nextEvents__items__list__item">
+                                    <a href="rituals/index.html#november">
+                                        <dl>
+                                            <dt>11月３日</dt>
+                                            <dd>明治祭</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+								
+                                <li class="info__nextEvents__items__list__item">
+                                    <a href="rituals/index.html#november">
+                                        <dl>
+                                            <dt>23日</dt>
+                                            <dd>新嘗祭</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+								
+                                <li class="info__nextEvents__items__list__item">
+                                    <a href="rituals/index.html#november">
+                                        <dl>
+                                            <dt>11月中</dt>
+                                            <dd>七五三行事</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+								
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			
+			<!--<div class="notice section u-mb_30">
+				<div class="c-inner c-inner_920 u-clearfix">
+					<div class="notice__worship">
+						<h2 class="notice__worship__hl">年末年始・23日～の御朱印の御案内</h2>
+						<p class="notice__worship__rt01">12月23日～1月15日までの御朱印は書き置きでの御対応になります。<br>
+						</p>
+                    </div>
+				</div>
+			</div>-->
+			<!--<div class="notice section u-mb_30">
+				<div class="c-inner c-inner_920 u-clearfix">
+					<div class="notice__worship">
+						<h2 class="notice__worship__hl">枚岡神社　令和6年度初詣へご参拝予定の方へ</h2>
+						<p class="notice__worship__rt03">混雑状況をライブカメラにて<br class="u-visible_xs">リアルタイムでご覧いただけます。</p>
+						<p class="notice__worship__live"><iframe width="560" height="315" src="https://www.youtube.com/embed/lMp2_VioKr8?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+					</div>
+				</div>
+			</div>-->
+			
+			
+			<!--<div class="section u-mb_30">
+				<div class="c-inner c-inner_920 u-clearfix">
+                        <div class="u-visible_lg">
+                            <a href="special/misogi.html">
+                                <img src="assets/images/index/misogi_lg.jpg" alt="禊場改修記念 神道行法研修会開催のご案内">
+                            </a>
+                        </div>
+                        <div class="u-visible_xs">
+                            <a href="special/misogi.html">
+                                <img src="assets/images/index/misogi_xs.jpg" alt="禊場改修記念 神道行法研修会開催のご案内">
+                            </a>
+                        </div>
+					</div>
+			</div>-->
+
+			<div class="section u-mb_30">
+					<div class="c-inner c-inner_920 u-clearfix">
+						<h2 class="txtCenter hnImg01 u-visible_lg"><a href="special/housyuku.html"><img src="_common/img/banner/gohousan_banner.jpg" alt="ご奉賛のお願い" /></a></h2>
+						<h2 class="txtCenter hnImg01 u-visible_xs"><a href="special/housyuku.html"><img src="_common/img/banner/gohousan_banner_xs.jpg" alt="ご奉賛のお願い" /></a></h2>
+					</div>
+			</div>
+			<div class="section u-mb_30">
+				<div class="c-inner c-inner_920 u-clearfix">
+				<h2 class="txtCenter hnImg01 u-visible_lg"><a href="special/owarai-shinji.html"><img src="_common/img/banner/guidance_top_1b.jpg" alt="お笑い神事のご案内" /></a></h2>
+				<h2 class="txtCenter hnImg01 u-visible_xs"><a href="special/owarai-shinji.html"><img src="_common/img/banner/guidance_top_xs_1b.jpg" alt="お笑い神事のご案内" /></a></h2>
+				</div>
+			</div>
+			<div class="section u-mb_30">
+					<div class="c-inner c-inner_920 u-clearfix">
+						<h2 class="txtCenter hnImg01 u-visible_lg"><a href="prayers/index.html"><img src="_common/img/banner/kotodama_banner.jpg" alt="ことだま祈願のご案内" /></a></h2>
+						<h2 class="txtCenter hnImg01 u-visible_xs"><a href="prayers/index.html"><img src="_common/img/banner/kotodama_banner_xs.jpg" alt="ことだま祈願のご案内" /></a></h2>
+					</div>
+			</div>
+			<div class="section u-mb_30">
+					<div class="c-inner c-inner_920 u-clearfix">
+						<h2 class="txtCenter hnImg01 u-visible_lg"><a href="special/shugosai-nittei.html"><img src="_common/img/banner/shugosai_banner.jpg" alt="秋郷祭日程変更のお知らせ" /></a></h2>
+						<h2 class="txtCenter hnImg01 u-visible_xs"><a href="special/shugosai-nittei.html"><img src="_common/img/banner/shugosai_banner_xs.jpg" alt="秋郷祭日程変更のお知らせ" /></a></h2>
+					</div>
+			</div>
+			<!--<div class="section u-mb_30">
+					<div class="c-inner c-inner_920 u-clearfix">
+						<h2 class="txtCenter hnImg01 u-visible_lg"><a href="special/housyuku.html"><img src="_common/img/banner/guidance_banner.jpg" alt="枚岡神社平成令和の大造営事業 各 奉祝行事" /></a></h2>
+						<h2 class="txtCenter hnImg01 u-visible_xs"><a href="special/housyuku.html"><img src="_common/img/banner/guidance_banner_xs.jpg" alt="枚岡神社平成令和の大造営事業 各 奉祝行事" /></a></h2>
+					</div>
+			</div>-->
+
+
+            <div class="intro">
+                <div class="c-inner c-inner_920">
+                    <img class="u-visible_lg" src="assets/images/index/intro_fig.png" alt="「ひらおかは神気 満ち満ちた聖地なり」">
+                    <img class="u-visible_xs" src="assets/images/index/intro_fig_xs.png" alt="「ひらおかは神気 満ち満ちた聖地なり」">
+                </div>
+            </div>
+			  <div class="intro">
+                <div class="c-inner c-inner_920">
+				　<a href="https://www.youtube.com/channel/UCh8lOJC7J65vkCCS62mIpBA" target="_blank">
+                    <img class="u-visible_lg" src="assets/images/index/intro_youtyube.jpg" alt="枚岡神社公式YouTubeチャンネル">
+                    <img class="u-visible_xs" src="assets/images/index/intro_youtyube_xs.jpg" alt="枚岡神社公式YouTubeチャンネル">
+				　</a>
+                </div>
+            </div>
+
+
+
+            <div class="menus">
+                <div class="menus__holder01">
+					
+                    <a href="wedding/index.html" class="menus__holder01__item menus__holder01__item--wedding">
+                        <div class="menus__holder01__item__bg"></div>
+                        <div class="menus__holder01__item__text"><span>挙式</span></div>
+                    </a>
+                </div>
+                <div class="menus__holder02">
+                    <div class="c-inner c-inner_920">
+                        <ul class="menus__holder02__list u-clearfix">
+                            <li class="menus__holder02__list__item">
+                                <a href="history/index.html">
+                                    <img class="u-visible_lg" src="assets/images/index/menus_fig_03.png" alt="御由緒">
+                                    <img class="u-visible_xs" src="assets/images/index/menus_fig_03_xs.png" alt="御由緒">
+                                    <div>
+                                        <span>御</span>
+                                        <span>由</span>
+                                        <span>緒</span>
+                                    </div>
+                                </a>
+                                <p class="menus__holder02__list__item__text">御祭神、創祀や御由緒についてご案内いたします。</p>
+                            </li>
+                            <li class="menus__holder02__list__item">
+                                <a href="prayers/index.html">
+                                    <img class="u-visible_lg" src="assets/images/index/menus_fig_04.png" alt="ご祈祷">
+                                    <img class="u-visible_xs" src="assets/images/index/menus_fig_04_xs.png" alt="ご祈祷">
+                                    <div>
+                                        <span>ご</span>
+                                        <span>祈</span>
+                                        <span>祷</span>
+                                    </div>
+                                </a>
+                                <div class="menus__holder02__list__item__text">人生儀礼や厄除けなど、様々なご祈祷を執り行っております。</div>
+                            </li>
+                            <li class="menus__holder02__list__item">
+                                <a href="greeting/index.html">
+                                    <img class="u-visible_lg" src="assets/images/index/menus_fig_05.png" alt="宮司よりひとこと">
+                                    <img class="u-visible_xs" src="assets/images/index/menus_fig_05_xs.png" alt="宮司よりひとこと">
+                                    <div>
+                                        <span>宮</span>
+                                        <span>司</span>
+                                        <span>よ</span>
+                                        <span>り</span>
+                                        <span>ひ</span>
+                                        <span>と</span>
+                                        <span>こ</span>
+                                        <span>と</span>
+                                    </div>
+                                </a>
+                                <div class="menus__holder02__list__item__text">宮司から日々のひとことをお伝えします。</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menus__holder03">
+                    <div class="c-inner c-inner_920">
+                        <ul class="menus__holder03__list u-clearfix">
+                            <li class="menus__holder03__list__item">
+                                <a href="grounds-of-a-shrine/index.html">
+                                    <img class="u-visible_lg" src="assets/images/index/menus_fig_06.png" alt="境内案内">
+                                    <img class="u-visible_xs" src="assets/images/index/menus_fig_06_xs.png" alt="境内案内">
+                                    <div>
+                                        <span>境</span>
+                                        <span>内</span>
+                                        <span>案</span>
+                                        <span>内</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menus__holder03__list__item">
+                                <a href="treasures/index.html">
+                                    <img src="assets/images/index/menus_fig_07.png" alt="宝物">
+                                    <div>
+                                        <span>宝</span>
+                                        <span>物</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menus__holder03__list__item">
+                                <a href="https://blog.goo.ne.jp/shinkimichimichi" target="_blank">
+                                    <img src="assets/images/index/menus_fig_08.png" alt="ブログ">
+                                    <div>
+                                        <span>ブ</span>
+                                        <span>ロ</span>
+                                        <span>グ</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menus__holder04 u-clearfix">
+                    <div class="c-inner c-inner_920">
+                        <div class="menus__holder04__col menus__holder04__col--l">
+                            <div class="menus__holder04__col__item01">
+                                <a href="rituals/index.html">
+                                    <img src="assets/images/index/menus_fig_09.png" alt="神事・祭典">
+                                    <div>
+                                        <span>神</span>
+                                        <span>事</span>
+                                        <span>・</span>
+                                        <span>祭</span>
+                                        <span>典</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="menus__holder04__col menus__holder04__col--r">
+                            <ul class="menus__holder04__col__list">
+                                <li class="menus__holder04__col__list__item">
+                                    <a href="special/owarai-shinji.html">
+                                        <img src="assets/images/index/menus_fig_10.png" alt="お笑い神事">
+                                        <div>
+                                            <span>お</span>
+                                            <span>笑</span>
+                                            <span>い</span>
+                                            <span>神</span>
+                                            <span>事</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="menus__holder04__col__list__item">
+                                    <a href="special/nagoshi-ooharae.html">
+                                        <img src="assets/images/index/menus_fig_11.png" alt="夏越大祓">
+                                        <div>
+                                            <span>大</span>
+                                            <span>祓</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="menus__holder04__col__list__item">
+                                    <a href="special/kannsha-honosai.html">
+                                        <img src="assets/images/index/menus_fig_12.png" alt="感謝奉納祭">
+                                        <div>
+                                            <span>感</span>
+                                            <span>謝</span>
+                                            <span>奉</span>
+                                            <span>納</span>
+                                            <span>祭</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="menus__holder04__col__list__item">
+                                    <a href="rituals/index.html#shugosai">
+                                        <img src="assets/images/index/menus_fig_13.png" alt="秋郷祭">
+                                        <div>
+                                            <span>秋</span>
+                                            <span>郷</span>
+                                            <span>祭</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="training">
+                <h2 class="training__hl c-hl c-hl_type01">研修</h2>
+                <div class="c-inner c-inner_920 u-clearfix">
+                    <ul class="training__list u-clearfix">
+                        <li class="training__list__item">
+                            <a href="special/miko.html">
+                                <img src="assets/images/index/training_item_01.png" alt="巫女体験">
+                                <div><span>巫女体験</span></div>
+                            </a>
+                        </li>
+                        <li class="training__list__item">
+                            <a href="special/misogi.html">
+                                <img src="assets/images/index/training_item_02.png" alt="禊研修会">
+                                <div><span>禊研修会</span></div>
+                            </a>
+                        </li>
+                        <li class="training__list__item">
+                            <a href="special/guji-tour.html">
+                                <img src="assets/images/index/training_item_03.png" alt="宮司と巡る聖地本宮御本殿">
+                                <div style="top: 40%;"><span>宮司と巡る<br>聖地本宮・御本殿</span></div>
+                            </a>
+                        </li>
+                    </ul>
+                    <!--<div class="training__banner">
+                        <div class="u-visible_lg">
+                            <a href="special/miko_recruit.html">
+                                <img src="assets/images/index/miko_recruit_lg.jpg" alt="巫女募集のご案内">
+                            </a>
+                        </div>
+                        <div class="u-visible_xs">
+                            <a href="special/miko_recruit.html">
+                                <img src="assets/images/index/miko_recruit_xs.jpg" alt="巫女募集のご案内">
+                            </a>
+                        </div>
+                    </div>-->
+                    <div class="training__others">
+                        <ul class="training__others__list u-clearfix">
+                            <li class="training__others__list__item training__others__list__item--sukei">
+                                <a href="__sukeikai/index.html">崇敬会</a>
+                            </li>
+                            <li class="training__others__list__item training__others__list__item--forest">
+                                <a href="http://hiraokanomori.blog120.fc2.com/" target="_blank">ひらおかの森を守る会</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="access">
+                <h2 class="access__hl c-hl c-hl_type01">交通アクセス</h2>
+                <div class="access__map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.698153841031!2d135.64988192868773!3d34.66994599713864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60012110fae468cd%3A0x2e0bef23c7ace1c7!2z44CSNTc5LTgwMzMg5aSn6Ziq5bqc5p2x5aSn6Ziq5biC5Ye66Zuy5LqV55S677yX4oiS77yR77yW!5e0!3m2!1sja!2sjp!4v1534730760636" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                <div class="access__status">
+                    <div class="c-inner c-inner_920 u-clearfix">
+                        <div class="access__status__address">
+                            <p class="access__status__address__rt">〒579-8033　<br class="u-visible_xs">大阪府東大阪市出雲井町7番16号<br>TEL: 072-981-4177</p>
+                        </div>
+                        <div class="access__status__btn">
+                            <a href="access/index.html"><span>詳しく見る</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="p-credit">
+                <div class="c-inner c-inner_920">
+                    <p class="p-credit__rt">動画制作：和婚喜</p>
+                </div>
+            </div>
+
+
+        </div>
+        <!--l-pageSelector-->
+    </div>
+    <!--l-container-->
+
+
+
+    <footer class="l-footer">
+        <div class="c-inner c-inner_920">
+            <div class="l-footer__holder">
+                <a href="contact/index.html" class="l-footer__holder__contact">
+                    <img src="assets/images/common/contact.svg" alt="お問い合わせ">
+                </a>
+                <div class="l-footer__holder__sns">
+                    <ul class="l-footer__holder__sns__list">
+                        <li class="l-footer__holder__sns__list__item">
+                            <a href="https://www.facebook.com/枚岡神社-640542336080597/?fref=ts" target="_blank">
+                               <img src="assets/images/common/icon_facebook.svg" alt="Facebook">
+                           </a>
+                        </li>
+                        <li class="l-footer__holder__sns__list__item">
+                            <a href="https://www.instagram.com/hiraokajinja/" target="_blank">
+                               <img src="assets/images/common/icon_instagram.svg" alt="Instagram">
+                           </a>
+                        </li>
+						<li class="l-footer__holder__sns__list__item">
+                            <a href="https://www.youtube.com/channel/UCh8lOJC7J65vkCCS62mIpBA" target="_blank">
+                               <img src="assets/images/common/icon_youtube.svg" alt="youtube">
+                           </a>
+                        </li>
+						 
+                    </ul>
+                </div>
+                <small class="l-footer__holder__copyright">&copy; 2020 枚岡神社</small>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <div class="l-loadingLayer"></div>
+
+
+
+    <!--ページ共通読み込みJS（編集禁止）-->
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/utility.js"></script>
+    <script src="assets/js/bundle.js"></script>
+    <!--/ページ共通読み込みJS（編集禁止）-->
+    <!--ページ固有読み込みJS-->
+    <script src="assets/js/root/index.js"></script>
+    <!--/ページ固有読み込みJS-->
+</body>
+
+</html>

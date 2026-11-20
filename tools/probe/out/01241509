@@ -1,178 +1,626 @@
-<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
 <head>
-    <link rel="canonical" href="https://duckduckgo.com/">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
-    <meta name="referrer" content="origin">
-    <title>
-        DuckDuckGo
-    </title>
-    <link rel="preload" href="/font/ProximaNova-Reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/font/ProximaNova-Sbold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link title="DuckDuckGo (Lite)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_lite_v2.xml">
-    <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon"/>
-    <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2"/>
-    <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2"/>
-    <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2"/>
-    <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2"/>
-    <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
-    <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/l.4db20359cb90b7c3b91a.css" type="text/css"/>
-    <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/lc.e4363f4c4e05cdc2a4be.css" type="text/css"/>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" />
+  <meta name="referrer" content="origin" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>松尾大社 初詣 正月 参拝時間 公式 at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml" />
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon" />
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon" />
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2"/>
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2"/>
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2"/>
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2"/>
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.5e485425356583f3072f.css" type="text/css"/>
 </head>
 
-<body>
-    <a name="top"></a>
-    <center id="lite_wrapper">
-        <br>
-        <a class="header-url" href="/html/">
-            <span class="header">DuckDuckGo</span>
-        </a>
-        <br><br>
+<body class="body--html">
+  <a name="top" id="top"></a>
+
+  <form action="/html/" method="post">
+    <input type="text" name="state_hidden" id="state_hidden" />
+  </form>
+
+  <div>
+    <div class="site-wrapper-border"></div>
+
+    <div id="header" class="header cw header--html">
+      <a title="DuckDuckGo" href="/html/" class="header__logo-wrap"></a>
+
+      <form name="x" class="header__form" action="/html/" method="post">
+        <div class="search search--header">
+          <input name="q" autocomplete="off" class="search__input" id="search_form_input_homepage" type="text" value="松尾大社 初詣 正月 参拝時間 公式" />
+          <input name="b" id="search_button_homepage" class="search__button search__button--html" value="" title="Search" alt="Search" type="submit" />
+        </div>
 
         
-        <iframe name="ifr" width="0" height="0" border="0" class="hidden"></iframe>
-        <form id="img-form" action="//duckduckgo.com/anomaly.js?sv=html&cc=botnet&ti=1795132574&gk=d4cd0dabcf4caa22ad92fab40844c786&p=3ac2b268cfe1f6254a987db61ba3dcdb-3e9bb2d23b2fe01532e94e4cb9319f21-f7d7cf65d670262984d730462b7d448e-3ec73ea2d78609abbf7cc7842738e239-4650cf82699c8aa872178309f61ad962-3f4ada9e66f2bb983619b2e8bb6b3588-3dee4b59923f3bff6895d45bc172a092-150cc053fbe447864dd078c29444f78f-f5c02fde6f1a5cab5c7dd9fa928c20dc&q=松尾大社 初詣 正月 参拝時間 公式&o=AeaAvACgIi8t4Qv81iCHoyjq9xID%2BqkJz3VxVSpUrIOC%2FXmsMzuM7MBmXcuaSrzG%0A&r=usw" target="ifr" method="POST"></form>
-        <form id="challenge-form" action="//duckduckgo.com/anomaly.js?sv=html&cc=botnet&st=1795132574&gk=d4cd0dabcf4caa22ad92fab40844c786&p=3ac2b268cfe1f6254a987db61ba3dcdb-3e9bb2d23b2fe01532e94e4cb9319f21-f7d7cf65d670262984d730462b7d448e-3ec73ea2d78609abbf7cc7842738e239-4650cf82699c8aa872178309f61ad962-3f4ada9e66f2bb983619b2e8bb6b3588-3dee4b59923f3bff6895d45bc172a092-150cc053fbe447864dd078c29444f78f-f5c02fde6f1a5cab5c7dd9fa928c20dc&q=松尾大社 初詣 正月 参拝時間 公式&o=AeaAvACgIi8t4Qv81iCHoyjq9xID%2BqkJz3VxVSpUrIOC%2FXmsMzuM7MBmXcuaSrzG%0A&r=usw" method="POST">
-            <div class="anomaly-modal__mask">
-                <div class="anomaly-modal__modal  is-ie" data-testid="anomaly-modal">
-                    <div class="anomaly-modal__title">Unfortunately, bots use DuckDuckGo too.</div>
-                    <div class="anomaly-modal__description">Please complete the following challenge to confirm this search was made by a human.</div>
+        
+        
+        
+
+        <div class="frm__select">
+          <select name="kl">
+            
+              <option value="" >All Regions</option>
+            
+              <option value="ar-es" >Argentina</option>
+            
+              <option value="au-en" >Australia</option>
+            
+              <option value="at-de" >Austria</option>
+            
+              <option value="be-fr" >Belgium (fr)</option>
+            
+              <option value="be-nl" >Belgium (nl)</option>
+            
+              <option value="br-pt" >Brazil</option>
+            
+              <option value="bg-bg" >Bulgaria</option>
+            
+              <option value="ca-en" >Canada (en)</option>
+            
+              <option value="ca-fr" >Canada (fr)</option>
+            
+              <option value="ct-ca" >Catalonia</option>
+            
+              <option value="cl-es" >Chile</option>
+            
+              <option value="cn-zh" >China</option>
+            
+              <option value="co-es" >Colombia</option>
+            
+              <option value="hr-hr" >Croatia</option>
+            
+              <option value="cz-cs" >Czech Republic</option>
+            
+              <option value="dk-da" >Denmark</option>
+            
+              <option value="ee-et" >Estonia</option>
+            
+              <option value="fi-fi" >Finland</option>
+            
+              <option value="fr-fr" >France</option>
+            
+              <option value="de-de" >Germany</option>
+            
+              <option value="gr-el" >Greece</option>
+            
+              <option value="hk-tzh" >Hong Kong</option>
+            
+              <option value="hu-hu" >Hungary</option>
+            
+              <option value="is-is" >Iceland</option>
+            
+              <option value="in-en" >India (en)</option>
+            
+              <option value="id-en" >Indonesia (en)</option>
+            
+              <option value="ie-en" >Ireland</option>
+            
+              <option value="il-en" >Israel (en)</option>
+            
+              <option value="it-it" >Italy</option>
+            
+              <option value="jp-jp" >Japan</option>
+            
+              <option value="kr-kr" >Korea</option>
+            
+              <option value="lv-lv" >Latvia</option>
+            
+              <option value="lt-lt" >Lithuania</option>
+            
+              <option value="my-en" >Malaysia (en)</option>
+            
+              <option value="mx-es" >Mexico</option>
+            
+              <option value="nl-nl" >Netherlands</option>
+            
+              <option value="nz-en" >New Zealand</option>
+            
+              <option value="no-no" >Norway</option>
+            
+              <option value="pk-en" >Pakistan (en)</option>
+            
+              <option value="pe-es" >Peru</option>
+            
+              <option value="ph-en" >Philippines (en)</option>
+            
+              <option value="pl-pl" >Poland</option>
+            
+              <option value="pt-pt" >Portugal</option>
+            
+              <option value="ro-ro" >Romania</option>
+            
+              <option value="ru-ru" >Russia</option>
+            
+              <option value="xa-ar" >Saudi Arabia</option>
+            
+              <option value="sg-en" >Singapore</option>
+            
+              <option value="sk-sk" >Slovakia</option>
+            
+              <option value="sl-sl" >Slovenia</option>
+            
+              <option value="za-en" >South Africa</option>
+            
+              <option value="es-ca" >Spain (ca)</option>
+            
+              <option value="es-es" >Spain (es)</option>
+            
+              <option value="se-sv" >Sweden</option>
+            
+              <option value="ch-de" >Switzerland (de)</option>
+            
+              <option value="ch-fr" >Switzerland (fr)</option>
+            
+              <option value="tw-tzh" >Taiwan</option>
+            
+              <option value="th-en" >Thailand (en)</option>
+            
+              <option value="tr-tr" >Turkey</option>
+            
+              <option value="us-en" >US (English)</option>
+            
+              <option value="us-es" >US (Spanish)</option>
+            
+              <option value="ua-uk" >Ukraine</option>
+            
+              <option value="uk-en" >United Kingdom</option>
+            
+              <option value="vn-en" >Vietnam (en)</option>
+            
+          </select>
+        </div>
+
+        <div class="frm__select frm__select--last">
+          <select class="" name="df">
+            
+              <option value="" selected>Any Time</option>
+            
+              <option value="d" >Past Day</option>
+            
+              <option value="w" >Past Week</option>
+            
+              <option value="m" >Past Month</option>
+            
+              <option value="y" >Past Year</option>
+            
+          </select>
+        </div>
+      </form>
+    </div>
+
+    
+
+    
+      <!-- Web results are present -->
+      <div>
+        <div class="serp__results">
+          <div id="links" class="results">
+            
+
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
                     
-                    <input type="hidden" name="ct" value="AgEAB5vXLJeVIA0N4uViVPh50OmuOa-MBXy8VYDgn3in1UB57qKdw8VNcpvmXNu359rvTkSBLKPk8OMbOdm4-wb_Jt4pY3bNd-YO3GwouCHlfxB1RIPUVWcxhVYiyCAyTgMLzP8CUsjNF3nCtoenwQnpZi-FGLm4j1k64gQkwI1eyFfVaGBEvr8trTjpaPzHvz1ammvM8aR03LDxaYSEc3FIyqHDfRHxkLpDKS9rzBVvTqSybXeKsAKpNn6PibSxPGnj8YYxG5ymdwyotwxaTf79qduXVRs_NL4hQGnBYD_bSD11lKN3vhl6VQmr5e01TnCXMaxhYPH2iBM1l87fwzPXm4KdmYRxKyZwOBJqJWlUmFIaNO-n4xLTKjPkF1_qMX0JnJ9d7-kGPalGj6KCsrjm_W77XQbrKsw-k_FhoODpODCb0ZfJdpywRPeGbRr0QBc0xFZ1dSU0Fe84PT_00hfyeiPC7hFMlR63tNLx7A7G7JqqWgyewIjGu2GsiOTwfhqXuDnhFA5tYuDlcLPyJapiVg3rpLn9GLy4AmVFgqfJUGOnwbF7-1y7-hpkvKaL6_Vnl2lYNbi_HCpRWcxKTON21X-67NJStfhm2zzMOTy_YcB926uHpgdroWe1fQ3SQuVAE_Z0_cv_JhXgESKhu6rft28Xa45gF4X-1ATKmOPFE6NIVWeqk2MBmNG-2bBpOiPKlAW56cz7Vfx78HepBfYMpjx9MnKIypU3X9ktD3TWjEDX-vz8EvGUBEzRVOR04ZTAJM4kpOnUGbkrIWd1">
-                    <div class="anomaly-modal__instructions">Select all squares containing a duck:</div>
-                    <div class="anomaly-modal__puzzle-margins">
-                        <div class="anomaly-modal__puzzle">
-                            
-                                <div class="anomaly-modal__box" data-index="0">
-                                    
-                                    
-                                        <label class="" for="image-check_3ac2b268cfe1f6254a987db61ba3dcdb" data-testid="anomaly-modal-tile-0">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_3ac2b268cfe1f6254a987db61ba3dcdb" id="image-check_3ac2b268cfe1f6254a987db61ba3dcdb">
-                                            <img class="anomaly-modal__image" alt=" " id="image-3ac2b268cfe1f6254a987db61ba3dcdb" src="../assets/anomaly/images/challenge/3ac2b268cfe1f6254a987db61ba3dcdb.jpg" data-id="3ac2b268cfe1f6254a987db61ba3dcdb.jpg" data-testid="anomaly-modal-image-0"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="1">
-                                    
-                                    
-                                        <label class="" for="image-check_3e9bb2d23b2fe01532e94e4cb9319f21" data-testid="anomaly-modal-tile-1">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_3e9bb2d23b2fe01532e94e4cb9319f21" id="image-check_3e9bb2d23b2fe01532e94e4cb9319f21">
-                                            <img class="anomaly-modal__image" alt=" " id="image-3e9bb2d23b2fe01532e94e4cb9319f21" src="../assets/anomaly/images/challenge/3e9bb2d23b2fe01532e94e4cb9319f21.jpg" data-id="3e9bb2d23b2fe01532e94e4cb9319f21.jpg" data-testid="anomaly-modal-image-1"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="2">
-                                    
-                                    
-                                        <label class="" for="image-check_f7d7cf65d670262984d730462b7d448e" data-testid="anomaly-modal-tile-2">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_f7d7cf65d670262984d730462b7d448e" id="image-check_f7d7cf65d670262984d730462b7d448e">
-                                            <img class="anomaly-modal__image" alt=" " id="image-f7d7cf65d670262984d730462b7d448e" src="../assets/anomaly/images/challenge/f7d7cf65d670262984d730462b7d448e.jpg" data-id="f7d7cf65d670262984d730462b7d448e.jpg" data-testid="anomaly-modal-image-2"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="3">
-                                    
-                                    
-                                        <label class="" for="image-check_3ec73ea2d78609abbf7cc7842738e239" data-testid="anomaly-modal-tile-3">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_3ec73ea2d78609abbf7cc7842738e239" id="image-check_3ec73ea2d78609abbf7cc7842738e239">
-                                            <img class="anomaly-modal__image" alt=" " id="image-3ec73ea2d78609abbf7cc7842738e239" src="../assets/anomaly/images/challenge/3ec73ea2d78609abbf7cc7842738e239.jpg" data-id="3ec73ea2d78609abbf7cc7842738e239.jpg" data-testid="anomaly-modal-image-3"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="4">
-                                    
-                                    
-                                        <label class="" for="image-check_4650cf82699c8aa872178309f61ad962" data-testid="anomaly-modal-tile-4">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_4650cf82699c8aa872178309f61ad962" id="image-check_4650cf82699c8aa872178309f61ad962">
-                                            <img class="anomaly-modal__image" alt=" " id="image-4650cf82699c8aa872178309f61ad962" src="../assets/anomaly/images/challenge/4650cf82699c8aa872178309f61ad962.jpg" data-id="4650cf82699c8aa872178309f61ad962.jpg" data-testid="anomaly-modal-image-4"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="5">
-                                    
-                                    
-                                        <label class="" for="image-check_3f4ada9e66f2bb983619b2e8bb6b3588" data-testid="anomaly-modal-tile-5">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_3f4ada9e66f2bb983619b2e8bb6b3588" id="image-check_3f4ada9e66f2bb983619b2e8bb6b3588">
-                                            <img class="anomaly-modal__image" alt=" " id="image-3f4ada9e66f2bb983619b2e8bb6b3588" src="../assets/anomaly/images/challenge/3f4ada9e66f2bb983619b2e8bb6b3588.jpg" data-id="3f4ada9e66f2bb983619b2e8bb6b3588.jpg" data-testid="anomaly-modal-image-5"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="6">
-                                    
-                                    
-                                        <label class="" for="image-check_3dee4b59923f3bff6895d45bc172a092" data-testid="anomaly-modal-tile-6">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_3dee4b59923f3bff6895d45bc172a092" id="image-check_3dee4b59923f3bff6895d45bc172a092">
-                                            <img class="anomaly-modal__image" alt=" " id="image-3dee4b59923f3bff6895d45bc172a092" src="../assets/anomaly/images/challenge/3dee4b59923f3bff6895d45bc172a092.jpg" data-id="3dee4b59923f3bff6895d45bc172a092.jpg" data-testid="anomaly-modal-image-6"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="7">
-                                    
-                                    
-                                        <label class="" for="image-check_150cc053fbe447864dd078c29444f78f" data-testid="anomaly-modal-tile-7">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_150cc053fbe447864dd078c29444f78f" id="image-check_150cc053fbe447864dd078c29444f78f">
-                                            <img class="anomaly-modal__image" alt=" " id="image-150cc053fbe447864dd078c29444f78f" src="../assets/anomaly/images/challenge/150cc053fbe447864dd078c29444f78f.jpg" data-id="150cc053fbe447864dd078c29444f78f.jpg" data-testid="anomaly-modal-image-7"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="8">
-                                    
-                                    
-                                        <label class="" for="image-check_f5c02fde6f1a5cab5c7dd9fa928c20dc" data-testid="anomaly-modal-tile-8">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_f5c02fde6f1a5cab5c7dd9fa928c20dc" id="image-check_f5c02fde6f1a5cab5c7dd9fa928c20dc">
-                                            <img class="anomaly-modal__image" alt=" " id="image-f5c02fde6f1a5cab5c7dd9fa928c20dc" src="../assets/anomaly/images/challenge/f5c02fde6f1a5cab5c7dd9fa928c20dc.jpg" data-id="f5c02fde6f1a5cab5c7dd9fa928c20dc.jpg" data-testid="anomaly-modal-image-8"></img>
-                                        </label>
-                                    
-                                </div>
-                            
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.matsunoo.or.jp%2F&amp;rut=64f748398a5e2cc4968641267be7af2fc799063ddaec9e2eccc854bbcd206010">松尾大社 - Matsunoo Taisha</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.matsunoo.or.jp%2F&amp;rut=64f748398a5e2cc4968641267be7af2fc799063ddaec9e2eccc854bbcd206010">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/www.matsunoo.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.matsunoo.or.jp%2F&amp;rut=64f748398a5e2cc4968641267be7af2fc799063ddaec9e2eccc854bbcd206010">
+                            www.matsunoo.or.jp
+                          </a>
+                          
                         </div>
-                    </div>
-                    <div class="anomaly-modal__controls">
-                        <button name="challenge-submit" class="btn btn--primary anomaly-modal__submit js-anomaly-modal-submit" form="challenge-form" value="d4cd0dabcf4caa22ad92fab40844c786" >Submit</button>
-                        <p></p>
-                        <input class="feedback-toggle" type="checkbox" id="feedback" unchecked />
-                        <label for="feedback" class="feedback-text">Images not loading?</label>
-                        <div class="feedback-content">
-                            <label class="feedback-instructions">Please email the following code to:</label>
-                            <p class="feedback-instructions">error-lite+aab3@duckduckgo.com</p>
-                            <p><label class="feedback-instructions">Code: aab3</label></p>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.matsunoo.or.jp%2F&amp;rut=64f748398a5e2cc4968641267be7af2fc799063ddaec9e2eccc854bbcd206010">松尾大社からお知らせ 一覧を見る 2026.11.16 <b>松尾大社</b> 神前結婚式相談会（11月開催カレンダー）のご案内 2026.11.15 干支祝寿祭のご案内 2026.11.13 松尾大社文化研究所 今月の史料公開のお知らせ 2026.11.01 第39回 松尾大社写真コンテスト入賞作品決定のお知らせ</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fminatori.site%2Fmatsuo%2Dtaisha%2Dhatsumode%2Dyatai%2Dkonzatsu%2F&amp;rut=4cc3b37e8c085f51ac0cd5635281b99388b6cb194bd7bd40a6ecfc8fc2fbba7a">松尾大社初詣2026年に屋台はある？出店や参拝時間、混雑と駐車場まとめ! | Seasonal Calendar</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fminatori.site%2Fmatsuo%2Dtaisha%2Dhatsumode%2Dyatai%2Dkonzatsu%2F&amp;rut=4cc3b37e8c085f51ac0cd5635281b99388b6cb194bd7bd40a6ecfc8fc2fbba7a">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/minatori.site.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fminatori.site%2Fmatsuo%2Dtaisha%2Dhatsumode%2Dyatai%2Dkonzatsu%2F&amp;rut=4cc3b37e8c085f51ac0cd5635281b99388b6cb194bd7bd40a6ecfc8fc2fbba7a">
+                            minatori.site/matsuo-taisha-hatsumode-yatai-konzatsu/
+                          </a>
+                          
                         </div>
-                    </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fminatori.site%2Fmatsuo%2Dtaisha%2Dhatsumode%2Dyatai%2Dkonzatsu%2F&amp;rut=4cc3b37e8c085f51ac0cd5635281b99388b6cb194bd7bd40a6ecfc8fc2fbba7a">松尾大社の初詣2026を予定している方向けに、参拝できる時間の見通し、屋台の雰囲気、混雑回避、駐車場の考え方を ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkyototravel.info%2Fmatsunootaishahatsumoude&amp;rut=ea48014d8b801ad2bd1a98df2fe4fe44a212ad638523aed33e2060d513a0ad73">松尾大社初詣2027年1月1日～（醸造祖神） - 京都ガイド</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkyototravel.info%2Fmatsunootaishahatsumoude&amp;rut=ea48014d8b801ad2bd1a98df2fe4fe44a212ad638523aed33e2060d513a0ad73">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/kyototravel.info.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkyototravel.info%2Fmatsunootaishahatsumoude&amp;rut=ea48014d8b801ad2bd1a98df2fe4fe44a212ad638523aed33e2060d513a0ad73">
+                            kyototravel.info/matsunootaishahatsumoude
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkyototravel.info%2Fmatsunootaishahatsumoude&amp;rut=ea48014d8b801ad2bd1a98df2fe4fe44a212ad638523aed33e2060d513a0ad73">松尾大社初詣（日程・アクセス・概要） 松尾大社初詣（日程時間など）を紹介しています。 初詣は例年元日の1月1日から始まります。 松尾大社では例年1月1日6:00に歳旦祭が行われ、歳旦祭では皇室・国民の繁栄や五穀豊穣などを祈願します。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.matsunoo.or.jp%2Fkitou01%2F&amp;rut=e3ecd0c9d04700ae41cfc744530ca0fdfb6854690d1ea13cf167740e6f04cb3d">初宮詣り｜御祈祷・お詣り ｜ 松尾大社 - Matsunoo Taisha</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.matsunoo.or.jp%2Fkitou01%2F&amp;rut=e3ecd0c9d04700ae41cfc744530ca0fdfb6854690d1ea13cf167740e6f04cb3d">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/www.matsunoo.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.matsunoo.or.jp%2Fkitou01%2F&amp;rut=e3ecd0c9d04700ae41cfc744530ca0fdfb6854690d1ea13cf167740e6f04cb3d">
+                            www.matsunoo.or.jp/kitou01/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.matsunoo.or.jp%2Fkitou01%2F&amp;rut=e3ecd0c9d04700ae41cfc744530ca0fdfb6854690d1ea13cf167740e6f04cb3d">御祈祷・お詣り 御祈祷・お詣り 初宮詣り 初宮詣り 交通安全祈祷 厄除・祝寿・賀寿 災除祈願 月読神社の安産祈願 御祈祷受付 お子様のご誕生の報告と健やかなご成長・ご安全をご神前にご祈願いたしましょう 毎日随時受付 午前9時より～午後4時30分頃まで（お正月期間も可） ご予約制では ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkakure%2Dkyoto.com%2Fkyotoshi%2F7128%2F&amp;rut=e7c2a6cc387e7637e02695899d570db788a36009e653229b1480b25d3b01b291">松尾大社 (京都市)初詣2026の駐車場と交通規制!屋台出店は？ | かくれkyoto</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkakure%2Dkyoto.com%2Fkyotoshi%2F7128%2F&amp;rut=e7c2a6cc387e7637e02695899d570db788a36009e653229b1480b25d3b01b291">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/kakure-kyoto.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkakure%2Dkyoto.com%2Fkyotoshi%2F7128%2F&amp;rut=e7c2a6cc387e7637e02695899d570db788a36009e653229b1480b25d3b01b291">
+                            kakure-kyoto.com/kyotoshi/7128/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkakure%2Dkyoto.com%2Fkyotoshi%2F7128%2F&amp;rut=e7c2a6cc387e7637e02695899d570db788a36009e653229b1480b25d3b01b291">お正月の恒例行事といえば「初詣」。 新年のはじまりに神社やお寺にお参りして、お祈りしたりおみくじを引くのが定番。 京都の初詣スポットのひとつである・・・ 「松尾大社の初詣2026」 についてご紹介! 京都の超人気初詣スポット。 毎年多くの方</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkyototravelnoosusume.hatenablog.com%2Fentry%2Fmatsunootaishahatsumode2026&amp;rut=03a02ca6e07cd1f8170f18b18ff4db4fdd355216f23d223aaf40e0b2378b002c">松尾大社 初詣2026：混雑状況と回避する方法、おすすめの参拝時間! - イベント＆観光 全国おでかけガイド!</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkyototravelnoosusume.hatenablog.com%2Fentry%2Fmatsunootaishahatsumode2026&amp;rut=03a02ca6e07cd1f8170f18b18ff4db4fdd355216f23d223aaf40e0b2378b002c">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/kyototravelnoosusume.hatenablog.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkyototravelnoosusume.hatenablog.com%2Fentry%2Fmatsunootaishahatsumode2026&amp;rut=03a02ca6e07cd1f8170f18b18ff4db4fdd355216f23d223aaf40e0b2378b002c">
+                            kyototravelnoosusume.hatenablog.com/entry/matsunootaishahatsumode2026
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkyototravelnoosusume.hatenablog.com%2Fentry%2Fmatsunootaishahatsumode2026&amp;rut=03a02ca6e07cd1f8170f18b18ff4db4fdd355216f23d223aaf40e0b2378b002c">嵐山観光と合わせて効率良く回るには？ といった疑問をお持ちの方も多いはずです。 この記事では、2026年の松尾大社初詣における最新の混雑予測と、待ち時間を劇的に減らすための具体的な回避策を徹底解説します!</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyoto%2Dkankou.or.jp%2Fevent%2F898&amp;rut=d152f61f70b81940224141369c7e1dcae5e53a57c53df795f1cc9580b5865282">松尾大社 初詣 | イベント一覧 | 京都府観光連盟公式サイト</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyoto%2Dkankou.or.jp%2Fevent%2F898&amp;rut=d152f61f70b81940224141369c7e1dcae5e53a57c53df795f1cc9580b5865282">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/www.kyoto-kankou.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyoto%2Dkankou.or.jp%2Fevent%2F898&amp;rut=d152f61f70b81940224141369c7e1dcae5e53a57c53df795f1cc9580b5865282">
+                            www.kyoto-kankou.or.jp/event/898
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyoto%2Dkankou.or.jp%2Fevent%2F898&amp;rut=d152f61f70b81940224141369c7e1dcae5e53a57c53df795f1cc9580b5865282"><b>松尾大社</b> 1. 1（祝）〜 1. 31（日） 開運招福 酒造りの神様として有名。本殿は重要文化財。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkyoto%2Dlocals.com%2F854.html&amp;rut=c2cc245a52da68282287d21e56943e566e350945b39b842deac66115154b867d">松尾大社の初詣2026に屋台はない？駐車場や混雑回避の裏技</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkyoto%2Dlocals.com%2F854.html&amp;rut=c2cc245a52da68282287d21e56943e566e350945b39b842deac66115154b867d">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/kyoto-locals.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkyoto%2Dlocals.com%2F854.html&amp;rut=c2cc245a52da68282287d21e56943e566e350945b39b842deac66115154b867d">
+                            kyoto-locals.com/854.html
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkyoto%2Dlocals.com%2F854.html&amp;rut=c2cc245a52da68282287d21e56943e566e350945b39b842deac66115154b867d">屋台の出店状況とそれに代わる松尾大社ならではの美味しい体験 2026年の干支「午」にちなんだ巨大絵馬や樽占いなどの見どころ 交通規制や駐車場のリアルな状況と失敗しないアクセス方法 祭典による受付停止時間を回避し、スムーズな参拝計画が立てられる</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Flocapop.jp%2Fevent%2Fkyoto%2Darashiyama%2Dmatsunoo%2Dhatsumode%2D2027%2F&amp;rut=161663e4b0e0d8c1fe975ecdb77628b3d8c800391cc7721fc82666a67778f4f4">松尾大社 初詣・歳旦祭 2027（1月1日）｜1/1〜3・嵐山</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Flocapop.jp%2Fevent%2Fkyoto%2Darashiyama%2Dmatsunoo%2Dhatsumode%2D2027%2F&amp;rut=161663e4b0e0d8c1fe975ecdb77628b3d8c800391cc7721fc82666a67778f4f4">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/locapop.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Flocapop.jp%2Fevent%2Fkyoto%2Darashiyama%2Dmatsunoo%2Dhatsumode%2D2027%2F&amp;rut=161663e4b0e0d8c1fe975ecdb77628b3d8c800391cc7721fc82666a67778f4f4">
+                            locapop.jp/event/kyoto-arashiyama-matsunoo-hatsumode-2027/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Flocapop.jp%2Fevent%2Fkyoto%2Darashiyama%2Dmatsunoo%2Dhatsumode%2D2027%2F&amp;rut=161663e4b0e0d8c1fe975ecdb77628b3d8c800391cc7721fc82666a67778f4f4">1月3日午前9時半からは元始祭、引き続き干支祝寿祭（えとしゅくじゅさい）が行われます。 松尾大社は醸造の神として全国の酒造家・味噌醤油醸造家の信仰を集め、11月1日の上卯祭（醸造祈願祭）など酒にまつわる祭典で知られます。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fpiro%2Dto.com%2Fe%2F1294ebbf%2Da1da%2D4daa%2Dafb8%2D31e2905575a9&amp;rut=6528e82de88e8afe0881c60860f5027197d26a1cd83d1ff4bf4fba00436cc016">松尾大社 初詣（京都府京都市） — ピロト</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fpiro%2Dto.com%2Fe%2F1294ebbf%2Da1da%2D4daa%2Dafb8%2D31e2905575a9&amp;rut=6528e82de88e8afe0881c60860f5027197d26a1cd83d1ff4bf4fba00436cc016">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/piro-to.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fpiro%2Dto.com%2Fe%2F1294ebbf%2Da1da%2D4daa%2Dafb8%2D31e2905575a9&amp;rut=6528e82de88e8afe0881c60860f5027197d26a1cd83d1ff4bf4fba00436cc016">
+                            piro-to.com/e/1294ebbf-a1da-4daa-afb8-31e2905575a9
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fpiro%2Dto.com%2Fe%2F1294ebbf%2Da1da%2D4daa%2Dafb8%2D31e2905575a9&amp;rut=6528e82de88e8afe0881c60860f5027197d26a1cd83d1ff4bf4fba00436cc016">2027年1月1日〜2027年1月31日 時間未定・松尾大社（京都府京都市西京区嵐山宮町3）で開催。祭り・季節・地域行事のイベント。酒造りの守護神を祭る松尾大社で、開運招福を願う新年参拝です。三が日に訪れる場合は周辺の交通規制にも注意が必要です。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+
+            
+              
+              
+                <div class="nav-link">
+                  <form action="/html/" method="post">
+                    <input type="submit" class='btn btn--alt' value="Next" />
+                    <input type="hidden" name="q" value="松尾大社 初詣 正月 参拝時間 公式" />
+                    <input type="hidden" name="s" value="10" />
+                    <input type="hidden" name="nextParams" value="" />
+                    <input type="hidden" name="v" value="l" />
+                    <input type="hidden" name="o" value="json" />
+                    <input type="hidden" name="dc" value="11" />
+                    <input type="hidden" name="api" value="d.js" />
+                    <input type="hidden" name="vqd" value="4-222458491375099887627320591532702690228" />
+
+                    
+                    
+                    
+                      <input name="kl" value="wt-wt" type="hidden" />
+                    
+                    
+                    
+                    
+                  </form>
+                </div>
+              
+            
+
+            <div class="feedback-btn">
+              <a rel="nofollow" href="//duckduckgo.com/feedback.html" target="_new">Feedback</a>
             </div>
-        </form>
-        
-
-        
-
-        
-
-        
-
-
-        <br>
-        <p class='html-only'>
-            <!--    This is the Lite version. Get the full-JS version <a href="https://duckduckgo.com/">here</a>. //-->
-        </p>
-    </center>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div> <!-- links wrapper //-->
     
-        <img src="//duckduckgo.com/t/tqadb?3644579&amp;s=lite&amp;e=0&amp;o=AeaAvACgIi8t4Qv81iCHoyjq9xID%2BqkJz3VxVSpUrIOC%2FXmsMzuM7MBmXcuaSrzG%0A&amp;i=-1&amp;p=3ac2b268cfe1f6254a987db61ba3dcdb-3e9bb2d23b2fe01532e94e4cb9319f21-f7d7cf65d670262984d730462b7d448e-3ec73ea2d78609abbf7cc7842738e239-4650cf82699c8aa872178309f61ad962-3f4ada9e66f2bb983619b2e8bb6b3588-3dee4b59923f3bff6895d45bc172a092-150cc053fbe447864dd078c29444f78f-f5c02fde6f1a5cab5c7dd9fa928c20dc&amp;iadb=0&amp;r=usw&amp;c=dadb&amp;sc=1&amp;cc=botnet&amp;gk=d4cd0dabcf4caa22ad92fab40844c786"/>
-    
-    
-    
-    
-    
+  </div>
 
+  <div id="bottom_spacing2"></div>
+
+  
+    <img src="//duckduckgo.com/t/sl_h"/>
+  
 </body>
-
 </html>

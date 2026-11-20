@@ -1,178 +1,626 @@
-<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
 <head>
-    <link rel="canonical" href="https://duckduckgo.com/">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
-    <meta name="referrer" content="origin">
-    <title>
-        DuckDuckGo
-    </title>
-    <link rel="preload" href="/font/ProximaNova-Reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/font/ProximaNova-Sbold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link title="DuckDuckGo (Lite)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_lite_v2.xml">
-    <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon"/>
-    <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2"/>
-    <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2"/>
-    <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2"/>
-    <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2"/>
-    <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
-    <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/l.4db20359cb90b7c3b91a.css" type="text/css"/>
-    <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/lc.e4363f4c4e05cdc2a4be.css" type="text/css"/>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" />
+  <meta name="referrer" content="origin" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>丹生都比売神社 初詣 正月 参拝時間 公式 at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml" />
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon" />
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon" />
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2"/>
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2"/>
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2"/>
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2"/>
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.5e485425356583f3072f.css" type="text/css"/>
 </head>
 
-<body>
-    <a name="top"></a>
-    <center id="lite_wrapper">
-        <br>
-        <a class="header-url" href="/html/">
-            <span class="header">DuckDuckGo</span>
-        </a>
-        <br><br>
+<body class="body--html">
+  <a name="top" id="top"></a>
+
+  <form action="/html/" method="post">
+    <input type="text" name="state_hidden" id="state_hidden" />
+  </form>
+
+  <div>
+    <div class="site-wrapper-border"></div>
+
+    <div id="header" class="header cw header--html">
+      <a title="DuckDuckGo" href="/html/" class="header__logo-wrap"></a>
+
+      <form name="x" class="header__form" action="/html/" method="post">
+        <div class="search search--header">
+          <input name="q" autocomplete="off" class="search__input" id="search_form_input_homepage" type="text" value="丹生都比売神社 初詣 正月 参拝時間 公式" />
+          <input name="b" id="search_button_homepage" class="search__button search__button--html" value="" title="Search" alt="Search" type="submit" />
+        </div>
 
         
-        <iframe name="ifr" width="0" height="0" border="0" class="hidden"></iframe>
-        <form id="img-form" action="//duckduckgo.com/anomaly.js?sv=html&cc=botnet&ti=1795132575&gk=d4cd0dabcf4caa22ad92fab40844c786&p=3cfc458e93cd4c1c251393481bf67ab8-7b1d4b7b60006d67420c5d0e62de542b-cd833992022f1f8a47f3c9ed7500af55-2d23fdb422891101fc856ffe2123e125-fa325f2ae5d5537d0b2dffd5654938d1-8dc7ae74f1a064937920a37c10290f39-9bcecadcfc862459f6382f5d679c5da7-c94c5a99095c2864785429ecefd23668-30deae6a1ba15991e1fdea184654feb2&q=丹生都比売神社 初詣 正月 参拝時間 公式&o=imTpj53tFUpqVVMvvOJ7nOuER%2BQg8zeDCzcrJNST5ixsg7FiPtf9ob4EgOPUEXCM%0A&r=usw" target="ifr" method="POST"></form>
-        <form id="challenge-form" action="//duckduckgo.com/anomaly.js?sv=html&cc=botnet&st=1795132575&gk=d4cd0dabcf4caa22ad92fab40844c786&p=3cfc458e93cd4c1c251393481bf67ab8-7b1d4b7b60006d67420c5d0e62de542b-cd833992022f1f8a47f3c9ed7500af55-2d23fdb422891101fc856ffe2123e125-fa325f2ae5d5537d0b2dffd5654938d1-8dc7ae74f1a064937920a37c10290f39-9bcecadcfc862459f6382f5d679c5da7-c94c5a99095c2864785429ecefd23668-30deae6a1ba15991e1fdea184654feb2&q=丹生都比売神社 初詣 正月 参拝時間 公式&o=imTpj53tFUpqVVMvvOJ7nOuER%2BQg8zeDCzcrJNST5ixsg7FiPtf9ob4EgOPUEXCM%0A&r=usw" method="POST">
-            <div class="anomaly-modal__mask">
-                <div class="anomaly-modal__modal  is-ie" data-testid="anomaly-modal">
-                    <div class="anomaly-modal__title">Unfortunately, bots use DuckDuckGo too.</div>
-                    <div class="anomaly-modal__description">Please complete the following challenge to confirm this search was made by a human.</div>
+        
+        
+        
+
+        <div class="frm__select">
+          <select name="kl">
+            
+              <option value="" >All Regions</option>
+            
+              <option value="ar-es" >Argentina</option>
+            
+              <option value="au-en" >Australia</option>
+            
+              <option value="at-de" >Austria</option>
+            
+              <option value="be-fr" >Belgium (fr)</option>
+            
+              <option value="be-nl" >Belgium (nl)</option>
+            
+              <option value="br-pt" >Brazil</option>
+            
+              <option value="bg-bg" >Bulgaria</option>
+            
+              <option value="ca-en" >Canada (en)</option>
+            
+              <option value="ca-fr" >Canada (fr)</option>
+            
+              <option value="ct-ca" >Catalonia</option>
+            
+              <option value="cl-es" >Chile</option>
+            
+              <option value="cn-zh" >China</option>
+            
+              <option value="co-es" >Colombia</option>
+            
+              <option value="hr-hr" >Croatia</option>
+            
+              <option value="cz-cs" >Czech Republic</option>
+            
+              <option value="dk-da" >Denmark</option>
+            
+              <option value="ee-et" >Estonia</option>
+            
+              <option value="fi-fi" >Finland</option>
+            
+              <option value="fr-fr" >France</option>
+            
+              <option value="de-de" >Germany</option>
+            
+              <option value="gr-el" >Greece</option>
+            
+              <option value="hk-tzh" >Hong Kong</option>
+            
+              <option value="hu-hu" >Hungary</option>
+            
+              <option value="is-is" >Iceland</option>
+            
+              <option value="in-en" >India (en)</option>
+            
+              <option value="id-en" >Indonesia (en)</option>
+            
+              <option value="ie-en" >Ireland</option>
+            
+              <option value="il-en" >Israel (en)</option>
+            
+              <option value="it-it" >Italy</option>
+            
+              <option value="jp-jp" >Japan</option>
+            
+              <option value="kr-kr" >Korea</option>
+            
+              <option value="lv-lv" >Latvia</option>
+            
+              <option value="lt-lt" >Lithuania</option>
+            
+              <option value="my-en" >Malaysia (en)</option>
+            
+              <option value="mx-es" >Mexico</option>
+            
+              <option value="nl-nl" >Netherlands</option>
+            
+              <option value="nz-en" >New Zealand</option>
+            
+              <option value="no-no" >Norway</option>
+            
+              <option value="pk-en" >Pakistan (en)</option>
+            
+              <option value="pe-es" >Peru</option>
+            
+              <option value="ph-en" >Philippines (en)</option>
+            
+              <option value="pl-pl" >Poland</option>
+            
+              <option value="pt-pt" >Portugal</option>
+            
+              <option value="ro-ro" >Romania</option>
+            
+              <option value="ru-ru" >Russia</option>
+            
+              <option value="xa-ar" >Saudi Arabia</option>
+            
+              <option value="sg-en" >Singapore</option>
+            
+              <option value="sk-sk" >Slovakia</option>
+            
+              <option value="sl-sl" >Slovenia</option>
+            
+              <option value="za-en" >South Africa</option>
+            
+              <option value="es-ca" >Spain (ca)</option>
+            
+              <option value="es-es" >Spain (es)</option>
+            
+              <option value="se-sv" >Sweden</option>
+            
+              <option value="ch-de" >Switzerland (de)</option>
+            
+              <option value="ch-fr" >Switzerland (fr)</option>
+            
+              <option value="tw-tzh" >Taiwan</option>
+            
+              <option value="th-en" >Thailand (en)</option>
+            
+              <option value="tr-tr" >Turkey</option>
+            
+              <option value="us-en" >US (English)</option>
+            
+              <option value="us-es" >US (Spanish)</option>
+            
+              <option value="ua-uk" >Ukraine</option>
+            
+              <option value="uk-en" >United Kingdom</option>
+            
+              <option value="vn-en" >Vietnam (en)</option>
+            
+          </select>
+        </div>
+
+        <div class="frm__select frm__select--last">
+          <select class="" name="df">
+            
+              <option value="" selected>Any Time</option>
+            
+              <option value="d" >Past Day</option>
+            
+              <option value="w" >Past Week</option>
+            
+              <option value="m" >Past Month</option>
+            
+              <option value="y" >Past Year</option>
+            
+          </select>
+        </div>
+      </form>
+    </div>
+
+    
+
+    
+      <!-- Web results are present -->
+      <div>
+        <div class="serp__results">
+          <div id="links" class="results">
+            
+
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
                     
-                    <input type="hidden" name="ct" value="AgEAB5vX2rKHDJZT7kCRioGx9kkQ81reyNflhbVhQIaQDLVBkDWYEc4SqJaPizNcfv3qs3lS226JxnV8Acs26okq1JeroCom4ZNmqOJM0_4YBVAoNW6j1uucXMiFeQ7vA7kYf3GLTgZCziLQ7Fs3HQPihWGsvtISJPynT2Hi22gwxuGJWxinjb5uRvULxAx0BFO24vS5Vhh7YPHKhCIaEy5SHOdatF8ps3oQutvhxFVoxa4NgUB1uW_P-zc_warYtuZlx0EM3XHo5fsK3gvDtpzD3NSVnWFKPuR9a9c5UmC-4tIBVN4iNg0cs3NvC7VlyDT5E0VdLz3D_JRDo84fC5HPL7qdl3gdLNkEk4A0G680Mc75ND65wNd28-vfmBB984XKl5Kt42ABFs95mD9DtYlXCzHEEGPpIRBoGHSgWEbSJj90RPElzDQqaLJEWdn4-qXHdSvGVqAta55ayJnRPf-rc3VopqHALgQaI_q7yNoAxbLi2GV_89kvAO4Rw8vMtFCCpi8b2r8Td0IkhK_bedrdhz1CgjXmKpyAGE80c7a-UXcSXaJ2T4FqM39iFajRMDBVk31GyqQqDCNoPyS0k7fTtIORiGaBjKQ--g_7zfUkgdCqhyVy0hsUWW-EWG-MkMfp3DswJ5Q5RKDnCKfWXgTNoKM2VGmRVH_Ay_QqHouxCbnYq0bo0LJdFgqb7qOx_bw2H9DmJwEKUgvB9JXo3uE2EnYvhqKEmgUtB0ZLmxIhyzvrTsfGFbnlasbSajI7mq4TARL7ycM8OfT7eaV2">
-                    <div class="anomaly-modal__instructions">Select all squares containing a duck:</div>
-                    <div class="anomaly-modal__puzzle-margins">
-                        <div class="anomaly-modal__puzzle">
-                            
-                                <div class="anomaly-modal__box" data-index="0">
-                                    
-                                    
-                                        <label class="" for="image-check_3cfc458e93cd4c1c251393481bf67ab8" data-testid="anomaly-modal-tile-0">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_3cfc458e93cd4c1c251393481bf67ab8" id="image-check_3cfc458e93cd4c1c251393481bf67ab8">
-                                            <img class="anomaly-modal__image" alt=" " id="image-3cfc458e93cd4c1c251393481bf67ab8" src="../assets/anomaly/images/challenge/3cfc458e93cd4c1c251393481bf67ab8.jpg" data-id="3cfc458e93cd4c1c251393481bf67ab8.jpg" data-testid="anomaly-modal-image-0"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="1">
-                                    
-                                    
-                                        <label class="" for="image-check_7b1d4b7b60006d67420c5d0e62de542b" data-testid="anomaly-modal-tile-1">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_7b1d4b7b60006d67420c5d0e62de542b" id="image-check_7b1d4b7b60006d67420c5d0e62de542b">
-                                            <img class="anomaly-modal__image" alt=" " id="image-7b1d4b7b60006d67420c5d0e62de542b" src="../assets/anomaly/images/challenge/7b1d4b7b60006d67420c5d0e62de542b.jpg" data-id="7b1d4b7b60006d67420c5d0e62de542b.jpg" data-testid="anomaly-modal-image-1"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="2">
-                                    
-                                    
-                                        <label class="" for="image-check_cd833992022f1f8a47f3c9ed7500af55" data-testid="anomaly-modal-tile-2">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_cd833992022f1f8a47f3c9ed7500af55" id="image-check_cd833992022f1f8a47f3c9ed7500af55">
-                                            <img class="anomaly-modal__image" alt=" " id="image-cd833992022f1f8a47f3c9ed7500af55" src="../assets/anomaly/images/challenge/cd833992022f1f8a47f3c9ed7500af55.jpg" data-id="cd833992022f1f8a47f3c9ed7500af55.jpg" data-testid="anomaly-modal-image-2"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="3">
-                                    
-                                    
-                                        <label class="" for="image-check_2d23fdb422891101fc856ffe2123e125" data-testid="anomaly-modal-tile-3">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_2d23fdb422891101fc856ffe2123e125" id="image-check_2d23fdb422891101fc856ffe2123e125">
-                                            <img class="anomaly-modal__image" alt=" " id="image-2d23fdb422891101fc856ffe2123e125" src="../assets/anomaly/images/challenge/2d23fdb422891101fc856ffe2123e125.jpg" data-id="2d23fdb422891101fc856ffe2123e125.jpg" data-testid="anomaly-modal-image-3"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="4">
-                                    
-                                    
-                                        <label class="" for="image-check_fa325f2ae5d5537d0b2dffd5654938d1" data-testid="anomaly-modal-tile-4">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_fa325f2ae5d5537d0b2dffd5654938d1" id="image-check_fa325f2ae5d5537d0b2dffd5654938d1">
-                                            <img class="anomaly-modal__image" alt=" " id="image-fa325f2ae5d5537d0b2dffd5654938d1" src="../assets/anomaly/images/challenge/fa325f2ae5d5537d0b2dffd5654938d1.jpg" data-id="fa325f2ae5d5537d0b2dffd5654938d1.jpg" data-testid="anomaly-modal-image-4"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="5">
-                                    
-                                    
-                                        <label class="" for="image-check_8dc7ae74f1a064937920a37c10290f39" data-testid="anomaly-modal-tile-5">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_8dc7ae74f1a064937920a37c10290f39" id="image-check_8dc7ae74f1a064937920a37c10290f39">
-                                            <img class="anomaly-modal__image" alt=" " id="image-8dc7ae74f1a064937920a37c10290f39" src="../assets/anomaly/images/challenge/8dc7ae74f1a064937920a37c10290f39.jpg" data-id="8dc7ae74f1a064937920a37c10290f39.jpg" data-testid="anomaly-modal-image-5"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="6">
-                                    
-                                    
-                                        <label class="" for="image-check_9bcecadcfc862459f6382f5d679c5da7" data-testid="anomaly-modal-tile-6">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_9bcecadcfc862459f6382f5d679c5da7" id="image-check_9bcecadcfc862459f6382f5d679c5da7">
-                                            <img class="anomaly-modal__image" alt=" " id="image-9bcecadcfc862459f6382f5d679c5da7" src="../assets/anomaly/images/challenge/9bcecadcfc862459f6382f5d679c5da7.jpg" data-id="9bcecadcfc862459f6382f5d679c5da7.jpg" data-testid="anomaly-modal-image-6"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="7">
-                                    
-                                    
-                                        <label class="" for="image-check_c94c5a99095c2864785429ecefd23668" data-testid="anomaly-modal-tile-7">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_c94c5a99095c2864785429ecefd23668" id="image-check_c94c5a99095c2864785429ecefd23668">
-                                            <img class="anomaly-modal__image" alt=" " id="image-c94c5a99095c2864785429ecefd23668" src="../assets/anomaly/images/challenge/c94c5a99095c2864785429ecefd23668.jpg" data-id="c94c5a99095c2864785429ecefd23668.jpg" data-testid="anomaly-modal-image-7"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="8">
-                                    
-                                    
-                                        <label class="" for="image-check_30deae6a1ba15991e1fdea184654feb2" data-testid="anomaly-modal-tile-8">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_30deae6a1ba15991e1fdea184654feb2" id="image-check_30deae6a1ba15991e1fdea184654feb2">
-                                            <img class="anomaly-modal__image" alt=" " id="image-30deae6a1ba15991e1fdea184654feb2" src="../assets/anomaly/images/challenge/30deae6a1ba15991e1fdea184654feb2.jpg" data-id="30deae6a1ba15991e1fdea184654feb2.jpg" data-testid="anomaly-modal-image-8"></img>
-                                        </label>
-                                    
-                                </div>
-                            
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fniutsuhime.or.jp%2Finformation%2Fr8_newyear%2F&amp;rut=22cef12e0c4a2dd97b44f4056e6141ec5725650a82b1bf1bb2c0de7518e99563">令和8年 丹生都比売神社の初詣 | 丹生都比売神社</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fniutsuhime.or.jp%2Finformation%2Fr8_newyear%2F&amp;rut=22cef12e0c4a2dd97b44f4056e6141ec5725650a82b1bf1bb2c0de7518e99563">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/niutsuhime.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fniutsuhime.or.jp%2Finformation%2Fr8_newyear%2F&amp;rut=22cef12e0c4a2dd97b44f4056e6141ec5725650a82b1bf1bb2c0de7518e99563">
+                            niutsuhime.or.jp/information/r8_newyear/
+                          </a>
+                          
                         </div>
-                    </div>
-                    <div class="anomaly-modal__controls">
-                        <button name="challenge-submit" class="btn btn--primary anomaly-modal__submit js-anomaly-modal-submit" form="challenge-form" value="d4cd0dabcf4caa22ad92fab40844c786" >Submit</button>
-                        <p></p>
-                        <input class="feedback-toggle" type="checkbox" id="feedback" unchecked />
-                        <label for="feedback" class="feedback-text">Images not loading?</label>
-                        <div class="feedback-content">
-                            <label class="feedback-instructions">Please email the following code to:</label>
-                            <p class="feedback-instructions">error-lite+aab3@duckduckgo.com</p>
-                            <p><label class="feedback-instructions">Code: aab3</label></p>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fniutsuhime.or.jp%2Finformation%2Fr8_newyear%2F&amp;rut=22cef12e0c4a2dd97b44f4056e6141ec5725650a82b1bf1bb2c0de7518e99563">あらゆる災厄を祓い幸福・成功へ導く丹生都比売神社の初詣の御案内です。幸先詣では12月1日より破魔矢などの正月縁起物、また干支の縁起物を頒布しております。金幣祓（三が日のみ）では特別に国重要文化財の楼門内へお進み頂き、除災招福の金幣祓と新年の参拝を執り行います。ご祈祷で ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fniutsuhime.or.jp%2Finformation%2Fr6_newyear%2F&amp;rut=8d007798825412605cf74eee866cec7a6bab6105351f1fd01ff685132eadbf37">丹生都比売神社の初詣 | 丹生都比売神社 - niutsuhime.or.jp</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fniutsuhime.or.jp%2Finformation%2Fr6_newyear%2F&amp;rut=8d007798825412605cf74eee866cec7a6bab6105351f1fd01ff685132eadbf37">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/niutsuhime.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fniutsuhime.or.jp%2Finformation%2Fr6_newyear%2F&amp;rut=8d007798825412605cf74eee866cec7a6bab6105351f1fd01ff685132eadbf37">
+                            niutsuhime.or.jp/information/r6_newyear/
+                          </a>
+                          
                         </div>
-                    </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fniutsuhime.or.jp%2Finformation%2Fr6_newyear%2F&amp;rut=8d007798825412605cf74eee866cec7a6bab6105351f1fd01ff685132eadbf37">丹生都比売神社の初詣のご案内。12月1日より破魔矢などの正月縁起物、また干支の縁起物を頒布しております。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F54298%2Fniuzuhimejinja%2D2%2F&amp;rut=1b012db70e3acb3526c4ca7f51f9e242098a317536de5eb96efd5b5fcdb4bb9b">和歌山県の丹生都比売神社の初詣ガイド｜2025年度最新情報 | 来たhub 観光 イベント 祭り お得情報</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F54298%2Fniuzuhimejinja%2D2%2F&amp;rut=1b012db70e3acb3526c4ca7f51f9e242098a317536de5eb96efd5b5fcdb4bb9b">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/kt-hub.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F54298%2Fniuzuhimejinja%2D2%2F&amp;rut=1b012db70e3acb3526c4ca7f51f9e242098a317536de5eb96efd5b5fcdb4bb9b">
+                            kt-hub.com/54298/niuzuhimejinja-2/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F54298%2Fniuzuhimejinja%2D2%2F&amp;rut=1b012db70e3acb3526c4ca7f51f9e242098a317536de5eb96efd5b5fcdb4bb9b">和歌山県の丹生都比売神社の初詣ガイド｜2025年度最新情報丹生都比売神社は高野山麓に位置し、あらゆる災厄を祓う女神を祀る古社で、初詣にはご利益のある神社として知られています。 電話番号：0736-26-0102 所在地：和歌山県伊都郡かつら...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2F%E3%83%91%E3%83%AF%E3%83%BC%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88.%E3%82%B3%E3%83%A0%2F%E8%BF%91%E7%95%BF%2Fniutsuhime%2Djinja%2F&amp;rut=8fedb6ea52caac9c1099f667a8910ba45cdcdace6a42456b7eba244ffd15a9d7">〖和歌山〗丹生都比売神社｜由緒・見どころ・参拝前に知りたいポイント | パワースポットjapan</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2F%E3%83%91%E3%83%AF%E3%83%BC%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88.%E3%82%B3%E3%83%A0%2F%E8%BF%91%E7%95%BF%2Fniutsuhime%2Djinja%2F&amp;rut=8fedb6ea52caac9c1099f667a8910ba45cdcdace6a42456b7eba244ffd15a9d7">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/xn--zckuap7azdvfzd.xn--tckwe.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2F%E3%83%91%E3%83%AF%E3%83%BC%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88.%E3%82%B3%E3%83%A0%2F%E8%BF%91%E7%95%BF%2Fniutsuhime%2Djinja%2F&amp;rut=8fedb6ea52caac9c1099f667a8910ba45cdcdace6a42456b7eba244ffd15a9d7">
+                            パワースポット.コム/近畿/niutsuhime-jinja/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2F%E3%83%91%E3%83%AF%E3%83%BC%E3%82%B9%E3%83%9D%E3%83%83%E3%83%88.%E3%82%B3%E3%83%A0%2F%E8%BF%91%E7%95%BF%2Fniutsuhime%2Djinja%2F&amp;rut=8fedb6ea52caac9c1099f667a8910ba45cdcdace6a42456b7eba244ffd15a9d7">丹生都比売神社は、土地の歴史と人々の祈りを伝える神社です。所在地は和歌山県伊都郡かつらぎ町上天野230。この記事では、伝承を事実と混同しないようにしながら、公式案内で紹介される特徴と参拝時に役立つ実用情報を紹介します。初訪問の方は、現地の掲示や公式サイトの最新情報も ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhotokami.jp%2Farea%2Fwakayama%2FHrttk%2FHrttktr%2FDmpss%2F131730%2F&amp;rut=3f289b8f0250621580e1dadff49d3fc82131f608e80ac06be5a1fbe3e6657fae">丹生都比売神社の御朱印・アクセス公式情報 (和歌山県上古沢駅) | ホトカミ</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhotokami.jp%2Farea%2Fwakayama%2FHrttk%2FHrttktr%2FDmpss%2F131730%2F&amp;rut=3f289b8f0250621580e1dadff49d3fc82131f608e80ac06be5a1fbe3e6657fae">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/hotokami.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhotokami.jp%2Farea%2Fwakayama%2FHrttk%2FHrttktr%2FDmpss%2F131730%2F&amp;rut=3f289b8f0250621580e1dadff49d3fc82131f608e80ac06be5a1fbe3e6657fae">
+                            hotokami.jp/area/wakayama/Hrttk/Hrttktr/Dmpss/131730/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhotokami.jp%2Farea%2Fwakayama%2FHrttk%2FHrttktr%2FDmpss%2F131730%2F&amp;rut=3f289b8f0250621580e1dadff49d3fc82131f608e80ac06be5a1fbe3e6657fae">丹生都比売神社の公式情報はホトカミでチェック! 丹生都比売神社からのお知らせや、参拝記録（282件）、写真（1646枚）、和歌山県上古沢駅からのアクセス、連絡先など、お参りに便利な情報が満載です!</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.katuragi.or.jp%2Fannai%2Fhatumoude01.htm&amp;rut=b016158ebdbda07bd52db4c97271bc5a213b5f28f752ca35187c18af7d421935">世界遺産 丹生都比売神社 初詣バス Jr妙寺駅から 25年初詣 かつらぎ町 天野大社</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.katuragi.or.jp%2Fannai%2Fhatumoude01.htm&amp;rut=b016158ebdbda07bd52db4c97271bc5a213b5f28f752ca35187c18af7d421935">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/www.katuragi.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.katuragi.or.jp%2Fannai%2Fhatumoude01.htm&amp;rut=b016158ebdbda07bd52db4c97271bc5a213b5f28f752ca35187c18af7d421935">
+                            www.katuragi.or.jp/annai/hatumoude01.htm
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.katuragi.or.jp%2Fannai%2Fhatumoude01.htm&amp;rut=b016158ebdbda07bd52db4c97271bc5a213b5f28f752ca35187c18af7d421935">JR和歌山線の妙寺駅からバスに乗って 世界遺産の丹生都比売神社へ初詣に行こう</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kumano%2Dkodo.jp%2Farchives%2F237&amp;rut=d1bb88073c7a232c2b8ee70d951d703b8a409236c919c87f1e60d08085c5d8c1">丹生都比売神社で御朱印を頂ける時間!美しき世界遺産を参拝するコツ | 和歌山県fan</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kumano%2Dkodo.jp%2Farchives%2F237&amp;rut=d1bb88073c7a232c2b8ee70d951d703b8a409236c919c87f1e60d08085c5d8c1">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/www.kumano-kodo.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kumano%2Dkodo.jp%2Farchives%2F237&amp;rut=d1bb88073c7a232c2b8ee70d951d703b8a409236c919c87f1e60d08085c5d8c1">
+                            www.kumano-kodo.jp/archives/237
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kumano%2Dkodo.jp%2Farchives%2F237&amp;rut=d1bb88073c7a232c2b8ee70d951d703b8a409236c919c87f1e60d08085c5d8c1"><b>丹生都比売神社</b> 御朱印 時間に関する基本情報 丹生都比売神社では御朱印・お守りの受付時間が定められており、通常は午前8時45分から午後4時30分までとなっています。これには授与所で書き置き・直書き双方が含まれます。ご祈祷の受付は午前9時から午後3時までです。祭典や特別行事の日に ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fniutsuhimejinja%2Fstatus%2F2002712969764110740&amp;rut=f1d7dd30ee5212790a756565ff2fc44183b26bf0152248e4479ec35449386545">『初詣のご案内』 〇ご祈祷受付時間 元旦 午前0時～午前2時 午前9時～午後4時 2日・3日 午前9時～午後4時 4日以降 午前9時～午後3時 ...</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fniutsuhimejinja%2Fstatus%2F2002712969764110740&amp;rut=f1d7dd30ee5212790a756565ff2fc44183b26bf0152248e4479ec35449386545">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/x.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fniutsuhimejinja%2Fstatus%2F2002712969764110740&amp;rut=f1d7dd30ee5212790a756565ff2fc44183b26bf0152248e4479ec35449386545">
+                            x.com/niutsuhimejinja/status/2002712969764110740
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fx.com%2Fniutsuhimejinja%2Fstatus%2F2002712969764110740&amp;rut=f1d7dd30ee5212790a756565ff2fc44183b26bf0152248e4479ec35449386545">【世界遺産】丹生都比売神社 (@niutsuhimejinja). 159 likes. 『初詣のご案内』 〇ご祈祷受付時間 元旦 午前0時～午前2時 午前9時～午後4時 2日・3日 午前9時～午後4時 4日以降 午前9時～午後3時30分 〇授与品・ご朱印受付時間 元旦 午前0時～午前2時 午前8時30分～午後4時30分 2日以降 午前8時30分 ～午後4時30 ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fbanzokubiology.com%2Fniutsuhimejinja%2Dkonzatsu%2Dguide%2F&amp;rut=b6f2e14bde6ac1a320fbb149664cea59028f7abbf83e6babef1cb2f41b4442cf">丹生都比売神社の混雑状況｜時期・時間帯・参拝の注意点などを解説 | Banzokuの鳥&amp;旅ブログ</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fbanzokubiology.com%2Fniutsuhimejinja%2Dkonzatsu%2Dguide%2F&amp;rut=b6f2e14bde6ac1a320fbb149664cea59028f7abbf83e6babef1cb2f41b4442cf">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/banzokubiology.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fbanzokubiology.com%2Fniutsuhimejinja%2Dkonzatsu%2Dguide%2F&amp;rut=b6f2e14bde6ac1a320fbb149664cea59028f7abbf83e6babef1cb2f41b4442cf">
+                            banzokubiology.com/niutsuhimejinja-konzatsu-guide/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fbanzokubiology.com%2Fniutsuhimejinja%2Dkonzatsu%2Dguide%2F&amp;rut=b6f2e14bde6ac1a320fbb149664cea59028f7abbf83e6babef1cb2f41b4442cf">丹生都比売神社の混雑状況を季節・時間帯別に詳しく解説。初詣・GW・紅葉などのピーク時期から混雑回避のコツ、参拝の注意点まで旅行客向けにわかりやすく紹介します。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fameblo.jp%2F968%2D910%2Fentry%2D12840958197.html&amp;rut=1a2f69737a8e7a2080f6dbfdd9416274f861513d096d67d149bc8db054ee631d">丹生都比売神社へ初詣 | 癒しの和歌山</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fameblo.jp%2F968%2D910%2Fentry%2D12840958197.html&amp;rut=1a2f69737a8e7a2080f6dbfdd9416274f861513d096d67d149bc8db054ee631d">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/ameblo.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fameblo.jp%2F968%2D910%2Fentry%2D12840958197.html&amp;rut=1a2f69737a8e7a2080f6dbfdd9416274f861513d096d67d149bc8db054ee631d">
+                            ameblo.jp/968-910/entry-12840958197.html
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fameblo.jp%2F968%2D910%2Fentry%2D12840958197.html&amp;rut=1a2f69737a8e7a2080f6dbfdd9416274f861513d096d67d149bc8db054ee631d">丹生都比売神社へ初詣 2024-02-19 02:00:54 テーマ： かつらぎ町 （伊都郡） 梅の季節からお正月の話に戻ります 記録にしておかないと忘れそうで・・・ 私は今年のお正月も 元旦と2日は仕事でした! 3日に夫、母、私の3人で 和歌山県の北東部に位置する</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+
+            
+              
+              
+                <div class="nav-link">
+                  <form action="/html/" method="post">
+                    <input type="submit" class='btn btn--alt' value="Next" />
+                    <input type="hidden" name="q" value="丹生都比売神社 初詣 正月 参拝時間 公式" />
+                    <input type="hidden" name="s" value="10" />
+                    <input type="hidden" name="nextParams" value="" />
+                    <input type="hidden" name="v" value="l" />
+                    <input type="hidden" name="o" value="json" />
+                    <input type="hidden" name="dc" value="11" />
+                    <input type="hidden" name="api" value="d.js" />
+                    <input type="hidden" name="vqd" value="4-268418801522356574472014082193781153085" />
+
+                    
+                    
+                    
+                      <input name="kl" value="wt-wt" type="hidden" />
+                    
+                    
+                    
+                    
+                  </form>
+                </div>
+              
+            
+
+            <div class="feedback-btn">
+              <a rel="nofollow" href="//duckduckgo.com/feedback.html" target="_new">Feedback</a>
             </div>
-        </form>
-        
-
-        
-
-        
-
-        
-
-
-        <br>
-        <p class='html-only'>
-            <!--    This is the Lite version. Get the full-JS version <a href="https://duckduckgo.com/">here</a>. //-->
-        </p>
-    </center>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div> <!-- links wrapper //-->
     
-        <img src="//duckduckgo.com/t/tqadb?5784332&amp;s=lite&amp;cc=botnet&amp;p=3cfc458e93cd4c1c251393481bf67ab8-7b1d4b7b60006d67420c5d0e62de542b-cd833992022f1f8a47f3c9ed7500af55-2d23fdb422891101fc856ffe2123e125-fa325f2ae5d5537d0b2dffd5654938d1-8dc7ae74f1a064937920a37c10290f39-9bcecadcfc862459f6382f5d679c5da7-c94c5a99095c2864785429ecefd23668-30deae6a1ba15991e1fdea184654feb2&amp;gk=d4cd0dabcf4caa22ad92fab40844c786&amp;sc=1&amp;c=dadb&amp;o=imTpj53tFUpqVVMvvOJ7nOuER%2BQg8zeDCzcrJNST5ixsg7FiPtf9ob4EgOPUEXCM%0A&amp;r=usw&amp;iadb=0&amp;e=0&amp;i=-1"/>
-    
-    
-    
-    
-    
+  </div>
 
+  <div id="bottom_spacing2"></div>
+
+  
+    <img src="//duckduckgo.com/t/sl_h"/>
+  
 </body>
-
 </html>

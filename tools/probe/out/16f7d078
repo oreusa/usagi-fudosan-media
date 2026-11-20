@@ -1,178 +1,626 @@
-<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
 <head>
-    <link rel="canonical" href="https://duckduckgo.com/">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
-    <meta name="referrer" content="origin">
-    <title>
-        DuckDuckGo
-    </title>
-    <link rel="preload" href="/font/ProximaNova-Reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/font/ProximaNova-Sbold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link title="DuckDuckGo (Lite)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_lite_v2.xml">
-    <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon"/>
-    <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2"/>
-    <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2"/>
-    <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2"/>
-    <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2"/>
-    <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
-    <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/l.4db20359cb90b7c3b91a.css" type="text/css"/>
-    <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/lc.e4363f4c4e05cdc2a4be.css" type="text/css"/>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" />
+  <meta name="referrer" content="origin" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>長田神社 初詣 正月 参拝時間 公式 at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml" />
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon" />
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon" />
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2"/>
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2"/>
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2"/>
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2"/>
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.5e485425356583f3072f.css" type="text/css"/>
 </head>
 
-<body>
-    <a name="top"></a>
-    <center id="lite_wrapper">
-        <br>
-        <a class="header-url" href="/html/">
-            <span class="header">DuckDuckGo</span>
-        </a>
-        <br><br>
+<body class="body--html">
+  <a name="top" id="top"></a>
+
+  <form action="/html/" method="post">
+    <input type="text" name="state_hidden" id="state_hidden" />
+  </form>
+
+  <div>
+    <div class="site-wrapper-border"></div>
+
+    <div id="header" class="header cw header--html">
+      <a title="DuckDuckGo" href="/html/" class="header__logo-wrap"></a>
+
+      <form name="x" class="header__form" action="/html/" method="post">
+        <div class="search search--header">
+          <input name="q" autocomplete="off" class="search__input" id="search_form_input_homepage" type="text" value="長田神社 初詣 正月 参拝時間 公式" />
+          <input name="b" id="search_button_homepage" class="search__button search__button--html" value="" title="Search" alt="Search" type="submit" />
+        </div>
 
         
-        <iframe name="ifr" width="0" height="0" border="0" class="hidden"></iframe>
-        <form id="img-form" action="//duckduckgo.com/anomaly.js?sv=html&cc=botnet&ti=1795132574&gk=d4cd0dabcf4caa22ad92fab40844c786&p=e976163e46bde46a152eafea79e7fb2d-3121973dcd383f9b65ee8e720802b6a1-a756d136d7827e3e97a116faa638979f-9a13758fe37acb3c4afe7f6a3d94d0d8-67d08ca414af695b4e35d2f424a0fb7f-8c7b50e1bef662d44b2ce5cb47a9824c-db8eb7a2f56c7477510da2e99ed68fce-4636a25352ab56602f31b6e2554aa0ca-02a44122168f3ba5fae05e4c5c93246e&q=長田神社 初詣 正月 参拝時間 公式&o=7JoZ9%2FJ56u0cFI0CIN%2BddPkn1u86uMreyvdlVS5Sv3oR8X6ANBemN95OwYybk4%2Fe%0A&r=usw" target="ifr" method="POST"></form>
-        <form id="challenge-form" action="//duckduckgo.com/anomaly.js?sv=html&cc=botnet&st=1795132574&gk=d4cd0dabcf4caa22ad92fab40844c786&p=e976163e46bde46a152eafea79e7fb2d-3121973dcd383f9b65ee8e720802b6a1-a756d136d7827e3e97a116faa638979f-9a13758fe37acb3c4afe7f6a3d94d0d8-67d08ca414af695b4e35d2f424a0fb7f-8c7b50e1bef662d44b2ce5cb47a9824c-db8eb7a2f56c7477510da2e99ed68fce-4636a25352ab56602f31b6e2554aa0ca-02a44122168f3ba5fae05e4c5c93246e&q=長田神社 初詣 正月 参拝時間 公式&o=7JoZ9%2FJ56u0cFI0CIN%2BddPkn1u86uMreyvdlVS5Sv3oR8X6ANBemN95OwYybk4%2Fe%0A&r=usw" method="POST">
-            <div class="anomaly-modal__mask">
-                <div class="anomaly-modal__modal  is-ie" data-testid="anomaly-modal">
-                    <div class="anomaly-modal__title">Unfortunately, bots use DuckDuckGo too.</div>
-                    <div class="anomaly-modal__description">Please complete the following challenge to confirm this search was made by a human.</div>
+        
+        
+        
+
+        <div class="frm__select">
+          <select name="kl">
+            
+              <option value="" >All Regions</option>
+            
+              <option value="ar-es" >Argentina</option>
+            
+              <option value="au-en" >Australia</option>
+            
+              <option value="at-de" >Austria</option>
+            
+              <option value="be-fr" >Belgium (fr)</option>
+            
+              <option value="be-nl" >Belgium (nl)</option>
+            
+              <option value="br-pt" >Brazil</option>
+            
+              <option value="bg-bg" >Bulgaria</option>
+            
+              <option value="ca-en" >Canada (en)</option>
+            
+              <option value="ca-fr" >Canada (fr)</option>
+            
+              <option value="ct-ca" >Catalonia</option>
+            
+              <option value="cl-es" >Chile</option>
+            
+              <option value="cn-zh" >China</option>
+            
+              <option value="co-es" >Colombia</option>
+            
+              <option value="hr-hr" >Croatia</option>
+            
+              <option value="cz-cs" >Czech Republic</option>
+            
+              <option value="dk-da" >Denmark</option>
+            
+              <option value="ee-et" >Estonia</option>
+            
+              <option value="fi-fi" >Finland</option>
+            
+              <option value="fr-fr" >France</option>
+            
+              <option value="de-de" >Germany</option>
+            
+              <option value="gr-el" >Greece</option>
+            
+              <option value="hk-tzh" >Hong Kong</option>
+            
+              <option value="hu-hu" >Hungary</option>
+            
+              <option value="is-is" >Iceland</option>
+            
+              <option value="in-en" >India (en)</option>
+            
+              <option value="id-en" >Indonesia (en)</option>
+            
+              <option value="ie-en" >Ireland</option>
+            
+              <option value="il-en" >Israel (en)</option>
+            
+              <option value="it-it" >Italy</option>
+            
+              <option value="jp-jp" >Japan</option>
+            
+              <option value="kr-kr" >Korea</option>
+            
+              <option value="lv-lv" >Latvia</option>
+            
+              <option value="lt-lt" >Lithuania</option>
+            
+              <option value="my-en" >Malaysia (en)</option>
+            
+              <option value="mx-es" >Mexico</option>
+            
+              <option value="nl-nl" >Netherlands</option>
+            
+              <option value="nz-en" >New Zealand</option>
+            
+              <option value="no-no" >Norway</option>
+            
+              <option value="pk-en" >Pakistan (en)</option>
+            
+              <option value="pe-es" >Peru</option>
+            
+              <option value="ph-en" >Philippines (en)</option>
+            
+              <option value="pl-pl" >Poland</option>
+            
+              <option value="pt-pt" >Portugal</option>
+            
+              <option value="ro-ro" >Romania</option>
+            
+              <option value="ru-ru" >Russia</option>
+            
+              <option value="xa-ar" >Saudi Arabia</option>
+            
+              <option value="sg-en" >Singapore</option>
+            
+              <option value="sk-sk" >Slovakia</option>
+            
+              <option value="sl-sl" >Slovenia</option>
+            
+              <option value="za-en" >South Africa</option>
+            
+              <option value="es-ca" >Spain (ca)</option>
+            
+              <option value="es-es" >Spain (es)</option>
+            
+              <option value="se-sv" >Sweden</option>
+            
+              <option value="ch-de" >Switzerland (de)</option>
+            
+              <option value="ch-fr" >Switzerland (fr)</option>
+            
+              <option value="tw-tzh" >Taiwan</option>
+            
+              <option value="th-en" >Thailand (en)</option>
+            
+              <option value="tr-tr" >Turkey</option>
+            
+              <option value="us-en" >US (English)</option>
+            
+              <option value="us-es" >US (Spanish)</option>
+            
+              <option value="ua-uk" >Ukraine</option>
+            
+              <option value="uk-en" >United Kingdom</option>
+            
+              <option value="vn-en" >Vietnam (en)</option>
+            
+          </select>
+        </div>
+
+        <div class="frm__select frm__select--last">
+          <select class="" name="df">
+            
+              <option value="" selected>Any Time</option>
+            
+              <option value="d" >Past Day</option>
+            
+              <option value="w" >Past Week</option>
+            
+              <option value="m" >Past Month</option>
+            
+              <option value="y" >Past Year</option>
+            
+          </select>
+        </div>
+      </form>
+    </div>
+
+    
+
+    
+      <!-- Web results are present -->
+      <div>
+        <div class="serp__results">
+          <div id="links" class="results">
+            
+
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
                     
-                    <input type="hidden" name="ct" value="AgEAB5vXGTACUIsWAH34UFxYy337wDUnpFkgBsaZXVfhgW6ifCbyaEtxMrMxA6dztbafprxCVwe64hiRdYVdq64PHtOxcOZUxHIw3epHFCOD24T6ZeROta0ncpjVJSOtQgVBorfEUfVFsfmVv9g5aCQsCd7eQr_Fiq5qUkAfmnw9m_ZgJpxV2DXz3kf7ccgWff99rfN2oCIRMAe4Hmeh2jlIhyZGBmYmb2t7-crlpMRUj-oTvTJ1rJ5qNi-qSIbpd851zEBED6kfYoFtyYGBeeSToX4swMrBTnAvapH8mFVNPzyiuGzs9bJq2p9cvKCdG8kgDF7Y9cZH8MKiEE8Y3MSThwyHCwgJ5xVnNJeY8whBNw_4ZDGyTDtTre_ht4ncM7MxAYPostlTo52hILS5FUpi8rBNarrnmJcQBZvbEiVVmR516En7bLY0VEll3siFV-pFCpHPds5lOrsDS9C7gHtau99aBZnAbfvY-NvBZPI2GXbpBlSIHmNcRQL2SnKawFN76ATsUdTbUKF5-no55tLZdYcRfOye_CfVaN1uPhU-8kQYfmzw7U5fuBrJ2JndkHkehSLZjLFbAT3FanWUMdBWWIh-w2xR1Wvxu1c65_qPTnmamjdbGTDKKoR2h9yViickKYgncWrvtp4a_dEs66wGLuBfNCfSYIbcfpJqXh3MMQl0DbWEeIOKdt7VIvqwcUh9ELJnmfspnQNuBFR2CYRxO_E8Ly6iK_N5I0Nke58kx6d0QlAL-QNjBzEZj5CwgIZK4iQbY6sumaDvtwNH">
-                    <div class="anomaly-modal__instructions">Select all squares containing a duck:</div>
-                    <div class="anomaly-modal__puzzle-margins">
-                        <div class="anomaly-modal__puzzle">
-                            
-                                <div class="anomaly-modal__box" data-index="0">
-                                    
-                                    
-                                        <label class="" for="image-check_e976163e46bde46a152eafea79e7fb2d" data-testid="anomaly-modal-tile-0">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_e976163e46bde46a152eafea79e7fb2d" id="image-check_e976163e46bde46a152eafea79e7fb2d">
-                                            <img class="anomaly-modal__image" alt=" " id="image-e976163e46bde46a152eafea79e7fb2d" src="../assets/anomaly/images/challenge/e976163e46bde46a152eafea79e7fb2d.jpg" data-id="e976163e46bde46a152eafea79e7fb2d.jpg" data-testid="anomaly-modal-image-0"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="1">
-                                    
-                                    
-                                        <label class="" for="image-check_3121973dcd383f9b65ee8e720802b6a1" data-testid="anomaly-modal-tile-1">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_3121973dcd383f9b65ee8e720802b6a1" id="image-check_3121973dcd383f9b65ee8e720802b6a1">
-                                            <img class="anomaly-modal__image" alt=" " id="image-3121973dcd383f9b65ee8e720802b6a1" src="../assets/anomaly/images/challenge/3121973dcd383f9b65ee8e720802b6a1.jpg" data-id="3121973dcd383f9b65ee8e720802b6a1.jpg" data-testid="anomaly-modal-image-1"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="2">
-                                    
-                                    
-                                        <label class="" for="image-check_a756d136d7827e3e97a116faa638979f" data-testid="anomaly-modal-tile-2">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_a756d136d7827e3e97a116faa638979f" id="image-check_a756d136d7827e3e97a116faa638979f">
-                                            <img class="anomaly-modal__image" alt=" " id="image-a756d136d7827e3e97a116faa638979f" src="../assets/anomaly/images/challenge/a756d136d7827e3e97a116faa638979f.jpg" data-id="a756d136d7827e3e97a116faa638979f.jpg" data-testid="anomaly-modal-image-2"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="3">
-                                    
-                                    
-                                        <label class="" for="image-check_9a13758fe37acb3c4afe7f6a3d94d0d8" data-testid="anomaly-modal-tile-3">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_9a13758fe37acb3c4afe7f6a3d94d0d8" id="image-check_9a13758fe37acb3c4afe7f6a3d94d0d8">
-                                            <img class="anomaly-modal__image" alt=" " id="image-9a13758fe37acb3c4afe7f6a3d94d0d8" src="../assets/anomaly/images/challenge/9a13758fe37acb3c4afe7f6a3d94d0d8.jpg" data-id="9a13758fe37acb3c4afe7f6a3d94d0d8.jpg" data-testid="anomaly-modal-image-3"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="4">
-                                    
-                                    
-                                        <label class="" for="image-check_67d08ca414af695b4e35d2f424a0fb7f" data-testid="anomaly-modal-tile-4">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_67d08ca414af695b4e35d2f424a0fb7f" id="image-check_67d08ca414af695b4e35d2f424a0fb7f">
-                                            <img class="anomaly-modal__image" alt=" " id="image-67d08ca414af695b4e35d2f424a0fb7f" src="../assets/anomaly/images/challenge/67d08ca414af695b4e35d2f424a0fb7f.jpg" data-id="67d08ca414af695b4e35d2f424a0fb7f.jpg" data-testid="anomaly-modal-image-4"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="5">
-                                    
-                                    
-                                        <label class="" for="image-check_8c7b50e1bef662d44b2ce5cb47a9824c" data-testid="anomaly-modal-tile-5">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_8c7b50e1bef662d44b2ce5cb47a9824c" id="image-check_8c7b50e1bef662d44b2ce5cb47a9824c">
-                                            <img class="anomaly-modal__image" alt=" " id="image-8c7b50e1bef662d44b2ce5cb47a9824c" src="../assets/anomaly/images/challenge/8c7b50e1bef662d44b2ce5cb47a9824c.jpg" data-id="8c7b50e1bef662d44b2ce5cb47a9824c.jpg" data-testid="anomaly-modal-image-5"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="6">
-                                    
-                                    
-                                        <label class="" for="image-check_db8eb7a2f56c7477510da2e99ed68fce" data-testid="anomaly-modal-tile-6">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_db8eb7a2f56c7477510da2e99ed68fce" id="image-check_db8eb7a2f56c7477510da2e99ed68fce">
-                                            <img class="anomaly-modal__image" alt=" " id="image-db8eb7a2f56c7477510da2e99ed68fce" src="../assets/anomaly/images/challenge/db8eb7a2f56c7477510da2e99ed68fce.jpg" data-id="db8eb7a2f56c7477510da2e99ed68fce.jpg" data-testid="anomaly-modal-image-6"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="7">
-                                    
-                                    
-                                        <label class="" for="image-check_4636a25352ab56602f31b6e2554aa0ca" data-testid="anomaly-modal-tile-7">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_4636a25352ab56602f31b6e2554aa0ca" id="image-check_4636a25352ab56602f31b6e2554aa0ca">
-                                            <img class="anomaly-modal__image" alt=" " id="image-4636a25352ab56602f31b6e2554aa0ca" src="../assets/anomaly/images/challenge/4636a25352ab56602f31b6e2554aa0ca.jpg" data-id="4636a25352ab56602f31b6e2554aa0ca.jpg" data-testid="anomaly-modal-image-7"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="8">
-                                    
-                                    
-                                        <label class="" for="image-check_02a44122168f3ba5fae05e4c5c93246e" data-testid="anomaly-modal-tile-8">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_02a44122168f3ba5fae05e4c5c93246e" id="image-check_02a44122168f3ba5fae05e4c5c93246e">
-                                            <img class="anomaly-modal__image" alt=" " id="image-02a44122168f3ba5fae05e4c5c93246e" src="../assets/anomaly/images/challenge/02a44122168f3ba5fae05e4c5c93246e.jpg" data-id="02a44122168f3ba5fae05e4c5c93246e.jpg" data-testid="anomaly-modal-image-8"></img>
-                                        </label>
-                                    
-                                </div>
-                            
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fcazzun84.com%2Fnagatajinja%2Dhatsumoude&amp;rut=80310c9a0219eb4caa4446fb0b69c8dc94531a02d670b7757ff145f28c9f1336">長田神社の初詣2025年の混雑状況や参拝時間｜駐車場と屋台の情報も｜行事のしらべ帳</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fcazzun84.com%2Fnagatajinja%2Dhatsumoude&amp;rut=80310c9a0219eb4caa4446fb0b69c8dc94531a02d670b7757ff145f28c9f1336">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/cazzun84.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fcazzun84.com%2Fnagatajinja%2Dhatsumoude&amp;rut=80310c9a0219eb4caa4446fb0b69c8dc94531a02d670b7757ff145f28c9f1336">
+                            cazzun84.com/nagatajinja-hatsumoude
+                          </a>
+                          
                         </div>
-                    </div>
-                    <div class="anomaly-modal__controls">
-                        <button name="challenge-submit" class="btn btn--primary anomaly-modal__submit js-anomaly-modal-submit" form="challenge-form" value="d4cd0dabcf4caa22ad92fab40844c786" >Submit</button>
-                        <p></p>
-                        <input class="feedback-toggle" type="checkbox" id="feedback" unchecked />
-                        <label for="feedback" class="feedback-text">Images not loading?</label>
-                        <div class="feedback-content">
-                            <label class="feedback-instructions">Please email the following code to:</label>
-                            <p class="feedback-instructions">error-lite+aab3@duckduckgo.com</p>
-                            <p><label class="feedback-instructions">Code: aab3</label></p>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fcazzun84.com%2Fnagatajinja%2Dhatsumoude&amp;rut=80310c9a0219eb4caa4446fb0b69c8dc94531a02d670b7757ff145f28c9f1336">トップ <b>初詣</b> 長田神社の初詣2025年の混雑状況や参拝時間｜駐車場と屋台の情報も 2025年の情報 2022年12月28日公開 2025年時点の情報です 日程・時間・屋台は毎年変わることがあります。お出かけの前に、主催者や寺社の公式の案内を確認してください。 スポンサーリンク</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fnagatajinja.jp%2F&amp;rut=599a139f8ef3487d70f44131706659656ca4f52e609e9878d39a5fb546dc37ac">【長田神社】厄除け・厄払い・商工業産業の守り神 | 兵庫県神戸市長田区</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fnagatajinja.jp%2F&amp;rut=599a139f8ef3487d70f44131706659656ca4f52e609e9878d39a5fb546dc37ac">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/nagatajinja.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fnagatajinja.jp%2F&amp;rut=599a139f8ef3487d70f44131706659656ca4f52e609e9878d39a5fb546dc37ac">
+                            nagatajinja.jp
+                          </a>
+                          
                         </div>
-                    </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fnagatajinja.jp%2F&amp;rut=599a139f8ef3487d70f44131706659656ca4f52e609e9878d39a5fb546dc37ac">神戸市営地下鉄 長田（長田神社前）駅 または阪急･阪神･山陽 高速長田駅下車 長田神社前商店街を北上し徒歩5分 JRでお越しの方 JR新長田駅にて市営地下鉄に乗り換え長田（長田神社前）駅下車 新幹線でお越しの方 新幹線 新神戸駅下車後、</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ffukubukurohunter29.com%2Fnagatajinja%2D2026%2F&amp;rut=124fa4cfada067b12a4ac964156203cc6d76190a6ce9a6d4a0696b6852af8e13">長田神社 初詣2026完全ガイド!屋台はいつまで？混雑予想と三が日の人出、参拝しやすい時間帯まとめ | 初売り・福袋情報</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ffukubukurohunter29.com%2Fnagatajinja%2D2026%2F&amp;rut=124fa4cfada067b12a4ac964156203cc6d76190a6ce9a6d4a0696b6852af8e13">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/fukubukurohunter29.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ffukubukurohunter29.com%2Fnagatajinja%2D2026%2F&amp;rut=124fa4cfada067b12a4ac964156203cc6d76190a6ce9a6d4a0696b6852af8e13">
+                            fukubukurohunter29.com/nagatajinja-2026/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ffukubukurohunter29.com%2Fnagatajinja%2D2026%2F&amp;rut=124fa4cfada067b12a4ac964156203cc6d76190a6ce9a6d4a0696b6852af8e13"><b>長田神社</b> （神戸市長田区）は「長田さん」と親しまれ、商売繁盛・開運招福で有名な初詣スポットです。 三が日は混雑しますが、時間帯を選べば比較的スムーズに参拝できます。 この記事では 屋台の期間／混雑予想／三が日の人出／参拝しやすい時間帯 を中心に、 2024-2025年の情報をもとに ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fforestpost%2Djp.com%2F2025%2F12%2F31%2Fnagatajinjahatsumode%2F&amp;rut=188f6e4d9c1b59180a9ae220bf18db2b420cc6835868656470d4561886a97c6e">長田神社初詣2026の屋台や混雑は？アクセスや駐車場や交通規制は？ | そらいろ～日本が魅せる多彩な表情～</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fforestpost%2Djp.com%2F2025%2F12%2F31%2Fnagatajinjahatsumode%2F&amp;rut=188f6e4d9c1b59180a9ae220bf18db2b420cc6835868656470d4561886a97c6e">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/forestpost-jp.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fforestpost%2Djp.com%2F2025%2F12%2F31%2Fnagatajinjahatsumode%2F&amp;rut=188f6e4d9c1b59180a9ae220bf18db2b420cc6835868656470d4561886a97c6e">
+                            forestpost-jp.com/2025/12/31/nagatajinjahatsumode/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fforestpost%2Djp.com%2F2025%2F12%2F31%2Fnagatajinjahatsumode%2F&amp;rut=188f6e4d9c1b59180a9ae220bf18db2b420cc6835868656470d4561886a97c6e">兵庫県神戸市の 長田神社の2026年初詣 について、参拝期間や時間、屋台・露店の出店、混雑状況や回避法、駐車場や交通規制、アクセス等気になりますよね。ここでは、長田神社の初詣の2026年参拝期間や時間、屋台・露店の出店、混雑状況・時間や回避法、アクセスや駐車場、特徴やご利益 ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fsakimawari%2Dcalendar.hatenablog.com%2Fentry%2F2026%2F11%2F16%2F134214&amp;rut=c398e6d0144f23bc7bfbfad42b716b3582d01b68209de1f265c15ead4d9584b8">初詣2027完全ガイド｜全国の有名神社・お寺の参拝時間・混雑回避・アクセスを徹底解説 - 先回りカレンダー</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fsakimawari%2Dcalendar.hatenablog.com%2Fentry%2F2026%2F11%2F16%2F134214&amp;rut=c398e6d0144f23bc7bfbfad42b716b3582d01b68209de1f265c15ead4d9584b8">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/sakimawari-calendar.hatenablog.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fsakimawari%2Dcalendar.hatenablog.com%2Fentry%2F2026%2F11%2F16%2F134214&amp;rut=c398e6d0144f23bc7bfbfad42b716b3582d01b68209de1f265c15ead4d9584b8">
+                            sakimawari-calendar.hatenablog.com/entry/2026/11/16/134214
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fsakimawari%2Dcalendar.hatenablog.com%2Fentry%2F2026%2F11%2F16%2F134214&amp;rut=c398e6d0144f23bc7bfbfad42b716b3582d01b68209de1f265c15ead4d9584b8">情報確認日：2026年11月16日（月） 初詣の混雑は「いつ行くか」で大きく変わります。同じ神社でも、元日の0時台と早朝では、参拝までの待ち時間がまったく違います。本記事では、全国の主な神社・お寺15か所について、正月期間の参拝可能時間、混みやすい時間帯と狙い目、交通規制と駐車場 ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhyogo%2Dsumai%2Dlabo.com%2Fnagata%2Dhatsumoude%2F&amp;rut=a6234119b9979ed32ae9e83971bab0c40622584f83ee3037073e261abb63143e">【2027年版】神戸市長田区の初詣ガイド｜長田神社の歳旦祭・駒林神社の厄除祭まとめ - 兵庫すまいラボ</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhyogo%2Dsumai%2Dlabo.com%2Fnagata%2Dhatsumoude%2F&amp;rut=a6234119b9979ed32ae9e83971bab0c40622584f83ee3037073e261abb63143e">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/hyogo-sumai-labo.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhyogo%2Dsumai%2Dlabo.com%2Fnagata%2Dhatsumoude%2F&amp;rut=a6234119b9979ed32ae9e83971bab0c40622584f83ee3037073e261abb63143e">
+                            hyogo-sumai-labo.com/nagata-hatsumoude/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhyogo%2Dsumai%2Dlabo.com%2Fnagata%2Dhatsumoude%2F&amp;rut=a6234119b9979ed32ae9e83971bab0c40622584f83ee3037073e261abb63143e">もう一つ、駒ヶ林の駒林神社があります。「駒ヶ林の厄神さん」と呼ばれ、応神天皇・猿田彦大神・奇稲田姫命をまつる新長田南地区の氏神です。正月の行事としては1月18日から20日の厄除祭が公式に案内されています。山の上には、標高328mの高取山山頂付近に鎮座する高取神社もあります。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fnagatajinja.com%2F&amp;rut=cfbf1ce507463f0f8d529880bd788be76924b8146fa73a419e41c562f2130b7a">長田神社｜鳥取市の神社｜七五三・ご祈祷・神前結婚式</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fnagatajinja.com%2F&amp;rut=cfbf1ce507463f0f8d529880bd788be76924b8146fa73a419e41c562f2130b7a">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/nagatajinja.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fnagatajinja.com%2F&amp;rut=cfbf1ce507463f0f8d529880bd788be76924b8146fa73a419e41c562f2130b7a">
+                            nagatajinja.com
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fnagatajinja.com%2F&amp;rut=cfbf1ce507463f0f8d529880bd788be76924b8146fa73a419e41c562f2130b7a">長田神社は、鳥取の創始時代に産土神（うぶすながみ）として久松山の山麓に奉祀された、 創始500年以上の歴史を有する古社です。 天文14年（1545年）以来、 山名氏・吉川氏・宮部氏・池田氏と歴代の鳥取城主の産土神として篤く崇敬されてまいりました。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyosei%2Dtairyu.jp%2Fomiyamairi%2Fjinnja%2Fhyogo%2D6390.html&amp;rut=633ef5e6a1b16d457b090996771930313621e7f80e5960b1c1af3d0dc45550f2">長田神社のお宮参り完全ガイド｜初穂料・予約不要・駐車場・当日の流れ【2026年最新】</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyosei%2Dtairyu.jp%2Fomiyamairi%2Fjinnja%2Fhyogo%2D6390.html&amp;rut=633ef5e6a1b16d457b090996771930313621e7f80e5960b1c1af3d0dc45550f2">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/www.kyosei-tairyu.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyosei%2Dtairyu.jp%2Fomiyamairi%2Fjinnja%2Fhyogo%2D6390.html&amp;rut=633ef5e6a1b16d457b090996771930313621e7f80e5960b1c1af3d0dc45550f2">
+                            www.kyosei-tairyu.jp/omiyamairi/jinnja/hyogo-6390.html
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.kyosei%2Dtairyu.jp%2Fomiyamairi%2Fjinnja%2Fhyogo%2D6390.html&amp;rut=633ef5e6a1b16d457b090996771930313621e7f80e5960b1c1af3d0dc45550f2">取材・調査ノート: 本記事の情報は、長田神社公式サイト (2026年4月時点)、Google Mapsの参拝者の口コミ、および地元情報をもとに編集しています。初穂料・受付時間は変更される場合があるため、参拝前に長田神社 (078-691-0333)へ電話でご確認ください。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F54124%2Fnagatajinja%2D2%2F&amp;rut=ed2f10e2d8264717ddc67688dbd4a6a356033e820a83a15afe5cf9449a226ce8">兵庫県神戸市長田区の長田神社の初詣ガイド｜2025年度最新情報 | 来たhub 観光 イベント 祭り お得情報</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F54124%2Fnagatajinja%2D2%2F&amp;rut=ed2f10e2d8264717ddc67688dbd4a6a356033e820a83a15afe5cf9449a226ce8">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/kt-hub.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F54124%2Fnagatajinja%2D2%2F&amp;rut=ed2f10e2d8264717ddc67688dbd4a6a356033e820a83a15afe5cf9449a226ce8">
+                            kt-hub.com/54124/nagatajinja-2/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F54124%2Fnagatajinja%2D2%2F&amp;rut=ed2f10e2d8264717ddc67688dbd4a6a356033e820a83a15afe5cf9449a226ce8">兵庫県神戸市長田区の長田神社の初詣ガイド｜2025年度最新情報 長田神社は商工業の守護神として知られ、開運招福や厄除けのご利益がある神社です。初詣には多くの参拝者が訪れます。 電話番号：078-621-3410 所在地：兵庫県神戸市長田区長田町3-1-1 公式サイト： 公式サイト</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fsp.jorudan.co.jp%2Fnewyear%2Fspot_0135.html&amp;rut=1a1cb6fe57c80afee4dc59f90915a918a64124baeeb39858220ac7af2ea89165">長田神社の初詣情報｜初詣特集2026 - ジョルダン</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fsp.jorudan.co.jp%2Fnewyear%2Fspot_0135.html&amp;rut=1a1cb6fe57c80afee4dc59f90915a918a64124baeeb39858220ac7af2ea89165">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/sp.jorudan.co.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fsp.jorudan.co.jp%2Fnewyear%2Fspot_0135.html&amp;rut=1a1cb6fe57c80afee4dc59f90915a918a64124baeeb39858220ac7af2ea89165">
+                            sp.jorudan.co.jp/newyear/spot_0135.html
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fsp.jorudan.co.jp%2Fnewyear%2Fspot_0135.html&amp;rut=1a1cb6fe57c80afee4dc59f90915a918a64124baeeb39858220ac7af2ea89165">長田神社の初詣情報 ながたじんじゃ 県内12位 開運 厄除 商売 駅近 ★★★★★2 イベント 周辺地図 クチコミ 天気予報 神戸市民から「長田さん」と親しまれている商売繁昌の神様 御祭神は事代主神（ことしろぬしのかみ）。「恵美主（えびす）さま」「福の神」として広く知られ、商工業を ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+
+            
+              
+              
+                <div class="nav-link">
+                  <form action="/html/" method="post">
+                    <input type="submit" class='btn btn--alt' value="Next" />
+                    <input type="hidden" name="q" value="長田神社 初詣 正月 参拝時間 公式" />
+                    <input type="hidden" name="s" value="10" />
+                    <input type="hidden" name="nextParams" value="" />
+                    <input type="hidden" name="v" value="l" />
+                    <input type="hidden" name="o" value="json" />
+                    <input type="hidden" name="dc" value="11" />
+                    <input type="hidden" name="api" value="d.js" />
+                    <input type="hidden" name="vqd" value="4-290105608926828142744090388340915963109" />
+
+                    
+                    
+                    
+                      <input name="kl" value="wt-wt" type="hidden" />
+                    
+                    
+                    
+                    
+                  </form>
+                </div>
+              
+            
+
+            <div class="feedback-btn">
+              <a rel="nofollow" href="//duckduckgo.com/feedback.html" target="_new">Feedback</a>
             </div>
-        </form>
-        
-
-        
-
-        
-
-        
-
-
-        <br>
-        <p class='html-only'>
-            <!--    This is the Lite version. Get the full-JS version <a href="https://duckduckgo.com/">here</a>. //-->
-        </p>
-    </center>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div> <!-- links wrapper //-->
     
-        <img src="//duckduckgo.com/t/tqadb?5671860&amp;s=lite&amp;c=dadb&amp;r=usw&amp;e=0&amp;p=e976163e46bde46a152eafea79e7fb2d-3121973dcd383f9b65ee8e720802b6a1-a756d136d7827e3e97a116faa638979f-9a13758fe37acb3c4afe7f6a3d94d0d8-67d08ca414af695b4e35d2f424a0fb7f-8c7b50e1bef662d44b2ce5cb47a9824c-db8eb7a2f56c7477510da2e99ed68fce-4636a25352ab56602f31b6e2554aa0ca-02a44122168f3ba5fae05e4c5c93246e&amp;o=7JoZ9%2FJ56u0cFI0CIN%2BddPkn1u86uMreyvdlVS5Sv3oR8X6ANBemN95OwYybk4%2Fe%0A&amp;cc=botnet&amp;gk=d4cd0dabcf4caa22ad92fab40844c786&amp;sc=1&amp;i=-1&amp;iadb=0"/>
-    
-    
-    
-    
-    
+  </div>
 
+  <div id="bottom_spacing2"></div>
+
+  
+    <img src="//duckduckgo.com/t/sl_h"/>
+  
 </body>
-
 </html>

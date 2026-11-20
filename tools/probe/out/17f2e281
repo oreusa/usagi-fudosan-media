@@ -1,178 +1,626 @@
-<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!--[if IE 6]><html class="ie6" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if IE 7]><html class="lt-ie8 lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9" xmlns="http://www.w3.org/1999/xhtml"><![endif]-->
+<!--[if gt IE 8]><!--><html xmlns="http://www.w3.org/1999/xhtml"><!--<![endif]-->
 <head>
-    <link rel="canonical" href="https://duckduckgo.com/">
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1">
-    <meta name="referrer" content="origin">
-    <title>
-        DuckDuckGo
-    </title>
-    <link rel="preload" href="/font/ProximaNova-Reg-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="/font/ProximaNova-Sbold-webfont.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link title="DuckDuckGo (Lite)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_lite_v2.xml">
-    <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon"/>
-    <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2"/>
-    <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2"/>
-    <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2"/>
-    <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2"/>
-    <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
-    <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/l.4db20359cb90b7c3b91a.css" type="text/css"/>
-    <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/lc.e4363f4c4e05cdc2a4be.css" type="text/css"/>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0, user-scalable=1" />
+  <meta name="referrer" content="origin" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>廣田神社 初詣 正月 参拝時間 公式 at DuckDuckGo</title>
+  <link title="DuckDuckGo (HTML)" type="application/opensearchdescription+xml" rel="search" href="//duckduckgo.com/opensearch_html_v2.xml" />
+  <link href="//duckduckgo.com/favicon.ico" rel="shortcut icon" />
+  <link rel="icon" href="//duckduckgo.com/favicon.ico" type="image/x-icon" />
+  <link id="icon60" rel="apple-touch-icon" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_60x60.png?v=2"/>
+  <link id="icon76" rel="apple-touch-icon" sizes="76x76" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_76x76.png?v=2"/>
+  <link id="icon120" rel="apple-touch-icon" sizes="120x120" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_120x120.png?v=2"/>
+  <link id="icon152" rel="apple-touch-icon" sizes="152x152" href="//duckduckgo.com/assets/icons/meta/DDG-iOS-icon_152x152.png?v=2"/>
+  <link rel="image_src" href="//duckduckgo.com/assets/icons/meta/DDG-icon_256x256.png">
+  <link rel="stylesheet" media="handheld, all" href="//duckduckgo.com/dist/h.5e485425356583f3072f.css" type="text/css"/>
 </head>
 
-<body>
-    <a name="top"></a>
-    <center id="lite_wrapper">
-        <br>
-        <a class="header-url" href="/html/">
-            <span class="header">DuckDuckGo</span>
-        </a>
-        <br><br>
+<body class="body--html">
+  <a name="top" id="top"></a>
+
+  <form action="/html/" method="post">
+    <input type="text" name="state_hidden" id="state_hidden" />
+  </form>
+
+  <div>
+    <div class="site-wrapper-border"></div>
+
+    <div id="header" class="header cw header--html">
+      <a title="DuckDuckGo" href="/html/" class="header__logo-wrap"></a>
+
+      <form name="x" class="header__form" action="/html/" method="post">
+        <div class="search search--header">
+          <input name="q" autocomplete="off" class="search__input" id="search_form_input_homepage" type="text" value="廣田神社 初詣 正月 参拝時間 公式" />
+          <input name="b" id="search_button_homepage" class="search__button search__button--html" value="" title="Search" alt="Search" type="submit" />
+        </div>
 
         
-        <iframe name="ifr" width="0" height="0" border="0" class="hidden"></iframe>
-        <form id="img-form" action="//duckduckgo.com/anomaly.js?sv=html&cc=botnet&ti=1795132574&gk=d4cd0dabcf4caa22ad92fab40844c786&p=2d23fdb422891101fc856ffe2123e125-f7a42438f5e7c32096ed6c63d2aa6c71-13582088f95037f324f1105756ac2e91-6c7dc479ed28087f7fd078315bd86879-18bfa8e9e3c3c78368b8fe614b558c85-677215fc9b3c4c48ad00f59206f6ed2c-ee2999aee193e4fc7fb321f3a3a455a1-d2bce2444455b9344cb0695100022af8-9631df0edfabaffa569d4deb18a17da2&q=廣田神社 初詣 正月 参拝時間 公式&o=y1ckyxyo5tyI8jBMk19kccAsQvX9F0Y770zdS5Qu1DYHrJDNOTiiOM%2FiL4jkJwlI%0A&r=usw" target="ifr" method="POST"></form>
-        <form id="challenge-form" action="//duckduckgo.com/anomaly.js?sv=html&cc=botnet&st=1795132574&gk=d4cd0dabcf4caa22ad92fab40844c786&p=2d23fdb422891101fc856ffe2123e125-f7a42438f5e7c32096ed6c63d2aa6c71-13582088f95037f324f1105756ac2e91-6c7dc479ed28087f7fd078315bd86879-18bfa8e9e3c3c78368b8fe614b558c85-677215fc9b3c4c48ad00f59206f6ed2c-ee2999aee193e4fc7fb321f3a3a455a1-d2bce2444455b9344cb0695100022af8-9631df0edfabaffa569d4deb18a17da2&q=廣田神社 初詣 正月 参拝時間 公式&o=y1ckyxyo5tyI8jBMk19kccAsQvX9F0Y770zdS5Qu1DYHrJDNOTiiOM%2FiL4jkJwlI%0A&r=usw" method="POST">
-            <div class="anomaly-modal__mask">
-                <div class="anomaly-modal__modal  is-ie" data-testid="anomaly-modal">
-                    <div class="anomaly-modal__title">Unfortunately, bots use DuckDuckGo too.</div>
-                    <div class="anomaly-modal__description">Please complete the following challenge to confirm this search was made by a human.</div>
+        
+        
+        
+
+        <div class="frm__select">
+          <select name="kl">
+            
+              <option value="" >All Regions</option>
+            
+              <option value="ar-es" >Argentina</option>
+            
+              <option value="au-en" >Australia</option>
+            
+              <option value="at-de" >Austria</option>
+            
+              <option value="be-fr" >Belgium (fr)</option>
+            
+              <option value="be-nl" >Belgium (nl)</option>
+            
+              <option value="br-pt" >Brazil</option>
+            
+              <option value="bg-bg" >Bulgaria</option>
+            
+              <option value="ca-en" >Canada (en)</option>
+            
+              <option value="ca-fr" >Canada (fr)</option>
+            
+              <option value="ct-ca" >Catalonia</option>
+            
+              <option value="cl-es" >Chile</option>
+            
+              <option value="cn-zh" >China</option>
+            
+              <option value="co-es" >Colombia</option>
+            
+              <option value="hr-hr" >Croatia</option>
+            
+              <option value="cz-cs" >Czech Republic</option>
+            
+              <option value="dk-da" >Denmark</option>
+            
+              <option value="ee-et" >Estonia</option>
+            
+              <option value="fi-fi" >Finland</option>
+            
+              <option value="fr-fr" >France</option>
+            
+              <option value="de-de" >Germany</option>
+            
+              <option value="gr-el" >Greece</option>
+            
+              <option value="hk-tzh" >Hong Kong</option>
+            
+              <option value="hu-hu" >Hungary</option>
+            
+              <option value="is-is" >Iceland</option>
+            
+              <option value="in-en" >India (en)</option>
+            
+              <option value="id-en" >Indonesia (en)</option>
+            
+              <option value="ie-en" >Ireland</option>
+            
+              <option value="il-en" >Israel (en)</option>
+            
+              <option value="it-it" >Italy</option>
+            
+              <option value="jp-jp" >Japan</option>
+            
+              <option value="kr-kr" >Korea</option>
+            
+              <option value="lv-lv" >Latvia</option>
+            
+              <option value="lt-lt" >Lithuania</option>
+            
+              <option value="my-en" >Malaysia (en)</option>
+            
+              <option value="mx-es" >Mexico</option>
+            
+              <option value="nl-nl" >Netherlands</option>
+            
+              <option value="nz-en" >New Zealand</option>
+            
+              <option value="no-no" >Norway</option>
+            
+              <option value="pk-en" >Pakistan (en)</option>
+            
+              <option value="pe-es" >Peru</option>
+            
+              <option value="ph-en" >Philippines (en)</option>
+            
+              <option value="pl-pl" >Poland</option>
+            
+              <option value="pt-pt" >Portugal</option>
+            
+              <option value="ro-ro" >Romania</option>
+            
+              <option value="ru-ru" >Russia</option>
+            
+              <option value="xa-ar" >Saudi Arabia</option>
+            
+              <option value="sg-en" >Singapore</option>
+            
+              <option value="sk-sk" >Slovakia</option>
+            
+              <option value="sl-sl" >Slovenia</option>
+            
+              <option value="za-en" >South Africa</option>
+            
+              <option value="es-ca" >Spain (ca)</option>
+            
+              <option value="es-es" >Spain (es)</option>
+            
+              <option value="se-sv" >Sweden</option>
+            
+              <option value="ch-de" >Switzerland (de)</option>
+            
+              <option value="ch-fr" >Switzerland (fr)</option>
+            
+              <option value="tw-tzh" >Taiwan</option>
+            
+              <option value="th-en" >Thailand (en)</option>
+            
+              <option value="tr-tr" >Turkey</option>
+            
+              <option value="us-en" >US (English)</option>
+            
+              <option value="us-es" >US (Spanish)</option>
+            
+              <option value="ua-uk" >Ukraine</option>
+            
+              <option value="uk-en" >United Kingdom</option>
+            
+              <option value="vn-en" >Vietnam (en)</option>
+            
+          </select>
+        </div>
+
+        <div class="frm__select frm__select--last">
+          <select class="" name="df">
+            
+              <option value="" selected>Any Time</option>
+            
+              <option value="d" >Past Day</option>
+            
+              <option value="w" >Past Week</option>
+            
+              <option value="m" >Past Month</option>
+            
+              <option value="y" >Past Year</option>
+            
+          </select>
+        </div>
+      </form>
+    </div>
+
+    
+
+    
+      <!-- Web results are present -->
+      <div>
+        <div class="serp__results">
+          <div id="links" class="results">
+            
+
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
                     
-                    <input type="hidden" name="ct" value="AgEAB5vXeyHC9Wmn8_88Sr5an27o2gKgwsGcKW528s8AbsG6jl3LOWY0mTCNVuJmXtZ-86xStsdeCxG4H7P9cXG7KJR2sgx2-ZaqjnbbAGnCnlYnqD1mOAYq7tZ_1fc7x08TnFZIxyiGg8rwT_JVUWr4pnIB-EP1oHA4HUlDc5eIyvsOX9gwq-UWLrQFOO47jKccqB6Vvh_sH4n8gl39KLBilEpEYQrxmUVEN8mGNEeqq9Xpxn_Kv_F7PMvszcwiDevaI_55R2TUQPlQ58tRNUCB354qQMXNQE98eXvwN85TBoNLNyuUARAoScizP6azUHj73C607F9aWAZlreucMoE512oLmkPQ429Cm-5bsGCjlCtrhH-OF-G3fHTO-XRNFoTyQvutYm1I41gMLOKVXiQDw4dLwAMiG6CVhDlXR9unxIjeHuhGTietzRTX4a3bmGk-fJw0-r-LvjCY4IectL_DzxL3gTv0DuMa1fnzR0jlSSdw6UZo3ijniMcx49ed2h4wf19GEYJNiN2Hc5VlJbhT9U757u7KJSPraYqM9wUAah7l8UE5Y7KNVnCWUDc9FEtGRfg4L9f0wyycGahoXISZgLuOlwrMMKVy9bmkmiJSeqo-sXZKKeQZqng37eivTcYAyzkDDHXaEJFUMWdtBPK37lEo5AWogv0z_Dimkxr-k67N4rQ3gkX4r3NOxoqskJEu9pEfN8yTOM6FzkTnoBK6GE_8Li_ZeaIobros09aqNkeowpGX159VZW0iP5JTNKH77sMlt2NY8-2-r4JH">
-                    <div class="anomaly-modal__instructions">Select all squares containing a duck:</div>
-                    <div class="anomaly-modal__puzzle-margins">
-                        <div class="anomaly-modal__puzzle">
-                            
-                                <div class="anomaly-modal__box" data-index="0">
-                                    
-                                    
-                                        <label class="" for="image-check_2d23fdb422891101fc856ffe2123e125" data-testid="anomaly-modal-tile-0">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_2d23fdb422891101fc856ffe2123e125" id="image-check_2d23fdb422891101fc856ffe2123e125">
-                                            <img class="anomaly-modal__image" alt=" " id="image-2d23fdb422891101fc856ffe2123e125" src="../assets/anomaly/images/challenge/2d23fdb422891101fc856ffe2123e125.jpg" data-id="2d23fdb422891101fc856ffe2123e125.jpg" data-testid="anomaly-modal-image-0"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="1">
-                                    
-                                    
-                                        <label class="" for="image-check_f7a42438f5e7c32096ed6c63d2aa6c71" data-testid="anomaly-modal-tile-1">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_f7a42438f5e7c32096ed6c63d2aa6c71" id="image-check_f7a42438f5e7c32096ed6c63d2aa6c71">
-                                            <img class="anomaly-modal__image" alt=" " id="image-f7a42438f5e7c32096ed6c63d2aa6c71" src="../assets/anomaly/images/challenge/f7a42438f5e7c32096ed6c63d2aa6c71.jpg" data-id="f7a42438f5e7c32096ed6c63d2aa6c71.jpg" data-testid="anomaly-modal-image-1"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="2">
-                                    
-                                    
-                                        <label class="" for="image-check_13582088f95037f324f1105756ac2e91" data-testid="anomaly-modal-tile-2">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_13582088f95037f324f1105756ac2e91" id="image-check_13582088f95037f324f1105756ac2e91">
-                                            <img class="anomaly-modal__image" alt=" " id="image-13582088f95037f324f1105756ac2e91" src="../assets/anomaly/images/challenge/13582088f95037f324f1105756ac2e91.jpg" data-id="13582088f95037f324f1105756ac2e91.jpg" data-testid="anomaly-modal-image-2"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="3">
-                                    
-                                    
-                                        <label class="" for="image-check_6c7dc479ed28087f7fd078315bd86879" data-testid="anomaly-modal-tile-3">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_6c7dc479ed28087f7fd078315bd86879" id="image-check_6c7dc479ed28087f7fd078315bd86879">
-                                            <img class="anomaly-modal__image" alt=" " id="image-6c7dc479ed28087f7fd078315bd86879" src="../assets/anomaly/images/challenge/6c7dc479ed28087f7fd078315bd86879.jpg" data-id="6c7dc479ed28087f7fd078315bd86879.jpg" data-testid="anomaly-modal-image-3"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="4">
-                                    
-                                    
-                                        <label class="" for="image-check_18bfa8e9e3c3c78368b8fe614b558c85" data-testid="anomaly-modal-tile-4">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_18bfa8e9e3c3c78368b8fe614b558c85" id="image-check_18bfa8e9e3c3c78368b8fe614b558c85">
-                                            <img class="anomaly-modal__image" alt=" " id="image-18bfa8e9e3c3c78368b8fe614b558c85" src="../assets/anomaly/images/challenge/18bfa8e9e3c3c78368b8fe614b558c85.jpg" data-id="18bfa8e9e3c3c78368b8fe614b558c85.jpg" data-testid="anomaly-modal-image-4"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="5">
-                                    
-                                    
-                                        <label class="" for="image-check_677215fc9b3c4c48ad00f59206f6ed2c" data-testid="anomaly-modal-tile-5">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_677215fc9b3c4c48ad00f59206f6ed2c" id="image-check_677215fc9b3c4c48ad00f59206f6ed2c">
-                                            <img class="anomaly-modal__image" alt=" " id="image-677215fc9b3c4c48ad00f59206f6ed2c" src="../assets/anomaly/images/challenge/677215fc9b3c4c48ad00f59206f6ed2c.jpg" data-id="677215fc9b3c4c48ad00f59206f6ed2c.jpg" data-testid="anomaly-modal-image-5"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="6">
-                                    
-                                    
-                                        <label class="" for="image-check_ee2999aee193e4fc7fb321f3a3a455a1" data-testid="anomaly-modal-tile-6">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_ee2999aee193e4fc7fb321f3a3a455a1" id="image-check_ee2999aee193e4fc7fb321f3a3a455a1">
-                                            <img class="anomaly-modal__image" alt=" " id="image-ee2999aee193e4fc7fb321f3a3a455a1" src="../assets/anomaly/images/challenge/ee2999aee193e4fc7fb321f3a3a455a1.jpg" data-id="ee2999aee193e4fc7fb321f3a3a455a1.jpg" data-testid="anomaly-modal-image-6"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="7">
-                                    
-                                    
-                                        <label class="" for="image-check_d2bce2444455b9344cb0695100022af8" data-testid="anomaly-modal-tile-7">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_d2bce2444455b9344cb0695100022af8" id="image-check_d2bce2444455b9344cb0695100022af8">
-                                            <img class="anomaly-modal__image" alt=" " id="image-d2bce2444455b9344cb0695100022af8" src="../assets/anomaly/images/challenge/d2bce2444455b9344cb0695100022af8.jpg" data-id="d2bce2444455b9344cb0695100022af8.jpg" data-testid="anomaly-modal-image-7"></img>
-                                        </label>
-                                    
-                                </div>
-                            
-                                <div class="anomaly-modal__box" data-index="8">
-                                    
-                                    
-                                        <label class="" for="image-check_9631df0edfabaffa569d4deb18a17da2" data-testid="anomaly-modal-tile-8">
-                                            <input type="checkbox" class="anomaly-modal__check" name="image-check_9631df0edfabaffa569d4deb18a17da2" id="image-check_9631df0edfabaffa569d4deb18a17da2">
-                                            <img class="anomaly-modal__image" alt=" " id="image-9631df0edfabaffa569d4deb18a17da2" src="../assets/anomaly/images/challenge/9631df0edfabaffa569d4deb18a17da2.jpg" data-id="9631df0edfabaffa569d4deb18a17da2.jpg" data-testid="anomaly-modal-image-8"></img>
-                                        </label>
-                                    
-                                </div>
-                            
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotahonsya.or.jp%2F&amp;rut=31f6fe2b2eddb7fae04f1ca6d1a0fe61f61489b8b4e60e15206be94049f9f090">廣田神社（公式ホームページ）|祈祷｜兵庫県西宮市</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotahonsya.or.jp%2F&amp;rut=31f6fe2b2eddb7fae04f1ca6d1a0fe61f61489b8b4e60e15206be94049f9f090">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/hirotahonsya.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotahonsya.or.jp%2F&amp;rut=31f6fe2b2eddb7fae04f1ca6d1a0fe61f61489b8b4e60e15206be94049f9f090">
+                            hirotahonsya.or.jp
+                          </a>
+                          
                         </div>
-                    </div>
-                    <div class="anomaly-modal__controls">
-                        <button name="challenge-submit" class="btn btn--primary anomaly-modal__submit js-anomaly-modal-submit" form="challenge-form" value="d4cd0dabcf4caa22ad92fab40844c786" >Submit</button>
-                        <p></p>
-                        <input class="feedback-toggle" type="checkbox" id="feedback" unchecked />
-                        <label for="feedback" class="feedback-text">Images not loading?</label>
-                        <div class="feedback-content">
-                            <label class="feedback-instructions">Please email the following code to:</label>
-                            <p class="feedback-instructions">error-lite+aab3@duckduckgo.com</p>
-                            <p><label class="feedback-instructions">Code: aab3</label></p>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotahonsya.or.jp%2F&amp;rut=31f6fe2b2eddb7fae04f1ca6d1a0fe61f61489b8b4e60e15206be94049f9f090">廣田神社（広田神社）のご案内 ... 境内総坪数は16,000坪。4月上旬には約2万株のコバノミツバツツジ（兵庫県天然記念物）が境内一帯に咲きます。阪神タイガースの必勝祈願でも知 ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotahonsya.or.jp%2Fpages%2F32%2F&amp;rut=41c10b3f0e8051714a1abdbcbda5604e47afe463cd84be99116ec1b43bf3d0d3">年間行事予定｜廣田神社（公式ホームページ）|祈祷｜兵庫県西宮市</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotahonsya.or.jp%2Fpages%2F32%2F&amp;rut=41c10b3f0e8051714a1abdbcbda5604e47afe463cd84be99116ec1b43bf3d0d3">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/hirotahonsya.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotahonsya.or.jp%2Fpages%2F32%2F&amp;rut=41c10b3f0e8051714a1abdbcbda5604e47afe463cd84be99116ec1b43bf3d0d3">
+                            hirotahonsya.or.jp/pages/32/
+                          </a>
+                          
                         </div>
-                    </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotahonsya.or.jp%2Fpages%2F32%2F&amp;rut=41c10b3f0e8051714a1abdbcbda5604e47afe463cd84be99116ec1b43bf3d0d3">毎月1日…月始（つきはじめ）併初穂講祭 毎月16日…月次（つきなみ）祭</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotajinja.or.jp%2F&amp;rut=1ec2fa4874a74af97cabeaf7ace81b41bab3cb600f164064bf51360e1a7aec40">廣田神社〜病厄除守護神〜｜青森県青森市</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotajinja.or.jp%2F&amp;rut=1ec2fa4874a74af97cabeaf7ace81b41bab3cb600f164064bf51360e1a7aec40">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/hirotajinja.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotajinja.or.jp%2F&amp;rut=1ec2fa4874a74af97cabeaf7ace81b41bab3cb600f164064bf51360e1a7aec40">
+                            hirotajinja.or.jp
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotajinja.or.jp%2F&amp;rut=1ec2fa4874a74af97cabeaf7ace81b41bab3cb600f164064bf51360e1a7aec40">Prev Next 1 2 3 4 5 6 7 【病厄除守護神 廣田神社】 青森開拓の一大恩人である進藤庄兵衛正次の神霊を祀り 一切の厄・病気・災難を祓い除ける全国唯一 病厄除守護の由緒ある神社です。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotajinja.or.jp%2Fevent%2F2025shogatsu%2F&amp;rut=b111b91026ec888ac3f3aec4913f3b2205a2f660b2162d7fb54baa47b27b55eb">授与所/社務所/御朱印 正月期間のご案内｜廣田神社〜病厄除守護神〜｜青森県青森市</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotajinja.or.jp%2Fevent%2F2025shogatsu%2F&amp;rut=b111b91026ec888ac3f3aec4913f3b2205a2f660b2162d7fb54baa47b27b55eb">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/hirotajinja.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotajinja.or.jp%2Fevent%2F2025shogatsu%2F&amp;rut=b111b91026ec888ac3f3aec4913f3b2205a2f660b2162d7fb54baa47b27b55eb">
+                            hirotajinja.or.jp/event/2025shogatsu/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fhirotajinja.or.jp%2Fevent%2F2025shogatsu%2F&amp;rut=b111b91026ec888ac3f3aec4913f3b2205a2f660b2162d7fb54baa47b27b55eb">全国唯一病厄除守護神 <b>廣田神社</b> 〒030-0861 青森市長島2丁目13-5 tel. 017-776-7848 / fax. 017-777-5244 授与所/社務所 8時30分～16時30分（水曜日 休務日） ※休務日は祭事等の関係で変更になる場合があります。 駐車場/参拝者専用4台 提携コインパーキング22台（有料）</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F54142%2Fhirotajinja%2F&amp;rut=86902d97d99323c562a9820e1dd849669258793e62fd186502df46a89201836d">兵庫県西宮市の廣田神社の初詣ガイド｜2025年度最新情報 | 来たhub 観光 イベント 祭り お得情報</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F54142%2Fhirotajinja%2F&amp;rut=86902d97d99323c562a9820e1dd849669258793e62fd186502df46a89201836d">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/kt-hub.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F54142%2Fhirotajinja%2F&amp;rut=86902d97d99323c562a9820e1dd849669258793e62fd186502df46a89201836d">
+                            kt-hub.com/54142/hirotajinja/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fkt%2Dhub.com%2F54142%2Fhirotajinja%2F&amp;rut=86902d97d99323c562a9820e1dd849669258793e62fd186502df46a89201836d">兵庫県西宮市の廣田神社の初詣ガイド｜2025年度最新情報 兵庫県西宮市にある廣田神社は、天照大神の荒御魂を祀る由緒ある神社で、初詣では勝運や開運祈願など多くのご利益が期待できます。2025年度の初詣情報をお伝えします。 電話番号：0798-74-3489 所在地：兵庫県西宮市大社町7番7号 <b>公式</b> ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ftoyama%2Dhirotajinja.com%2F&amp;rut=5e97c07c9dfdc39cd502d29f6599672268c5b1c573db858c49a01b371c4876bb">富山 廣田神社【公式】｜バイクお祓い・ツーリング安全祈願・七五三・厄払い・左義長</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ftoyama%2Dhirotajinja.com%2F&amp;rut=5e97c07c9dfdc39cd502d29f6599672268c5b1c573db858c49a01b371c4876bb">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/toyama-hirotajinja.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ftoyama%2Dhirotajinja.com%2F&amp;rut=5e97c07c9dfdc39cd502d29f6599672268c5b1c573db858c49a01b371c4876bb">
+                            toyama-hirotajinja.com
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ftoyama%2Dhirotajinja.com%2F&amp;rut=5e97c07c9dfdc39cd502d29f6599672268c5b1c573db858c49a01b371c4876bb">富山市に鎮座する廣田神社の公式HPです。全国のライダーが集う「バイクのお祓い（ツーリング安全祈願）」をはじめ、七五三、厄払い、安産祈願を承ります。毎年恒例の左義長（どんと焼き）のご案内も。北陸・富山での参拝やツーリングの目的地として、お気軽にご来社ください。駐車場 ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fnishi2.jp%2F311969%2F&amp;rut=97fca3a37cdaa1092b6ebce355d7f6aab2337f644f557695e6e03dcf761834d1">西宮神社・広田神社・厄神さん・神呪寺など初詣まとめ。屋台の数とか除夜の鐘とか【2025年〜2026年】 | 西宮つーしん</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fnishi2.jp%2F311969%2F&amp;rut=97fca3a37cdaa1092b6ebce355d7f6aab2337f644f557695e6e03dcf761834d1">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/nishi2.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fnishi2.jp%2F311969%2F&amp;rut=97fca3a37cdaa1092b6ebce355d7f6aab2337f644f557695e6e03dcf761834d1">
+                            nishi2.jp/311969/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fnishi2.jp%2F311969%2F&amp;rut=97fca3a37cdaa1092b6ebce355d7f6aab2337f644f557695e6e03dcf761834d1">2026年の西宮神社・広田神社・厄神さんなど初詣や屋台が出るかなどの情報をまとめました。 12月31日22時～3時 1月1日8時～21時 （2・3日は、9時～21時） 例年正月の3日間で約50万人が参拝されます。 参拝順路など↓ 西宮神社 ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.instagram.com%2Fhirotahonsya%2F&amp;rut=a1c2753647e66b34cd0e91b0475e193895f1263c1b4c69e87f16eab4c92f8a9a">廣田神社 西宮市 -公式- (@hirotahonsya) • Instagram photos and videos</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.instagram.com%2Fhirotahonsya%2F&amp;rut=a1c2753647e66b34cd0e91b0475e193895f1263c1b4c69e87f16eab4c92f8a9a">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/www.instagram.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.instagram.com%2Fhirotahonsya%2F&amp;rut=a1c2753647e66b34cd0e91b0475e193895f1263c1b4c69e87f16eab4c92f8a9a">
+                            www.instagram.com/hirotahonsya/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fwww.instagram.com%2Fhirotahonsya%2F&amp;rut=a1c2753647e66b34cd0e91b0475e193895f1263c1b4c69e87f16eab4c92f8a9a">13K Followers, 4 Following, 1,345 Posts - <b>廣田神社</b> 西宮市 -公式- (@hirotahonsya) on Instagram: &quot;兵庫県西宮市にご鎮座する兵庫県一の古い神社。 コバノミツバツツジは境内に2万株咲き誇り、当社のシンボルになってます。 ↓↓🔗lit.linkからHPへ&quot;</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ftadajinjya.or.jp%2Fhatsumoude%2F&amp;rut=609b5e0236ba940474220f78ace4ba0387c7b35947d54cc33cfddf04b2406dc4">初詣特集 | 多田神社</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ftadajinjya.or.jp%2Fhatsumoude%2F&amp;rut=609b5e0236ba940474220f78ace4ba0387c7b35947d54cc33cfddf04b2406dc4">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/tadajinjya.or.jp.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ftadajinjya.or.jp%2Fhatsumoude%2F&amp;rut=609b5e0236ba940474220f78ace4ba0387c7b35947d54cc33cfddf04b2406dc4">
+                            tadajinjya.or.jp/hatsumoude/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Ftadajinjya.or.jp%2Fhatsumoude%2F&amp;rut=609b5e0236ba940474220f78ace4ba0387c7b35947d54cc33cfddf04b2406dc4">ご参拝時間 アクセス 厄除表 新年特別祈願祭 正月縁起物 獅子舞奉納（1月2日10時より開催） 久下道場寒稽古始 創心館稽古始 ご参拝の時間（開門～閉門の時間） 大晦日 ： 6：00 ～ 17：00 元 旦 ： 0：00 ～ 19：00頃 2 日 ： 6：00 ～ 18：00頃 3 日 ： 6：00 ～ 18：00頃 4 日 ： 6：00 ～ 17：00頃 ※ 正月の ...</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+              
+                <div class="result results_links results_links_deep web-result ">
+                  <div class="links_main links_deep result__body"> <!-- This is the visible part -->
+                    
+                      <h2 class="result__title">
+                        <a rel="nofollow" class="result__a" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fjinja%2Dmedia.com%2Fhatsumode%2Fhyogo%2F&amp;rut=15d661692d98f599831e5b0ebe67282a978fd5d7fd6ffab7f5e5fd618aeb671a">兵庫県の初詣おすすめ神社8選｜参拝・アクセス案内 - 神社しるべ</a>
+                      </h2>
+
+                    
+
+                    
+                      <div class="result__extras">
+                        <div class="result__extras__url">
+                          <span class="result__icon">
+                            <a rel="nofollow" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fjinja%2Dmedia.com%2Fhatsumode%2Fhyogo%2F&amp;rut=15d661692d98f599831e5b0ebe67282a978fd5d7fd6ffab7f5e5fd618aeb671a">
+                              <img class="result__icon__img" width="16" height="16" alt="" src="//external-content.duckduckgo.com/ip3/jinja-media.com.ico" name="i15" />
+                            </a>
+                          </span>
+                          <a class="result__url" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fjinja%2Dmedia.com%2Fhatsumode%2Fhyogo%2F&amp;rut=15d661692d98f599831e5b0ebe67282a978fd5d7fd6ffab7f5e5fd618aeb671a">
+                            jinja-media.com/hatsumode/hyogo/
+                          </a>
+                          
+                        </div>
+                      </div>
+                    
+
+                    
+                      
+                        <a class="result__snippet" href="//duckduckgo.com/l/?uddg=https%3A%2F%2Fjinja%2Dmedia.com%2Fhatsumode%2Fhyogo%2F&amp;rut=15d661692d98f599831e5b0ebe67282a978fd5d7fd6ffab7f5e5fd618aeb671a">兵庫県の初詣先8か所の由緒・通常の受付時間・アクセスを紹介。2026年10月に主要情報を点検し、正月の特別運用と通常案内を分けています。2027年の情報は公式発表が確認できた範囲のみ掲載。</a>
+                      
+                    
+
+                    <div class="clear"></div>
+                  </div>
+                </div>
+              
+            
+
+            
+              
+              
+                <div class="nav-link">
+                  <form action="/html/" method="post">
+                    <input type="submit" class='btn btn--alt' value="Next" />
+                    <input type="hidden" name="q" value="廣田神社 初詣 正月 参拝時間 公式" />
+                    <input type="hidden" name="s" value="10" />
+                    <input type="hidden" name="nextParams" value="" />
+                    <input type="hidden" name="v" value="l" />
+                    <input type="hidden" name="o" value="json" />
+                    <input type="hidden" name="dc" value="11" />
+                    <input type="hidden" name="api" value="d.js" />
+                    <input type="hidden" name="vqd" value="4-55703607865101462662636232544192236995" />
+
+                    
+                    
+                    
+                      <input name="kl" value="wt-wt" type="hidden" />
+                    
+                    
+                    
+                    
+                  </form>
+                </div>
+              
+            
+
+            <div class="feedback-btn">
+              <a rel="nofollow" href="//duckduckgo.com/feedback.html" target="_new">Feedback</a>
             </div>
-        </form>
-        
-
-        
-
-        
-
-        
-
-
-        <br>
-        <p class='html-only'>
-            <!--    This is the Lite version. Get the full-JS version <a href="https://duckduckgo.com/">here</a>. //-->
-        </p>
-    </center>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div> <!-- links wrapper //-->
     
-        <img src="//duckduckgo.com/t/tqadb?4031872&amp;s=lite&amp;gk=d4cd0dabcf4caa22ad92fab40844c786&amp;r=usw&amp;i=-1&amp;p=2d23fdb422891101fc856ffe2123e125-f7a42438f5e7c32096ed6c63d2aa6c71-13582088f95037f324f1105756ac2e91-6c7dc479ed28087f7fd078315bd86879-18bfa8e9e3c3c78368b8fe614b558c85-677215fc9b3c4c48ad00f59206f6ed2c-ee2999aee193e4fc7fb321f3a3a455a1-d2bce2444455b9344cb0695100022af8-9631df0edfabaffa569d4deb18a17da2&amp;iadb=0&amp;c=dadb&amp;cc=botnet&amp;sc=1&amp;e=0&amp;o=y1ckyxyo5tyI8jBMk19kccAsQvX9F0Y770zdS5Qu1DYHrJDNOTiiOM%2FiL4jkJwlI%0A"/>
-    
-    
-    
-    
-    
+  </div>
 
+  <div id="bottom_spacing2"></div>
+
+  
+    <img src="//duckduckgo.com/t/sl_h"/>
+  
 </body>
-
 </html>
