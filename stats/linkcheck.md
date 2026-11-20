@@ -1,6 +1,6 @@
-# リンクの確かめ（2026-11-20 12:34 JST・1412件・HPの全ページ）
+# リンクの確かめ（2026-11-20 12:50 JST・1412件・HPの全ページ）
 
-種類ごと（見た数／開けない数）：不動産 773／4・紅葉 22／3・イルミ 110／7・初もうで 24／0・おでかけ 402／5・ほか 81／0
+種類ごと（見た数／開けない数）：不動産 773／8・紅葉 22／3・イルミ 110／7・初もうで 24／0・おでかけ 402／5・ほか 81／0
 行き先の分からないアフィリエイトの入口 0本（押さないので見ていない）
 
 ## 開けない（直す）
@@ -18,6 +18,10 @@
 - ✗ [イルミ] 勝尾寺 錦秋の宵詣り2026（links/illumination-osaka.html）URLError https://katsuo-ji-temple.or.jp/autumn/
 - ✗ [不動産] https://www.pref.shiga.lg.jp/file/attach（links/chika-kansai.html）404 https://www.pref.shiga.lg.jp/file/attachment/5598454.pdf
 - ✗ [不動産] 紀美野町（国勢調査 速報）紀美野町 人口 7,235人2025年10月1日の国勢（links/fudosan-list.html）404 https://www.pref.wakayama.lg.jp/prefg/020300/d00219934_d/fil/R7sokuho.pdf
+- ✗ [不動産] 国土交通省 近畿地方整備局12/14 城陽市 混む2路線・計3.5kmが、そろっ（links/fudosan-list.html）504 https://www.kkr.mlit.go.jp/news/top/press/2026/20261027-1teradakakuhuku4shasenka.html
+- ✗ [不動産] 国土交通省 近畿地方整備局6/13 西脇市 国道175号 西脇北バイパス3.1k（links/fudosan-list.html）504 https://www.kkr.mlit.go.jp/profile/yosan/r8/a8aihh00000047oq-att/hyougoken260423.pdf
+- ✗ [不動産] 国土交通省 近畿地方整備局3/8 橿原高田IC 大阪方面のランプが開通国道24号（links/fudosan-list.html）504 https://www.kkr.mlit.go.jp/profile/yosan/r8/a8aihh00000047oq-att/naraken260423.pdf
+- ✗ [不動産] 国土交通省 近畿地方整備局栗東市 出庭〜手原1.9kmが令和8年度に開通（予定）（links/fudosan-list.html）504 https://www.kkr.mlit.go.jp/profile/yosan/r8/a8aihh00000047oq-att/shigaken260423.pdf
 - ✗ [不動産] 奈良市奈良市 耐震改修の補助 上限50万円木造住宅の耐震改修に、工事費の1/3を（links/fudosan-list.html）404 https://www.pref.nara.lg.jp/documents/8512/20260727155339.pdf
 - ✗ [不動産] 大阪府 推計人口池田市 1年で+424人、住宅地の地価+2.7%大阪府の最新の推（links/machi/osaka-35.html）404 https://www.pref.osaka.lg.jp/documents/12055/jk20260901.pdf
 - ✗ [紅葉] 見頃の時期です毘沙門堂京都市山科区見頃11月中旬〜12月上旬→（links/koyo-kyoto.html）404 https://www.kyoto-kankou.or.jp/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Mzg1NzAsInB1ciI6ImJsb2JfaWQifX0=--397e7cc41940b4193b458ec691899f40a63f5cb5/%E7%B4%85%E8%91%89%E3%81%A0%E3%82%88%E3%82%8A.pdf
