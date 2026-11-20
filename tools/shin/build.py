@@ -7,7 +7,7 @@ R = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 L = os.path.join(R, 'links')
 TPL = open(os.path.join(R, 'tools/shin/page.tpl.html'), encoding='utf-8').read()
 sys.path.insert(0, os.path.join(R, 'tools/shin'))
-from ix import ix_html as IX
+from ix import ix_html as IX, pre_html as PRE
 ver = lambda f: hashlib.sha1(open(os.path.join(L, 'shin', f), 'rb').read()).hexdigest()[:8]
 J = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 # 11/19 owner「入れ替える」：新しいページは今の URL（/odekake・/fudosan-list・/okaimono）で出す（functions/ が /shin/* を読む）
@@ -93,7 +93,7 @@ def write(name, title, cfg, data, js=None):
     page = (TPL.replace('__TITLE__', html.escape(title)).replace('__HEAD__', head).replace('__CFG__', J(cfg)).replace('__DATA__', J(data))
             .replace('__CV__', ver('shin.css')).replace('__JV__', ver('shin.js')).replace('__PAGE__', js).replace('__PV__', ver(js + '.js')))
     # 11/20 検索の機械にも中身とリンクが見えるように、ページの下の「一覧」を HTML のまま（tools/shin/ix.py）
-    page = page.replace('<div id="app"></div>', '<div id="app"></div>' + IX(name, data, L), 1)
+    page = page.replace('<div id="app"></div>', '<div id="app">' + PRE(data) + '</div>' + IX(name, data, L), 1)
     open(os.path.join(L, 'shin', name + '.html'), 'w', encoding='utf-8').write(page)
     print(name, len(page) // 1024, 'KB')
 
