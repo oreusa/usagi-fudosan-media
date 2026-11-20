@@ -15,6 +15,39 @@ SEC = {'Odekake': '/odekake', 'Home & Land': '/fudosan-list', 'Shopping': '/okai
 SITE = 'https://kansai.townnote.app'
 # 11/20 今週末のおすすめに出してよい写真（月が目で選んだ・行きたくなる写真だけ）
 PHOK = set(json.load(open(os.path.join(R, 'tools/shin/photo_ok.json'), encoding='utf-8'))['ok'])
+PHHR = set(json.load(open(os.path.join(R, 'tools/shin/photo_ok.json'), encoding='utf-8')).get('hero', []))
+# 11/20 owner「出来上がったあとに本気で確認して改善」：イルミのページに昼の建物、紅葉のページに夏の緑の写真が先に出ていた。
+# 写真ごとに 明るさ・赤や橙の多さ・緑の多さ を量って（tools/shin/photo_m.json に残す）、ページに合う写真を先に出す
+_PMF = os.path.join(R, 'tools/shin/photo_m.json')
+try: _PM = json.load(open(_PMF, encoding='utf-8'))
+except Exception: _PM = {}
+def PHM(f):
+    if f in _PM and len(_PM[f]) > 3: return _PM[f]
+    try:
+        import colorsys
+        from PIL import Image
+        im = Image.open(os.path.join(L, 'assets/ph', f)).convert('RGB').resize((64, 48)); px = list(im.getdata())
+        lum = sum(0.299*r + 0.587*g + 0.114*b for r, g, b in px) / len(px); w = gr = 0
+        for r, g, b in px:
+            h, sa, v = colorsys.rgb_to_hsv(r/255, g/255, b/255)
+            if sa > .35 and v > .25 and (h < .11 or h > .95): w += 1
+            if sa > .25 and v > .2 and .17 < h < .45: gr += 1
+        _PM[f] = [round(lum), round(w/len(px), 2), round(gr/len(px), 2), Image.open(os.path.join(L, 'assets/ph', f)).size[0]]
+        json.dump(_PM, open(_PMF, 'w', encoding='utf-8'))
+        return _PM[f]
+    except Exception:
+        return _PM.get(f)
+def FIT(it, kind):
+    """ok：2＝このページに合う写真、1＝目で選んだ写真、-1＝合わない（後ろへ）"""
+    it = dict(it); m = PHM(it['im']) if it.get('im') else None
+    if not m: return it
+    lum, warm, green = m[:3]
+    if kind == 'illumination':
+        it['ok'] = 2 if lum < 75 else (-1 if lum > 120 else (1 if it.get('ok') else 0))
+    elif kind == 'koyo':
+        it['ok'] = 2 if warm >= .2 else (-1 if green >= .3 and warm < .1 else (1 if it.get('ok') else 0))
+    if not it.get('ok'): it.pop('ok', None)
+    return it
 # 11/20 人気順：この30日に押された数（カード）＋♡の数×3。毎朝 link-stats が数え直す
 try: _LT = json.load(open(os.path.join(R, 'stats/link-30.json'), encoding='utf-8'))['total']
 except Exception: _LT = {}
@@ -108,6 +141,8 @@ def odekake():
             if v.get(k): it[k] = v[k]
         if v.get('im') and v['im'] in phh: it['th'] = phh[v['im']]
         if v.get('im') in PHOK: it['ok'] = 1
+        if v.get('im') in PHHR: it['hr'] = 1
+        if v.get('im') and (PHM(v['im']) or [0, 0, 0, 9999])[3] < 900: it['lo'] = 1
         if POP(t): it['pp'] = POP(t)
         if v.get('id') in opages: it['o'] = v['id']
         g = gn.get(norm(t)) or gn.get(norm(v.get('n', '')))
@@ -129,6 +164,8 @@ def odekake():
         if v.get('h') and 'h' not in it: it['h'] = v['h']
         if it.get('im') and it['im'] in phh: it['th'] = phh[it['im']]
         if it.get('im') in PHOK: it['ok'] = 1
+        if it.get('im') in PHHR: it['hr'] = 1
+        if it.get('im') and (PHM(it['im']) or [0, 0, 0, 9999])[3] < 900: it['lo'] = 1
         if POP(name): it['pp'] = POP(name)
         if v.get('id') in opages: it['o'] = v['id']
         g = gn.get(norm(name)) or gn.get(norm(v.get('n', '')))
@@ -139,6 +176,7 @@ def odekake():
     SLUG = {'大阪': 'osaka', '京都': 'kyoto', '兵庫': 'hyogo', '奈良': 'nara', '滋賀': 'shiga', '和歌山': 'wakayama'}
     import copy, datetime, sys as _s
     def page(name, url, title, desc, page, its, cur):
+        if name.startswith(('illumination', 'koyo')): its = [FIT(x, 'koyo' if name.startswith('koyo') else 'illumination') for x in its]
         c = copy.deepcopy(cfg); c['desc'] = desc
         c['menu']['items'] = [[t, u] + ([1] if u == cur else []) for t, u, *_ in c['menu']['items']]
         URL[name] = url

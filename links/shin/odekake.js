@@ -30,7 +30,7 @@ function pick(){return IT.filter(function(x){
   if(S.g==="_hv")return !!HV[hvKey(x)]&&(!S.p||x.p===S.p);if(S.p&&x.p!==S.p)return false;if(S.g&&x.k!==S.g)return false;
   if(S.w==="now")return x.st==="now";if(S.w==="end")return x.st==="now"&&x.left<=7;if(S.w==="td")return x.st==="now"&&x.left===0;if(S.w==="new")return x.st==="up"&&diff(TD,x.s)<=7;if(S.w==="we")return x.s<=SUN&&x.e>=SAT;return x.st==="up"}).sort(function(a,b){
   if(S.w==="up"||S.w==="new")return a.s<b.s?-1:a.s>b.s?1:0;if(S.w==="end"||S.w==="td")return a.e<b.e?-1:a.e>b.e?1:0;
-  var pa=(a.im?0:2)-(a.ok?1:0),pb=(b.im?0:2)-(b.ok?1:0);if(pa!==pb)return pa-pb;if((b.pp||0)!==(a.pp||0))return (b.pp||0)-(a.pp||0);return a.e<b.e?-1:a.e>b.e?1:0})}
+  var pa=(a.im?0:3)-(a.ok||0),pb=(b.im?0:3)-(b.ok||0);if(pa!==pb)return pa-pb;if((b.pp||0)!==(a.pp||0))return (b.pp||0)-(a.pp||0);return a.e<b.e?-1:a.e>b.e?1:0})}
 var nNow=IT.filter(function(x){return x.st==="now"}).length;
 var nEnd=IT.filter(function(x){return x.st==="now"&&x.left<=7}).length,nTd=IT.filter(function(x){return x.st==="now"&&x.left===0}).length,
  nWe=IT.filter(function(x){return x.s<=SUN&&x.e>=SAT}).length,nNew=IT.filter(function(x){return x.st==="up"&&diff(TD,x.s)<=7}).length,DT=dd(TD),EN=["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"][DT.getUTCDay()];
@@ -48,7 +48,7 @@ $(".tiles").addEventListener("click",function(e){var b=e.target.closest("button"
 
 /* ストーリー（虹の輪のまま。見た印は前と同じ hx_seen に残す） */
 var ST=(PG.st==="pref"?PREF.map(function(p){return [p,function(x){return x.p===p&&x.st==="now"}]}).concat([["無料",function(x){return x.f}],["これから",function(x){return x.st==="up"}]]):[["今週末",function(x){return x.s<=SUN&&x.e>=SAT}],["まもなく終了",function(x){return x.st==="now"&&x.left<=10}],["イルミ",function(x){return x.k==="light"}],["紅葉",function(x){return x.k==="koyo"}],["アート",function(x){return x.k==="art"}],["子どもと",function(x){return x.k==="play"||x.k==="animal"}],["無料",function(x){return x.f}],["近日開始",function(x){return x.st==="up"&&diff(TD,x.s)<=21}]])
- .map(function(s){var l=IT.filter(s[1]).sort(function(a,b){return (a.im?0:1)-(b.im?0:1)}).slice(0,10);return {t:s[0],l:l}}).filter(function(s){return s.l.length>=2});
+ .map(function(s){var l=IT.filter(s[1]).sort(function(a,b){return ((a.im?0:3)-(a.ok||0))-((b.im?0:3)-(b.ok||0))}).slice(0,10);return {t:s[0],l:l}}).filter(function(s){return s.l.length>=2});
 $("#st").innerHTML=ST.map(function(s,i){var c=s.l[0];return '<button data-s="'+i+'"><span class="rg">'+(c.im?'<img src="'+img(c)+'" alt="" loading="lazy">':'<span class="ph" style="display:block"></span>')+'</span><span>'+esc(s.t)+'</span></button>'}).join("");
 var sv=$("#sv"),svS=null,svI=0,svA=null;
 function svShow(){var s=ST[svS],x=s.l[svI];$(".hd span",sv).textContent=s.t+"　"+(svI+1)+"/"+s.l.length;
@@ -67,7 +67,7 @@ var sy0=null;sv.addEventListener("touchstart",function(e){sy0=e.touches[0].clien
 sv.addEventListener("touchend",function(e){var dy=e.changedTouches[0].clientY-(sy0||0);if(dy>90)svClose();else if(svA)svA.play()},{passive:true});
 
 /* 今週の顔（扇のように重なり、めくると立体で回る） */
-var FAN=IT.filter(function(x){return x.im&&x.s<=SUN&&x.e>=TD}).sort(function(a,b){return (b.ok?1:0)-(a.ok?1:0)||(b.pp||0)-(a.pp||0)||(b.hk?1:0)-(a.hk?1:0)||((a.i*7919+S_.seed)%97)-((b.i*7919+S_.seed)%97)}).slice(0,8);
+var FAN=IT.filter(function(x){return x.im&&x.s<=SUN&&x.e>=TD}).sort(function(a,b){return (b.hr?1:0)-(a.hr?1:0)||(a.lo?1:0)-(b.lo?1:0)||(b.ok||0)-(a.ok||0)||(b.pp||0)-(a.pp||0)||(b.hk?1:0)-(a.hk?1:0)||((a.i*7919+S_.seed)%97)-((b.i*7919+S_.seed)%97)}).slice(0,8);
 var fan=$("#fan");
 fan.innerHTML='<i class="pad"></i>'+FAN.map(function(x){return '<a class="fc" href="#" data-i="'+x.i+'"><span class="in" style="background-color:'+avg(x.th)+'"><img src="'+img(x)+'" alt="" loading="lazy" decoding="async"><span class="cap"><small>'+x.g[3]+'・'+esc(x.p)+'</small><b>'+esc(x.t)+'</b><span>'+when(x)+'</span></span></span></a>'}).join("")+'<i class="pad"></i>';
 var fcs=$$(".fc",fan),fq=0;
