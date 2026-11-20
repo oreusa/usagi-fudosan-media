@@ -1,4 +1,4 @@
-ka-d url=https://kansai.townnote.app/odekake?map2=1&w=we errs=[]
-ka-n FAIL page.click: Timeout 30000ms exceeded. errs=["500 https://kansai.townnote.app/assets/ph/8dae8976.webp","500 https://kansai.townnote.app/assets/ph/29751588.webp","500 https://kansai.townnote.app/shin/map2.js?v=1120d"]
-kt-d url=https://kanto.townnote.app/odekake?map2=1&w=we errs=[]
-kt-n url=https://kanto.townnote.app/odekake?map2=1&w=we errs=[]
+ka-d url=https://kansai.townnote.app/odekake?w=we errs=[]
+ka-n url=https://kansai.townnote.app/odekake?w=we errs=[]
+kt-d FAIL page.click: Timeout 30000ms exceeded. errs=[]
+kt-n FAIL page.click: Timeout 30000ms exceeded. errs=[]
