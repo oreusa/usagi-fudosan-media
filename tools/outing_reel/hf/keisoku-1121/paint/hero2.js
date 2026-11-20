@@ -11,7 +11,7 @@ function mapleBig(x,S){const lob=[[-90,1],[-38,.9],[-142,.9],[8,.72],[-188,.72],
   const mid=(a+an)/2;if(an-a>30)pts.push(P(mid,.36))}
  pts.forEach((p,i)=>i?x.lineTo(...p):x.moveTo(...p));x.closePath()}
 function mleaf(x,px,py,S,rot,col){x.save();x.translate(px,py);x.rotate(rot);x.fillStyle=col;mapleBig(x,S);x.fill();x.restore()}
-function H1(){const L={};const cx=520,cy=560;const LT=[cx,cy,620];
+function H1(){const L={};const cx=520,cy=780;const LT=[cx,cy,620];
  {const c=cv(),x=c.getContext('2d');
   const g=x.createRadialGradient(cx,cy,0,cx,cy,900);g.addColorStop(0,'#fffbe8');g.addColorStop(.1,'#ffe6a8');g.addColorStop(.3,'#f2953c');g.addColorStop(.6,'#a8301c');g.addColorStop(1,'#3e0e0a');x.fillStyle=g;x.fillRect(0,0,W,H);
   const far=cv(),fx=far.getContext('2d');leafCloud(fx,cx,cy,760,900,7000,15,PAL2,71,{light:LT,shape:(u,v)=>Math.hypot(u*1.2,v)>.16+Math.sin(Math.atan2(v,u)*7)*.04});x.drawImage(layerBlur(far,4),0,0);
@@ -29,6 +29,9 @@ function H1(){const L={};const cx=520,cy=560;const LT=[cx,cy,620];
    x.strokeStyle='#2a160e';x.lineWidth=10;x.lineCap='round';x.beginPath();x.moveTo(bx,by);x.quadraticCurveTo((bx+ex)/2,by-40,ex,ey);x.stroke();
    const q=rng(80+i);for(let j=0;j<60;j++){const t=.25+q()*.8,px=bx+(ex-bx)*t+(q()-.5)*90,py=by+(ey-by)*t+(q()-.5)*90;const d=Math.hypot(px-cx,py-cy)/700;
     leaf(x,px,py,16+q()*16,q()*6,mix(mix(PAL2[j%7],'#ffd890',Math.max(0,.7-d)*.6),'#3a0806',q()*.2),7)}});
+  {const q=rng(777);for(let i=0;i<420;i++){const a=q()*Math.PI*2,r=135+Math.pow(q(),.6)*300+Math.sin(a*5)*40;const px=520+Math.cos(a)*r*1.05,py=780+Math.sin(a)*r;const d=Math.min(1,(r-135)/300);
+    leaf(x,px,py,10+q()*16,q()*6,mix('#4a0a0e','#c03018',d*.5+q()*.2),7)}
+   x.globalCompositeOperation='screen';for(let i=0;i<160;i++){const a=q()*Math.PI*2,r=140+q()*40;leaf(x,520+Math.cos(a)*r*1.05,780+Math.sin(a)*r,8+q()*8,q()*6,'rgba(255,170,90,.55)',7)}x.globalCompositeOperation='source-over'}
   L.n=finish(c,703,{rim:false,g:5,blot:0})}
  {const s=cv(),sx=s.getContext('2d');leafCloud(sx,60,1360,260,160,60,48,PAL2,91);leafCloud(sx,W-40,1300,240,170,60,48,PAL2,92);leafCloud(sx,W-60,60,220,120,40,44,PAL2,93);L.f=layerBlur(s,7)}
  return L}
@@ -83,9 +86,14 @@ function H3(){const L={};const sx=700,sy=330;const LT=[sx,sy,800];
   L.m=finish(layerBlur(c,.8),902,{rim:false,g:6,blot:0})}
  {const c=cv(),x=c.getContext('2d');
   // 道を歩く二人（逆光の影絵・小さく）
-  const fig=(px,py,s,h)=>{x.fillStyle='#2a1610';x.beginPath();x.arc(px,py-h*s,7*s,0,7);x.fill();x.beginPath();x.moveTo(px-9*s,py-(h-10)*s);x.quadraticCurveTo(px,py-(h-6)*s,px+9*s,py-(h-10)*s);x.lineTo(px+7*s,py-18*s);x.lineTo(px+5*s,py);x.lineTo(px+1*s,py);x.lineTo(px,py-16*s);x.lineTo(px-1*s,py);x.lineTo(px-5*s,py);x.lineTo(px-7*s,py-18*s);x.fill();
-   x.globalCompositeOperation='screen';x.strokeStyle='rgba(255,220,160,.7)';x.lineWidth=1.5;x.beginPath();x.arc(px,py-h*s,7*s,-1.8,.2);x.stroke();x.globalCompositeOperation='source-over'};
-  fig(552,780,1.0,58);fig(576,782,.92,54);
+  // 二人の後ろ姿（逆光）：手前へ長い影、輪郭に金の光、手をつなぐ
+  const fig=(px,py,h,coat,hair)=>{const w=h*.26;
+   const sg=x.createLinearGradient(px,py,px-30,py+h*2.6);sg.addColorStop(0,'rgba(40,14,8,.55)');sg.addColorStop(1,'rgba(40,14,8,0)');x.fillStyle=sg;x.beginPath();x.moveTo(px-w*.35,py);x.lineTo(px+w*.35,py);x.lineTo(px-20+w*.9,py+h*2.6);x.lineTo(px-40-w*.9,py+h*2.6);x.fill();
+   x.fillStyle=coat;x.beginPath();x.moveTo(px-w*.38,py-h*.80);x.quadraticCurveTo(px,py-h*.86,px+w*.38,py-h*.80);x.quadraticCurveTo(px+w*.52,py-h*.45,px+w*.46,py-h*.30);x.lineTo(px+w*.2,py-h*.30);x.lineTo(px+w*.22,py);x.lineTo(px+w*.04,py);x.lineTo(px,py-h*.28);x.lineTo(px-w*.04,py);x.lineTo(px-w*.22,py);x.lineTo(px-w*.2,py-h*.30);x.lineTo(px-w*.46,py-h*.30);x.quadraticCurveTo(px-w*.52,py-h*.45,px-w*.38,py-h*.80);x.fill();
+   x.fillStyle=hair;x.beginPath();x.ellipse(px,py-h*.9,w*.2,h*.1,0,0,7);x.fill();
+   x.globalCompositeOperation='screen';x.strokeStyle='rgba(255,214,150,.75)';x.lineWidth=1.6;x.beginPath();x.ellipse(px,py-h*.9,w*.2,h*.1,0,-2.4,.1);x.stroke();x.beginPath();x.moveTo(px+w*.38,py-h*.80);x.quadraticCurveTo(px+w*.52,py-h*.45,px+w*.46,py-h*.30);x.stroke();x.globalCompositeOperation='source-over'};
+  fig(548,792,78,'#3a1f18','#24120c');fig(580,794,70,'#5a2a20','#2a140c');
+  x.strokeStyle='#3a1f18';x.lineWidth=3;x.beginPath();x.moveTo(548+9,792-22);x.quadraticCurveTo(564,792-18,580-8,794-20);x.stroke();
   // 手前の土手の苔と葉
   for(const sd of[-1,1]){const ex=sd<0?0:W;const q=rng(sd>0?341:342);for(let i=0;i<2600;i++){const t=q(),y=H-q()*320*(1-t*.5);const xx=ex+(-sd)*t*260;x.fillStyle=rgba(['#6a7e22','#8aa030','#4a5a18'][i%3],.7);x.beginPath();x.ellipse(xx,y,4+q()*10,2+q()*5,0,0,7);x.fill()}
    for(let i=0;i<300;i++){const t=q();leaf(x,ex+(-sd)*t*250,H-q()*300*(1-t*.5),8+q()*10,q()*6,mix(PAL2[i%7],'#3a0806',q()*.3),7)}}

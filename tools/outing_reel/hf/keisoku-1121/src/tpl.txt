@@ -24,8 +24,8 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
 .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,20,10,0) 30%,rgba(40,20,10,.65));opacity:0;z-index:5}
 .cast{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,10,5,.7),rgba(20,10,5,.25) 60%,rgba(20,10,5,0));opacity:0;z-index:5}
 .gut{position:absolute;left:0;top:0;bottom:0;width:46px;background:linear-gradient(90deg,rgba(0,0,0,.35),transparent);z-index:4}
-.cap{position:absolute;left:110px;right:121px;top:207px;font-family:M;color:#fffaf0;font-size:60px;line-height:1.45;letter-spacing:.12em;text-shadow:0 2px 24px rgba(40,12,4,.55),0 0 2px rgba(40,12,4,.4);z-index:3}
-.cap:before{content:'';position:absolute;left:-200px;right:-200px;top:-260px;height:calc(100% + 520px);background:radial-gradient(ellipse 60% 50% at 30% 45%,rgba(30,10,4,.38),rgba(30,10,4,0));z-index:-1}
+.cap{position:absolute;left:110px;right:121px;top:207px;font-family:M;color:#fffaf0;font-size:60px;line-height:1.45;letter-spacing:.12em;text-shadow:0 2px 20px rgba(30,8,2,.8),0 0 3px rgba(30,8,2,.6);z-index:3}
+.cap:before{content:'';position:absolute;left:-200px;right:-200px;top:-260px;height:calc(100% + 520px);background:radial-gradient(ellipse 62% 48% at 32% 46%,rgba(30,10,4,.6),rgba(30,10,4,.25) 60%,rgba(30,10,4,0));z-index:-1}
 .cap .w{display:inline-block}.cap .lb{display:block;font-family:G;font-size:22px;letter-spacing:.42em;color:rgba(255,240,215,.92);margin-bottom:22px}
 .cap .ul{display:block;height:1px;width:200px;margin:26px 0 18px;background:rgba(255,236,200,.85);transform-origin:0 50%}
 .cap small{display:block;font-family:G;font-size:28px;letter-spacing:.14em;color:rgba(255,240,215,.95);line-height:1.6}
@@ -42,7 +42,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
 .info h2{font-family:MB;font-size:66px;margin:0 0 22px}
 .info .r{display:flex;gap:26px;padding:18px 0;border-top:1px solid #d8c8b0;font-size:40px;align-items:baseline}.info .r b{width:150px;flex:none;font-size:28px;color:#8a6a50;font-weight:normal}
 .info small{display:block;font-size:28px;color:#7a6050;margin-top:4px}.info p{font-size:34px;line-height:1.6;color:#7a3a1a;margin:22px 0 0;font-family:MB}
-.info .ph{position:absolute;left:56px;right:56px;bottom:56px;height:300px;border-radius:14px;overflow:hidden}.info .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.info .ph{position:absolute;left:56px;right:56px;bottom:56px;height:380px;border-radius:14px;overflow:hidden}.info .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
 #tab{position:absolute;right:130px;top:235px;width:150px;height:0;overflow:hidden;z-index:12}
 #tab div{position:absolute;left:0;right:0;bottom:0;height:280px;background:linear-gradient(180deg,#b03a2c,#8e2a20);clip-path:polygon(0 0,100% 0,100% 100%,50% 86%,0 100%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:70px;font-family:MB;color:#fbe7c0;font-size:34px;writing-mode:vertical-rl;letter-spacing:.2em}
 .hp{position:absolute;inset:0;background:#f4ecdc;font-family:M;color:#3d2a22}
@@ -168,9 +168,9 @@ const twinkle=(fx,n,t0,t1,y0,y1)=>{for(let i=0;i<n;i++){const x=R()*925,y=y0+R()
  gsap.set(d,{x,y,opacity:0,scale:.3});const t=t0+.8+R()*(t1-t0-1.6);tl.to(d,{opacity:1,scale:1,rotation:45,duration:.35,ease:"power2.out"},t);tl.to(d,{opacity:0,scale:.3,duration:.5,ease:"power2.in"},t+.35)}};
 const F=k=>document.getElementById("fx"+k);
 rays(F(0),470,380,6,1.4,T[0],18);glow(F(0),470,460,220,"255,240,200",.8,1.4,T[0],true);twinkle(F(0),10,1.4,T[0],700,1400);
-glow(F(1),520,560,330,"255,248,225",.9,T[0]+.2,T[1],true);
+glow(F(1),520,780,330,"255,248,225",.9,T[0]+.2,T[1],true);
 // 見上げた空：光の輪（レンズの光）が斜めに並ぶ
-[[640,720,60,.35],[730,860,34,.45],[800,970,90,.22],[860,1060,22,.5]].forEach(([x,y,r,a],i)=>{const d=mk(F(1),"p",{width:r*2+"px",height:r*2+"px",background:`radial-gradient(circle,rgba(255,230,180,${a*.3}) 55%,rgba(255,236,190,${a}) 68%,rgba(255,236,190,0) 72%)`});gsap.set(d,{x:x-r,y:y-r,opacity:0});tl.to(d,{opacity:1,duration:1},T[0]+.8+i*.15);tl.to(d,{x:"+=40",y:"+=60",duration:T[1]-T[0],ease:"sine.inOut"},T[0]+.2)});
+[[640,940,60,.35],[730,1080,34,.45],[800,1190,90,.22],[860,1280,22,.5]].forEach(([x,y,r,a],i)=>{const d=mk(F(1),"p",{width:r*2+"px",height:r*2+"px",background:`radial-gradient(circle,rgba(255,230,180,${a*.3}) 55%,rgba(255,236,190,${a}) 68%,rgba(255,236,190,0) 72%)`});gsap.set(d,{x:x-r,y:y-r,opacity:0});tl.to(d,{opacity:1,duration:1},T[0]+.8+i*.15);tl.to(d,{x:"+=40",y:"+=60",duration:T[1]-T[0],ease:"sine.inOut"},T[0]+.2)});
 twinkle(F(1),8,T[0]+.2,T[1],250,900);
 twinkle(F(2),16,T[1]+.2,T[2],100,1400);glow(F(2),160,40,420,"255,236,180",.45,T[1]+.2,T[2],true);
 rays(F(3),700,330,8,T[2]+.2,T[3],13);glow(F(3),700,330,300,"255,250,230",.95,T[2]+.2,T[3],true);
