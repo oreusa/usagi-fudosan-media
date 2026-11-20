@@ -1,0 +1,24 @@
+shots/ai-art/keisoku-1121/k0-11.jpg OK 95139
+k0-12 失敗0 HTTP Error 402: Payment Required
+k0-12 失敗1 HTTP Error 402: Payment Required
+k0-12 失敗2 HTTP Error 402: Payment Required
+shots/ai-art/keisoku-1121/k0-13.jpg OK 102542
+k1-21 失敗0 HTTP Error 402: Payment Required
+k1-21 失敗1 HTTP Error 402: Payment Required
+k1-21 失敗2 HTTP Error 402: Payment Required
+shots/ai-art/keisoku-1121/k1-22.jpg OK 144961
+k1-23 失敗0 HTTP Error 402: Payment Required
+k1-23 失敗1 HTTP Error 402: Payment Required
+k1-23 失敗2 HTTP Error 402: Payment Required
+shots/ai-art/keisoku-1121/k2-31.jpg OK 99956
+k2-32 失敗0 HTTP Error 402: Payment Required
+k2-32 失敗1 HTTP Error 402: Payment Required
+k2-32 失敗2 HTTP Error 402: Payment Required
+shots/ai-art/keisoku-1121/k2-33.jpg OK 118527
+k3-41 失敗0 HTTP Error 402: Payment Required
+k3-41 失敗1 HTTP Error 402: Payment Required
+k3-41 失敗2 HTTP Error 402: Payment Required
+shots/ai-art/keisoku-1121/k3-42.jpg OK 124404
+k3-43 失敗0 HTTP Error 402: Payment Required
+k3-43 失敗1 HTTP Error 402: Payment Required
+k3-43 失敗2 HTTP Error 402: Payment Required
