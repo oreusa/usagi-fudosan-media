@@ -53,8 +53,25 @@ def date_bits(t, day):
     return f"{mo}.{d:02d}", unit, f"{mo}/{d}（{wd}）{unit}"
 
 
+def end_date(r, day):
+    """本文の「〜12/6（日）」「12/6（日）まで」＝いつまでか（11/21 n5 で「11.21まで」と出た：1行目の「11/21（土）〜23（月・祝）も夜まで」の「まで」を拾っていた）"""
+    t = (r.get("threads_text") or "") + "\n" + (r.get("x_text") or "")
+    for m in re.finditer(r"(?:〜\s*(\d{1,2})/(\d{1,2})|(\d{1,2})/(\d{1,2})(?:（[^）]*）)?まで)", t):
+        mo, d = int(m.group(1) or m.group(3)), int(m.group(2) or m.group(4))
+        y = int(day[:4]) + (1 if mo < int(day[5:7]) else 0)
+        try:
+            if datetime(y, mo, d).date().isoformat() > day:
+                return f"{mo}.{d:02d}"
+        except ValueError:
+            pass
+    return None
+
+
 def specs_for(r, day, pk):
     big, unit, when = date_bits(first_line(r) + " " + (r.get("x_text") or ""), day)
+    e = end_date(r, day)
+    if e:  # 大きい数字は「いつまで」（きょうの日付を大きく出しても伝わらない）
+        big, unit, when = e, "まで", ""  # 上の札は場所だけ（「11/21（土）まで」の取り違えを出さない）
     # 11/20 21:26 owner「よい」：HPと同じ光とガラスの形（tools/post_img/glass.js）。写真を一面に、下にガラスのカード
     base = {"name": f"photo-{day[5:].replace('-', '')}-{r['slot']}", "im": pk["file"], "cr": pk["cr"],
             "photo": {"im": pk["file"], "cr": pk["cr"], "pos": pk.get("pos", "50% 50%")},
