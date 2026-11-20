@@ -318,6 +318,8 @@ def skin():
         return any(k in sel for k in KEYS) and not any(b in sel for b in BAD)
     css, used, kf = [], set(), {}
     for sel, body in blocks(src):
+        if sel.startswith('@property'):
+            css.append('%s{%s}' % (sel, body)); continue  # 11/20 MENU の回る光が前の形のページで止まっていた（--ra の登録が無いと角度が一気に飛ぶ）
         if sel.startswith('@keyframes'):
             kf[sel.split()[1]] = '%s{%s}' % (sel, body); continue
         if sel.startswith('@media') or sel.startswith('@supports'):
