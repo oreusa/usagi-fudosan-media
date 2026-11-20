@@ -1,0 +1,58 @@
+■ top https://lifenote-kanto.pages.dev/  ✓
+  リンク 0本（外 31本）
+  下のバー 4個を押した
+  MENU 開く・中のリンク 9本
+■ odekake https://lifenote-kanto.pages.dev/odekake  ✓
+  リンク 0本（外 34本）
+  下のバー 1個を押した
+  MENU 開く・中のリンク 8本
+■ ima https://lifenote-kanto.pages.dev/ima  ✓
+  リンク 0本（外 33本）
+  下のバー 2個を押した
+  MENU 開く・中のリンク 9本
+■ illum https://lifenote-kanto.pages.dev/illumination  ✓
+  リンク 0本（外 33本）
+  下のバー 1個を押した
+  MENU 開く・中のリンク 9本
+■ koyo https://lifenote-kanto.pages.dev/koyo  ✓
+  リンク 0本（外 29本）
+  下のバー 1個を押した
+  MENU 開く・中のリンク 9本
+■ o1 https://lifenote-kanto.pages.dev/o/048ee96e  ✓
+  リンク 0本（外 35本）
+  下のバー 4個を押した
+  MENU 開く・中のリンク 7本
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+elementHandle.tap: Timeout 30000ms exceeded.
+Call log:
+  - attempting tap action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <svg viewBox="0 0 24 24">…</svg> from <div id="sk" class="skc">…</div> subtree intercepts pointer events
+    - retrying tap action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <svg viewBox="0 0 24 24">…</svg> from <div id="sk" class="skc">…</div> subtree intercepts pointer events
+    - retrying tap action
+      - waiting 100ms
+    56 × waiting for element to be visible, enabled and stable
+       - element is visible, enabled and stable
+       - scrolling into view if needed
+       - done scrolling
+       - <svg viewBox="0 0 24 24">…</svg> from <div id="sk" class="skc">…</div> subtree intercepts pointer events
+     - retrying tap action
+       - waiting 500ms
+
+    at /home/runner/work/usagi-fudosan-media/usagi-fudosan-media/tools/review/tap2.js:45:83 {
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.2
