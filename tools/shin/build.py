@@ -2,10 +2,12 @@
 今の作り（links/index.html に何枚も上から貼る形）とは別に、1から作る新しい土台。URL は /shin/〜。
 共通の土台＝links/shin/shin.css・shin.js（空・頭・下のバー・MENU・板）。ページの中身＝links/shin/<page>.js。
 python3 tools/shin/build.py"""
-import json, os, re, html, hashlib, csv
+import json, os, re, html, hashlib, csv, sys
 R = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 L = os.path.join(R, 'links')
 TPL = open(os.path.join(R, 'tools/shin/page.tpl.html'), encoding='utf-8').read()
+sys.path.insert(0, os.path.join(R, 'tools/shin'))
+from ix import ix_html as IX
 ver = lambda f: hashlib.sha1(open(os.path.join(L, 'shin', f), 'rb').read()).hexdigest()[:8]
 J = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 # 11/19 owner「入れ替える」：新しいページは今の URL（/odekake・/fudosan-list・/okaimono）で出す（functions/ が /shin/* を読む）
@@ -90,6 +92,8 @@ def write(name, title, cfg, data, js=None):
         f'<link rel="canonical" href="{SITE}{URL.get(name, "/shin/" + name)}"><meta property="og:title" content="{html.escape(title.split("｜")[0])}"><meta property="og:image" content="{SITE}/assets/ogp.png"><meta property="og:url" content="{SITE}{URL.get(name, "/shin/" + name)}">'
     page = (TPL.replace('__TITLE__', html.escape(title)).replace('__HEAD__', head).replace('__CFG__', J(cfg)).replace('__DATA__', J(data))
             .replace('__CV__', ver('shin.css')).replace('__JV__', ver('shin.js')).replace('__PAGE__', js).replace('__PV__', ver(js + '.js')))
+    # 11/20 検索の機械にも中身とリンクが見えるように、ページの下の「一覧」を HTML のまま（tools/shin/ix.py）
+    page = page.replace('<div id="app"></div>', '<div id="app"></div>' + IX(name, data, L), 1)
     open(os.path.join(L, 'shin', name + '.html'), 'w', encoding='utf-8').write(page)
     print(name, len(page) // 1024, 'KB')
 
