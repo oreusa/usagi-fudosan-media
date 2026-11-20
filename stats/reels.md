@@ -1,6 +1,6 @@
 # リールの数字（インスタ・関西）
 
-更新：2026-11-20 07:33（機械が6時間に1回とる。tools/reel_stats.py）
+更新：2026-11-20 21:55（機械が6時間に1回とる。tools/reel_stats.py）
 
 - フォロワー：2人（2026-11-11 は 2人）
 - とれなかった数字がある：(#10) Application does not have permission for this action
