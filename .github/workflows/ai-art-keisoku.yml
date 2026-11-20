@@ -10,14 +10,14 @@ permissions:
 jobs:
   gen:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.11"}
       - run: pip install -q gradio_client huggingface_hub pillow
-      - env: {HF_TOKEN: "${{ secrets.HF_TOKEN }}"}
-        run: python3 tools/outing_reel/ai-art/gen.py tools/outing_reel/ai-art/keisoku/req.json shots/ai-art/keisoku-1121
+      # HF の無料枠（ZeroGPU・推論の窓口）は 11/20 に使い切っていたので、公開の FLUX の窓口 pollinations で描く
+      - run: python3 tools/outing_reel/ai-art/pollinations.py tools/outing_reel/ai-art/keisoku/req.json shots/ai-art/keisoku-1121
       - run: |
           git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add shots/ai-art/keisoku-1121; git commit -m "[CF-Pages-Skip] ai-art: 鶏足寺の絵" || exit 0
