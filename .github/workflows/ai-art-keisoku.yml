@@ -1,6 +1,7 @@
 name: ai-art（鶏足寺リールの絵・枝だけ）
 # 11/20 owner「何一つ綺麗に見えない」「クオリティ上げろ」→ 本のページの絵を画像AI（FLUX.1-schnell・Apache-2.0）で描く。tools/outing_reel/ai-art/gen.py を使う
 on:
+  workflow_dispatch:
   push:
     branches: [claude/project-thread-iniiic]
     paths: ["tools/outing_reel/ai-art/keisoku/req.json"]
