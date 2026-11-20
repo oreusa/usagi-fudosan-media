@@ -1,9 +1,16 @@
 {
- "at": "2026-11-20T08:47:16+09:00",
- "error": [],
+ "at": "2026-11-20T16:00:50+09:00",
+ "error": [
+  {
+   "id": "6aff6b6f373c7db3cb55b76a",
+   "channelService": "threads",
+   "dueAt": "2026-11-20T06:00:00.000Z",
+   "status": "error"
+  }
+ ],
  "count": {
-  "scheduled": 11,
-  "sent": 19,
-  "error": 0
+  "scheduled": 4,
+  "sent": 25,
+  "error": 1
  }
 }
