@@ -1,4 +1,4 @@
 ka-d url=https://kansai.townnote.app/odekake?w=we errs=[]
 ka-n url=https://kansai.townnote.app/odekake?w=we errs=[]
-kt-d FAIL page.click: Timeout 30000ms exceeded. errs=[]
-kt-n FAIL page.click: Timeout 30000ms exceeded. errs=[]
+kt-d url=https://kanto.townnote.app/odekake?w=we errs=[]
+kt-n url=https://kanto.townnote.app/odekake?w=we errs=[]
