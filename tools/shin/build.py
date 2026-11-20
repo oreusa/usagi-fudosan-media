@@ -43,7 +43,7 @@ def FIT(it, kind):
     if not m: return it
     lum, warm, green = m[:3]
     if kind == 'illumination':
-        it['ok'] = 2 if lum < 75 else (-1 if lum > 120 else (1 if it.get('ok') else 0))
+        it['ok'] = 2 if lum < 75 else -1
     elif kind == 'koyo':
         it['ok'] = 2 if warm >= .2 else (-1 if green >= .3 and warm < .1 else (1 if it.get('ok') else 0))
     if not it.get('ok'): it.pop('ok', None)
