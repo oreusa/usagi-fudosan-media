@@ -1,0 +1,154 @@
+{
+ "date": "2026-11-21",
+ "bad": 0,
+ "slots": {
+  "n1": {
+   "ok": true,
+   "time": "07:00",
+   "head": "【関西まちランキング No.40｜近鉄吉野線、福神と下市口はわずか86人差🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "414e6e0703e14396",
+   "x": false,
+   "th": true
+  },
+  "x07": {
+   "ok": true,
+   "time": "07:00",
+   "head": "奈良・大和西大寺駅前のならファミリーB1に、チュロス専門店「STREET CHURROS」、11/21（土）オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "3bdd7690a1257fad",
+   "x": true,
+   "th": false
+  },
+  "S1": {
+   "ok": true,
+   "time": "08:00",
+   "head": "【実家が吹田市なら｜昨年度の平均は4,506万円🏠】",
+   "bad": [],
+   "warn": [],
+   "digest": "a7c5e57f46bc258e",
+   "x": false,
+   "th": true
+  },
+  "n2": {
+   "ok": true,
+   "time": "09:00",
+   "head": "【11/21（土）も開催中｜奈良・桜井市の談山神社の紅葉まつり🍁】",
+   "bad": [],
+   "warn": [],
+   "digest": "b7164b962084de80",
+   "x": false,
+   "th": true
+  },
+  "x09": {
+   "ok": true,
+   "time": "09:00",
+   "head": "心斎橋・クオーツ心斎橋に「フェンディ 心斎橋店」、11/28（土）グランドオープン",
+   "bad": [],
+   "warn": [
+    "絵が無い（文字だけで出る）"
+   ],
+   "digest": "d8563191c77e5a55",
+   "x": true,
+   "th": false
+  },
+  "n3": {
+   "ok": true,
+   "time": "12:00",
+   "head": "【11/28（土）心斎橋｜フェンディの大阪の新しい旗艦店が開く👜】",
+   "bad": [],
+   "warn": [],
+   "digest": "00a857a444598071",
+   "x": false,
+   "th": true
+  },
+  "x12": {
+   "ok": true,
+   "time": "12:00",
+   "head": "難波・西心斎橋に「牛かつもと村 西心斎橋店」、11/25（水）オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "6fd2bac3c0d5cdfc",
+   "x": true,
+   "th": false
+  },
+  "n8": {
+   "ok": true,
+   "time": "13:00",
+   "head": "【関西まちランキング No.41｜山陽電鉄本線、亀山と西舞子はわずか10人差🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "aacb0ea00384bfb6",
+   "x": false,
+   "th": true
+  },
+  "n5": {
+   "ok": true,
+   "time": "15:00",
+   "head": "【11/21（土）〜23（月・祝）も夜まで｜姫路・好古園の紅葉会🍁】",
+   "bad": [],
+   "warn": [],
+   "digest": "f011b4b400683990",
+   "x": false,
+   "th": true
+  },
+  "x15": {
+   "ok": true,
+   "time": "15:00",
+   "head": "神戸市西区・イズミヤSC西神戸2階に「ガシャポンバンダイオフィシャルショップ」、11/20（金）オープン",
+   "bad": [],
+   "warn": [
+    "絵が無い（文字だけで出る）"
+   ],
+   "digest": "8175a1c6efdb3c7e",
+   "x": true,
+   "th": false
+  },
+  "n6": {
+   "ok": true,
+   "time": "18:00",
+   "head": "【11/20（金）神戸市西区｜ガシャポンバンダイの公式店が開いた🎰】",
+   "bad": [],
+   "warn": [],
+   "digest": "f4193399087ceafc",
+   "x": false,
+   "th": true
+  },
+  "x18": {
+   "ok": true,
+   "time": "18:00",
+   "head": "梅田・ルクア サウス12階に「NARUMIYA HAPPY PARK」、11/24（火）オープン",
+   "bad": [],
+   "warn": [
+    "絵が無い（文字だけで出る）"
+   ],
+   "digest": "aba8c93fc557da21",
+   "x": true,
+   "th": false
+  },
+  "n7": {
+   "ok": true,
+   "time": "21:00",
+   "head": "【塚口駅は1日43,059人｜ひと駅しらべ その29🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "17ec12e44e00b103",
+   "x": false,
+   "th": true
+  },
+  "x21": {
+   "ok": true,
+   "time": "21:00",
+   "head": "梅田・ルクア イーレ4階に「Pandora Osaka LUCUA 1100店」、12/1（火）オープン",
+   "bad": [],
+   "warn": [
+    "絵が無い（文字だけで出る）"
+   ],
+   "digest": "49997f5dd7d5f523",
+   "x": true,
+   "th": false
+  }
+ }
+}

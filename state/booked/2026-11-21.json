@@ -1,0 +1,79 @@
+{
+ "n1": {
+  "time": "07:00",
+  "digest": "414e6e0703e14396",
+  "at": "2026-11-21T06:27:48+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x07": {
+  "time": "07:00",
+  "digest": "3bdd7690a1257fad",
+  "at": "2026-11-21T06:27:48+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "S1": {
+  "time": "08:00",
+  "digest": "a7c5e57f46bc258e",
+  "at": "2026-11-21T06:27:48+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n2": {
+  "time": "09:00",
+  "digest": "b7164b962084de80",
+  "at": "2026-11-21T06:27:48+09:00",
+  "threads": "6b00bb565e993799d82d44fd"
+ },
+ "x09": {
+  "time": "09:00",
+  "digest": "d8563191c77e5a55",
+  "at": "2026-11-21T06:27:48+09:00",
+  "threads": "X だけの枠",
+  "twitter": "6b00bb569ffbc8503cd85c20"
+ },
+ "n3": {
+  "time": "12:00",
+  "digest": "00a857a444598071",
+  "at": "2026-11-21T06:27:48+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x12": {
+  "time": "12:00",
+  "digest": "6fd2bac3c0d5cdfc",
+  "at": "2026-11-21T06:27:48+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n8": {
+  "time": "13:00",
+  "digest": "aacb0ea00384bfb6",
+  "at": "2026-11-21T06:27:48+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n5": {
+  "time": "15:00",
+  "digest": "f011b4b400683990",
+  "at": "2026-11-21T06:27:48+09:00",
+  "threads": "6b00bb585102766245d423a1"
+ },
+ "x15": {
+  "time": "15:00",
+  "digest": "8175a1c6efdb3c7e",
+  "at": "2026-11-21T06:27:48+09:00",
+  "threads": "X だけの枠",
+  "twitter": "6b00bb589ffbc8503cd85c9e"
+ },
+ "n6": {
+  "time": "18:00",
+  "digest": "f4193399087ceafc",
+  "at": "2026-11-21T06:27:48+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x18": {
+  "time": "18:00",
+  "digest": "aba8c93fc557da21",
+  "at": "2026-11-21T06:27:48+09:00",
+  "threads": "X だけの枠",
+  "twitter": "6b00bb585e993799d82d4626"
+ }
+}
