@@ -32,7 +32,7 @@ SKIP_DIR = {"shin", "stats", "c", "wx", "api", "assets", "townnotes"}
 # → 前のページの見た目（<style>）は止めて（消さずに media="not all" で眠らせる）、新しい土台の見た目 /shin/kyu.css で描き直す。
 #   開く・閉じる・タブなど動きに要る規則（display:none や .on の時の表示）だけは残す。
 KYUMARK = 'data-kyu'
-KYUV = "3"
+KYUV = "4"
 import re as _re
 _FN = _re.compile(r"\.(on|open|show|active|sel|cur|hide|hidden|is-[\w-]+)\b|\[open\]|:checked|\[hidden\]|\[aria-[\w-]+")
 
@@ -91,6 +91,12 @@ def kyu(h, k="x"):
         keep.append(_keep(m.group(2)))
         return '<style data-kyu-old media="not all"' + m.group(1) + ">" + m.group(2) + "</style>"
     h2 = _re.sub(r"<style((?:(?!media=)[^>])*)>([\s\S]*?)</style>", sleep, h)
+    # 11/20 owner「動作は？」：前のページは Google の字（明朝・ゴシック・Jost）を毎回読みに行くが、kyu.css は使わない（表示を止めて遅くするだけ）。
+    # 止めた style の外（絵の中の字など）で使っていないページだけ、読み込みを外す（ゴシックは普通のゴシックで同じに見えるので数えない）
+    body = _re.sub(r'<style data-kyu-old[\s\S]*?</style>', "", h2)
+    body = _re.sub(r'<link[^>]+fonts\.(?:googleapis|gstatic)\.com[^>]*>', "", body)
+    if not _re.search(r"Shippori|Jost|Zen Maru|Noto Serif", body):
+        h2 = _re.sub(r'<link[^>]+fonts\.(?:googleapis|gstatic)\.com[^>]*>\s*', "", h2)
     link = ('<script>document.documentElement.dataset.k="' + k + '"</script><style data-kyu="keep">' + "".join(keep) + '</style><link rel="stylesheet" href="/shin/kyu.css?v=' + KYUV + '">')
     i = h2.find(SKIN[:40]) if SKIN[:40] in h2 else h2.find("</head>")
     return h2[:i] + link + h2[i:]
