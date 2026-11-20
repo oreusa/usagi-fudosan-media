@@ -16,7 +16,8 @@ const img=p=>{const f=path.isAbsolute(p)?p:path.join(R,p);const e=path.extname(f
 // 星（夜だけ）：毎回同じ並びになるよう名前から決める
 const stars=(seed)=>{let s=0;for(const c of seed)s=(s*31+c.charCodeAt(0))>>>0;const r=()=>(s=(s*1103515245+12345)>>>0)/4294967296;let o='';
   for(let i=0;i<120;i++){const x=r()*1080,y=r()*1350,z=r()<.08?2.6:r()<.3?1.7:1.1,a=.25+r()*.7;o+=`<b style="left:${x.toFixed(0)}px;top:${y.toFixed(0)}px;width:${z}px;height:${z}px;opacity:${a.toFixed(2)}"></b>`}return o};
-const HTML=x=>{const N=!!x.night,P=x.photo;return `<!doctype html><meta charset="utf-8">
+// 夜の枠（21時など）は名前の最後で決まる時もある（card-config.js の night：例 /-(n7|x21)$/）
+const HTML=x=>{const N=x.night!=null?!!x.night:!!(CFG.night&&CFG.night.test(x.name||'')),P=x.photo;return `<!doctype html><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>*{margin:0;box-sizing:border-box}
 body{width:1080px;height:1350px;position:relative;overflow:hidden;font-family:"Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased;
