@@ -1,4 +1,4 @@
 ka-d url=https://kansai.townnote.app/odekake?map2=1&w=we errs=[]
 ka-n url=https://kansai.townnote.app/odekake?map2=1&w=we errs=[]
-kt-d FAIL elementHandle.click: Timeout 30000ms exceeded. errs=[]
-kt-n FAIL elementHandle.click: Timeout 30000ms exceeded. errs=[]
+kt-d url=https://kanto.townnote.app/odekake?map2=1&w=we errs=[]
+kt-n url=https://kanto.townnote.app/odekake?map2=1&w=we errs=[]
