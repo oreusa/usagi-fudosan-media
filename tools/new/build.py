@@ -379,7 +379,7 @@ top_html = (head("関西おでかけ｜きょう・今週末に行ける関西�
             f'<section class="sec"><div class="h"><div><span class="en">Last chance</span><h2>もうすぐ終わる</h2></div><a class="more" href="/new/list?sort=end">すべて{ARW}</a></div><div>'
             + "".join(f'<a class="e" href="/new/o/{c["id"]}"><div class="ph">{ph(c)}</div><div><b>{e(title(c))}</b><small>{c["pref"]}・{e(town(c["city"]))}｜{md(c["e"])}まで</small></div><div class="d">{"きょう" if c["left_e"] == 0 else "あと<b>" + str(c["left_e"]) + "</b>日"}</div></a>' for c in soon) +
             '</div></section>'
-            '<div class="follow"><b>あしたの朝も、おでかけニュース。</b><p>毎朝、関西の「きょう行ける」を1本の動画でお届けします。</p><div class="fb"><a href="https://www.instagram.com/fudousan_ai_si" target="_blank" rel="noopener">インスタ</a><a href="https://x.com/fudosan_ai_si" target="_blank" rel="noopener">X</a><a href="https://www.threads.com/@fudousan_ai_si" target="_blank" rel="noopener">Threads</a></div></div>'
+            '<div class="follow"><b>あしたの朝も、おでかけニュース。</b><p>毎朝、関西の「きょう行ける」を1本の動画でお届けします。</p><div class="fb"><a href="https://www.instagram.com/fudousan_ai_si" target="_blank" rel="noopener">Instagram</a><a href="https://x.com/fudosan_ai_si" target="_blank" rel="noopener">X</a><a href="https://www.threads.com/@fudousan_ai_si" target="_blank" rel="noopener">Threads</a></div></div>'
             + foot(news + we + pick + starting + soon) + '</main>' + bar("top") + slider_js + END)
 write("index.html", top_html)
 
