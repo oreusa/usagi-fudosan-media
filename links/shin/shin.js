@@ -55,7 +55,11 @@ function counts(root){$$("[data-n]",root).forEach(function(b){b.textContent=fmt(
 var bio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){bio.unobserve(e.target);e.target.style.transform="scaleX("+e.target.dataset.w+")"}})});
 function bars(root){$$("[data-w]",root).forEach(function(b){if(RM)b.style.transform="scaleX("+b.dataset.w+")";else bio.observe(b)})}
 
+/* 11/20 ページの下の一覧（HTML のまま・検索用にも）を、足（.ft）の上へ */
+(function(){var ix=document.querySelector("body>.ix"),ft=app.querySelector(".ft");if(ix&&ft)ft.parentNode.insertBefore(ix,ft)})();
 /* ---- 下から出る板 ---- */
+/* 11/20 #app の中だと上の題の帯（#tb）が板より上に来て、MENU や板の上の方を押すと後ろが動いた → 板は body の直下へ */
+["#sh","#mu"].forEach(function(q){var e=$(q);if(e)document.body.appendChild(e)});
 var sh=$("#sh"),shc=$("#shc"),shOpen=false;
 function sheet(html,from,after){var go2=function(){shc.innerHTML=html;$(".pn",sh).scrollTop=0;sh.classList.add("op");sh.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";counts(shc);bars(shc);if(after)after(shc)};
   if(!shOpen)history.pushState({sh:1},"");shOpen=true;
@@ -79,7 +83,7 @@ nav.addEventListener("click",function(e){var b=e.target.closest("[data-a]");if(!
 function navCur(a){$$("#nav [data-a]").forEach(function(b){b.classList.toggle("cur",b.dataset.a===a)})}
 /* 11/19 下へ流す間だけ隠し、指を止めたら（0.8秒）すぐ戻す。押した後に勝手に動いた時もバーが消えたままにならない */
 var nvT;addEventListener("scroll",function(){var y=scrollY;if(Math.abs(y-ly)>8){nav.classList.toggle("hide",y>ly&&y>300);ly=y}clearTimeout(nvT);nvT=setTimeout(function(){nav.classList.remove("hide")},800)},{passive:true});
-var mu=$("#mu");$("#mnb").onclick=function(){mu.classList.add("op")};$(".bk",mu).onclick=function(){mu.classList.remove("op")};
+/* 11/20 子のページ（1件・府県・ランキングなど）は親の行に印 */(function(){if(document.querySelector(".mu li a.here"))return;var P0=location.pathname.replace(/\.html$/,""),b=null,bl=0;Array.prototype.forEach.call(document.querySelectorAll(".mu li a"),function(a){var u=a.getAttribute("href");if(!u||u.charAt(0)!=="/"||u==="/")return;var v=u.replace(/\/$/,"");if(P0.indexOf(v)===0&&v.length>bl){b=a;bl=v.length}});if(!b&&/^\/o\//.test(P0))b=document.querySelector('.mu li a[href="/odekake"]');if(b)b.classList.add("here")})();/* 11/20 owner「メニューを触ろうとすると後ろが反応する」：開いている間は後ろのページを動かさない */var mu=$("#mu"),mo=function(o){mu.classList.toggle("op",o);document.documentElement.style.overflow=document.body.style.overflow=o?"hidden":""};$("#mnb").onclick=function(){mo(true)};$(".bk",mu).onclick=function(){mo(false)};mu.addEventListener("touchmove",function(e){var p=$(".pn",mu);if(!p.contains(e.target)||p.scrollHeight<=p.clientHeight+1)e.preventDefault()},{passive:false});mu.addEventListener("wheel",function(e){var p=$(".pn",mu);if(!p.contains(e.target)||p.scrollHeight<=p.clientHeight+1)e.preventDefault()},{passive:false});addEventListener("keydown",function(e){if(e.key==="Escape"&&mu.classList.contains("op"))mo(false)});addEventListener("pageshow",function(){mo(false)});
 
 /* ---- 府県の玉（選んだ所へ滑る・周りを光が回る） ---- */
 function seg(box,list,cur,on){box.innerHTML='<i class="pill"></i>'+list.map(function(p){return '<button data-v="'+esc(p[0])+'">'+esc(p[1])+'</button>'}).join("");
@@ -143,3 +147,15 @@ function largeTitle(){var h=$(".h1t");if(!h)return;var tb=document.createElement
     var o=r.bottom<46;if(o!==on){on=o;tb.classList.toggle("on",o);H.classList.toggle("tbon",o)}}
   addEventListener("scroll",function(){if(!q)q=requestAnimationFrame(f)},{passive:true});f()}
 })();
+/* 11/20 数える：新しいページ（shin）には数える仕組みが無く、11/19夜の入れ替えから表示・クリックが数えられていなかった。前と同じ名前で /c へ送る（オーナーの端末は数えない） */
+(function(){var O=false;try{O=localStorage.getItem("usagi_owner")==="1"}catch(e){}
+  /* 関東（燈のサイト）の /c は書き込みに1日の上限がある → 表示は送らず（_middleware.js が数える）、カードを押した数だけを「操作」の枠（f=card・1日100まで）で送る。人気順に使う */
+  var K=/kanto|lifenote/.test(location.hostname);
+  var P=location.pathname.replace(/^\/shin(?=\/)/,"").replace(/\.html$/,"").replace(/\/$/,"")||"/",
+      N={"/":"TOWN NOTE 入口","/odekake":"おでかけリスト","/illumination":"イルミネーション","/koyo":"紅葉ライトアップ","/ima":"いまから行ける","/tomari":"泊まり","/hatsumode":"初詣","/fudosan-list":"不動産リスト","/okaimono":"おかいもの","/kaiten":"開店・閉店","/ikura":"いくら","/uru":"売る前・買う前に","/jikka":"実家ノート","/furusato":"ふるさと納税","/nesage":"値下がり","/otoku":"お得"}[P]||(/^\/o\//.test(P)?"1件ページ":(document.title.split("｜")[0]||P).slice(0,30));
+  function s(k){if(O)return;if(K){var m=/^クリック：([^｜]*)｜(.*)$/.exec(k);if(!m)return;var u="/c?f=card&s="+encodeURIComponent(m[1].slice(0,16))+"&k="+encodeURIComponent(m[2].slice(0,40));try{if(!(navigator.sendBeacon&&navigator.sendBeacon(u,"")))fetch(u,{method:"POST",keepalive:true})}catch(e){}return}try{var b=JSON.stringify({k:k});if(!(navigator.sendBeacon&&navigator.sendBeacon("/c",b)))fetch("/c",{method:"POST",body:b,keepalive:true})}catch(e){}}
+  window.SHIN_COUNT=s;if(P==="/ikura")return;
+  var r=document.referrer,out=r&&!/townnote|usagi-odekake|pages\.dev/.test(r);
+  s("表示："+N+(out?"（外から）":""));
+  document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a,button[data-k]");if(!a||e.target.closest(".hv"))return;
+    var h=a.querySelector("h4,.t,b"),t=a.getAttribute("data-k")||(h?h.textContent:a.textContent)||"";t=t.replace(/[\u200b\u00ad]/g,"").replace(/\s+/g," ").trim().slice(0,60);if(t)s("クリック："+N+"｜"+t)},true)})();

@@ -2,26 +2,98 @@
 今の作り（links/index.html に何枚も上から貼る形）とは別に、1から作る新しい土台。URL は /shin/〜。
 共通の土台＝links/shin/shin.css・shin.js（空・頭・下のバー・MENU・板）。ページの中身＝links/shin/<page>.js。
 python3 tools/shin/build.py"""
-import json, os, re, html, hashlib, csv
+import json, os, re, html, hashlib, csv, sys
 R = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 L = os.path.join(R, 'links')
 TPL = open(os.path.join(R, 'tools/shin/page.tpl.html'), encoding='utf-8').read()
+sys.path.insert(0, os.path.join(R, 'tools/shin'))
+from ix import ix_html as IX, pre_html as PRE
 ver = lambda f: hashlib.sha1(open(os.path.join(L, 'shin', f), 'rb').read()).hexdigest()[:8]
 J = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
 # 11/19 owner「入れ替える」：新しいページは今の URL（/odekake・/fudosan-list・/okaimono）で出す（functions/ が /shin/* を読む）
 URL = {'odekake': '/odekake', 'ie': '/fudosan-list', 'kau': '/okaimono'}
-REL = [['おでかけ', '/odekake'], ['家と土地', '/fudosan-list'], ['おかいもの', '/okaimono'], ['トップへ', '/']]
+REL = [['おでかけ', '/odekake'], ['家と土地', '/fudosan-list'], ['おかいもの', '/okaimono'], ['開店・閉店', '/kaiten'], ['トップへ', '/']]
+SEC = {'Odekake': '/odekake', 'Home & Land': '/fudosan-list', 'Shopping': '/okaimono', 'New Shops': '/kaiten'}
 SITE = 'https://kansai.townnote.app'
+# 11/20 今週末のおすすめに出してよい写真（月が目で選んだ・行きたくなる写真だけ）
+PHOK = set(json.load(open(os.path.join(R, 'tools/shin/photo_ok.json'), encoding='utf-8'))['ok'])
+PHHR = set(json.load(open(os.path.join(R, 'tools/shin/photo_ok.json'), encoding='utf-8')).get('hero', []))
+# 11/20 owner「出来上がったあとに本気で確認して改善」：イルミのページに昼の建物、紅葉のページに夏の緑の写真が先に出ていた。
+# 写真ごとに 明るさ・赤や橙の多さ・緑の多さ を量って（tools/shin/photo_m.json に残す）、ページに合う写真を先に出す
+_PMF = os.path.join(R, 'tools/shin/photo_m.json')
+try: _PM = json.load(open(_PMF, encoding='utf-8'))
+except Exception: _PM = {}
+# 11/20 暗い昼の写真（木陰の寺など）を「夜の写真」と取り違えていた → 暗い所の割合・上の方（空）の暗さ・青空の割合も量る
+def NIGHT(px):
+    lum = [0.299*r + 0.587*g + 0.114*b for r, g, b in px]; top = lum[:64*12]
+    return [round(sum(v < 35 for v in lum)/len(lum), 2), round(sum(v < 40 for v in top)/len(top), 2),
+            round(sum(1 for r, g, b in px[:64*12] if b > r + 15 and b > 110)/len(top), 2)]
+def IS_NIGHT(m):
+    return (m[4] >= .5 or (m[5] >= .35 and m[6] < .2)) if len(m) > 6 else m[0] < 75
+def PHM(f):
+    if f in _PM and len(_PM[f]) > 6: return _PM[f]
+    try:
+        import colorsys
+        from PIL import Image
+        im = Image.open(os.path.join(L, 'assets/ph', f)).convert('RGB').resize((64, 48)); px = list(im.getdata())
+        lum = sum(0.299*r + 0.587*g + 0.114*b for r, g, b in px) / len(px); w = gr = 0
+        for r, g, b in px:
+            h, sa, v = colorsys.rgb_to_hsv(r/255, g/255, b/255)
+            if sa > .35 and v > .25 and (h < .11 or h > .95): w += 1
+            if sa > .25 and v > .2 and .17 < h < .45: gr += 1
+        _PM[f] = [round(lum), round(w/len(px), 2), round(gr/len(px), 2), Image.open(os.path.join(L, 'assets/ph', f)).size[0]]
+        _PM[f] += NIGHT(px)
+        json.dump(_PM, open(_PMF, 'w', encoding='utf-8'))
+        return _PM[f]
+    except Exception:
+        return _PM.get(f)
+def FIT(it, kind):
+    """ok：2＝このページに合う写真、1＝目で選んだ写真、-1＝合わない（後ろへ）"""
+    it = dict(it); m = PHM(it['im']) if it.get('im') else None
+    if not m: return it
+    lum, warm, green = m[:3]
+    if kind == 'illumination':
+        it['ok'] = 2 if IS_NIGHT(m) else -1
+    elif kind == 'koyo':
+        it['ok'] = 2 if warm >= .2 else (-1 if green >= .3 and warm < .1 else (1 if it.get('ok') else 0))
+    if not it.get('ok'): it.pop('ok', None)
+    return it
+# 11/20 人気順：この30日に押された数（カード）＋♡の数×3。毎朝 link-stats が数え直す
+try: _LT = json.load(open(os.path.join(R, 'stats/link-30.json'), encoding='utf-8'))['total']
+except Exception: _LT = {}
+def POP(t):
+    n = 0
+    for k, v in _LT.items():
+        tail = k.split('｜')[-1]
+        if k.startswith('♡：'): tail = k[2:]
+        if len(tail) >= 4 and t[:len(tail)] == tail and (k.startswith('クリック') or k.startswith('♡：')):
+            n += v * (3 if k.startswith('♡：') else 1)
+    return n
+
+# 11/20 owner「統一されてない・整理されてない」：MENU の項目と並び順は分野ごとにここ1か所だけ（skin.js の FUD・ODE・OKA・KAI も同じ順）
+MENUS = {
+    'Odekake': [['関西おでかけ', '/odekake'], ['イルミネーション', '/illumination'], ['紅葉', '/koyo'], ['いまから行ける', '/ima'], ['泊まり', '/tomari'], ['初詣', '/hatsumode']],
+    'Home & Land': [['家と土地の相場', '/fudosan-list'], ['地価ランキング', '/chika-kansai'], ['まちランキング', '/ranking'], ['家を売る前に', '/uru'], ['いくらで売れる？', '/ikura'], ['実家・空き家', '/jikka/'], ['解体の費用と補助金', '/kaitai']],
+    'Shopping': [['日用品の値段くらべ', '/okaimono'], ['値下がりした物', '/nesage'], ['お得な物', '/otoku'], ['ふるさと納税', '/furusato']],
+    'New Shops': [['関西の開店・閉店', '/kaiten'], ['関東の開店・閉店', 'https://kanto.townnote.app/kaiten']],
+}
 
 def write(name, title, cfg, data, js=None):
     js = js or name
+    m = cfg['menu']
+    if m.get('k') in MENUS:
+        cur = next((x[1] for x in m['items'] if len(x) > 2 and x[2]), None)
+        m['items'] = [[t, u] + ([1] if u == cur else []) for t, u in MENUS[m['k']]]
     # 11/20 表紙の MENU は分野の入口そのものなので、下の重なるボタンは出さない
-    cfg['menu']['rel'] = [] if name.startswith('cover') else [r for r in REL if r[1] != URL.get(name)]
+    # MENU の下のボタンは「ほかの分野＋トップへ」をどのページでも同じ順で（自分の分野は出さない）
+    cfg['menu']['rel'] = [] if name.startswith('cover') else [r for r in REL if r[1] != SEC.get(m.get('k'), URL.get(name))]
     desc = cfg.pop('desc', '')
     head = (f'<meta name="description" content="{html.escape(desc)}">' if desc else '') + \
         f'<link rel="canonical" href="{SITE}{URL.get(name, "/shin/" + name)}"><meta property="og:title" content="{html.escape(title.split("｜")[0])}"><meta property="og:image" content="{SITE}/assets/ogp.png"><meta property="og:url" content="{SITE}{URL.get(name, "/shin/" + name)}">'
     page = (TPL.replace('__TITLE__', html.escape(title)).replace('__HEAD__', head).replace('__CFG__', J(cfg)).replace('__DATA__', J(data))
             .replace('__CV__', ver('shin.css')).replace('__JV__', ver('shin.js')).replace('__PAGE__', js).replace('__PV__', ver(js + '.js')))
+    # 11/20 検索の機械にも中身とリンクが見えるように、ページの下の「一覧」を HTML のまま（tools/shin/ix.py）
+    page = page.replace('<div id="app"></div>', '<div id="app">' + PRE(data) + '</div>' + IX(name, data, L), 1)
     open(os.path.join(L, 'shin', name + '.html'), 'w', encoding='utf-8').write(page)
     print(name, len(page) // 1024, 'KB')
 
@@ -80,6 +152,10 @@ def odekake():
         for k in ('hk', 'ds', 'h', 'cr', 'cu', 'im'):
             if v.get(k): it[k] = v[k]
         if v.get('im') and v['im'] in phh: it['th'] = phh[v['im']]
+        if v.get('im') in PHOK: it['ok'] = 1
+        if v.get('im') in PHHR: it['hr'] = 1
+        if v.get('im') and (PHM(v['im']) or [0, 0, 0, 9999])[3] < 900: it['lo'] = 1
+        if POP(t): it['pp'] = POP(t)
         if v.get('id') in opages: it['o'] = v['id']
         g = gn.get(norm(t)) or gn.get(norm(v.get('n', '')))
         if g and g[0] is not None:
@@ -99,6 +175,10 @@ def odekake():
             if v.get(k) and k not in it: it[k] = v[k]
         if v.get('h') and 'h' not in it: it['h'] = v['h']
         if it.get('im') and it['im'] in phh: it['th'] = phh[it['im']]
+        if it.get('im') in PHOK: it['ok'] = 1
+        if it.get('im') in PHHR: it['hr'] = 1
+        if it.get('im') and (PHM(it['im']) or [0, 0, 0, 9999])[3] < 900: it['lo'] = 1
+        if POP(name): it['pp'] = POP(name)
         if v.get('id') in opages: it['o'] = v['id']
         g = gn.get(norm(name)) or gn.get(norm(v.get('n', '')))
         if g and g[0] is not None:
@@ -108,6 +188,7 @@ def odekake():
     SLUG = {'大阪': 'osaka', '京都': 'kyoto', '兵庫': 'hyogo', '奈良': 'nara', '滋賀': 'shiga', '和歌山': 'wakayama'}
     import copy, datetime, sys as _s
     def page(name, url, title, desc, page, its, cur):
+        if name.startswith(('illumination', 'koyo')): its = [FIT(x, 'koyo' if name.startswith('koyo') else 'illumination') for x in its]
         c = copy.deepcopy(cfg); c['desc'] = desc
         c['menu']['items'] = [[t, u] + ([1] if u == cur else []) for t, u, *_ in c['menu']['items']]
         URL[name] = url

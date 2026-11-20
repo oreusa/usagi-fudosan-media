@@ -250,9 +250,9 @@ html.nt .nav .mn{background:#28324A}
 /* ===== MENU（このページの分野だけ。ほかは関連リンク） ===== */
 .mu{position:fixed;inset:0;z-index:65;visibility:hidden}
 .mu.op{visibility:visible}
-.mu .bk{position:absolute;inset:0;background:rgba(0,0,0,.5);opacity:0;transition:opacity .3s}
+.mu .bk{position:absolute;inset:0;touch-action:none;background:rgba(0,0,0,.5);opacity:0;transition:opacity .3s}
 .mu.op .bk{opacity:1}
-.mu .pn{position:absolute;left:0;right:0;bottom:0;max-width:760px;margin:0 auto;border-radius:26px 26px 0 0;background:#14110E;color:#fff;padding:22px 20px calc(24px + var(--safe));transform:translate3d(0,100%,0);transition:transform .45s cubic-bezier(.2,.9,.25,1)}
+.mu .pn{position:absolute;left:0;right:0;bottom:0;max-height:88vh;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;max-width:760px;margin:0 auto;border-radius:26px 26px 0 0;background:#14110E;color:#fff;padding:22px 20px calc(24px + var(--safe));transform:translate3d(0,100%,0);transition:transform .45s cubic-bezier(.2,.9,.25,1)}
 html.nt .mu .pn{background:#121826}
 .mu.op .pn{transform:none}
 .mu .k{font:500 11px/1 var(--lat);letter-spacing:.3em;color:rgba(255,255,255,.5)}
@@ -815,3 +815,78 @@ html.iro .mu .pn>*{position:relative}
 html.iro .mu li a.here{color:#fff}
 html.iro .mu li a::after{content:"";margin-left:auto;align-self:center;width:8px;height:8px;border-radius:9px;background:var(--md,transparent)}
 html.iro .mu li a[href="/odekake"]{--md:var(--g-od);--mc:#FFAFCC}html.iro .mu li a[href="/fudosan-list"]{--md:var(--g-ie);--mc:#A8D8FF}html.iro .mu li a[href="/okaimono"]{--md:var(--g-kau);--mc:#B5EAD7}html.iro .mu li a[href="/kaiten"]{--md:var(--g-kai);--mc:#CDB4FF}
+
+/* 11/20 owner「ここだけ暗くなる仕様なんだ」「統一されてない・整理されてない」：MENU も白い地・黒い字（ほかの板・カードと同じ）。
+   後ろは薄くぼかすだけ、板は下から出る白いシート。夜は夜の地。色は今の場所の小さな線だけ */
+.mu .bk{background:rgba(250,250,252,.55);-webkit-backdrop-filter:blur(10px) saturate(1.1);backdrop-filter:blur(10px) saturate(1.1)}
+html.nt .mu .bk{background:rgba(6,10,20,.55)}
+.mu .pn,html.iro .mu .pn,html.nt .mu .pn{background:var(--bg,#fff);color:var(--ink);overflow-y:auto;border-radius:24px 24px 0 0;padding:10px 20px calc(22px + var(--safe));box-shadow:0 -1px 0 var(--line),0 -24px 60px -30px rgba(0,0,0,.25)}
+html.nt .mu .pn{background:#0E1424}
+.mu .pn::after{content:"";position:absolute;left:50%;top:8px;width:36px;height:4px;margin-left:-18px;border-radius:4px;background:var(--line)}
+.mu .k{display:block;margin-top:18px;color:var(--sub)}
+.mu ol{margin-top:8px}
+.mu li a,html.iro .mu li a{color:var(--ink);border-bottom:1px solid var(--line);font-size:17px;padding:15px 0}
+.mu li a small{color:var(--mut);font-style:normal}
+.mu li a.here,html.iro .mu li a.here{color:var(--ink);font-weight:700}
+.mu li a.here small{color:var(--ink)}
+.mu .rel a{background:transparent;border:1px solid var(--line);color:var(--ink)}
+/* 印は「いま居るページ」の1つだけ：太字＋分野の色の小さな点（ほかの行の点は出さない） */
+html.iro .mu li a::after{background:transparent}
+.mu li a.here::after,html.iro .mu li a.here::after{content:"";margin-left:auto;align-self:center;width:7px;height:7px;border-radius:9px;background:var(--ga,var(--g-top,var(--ink)))}
+.mu li a{transition:opacity .4s,transform .4s,background .2s}
+.mu li a:active{background:var(--chip)}
+.mu .rel{display:grid;grid-template-columns:repeat(auto-fit,minmax(0,1fr));gap:8px}
+.mu .rel a{height:42px;border-radius:21px;font-size:12px;white-space:nowrap}
+
+/* ===== 11/20 そろえる（owner「統一されてない・整理されてない」）：同じ役目の部品は1つの形 =====
+   ① 切り替え（2〜3個から1つ・場所や種類）＝グレーの帯の中に黒い丸。高さ34
+   ② 絞り込み（たくさんから1つ）＝白い丸・細い線、選ぶと黒。高さ34
+   ③ 答えを選ぶ（入力の代わり）＝白い角丸・細い線、選ぶと黒。高さ44
+   ④ 数字＝箱にしない。上下の細い線と縦の細い線で区切って並べる
+   ⑤ ページの終わり＝「あわせて見る」は線の一覧 → 戻るは細い線の丸ボタン1つ */
+html body .fseg,html body .kt-tab{display:flex!important;gap:2px!important;padding:4px!important;margin-top:16px;border:0!important;border-radius:999px!important;background:var(--chip,#F4F2EF)!important;overflow:visible}
+html body .fseg button,html body .kt-tab button{flex:1 1 0!important;min-height:34px!important;height:34px;padding:0 12px!important;border:0!important;border-radius:999px!important;background:transparent!important;box-shadow:none!important;color:var(--sub)!important;font:500 13px/1 var(--sans)!important;letter-spacing:0!important}
+html body .fseg button[aria-selected=true],html body .kt-tab button.on{background:var(--on,#1D1D1F)!important;color:var(--bg,#fff)!important;font-weight:600!important}
+
+html body .flt{display:flex!important;flex-wrap:nowrap!important;justify-content:flex-start!important;gap:8px!important;overflow-x:auto;margin:16px -20px 0!important;padding:2px 20px 4px!important;border:0!important;background:transparent!important;scrollbar-width:none}
+html body .flt::-webkit-scrollbar{display:none}
+html body .flt button,html body .kt-f button,html body .toc a{flex:0 0 auto!important;display:inline-flex!important;align-items:center;height:34px!important;min-height:34px!important;padding:0 14px!important;border:1px solid var(--line)!important;border-radius:999px!important;background:var(--card,#fff)!important;color:var(--chipt,var(--ink))!important;font:500 12.5px/1 var(--sans)!important;letter-spacing:0!important;opacity:1!important;text-decoration:none!important;white-space:nowrap}
+html body .flt button.on.on,html body .kt-f button.on.on{background:var(--on,#1D1D1F)!important;border-color:var(--on,#1D1D1F)!important;color:var(--bg,#fff)!important}
+html body .chip{height:34px}
+
+html body .dchs button,html body .kt-q button,html body .bud .bc button{min-height:44px!important;border-radius:14px!important;border:1px solid var(--line)!important;background:var(--card,#fff)!important;color:var(--ink)!important;box-shadow:none!important;font-family:var(--sans)!important}
+html body .dchs button.on,html body .dchs button[aria-pressed=true],html body .kt-q button.on,html body .bud .bc button.on{background:var(--on,#1D1D1F)!important;border-color:var(--on,#1D1D1F)!important;color:var(--bg,#fff)!important}
+html body .bud{background:transparent!important;padding-left:0!important;padding-right:0!important}
+
+html body .sum,html body .big,html body .jn{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:0!important;margin-top:18px;border-top:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important}
+html body .sum>div,html body .big>div,html body .jn>div{margin:0!important;padding:14px 12px 13px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+html body .sum>div:nth-child(2n),html body .big>div:nth-child(2n),html body .jn>div:nth-child(2n){border-left:1px solid var(--line)!important}
+html body .sum>div:nth-child(2n+1),html body .big>div:nth-child(2n+1),html body .jn>div:nth-child(2n+1){padding-left:0!important}
+html body .sum>div:nth-child(n+3),html body .big>div:nth-child(n+3),html body .jn>div:nth-child(n+3){border-top:1px solid var(--line)!important}
+
+html body .drel{display:block!important;margin-top:4px}
+html body .drel a,html body .also a,html body .also2 a{display:flex!important;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:2px 10px;margin:0!important;padding:14px 0!important;border:0!important;border-bottom:1px solid var(--line)!important;border-radius:0!important;background:transparent!important;color:var(--ink)!important;font:500 15px/1.4 var(--sans)!important;letter-spacing:0!important;text-decoration:none!important}
+html body .drel a small{flex-basis:100%;order:2;font-size:12px;font-weight:400;color:var(--sub)}
+html body .drel a::after,html body .also a:not(:has(*))::after{content:"→";order:1;color:var(--mut);font-weight:400}
+html body .back,html body a.back{display:flex!important;align-items:center;justify-content:center;width:auto!important;max-width:none!important;min-height:48px;margin:28px 0 0!important;padding:0 20px!important;border:1px solid var(--ink)!important;border-radius:999px!important;background:transparent!important;color:var(--ink)!important;font:500 14.5px/1.3 var(--sans)!important;letter-spacing:0!important;text-decoration:none!important;box-shadow:none!important}
+html.sk.nt[data-k] body .flt button.on.on,html.nt body .flt button.on.on{background:var(--on)!important;border-color:var(--on)!important;color:var(--bg)!important}
+
+/* 11/20 ♡（どのカードにも・押すと残る）と一言（hk） */
+.cd{position:relative}
+.cd .hv{position:absolute;z-index:3;top:8px;right:8px;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 2px 8px -2px rgba(0,0,0,.25);cursor:pointer}
+.cd .hv::before{content:"";position:absolute;inset:-6px}
+.cd .hv svg{width:17px;height:17px;fill:none;stroke:#1D1D1F;stroke-width:1.8}
+.cd .hv.on svg{fill:#1D1D1F;stroke:#1D1D1F}
+html.nt .cd .hv{background:rgba(14,20,36,.82)}html.nt .cd .hv svg{stroke:#ECE8E1}html.nt .cd .hv.on svg{stroke:#ECE8E1;fill:#ECE8E1}
+.cd .hv::after{content:"";position:absolute;inset:-6px}
+.cd .hk{margin:3px 0 0;font-size:12px;line-height:1.45;color:var(--sub);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.chip.hvc svg{width:13px;height:13px;fill:currentColor;stroke:currentColor;stroke-width:1.6}
+/* 11/20 見直し：1件ページの .big（日程・いまは・時間・料金・場所）が、幅の広い行と半分の行が混ざって段違い・左の余白がそろわない・灰色の箱が残っていた → 1列の線の一覧にそろえる */
+html body .big.big:has(>.w){grid-template-columns:1fr!important;gap:0!important;background:transparent!important}
+html body .big.big:has(>.w)>div{grid-column:1/-1!important;margin:0!important;padding:14px 0 13px!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+html body .big.big:has(>.w)>div:first-child{border-top:0!important}
+
+/* 11/20 ページの下の一覧（HTML のまま書いてある。検索の機械にも中身とリンクが見えるように）。shin.js が足の上へ動かす */
+.ix{max-width:760px;margin:0 auto;padding:0 16px}.wrap .ix{padding:0;margin:36px 0 0}.ix details{border-top:1px solid var(--line)}.ix summary{cursor:pointer;list-style:none;padding:16px 0;font-size:14px;font-weight:700;color:var(--ink);display:flex;justify-content:space-between;align-items:center}.ix summary::-webkit-details-marker{display:none}.ix summary::after{content:"＋";font-weight:400;color:var(--sub)}.ix details[open] summary::after{content:"－"}.ix ul{list-style:none;margin:0;padding:0 0 8px}.ix li{border-top:1px solid var(--line);padding:11px 0;font-size:14px;line-height:1.5}.ix li a,.ix li b{color:var(--ink);text-decoration:none;font-weight:600}.ix li span{display:block;margin-top:2px;font-size:12px;color:var(--sub)}
+#app>.pre{display:none}
+.ixh{display:none}

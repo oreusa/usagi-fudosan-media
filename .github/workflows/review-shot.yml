@@ -6,6 +6,7 @@ on:
       list: {description: "URLの一覧ファイル（リポジトリの中）", required: true}
       name: {description: "保存するフォルダ名", required: true}
       act: {description: "yes なら全部の部品を押す点検（act.js）も", required: false, default: "no"}
+      full: {description: "yes なら上から下まで1枚で撮る（他社を見る用・full.js）", required: false, default: "no"}
 permissions:
   contents: write
 jobs:
@@ -16,7 +17,10 @@ jobs:
       - uses: actions/checkout@v4
       - run: npm i --no-save playwright@1.49.1 axe-core@4.10.2 && (timeout 150 npx playwright install --with-deps chromium || npx playwright install chromium)
       - run: sudo apt-get install -y -qq fonts-noto-cjk >/dev/null 2>&1 || true
-      - run: node tools/review/shots.js "${{ inputs.list }}" /tmp/rv
+      - if: ${{ inputs.full != 'yes' }}
+        run: node tools/review/shots.js "${{ inputs.list }}" /tmp/rv
+      - if: ${{ inputs.full == 'yes' }}
+        run: timeout 1800 node tools/review/full.js "${{ inputs.list }}" /tmp/rv || true
       - if: ${{ inputs.act == 'yes' }}
         run: timeout 2400 node tools/review/tap2.js "${{ inputs.list }}" > /tmp/rv/act.log 2>&1 || true
       - run: |

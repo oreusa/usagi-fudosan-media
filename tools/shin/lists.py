@@ -182,7 +182,7 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
         URL['cover'] = '/'
         write('cover1', 'TOWN NOTE（タウンノート）｜関西のおでかけと、家と土地の値段（前の表紙）', c,
               {'pc': pc, 'top': top, 'go': go, 'more': more, 'map': MAP,
-               'sns': [['インスタ', 'https://www.instagram.com/fudousan_ai_si/'], ['Threads', 'https://www.threads.com/@fudousan_ai_si'], ['X', 'https://x.com/fudosan_ai_si']]}, js='cover')
+               'sns': [['Instagram', 'https://www.instagram.com/fudousan_ai_si/'], ['Threads', 'https://www.threads.com/@fudousan_ai_si'], ['X', 'https://x.com/fudosan_ai_si']]}, js='cover')
         # 11/19 23:16 owner「表紙ほぼおでかけじゃん」「地図も変」「全然お洒落でもAppleっぽくもない」→ apple.com の表紙の形：
         # 分野ごとに同じ大きさの面（見出し・1行・ボタン2つ・大きい絵）を縦に並べる。地図は表紙に置かない（おでかけのページにある）。
         def pick_ph(f, n):
@@ -209,7 +209,7 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
                       ['家と土地', [['家と土地の相場', '/fudosan-list'], ['地価の動き', '/chika-kansai'], ['まちランキング', '/ranking'], ['空き家の割合', '/akiya-ranking'], ['いくらで売れる？', '/ikura'], ['家を売る前に', '/uru'], ['実家・空き家', '/jikka/'], ['解体の費用', '/kaitai'], ['解体の補助金', '/kaitai-ranking'], ['家をさがす', '/sagasu']]],
                       ['おかいもの', [['日用品の値段くらべ', '/okaimono'], ['値下がりした物', '/nesage'], ['ふるさと納税', '/furusato'], ['開店・閉店ニュース', '/kaiten']]],
                       ['このサイト', [['相談・申し込み', '/moushikomi'], ['リクエスト・感想', '/koe'], ['プライバシーポリシー', '/privacy']]]],
-               'sns': [['インスタ', 'https://www.instagram.com/fudousan_ai_si/'], ['Threads', 'https://www.threads.com/@fudousan_ai_si'], ['X', 'https://x.com/fudosan_ai_si']]}
+               'sns': [['Instagram', 'https://www.instagram.com/fudousan_ai_si/'], ['Threads', 'https://www.threads.com/@fudousan_ai_si'], ['X', 'https://x.com/fudosan_ai_si']]}
         # 11/19 23:15 owner「朝9時には反映」→ この形を表紙（/）に。前の表紙は /shin/cover1 に残す
         write('cover', 'TOWN NOTE（タウンノート）｜関西のおでかけと、家と土地の値段', c2, D2, js='cover2')
         write('cover2', 'TOWN NOTE（タウンノート）｜関西のおでかけと、家と土地の値段', c2, D2, js='cover2')

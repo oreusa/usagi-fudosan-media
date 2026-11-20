@@ -1,19 +1,12 @@
-# 不動産リストの新着の候補（2026-11-19・22ページを見た）
+# 不動産リストの新着の候補（2026-11-20・22ページを見た）
 
 月曜と木曜の 19:47 の回が、上から公式ページで確かめ、合う物を tools/fudosan_list/facts.json に足して make.py を回す。
 足した物・合わない物は stats/fudosan-watch.json の done に URL を入れる（次から出ない）。
 
-## 候補（43件）
-- 2026-11-19｜南海 ニュース｜[dekiru] 栂・美木多 昭和48年(1973)12月7日に開業したこの駅は、泉北ニュータウンの栂地区にあります。 周辺は閑静な住宅街となっており、駅名は周辺の地名である「栂」と「美木多」から取られており、南海駅名で唯一中黒（・）が入っているのが特徴です。｜https://www.nankai.co.jp/community/station/toga_mikita.html
-- 2026-11-17｜大阪市｜[seido] 2026年11月17日 放置自動車の除却について（大阪港湾局）｜https://www.city.osaka.lg.jp/port/page/0000690413.html
-- 2026-11-17｜兵庫県｜[seido] UJIターン就職相談窓口「ひょうご移住・しごとプラザ」｜https://web.pref.hyogo.lg.jp/sr05/comeback/hhw.html
-- 2026-11-16｜国土交通省 近畿地方整備局｜[dekiru] まちづくり・建設産業へ｜https://www.kkr.mlit.go.jp/kensei/index.html
-- 2026-11-16｜法務省（相続登記）｜[seido] 相続登記の義務化｜https://www.moj.go.jp/MINJI/souzokutouki-gimuka/index.html
-- 2026-11-16｜法務省（相続登記）｜[seido] 登記情報提供サービス｜https://www.moj.go.jp/MINJI/minji25.html
-- 2026-11-16｜法務省（相続登記）｜[seido] スマート変更登記｜https://www.moj.go.jp/MINJI/minji05_00688.html
-- 2026-11-16｜法務省（相続登記）｜[seido] 家・土地の購入・相続 (登記)｜https://www.moj.go.jp/MINJI/fudousantouki.html
-- 2026-11-16｜法務省（相続登記）｜[seido] 会社等の設立・役員変更（登記）｜https://www.moj.go.jp/MINJI/houjintouki.html
-- 2026-11-16｜国税庁｜[seido] 酒類事業者向け補助金の第１期採択事業者を決定しました。｜https://www.nta.go.jp/taxes/sake/boshujoho/hojojigyo.htm
+## 候補（36件）
+- 2026-11-20｜南海 ニュース｜[dekiru] 深井 昭和46年(1971)年4月1日に開業した深井駅は、堺市中区にあり、中区唯一の駅です。 泉北ニュータウンの手前に位置するため、他の駅とは少し異なる雰囲気を持っており、飲食店や冠婚葬祭施設も多く見られます。 高架駅で、高架下にはショッピングゾーン「深井プラザ」があります。｜https://www.nankai.co.jp/community/station/fukai.html
+- 2026-11-20｜阪急阪神HD ニュース｜[dekiru] 2026.11.20 不動産 【リリース】 大阪･梅田エリアおよび芝田地区のまちづくりの方向性を議論する 「芝田地区まちづくり推進会議」が本日開催されました（阪急電鉄、阪急阪神不動産）｜https://www.hankyu-hanshin.co.jp/release/2026/11/1b916b6cff8441dd59eb589b74aec44f8feba88f.pdf
+- 2026-11-20｜南海 ニュース｜[dekiru] 萩ノ茶屋 明治40年(1907)12月に開業しました。 駅名の由来といわれる「萩の茶屋」は、かつて紀州街道沿いにあった茶店の1つで、大阪方面から住吉詣りに向かう途中、敷地内に植えられた萩の花が旅人の目を楽しませたと言われています。｜https://www.nankai.co.jp/community/station/haginochaya.html
 - 2026-11-16｜国税庁｜[seido] 令和6年分 相続税の申告事績の概要（令和7年12月）｜https://www.nta.go.jp/information/release/kokuzeicho/2025/sozoku_shinkoku/index.htm
 - 2026-11-16｜国税庁｜[seido] 令和6事務年度における相続税の調査等の状況（令和7年12月）｜https://www.nta.go.jp/information/release/kokuzeicho/2025/sozoku_chosa/index.htm
 - 2026-11-16｜国税庁｜[seido] 路線価図・評価倍率表｜http://www.rosenka.nta.go.jp/
