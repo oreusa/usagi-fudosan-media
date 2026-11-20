@@ -28,7 +28,7 @@ function pick(){return IT.filter(function(x){
   if(S.g==="_hv")return !!HV[hvKey(x)]&&(!S.p||x.p===S.p);if(S.p&&x.p!==S.p)return false;if(S.g&&x.k!==S.g)return false;
   if(S.w==="now")return x.st==="now";if(S.w==="end")return x.st==="now"&&x.left<=7;if(S.w==="td")return x.st==="now"&&x.left===0;if(S.w==="new")return x.st==="up"&&diff(TD,x.s)<=7;if(S.w==="we")return x.s<=SUN&&x.e>=SAT;return x.st==="up"}).sort(function(a,b){
   if(S.w==="up"||S.w==="new")return a.s<b.s?-1:a.s>b.s?1:0;if(S.w==="end"||S.w==="td")return a.e<b.e?-1:a.e>b.e?1:0;
-  var pa=a.im?0:1,pb=b.im?0:1;if(pa!==pb)return pa-pb;return a.e<b.e?-1:a.e>b.e?1:0})}
+  var pa=a.im?0:1,pb=b.im?0:1;if(pa!==pb)return pa-pb;if((b.pp||0)!==(a.pp||0))return (b.pp||0)-(a.pp||0);return a.e<b.e?-1:a.e>b.e?1:0})}
 var nNow=IT.filter(function(x){return x.st==="now"}).length;
 var nEnd=IT.filter(function(x){return x.st==="now"&&x.left<=7}).length,nTd=IT.filter(function(x){return x.st==="now"&&x.left===0}).length,
  nWe=IT.filter(function(x){return x.s<=SUN&&x.e>=SAT}).length,nNew=IT.filter(function(x){return x.st==="up"&&diff(TD,x.s)<=7}).length,DT=dd(TD),EN=["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"][DT.getUTCDay()];
@@ -65,7 +65,7 @@ var sy0=null;sv.addEventListener("touchstart",function(e){sy0=e.touches[0].clien
 sv.addEventListener("touchend",function(e){var dy=e.changedTouches[0].clientY-(sy0||0);if(dy>90)svClose();else if(svA)svA.play()},{passive:true});
 
 /* 今週の顔（扇のように重なり、めくると立体で回る） */
-var FAN=IT.filter(function(x){return x.im&&x.s<=SUN&&x.e>=TD}).sort(function(a,b){return (b.ok?1:0)-(a.ok?1:0)||(b.hk?1:0)-(a.hk?1:0)||((a.i*7919+S_.seed)%97)-((b.i*7919+S_.seed)%97)}).slice(0,8);
+var FAN=IT.filter(function(x){return x.im&&x.s<=SUN&&x.e>=TD}).sort(function(a,b){return (b.ok?1:0)-(a.ok?1:0)||(b.pp||0)-(a.pp||0)||(b.hk?1:0)-(a.hk?1:0)||((a.i*7919+S_.seed)%97)-((b.i*7919+S_.seed)%97)}).slice(0,8);
 var fan=$("#fan");
 fan.innerHTML='<i class="pad"></i>'+FAN.map(function(x){return '<a class="fc" href="#" data-i="'+x.i+'"><span class="in" style="background-color:'+avg(x.th)+'"><img src="'+img(x)+'" alt="" loading="lazy" decoding="async"><span class="cap"><small>'+x.g[3]+'・'+esc(x.p)+'</small><b>'+esc(x.t)+'</b><span>'+when(x)+'</span></span></span></a>'}).join("")+'<i class="pad"></i>';
 var fcs=$$(".fc",fan),fq=0;

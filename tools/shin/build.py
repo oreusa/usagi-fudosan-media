@@ -15,6 +15,17 @@ SEC = {'Odekake': '/odekake', 'Home & Land': '/fudosan-list', 'Shopping': '/okai
 SITE = 'https://kansai.townnote.app'
 # 11/20 今週末のおすすめに出してよい写真（月が目で選んだ・行きたくなる写真だけ）
 PHOK = set(json.load(open(os.path.join(R, 'tools/shin/photo_ok.json'), encoding='utf-8'))['ok'])
+# 11/20 人気順：この30日に押された数（カード）＋♡の数×3。毎朝 link-stats が数え直す
+try: _LT = json.load(open(os.path.join(R, 'stats/link-30.json'), encoding='utf-8'))['total']
+except Exception: _LT = {}
+def POP(t):
+    n = 0
+    for k, v in _LT.items():
+        tail = k.split('｜')[-1]
+        if k.startswith('♡：'): tail = k[2:]
+        if len(tail) >= 4 and t[:len(tail)] == tail and (k.startswith('クリック') or k.startswith('♡：')):
+            n += v * (3 if k.startswith('♡：') else 1)
+    return n
 
 # 11/20 owner「統一されてない・整理されてない」：MENU の項目と並び順は分野ごとにここ1か所だけ（skin.js の FUD・ODE・OKA・KAI も同じ順）
 MENUS = {
@@ -97,6 +108,7 @@ def odekake():
             if v.get(k): it[k] = v[k]
         if v.get('im') and v['im'] in phh: it['th'] = phh[v['im']]
         if v.get('im') in PHOK: it['ok'] = 1
+        if POP(t): it['pp'] = POP(t)
         if v.get('id') in opages: it['o'] = v['id']
         g = gn.get(norm(t)) or gn.get(norm(v.get('n', '')))
         if g and g[0] is not None:
@@ -117,6 +129,7 @@ def odekake():
         if v.get('h') and 'h' not in it: it['h'] = v['h']
         if it.get('im') and it['im'] in phh: it['th'] = phh[it['im']]
         if it.get('im') in PHOK: it['ok'] = 1
+        if POP(name): it['pp'] = POP(name)
         if v.get('id') in opages: it['o'] = v['id']
         g = gn.get(norm(name)) or gn.get(norm(v.get('n', '')))
         if g and g[0] is not None:
