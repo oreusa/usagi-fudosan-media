@@ -181,6 +181,13 @@ def odekake():
         if POP(name): it['pp'] = POP(name)
         if v.get('id') in opages: it['o'] = v['id']
         g = gn.get(norm(name)) or gn.get(norm(v.get('n', '')))
+        if not g:
+            # 11/20 名所（永観堂（禅林寺）・東福寺 など）は名前が地図の場所の名前と少し違って地図に出ていなかった
+            #  →（）の中を外した名前・同じ府県で その名前から始まる場所（例：永観堂 秋の寺宝展 夜間拝観）を使う。2つ以上の場所に当たる時は使わない
+            base_ = norm(re.sub(r'[（(].*?[）)]', '', name))
+            if len(base_) >= 2:
+                hit = {tuple(vv[:2]) for kk, vv in gn.items() if kk.startswith(base_) and vv and vv[0] is not None}
+                if len(hit) == 1: g = list(next(iter(hit)))
         if g and g[0] is not None:
             x, y = proj((g[1], g[0])); it['xy'] = [round(x, 2), round(y, 2)]
         return it
