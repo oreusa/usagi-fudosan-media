@@ -79,6 +79,19 @@ try:
 except Exception as e:
     bad.append(f"× 関西HPの公開：読めない {e}")
 
+# 11/20：formcheck.yml は「動いた」だけで○になり、中身の「申し込みが送れない」を15時間見逃した（11/19 18時〜）。結果の中身も見る。
+try:
+    import json, os
+    fc = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "stats", "formcheck.json"), encoding="utf-8"))
+    for k, s in fc.get("sites", {}).items():
+        ng = [r["name"] + "：" + r.get("why", "") for r in s.get("rows", []) if not r.get("ok")]
+        if ng:
+            bad.append(f"× 申し込みが最後まで送れない（{k}・{fc.get('at')}）：" + "／".join(ng))
+        else:
+            rows.append(f"○ 申し込みの通し（{k}・{fc.get('at')}）")
+except Exception as e:
+    bad.append(f"× 申し込みの通し：stats/formcheck.json が読めない {e}")
+
 print("\n".join(rows))
 if bad:
     print("\n直すもの：")
