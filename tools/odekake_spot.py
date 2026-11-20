@@ -137,6 +137,7 @@ for sp in spots:
         if kv.get(lb) and not mo.get(kk) and "公式" not in kv[lb]: mo[kk] = kv[lb]
     if kv.get("メモ") and not mo.get("note"): mo["note"] = kv["メモ"].rstrip("。") + "。"
     if kv.get("休み") and not mo.get("note"): mo["note"] = ("開くのは" if "のみ" in kv["休み"].split("・")[0] else "休みは") + kv["休み"].rstrip("。") + "。"  # 11/20「休みは金土日祝のみ」と逆の意味に読めていた
+    if sp["free"] and mo.get("price") and not re.search(r"\d[\d,]*円", mo["price"]): mo.pop("price")  # 11/20「入場：無料」と「料金：入場は無料」が2行続いていた（関東と同じ）
     has = [x for x, k in (("時間", "time"), ("料金", "price"), ("駐車場", "park")) if mo.get(k)]
     if mo.get("time"): lead += f"時間は{mo['time']}です。"
     if mo.get("price"): lead += f"料金は{mo['price']}です。"
