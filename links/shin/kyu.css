@@ -513,8 +513,8 @@ html.sk.night[data-k] body>*:not(.skc){filter:none!important}
 html.sk[data-k] body{color:var(--ink)}
 /* 11/20 見本v4「枠だけ」：owner 9:00「枠だけにするとか？」「白背景の最初の方が綺麗かも」。
    地は白（夜は今の夜空）のまま・字もボタンの中も白黒のまま。色は 枠の細い線 だけ（分野ごとのグラデーションの線） */
-html.iro{--g-od:linear-gradient(120deg,#FF9A76,#FF6FA3);--g-ie:linear-gradient(120deg,#6FA8FF,#5FD4E0);--g-kau:linear-gradient(120deg,#5CCFA0,#B5DC6A);--g-kai:linear-gradient(120deg,#A98BFF,#F48CC8);--g-top:linear-gradient(110deg,#FF9A76,#FF6FA3 30%,#A98BFF 55%,#6FA8FF 78%,#5FD4E0)}
-html.iro[data-f=od]{--ga:var(--g-od);--gc:#FF6FA3}html.iro[data-f=ie]{--ga:var(--g-ie);--gc:#6FA8FF}html.iro[data-f=kau]{--ga:var(--g-kau);--gc:#5CCFA0}html.iro[data-f=kai]{--ga:var(--g-kai);--gc:#A98BFF}html.iro[data-f=top]{--ga:var(--g-top);--gc:#A98BFF}
+html.iro{--g-od:linear-gradient(120deg,#F6C66B,#F29E4C);--g-ie:linear-gradient(120deg,#2BB3A3,#3A86C8);--g-kau:linear-gradient(120deg,#5CCFA0,#B5DC6A);--g-kai:linear-gradient(120deg,#A98BFF,#F48CC8);--g-top:linear-gradient(110deg,#F6C66B,#F29E4C 30%,#A98BFF 55%,#3A86C8 78%,#2BB3A3)}
+html.iro[data-f=od]{--ga:var(--g-od);--gc:#F29E4C}html.iro[data-f=ie]{--ga:var(--g-ie);--gc:#2BB3A3}html.iro[data-f=kau]{--ga:var(--g-kau);--gc:#5CCFA0}html.iro[data-f=kai]{--ga:var(--g-kai);--gc:#A98BFF}html.iro[data-f=top]{--ga:var(--g-top);--gc:#A98BFF}
 /* 下のバーの今いる所：細い線 */
 html.iro .nav .cur::before{width:22px;margin-left:-11px;background:var(--ga)}
 /* 表紙：2つ目のボタン（枠のボタン）の枠を、その分野のグラデーションの線に */
