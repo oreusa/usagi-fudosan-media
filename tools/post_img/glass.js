@@ -9,7 +9,8 @@ const {chromium}=require('playwright');const fs=require('fs');const path=require
 const CFG=require('./card-config.js');const R=path.join(__dirname,'..','..');
 const OUT=process.env.OUT_DIR||CFG.out;
 const esc=s=>String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-const head=s=>esc(s).replace(/&lt;br&gt;/g,'<br>').replace(/&lt;em&gt;/g,'<em>').replace(/&lt;\/em&gt;/g,'</em>');
+// 見出しは <br> ごとに1行（行の途中で折り返さない。入らなければ字を小さくするか、作らない）
+const head=s=>esc(s).split('&lt;br&gt;').map(l=>`<span class="ln">${l.replace(/&lt;em&gt;/g,'<em>').replace(/&lt;\/em&gt;/g,'</em>')}</span>`).join('');
 const logo='data:image/png;base64,'+fs.readFileSync(CFG.logo).toString('base64');
 const img=p=>{const f=path.isAbsolute(p)?p:path.join(R,p);const e=path.extname(f).slice(1).replace('jpg','jpeg');return `data:image/${e};base64,`+fs.readFileSync(f).toString('base64')};
 // 星（夜だけ）：毎回同じ並びになるよう名前から決める
@@ -20,7 +21,7 @@ const HTML=x=>{const N=!!x.night,P=x.photo;return `<!doctype html><meta charset=
 <style>*{margin:0;box-sizing:border-box}
 body{width:1080px;height:1350px;position:relative;overflow:hidden;font-family:"Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased;
  background:${N?'#070A14':'#F8F8FA'};color:${N?'#F5F5F7':'#1D1D1F'}}
-.hero{position:absolute;left:0;right:0;top:0;height:${P?1350:860}px;overflow:hidden;${P||!N?'':'clip-path:polygon(0 0,100% 0,100% 80%,0 100%);'}background:${N?'#120E1C':'transparent'}}
+.hero{position:absolute;left:0;right:0;top:0;height:${P||!N?1350:860}px;overflow:hidden;${P||!N?'':'clip-path:polygon(0 0,100% 0,100% 80%,0 100%);'}background:${N?'#120E1C':'transparent'}}
 .hero i{position:absolute;border-radius:50%;filter:blur(${N?90:110}px);opacity:${N?.42:.32}}
 .hero i:nth-child(1){width:900px;height:900px;left:-300px;top:-380px;background:#FFB65C}
 .hero i:nth-child(2){width:820px;height:820px;right:-360px;top:-220px;background:#2EC4B6}
@@ -36,6 +37,7 @@ body{width:1080px;height:1350px;position:relative;overflow:hidden;font-family:"N
  border:1px solid ${N?'rgba(255,255,255,.18)':'rgba(255,255,255,.8)'};backdrop-filter:blur(14px);color:${N?'#F5F5F7':'#1D1D1F'}}
 .en{position:absolute;left:72px;top:${P?190:196}px;font:500 24px Inter;letter-spacing:.32em;color:${N||P?'rgba(245,245,247,.7)':'rgba(29,29,31,.6)'}}
 .hd{position:absolute;left:68px;right:68px;top:${P?236:246}px;font:800 ${x.hs||92}px/1.22 "Noto Sans JP";letter-spacing:-.01em;${P?'color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.35)':''}}
+.hd .ln{display:block;white-space:nowrap;overflow:hidden}
 .hd em{font-style:normal;padding:0 .04em;background:linear-gradient(90deg,rgba(255,255,255,.0),rgba(255,255,255,.0)),linear-gradient(90deg,rgba(255,182,92,.55),rgba(46,196,182,.45));background-size:100% 100%,100% 24%;background-position:0 0,0 88%;background-repeat:no-repeat;-webkit-box-decoration-break:clone;box-decoration-break:clone}
 ${N||P?'.hd em{background-image:linear-gradient(90deg,rgba(255,182,92,.0),rgba(255,182,92,.0)),linear-gradient(90deg,#FF8A5B,#FFB65C 50%,#2EC4B6);opacity:1}':''}
 .ph{position:absolute;left:0;right:0;top:0;height:1350px}.ph img{width:100%;height:100%;object-fit:cover;object-position:${P&&P.pos||'50% 50%'}}
@@ -66,12 +68,12 @@ ${P?`<div class="cr">写真：${esc(P.cr)}</div>`:''}<div class="ft">${esc(CFG.b
  const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1350}});let n=0;
  for(const x of specs){if(!/^[a-z0-9-]+$/.test(x.name||'')){console.log('× name：',x.name);continue}
   if(x.photo&&!x.photo.cr){console.log('× 写真のクレジットが無い：',x.name);continue}
-  // 見出しがガラスのカードに重なる・横にはみ出す時は、字を小さくして（92→84→76）もう一度。それでも入らなければ作らない
+  // 見出しがガラスのカードに重なる・横にはみ出す時は、字を小さくして（92→84→76→68）もう一度。それでも入らなければ作らない
   // （前の道具の hs 50〜66 は明朝の大きさなので、70 より小さい時はこの道具の大きさで始める）
-  let bad=true;for(const hs of [x.hs&&x.hs>=70?x.hs:92,84,76]){
+  let bad=true;for(const hs of [x.hs&&x.hs>=70?x.hs:92,84,76,68]){
    await p.setContent(HTML(Object.assign({},x,{hs})),{waitUntil:'networkidle'});await p.evaluate(()=>document.fonts.ready);await p.waitForTimeout(400);
    bad=await p.evaluate(()=>{const h=document.querySelector('.hd').getBoundingClientRect(),g=document.querySelector('.gl').getBoundingClientRect();
-    const wide=[...document.querySelectorAll('.hd,.r span,.cap')].some(e=>e.scrollWidth>e.clientWidth+2);return h.bottom>g.top-24||g.top<300||wide});
+    const wide=[...document.querySelectorAll('.hd .ln,.r span,.cap')].some(e=>e.scrollWidth>e.clientWidth+2);return h.bottom>g.top-24||g.top<300||wide});
    if(!bad)break}
   if(bad){console.log('× 見出しか表が入らない：',x.name);process.exitCode=1;continue}
   await p.screenshot({path:path.join(OUT,`card-${x.name}.jpg`),type:'jpeg',quality:90});n++
