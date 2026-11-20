@@ -116,3 +116,4 @@ html.sk.nt[data-k] .cmpt-l .n em{border-color:#F5F5F7}
 html.sk.nt[data-k] .cmpt-go{background:#F5F5F7;color:#0A0E18}
 html.sk.nt[data-k] .cmpt-go small{color:rgba(10,14,24,.7)}
 html.sk.nt[data-k] .cmpt-l b u,html.sk.nt[data-k] .cmpt-few{color:#F6C66B;border-color:#F6C66B}
+@media (max-width:359px){html.sk .skc .nav a,html.sk .skc .nav button{font-size:9.5px;letter-spacing:-.03em;white-space:nowrap}}
