@@ -2,21 +2,21 @@
  "n1": {
   "time": "07:00",
   "digest": "414e6e0703e14396",
-  "at": "2026-11-21T06:27:48+09:00",
-  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+  "at": "2026-11-21T06:31:16+09:00",
+  "threads": "6b00bc2420a2d09a0ab0ce94"
  },
  "x07": {
   "time": "07:00",
   "digest": "3bdd7690a1257fad",
-  "at": "2026-11-21T06:27:48+09:00",
+  "at": "2026-11-21T06:31:16+09:00",
   "threads": "X だけの枠",
-  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+  "twitter": "6b00bc249ffbc8503cd8b9c1"
  },
  "S1": {
   "time": "08:00",
   "digest": "a7c5e57f46bc258e",
-  "at": "2026-11-21T06:27:48+09:00",
-  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+  "at": "2026-11-21T06:31:16+09:00",
+  "threads": "6b00bc2520a2d09a0ab0cedb"
  },
  "n2": {
   "time": "09:00",
@@ -34,21 +34,21 @@
  "n3": {
   "time": "12:00",
   "digest": "00a857a444598071",
-  "at": "2026-11-21T06:27:48+09:00",
-  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+  "at": "2026-11-21T06:31:16+09:00",
+  "threads": "6b00bc255102766245d498e6"
  },
  "x12": {
   "time": "12:00",
   "digest": "6fd2bac3c0d5cdfc",
-  "at": "2026-11-21T06:27:48+09:00",
+  "at": "2026-11-21T06:31:16+09:00",
   "threads": "X だけの枠",
-  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+  "twitter": "6b00bc255102766245d49914"
  },
  "n8": {
   "time": "13:00",
   "digest": "aacb0ea00384bfb6",
-  "at": "2026-11-21T06:27:48+09:00",
-  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+  "at": "2026-11-21T06:31:16+09:00",
+  "threads": "6b00bc269ffbc8503cd8ba53"
  },
  "n5": {
   "time": "15:00",
@@ -66,8 +66,8 @@
  "n6": {
   "time": "18:00",
   "digest": "f4193399087ceafc",
-  "at": "2026-11-21T06:27:48+09:00",
-  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+  "at": "2026-11-21T06:31:16+09:00",
+  "threads": "6b00bc26dd205ed77999ca83"
  },
  "x18": {
   "time": "18:00",
