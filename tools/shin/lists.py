@@ -176,7 +176,7 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
                 ['関西の初詣', '/hatsumode'], ['関西まちランキング', '/ranking'], ['実家・空き家', '/jikka/'], ['ふるさと納税', '/furusato']]
         c = copy.deepcopy(cfg)
         c['nav'] = [{'t': 'おでかけ', 'ic': 'now', 'href': '/odekake'}, {'t': '家と土地', 'ic': 'find', 'href': '/fudosan-list'}, {'t': 'おかいもの', 'ic': 'yen', 'href': '/okaimono'}, {'t': '地図', 'ic': 'map', 'a': 'map'}]
-        c['menu'] = {'k': 'Town Note', 'items': [['トップ', '/', 1], ['関西のおでかけ', '/odekake'], ['家と土地の相場', '/fudosan-list'], ['日用品の値段くらべ', '/okaimono'], ['開店・閉店', '/kaiten'], ['まちランキング', '/ranking']]}
+        c['menu'] = {'k': 'Town Note', 'items': [['トップ', '/', 1], ['おでかけ', '/odekake'], ['家と土地', '/fudosan-list'], ['おかいもの', '/okaimono'], ['開店・閉店', '/kaiten']], 'rel': []}
         c['foot'] = 'おでかけの券・宿と、おかいものリストのリンクには広告（PR）があります。'
         c['desc'] = '関西の不動産屋が、街を調べて見つけたことをまとめています。開催中のおでかけ・イベント、205の街の家と土地の値段、日用品の値段くらべ、開店・閉店を、公式の発表と数字で。'
         URL['cover'] = '/'
@@ -199,7 +199,7 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
         ka = next(({k: x[k] for k in ('t', 'a', 'd', 'im', 'big', 'sp', 'p') if k in x} for x in reversed(kt) if x['w'] == 'soon' and x.get('im')), None)
         c2 = copy.deepcopy(c)
         c2['nav'] = [{'t': 'おでかけ', 'ic': 'now', 'href': '/odekake'}, {'t': '家と土地', 'ic': 'find', 'href': '/fudosan-list'}, {'t': 'おかいもの', 'ic': 'yen', 'href': '/okaimono'}, {'t': '開店閉店', 'ic': 'buy', 'href': '/kaiten'}]
-        c2['menu'] = {'k': 'Town Note', 'items': [['トップ', '/', 1], ['関西のおでかけ', '/odekake'], ['家と土地の相場', '/fudosan-list'], ['日用品の値段くらべ', '/okaimono'], ['開店・閉店', '/kaiten'], ['まちランキング', '/ranking'], ['実家・空き家', '/jikka/'], ['ふるさと納税', '/furusato']]}
+        c2['menu'] = {'k': 'Town Note', 'items': [['トップ', '/', 1], ['おでかけ', '/odekake'], ['家と土地', '/fudosan-list'], ['おかいもの', '/okaimono'], ['開店・閉店', '/kaiten']], 'rel': []}
         D2 = {'od': {'n': len(now), 'ph': pick_ph(lambda x: True, 5)},
                'ie': {'n': len(ie['towns']), 'tw': [{'n': t_['n'], 'r': t_['r8'], 'id': t_['id']} for t_ in tw]},
                'kau': {'n': len(kau['cats']), 'ks': ks},

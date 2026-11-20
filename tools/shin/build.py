@@ -15,7 +15,8 @@ SITE = 'https://kansai.townnote.app'
 
 def write(name, title, cfg, data, js=None):
     js = js or name
-    cfg['menu']['rel'] = [r for r in REL if r[1] != URL.get(name)]
+    # 11/20 表紙の MENU は分野の入口そのものなので、下の重なるボタンは出さない
+    cfg['menu']['rel'] = [] if name.startswith('cover') else [r for r in REL if r[1] != URL.get(name)]
     desc = cfg.pop('desc', '')
     head = (f'<meta name="description" content="{html.escape(desc)}">' if desc else '') + \
         f'<link rel="canonical" href="{SITE}{URL.get(name, "/shin/" + name)}"><meta property="og:title" content="{html.escape(title.split("｜")[0])}"><meta property="og:image" content="{SITE}/assets/ogp.png"><meta property="og:url" content="{SITE}{URL.get(name, "/shin/" + name)}">'
@@ -222,7 +223,7 @@ def skin():
             x = x.strip()
             if x.startswith('::view-transition') or x.startswith('html.vtt') or x.startswith('html.tbon'):
                 r.append(x); continue
-            m = re.match(r'(html(?:\.nt|:not\(\.nt\))?)\s+(.*)', x)
+            m = re.match(r'(html(?:\.nt|\.iro|:not\(\.nt\))*(?:\[[^\]]*\])?)\s+(.*)', x)
             r.append((m.group(1) + ' .skc ' + m.group(2)) if m else '.skc ' + x)
         return ','.join(r)
     def take(sel):

@@ -1,54 +1,54 @@
 {
- "at": "2026-11-20 01:04",
+ "at": "2026-11-20 09:33",
  "sites": {
   "kansai": {
    "base": "https://kansai.townnote.app",
-   "ok": false,
+   "ok": true,
    "rows": [
     {
      "name": "ふつうの申し込み（3つの画面）",
      "path": "/moushikomi",
-     "ok": false,
-     "why": "最初の画面が1つ目になっていない"
+     "ok": true,
+     "why": ""
     },
     {
      "name": "かんたん相談（1つの画面）",
      "path": "/moushikomi?lite=1",
-     "ok": false,
-     "why": "途中で止まった：page.fill: Timeout 30000ms exceeded."
+     "ok": true,
+     "why": ""
     },
     {
      "name": "ご希望を選んで来た人（2つ目の画面から）",
      "path": "/moushikomi?want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A",
-     "ok": false,
-     "why": "ご希望つきで来たのに、2つ目の画面から始まらない"
+     "ok": true,
+     "why": ""
     }
    ]
   },
   "kanto": {
    "base": "https://kanto.townnote.app",
-   "ok": false,
+   "ok": true,
    "rows": [
     {
      "name": "ふつうの申し込み（3つの画面）",
      "path": "/moushikomi",
-     "ok": false,
-     "why": "最初の画面が1つ目になっていない"
+     "ok": true,
+     "why": ""
     },
     {
      "name": "かんたん相談（1つの画面）",
      "path": "/moushikomi?lite=1",
-     "ok": false,
-     "why": "途中で止まった：page.fill: Timeout 30000ms exceeded."
+     "ok": true,
+     "why": ""
     },
     {
      "name": "ご希望を選んで来た人（2つ目の画面から）",
      "path": "/moushikomi?want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A",
-     "ok": false,
-     "why": "ご希望つきで来たのに、2つ目の画面から始まらない"
+     "ok": true,
+     "why": ""
     }
    ]
   }
  },
- "ok": false
+ "ok": true
 }

@@ -42,7 +42,8 @@ const fs = require('fs');
       await p.goto(url, {waitUntil: 'load'}).catch(() => {}); await W(900);
       const e = await p.$(`#nav a[href="${h}"]`);
       if (!e || !(await e.isVisible())) { X('バーの ' + h + ' が見えない'); continue; }
-      await Promise.all([p.waitForNavigation({timeout: 10000}).catch(() => {}), e.tap()]); await W(1200);
+      const tok = await Promise.all([p.waitForNavigation({timeout: 10000}).catch(() => {}), e.tap({timeout: 8000}).then(() => 1, () => 0)]); await W(1200);
+      if (!tok[1]) { X('バーの ' + h + ' が押せない（他の物が上に重なっている）'); continue; }
       const to = new URL(p.url());
       if (!(await p.$('#nav'))) X('バー ' + h + ' の先に下のバーが無い ' + to.pathname);
       await p.goBack().catch(() => {}); await W(1000);
@@ -54,7 +55,7 @@ const fs = require('fs');
     await p.goto(url, {waitUntil: 'load'}).catch(() => {}); await W(900);
     const mb = await p.$('#mnb');
     if (mb) {
-      await mb.tap(); await W(800);
+      await mb.tap({timeout: 8000}).catch(() => X('MENU が押せない（他の物が上に重なっている）')); await W(800);
       const vis = await p.evaluate(() => {
         const m = document.getElementById('mu'); if (!m) return 0;
         const pn = m.querySelector('.pn') || m; const r = pn.getBoundingClientRect();
