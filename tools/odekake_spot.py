@@ -126,6 +126,8 @@ for sp in spots:
         for x in re.findall(r"（[^）]*(?:休|のみ|だけ|ごろ|見ごろ)[^）]*）", dl):
             if x not in when:
                 when += x
+    # 11/20 見直し：カードの2つ目が場所ではなく説明文（「江戸の町並みで」「16時半からの列車で」）の時は、場所に使わない
+    if re.search(r"(で|から|まで|の道)$|\d+時|\d+/\d+", sp["place"] or ""): sp["place"] = ""
     where = (sp["city"] + ("の" + sp["place"] if sp["place"] and sp["place"] != sp["city"] else "")) or fu
     lead = f"{nm}は、{'' if where.startswith(fu) else fu}{where}で" + (f"、{jd(sp['st'])}から{jd(sp['en'])}まで開かれます。" if sp["st"] and sp["en"] and sp["en"] != sp["st"] else (f"、{jd(sp['st'])}に開かれます。" if sp["st"] else "楽しめます。"))
     if sp["free"]: lead += "入場は無料です（一部有料の所があります）。" if sp.get("part") else "入場は無料です。"
