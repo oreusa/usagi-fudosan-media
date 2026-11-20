@@ -1,0 +1,22 @@
+# 11/20 他社（ページの種類ごと）
+tanosu-top	https://tanosu.com/
+tanosu-event	https://tanosu.com/event/
+walker-ev	https://www.walkerplus.com/event_list/ar0700/
+walker-ev1	https://www.walkerplus.com/event_list/today/ar0700/
+jalan-ev	https://www.jalan.net/event/270000/
+illumi	https://illumi.walkerplus.com/list/ar0700/
+koyo	https://koyo.walkerplus.com/list/ar0700/
+hatsu	https://hatsumode.walkerplus.com/list/ar0700/
+tokyo-tl	https://www.timeout.jp/tokyo/ja
+souba-homes	https://www.homes.co.jp/souba/osaka/
+souba-suumo	https://suumo.jp/kanto/
+tochidai	https://tochidai.info/osaka/
+satei-homes	https://www.homes.co.jp/satei/
+ieul	https://www.ieul.jp/
+akiya-athome	https://www.akiya-athome.jp/
+kaitai	https://www.kaitai-guide.com/
+kakaku	https://kakaku.com/
+satofull	https://www.satofull.jp/
+furusato	https://www.furusato-tax.jp/
+kaiten	https://kaiten-heiten.com/
+apple	https://www.apple.com/jp/iphone/
