@@ -55,10 +55,12 @@ def date_bits(t, day):
 
 def specs_for(r, day, pk):
     big, unit, when = date_bits(first_line(r) + " " + (r.get("x_text") or ""), day)
-    base = {"name": f"photo-{day[5:].replace('-', '')}-{r['slot']}", "im": pk["file"], "cr": pk["cr"], "pos": pk.get("pos", "50% 50%"),
-            "pill": (pk.get("area", "") + ("　" + when if when else "")).strip(), "big": big, "unit": unit, "en": pk.get("en", ""), "nowrap": True}
+    # 11/20 21:26 owner「よい」：HPと同じ光とガラスの形（tools/post_img/glass.js）。写真を一面に、下にガラスのカード
+    base = {"name": f"photo-{day[5:].replace('-', '')}-{r['slot']}", "im": pk["file"], "cr": pk["cr"],
+            "photo": {"im": pk["file"], "cr": pk["cr"], "pos": pk.get("pos", "50% 50%")},
+            "pill": (pk.get("area", "") + ("　" + when if when else "")).strip(), "big": big, "unit": unit, "en": pk.get("en", "")}
     cap = pk.get("cap", "")
-    return [dict(base, head=pk["head"], cap=cap), dict(base, head=pk["head"], cap=cap, hs=60)]
+    return [dict(base, head=pk["head"], cap=cap), dict(base, head=pk["head"])]
 
 
 def main():
@@ -92,7 +94,7 @@ def main():
         for s in tries:
             with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as f:
                 json.dump([s], f, ensure_ascii=False)
-            p = subprocess.run(["node", os.path.join(R, "tools", "post_img", "photo.js"), f.name], capture_output=True, text=True, timeout=120)
+            p = subprocess.run(["node", os.path.join(R, "tools", "post_img", "glass.js"), f.name], capture_output=True, text=True, timeout=120)
             out = os.path.join(R, "media", "post", f"card-{s['name']}.jpg")
             if "作った 1 枚" in p.stdout and os.path.exists(out):
                 r["image_url"] = RAW + f"card-{s['name']}.jpg?v={int(time.time()) % 100000000:x}"
