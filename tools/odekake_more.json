@@ -555,6 +555,70 @@
    "price": "参拝は無料",
    "src": "https://kifunejinja.jp/",
    "day": "2026-11-20"
+  },
+  "ナゾトキイベント「ぐわ兵衛とアソビ帝国」": {
+   "price": "参加費 1セット500円",
+   "src": "https://hamadera.osaka-park.or.jp/event-information/%e3%83%8a%e3%82%be%e3%83%88%e3%82%ad%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%80%8c%e3%81%90%e3%82%8f%e5%85%b5%e8%a1%9b%e3%81%a8%e3%82%a2%e3%82%bd%e3%83%93%e5%b8%9d%e5%9b%bd%e3%80%8d/",
+   "day": "2026-11-20"
+  },
+  "NAKED meets 二条城 2026": {
+   "price": "月〜木 2,000円、金土日祝 2,400円（早割は 1,600円・2,000円）",
+   "src": "https://nijo-jocastle.city.kyoto.lg.jp/event/matsuri2026-1/",
+   "day": "2026-11-20"
+  },
+  "びっくり構図展": {
+   "price": "一般 1,200円、大学・高校・中学生 1,100円、小学生以下 300円",
+   "src": "https://hosotsuji-ihee-museum.com/exhibition#surprising",
+   "day": "2026-11-20"
+  },
+  "酒にのまれ展": {
+   "time": "10:00〜18:00（入館は17:30まで）",
+   "src": "https://itami-im.jp/exhibitions/%E9%85%92%E3%81%AB%E3%81%AE%E3%81%BE%E3%82%8C%E5%B1%95/",
+   "day": "2026-11-20"
+  },
+  "企画展「ふれる×れきはく」": {
+   "time": "10:00〜17:00（入館は16:30まで）",
+   "src": "https://rekihaku.pref.hyogo.lg.jp/exhibition/21536/",
+   "day": "2026-11-20"
+  },
+  "2026 パンダがむすぶ西宮展": {
+   "time": "10:00〜20:00（最終日は17:00まで）",
+   "price": "入場は無料",
+   "src": "https://frentehall.jp/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/%E7%B7%B4%E7%BF%92%E5%AE%A4%E3%83%BB%E5%A4%9A%E7%9B%AE%E7%9A%84%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9_0261107-1122/",
+   "day": "2026-11-20"
+  },
+  "中央公会堂プロジェクションマッピング": {
+   "time": "17:30〜21:30（約12分ごとに上映。最後は21:20から）",
+   "src": "https://hikari-kyoen.com/core/renaissance",
+   "day": "2026-11-20"
+  },
+  "神戸旧居留地イルミネーション": {
+   "time": "17:00〜22:00",
+   "src": "https://www.city.kobe.lg.jp/a30028/shise/kekaku/jutakutoshikyoku/scene/11_night/38_kyoryuchi.html",
+   "day": "2026-11-20"
+  },
+  "ひかりの森～夜の芸術散歩～（神戸六甲ミーツ・アート）": {
+   "price": "無料（施設の入場料は別に要ります）",
+   "src": "https://rokkomeetsart.jp/hikarinomori/",
+   "day": "2026-11-20"
+  },
+  "梅小路公園 紅葉まつり": {
+   "time": "夜の紅葉は 17:00〜21:00（最終入園20:30）",
+   "price": "夜は大人 600円、小学生 300円、未就学児は無料",
+   "src": "https://www.kyoto-ga.jp/event/umekouji/index.html",
+   "day": "2026-11-20"
+  },
+  "北野天満宮 もみじ苑 ライトアップ": {
+   "time": "日没〜20:00（最終受付19:40）",
+   "price": "大人（中学生以上）1,500円、小学生 700円、未就学児は無料",
+   "src": "https://kitanotenmangu.or.jp/",
+   "day": "2026-11-20"
+  },
+  "北野天満宮 もみじ苑": {
+   "time": "9:00〜16:00（受付は15:40まで）。ライトアップの期間は20:00まで（受付は19:40まで）",
+   "price": "大人（中学生以上）1,500円、小学生 700円、未就学児は無料",
+   "src": "https://kitanotenmangu.or.jp/",
+   "day": "2026-11-20"
   }
  }
 }
