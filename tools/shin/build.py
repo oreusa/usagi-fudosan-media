@@ -223,7 +223,7 @@ def skin():
             x = x.strip()
             if x.startswith('::view-transition') or x.startswith('html.vtt') or x.startswith('html.tbon'):
                 r.append(x); continue
-            m = re.match(r'(html(?:\.nt|:not\(\.nt\))?)\s+(.*)', x)
+            m = re.match(r'(html(?:\.nt|\.iro|:not\(\.nt\))*(?:\[[^\]]*\])?)\s+(.*)', x)
             r.append((m.group(1) + ' .skc ' + m.group(2)) if m else '.skc ' + x)
         return ','.join(r)
     def take(sel):
