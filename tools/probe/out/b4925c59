@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=1200,minimum-scale=0.1">
+<meta name="description" content="松尾大社からのお知らせやアクセス、境内のご案内やご祈祷・お詣りのご案内など。" />
+<meta name="Keywords" content="松尾大社,京都,御遷宮,嵐山,磐座,御祈祷,お詣り"/>
+<title>松尾大社 - MATSUNOO TAISHA</title>
+<!-- *** stylesheet *** -->
+<link href="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href='https://fonts.googleapis.com/css?family=Marcellus&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<!-- *** javascript *** -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/js/bxslider/jquery.bxslider.min.js"></script>
+<script src="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/js/tool.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<link href="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/css/ie8.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/js/html5.js"></script>
+<script type="text/javascript" src="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/js/selectivizr.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+
+<div id="baseFrame" class="hide">
+
+	<nav id="navArea">
+		<h1><a href="https://www.matsunoo.or.jp"><img src="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/img/common/sidebar/logo.png" height="257" width="183" alt="松尾大社"></a></h1>
+		<ul id="navGrobal">
+			<li>
+				<a href="https://www.matsunoo.or.jp/about01">松尾大社について</a>
+				<section>
+					<h1><span>松尾大社について</span></h1>
+					<ul>
+						<li><a href="https://www.matsunoo.or.jp/about01">歴史・由緒</a></li>
+						<li><a href="https://www.matsunoo.or.jp/about02">御祭神</a></li>
+						<li><a href="https://www.matsunoo.or.jp/about03">御神徳</a></li>
+						<li><a href="https://www.matsunoo.or.jp/about04">幸運の撫で亀と幸運の双鯉</a></li>
+					</ul>
+				</section>
+			</li>
+			<li>
+				<a href="https://www.matsunoo.or.jp/guide01">境内のご案内</a>
+				<section>
+					<h1><span>境内のご案内</span></h1>
+					<ul>
+						<li><a href="https://www.matsunoo.or.jp/guide01">境内マップ</a></li>
+						<li><a href="https://www.matsunoo.or.jp/guide02">御社殿</a></li>
+						<li><a href="https://www.matsunoo.or.jp/guide03">庭園拝観</a></li>
+						<li><a href="https://www.matsunoo.or.jp/guide04">磐座</a></li>
+						<li><a href="https://www.matsunoo.or.jp/guide05">神像舘</a></li>
+						<li><a href="https://www.matsunoo.or.jp/guide06">お酒の資料館</a></li>
+						<li><a href="https://www.matsunoo.or.jp/guide07">摂社・末社</a></li>
+					</ul>
+				</section>
+			</li>
+			<li>
+				<a href="https://www.matsunoo.or.jp/event">祭典・行事</a>
+				<section>
+					<h1><span>祭典・行事</span></h1>
+					<ul>
+						<li><a href="https://www.matsunoo.or.jp/event">年間祭儀予定</a></li>
+						<li><a href="http://www.matsunoo.or.jp/2022/01/20/%e4%bb%a4%e5%92%8c%ef%bc%93%e5%b9%b4%e3%80%80%e3%83%95%e3%83%aa%e3%83%bc%e3%83%9e%e3%83%bc%e3%82%b1%e3%83%83%e3%83%88%e4%ba%80%e3%81%ae%e5%b8%82%e3%80%80%e4%ba%88%e5%ae%9a/">フリーマーケット　亀の市</a></li>
+					</ul>
+				</section>
+			</li>
+			<li>
+				<a href="https://www.matsunoo.or.jp/kitou01">ご祈祷・お詣り</a>
+				<section>
+					<h1><span>御祈祷・お詣り</span></h1>
+					<ul>
+						<li><a href="https://www.matsunoo.or.jp/kitou01">初宮詣り</a></li>
+						<li><a href="https://www.matsunoo.or.jp/kitou02">交通安全祈祷</a></li>
+						<li><a href="https://www.matsunoo.or.jp/kitou03">厄除・祝寿・賀寿</a></li>
+						<li><a href="https://www.matsunoo.or.jp/kitou04">災除祈願</a></li>
+						<li><a href="https://www.matsunoo.or.jp/kitou05">月讀神社の安産祈願</a></li>
+					</ul>
+				</section>
+			</li>
+		</ul>
+		<p class="btnMarried btn"><a href="http://www.wedding.matsunoo.or.jp/index.html" target="_blank">松尾大社の<b>結婚式</b></a></p>
+		<p class="btnMarried btn"><a href="http://www.matsunoo.or.jp/syoku/syoku01.html"><b>各種お食事会</b></a></p>
+		<p class="btnAcc btn"><a href="https://www.matsunoo.or.jp/access"><b>アクセス</b></a></p>
+		<div class="language">
+			<p class="btn red"><a href="https://www.matsunoo.or.jp">JAPANESE</a></p>
+			<p class="btn"><a href="https://www.matsunoo.or.jp/en">ENGLISH</a></p>
+		</div>
+		<p class="copyright"><small>Copyright Matsunoo-Taisha. All Right Reserved.</small></p>
+	</nav>
+	<!-- #navArea -->  <section id="contentArea" class="contentAreaTop">
+
+    <article>
+
+      <!-- ▼スライダー（京都最古の神社） -->
+      <section id="cont01">
+        <div class="slide">
+                        <ul>
+                    <li style="background-image: url(https://www.matsunoo.or.jp/wp/wp-content/uploads/2023/08/162a6b89597c402770b283faee6f0e79.jpg)";></li>
+                    <li style="background-image: url(https://www.matsunoo.or.jp/wp/wp-content/uploads/2026/10/Photo-55.jpg)";></li>
+                    <li style="background-image: url(https://www.matsunoo.or.jp/wp/wp-content/uploads/2025/12/FullSizeRender-2.jpg)";></li>
+                  </ul>
+                        </div>
+      </section>
+
+      <!-- ▼ご案内 -->
+      <section id="cont02">
+        <h1><span>ご案内</span></h1>
+        <p class="tel"><a href="tel:0758715016">Tel：075-871-5016</a></p>
+        <p class="address">〒616-0024　京都市西京区嵐山宮町３</p>
+      </section>
+
+      <!-- ▼松尾大社からお知らせ -->
+      <section id="cont03" style="height: 400px;">
+        <h1>松尾大社からお知らせ</h1>
+        <p class="more"><a href="https://www.matsunoo.or.jp/news">一覧を見る</a></p>
+        <div class="newsArea" style="max-height:300px;">
+          <ul>
+                                                <li>
+              <a href="https://www.matsunoo.or.jp/2026/11/16/%e6%9d%be%e5%b0%be%e5%a4%a7%e7%a4%be-%e7%a5%9e%e5%89%8d%e7%b5%90%e5%a9%9a%e5%bc%8f%e7%9b%b8%e8%ab%87%e4%bc%9a%ef%bc%8811%e6%9c%88%e9%96%8b%e5%82%ac%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc/">
+                <span class="date">2026.11.16</span>
+                <span class="body">松尾大社 神前結婚式相談会（11月開催カレンダー）のご案内</span>
+              </a>
+            </li>
+                                    <li>
+              <a href="https://www.matsunoo.or.jp/2026/11/15/%e5%b9%b2%e6%94%af%e7%a5%9d%e5%af%bf%e7%a5%ad%e3%81%ae%e3%81%94%e6%a1%88%e5%86%85/">
+                <span class="date">2026.11.15</span>
+                <span class="body">干支祝寿祭のご案内</span>
+              </a>
+            </li>
+                                    <li>
+              <a href="https://www.matsunoo.or.jp/2026/11/13/%e6%9d%be%e5%b0%be%e5%a4%a7%e7%a4%be%e6%96%87%e5%8c%96%e7%a0%94%e7%a9%b6%e6%89%80%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/">
+                <span class="date">2026.11.13</span>
+                <span class="body">松尾大社文化研究所 今月の史料公開のお知らせ</span>
+              </a>
+            </li>
+                                    <li>
+              <a href="https://www.matsunoo.or.jp/2026/11/01/%e7%ac%ac39%e5%9b%9e-%e6%9d%be%e5%b0%be%e5%a4%a7%e7%a4%be%e5%86%99%e7%9c%9f%e3%82%b3%e3%83%b3%e3%83%86%e3%82%b9%e3%83%88%e5%85%a5%e8%b3%9e%e4%bd%9c%e5%93%81%e6%b1%ba%e5%ae%9a%e3%81%ae%e3%81%8a/">
+                <span class="date">2026.11.01</span>
+                <span class="body">第39回 松尾大社写真コンテスト入賞作品決定のお知らせ</span>
+              </a>
+            </li>
+                                    <li>
+              <a href="https://www.matsunoo.or.jp/2026/10/31/%e5%b9%b4%e6%9c%ab%e5%b9%b4%e5%a7%8b%e5%b7%ab%e5%a5%b3%e5%8a%a9%e5%8b%a4%e5%8b%9f%e9%9b%86%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/">
+                <span class="date">2026.10.31</span>
+                <span class="body">年末年始巫女助勤募集のお知らせ　※募集終了</span>
+              </a>
+            </li>
+                                    <li>
+              <a href="https://www.matsunoo.or.jp/2026/10/27/%e4%bb%a4%e5%92%8c9%e5%b9%b4-%e7%8c%ae%e8%8c%b6%e4%bc%9a%e9%96%8b%e5%82%ac%e6%97%a5%e7%a8%8b%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/">
+                <span class="date">2026.10.27</span>
+                <span class="body">令和9年 献茶会開催日程のお知らせ</span>
+              </a>
+            </li>
+                                    <li>
+              <a href="https://www.matsunoo.or.jp/2026/10/01/%e6%9d%be%e5%b0%be%e5%a4%a7%e7%a4%be-%e4%b8%83%e4%ba%94%e4%b8%89%e8%a9%a3/">
+                <span class="date">2026.10.01</span>
+                <span class="body">松尾大社 七五三詣</span>
+              </a>
+            </li>
+                                    <li>
+              <a href="https://www.matsunoo.or.jp/2026/08/25/%e4%bb%a4%e5%92%8c%ef%bc%98%e5%b9%b4%e3%80%80%e4%b8%83%e4%ba%94%e4%b8%89%e8%a9%a3%e3%82%8a%ef%bc%88%e8%a1%a3%e8%a3%b3%e3%83%bb%e7%be%8e%e5%ae%b9%e3%83%bb%e5%86%99%e7%9c%9f%ef%bc%89%e3%83%91%e3%83%83/">
+                <span class="date">2026.08.25</span>
+                <span class="body">令和８年 七五三詣り（衣裳・美容・写真）パックのご案内</span>
+              </a>
+            </li>
+                                    <li>
+              <a href="https://www.matsunoo.or.jp/2026/06/20/%e9%83%b5%e9%80%81%e7%a5%88%e7%a5%b7%e3%81%ae%e3%81%94%e6%a1%88%e5%86%85/">
+                <span class="date">2026.06.20</span>
+                <span class="body">郵送祈祷のご案内</span>
+              </a>
+            </li>
+                                    <li>
+              <a href="https://www.matsunoo.or.jp/2026/06/19/%e5%a5%b3%e7%a5%9e%e8%bc%bf%e3%82%84%e3%81%be%e3%81%b6%e3%81%8d%e4%bc%9a-%e3%82%af%e3%83%a9%e3%82%a6%e3%83%89%e3%83%95%e3%82%a1%e3%83%b3%e3%83%87%e3%82%a3%e3%83%b3%e3%82%b0%e3%81%ae%e3%81%8a%e7%9f%a5/">
+                <span class="date">2026.06.19</span>
+                <span class="body">女神輿やまぶき会 クラウドファンディングのお知らせ</span>
+              </a>
+            </li>
+                      </ul>
+        </div>
+      </section>
+
+      <!-- バナー（平成の御遷宮） -->
+      <!-- <section id="cont04">
+        <a href="http://matsunoo.or.jp/gosenguu/" target="_blank">
+          <div class="inner">
+            <div class="content">
+              <h1><span>へいせいのごせんぐう</span>平成の御遷宮</h1>
+              <p class="more">詳しくはこちら</p>
+            </div>
+          </div>
+        </a>
+      </section> -->
+
+<!-- ▼開花情報のお知らせ -->
+      <section id="cont05" style="background-image: url(https://www.matsunoo.or.jp/wp/wp-content/uploads/2023/08/162a6b89597c402770b283faee6f0e79.jpg)";>
+        <div class="text">
+          <h1><span><b>ピックアップ</b></span></h1>
+          <article>
+            <!-- p class="date">2026.09.01 <span>update!</span></p -->
+            <h1><a href="https://www.matsunoo.or.jp/flower/%e4%b8%83%e4%ba%94%e4%b8%89%e3%83%91%e3%83%83%e3%82%af%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/">七五三パックのお知らせ</a></h1>
+            <p class="body">【今年の七五三詣パック】 
+
+◇ 受付・お申し込み期間
+
+９/２（水）～１２/６（日）
+
+・ 定休日 = ９月のみ 火...</p>
+
+          </article>
+        </div>
+      </section>
+
+      <!-- ▼庭園拝観のご案内 -->
+      <section id="cont06">
+        <a href="https://www.matsunoo.or.jp/guide03">
+          <h1>庭園拝観</h1> 
+          <p class="body">▼庭園拝観のご案内<br>&nbsp;</p>
+          <p class="more">詳しくはこちら</p>
+        </a>
+      </section>
+
+      <!-- ▼京都五社めぐり -->
+      <section id="cont07">
+        <a href="https://www.matsunoo.or.jp/tukiyomi/index/" target="_blank">
+          <h1><img src="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/img/index/14_tukiyomi/caption.png" height="44" width="190" alt="月読神社"></h1>
+        </a>
+      </section>
+
+      <!-- ▼社報まつのを -->
+      <section id="cont08">
+
+
+        <h1><img src="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/img/index/08_magazine/caption.png" height="150" width="26" alt="社報まつのを"></h1>
+        <div class="content">
+          <div class="img">
+          <!-- <img src="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/img/index/08_magazine/img.jpg" height="173" width="122" alt=""> -->
+          <img src="https://www.matsunoo.or.jp/wp/wp-content/uploads/2026/01/002750e84b8dfaedebe7661e92e25627.png" height="173" width="122" alt="">
+          </div>
+          <div class="text">
+            <h1><a href="https://www.matsunoo.or.jp/wp/wp-content/uploads/2026/01/71556cf0d9019e3a92aa0a278cf531c6.pdf" target="_blank">最新号を見る <span class="pdf"><img src="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/img/common/icn_pdf.png" height="16" width="16" alt="">PDFデータ</span></a></h1>
+            <p class="body">まつのを55号 　令和 8年 1月 1日 発刊</p>
+            <p class="more"><a href="https://www.matsunoo.or.jp/pdf">バックナンバーはこちら</a></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ▼松尾大社の結婚式 -->
+      <section id="cont09">
+        <a href="http://www.wedding.matsunoo.or.jp/" target="_blank">
+          <h1><img src="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/img/index/09_marry/caption.png" height="102" width="187" alt="松尾大社の結婚式"></h1>
+        </a>
+      </section>
+
+      <!-- ▼関連団体 -->
+      <section id="cont10">
+        <div class="inner">
+          <h1>関連団体</h1>
+          <ul>
+            <li><a href="http://yamabukikai.com" target="_blank">女神輿 やまぶき会</a></li>
+            <li><a href="https://www.facebook.com/matunooujisei/" target="_blank">松尾大社 氏子青年会</a></li><!-- 
+            <li><a href="http://matsunoo.or.jp/gosenguu/" target="_blank">平成の御遷宮奉賛会</a></li> -->
+          </ul>
+        </div>
+      </section>
+
+      <!-- ▼松尾大社facebook -->
+      <section id="cont11">
+        <h1>
+          <a href="https://www.facebook.com/神結び-松尾大社結婚式-110537519278357/" target="_blank">
+            <div class="inner">
+              <img src="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/img/index/11_facebook/logo.png" height="70" width="155" alt="松尾大社 facebook">
+              <span>オフィシャルページ</span>
+            </div>
+          </a>
+        </h1>
+      </section>
+
+
+      <!-- ▼松尾大社インスタ -->
+      <section id="cont16">
+            <a href="https://www.instagram.com/matsunootaisha.official/" target="_blank" >
+              <h1><img src="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/img/index/16_insta/caption.png" height="178" width="184" alt="松尾大社 instagram"></h1>
+            </a>
+      </section>
+
+      <!-- ▼月読神社 -->
+          <section id="cont14">
+            <a href="https://note.com/matsunoo_taisha/portal" target="_blank">
+              <h1><img src="https://www.matsunoo.or.jp/wp/wp-content/themes/matsuotheme/img/index/17_kenkyu/caption.png" height="159" width="151" alt="松尾大社文化研究所"></h1>
+            </a>
+          </section>
+
+      <!-- ▼史料 -->
+      <section id="cont15">
+        <h1>
+          <a href="https://www.matsunoo.or.jp/shiryogazo_riyokiyaku ">
+            <div class="inner">
+              <span>松尾大社<br>史料画像について</span>
+            </div>
+          </a>
+        </h1>
+      </section>
+
+
+      <!-- ▼日本酒ガールブログ -->
+      <!-- section id="cont13">
+        <a href="http://kyotosumire.jimdo.com/日本酒ガール/" target="_blank">
+          <div class="text">
+            <h1><span class="newtab">NIHONSYU GIRL BLOG</span>日本酒<br>ガールブログ</h1>
+            <p class="body">元松尾大社の巫女である<br>
+            松浦すみれさんが発信する<br>
+            ブログをご紹介</p>
+          </div>
+        </a>
+      </section -->
+
+    </article>
+		<footer>
+			<ul>
+				<li><a href="https://www.matsunoo.or.jp/sitemap">サイトマップ</a></li>
+				<li><a href="https://www.matsunoo.or.jp/policy">サイトポリシー</a></li>
+			</ul>
+		</footer>
+
+	</section>
+	<!-- #contentArea -->
+</div>
+<!-- /#baseFrame -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1250231-37', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

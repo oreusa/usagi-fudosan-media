@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+<title>西宮神社　正月（初詣）・十日えびす</title>
+<meta name="keywords" content="">
+<meta name="description" content="えびす宮の総本社、西宮神社の正月・十日えびす特設サイトです。">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<link rel="stylesheet" href="style.css" type="text/css" media="all">
+<link rel="stylesheet" href="second.css" type="text/css" media="all">
+<link rel="stylesheet" href="magnific-popup.css">
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<script src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+<script src="js/jquery1.7.2.min.js"></script>
+<script src="js/script.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link href="jquery.bxslider.css" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8GMTJPGY7X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8GMTJPGY7X');
+</script>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header id="header" role="banner">
+	<div class="inner">
+		<h2 class="logo"><a href="index.html"><img src="images/logo.png" alt="西宮神社" class="img-responsive"></a></h2>
+	</div>
+</header>
+
+
+
+
+<div id="wrapper">
+<div class="ribbon15-wrapper" style="display:none;">
+  <span class="ribbon15"><i class="fas fa-exclamation"></i></span>
+  <div>
+  <p>縁起物は1月末まで授与しております。<br>日を移して分散参拝にご協力願います。</p>
+  </div>
+</div>	
+	<div id="content" style="width:100%;">
+
+		<section>
+			<article class="content">
+				<header>
+					<h2 class="title"><span></span></h2>
+				</header>
+				<div class="post toppage">
+
+					<div class="topinfo clearfix" style="display:block;">
+					  	<div class="fl half50 center-block mb20 topdate">
+				         <a href="https://nishinomiya-ebisu.jp/camera/index.html"><img src="images/livecamera.jpg" alt="西宮神社のお正月"></a>
+				         <p class="text-center">境内の混雑状況をライブ映像で配信</p>
+				         <div class="mb10 text-center" style="display:none;"><a href="camera/index.html" class="btn-flat-logo"><i class="fa fa-chevron-right"></i>　ライブカメラ（境内の様子）</a></div>
+				         <div class="mb10 text-center" style="display:block;">ただいま準備中</div>
+				         </div>
+				         <div class="fr half50 center-block mb20 topdate">
+				         <a href="https://nishinomiya-ebisu.jp/tookaebisu/index.html"><img src="images/tookaebisu.jpg" alt="西宮神社の十日えびす"></a>
+				         <p style="display:none;">縁起物は2月末まで授与しております。</p>
+				         <p class="text-center">正月・十日えびす　特設サイト</p>
+				         <div class="mb10 text-center" style="display:none;"><a href="https://nishinomiya-ebisu.jp/tookaebisu/" class="btn-flat-logo"><i class="fa fa-chevron-right"></i>　大福初詣のご案内</a></div>
+				         <div class="mb10 text-center" style="display:block;">ただいま準備中</div>
+					</div>
+						</div>
+		<p class="intro">こちらは特設サイトです。公式サイトは下記アドレスでご覧ください。<br /><a href="https://nishinomiya-ebisu.com">https://nishinomiya-ebisu.com</a></p>
+					</div>						
+				</div>
+			</article>
+			</section>
+			</div><!-- / content -->
+		
+</div>
+<!-- / wrapper -->
+
+<footer id="footer">
+	<div class="inner">
+		<div class="boxWrap contact">
+				<h3><span>えびす宮総本社　西宮神社</span></h3>
+				<p class="address">〒662-0974　兵庫県西宮市社家町1-17</p>
+				<p class="tel">0798-33-0321</p>
+				<p class="pc"><a href="https://nishinomiya-ebisu.com/">https://nishinomiya-ebisu.com/</a></p>
+		</div>
+	</div>
+
+	<p id="copyright">Copyright &copy; 西宮神社　All rights Reserved. <a href="https://nishinomiya-ebisu.jp/archive/"><img src="images/minicheck.gif"></a></p>
+</footer>
+<!-- / footer -->
+<script src="js/jquery.magnific-popup.min.js"></script> 
+<script>
+jQuery(function($){
+    $('.popup-link').magnificPopup({ 
+        type: 'image'
+        // その他のオプション（必要であれば）
+    });
+});
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.bxslider').bxSlider({
+        slideWidth: 940,
+        auto:true,
+        speed:1000,
+	mode: 'fade',
+    });
+});
+</script>
+</body>
+</html>

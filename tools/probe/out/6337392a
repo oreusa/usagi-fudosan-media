@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>初詣のご案内 | 城南宮</title><!--[if lt IE 9]>
+<script src="html5.js" type="text/javascript"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="style1.css"></head>
+<body class="basic" id="hpb-sp-20-0001-01">
+<div id="page" class="site">
+<header id="masthead" class="site-header sp-part-top" role="banner">
+<div id="sp-site-branding-1" class="sp-part-top">
+<div class="inner-box">
+<h1 class="site-title"><a href="index.html" rel="home">城南宮</a></h1>
+<h2 class="site-description">京都の南、方除け ・厄除けの祈祷、車のお祓いの神社。巫女が神楽を舞い、庭園は花と紅葉の名所です</h2>
+<div id="sp-block-container-1" class="sp-part-top">
+<p class="paragraph">　　　　　　　　　　　　　<span style="color : #000000;" class="character">TEL.075-623-0846</span></p>
+<p class="paragraph">　　<span style="color : #000000;" class="character">FAX.075-611-0785</span></p>
+<p class="paragraph"><span style="color : #000000;" class="character">〒612-8459　京都市伏見区中島鳥羽離宮町７番地</span></p></div></div></div></header>
+<div id="main" class="site-main sp-part-top">
+<div id="contenthead" class="sp-part-top">
+<nav id="sp-site-navigation-1" class="navigation-main button-menu sp-part-top" role="navigation">
+<h1 class="menu-toggle">メニュー</h1>
+<div class="screen-reader-text skip-link"><a title="コンテンツへスキップ" href="#content">コンテンツへスキップ</a></div>
+<ul id="menu-mainnav">
+  <li class="menu-item"><a href="history.html">ご祭神と歴史</a>
+  <ul class="sub-menu">
+    <li class="menu-item"><a href="manners.html">参拝の作法</a>
+    <li class="menu-item"><a href="structure.html">建造物</a>
+    <li class="menu-item"><a href="setumaxtusya.html">摂社・末社</a>
+    <li class="menu-item"><a href="kumanomoude.html">熊野詣出立の地</a></ul>
+  <li class="menu-item"><a href="prayer.html">ご祈祷</a>
+  <ul class="sub-menu">
+    <li class="menu-item"><a href="houyoke.html">方除・諸祈願</a>
+    <li class="menu-item"><a href="yakuyoke.html">厄除</a>
+    <li class="menu-item"><a href="omiyamairi.html">お宮参り</a>
+    <li class="menu-item"><a href="753.html">七五三</a>
+    <li class="menu-item"><a href="hajimarinoharuni.html">始まりの春に安全を願って</a>
+    <li class="menu-item"><a href="jitinnsai.html">地鎮祭</a>
+    <li class="menu-item"><a href="danntaikitou.html">団体祈祷</a>
+    <li class="menu-item"><a href="application.html">ご祈祷の申し込み</a>
+    <li class="menu-item"><a href="kazoe-hayami.html">数え年・厄年　早見表</a></ul>
+  <li class="menu-item"><a href="kurumanooharai.html">車のお祓い</a>
+  <ul class="sub-menu">
+    <li class="menu-item"><a href="kurumaapplication.html">車のご祈祷の申し込み</a></ul>
+  <li class="menu-item"><a href="pray.html">御守と御札</a>
+  <ul class="sub-menu">
+    <li class="menu-item"><a href="pray2.html">建築・転宅の御札</a>
+    <li class="menu-item"><a href="pray3.html">御守・御札</a>
+    <li class="menu-item"><a href="oyashiro.html">お社</a>
+    <li class="menu-item"><a href="jyuyohinn.html">その他の授与品</a>
+    <li class="menu-item"><a href="prayaapplication.html">御守・御札の申し込み</a></ul>
+  <li class="menu-item"><a href="festival.html">祭礼と年中行事</a>
+  <ul class="sub-menu">
+    <li class="menu-item"><a href="festival1.html">１月から３月</a>
+    <li class="menu-item"><a href="festival2.html">４月から６月</a>
+    <li class="menu-item"><a href="festival3.html">７月から９月</a>
+    <li class="menu-item"><a href="festival4.html">１０月から１２月</a>
+    <li class="menu-item"><a href="kyokusuinoutage.html">曲水の宴</a></ul>
+  <li class="menu-item"><a href="mikokagura.html">巫女神楽</a>
+  <li class="menu-item"><a href="garden.html">神苑　源氏物語花の庭</a>
+  <ul class="sub-menu">
+    <li class="menu-item"><a href="garden1.html">神苑の特長</a>
+    <li class="menu-item"><a href="hanagoyomi.html">花ごよみ</a>
+    <li class="menu-item"><a href="shidareume.html">しだれ梅と椿まつり</a>
+    <li class="menu-item"><a href="tsubaki.html">椿を観る　[城南宮　椿図鑑]</a>
+    <li class="menu-item"><a href="shidareumetotsubaki.html">しだれ梅と椿　今日のいちまい</a>
+    <li class="menu-item"><a href="harunomisono.html">春の御苑の花めぐり</a>
+    <li class="menu-item"><a href="koyou.html">紅葉八景と秋咲き椿</a>
+    <li class="menu-item"><a href="ichimai.html">紅葉　今日のいちまい</a>
+    <li class="menu-item"><a href="nishikigoi.html">錦鯉</a></ul>
+  <li class="menu-item"><a href="uutsubarikai.html">うつばり会（崇敬会）</a>
+  <li class="menu-item"><a href="guide.html">ご案内</a>
+  <ul class="sub-menu">
+    <li class="menu-item"><a href="kinenhin.html">参拝記念品</a>
+    <li class="menu-item"><a href="news.html">以前の新着情報</a>
+    <li class="menu-item"><a href="hanadayori.html">以前の花だより</a>
+    <li class="menu-item"><a href="custom49.html">以前の特別展</a>
+    <li class="menu-item"><a href="mikohoushi.html">お正月・巫女アルバイト募集</a>
+    <li class="menu-item"><a href="shootingrules.html">境内における写真撮影に関して</a>
+    <li class="menu-item"><a href="setumaxtusya.html">摂社</a>
+    <li class="menu-item"><a href="structure.html">建造物</a>
+    <li class="menu-item"><a href="manners.html">参拝の作法</a></ul>
+  <li class="menu-item"><a href="access_keidai.html">アクセス</a>
+  <ul class="sub-menu">
+    <li class="menu-item"><a href="access_surrounding.html">周辺地図</a>
+    <li class="menu-item"><a href="access_public.html">バス・電車</a>
+    <li class="menu-item"><a href="access_car.html">車・バイク</a></ul>
+  <li class="menu-item"><a href="meisyokyuuseki.html">城南宮と周辺の名所旧蹟</a>
+  <ul class="sub-menu">
+    <li class="menu-item"><a href="gosyameguri.html">五社めぐり</a>
+    <li class="menu-item"><a href="syuuhennnosyaji.html">周辺の社寺と名所旧蹟</a></ul>
+  <li class="menu-item"><a href="toiawase.html">よくあるお問い合わせ</a>
+  <li class="menu-item"><a href="english.html">Jonangu English Page</a>
+  <ul class="sub-menu">
+    <li class="menu-item"><a href="festivals.html">Festivals</a>
+    <li class="menu-item"><a href="precinct.html">Precinct</a>
+    <li class="menu-item"><a href="garden2.html">Garden</a>
+    <li class="menu-item"><a href="amulets.html">Amulets</a>
+    <li class="menu-item"><a href="access.html">Access</a></ul></ul></nav>
+<div id="breadcrumb-list" itemscope="" itemtype="http://schema.org/BreadcrumbList" class="sp-part-top">
+<div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemprop="item" href="index.html"><span itemprop="name">トップ</span></a>
+<meta itemprop="position" content="1"></div>
+<div>›</div>
+<div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a href="guide.html" itemprop="item"><span itemprop="name">ご案内</span></a>
+<meta itemprop="position" content="2"></div>
+<div>›</div>
+<div itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><span itemprop="name">初詣のご案内</span>
+<meta itemprop="position" content="3"></div></div></div>
+<div id="main-inner">
+<div id="primary" class="content-area">
+<div id="content" class="site-content sp-part-top page-custom45" role="main">
+<p>このページは作成中です。</p></div></div></div></div>
+<footer id="colophon" class="site-footer sp-part-top" role="contentinfo">
+<div class="inner-box">
+<div id="sp-block-container-3" class="sp-part-top">
+<p style="text-align:center;color:#fff;" class="hpb-copyright paragraph"><a href="guide.html" style="color : #ffffff;">◆◆◆　 サイトマップ　◆◆◆</a></p>
+<p style="text-align:center;color:#fff;" class="hpb-copyright paragraph">Copyright &copy; 城南宮, All rights reserved.</p></div></div></footer></div><script type="text/javascript" src="navigation.js"></script></body></html>

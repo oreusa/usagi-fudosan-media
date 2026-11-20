@@ -237,3 +237,26 @@ bd79953f	200	34812	text/html; charset=UTF-8	https://html.duckduckgo.com/html/?q=
 c8d90d94	200	33955	text/html; charset=UTF-8	https://html.duckduckgo.com/html/?q=%E4%BC%8A%E5%A4%AA%E7%A5%81%E6%9B%BD%E7%A5%9E%E7%A4%BE%20%E5%88%9D%E8%A9%A3%20%E6%AD%A3%E6%9C%88%20%E5%8F%82%E6%8B%9D%E6%99%82%E9%96%93%20%E5%85%AC%E5%BC%8F
 154522a2	200	33725	text/html; charset=UTF-8	https://html.duckduckgo.com/html/?q=%E4%B8%AD%E5%B1%B1%E5%AF%BA%20%E5%88%9D%E8%A9%A3%20%E6%AD%A3%E6%9C%88%20%E5%8F%82%E6%8B%9D%E6%99%82%E9%96%93%20%E5%85%AC%E5%BC%8F
 d907145d	200	34617	text/html; charset=UTF-8	https://html.duckduckgo.com/html/?q=%E6%B8%85%E8%8D%92%E7%A5%9E%20%E5%88%9D%E8%A9%A3%20%E6%AD%A3%E6%9C%88%20%E5%8F%82%E6%8B%9D%E6%99%82%E9%96%93%20%E5%85%AC%E5%BC%8F
+c0e07451	200	5948	text/html	https://www.ikutamajinja.jp/
+71299095	200	90781	text/html; charset=UTF-8	https://www.ootoritaisha.jp/2025/12/r8hatumoude/
+64a69afd	ERR	<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)>		https://www.heianjingu.or.jp/news_list/%E4%BB%A4%E5%92%8C%EF%BC%98%E5%B9%B4%E3%80%80%E5%88%9D%E8%A9%A3%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/
+865c543b	200	49393	text/html; charset=UTF-8	https://kitanotenmangu.or.jp/access/
+792b924f	200	1328157	text/html; charset=UTF-8	https://www.shimogamo-jinja.or.jp/newyearsinformation
+b6c8c6e3	200	43328	text/html; charset=UTF-8	https://www.kamigamojinja.jp/sanpai/
+b4925c59	200	17690	text/html; charset=UTF-8	https://www.matsunoo.or.jp/
+6337392a	200	8492	text/html	https://www.jonangu.com/hatsumoude.html
+08a468d2	200	47674	text/html; charset=UTF-8	https://iwashimizu.or.jp/news/r6_hatumoude/
+74092096	200	4895	text/html	https://www.nishinomiya-ebisu.jp/
+cb10c0c6	200	38059	text/html	https://nagatajinja.jp/
+aaa83314	200	141523	text/html; charset=UTF-8	https://hirotahonsya.or.jp/pages/32/
+1c5cfcbd	200	50997	text/html; charset=UTF-8	https://mondoyakujin.or.jp/event/
+7976a16c	ERR	HTTP Error 403: Forbidden		https://www.isonokami.jp/sanpai/index.html
+eaeb6643	200	42094	text/html; charset=UTF-8	https://kashiharajingu.or.jp/news/%E5%88%9D%E8%A9%A3%E6%83%85%E5%A0%B1
+9e39d81b	200	41553	text/html; charset=UTF-8	https://www.tagataisya.or.jp/%E5%88%9D%E8%A9%A3%E3%81%AB%E3%81%8A%E8%B6%8A%E3%81%97%E3%81%AE%E7%9A%86%E6%A7%98%E3%81%B8%EF%BC%88%E5%90%84%E7%AA%93%E5%8F%A3%E3%81%AE%E9%96%8B%E8%A8%AD%E6%99%82%E9%96%93%EF%BC%89-2/
+b2e1efdb	200	41997	text/html; charset=UTF-8	https://takebetaisha.jp/information/%E4%BB%A4%E5%92%8C8%E5%B9%B4%E3%80%80%E5%B9%B4%E6%9C%AB%E5%B9%B4%E5%A7%8B%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/
+d6541e7c	200	37347	text/html; charset=UTF-8	https://niutsuhime.or.jp/information/r8_newyear/
+553b706f	200	19296	text/html	https://itakiso-jinja.net/
+5cc93b7c	ERR	<urlopen error timed out>		https://www.nakayamadera.or.jp/news/107
+b943cede	200	39272	text/html; charset=UTF-8	https://www.kiyoshikojin.or.jp/event/shinnenshukuto/
+4ac595cc	ERR	<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)>		https://www.heianjingu.or.jp/news_list/time/
+1ab8c526	200	108364	text/html; charset=UTF-8	https://nishinomiya-ebisu.com/event/

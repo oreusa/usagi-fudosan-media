@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF8" />
+  <meta http-equiv="content-language" content="ja" />
+  <meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
+  <meta name="robots" content="index,follow" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="rating" content="general" />
+  <meta name="author" content="伊太祁曽神社 Itakiso Jinja" />
+<title>伊太祁曽神社　～木の神・いのち神・厄除けの神～</title>
+<link rel="shortcut icon" href="http://itakiso-jinja.net/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="icon" href="http://itakiso-jinja.net/favicon.ico" type="image/vnd.microsoft.icon" />
+<link href="css/foundation.css" rel="stylesheet" type="text/css" />
+<link href="css/toppage.css" rel="stylesheet" type="text/css" />
+<!--スライドショー用-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+function slideSwitch() {
+   var $active = $('#slideshow p.active');
+
+   if ( $active.length == 0 ) $active = $('#slideshow p:last');
+
+   var $next =  $active.next().length ? $active.next()
+      : $('#slideshow p:first');
+
+   $active.addClass('last-active');
+
+   $next.css({opacity: 0.0})
+      .addClass('active')
+      .animate({opacity: 1.0}, 1000, function() {
+         $active.removeClass('active last-active');
+      });
+}
+
+$(function() {
+   setInterval( "slideSwitch()", 10000 );
+});
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77560921-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<style type="text/css">
+<!--
+.style1 {font-size: 10px}
+-->
+</style>
+</head>
+
+<body>
+<!--Facebookpage用--><div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<!--Facebookpage用ここまで-->
+
+<div id="body_wrapper">
+<div id="left_banner"><div id="left-title"><img src="img/logo2.gif" alt="社号" width="120" height="600" border="0" /><br />
+  <p><a href="access.php">〒640-0361<br />
+  和歌山市伊太祈曽５５８</a><br />
+  TEL 073-478-0006 </p>
+  <p><a href="http://jinja.jp/" target="_blank"><img src="img/link_kounin.gif" alt="神社オンラインネットワーク連盟" width="88" height="31" vspace="15" border="0" align="middle" /></a></p>
+</div>
+</div>
+
+<!-- NINJA ANALYZE -->
+<script type="text/javascript">
+//<![CDATA[
+(function(d) {
+  var sc=d.createElement("script"),
+      ins=d.getElementsByTagName("script")[0];
+  sc.type="text/javascript";
+  sc.src=("https:"==d.location.protocol?"https://":"http://") + "code.analysis.shinobi.jp" + "/ninja_ar/NewScript?id=00310224&hash=ab218980&zone=36";
+  sc.async=true;
+  ins.parentNode.insertBefore(sc, ins);
+})(document);
+//]]>
+</script>
+<!-- /NINJA ANALYZE -->
+ <!-- 解析ツール -->
+
+<div id="main_wrapper">
+  <div id="header-bk">
+	<div id="header"><p>LANGUAGE　
+	  <select name="select" onChange="location.href=value;">
+	    <option value="#" selected="selected">日本語</option>
+	    <option value="./m/index_en.html">English</option>
+	    <option value="./m/index_zh_cn.html">中文（?体字）</option>
+	    <option value="./m/index_zh_tw.html">中文（繁体字）</option>
+	    <option value="./m/index_th.html">タイ語（Thai）</option>
+	    <option value="./m/index_ja.html">スマホ（日本語）</option>
+      </select></p>
+	<div class="title"><h3>紀伊国一之宮　木の国神話の社・厄難除けの神</h3><br />
+	<h1><a href="http://jinja.jp/" target="_blank"><img src="img/link_kounin.gif" alt="神社オンラインネットワーク連盟" width="88" height="31" hspace="15" border="0" align="right" /></a><a href="./">伊太祁曽神社<span class="small">（いたきそじんじゃ）</span></a><span class="small"></span></h1>
+	</div>
+	</div>
+  </div>
+  <div id="photo"><div id="slideshow">
+   <p class="active">
+      <a href="yuisho.php">
+		<picture> <source srcset="slideshow/photo01.webp" type="image/webp">
+		<img src="slideshow/photo01.jpg" alt="本殿">
+		</picture>
+	  </a>
+      　御本殿と右殿（平成脇22年御屋根葺替完了）   </p>
+   <p>
+      <a href="saiten_01udue.php"><img src="slideshow/photo02.jpg" alt="卯杖祭"></a>
+      　卯杖祭　粥占神事（１月１４日）   </p>
+   <p>
+      <a href="saiten_04kimatsuri.php"><img src="slideshow/photo03.jpg" alt="木祭り"></a>
+      　木祭り（４月第１日曜日）～チェンソーカービング実演奉納～   </p>
+   <p>
+      <a href="saiten_07wakuguri.php"><img src="slideshow/photo04.jpg" alt="茅輪祭"></a>
+      　茅輪祭くぐり初め神事（７月３０日）   </p>
+   <p>
+      <a href="saiten_10reisai.php"><img src="slideshow/photo05.jpg" alt="例祭"></a>
+      　例祭・神幸祭（１０月１５日、その後の日曜日）   </p>
+   <p>
+      <a href="saiten_01udue.php"><img src="slideshow/photo06.jpg" alt="卯杖祭"></a>
+      　卯杖祭　～裸詣り～（成人の日）   </p>
+   <p>
+      <a href="saiten_04kimatsuri.php"><img src="slideshow/photo07.jpg" alt="木祭り"></a>
+      　木祭り（４月第１日曜日）～餅撒き～   </p>
+   <p>
+      <a href="saiten_07wakuguri.php"><img src="slideshow/photo08.jpg" alt="茅輪祭"></a>
+      　茅輪祭　～打ち水大作戦！（７月３１日）   </p>
+   <p>
+      <a href="saiten_10reisai.php"><img src="slideshow/photo09.jpg" alt="神幸祭"></a>
+      　神幸祭（１０月１５日の次の日曜日）   </p>
+   <p>
+      <a href="saiten_10reisai.php"><img src="slideshow/photo10.jpg" alt="例祭"></a>
+      　例祭　～子供みこし～（１０月１５日）   </p>
+</div>
+  </div>
+  <div id="menu">
+  ﻿<a href="yuisho.php"><p class="main">御由緒</p></a>
+<a href="saiten.php"><p class="main">年間行事</p></a>
+<a href="kigan.php"><p class="main">各種祈願</p></a>
+<a href="bridal.php"><p class="main">結婚式</p></a>
+<a href="sukeikai.php"><p class="main">崇敬会</p></a>
+<a href="hanpuhin.php"><p class="main">頒布品</p></a>
+<a href="access.php"><p class="main">交通案内</p></a>
+<a href="https://arwrk.net/recruit/fn2q0ybxx5lzk9d/" target="new"><p class="main">求人情報</p></a>
+  </div>
+
+<div id="body-bk">        
+<div id="body">
+  <div id="sub_contents"><!--340px-->
+  <div class="sub_box">
+	<p class="title">サイト内検索</p>
+	<script>
+	  (function() {
+	    var cx = '010386836499814782162:hgny1e1h6ai';
+	    var gcse = document.createElement('script');
+	    gcse.type = 'text/javascript';
+	    gcse.async = true;
+	    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+	        '//www.google.com/cse/cse.js?cx=' + cx;
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(gcse, s);
+	  })();
+	</script>
+	<gcse:search></gcse:search>
+
+	<p class="title">祭典・行事案内</p>
+    ﻿<ul>
+  <li>11月 1日 午前 9時　<span class='saiten'>月次祭</span></li>
+  <li>11月 2日 終　　日　<span class='saiten'>初辰祈願</span></li>
+  <li>11月 9日 午前11時　<span class='saiten'>亥の森祭</span></li>
+  <li>11月15日 午前 9時　<span class='saiten'>月次祭（奥宮）</span></li>
+  <li>11月23日 午前11時　<span class='saiten'>新嘗祭・大麻頒布始祭</span></li>
+</ul><ul>
+  <li>12月 1日 午前 9時　<span class='saiten'>月次祭</span></li>
+  <li>12月 8日 終　　日　<span class='saiten'>初辰祈願</span></li>
+  <li>12月10日 午後 7時　<span class='saiten'>冬季祭</span></li>
+  <li>12月12日 午前10時　<span class='saiten'>氣神祭</span></li>
+  <li>12月15日 午前 9時　<span class='saiten'>月次祭（奥宮）</span></li>
+  <li>12月31日 午後 4時　<span class='saiten'>大祓</span></li>
+  <li>12月31日 午後 5時　<span class='saiten'>除夜祭</span></li>
+</ul>
+    <p>&nbsp;</p>
+    </div>
+  <div class="fb-like-box" data-href="https://www.facebook.com/itakiso" data-width="340" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="true"></div><br />
+<p><a href="https://www.instagram.com/itakiso/" target="_blank"><img src="img/ico_Instagram_32px.jpg" width="32" height="32" border="0" align="absbottom" /> itakiso
+</a>
+<!-- InstaWidget -->
+<a href="https://instawidget.net/v/user/itakiso" id="link-3c5d6b277fb7c18e58823777801b9c690f264ed20ef37f6844a6429b403b039a">@itakiso</a>
+<!-- SnapWidget -->
+<a href="https://twitter.com/x?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @x</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<iframe src="https://snapwidget.com/embed/1082931" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:330px; height:330px" title="Posts from Instagram"></iframe>
+<!--TikTok-->
+<div><img src="tiktok/icon_tiktok.png" width="32" height="32" border="0" align="absmiddle" />TikTok <a href="https://www.tiktok.com/@itakiso_50?refer=creator_embed&referer_url=https://itakiso-jinja.net/" target="TikTok">@itakiso_50</a>
+<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@itakiso_50" data-unique-id="itakiso_50" data-embed-type="creator" style="max-width: 720px; min-width: 288px; height: 350px;" > <section> <a target="_blank" href="https://www.tiktok.com/@itakiso_50?refer=creator_embed">@itakiso_50</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script></div>
+<!--バナー広告-->
+<div align="center"><a href="https://jsbs2012.jp/date/itakiso-jinja" target="new"><img src="https://image.jsbs2012.jp/logo/enmusubi_banner_d_small.jpg" alt="縁結び大学" width="220px" /></a></div>
+<p> </p>
+<div align="center"><a href="https://qraft.co.jp/docodex/itakiso/" target="new"><img src="img/banner_docodex220_88.jpg" alt="DOCODEXどこ出掛ける？" width="220px" /></a></div>
+</div>
+
+  <div id="main_contents">
+	<div class="main_box">
+	  <p class="info">　伊太祁曽神社は我が国に樹木を植えて廻ったと 『日本書紀』 に記される 「五十猛命（いたけるのみこと）」 を祀る神社です。植樹神五十猛命は一般には「木の神様」として慕われています。そのため、全国の木材関係者のお詣りが多い神社です。<br />
+	    　
+	    また 『古事記』 には 「大屋毘古神（おほやびこのかみ）」 として記され、災難に遭われた大国主神（おほくにぬしのかみ）の生命を救った話が記されています。このことから ”いのち神” ”厄難除けの神” の信仰が篤く、病気平癒祈願、厄除け祈願の参拝が多い神社でもあります。</p>
+	  <div id="news">
+	  <p class="title">お知らせ</p>
+	  ﻿<div><dt>祝祭日には国旗を掲げましょう</dt><br><hr />
+
+
+<script type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+//-->
+</script>
+
+<div><dt>WEBサイトのセキュリティについて</dt><dd>
+<p>10月21日に政府より発表がありましたWEBサイトの脆弱性につきまして、当神社WEBサイトでは対応が完了しておりますことをご報告します。</p>
+</dd>
+</div><hr />	 
+	 
+<div><dt>七五三詣りについて</dt><dd>
+<img src="http://itakiso-jinja.net/info/img/753.jpg" width="185" height="206" border="0" align="right"><p>子供の成長を祝う七五三詣り。11月15日がお祝いの日とされています。伊太祁曽神社では今年は10月24日より11月末日を七五三詣り期間として、お守りの他に千歳飴やお土産を準備してお参りをお待ちしています。</p>
+<p>伊太祁曽神社では１回の参拝では２～３家族でのご案内とさせていただきます。そのため、事前に御予約を頂いていない方の御祈願はお受け致しかねる場合があります。予めご了承下さい。11月中の参拝の空き状況につきましては<a href="http://itakiso-jinja.net/kigan_753.php">こちら</a>より確認していただくことができます。それ以外の期間の参拝予約や空き状況の確認は電話で受け付け致します。電話 073-478-0006（午前９時～午後５時）</p>
+<p><span style="font-size: x-large"><span style="color: red"><a href="http://itakiso-jinja.net/kigan_753.php">→七五三詣りの空き状況を確認する</a></span></span></p>
+</dd>
+</div><hr />	 
+
+<div><dt>今月の「参拝証」</dt><dd><br>
+<a href="http://itakiso-jinja.net/info/img/sanpaisho-R0810.jpg"><img src="http://itakiso-jinja.net/info/img/sanpaisho-R0810.jpg" width="150" align="left" hspace="5" border="1"></a>今月の参拝証です。<br>伊太祁曽神社では御朱印は朱印帳に墨書し印を捺すのみとしております。朱印帳をお忘れの方などに半紙に印を捺した、いわゆる「紙朱印」「書き置き朱印」の準備はございません。代わりにこちらの参拝証をお受け頂いております。<br>尚、参拝証の意匠（デザイン）は月替りとしております。（参拝証は御朱印帳をお持ちの方もお受けいただけます。）
+<br><br></dd>
+</div><hr />
+
+
+<div><dt>健康相談・子育て相談会を行います</dt><dd>
+<a href=""><img src="http://itakiso-jinja.net/info/img/kosodatekenko.jpg" width="185" border="1" align="right" hspace="10" border="1" onclick="MM_openBrWindow('./info/img/kosodatekenko.jpg','','status=no,scrollbars=yes,resizable=yes,width=595,height=842')"></a><p>出産を控えた妊婦さん、子育て中のお母さんの些細なお悩みなどにお力添えを致します。</p>
+<p>小さなお悩みでもお気兼ねなくご相談下さい。ベテラン助産師が相談に乗ります。</p><p>また妊産婦の母子相談だけでなく、一般の方の健康相談も行います。子育て世代では無い方もお気軽にお越しください。</p>
+<p>9月は19日(土)に行います。時間は各日10時～15時。事前予約不要、相談無料です。</p>
+<p><b>相談員：土橋厚子</b>（つちはし あつこ）<br>和歌山県立高等看護学院助産学科卒業。助産師、看護師として病院勤務や看護専門学校の教員などを経て10年前から看護管理職をしています。<br>また平成27年3月23日より「あつこ助産院」を開業し訪問母乳指導などもしています。</p>
+</dd>
+</div><hr />
+
+
+<div><dt>紙朱印対応終了のお知らせ</dt><dd>
+<p>御朱印帳をお忘れの方に、半紙に朱印を捺したものをお渡ししておりましたが、令和６年６月末日を持って、この対応を終了させていただきました。</p><p>７月１日以降は御朱印帳に朱印を捺し、参拝日を墨書するのみの対応とさせていただいております。</p>
+<p>紙朱印を廃止する変わりに「参拝証」を月替り意匠（デザイン）にて頒布いたします。御朱印帳をお忘れの方は「参拝証」をお受けいただくことで替わりとさせていただきますので、ご理解下さい。尚、御朱印帳をお持ちの方であっても「参拝証」をお受けいただくことはできます。</p>
+</dd>
+</div><hr />
+
+
+<div><dt>クラウドファンディング達成しました</dt><dd>
+<p align="center"><a href="https://readyfor.jp/projects/139672?sns_share_token="><img src="http://itakiso-jinja.net/info/img/p139672-key-visual.webp" width="400" border="1" hspace="10" border="1"></a></p>
+<p>この度、日本文化の基礎を海外の方々に、正確にわかりやすくお伝えする翻訳を行うため、クラウドファンディングでの応援をお願いしております。</p>
+<p>具体的には、以下のような語彙を単純な翻訳ではなく、その背景をも併せて日本文化として伝えようとする試みです。</p>
+<p>※一例として<br>
+・八百万の神<br>
+・神棚<br>
+・神社と寺の違い<br>
+・鎮座<br>
+・参道<br>
+どれも耳慣れている言葉ですが、それは私たちが日本人ゆえに違和感なく受け取れているのであって、文化の違う方々に伝えるには、高度な言語力と双方の文化に関する見識を必要とします。</p>
+<p>おかげさまで目標額に達成することができました。<br>
+ありがとうございます。</p>
+</dd>
+</div><hr />
+
+
+<!--
+<div><dt>伊太祁曽神社公式スマホアプリ誕生</dt><dd><br>
+<a href="info/img/appa.jpg" border="0"><img src="info/img/appa.jpg" align="left" width="100" hspace="5"></a>伊太祁曽神社の公式スマホアプリが登場しました。<br>
+iPHONE、Androidどちらにも対応。App StoreやGoogle Playからダウンロードできます。「伊太祁曽神社」で検索してみて下さい。<br>プッシュ通知による各種案内がいち早く御手元に届きます。
+<br><br></dd>
+</div><hr />
+-->	  </div>
+	</div>
+	<div id="banner">
+	<a href="keidai_kinomata.php"><img src="img/banner_kinomata.gif" alt="木の俣くぐり" width="300" height="100" border="0" class="banner300" /></a>
+	<a href="bridal.php"><img src="img/banner_bridal.gif" alt="神前結婚式" width="300" height="100" border="0" class="banner300"/></a>
+	<a href="kigan_anzan.php" target="_parent"><img src="img/banner_inunohi.jpg" alt="安産祈願「戌の日」" width="300" height="100" border="0" class="banner300"/></a>
+	<a href="kigan_hattatsu.php" target="_parent"><img src="img/banner_hattatsu30.jpg" alt="初辰祈願" width="300" height="100" border="0" class="banner300"/></a>
+	<a href="" target="_parent"><img src="img/banner_osaruishi.gif" alt="霊石「お猿石」" width="300" height="100" border="0" class="banner300"/></a>
+	<!--<a href="img/original_app.jpg" target="_parent"><img src="img/banner_app.jpg" alt="霊石「お猿石」" width="300" height="100" border="0" class="banner300"/></a>-->
+	<div id="banner_end"></div>
+	</div>	
+</div>
+</div>
+
+  <div id="footer-bk">
+  <div id="footer">Copyright &copy; ITAKISO JINJA All rights reserved.</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TMWQQM6Q');</script>
+<!-- End Google Tag Manager -->
+	
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>【長田神社】厄除け・厄払い・商工業産業の守り神 | 兵庫県神戸市長田区</title>
+<meta name="description" content="【長田神社】厄除け・厄払い・商工業産業の守り神 | 兵庫県神戸市長田区">
+<meta name="keywords" content="長田神社, 兵庫県, 神戸市, 厄除け, 追儺式, 事代主神">
+
+<!--------------------OG------------>
+<meta property="og:url" content="https://nagatajinja.jp/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="長田神社（ながたさん） | 関西地方、兵庫県神戸市の厄除け・厄払い・合格祈願、商工業・産業の護り神">
+<meta property="og:description" content="長田神社（ながたさん） | 関西地方、兵庫県神戸市の厄除け・厄払い・合格祈願、商工業・産業の護り神">
+<meta property="og:site_name" content="長田神社（ながたさん） | 関西地方、兵庫県神戸市の厄除け・厄払い・合格祈願、商工業・産業の護り神">
+<meta property="og:image" content="https://nagatajinja.jp/img/common/og.jpg">
+
+<!--------------------/OG------------> 
+
+<!-- google font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=open_in_new" />
+<!-- reset css -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
+<!-- style css -->
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="css/page.css">
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMWQQM6Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	
+<div class="body__wrapper">
+
+<!-- ヘッダー -->
+<header class="header" id="header">
+  <div class="inner">
+    <nav class="header__nav">
+      <h1 class="header__nav-logo"><a href="/index.php"><img src="/img/common/sp_logo.svg" alt="長田神社"></a></h1>
+      <button type="button" class="drawer__toggle"> <span class="drawer__toggle-line"></span> <span class="drawer__toggle-line"></span> <span class="drawer__toggle-line"></span> </button>
+    </nav>
+  </div>
+</header>
+<nav class="drawer__nav">
+    <ul class="menu__lists">
+      <li class="menu__list">
+        <p class="menu__accordion gokitou <br />
+<b>Warning</b>:  Undefined variable $accordion_active_01 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>60</b><br />
+"> ご祈祷・ご祈願 </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_01 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>61</b><br />
+">
+          <li><a href="/gokitou/gokitou.php" class="">長田神社のご祈祷について</a></li>
+          <li><a href="/gokitou/ichiran.php" class="">ご祈祷一覧</a></li>
+          <li><a href="/gokitou/yakuyoke.php" class="">厄除け・災い除け</a></li>
+          <li><a href="/gokitou/inunohi.php" class="">戌の日（安産祈願）</a></li>
+          <li><a href="/gokitou/shichigosan.php" class="">七五三詣</a></li>
+          <li><a href="/gokitou/shuttyousai.php" class="">出張祭</a></li>
+        </ul>
+      </li>
+      <li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_02 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>71</b><br />
+"> 授与品について </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_02 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>72</b><br />
+">
+          <li><a href="/juyohin/ohuda.php" class="">御札</a></li>
+          <li><a href="/juyohin/omamori.php" class="">お守り</a></li>
+          <li><a href="/juyohin/ema.php" class="">絵馬</a></li>
+          <li><a href="/juyohin/goshuin.php" class="">ご朱印・その他</a></li>
+        </ul>
+      </li>
+      <li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_03 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>80</b><br />
+"> 境内のご案内 </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_03 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>81</b><br />
+">
+          <li><a href="/keidai/goshaden.php" class="">御社殿・附属建物</a></li>
+          <li><a href="/keidai/keidai.php" class="">境内地図・末社</a></li>
+          <li><a href="/keidai/yonakiishi.php" class="">夜泣き石</a></li>
+          <li><a href="/keidai/meganehi.php" class="">眼鏡碑</a></li>
+          <li><a href="/keidai/shinkei.php" class="">神鶏</a></li>
+        </ul>
+      </li>
+      <li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_04 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>90</b><br />
+"> 長田神社について </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_04 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>91</b><br />
+">
+          <li><a href="/nagatajinjatowa/yuisho.php" class="">御祭神・由緒・歴史</a></li>
+          <li><a href="/nagatajinjatowa/byokibyoyu.php" class="">病気平癒の信仰</a></li>
+          <li><a href="/nagatajinjatowa/siteibunkazai.php" class="">指定文化財</a></li>
+          <li><a href="/nagatajinjatowa/sakadokai.php" class="">長田神社茶花道会</a></li>
+        </ul>
+      </li>
+      <li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_05 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>99</b><br />
+"> 年中行事 </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_05 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>100</b><br />
+">
+          <li><a href="/gyouji/tsuinashiki.php" class="">長田神社古式追儺式</a></li>
+          <li><a href="/gyouji/ichiran.php" class="">年中行事・毎月の行事</a></li>
+          <li><a href="/gyouji/spring.php" class="">春の行事</a></li>
+          <li><a href="/gyouji/summer.php" class="">夏の行事</a></li>
+          <li><a href="/gyouji/autumn.php" class="">秋の行事</a></li>
+          <li><a href="/gyouji/winter.php" class="">冬の行事</a></li>
+        </ul>
+      </li>
+      <li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_06 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>110</b><br />
+"> お知らせ </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_06 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>111</b><br />
+">
+          <li><a href="/oshirase/index.php" class="">一覧</a></li>
+          <li><a href="/oshirase/index_oshirase.php" class="">お知らせ</a></li>
+          <li><a href="/oshirase/index_yomoyama.php" class="">よもやま話</a></li>
+        </ul>
+      </li>
+       <!--<li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_07 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>118</b><br />
+"> <a href="/kyoshiki/" > 神前挙式 </a> </p>
+      </li>-->
+      <li class="menu__list no_list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_08 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>121</b><br />
+"> <a href="/access/"> アクセス方法 </a> </p>
+      </li>
+		
+      <li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_11 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>125</b><br />
+"> ライブラリー </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_11 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/header.php</b> on line <b>126</b><br />
+">
+          <li><a href="/library/index.php" class="">おついたち</a></li>
+          <li><a href="/archives/" target="_blank" class="">旧サイトアーカイブ<span class="material-symbols-outlined">open_in_new</span></a></li>
+        </ul>
+      </li>
+		
+       <li class="menu__list">
+        <p class="menu__accordion"> <a href="/miko/" class="nav_miko"> 巫女募集 </a> </p>
+      </li>
+		
+       <li class="nav_sns">
+        <a href="https://www.instagram.com/nagatajinja_official/" target="_blank"> <img src="/img/common/sns_ins.png" width="30" height="30" alt=""/></a> 
+      </li>
+    </ul>
+  <!--<a href="" class="menu__en">ENGLISH SITE</a> --> 
+  
+</nav>
+<!--------------------サイドバー読み込み------------>
+<!-- サイドバー -->
+<aside class="menu">
+  <h1 class="menu__logo"><a href="/index.php"><img src="/img/common/logo.svg" alt=""></a></h1>
+  <nav class="menu__nav">
+    <ul class="menu__lists">
+      <li class="menu__list">
+        <p class="menu__accordion gokitou <br />
+<b>Warning</b>:  Undefined variable $accordion_active_01 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>7</b><br />
+"> ご祈祷・ご祈願 </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_01 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>8</b><br />
+">
+          <li><a href="/gokitou/gokitou.php" class="">長田神社のご祈祷について</a></li>
+          <li><a href="/gokitou/ichiran.php" class="">ご祈祷一覧</a></li>
+          <li><a href="/gokitou/yakuyoke.php" class="">厄除け・災い除け</a></li>
+          <li><a href="/gokitou/inunohi.php" class="">戌の日（安産祈願）</a></li>
+          <li><a href="/gokitou/shichigosan.php" class="">七五三詣</a></li>
+          <li><a href="/gokitou/shuttyousai.php" class="">出張祭</a></li>
+        </ul>
+      </li>
+      <li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_02 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>18</b><br />
+"> 授与品について </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_02 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>19</b><br />
+">
+          <li><a href="/juyohin/ohuda.php" class="">御札</a></li>
+          <li><a href="/juyohin/omamori.php" class="">お守り</a></li>
+          <li><a href="/juyohin/ema.php" class="">絵馬</a></li>
+          <li><a href="/juyohin/goshuin.php" class="">ご朱印・その他</a></li>
+        </ul>
+      </li>
+      <li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_03 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>27</b><br />
+"> 境内のご案内 </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_03 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>28</b><br />
+">
+          <li><a href="/keidai/goshaden.php" class="">御社殿・附属建物</a></li>
+          <li><a href="/keidai/keidai.php" class="">境内地図・末社</a></li>
+          <li><a href="/keidai/yonakiishi.php" class="">夜泣き石</a></li>
+          <li><a href="/keidai/meganehi.php" class="">眼鏡碑</a></li>
+          <li><a href="/keidai/shinkei.php" class="">神鶏</a></li>
+        </ul>
+      </li>
+      <li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_04 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>37</b><br />
+"> 長田神社について </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_04 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>38</b><br />
+">
+          <li><a href="/nagatajinjatowa/yuisho.php" class="">御祭神・由緒・歴史</a></li>
+          <li><a href="/nagatajinjatowa/byokibyoyu.php" class="">病気平癒の信仰</a></li>
+          <li><a href="/nagatajinjatowa/siteibunkazai.php" class="">指定文化財</a></li>
+          <li><a href="/nagatajinjatowa/sakadokai.php" class="">長田神社茶花道会</a></li>
+        </ul>
+      </li>
+      <li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_05 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>46</b><br />
+"> 年中行事 </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_05 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>47</b><br />
+">
+          <li><a href="/gyouji/tsuinashiki.php" class="">長田神社古式追儺式</a></li>
+          <li><a href="/gyouji/ichiran.php" class="">年中行事・毎月の行事</a></li>
+          <li><a href="/gyouji/spring.php" class="">春の行事</a></li>
+          <li><a href="/gyouji/summer.php" class="">夏の行事</a></li>
+          <li><a href="/gyouji/autumn.php" class="">秋の行事</a></li>
+          <li><a href="/gyouji/winter.php" class="">冬の行事</a></li>
+        </ul>
+      </li>
+      <li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_06 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>57</b><br />
+"> お知らせ </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_06 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>58</b><br />
+">
+          <li><a href="/oshirase/index.php" class="">一覧</a></li>
+          <li><a href="/oshirase/index_oshirase.php" class="">お知らせ</a></li>
+          <li><a href="/oshirase/index_yomoyama.php" class="">よもやま話</a></li>
+        </ul>
+      </li>
+       <!--<li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_07 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>65</b><br />
+"> <a href="/kyoshiki/" > 神前挙式 </a> </p>
+      </li>-->
+      <li class="menu__list no_list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_08 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>68</b><br />
+"> <a href="/access/"> アクセス方法 </a> </p>
+      </li>
+		
+      <li class="menu__list">
+        <p class="menu__accordion <br />
+<b>Warning</b>:  Undefined variable $accordion_active_11 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>72</b><br />
+"> ライブラリー </p>
+        <ul class="menu__accordion-content <br />
+<b>Warning</b>:  Undefined variable $accordion_active_11 in <b>/home/users/web04/6/9/0135396/www.nagatajinja.jp/include/sidebar.php</b> on line <b>73</b><br />
+">
+          <li><a href="/library/index.php" class="">おついたち</a></li>
+          <li><a href="/archives/" target="_blank" class="">旧サイトアーカイブ<span class="material-symbols-outlined">open_in_new</span></a></li>
+        </ul>
+      </li>
+       <li class="menu__list">
+        <a href="/miko/" class="nav_miko"> 巫女募集 </a> 
+      </li>
+		
+       <li class="nav_sns">
+        <a href="https://www.instagram.com/nagatajinja_official/" target="_blank"> <img src="/img/common/sns_ins.png" width="30" height="30" alt=""/></a> 
+      </li>
+    </ul>
+  </nav>
+ <!-- <a href="" class="menu__en">ENGLISH SITE</a>--> </aside> 
+
+<!--------------------CMS------------>
+
+<!-- メインコンテンツ -->
+<main> 
+  <!-- メインビジュアル -->
+  <section class="fv">
+  <img src="img/top/fv-pc.jpg" class="pc-only" alt=""/>
+<img src="img/top/fv-sp.jpg" class="pc-none" alt=""/></section>
+  <section class="pagelink">
+    <div class="pagelink__container"> 
+      
+      <!-- ご祈祷・ご祈願 -->
+      <div class="pagelink__items">
+        <div class="pagelink__body">
+          <div class="section__head">
+            <figure class="section__title-logo"><img src="/img/common/kiku.svg" alt=""></figure>
+            <h2 class="section__title">ご祈祷・ご祈願</h2>
+          </div>
+          <figure class="pagelink__img"><img src="/img/top/top_pray.jpg" alt=""></figure>
+          <p class="pagelink__lead">長田神社で執り行っております、個人様・企業団体様の個別のご祈願をご紹介いたします。</p>
+          <ul class="pagelink__btn-lists">
+            <li class="pagelink__btn-list"><a href="/gokitou/gokitou.php" class="btn">長田神社のご祈祷について</a></li>
+            <li class="pagelink__btn-list"><a href="/gokitou/ichiran.php" class="btn">ご祈祷一覧</a></li>
+            <li class="pagelink__btn-list"><a href="/gokitou/yakuyoke.php" class="btn">厄除け・災い除け</a></li>
+            <li class="pagelink__btn-list"><a href="/gokitou/inunohi.php" class="btn">戌の日（安産祈願）</a></li>
+            <li class="pagelink__btn-list"><a href="/gokitou/shichigosan.php" class="btn">七五三詣</a></li>
+            <li class="pagelink__btn-list"><a href="/gokitou/shuttyousai.php" class="btn">出張祭</a></li>
+          </ul>
+        </div>
+        <!-- /pagelink__body --> 
+      </div>
+      <!-- /pagelink__items --> 
+      
+      <!-- 授与品について -->
+      <div class="pagelink__items">
+        <div class="pagelink__body">
+          <div class="section__head">
+            <figure class="section__title-logo"><img src="/img/common/kiku.svg" alt=""></figure>
+            <h2 class="section__title">授与品について</h2>
+          </div>
+          <figure class="pagelink__img"><img src="/img/top/top-items.jpg" alt=""></figure>
+          <p class="pagelink__lead">長田神社で授与しております、さまざまな御札・お守り・絵馬・ご朱印のご紹介です。</p>
+          <ul class="pagelink__btn-lists">
+            <li class="pagelink__btn-list"><a href="/juyohin/ohuda.php" class="btn">御札</a></li>
+            <li class="pagelink__btn-list"><a href="/juyohin/omamori.php" class="btn">お守り</a></li>
+            <li class="pagelink__btn-list"><a href="/juyohin/ema.php" class="btn">絵馬</a></li>
+            <li class="pagelink__btn-list"><a href="/juyohin/goshuin.php" class="btn">ご朱印・その他</a></li>
+          </ul>
+        </div>
+        <!-- /pagelink__body --> 
+      </div>
+      <!-- /pagelink__items --> 
+      
+      <!-- 境内のご案内 -->
+      <div class="pagelink__items">
+        <div class="pagelink__body">
+          <div class="section__head">
+            <figure class="section__title-logo"><img src="/img/common/kiku.svg" alt=""></figure>
+            <h2 class="section__title">境内のご案内</h2>
+          </div>
+          <figure class="pagelink__img"><img src="/img/top/top-map.jpg" alt=""></figure>
+          <p class="pagelink__lead">長田神社の御社殿や末社、境内の地図などを掲載しております。</p>
+          <ul class="pagelink__btn-lists">
+            <li class="pagelink__btn-list"><a href="/keidai/goshaden.php" class="btn">御社殿・附属建物</a></li>
+            <li class="pagelink__btn-list"><a href="/keidai/keidai.php" class="btn">境内地図・末社</a></li>
+            <li class="pagelink__btn-list"><a href="/keidai/yonakiishi.php" class="btn">夜泣き石</a></li>
+            <li class="pagelink__btn-list"><a href="/keidai/meganehi.php" class="btn">眼鏡碑</a></li>
+            <li class="pagelink__btn-list"><a href="/keidai/shinkei.php" class="btn">神鶏</a></li>
+          </ul>
+        </div>
+        <!-- /pagelink__body --> 
+      </div>
+      <!-- /pagelink__items --> 
+      
+    </div>
+    <!-- /pagelink__container --> 
+  </section>
+  
+  <!-- お知らせ -->
+  <section class="news">
+    <div class="inner">
+      <div class="event__container">
+        <div class="section__head">
+          <figure class="section__title-logo"><img src="/img/common/kiku.svg" alt=""></figure>
+          <h2 class="section__title">お知らせ</h2>
+        </div>
+        
+        <!--▼▼CMS-->
+        <ul class="news__lists">
+          			<a href="oshirase/news-detail.php?id=15" target="_parent">          <li id="postID_15" class="news__list cat-0 clearfix"> 
+            <!--　サムネイルと本文表示（不要な場合削除OK）-->
+                        <figure class="event__img"><img src="cms/upload/15-0s.png?6aff8e9c84a54" width="100" class="thumbNail" id="thumb_15" /></figure>
+                        <!--　/サムネイルと本文表示（不要な場合削除OK）-->
+            <div class="news__description">
+              <div class="news__head">
+                <time class="news__time" datetime="">2026年11月3日 </time>
+                <div class="news__cat">お知らせ</div>              </div>
+              <div class="news__title">第14回雅楽公演会のおしらせ</div>
+                          </div>
+          </li></a>          			<a href="cms/upload/14-0link_file.docx" target="_blank">          <li id="postID_14" class="news__list cat-0 clearfix"> 
+            <!--　サムネイルと本文表示（不要な場合削除OK）-->
+                        <!--　/サムネイルと本文表示（不要な場合削除OK）-->
+            <div class="news__description">
+              <div class="news__head">
+                <time class="news__time" datetime="">2026年10月4日 </time>
+                <div class="news__cat">お知らせ</div>              </div>
+              <div class="news__title">令和8年　神幸祭ご奉仕の皆様へ</div>
+                          </div>
+          </li></a>          			<a href="cms/upload/13-0link_file.jpg" target="_blank">          <li id="postID_13" class="news__list cat-0 clearfix"> 
+            <!--　サムネイルと本文表示（不要な場合削除OK）-->
+                        <figure class="event__img"><img src="cms/upload/13-0s.jpg?6aff8e9c84afb" width="100" class="thumbNail" id="thumb_13" /></figure>
+                        <!--　/サムネイルと本文表示（不要な場合削除OK）-->
+            <div class="news__description">
+              <div class="news__head">
+                <time class="news__time" datetime="">2026年9月28日 </time>
+                <div class="news__cat">お知らせ</div>              </div>
+              <div class="news__title">お正月臨時巫女さん募集開始</div>
+                          </div>
+          </li></a>          			<a href="oshirase/news-detail.php?id=12" target="_parent">          <li id="postID_12" class="news__list cat-0 clearfix"> 
+            <!--　サムネイルと本文表示（不要な場合削除OK）-->
+                        <figure class="event__img"><img src="cms/upload/12-0s.jpg?6aff8e9c84b57" width="100" class="thumbNail" id="thumb_12" /></figure>
+                        <!--　/サムネイルと本文表示（不要な場合削除OK）-->
+            <div class="news__description">
+              <div class="news__head">
+                <time class="news__time" datetime="">2026年9月28日 </time>
+                <div class="news__cat">お知らせ</div>              </div>
+              <div class="news__title">今年の神幸祭について</div>
+                          </div>
+          </li></a>                  </ul>
+        <span id="pn00158" style="display:none"></span> 
+        
+        <!--▲▲CMS▲▲-->
+        
+        <div class="banner__link"> 
+			<a href="gyouji/tsuinashiki.php" class="banner__btn formula"><p> 長田神社古式追儺式 </p></a> 
+			<a href="/miko/" class="banner__btn recruit"> 巫女募集のお知らせ </a>
+        <!-- /banner__link --> 
+      </div>
+      <!-- /event__container --> 
+      
+    </div>
+	  </div>
+	</section>
+  
+  <!-- 長田神社について -->
+  <section class="about">
+    <div class="inner">
+      <div class="about__container">
+        <div class="about__head">
+          <h2 class="about__title">「長田さん」と<br class="pc-only">地域に親しまれてる<br>商工業・産業・開運招福・<br class="pc-only">厄除解除の神様
+            </h2>
+          <p class="about__text"> 長田神社の御祭神である<br class="pc-only">事代主神（ことしろぬしのかみ）は、<br class="pc-only">世に広く「恵美主（えびす）さま」<br class="pc-only">「福の神」とも讃えられております。<br>
+            事代主神は商工業をはじめ、<br class="pc-only">あらゆる産業の守護神、日々の生活の<br class="pc-only">開運招福・厄除解除の神として崇敬され、<br class="pc-only">神戸市民から「長田さん」と親しまれて、<br class="pc-only">神戸市民の心の拠り所、願いを叶え応える<br class="pc-only">神として篤く敬仰されています。 </p>
+        </div>
+        <!-- /about__head -->
+        <ul class="about__lists">
+          <!-- 由緒 -->
+          <li class="about__list"><a href="/nagatajinjatowa/yuisho.php">
+            <figure class="about__list-img"><img src="/img/top/top-about.jpg" alt="由緒"></figure>
+            <div class="about__list-name">御祭神・由緒・歴史</div>
+            </a></li>
+          <!-- 歴史 -->
+          <li class="about__list"><a href="/nagatajinjatowa/byokibyoyu.php">
+            <figure class="about__list-img"><img src="/img/top/top-history.jpg" alt="歴史"></figure>
+            <div class="about__list-name">病気平癒の信仰</div>
+            </a></li>
+          <!-- 御祭神 -->
+          <li class="about__list"><a href="/nagatajinjatowa/siteibunkazai.php">
+            <figure class="about__list-img"><img src="/img/top/top-god.jpg" alt="御祭神"></figure>
+            <div class="about__list-name">指定文化財</div>
+            </a></li>
+          <!-- 茶花道会 --> 
+          <li class="about__list"><a href="nagatajinjatowa/sakadokai.php">
+                  <figure class="about__list-img"><img src="img/top/top-sakadokai.jpg" alt="茶花道会"></figure>
+                  <div class="about__list-name">長田神社茶花道会</div>
+                </a></li> 
+        </ul>
+      </div>
+      <!-- /about__container --> 
+      
+    </div>
+  </section>
+  
+  <!-- 年中行事 -->
+  <section class="event">
+    <div class="inner">
+      <div class="event__container">
+        <div class="section__head">
+          <figure class="section__title-logo svg_white"><img src="img/common/kiku.svg" alt=""></figure>
+          <h2 class="section__title">年中行事</h2>
+        </div>
+        <div class="banner__link"> <a href="/gyouji/tsuinashiki.php" class="banner__btn formula">
+          <p> 長田神社古式追儺式 </p>
+          </a> <a href="/gyouji/ichiran.php" class="banner__btn gyoji_ichiran"><div>行事一覧・毎月の行事</div> </a> </div>
+        <!-- /banner__link -->
+        
+        <ul class="event__lists">
+          <li class="event__list"><a href="/gyouji/spring.php">
+            <figure class="event__img"><img src="/img/top/event3.jpg" alt=""></figure>
+            <div class="event__description">
+              <time class="event__time" datetime="">春の行事 </time>
+            </div>
+            <!-- /event__description --> 
+            </a></li>
+          <li class="event__list"><a href="/gyouji/summer.php">
+            <figure class="event__img"><img src="/img/top/event2.jpg" alt=""></figure>
+            <div class="event__description">
+              <time class="event__time" datetime="">夏の行事 </time>
+            </div>
+            <!-- /event__description --> 
+            </a></li>
+          <li class="event__list"><a href="/gyouji/autumn.php">
+            <figure class="event__img"><img src="/img/top/event4.jpg" alt=""></figure>
+            <div class="event__description">
+              <time class="event__time" datetime="">秋の行事 </time>
+            </div>
+            <!-- /event__description --> 
+            </a></li>
+          <li class="event__list"><a href="/gyouji/winter.php">
+            <figure class="event__img"><img src="/img/top/event1.jpg" alt=""></figure>
+            <div class="event__description">
+              <time class="event__time" datetime="">冬の行事 </time>
+            </div>
+            <!-- /event__description --> 
+            </a></li>
+        </ul>
+      </div>
+      <!-- /event__container --> 
+      
+    </div>
+  </section>
+  
+  <!-- 挙式 
+  <section class="wedding">
+    <div class="inner">
+      <div class="wedding__container">
+        <h2 class="wedding__title">神の御前で<br class="pc-only">かわらぬ愛を</h2>
+        <a href="" class="btn">神前挙式</a> </div>
+    </div>
+  </section>
+  -->
+	
+  <!-- アクセス -->
+  <section class="access">
+    <div class="inner">
+      <div class="section__head">
+        <figure class="section__title-logo"><img src="/img/common/kiku.svg" alt=""></figure>
+        <h2 class="section__title">アクセス方法</h2>
+      </div>
+      <!-- /section__head -->
+      
+      <div class="access__container"> 
+        
+        <!-- Google Map -->
+        <div class="access__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6562.68118578296!2d135.1443587761974!3d34.67135248478617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008588837aee45%3A0x781a7e03a8844689!2z6ZW355Sw56We56S-!5e0!3m2!1sja!2sjp!4v1719828164647!5m2!1sja!2sjp"
+            width="775" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <!-- /access__map -->
+        
+        <dl class="access__lists">
+          <div class="access__list">
+            <h5>電車をご利用の方</h5>
+            <dt>最寄り駅（神戸市営地下鉄・阪急・阪神・山陽）</dt>
+			  <dd>神戸市営地下鉄 長田（長田神社前）駅<br>または阪急･阪神･山陽 高速長田駅下車<br>
+長田神社前商店街を北上し徒歩5分</dd>
+			  
+          </div>
+          <div class="access__list">
+            <dt>JRでお越しの方</dt>
+			  <dd>JR新長田駅にて市営地下鉄に乗り換え長田（長田神社前）駅下車</dd>
+			  
+          </div>
+          <div class="access__list">
+            <dt>新幹線でお越しの方</dt>
+			  <dd>新幹線 新神戸駅下車後、<br>市営地下鉄に乗り換え長田（長田神社前）駅下車</dd>
+          </div>
+			
+			
+          <div class="access__list">
+            <h5>市バスをご利用の方</h5>
+            <dd>3系統・4系統(JR神戸･兵庫駅)・17系統(JR新長田駅)、<br>それぞれ長田神社前下車すぐ
+</dd>
+          </div>
+          <div class="access__list">
+            <h5>自動車をご利用の方</h5>
+            <dd>阪神高速3号神戸線柳原ランプまたは湊川ランプより2.5km<br>
+阪神高速31号神戸山手線神戸長田ランプより0.6km</dd>
+          </div>
+        </dl>
+      </div>
+      <!-- /access__container --> 
+    </div>
+  </section>
+  
+  <!--------------------フッター読み込み------------>
+  <!-- フッター -->
+<footer class="footer">
+  <div class="footer__banner">
+    <div class="banner__link"> 
+		<a href="/library/" class="banner__btn libary">ライブラリー</a> 
+      <a href="/miko/" class="banner__btn recruit"> 巫女募集 </a>
+    </div>
+    <!-- /banner__link --> 
+  </div>
+  <!-- /footer__banner -->
+  
+  <div class="footer__container">
+    <nav class="footer__nav">
+      <ul class="footer__lists">
+        <li>
+          <p>ご祈祷・ご祈願</p>
+        </li>
+        <li><a href="/gokitou/gokitou.php">長田神社のご祈祷について</a></li>
+        <li><a href="/gokitou/ichiran.php">ご祈祷一覧</a></li>
+        <li><a href="/gokitou/yakuyoke.php">厄除け・災い除け</a></li>
+        <li><a href="/gokitou/inunohi.php">戌の日（安産祈願）</a></li>
+        <li><a href="/gokitou/shichigosan.php">七五三詣</a></li>
+        <li><a href="/gokitou/shuttyousai.php">出張祭</a></li>
+      </ul>
+      <ul class="footer__lists">
+        <li>
+          <p>授与品について</p>
+        </li>
+        <li><a href="/juyohin/ohuda.php">御札</a></li>
+        <li><a href="/juyohin/omamori.php">お守り</a></li>
+        <li><a href="/juyohin/ema.php">絵馬</a></li>
+        <li><a href="/juyohin/goshuin.php">ご朱印・その他</a></li>
+      </ul>
+      <ul class="footer__lists">
+        <li>
+          <p>境内のご案内</p>
+        </li>
+        <li><a href="/keidai/goshaden.php">御社殿・附属建物</a></li>
+        <li><a href="/keidai/keidai.php">境内地図・末社</a></li>
+        <li><a href="/keidai/yonakiishi.php">夜泣き石</a></li>
+        <li><a href="/keidai/meganehi.php">眼鏡碑</a></li>
+        <li><a href="/keidai/shinkei.php">神鶏</a></li>
+      </ul>
+      <ul class="footer__lists">
+        <li>
+          <p>長田神社について</p>
+        </li>
+        <li><a href="/nagatajinjatowa/yuisho.php">御祭神・由緒・歴史</a></li>
+        <li><a href="/nagatajinjatowa/byokibyoyu.php">病気平癒の信仰</a></li>
+        <li><a href="/nagatajinjatowa/siteibunkazai.php">指定文化財</a></li>
+        <li><a href="/nagatajinjatowa/sakadokai.php">長田神社茶花道会</a></li>
+      </ul>
+      <ul class="footer__lists">
+        <li>
+          <p>年中行事</p>
+        </li>
+        <li><a href="/gyouji/tsuinashiki.php">長田神社古式追儺式</a></li>
+        <li><a href="/gyouji/ichiran.php">行事一覧・毎月の行事</a></li>
+        <li><a href="/gyouji/spring.php">春の行事</a></li>
+        <li><a href="/gyouji/summer.php">夏の行事</a></li>
+        <li><a href="/gyouji/autumn.php">秋の行事</a></li>
+        <li><a href="/gyouji/winter.php">冬の行事</a></li>
+      </ul>
+      <ul class="footer__lists">
+        <li>
+          <p>お知らせ</p>
+        </li>
+        <li><a href="/oshirase/index.php">一覧</a></li>
+        <li><a href="/oshirase/index_oshirase.php">お知らせ</a></li>
+        <li><a href="/oshirase/index_yomoyama.php">よもやま話</a></li>
+      </ul>
+      <!--<ul class="footer__lists">
+        <li>
+          <p>神前挙式</p>
+        </li>
+        <li><a href="/kyoshiki/">神前挙式</a></li>
+      </ul>-->
+      <ul class="footer__lists">
+        <p><a href="/access/index.php">アクセス方法</a></p>
+      </ul>
+      <ul class="footer__lists">
+        <li>
+          <p>ライブラリー</p>
+        </li>
+        <li><a href="/library/index.php">おついたち</a></li>
+        <li><a href="/archives/" target="_blank" class="link_blank">旧サイトアーカイブ<span class="material-symbols-outlined">open_in_new</span></a></li>
+      </ul>
+      <ul class="footer__lists">
+       <p><a href="/miko/">巫女募集</a></p>
+       <!--<p><a href="/access/index.php">プライバシーポリシー</a></p>
+       <p><a href="/access/index.php">ENGLISH</a></p>-->
+      </ul>
+      
+    </nav>
+    <div class="footer__bottom"> 
+		<a href="/index.php" class="footer__logo"><img src="/img/common/logo.svg" alt="長田神社"></a>
+		
+       <div class="nav_sns">        
+		   <a href="https://www.instagram.com/nagatajinja_official/" target="_blank"> <img src="/img/common/sns_ins.png" width="26" height="26" alt=""/></a> 
+</div>
+      <p class="footer__address">〒653-0812 神戸市長田区長田町3-1-1<br class="pc-none">
+        TEL 078-691-0333</p>
+    </div>
+  </div>
+  <!-- /footer__container -->
+  
+  <p class="copyright">© Nagata jinja</p>
+  
+  <!-- ページトップボタン --> 
+  <a href="#top">
+  <button class="page-top"> <span class="page-top_arrow"><img src="/img/common/arrow-top.png" alt=""></span>ページトップへ </button>
+  </a></footer>
+</main>
+</div>
+<!-- /body__wrapper -->
+</body><!-- script js -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/js/script.js"></script>
+</html>
