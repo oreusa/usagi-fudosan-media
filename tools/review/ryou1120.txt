@@ -1,0 +1,6 @@
+k-odekake	https://kanto.townnote.app/odekake
+k-illumi	https://kanto.townnote.app/illumination
+k-mother	https://kanto.townnote.app/o/ddef8988
+k-kawachi	https://kanto.townnote.app/o/09287b14
+u-panda	https://kansai.townnote.app/o/6ac62253
+u-sake	https://kansai.townnote.app/o/91059a66
