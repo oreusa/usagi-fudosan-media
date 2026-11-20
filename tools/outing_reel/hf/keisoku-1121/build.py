@@ -9,7 +9,7 @@ for k in range(5):
     T.append(round(v[k] + D[k] + .35, 2)); v.append(round(T[-1] + .6, 2))
 END = round(v[5] + D[5] + 1.2, 2)
 print("END", END, "T", T, "v", v)
-cap = lambda dk, a, b, sm: f'<div class="cap{" dk" if dk else ""}"><span class="w">{a}</span><span class="w">{b}</span><i class="ul"></i><small class="w">{sm}</small></div>'
+cap = lambda lb, a, b, sm: f'<div class="cap"><span class="w lb">{lb}</span><span class="w">{a}</span><br><span class="w">{b}</span><i class="ul"></i><small class="w">{sm}</small></div>'
 # 11/20 作り直し：4場面とも H（光と空気で描いた絵）。層は奥から起き上がる
 def pop(k, layers, extra=''):
     h = f'<img class="pl kb" src="a/H{k}-b.png">'
@@ -21,10 +21,10 @@ S1 = pop(1, [('m', '1425px', 'up'), ('n', '1425px', 'up'), ('f', '1425px', 'fl')
 S2 = pop(2, [('m', '1425px', 'up'), ('n', '980px', 'drop'), ('f', '0px', 'lt')])
 S3 = pop(3, [('m', '1425px', 'up'), ('n', '1425px', 'up'), ('f', '0px', 'fl')])
 html = open(HERE + "/src/tpl.txt").read()
-R = {'@S0@': S0 + cap(0, '真っ赤な', '石段をのぼる', '滋賀・長浜 鶏足寺　12月3日まで'),
-     '@S1@': S1 + cap(0, '見上げれば、', 'もみじの天井', '約200本のもみじの古木'),
-     '@S2@': S2 + cap(0, '苔の緑に、', '散った赤', '見頃は11月下旬からの予想'),
-     '@S3@': S3 + cap(0, '朝のうちに、', '光の参道へ', '混むのは晴れた土日祝の10〜14時'),
+R = {'@S0@': S0 + cap('SHIGA — KEISOKU-JI', '真っ赤な', '石段をのぼる', '滋賀・長浜 鶏足寺　12月3日まで'),
+     '@S1@': S1 + cap('LOOK UP', '見上げれば、', 'もみじの天井', '約200本のもみじの古木'),
+     '@S2@': S2 + cap('AT YOUR FEET', '苔の緑に、', '散った赤', '見頃は11月下旬からの予想'),
+     '@S3@': S3 + cap('MORNING LIGHT', '朝のうちに、', '光の参道へ', '混むのは晴れた土日祝の10〜14時'),
      '@END@': str(END), '@T@': json.dumps(T), '@V@': json.dumps(v)}
 aud = '\n'.join(f' <audio id="v{i}" src="a/v{i}.wav" data-start="{v[i]}" data-duration="{round(D[i], 2)}" data-volume="1.7"></audio>' for i in range(6))
 aud += '\n' + '\n'.join(f' <audio id="flip{j}" src="a/flip.wav" data-start="{t}" data-duration="0.6" data-volume="0.7"></audio>' for j, t in enumerate(T))

@@ -24,12 +24,11 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
 .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,20,10,0) 30%,rgba(40,20,10,.65));opacity:0;z-index:5}
 .cast{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,10,5,.7),rgba(20,10,5,.25) 60%,rgba(20,10,5,0));opacity:0;z-index:5}
 .gut{position:absolute;left:0;top:0;bottom:0;width:46px;background:linear-gradient(90deg,rgba(0,0,0,.35),transparent);z-index:4}
-.cap{position:absolute;left:46px;right:60px;top:64px;font-family:MB;color:#fff;font-size:70px;line-height:1.25;text-shadow:0 3px 18px rgba(0,0,0,.7);z-index:3}
-.cap:before{content:'';position:absolute;left:-46px;right:-60px;top:-64px;height:calc(100% + 150px);background:linear-gradient(180deg,rgba(30,10,4,.62),rgba(30,10,4,0));z-index:-1}
-.cap.dk{color:#2a1c14;text-shadow:0 0 12px rgba(255,255,255,.9)}.cap.dk:before{background:linear-gradient(180deg,rgba(255,250,240,.8),rgba(255,250,240,0))}
-.cap .w{display:inline-block}.cap small{display:block;font-family:G;font-size:38px;color:#ffe2b0;margin-top:14px;line-height:1.4}.cap.dk small{color:#6a3a1a}
-.cap .ul{display:block;height:4px;width:420px;margin-top:12px;background:linear-gradient(90deg,#e3c88c,rgba(227,200,140,0));transform-origin:0 50%}
-.cap.dk .ul{background:linear-gradient(90deg,#a5332a,rgba(165,51,42,0))}
+.cap{position:absolute;left:110px;right:121px;top:207px;font-family:M;color:#fffaf0;font-size:60px;line-height:1.45;letter-spacing:.12em;text-shadow:0 2px 24px rgba(40,12,4,.55),0 0 2px rgba(40,12,4,.4);z-index:3}
+.cap:before{content:'';position:absolute;left:-200px;right:-200px;top:-260px;height:calc(100% + 520px);background:radial-gradient(ellipse 60% 50% at 30% 45%,rgba(30,10,4,.38),rgba(30,10,4,0));z-index:-1}
+.cap .w{display:inline-block}.cap .lb{display:block;font-family:G;font-size:22px;letter-spacing:.42em;color:rgba(255,240,215,.92);margin-bottom:22px}
+.cap .ul{display:block;height:1px;width:200px;margin:26px 0 18px;background:rgba(255,236,200,.85);transform-origin:0 50%}
+.cap small{display:block;font-family:G;font-size:28px;letter-spacing:.14em;color:rgba(255,240,215,.95);line-height:1.6}
 #cover{background:url(a/cvface.png) center/100% 100%}
 #foil{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;background:linear-gradient(115deg,rgba(255,240,200,0) 40%,rgba(255,240,200,.55) 50%,rgba(255,240,200,0) 60%);background-size:300% 100%;background-position:120% 0;opacity:.8}
 .info{position:absolute;inset:0;padding:70px 56px;font-family:M;color:#3a2a20;background:#f4ecdc}
@@ -96,6 +95,10 @@ rise(["S0m","S0n"],0.75);
 rise(["S1m","S1n"],T[0]+.2);
 rise(["S2m"],T[1]+.2);
 rise(["S3m","S3n"],T[2]+.2);
+// ===== 2b. 表紙が開いたら絵へ寄って画面いっぱいに（本の枠に閉じこめない）。案内ページで本に戻る =====
+gsap.set("#stage",{transformOrigin:"547.5px 947.5px"});
+tl.to("#stage",{scale:1.36,x:-7.5,y:12.5,duration:1.6,ease:"power2.inOut"},0.9);
+tl.to("#stage",{scale:1,x:0,y:0,duration:1.1,ease:"power2.inOut"},T[3]);
 // ===== 3. ページをめくる =====
 const turns=[["#s0","#s1",T[0]],["#s1","#s2",T[1]],["#s2","#s3",T[2]],["#s3","#s4",T[3]],["#s4","#s5",T[4]]];
 turns.forEach(([a,b,t])=>{tl.to(a,{rotationY:-178,duration:.65,ease:"power3.inOut"},t);tl.to(a+" .shade",{opacity:1,duration:.65,ease:"power2.in"},t);
@@ -105,7 +108,7 @@ turns.forEach(([a,b,t])=>{tl.to(a,{rotationY:-178,duration:.65,ease:"power3.inOu
 tl.to("#S2m",{rotationX:40,duration:.5,ease:"power2.in"},T[2]);
 // ===== 4. 字：ぼかしから浮かび、金の線が走る =====
 [["#s0",V[0]],["#s1",V[1]],["#s2",V[2]],["#s3",V[3]]].forEach(([id,s])=>{
- tl.from(id+" .cap .w",{opacity:0,y:34,filter:"blur(10px)",duration:.6,ease:"power3.out",stagger:.22},s);
+ tl.from(id+" .cap .w",{opacity:0,y:18,filter:"blur(8px)",duration:.9,ease:"power2.out",stagger:.28},s-.3);
  tl.from(id+" .cap .ul",{scaleX:0,duration:.9,ease:"power3.inOut"},s+.4)});
 tl.from("#s4 .info > *",{opacity:0,y:24,duration:.5,ease:"power2.out",stagger:.1},T[3]+.4);
 // ===== 5. 場面の中の空気：絵がゆっくり近づき、手前の葉がそよぎ、光の粒が舞う =====
