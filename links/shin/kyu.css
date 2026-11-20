@@ -511,22 +511,19 @@ html.sk.nt[data-k] .fsn a span{color:var(--sub)!important}
 /* 11/20 夜：skin.css の色反転（前のページを夜にする仕組み）を kyu のページでは使わない。kyu は自分で夜の色を持つ */
 html.sk.night[data-k] body>*:not(.skc){filter:none!important}
 html.sk[data-k] body{color:var(--ink)}
-/* 11/20 見本v3「ほんのり」：owner 8:56「色合い嫌」「めっちゃ色ない感じに少し色つけたいだけ」。
-   地・字・ボタン・選んでいる所は白黒のまま。色は 後ろの薄い光・細い線・小さな点 だけ（淡いパステルのグラデーション） */
-html.iro{--g-od:linear-gradient(120deg,#FFC3A0,#FFAFCC);--g-ie:linear-gradient(120deg,#A8D8FF,#B8F2E6);--g-kau:linear-gradient(120deg,#B5EAD7,#E2F0CB);--g-kai:linear-gradient(120deg,#CDB4FF,#FFC8DD);--g-top:linear-gradient(110deg,#FFC3A0,#FFAFCC 30%,#CDB4FF 55%,#A8D8FF 78%,#B8F2E6)}
-html.iro[data-f=od]{--ga:var(--g-od);--gc:#FFAFCC}html.iro[data-f=ie]{--ga:var(--g-ie);--gc:#A8D8FF}html.iro[data-f=kau]{--ga:var(--g-kau);--gc:#B5EAD7}html.iro[data-f=kai]{--ga:var(--g-kai);--gc:#CDB4FF}html.iro[data-f=top]{--ga:var(--g-top);--gc:#CDB4FF}
-/* 下のバーの今いる所：細い光の線だけ */
-html.iro .nav .cur::before{width:22px;margin-left:-11px;background:var(--ga);box-shadow:0 0 10px var(--gc)}
-/* 表紙：面の後ろにうすい光（字・数字・ボタンは白黒のまま） */
-html.iro .c3>section:nth-of-type(1){--s1:#FFC3A0;--s2:#FFAFCC}
-html.iro .c3>section:nth-of-type(2){--s1:#A8D8FF;--s2:#B8F2E6}
-html.iro .c3>section:nth-of-type(3){--s1:#B5EAD7;--s2:#E2F0CB}
-html.iro .c3>section:nth-of-type(4){--s1:#CDB4FF;--s2:#FFC8DD}
-html.iro .c3u::before{content:"";position:absolute;z-index:0;left:50%;top:-90px;width:600px;height:320px;margin-left:-300px;border-radius:50%;background:radial-gradient(closest-side at 35% 55%,color-mix(in srgb,var(--s1) 55%,transparent),transparent),radial-gradient(closest-side at 68% 45%,color-mix(in srgb,var(--s2) 50%,transparent),transparent);filter:blur(36px);opacity:.55;pointer-events:none}
-html.iro .c3u>*{position:relative;z-index:1}
-html.iro.nt .c3u::before{opacity:.22}
-html.iro .c3u.k::before{opacity:.25}
-/* 頭の下に、ごく細いパステルの線（ゆっくり流れる） */
-html.iro body::after{content:"";position:fixed;z-index:60;left:0;right:0;top:0;height:2px;background:linear-gradient(90deg,#FFC3A0,#FFAFCC,#CDB4FF,#A8D8FF,#B8F2E6,#E2F0CB,#FFC3A0);background-size:200% 100%;animation:iroflow 14s linear infinite;opacity:.9;pointer-events:none}
-@keyframes iroflow{to{background-position:200% 0}}
-@media (prefers-reduced-motion:reduce){html.iro body::after{animation:none}}
+/* 11/20 見本v4「枠だけ」：owner 9:00「枠だけにするとか？」「白背景の最初の方が綺麗かも」。
+   地は白（夜は今の夜空）のまま・字もボタンの中も白黒のまま。色は 枠の細い線 だけ（分野ごとのグラデーションの線） */
+html.iro{--g-od:linear-gradient(120deg,#FF9A76,#FF6FA3);--g-ie:linear-gradient(120deg,#6FA8FF,#5FD4E0);--g-kau:linear-gradient(120deg,#5CCFA0,#B5DC6A);--g-kai:linear-gradient(120deg,#A98BFF,#F48CC8);--g-top:linear-gradient(110deg,#FF9A76,#FF6FA3 30%,#A98BFF 55%,#6FA8FF 78%,#5FD4E0)}
+html.iro[data-f=od]{--ga:var(--g-od);--gc:#FF6FA3}html.iro[data-f=ie]{--ga:var(--g-ie);--gc:#6FA8FF}html.iro[data-f=kau]{--ga:var(--g-kau);--gc:#5CCFA0}html.iro[data-f=kai]{--ga:var(--g-kai);--gc:#A98BFF}html.iro[data-f=top]{--ga:var(--g-top);--gc:#A98BFF}
+/* 下のバーの今いる所：細い線 */
+html.iro .nav .cur::before{width:22px;margin-left:-11px;background:var(--ga)}
+/* 表紙：2つ目のボタン（枠のボタン）の枠を、その分野のグラデーションの線に */
+html.iro .c3>section:nth-of-type(1){--sg:var(--g-od)}html.iro .c3>section:nth-of-type(2){--sg:var(--g-ie)}html.iro .c3>section:nth-of-type(3){--sg:var(--g-kau)}html.iro .c3>section:nth-of-type(4){--sg:var(--g-kai)}
+html.iro .c3u .c3b a:not(.f){border:1.5px solid transparent;background:linear-gradient(var(--bg),var(--bg)) padding-box,var(--sg) border-box}
+html.iro .c3u.g .c3b a:not(.f){background:linear-gradient(#F5F5F7,#F5F5F7) padding-box,var(--sg) border-box}
+html.iro.nt .c3u .c3b a:not(.f){background:linear-gradient(#0A0E18,#0A0E18) padding-box,var(--sg) border-box}
+html.iro.nt .c3u.g .c3b a:not(.f){background:linear-gradient(#141a28,#141a28) padding-box,var(--sg) border-box}
+html.iro .c3u.k .c3b a:not(.f){background:linear-gradient(#000,#000) padding-box,var(--sg) border-box}
+/* 表紙の写真（今出ている1枚）に細い枠 */
+html.iro .c3sd.on{box-shadow:0 0 0 1.5px #fff,0 0 0 3px transparent,0 22px 50px -12px rgba(0,0,0,.3)}
+html.iro .c3sd.on::before{content:"";position:absolute;z-index:2;inset:0;border-radius:24px;padding:2px;background:var(--g-od);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}

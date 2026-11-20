@@ -62,13 +62,13 @@ html.nt .skc{--line:#222A3A}
 .skc #tb{position:fixed;left:0;right:0;top:0;z-index:40;height:44px;padding:0 60px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);font:600 15px/1 var(--sans);color:var(--ink);letter-spacing:-.005em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;opacity:0;transform:translateY(-100%);transition:opacity .25s,transform .35s cubic-bezier(.2,.9,.25,1);pointer-events:none}
 .skc #tb.on{opacity:1;transform:none;pointer-events:auto}
 html.nt .skc #tb{background:rgba(10,14,24,.96)}
-.skc html.iro .nav .cur::before{width:22px;margin-left:-11px;background:var(--ga);box-shadow:0 0 10px var(--gc)}
+.skc html.iro .nav .cur::before{width:22px;margin-left:-11px;background:var(--ga)}
 .skc .mu .rel:empty{display:none}
 .skc html.iro .mu .pn{overflow:hidden}
-.skc html.iro .mu .pn::before{content:"";position:absolute;left:-20%;right:-20%;top:-120px;height:220px;background:var(--ga,var(--g-top));filter:blur(60px);opacity:.14;pointer-events:none}
+.skc html.iro .mu .pn::before{display:none;content:"";position:absolute;left:-20%;right:-20%;top:-120px;height:220px;background:var(--ga,var(--g-top));filter:blur(60px);opacity:.14;pointer-events:none}
 .skc html.iro .mu .pn>*{position:relative}
 .skc html.iro .mu li a.here{color:#fff}
-.skc html.iro .mu li a::after{content:"";margin-left:auto;align-self:center;width:8px;height:8px;border-radius:9px;background:var(--md,transparent);box-shadow:0 0 12px var(--mc,transparent)}
+.skc html.iro .mu li a::after{content:"";margin-left:auto;align-self:center;width:8px;height:8px;border-radius:9px;background:var(--md,transparent)}
 .skc html.iro .mu li a[href="/odekake"]{--md:var(--g-od);--mc:#FFAFCC}
 .skc html.iro .mu li a[href="/fudosan-list"]{--md:var(--g-ie);--mc:#A8D8FF}
 .skc html.iro .mu li a[href="/okaimono"]{--md:var(--g-kau);--mc:#B5EAD7}
