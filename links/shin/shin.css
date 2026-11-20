@@ -874,6 +874,7 @@ html.sk.nt[data-k] body .flt button.on.on,html.nt body .flt button.on.on{backgro
 /* 11/20 ♡（どのカードにも・押すと残る）と一言（hk） */
 .cd{position:relative}
 .cd .hv{position:absolute;z-index:3;top:8px;right:8px;width:34px;height:34px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.88);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 2px 8px -2px rgba(0,0,0,.25);cursor:pointer}
+.cd .hv::before{content:"";position:absolute;inset:-6px}
 .cd .hv svg{width:17px;height:17px;fill:none;stroke:#1D1D1F;stroke-width:1.8}
 .cd .hv.on svg{fill:#1D1D1F;stroke:#1D1D1F}
 html.nt .cd .hv{background:rgba(14,20,36,.82)}html.nt .cd .hv svg{stroke:#ECE8E1}html.nt .cd .hv.on svg{stroke:#ECE8E1;fill:#ECE8E1}

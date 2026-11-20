@@ -21,6 +21,8 @@ function saveQ(){var u=new URLSearchParams(location.search);["p","w","g"].forEac
 /* 11/20 owner「他社より確実に上」：どのカードにも♡。押した物は「♡ 残した」で見返せる（この端末にだけ残る） */
 var HK="tn_hv",HV={};try{HV=JSON.parse(localStorage.getItem(HK)||"{}")}catch(e){}
 function hvKey(x){return x.o||x.t}
+/* 一言と同じ書き出しの「場所」は2回同じ文になるので、場所の行は地域にする */
+function vnOf(x){var v=x.v||x.a||"";if(x.hk&&v.slice(0,5)===x.hk.slice(0,5))return x.a&&x.a!==v?x.a:"";return v}
 function hvSave(){try{localStorage.setItem(HK,JSON.stringify(HV))}catch(e){}}
 var HVI='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.6a4.3 4.3 0 0 1 7.5 2.7c0 5.6-7.5 10.2-7.5 10.2z"/></svg>';
 function pick(){return IT.filter(function(x){
@@ -28,7 +30,7 @@ function pick(){return IT.filter(function(x){
   if(S.g==="_hv")return !!HV[hvKey(x)]&&(!S.p||x.p===S.p);if(S.p&&x.p!==S.p)return false;if(S.g&&x.k!==S.g)return false;
   if(S.w==="now")return x.st==="now";if(S.w==="end")return x.st==="now"&&x.left<=7;if(S.w==="td")return x.st==="now"&&x.left===0;if(S.w==="new")return x.st==="up"&&diff(TD,x.s)<=7;if(S.w==="we")return x.s<=SUN&&x.e>=SAT;return x.st==="up"}).sort(function(a,b){
   if(S.w==="up"||S.w==="new")return a.s<b.s?-1:a.s>b.s?1:0;if(S.w==="end"||S.w==="td")return a.e<b.e?-1:a.e>b.e?1:0;
-  var pa=a.im?0:1,pb=b.im?0:1;if(pa!==pb)return pa-pb;if((b.pp||0)!==(a.pp||0))return (b.pp||0)-(a.pp||0);return a.e<b.e?-1:a.e>b.e?1:0})}
+  var pa=(a.im?0:2)-(a.ok?1:0),pb=(b.im?0:2)-(b.ok?1:0);if(pa!==pb)return pa-pb;if((b.pp||0)!==(a.pp||0))return (b.pp||0)-(a.pp||0);return a.e<b.e?-1:a.e>b.e?1:0})}
 var nNow=IT.filter(function(x){return x.st==="now"}).length;
 var nEnd=IT.filter(function(x){return x.st==="now"&&x.left<=7}).length,nTd=IT.filter(function(x){return x.st==="now"&&x.left===0}).length,
  nWe=IT.filter(function(x){return x.s<=SUN&&x.e>=SAT}).length,nNew=IT.filter(function(x){return x.st==="up"&&diff(TD,x.s)<=7}).length,DT=dd(TD),EN=["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"][DT.getUTCDay()];
@@ -77,13 +79,13 @@ fan.addEventListener("click",function(e){var a=e.target.closest(".fc");if(!a)ret
 /* 絞り込み */
 var setSeg=S_.seg($("#seg"),[["",RG.n]].concat(PREF.map(function(p){return [p,p]})),S.p,function(v){S.p=v;S.n=24;sync();go(true)});
 function kinds(){var c={};IT.forEach(function(x){if(!S.p||x.p===S.p)c[x.k]=(c[x.k]||0)+1});return Object.keys(G).filter(function(k){return c[k]})}
-function drawChips(){var ks=kinds();$("#chips").style.display=ks.length<2&&!Object.keys(HV).length?"none":"";var nh=Object.keys(HV).length;$("#chips").innerHTML='<button class="chip'+(S.g?"":" on")+'" data-g="">すべて</button>'+(nh?'<button class="chip hvc'+(S.g==="_hv"?" on":"")+'" data-g="_hv">'+HVI+'残した '+nh+'</button>':"")+kinds().map(function(k){return '<button class="chip'+(S.g===k?" on":"")+'" data-g="'+k+'" style="--c:'+G[k][1]+'"><i></i>'+G[k][3]+'</button>'}).join("")}
+function drawChips(){if(S.g==="_hv"&&!Object.keys(HV).length){S.g="";saveQ()}var ks=kinds();$("#chips").style.display=ks.length<2&&!Object.keys(HV).length?"none":"";var nh=Object.keys(HV).length;$("#chips").innerHTML='<button class="chip'+(S.g?"":" on")+'" data-g="">すべて</button>'+(nh?'<button class="chip hvc'+(S.g==="_hv"?" on":"")+'" data-g="_hv">'+HVI+'残した '+nh+'</button>':"")+kinds().map(function(k){return '<button class="chip'+(S.g===k?" on":"")+'" data-g="'+k+'" style="--c:'+G[k][1]+'"><i></i>'+G[k][3]+'</button>'}).join("")}
 $("#chips").addEventListener("click",function(e){var b=e.target.closest(".chip");if(!b)return;S.g=b.dataset.g;S.n=24;sync();go(true)});
 function sync(){drawChips();S_.navCur(S.w);saveQ()}
 var cache={};
 function card(x){if(cache[x.i])return cache[x.i];
   var a=el('<a class="cd" href="'+(x.o?"/o/"+x.o:esc(x.u))+'" data-i="'+x.i+'" style="--gc:'+x.g[1]+'"><div class="im" style="background-color:'+(x.th?avg(x.th):x.g[2])+'">'+(x.im?'<img alt="" loading="lazy" decoding="async" src="'+img(x)+'">':tile(x))+'</div>'+
-   '<span class="hv'+(HV[hvKey(x)]?" on":"")+'" role="button" tabindex="0" aria-label="♡で残す" aria-pressed="'+(HV[hvKey(x)]?"true":"false")+'">'+HVI+'</span><div class="lb"><span class="g">'+x.g[3]+'</span><span>'+esc(x.p)+'</span>'+lt(x)+'</div><h4>'+esc(x.t)+'</h4>'+(x.hk?'<p class="hk">'+esc(x.hk)+'</p>':'')+'<div class="dt">'+when(x)+'</div><div class="vn">'+esc(x.v||x.a)+'</div></a>');
+   '<span class="hv'+(HV[hvKey(x)]?" on":"")+'" role="button" tabindex="0" aria-label="♡で残す" aria-pressed="'+(HV[hvKey(x)]?"true":"false")+'">'+HVI+'</span><div class="lb"><span class="g">'+x.g[3]+'</span><span>'+esc(x.p)+'</span>'+lt(x)+'</div><h4>'+esc(x.t)+'</h4>'+(x.hk?'<p class="hk">'+esc(x.hk)+'</p>':'')+'<div class="dt">'+when(x)+'</div><div class="vn">'+esc(vnOf(x))+'</div></a>');
   var im=$("img",a);if(im){if(im.complete)im.classList.add("ld");else im.onload=function(){im.classList.add("ld")}}
   return cache[x.i]=a}
 var grid=$("#grid"),first=true;
@@ -92,10 +94,10 @@ function hvTap(e){var h=e.target.closest&&e.target.closest(".hv");if(!h)return;e
   if(HV[k])delete HV[k];else{HV[k]=1;try{navigator.sendBeacon("/c",JSON.stringify({k:"♡："+x.t.slice(0,60)}))}catch(er){}}
   hvSave();h.classList.toggle("on",!!HV[k]);h.setAttribute("aria-pressed",HV[k]?"true":"false");
   if(!RM)h.animate([{transform:"scale(1)"},{transform:"scale(1.35)"},{transform:"scale(1)"}],{duration:360,easing:"cubic-bezier(.3,1.6,.5,1)"});
-  drawChips();if(S.g==="_hv")go(true)}
+  var was=S.g;drawChips();if(was==="_hv")go(true)}
 grid.addEventListener("click",hvTap,true);grid.addEventListener("keydown",function(e){if((e.key==="Enter"||e.key===" ")&&e.target.classList&&e.target.classList.contains("hv"))hvTap(e)},true);
 function go(anim){var L=pick(),show=L.slice(0,S.n),pr=S.p||RG.n,wl={now:"開催中",we:"今週末",up:"これから",end:"7日以内に終わる",td:"きょうまで",new:"7日以内に始まる"}[S.w];
-  $("#ch").innerHTML=esc(pr)+"・"+wl+" <b data-n='"+L.length+"'>"+L.length+"</b>件";$("#cs").textContent=S.g?G[S.g][3]:(S.w==="we"?md(SAT)+"・"+md(SUN).replace(/（.）/,""):"");
+  $("#ch").innerHTML=esc(pr)+"・"+(S.g==="_hv"?"♡で残した":wl)+" <b data-n='"+L.length+"'>"+L.length+"</b>件";$("#cs").textContent=S.g==="_hv"?"この端末にだけ残っています":S.g&&G[S.g]?G[S.g][3]:(S.w==="we"?md(SAT)+"・"+md(SUN).replace(/（.）/,""):"");
   if(anim&&!first)S_.countUp($("#ch b"));
   var old={};if(anim&&!RM)$$(".cd",grid).forEach(function(c){old[c.dataset.i]=c.getBoundingClientRect()});
   var frag=document.createDocumentFragment();show.forEach(function(x){frag.appendChild(card(x))});grid.replaceChildren(frag);
