@@ -1,29 +1,6 @@
-696da642	ERR	The read operation timed out		https://www.mistore.jp/store/kyoto/museum/event_list/event21.html
-af37065f	200	71329	text/html; charset=UTF-8	https://www.tsurumi-ryokuchi.jp/events/28742
-8447026f	200	52288	text/html; charset=UTF-8	https://rokkomeetsart.jp/
-f5615853	200	174674	text/html; charset=UTF-8	https://www.kobe-port-tower.com/info/moomin/
-70032971	200	71636	text/html; charset=UTF-8	https://www.kiboupark-shiga.or.jp/important/156423.html
-de23a9ac	200	73074	text/html; charset=UTF-8	https://hakubutu.wakayama.jp/exhibit/
-cc7a84ed	ERR	<urlopen error [Errno 113] No route to host>		https://osakastationcity-nazo.com/
-eb00b3e6	200	115047	text/html; charset=UTF-8	https://www.rokkosan.com/museum/sikigarden/
-4719e8d9	200	200448	text/html; charset=UTF-8	https://www.rokkosan.com/top/facility/gt/
-028db899	200	29843	text/html; charset=UTF-8	https://rokkomeetsart.jp/hikarinomori/
-5b0f3e06	ERR	<urlopen error timed out>		https://hogonin.jp/
-8ff0e989	ERR	<urlopen error [Errno 111] Connection refused>		https://www.hyakusaiji.jp/
-8f3cd891	200	78334	text/html; charset=UTF-8	https://www.kiyomizudera.or.jp/
-f43aedd4	200	13703	text/html	https://www.eikando.or.jp/lp/2026/index.html
-98292ecb	200	79331	text/html; charset=UTF-8	https://kitanotenmangu.or.jp/
-23ad2254	200	11895	text/html	https://www.kurodani.jp/lightup/
-76f75325	200	12469	text/html	https://www.chion-in.or.jp/
-46c76ddc	200	81209	text/html; charset=utf-8	https://www.daisenteien.jp/
-a96b20b2	200	17736	text/html; charset=UTF-8	http://www.shosha.or.jp/
-38f0c009	200	61670	text/html; charset=UTF-8	https://www.mino-park.jp/koyo/
-f0189e3d	200	85071	text/html; charset=UTF-8	https://hikari-kyoen.com/core/midosuji
-11ce40cd	200	47946	text/html; charset=UTF-8	https://www.kyoto-tower.jp/lightup/
-607d1467	200	209486	text/html; charset=UTF-8	https://www.hirakatapark.co.jp/attractions/illumination/
-7bf3a273	200	33340	text/html; charset=UTF-8	https://osakastationcity.com/event/6459/
-1062ce77	200	83710	text/html; charset=UTF-8	https://www.nankishirahama.jp/news/19718/
-a16a2ea4	200	16336	text/html	https://www.city.kobe.lg.jp/a30028/shise/kekaku/jutakutoshikyoku/scene/11_night/38_kyoryuchi.html
-26b7847e	200	116855	text/html; charset=UTF-8	https://harborland.co.jp/
-29c90f4b	200	228933	text/html; charset=UTF-8	https://umie.jp/news
-5a5c0e77	200	62016	text/html; charset=UTF-8	https://www.premiumoutlets.co.jp/kobesanda/information/
+b08a85e8	200	146868	text/html; charset=utf-8	https://kanto.townnote.app/odekake
+e0675dc9	200	277501	text/html; charset=utf-8	https://kanto.townnote.app/fudosan-list
+df01b5c0	200	8773	text/html; charset=utf-8	https://kanto.townnote.app/
+9406e282	200	131235	text/html; charset=utf-8	https://kansai.townnote.app/odekake
+da4b1bf0	200	17841	text/html; charset=utf-8	https://kansai.townnote.app/uru
+d19442a3	200	205529	text/html; charset=utf-8	https://kansai.townnote.app/fudosan-list
