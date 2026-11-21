@@ -1,0 +1,146 @@
+{
+ "date": "2026-11-22",
+ "bad": 0,
+ "slots": {
+  "n1": {
+   "ok": true,
+   "time": "07:00",
+   "head": "【関西まちランキング No.42｜近鉄京都線、寺田と伏見はわずか19人差🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "65fbcc8b0a3178e3",
+   "x": false,
+   "th": true
+  },
+  "x07": {
+   "ok": true,
+   "time": "07:00",
+   "head": "大阪駅直結のルクア サウス11階に「ちいかわパークストア」、11/24（火）オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "4d168bf9dedf5b6f",
+   "x": true,
+   "th": false
+  },
+  "S1": {
+   "ok": true,
+   "time": "08:00",
+   "head": "【実家が西宮市なら｜昨年度の平均は3,947万円🏠】",
+   "bad": [],
+   "warn": [],
+   "digest": "6c65a5889cf12e0f",
+   "x": false,
+   "th": true
+  },
+  "n2": {
+   "ok": true,
+   "time": "09:00",
+   "head": "【11/22（日）京都・東山｜知恩院の秋のライトアップ🍁】",
+   "bad": [],
+   "warn": [],
+   "digest": "e77adb2011a1e423",
+   "x": false,
+   "th": true
+  },
+  "x09": {
+   "ok": true,
+   "time": "09:00",
+   "head": "嵐山の長辻通（渡月橋北詰〜丸太町通）、きょう11/22（日）は13時ごろ〜17時ごろ歩行者用道路に",
+   "bad": [],
+   "warn": [],
+   "digest": "7fb50faa168f24d5",
+   "x": true,
+   "th": false
+  },
+  "n3": {
+   "ok": true,
+   "time": "12:00",
+   "head": "【11/24（火）大阪駅｜ちいかわパークストアがLUCUA SOUTHに開く🎀】",
+   "bad": [],
+   "warn": [],
+   "digest": "b1a40446e03a9d11",
+   "x": false,
+   "th": true
+  },
+  "x12": {
+   "ok": true,
+   "time": "12:00",
+   "head": "大阪駅前のグラングリーン大阪に「うめきたの森」、11/20（金）開園",
+   "bad": [],
+   "warn": [],
+   "digest": "e4f668dfedca2357",
+   "x": true,
+   "th": false
+  },
+  "n8": {
+   "ok": true,
+   "time": "13:00",
+   "head": "【関西まちランキング No.43｜南海加太線、加太と西ノ庄はわずか26人差🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "6d28c1a1d2cfd9ab",
+   "x": false,
+   "th": true
+  },
+  "n5": {
+   "ok": true,
+   "time": "15:00",
+   "head": "【11/22（日）大阪・御堂筋｜夕方5時ごろからイルミネーション✨】",
+   "bad": [],
+   "warn": [],
+   "digest": "aff856b76bd97214",
+   "x": false,
+   "th": true
+  },
+  "x15": {
+   "ok": true,
+   "time": "15:00",
+   "head": "堺筋本町に、東京のベーカリー「LAZY SUNDAY BAKERY」、11/21（土）オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "f7e24b9d0e0445e5",
+   "x": true,
+   "th": false
+  },
+  "n6": {
+   "ok": true,
+   "time": "18:00",
+   "head": "【11/20 開園｜大阪駅前に「うめきたの森」、空中の道は350m🌳】",
+   "bad": [],
+   "warn": [],
+   "digest": "f9c5cb134721c9d8",
+   "x": false,
+   "th": true
+  },
+  "x18": {
+   "ok": true,
+   "time": "18:00",
+   "head": "京都・北山の府立植物園で、紅葉の夜のライトアップ「NIGHT GARDEN of Autumn Colors」",
+   "bad": [],
+   "warn": [],
+   "digest": "478cebdbf85a63c7",
+   "x": true,
+   "th": false
+  },
+  "n7": {
+   "ok": true,
+   "time": "21:00",
+   "head": "【橋本駅は1日6,030人｜ひと駅しらべ その30🚃】",
+   "bad": [],
+   "warn": [],
+   "digest": "1b44f2852dc38e13",
+   "x": false,
+   "th": true
+  },
+  "x21": {
+   "ok": true,
+   "time": "21:00",
+   "head": "阪急池田駅直結のIKEDIA（イケディア）、11/20（金）にリニューアルオープン",
+   "bad": [],
+   "warn": [],
+   "digest": "12c5f869f687e453",
+   "x": true,
+   "th": false
+  }
+ }
+}
