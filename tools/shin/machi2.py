@@ -135,7 +135,7 @@ def main(src, out, prod=False):
 <header class="m2h"><p class="pf">{E(pref)}</p><h1>{E(name)}</h1><p class="sb">家と土地の値段・地価・くらしの数字</p></header>
 <section class="mcs" aria-label="数字">{"".join(cards)}</section>
 {f'<p class="vd">{E(verdict)}</p>' if verdict else ""}
-<a class="go" href="{ikura}"><b>{E(name)}で、うちの家はいくら？</b><small>種類と広さから30秒で目安・名前は要りません</small><i>›</i></a>
+<a class="go" href="{ikura}"><b>{E(name)}で、うちの家はいくら？</b><small>種類と広さから30秒で目安（その場で出ます）</small><i>›</i></a>
 <a class="go2" href="{ask}">売る前に、無料で聞いてみる<i>›</i></a>
 <div id="itt"></div>
 <section class="sec"><h2>{E(name)}で売り出し中の家</h2><div class="yh">{yrow}</div><p class="note">Yahoo!不動産の一覧が開きます（広告）</p></section>
