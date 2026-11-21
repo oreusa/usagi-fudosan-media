@@ -120,6 +120,40 @@ def score(title, o, theme):
     return {"title": title, "page": ii.get("descriptionurl"), "thumb": ii.get("thumburl"), "license": lic, "artist": art[:80], "w": w, "h": h, "score": round(s, 1), "why": why}
 
 
+def visual(url, theme):
+    """11/21 オーナー「より良い写真を選べるように」→ 文字（題・分類）の点に、写真そのものの見た目の点を足す。
+    小さい写真（幅240）で ①色の鮮やかさ ②くっきり（輪郭の強さ）③明るさのほどよさ ④季節・時間に合う色
+    （紅葉＝赤・橙・黄の多さ／夜＝暗い地に明るい光）⑤くもり空（上の3分の1が白っぽく色が無い）を減点。PIL だけで量る。"""
+    try:
+        from PIL import Image, ImageFilter, ImageStat
+        import io
+        im = Image.open(io.BytesIO(get(url))).convert("RGB"); im.thumbnail((240, 240))
+    except Exception:
+        return 0, []
+    w, h = im.size; hsv = im.convert("HSV"); px = list(hsv.getdata()); n = len(px) or 1
+    L = im.convert("L"); lm = ImageStat.Stat(L).mean[0]
+    sat = sum(p[1] for p in px) / n / 255
+    edge = ImageStat.Stat(L.filter(ImageFilter.FIND_EDGES)).mean[0]
+    s, why = 0.0, []
+    s += max(-10, min(14, (sat - .22) * 60))                    # 色の鮮やかさ（灰色っぽい写真は下げる）
+    s += max(-12, min(10, (edge - 9) * 1.2))                     # くっきり（ぼやけ・のっぺりは下げる）
+    if theme == "night":
+        hi = sum(1 for v in L.getdata() if v > 215) / n
+        if lm < 95 and hi > .01: s += 18; why.append("夜の光")
+        elif lm > 130: s -= 18; why.append("昼の写真")
+    else:
+        if lm < 60: s -= 14; why.append("暗い")
+        elif lm > 205: s -= 10; why.append("白飛び")
+        top = [p for i, p in enumerate(px) if i < n // 3]
+        if top and sum(1 for p in top if p[1] < 30 and p[2] > 170) / len(top) > .55: s -= 10; why.append("くもり空")
+    if theme == "autumn":
+        warm = sum(1 for p in px if (p[0] < 32 or p[0] > 240) and p[1] > 110 and p[2] > 70) / n
+        if warm > .18: s += 22; why.append("紅葉の色")
+        elif warm < .05: s -= 18; why.append("紅葉が写っていない")
+    if sat > .3 and edge > 12: why.append("鮮やか")
+    return round(s, 1), why
+
+
 def best(q, theme):
     e = entity(q)
     if not e: return None, []
@@ -133,6 +167,10 @@ def best(q, theme):
         for r in cand:
             if r["title"] == "File:" + e["p18"]: r["score"] += 8; r["why"].append("代表の写真")
     cand.sort(key=lambda r: -r["score"])
+    # 11/21 文字の点の上位12枚だけ、写真の見た目でも点を付けて並べ直す（呼び出しを増やしすぎない）
+    for r in cand[:12]:
+        v, vw = visual(r["thumb"], theme); r["score"] = round(r["score"] + v, 1); r["vis"] = v; r["why"] += vw
+    cand = sorted(cand[:12], key=lambda r: -r["score"]) + cand[12:]
     return e, cand[:3]
 
 
