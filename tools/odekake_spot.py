@@ -17,7 +17,9 @@ s = open("links/index.html", encoding="utf-8").read()
 for p in FU:
     m = re.search(r'\[data-pref="' + p + r'"\][^{]*\{[^}]*--pc:\s*(#[0-9A-Fa-f]{6})', s)
     if m: PC[p] = m.group(1)
-yado = json.load(open("links/kansai-yado.json", encoding="utf-8")) if os.path.exists("links/kansai-yado.json") else {}
+# 11/21 1件ページは街なかの宿も入れた版（燈の kansai-yado-all.json）。無い日は遠い所だけの版
+_yf = "links/kansai-yado-all.json" if os.path.exists("links/kansai-yado-all.json") else "links/kansai-yado.json"
+yado = json.load(open(_yf, encoding="utf-8")) if os.path.exists(_yf) else {}
 yado = {re.sub(r"\s+", "", k): v for k, v in yado.items()}
 MORE = {re.sub(r"\s+", "", k): v for k, v in json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "odekake_more.json"), encoding="utf-8"))["rows"].items()}
 yjs = open("links/assets/yado.js", encoding="utf-8").read()
