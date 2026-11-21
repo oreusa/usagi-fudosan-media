@@ -1,0 +1,483 @@
+[
+ {
+  "name": "石切劔箭神社",
+  "theme": "",
+  "entity": {
+   "id": "Q11585189",
+   "label": "石切剣箭神社",
+   "cat": "Ishikiri Tsurugiya-Jinja",
+   "p18": "Ishikiritsurugiya-jinja Higashiosaka Osaka pref Japan05n.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Ishikiritsurugiya-jinja Higashiosaka Osaka pref Japan05n.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ishikiritsurugiya-jinja_Higashiosaka_Osaka_pref_Japan05n.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Ishikiritsurugiya-jinja_Higashiosaka_Osaka_pref_Japan05n.jpg/1920px-Ishikiritsurugiya-jinja_Higashiosaka_Osaka_pref_Japan05n.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.5",
+    "artist": "663highland",
+    "w": 4912,
+    "h": 3264,
+    "score": 36.8,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "000-0.jpg"
+   },
+   {
+    "title": "File:Ishikiri Tsurugiya Jinja, A Thousand Origami Cranes 01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ishikiri_Tsurugiya_Jinja,_A_Thousand_Origami_Cranes_01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/Ishikiri_Tsurugiya_Jinja%2C_A_Thousand_Origami_Cranes_01.jpg/1920px-Ishikiri_Tsurugiya_Jinja%2C_A_Thousand_Origami_Cranes_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Naokijp",
+    "w": 5472,
+    "h": 3648,
+    "score": 35.2,
+    "why": [],
+    "file": "000-1.jpg"
+   },
+   {
+    "title": "File:Ishikiri Tsurugiya Jinja, Ema of 2022.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ishikiri_Tsurugiya_Jinja,_Ema_of_2022.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Ishikiri_Tsurugiya_Jinja%2C_Ema_of_2022.jpg/1920px-Ishikiri_Tsurugiya_Jinja%2C_Ema_of_2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Naokijp",
+    "w": 5472,
+    "h": 3648,
+    "score": 35.2,
+    "why": [],
+    "file": "000-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "下鴨神社",
+  "theme": "",
+  "entity": {
+   "id": "Q701620",
+   "label": "賀茂御祖神社",
+   "cat": "Shimogamo-jinja",
+   "p18": "Shimogamo 01.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:KTO1910-043 (48892045426).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:KTO1910-043_(48892045426).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/KTO1910-043_%2848892045426%29.jpg/1920px-KTO1910-043_%2848892045426%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "nobu3withfoxy from Iga,Mie, Japan",
+    "w": 5472,
+    "h": 3648,
+    "score": 35.2,
+    "why": [],
+    "file": "001-0.jpg"
+   },
+   {
+    "title": "File:KTO1910-042 (48891514998).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:KTO1910-042_(48891514998).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/KTO1910-042_%2848891514998%29.jpg/1920px-KTO1910-042_%2848891514998%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "nobu3withfoxy from Iga,Mie, Japan",
+    "w": 5290,
+    "h": 3527,
+    "score": 35.1,
+    "why": [],
+    "file": "001-1.jpg"
+   },
+   {
+    "title": "File:KTO1910-045 (48891510958).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:KTO1910-045_(48891510958).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/KTO1910-045_%2848891510958%29.jpg/1920px-KTO1910-045_%2848891510958%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "nobu3withfoxy from Iga,Mie, Japan",
+    "w": 5268,
+    "h": 3512,
+    "score": 35.1,
+    "why": [],
+    "file": "001-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "上賀茂神社",
+  "theme": "",
+  "entity": {
+   "id": "Q700448",
+   "label": "賀茂別雷神社",
+   "cat": "Kamigamo-jinja",
+   "p18": "Kamo-wakeikazuchi-jinja24n3200.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Kamigamo Shrine in Kyoto.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kamigamo_Shrine_in_Kyoto.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/Kamigamo_Shrine_in_Kyoto.jpg/1920px-Kamigamo_Shrine_in_Kyoto.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Tmv",
+    "w": 6016,
+    "h": 4016,
+    "score": 35.5,
+    "why": [],
+    "file": "002-0.jpg"
+   },
+   {
+    "title": "File:Ota-jinja (Kyoto) Chinju-sha.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Ota-jinja_(Kyoto)_Chinju-sha.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Ota-jinja_%28Kyoto%29_Chinju-sha.JPG/1920px-Ota-jinja_%28Kyoto%29_Chinju-sha.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "Saigen Jiro",
+    "w": 6016,
+    "h": 4000,
+    "score": 35.5,
+    "why": [],
+    "file": "002-1.jpg"
+   },
+   {
+    "title": "File:Ota-jinja (Kyoto) Hyakudayu-sha.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Ota-jinja_(Kyoto)_Hyakudayu-sha.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Ota-jinja_%28Kyoto%29_Hyakudayu-sha.JPG/1920px-Ota-jinja_%28Kyoto%29_Hyakudayu-sha.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "Saigen Jiro",
+    "w": 6016,
+    "h": 4000,
+    "score": 35.5,
+    "why": [],
+    "file": "002-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "建部大社",
+  "theme": "",
+  "entity": {
+   "id": "Q403338",
+   "label": "建部大社",
+   "cat": "Takebe Taisha",
+   "p18": "Takebe-shrine.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Takebe Taisha 20200919 07.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Takebe_Taisha_20200919_07.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Takebe_Taisha_20200919_07.jpg/1920px-Takebe_Taisha_20200919_07.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "先従隗始",
+    "w": 4608,
+    "h": 3456,
+    "score": 34.8,
+    "why": [],
+    "file": "003-0.jpg"
+   },
+   {
+    "title": "File:Takebe Taisha 20200919 08.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Takebe_Taisha_20200919_08.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1e/Takebe_Taisha_20200919_08.jpg/1920px-Takebe_Taisha_20200919_08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "先従隗始",
+    "w": 4608,
+    "h": 3456,
+    "score": 34.8,
+    "why": [],
+    "file": "003-1.jpg"
+   },
+   {
+    "title": "File:Takebe-taisha Fujinomiya-jinja.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Takebe-taisha_Fujinomiya-jinja.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Takebe-taisha_Fujinomiya-jinja.JPG/1920px-Takebe-taisha_Fujinomiya-jinja.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "Saigen Jiro",
+    "w": 3648,
+    "h": 2736,
+    "score": 34.0,
+    "why": [],
+    "file": "003-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "クラフトパーク 秋の日曜体験",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "白龍園の紅葉 秋の特別公開",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "そんな“バーガー”なフェス",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "シガパークめぐり スタンプラリー",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "ギュウポケ in ドラゴン",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "那智漁港 漁師の朝市",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "紀の川市産業まつり・食育フェア",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "万呂須佐神社例祭（万呂の獅子舞）",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "和歌山県eスポーツフェスタ「きら★スポ」2026",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "国城観光農園 みかん狩り",
+  "theme": "night",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "豊臣兄弟！大和郡山 大河ドラマ館",
+  "theme": "",
+  "entity": {
+   "id": "Q11280523",
+   "label": "やまと郡山城ホール",
+   "cat": "Yamato Koriyama-jo Hall",
+   "p18": "DMG MORI Yamato Koriyamajo Hall ac.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:DMG MORI Yamato Koriyamajo Hall ac.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:DMG_MORI_Yamato_Koriyamajo_Hall_ac.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/DMG_MORI_Yamato_Koriyamajo_Hall_ac.jpg/1920px-DMG_MORI_Yamato_Koriyamajo_Hall_ac.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Asturio Cantabrio",
+    "w": 6016,
+    "h": 4000,
+    "score": 43.5,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "014-0.jpg"
+   },
+   {
+    "title": "File:DMG MORI YAMATOKORIYAMAJO HALL.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:DMG_MORI_YAMATOKORIYAMAJO_HALL.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/DMG_MORI_YAMATOKORIYAMAJO_HALL.jpg/1920px-DMG_MORI_YAMATOKORIYAMAJO_HALL.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Tokumeigakarinoaoshima",
+    "w": 3519,
+    "h": 1920,
+    "score": 33.3,
+    "why": [],
+    "file": "014-1.jpg"
+   },
+   {
+    "title": "File:DMG MORI YAMATO KORIYAMAJO HALL.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:DMG_MORI_YAMATO_KORIYAMAJO_HALL.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/DMG_MORI_YAMATO_KORIYAMAJO_HALL.jpg/1920px-DMG_MORI_YAMATO_KORIYAMAJO_HALL.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Tokumeigakarinoaoshima",
+    "w": 2544,
+    "h": 978,
+    "score": 31.6,
+    "why": [],
+    "file": "014-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "万博の森 どんぐりフェス",
+  "theme": "",
+  "entity": {
+   "id": "Q4817249",
+   "label": "万博記念公園",
+   "cat": "Expo '70 Commemorative Park",
+   "p18": ""
+  },
+  "cand": [
+   {
+    "title": "File:日本万国博覧会記念公園 桜 (49085338542).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E6%97%A5%E6%9C%AC%E4%B8%87%E5%9B%BD%E5%8D%9A%E8%A6%A7%E4%BC%9A%E8%A8%98%E5%BF%B5%E5%85%AC%E5%9C%92_%E6%A1%9C_(49085338542).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/%E6%97%A5%E6%9C%AC%E4%B8%87%E5%9B%BD%E5%8D%9A%E8%A6%A7%E4%BC%9A%E8%A8%98%E5%BF%B5%E5%85%AC%E5%9C%92_%E6%A1%9C_%2849085338542%29.jpg/1920px-%E6%97%A5%E6%9C%AC%E4%B8%87%E5%9B%BD%E5%8D%9A%E8%A6%A7%E4%BC%9A%E8%A8%98%E5%BF%B5%E5%85%AC%E5%9C%92_%E6%A1%9C_%2849085338542%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 2.0",
+    "artist": "Ann Lee",
+    "w": 6000,
+    "h": 4000,
+    "score": 35.5,
+    "why": [],
+    "file": "015-0.jpg"
+   },
+   {
+    "title": "File:苔内に入らないで下さい (49926906326).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E8%8B%94%E5%86%85%E3%81%AB%E5%85%A5%E3%82%89%E3%81%AA%E3%81%84%E3%81%A7%E4%B8%8B%E3%81%95%E3%81%84_(49926906326).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/%E8%8B%94%E5%86%85%E3%81%AB%E5%85%A5%E3%82%89%E3%81%AA%E3%81%84%E3%81%A7%E4%B8%8B%E3%81%95%E3%81%84_%2849926906326%29.jpg/1920px-%E8%8B%94%E5%86%85%E3%81%AB%E5%85%A5%E3%82%89%E3%81%AA%E3%81%84%E3%81%A7%E4%B8%8B%E3%81%95%E3%81%84_%2849926906326%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 2.0",
+    "artist": "Cheng-en Cheng from Taichung City, Taiwan",
+    "w": 5056,
+    "h": 3792,
+    "score": 35.1,
+    "why": [],
+    "file": "015-1.jpg"
+   },
+   {
+    "title": "File:SAKURAKO - Fun park ride! (33882174936).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:SAKURAKO_-_Fun_park_ride!_(33882174936).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d4/SAKURAKO_-_Fun_park_ride%21_%2833882174936%29.jpg/1920px-SAKURAKO_-_Fun_park_ride%21_%2833882174936%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "MIKI Yoshihito from Sapporo City, Hokkaido, Japan",
+    "w": 5472,
+    "h": 3077,
+    "score": 34.9,
+    "why": [],
+    "file": "015-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "梅小路公園 紅葉まつり ライトアップ",
+  "theme": "autumn",
+  "entity": {
+   "id": "Q11538444",
+   "label": "梅小路公園",
+   "cat": "Umekoji Park",
+   "p18": "250503 Suzaku-no-niwa in Umekoji Park Kyoto Japan01s3.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:250503 Suzaku-no-niwa in Umekoji Park Kyoto Japan01s3.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:250503_Suzaku-no-niwa_in_Umekoji_Park_Kyoto_Japan01s3.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/250503_Suzaku-no-niwa_in_Umekoji_Park_Kyoto_Japan01s3.jpg/1920px-250503_Suzaku-no-niwa_in_Umekoji_Park_Kyoto_Japan01s3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "663highland",
+    "w": 5472,
+    "h": 3648,
+    "score": 22.2,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "016-0.jpg"
+   },
+   {
+    "title": "File:Kyoto 20221026115501 (52649553882).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kyoto_20221026115501_(52649553882).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Kyoto_20221026115501_%2852649553882%29.jpg/1920px-Kyoto_20221026115501_%2852649553882%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "inunami",
+    "w": 4032,
+    "h": 3024,
+    "score": 19.3,
+    "why": [],
+    "file": "016-1.jpg"
+   },
+   {
+    "title": "File:Kyoto 20221026115715 (52650045746).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kyoto_20221026115715_(52650045746).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Kyoto_20221026115715_%2852650045746%29.jpg/1920px-Kyoto_20221026115715_%2852650045746%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "inunami",
+    "w": 4032,
+    "h": 3024,
+    "score": 19.3,
+    "why": [],
+    "file": "016-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "びっくり構図展",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "読書週間 Book＆POP展",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "斑鳩文化財センター 秋季特別展「華麗なる王族」",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "いい福展",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "浄厳院国際芸術祭2026",
+  "theme": "",
+  "entity": {
+   "id": "Q11556804",
+   "label": "浄厳院",
+   "cat": "",
+   "p18": "JOHGOHIN TEMPLE.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:JOHGOHIN TEMPLE.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:JOHGOHIN_TEMPLE.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/b/be/JOHGOHIN_TEMPLE.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "CC BY-SA 4.0",
+    "artist": "イココ",
+    "w": 1600,
+    "h": 1200,
+    "score": 39.1,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "021-0.jpg"
+   }
+  ]
+ },
+ {
+  "name": "ネスタリゾート神戸 NESTA ILLUMINA",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "最上山もみじ祭り ライトアップ",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "善法律寺 紅葉ライトアップ",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "奇絶峡",
+  "theme": "",
+  "entity": {
+   "id": "Q11444893",
+   "label": "奇絶峡",
+   "cat": "",
+   "p18": "奇絶峡 Kizetsukyo - panoramio.jpg"
+  },
+  "cand": []
+ }
+]
