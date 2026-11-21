@@ -15,6 +15,8 @@ for(const [n,u,lat,lon] of [['ka','https://kansai.townnote.app/odekake',34.7025,
  const ok=await p.evaluate(()=>{const W=innerWidth,H=innerHeight;const o=[...document.querySelectorAll('.pin.one .pc')].find(e=>{const r=e.getBoundingClientRect();return r.left>20&&r.right<W-70&&r.top>200&&r.bottom<H-260});if(o){o.click();return 1}return 0});if(ok)await S('5one');
  await p.click('#m2w button[data-w="we"]');await S('6we');
  await p.click('.m2z button[data-z="me"]');await S('7me');
+ const sw=async(dx,dy)=>{const r=await p.evaluate(()=>{const e=document.querySelector('#m2c').getBoundingClientRect();return [e.left+e.width/2,e.top+60]});const cd=await p.context().newCDPSession(p);await cd.send('Input.synthesizeScrollGesture',{x:r[0],y:r[1],xDistance:dx,yDistance:dy,gestureSourceType:'touch',speed:1200});await p.waitForTimeout(700);return p.evaluate(()=>({sy:scrollY,vv:Math.round(visualViewport.offsetTop),top:Math.round(document.querySelector('.m2').getBoundingClientRect().top),ct:document.querySelector('#m2c').scrollTop,cl:Math.round(document.querySelector('#m2c').scrollLeft)}))};
+ const v0=await sw(0,-300),v1=await sw(0,300),h0=await sw(-250,0);log.push(t+' swipe up='+JSON.stringify(v0)+' down='+JSON.stringify(v1)+' side='+JSON.stringify(h0));await S('6bswipe');
  const c=await p.$('#m2c .mcd');if(c){await c.click();await S('8sheet');await p.goBack()}
  await p.goBack();await S('9back');
  log.push(t+' url='+p.url()+' errs='+JSON.stringify(errs));
