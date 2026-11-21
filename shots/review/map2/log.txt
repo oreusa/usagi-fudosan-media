@@ -1,4 +1,8 @@
+ka-d swipe up={"sy":535,"vv":0,"top":0,"ct":0,"cl":0} down={"sy":535,"vv":0,"top":0,"ct":0,"cl":0} side={"sy":535,"vv":0,"top":0,"ct":0,"cl":0}
 ka-d url=https://kansai.townnote.app/odekake?map2=1&w=we errs=[]
+ka-n swipe up={"sy":535,"vv":0,"top":0,"ct":0,"cl":0} down={"sy":535,"vv":0,"top":0,"ct":0,"cl":0} side={"sy":535,"vv":0,"top":0,"ct":0,"cl":0}
 ka-n url=https://kansai.townnote.app/odekake?map2=1&w=we errs=[]
+kt-d swipe up={"sy":535,"vv":0,"top":0,"ct":0,"cl":0} down={"sy":535,"vv":0,"top":0,"ct":0,"cl":0} side={"sy":535,"vv":0,"top":0,"ct":0,"cl":0}
 kt-d url=https://kanto.townnote.app/odekake?map2=1&w=we errs=[]
+kt-n swipe up={"sy":535,"vv":0,"top":0,"ct":0,"cl":0} down={"sy":535,"vv":0,"top":0,"ct":0,"cl":0} side={"sy":535,"vv":0,"top":0,"ct":0,"cl":0}
 kt-n url=https://kanto.townnote.app/odekake?map2=1&w=we errs=[]
