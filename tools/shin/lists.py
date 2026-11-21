@@ -110,7 +110,7 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
     gk = {g: [g, GC.get(g, '#6E6E73')] for g in GC if any(x['k'] == g for x in kt)}
     c = copy.deepcopy(cfg)
     c['nav'] = [{'t': 'これから', 'ic': 'now', 'a': 'w=soon'}, {'t': '開いた', 'ic': 'we', 'a': 'w=done'}, {'t': '閉まる', 'ic': 'down', 'a': 'w=close'}, {'t': '保存', 'ic': 'star', 'a': 'fav'}]
-    c['menu'] = {'k': 'New Shops', 'items': [['関西の開店・閉店', '/kaiten', 1], ['関東の開店・閉店', 'https://kanto.townnote.app/kaiten']]}
+    c['menu'] = {'k': 'New Shops', 'items': [['関西の開店・閉店', '/kaiten', 1]]}
     c['foot'] = '各社の公式の発表（プレスリリース・お店のお知らせ）から集めています。写真はお店の入る建物・場所の写真で、撮影者を各ページに書いています（ウィキメディア・コモンズ ほか）。'
     c['desc'] = f'関西6府県の新しいお店・閉まるお店を、各社の公式の発表から毎日集めています。これから{cn["soon"]}件・開いた{cn["done"]}件・閉まる{cn["close"]}件。'
     URL['kaiten'] = '/kaiten'
