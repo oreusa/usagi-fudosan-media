@@ -47,6 +47,22 @@ def PHM(f):
         return _PM[f]
     except Exception:
         return _PM.get(f)
+# 11/21 owner「HPもっと綺麗に見せたい」：表（今週の顔・ストーリーの丸）には一番きれいな写真を出す。
+# 写真ごとの見た目の点（色の鮮やかさ・くっきり・明るさ・くもり空）を tools/photo/best.py の visual_im で量り tools/shin/photo_b.json に残す
+_PBF = os.path.join(R, 'tools/shin/photo_b.json')
+try: _PB = json.load(open(_PBF, encoding='utf-8'))
+except Exception: _PB = {}
+def PHB(f):
+    if f in _PB: return _PB[f]
+    try:
+        import sys; sys.path.insert(0, os.path.join(R, 'tools/photo'))
+        from best import visual_im
+        from PIL import Image
+        _PB[f] = visual_im(Image.open(os.path.join(L, 'assets/ph', f)))[0]
+        json.dump(_PB, open(_PBF, 'w', encoding='utf-8'))
+    except Exception:
+        _PB[f] = 0
+    return _PB[f]
 def FIT(it, kind):
     """ok：2＝このページに合う写真、1＝目で選んだ写真、-1＝合わない（後ろへ）"""
     it = dict(it); m = PHM(it['im']) if it.get('im') else None
@@ -153,6 +169,9 @@ def odekake():
             if v.get(k): it[k] = v[k]
         if v.get('im') and v['im'] in phh: it['th'] = phh[v['im']]
         if v.get('im') in PHOK: it['ok'] = 1
+        if v.get('im'): it['vb'] = PHB(v['im'])
+        if v.get('im') and PHM(v['im']) and IS_NIGHT(PHM(v['im'])): it['nt'] = 1
+        if v.get('im') and (PHM(v['im']) or [0, 0])[1] >= .2: it['wm'] = 1
         if v.get('im') in PHHR: it['hr'] = 1
         if v.get('im') and (PHM(v['im']) or [0, 0, 0, 9999])[3] < 900: it['lo'] = 1
         if POP(t): it['pp'] = POP(t)
@@ -176,6 +195,9 @@ def odekake():
         if v.get('h') and 'h' not in it: it['h'] = v['h']
         if it.get('im') and it['im'] in phh: it['th'] = phh[it['im']]
         if it.get('im') in PHOK: it['ok'] = 1
+        if it.get('im'): it['vb'] = PHB(it['im'])
+        if it.get('im') and PHM(it['im']) and IS_NIGHT(PHM(it['im'])): it['nt'] = 1
+        if it.get('im') and (PHM(it['im']) or [0, 0])[1] >= .2: it['wm'] = 1
         if it.get('im') in PHHR: it['hr'] = 1
         if it.get('im') and (PHM(it['im']) or [0, 0, 0, 9999])[3] < 900: it['lo'] = 1
         if POP(name): it['pp'] = POP(name)

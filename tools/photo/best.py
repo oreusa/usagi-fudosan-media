@@ -127,9 +127,16 @@ def visual(url, theme):
     try:
         from PIL import Image, ImageFilter, ImageStat
         import io
-        im = Image.open(io.BytesIO(get(url))).convert("RGB"); im.thumbnail((240, 240))
+        im = Image.open(io.BytesIO(get(url))).convert("RGB")
     except Exception:
         return 0, []
+    return visual_im(im, theme)
+
+
+def visual_im(im, theme=""):
+    """visual() の中身。手元の写真（HPの assets/ph）にも同じ物差しを使う（11/21 一番きれいな写真を表に）"""
+    from PIL import ImageFilter, ImageStat
+    im = im.convert("RGB"); im.thumbnail((240, 240))
     w, h = im.size; hsv = im.convert("HSV"); px = list(hsv.getdata()); n = len(px) or 1
     L = im.convert("L"); lm = ImageStat.Stat(L).mean[0]
     sat = sum(p[1] for p in px) / n / 255

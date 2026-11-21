@@ -188,7 +188,7 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
         def pick_ph(f, n):
             r, u = [], set()
             RK = {'koyo': 0, 'flower': 1, 'spot': 2, 'animal': 3, 'play': 4}
-            for x in sorted(now, key=lambda x: (RK.get(x.get('k'), 9), x['e'])):
+            for x in sorted(now, key=lambda x: (RK.get(x.get('k'), 9), -(x.get('vb') or 0) // 6, x['e'])):  # 11/21 きれいな写真を先に（6点ごとの段・同じ段は終わりが近い順）
                 if x.get('im') and f(x) and x['im'] not in u: r.append({k: x[k] for k in ('t', 'p', 'e', 'im', 'th', 'o') if k in x}); u.add(x['im'])
                 if len(r) >= n: break
             return r
