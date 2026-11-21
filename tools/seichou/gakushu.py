@@ -563,7 +563,10 @@ for o in orders:
         _act.append(o)
         if not _alert: _n[o["to"]] = _n.get(o["to"], 0) + 1
 orders = _act
-top3 = [{"name": "来た人（人だけ・7日）", "num": _hito, "line": "週300人", "note": ("数えはじめ 11/12（7日ぶんがそろうのは 11/19）" if today.isoformat() < "2026-11-19" else "") if _src else "数えはじめ 11/12。それまでの「外から」は機械まじり"},
+# 11/21 オーナー「毎日報告は昨日来た人にして・全部」→ 報告に出すのは「きのう1日」の人だけの数（段の線は7日のまま中で使う）
+_y1 = (today - timedelta(days=1)).isoformat()
+_hito1 = sum(int(r.get("n", 0) or 0) for r in rows if r.get("day", "") == _y1 and r.get("k", "").startswith("来た元：")) if _src else None
+top3 = [{"name": f"来た人（人だけ・きのう {_y1[5:].replace('-', '/')}）", "num": _hito1, "line": f"1日43人（7日で {_hito}）", "note": ("数えはじめ 11/12（7日ぶんがそろうのは 11/19）" if today.isoformat() < "2026-11-19" else "") if _src else "数えはじめ 11/12。それまでの「外から」は機械まじり"},
         {"name": "Google に載った枚数", "num": f"関西 {_ik if _ik is not None else '未確認'}・関東 {_it if _it is not None else '未確認'}", "line": "関西100・関東100", "note": ""},
         {"name": "反響（送信・7日）", "num": sent, "line": "週1件", "note": ""}]
 hist.setdefault("hito", []).append([today.isoformat(), _hito]); hist.setdefault("idx", []).append([today.isoformat(), (_ik or 0) + (_it or 0)])
