@@ -65,12 +65,22 @@ for raw in sorted(ven, key=lambda x: -len(ven[x])):
     try:
         e = B.entity(vn)
         lab = (e or {}).get("label", "")
-        if not e or not e.get("p18") or not lab or not (k(vn) in k(lab) or k(lab) in k(vn)): print("代表の写真なし", vn, lab); continue
-        # 毎朝の自動は「ウィキデータの代表の写真」だけ使う（その場所を写した写真として人が選んだ物＝違う場所が入らない）
-        t = "File:" + e["p18"]; ii = (B.info([t]).get(t) or {}).get("ii") or {}
-        md = ii.get("extmetadata", {}); lic = md.get("LicenseShortName", {}).get("value", "")
-        if not any(lic.startswith(x) for x in B.OK) or ii.get("width", 0) < 800 or ii.get("width", 0) < ii.get("height", 1): print("使えない写真", vn, lic); continue
-        c = {"thumb": ii.get("thumburl"), "page": ii.get("descriptionurl"), "license": lic, "artist": re.sub(r"<[^>]+>", "", md.get("Artist", {}).get("value", "")).strip(), "title": t}
+        if not e or not (e.get("p18") or e.get("cat")) or not lab or not (k(vn) in k(lab) or k(lab) in k(vn)): print("代表の写真なし", vn, lab); continue
+        # 11/21 オーナー「より良い写真を」→ その場所の分類（同じ場所の写真だけ）から、文字の点＋見た目の点（色・くっきり・季節）で一番の1枚。
+        # 点が低い・無い時は今まで通り「ウィキデータの代表の写真」（人がその場所の写真として選んだ物）
+        th = B.theme_of(" ".join(M[x]["n"] for x in ven[raw] if x in M))
+        c = None
+        if e.get("cat"):
+            try:
+                _, cs = B.best(vn, th)
+                if cs and cs[0]["score"] >= 70: c = cs[0]
+            except Exception as ex: print("ERR best", vn, ex)
+        if not c:
+            if not e.get("p18"): print("代表の写真なし", vn, lab); continue
+            t = "File:" + e["p18"]; ii = (B.info([t]).get(t) or {}).get("ii") or {}
+            md = ii.get("extmetadata", {}); lic = md.get("LicenseShortName", {}).get("value", "")
+            if not any(lic.startswith(x) for x in B.OK) or ii.get("width", 0) < 800 or ii.get("width", 0) < ii.get("height", 1): print("使えない写真", vn, lic); continue
+            c = {"thumb": ii.get("thumburl"), "page": ii.get("descriptionurl"), "license": lic, "artist": re.sub(r"<[^>]+>", "", md.get("Artist", {}).get("value", "")).strip(), "title": t}
         f = save(c["thumb"], "venue:" + vn)
         VP[vn] = {"img": f, "cr": f'{(c["artist"] or "撮影者")[:40]}（{c["license"]}・Wikimedia Commons）', "page": c["page"], "auto": 1, "d": T}
         print("会場の写真", vn, "←", lab, c["title"][:50])
