@@ -160,7 +160,7 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
             return json.loads(html.unescape(re.search(r'id="d" type="application/json">(.*?)</script>', t, re.S).group(1)).replace('<\\/', '</'))
         now = [x for x in items if x['s'] <= TD <= x['e']]
         pc = {p: sum(1 for x in now if x['p'] == p) for p in PREFS}
-        ph = [x for x in sorted(now, key=lambda x: x['e']) if x.get('im')]
+        ph = [x for x in sorted(now, key=lambda x: ((1 if (x.get('k') == 'light' and not x.get('nt')) or (x.get('k') == 'koyo' and not x.get('wm')) else 0), -(x.get('vb') or 0) // 6, x['e'])) if x.get('im')]  # 11/21 表紙の顔：中身に合う・きれいな写真を先に
         top, used = [], set()
         while len(top) < 8 and ph:
             for p in PREFS:
@@ -188,7 +188,7 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
         def pick_ph(f, n):
             r, u = [], set()
             RK = {'koyo': 0, 'flower': 1, 'spot': 2, 'animal': 3, 'play': 4}
-            for x in sorted(now, key=lambda x: (RK.get(x.get('k'), 9), -(x.get('vb') or 0) // 6, x['e'])):  # 11/21 きれいな写真を先に（6点ごとの段・同じ段は終わりが近い順）
+            for x in sorted(now, key=lambda x: (RK.get(x.get('k'), 9), (1 if (x.get('k') == 'light' and not x.get('nt')) or (x.get('k') == 'koyo' and not x.get('wm')) else 0), -(x.get('vb') or 0) // 6, x['e'])):  # 11/21 きれいな写真を先に（6点ごとの段・同じ段は終わりが近い順）
                 if x.get('im') and f(x) and x['im'] not in u: r.append({k: x[k] for k in ('t', 'p', 'e', 'im', 'th', 'o') if k in x}); u.add(x['im'])
                 if len(r) >= n: break
             return r
