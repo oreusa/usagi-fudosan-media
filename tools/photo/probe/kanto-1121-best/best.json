@@ -1,0 +1,1994 @@
+[
+ {
+  "name": "OOTEMORIクリスマスツリー2026",
+  "theme": "",
+  "entity": {
+   "id": "Q112255588",
+   "label": "大手町の森",
+   "cat": "Ōtemachi no Mori",
+   "p18": "Otemachi no Mori 20140910 1.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Otemachi no Mori 20140910 1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Otemachi_no_Mori_20140910_1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Otemachi_no_Mori_20140910_1.jpg/1920px-Otemachi_no_Mori_20140910_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "artist": "State Department photo by William Ng / Public DomainEast Asia and Pacific Media ",
+    "w": 4845,
+    "h": 3225,
+    "score": 42.8,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "000-0.jpg"
+   },
+   {
+    "title": "File:Caroline Kennedy 20140910 1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Caroline_Kennedy_20140910_1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Caroline_Kennedy_20140910_1.jpg/1920px-Caroline_Kennedy_20140910_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "artist": "State Department photo by William Ng / Public DomainEast Asia and Pacific Media ",
+    "w": 4928,
+    "h": 3280,
+    "score": 34.8,
+    "why": [],
+    "file": "000-1.jpg"
+   },
+   {
+    "title": "File:Caroline Kennedy 20140910 2.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Caroline_Kennedy_20140910_2.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Caroline_Kennedy_20140910_2.jpg/1920px-Caroline_Kennedy_20140910_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "artist": "State Department photo by William Ng / Public DomainEast Asia and Pacific Media ",
+    "w": 4824,
+    "h": 3211,
+    "score": 34.8,
+    "why": [],
+    "file": "000-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "明治安田ヴィレッジ丸の内 Christmas Tree",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "御茶ノ水ソラシティ Winter Illuminations",
+  "theme": "",
+  "entity": {
+   "id": "Q17989798",
+   "label": "御茶ノ水ソラシティ",
+   "cat": "Ochanomizu sola city",
+   "p18": "Solacity.jpg"
+  },
+  "cand": []
+ },
+ {
+  "name": "ホテルメトロポリタン エドモント Crystal Garden",
+  "theme": "",
+  "entity": {
+   "id": "Q11282092",
+   "label": "アイガーデンエア",
+   "cat": "I-Garden Air",
+   "p18": "Garden Air Tower.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:I garden terrace iidabashi.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:I_garden_terrace_iidabashi.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/I_garden_terrace_iidabashi.JPG/1920px-I_garden_terrace_iidabashi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "Kamemaru2000",
+    "w": 2581,
+    "h": 1832,
+    "score": 32.7,
+    "why": [],
+    "file": "003-0.jpg"
+   },
+   {
+    "title": "File:Hotel metropolitan edmont iidabashi 2009.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Hotel_metropolitan_edmont_iidabashi_2009.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Hotel_metropolitan_edmont_iidabashi_2009.JPG/1920px-Hotel_metropolitan_edmont_iidabashi_2009.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "Kamemaru2000",
+    "w": 2592,
+    "h": 1944,
+    "score": 26.8,
+    "why": [],
+    "file": "003-1.jpg"
+   },
+   {
+    "title": "File:Hotel Metropolitan Edmont 01.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Hotel_Metropolitan_Edmont_01.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Hotel_Metropolitan_Edmont_01.JPG/1920px-Hotel_Metropolitan_Edmont_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "artist": "Abasaa",
+    "w": 2048,
+    "h": 1536,
+    "score": 26.0,
+    "why": [],
+    "file": "003-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "TOKYO ILLUMILIA 2026-2027",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "LIGHTBEATS 光の鼓動",
+  "theme": "night",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "代官山アドレス・ディセ 冬のイルミネーション",
+  "theme": "night",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "新宿パークタワーのクリスマス 2026",
+  "theme": "",
+  "entity": {
+   "id": "Q1348023",
+   "label": "新宿パークタワー",
+   "cat": "Shinjuku Park Tower",
+   "p18": "Shinjuku Park Tower.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:New York Bar Unplugged, Park Hyatt Tokyo (8376387540).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:New_York_Bar_Unplugged,_Park_Hyatt_Tokyo_(8376387540).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/41/New_York_Bar_Unplugged%2C_Park_Hyatt_Tokyo_%288376387540%29.jpg/1920px-New_York_Bar_Unplugged%2C_Park_Hyatt_Tokyo_%288376387540%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "Jun Seita from Palo Alto, CA, U.S.",
+    "w": 6016,
+    "h": 4016,
+    "score": 35.5,
+    "why": [],
+    "file": "007-0.jpg"
+   },
+   {
+    "title": "File:お米のティラミス薄焼き卵包み 濃茶ソース (8380616651).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E3%81%8A%E7%B1%B3%E3%81%AE%E3%83%86%E3%82%A3%E3%83%A9%E3%83%9F%E3%82%B9%E8%96%84%E7%84%BC%E3%81%8D%E5%8D%B5%E5%8C%85%E3%81%BF_%E6%BF%83%E8%8C%B6%E3%82%BD%E3%83%BC%E3%82%B9_(8380616651).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/%E3%81%8A%E7%B1%B3%E3%81%AE%E3%83%86%E3%82%A3%E3%83%A9%E3%83%9F%E3%82%B9%E8%96%84%E7%84%BC%E3%81%8D%E5%8D%B5%E5%8C%85%E3%81%BF_%E6%BF%83%E8%8C%B6%E3%82%BD%E3%83%BC%E3%82%B9_%288380616651%29.jpg/1920px-%E3%81%8A%E7%B1%B3%E3%81%AE%E3%83%86%E3%82%A3%E3%83%A9%E3%83%9F%E3%82%B9%E8%96%84%E7%84%BC%E3%81%8D%E5%8D%B5%E5%8C%85%E3%81%BF_%E6%BF%83%E8%8C%B6%E3%82%BD%E3%83%BC%E3%82%B9_%288380616651%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "Jun Seita from Palo Alto, CA, U.S.",
+    "w": 6016,
+    "h": 4016,
+    "score": 35.5,
+    "why": [],
+    "file": "007-1.jpg"
+   },
+   {
+    "title": "File:Open Kitchen in Action, New York Grill, Park Hyatt Tokyo (8375313873).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Open_Kitchen_in_Action,_New_York_Grill,_Park_Hyatt_Tokyo_(8375313873).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Open_Kitchen_in_Action%2C_New_York_Grill%2C_Park_Hyatt_Tokyo_%288375313873%29.jpg/1920px-Open_Kitchen_in_Action%2C_New_York_Grill%2C_Park_Hyatt_Tokyo_%288375313873%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "Jun Seita from Palo Alto, CA, U.S.",
+    "w": 5544,
+    "h": 3696,
+    "score": 35.2,
+    "why": [],
+    "file": "007-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "たちかわイルミネーション",
+  "theme": "night",
+  "entity": {
+   "id": "Q11485800",
+   "label": "庄内交通",
+   "cat": "Shonai Kotsu",
+   "p18": "Shonai-kotsu-39.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Shonai Kotsu,Co.,ltd.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Shonai_Kotsu,Co.,ltd.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Shonai_Kotsu%2CCo.%2Cltd.JPG/1920px-Shonai_Kotsu%2CCo.%2Cltd.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Suz-b",
+    "w": 2560,
+    "h": 1920,
+    "score": 17.8,
+    "why": [],
+    "file": "008-0.jpg"
+   },
+   {
+    "title": "File:AsahiKoutsu313.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:AsahiKoutsu313.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a9/AsahiKoutsu313.jpg/1920px-AsahiKoutsu313.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "Rsa",
+    "w": 2908,
+    "h": 2000,
+    "score": -21.9,
+    "why": [
+     "記録写真"
+    ],
+    "file": "008-1.jpg"
+   },
+   {
+    "title": "File:S-Mall Bus Terminal.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:S-Mall_Bus_Terminal.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1c/S-Mall_Bus_Terminal.JPG/1920px-S-Mall_Bus_Terminal.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Suz-b",
+    "w": 2560,
+    "h": 1920,
+    "score": -22.2,
+    "why": [
+     "記録写真"
+    ],
+    "file": "008-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "イセザキ☆ライト",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "さがみ湖イルミリオン",
+  "theme": "night",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "マクハリイルミ 26/27",
+  "theme": "night",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "ホテルオークラ東京ベイ ウィンターイルミネーション",
+  "theme": "night",
+  "entity": {
+   "id": "Q11337853",
+   "label": "ホテルオークラ東京ベイ",
+   "cat": "Hotel Okura Tokyo Bay",
+   "p18": "Hotel Okura TOKYO BAY.JPG"
+  },
+  "cand": []
+ },
+ {
+  "name": "うつのみやイルミネーション 2026",
+  "theme": "night",
+  "entity": {
+   "id": "Q10946254",
+   "label": "宇都宮二荒山神社",
+   "cat": "Utsunomiya Futaarayama-jinja",
+   "p18": "宇都宮二荒山神社 拝殿.JPG"
+  },
+  "cand": [
+   {
+    "title": "File:Utsunomiya Bamba.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Utsunomiya_Bamba.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Utsunomiya_Bamba.JPG/1920px-Utsunomiya_Bamba.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "駅弁",
+    "w": 3648,
+    "h": 2736,
+    "score": 64.0,
+    "why": [
+     "季節が合う"
+    ],
+    "file": "013-0.jpg"
+   },
+   {
+    "title": "File:Paper lanterns of Utsunomiya Futaarayama-jinja 2006.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Paper_lanterns_of_Utsunomiya_Futaarayama-jinja_2006.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Paper_lanterns_of_Utsunomiya_Futaarayama-jinja_2006.JPG/1920px-Paper_lanterns_of_Utsunomiya_Futaarayama-jinja_2006.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "Asanagi",
+    "w": 2048,
+    "h": 1536,
+    "score": 62.0,
+    "why": [
+     "季節が合う"
+    ],
+    "file": "013-1.jpg"
+   },
+   {
+    "title": "File:Furusato Miya Festival 2023.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Furusato_Miya_Festival_2023.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Furusato_Miya_Festival_2023.jpg/1920px-Furusato_Miya_Festival_2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Miyuki Meinaka",
+    "w": 4096,
+    "h": 2304,
+    "score": 57.9,
+    "why": [
+     "季節が合う"
+    ],
+    "file": "013-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "サンタヒルズのクリスマスイルミネーション",
+  "theme": "night",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "府中まんなかイルミ",
+  "theme": "night",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "2026あげおイルミネーション",
+  "theme": "night",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "ヒルトン東京ベイ クリスマス・トレイン",
+  "theme": "",
+  "entity": {
+   "id": "Q11330335",
+   "label": "ヒルトン東京ベイ",
+   "cat": "Hilton Tokyo Bay",
+   "p18": "Hilton Tokyo Bay.JPG"
+  },
+  "cand": []
+ },
+ {
+  "name": "大山 紅葉ライトアップ（大山寺・阿夫利神社下社）",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "宝徳寺 床もみじ ライトアップ",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "足利織姫神社 紅葉ライトアップ",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "高尾山",
+  "theme": "",
+  "entity": {
+   "id": "Q1329959",
+   "label": "高尾山",
+   "cat": "Mount Takao",
+   "p18": "Mount Takao hike in January 9.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Tokyo Takaosan 20151128.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tokyo_Takaosan_20151128.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Tokyo_Takaosan_20151128.jpg/1920px-Tokyo_Takaosan_20151128.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Antilovsky",
+    "w": 8008,
+    "h": 2992,
+    "score": 35.5,
+    "why": [],
+    "file": "021-0.jpg"
+   },
+   {
+    "title": "File:ムっちゃん様 控え室 (25187898467).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E3%83%A0%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93%E6%A7%98_%E6%8E%A7%E3%81%88%E5%AE%A4_(25187898467).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/%E3%83%A0%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93%E6%A7%98_%E6%8E%A7%E3%81%88%E5%AE%A4_%2825187898467%29.jpg/1920px-%E3%83%A0%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93%E6%A7%98_%E6%8E%A7%E3%81%88%E5%AE%A4_%2825187898467%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "mono from Tokyo, Japan",
+    "w": 5184,
+    "h": 3888,
+    "score": 35.2,
+    "why": [],
+    "file": "021-1.jpg"
+   },
+   {
+    "title": "File:ムっちゃん様 控え室 (39161644375).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E3%83%A0%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93%E6%A7%98_%E6%8E%A7%E3%81%88%E5%AE%A4_(39161644375).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/%E3%83%A0%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93%E6%A7%98_%E6%8E%A7%E3%81%88%E5%AE%A4_%2839161644375%29.jpg/1920px-%E3%83%A0%E3%81%A3%E3%81%A1%E3%82%83%E3%82%93%E6%A7%98_%E6%8E%A7%E3%81%88%E5%AE%A4_%2839161644375%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "mono from Tokyo, Japan",
+    "w": 5184,
+    "h": 3888,
+    "score": 35.2,
+    "why": [],
+    "file": "021-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "六義園",
+  "theme": "",
+  "entity": {
+   "id": "Q1889010",
+   "label": "六義園",
+   "cat": "Rikugi-en",
+   "p18": "Bunkyo Rikugien Panoramic View In Late Autumn 1.JPG"
+  },
+  "cand": [
+   {
+    "title": "File:Bunkyo Rikugien Panoramic View In Late Autumn 1.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Bunkyo_Rikugien_Panoramic_View_In_Late_Autumn_1.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Bunkyo_Rikugien_Panoramic_View_In_Late_Autumn_1.JPG/1920px-Bunkyo_Rikugien_Panoramic_View_In_Late_Autumn_1.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "京浜にけ",
+    "w": 3456,
+    "h": 2304,
+    "score": 41.6,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "022-0.jpg"
+   },
+   {
+    "title": "File:Tea ceremony house (30610354407).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tea_ceremony_house_(30610354407).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/99/Tea_ceremony_house_%2830610354407%29.jpg/1920px-Tea_ceremony_house_%2830610354407%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "Raita Futo from Tokyo, Japan",
+    "w": 5964,
+    "h": 3976,
+    "score": 35.5,
+    "why": [],
+    "file": "022-1.jpg"
+   },
+   {
+    "title": "File:Light-up show in Rikugien (30610340297).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Light-up_show_in_Rikugien_(30610340297).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Light-up_show_in_Rikugien_%2830610340297%29.jpg/1920px-Light-up_show_in_Rikugien_%2830610340297%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "Raita Futo from Tokyo, Japan",
+    "w": 5724,
+    "h": 3816,
+    "score": 35.4,
+    "why": [],
+    "file": "022-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "明治神宮外苑",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "新宿御苑",
+  "theme": "",
+  "entity": {
+   "id": "Q776863",
+   "label": "新宿御苑",
+   "cat": "Shinjuku Gyo-en",
+   "p18": "Shinjuku Gyoen National Garden - sakura 3.JPG"
+  },
+  "cand": [
+   {
+    "title": "File:Shinjuku Gyoen National Garden - sakura 3.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Shinjuku_Gyoen_National_Garden_-_sakura_3.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/archive/9/9d/20141216125935%21Shinjuku_Gyoen_National_Garden_-_sakura_3.JPG/1920px-Shinjuku_Gyoen_National_Garden_-_sakura_3.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "Kakidai",
+    "w": 4561,
+    "h": 3332,
+    "score": 42.7,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "024-0.jpg"
+   },
+   {
+    "title": "File:2018-09-23 trees in Shinjuku Gyo-en.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:2018-09-23_trees_in_Shinjuku_Gyo-en.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9c/2018-09-23_trees_in_Shinjuku_Gyo-en.jpg/1920px-2018-09-23_trees_in_Shinjuku_Gyo-en.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 2.0",
+    "artist": "Sergey Galyonkin",
+    "w": 7067,
+    "h": 5304,
+    "score": 36.3,
+    "why": [],
+    "file": "024-1.jpg"
+   },
+   {
+    "title": "File:Autumn Trees in the Dusk (15224122693).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Autumn_Trees_in_the_Dusk_(15224122693).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Autumn_Trees_in_the_Dusk_%2815224122693%29.jpg/1920px-Autumn_Trees_in_the_Dusk_%2815224122693%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "Yoshikazu TAKADA from Tokyo, Japan",
+    "w": 6000,
+    "h": 4000,
+    "score": 35.5,
+    "why": [],
+    "file": "024-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "小石川後楽園",
+  "theme": "",
+  "entity": {
+   "id": "Q1778881",
+   "label": "小石川後楽園",
+   "cat": "Koishikawa Korakuen",
+   "p18": "Koishikawa Korakuen (2008.09).JPG"
+  },
+  "cand": [
+   {
+    "title": "File:Koishikawa Korakuen (2008.09).JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Koishikawa_Korakuen_(2008.09).JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/95/Koishikawa_Korakuen_%282008.09%29.JPG/1920px-Koishikawa_Korakuen_%282008.09%29.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "artist": "Lombroso",
+    "w": 2048,
+    "h": 1536,
+    "score": 40.0,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "025-0.jpg"
+   },
+   {
+    "title": "File:Koishikawa Korakuen - early autumn - Nov 12 2021 various 20 25 06 365000.jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File:Koishikawa_Korakuen_-_early_autumn_-_Nov_12_2021_various_20_25_06_365000.jpeg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Koishikawa_Korakuen_-_early_autumn_-_Nov_12_2021_various_20_25_06_365000.jpeg/1920px-Koishikawa_Korakuen_-_early_autumn_-_Nov_12_2021_various_20_25_06_365000.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 4.0",
+    "artist": "Nesnad",
+    "w": 9122,
+    "h": 3812,
+    "score": 36.2,
+    "why": [],
+    "file": "025-1.jpg"
+   },
+   {
+    "title": "File:Lantern - Koishikawa Korakuen - DSC09245.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Lantern_-_Koishikawa_Korakuen_-_DSC09245.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Lantern_-_Koishikawa_Korakuen_-_DSC09245.JPG/1920px-Lantern_-_Koishikawa_Korakuen_-_DSC09245.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "Daderot",
+    "w": 5472,
+    "h": 3648,
+    "score": 35.2,
+    "why": [],
+    "file": "025-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "殿ヶ谷戸庭園",
+  "theme": "",
+  "entity": {
+   "id": "Q7076787",
+   "label": "殿ヶ谷戸庭園",
+   "cat": "Tonogayato Garden",
+   "p18": "Tonogayato1.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Tonogayato1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tonogayato1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Tonogayato1.jpg/1920px-Tonogayato1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "Irina Gelbukh",
+    "w": 3648,
+    "h": 2736,
+    "score": 42.0,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "026-0.jpg"
+   },
+   {
+    "title": "File:Tonogayato garden 20151205 Pcs34560 img0302.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tonogayato_garden_20151205_Pcs34560_img0302.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Tonogayato_garden_20151205_Pcs34560_img0302.jpg/1920px-Tonogayato_garden_20151205_Pcs34560_img0302.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "artist": "Pcs34560 from jawp",
+    "w": 5472,
+    "h": 3648,
+    "score": 35.2,
+    "why": [],
+    "file": "026-1.jpg"
+   },
+   {
+    "title": "File:Tonogayato Garden 20200830-3.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tonogayato_Garden_20200830-3.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Tonogayato_Garden_20200830-3.jpg/1920px-Tonogayato_Garden_20200830-3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Suikotei",
+    "w": 4320,
+    "h": 3240,
+    "score": 34.6,
+    "why": [],
+    "file": "026-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "浜離宮恩賜庭園",
+  "theme": "",
+  "entity": {
+   "id": "Q1033333",
+   "label": "浜離宮恩賜庭園",
+   "cat": "Hama-rikyū Garden",
+   "p18": "Hamarikyu Garden as seen from Shiodome.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Japan tea ceremony 1165.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Japan_tea_ceremony_1165.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Japan_tea_ceremony_1165.jpg/1920px-Japan_tea_ceremony_1165.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Ermell",
+    "w": 3914,
+    "h": 2936,
+    "score": 119.2,
+    "why": [
+     "秀逸",
+     "高品質"
+    ],
+    "file": "027-0.jpg"
+   },
+   {
+    "title": "File:Tokio Hamarikyu-Garten-20091017-RM-141110.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tokio_Hamarikyu-Garten-20091017-RM-141110.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Tokio_Hamarikyu-Garten-20091017-RM-141110.jpg/1920px-Tokio_Hamarikyu-Garten-20091017-RM-141110.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Reinhold Möller Ermell",
+    "w": 4000,
+    "h": 3000,
+    "score": 69.3,
+    "why": [
+     "高品質"
+    ],
+    "file": "027-1.jpg"
+   },
+   {
+    "title": "File:Tokio Hamarikyu-Garten-20091017-RM-141115.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Tokio_Hamarikyu-Garten-20091017-RM-141115.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/16/Tokio_Hamarikyu-Garten-20091017-RM-141115.jpg/1920px-Tokio_Hamarikyu-Garten-20091017-RM-141115.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Reinhold Möller Ermell",
+    "w": 4000,
+    "h": 3000,
+    "score": 69.3,
+    "why": [
+     "高品質"
+    ],
+    "file": "027-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "箱根 強羅（箱根美術館）",
+  "theme": "",
+  "entity": {
+   "id": "Q11284659",
+   "label": "箱根美術館",
+   "cat": "Hakone Museum of Art",
+   "p18": "箱根美術館本館.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Interior view - Hakone Museum of Art - Hakone, Kanagawa, Japan - DSC08274.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Interior_view_-_Hakone_Museum_of_Art_-_Hakone,_Kanagawa,_Japan_-_DSC08274.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Interior_view_-_Hakone_Museum_of_Art_-_Hakone%2C_Kanagawa%2C_Japan_-_DSC08274.jpg/1920px-Interior_view_-_Hakone_Museum_of_Art_-_Hakone%2C_Kanagawa%2C_Japan_-_DSC08274.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "Daderot",
+    "w": 5472,
+    "h": 3648,
+    "score": -4.8,
+    "why": [
+     "記録写真"
+    ],
+    "file": "028-0.jpg"
+   },
+   {
+    "title": "File:Interior view - Hakone Museum of Art - Hakone, Kanagawa, Japan - DSC08350.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Interior_view_-_Hakone_Museum_of_Art_-_Hakone,_Kanagawa,_Japan_-_DSC08350.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ae/Interior_view_-_Hakone_Museum_of_Art_-_Hakone%2C_Kanagawa%2C_Japan_-_DSC08350.jpg/1920px-Interior_view_-_Hakone_Museum_of_Art_-_Hakone%2C_Kanagawa%2C_Japan_-_DSC08350.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "Daderot",
+    "w": 5472,
+    "h": 3648,
+    "score": -4.8,
+    "why": [
+     "記録写真"
+    ],
+    "file": "028-1.jpg"
+   },
+   {
+    "title": "File:Koen-Kami Station - Hakone, Kanagawa, Japan - DSC07975.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Koen-Kami_Station_-_Hakone,_Kanagawa,_Japan_-_DSC07975.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/Koen-Kami_Station_-_Hakone%2C_Kanagawa%2C_Japan_-_DSC07975.jpg/1920px-Koen-Kami_Station_-_Hakone%2C_Kanagawa%2C_Japan_-_DSC07975.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "Daderot",
+    "w": 5472,
+    "h": 3648,
+    "score": -10.8,
+    "why": [
+     "記録写真"
+    ],
+    "file": "028-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "箱根 小涌谷（岡田美術館）",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "県立相模原公園",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "大磯城山公園",
+  "theme": "",
+  "entity": {
+   "id": "Q17221076",
+   "label": "大磯城山公園",
+   "cat": "Oiso Joyama Park",
+   "p18": "Oisojoyama park - Aug 30 2021 various.jpeg"
+  },
+  "cand": [
+   {
+    "title": "File:Oisojoyama park - Aug 30 2021 various.jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File:Oisojoyama_park_-_Aug_30_2021_various.jpeg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Oisojoyama_park_-_Aug_30_2021_various.jpeg/1920px-Oisojoyama_park_-_Aug_30_2021_various.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 4.0",
+    "artist": "Nesnad",
+    "w": 4032,
+    "h": 3024,
+    "score": 42.3,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "031-0.jpg"
+   },
+   {
+    "title": "File:Oisojoyama park - Aug 30 2021 various 17 34 13 413000.jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File:Oisojoyama_park_-_Aug_30_2021_various_17_34_13_413000.jpeg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/aa/Oisojoyama_park_-_Aug_30_2021_various_17_34_13_413000.jpeg/1920px-Oisojoyama_park_-_Aug_30_2021_various_17_34_13_413000.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 4.0",
+    "artist": "Nesnad",
+    "w": 7714,
+    "h": 3876,
+    "score": 35.9,
+    "why": [],
+    "file": "031-1.jpg"
+   },
+   {
+    "title": "File:Oisojoyama park - Aug 30 2021 various 17 28 25 757000.jpeg",
+    "page": "https://commons.wikimedia.org/wiki/File:Oisojoyama_park_-_Aug_30_2021_various_17_28_25_757000.jpeg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Oisojoyama_park_-_Aug_30_2021_various_17_28_25_757000.jpeg/1920px-Oisojoyama_park_-_Aug_30_2021_various_17_28_25_757000.jpeg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 4.0",
+    "artist": "Nesnad",
+    "w": 4032,
+    "h": 3024,
+    "score": 34.3,
+    "why": [],
+    "file": "031-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "平林寺",
+  "theme": "",
+  "entity": {
+   "id": "Q3129557",
+   "label": "平林寺",
+   "cat": "Heirinji",
+   "p18": "Heirinji inner gate.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Heirinji inner gate.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Heirinji_inner_gate.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/Heirinji_inner_gate.jpg/1920px-Heirinji_inner_gate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "Zeimusu",
+    "w": 2304,
+    "h": 1728,
+    "score": 40.4,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "032-0.jpg"
+   },
+   {
+    "title": "File:Heirinji Butsuden 2009.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Heirinji_Butsuden_2009.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Heirinji_Butsuden_2009.jpg/1920px-Heirinji_Butsuden_2009.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "Wiiii",
+    "w": 2610,
+    "h": 1935,
+    "score": 26.8,
+    "why": [],
+    "file": "032-1.jpg"
+   },
+   {
+    "title": "File:Grave of Matsudaira Nobutsuna.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Grave_of_Matsudaira_Nobutsuna.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Grave_of_Matsudaira_Nobutsuna.JPG/1920px-Grave_of_Matsudaira_Nobutsuna.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "artist": "Abasaa",
+    "w": 2048,
+    "h": 1536,
+    "score": 26.0,
+    "why": [],
+    "file": "032-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "養老渓谷",
+  "theme": "",
+  "entity": {
+   "id": "Q8062663",
+   "label": "養老渓谷",
+   "cat": "Yoro Ravine",
+   "p18": "弘文洞跡養老渓谷P1010122.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:粟又の滝周辺の風景 - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E7%B2%9F%E5%8F%88%E3%81%AE%E6%BB%9D%E5%91%A8%E8%BE%BA%E3%81%AE%E9%A2%A8%E6%99%AF_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/%E7%B2%9F%E5%8F%88%E3%81%AE%E6%BB%9D%E5%91%A8%E8%BE%BA%E3%81%AE%E9%A2%A8%E6%99%AF_-_panoramio.jpg/1920px-%E7%B2%9F%E5%8F%88%E3%81%AE%E6%BB%9D%E5%91%A8%E8%BE%BA%E3%81%AE%E9%A2%A8%E6%99%AF_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "くろふね",
+    "w": 5184,
+    "h": 3456,
+    "score": 35.0,
+    "why": [],
+    "file": "033-0.jpg"
+   },
+   {
+    "title": "File:粟又の滝遊歩道 - panoramio (24).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E7%B2%9F%E5%8F%88%E3%81%AE%E6%BB%9D%E9%81%8A%E6%AD%A9%E9%81%93_-_panoramio_(24).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/%E7%B2%9F%E5%8F%88%E3%81%AE%E6%BB%9D%E9%81%8A%E6%AD%A9%E9%81%93_-_panoramio_%2824%29.jpg/1920px-%E7%B2%9F%E5%8F%88%E3%81%AE%E6%BB%9D%E9%81%8A%E6%AD%A9%E9%81%93_-_panoramio_%2824%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "くろふね",
+    "w": 5184,
+    "h": 3456,
+    "score": 35.0,
+    "why": [],
+    "file": "033-1.jpg"
+   },
+   {
+    "title": "File:粟又の滝遊歩道 - panoramio (25).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E7%B2%9F%E5%8F%88%E3%81%AE%E6%BB%9D%E9%81%8A%E6%AD%A9%E9%81%93_-_panoramio_(25).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/%E7%B2%9F%E5%8F%88%E3%81%AE%E6%BB%9D%E9%81%8A%E6%AD%A9%E9%81%93_-_panoramio_%2825%29.jpg/1920px-%E7%B2%9F%E5%8F%88%E3%81%AE%E6%BB%9D%E9%81%8A%E6%AD%A9%E9%81%93_-_panoramio_%2825%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "くろふね",
+    "w": 5184,
+    "h": 3456,
+    "score": 35.0,
+    "why": [],
+    "file": "033-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "亀山湖",
+  "theme": "",
+  "entity": {
+   "id": "Q11370825",
+   "label": "亀山ダム",
+   "cat": "Kameyama Dam",
+   "p18": "Kameyama-676-r1.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Kameyama-676-r1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Kameyama-676-r1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Kameyama-676-r1.jpg/1920px-Kameyama-676-r1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "河川一等兵",
+    "w": 3072,
+    "h": 2304,
+    "score": 35.4,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "034-0.jpg"
+   },
+   {
+    "title": "File:亀山ダム - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E4%BA%80%E5%B1%B1%E3%83%80%E3%83%A0_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b1/%E4%BA%80%E5%B1%B1%E3%83%80%E3%83%A0_-_panoramio.jpg/1920px-%E4%BA%80%E5%B1%B1%E3%83%80%E3%83%A0_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "くろふね",
+    "w": 4368,
+    "h": 2912,
+    "score": 34.4,
+    "why": [],
+    "file": "034-1.jpg"
+   },
+   {
+    "title": "File:亀山湖 - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E4%BA%80%E5%B1%B1%E6%B9%96_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/%E4%BA%80%E5%B1%B1%E6%B9%96_-_panoramio.jpg/1920px-%E4%BA%80%E5%B1%B1%E6%B9%96_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "くろふね",
+    "w": 4368,
+    "h": 2912,
+    "score": 34.4,
+    "why": [],
+    "file": "034-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "本土寺",
+  "theme": "",
+  "entity": {
+   "id": "Q11519907",
+   "label": "本土寺",
+   "cat": "Hondoji (Matsudo)",
+   "p18": "Hondoji-hondou.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Hondoji-hondou.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hondoji-hondou.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Hondoji-hondou.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "CC BY-SA 3.0",
+    "artist": "wooboo",
+    "w": 1824,
+    "h": 1216,
+    "score": 39.4,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "035-0.jpg"
+   },
+   {
+    "title": "File:Autumn at Hondo-ji temple, Chiba; November 2017 (01).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Autumn_at_Hondo-ji_temple,_Chiba;_November_2017_(01).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Autumn_at_Hondo-ji_temple%2C_Chiba%3B_November_2017_%2801%29.jpg/1920px-Autumn_at_Hondo-ji_temple%2C_Chiba%3B_November_2017_%2801%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 2.0",
+    "artist": "Hetarllen Mumriken",
+    "w": 4608,
+    "h": 2592,
+    "score": 34.3,
+    "why": [],
+    "file": "035-1.jpg"
+   },
+   {
+    "title": "File:Autumn at Hondo-ji temple, Chiba; November 2017 (04).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Autumn_at_Hondo-ji_temple,_Chiba;_November_2017_(04).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/Autumn_at_Hondo-ji_temple%2C_Chiba%3B_November_2017_%2804%29.jpg/1920px-Autumn_at_Hondo-ji_temple%2C_Chiba%3B_November_2017_%2804%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 2.0",
+    "artist": "Hetarllen Mumriken",
+    "w": 4608,
+    "h": 2592,
+    "score": 34.3,
+    "why": [],
+    "file": "035-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "成田山公園",
+  "theme": "",
+  "entity": {
+   "id": "Q136504677",
+   "label": "成田山公園",
+   "cat": "Naritasan Park",
+   "p18": "IMAG1509 (28154414491).jpg"
+  },
+  "cand": [
+   {
+    "title": "File:IMAG1509 (28154414491).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:IMAG1509_(28154414491).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/IMAG1509_%2828154414491%29.jpg/1920px-IMAG1509_%2828154414491%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "franck injapan from Tokyo, Japan",
+    "w": 2592,
+    "h": 1952,
+    "score": 40.8,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "036-0.jpg"
+   },
+   {
+    "title": "File:Naritasan Shinshoji Temple @ Narita (15078185259).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Naritasan_Shinshoji_Temple_@_Narita_(15078185259).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e3/Naritasan_Shinshoji_Temple_%40_Narita_%2815078185259%29.jpg/1920px-Naritasan_Shinshoji_Temple_%40_Narita_%2815078185259%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "Guilhem Vellut from Annecy, France",
+    "w": 3968,
+    "h": 2976,
+    "score": 34.3,
+    "why": [],
+    "file": "036-1.jpg"
+   },
+   {
+    "title": "File:Park @ Naritasan Shinshoji Temple @ Narita (15078214270).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Park_@_Naritasan_Shinshoji_Temple_@_Narita_(15078214270).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Park_%40_Naritasan_Shinshoji_Temple_%40_Narita_%2815078214270%29.jpg/1920px-Park_%40_Naritasan_Shinshoji_Temple_%40_Narita_%2815078214270%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "Guilhem Vellut from Annecy, France",
+    "w": 3968,
+    "h": 2976,
+    "score": 34.3,
+    "why": [],
+    "file": "036-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "妙義山",
+  "theme": "",
+  "entity": {
+   "id": "Q994071",
+   "label": "妙義山",
+   "cat": "Mount Myōgi",
+   "p18": "Mt-myogi-in-summer.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:ビビリ岩からの浅間山と裏妙義.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E3%83%93%E3%83%93%E3%83%AA%E5%B2%A9%E3%81%8B%E3%82%89%E3%81%AE%E6%B5%85%E9%96%93%E5%B1%B1%E3%81%A8%E8%A3%8F%E5%A6%99%E7%BE%A9.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/11/%E3%83%93%E3%83%93%E3%83%AA%E5%B2%A9%E3%81%8B%E3%82%89%E3%81%AE%E6%B5%85%E9%96%93%E5%B1%B1%E3%81%A8%E8%A3%8F%E5%A6%99%E7%BE%A9.jpg/1920px-%E3%83%93%E3%83%93%E3%83%AA%E5%B2%A9%E3%81%8B%E3%82%89%E3%81%AE%E6%B5%85%E9%96%93%E5%B1%B1%E3%81%A8%E8%A3%8F%E5%A6%99%E7%BE%A9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Koda6029",
+    "w": 5472,
+    "h": 3648,
+    "score": 35.2,
+    "why": [],
+    "file": "037-0.jpg"
+   },
+   {
+    "title": "File:天狗岩からの北アルプスと浅間山.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E5%A4%A9%E7%8B%97%E5%B2%A9%E3%81%8B%E3%82%89%E3%81%AE%E5%8C%97%E3%82%A2%E3%83%AB%E3%83%97%E3%82%B9%E3%81%A8%E6%B5%85%E9%96%93%E5%B1%B1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6a/%E5%A4%A9%E7%8B%97%E5%B2%A9%E3%81%8B%E3%82%89%E3%81%AE%E5%8C%97%E3%82%A2%E3%83%AB%E3%83%97%E3%82%B9%E3%81%A8%E6%B5%85%E9%96%93%E5%B1%B1.jpg/1920px-%E5%A4%A9%E7%8B%97%E5%B2%A9%E3%81%8B%E3%82%89%E3%81%AE%E5%8C%97%E3%82%A2%E3%83%AB%E3%83%97%E3%82%B9%E3%81%A8%E6%B5%85%E9%96%93%E5%B1%B1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Koda6029",
+    "w": 5472,
+    "h": 3648,
+    "score": 35.2,
+    "why": [],
+    "file": "037-1.jpg"
+   },
+   {
+    "title": "File:天狗岩からの北アルプスと浅間山裾野.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E5%A4%A9%E7%8B%97%E5%B2%A9%E3%81%8B%E3%82%89%E3%81%AE%E5%8C%97%E3%82%A2%E3%83%AB%E3%83%97%E3%82%B9%E3%81%A8%E6%B5%85%E9%96%93%E5%B1%B1%E8%A3%BE%E9%87%8E.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/%E5%A4%A9%E7%8B%97%E5%B2%A9%E3%81%8B%E3%82%89%E3%81%AE%E5%8C%97%E3%82%A2%E3%83%AB%E3%83%97%E3%82%B9%E3%81%A8%E6%B5%85%E9%96%93%E5%B1%B1%E8%A3%BE%E9%87%8E.jpg/1920px-%E5%A4%A9%E7%8B%97%E5%B2%A9%E3%81%8B%E3%82%89%E3%81%AE%E5%8C%97%E3%82%A2%E3%83%AB%E3%83%97%E3%82%B9%E3%81%A8%E6%B5%85%E9%96%93%E5%B1%B1%E8%A3%BE%E9%87%8E.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Koda6029",
+    "w": 5472,
+    "h": 3648,
+    "score": 35.2,
+    "why": [],
+    "file": "037-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "THE MOVEUM YOKOHAMA モネと浮世絵",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "鉄道でつなぐ 開運六社めぐり",
+  "theme": "",
+  "entity": {
+   "id": "Q846106",
+   "label": "鉄道博物館",
+   "cat": "Railway Museum (Saitama)",
+   "p18": "The Railway Museum Park Zone 20071014 (1).jpg"
+  },
+  "cand": [
+   {
+    "title": "File:きらがし (16965485647).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E3%81%8D%E3%82%89%E3%81%8C%E3%81%97_(16965485647).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/%E3%81%8D%E3%82%89%E3%81%8C%E3%81%97_%2816965485647%29.jpg/1920px-%E3%81%8D%E3%82%89%E3%81%8C%E3%81%97_%2816965485647%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 2.0",
+    "artist": "haru__q",
+    "w": 6000,
+    "h": 4000,
+    "score": 35.5,
+    "why": [],
+    "file": "039-0.jpg"
+   },
+   {
+    "title": "File:Railway Museum, Saitama, 2015-07-21 DSC 3097 (19883616465).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Railway_Museum,_Saitama,_2015-07-21_DSC_3097_(19883616465).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/39/Railway_Museum%2C_Saitama%2C_2015-07-21_DSC_3097_%2819883616465%29.jpg/1920px-Railway_Museum%2C_Saitama%2C_2015-07-21_DSC_3097_%2819883616465%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 2.0",
+    "artist": "Cheng-en Cheng from Taichung City, Taiwan",
+    "w": 4800,
+    "h": 3200,
+    "score": 34.7,
+    "why": [],
+    "file": "039-1.jpg"
+   },
+   {
+    "title": "File:Railway Museum, Saitama, 2015-07-21 DSC 3100 (19695619470).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Railway_Museum,_Saitama,_2015-07-21_DSC_3100_(19695619470).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Railway_Museum%2C_Saitama%2C_2015-07-21_DSC_3100_%2819695619470%29.jpg/1920px-Railway_Museum%2C_Saitama%2C_2015-07-21_DSC_3100_%2819695619470%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 2.0",
+    "artist": "Cheng-en Cheng from Taichung City, Taiwan",
+    "w": 4800,
+    "h": 3200,
+    "score": 34.7,
+    "why": [],
+    "file": "039-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "長瀞紅葉まつり2026",
+  "theme": "autumn",
+  "entity": {
+   "id": "Q11653371",
+   "label": "長瀞渓谷",
+   "cat": "Nagatoro (gorge)",
+   "p18": "Nagatorokeikoku1.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Nagatoro gorge 2019 01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nagatoro_gorge_2019_01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/Nagatoro_gorge_2019_01.jpg/1920px-Nagatoro_gorge_2019_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Suikotei",
+    "w": 4320,
+    "h": 3240,
+    "score": 58.6,
+    "why": [
+     "季節が合う"
+    ],
+    "file": "040-0.jpg"
+   },
+   {
+    "title": "File:Nagatoro gorge Boat tour 2019-1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nagatoro_gorge_Boat_tour_2019-1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Nagatoro_gorge_Boat_tour_2019-1.jpg/1920px-Nagatoro_gorge_Boat_tour_2019-1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Suikotei",
+    "w": 4320,
+    "h": 3240,
+    "score": 58.6,
+    "why": [
+     "季節が合う"
+    ],
+    "file": "040-1.jpg"
+   },
+   {
+    "title": "File:Nagatoro gorge Boat tour 2019-6.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nagatoro_gorge_Boat_tour_2019-6.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Nagatoro_gorge_Boat_tour_2019-6.jpg/1920px-Nagatoro_gorge_Boat_tour_2019-6.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Suikotei",
+    "w": 4320,
+    "h": 3240,
+    "score": 58.6,
+    "why": [
+     "季節が合う"
+    ],
+    "file": "040-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "八王子いちょう祭り",
+  "theme": "",
+  "entity": {
+   "id": "Q11391547",
+   "label": "八王子いちょう祭り",
+   "cat": "Hachioji Ginkgo Festival",
+   "p18": ""
+  },
+  "cand": [
+   {
+    "title": "File:Hachioji Ichou Festival 2019 八王子イチョウ祭り 8.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hachioji_Ichou_Festival_2019_%E5%85%AB%E7%8E%8B%E5%AD%90%E3%82%A4%E3%83%81%E3%83%A7%E3%82%A6%E7%A5%AD%E3%82%8A_8.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/Hachioji_Ichou_Festival_2019_%E5%85%AB%E7%8E%8B%E5%AD%90%E3%82%A4%E3%83%81%E3%83%A7%E3%82%A6%E7%A5%AD%E3%82%8A_8.jpg/1920px-Hachioji_Ichou_Festival_2019_%E5%85%AB%E7%8E%8B%E5%AD%90%E3%82%A4%E3%83%81%E3%83%A7%E3%82%A6%E7%A5%AD%E3%82%8A_8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "AshleyBrownPix",
+    "w": 5523,
+    "h": 3599,
+    "score": 29.2,
+    "why": [],
+    "file": "041-0.jpg"
+   },
+   {
+    "title": "File:Hachioji Ichou Festival 2022 八王子イチョウ祭り 3.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hachioji_Ichou_Festival_2022_%E5%85%AB%E7%8E%8B%E5%AD%90%E3%82%A4%E3%83%81%E3%83%A7%E3%82%A6%E7%A5%AD%E3%82%8A_3.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Hachioji_Ichou_Festival_2022_%E5%85%AB%E7%8E%8B%E5%AD%90%E3%82%A4%E3%83%81%E3%83%A7%E3%82%A6%E7%A5%AD%E3%82%8A_3.jpg/1920px-Hachioji_Ichou_Festival_2022_%E5%85%AB%E7%8E%8B%E5%AD%90%E3%82%A4%E3%83%81%E3%83%A7%E3%82%A6%E7%A5%AD%E3%82%8A_3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "AshleyBrownPix",
+    "w": 4958,
+    "h": 3482,
+    "score": 28.9,
+    "why": [],
+    "file": "041-1.jpg"
+   },
+   {
+    "title": "File:Hachioji Ichou Festival 2019 八王子イチョウ祭り 9.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Hachioji_Ichou_Festival_2019_%E5%85%AB%E7%8E%8B%E5%AD%90%E3%82%A4%E3%83%81%E3%83%A7%E3%82%A6%E7%A5%AD%E3%82%8A_9.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Hachioji_Ichou_Festival_2019_%E5%85%AB%E7%8E%8B%E5%AD%90%E3%82%A4%E3%83%81%E3%83%A7%E3%82%A6%E7%A5%AD%E3%82%8A_9.jpg/1920px-Hachioji_Ichou_Festival_2019_%E5%85%AB%E7%8E%8B%E5%AD%90%E3%82%A4%E3%83%81%E3%83%A7%E3%82%A6%E7%A5%AD%E3%82%8A_9.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "AshleyBrownPix",
+    "w": 4302,
+    "h": 3252,
+    "score": 28.6,
+    "why": [],
+    "file": "041-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "第一回 前橋国際芸術祭 2026",
+  "theme": "",
+  "entity": {
+   "id": "Q18700337",
+   "label": "アーツ前橋",
+   "cat": "Arts Maebashi",
+   "p18": "Arts Maebashi.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Arts Maebashi.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Arts_Maebashi.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Arts_Maebashi.jpg/1920px-Arts_Maebashi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "photo: Qurren (talk) Taken with Canon IXY 430F (Digital IXUS 245 HS)",
+    "w": 4071,
+    "h": 3051,
+    "score": 36.4,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "042-0.jpg"
+   },
+   {
+    "title": "File:Arts Maebashi night 1.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Arts_Maebashi_night_1.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Arts_Maebashi_night_1.jpg/1920px-Arts_Maebashi_night_1.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "photo: Qurren (talk) Taken with Canon IXY 430F (Digital IXUS 245 HS)",
+    "w": 4326,
+    "h": 3244,
+    "score": 28.6,
+    "why": [],
+    "file": "042-1.jpg"
+   }
+  ]
+ },
+ {
+  "name": "宝徳寺 秋の床もみじ特別公開",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "北の丸大妖怪展 百鬼騒乱",
+  "theme": "",
+  "entity": {
+   "id": "Q10855424",
+   "label": "科学技術館",
+   "cat": "Science Museum (Tokyo)",
+   "p18": "Science Museum,Tokyo.JPG"
+  },
+  "cand": [
+   {
+    "title": "File:Science Museum,Tokyo.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Science_Museum,Tokyo.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Science_Museum%2CTokyo.JPG/1920px-Science_Museum%2CTokyo.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "Kakidai",
+    "w": 3427,
+    "h": 2600,
+    "score": 35.8,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "044-0.jpg"
+   },
+   {
+    "title": "File:科学技術館とイチョウ - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E7%A7%91%E5%AD%A6%E6%8A%80%E8%A1%93%E9%A4%A8%E3%81%A8%E3%82%A4%E3%83%81%E3%83%A7%E3%82%A6_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/%E7%A7%91%E5%AD%A6%E6%8A%80%E8%A1%93%E9%A4%A8%E3%81%A8%E3%82%A4%E3%83%81%E3%83%A7%E3%82%A6_-_panoramio.jpg/1920px-%E7%A7%91%E5%AD%A6%E6%8A%80%E8%A1%93%E9%A4%A8%E3%81%A8%E3%82%A4%E3%83%81%E3%83%A7%E3%82%A6_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "くろふね",
+    "w": 5472,
+    "h": 3648,
+    "score": 35.2,
+    "why": [],
+    "file": "044-1.jpg"
+   },
+   {
+    "title": "File:創ろう、私たちの未来を (23647747102).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E5%89%B5%E3%82%8D%E3%81%86%E3%80%81%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%AE%E6%9C%AA%E6%9D%A5%E3%82%92_(23647747102).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/%E5%89%B5%E3%82%8D%E3%81%86%E3%80%81%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%AE%E6%9C%AA%E6%9D%A5%E3%82%92_%2823647747102%29.jpg/1920px-%E5%89%B5%E3%82%8D%E3%81%86%E3%80%81%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%AE%E6%9C%AA%E6%9D%A5%E3%82%92_%2823647747102%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "Yuya Tamai",
+    "w": 4000,
+    "h": 3000,
+    "score": 34.3,
+    "why": [],
+    "file": "044-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "三崎マグロ「茜身」スタンプラリー2026",
+  "theme": "",
+  "entity": {
+   "id": "Q9064597",
+   "label": "三崎港",
+   "cat": "Port of Misaki (Ehime)",
+   "p18": "Ehime-Misakikou.JPG"
+  },
+  "cand": [
+   {
+    "title": "File:Ehime-Misakikou.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Ehime-Misakikou.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/69/Ehime-Misakikou.JPG/1920px-Ehime-Misakikou.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "D700master",
+    "w": 4256,
+    "h": 2832,
+    "score": 36.3,
+    "why": [
+     "代表の写真"
+    ],
+    "file": "045-0.jpg"
+   },
+   {
+    "title": "File:Misaki port - 三崎港 - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Misaki_port_-_%E4%B8%89%E5%B4%8E%E6%B8%AF_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Misaki_port_-_%E4%B8%89%E5%B4%8E%E6%B8%AF_-_panoramio.jpg/1920px-Misaki_port_-_%E4%B8%89%E5%B4%8E%E6%B8%AF_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "yano@mama.akari.ne.j…",
+    "w": 4272,
+    "h": 2848,
+    "score": 34.3,
+    "why": [],
+    "file": "045-1.jpg"
+   },
+   {
+    "title": "File:三崎港 - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E4%B8%89%E5%B4%8E%E6%B8%AF_-_panoramio.jpg",
+    "thumb": "https://upload.wikimedia.org/wikipedia/commons/1/12/%E4%B8%89%E5%B4%8E%E6%B8%AF_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+    "license": "CC BY-SA 3.0",
+    "artist": "Yobito KAYANUMA",
+    "w": 1600,
+    "h": 902,
+    "score": 30.6,
+    "why": [],
+    "file": "045-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "秋の大ゆる運動会",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "草間彌生美術館 パァーッと光が出て、キラキラッていろんなものが見えてくる。",
+  "theme": "night",
+  "entity": {
+   "id": "Q65941212",
+   "label": "草間彌生美術館",
+   "cat": "Yayoi Kusama Museum",
+   "p18": "YAYOI KUSAMA MUSEUM 草間彌生美術館2018sideCIMG3596.jpg"
+  },
+  "cand": []
+ },
+ {
+  "name": "ミニチュアベーカリーの世界展 2026",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "神田カレー街食べ歩きスタンプラリー2026",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "霞ヶ浦観光帆引き船",
+  "theme": "night",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "Ezy Roller（軽井沢おもちゃ王国）",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "Crystal Garden 2026-2027（アイガーデンエア）",
+  "theme": "",
+  "entity": {
+   "id": "Q11282092",
+   "label": "アイガーデンエア",
+   "cat": "I-Garden Air",
+   "p18": "Garden Air Tower.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:I garden terrace iidabashi.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:I_garden_terrace_iidabashi.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/I_garden_terrace_iidabashi.JPG/1920px-I_garden_terrace_iidabashi.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "Kamemaru2000",
+    "w": 2581,
+    "h": 1832,
+    "score": 32.7,
+    "why": [],
+    "file": "052-0.jpg"
+   },
+   {
+    "title": "File:Hotel metropolitan edmont iidabashi 2009.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Hotel_metropolitan_edmont_iidabashi_2009.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Hotel_metropolitan_edmont_iidabashi_2009.JPG/1920px-Hotel_metropolitan_edmont_iidabashi_2009.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "Kamemaru2000",
+    "w": 2592,
+    "h": 1944,
+    "score": 26.8,
+    "why": [],
+    "file": "052-1.jpg"
+   },
+   {
+    "title": "File:Hotel Metropolitan Edmont 01.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Hotel_Metropolitan_Edmont_01.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/Hotel_Metropolitan_Edmont_01.JPG/1920px-Hotel_Metropolitan_Edmont_01.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "artist": "Abasaa",
+    "w": 2048,
+    "h": 1536,
+    "score": 26.0,
+    "why": [],
+    "file": "052-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "徳明園 秋の紅葉 金のライトアップ",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "没後150年 藤枝太郎英義の刀剣美",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "川口×絶品グルメ☆鍋祭り2026",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "メッツァの北欧クリスマス2026",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "MAPPA EXPO 15th Anniversary",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "『牧場物語』×那須高原りんどう湖ファミリー牧場",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "大谷クリスマスマーケット",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "かわちイルミネーション2026",
+  "theme": "night",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "梵天祭り",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "ごかラーメン＆スイーツフェス",
+  "theme": "",
+  "entity": {
+   "id": "Q11640750",
+   "label": "道の駅ごか",
+   "cat": "",
+   "p18": "Michinoeki goka.jpg"
+  },
+  "cand": []
+ },
+ {
+  "name": "佐久山御殿山紅葉まつり",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "いわむらかずおの「カエルの絵本展」",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "ティム・バートンのラビリンス",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "KURKKU FIELDS 7TH ANNIVERSARY MARKET",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "第20回 長沼コミュニティまつり",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "とちぎ アグリフェスタ2026",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "Maple festa 秋の収穫祭",
+  "theme": "autumn",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "Bouquet BOTANICA COFFEE FES",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "いきいきフェスタTAKO2026",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "Bamboo Winter Lights 2026",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "柏の葉街まるごとフェスティバル",
+  "theme": "",
+  "entity": {
+   "id": "Q6374365",
+   "label": "柏の葉キャンパス駅",
+   "cat": "Kashiwanoha-campus Station",
+   "p18": "Kashiwanoha-campus Station.JPG"
+  },
+  "cand": [
+   {
+    "title": "File:Kashiwanoha-campus Station.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Kashiwanoha-campus_Station.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1a/Kashiwanoha-campus_Station.JPG/1920px-Kashiwanoha-campus_Station.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "artist": "Abasaa",
+    "w": 2048,
+    "h": 1536,
+    "score": -6.0,
+    "why": [
+     "記録写真",
+     "代表の写真"
+    ],
+    "file": "073-0.jpg"
+   },
+   {
+    "title": "File:つくばEx.柏の葉キャンパス駅 - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E3%81%A4%E3%81%8F%E3%81%B0Ex.%E6%9F%8F%E3%81%AE%E8%91%89%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9%E9%A7%85_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d2/%E3%81%A4%E3%81%8F%E3%81%B0Ex.%E6%9F%8F%E3%81%AE%E8%91%89%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9%E9%A7%85_-_panoramio.jpg/1920px-%E3%81%A4%E3%81%8F%E3%81%B0Ex.%E6%9F%8F%E3%81%AE%E8%91%89%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9%E9%A7%85_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "kcomiida",
+    "w": 2560,
+    "h": 1920,
+    "score": -7.2,
+    "why": [
+     "記録写真"
+    ],
+    "file": "073-1.jpg"
+   },
+   {
+    "title": "File:つくばEx.柏の葉キャンパス駅 - panoramio(cropped).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E3%81%A4%E3%81%8F%E3%81%B0Ex.%E6%9F%8F%E3%81%AE%E8%91%89%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9%E9%A7%85_-_panoramio(cropped).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/%E3%81%A4%E3%81%8F%E3%81%B0Ex.%E6%9F%8F%E3%81%AE%E8%91%89%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9%E9%A7%85_-_panoramio%28cropped%29.jpg/1920px-%E3%81%A4%E3%81%8F%E3%81%B0Ex.%E6%9F%8F%E3%81%AE%E8%91%89%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%91%E3%82%B9%E9%A7%85_-_panoramio%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 3.0",
+    "artist": "kcomiida",
+    "w": 2514,
+    "h": 1767,
+    "score": -7.4,
+    "why": [
+     "記録写真"
+    ],
+    "file": "073-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "第23回 黒潮よさこい祭り",
+  "theme": "",
+  "entity": {
+   "id": "Q130341890",
+   "label": "銚子市役所",
+   "cat": "Choshi City Hall",
+   "p18": "Choshi cityoffice.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Choshi City Hall 01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Choshi_City_Hall_01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/Choshi_City_Hall_01.jpg/1920px-Choshi_City_Hall_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "Higa4",
+    "w": 4032,
+    "h": 3024,
+    "score": 28.3,
+    "why": [],
+    "file": "074-0.jpg"
+   },
+   {
+    "title": "File:Choshi City Hall 02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Choshi_City_Hall_02.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Choshi_City_Hall_02.jpg/1920px-Choshi_City_Hall_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "Higa4",
+    "w": 4032,
+    "h": 3024,
+    "score": 28.3,
+    "why": [],
+    "file": "074-1.jpg"
+   },
+   {
+    "title": "File:Choshi City Hall 03.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Choshi_City_Hall_03.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/Choshi_City_Hall_03.jpg/1920px-Choshi_City_Hall_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "Higa4",
+    "w": 4032,
+    "h": 3024,
+    "score": 28.3,
+    "why": [],
+    "file": "074-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "狭山スキー場 2026-27シーズン",
+  "theme": "",
+  "entity": {
+   "id": "Q11571721",
+   "label": "狭山スキー場",
+   "cat": "Sayama Ski Dome",
+   "p18": "狭山スキー場 正面出入口.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Sayama indoor ski resort @ Seibu Dome (11340196935).jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Sayama_indoor_ski_resort_@_Seibu_Dome_(11340196935).jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Sayama_indoor_ski_resort_%40_Seibu_Dome_%2811340196935%29.jpg/1920px-Sayama_indoor_ski_resort_%40_Seibu_Dome_%2811340196935%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "Guilhem Vellut from Annecy, France",
+    "w": 3648,
+    "h": 2736,
+    "score": 34.0,
+    "why": [],
+    "file": "075-0.jpg"
+   },
+   {
+    "title": "File:Prince Snow Resort Sayama.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Prince_Snow_Resort_Sayama.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Prince_Snow_Resort_Sayama.JPG/1920px-Prince_Snow_Resort_Sayama.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "artist": "Ski Mania",
+    "w": 4416,
+    "h": 3312,
+    "score": 28.7,
+    "why": [],
+    "file": "075-1.jpg"
+   }
+  ]
+ },
+ {
+  "name": "あけぼの山公園 日本庭園の紅葉",
+  "theme": "autumn",
+  "entity": {
+   "id": "Q11257083",
+   "label": "あけぼの山公園",
+   "cat": "Akebonoyama Park",
+   "p18": "Akebonoyama Agricultural Park.JPG"
+  },
+  "cand": [
+   {
+    "title": "File:あけぼの山農業公園のチューリップ01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E3%81%82%E3%81%91%E3%81%BC%E3%81%AE%E5%B1%B1%E8%BE%B2%E6%A5%AD%E5%85%AC%E5%9C%92%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%83%E3%83%9701.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/%E3%81%82%E3%81%91%E3%81%BC%E3%81%AE%E5%B1%B1%E8%BE%B2%E6%A5%AD%E5%85%AC%E5%9C%92%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%83%E3%83%9701.jpg/1920px-%E3%81%82%E3%81%91%E3%81%BC%E3%81%AE%E5%B1%B1%E8%BE%B2%E6%A5%AD%E5%85%AC%E5%9C%92%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%83%E3%83%9701.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "くろふね",
+    "w": 6240,
+    "h": 4160,
+    "score": 20.7,
+    "why": [],
+    "file": "076-0.jpg"
+   },
+   {
+    "title": "File:あけぼの山農業公園のチューリップ02.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E3%81%82%E3%81%91%E3%81%BC%E3%81%AE%E5%B1%B1%E8%BE%B2%E6%A5%AD%E5%85%AC%E5%9C%92%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%83%E3%83%9702.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/%E3%81%82%E3%81%91%E3%81%BC%E3%81%AE%E5%B1%B1%E8%BE%B2%E6%A5%AD%E5%85%AC%E5%9C%92%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%83%E3%83%9702.jpg/1920px-%E3%81%82%E3%81%91%E3%81%BC%E3%81%AE%E5%B1%B1%E8%BE%B2%E6%A5%AD%E5%85%AC%E5%9C%92%E3%81%AE%E3%83%81%E3%83%A5%E3%83%BC%E3%83%AA%E3%83%83%E3%83%9702.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "くろふね",
+    "w": 6240,
+    "h": 4160,
+    "score": 20.7,
+    "why": [],
+    "file": "076-1.jpg"
+   },
+   {
+    "title": "File:あけぼの山農業公園（柏市） - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E3%81%82%E3%81%91%E3%81%BC%E3%81%AE%E5%B1%B1%E8%BE%B2%E6%A5%AD%E5%85%AC%E5%9C%92%EF%BC%88%E6%9F%8F%E5%B8%82%EF%BC%89_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/%E3%81%82%E3%81%91%E3%81%BC%E3%81%AE%E5%B1%B1%E8%BE%B2%E6%A5%AD%E5%85%AC%E5%9C%92%EF%BC%88%E6%9F%8F%E5%B8%82%EF%BC%89_-_panoramio.jpg/1920px-%E3%81%82%E3%81%91%E3%81%BC%E3%81%AE%E5%B1%B1%E8%BE%B2%E6%A5%AD%E5%85%AC%E5%9C%92%EF%BC%88%E6%9F%8F%E5%B8%82%EF%BC%89_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "☆ブロッコリーマン☆",
+    "w": 4320,
+    "h": 3240,
+    "score": 19.6,
+    "why": [],
+    "file": "076-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "活きな世界のグルメ横丁",
+  "theme": "",
+  "entity": {
+   "id": "Q11627702",
+   "label": "西小泉駅",
+   "cat": "Nishi-Koizumi Station",
+   "p18": "Nishi-Koizumi Station 20201024.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:Nishi-Koizumi Station 20201024.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nishi-Koizumi_Station_20201024.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/Nishi-Koizumi_Station_20201024.jpg/1920px-Nishi-Koizumi_Station_20201024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "Suikotei",
+    "w": 4019,
+    "h": 3013,
+    "score": -3.6999999999999993,
+    "why": [
+     "記録写真",
+     "代表の写真"
+    ],
+    "file": "077-0.jpg"
+   },
+   {
+    "title": "File:西小泉駅 - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E8%A5%BF%E5%B0%8F%E6%B3%89%E9%A7%85_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/27/%E8%A5%BF%E5%B0%8F%E6%B3%89%E9%A7%85_-_panoramio.jpg/1920px-%E8%A5%BF%E5%B0%8F%E6%B3%89%E9%A7%85_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "くろふね",
+    "w": 3648,
+    "h": 2736,
+    "score": -6.0,
+    "why": [
+     "記録写真"
+    ],
+    "file": "077-1.jpg"
+   },
+   {
+    "title": "File:Nishi-Koizumi-STA Gate.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Nishi-Koizumi-STA_Gate.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a6/Nishi-Koizumi-STA_Gate.jpg/1920px-Nishi-Koizumi-STA_Gate.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "MaedaAkihiko",
+    "w": 5471,
+    "h": 3647,
+    "score": -10.8,
+    "why": [
+     "記録写真"
+    ],
+    "file": "077-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "竜神峡 紅葉まつり",
+  "theme": "autumn",
+  "entity": {
+   "id": "Q11598381",
+   "label": "竜神峡",
+   "cat": "Ryujin Dam",
+   "p18": ""
+  },
+  "cand": [
+   {
+    "title": "File:Ryujin Bridge zenkei.JPG",
+    "page": "https://commons.wikimedia.org/wiki/File:Ryujin_Bridge_zenkei.JPG",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fe/Ryujin_Bridge_zenkei.JPG/1920px-Ryujin_Bridge_zenkei.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC0",
+    "artist": "Saigen Jiro",
+    "w": 6016,
+    "h": 4000,
+    "score": 20.5,
+    "why": [],
+    "file": "078-0.jpg"
+   },
+   {
+    "title": "File:Ryuujin Ohtsuribashi.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ryuujin_Ohtsuribashi.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1f/Ryuujin_Ohtsuribashi.jpg/1920px-Ryuujin_Ohtsuribashi.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 2.0",
+    "artist": "TANAKA Juuyoh (田中十洋)",
+    "w": 5616,
+    "h": 3744,
+    "score": 20.3,
+    "why": [],
+    "file": "078-1.jpg"
+   },
+   {
+    "title": "File:Ryujin Bridge 01.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Ryujin_Bridge_01.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Ryujin_Bridge_01.jpg/1920px-Ryujin_Bridge_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 4.0",
+    "artist": "Σ64",
+    "w": 6000,
+    "h": 4000,
+    "score": 14.5,
+    "why": [],
+    "file": "078-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "第14回ぐんまフランス祭2026",
+  "theme": "",
+  "entity": {
+   "id": "Q20044111",
+   "label": "群馬県庁",
+   "cat": "Gunma Prefectural Government",
+   "p18": ""
+  },
+  "cand": [
+   {
+    "title": "File:利根橋からの県庁 - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E5%88%A9%E6%A0%B9%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E7%9C%8C%E5%BA%81_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0d/%E5%88%A9%E6%A0%B9%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E7%9C%8C%E5%BA%81_-_panoramio.jpg/1920px-%E5%88%A9%E6%A0%B9%E6%A9%8B%E3%81%8B%E3%82%89%E3%81%AE%E7%9C%8C%E5%BA%81_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "sorarin",
+    "w": 3008,
+    "h": 2000,
+    "score": 33.1,
+    "why": [],
+    "file": "079-0.jpg"
+   },
+   {
+    "title": "File:前橋公園 - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E5%89%8D%E6%A9%8B%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/%E5%89%8D%E6%A9%8B%E5%85%AC%E5%9C%92_-_panoramio.jpg/1920px-%E5%89%8D%E6%A9%8B%E5%85%AC%E5%9C%92_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "高橋文武",
+    "w": 2288,
+    "h": 1712,
+    "score": 32.4,
+    "why": [],
+    "file": "079-1.jpg"
+   },
+   {
+    "title": "File:261011 Tone River Maebashi Japan01s3.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:261011_Tone_River_Maebashi_Japan01s3.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/261011_Tone_River_Maebashi_Japan01s3.jpg/1920px-261011_Tone_River_Maebashi_Japan01s3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "663highland",
+    "w": 5472,
+    "h": 3648,
+    "score": 29.2,
+    "why": [],
+    "file": "079-2.jpg"
+   }
+  ]
+ },
+ {
+  "name": "八坂神社 太々神楽（11月）",
+  "theme": "",
+  "entity": null,
+  "cand": []
+ },
+ {
+  "name": "根岸森林公園の紅葉",
+  "theme": "autumn",
+  "entity": {
+   "id": "Q11536319",
+   "label": "根岸森林公園",
+   "cat": "Negishi Forest Park",
+   "p18": "Negishi forest park.jpg"
+  },
+  "cand": [
+   {
+    "title": "File:横浜競馬場 1870年秋.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:%E6%A8%AA%E6%B5%9C%E7%AB%B6%E9%A6%AC%E5%A0%B4_1870%E5%B9%B4%E7%A7%8B.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2a/%E6%A8%AA%E6%B5%9C%E7%AB%B6%E9%A6%AC%E5%A0%B4_1870%E5%B9%B4%E7%A7%8B.jpg/1920px-%E6%A8%AA%E6%B5%9C%E7%AB%B6%E9%A6%AC%E5%A0%B4_1870%E5%B9%B4%E7%A7%8B.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "Public domain",
+    "artist": "The Far East　news 1870.11.16",
+    "w": 1986,
+    "h": 1276,
+    "score": 55.6,
+    "why": [
+     "季節が合う"
+    ],
+    "file": "081-0.jpg"
+   },
+   {
+    "title": "File:2021 3 14 Sun Daimond Sunset in Mt.Fuji@NegishiHorseTrack.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:2021_3_14_Sun_Daimond_Sunset_in_Mt.Fuji@NegishiHorseTrack.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/2021_3_14_Sun_Daimond_Sunset_in_Mt.Fuji%40NegishiHorseTrack.jpg/1920px-2021_3_14_Sun_Daimond_Sunset_in_Mt.Fuji%40NegishiHorseTrack.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY-SA 4.0",
+    "artist": "不可説転",
+    "w": 4000,
+    "h": 3000,
+    "score": 19.3,
+    "why": [],
+    "file": "081-1.jpg"
+   },
+   {
+    "title": "File:Negishi Forest Park 根岸森林公園 - panoramio.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:Negishi_Forest_Park_%E6%A0%B9%E5%B2%B8%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92_-_panoramio.jpg",
+    "thumb": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Negishi_Forest_Park_%E6%A0%B9%E5%B2%B8%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92_-_panoramio.jpg/1920px-Negishi_Forest_Park_%E6%A0%B9%E5%B2%B8%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9C%92_-_panoramio.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "license": "CC BY 3.0",
+    "artist": "AMANO Jun-ichi",
+    "w": 4288,
+    "h": 2848,
+    "score": 19.3,
+    "why": [],
+    "file": "081-2.jpg"
+   }
+  ]
+ }
+]
