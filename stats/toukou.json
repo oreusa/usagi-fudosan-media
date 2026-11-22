@@ -1,5 +1,5 @@
 {
- "about": "投稿そのものの数字。投稿の点検の回（20:33）が毎晩足す。rows＝1投稿1行 {day:'YYYY-MM-DD', svc:'threads'か'x', slot:'07:00', type:リンクの印の型（rank・kaitai・jikka・hitoeki・odekake など。無ければ''）, pic:画像つきなら true, head:1本目の1行目（【】の見出し。11/12〜。gakushu.py が型に分ける）, kata:惹きつける型の名前（gakushu.py の KATA と同じ名前。点検の回が head から付ける）, views:閲覧, likes:いいね}。同じ day・svc・slot の行は数字を上書き（きのう・おとといの分も取り直す）。followers＝1日1行 {day, threads:人数, x:人数}（取れない方は書かない）。60日より前の行は消してよい。kata_count＝1日1つ {\"YYYY-MM-DD\": {\"Threads\": {型: 本数}}}（その日に出した本数。点検の回が毎晩書く）",
+ "about": "投稿そのものの数字。投稿の点検の回（20:33）が毎晩足す。rows＝1投稿1行 {day:'YYYY-MM-DD', svc:'threads'か'x', slot:'07:00', type:リンクの印の型（rank・kaitai・jikka・hitoeki・odekake など。無ければ''）, pic:画像つきなら true, head:1本目の1行目（【】の見出し。11/12〜。gakushu.py が型に分ける）, kata:惹きつける型の名前（gakushu.py の KATA と同じ名前。点検の回が head から付ける）, views:閲覧, likes:いいね}。同じ day・svc・slot の行は数字を上書き（きのう・おとといの分も取り直す）。followers＝1日1行 {day, threads:人数, x:人数}（取れない方は書かない）。60日より前の行は消してよい。kata_count＝1日1つ {\"YYYY-MM-DD\": {\"Threads\": {型: 本数}}}（その日に出した本数。点検の回が毎晩書く） replies＝Buffer の comments から自分のスレッドの2本目以降（schedule の threads_thread の数）を引いた、人からの返事の数（11/20〜）。",
  "rows": [
   {
    "day": "2026-10-29",
@@ -4171,56 +4171,61 @@
    "day": "2026-11-20",
    "svc": "threads",
    "slot": "07:00",
-   "type": "rank",
+   "type": "",
    "head": "【関西まちランキング No.38｜近鉄けいはんな線、吉田と荒本はわずか165人差🚃】",
    "kata": "駅・路線の順位",
    "pic": true,
    "views": 30,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-20",
    "svc": "x",
    "slot": "07:00",
-   "type": "rank",
+   "type": "",
    "head": "三田・神戸三田プレミアム・アウトレットに、スノーピークの店、11/20（金）オープン",
    "kata": "できる・開く（新駅・開業・完成）",
    "pic": true,
    "views": 280,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-20",
    "svc": "threads",
    "slot": "08:00",
-   "type": "jikka",
+   "type": "",
    "head": "【実家が守山市なら｜昨年度の平均は2,979万円🏠】",
    "kata": "実家・お金の知識",
    "pic": true,
    "views": 57,
-   "likes": 2
+   "likes": 2,
+   "replies": 0
   },
   {
    "day": "2026-11-20",
    "svc": "threads",
    "slot": "09:00",
-   "type": "odekake",
+   "type": "",
    "head": "【11/20（金）も開催中｜京都・東福寺の秋の拝観🍁】",
    "kata": "日付つきの催し",
    "pic": true,
-   "views": 169,
-   "likes": 3
+   "views": 191,
+   "likes": 3,
+   "replies": 0
   },
   {
    "day": "2026-11-20",
    "svc": "x",
    "slot": "09:00",
-   "type": "odekake",
+   "type": "",
    "head": "和泉市・観音寺町に「アクロスプラザ和泉観音寺」、11/20（金）オープン",
    "kata": "できる・開く（新駅・開業・完成）",
    "pic": false,
    "views": 540,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-20",
@@ -4230,63 +4235,69 @@
    "head": "【11/20（金）神戸三田｜スノーピークの店がアウトレットに開く🏕️】",
    "kata": "日付つきの催し",
    "pic": true,
-   "views": 387,
-   "likes": 1
+   "views": 409,
+   "likes": 1,
+   "replies": 0
   },
   {
    "day": "2026-11-20",
    "svc": "x",
    "slot": "12:00",
-   "type": "dekiru",
+   "type": "",
    "head": "京都駅近く・イオンモールKYOTO Sakura館2階に「イオンモールKYOTOロフト」、11/27（金）オープン",
    "kata": "できる・開く（新駅・開業・完成）",
    "pic": true,
    "views": 77,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-20",
    "svc": "threads",
    "slot": "13:00",
-   "type": "rank",
+   "type": "",
    "head": "【関西まちランキング No.39｜近鉄生駒線、勢野北口と竜田川はわずか114人差🚃】",
    "kata": "駅・路線の順位",
    "pic": true,
-   "views": 138,
-   "likes": 0
+   "views": 140,
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-20",
    "svc": "x",
    "slot": "15:00",
-   "type": "odekake",
+   "type": "",
    "head": "松原・セブンパーク天美3階に「京都北白川 ラーメン魁力屋」、11/19（木）オープン",
    "kata": "できる・開く（新駅・開業・完成）",
    "pic": false,
    "views": 130,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-20",
    "svc": "threads",
    "slot": "18:00",
-   "type": "dekiru",
+   "type": "",
    "head": "【11/20（金）和泉市｜アクロスプラザ和泉観音寺が開く🛒】",
    "kata": "日付つきの催し",
    "pic": true,
-   "views": 415,
-   "likes": 0
+   "views": 437,
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-20",
    "svc": "x",
    "slot": "18:00",
-   "type": "dekiru",
+   "type": "",
    "head": "京都・東福寺の秋の拝観（通天橋・開山堂）、12/6（日）まで",
    "kata": "そのほか",
    "pic": true,
    "views": 243,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-20",
@@ -4296,8 +4307,9 @@
    "head": "【11/21（土）〜23（月・祝）も点灯｜大阪・御堂筋イルミネーション✨】",
    "kata": "日付つきの催し",
    "pic": true,
-   "views": 153,
-   "likes": 0
+   "views": 155,
+   "likes": 0,
+   "replies": 2
   },
   {
    "day": "2026-11-20",
@@ -4307,74 +4319,81 @@
    "head": "【守山駅は1日17,354人｜ひと駅しらべ その28🚃】",
    "kata": "駅・路線の順位",
    "pic": true,
-   "views": 257,
-   "likes": 3
+   "views": 281,
+   "likes": 3,
+   "replies": 0
   },
   {
    "day": "2026-11-20",
    "svc": "x",
    "slot": "21:00",
-   "type": "hitoeki",
+   "type": "",
    "head": "大阪・御堂筋イルミネーション2026、12/31（木）まで毎晩",
    "kata": "そのほか",
    "pic": false,
    "views": 66,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
    "svc": "threads",
    "slot": "07:00",
-   "type": "rank",
+   "type": "",
    "head": "【関西まちランキング No.40｜近鉄吉野線、福神と下市口はわずか86人差🚃】",
    "kata": "駅・路線の順位",
    "pic": true,
-   "views": 68,
-   "likes": 0
+   "views": 71,
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
    "svc": "x",
    "slot": "07:00",
-   "type": "rank",
+   "type": "",
    "head": "奈良・大和西大寺駅前のならファミリーB1に、チュロス専門店「STREET CHURROS」、11/21（土）オープン",
    "kata": "できる・開く（新駅・開業・完成）",
    "pic": true,
    "views": 822,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
    "svc": "threads",
    "slot": "08:00",
-   "type": "jikka",
+   "type": "",
    "head": "【実家が吹田市なら｜昨年度の平均は4,506万円🏠】",
    "kata": "実家・お金の知識",
    "pic": true,
-   "views": 38,
-   "likes": 0
+   "views": 44,
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
    "svc": "threads",
    "slot": "09:00",
-   "type": "odekake",
+   "type": "",
    "head": "【11/21（土）も開催中｜奈良・桜井市の談山神社の紅葉まつり🍁】",
    "kata": "日付つきの催し",
    "pic": true,
-   "views": 156,
-   "likes": 1
+   "views": 183,
+   "likes": 1,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
    "svc": "x",
    "slot": "09:00",
-   "type": "odekake",
+   "type": "",
    "head": "心斎橋・クオーツ心斎橋に「フェンディ 心斎橋店」、11/28（土）グランドオープン",
    "kata": "できる・開く（新駅・開業・完成）",
    "pic": false,
    "views": 20,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
@@ -4384,74 +4403,81 @@
    "head": "【11/28（土）心斎橋｜フェンディの大阪の新しい旗艦店が開く👜】",
    "kata": "できる・開く（新駅・開業・完成）",
    "pic": true,
-   "views": 203,
-   "likes": 0
+   "views": 233,
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
    "svc": "x",
    "slot": "12:00",
-   "type": "dekiru",
+   "type": "",
    "head": "難波・西心斎橋に「牛かつもと村 西心斎橋店」、11/25（水）オープン",
    "kata": "できる・開く（新駅・開業・完成）",
    "pic": true,
    "views": 63,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
    "svc": "threads",
    "slot": "13:00",
-   "type": "rank",
+   "type": "",
    "head": "【関西まちランキング No.41｜山陽電鉄本線、亀山と西舞子はわずか10人差🚃】",
    "kata": "駅・路線の順位",
    "pic": true,
-   "views": 53,
-   "likes": 0
+   "views": 61,
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
    "svc": "threads",
    "slot": "15:00",
-   "type": "odekake",
+   "type": "",
    "head": "【11/21（土）〜23（月・祝）も夜まで｜姫路・好古園の紅葉会🍁】",
    "kata": "日付つきの催し",
    "pic": true,
-   "views": 53,
-   "likes": 0
+   "views": 67,
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
    "svc": "x",
    "slot": "15:00",
-   "type": "odekake",
+   "type": "",
    "head": "神戸市西区・イズミヤSC西神戸2階に「ガシャポンバンダイオフィシャルショップ」、11/20（金）オープン",
    "kata": "できる・開く（新駅・開業・完成）",
    "pic": false,
    "views": 37,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
    "svc": "threads",
    "slot": "18:00",
-   "type": "dekiru",
+   "type": "",
    "head": "【11/20（金）神戸市西区｜ガシャポンバンダイの公式店が開いた🎰】",
    "kata": "日付つきの催し",
    "pic": true,
-   "views": 26,
-   "likes": 0
+   "views": 397,
+   "likes": 1,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
    "svc": "x",
    "slot": "18:00",
-   "type": "dekiru",
+   "type": "",
    "head": "梅田・ルクア サウス12階に「NARUMIYA HAPPY PARK」、11/24（火）オープン",
    "kata": "できる・開く（新駅・開業・完成）",
    "pic": false,
    "views": 105,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
@@ -4461,74 +4487,165 @@
    "head": "【塚口駅は1日43,059人｜ひと駅しらべ その29🚃】",
    "kata": "駅・路線の順位",
    "pic": true,
-   "views": 0,
-   "likes": 0
+   "views": 155,
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-21",
    "svc": "x",
    "slot": "21:00",
-   "type": "hitoeki",
+   "type": "",
    "head": "梅田・ルクア イーレ4階に「Pandora Osaka LUCUA 1100店」、12/1（火）オープン",
    "kata": "できる・開く（新駅・開業・完成）",
    "pic": false,
    "views": 34,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-22",
    "svc": "threads",
    "slot": "07:00",
-   "type": "rank",
+   "type": "",
    "head": "【関西まちランキング No.42｜近鉄京都線、寺田と伏見はわずか19人差🚃】",
    "kata": "駅・路線の順位",
    "pic": true,
-   "views": 0,
-   "likes": 0
+   "views": 67,
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-22",
    "svc": "x",
    "slot": "07:00",
-   "type": "rank",
+   "type": "",
    "head": "大阪駅直結のルクア サウス11階に「ちいかわパークストア」、11/24（火）オープン",
    "kata": "できる・開く（新駅・開業・完成）",
    "pic": true,
    "views": 0,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
   },
   {
    "day": "2026-11-22",
    "svc": "threads",
    "slot": "08:00",
-   "type": "jikka",
+   "type": "",
    "head": "【実家が西宮市なら｜昨年度の平均は3,947万円🏠】",
    "kata": "実家・お金の知識",
    "pic": true,
-   "views": 0,
-   "likes": 0
+   "views": 75,
+   "likes": 1,
+   "replies": 0
   },
   {
    "day": "2026-11-22",
    "svc": "threads",
    "slot": "09:00",
-   "type": "odekake",
+   "type": "",
    "head": "【11/22（日）京都・東山｜知恩院の秋のライトアップ🍁】",
    "kata": "日付つきの催し",
    "pic": true,
-   "views": 0,
-   "likes": 0
+   "views": 158,
+   "likes": 1,
+   "replies": 0
   },
   {
    "day": "2026-11-22",
    "svc": "x",
    "slot": "09:00",
-   "type": "odekake",
+   "type": "",
    "head": "嵐山の長辻通（渡月橋北詰〜丸太町通）、きょう11/22（日）は13時ごろ〜17時ごろ歩行者用道路に",
    "kata": "そのほか",
    "pic": true,
    "views": 0,
-   "likes": 0
+   "likes": 0,
+   "replies": 0
+  },
+  {
+   "day": "2026-11-22",
+   "svc": "x",
+   "slot": "18:00",
+   "type": "",
+   "head": "京都・北山の府立植物園で、紅葉の夜のライトアップ「NIGHT GARDEN of Autumn Colors」",
+   "kata": "そのほか",
+   "pic": true,
+   "views": 0,
+   "likes": 0,
+   "replies": 0
+  },
+  {
+   "day": "2026-11-22",
+   "svc": "threads",
+   "slot": "18:00",
+   "type": "",
+   "head": "【11/20 開園｜大阪駅前に「うめきたの森」、空中の道は350m🌳】",
+   "kata": "駅・路線の順位",
+   "pic": true,
+   "views": 0,
+   "likes": 0,
+   "replies": 0
+  },
+  {
+   "day": "2026-11-22",
+   "svc": "x",
+   "slot": "15:00",
+   "type": "",
+   "head": "堺筋本町に、東京のベーカリー「LAZY SUNDAY BAKERY」、11/21（土）オープン",
+   "kata": "できる・開く（新駅・開業・完成）",
+   "pic": true,
+   "views": 0,
+   "likes": 0,
+   "replies": 0
+  },
+  {
+   "day": "2026-11-22",
+   "svc": "threads",
+   "slot": "15:00",
+   "type": "",
+   "head": "【11/22（日）大阪・御堂筋｜夕方5時ごろからイルミネーション✨】",
+   "kata": "日付つきの催し",
+   "pic": true,
+   "views": 90,
+   "likes": 0,
+   "replies": 0
+  },
+  {
+   "day": "2026-11-22",
+   "svc": "threads",
+   "slot": "12:00",
+   "type": "dekiru",
+   "head": "【11/24（火）大阪駅｜ちいかわパークストアがLUCUA SOUTHに開く🎀】",
+   "kata": "駅・路線の順位",
+   "pic": true,
+   "views": 144,
+   "likes": 0,
+   "replies": 0
+  },
+  {
+   "day": "2026-11-22",
+   "svc": "x",
+   "slot": "12:00",
+   "type": "",
+   "head": "大阪駅前のグラングリーン大阪に「うめきたの森」、11/20（金）開園",
+   "kata": "駅・路線の順位",
+   "pic": true,
+   "views": 0,
+   "likes": 0,
+   "replies": 0
+  },
+  {
+   "day": "2026-11-22",
+   "svc": "threads",
+   "slot": "13:00",
+   "type": "",
+   "head": "【関西まちランキング No.43｜南海加太線、加太と西ノ庄はわずか26人差🚃】",
+   "kata": "駅・路線の順位",
+   "pic": true,
+   "views": 78,
+   "likes": 0,
+   "replies": 0
   }
  ],
  "followers": [
@@ -4940,13 +5057,14 @@
   },
   "2026-11-22": {
    "Threads": {
-    "日付つきの催し": 1,
+    "駅・路線の順位": 4,
     "実家・お金の知識": 1,
-    "駅・路線の順位": 1
+    "日付つきの催し": 2
    },
    "X": {
-    "そのほか": 1,
-    "できる・開く（新駅・開業・完成）": 1
+    "できる・開く（新駅・開業・完成）": 2,
+    "そのほか": 2,
+    "駅・路線の順位": 1
    }
   }
  },
@@ -4965,22 +5083,24 @@
   ]
  },
  "yesterday": {
-  "day": "2026-11-20",
+  "day": "2026-11-21",
   "atari": [
-   "X の開店の速報（09:00 アクロスプラザ和泉観音寺 439・07:00 スノーピーク 197。線46の2倍越え）",
-   "X のおでかけ 写真の表紙つき（18:00 東福寺 140）",
-   "Threads の日付つきの開く（18:00 アクロスプラザ和泉観音寺 415・12:00 スノーピーク 387）"
+   "X 07:00 の開店の速報（大和西大寺 ならファミリーのチュロス専門店 822。線46の約18倍）",
+   "X 18:00 の開店（ルクア サウス NARUMIYA HAPPY PARK 105）",
+   "Threads 18:00 の開く（ガシャポンバンダイ公式店 西神戸 397）・12:00 フェンディ心斎橋 233"
   ],
   "hazure": [
-   "Threads 07:00 路線の順位 No.38 近鉄けいはんな線（30。7駅の小さい線）",
-   "Threads 08:00 実家・お金の知識（守山市 57）"
+   "Threads 07:00 路線の順位 No.40 近鉄吉野線（71）と 13:00 No.41 山陽本線（61）。11/22 も近鉄京都線 67・南海加太線 78 で、順位の型が4本続けて線208の半分より下",
+   "Threads 08:00 実家・お金の知識（吹田市 44）",
+   "Threads 15:00 好古園の紅葉（67）",
+   "X 09:00 フェンディ心斎橋（20）・21:00 Pandora（34）"
   ],
-  "threads_median": 161,
+  "threads_median": 113,
   "kita": {
-   "kansai": 40,
-   "kanto": 9,
+   "kansai": 37,
+   "kanto": 10,
    "line": 125
   },
-  "note": "11/21 20:35：数字のそろった 11/20 で答え合わせ（11/21 の X はまだ0）。来た人＝関西 seichou.md 投稿の型の7日279÷7、関東 akari notes/gakushu.md 7日62÷7。路線の順位は大きい線（11/19 阪神本線 972・南大阪線 1,628）と小さい線（けいはんな線 30・生駒線 138）で差が大きい。あすの drafts がまだ無いので、朝の回への申し送りは maint_selfcheck に書いた"
+  "note": "11/22 20:3x：数字のそろった 11/21 で答え合わせ（11/22 の X はまだ0）。来た人＝関西 seichou.md 投稿の型の7日256÷7、関東 akari notes/gakushu.md 7日71÷7。返事は Buffer の comments に自分のスレッドの2本目以降が入っていた（2本つなぐ投稿は毎回2）。11/20 から rows に replies（人からの返事＝comments−自分の2本目以降）を足した。11/20〜22 の人からの返事は0、11/14〜21 は約10件（多いのは順位の型）"
  }
 }
