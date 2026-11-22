@@ -90,3 +90,45 @@ function H2(){const L={};const LT=[W/2,820,620];const OP={light:LT,dark:'#0c0208
   x.globalCompositeOperation='source-atop';const g=x.createLinearGradient(0,1180,0,H);g.addColorStop(0,'rgba(255,180,100,.25)');g.addColorStop(1,'rgba(20,4,8,.35)');x.fillStyle=g;x.fillRect(0,1150,W,300);L.f=c}
  return L}
 window.SCN=Object.assign(window.SCN||{},{H0,H1,H2});
+
+// ===== H3 山門をくぐると、山いっぱいの紅葉（朱の山門が額縁） =====
+function H3(){const L={};const LT=[W*.62,260,1100];
+ {const c=cv(),x=c.getContext('2d');sky(x,'#cfe3f0','#fbeacc',0,520);glow(x,LT[0],LT[1],620,.7,'255,250,232');
+  // 奥の山：赤・黄・紫の全山
+  const PV=['#8a3a5c','#a04a66','#b3121e','#d93a22','#e8a42c','#c8241f','#7a3050'];
+  const far=cv(),fx=far.getContext('2d');
+  for(let r=0;r<4;r++)for(let i=0;i<10;i++){const xx=(i/9)*W+(r%2)*50-25;const top=470-Math.sin((xx/W)*Math.PI*1.3+.4)*90;leafCloud(fx,xx,top+r*95,130,100,1200,8+r,r<2?PV:PALM,3110+r*10+i,{light:LT})}
+  x.drawImage(layerBlur(far,2),0,0);
+  const hz=x.createLinearGradient(0,330,0,900);hz.addColorStop(0,'rgba(255,244,226,.45)');hz.addColorStop(.5,'rgba(255,240,220,.15)');hz.addColorStop(1,'rgba(255,240,220,0)');x.fillStyle=hz;x.fillRect(0,330,W,570);
+  L.b=finish(c,3102,{rim:false,g:7,blot:.03})}
+ {const c=cv(),x=c.getContext('2d');
+  // 境内の斜面の紅葉と、上へ続く石段
+  for(const tx of[130,300,W-300,W-130]){x.strokeStyle='rgba(70,40,26,.8)';x.lineWidth=7;x.beginPath();x.moveTo(tx,1250);x.quadraticCurveTo(tx+20,1050,tx-10,860);x.stroke()}
+  for(let r=0;r<3;r++)for(let i=0;i<8;i++){const xx=(i/7)*W+(r%2)*60-30;const k=Math.abs(xx-W/2)/(W/2);if(r==0&&k<.35)continue;leafCloud(x,xx,760+r*150-Math.sin(i*1.7+r)*50+k*40,150+r*30,140,2200,11+r*2,PALM,3200+r*10+i,{light:LT})}
+  // 石段の上の本堂の屋根
+  {const rx=W*.5,ry=835;x.fillStyle='#4a2e24';x.beginPath();x.moveTo(rx-170,ry);x.quadraticCurveTo(rx,ry-30,rx+170,ry);x.lineTo(rx+110,ry-70);x.lineTo(rx-110,ry-70);x.fill();x.fillStyle='#7a2c1c';x.fillRect(rx-120,ry,240,50);x.fillStyle='rgba(255,220,160,.5)';x.fillRect(rx-100,ry+12,200,26)}
+  
+  const sx=W*.5;for(let k=0;k<14;k++){const t=k/13,y=860+t*560,w=90+t*420;x.fillStyle=mix('#c9b394','#8a7258',t);x.fillRect(sx-w/2,y,w,26+t*16);x.fillStyle='rgba(60,30,20,.35)';x.fillRect(sx-w/2,y+18+t*12,w,8+t*4);x.fillStyle='rgba(255,246,226,.55)';x.fillRect(sx-w/2,y,w,3)}
+  const q=rng(3210);for(let i=0;i<260;i++){const t=q(),y=860+t*580,w=90+t*420;leaf(x,sx-w/2+q()*w,y+q()*20,3+t*9,q()*6,PALM[i%PALM.length],7)}
+  [[sx-150,1000,30],[sx+150,1010,30],[sx-230,1230,46],[sx+235,1240,46]].forEach(([dx,dy,s],i)=>daruma(x,dx,dy,s,{lit:1,rot:(i%2?.06:-.05)}));
+  L.m=finish(c,3202,{rim:false,g:6,blot:0})}
+ {const c=cv(),x=c.getContext('2d');
+  // 手前：朱の山門（柱と貫と屋根）が額縁になる
+  const red='#b8321f',dk='#5a1a10',sh='#7a2414';
+  const pil=(px,w)=>{const g=x.createLinearGradient(px,0,px+w,0);g.addColorStop(0,dk);g.addColorStop(.35,red);g.addColorStop(.7,'#c84a2c');g.addColorStop(1,sh);x.fillStyle=g;x.fillRect(px,230,w,H-230);
+   x.fillStyle='#3a2a20';x.fillRect(px-14,H-70,w+28,70);x.fillStyle='rgba(255,230,190,.25)';x.fillRect(px+w*.55,240,3,H-320)};
+  pil(30,120);pil(W-150,120);
+  [[250,44],[370,30]].forEach(([y,h])=>{const g=x.createLinearGradient(0,y,0,y+h);g.addColorStop(0,'#d0563a');g.addColorStop(1,sh);x.fillStyle=g;x.fillRect(0,y,W,h);x.fillStyle='rgba(0,0,0,.25)';x.fillRect(0,y+h,W,6)});
+  // 屋根（反り）と垂木
+  x.fillStyle='#2a1c18';x.beginPath();x.moveTo(-40,0);x.lineTo(W+40,0);x.lineTo(W+40,150);x.quadraticCurveTo(W*.5,205,-40,150);x.fill();
+  x.fillStyle='#3e2a22';for(let i=0;i<46;i++){const xx=i*W/45;x.fillRect(xx-5,150+Math.sin(i/45*Math.PI)*42-30,10,40)}
+  x.fillStyle='#e9dcc0';x.fillRect(0,206,W,10);x.fillStyle='rgba(255,240,200,.5)';x.fillRect(0,206,W,2);
+  // 額（勝尾寺）
+  x.fillStyle='#2a1810';x.fillRect(W/2-70,282,140,74);x.strokeStyle='#d4a54a';x.lineWidth=4;x.strokeRect(W/2-64,288,128,62);
+  x.fillStyle='#e6c27a';x.font='700 40px "Shippori Mincho"';x.textAlign='center';x.textBaseline='middle';x.fillText('勝尾寺',W/2,320);
+  // 門の内側の影
+  const vg=x.createLinearGradient(0,0,0,260);vg.addColorStop(0,'rgba(20,8,4,0)');vg.addColorStop(1,'rgba(20,8,4,0)');
+  L.n=finish(c,3301,{rim:false,g:5,blot:0})}
+ {const s=cv(),sx=s.getContext('2d');leafCloud(sx,W-20,330,150,120,60,40,PAL,3401);leafCloud(sx,30,H-80,210,140,50,46,PALM,3402);L.f=layerBlur(s,6)}
+ return L}
+window.SCN=Object.assign(window.SCN||{},{H3});

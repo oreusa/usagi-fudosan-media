@@ -9,3 +9,5 @@ times.json
 .hyperframes/
 gsap.min.js
 node_modules/
+work-*/
+.hf.*
