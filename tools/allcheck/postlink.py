@@ -22,12 +22,13 @@ OK = {
     "kaitai": ("/kaitai", "/hojo"),
     "hojo": ("/hojo", "/kaitai"),
     "odekake": ("/koyo", "/illumination", "/hatsumode", "/odekake", "/o/", "/ima"),
-    "dekiru": ("/odekake", "/ima", "/koyo", "/illumination", "/hatsumode", "/o/", "/machi/"),
+    "dekiru": ("/kaiten", "/odekake", "/ima", "/koyo", "/illumination", "/hatsumode", "/o/", "/machi/"),
+    "nesage": ("/nesage",),
 }
 
 # 見出し（1行目）の言葉 → 行き先はこのどれかでないといけない
 WORDS = [
-    (r"開業|オープン|店舗|売り場|商業施設|新店", ("/odekake", "/ima", "/o/"), "店・施設の開業の話"),
+    (r"開業|オープン|店舗|売り場|商業施設|新店", ("/kaiten", "/odekake", "/ima", "/o/", "/nesage"), "店・施設の開業の話"),
     (r"売れた|成約|中古一戸建て|平均は", ("/jikka/", "/machi/"), "売れた値段の話"),
     (r"紅葉|もみじ", ("/koyo", "/odekake", "/o/"), "紅葉の話"),
     (r"イルミ|ライトアップ", ("/illumination", "/koyo", "/odekake", "/o/"), "イルミ・ライトアップの話"),
