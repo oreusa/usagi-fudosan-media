@@ -35,7 +35,7 @@ def build(write, L, R):
     d['groups'] = [[g, [k for k in ks if k in have]] for g, ks in GROUPS]
     d['live'] = LIVE
     cfg = {'nav': [{'t': '品物', 'ic': 'find', 'a': 'find'}, {'t': '値下がり', 'ic': 'down', 'a': 'drop'}, {'t': 'いつもの物', 'ic': 'star', 'a': 'my'}, {'t': 'ふるさと納税', 'ic': 'gift', 'href': '/furusato'}],
-           'menu': {'k': 'Shopping', 'items': [['日用品の値段くらべ', '/okaimono', 1], ['ふるさと納税', '/furusato'], ['値下がりした物の一覧', '/nesage'], ['今までのおかいものの画面', '/okaimono']]},
+           'menu': {'k': 'Shopping', 'items': [['日用品の値段くらべ', '/okaimono', 1], ['ふるさと納税', '/furusato'], ['本当に安い？', '/nesage'], ['今までのおかいものの画面', '/okaimono']]},
            'foot': '値段：楽天市場・Yahoo!ショッピングで調べた送料込みの値段（調べた時のもの。お店で変わることがあります）。Amazonは値段を自動で調べられないため、押すとAmazonの検索が開きます。<br>このページのお店へのリンクは広告（PR）です。'}
     cfg['desc'] = 'ティッシュ・トイレットペーパー・おむつ・洗剤・水・お米など21種類を、楽天とYahoo!ショッピングの送料込みの値段で、1Lあたり・1枚あたりに直して比べています。Amazonも同じ画面から見られます。広告（PR）を含みます。'
     write('kau', '日用品の値段くらべ（楽天・Yahoo!・Amazon）｜TOWN NOTE', cfg, d)
