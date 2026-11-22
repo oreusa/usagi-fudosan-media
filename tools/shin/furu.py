@@ -16,7 +16,7 @@ def get(name):
 
 NAV = lambda first: first + [{'t': 'おかいもの', 'ic': 'yen', 'href': '/okaimono'}]
 MENU = lambda cur: {'k': 'Shopping', 'items': [[t, u] + ([1] if u == cur else []) for t, u in
-                                               [['日用品の値段くらべ', '/okaimono'], ['ふるさと納税', '/furusato'], ['値下がりした物', '/nesage'], ['開店・閉店', '/kaiten']]]}
+                                               [['日用品の値段くらべ', '/okaimono'], ['ふるさと納税', '/furusato'], ['本当に安い？', '/nesage'], ['開店・閉店', '/kaiten']]]}
 FOOT = '値段は楽天市場で調べた時のものです（お店で変わることがあります）。このページの商品へのリンクは広告（PR）です。'
 
 
@@ -33,6 +33,18 @@ def build(write, URL, region='関西'):
               {'kind': 'furu', 'h1': 'ふるさと納税 1万円でもらえる量', 'sub': '楽天ふるさと納税の返礼品を、寄付1万円あたりの量でくらべました。', 'at': f['at'], 'cats': cats}, js='furu')
     except Exception as e:
         print('furu: ふるさと納税を作れなかった', repr(e))
+    # 11/22「本当に安い？」：燈が毎日作る data/honto.json（楽天の日用品の値段を11/1から記録・1品ずつ 今が安い／上げて下げた／高い／変わらない）。
+    # 描くのは links/shin/honto.js（関東 akari site/shin/honto.js と同じ物）。読めない時は前の「値下がりした物」
+    try:
+        hd = get('honto.json')
+        if hd.get('n', 0) >= 30:
+            cfg = {'nav': [], 'menu': MENU('/nesage'), 'foot': FOOT,
+                   'desc': f"楽天市場の日用品{hd['n']}品の値段を11月1日から毎日記録。ブラックフライデーなどセールの値段が本当に安いか、値段の動きのグラフでたしかめられます。"}
+            URL['nesage'] = '/nesage'
+            write('nesage', '本当に安い？｜セールの値段を11月1日からの記録でたしかめる（楽天の日用品）｜TOWN NOTE', cfg, hd, js='honto')
+            return
+    except Exception as e:
+        print('furu: 本当に安い？を作れなかった', repr(e))
     try:
         n = get('nesage.json')
         cfg = {'nav': NAV([{'t': '値下がり', 'ic': 'down', 'a': 'down'}, {'t': '値上がり', 'ic': 'rank', 'a': 'up'}, {'t': 'ふるさと', 'ic': 'gift', 'href': '/furusato'}]),
