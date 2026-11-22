@@ -1070,6 +1070,7 @@
 "https://www.city.osaka.lg.jp/shisei/category/3064-1-7-0-0-0-0-0-0-0.html",
 "https://www.city.osaka.lg.jp/shisei/category/3065-1-0-0-0-0-0-0-0-0.html",
 "https://www.city.osaka.lg.jp/shisei/news/curr.html",
+"https://www.city.osaka.lg.jp/shobo/page/0000691142.html",
 "https://www.city.osaka.lg.jp/shobo/page/0000691143.html",
 "https://www.city.osaka.lg.jp/somu/page/0000004215.html",
 "https://www.city.osaka.lg.jp/somu/page/0000518905.html",
@@ -2309,6 +2310,7 @@
 "https://subway.osakametro.co.jp/news/news_release/",
 "https://subway.osakametro.co.jp/news/news_release/20261112_2026nendo_2qkessan.php",
 "https://subway.osakametro.co.jp/news/news_release/20261120_ghg_assurance.php",
+"https://subway.osakametro.co.jp/tourism/event/2026_12_burariwalk.php",
 "https://www.osakametro-service.jp/recruit/",
 "https://www.osakametro.co.jp/news/news/notice/20261112_customermonitor_2026.php",
 "https://www.osakametro.co.jp/news/news/other/20260901_metolabo_heiten.php",
@@ -2606,6 +2608,13 @@
 "cat": "dekiru",
 "t": "2026.11.20 不動産 【リリース】 グラングリーン大阪「うめきたの森」本日開園、「ひらめきの道」全面開通 ～JR大阪駅前に“都市の森”が誕生。都心の新たな憩いの場が広がる～",
 "url": "https://www.hankyu-hanshin.co.jp/release/2026/11/f1ef06bb42567258734f956151fce9b924cb17e5.pdf"
+},
+{
+"date": "2026-11-22",
+"src": "Osaka Metro ニュース",
+"cat": "dekiru",
+"t": "2026年度 第5回 大阪・まち・再発見 ぶらりウォーク\"【開業20周年】今里筋線をぶらりあるき その2\"を2026年12月5日（土曜日）に開催します",
+"url": "https://subway.osakametro.co.jp/tourism/event/2026_12_burariwalk.php"
 }
 ]
 }
