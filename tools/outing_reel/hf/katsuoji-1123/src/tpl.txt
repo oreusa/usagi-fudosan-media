@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ja" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="gsap.min.js"></script>
+<style>
+@font-face{font-family:MB;src:url(a/ShipporiMincho-Bold.ttf)}@font-face{font-family:M;src:url(a/ShipporiMincho-Medium.ttf)}@font-face{font-family:G;src:url(a/ZenKakuGothicNew-Medium.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
+#root{position:relative;width:1080px;height:1920px;background:url(a/cover.png);overflow:hidden}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,transparent 55%,rgba(10,5,2,.55));pointer-events:none;z-index:20}
+#stage{position:absolute;inset:0}
+#book{position:absolute;left:85px;top:235px;width:925px;height:1425px;perspective:7000px;perspective-origin:30% 50%;background:#efe5d2}
+.sc{position:absolute;inset:0;transform-origin:0 50%;transform-style:preserve-3d}
+.sc .face{position:absolute;inset:0;backface-visibility:hidden;overflow:hidden;background:#f4ecdc}
+.sc .bk{position:absolute;inset:0;backface-visibility:hidden;transform:rotateY(180deg);background:linear-gradient(90deg,#e6dac4,#f2e8d6)}
+/* 切り紙の層：ページに寝ていて、めくると起き上がる */
+.pop{position:absolute;inset:0;perspective:1500px;perspective-origin:50% 38%}
+.pl{position:absolute;left:0;top:0;width:925px;height:1425px}
+.pl.up{filter:drop-shadow(0 10px 9px rgba(40,18,6,.42))}.pl.drop{filter:drop-shadow(0 14px 10px rgba(20,24,6,.35))}.pl.lt{mix-blend-mode:screen}
+#dust{position:absolute;left:85px;top:235px;width:925px;height:1425px;overflow:hidden;pointer-events:none;z-index:8;opacity:0}
+#dust i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,246,214,.95),rgba(255,226,160,.35) 45%,rgba(255,220,150,0) 70%)}
+.shine{position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:0;background:radial-gradient(ellipse 40% 30% at 50% 50%,rgba(255,240,200,.9),rgba(255,240,200,0) 70%)}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,20,10,0) 30%,rgba(40,20,10,.65));opacity:0;z-index:5}
+.cast{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,10,5,.7),rgba(20,10,5,.25) 60%,rgba(20,10,5,0));opacity:0;z-index:5}
+.gut{position:absolute;left:0;top:0;bottom:0;width:46px;background:linear-gradient(90deg,rgba(0,0,0,.35),transparent);z-index:4}
+.cap{position:absolute;left:110px;right:121px;top:207px;font-family:M;color:#fffaf0;font-size:60px;line-height:1.45;letter-spacing:.12em;text-shadow:0 2px 20px rgba(30,8,2,.8),0 0 3px rgba(30,8,2,.6);z-index:3}
+.cap:before{content:'';position:absolute;left:-200px;right:-200px;top:-260px;height:calc(100% + 520px);background:radial-gradient(ellipse 62% 48% at 32% 46%,rgba(30,10,4,.6),rgba(30,10,4,.25) 60%,rgba(30,10,4,0));z-index:-1}
+.cap .w{display:inline-block}.cap .lb{display:block;font-family:G;font-size:22px;letter-spacing:.42em;color:rgba(255,240,215,.92);margin-bottom:22px}
+.cap .ul{display:block;height:1px;width:200px;margin:26px 0 18px;background:rgba(255,236,200,.85);transform-origin:0 50%}
+.cap small{display:block;font-family:G;font-size:28px;letter-spacing:.14em;color:rgba(255,240,215,.95);line-height:1.6}
+#halo{position:absolute;left:85px;top:235px;width:925px;height:1425px;border-radius:10px;box-shadow:0 0 90px 30px rgba(255,200,110,.9),0 0 240px 80px rgba(255,150,60,.5);opacity:0}
+#leak{position:absolute;right:-4px;top:20px;bottom:20px;width:14px;background:linear-gradient(180deg,rgba(255,230,160,0),rgba(255,240,190,1) 20%,rgba(255,250,220,1) 50%,rgba(255,240,190,1) 80%,rgba(255,230,160,0));filter:blur(6px);opacity:0;z-index:7}
+#burst{position:absolute;left:85px;top:235px;width:925px;height:1425px;background:radial-gradient(ellipse 85% 70% at 4% 50%,rgba(255,244,210,.95),rgba(255,200,120,.55) 35%,rgba(255,170,80,0) 80%);mix-blend-mode:screen;opacity:0;z-index:9;pointer-events:none}
+#parts{position:absolute;inset:0;pointer-events:none;z-index:15}
+.p{position:absolute;left:0;top:0;border-radius:50%;pointer-events:none}.lf{position:absolute;left:0;top:0;pointer-events:none}
+.fx{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;z-index:2;overflow:hidden}
+.edge{position:absolute;top:0;bottom:0;right:0;width:60px;background:linear-gradient(90deg,rgba(255,236,190,0),rgba(255,246,220,.95),rgba(255,236,190,0));filter:blur(8px);opacity:0;z-index:6;mix-blend-mode:screen}
+#cover{background:url(a/cvface.png) center/100% 100%}
+#foil{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;background:linear-gradient(115deg,rgba(255,240,200,0) 40%,rgba(255,240,200,.55) 50%,rgba(255,240,200,0) 60%);background-size:300% 100%;background-position:120% 0;opacity:.8}
+.info{position:absolute;inset:0;padding:70px 56px;font-family:M;color:#3a2a20;background:#f4ecdc}
+.info h2{font-family:MB;font-size:66px;margin:0 0 22px}
+.info .r{display:flex;gap:26px;padding:18px 0;border-top:1px solid #d8c8b0;font-size:40px;align-items:baseline}.info .r b{width:150px;flex:none;font-size:28px;color:#8a6a50;font-weight:normal}
+.info small{display:block;font-size:28px;color:#7a6050;margin-top:4px}.info p{font-size:34px;line-height:1.6;color:#7a3a1a;margin:22px 0 0;font-family:MB}
+.info .ph{position:absolute;left:56px;right:56px;bottom:56px;height:380px;border-radius:14px;overflow:hidden}.info .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+#tab{position:absolute;right:130px;top:235px;width:150px;height:0;overflow:hidden;z-index:12}
+#tab div{position:absolute;left:0;right:0;bottom:0;height:280px;background:linear-gradient(180deg,#b03a2c,#8e2a20);clip-path:polygon(0 0,100% 0,100% 100%,50% 86%,0 100%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:70px;font-family:MB;color:#fbe7c0;font-size:34px;writing-mode:vertical-rl;letter-spacing:.2em}
+.hp{position:absolute;inset:0;background:#f4ecdc;font-family:M;color:#3d2a22}
+#h0{position:absolute;left:0;right:0;top:64px;text-align:center}#h0 img{width:96px;height:96px;border-radius:50%}#h0 .en{font:500 26px G;letter-spacing:.42em;color:#8a6a55;margin-top:10px}#h0 .jp{font:700 62px MB;letter-spacing:.12em;margin-top:8px}
+#ph{position:absolute;left:70px;top:330px;width:440px;height:880px;border-radius:58px;background:#2b211c;padding:15px;box-shadow:0 30px 60px rgba(60,35,20,.4)}
+#ph .scr{width:100%;height:100%;border-radius:44px;overflow:hidden;position:relative;background:#fff}#ph img{position:absolute;left:0;top:0;width:100%}
+#pc{position:absolute;left:16px;right:16px;bottom:30px;background:#fff;border-radius:24px;box-shadow:0 12px 30px rgba(60,35,20,.35),0 0 0 3px #a5332a;padding:16px;display:flex;gap:16px;align-items:center}
+#pc .pci{flex:none;width:120px;height:150px;border-radius:14px;background:url(a/H0.jpg) 50% 70%/cover}#pc b{display:inline-block;font:700 19px M;color:#fff;background:#a5332a;border-radius:999px;padding:4px 14px}
+#pc .t{font:700 34px MB;margin-top:8px}#pc .s{font:500 24px M;color:#7a5b4a}#pc .d{font:700 22px M;color:#a5332a;margin-top:4px}
+#h1{position:absolute;right:40px;top:520px;width:340px;text-align:center;font:700 38px MB;letter-spacing:.12em;line-height:1.8;color:#6b4a3a}#h1 span{display:block;font:500 28px M;letter-spacing:.04em;line-height:1.6;margin-top:24px;color:#8a6a55}
+#endb{position:absolute;left:0;right:0;top:1250px;text-align:center}#endb div{display:inline-block;font:700 50px MB;letter-spacing:.14em;color:#f8ecd8;background:#a5332a;border-radius:999px;padding:24px 56px;box-shadow:0 10px 30px rgba(165,51,42,.35)}
+</style>
+<style>
+/* 11/23 短い形：最初の1コマから見せ場の絵（本は開いた状態で始まる）。表紙はインスタの並びの絵（cover_url）だけに使う */
+#root{background:#21160f}
+.cap{font-size:66px}
+#s0 .cap{top:120px}
+#s0 .cap:before{background:radial-gradient(ellipse 70% 52% at 34% 48%,rgba(30,10,4,.78),rgba(30,10,4,.4) 60%,rgba(30,10,4,0))}
+#endb div{font-size:46px}
+</style>
+</head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-duration="@END@" data-width="1080" data-height="1920">
+ <div id="stage">
+ <div id="halo"></div>
+ <div id="book">
+  <div class="sc" id="s3" style="z-index:0"><div class="face"><div class="hp">
+   <div id="h0"><img src="a/logo.png"><div class="en">TOWN NOTE</div><div class="jp">関西おでかけリスト</div></div>
+   <div id="ph"><div class="scr"><img id="ph1" src="a/hp1.jpg"><img id="ph2" src="a/hp2.jpg">
+    <div id="pc"><div class="pci"></div><div><b>今日のおでかけ</b><div class="t">勝尾寺</div><div class="s">紅葉と勝ちダルマ</div><div class="d">いま見頃</div></div></div></div></div>
+   <div id="h1">無料・登録なし<br>毎日更新<br><span>関西の府県ごとに<br>今やっている催し</span></div>
+   <div id="endb"><div>プロフィールのリンクから</div></div>
+  </div><div class="cast"></div><div class="gut"></div></div></div>
+  <div class="sc" id="s2" style="z-index:3"><div class="face"><div class="edge" id="e2"></div>@S2@<div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s1" style="z-index:4"><div class="face"><div class="edge" id="e1"></div>@S1@<div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s0" style="z-index:5"><div class="face"><div class="edge" id="e0"></div>@S0@<div class="shine" id="sh0"></div><div class="shade"></div><div class="gut"></div></div><div class="bk"></div></div>
+ </div>
+ <div id="dust">@DUST@</div>
+ </div>
+ <div id="parts"></div>
+ <div id="vig"></div>
+@AUDIO@
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const T=@T@,V=@V@,END=@END@;
+// 1コマ目から絵は画面いっぱい（寄った状態）・層は起きている。S1/S2 の層は寝た形から
+gsap.set("#stage",{transformOrigin:"547.5px 947.5px",scale:1.36,x:-7.5,y:12.5});
+gsap.set(["#S1m","#S1n","#S2m"],{rotationX:86});
+const rise=(ids,t)=>ids.forEach((id,i)=>{tl.to("#"+id,{rotationX:4,duration:.5,ease:"power3.out"},t+i*.14);tl.to("#"+id,{rotationX:0,duration:.4,ease:"sine.inOut"},t+i*.14+.5)});
+rise(["S1m","S1n"],T[0]+.2);rise(["S2m"],T[1]+.2);
+// 手前の層だけ少しずつ寄る（奥行き）
+tl.fromTo("#S0n",{scale:1.0},{scale:1.06,transformOrigin:"50% 100%",duration:T[0]+.6,ease:"none"},0);
+tl.fromTo("#s0 .pop",{scale:1.0},{scale:1.05,transformOrigin:"50% 55%",duration:T[0]+.6,ease:"none"},0);
+[[1,T[0],T[1]],[2,T[1],T[2]]].forEach(([k,a,b])=>tl.fromTo("#s"+k+" .pop",{scale:1},{scale:1.06,transformOrigin:"50% 45%",duration:b-a+.6,ease:"none"},a));
+// めくる
+[["#s0","#s1",T[0]],["#s1","#s2",T[1]],["#s2","#s3",T[2]]].forEach(([a,b,t])=>{tl.to(a,{rotationY:-178,duration:.6,ease:"power3.inOut"},t);tl.to(a+" .shade",{opacity:1,duration:.6,ease:"power2.in"},t);
+ tl.fromTo(b+" .cast",{opacity:.85},{opacity:0,duration:.7,ease:"power2.out"},t+.25)});
+[["S1",T[1]]].forEach(([s,t])=>tl.to(["#"+s+"m","#"+s+"n"],{rotationX:40,duration:.45,ease:"power2.in"},t));tl.to("#S2m",{rotationX:40,duration:.45,ease:"power2.in"},T[2]);
+// 最後のページで本に戻る
+tl.to("#stage",{scale:1,x:0,y:0,duration:.9,ease:"power2.inOut"},T[2]);
+// 字：S0 は1コマ目から読める（下線だけ走る）。S1/S2 はぼかしから
+tl.fromTo("#s0 .cap .ul",{scaleX:0},{scaleX:1,duration:.8,ease:"power3.inOut"},.2);
+[["#s1",V[1]],["#s2",V[2]]].forEach(([id,s])=>{tl.from(id+" .cap .w",{opacity:0,y:18,filter:"blur(8px)",duration:.7,ease:"power2.out",stagger:.2},s-.3);tl.from(id+" .cap .ul",{scaleX:0,duration:.8,ease:"power3.inOut"},s+.3)});
+// 夜：灯籠の灯りがゆらぐ
+tl.fromTo("#S2n",{opacity:.4},{opacity:1,duration:.9,ease:"power2.inOut"},T[1]+.6);
+tl.to("#S2n",{opacity:.75,duration:.6,ease:"sine.inOut",yoyo:true,repeat:Math.max(1,Math.floor((T[2]-T[1]-1.5)/.6))},T[1]+1.5);
+// 光の粒
+tl.to("#dust",{opacity:1,duration:.6},0);tl.to("#dust",{opacity:0,duration:.5},T[2]-.2);
+document.querySelectorAll("#dust i").forEach((el,i)=>{const d=+el.dataset.d,dx=+el.dataset.x;tl.fromTo(el,{y:0,x:0},{y:-d,x:dx,duration:T[2],ease:"none"},0)});
+let seed=1123;const R=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const mk=(par,cls,css)=>{const d=document.createElement("div");d.className=cls;Object.assign(d.style,css);par.appendChild(d);return d};
+const F=k=>document.getElementById("fx"+k);
+const glow=(fx,x,y,r,c,a,t0,t1)=>{const d=mk(fx,"p",{width:r*2+"px",height:r*2+"px",background:`radial-gradient(circle,rgba(${c},${a}),rgba(${c},0) 70%)`});gsap.set(d,{x:x-r,y:y-r,opacity:0});tl.to(d,{opacity:1,duration:1},t0);const n=Math.floor((t1-t0-1)/.9);for(let k=0;k<n;k++)tl.to(d,{opacity:.6+R()*.4,scale:.95+R()*.12,duration:.9,ease:"sine.inOut"},t0+1+k*.9);return d};
+const twinkle=(fx,n,t0,t1,y0,y1)=>{for(let i=0;i<n;i++){const x=R()*925,y=y0+R()*(y1-y0),s=14+R()*22;const d=mk(fx,"p",{width:s+"px",height:s+"px",borderRadius:"0",background:"radial-gradient(circle,rgba(255,255,240,1) 0,rgba(255,240,200,.0) 18%),linear-gradient(0deg,transparent 46%,rgba(255,248,220,.95) 50%,transparent 54%),linear-gradient(90deg,transparent 46%,rgba(255,248,220,.95) 50%,transparent 54%)"});
+ gsap.set(d,{x,y,opacity:0,scale:.3});const t=t0+.5+R()*(t1-t0-1);tl.to(d,{opacity:1,scale:1,rotation:45,duration:.3,ease:"power2.out"},t);tl.to(d,{opacity:0,scale:.3,duration:.45,ease:"power2.in"},t+.3)}};
+// 日の光（S0 右上）・参道の奥の光（S1）・夜の星（S2）
+const s0g=mk(F(0),"p",{width:"760px",height:"760px",background:"radial-gradient(circle,rgba(255,246,214,.75),rgba(255,236,190,0) 70%)"});gsap.set(s0g,{x:380,y:-240,opacity:.8});tl.to(s0g,{opacity:1,scale:1.08,duration:1.6,ease:"sine.inOut",yoyo:true,repeat:Math.max(1,Math.floor(T[0]/1.6))},0);
+twinkle(F(0),6,0,T[0],500,1300);
+glow(F(1),462,600,300,"255,248,225",.85,T[0]+.2,T[1]);
+twinkle(F(2),12,T[1]+.2,T[2],40,600);
+// めくる辺の光と金の粒
+T.forEach((t,k)=>{const e=document.getElementById("e"+k);if(e){tl.fromTo(e,{opacity:0},{opacity:1,duration:.2},t);tl.to(e,{opacity:0,duration:.35},t+.3)}
+ for(let i=0;i<10;i++){const s=3+R()*7;const d=mk(document.getElementById("parts"),"p",{width:s+"px",height:s+"px",background:"radial-gradient(circle,#fff6d8,rgba(255,200,110,0) 70%)",boxShadow:"0 0 "+(s*2)+"px rgba(255,210,130,.9)"});gsap.set(d,{opacity:0});
+  const y=300+R()*1300;tl.fromTo(d,{x:900+R()*120,y,opacity:0},{x:"-="+(150+R()*500),y:y-60-R()*200,opacity:1,duration:.8+R()*.4,ease:"power2.out"},t+.1);tl.to(d,{opacity:0,duration:.35},t+.8+R()*.3)}});
+// 最後：おでかけリスト（短く）
+const T5=T[2];
+tl.from("#h0",{opacity:0,y:-30,duration:.5,ease:"power3.out"},T5+.3);
+tl.from("#ph",{opacity:0,y:80,duration:.6,ease:"power3.out"},T5+.4);
+tl.from("#pc",{opacity:0,y:60,duration:.5,ease:"power3.out"},T5+.8);
+tl.from("#h1",{opacity:0,x:30,duration:.5,ease:"power2.out"},T5+1.0);
+tl.fromTo("#ph2",{opacity:0},{opacity:1,duration:.6,ease:"sine.inOut"},T5+1.3);tl.to("#ph1",{y:-40,duration:.6,ease:"sine.inOut"},T5+1.3);
+tl.from("#endb",{opacity:0,y:30,duration:.5,ease:"power3.out"},T5+1.2);
+tl.to("#root",{opacity:1,duration:.1},END-.1);
+window.__timelines["main"] = tl;
+tl.seek(0);
+</script>
+</body>
+</html>

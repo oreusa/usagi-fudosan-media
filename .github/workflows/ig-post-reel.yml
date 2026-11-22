@@ -108,6 +108,8 @@ jobs:
               if same:
                   print("already on instagram:", same[0].get("permalink")); raise SystemExit(0)
           q = dict(media_type="REELS", video_url=spec["video_url"], caption=spec.get("caption", ""), share_to_feed="true")
+          # 11/22 並びの絵（表紙）を動画の1コマ目でなく本の表紙の絵にする（最初から見せ場で始める短い形のため）
+          if spec.get("cover_url"): q["cover_url"] = spec["cover_url"]
           if spec.get("audio_id"):
               ac = {"audio_id": spec["audio_id"]}
               if spec.get("audio_volume"): ac["audio_volume"] = int(spec["audio_volume"])
