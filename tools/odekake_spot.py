@@ -107,6 +107,9 @@ CSS += """.act{display:grid;gap:8px;margin:22px 0 0}.act a{display:block;text-al
 
 os.makedirs("links/o", exist_ok=True)
 for f in glob.glob("links/o/*.html"): os.remove(f)
+# 11/23 夜の見回り：永源寺の場所が「小学生以下は無料」（カードの2つ目が料金の注記）→ 料金・年齢の言葉は場所に使わない（地図の読み上げ・近くのカードも）
+for _o in spots:
+    if re.search(r"無料|有料|\d+円|以下|以上|\d+歳|料金|入場", _o.get("place") or ""): _o["place"] = ""
 for sp in spots:
     p = sp["pref"]; fu = FU[p]; pc = PC[p]; nm = sp["name"]; yr = (sp["st"] or TODAY)[:4]
     when, stat = "", ""

@@ -108,6 +108,12 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
               'rows': [r for r in [['日', f"{d.month}月{d.day}日（{'月火水木金土日'[d.weekday()]}）{lab}" + (f"〜{x['end']}" if x.get('end') else '')], ['場所', x.get('pl') or x['p']], ['時間', x.get('tm') or '']] if r[1]],
               'mq': (x.get('pl') or '') + ' ' + x['n'], 'big': ('あと' + str((d - datetime.date.today()).days) + '日で' + lab if d.isoformat() > TD else ('きょう' + lab if d.isoformat() == TD else ''))}
         if it['id'] in sp: it['sp'] = '/kaiten/' + it['id']
+        # 11/23 夜の見回り：日がまだ発表されていない店（fuzzy＝「2027年3月」）が日付の欄で 3/1 になっていた → 「3月予定（日は未発表）」と書く。期間限定の終わりも「〜12/13」の形に
+        if x.get("fuzzy"):
+            fz = x["fuzzy"]; it["d"] = re.sub(r"^\d{4}年", "", fz) + "予定（日は未発表）・" + lab; it["big"] = ""
+            it["rows"] = [r for r in [["日", fz + "予定（日はまだ発表されていません）"], ["場所", x.get("pl") or x["p"]], ["時間", x.get("tm") or ""]] if r[1]]
+        elif x.get("end"):
+            _e = datetime.date.fromisoformat(x["end"]); it["rows"][0][1] = it["rows"][0][1].replace("〜" + x["end"], f"〜{_e.month}月{_e.day}日")
         if v: it.update({'im': v['img'], 'cr': v['cr'], 'cu': v.get('page', '')})
         kt.append(it)
     kt.reverse()
