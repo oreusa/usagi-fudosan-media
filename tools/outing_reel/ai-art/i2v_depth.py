@@ -1,17 +1,17 @@
 """絵の奥行き（手前・奥）を Depth Anything V2（Apache-2.0 の Small）で読む＋衛星写真のタイル（EOX Sentinel-2 cloudless 2016、CC BY 4.0）を取る。GPU なしで動く。"""
 import glob, io, json, math, os, sys, urllib.request
 from PIL import Image
-out = sys.argv[1]; os.makedirs(out, exist_ok=True); log = []
+out = sys.argv[1]; SRC = sys.argv[2] if len(sys.argv) > 2 else 'shots/ai-art/jingoji-img'; LL = sys.argv[3] if len(sys.argv) > 3 else '35.0437,135.6727'; os.makedirs(out, exist_ok=True); log = []
 try:
     from transformers import pipeline
     pipe = pipeline('depth-estimation', model='depth-anything/Depth-Anything-V2-Small-hf', device=-1)
-    for f in sorted(glob.glob('shots/ai-art/jingoji-img/*.webp')):
+    for f in sorted((glob.glob(SRC + '/*.webp') + glob.glob(SRC + '/*.jpg'))):
         im = Image.open(f).convert('RGB'); d = pipe(im)['depth']
         n = os.path.basename(f).rsplit('.', 1)[0]; d.resize(im.size).save(f'{out}/{n}-depth.png'); log.append(f'{n} 奥行きOK')
 except Exception as e:
     log.append(f'奥行き 失敗 {str(e)[:300]}')
 # 衛星写真タイル：日本全体 z5 → 高雄 z13 まで、各段で中心の周り
-LAT, LON = 35.0437, 135.6727
+LAT, LON = map(float, LL.split(','))
 def tile(z):
     n = 2 ** z; x = (LON + 180) / 360 * n; y = (1 - math.log(math.tan(math.radians(LAT)) + 1 / math.cos(math.radians(LAT))) / math.pi) / 2 * n; return x, y
 for layer in ['s2cloudless_3857']:
