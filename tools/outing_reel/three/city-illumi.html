@@ -47,7 +47,7 @@ const CARS=[];for(let i=0;i<90;i++){const lane=[-8.5,-5,-1.5,1.5,5,8.5][i%6];con
 const carArr=[];for(const c of CARS)for(let k=0;k<2;k++)carArr.push([c.x+(k?.7:-.7),.6,c.z,c.head?'#fff6e8':'#ff3020',c.head?1.1:1.2]);
 const cars=points(carArr,.32);
 // people
-const pm=new THREE.MeshBasicMaterial({color:'#06060a'});for(let i=0;i<60;i++){const s=R()<.5?-1:1,x=s*(14+R()*10),z=10-R()*90,h=1.5+R()*.3;const b=new THREE.Mesh(new THREE.CapsuleGeometry(.2,h-.55,4,8),pm);b.position.set(x,h/2+.2,z);scene.add(b);const hd=new THREE.Mesh(new THREE.SphereGeometry(.12,10,8),pm);hd.position.set(x,h+.28,z);scene.add(hd)}
+const pm=new THREE.MeshBasicMaterial({color:'#06060a'});for(let i=0;i<0;i++){const s=R()<.5?-1:1,x=s*(14+R()*10),z=10-R()*90,h=1.5+R()*.3;const b=new THREE.Mesh(new THREE.CapsuleGeometry(.2,h-.55,4,8),pm);b.position.set(x,h/2+.2,z);scene.add(b);const hd=new THREE.Mesh(new THREE.SphereGeometry(.12,10,8),pm);hd.position.set(x,h+.28,z);scene.add(hd)}
 // camera
 const V=(a,b,c)=>new THREE.Vector3(a,b,c);
 const PATH={blvd:[V(-13,1.7,18),V(-13,1.75,4),V(-2,6,-80),V(-2,6,-95)],
