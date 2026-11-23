@@ -1,2 +1,2 @@
-shots/ai-depth-jingoji2 shots/ai-art/jingoji2 none
-shots/ai-depth-gaien2 shots/ai-art/gaien2 none
+shots/ai-depth-jingoji4 shots/ai-art/jingoji4 none
+shots/ai-depth-gaien4 shots/ai-art/gaien4 none

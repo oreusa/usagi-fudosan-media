@@ -1,0 +1,6 @@
+10-eave 奥行きOK
+11-valley 奥行きOK
+12-lantern 奥行きOK
+7-gate 奥行きOK
+8-rays 奥行きOK
+9-branch 奥行きOK
