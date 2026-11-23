@@ -1,0 +1,15 @@
+{
+ "space": "black-forest-labs/FLUX.1-dev",
+ "model": "black-forest-labs/FLUX.1-dev",
+ "steps": 28,
+ "guidance": 3.5,
+ "style": "Ultra realistic professional travel photograph, shot on full-frame camera, 24mm lens, natural light, rich vivid autumn colors, crisp detail, high dynamic range, cinematic, vertical 9:16 composition. Absolutely no people, no text, no letters, no signs with writing",
+ "items": [
+  {"name": "a-aerial", "w": 768, "h": 1344, "seeds": [11, 12], "prompt": "Drone view looking straight down at a steep forested mountain valley near Kyoto in autumn, a narrow clear river winding through the gorge, mountainside covered in red, orange and yellow maple trees mixed with dark green cedar, a small traditional Japanese temple with grey tiled roofs nestled on the slope"},
+  {"name": "b-steps", "w": 768, "h": 1344, "seeds": [21, 22], "prompt": "A long, steep, old mossy stone stairway climbing up a mountain to a Japanese temple, completely covered by a tunnel of brilliant red and orange Japanese maple trees, fallen red leaves on the stone steps, warm morning sunlight shining through the leaves, soft haze"},
+  {"name": "c-kondo", "w": 768, "h": 1344, "seeds": [31, 32], "prompt": "A large old wooden Japanese Buddhist temple main hall with a sweeping grey tiled hip roof, standing at the top of stone steps on a mountain, framed by bright red maple branches in the foreground, clear blue sky, sunny autumn day"},
+  {"name": "d-canopy", "w": 768, "h": 1344, "seeds": [41, 42], "prompt": "Looking straight up into a canopy of Japanese maple leaves glowing red, orange and gold, backlit by the sun, sun star peeking through the branches, dark curved branches, extremely vivid and luminous"},
+  {"name": "e-valley", "w": 768, "h": 1344, "seeds": [51, 52], "prompt": "Golden hour view from a mountain temple viewpoint over a deep valley of autumn forest in Kyoto, layers of red and orange maple covered mountains fading into warm sunset haze, a small wooden fence railing in the foreground"},
+  {"name": "f-river", "w": 768, "h": 1344, "seeds": [61, 62], "prompt": "A traditional wooden Japanese riverside teahouse with red parasols and red felt benches beside a clear mountain stream, surrounded by red maple trees, warm paper lanterns glowing at dusk, blue hour sky, calm and cozy"}
+ ]
+}

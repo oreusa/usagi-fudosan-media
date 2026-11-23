@@ -1,0 +1,147 @@
+{
+ "date": "2026-11-24",
+ "time": "07:30",
+ "pref": "kyoto",
+ "tab": "京都",
+ "lat": 35.0558,
+ "lon": 135.6705,
+ "audio_id": "",
+ "text": {
+  "corner": "KYOTO ─ TAKAO",
+  "title": [
+   "神護寺",
+   "紅葉の石段"
+  ],
+  "place": "神護寺｜京都市右京区",
+  "map_tag": [
+   "JINGO-JI ─ TAKAO",
+   "神護寺",
+   "京都市右京区"
+  ],
+  "map_caption": "金堂へ続く長い石段を、両側のもみじがつつむ。",
+  "date": [
+   "11.23",
+   "MON",
+   "今見頃",
+   ""
+  ],
+  "date_title": "紅葉の石段",
+  "date_note": "拝観 9時〜16時",
+  "point_kicker": "MOMIJI",
+  "point_title": "もみじの石段",
+  "points": [
+   "金堂へ続く石段",
+   "11/23 いま見頃",
+   "散りもみじも"
+  ],
+  "info": [
+   [
+    "色づき",
+    "今見頃（11/23）"
+   ],
+   [
+    "拝観",
+    "9時〜16時"
+   ],
+   [
+    "拝観料",
+    "中学生以上1000円"
+   ],
+   [
+    "行き方",
+    "高雄バス停から徒歩20分"
+   ]
+  ],
+  "info_note": "小学生500円・駐車場なし",
+  "list_caption": "ほかの紅葉も。",
+  "motif": "temple",
+  "scene": "momiji",
+  "seal": "紅葉",
+  "ehon1": [
+   "もみじが",
+   "石段を",
+   "つつむ"
+  ],
+  "ehon2": [
+   "金堂へ",
+   "続く道"
+  ],
+  "ehon4": [
+   "散りもみじの",
+   "石段"
+  ],
+  "ehon_night": [
+   "11.23",
+   "MON",
+   "いま",
+   "見頃"
+  ],
+  "ehon5": [
+   "日付でさがせる",
+   "地図でさがせる",
+   "紅葉もイルミも"
+  ]
+ },
+ "source": "https://koyo.walkerplus.com/detail/ar0726e12990/data.html",
+ "facts": [
+  {
+   "q": "今見頃",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12990/"
+  },
+  {
+   "q": "2026年11月23日",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12990/"
+  },
+  {
+   "q": "9:00～16:00",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12990/data.html"
+  },
+  {
+   "q": "1000円",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12990/data.html"
+  },
+  {
+   "q": "500円",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12990/data.html"
+  },
+  {
+   "q": "10:00～14:00",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12990/data.html"
+  },
+  {
+   "q": "徒歩20分",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12990/data.html"
+  },
+  {
+   "q": "約50分",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12990/data.html"
+  },
+  {
+   "q": "金堂",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12990/data.html"
+  },
+  {
+   "q": "なし",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12990/data.html"
+  },
+  {
+   "q": "府道138号",
+   "url": "https://koyo.walkerplus.com/detail/ar0726e12990/data.html"
+  }
+ ],
+ "voice_lines": [
+  "京都、たかおの、じんごじ。もみじのトンネルが、長い石段をつつみます。",
+  "見上げると、朝の光をすかして、もみじが、きらきらとかがやきます。",
+  "石段には、散ったもみじが、ひとつずつ、色をそえています。",
+  "こけむした石垣にそって、一段ずつ、ゆっくり上っていきます。",
+  "上りきると、こんどう。紅葉は、いま、見頃をむかえています。",
+  "ふりかえると、歩いてきた道が、まっかに染まっています。",
+  "はいかんは、朝9時から夕方4時まで。はいかん料は、中学生以上1000円です。",
+  "たかおのバス停から、歩いて約20分。休日の昼前後は混むので、朝早くがおすすめです。",
+  "ほかのおでかけ先は、プロフィールのリンクからどうぞ。"
+ ],
+ "made": "3D（three.js）で描いた6場面＋表紙から開く絵本・1分3秒",
+ "video_url": "https://oreusa.github.io/usagi-fudosan-media/media/reels/2026-11-24-popup.mp4",
+ "cover_url": "https://oreusa.github.io/usagi-fudosan-media/media/reels/2026-11-24-cover.jpg",
+ "caption": "京都・高雄の神護寺。金堂へ続く長い石段を、両側のもみじがつつみます\n\n✦ 11/23 の色づきは「今見頃」\n✦ 拝観は 9:00〜16:00\n✦ 拝観料は 中学生以上1000円・小学生500円\n✦ ライトアップはありません。明るいうちに\n✦ 休日は 10:00〜14:00 が混みます。朝早くがおすすめ\n✦ JR京都駅からJRバスで約50分、高雄バス停から歩いて約20分\n✦ 駐車場はありません。11月の土日は府道138号に通行制限があります\n\n一緒に行く人に送っておくと、当日迷いません\nほかの紅葉は、プロフィールのリンク「関西おでかけリスト」から\n\n✧ 内容は変わることがあります。出かける前に神護寺のページで確かめてください\n\n#関西おでかけ #京都紅葉 #神護寺 #高雄"
+}

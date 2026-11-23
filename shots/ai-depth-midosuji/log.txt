@@ -1,0 +1,21 @@
+a-aerial 奥行きOK
+b-walk 奥行きOK
+c-up 奥行きOK
+d-cross 奥行きOK
+e-hall 奥行きOK
+f-detail 奥行きOK
+https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/4/4/16.jpg HTTP Error 404: Not Found
+https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/4/5/16.jpg HTTP Error 404: Not Found
+https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/4/6/16.jpg HTTP Error 404: Not Found
+https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/4/7/16.jpg HTTP Error 404: Not Found
+https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/4/8/16.jpg HTTP Error 404: Not Found
+衛星 z4 20枚 中心 14.022,6.354
+衛星 z5 25枚 中心 28.044,12.709
+衛星 z6 25枚 中心 56.089,25.418
+衛星 z7 25枚 中心 112.178,50.836
+衛星 z8 25枚 中心 224.356,101.671
+衛星 z9 25枚 中心 448.712,203.343
+衛星 z10 25枚 中心 897.424,406.686
+衛星 z11 25枚 中心 1794.847,813.371
+衛星 z12 25枚 中心 3589.695,1626.742
+衛星 z13 25枚 中心 7179.389,3253.484

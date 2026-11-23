@@ -1,0 +1,34 @@
+{
+ "provider": "pollinations",
+ "model": "flux",
+ "style": "Ultra realistic professional travel photograph, shot on full-frame camera, 24mm lens, natural light, rich vivid autumn colors, crisp detail, high dynamic range, cinematic, vertical 9:16 composition. Absolutely no people, no text, no letters, no signs with writing",
+ "items": [
+  {
+   "name": "b-steps",
+   "w": 768,
+   "h": 1344,
+   "seeds": [
+    21
+   ],
+   "prompt": "A long, steep, old mossy stone stairway climbing up a mountain to a Japanese temple, completely covered by a tunnel of brilliant red and orange Japanese maple trees, fallen red leaves on the stone steps, warm morning sunlight shining through the leaves, soft haze"
+  },
+  {
+   "name": "e-valley",
+   "w": 768,
+   "h": 1344,
+   "seeds": [
+    51
+   ],
+   "prompt": "Golden hour view from a mountain temple viewpoint over a deep valley of autumn forest in Kyoto, layers of red and orange maple covered mountains fading into warm sunset haze, a small wooden fence railing in the foreground"
+  },
+  {
+   "name": "f-river",
+   "w": 768,
+   "h": 1344,
+   "seeds": [
+    61
+   ],
+   "prompt": "A traditional wooden Japanese riverside teahouse with red parasols and red felt benches beside a clear mountain stream, surrounded by red maple trees, warm paper lanterns glowing at dusk, blue hour sky, calm and cozy"
+  }
+ ]
+}
