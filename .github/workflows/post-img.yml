@@ -10,7 +10,7 @@ permissions:
 jobs:
   make:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
       # --with-deps は付けない（11/11 Ubuntu の置き場に届かず10分止まった。字は Google Fonts を読むので要らない）
