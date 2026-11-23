@@ -14,7 +14,7 @@ export async function onRequest(ctx) {
     return look(await ctx.env.ASSETS.fetch(new Request(u.toString(), request)));
   }
   // 11/20 owner「月が決めていいよ」→ 街のページ（/machi/<id>）は新しい形（links/shin/machi/<id>.html・tools/shin/machi2.py）。無ければ前のページ
-  if ((request.method === "GET" || request.method === "HEAD") && /^\/((machi|jikka)\/[a-z]+-\d+|kaitai(-[a-z]+)?|o\/[0-9a-f]+)$/.test(p)) {
+  if ((request.method === "GET" || request.method === "HEAD") && /^\/((machi|jikka)\/[a-z]+-\d+|kaitai(-[a-z]+)?|o\/[0-9a-f]+|kaiten\/\d{8}-[0-9a-f]+)$/.test(p)) {
     const u = new URL(request.url); u.pathname = "/shin" + p;
     const r2 = await ctx.env.ASSETS.fetch(new Request(u.toString(), request));
     if (r2.ok) return look(r2);

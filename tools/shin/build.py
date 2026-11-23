@@ -501,3 +501,20 @@ try:
     print('o: 新しい形', _n, '枚')
 except Exception as e:
     print('o: 作り直さず前の物のまま', repr(e))
+# 11/23 開店・閉店の1店のページ（/kaiten/<日付>-<id>）も新しい土台で（yari.shop・関東と同じ）。写真を入れた後に作る。
+try:
+    _kd = os.path.join(L, 'shin', 'kaiten'); _sh2.rmtree(_kd, ignore_errors=True); os.makedirs(_kd)
+    _n = 0
+    for _f in sorted(os.listdir(os.path.join(L, 'kaiten'))):
+        if not re.match(r'^\d{8}-[0-9a-f]+\.html$', _f): continue
+        _p = os.path.join(L, 'kaiten', _f); _d = _Y.shop(_p, [['関西おでかけリスト', '/odekake'], ['今から行ける所', '/ima'], ['関西のイルミネーション', '/illumination']])
+        if not _d: continue
+        _ti, _de = _Y.meta(_p)
+        _c = {'nav': [{'t': '開店閉店', 'ic': 'now', 'href': '/kaiten'}], 'menu': {'k': 'New Shops', 'items': [['関西の開店・閉店', '/kaiten', 1]]},
+              'foot': '日付・場所は各社の公式の発表をもとにしています。出かける前に公式の発表をご確認ください。', 'desc': _de}
+        URL['kaiten/' + _f[:-5]] = '/kaiten/' + _f[:-5]
+        write('kaiten/' + _f[:-5], _ti, _c, _d, js='doc')
+        _Y.keep_head(_p, os.path.join(_kd, _f)); _n += 1
+    print('kaiten 1店: 新しい形', _n, '枚')
+except Exception as e:
+    print('kaiten 1店: 作り直さず前の物のまま', repr(e))
