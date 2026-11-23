@@ -14,7 +14,7 @@ export async function onRequest(ctx) {
     return look(await ctx.env.ASSETS.fetch(new Request(u.toString(), request)));
   }
   // 11/20 owner「月が決めていいよ」→ 街のページ（/machi/<id>）は新しい形（links/shin/machi/<id>.html・tools/shin/machi2.py）。無ければ前のページ
-  if ((request.method === "GET" || request.method === "HEAD") && /^\/machi\/[a-z]+-\d+$/.test(p)) {
+  if ((request.method === "GET" || request.method === "HEAD") && /^\/(machi|jikka)\/[a-z]+-\d+$/.test(p)) {
     const u = new URL(request.url); u.pathname = "/shin" + p;
     const r2 = await ctx.env.ASSETS.fetch(new Request(u.toString(), request));
     if (r2.ok) return look(r2);
@@ -39,7 +39,7 @@ const PF = ["osaka", "kyoto", "hyogo", "nara", "shiga", "wakayama"];
 const SHIN = new Set([
   ...PF.map(x => "/odekake-" + x), "/illumination", "/illumination-muryo", ...PF.map(x => "/illumination-" + x),
   "/koyo", ...PF.map(x => "/koyo-" + x),
-  "/hatsumode", "/tomari", "/ima", "/kaiten", "/ranking", "/uru", "/ikura", "/furusato", "/nesage", "/chika-kansai", "/chika-osaka", "/sagasu",
+  "/hatsumode", "/tomari", "/ima", "/kaiten", "/ranking", "/uru", "/ikura", "/furusato", "/nesage", "/chika-kansai", "/chika-osaka", "/sagasu", "/jikka", "/jikka/shindan",
 ]);
 // 新しい土台のページ（functions/*.js が /shin を出す所）にはかぶせない
 const NOSKIN = new Set(["", "/odekake", "/okaimono", "/fudosan-list", ...SHIN]);
