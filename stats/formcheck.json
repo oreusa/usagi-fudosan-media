@@ -1,5 +1,5 @@
 {
- "at": "2026-11-23 18:44",
+ "at": "2026-11-23 19:00",
  "sites": {
   "kansai": {
    "base": "https://kansai.townnote.app",
@@ -33,13 +33,13 @@
   },
   "kanto": {
    "base": "https://kanto.townnote.app",
-   "ok": false,
+   "ok": true,
    "rows": [
     {
      "name": "ふつうの申し込み（1画面・3問）",
      "path": "/moushikomi",
-     "ok": false,
-     "why": "お名前が1画面目に出ている（3問のはず）"
+     "ok": true,
+     "why": ""
     },
     {
      "name": "ほかにも書く（お名前あり）",
@@ -50,17 +50,17 @@
     {
      "name": "かんたん相談（1つの画面）",
      "path": "/moushikomi?lite=1",
-     "ok": false,
-     "why": "送信の後に「受け付けました」が出ない：お名前を​書いてください"
+     "ok": true,
+     "why": ""
     },
     {
      "name": "ご希望を選んで来た人",
      "path": "/moushikomi?want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A",
-     "ok": false,
-     "why": "送信の後に「受け付けました」が出ない：お名前を​書いてください"
+     "ok": true,
+     "why": ""
     }
    ]
   }
  },
- "ok": false
+ "ok": true
 }
