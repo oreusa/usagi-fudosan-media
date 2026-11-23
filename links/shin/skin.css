@@ -110,6 +110,9 @@ html.nt .skc .mu li.mg{color:#9AA3B5}
 @media (max-width:370px){.skc .topsg-k{display:none}.skc .topsg-b a{font-size:12.5px;letter-spacing:0}}
 .skc html.m2op #tb{visibility:hidden}
 @media (max-width:359px){.skc .nav a,.skc .nav button{font-size:9.5px;letter-spacing:-.03em;white-space:nowrap}}
+.skc .dqz .twl{display:flex;flex-wrap:wrap;gap:8px;max-height:46vh;overflow:auto;padding:2px 0 6px;overscroll-behavior:contain}
+.skc .dqz .twl button{font:14.5px var(--sans);color:var(--ink);background:var(--chip);border:1px solid transparent;border-radius:999px;padding:9px 14px;cursor:pointer}
+.skc .dqz .twl p{font-size:13px;color:var(--sub);margin:6px 2px}
 @keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(-24px,-40px,0)}}
 @keyframes pop{40%{transform:scale(.82)}100%{transform:scale(1)}}
 @keyframes ring{to{--ra:360deg}}

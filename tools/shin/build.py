@@ -321,6 +321,26 @@ if os.path.exists(os.path.join(L, 'shin/doc.js')):
             write(_nm, {'sagasu': 'その予算で、どの街に住める？｜関西205の街を実際に売れた値段で｜TOWN NOTE'}[_nm], dict(m.cfg('/' + _nm, {'sagasu': '関西205の市区町村を、中古マンション・一戸建て・土地の実際に売れた値段（近畿レインズ）で予算から選べます。'}[_nm])), _d, js={'sagasu': 'sg'}[_nm])
         except Exception as e:
             print(_nm + ': 作り直さず前の物のまま', repr(e))
+    # 実家・空き家ノート（入口と街ごと）
+    try:
+        _jd = os.path.join(L, 'jikka'); os.makedirs(os.path.join(L, 'shin', 'jikka'), exist_ok=True)
+        _ti, _de = Y.meta(os.path.join(_jd, 'index.html'))
+        _d = Y.jikka_index(os.path.join(_jd, 'index.html'), '吹田市')
+        if _d:
+            URL['jikka'] = '/jikka/'; write('jikka', _ti, dict(m.cfg('/jikka/', _de)), _d, js='doc')
+        _n = 0
+        for _f in sorted(os.listdir(_jd)):
+            if not re.match(r'^[a-z]+-\d+\.html$', _f): continue
+            _ti, _de = Y.meta(os.path.join(_jd, _f))
+            _d = Y.jikka_town(os.path.join(_jd, _f), 'TOWN NOTE')
+            if not _d: continue
+            URL['jikka/' + _f[:-5]] = '/jikka/' + _f[:-5]
+            write('jikka/' + _f[:-5], _ti, dict(m.cfg('/jikka/', _de)), _d, js='doc'); _n += 1
+        print('jikka: 新しい形', _n, '枚')
+        _sp = os.path.join(_jd, 'shindan', 'index.html'); _ti, _de = Y.meta(_sp); _d = Y.shindan(_sp)
+        if _d: URL['jikka/shindan'] = '/jikka/shindan/'; write('jikka/shindan', _ti, dict(m.cfg('/jikka/', _de)), _d, js='doc')
+    except Exception as e:
+        print('jikka: 作り直さず前の物のまま', repr(e))
 # 11/19 ふるさと納税・値下がり（燈のデータ）を新しい土台で
 try:
     _sf = __import__('importlib.util').util.spec_from_file_location('furu', os.path.join(R, 'tools/shin/furu.py')); _mf = __import__('importlib.util').util.module_from_spec(_sf); _sf.loader.exec_module(_mf); _mf.build(write, URL)
