@@ -142,8 +142,7 @@
     "n5": {
      "time": "15:00",
      "type": [
-      "odekake",
-      "nesage"
+      "odekake"
      ],
      "x": false
     },
@@ -152,8 +151,7 @@
      "type": [
       "sokuhou",
       "rank",
-      "odekake",
-      "nesage"
+      "odekake"
      ],
      "x": true,
      "th": false,
