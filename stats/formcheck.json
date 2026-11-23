@@ -1,12 +1,18 @@
 {
- "at": "2026-11-23 12:07",
+ "at": "2026-11-23 18:28",
  "sites": {
   "kansai": {
    "base": "https://kansai.townnote.app",
    "ok": true,
    "rows": [
     {
-     "name": "ふつうの申し込み（3つの画面）",
+     "name": "ふつうの申し込み（1画面・3問）",
+     "path": "/moushikomi",
+     "ok": true,
+     "why": ""
+    },
+    {
+     "name": "ほかにも書く（お名前あり）",
      "path": "/moushikomi",
      "ok": true,
      "why": ""
@@ -18,7 +24,7 @@
      "why": ""
     },
     {
-     "name": "ご希望を選んで来た人（2つ目の画面から）",
+     "name": "ご希望を選んで来た人",
      "path": "/moushikomi?want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A",
      "ok": true,
      "why": ""
@@ -27,10 +33,16 @@
   },
   "kanto": {
    "base": "https://kanto.townnote.app",
-   "ok": true,
+   "ok": false,
    "rows": [
     {
-     "name": "ふつうの申し込み（3つの画面）",
+     "name": "ふつうの申し込み（1画面・3問）",
+     "path": "/moushikomi",
+     "ok": false,
+     "why": "お名前が1画面目に出ている（3問のはず）"
+    },
+    {
+     "name": "ほかにも書く（お名前あり）",
      "path": "/moushikomi",
      "ok": true,
      "why": ""
@@ -38,17 +50,17 @@
     {
      "name": "かんたん相談（1つの画面）",
      "path": "/moushikomi?lite=1",
-     "ok": true,
-     "why": ""
+     "ok": false,
+     "why": "送信の後に「受け付けました」が出ない：お名前を​書いてください"
     },
     {
-     "name": "ご希望を選んで来た人（2つ目の画面から）",
+     "name": "ご希望を選んで来た人",
      "path": "/moushikomi?want=%E8%A7%A3%E4%BD%93%E3%81%AE%E8%A6%8B%E7%A9%8D%E3%82%8A",
-     "ok": true,
-     "why": ""
+     "ok": false,
+     "why": "送信の後に「受け付けました」が出ない：お名前を​書いてください"
     }
    ]
   }
  },
- "ok": true
+ "ok": false
 }
