@@ -518,3 +518,22 @@ try:
     print('kaiten 1店: 新しい形', _n, '枚')
 except Exception as e:
     print('kaiten 1店: 作り直さず前の物のまま', repr(e))
+# 11/23 買いまわり（/kaimawari）：中身（楽天で確かめた1,000円ぽっきり）は燈が作る。前は燈のページをそのまま映していた（頭だけ TOWN）→ 新しい土台で関西のページとして作る。
+try:
+    import urllib.request as _ur
+    _kt = open(os.environ['KMW_SRC'], encoding='utf-8').read() if os.environ.get('KMW_SRC') else None  # 手元で試す時だけ
+    for _u in () if _kt else ('https://kanto.townnote.app/kyu/kaimawari.html', 'https://kanto.townnote.app/kaimawari'):
+        try:
+            _t = _ur.urlopen(_ur.Request(_u, headers={'User-Agent': 'Mozilla/5.0 (townnote build)'}), timeout=30).read().decode('utf-8')
+            if 'id="kn"' in _t and '/shin/shin.css' not in _t: _kt = _t; break
+        except Exception as _e:
+            print('kaimawari: 読めなかった', _u, repr(_e))
+    _d = _Y.kaimawari(_kt)
+    if _d:
+        _de = '楽天の買いまわり用に、1,000〜1,199円・送料込み・レビュー1,000件以上・評価4.0以上の物だけを、ジャンルごとに集めました。ポイントの計算つき。'
+        URL['kaimawari'] = '/kaimawari'
+        write('kaimawari', '買いまわり 1,000円ぽっきり（送料込み）まとめ｜TOWN NOTE', _Y.kau_cfg('/kaimawari', _de, '商品へのリンクは楽天アフィリエイトの広告（PR）です。'), _d, js='doc')
+        _Y.keep_head(None, os.path.join(L, 'shin', 'kaimawari.html'), only_ld=True, text=_kt)
+        print('kaimawari: 新しい形')
+except Exception as e:
+    print('kaimawari: 作り直さず前の物のまま', repr(e))
