@@ -41,6 +41,10 @@ css = tpl[:css_end] + """
 .cap .lb{display:block;font-family:G;font-size:22px;letter-spacing:.42em;color:#F6D9A2;margin-bottom:22px;text-shadow:0 1px 10px rgba(0,0,0,.5)}
 .cap .ul{display:block;height:3px;width:120px;margin:28px 0 20px}
 .cap small{font-family:G;font-size:30px;letter-spacing:.1em;color:rgba(255,255,255,.92)}
+
+/* 11/24 早朝：案内ページの後ろを、ぼかした景色がゆっくり進む映像に */
+.info:before{display:none}
+.info > video.ibg{position:absolute;left:-40px;top:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(14px) brightness(.58) saturate(1.15)}
 .info{background:#120c09;color:#fff;padding:64px 52px}
 .info:before{content:'';position:absolute;inset:-30px;background:url(a/L0.jpg) center/cover;filter:blur(18px) brightness(.62) saturate(1.15)}
 .info > *{position:relative}
@@ -72,6 +76,7 @@ hp = h[h.index('<div class="sc" id="s5"'):h.index('<div class="sc" id="s4"')].re
 info = h[h.index('<div class="sc" id="s4"'):h.index('<div class="sc" id="s3"')].replace('id="s4" style="z-index:1"', 'id="s6" style="z-index:1"')
 cover = h[h.index('<div class="sc" id="cv"'):h.index('</div>\n <div id="dust">')]
 rest = h[h.index(' <div id="dust">'):h.index('<script>')]
+info = info.replace('<div class="info">', f'<div class="info"><video class="ibg" src="a/vvi.mp4" muted data-start="{T[5]}" data-duration="{round(T[6]+1.2-T[5],2)}"></video>', 1)
 html_book = ' <div id="stage">\n <div id="halo"></div>\n <div id="book">\n  ' + hp + info + "\n  ".join(reversed(pages)) + "\n  " + cover.replace('z-index:6', 'z-index:9') + '</div>\n'
 pre = h[:h.index(' <div id="stage">')]
 js = h[h.index('<script>'):]
