@@ -341,6 +341,21 @@ if os.path.exists(os.path.join(L, 'shin/doc.js')):
         if _d: URL['jikka/shindan'] = '/jikka/shindan/'; write('jikka/shindan', _ti, dict(m.cfg('/jikka/', _de)), _d, js='doc')
     except Exception as e:
         print('jikka: 作り直さず前の物のまま', repr(e))
+    # 解体（入口・補助金ランキング・市ごと）
+    try:
+        _n = 0
+        for _f in sorted(os.listdir(L)):
+            if not re.match(r'^kaitai(-[a-z]+)?\.html$', _f): continue
+            _ti, _de = Y.meta(os.path.join(L, _f)); _d = Y.kaitai(os.path.join(L, _f))
+            if not _d: continue
+            URL[_f[:-5]] = '/' + _f[:-5]
+            write(_f[:-5], _ti, dict(m.cfg('/kaitai', _de)), _d, js='doc'); _n += 1
+        print('kaitai: 新しい形', _n, '枚')
+        _ti, _de = Y.meta(os.path.join(L, 'akiya-ranking.html'))
+        _d = Y.akiya(os.path.join(L, 'akiya-ranking.html'), '関西', '寝屋川市', [['実家・空き家ノート', '/jikka/', '街ごとの数字と順番'], ['解体の補助金', '/kaitai-ranking', '市ごとの上限'], ['地価ランキング', '/chika-kansai', '住宅地の1年の動き'], ['まちランキング', '/ranking', '駅・人口の順位も']])
+        if _d: URL['akiya-ranking'] = '/akiya-ranking'; write('akiya-ranking', _ti, dict(m.cfg('/jikka/', _de)), _d, js='rk')
+    except Exception as e:
+        print('kaitai: 作り直さず前の物のまま', repr(e))
 # 11/19 ふるさと納税・値下がり（燈のデータ）を新しい土台で
 try:
     _sf = __import__('importlib.util').util.spec_from_file_location('furu', os.path.join(R, 'tools/shin/furu.py')); _mf = __import__('importlib.util').util.module_from_spec(_sf); _sf.loader.exec_module(_mf); _mf.build(write, URL)
