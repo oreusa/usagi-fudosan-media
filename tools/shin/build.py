@@ -481,3 +481,23 @@ try:
     _kphoto()
 except Exception as e:
     print('開店閉店 写真：入れられなかった', repr(e))
+# 11/23 owner「全部やり変えて」：おでかけ1件のページ（/o/*）も新しい土台で（tools/shin/yari.py spot・関東と同じ）。写真を入れた後に作る。
+# 前のページ（links/o/*.html）はそのまま残す（_middleware.js が新しい形を先に出し、無ければ前のページ）。
+try:
+    import shutil as _sh2
+    _sp3 = importlib.util.spec_from_file_location('yari', os.path.join(R, 'tools/shin/yari.py')); _Y = importlib.util.module_from_spec(_sp3); _sp3.loader.exec_module(_Y)
+    _od = os.path.join(L, 'shin', 'o'); _sh2.rmtree(_od, ignore_errors=True); os.makedirs(_od)
+    _n = 0
+    for _f in sorted(os.listdir(os.path.join(L, 'o'))):
+        if not re.match(r'^[0-9a-f]+\.html$', _f): continue
+        _p = os.path.join(L, 'o', _f); _d = _Y.spot(_p, [['関西すべて', '/odekake']] + [[_l, '/odekake-' + _k] for _l, _k in [['大阪', 'osaka'], ['京都', 'kyoto'], ['兵庫', 'hyogo'], ['奈良', 'nara'], ['滋賀', 'shiga'], ['和歌山', 'wakayama']]])
+        if not _d: continue
+        _ti, _de = _Y.meta(_p)
+        _c = {'nav': [{'t': '開催中', 'ic': 'now', 'href': '/odekake'}, {'t': 'イルミ', 'ic': 'we', 'href': '/illumination'}, {'t': '紅葉', 'ic': 'map', 'href': '/koyo'}, {'t': '泊まり', 'ic': 'inn', 'href': '/tomari'}],
+              'menu': {'k': 'Odekake', 'items': [['関西おでかけ', '/odekake', 1]]}, 'foot': '日程や料金は変わることがあります。出かける前に公式ページで確かめてください。<br>券・宿のリンクの一部は広告です。', 'desc': _de}
+        URL['o/' + _f[:-5]] = '/o/' + _f[:-5]
+        write('o/' + _f[:-5], _ti, _c, _d, js='doc')
+        _Y.keep_head(_p, os.path.join(_od, _f)); _n += 1
+    print('o: 新しい形', _n, '枚')
+except Exception as e:
+    print('o: 作り直さず前の物のまま', repr(e))
