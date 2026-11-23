@@ -2,6 +2,11 @@
 初詣・泊まり・いまから行ける・開店閉店・まちランキング を、おでかけと同じ土台で作る。build.py の odekake() の最後から呼ばれる。"""
 import copy, datetime, hashlib, html, json, os, re, runpy, tempfile
 
+try:
+    from yari import sell_cfg  # 関西 tools/shin/yari.py
+except ImportError:
+    from shin_yari import sell_cfg  # 関東 scripts/shin_yari.py
+
 PREFS = ['大阪', '京都', '兵庫', '奈良', '滋賀', '和歌山']
 EMO = re.compile('[\U0001F000-\U0001FAFF☀-➿️⛩]+')
 ODE_NAV = lambda cur: [dict(n, **({'cur': 1} if n['href'] == cur else {})) for n in [
@@ -146,6 +151,7 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
     c['menu'] = {'k': 'Home & Land', 'items': [['家と土地の相場', '/fudosan-list'], ['まちランキング', '/ranking', 1], ['家を売る前に', '/uru'], ['いくらで売れる？', '/ikura'], ['実家・空き家', '/jikka/'], ['地価ランキング', '/chika-kansai']]}
     c['foot'] = '数字はどれも国・府県・鉄道会社などの公式の発表です。街の平均で、1軒ずつの値段ではありません。'
     c['desc'] = f'関西の街を、駅の乗る人の数・地価・人口など公式の数字で順位にしました（{len(rl)}本）。'
+    c['sell'] = sell_cfg(0)
     URL['ranking'] = '/ranking'
     write('ranking', f'関西まちランキング｜駅・地価・人口の順位を公式の数字で（{len(rl)}本）｜TOWN NOTE', c,
           {'items': rl, 'page': {'h1': '関西まちランキング', 'sub': f'駅・地価・人口の順位を、公式の数字で・{len(rl)}本', 'view': 'list', 'cnt': '本',

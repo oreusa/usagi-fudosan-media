@@ -8,7 +8,7 @@ on:
     - cron: "40 6 * * *"    # 15:40
   push:
     branches: [main]
-    paths: ["links/moushikomi.html", "links/assets/tech.js", "links/assets/night.js", "tools/formcheck/**"]
+    paths: ["links/moushikomi.html", "links/shin/moushikomi.html", "tools/shin/yari.py", "links/assets/tech.js", "links/assets/night.js", "tools/formcheck/**"]
   workflow_dispatch:
 permissions:
   contents: write

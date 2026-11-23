@@ -2,6 +2,11 @@
 データ：links/assets/towns.json（地価の動き・順位・位置）＋ tools/fudosan_list/reins/*.csv（近畿レインズ 2025年度の成約）＋ toukei.json（国勢調査・住宅土地統計）＋ 各街ページ links/machi/<id>.html のリンク（買いたい・売りたい）。"""
 import json, os, csv, re, html
 
+try:
+    from yari import sell_cfg  # 関西 tools/shin/yari.py
+except ImportError:
+    from shin_yari import sell_cfg  # 関東 scripts/shin_yari.py
+
 def build(write, MAP, L, R):
     towns = json.load(open(os.path.join(L, 'assets/towns.json'), encoding='utf-8'))
     tk = json.load(open(os.path.join(R, 'tools/fudosan_list/toukei.json'), encoding='utf-8'))
@@ -49,5 +54,6 @@ def build(write, MAP, L, R):
     cfg = {'nav': [{'t': '街をさがす', 'ic': 'find', 'a': 'find'}, {'t': 'ランキング', 'ic': 'rank', 'href': '/ranking'}, {'t': '売りたい', 'ic': 'sell', 'href': '/uru'}, {'t': 'いくら？', 'ic': 'yen', 'href': '/ikura'}],
            'menu': {'k': 'Home & Land', 'items': [['家と土地の相場', '/fudosan-list', 1], ['家を売る前に', '/uru'], ['いくらで売れる？', '/ikura'], ['実家・空き家', '/jikka/'], ['解体の費用と補助金', '/kaitai'], ['地価ランキング', '/chika-kansai']]},
            'foot': '地価：国土交通省・各府県「令和8年地価公示」。売れた家の値段：近畿レインズ「2025年度 年刊市況レポート」。人口・空き家：総務省統計局。<br>どれも街の平均で、1軒ずつの値段ではありません。「買いたい」のリンクは広告です（Yahoo!不動産）。'}
+    cfg['sell'] = sell_cfg(0)
     cfg['desc'] = '関西205の街の、中古マンション・中古一戸建て・土地が実際に売れた値段（レインズ）と、地価の動き・人口を、街ごとにまとめました。府県の平均とも比べられます。'
     write('ie', '関西の家と土地の相場｜205の街の売れた値段と地価｜TOWN NOTE', cfg, {'towns': out, 'pa': PA, 'map': MAP})
