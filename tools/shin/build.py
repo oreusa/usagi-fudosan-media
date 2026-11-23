@@ -361,6 +361,8 @@ if os.path.exists(os.path.join(L, 'shin/doc.js')):
         for _nm in ('moushikomi', 'koe'):
             _ti, _de = Y.meta(os.path.join(L, _nm + '.html')); _d = Y.form(os.path.join(L, _nm + '.html'))
             if _d: URL[_nm] = '/' + _nm; write(_nm, _ti, dict(m.cfg('/' + _nm, _de)), _d, js='doc')
+        URL['otoku'] = '/otoku'
+        write('otoku', 'お得まとめ｜セール・値下がり・ふるさと納税・宿の入口｜TOWN NOTE', Y.kau_cfg('/otoku', 'セール・値下がりした物・ふるさと納税・宿。お得の入口をひとつにまとめました。', '商品・宿へのリンクは広告（PR）です。'), Y.otoku(), js='doc')
     except Exception as e:
         print('kaitai: 作り直さず前の物のまま', repr(e))
 # 11/19 ふるさと納税・値下がり（燈のデータ）を新しい土台で
