@@ -3,6 +3,7 @@
 市区を足す時：kanto_hojo.tsv に行を足し、下の SLUG に（ローマ字・都県）を足す。
 使い方：python3 tools/kaitai/to_life.py ../akari-auto のあとに  python3 tools/kaitai/city_life.py ../akari-auto"""
 import html, json, os, re, sys
+from fractions import Fraction
 from urllib.parse import quote
 def cut(tx, n=88):
     """説明文に入れる時、文の途中で切らない（関西の city.py と同じ）。"""
@@ -62,6 +63,22 @@ for city, tx, st, u, d in rows:
     if ended:
         sec += (f'<section id="hiku" class="ps" style="--c:#4F7BA8"><h2>今年度の受付について</h2><p class="kt-n" style="font-size:13.5px;color:inherit">{E(city)}の今年度の受付は、'
                 f'{"止まっています" if st == "受付停止" else "終わっています"}。来年度の受付は、市の公式ページでご確認ください。見積りは、受付が始まる前に取っておくと、申し込みが早く進みます。</p></section>')
+    # 11/23 関西と同じ「補助が出た時の目安」：本文に割合と上限が1つずつだけ書いてある市区だけ（2つ以上の制度・地区で違う市区は、まちがえるので出さない）
+    _rt = re.findall(r"(?:費用|工事費|解体費|工事の費用)[^。、]{0,6}?の\s*(\d+)分の(\d+)|(?:費用|工事費|解体費|工事の費用)[^。、]{0,6}?の\s*(\d+)[%％]|(?:費用|工事費)の(9)割", tx)
+    _cp = re.findall(r"上限\s*([\d,]+)万円", tx)
+    if not ended and len(_rt) == 1 and len(set(_cp)) == 1:
+        r_ = _rt[0]; fr = Fraction(int(r_[1]), int(r_[0])) if r_[0] else Fraction(int(r_[2]), 100) if r_[2] else Fraction(9, 10)
+        cap = int(_cp[0].replace(",", "")); tr = ""
+        for t in (20, 30, 40):
+            lo, hi = 3 * t, 5 * t
+            sl, sh = min(cap, lo * fr), min(cap, hi * fr)
+            man = lambda v: f"{round(v)}万円"
+            sub = man(sl) if round(sl) == round(sh) else f"{round(sl)}万〜{man(sh)}"
+            tr += f"<tr><th>{t}坪<small>解体 {lo}万〜{hi}万円</small></th><td>{sub}</td><td><b>{round(lo - sl)}万〜{man(hi - sh)}</b></td></tr>"
+        rs = f"{fr.denominator}分の{fr.numerator}" if fr.denominator <= 10 else f"{round(float(fr) * 100)}%"
+        sec += (f'<section id="hiku" class="ps" style="--c:#4F7BA8"><h2>補助が出た時の目安</h2><p class="rk-sub">木造の家・条件に合った時</p>'
+                '<div class="kt-w"><table class="kt"><thead><tr><th>広さ</th><th>補助の目安</th><th>自分で払う目安</th></tr></thead><tbody>' + tr + '</tbody></table></div>'
+                f'<p class="kt-n">補助は「費用の{rs}・上限{cap}万円」で計算しています。解体の目安は全国の相場（木造1坪3万〜5万円）です。対象になるか・いくら出るかは、{"区" if city.endswith("区") else "市"}の審査で決まります。</p></section>')
     steps = [("市の窓口で、対象かどうかを確かめる", "建った年・場所・所得などの条件があります。"), ("解体の見積りを取る", "申請に見積書が要る市区が多いです。2〜3社でくらべると安心です。"),
              ("市に申請して、交付の決定を待つ", "決定の前に契約や工事を始めると、対象外になります。"), ("決定のあとで、契約・工事", "工事の前後の写真が要る市区もあります。"),
              ("工事が終わったら報告して、補助を受け取る", "報告の期限があります。")]
