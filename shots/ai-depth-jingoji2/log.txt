@@ -1,0 +1,6 @@
+1-steps 奥行きOK
+2-canopy 奥行きOK
+3-leaves 奥行きOK
+4-wall 奥行きOK
+5-kondo 奥行きOK
+6-valley 奥行きOK
