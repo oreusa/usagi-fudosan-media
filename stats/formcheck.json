@@ -1,15 +1,15 @@
 {
- "at": "2026-11-23 21:24",
+ "at": "2026-11-24 03:45",
  "sites": {
   "kansai": {
    "base": "https://kansai.townnote.app",
-   "ok": true,
+   "ok": false,
    "rows": [
     {
      "name": "ふつうの申し込み（1画面・3問）",
      "path": "/moushikomi",
-     "ok": true,
-     "why": ""
+     "ok": false,
+     "why": "途中で止まった：page.goto: Timeout 45000ms exceeded."
     },
     {
      "name": "ほかにも書く（お名前あり）",
@@ -62,5 +62,5 @@
    ]
   }
  },
- "ok": true
+ "ok": false
 }
