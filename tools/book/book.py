@@ -187,7 +187,9 @@ def reel_texts(spec, svc, d):
 def book_reel_sns(d, now):
     sp = os.path.join(ROOT, "ig", "reels", d + ".json")
     spec = load(sp, None)
-    if not spec or os.path.exists(os.path.join(ROOT, "ig", "reels-hold", "STOP")):
+    hold = os.path.join(ROOT, "ig", "reels-hold")
+    # 11/23 インスタと同じ門：STOP があっても、その日の OK-<日> があれば出す（11/20〜23 は STOP のせいで X・Threads だけ出ていなかった）
+    if not spec or (os.path.exists(os.path.join(hold, "STOP")) and not os.path.exists(os.path.join(hold, "OK-" + d))):
         return
     url = spec.get("video_url") or ""
     mp4 = os.path.join(ROOT, "media", "reels", url.rsplit("/", 1)[-1]) if url else ""
