@@ -1,0 +1,6 @@
+1-walk 奥行きOK
+2-up 奥行きOK
+3-carpet 奥行きOK
+4-rows 奥行きOK
+5-eve 奥行きOK
+6-drone 奥行きOK

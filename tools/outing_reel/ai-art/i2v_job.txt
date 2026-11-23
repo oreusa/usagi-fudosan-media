@@ -1,1 +1,2 @@
-shots/ai-depth-midosuji shots/ai-art/midosuji-img 34.6880,135.5005
+shots/ai-depth-jingoji2 shots/ai-art/jingoji2 none
+shots/ai-depth-gaien2 shots/ai-art/gaien2 none
