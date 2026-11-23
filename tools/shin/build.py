@@ -356,6 +356,13 @@ if os.path.exists(os.path.join(L, 'shin/doc.js')):
         if _d: URL['akiya-ranking'] = '/akiya-ranking'; write('akiya-ranking', _ti, dict(m.cfg('/jikka/', _de)), _d, js='rk')
     except Exception as e:
         print('kaitai: 作り直さず前の物のまま', repr(e))
+    # 申し込み・リクエストと感想（入力と送る仕組みは前のまま）
+    try:
+        for _nm in ('moushikomi', 'koe'):
+            _ti, _de = Y.meta(os.path.join(L, _nm + '.html')); _d = Y.form(os.path.join(L, _nm + '.html'))
+            if _d: URL[_nm] = '/' + _nm; write(_nm, _ti, dict(m.cfg('/' + _nm, _de)), _d, js='doc')
+    except Exception as e:
+        print('kaitai: 作り直さず前の物のまま', repr(e))
 # 11/19 ふるさと納税・値下がり（燈のデータ）を新しい土台で
 try:
     _sf = __import__('importlib.util').util.spec_from_file_location('furu', os.path.join(R, 'tools/shin/furu.py')); _mf = __import__('importlib.util').util.module_from_spec(_sf); _sf.loader.exec_module(_mf); _mf.build(write, URL)
