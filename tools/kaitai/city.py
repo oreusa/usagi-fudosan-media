@@ -140,7 +140,8 @@ def page(base, city, rows, date, others):
            ("補助が決まる前に、解体の契約をしてもいいですか？", "多くの市で、交付が決まる前に契約や工事を始めると対象外になります。見積りを取る所までにして、先に市へ申請してください。"),
            ("見積りだけでも頼めますか？", "はい。無料で、見積りだけでも大丈夫です。関西（大阪・京都・兵庫・奈良・滋賀・和歌山）のお家が対象です。")]
     fq = '<section class="faq"><h2>よくある質問</h2>' + "".join(f"<details><summary>{E(q)}</summary><p>{E(x)}</p></details>" for q, x in faq) + "</section>"
-    s = s[:a] + sec + s[a:k1] + jun + s[k1:h1].replace("<!--hojo-->", "") + oth + fq + s[f2:]
+    # 11/23 関東と同じ：費用ページの「片付け・遺品整理の費用の目安」「解体までの順番」も残す（前は補助の段から下を落としていた）
+    s = s[:a] + sec + s[a:k1] + jun + s[k1:h1].replace("<!--hojo-->", "") + s[hj_end:f1] + oth + fq + s[f2:]
     title = f"{city}の解体の補助金 2026年度｜" + (f"上限{cap}万円・" if cap else "") + "条件と受付の状況、費用の目安"
     desc = f"{pref}{city}の{h0}：{cut(tx0)} 木造30坪の解体は90万〜150万円が目安（全国）。市の公式ページを{date}に確認。無料の見積り相談もできます。"
     ld = [{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": x}} for q, x in faq]},

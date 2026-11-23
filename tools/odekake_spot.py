@@ -195,7 +195,7 @@ for sp in spots:
 <script type="application/ld+json">{ld}</script><style>{CSS}</style>
 <script src="/assets/night.js?v=30"></script><script src="/assets/menu.js?v=49" defer></script><script src="/assets/v2sub.js?v=12" defer></script></head>
 <body style="--pc:{pc}"><div class="wrap"><div class="head"><img src="/assets/logo-s.png?v=2" width="60" height="60" alt="TOWN NOTE のロゴ">
-<div class="en">{SLUG[p].upper()} ─ ODEKAKE</div><h1>{e(nm)}<span>{yr} 日程・場所</span></h1><p class="sub">{e(where if where.startswith(fu) else fu + where)}</p><div class="upd">{upd} 確認</div></div>
+<div class="en">{SLUG[p].upper()} ─ ODEKAKE</div><h1>{e(nm)}<span>{"" if yr in nm else yr + " "}日程・場所</span></h1><p class="sub">{e(where if where.startswith(fu) else fu + where)}</p><div class="upd">{upd} 確認</div></div>
 <div class="big">{big}</div>{mapd}<p class="lead">{e(lead)}</p><div class="act">{act}</div>{yh}
 <h2>{e(p)}のほかのおでかけ</h2>{nh}{mh}
 <a class="back" href="/odekake-{SLUG[p]}">{e(p)}おでかけリストへ</a><a class="back" href="/odekake" style="margin-top:14px">関西おでかけリストへ</a>
