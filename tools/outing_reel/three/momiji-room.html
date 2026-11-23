@@ -1,0 +1,161 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"./node_modules/three/build/three.module.js","three/addons/":"./node_modules/three/examples/jsm/"}}</script></head><body>
+<script type="module">
+import * as THREE from 'three';
+import {Reflector} from 'three/addons/objects/Reflector.js';
+import {EffectComposer} from 'three/addons/postprocessing/EffectComposer.js';
+import {RenderPass} from 'three/addons/postprocessing/RenderPass.js';
+import {UnrealBloomPass} from 'three/addons/postprocessing/UnrealBloomPass.js';
+import {ShaderPass} from 'three/addons/postprocessing/ShaderPass.js';
+import {BokehPass} from 'three/addons/postprocessing/BokehPass.js';
+import {OutputPass} from 'three/addons/postprocessing/OutputPass.js';
+const P=new URLSearchParams(location.search);
+const W=+(P.get('w')||1080),H=+(P.get('h')||1920);
+const MODE=P.get('mode')||'room',NIGHT=MODE==='night',OUT=MODE==='garden'||MODE==='umb',DUR=+(P.get('dur')||3);
+let seed=7;const R=()=>{seed=(seed*16807)%2147483647;return (seed-1)/2147483646};
+const r=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
+r.setSize(W,H);r.setPixelRatio(1);r.toneMapping=THREE.ACESFilmicToneMapping;r.toneMappingExposure=+(P.get('exp')||1.0);
+document.body.appendChild(r.domElement);
+const scene=new THREE.Scene();
+const FOG=new THREE.Color(NIGHT?'#120a0c':'#efc6a0');scene.fog=new THREE.Fog(FOG,OUT?18:12,OUT?70:55);
+const cam=new THREE.PerspectiveCamera(+(P.get('fov')||66),W/H,.05,200);
+// ---------- textures
+function cv(w,h,f){const c=document.createElement('canvas');c.width=w;c.height=h;f(c.getContext('2d'),w,h);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=8;return t}
+const leafTex=cv(128,128,(x,w,h)=>{x.translate(64,70);x.fillStyle='#fff';x.beginPath();
+ const lobes=[[-90,52],[-45,46],[-135,46],[0,34],[180,34],[30,20],[150,20]];
+ for(let i=0;i<=360;i+=2){const a=i-90;let rr=10;for(const[l,L]of lobes){const d=Math.abs(((a-l+540)%360)-180);rr=Math.max(rr,L*Math.pow(Math.max(0,1-d/26),1.4)+10)}
+  // serrations
+  rr+=Math.sin(i*0.9)*1.5;const ra=a*Math.PI/180;i?x.lineTo(Math.cos(ra)*rr,Math.sin(ra)*rr):x.moveTo(Math.cos(ra)*rr,Math.sin(ra)*rr)}
+ x.fill();x.strokeStyle='rgba(0,0,0,.25)';x.lineWidth=1.5;for(const[l,L]of lobes){const ra=l*Math.PI/180;x.beginPath();x.moveTo(0,0);x.lineTo(Math.cos(ra)*L*.9,Math.sin(ra)*L*.9);x.stroke()}
+ const g=x.createRadialGradient(0,0,0,0,0,60);g.addColorStop(0,'rgba(255,255,255,0)');g.addColorStop(1,'rgba(0,0,0,.18)');x.globalCompositeOperation='source-atop';x.fillStyle=g;x.fillRect(-64,-70,128,128)});
+const woodTex=(base,dark,n)=>cv(512,512,(x,w,h)=>{x.fillStyle=base;x.fillRect(0,0,w,h);for(let i=0;i<n;i++){x.strokeStyle=`rgba(${dark},${.05+R()*.12})`;x.lineWidth=.5+R()*2.5;x.beginPath();let y=R()*h;x.moveTo(0,y);for(let X=0;X<=w;X+=16){y+=(R()-.5)*3;x.lineTo(X,y)}x.stroke()}});
+// ---------- room
+const darkWood=new THREE.MeshStandardMaterial({color:'#3a2216',roughness:.55,map:woodTex('#6b4630','20,8,2',260)});
+const beamWood=new THREE.MeshStandardMaterial({color:'#2a170e',roughness:.6,map:woodTex('#5a3a26','20,8,2',200)});
+const plaster=new THREE.MeshStandardMaterial({color:'#4a3a2e',roughness:.95});
+const room=new THREE.Group();scene.add(room);room.visible=!OUT;
+const box=(w,h,d,m,x,y,z)=>{const b=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),m);b.position.set(x,y,z);room.add(b);return b};
+const WX=4.2, OPEN_Y0=.32, OPEN_Y1=2.15, CEIL=2.75;
+// floor reflector
+const refl=new Reflector(new THREE.PlaneGeometry(2*WX,12),{textureWidth:W*.6|0,textureHeight:H*.6|0,color:new THREE.Color(P.get('rc')||'#a09088')});
+refl.material.fragmentShader=refl.material.fragmentShader.replace('vec4 base = texture2DProj( tDiffuse, vUv );',`vec4 base=vec4(0.);vec2 p=vUv.xy/vUv.w;float k=${(+(P.get("rk")||.0016)).toFixed(5)};
+ for(int i=-2;i<=2;i++)for(int j=-3;j<=3;j++){base+=texture2D(tDiffuse,p+vec2(float(i)*k*.6,float(j)*k*1.4));}base/=35.;`);
+refl.rotation.x=-Math.PI/2;refl.position.set(0,0,6);room.add(refl);
+// lacquer overlay: planks + fresnel (more opaque near camera)
+const ovTex=cv(1024,1024,(x,w,h)=>{for(let i=0;i<14;i++){const X=i*w/14;x.fillStyle=`rgba(${30+R()*12|0},${16+R()*8|0},${8+R()*6|0},1)`;x.fillRect(X,0,w/14,h);x.fillStyle='rgba(0,0,0,.6)';x.fillRect(X,0,1.5,h)}
+ for(let i=0;i<900;i++){x.strokeStyle=`rgba(90,55,35,${R()*.12})`;x.lineWidth=R()*2;const X=R()*w;x.beginPath();x.moveTo(X,R()*h);x.lineTo(X+(R()-.5)*4,R()*h);x.stroke()}
+ // alpha ramp: v=0 (window side) transparent -> camera side opaque
+ const g=x.createLinearGradient(0,0,0,h);g.addColorStop(0,'rgba(0,0,0,.92)');g.addColorStop(.25,'rgba(0,0,0,.75)');g.addColorStop(.6,'rgba(0,0,0,.35)');g.addColorStop(1,'rgba(0,0,0,.05)');
+ x.globalCompositeOperation='destination-in';x.fillStyle=g;x.fillRect(0,0,w,h)});
+ovTex.wrapS=ovTex.wrapT=THREE.ClampToEdgeWrapping;
+const ov=new THREE.Mesh(new THREE.PlaneGeometry(2*WX,12),new THREE.MeshBasicMaterial({map:ovTex,transparent:true,depthWrite:false,fog:false}));
+ov.rotation.x=-Math.PI/2;ov.rotation.z=0;ov.position.set(0,.002,6);room.add(ov);
+// wall around opening (z=0)
+box(2*WX,CEIL-OPEN_Y1,.25,plaster,0,(CEIL+OPEN_Y1)/2,0);
+box(2*WX,.16,.3,beamWood,0,OPEN_Y1+.08,.03); // 鴨居
+box(2*WX,.22,.32,beamWood,0,OPEN_Y1+.48,.05); // 長押
+box(2*WX,OPEN_Y0,.3,darkWood,0,OPEN_Y0/2,0); // 敷居の下
+box(2*WX,.05,.34,new THREE.MeshStandardMaterial({color:'#7a5236',roughness:.35}),0,OPEN_Y0+.0,0.02);
+for(const px of [-WX,-1.45,1.45,WX])box(.2,CEIL,.24,beamWood,px,CEIL/2,0);
+// side walls + ceiling
+for(const s of [-1,1]){box(.2,CEIL,12,plaster,s*(WX+.1),CEIL/2,6);for(let z=0;z<12;z+=2.2)box(.18,CEIL,.2,beamWood,s*(WX-.02),CEIL/2,z)}
+box(2*WX+.4,.1,12,new THREE.MeshStandardMaterial({color:'#1b0f09',roughness:.8}),0,CEIL,6);
+for(let z=.6;z<12;z+=.9)box(2*WX,.08,.1,beamWood,0,CEIL-.06,z);
+// lights: window glow into room
+scene.add(new THREE.AmbientLight('#ffe2c8',.25));
+const sun=new THREE.DirectionalLight('#ffd7a8',1.4);sun.position.set(2,6,-8);scene.add(sun);
+const fill=new THREE.PointLight('#ff9a5a',6,9,1.6);fill.position.set(0,1.3,-.6);scene.add(fill);
+// ---------- outside
+const sky=new THREE.Mesh(new THREE.PlaneGeometry(120,60),new THREE.MeshBasicMaterial({fog:false,map:cv(64,512,(x,w,h)=>{const g=x.createLinearGradient(0,0,0,h);if(NIGHT){g.addColorStop(0,'#05060f');g.addColorStop(.6,'#0d0b1c');g.addColorStop(1,'#2a1418');}else{g.addColorStop(0,'#cfe0ee');g.addColorStop(.5,'#fff2dc');g.addColorStop(1,'#f4c79a');}x.fillStyle=g;x.fillRect(0,0,w,h)})}));
+sky.position.set(0,12,-45);scene.add(sky);
+const ground=new THREE.Mesh(new THREE.PlaneGeometry(80,60),new THREE.MeshBasicMaterial({color:new THREE.Color(NIGHT?.25:1.1,NIGHT?.2:.85,NIGHT?.2:.8),map:cv(512,512,(x,w,h)=>{x.fillStyle='#7a3a1c';x.fillRect(0,0,w,h);for(let i=0;i<6000;i++){x.fillStyle=['#b3261a','#d4561e','#e9a040','#5a3a20','#8a2a18'][R()*5|0];x.globalAlpha=.6;x.beginPath();x.arc(R()*w,R()*h,1+R()*3,0,7);x.fill()}})}));
+ground.material.map.repeat.set(10,8);ground.material.map.wrapS=ground.material.map.wrapT=THREE.RepeatWrapping;
+ground.rotation.x=-Math.PI/2;ground.position.set(0,-.25,-30);scene.add(ground);
+const far=new THREE.Mesh(new THREE.PlaneGeometry(70,22),new THREE.MeshBasicMaterial({transparent:true,map:cv(1024,512,(x,w,h)=>{for(let i=0;i<9000;i++){const X=R()*w,Y=h*(.18+.82*Math.pow(R(),.7));const top=1-(Y/h);x.globalAlpha=.85;x.fillStyle=['#c83a22','#d9542a','#e7772e','#c22a20','#eea040','#b52a22','#e2643a'][R()*7|0];x.beginPath();x.arc(X,Y,1.5+R()*3.5,0,7);x.fill()}
+ x.globalCompositeOperation='destination-in';const g=x.createLinearGradient(0,0,0,h);g.addColorStop(0,'rgba(0,0,0,0)');g.addColorStop(.3,'rgba(0,0,0,1)');x.fillStyle=g;x.fillRect(0,0,w,h)})}));
+far.position.set(0,6,-24);scene.add(far);if(NIGHT)far.material.color.set('#7a3a26');
+// leaves
+const PAL=['#a4101a','#c41d1b','#d9321c','#e8501c','#ef7420','#f39a2a','#f2bb3c','#c42a24','#b8141c','#e0401a','#9aa83a'];
+const leaves=[];
+const DEN=+(P.get('den')||.18),SZ=+(P.get('sz')||1.9);
+function canopy(cx,cy,cz,rx,ry,rz,n,size,bright,palW){n=n*DEN|0;size*=SZ;for(let i=0;i<n;i++){// clumpy ellipsoid shell
+  let u=R()*2-1,a=R()*Math.PI*2,s=Math.sqrt(1-u*u);let rad=Math.pow(R(),.35);
+  const dx=s*Math.cos(a)*rad,dy=u*rad,dz=s*Math.sin(a)*rad;
+  const x=cx+dx*rx,y=cy+dy*ry,z=cz+dz*rz;
+  // light: top & sun side (back, +x) brighter; inner darker
+  let L=bright*(.35+.65*rad)*(.75+.35*Math.max(0,dy))*(.85+.25*(dx));
+  let ci=R()*PAL.length|0;if(ci===PAL.length-1&&R()>(palW||.15))ci=2;
+  leaves.push([x,y,z,size*(.7+R()*.6),R()*6.28,R()*6.28,R()*6.28,ci,L])}}
+// trees: [x, z, canopy center y, radius]
+const trees=[];
+if(!OUT){// near hanging branches across top of the window
+for(let i=0;i<10;i++)canopy(-4+i*.9+R()*.4,2.0+R()*.3,-.7-R()*.9,.8,.35,.55,2200,.08,1.0);
+for(let i=0;i<3;i++)canopy(-3+i*3+R()*.4,.9+R()*.5,-1.6-R()*1.2,1.0,.55,.7,3500,.085,.95);
+// near left/right big trees
+canopy(-2.6,1.55,-2.6,1.5,.9,1.0,9000,.085,1.05);trees.push([-2.6,-2.6,1.55]);
+canopy(2.4,1.7,-3.0,1.6,1.0,1.0,9000,.085,1.0);trees.push([2.4,-3,1.7]);
+canopy(.1,1.0,-4.4,1.8,.9,1.1,11000,.09,1.1);trees.push([.1,-4.4,1.15]);
+// mid layer
+for(let i=0;i<6;i++){const x=-6+i*2.4+R()*.6,z=-6.5-R()*3;canopy(x,1.1+R()*.9,z,1.8,1.2,1.3,6500,.11,1.15);trees.push([x,z,1.6])}
+// far layer
+for(let i=0;i<6;i++){const x=-10+i*4+R(),z=-12-R()*5;canopy(x,1.6+R()*1.4,z,2.6,1.8,1.8,4500,.18,1.2,.4)}
+}else{
+ // 庭：小道の両側にカエデのトンネル（カメラは z=-4 → 奥へ）
+ for(let z=-3;z>-26;z-=2.2){for(const sd of [-1,1]){const x=sd*(2.4+R()*1.4);canopy(x,2.6+R()*.8,z,2.0,1.1,1.4,6000,.11,1.1);trees.push([x,z,2.6]);}
+  canopy((R()-.5)*1.5,3.9+R()*.5,z-1,1.8,.6,1.2,3500,.11,1.2);}
+ for(let i=0;i<8;i++)canopy(-14+i*4+R(),3+R()*2,-30-R()*6,3,2.2,2,4000,.2,1.2,.4);
+}
+// fallen leaves on the outside ground near window (the 床もみじ edge)
+for(let i=0;i<(OUT?5000:1500);i++)leaves.push([(R()-.5)*(OUT?12:9),-.24,-.3-R()*(OUT?26:5),.07,-Math.PI/2+(R()-.5)*.6,0,R()*6.28,R()*7|0,.6+R()*.3]);
+// trunks
+const bark=new THREE.MeshStandardMaterial({color:'#2a1c14',roughness:1});
+for(const[x,z,y]of trees){const t=new THREE.Mesh(new THREE.CylinderGeometry(.06,.12,y+.3,8),bark);t.position.set(x,(y-.3)/2-.1,z);t.rotation.z=(R()-.5)*.25;scene.add(t);
+ for(let k=0;k<3;k++){const b=new THREE.Mesh(new THREE.CylinderGeometry(.02,.045,1.2,6),bark);b.position.set(x+(R()-.5)*.6,y-.2+R()*.3,z+(R()-.5)*.4);b.rotation.set((R()-.5)*1,0,(R()>.5?1:-1)*(.7+R()*.5));scene.add(b)}}
+const lg=new THREE.PlaneGeometry(1,1);
+const lm=new THREE.MeshBasicMaterial({map:leafTex,alphaTest:.5,side:THREE.DoubleSide});
+const U={t:{value:0}};
+lm.onBeforeCompile=s=>{s.uniforms.uT=U.t;s.vertexShader='uniform float uT;\n'+s.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\n vec4 ip=instanceMatrix[3]; float ph=ip.x*1.7+ip.z*1.3+ip.y*2.1; transformed.xy+=vec2(sin(uT*1.3+ph),cos(uT*1.1+ph*1.3))*.12;')};
+const im=new THREE.InstancedMesh(lg,lm,leaves.length);
+const m4=new THREE.Matrix4(),q=new THREE.Quaternion(),e=new THREE.Euler(),sc=new THREE.Vector3(),ps=new THREE.Vector3(),col=new THREE.Color();
+leaves.forEach((l,i)=>{ps.set(l[0],l[1],l[2]);e.set(l[4],l[5],l[6]);q.setFromEuler(e);sc.setScalar(l[3]);m4.compose(ps,q,sc);im.setMatrixAt(i,m4);col.set(PAL[l[7]]).multiplyScalar(l[8]*(+(P.get('lb')||1.4)));if(NIGHT){const up=Math.min(1,Math.max(0,(2.6-l[1])/2.4));const dist=Math.min(1,Math.max(0,(-l[2]-1)/14));col.multiplyScalar((.25+1.25*up)*(1-.75*dist));col.r*=1.15;col.b*=.6;}im.setColorAt(i,col)});
+scene.add(im);
+if(MODE==='umb'){const UC=['#e23b4a','#f06a9a','#f4b23c','#3fb6a8','#7a6ad8','#f08a3c','#e8e2d0','#4a8ee0'];
+ const ut=c=>cv(256,256,(x,w,h)=>{x.fillStyle=c;x.fillRect(0,0,w,h);for(let i=0;i<24;i++){x.strokeStyle='rgba(255,255,255,.35)';x.lineWidth=1.5;x.beginPath();x.moveTo(i*w/24,0);x.lineTo(i*w/24,h);x.stroke()}const g=x.createLinearGradient(0,0,0,h);g.addColorStop(0,'rgba(255,255,255,.35)');g.addColorStop(1,'rgba(0,0,0,.15)');x.fillStyle=g;x.fillRect(0,0,w,h)});
+ let ui=0;for(let z=-5;z>-22;z-=1.15)for(let x=-2.4;x<=2.41;x+=1.2){const c=UC[(((ui++*3+(Math.round(-z*7)))%UC.length)+UC.length)%UC.length];const u=new THREE.Mesh(new THREE.ConeGeometry(.52,.22,28,1,true),new THREE.MeshBasicMaterial({map:ut(c),side:THREE.DoubleSide,color:new THREE.Color(1.25,1.25,1.25)}));
+  u.position.set(x+(R()-.5)*.25,3.05+(R()-.5)*.2,z+(R()-.5)*.25);u.rotation.set((R()-.5)*.15,R()*6,(R()-.5)*.15);scene.add(u);
+  const st=new THREE.Mesh(new THREE.CylinderGeometry(.008,.008,.5,4),new THREE.MeshBasicMaterial({color:'#3a2a20'}));st.position.set(u.position.x,u.position.y-.3,u.position.z);scene.add(st)}}
+// night: room lamps (andon) glow on floor
+if(NIGHT){for(const x of [-3.4,3.4]){const l=new THREE.PointLight('#ffb070',4,6,1.5);l.position.set(x,.5,2.5);scene.add(l);const a=new THREE.Mesh(new THREE.BoxGeometry(.28,.5,.28),new THREE.MeshBasicMaterial({color:new THREE.Color(2.2,1.5,.8)}));a.position.set(x,.25,2.5);room.add(a)}
+ sun.intensity=.2;fill.color.set('#ff8a40');fill.intensity=10;}
+// a few falling leaves outside
+const fall=[];for(let i=0;i<8;i++){const m=new THREE.Mesh(lg,new THREE.MeshBasicMaterial({map:leafTex,alphaTest:.5,side:THREE.DoubleSide,color:new THREE.Color(PAL[R()*7|0]).multiplyScalar(1.2)}));m.scale.setScalar(.07);m.userData={x:(R()-.5)*7,y0:R()*2.6,z:-.4-R()*3,sp:.12+R()*.12,ph:R()*6};scene.add(m);fall.push(m)}
+// ---------- post
+const comp=new EffectComposer(r);comp.setPixelRatio(1);comp.setSize(W,H);
+comp.addPass(new RenderPass(scene,cam));
+if(!P.get('nob'))comp.addPass(new BokehPass(scene,cam,{focus:+(P.get('focus')||5.5),aperture:+(P.get('ap')||.0012),maxblur:+(P.get('mb')||.007)}));
+comp.addPass(new UnrealBloomPass(new THREE.Vector2(W,H),+(P.get('bloom')||.55),.7,.82));
+comp.addPass(new OutputPass());
+const grade=new ShaderPass({uniforms:{tDiffuse:{value:null},uT:{value:0},uR:{value:new THREE.Vector2(W,H)}},vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
+fragmentShader:`uniform sampler2D tDiffuse;uniform float uT;uniform vec2 uR;varying vec2 vUv;
+float h(vec2 p){return fract(sin(dot(p,vec2(12.9898,78.233)))*43758.5453);}
+void main(){vec2 d=vUv-.5;float ca=.0018*length(d)*2.;vec3 c;c.r=texture2D(tDiffuse,vUv+d*ca).r;c.g=texture2D(tDiffuse,vUv).g;c.b=texture2D(tDiffuse,vUv-d*ca).b;
+ // filmic grade: warm highs, deep cool-ish shadows
+ float l=dot(c,vec3(.299,.587,.114));c=mix(c,c*vec3(1.04,.98,.92),smoothstep(.4,1.,l));c=mix(c*vec3(.92,.94,1.02)+vec3(.0,.003,.01),c,smoothstep(0.,.25,l));
+ c=pow(c,vec3(1.04));
+ float v=smoothstep(.95,.25,length(d*vec2(1.,.75)));c*=mix(.55,1.,v);
+ c+=(h(vUv*uR+uT*91.)-.5)*.035;gl_FragColor=vec4(c,1.);}`});
+comp.addPass(grade);
+// ---------- camera path
+const V3=(a,b,c)=>new THREE.Vector3(a,b,c);
+const PATHS={room:[V3(0,.42,6.2),V3(0,.47,5.4),V3(0,.62,-3),V3(0,.62,-3)],
+ floor:[V3(-.9,.14,3.6),V3(.9,.12,3.3),V3(-.2,.55,-3),V3(.2,.5,-3)],
+ garden:[V3(0,1.15,-4),V3(0,1.25,-7.5),V3(0,1.7,-16),V3(0,1.9,-18)],
+ umb:[V3(-.3,1.4,-4.5),V3(.3,1.5,-7),V3(-.4,3.6,-11),V3(.4,3.7,-14)],
+ side:[V3(-3.2,.55,4.8),V3(-2.4,.5,4.2),V3(.8,.7,-3),V3(1.4,.7,-3)],
+ night:[V3(0,.45,6.4),V3(0,.5,5.5),V3(0,.62,-3),V3(0,.62,-3)]};
+const PA=PATHS[MODE==='night'?'night':MODE];
+window.renderAt=t=>{const k=Math.min(1,t/DUR),s=k*k*(3-2*k)*.6+k*.4;cam.position.lerpVectors(PA[0],PA[1],s);const tg=new THREE.Vector3().lerpVectors(PA[2],PA[3],s);cam.lookAt(tg);U.t.value=t;grade.uniforms.uT.value=t;
+ for(const m of fall){const u=m.userData;const y=((u.y0-u.sp*(t+u.ph*2))%2.6+2.6)%2.6-.2;m.position.set(u.x+Math.sin(t*1.2+u.ph)*.25,y+(OUT?1:0),u.z+(OUT?-4:0));m.rotation.set(t*1.5+u.ph,t*1.1+u.ph,u.ph)}
+ comp.render();return true};
+window.ready=true;
+</script></body></html>
