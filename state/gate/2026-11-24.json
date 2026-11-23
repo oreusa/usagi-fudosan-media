@@ -1,0 +1,146 @@
+{
+ "date": "2026-11-24",
+ "bad": 0,
+ "slots": {
+  "n1": {
+   "ok": true,
+   "time": "07:00",
+   "head": "伏見稲荷と東福寺、1日の差はたった312人でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "c24d3a493e0cb905",
+   "x": false,
+   "th": true
+  },
+  "x07": {
+   "ok": true,
+   "time": "07:00",
+   "head": "梅田・ルクア サウス10階に「THE★JOJO WORLD OSAKA」、12/4（金）オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "71b362b68ba83215",
+   "x": true,
+   "th": false
+  },
+  "S1": {
+   "ok": true,
+   "time": "08:00",
+   "head": "神戸市の中古一戸建て、7〜9月の平均は2,553万円でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "2051a44d14f915fd",
+   "x": false,
+   "th": true
+  },
+  "n2": {
+   "ok": true,
+   "time": "09:00",
+   "head": "きょう11/24（火）も、奈良市の正暦寺は紅葉の特別拝観をしています。",
+   "bad": [],
+   "warn": [],
+   "digest": "d228d068d3fe7aff",
+   "x": false,
+   "th": true
+  },
+  "x09": {
+   "ok": true,
+   "time": "09:00",
+   "head": "心斎橋PARCO 6階に、テレビ東京の公式ショップ「テレ東本舗。with テレビ大阪」が期間限定で登場",
+   "bad": [],
+   "warn": [],
+   "digest": "eb1eebc625011643",
+   "x": true,
+   "th": false
+  },
+  "x0930": {
+   "ok": true,
+   "time": "09:30",
+   "head": "貝塚・二色の浜公園に「牡蠣小屋ブルーテラス」、11/28（土）から2027年3/28まで",
+   "bad": [],
+   "warn": [],
+   "digest": "2725271e8c617b59",
+   "x": true,
+   "th": false
+  },
+  "n3": {
+   "ok": true,
+   "time": "12:00",
+   "head": "きょう11/24（火）、大阪駅直結のルクア サウス12階に、ナルミヤの関西初の常設店が開きます。",
+   "bad": [],
+   "warn": [],
+   "digest": "0280969254c1438c",
+   "x": false,
+   "th": true
+  },
+  "x12": {
+   "ok": true,
+   "time": "12:00",
+   "head": "大津・堅田と栗東に、スーパー「万代」が12月上旬オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "641df13533c906af",
+   "x": true,
+   "th": false
+  },
+  "n8": {
+   "ok": true,
+   "time": "13:00",
+   "head": "川西能勢口と宝塚、1日の差は794人でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "387004a9e7c6bd1c",
+   "x": false,
+   "th": true
+  },
+  "n5": {
+   "ok": true,
+   "time": "15:00",
+   "head": "和歌山城は今夜も、日没から夜11時まで無料でライトアップしています。",
+   "bad": [],
+   "warn": [],
+   "digest": "bca3734a604b26e5",
+   "x": false,
+   "th": true
+  },
+  "n6": {
+   "ok": true,
+   "time": "18:00",
+   "head": "12/4（金）、京都・岡崎のがま口の専門店「AYANOKOJI」本店が、建物を改装して開き直します。",
+   "bad": [],
+   "warn": [],
+   "digest": "ccc76f4dbd5b84d4",
+   "x": false,
+   "th": true
+  },
+  "x18": {
+   "ok": true,
+   "time": "18:00",
+   "head": "京都・岡崎に、がま口の専門店「AYANOKOJI 岡崎本店」、12/4（金）リニューアルオープン",
+   "bad": [],
+   "warn": [],
+   "digest": "021d69ea23003ae8",
+   "x": true,
+   "th": false
+  },
+  "n7": {
+   "ok": true,
+   "time": "21:00",
+   "head": "新田辺駅は1日22,076人、となりの興戸の約2.3倍でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "0f47894154240de0",
+   "x": false,
+   "th": true
+  },
+  "x21": {
+   "ok": true,
+   "time": "21:00",
+   "head": "梅田・ルクア サウス11階に、バンダイの「TAMASHII NATIONS STORE OSAKA」、12/2（水）オー",
+   "bad": [],
+   "warn": [],
+   "digest": "c647d2e75140fb03",
+   "x": true,
+   "th": false
+  }
+ }
+}
