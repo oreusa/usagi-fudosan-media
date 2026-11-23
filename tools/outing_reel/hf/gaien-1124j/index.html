@@ -80,6 +80,10 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
 .cap .lb{display:block;font-family:G;font-size:22px;letter-spacing:.42em;color:#F6D9A2;margin-bottom:22px;text-shadow:0 1px 10px rgba(0,0,0,.5)}
 .cap .ul{display:block;height:3px;width:120px;margin:28px 0 20px}
 .cap small{font-family:G;font-size:30px;letter-spacing:.1em;color:rgba(255,255,255,.92)}
+
+/* 11/24 早朝：案内ページの後ろを、ぼかした景色がゆっくり進む映像に */
+.info:before{display:none}
+.info > video.ibg{position:absolute;left:-40px;top:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(14px) brightness(.58) saturate(1.15)}
 .info{background:#120c09;color:#fff;padding:64px 52px}
 .info:before{content:'';position:absolute;inset:-30px;background:url(a/L0.jpg) center/cover;filter:blur(18px) brightness(.62) saturate(1.15)}
 .info > *{position:relative}
@@ -104,7 +108,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
    <div id="h1">無料・登録なし<br>毎日更新<br><span>関東の都県ごとに<br>今やっている催し</span></div>
    <div id="endb"><div>プロフィールのリンクから</div></div>
   </div><div class="cast"></div><div class="gut"></div></div></div>
-  <div class="sc" id="s6" style="z-index:1"><div class="face"><div class="info"><h2>神宮外苑のいちょう並木</h2>
+  <div class="sc" id="s6" style="z-index:1"><div class="face"><div class="info"><video class="ibg" src="a/vvi.mp4" muted data-start="43.78" data-duration="14.27"></video><h2>神宮外苑のいちょう並木</h2>
    <div class="r"><b>見頃</b><span>11月下旬〜12月はじめ<small>例年の見頃（気温で前後します）</small></span></div><div class="r"><b>並木</b><span>約300m・146本<small>4列にならぶいちょう</small></span></div>
    <div class="r"><b>料金</b><span>無料<small>並木道は公道です</small></span></div><div class="r"><b>最寄り</b><span>青山一丁目駅・外苑前駅<small>東京メトロ・都営地下鉄</small></span></div>
    <div class="r"><b>夜</b><span>ライトアップは例年11月下旬<small>今年の日程は公式で確かめてください</small></span></div><p>保存して、黄色い週末のおでかけに。</p>
