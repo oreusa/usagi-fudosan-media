@@ -33,13 +33,13 @@ function look(res) {
   if (!(res.headers.get("content-type") || "").includes("text/html")) return res;
   return new HTMLRewriter().on("head", { element(e) { e.append(LOOK, { html: true }); } }).transform(res);
 }
-const LOOK = '<script>try{if(localStorage.getItem("tn_ty2")!=="0"&&!/[?&]ty=0/.test(location.search))document.documentElement.classList.add("lk-t1")}catch(e){}try{var v=localStorage.getItem("tn_lk2")||"f",m=location.search.match(/[?&]look=([abcdef0])/);if(m){v=m[1];localStorage.setItem("tn_lk2",v)}if(v!=="0"){var h=document.documentElement;h.classList.add("lk","lk-"+v);if(v==="d"||v==="e"||v==="f")h.classList.add("lk-a","lk-d");if(v==="f")h.classList.add("lk-e")}}catch(e){}</script><link rel="stylesheet" href="/shin/look.css?v=36" id="lkcss"><script src="/shin/look.js?v=36" defer></script>';
+const LOOK = '<script>try{if(localStorage.getItem("tn_ty2")!=="0"&&!/[?&]ty=0/.test(location.search))document.documentElement.classList.add("lk-t1")}catch(e){}try{var v=localStorage.getItem("tn_lk2")||"f",m=location.search.match(/[?&]look=([abcdef0])/);if(m){v=m[1];localStorage.setItem("tn_lk2",v)}if(v!=="0"){var h=document.documentElement;h.classList.add("lk","lk-"+v);if(v==="d"||v==="e"||v==="f")h.classList.add("lk-a","lk-d");if(v==="f")h.classList.add("lk-e")}}catch(e){}</script><link rel="stylesheet" href="/shin/look.css?v=37" id="lkcss"><script src="/shin/look.js?v=37" defer></script>';
 const SKIN = '<script>document.documentElement.classList.add("sk");try{if(localStorage.getItem("usagi_theme")==="night")document.documentElement.classList.add("nt")}catch(e){}</script><link rel="stylesheet" href="/shin/skin.css"><script src="/shin/skin.js" defer></script>';
 const PF = ["osaka", "kyoto", "hyogo", "nara", "shiga", "wakayama"];
 const SHIN = new Set([
   ...PF.map(x => "/odekake-" + x), "/illumination", "/illumination-muryo", ...PF.map(x => "/illumination-" + x),
   "/koyo", ...PF.map(x => "/koyo-" + x),
-  "/hatsumode", "/tomari", "/ima", "/kaiten", "/ranking", "/uru", "/ikura", "/furusato", "/nesage",
+  "/hatsumode", "/tomari", "/ima", "/kaiten", "/ranking", "/uru", "/ikura", "/furusato", "/nesage", "/chika-kansai", "/chika-osaka",
 ]);
 // 新しい土台のページ（functions/*.js が /shin を出す所）にはかぶせない
 const NOSKIN = new Set(["", "/odekake", "/okaimono", "/fudosan-list", ...SHIN]);

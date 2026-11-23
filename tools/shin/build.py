@@ -305,6 +305,12 @@ if os.path.exists(os.path.join(L, 'shin/kau.js')):
 if os.path.exists(os.path.join(L, 'shin/doc.js')):
     sp = importlib.util.spec_from_file_location('docs', os.path.join(R, 'tools/shin/docs.py')); m = importlib.util.module_from_spec(sp); sp.loader.exec_module(m)
     m.build(write, L, R, URL)
+    # 11/23 owner「全部やり変えて」：地価ランキング（tools/shin/chika.py・links/shin/rk.js。関東と同じ）
+    try:
+        sp2 = importlib.util.spec_from_file_location('chika', os.path.join(R, 'tools/shin/chika.py')); m2 = importlib.util.module_from_spec(sp2); sp2.loader.exec_module(m2)
+        m2.build(write, L, R, URL, m.cfg)
+    except Exception as e:
+        print('chika: 作り直さず前の物のまま', repr(e))
 # 11/19 ふるさと納税・値下がり（燈のデータ）を新しい土台で
 try:
     _sf = __import__('importlib.util').util.spec_from_file_location('furu', os.path.join(R, 'tools/shin/furu.py')); _mf = __import__('importlib.util').util.module_from_spec(_sf); _sf.loader.exec_module(_mf); _mf.build(write, URL)
