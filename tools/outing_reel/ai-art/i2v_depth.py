@@ -11,10 +11,10 @@ try:
 except Exception as e:
     log.append(f'奥行き 失敗 {str(e)[:300]}')
 # 衛星写真タイル：日本全体 z5 → 高雄 z13 まで、各段で中心の周り
-LAT, LON = map(float, LL.split(','))
+LAT, LON = map(float, LL.split(',')) if LL != 'none' else (0.0, 0.0)
 def tile(z):
     n = 2 ** z; x = (LON + 180) / 360 * n; y = (1 - math.log(math.tan(math.radians(LAT)) + 1 / math.cos(math.radians(LAT))) / math.pi) / 2 * n; return x, y
-for layer in ['s2cloudless_3857']:
+for layer in ([] if LL == 'none' else ['s2cloudless_3857']):
     for z, R in [(4, 2), (5, 2), (6, 2), (7, 2), (8, 2), (9, 2), (10, 2), (11, 2), (12, 2), (13, 2)]:
         cx, cy = tile(z); ok = 0
         for dx in range(-R, R + 1):
