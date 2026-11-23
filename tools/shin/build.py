@@ -311,6 +311,16 @@ if os.path.exists(os.path.join(L, 'shin/doc.js')):
         m2.build(write, L, R, URL, m.cfg)
     except Exception as e:
         print('chika: 作り直さず前の物のまま', repr(e))
+    # 11/23 前のページを新しい土台で作り直す（tools/shin/yari.py。関東と同じ）
+    sp3 = importlib.util.spec_from_file_location('yari', os.path.join(R, 'tools/shin/yari.py')); Y = importlib.util.module_from_spec(sp3); sp3.loader.exec_module(Y)
+    for _nm, _fn in [('sagasu', lambda: Y.sagasu(os.path.join(L, 'sagasu.html'), [['家と土地の相場', '/fudosan-list', '街ごとの売れた値段'], ['地価ランキング', '/chika-kansai', '住宅地の1年の動き'], ['まちランキング', '/ranking', '駅・人口の順位も'], ['実家・空き家', '/jikka/', '売る・片付ける前に']]))]:
+        try:
+            _d = _fn()
+            if not _d: continue
+            URL[_nm] = '/' + _nm
+            write(_nm, {'sagasu': 'その予算で、どの街に住める？｜関西205の街を実際に売れた値段で｜TOWN NOTE'}[_nm], dict(m.cfg('/' + _nm, {'sagasu': '関西205の市区町村を、中古マンション・一戸建て・土地の実際に売れた値段（近畿レインズ）で予算から選べます。'}[_nm])), _d, js={'sagasu': 'sg'}[_nm])
+        except Exception as e:
+            print(_nm + ': 作り直さず前の物のまま', repr(e))
 # 11/19 ふるさと納税・値下がり（燈のデータ）を新しい土台で
 try:
     _sf = __import__('importlib.util').util.spec_from_file_location('furu', os.path.join(R, 'tools/shin/furu.py')); _mf = __import__('importlib.util').util.module_from_spec(_sf); _sf.loader.exec_module(_mf); _mf.build(write, URL)
