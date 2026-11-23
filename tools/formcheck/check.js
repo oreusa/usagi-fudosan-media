@@ -35,25 +35,29 @@ async function run(b, base, name, path, fn) {
   const b = await chromium.launch(); const out = { at: new Date(Date.now() + 9 * 3600e3).toISOString().slice(0, 16).replace('T', ' '), sites: {} };
   for (const [key, base] of SITES) {
     const rs = [];
-    rs.push(await run(b, base, 'ふつうの申し込み（3つの画面）', '/moushikomi', async (p, r) => {
-      r.must = ['テスト太郎', '確かめ市', '査定してほしい', '午後'];
-      if (await step(p) !== '1') { r.why = '最初の画面が1つ目になっていない'; return; }
-      await tick(p, 'input[name=want][value="査定してほしい"]'); await p.waitForTimeout(900);
-      if (await step(p) !== '2') { r.why = 'ご希望を押しても次の画面へ進まない'; return; }
-      await p.fill('#pl', '確かめ市'); await p.click('.tks.on .tknx'); await p.waitForTimeout(700);
-      if (await step(p) !== '3') { r.why = '場所を書いて「次へ」を押しても連絡先の画面へ進まない'; return; }
-      await p.fill('#nm', 'テスト太郎'); await p.fill('#tl', '09000000000'); await p.waitForTimeout(300);
+    // 11/23 owner「収益化が何一つ上手くいってない」→ 1画面目を3問（ご用件・お家の場所・ご連絡先）に。お名前・種類・内容は「ほかにも書く（任意）」。
+    const MP = process.env.MK_PATH || '/moushikomi';
+    rs.push(await run(b, base, 'ふつうの申し込み（1画面・3問）', MP, async (p, r) => {
+      r.must = ['確かめ市', '査定してほしい', '午後', 'お名前なし'];
+      for (const s of ['input[name=want][value="査定してほしい"]', '#pl', '#tl']) if (!(await p.isVisible(s.startsWith('input') ? 'label:has(' + s + ')' : s))) { r.why = '1画面目に「' + s + '」が見えない'; return; }
+      if (await p.isVisible('#nm')) { r.why = 'お名前が1画面目に出ている（3問のはず）'; return; }
+      await tick(p, 'input[name=want][value="査定してほしい"]');
+      await p.fill('#pl', '確かめ市'); await p.fill('#tl', '09000000000'); await p.waitForTimeout(300);
       await tick(p, 'input[name=ttime][value="午後"]'); await tick(p, '#ag');
     }));
-    rs.push(await run(b, base, 'かんたん相談（1つの画面）', '/moushikomi?lite=1', async (p, r) => {
-      r.must = ['テスト太郎', '確かめ市', 'かんたん相談'];
-      await p.fill('#pl', '確かめ市'); await p.fill('#nm', 'テスト太郎'); await p.fill('#tl', '09000000000'); await tick(p, '#ag');
+    rs.push(await run(b, base, 'ほかにも書く（お名前あり）', MP, async (p, r) => {
+      r.must = ['テスト太郎', '確かめ市', '一戸建て'];
+      await tick(p, 'input[name=want][value="売るか迷っている"]'); await p.fill('#pl', '確かめ市'); await p.fill('#em', 'test@example.com');
+      await p.click('#kw summary'); await p.fill('#nm', 'テスト太郎'); await tick(p, 'input[name=kind][value="一戸建て"]'); await tick(p, '#ag');
     }));
-    rs.push(await run(b, base, 'ご希望を選んで来た人（2つ目の画面から）', '/moushikomi?want=' + encodeURIComponent('解体の見積り'), async (p, r) => {
-      r.must = ['テスト太郎', '確かめ市', '解体'];
-      if (await step(p) !== '2') { r.why = 'ご希望つきで来たのに、2つ目の画面から始まらない'; return; }
-      await p.fill('#pl', '確かめ市'); await p.click('.tks.on .tknx'); await p.waitForTimeout(700);
-      await p.fill('#nm', 'テスト太郎'); await p.fill('#em', 'test@example.com'); await tick(p, '#ag');
+    rs.push(await run(b, base, 'かんたん相談（1つの画面）', MP + '?lite=1', async (p, r) => {
+      r.must = ['確かめ市', 'かんたん相談'];
+      await p.fill('#pl', '確かめ市'); await p.fill('#tl', '09000000000'); await tick(p, '#ag');
+    }));
+    rs.push(await run(b, base, 'ご希望を選んで来た人', MP + '?want=' + encodeURIComponent('解体の見積り'), async (p, r) => {
+      r.must = ['確かめ市', '解体'];
+      if (!(await p.isChecked('input[name=want][value="解体の見積り"]'))) { r.why = 'ご希望つきで来たのに、ご希望が選ばれていない'; return; }
+      await p.fill('#pl', '確かめ市'); await p.fill('#em', 'test@example.com'); await tick(p, '#ag');
     }));
     out.sites[key] = { base, ok: rs.every(x => x.ok), rows: rs };
   }
