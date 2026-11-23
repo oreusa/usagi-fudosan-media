@@ -1,6 +1,6 @@
 {
  "date": "2026-11-23",
- "bad": 0,
+ "bad": 1,
  "slots": {
   "n1": {
    "ok": true,
@@ -83,10 +83,12 @@
    "th": true
   },
   "n5": {
-   "ok": true,
+   "ok": false,
    "time": "15:00",
    "head": "Ankerのモバイルバッテリー、11/1より1,000円安い2,990円でした。",
-   "bad": [],
+   "bad": [
+    "型が nesage（表では odekake）"
+   ],
    "warn": [],
    "digest": "b50d67604a744ad7",
    "x": false,
