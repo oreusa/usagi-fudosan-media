@@ -12,7 +12,9 @@ for it in req['items']:
         p = f"{it['prompt']}. {style}"; f = f"{out}/{it['name']}-{s}.webp"
         for k in range(3):
             try:
-                r = c.predict(prompt=p, seed=s, randomize_seed=False, width=it.get('w', 768), height=it.get('h', 1152), num_inference_steps=it.get('steps', 4), api_name='/infer')
+                kw = dict(prompt=p, seed=s, randomize_seed=False, width=it.get('w', 768), height=it.get('h', 1152), num_inference_steps=it.get('steps', req.get('steps', 4)), api_name='/infer')
+                if 'guidance' in req: kw['guidance_scale'] = req['guidance']
+                r = c.predict(**kw)
                 src = r[0] if isinstance(r, (list, tuple)) else r
                 ext = os.path.splitext(src)[1] or '.webp'; f = f"{out}/{it['name']}-{s}{ext}"; shutil.copy(src, f); log.append(f'{f} OK'); break
             except Exception as e:
@@ -20,7 +22,7 @@ for it in req['items']:
                 if 'ZeroGPU' in str(e) and TOK:   # 無料の GPU 枠が切れたら、同じ絵の AI を HF の推論の窓口（毎月の無料分）で
                     try:
                         from huggingface_hub import InferenceClient
-                        im = InferenceClient(provider='auto', api_key=TOK).text_to_image(p, model='black-forest-labs/FLUX.1-schnell', width=it.get('w', 768), height=it.get('h', 1152), seed=s, num_inference_steps=4)
+                        im = InferenceClient(provider='auto', api_key=TOK).text_to_image(p, model=req.get('model', 'black-forest-labs/FLUX.1-schnell'), width=it.get('w', 768), height=it.get('h', 1152), seed=s, num_inference_steps=kw['num_inference_steps'])
                         f = f"{out}/{it['name']}-{s}.png"; im.save(f); log.append(f'{f} OK（推論の窓口）'); break
                     except Exception as e2:
                         log.append(f'{f} 推論の窓口も失敗 {str(e2)[:200]}'); break

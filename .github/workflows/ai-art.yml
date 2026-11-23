@@ -1,0 +1,40 @@
+name: ai-art
+# 画像AI（FLUX）で絵を描く。tools/outing_reel/ai-art/req-*.json を押した時に動く。結果は shots/ai-art/<name>/ に置く。
+on:
+  push:
+    branches: ['claude/**']
+    paths: ['tools/outing_reel/ai-art/req-*.json']
+  workflow_dispatch:
+    inputs:
+      req:
+        description: "頼みの JSON（repo内のパス）"
+        required: true
+permissions:
+  contents: write
+jobs:
+  art:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q gradio_client huggingface_hub pillow
+      - name: draw
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          REQ: ${{ github.event.inputs.req }}
+        run: |
+          if [ -z "$REQ" ]; then REQ=$(git diff --name-only HEAD~1 HEAD -- 'tools/outing_reel/ai-art/req-*.json' | head -1); fi
+          N=$(basename "$REQ" .json); N=${N#req-}
+          python3 tools/outing_reel/ai-art/gen.py "$REQ" "shots/ai-art/$N"
+      - name: commit
+        run: |
+          git config user.name "art bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add shots/ai-art
+          git diff --cached --quiet || git commit -m "[CF-Pages-Skip] ai-art: 画像AIの絵"
+          for i in 1 2 3 4 5; do git pull --rebase --autostash -q origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && break; sleep $((i*5)); done
