@@ -1,0 +1,2684 @@
+[
+ {
+  "r": "k",
+  "u": "/",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "TOWN NOTE（タウンノート）｜関西のおでかけと、家と土地の値段",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn lk-ks",
+  "txt": 415,
+  "screens": 1.8,
+  "over": 0,
+  "cards": 0,
+  "imgs": 6,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関西のおでかけと家の値段｜TOWN NOTE",
+   "おで​かけ",
+   "家と​土地",
+   "おかい​もの",
+   "この​サイト",
+   "TOWN NOTE"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "関西のおでかけ",
+   "イルミネーション",
+   "紅葉",
+   "いまから行ける",
+   "泊まりで行く",
+   "初詣",
+   "家と土地の相場",
+   "地価ランキング",
+   "まちランキング",
+   "家を売る前に",
+   "いくらで売れる？",
+   "家を買いたい",
+   "実家・空き家ノート",
+   "3問でわかる実家の診断",
+   "解体・片付けの費用",
+   "解体の補助金",
+   "空き家が多い街",
+   "日用品の値段くらべ",
+   "値下がりした物",
+   "ふるさと納税"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/odekake",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関西おでかけリスト【2026年11月】｜開催中・今週末のイベント（大阪・京都・兵庫・奈良・滋賀・和歌山）｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 1153,
+  "screens": 5.3,
+  "over": 0,
+  "cards": 24,
+  "imgs": 33,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関西の​おで​かけ・イベント",
+   "関西 109件"
+  ],
+  "bar": [
+   "関西",
+   "大阪",
+   "京都",
+   "兵庫",
+   "奈良",
+   "滋賀",
+   "和歌山",
+   "すべて",
+   "今週末",
+   "まもなく終了"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/fudosan-list",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関西の家と土地の相場｜205の街の売れた値段と地価｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro ieo lk-kn ie2",
+  "txt": 1933,
+  "screens": 5.1,
+  "over": 0,
+  "cards": 30,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関西の​家と​土地",
+   "何を​しますか？",
+   "街の​値段と​地価",
+   "関西 205の​街"
+  ],
+  "bar": [
+   "関西",
+   "大阪",
+   "京都",
+   "兵庫",
+   "奈良",
+   "滋賀",
+   "和歌山"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/okaimono",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "日用品の値段くらべ（楽天・Yahoo!・Amazon）｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 1016,
+  "screens": 3.6,
+  "over": 0,
+  "cards": 21,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "日用品の​値段くらべ",
+   "すべて 21種類"
+  ],
+  "bar": [
+   "すべて",
+   "赤ちゃん",
+   "紙・日用品",
+   "洗濯・お風呂",
+   "飲み物・食べ物",
+   "ペット"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/kaiten",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関西の開店・閉店ニュース｜新しいお店・閉まるお店を公式の発表で｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 1768,
+  "screens": 4.7,
+  "over": 0,
+  "cards": 24,
+  "imgs": 10,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関西の​開店・閉店",
+   "関西・​これから​ 34件"
+  ],
+  "bar": [
+   "これから 34",
+   "開いた 47",
+   "閉まる 1",
+   "関西",
+   "大阪",
+   "京都",
+   "兵庫",
+   "奈良",
+   "滋賀",
+   "和歌山"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/illumination",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関西イルミネーション2026-2027｜開催中・無料・今週末（大阪・京都・兵庫・奈良・滋賀・和歌山）｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 1012,
+  "screens": 5.2,
+  "over": 0,
+  "cards": 24,
+  "imgs": 32,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関西の​イルミネーション",
+   "関西 43件"
+  ],
+  "bar": [
+   "関西",
+   "大阪",
+   "京都",
+   "兵庫",
+   "奈良",
+   "滋賀",
+   "和歌山",
+   "すべて",
+   "今週末",
+   "まもなく終了"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/koyo",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関西の紅葉2026｜見頃とライトアップ（大阪・京都・兵庫・奈良・滋賀・和歌山）｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 868,
+  "screens": 5.2,
+  "over": 0,
+  "cards": 24,
+  "imgs": 32,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関西の​紅葉",
+   "関西 70件"
+  ],
+  "bar": [
+   "関西",
+   "大阪",
+   "京都",
+   "兵庫",
+   "奈良",
+   "滋賀",
+   "和歌山",
+   "すべて",
+   "今週末",
+   "まもなく終了"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/ima",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "いまから行ける関西のおでかけ｜近い順・きょう開いている所｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 1135,
+  "screens": 5.7,
+  "over": 0,
+  "cards": 24,
+  "imgs": 25,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "いまから​行ける​おで​かけ",
+   "関西・1時間で​行ける​ 51か​所"
+  ],
+  "bar": [
+   "30分",
+   "1時間",
+   "1時間半",
+   "すべて"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/tomari",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "泊まりで行く関西のおでかけ｜近くの評価の高い宿つき｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 1032,
+  "screens": 5.4,
+  "over": 0,
+  "cards": 24,
+  "imgs": 22,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "泊まりで​行く​おで​かけ",
+   "関西・​宿つき 68か​所"
+  ],
+  "bar": [
+   "関西",
+   "大阪",
+   "兵庫",
+   "奈良",
+   "滋賀",
+   "和歌山",
+   "すべて",
+   "アート・展示",
+   "光・イルミ",
+   "紅葉"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/hatsumode",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関西の初詣2027｜大晦日・三が日の時間と交通規制（24か所）｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 797,
+  "screens": 5.1,
+  "over": 0,
+  "cards": 24,
+  "imgs": 25,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関西の​初詣",
+   "関西・初詣 24か​所"
+  ],
+  "bar": [
+   "関西",
+   "大阪",
+   "京都",
+   "兵庫",
+   "奈良",
+   "滋賀",
+   "和歌山"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/chika-kansai",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関西 地価ランキング2026｜205の市区町村の住宅地（令和8年地価公示）",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 1515,
+  "screens": 4.1,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関西 地価ランキング2026 住宅地の​1年の​動き",
+   "関西ぜんぶの​住宅地",
+   "よく​ある​質問"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/ranking",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関西まちランキング｜駅・地価・人口の順位を公式の数字で（45本）｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro ieo lk-kn",
+  "txt": 1068,
+  "screens": 4,
+  "over": 0,
+  "cards": 24,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関西まちランキング",
+   "関西・ぜんぶ 45本"
+  ],
+  "bar": [
+   "関西",
+   "大阪",
+   "京都",
+   "兵庫",
+   "奈良",
+   "滋賀",
+   "和歌山",
+   "すべて",
+   "駅",
+   "家と土地"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/uru",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "家を売る前に｜相場を見る・値段を聞く・大事なこと（関西）｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro ieo lk-kn",
+  "txt": 722,
+  "screens": 2.9,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "家を​売る​前に",
+   "街の​相場を​見る",
+   "値段を​聞く​（無料）",
+   "大事な​ことを​知っておく",
+   "よく​ある​質問",
+   "あわせて​見る"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/ikura",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "お家はいくらで売れる？｜関西183の市区の実際に売れた値段から30秒で目安｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro ieo lk-kn",
+  "txt": 1210,
+  "screens": 1.8,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "お家は​いくらで​売れる？",
+   "あわせて​見る"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/sagasu",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "家を買いたい｜その予算で、どの街に住める？関西205の街【2026年】｜TOWN NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e tk-sd v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1",
+  "txt": 1481,
+  "screens": 3.7,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "その​予算で、​どの​街に​住める？"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/jikka",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関西の実家・空き家ノート｜200の街の売れた相場と、売る・片付け・解体の順番",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 1657,
+  "screens": 6,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "実家・​空き家ノート関西 200の​街"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/kaitai",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "解体・片付けの費用の目安｜30秒で計算・関西の無料見積り相談",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 2075,
+  "screens": 5.9,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "解体・片付けの​費用30秒で​目安が​わかります",
+   "30秒で​目安を​出す",
+   "解体の​費用の​目安",
+   "別に​かかる​事が​ある​物",
+   "解体の​補助が​ある​市",
+   "片付け・遺品整理の​費用の​目安",
+   "解体までの​順番",
+   "よく​ある​質問"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/kaitai-ranking",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "解体の補助金 上限ランキング 関西30市｜1位は泉佐野市の130万円【2026年度】",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e tk-sd v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1",
+  "txt": 3182,
+  "screens": 9.9,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "解体の​補助金 上限ランキング関西の​市ごとに、​い",
+   "解体の​補助金 上限ランキング​（関西 30市）",
+   "30秒で​目安を​出す",
+   "解体の​費用の​目安",
+   "別に​かかる​事が​ある​物",
+   "解体の​補助が​ある​市",
+   "片付け・遺品整理の​費用の​目安",
+   "解体までの​順番",
+   "よく​ある​質問"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/akiya-ranking",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関西 空き家の割合ランキング｜181の市区町村（2023年 住宅・土地統計調査）",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 4588,
+  "screens": 15,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関​西 ​空き家の​割合ランキング2023年 住宅・",
+   "関西ぜんぶの​空き家の​割合",
+   "よく​ある​質問"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/nesage",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "本当に安い？｜セールの値段を11月1日からの記録でたしかめる（楽天の日用品）｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 2301,
+  "screens": 4.2,
+  "over": 0,
+  "cards": 0,
+  "imgs": 23,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "本当に​安い？",
+   "本当に​安い16品",
+   "安く​見えて、​11/1と​同じくらい1品",
+   "いつもより​高い5品",
+   "水",
+   "炭酸水",
+   "お米",
+   "トイレットペーパー",
+   "ティッシュ",
+   "洗濯洗剤",
+   "柔軟剤",
+   "食器用洗剤",
+   "おむつ",
+   "おしり​ふき",
+   "コーヒー",
+   "プロテイン"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/furusato",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "ふるさと納税 寄付1万円でもらえる量くらべ（お米・トイレットペーパー・水）｜TOWN NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 1120,
+  "screens": 2.4,
+  "over": 0,
+  "cards": 0,
+  "imgs": 7,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "ふるさと​納税 1万円で​もらえる​量",
+   "くらべ方"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "TOWN NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/moushikomi",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "売却・査定のお申し込み｜TOWN NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 337,
+  "screens": 1.4,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "売却・査定の​お申し込み"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/koe",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "リクエスト・感想を送る｜TOWN NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 396,
+  "screens": 1.4,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "リクエスト・感想"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/privacy",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "プライバシーポリシーと広告について｜TOWN NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 1493,
+  "screens": 3,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "プライバシーポリシーと​広告に​ついて",
+   "広告​（アフィリエイト）に​ついて",
+   "アクセスの​集計に​ついて",
+   "リクエスト・感想に​ついて",
+   "不動産の​ご相談に​ついて",
+   "「いまから​行ける」の​位置情報に​ついて",
+   "の​せている​情報に​ついて",
+   "お問い​合わせ"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/otoku",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "お得まとめ（セール・ふるさと納税・宿）｜くらべたおかいものリスト｜TOWN NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 409,
+  "screens": 1.5,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "お得まとめ",
+   "うさぎに​聞く探したい​物を​入れると、​合う​ペー",
+   "入口",
+   "買う​日の​予定楽天"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/chika-osaka",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "大阪市24区 地価ランキング2026｜住宅地・商業地の上がり幅（令和8年地価公示）",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 1271,
+  "screens": 4.1,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "大阪市24区 地価ランキング2026 住宅地・商業地",
+   "住宅地の​上がり幅",
+   "よく​ある​質問"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/gyosha",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "業者さま・士業の先生方へ｜関西の動かしにくい不動産のご相談｜TOWN NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 920,
+  "screens": 3.7,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "業者さま・士業の​先生方​へ",
+   "困りごとから​選ぶ",
+   "ご紹介くださる​方​への​お約束",
+   "士業の​先生方​へ",
+   "ご相談の​進め方",
+   "概要を​送る"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/kaimawari",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "楽天ブラックフライデー2026はいつ？11/19(木)20:00〜11/25(水)1:59｜回り方と買いまわり1,000円ぽっきり（送料込み",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e tk-sd v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1",
+  "txt": 4394,
+  "screens": 11.1,
+  "over": 0,
+  "cards": 42,
+  "imgs": 22,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "買いまわりの​1,000円ぽっきり楽天ブラックフライ",
+   "楽天ブラックフライデーの​回り方",
+   "10店で​10倍に​する​例",
+   "よく​ある​質問",
+   "ポイントの​計算",
+   "日用品6件",
+   "食品6件",
+   "水・​飲み物6件",
+   "キッチン6件",
+   "美容・​コスメ6件",
+   "ベビー・キッズ6件",
+   "ペット6件"
+  ],
+  "bar": [],
+  "menu": [
+   "値下がりした物",
+   "1個あたりでくらべる（最安とおす",
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "くらべたおかいものリストを見",
+   "値下がりした物",
+   "1個あたりでくらべる（最安と",
+   "ODEKAKE関西おでかけリ",
+   "REAL ESTATE関西不",
+   "Instagram@fudo",
+   "Threads@fudous",
+   "X@fudosan_ai_s"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/jikka/shindan",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "実家・空き家の3問診断｜TOWN NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e iro ieo lk-kn lk-e1 lk-h4 lk-s1 v2bar-on tk-sd",
+  "txt": 210,
+  "screens": 1,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "実家・​空き家の​3問診断",
+   "お家は、​どの​街に​ありますか"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/jikka/osaka-01",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "大阪市都島区の実家・空き家｜空き家率17.0%・売る・片付け・解体の前に（売れた相場と順番）",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 1954,
+  "screens": 4.6,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "大阪市都島区の​実家・​空き家ノート売る​・片付ける",
+   "この​街で、​2025年度​（2025年4月〜202",
+   "迷ったら、​この​順で",
+   "大阪市都島区の​空き家と、​くらす​人",
+   "大阪市の​補助・​空き家バンク",
+   "次に​できる​こと",
+   "近くの​街の​実家・​空き家ノート"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/o/c39910a5",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "万博記念公園 紅葉まつり 2026｜時間・料金・日程・場所（大阪府吹田市）｜TOWN NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 1046,
+  "screens": 4.4,
+  "over": 0,
+  "cards": 0,
+  "imgs": 2,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "万博記念公園 紅葉まつり2026 日程・場所",
+   "近くの​宿",
+   "大阪の​ほかの​おで​かけ"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/o/5c8f6968",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "吉野山 紅葉ライトアップ 2026｜時間・駐車場・日程・場所（奈良県吉野町）｜TOWN NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 907,
+  "screens": 4.4,
+  "over": 0,
+  "cards": 0,
+  "imgs": 2,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "吉野山 紅葉ライトアップ2026 日程・場所",
+   "近くの​宿",
+   "奈良の​ほかの​おで​かけ"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/machi/osaka-01",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "大阪市都島区の地価・土地相場 2026｜住宅地は+8.5%｜家を売る前・買う前に",
+  "cls": "sk lk-t1 lk lk-f lk-a lk-d lk-e iro ieo lk-kn lk-e1 lk-h4 lk-s1",
+  "txt": 1579,
+  "screens": 4.3,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "大阪市都島区",
+   "大阪市都島区で​売り出し中の​家",
+   "近くの​街とくらべる",
+   "実家・​空き家・解体",
+   "くらしの​数字",
+   "よく​ある​質問",
+   "出典"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/machi/osaka-02",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "大阪市東成区の地価・土地相場 2026｜住宅地は+8.4%｜家を売る前・買う前に",
+  "cls": "sk lk-t1 lk lk-f lk-a lk-d lk-e iro ieo lk-kn lk-e1 lk-h4 lk-s1",
+  "txt": 1579,
+  "screens": 4.3,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "大阪市東成区",
+   "大阪市東成区で​売り出し中の​家",
+   "近くの​街とくらべる",
+   "実家・​空き家・解体",
+   "くらしの​数字",
+   "よく​ある​質問",
+   "出典"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/kaiten/20261228-20ba08",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "【12/28開店】ゴンチャ｜大阪府門真市の新しいお店（いつ・場所・時間）",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 1387,
+  "screens": 3.2,
+  "over": 0,
+  "cards": 1,
+  "imgs": 4,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "ゴンチャ",
+   "大阪の​ほかの​新しい​お店",
+   "飯汁魚で​お腹いっぱいの​幸せ",
+   "OSAKA WHEEL(オオサカホイール)",
+   "リカーマウンテン なんば​店",
+   "もりもり寿し",
+   "テレ東本舗。​with テレビ大阪"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/kaiten/20261223-19242f",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "【12/23開店】飯汁魚でお腹いっぱいの幸せ｜大阪府八尾市の新しいお店（いつ・場所・時間）",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e tk-sd v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1",
+  "txt": 1359,
+  "screens": 2.7,
+  "over": 0,
+  "cards": 1,
+  "imgs": 4,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "飯汁魚で​お腹いっぱいの​幸せ",
+   "大阪の​ほかの​新しい​お店",
+   "ゴンチャ",
+   "OSAKA WHEEL(オオサカホイール)",
+   "リカーマウンテン なんば​店",
+   "もりもり寿し",
+   "テレ東本舗。​with テレビ大阪"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/kaitai-neyagawa",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "寝屋川市の解体の補助金 2026年度｜上限50万円・条件と受付の状況、費用の目安",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 2911,
+  "screens": 8.6,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "寝屋川市の​解体の​補助金いくら出るか・条件・受付の",
+   "寝屋川市の​解体の​補助",
+   "ほかの​制度",
+   "補助が​出た​時の​目安",
+   "30秒で​目安を​出す",
+   "補助を​使う​時の​順番",
+   "解体の​費用の​目安",
+   "別に​かかる​事が​ある​物",
+   "片付け・遺品整理の​費用の​目安",
+   "解体までの​順番",
+   "ほかの​市の​補助",
+   "よく​ある​質問"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "k",
+  "u": "/kaitai-daito",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "大東市の解体の補助金 2026年度｜上限80万円・条件と受付の状況、費用の目安",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 2867,
+  "screens": 8.3,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "大東市の​解体の​補助金いくら出るか・条件・受付の​",
+   "大東市の​解体の​補助",
+   "補助が​出た​時の​目安",
+   "30秒で​目安を​出す",
+   "補助を​使う​時の​順番",
+   "解体の​費用の​目安",
+   "別に​かかる​事が​ある​物",
+   "片付け・遺品整理の​費用の​目安",
+   "解体までの​順番",
+   "ほかの​市の​補助",
+   "よく​ある​質問"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "LIFE NOTE（ライフノート）｜関東のおでかけと、家と土地の値段",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn lk-ks",
+  "txt": 403,
+  "screens": 1.8,
+  "over": 0,
+  "cards": 0,
+  "imgs": 6,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関東のおでかけと家の値段｜LIFE NOTE",
+   "おで​かけ",
+   "家と​土地",
+   "おかい​もの",
+   "この​サイト",
+   "LIFE NOTE"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "関東のおでかけ",
+   "イルミネーション",
+   "紅葉",
+   "いまから行ける",
+   "泊まりで行く",
+   "初詣",
+   "家と土地の相場",
+   "地価ランキング",
+   "まちランキング",
+   "家を売る前に",
+   "いくらで売れる？",
+   "家を買いたい",
+   "実家・空き家ノート",
+   "3問でわかる実家の診断",
+   "解体・片付けの費用",
+   "解体の補助金",
+   "空き家が多い街",
+   "日用品の値段くらべ",
+   "値下がりした物",
+   "ふるさと納税"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/odekake",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関東おでかけリスト【2026年11月】｜開催中・今週末のイベント（東京・神奈川・埼玉・千葉・茨城・栃木・群馬）｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 1155,
+  "screens": 5.3,
+  "over": 0,
+  "cards": 24,
+  "imgs": 33,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関東の​おで​かけ・イベント",
+   "関東 155件"
+  ],
+  "bar": [
+   "関東",
+   "東京",
+   "神奈川",
+   "埼玉",
+   "千葉",
+   "茨城",
+   "栃木",
+   "群馬",
+   "すべて",
+   "今週末"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/fudosan-list",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関東の家と土地の相場｜329の街の地価と人口｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro ieo lk-kn ie2",
+  "txt": 1079,
+  "screens": 5.1,
+  "over": 0,
+  "cards": 30,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関東の​家と​土地",
+   "何を​しますか？",
+   "街の​値段と​地価",
+   "関東 329の​街"
+  ],
+  "bar": [
+   "関東",
+   "東京",
+   "神奈川",
+   "埼玉",
+   "千葉",
+   "茨城",
+   "栃木",
+   "群馬"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/okaimono",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "日用品の値段くらべ（楽天・Yahoo!・Amazon）｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 1017,
+  "screens": 3.6,
+  "over": 0,
+  "cards": 21,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "日用品の​値段くらべ",
+   "すべて​ 21種類"
+  ],
+  "bar": [
+   "すべて",
+   "赤ちゃん",
+   "紙・日用品",
+   "洗濯・お風呂",
+   "飲み物・食べ物",
+   "ペット"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/kaiten",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関東の開店・閉店ニュース｜新しいお店・閉まるお店を公式の発表で｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 1921,
+  "screens": 4.9,
+  "over": 0,
+  "cards": 24,
+  "imgs": 6,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関東の​開店・閉店",
+   "関東・​これから​ 74件"
+  ],
+  "bar": [
+   "これから 74",
+   "開いた 89",
+   "閉まる 2",
+   "関東",
+   "東京",
+   "神奈川",
+   "埼玉",
+   "千葉",
+   "茨城",
+   "栃木"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/illumination",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関東イルミネーション2026-2027｜開催中・無料・今週末（東京・神奈川・埼玉・千葉・茨城・栃木・群馬）｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 949,
+  "screens": 5.2,
+  "over": 0,
+  "cards": 24,
+  "imgs": 34,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関東の​イルミネーション",
+   "関東 85件"
+  ],
+  "bar": [
+   "関東",
+   "東京",
+   "神奈川",
+   "埼玉",
+   "千葉",
+   "茨城",
+   "栃木",
+   "群馬",
+   "すべて",
+   "今週末"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/koyo",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関東の紅葉2026｜見頃とライトアップ（東京・神奈川・埼玉・千葉・茨城・栃木・群馬）｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 820,
+  "screens": 5.2,
+  "over": 0,
+  "cards": 24,
+  "imgs": 34,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関東の​紅葉",
+   "関東 35件"
+  ],
+  "bar": [
+   "関東",
+   "東京",
+   "神奈川",
+   "埼玉",
+   "千葉",
+   "茨城",
+   "栃木",
+   "群馬",
+   "すべて",
+   "今週末"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/ima",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "いまから行ける関東のおでかけ｜近い順・きょう開いている所｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 1207,
+  "screens": 5.7,
+  "over": 0,
+  "cards": 24,
+  "imgs": 17,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "いまから​行ける​おで​かけ",
+   "関東・1時間で​行ける​ 81か​所"
+  ],
+  "bar": [
+   "30分",
+   "1時間",
+   "1時間半",
+   "すべて"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/tomari",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "泊まりで行く関東のおでかけ｜近くの評価の高い宿つき｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 1146,
+  "screens": 5.4,
+  "over": 0,
+  "cards": 24,
+  "imgs": 24,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "泊まりで​行く​おで​かけ",
+   "関東・​宿つき 127か​所"
+  ],
+  "bar": [
+   "関東",
+   "東京",
+   "神奈川",
+   "埼玉",
+   "千葉",
+   "茨城",
+   "栃木",
+   "群馬",
+   "すべて",
+   "アート・展示"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/hatsumode",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関東の初詣2027｜大晦日・三が日の時間と交通規制（10か所）｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 668,
+  "screens": 2.8,
+  "over": 0,
+  "cards": 10,
+  "imgs": 7,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関東の​初詣",
+   "関東・初詣 10か​所"
+  ],
+  "bar": [
+   "関東",
+   "東京",
+   "神奈川",
+   "埼玉",
+   "千葉",
+   "茨城",
+   "栃木"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/chika-kanto",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関東 地価ランキング2026｜329の市区町村の住宅地（令和8年地価公示）",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 2211,
+  "screens": 4.8,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関東 地価ランキング2026 住宅地の​1年の​動き",
+   "関東ぜんぶの​住宅地",
+   "よく​ある​質問"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/ranking",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関東まちランキング｜地価・人口の順位を公式の数字で（17本）｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro ieo lk-kn",
+  "txt": 1086,
+  "screens": 3.1,
+  "over": 0,
+  "cards": 17,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関東まちランキング",
+   "関東・ぜんぶ 17本"
+  ],
+  "bar": [
+   "関東",
+   "東京",
+   "神奈川",
+   "埼玉",
+   "千葉",
+   "茨城",
+   "栃木",
+   "群馬",
+   "すべて",
+   "家と土地"
+  ],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/uru",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "家を売る前に｜相場を見る・値段を聞く・大事なこと（関東）｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro ieo lk-kn",
+  "txt": 751,
+  "screens": 3,
+  "over": 0,
+  "cards": 0,
+  "imgs": 2,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "家を​売る​前に",
+   "街の​相場を​見る",
+   "値段を​聞く​（無料）",
+   "大事な​ことを​知っておく",
+   "よく​ある​質問",
+   "あわせて​見る"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/ikura",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "お家はいくらで売れる？｜関東の市区町村の地価公示から30秒で目安｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro ieo lk-kn",
+  "txt": 2087,
+  "screens": 1.9,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "お家は​いくらで​売れる？",
+   "あわせて​見る"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/sagasu",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "家を買いたい｜その予算で、どの街に住める？関東329の街【2026年】｜LIFE NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e tk-sd v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1",
+  "txt": 1590,
+  "screens": 3.6,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "その​予算で、​どの​街に​住める？"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/jikka",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関東の実家・空き家ノート｜329の街の地価と、売る・片付け・解体の順番",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 1154,
+  "screens": 4.9,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "実家・​空き家ノート関東 329の​街"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/kaitai",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "解体・片付けの費用の目安｜30秒で計算・関東の無料見積り相談",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 2021,
+  "screens": 5.6,
+  "over": 0,
+  "cards": 0,
+  "imgs": 2,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "解体・片付けの​費用30秒で​目安が​わかります",
+   "30秒で​目安を​出す",
+   "解体の​費用の​目安",
+   "別に​かかる​事が​ある​物",
+   "解体の​補助が​ある​市区",
+   "片付け・遺品整理の​費用の​目安",
+   "解体までの​順番",
+   "よく​ある​質問"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/kaitai-ranking",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "解体の補助金 上限ランキング 関東37市区｜1位は中野区の最大400万円【2026年度】",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 3099,
+  "screens": 9.4,
+  "over": 0,
+  "cards": 0,
+  "imgs": 2,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "解体の​補助金 上限ランキング関東の​市区ごとに、​",
+   "解体の​補助金 上限ランキング​（関東 37市区）",
+   "30秒で​目安を​出す",
+   "解体の​費用の​目安",
+   "別に​かかる​事が​ある​物",
+   "解体の​補助が​ある​市区",
+   "片付け・遺品整理の​費用の​目安",
+   "解体までの​順番",
+   "よく​ある​質問"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/akiya-ranking",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "関東 空き家の割合ランキング｜289の市区町村（2023年 住宅・土地統計調査）",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 6995,
+  "screens": 22.8,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "関​東 ​空き家の​割合ランキング2023年 住宅・",
+   "関東ぜんぶの​空き家の​割合",
+   "よく​ある​質問"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/nesage",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "本当に安い？｜セールの値段を11月1日からの記録でたしかめる（楽天の日用品）｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 2301,
+  "screens": 4.2,
+  "over": 0,
+  "cards": 0,
+  "imgs": 23,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "本当に​安い？",
+   "本当に​安い16品",
+   "安く​見えて、​11/1と​同じくらい1品",
+   "いつもより​高い5品",
+   "水",
+   "炭酸水",
+   "お米",
+   "トイレットペーパー",
+   "ティッシュ",
+   "洗濯洗剤",
+   "柔軟剤",
+   "食器用洗剤",
+   "おむつ",
+   "おしり​ふき",
+   "コーヒー",
+   "プロテイン"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/furusato",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "ふるさと納税 寄付1万円でもらえる量くらべ（お米・トイレットペーパー・水）｜LIFE NOTE",
+  "cls": "lk-t1 lk lk-f lk-a lk-d lk-e lk-e1 lk-h4 lk-s1 iro lk-kn",
+  "txt": 1120,
+  "screens": 2.4,
+  "over": 0,
+  "cards": 0,
+  "imgs": 7,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "ふるさと​納税 1万円で​もらえる​量",
+   "くらべ方"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "LIFE NOTE トップ",
+   "プライバシー"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/moushikomi",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "売却・査定のお申し込み｜LIFE NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 333,
+  "screens": 1.3,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "売却・査定の​お申し込み"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/koe",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "リクエスト・感想を送る｜LIFE NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 397,
+  "screens": 1.4,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "リクエスト・感想"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/privacy",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "プライバシーポリシーと広告について｜LIFE NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 1520,
+  "screens": 3.1,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "プライバシーポリシーと​広告に​ついて",
+   "広告​（アフィリエイト）に​ついて",
+   "アクセスの​集計に​ついて",
+   "リクエスト・感想に​ついて",
+   "不動産の​ご相談に​ついて",
+   "「いまから​行ける」の​位置情報に​ついて",
+   "の​せている​情報に​ついて",
+   "お問い​合わせ"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/otoku",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "お得まとめ（セール・ふるさと納税・宿）｜くらべたおかいものリスト｜LIFE NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 409,
+  "screens": 1.5,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "お得まとめ",
+   "うさぎに​聞く探したい​物を​入れると、​合う​ペー",
+   "入口",
+   "買う​日の​予定楽天"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/kaimawari",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "楽天ブラックフライデー2026はいつ？11/19(木)20:00〜11/25(水)1:59｜回り方と買いまわり1,000円ぽっきり（送料込み",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e tk-sd v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1",
+  "txt": 4394,
+  "screens": 11.1,
+  "over": 0,
+  "cards": 42,
+  "imgs": 22,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "買いまわりの​1,000円ぽっきり楽天ブラックフライ",
+   "楽天ブラックフライデーの​回り方",
+   "10店で​10倍に​する​例",
+   "よく​ある​質問",
+   "ポイントの​計算",
+   "日用品6件",
+   "食品6件",
+   "水・​飲み物6件",
+   "キッチン6件",
+   "美容・​コスメ6件",
+   "ベビー・キッズ6件",
+   "ペット6件"
+  ],
+  "bar": [],
+  "menu": [
+   "値下がりした物",
+   "1個あたりでくらべる（最安とおす",
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [
+   "くらべたおかいものリストを見",
+   "値下がりした物",
+   "1個あたりでくらべる（最安と",
+   "ODEKAKE関東おでかけリ",
+   "REAL ESTATE関東不",
+   "Instagram@usag",
+   "Threads@usagic",
+   "X@ai_usagichan"
+  ],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/jikka/shindan",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "実家・空き家の3問診断｜LIFE NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e iro ieo lk-kn lk-e1 lk-h4 lk-s1 v2bar-on tk-sd",
+  "txt": 237,
+  "screens": 1.1,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "実家・​空き家の​3問診断",
+   "お家は、​どの​街に​ありますか"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/jikka/tokyo-01",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "千代田区の実家・空き家｜空き家率12.6%・売る・片付け・解体の前に（地価と順番）",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 1676,
+  "screens": 4.2,
+  "over": 0,
+  "cards": 0,
+  "imgs": 3,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "千代田区の​実家・​空き家ノート売る​・片付ける​・",
+   "この​街の​土地の​値段",
+   "迷ったら、​この​順で",
+   "千代田区の​空き家と、​くらす​人",
+   "次に​できる​こと",
+   "近くの​街の​実家・​空き家ノート"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/o/fe3e8b4a",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "長瀞紅葉まつり2026｜時間・料金・日程・場所（埼玉県）｜LIFE NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 876,
+  "screens": 3.8,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "長瀞紅葉まつり2026日程・場所",
+   "近くの​宿",
+   "埼玉の​ほかの​おで​かけ"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/o/ca7adba3",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "塩原温泉 紅葉ライトアップ 2026｜時間・日程・場所・アクセス（栃木県）｜LIFE NOTE",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 879,
+  "screens": 3.9,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "塩原温泉 紅葉ライトアップ2026 日程・場所",
+   "近くの​宿",
+   "栃木の​ほかの​おで​かけ"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/machi/tokyo-01",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "千代田区の地価・土地相場 2026｜住宅地は+10.7%｜家を売る前・買う前に",
+  "cls": "sk lk-t1 lk lk-f lk-a lk-d lk-e iro ieo lk-kn lk-e1 lk-h4 lk-s1",
+  "txt": 1392,
+  "screens": 4.1,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "千代田区",
+   "千代田区で​売り出し中の​家",
+   "近くの​街とくらべる",
+   "実家・​空き家・解体",
+   "くらしの​数字",
+   "よく​ある​質問",
+   "出典"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/machi/tokyo-02",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "中央区の地価・土地相場 2026｜住宅地は+13.8%｜家を売る前・買う前に",
+  "cls": "sk lk-t1 lk lk-f lk-a lk-d lk-e iro ieo lk-kn lk-e1 lk-h4 lk-s1",
+  "txt": 1385,
+  "screens": 4.1,
+  "over": 0,
+  "cards": 0,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "中央区",
+   "中央区で​売り出し中の​家",
+   "近くの​街とくらべる",
+   "実家・​空き家・解体",
+   "くらしの​数字",
+   "よく​ある​質問",
+   "出典"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/kaiten/20270301-f24ae4",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "【2027年3月開店】れんげ食堂Toshu 西浦和駅前店｜埼玉県さいたま市の新しいお店（いつ・場所・時間）",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 1084,
+  "screens": 3.6,
+  "over": 0,
+  "cards": 1,
+  "imgs": 1,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "れんげ食堂Toshu 西浦和駅前店",
+   "埼玉の​ほかの​新しい​お店",
+   "東武ストア 春日部​店",
+   "魚串焼",
+   "寿司酒場コレチカ 西浦和店",
+   "どうぶつ​温泉 2026-2027",
+   "ワッツウィズ 狭山中央ビッグ・エー店"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/kaiten/20270301-998b3b",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "【2027/3/1開店】THE NEXTT HOTEL｜東京都立川市の新しいお店（いつ・場所・時間）",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 1450,
+  "screens": 4.2,
+  "over": 0,
+  "cards": 1,
+  "imgs": 2,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "THE NEXTT HOTEL",
+   "東京の​ほかの​新しい​お店",
+   "60%​（シックスティーパーセント）",
+   "TKP虎ノ門ダイビルイーストカンファレンスセンター",
+   "Alpen TOKYO",
+   "＆found",
+   "プロント珈琲庭園"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/kaitai-yokohama",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "横浜市の解体の補助金 2026年度｜最大50万円・条件と受付の状況、費用の目安",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 2773,
+  "screens": 8,
+  "over": 0,
+  "cards": 0,
+  "imgs": 2,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "横浜市の​解体の​補助金いくら出るか・条件・受付の​",
+   "横浜市の​解体の​補助",
+   "30秒で​目安を​出す",
+   "補助を​使う​時の​順番",
+   "解体の​費用の​目安",
+   "別に​かかる​事が​ある​物",
+   "片付け・遺品整理の​費用の​目安",
+   "解体までの​順番",
+   "ほかの​市区の​補助",
+   "よく​ある​質問"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ },
+ {
+  "r": "t",
+  "u": "/kaitai-kawasaki",
+  "st": 200,
+  "er": [],
+  "bad": [],
+  "title": "川崎市の解体の補助金 2026年度｜最大100万円・条件と受付の状況、費用の目安",
+  "cls": "tk tk2 sk lk-t1 lk lk-f lk-a lk-d lk-e v2bar-on iro ieo lk-kn lk-e1 lk-h4 lk-s1 tk-sd",
+  "txt": 2608,
+  "screens": 7.8,
+  "over": 0,
+  "cards": 0,
+  "imgs": 2,
+  "broken": 0,
+  "look": "v=36",
+  "h": [
+   "川崎市の​解体の​補助金いくら出るか・条件・受付の​",
+   "川崎市の​解体の​補助",
+   "30秒で​目安を​出す",
+   "補助を​使う​時の​順番",
+   "解体の​費用の​目安",
+   "別に​かかる​事が​ある​物",
+   "片付け・遺品整理の​費用の​目安",
+   "解体までの​順番",
+   "ほかの​市区の​補助",
+   "よく​ある​質問"
+  ],
+  "bar": [],
+  "menu": [
+   "トップへ",
+   "Instagram",
+   "Threads",
+   "X"
+  ],
+  "foot": [],
+  "sdc": false
+ }
+]
