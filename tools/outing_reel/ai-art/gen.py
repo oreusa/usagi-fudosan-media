@@ -6,11 +6,26 @@ from gradio_client import Client
 req = json.load(open(sys.argv[1])); out = sys.argv[2]; os.makedirs(out, exist_ok=True)
 style = req['style']; log = []
 TOK = (os.environ.get('HF_TOKEN') or '').strip() or None
-c = Client(req.get('space', 'black-forest-labs/FLUX.1-schnell'), token=TOK)   # 鍵が無いと1回3枚まで
+PROV = req.get('provider', 'hf')
+c = Client(req.get('space', 'black-forest-labs/FLUX.1-schnell'), token=TOK) if PROV == 'hf' else None   # 鍵が無いと1回3枚まで
+
+def poll(prompt, seed, w, h, model):
+    # pollinations.ai（鍵なし・無料）。https://image.pollinations.ai/prompt/<文>?width=&height=&seed=&model=&nologo=true
+    import urllib.parse, urllib.request
+    u = 'https://image.pollinations.ai/prompt/' + urllib.parse.quote(prompt) + '?' + urllib.parse.urlencode(dict(width=w, height=h, seed=seed, model=model, nologo='true', enhance='false'))
+    with urllib.request.urlopen(urllib.request.Request(u, headers={'User-Agent': 'Mozilla/5.0'}), timeout=240) as r:
+        return r.read(), r.headers.get('Content-Type', '')
 for it in req['items']:
     for s in it.get('seeds', [1, 2, 3]):
         p = f"{it['prompt']}. {style}"; f = f"{out}/{it['name']}-{s}.webp"
         for k in range(3):
+            if PROV == 'pollinations':
+                try:
+                    b, ct = poll(p, s, it.get('w', 768), it.get('h', 1152), req.get('model', 'flux'))
+                    if not ct.startswith('image'): raise Exception(f'{ct} {b[:200]!r}')
+                    f = f"{out}/{it['name']}-{s}.jpg"; open(f, 'wb').write(b); log.append(f'{f} OK（pollinations {len(b)}）'); break
+                except Exception as e:
+                    log.append(f'{f} pollinations 失敗{k} {str(e)[:200]}'); time.sleep(15); continue
             try:
                 kw = dict(prompt=p, seed=s, randomize_seed=False, width=it.get('w', 768), height=it.get('h', 1152), num_inference_steps=it.get('steps', req.get('steps', 4)), api_name='/infer')
                 if 'guidance' in req: kw['guidance_scale'] = req['guidance']
