@@ -1,0 +1,31 @@
+name: kurabe
+# 関西と関東の HP を全ページ並べて見比べる（結果は shots/kurabe/<name>/。手で動かす時だけ）
+on:
+  workflow_dispatch:
+    inputs:
+      name: {description: "保存するフォルダ名", required: true, default: "all"}
+permissions:
+  contents: write
+concurrency:
+  group: kurabe
+  cancel-in-progress: false
+jobs:
+  shot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm i --no-save playwright@1.49.1 && (timeout 150 npx playwright install --with-deps chromium || npx playwright install chromium)
+      - env:
+          SHOT_NAME: ${{ inputs.name }}
+        run: |
+          case "$SHOT_NAME" in *[!A-Za-z0-9_-]*|"") echo "bad name"; exit 1;; esac
+          rm -rf "shots/kurabe/$SHOT_NAME"
+          node tools/kurabe/kurabe.js "shots/kurabe/$SHOT_NAME"
+      - env:
+          SHOT_NAME: ${{ inputs.name }}
+        run: |
+          git config user.name "page-shot bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add shots/kurabe
+          git diff --cached --quiet || (git commit -q -m "[CF-Pages-Skip] kurabe: $SHOT_NAME" && for i in 1 2 3 4 5; do git pull --rebase --autostash -q && git push -q && break; sleep $((i*5)); done)
