@@ -7,7 +7,7 @@ const E={soft:t=>.5-.5*Math.cos(Math.PI*t)*1, io:t=>t<.5?4*t*t*t:1-Math.pow(-2*t
 const tmp=outmp4+'.d';fs.rmSync(tmp,{recursive:true,force:true});fs.mkdirSync(tmp,{recursive:true});const parts=[];
 for(const [k,s] of shots.entries()){await p.evaluate(([k,a,d])=>setPair(k,a,d),['s'+k,'file://'+s.img,'file://'+s.dep]);const m=s.m;const N=Math.round(s.dur*30);const es=E[s.ease||'o2'];const dir=`${tmp}/c${k}`;fs.mkdirSync(dir);
  for(let i=0;i<N;i++){const q=es(i/(N-1));const L=(a,b)=>(a||0)+((b||0)-(a||0))*q;
-  await p.evaluate(f=>frame(f),{z:L(m.z0,m.z1),cx:m.cx??.5,cy:m.cy??.45,px:L(m.px0,m.px1),py:L(m.py0,m.py1),base:L(m.b0??1.06,m.b1??1.06),rot:L(m.r0,m.r1),tm:(i/30)+k*3,mist:m.mist||0,ray:m.ray||0,rx:m.rx,ry:m.ry});
+  await p.evaluate(f=>frame(f),{z:L(m.z0,m.z1),cx:m.cx??.5,cy:m.cy??.45,px:L(m.px0,m.px1),py:L(m.py0,m.py1),base:L(m.b0??1.06,m.b1??1.06),rot:L(m.r0,m.r1),tm:(i/30)+k*3,mist:m.mist||0,ray:m.ray||0,wind:m.wind,rx:m.rx,ry:m.ry});
   const u=await p.evaluate(()=>document.getElementById('g').toDataURL('image/jpeg',.95));fs.writeFileSync(`${dir}/f${String(i).padStart(4,'0')}.jpg`,Buffer.from(u.split(',')[1],'base64'))}
  execSync(`ffmpeg -y -loglevel error -framerate 30 -i ${dir}/f%04d.jpg -c:v libx264 -crf 14 -pix_fmt yuv420p ${tmp}/c${k}.mp4`);parts.push({f:`${tmp}/c${k}.mp4`,dur:s.dur,tr:s.tr||'fade'})}
 await b.close();

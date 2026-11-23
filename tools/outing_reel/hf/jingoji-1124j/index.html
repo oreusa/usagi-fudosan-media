@@ -80,6 +80,10 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
 .cap .lb{display:block;font-family:G;font-size:22px;letter-spacing:.42em;color:#F6D9A2;margin-bottom:22px;text-shadow:0 1px 10px rgba(0,0,0,.5)}
 .cap .ul{display:block;height:3px;width:120px;margin:28px 0 20px}
 .cap small{font-family:G;font-size:30px;letter-spacing:.1em;color:rgba(255,255,255,.92)}
+
+/* 11/24 早朝：案内ページの後ろを、ぼかした景色がゆっくり進む映像に */
+.info:before{display:none}
+.info > video.ibg{position:absolute;left:-40px;top:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(14px) brightness(.58) saturate(1.15)}
 .info{background:#120c09;color:#fff;padding:64px 52px}
 .info:before{content:'';position:absolute;inset:-30px;background:url(a/L0.jpg) center/cover;filter:blur(18px) brightness(.62) saturate(1.15)}
 .info > *{position:relative}
@@ -104,7 +108,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
    <div id="h1">無料・登録なし<br>毎日更新<br><span>関西の府県ごとに<br>今やっている催し</span></div>
    <div id="endb"><div>プロフィールのリンクから</div></div>
   </div><div class="cast"></div><div class="gut"></div></div></div>
-  <div class="sc" id="s6" style="z-index:1"><div class="face"><div class="info"><h2>高雄・神護寺の紅葉</h2>
+  <div class="sc" id="s6" style="z-index:1"><div class="face"><div class="info"><video class="ibg" src="a/vvi.mp4" muted data-start="41.94" data-duration="16.14"></video><h2>高雄・神護寺の紅葉</h2>
    <div class="r"><b>色づき</b><span>今見頃<small>11/23の色づき（ライトアップはなし）</small></span></div><div class="r"><b>拝観</b><span>9時〜16時<small>拝観料 中学生以上1000円・小学生500円</small></span></div>
    <div class="r"><b>行き方</b><span>高雄バス停から徒歩20分<small>JR京都駅からJRバス約50分</small></span></div><div class="r"><b>混む時間</b><span>休日の10時〜14時<small>朝早くがおすすめ</small></span></div>
    <div class="r"><b>車</b><span>駐車場なし<small>11月の土日は府道138号に通行制限</small></span></div><p>保存して、紅葉のおでかけに。</p>
