@@ -146,7 +146,7 @@ def check_one(dr, d, tab, seen_heads):
     if want and want.get("x") and xs[0].strip():
         tags = re.findall(r"#\S+", xs[0])
         if len(tags) > 2:
-            bad.append(f"X のハッシュタグが {len(tags)} 個（2つまで：市の名前と駅の名前）")
+            bad.append(f"X のハッシュタグが {len(tags)} 個（2つまで：名前のタグ1つと場所1つ）")
     # 使わない言葉
     for t in th + xs:
         bad += ng_words(t)
