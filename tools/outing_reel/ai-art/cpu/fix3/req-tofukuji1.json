@@ -1,0 +1,32 @@
+{
+ "models": [
+  "@cf/black-forest-labs/flux-2-klein-4b"
+ ],
+ "style": "Photorealistic travel photograph, shot on a full-frame mirrorless camera, natural true-to-life colors, realistic soft light, high detail, vertical composition. No people, no text, no letters, no logos, no signs with writing",
+ "items": [
+  {
+   "name": "02-bridge",
+   "prompt": "A long wooden covered corridor bridge with a tiled roof spanning a deep ravine filled with red autumn maples, seen from the side from another bridge, Kyoto Zen temple",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "02-bridge-b",
+   "prompt": "A long wooden covered corridor bridge with a tiled roof spanning a deep ravine filled with red autumn maples, seen from the side from another bridge, Kyoto Zen temple",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "11-backlit",
+   "prompt": "Golden yellow maple leaves with three-pointed lobes on a branch, backlit by soft morning sun and glowing, red maples blurred behind, Kyoto temple ravine",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "11-backlit-b",
+   "prompt": "Golden yellow maple leaves with three-pointed lobes on a branch, backlit by soft morning sun and glowing, red maples blurred behind, Kyoto temple ravine",
+   "W": 1088,
+   "H": 1680
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "models": [
+  "@cf/black-forest-labs/flux-2-klein-4b"
+ ],
+ "style": "Photorealistic travel photograph, shot on a full-frame mirrorless camera, natural true-to-life colors, realistic soft light, high detail, vertical composition. No people, no text, no letters, no logos, no signs with writing",
+ "items": [
+  {
+   "name": "02-bridge-night",
+   "prompt": "A small wooden arched bridge in a Japanese garden at night, illuminated autumn maple leaves above, reflection in water",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "02-bridge-night-b",
+   "prompt": "A small wooden arched bridge in a Japanese garden at night, illuminated autumn maple leaves above, reflection in water",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "13-path-day",
+   "prompt": "A stone path through a Japanese stroll garden with red maples arching overhead, daytime, dappled light",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "13-path-day-b",
+   "prompt": "A stone path through a Japanese stroll garden with red maples arching overhead, daytime, dappled light",
+   "W": 1088,
+   "H": 1680
+  }
+ ]
+}
