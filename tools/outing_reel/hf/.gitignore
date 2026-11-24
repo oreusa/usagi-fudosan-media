@@ -1,0 +1,9 @@
+# 書き出しの途中の物（大きい動画・曲・道具の写し）は入れない
+*.mp4
+*.log
+bgm.m4a
+bgm.wav
+gsap.min.js
+.hyperframes/
+node_modules/
+*/a/
