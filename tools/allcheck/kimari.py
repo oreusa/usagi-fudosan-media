@@ -68,7 +68,7 @@ def main(day):
     nm_req = bool(re.search(r'id="nm"[^>]*required', mo))
     ng_hits = [os.path.relpath(f, ROOT) for f, t in html_texts("links/**/*.html")
                if "/shindan" not in f and re.search(r"名前なしでも|お名前は要りません|名前は要りません",
-                                                     re.sub(r'<a [^>]*href="/jikka/shindan[^"]*"[^>]*>.*?</a>', "", t, flags=re.S))]  # 3問診断は申し込みではない（名前の要らない診断）
+                                                     re.sub(r'<a [^>]*href=\\?"/(?:jikka/shindan|ikura)[^"\\]*\\?"[^>]*>.*?<\\?/a>', "", t, flags=re.S))]  # 3問診断・/ikura（目安の計算）は申し込みではない（名前の要らない道具）
     rule("申し込みの形", "名前のある相談だけを受ける", "申し込みは必ずお名前（名字だけでも）をもらう。名前なしの入口は作らない（11/12 オーナー）",
          nm_req and not ng_hits, ("お名前の欄が必須" if nm_req else "お名前の欄が必須でない") + (f"・名前なしの言葉 {len(ng_hits)}枚（{', '.join(ng_hits[:3])}）" if ng_hits else ""),
          "links/moushikomi.html の nm に required。言葉はページから外す")
