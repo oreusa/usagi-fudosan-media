@@ -13,7 +13,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    timeout-minutes: 120  # 11/24 ページが増えて昼夜あわせて75分を越え、最後の保存で止まった
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
