@@ -6,6 +6,7 @@ python3 tools/odekake_spot.py [YYYY-MM-DD]"""
 import re, json, html, sys, datetime, hashlib, os, glob
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import spot_map
+import kyukan as KY
 TODAY = sys.argv[1] if len(sys.argv) > 1 else datetime.date.today().isoformat()
 BASE = "https://kansai.townnote.app"
 FU = {"大阪": "大阪府", "京都": "京都府", "兵庫": "兵庫県", "奈良": "奈良県", "滋賀": "滋賀県", "和歌山": "和歌山県"}
@@ -90,7 +91,7 @@ for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', SRC, re.S):
     parts = txt(mm.group(1)).split("｜") if mm else [""]
     spots.append(dict(name=name, key=key, pref=a["data-pref"], st=st, en=en, url=a.get("href", ""), free="無料" in a.get("data-tag", ""), part="一部有料" in b,
                       city=(lambda c, r: r if len(r) > 1 else c)(parts[0].strip(), re.sub(r"^(大阪府|京都府|兵庫県|奈良県|滋賀県|和歌山県)", "", parts[0].strip())), place=re.split(r"[。、]", parts[-1].strip())[0] if len(parts) > 1 else "", dline=txt(dd.group(1)) if dd else "",
-                      map=a.get("data-map", ""), id=hashlib.md5(key.encode()).hexdigest()[:8],
+                      map=a.get("data-map", ""), dy=a.get("data-days", ""), cl=a.get("data-cl", ""), id=hashlib.md5(key.encode()).hexdigest()[:8],
                       kv={txt(k): txt(v) for k, v in re.findall(r'class="kv"><span>(.*?)</span>(.*?)</div>', b, re.S)}))
 
 d0 = datetime.date.fromisoformat(TODAY); upd = f"{d0.year}年{d0.month}月{d0.day}日"
@@ -119,6 +120,10 @@ for sp in spots:
         elif re.fullmatch(r"\d{4}-\d\d-\d\d", sp["en"]):
             left = (datetime.date.fromisoformat(sp["en"]) - d0).days
             stat = "きょうまで" if left == 0 else f"開催中・あと{left}日"
+            # 11/24 夜の見回り：祝日の翌日（振替）で休館の館が「開催中」だった → tools/kyukan.py の決まりで「きょうは休館」
+            _y0, _m0 = int(sp["st"][:4]), int(sp["st"][5:7])
+            _why = KY.shut(sp.get("dy"), sp.get("cl"), d0, KY.cl_from_text(sp.get("dline", ""), lambda mo: _y0 + (1 if mo < _m0 else 0)))
+            if _why: stat = {"休館日": "きょうは休館日", "休みの日": "きょうはお休み"}.get(_why, "きょうは" + _why) + (f"・あと{left}日" if left else "・きょうまで")
         else: stat = "開催中"
     kv = sp.get("kv", {})
     if not when and kv.get("見頃"): when = "見頃は" + kv["見頃"]
