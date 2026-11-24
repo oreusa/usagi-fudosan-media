@@ -10,7 +10,7 @@ permissions:
 jobs:
   draw:
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    timeout-minutes: 45
     strategy:
       fail-fast: false
       matrix:
