@@ -1,9 +1,11 @@
-# 不動産リストの新着の候補（2026-11-23・22ページを見た）
+# 不動産リストの新着の候補（2026-11-24・22ページを見た）
 
 月曜と木曜の 19:47 の回が、上から公式ページで確かめ、合う物を tools/fudosan_list/facts.json に足して make.py を回す。
 足した物・合わない物は stats/fudosan-watch.json の done に URL を入れる（次から出ない）。
 
-## 候補（39件）
+## 候補（41件）
+- 2026-11-24｜兵庫県｜[seido] 令和8年度自家消費型非住宅用太陽光発電設備導入補助事業｜https://web.pref.hyogo.lg.jp/nk19/taiyokohojojigyosya2026.html
+- 2026-11-24｜奈良県｜[seido] 奈良県と吉野町とのまちづくりに関する包括協定 締結式｜https://www.pref.nara.lg.jp/n151/p037010.html
 - 2026-11-22｜Osaka Metro ニュース｜[dekiru] 2026年度 第5回 大阪・まち・再発見 ぶらりウォーク"【開業20周年】今里筋線をぶらりあるき その2"を2026年12月5日（土曜日）に開催します｜https://subway.osakametro.co.jp/tourism/event/2026_12_burariwalk.php
 - 2026-11-21｜法務省（相続登記）｜[seido] 11月20日（金）令和８年度土地家屋調査士試験筆記試験（多肢択一式問題）の正解及び基準点等について｜https://www.moj.go.jp/MINJI/minji05_00804.html
 - 2026-11-21｜阪急阪神HD ニュース｜[dekiru] 2026.11.20 不動産 【リリース】 グラングリーン大阪「うめきたの森」本日開園、「ひらめきの道」全面開通 ～JR大阪駅前に“都市の森”が誕生。都心の新たな憩いの場が広がる～｜https://www.hankyu-hanshin.co.jp/release/2026/11/f1ef06bb42567258734f956151fce9b924cb17e5.pdf
