@@ -54,4 +54,4 @@ jobs:
           mkdir -p shots/ai-art; for d in dl/art-*; do [ -d "$d" ] && cp -r "$d"/* shots/ai-art/ ; done; ls -R shots/ai-art | tail -60
           git config user.name "art bot"; git config user.email "actions@users.noreply.github.com"
           git add shots/ai-art; git diff --cached --quiet || git commit -m "[CF-Pages-Skip] ai-art-cpu: CPU で描いた絵"
-          for i in 1 2 3 4 5 6; do git pull --rebase --autostash -q origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && break; sleep $((i*7)); done
+          for i in 1 2 3 4 5 6; do git push origin HEAD:refs/heads/${GITHUB_REF_NAME} && break; git pull --rebase --autostash -q origin ${GITHUB_REF_NAME}; sleep $((i*7)); done
