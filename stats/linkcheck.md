@@ -1,19 +1,17 @@
-# リンクの確かめ（2026-11-24 09:25 JST・1630件・HPの全ページ）
+# リンクの確かめ（2026-11-24 16:06 JST・1631件・HPの全ページ）
 
-種類ごと（見た数／開けない数）：不動産 778／4・紅葉 20／2・イルミ 108／7・初もうで 24／0・おでかけ 603／10・ほか 97／0
+種類ごと（見た数／開けない数）：不動産 778／4・紅葉 20／2・イルミ 108／7・初もうで 24／0・おでかけ 604／8・ほか 97／0
 行き先の分からないアフィリエイトの入口 0本（押さないので見ていない）
 
 ## 開けない（直す）
 - ✗ [おでかけ] 魯山人の宇宙 魂を刳る美がほしい（links/index.html）TimeoutError https://www.mistore.jp/store/kyoto/museum/event_list/event21.html
 - ✗ [おでかけ] そんな“バーガー”なフェス（links/index.html）404 https://www.blumenooka.jp/post-19317/
 - ✗ [おでかけ] 万呂須佐神社例祭（万呂の獅子舞）（links/index.html）404 https://www.wakayama-kanko.or.jp/events/detail_2968.html
-- ✗ [おでかけ] PINGU meets アドベンチャーワールド（links/index.html）503 https://www.aws-s.com/
 - ✗ [おでかけ] 大阪ステーションシティ×ドラマチック謎解きゲーム（links/index.html）URLError https://osakastationcity-nazo.com/
 - ✗ [おでかけ] 梅小路公園 紅葉まつり ライトアップ（links/index.html）503 https://www.kyoto-ga.jp/event/umekouji/index.html
 - ✗ [おでかけ] ペダルで時を漕ぐ デジタルスタンプラリー（links/index.html）404 https://event.city.kobe.lg.jp/event/OSHoI3B50boJ3RrtuNtr
 - ✗ [おでかけ] アニタッチ OSAKA なんば（links/index.html）404 https://www.afpbb.com/articles/-/3648165
 - ✗ [おでかけ] 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
-- ✗ [おでかけ] 東条湖おもちゃ王国 トミカ・プラレールランド（links/index.html）URLError https://www.omochaoukoku.com/tojoko/
 - ✗ [イルミ] 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
 - ✗ [イルミ] 宝厳院 紅葉ライトアップ（links/illumination-kyoto.html）URLError https://hogonin.jp/
 - ✗ [イルミ] HERBIS CHRISTMAS（links/illumination-muryo.html）URLError https://www.herbis.jp/

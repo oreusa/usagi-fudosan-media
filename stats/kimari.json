@@ -1,7 +1,7 @@
 {
  "day": "2026-11-24",
- "at": "2026-11-24T09:23:43+09:00",
- "bad": 4,
+ "at": "2026-11-24T16:03:38+09:00",
+ "bad": 1,
  "rows": [
   {
    "name": "関西の申し込み（反響）",
@@ -15,8 +15,8 @@
    "name": "申し込みの形",
    "purpose": "名前のある相談だけを受ける",
    "kimari": "申し込みは必ずお名前（名字だけでも）をもらう。名前なしの入口は作らない（11/12 オーナー）",
-   "ok": false,
-   "detail": "お名前の欄が必須・名前なしの言葉 406枚（links/shin/jikka.html, links/shin/jikka/hyogo-01.html, links/shin/jikka/hyogo-02.html）",
+   "ok": true,
+   "detail": "お名前の欄が必須",
    "te": "links/moushikomi.html の nm に required。言葉はページから外す"
   },
   {
@@ -56,23 +56,23 @@
    "purpose": "どの型が見られたかを毎日学ぶ",
    "kimari": "数字は機械が毎日取る（Claude の手で取らない）",
    "ok": true,
-   "detail": "最後に取った時 2026-11-24T07:41:34+09:00",
+   "detail": "最後に取った時 2026-11-24T14:33:07+09:00",
    "te": "Actions の metrics.yml を見る"
   },
   {
    "name": "楽天ROOM（台本）",
    "purpose": "夜（GPT）が毎日たくさん載せる",
    "kimari": "台本は毎日・40件より多く（11/13 オーナー「100倍楽天roomやれ」）",
-   "ok": false,
-   "detail": "台本の日付 2026-11-24・38件",
+   "ok": true,
+   "detail": "台本の日付 2026-11-24・93件",
    "te": "akari scripts/room_auto.py と page.yml を見る"
   },
   {
    "name": "楽天ROOM（新しい商品）",
    "purpose": "載せられる新しい商品が毎日ある",
    "kimari": "台本に前の14日に出していない商品が毎日20件以上（11/16 台本が出し済みばかりで0件になった）",
-   "ok": false,
-   "detail": "新しい商品 1件",
+   "ok": true,
+   "detail": "新しい商品 56件",
    "te": "akari data/room-rank.json の日付（ranking.yml が毎晩）と scripts/room_auto.py の rank_cands を見る"
   },
   {
@@ -80,7 +80,7 @@
    "purpose": "毎日ROOMに商品が増える",
    "kimari": "1日10件以上載る（台帳の線）",
    "ok": true,
-   "detail": "2026-11-23→2026-11-24 で +14件（781件）・最後に載せた時刻 2026-11-23 17:48:20",
+   "detail": "2026-11-23→2026-11-24 で +39件（806件）・最後に載せた時刻 2026-11-24 12:52:20",
    "te": "雫・凪の報告の「見送り・飛ばした理由」を見て、台本（akari scripts/room_auto.py の■載せ方）を直す"
   },
   {
