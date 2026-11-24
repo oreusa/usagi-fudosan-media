@@ -1,0 +1,61 @@
+name: ai-art-cpu
+# Cloudflare の無料枠が切れた日の代わり：同じ FLUX.2 klein 4B を CPU で分けて描く（21台）。
+on:
+  workflow_dispatch:
+    inputs:
+      reqs:
+        description: "頼みの JSON（空白区切り）"
+        required: true
+      shards:
+        description: "台数"
+        default: '21'
+permissions:
+  contents: write
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        k: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: tools/outing_reel/ai-art/cpu
+      - name: swap
+        run: |
+          free -g; nproc; grep -o 'avx512_bf16\|amx_bf16\|avx512f' /proc/cpuinfo | sort | uniq -c; df -h / /mnt
+          sudo swapoff -a; sudo fallocate -l 24G /mnt/sw || sudo dd if=/dev/zero of=/mnt/sw bs=1M count=24576; sudo chmod 600 /mnt/sw; sudo mkswap /mnt/sw; sudo swapon /mnt/sw; free -g
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q -U diffusers transformers accelerate safetensors sentencepiece pillow huggingface_hub
+      - name: draw
+        if: ${{ matrix.k < fromJSON(github.event.inputs.shards) }}
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_HOME: /mnt/hf
+        run: |
+          sudo mkdir -p /mnt/hf && sudo chmod 777 /mnt/hf
+          python3 tools/outing_reel/ai-art/cpu/klein_cpu.py ${{ matrix.k }} ${{ github.event.inputs.shards }} ${{ github.event.inputs.reqs }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: art-${{ matrix.k }}
+          path: out
+          if-no-files-found: ignore
+  save:
+    needs: draw
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: dl
+      - run: |
+          mkdir -p shots/ai-art; for d in dl/art-*; do [ -d "$d" ] && cp -r "$d"/* shots/ai-art/ ; done; ls -R shots/ai-art | tail -60
+          git config user.name "art bot"; git config user.email "actions@users.noreply.github.com"
+          git add shots/ai-art; git diff --cached --quiet || git commit -m "[CF-Pages-Skip] ai-art-cpu: CPU で描いた絵"
+          for i in 1 2 3 4 5 6; do git pull --rebase --autostash -q origin ${GITHUB_REF_NAME} && git push origin HEAD:${GITHUB_REF_NAME} && break; sleep $((i*7)); done
