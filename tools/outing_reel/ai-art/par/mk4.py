@@ -14,9 +14,9 @@ tf=[[S(T,'15-autumn-wide',PUSH(.45,ray=.35,rx=.7)),S(T,'01-sea',PAN(1,mist=.3))]
  [S(T,'13-veranda',PUSH(.45,ray=.3)),S(T,'06-checker',PAN(1,mist=.1)),S(T,'07-gravel',PUSH(.42)),S(T,'21-lantern',PAN(-1))],
  [S(T,'05-gate',PUSH(.4,ray=.4,mist=.3,rx=.7)),S(T,'09-path',PAN(1,ray=.35)),S(T,'17-hall',PUSH(.42,ray=.3,rx=.3))]]
 tvi=[S(T,'12-moss',VIM())]
-rk=[[S(R,'17-overview-night',PUSH(.45,**N)),S(R,'01-pond-night',PAN(1,**N))],
+rk=[[S(R,'17-overview-night',PUSH(.45,**N)),S(R,'01-pond-night',PAN(1,**N)),S(R,'14-gate',PUSH(.45,**N))],
  [S(R,'10-day-pond',PUSH(.42,ray=.3,rx=.7)),S(R,'11-day-maple',PAN(-1)),S(R,'13-path-day',PUSH(.45,ray=.35)),S(R,'12-dodan',PAN(1,ray=.15))],
- [S(R,'04-storehouse',PUSH(.45,**N)),S(R,'05-bamboo',PAN(-1,**N)),S(R,'14-gate',PUSH(.45,**N))],
+ [S(R,'04-storehouse',PUSH(.45,**N)),S(R,'05-bamboo',PAN(-1,**N))],
  [S(R,'06-lightstream',PUSH(.45,**N)),S(R,'02-bridge-night',PAN(1,**N)),S(R,'07-ground',PUSH(.5,**N)),S(R,'15-reflection',PAN(-1,**N,wind=0))],
  [S(R,'03-teahouse',PUSH(.45,**N)),S(R,'09-matcha',PAN(1,**N,wind=0)),S(R,'16-lantern-night',PUSH(.45,**N))],
  [S(R,'08-mountain',PUSH(.42,**N)),S(R,'20-leaves-close',PAN(-1,**N)),S(R,'18-ginkgo-night',PUSH(.4,**N)),S(R,'21-island',PAN(1,**N))]]
@@ -26,6 +26,7 @@ for key,L,vi,d in (('tf',tf,tvi,'tofukuji-1125'),('rk',rk,rvi,'rikugien-1125')):
     sp=json.load(open(f'{HF}/{d}/spans.json')); Tm=json.load(open(f'{HF}/{d}/times.json'))
     used=[s['img'] for sc in L for s in sc]+[vi[0]['img']]; assert len(used)==len(set(used)),key
     miss=[u for u in used if not os.path.exists(u)]; print(key,'missing',len(miss),[os.path.basename(m) for m in miss])
+    if os.environ.get('DROP'): L=[[s for s in sc if os.path.exists(s['img'])] for sc in L]
     for k,sh in enumerate(L):
         need=sp[k]+.3
         if k==0: need=need-4.2+.4
