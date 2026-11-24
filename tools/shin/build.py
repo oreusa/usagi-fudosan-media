@@ -2,6 +2,9 @@
 今の作り（links/index.html に何枚も上から貼る形）とは別に、1から作る新しい土台。URL は /shin/〜。
 共通の土台＝links/shin/shin.css・shin.js（空・頭・下のバー・MENU・板）。ページの中身＝links/shin/<page>.js。
 python3 tools/shin/build.py"""
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))
+import kyukan as KYU
 import json, os, re, html, hashlib, csv, sys
 R = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
 L = os.path.join(R, 'links')
@@ -165,6 +168,12 @@ def odekake():
         it = {'t': t, 'u': u, 'p': a.get('data-pref', ''), 's': a.get('data-s', ''), 'e': a.get('data-e', ''),
               'a': area.strip(), 'v': (v.get('vn') or ven).strip(), 'k': kind(t, m)}
         if a.get('data-tag') == '無料': it['f'] = 1
+        # 11/24 休館日：曜日（data-days）・休む日（data-cl）・日付の文の「（11/16・11/24は休館）」→ shin.js の SHIN.shut で「きょうは休館」
+        if a.get('data-days'): it['dy'] = a['data-days']
+        _dl = T((re.search(r'class="d">(.*?)</div>', body, re.S) or [None, ''])[1])
+        _y0 = int((it['s'] or it['e'])[:4]); _m0 = int((it['s'] or it['e'])[5:7])
+        _cl = [c for c in (a.get('data-cl') or '').split(',') if c and c[0] in '+-'] + KYU.cl_from_text(_dl, lambda mo: _y0 + (1 if mo < _m0 else 0))
+        if _cl: it['cl'] = ','.join(_cl)
         for k in ('hk', 'ds', 'h', 'cr', 'cu', 'im'):
             if v.get(k): it[k] = v[k]
         if v.get('im') and v['im'] in phh: it['th'] = phh[v['im']]
