@@ -1,0 +1,3 @@
+const {chromium}=require('playwright');const fs=require('fs');(async()=>{const b=await chromium.launch({args:['--allow-file-access-from-files']});const p=await b.newPage({viewport:{width:1080,height:1920}});
+const [pg,q,ts,out]=process.argv.slice(2);await p.goto('file://'+__dirname+'/'+pg+'?'+q);await p.waitForFunction('window.ready',null,{timeout:60000});await p.evaluate(()=>document.fonts.ready);fs.mkdirSync(out,{recursive:true});
+let i=0;for(const t of ts.split(',').map(Number)){await p.evaluate(t=>draw(t),t);const d=await p.evaluate(()=>document.getElementById('c').toDataURL('image/jpeg',.9));fs.writeFileSync(`${out}/f${i++}.jpg`,Buffer.from(d.split(',')[1],'base64'))}await b.close()})();
