@@ -1,0 +1,47 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}@font-face{font-family:MB;src:url(ShipporiMincho-Bold.ttf)}</style>
+<script src="d3-array-3.2.5/package/dist/d3-array.min.js"></script><script src="d3-geo-3.1.2/package/dist/d3-geo.min.js"></script><script src="topojson-client-3.1.0/package/dist/topojson-client.min.js"></script></head><body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+const W=1080,H=1920,c=document.getElementById('c'),x=c.getContext('2d');const Q=new URLSearchParams(location.search);
+const LON=+Q.get('lon'),LAT=+Q.get('lat'),PREF=Q.get('pref'),MUNI=(Q.get('muni')||'').split(','),LB=Q.get('label'),F1=+(Q.get('f1')||60);
+const P0=d3.geoAzimuthalEqualArea().center([138.5,36-18/60]).rotate([-138.5,-36+18/60]).scale(1700).translate([2500,-1930]);
+let land,jp,prefs,muni,tgtP,tgtM,borders;
+const pap=document.createElement('canvas');pap.width=W;pap.height=H;
+(async()=>{const wl=await (await fetch('world-atlas-2.0.2/package/land-50m.json')).json();land=topojson.feature(wl,wl.objects.land);
+ const j=await (await fetch('jpn-atlas-1.0.2/package/japan/japan.json')).json();
+ prefs=topojson.feature(j,j.objects.prefectures);borders=topojson.mesh(j,j.objects.prefectures,(a,b)=>a!==b);window.coast=topojson.mesh(j,j.objects.prefectures,(a,b)=>a===b);
+ const mu=topojson.feature(j,j.objects.municipalities);tgtM={type:'FeatureCollection',features:mu.features.filter(f=>MUNI.includes(String(f.id)))};
+ muni=topojson.mesh(j,j.objects.municipalities,(a,b)=>a!==b&&String(a.id).slice(0,2)===PREF.padStart(2,'0').slice(0,2));
+ tgtP=prefs.features.find(f=>+f.id===+PREF);
+ const g=pap.getContext('2d'),d=g.createImageData(W,H);for(let i=0;i<d.data.length;i+=4){const n=228+Math.random()*27;d.data[i]=n;d.data[i+1]=n*.965;d.data[i+2]=n*.88;d.data[i+3]=255}g.putImageData(d,0,0);
+ await document.fonts.load('52px MB');window.ready=1})();
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+function P(obj,geo){const p=d3.geoPath(geo?P0:null,x);x.beginPath();p(obj)}
+window.draw=function(t){const e=ease(Math.min(1,t/.9));const F0=1.15;const f=F0*Math.pow(F1/F0,e);
+ const c0=P0([137.0,37.6]),c1=P0([LON,LAT]);const k=Math.log(f/F0)/Math.log(F1/F0);const kk=Math.min(1,Math.pow(k,.6));
+ const cx=c0[0]+(c1[0]-c0[0])*kk,cy=c0[1]+(c1[1]-c0[1])*kk;
+ x.setTransform(1,0,0,1,0,0);x.fillStyle='#b9d3d6';x.fillRect(0,0,W,H);
+ x.save();x.globalAlpha=.16;x.strokeStyle='#7fa9b3';x.lineWidth=2;for(let i=0;i<22;i++){const yy=(i*97)%H;x.beginPath();x.moveTo(0,yy);for(let xx=0;xx<=W;xx+=60)x.lineTo(xx,yy+Math.sin(xx/90+i)*6);x.stroke()}x.restore();
+ x.setTransform(f,0,0,f,W/2-f*cx,H*.46-f*cy);const lw=v=>v/f;
+ const wa=Math.max(0,1-e/.45);if(wa>0){x.globalAlpha=wa;P(land,1);x.fillStyle='#e6dab2';x.fill();x.globalAlpha=1}
+ P(prefs);x.fillStyle='#dfe2b2';x.fill();
+ if(tgtP){P(tgtP);x.fillStyle='#f2c48d';x.fill()}
+ const mz=Math.max(0,Math.min(1,(e-.5)/.3));
+ if(mz>0&&tgtM.features.length){x.globalAlpha=mz;P(tgtM);x.fillStyle='#ec9466';x.fill();x.globalAlpha=1}
+ x.lineJoin='round';
+ if(mz>0){x.globalAlpha=mz*.8;P(muni);x.strokeStyle='#a07a55';x.lineWidth=lw(1.6);x.setLineDash([lw(6),lw(6)]);x.stroke();x.setLineDash([]);x.globalAlpha=1}
+ P(borders);x.strokeStyle='#9b7650';x.lineWidth=lw(2);x.setLineDash([lw(10),lw(8)]);x.stroke();x.setLineDash([]);
+ if(wa>0){x.globalAlpha=wa;P(land,1);x.strokeStyle='#6b4a30';x.lineWidth=lw(3);x.stroke();x.globalAlpha=1}
+ P(coast);x.strokeStyle='#6b4a30';x.lineWidth=lw(3);x.stroke();
+ P(prefs);x.strokeStyle='#6b4a30';x.lineWidth=lw(2.4);x.globalAlpha=.0;x.stroke();x.globalAlpha=1;
+ x.setTransform(1,0,0,1,0,0);
+ x.save();x.globalCompositeOperation='multiply';x.drawImage(pap,0,0);x.restore();
+ const vg=x.createRadialGradient(W/2,H*.46,H*.28,W/2,H*.5,H*.78);vg.addColorStop(0,'rgba(90,60,30,0)');vg.addColorStop(1,'rgba(90,60,30,.42)');x.fillStyle=vg;x.fillRect(0,0,W,H);
+ const px=W/2+f*(c1[0]-cx),py=H*.46+f*(c1[1]-cy),pt=Math.max(0,Math.min(1,(t-.6)/.18));
+ if(pt>0){const dy=(1-ease(pt))*-260;x.save();x.globalAlpha=Math.min(1,pt*2);
+  for(let r=0;r<2;r++){const rr=((t*1.6+r*.5)%1);x.beginPath();x.ellipse(px,py,20+rr*90,(20+rr*90)*.42,0,0,7);x.strokeStyle=`rgba(120,60,30,${.6*(1-rr)*pt})`;x.lineWidth=3;x.stroke()}
+  x.translate(px,py+dy);x.beginPath();x.moveTo(0,0);x.bezierCurveTo(-8,-26,-38,-52,-38,-86);x.arc(0,-86,38,Math.PI,0);x.bezierCurveTo(38,-52,8,-26,0,0);
+  x.shadowColor='rgba(60,30,10,.4)';x.shadowBlur=14;x.shadowOffsetY=8;x.fillStyle='#d2462e';x.fill();x.shadowColor='transparent';x.lineWidth=3;x.strokeStyle='#6b2a18';x.stroke();x.beginPath();x.arc(0,-86,14,0,7);x.fillStyle='#fbf1de';x.fill();x.restore();
+  const lt=Math.max(0,Math.min(1,(t-.7)/.15));if(lt>0){x.save();x.globalAlpha=lt;x.font='52px MB, serif';const tw=x.measureText(LB).width,bx=px-tw/2-34,by=py+36;x.fillStyle='rgba(251,243,226,.96)';x.beginPath();x.roundRect(bx,by,tw+68,88,8);x.fill();x.strokeStyle='#7a4e30';x.lineWidth=2.5;x.stroke();x.fillStyle='#4a2a18';x.textBaseline='middle';x.fillText(LB,bx+34,by+46);x.restore()}}
+};
+</script></body></html>
