@@ -182,6 +182,9 @@ for sp in spots:
     q = sp["map"] or (sp["place"] + " " + sp["city"])
     act = f'<a class="o" href="{e(sp["url"])}" target="_blank" rel="noopener">公式ページで最新の情報を見る</a>'
     act += f'<a class="g" href="https://www.google.com/maps/search/?api=1&amp;query={e(q)}" target="_blank" rel="noopener">地図で場所を見る</a>'
+    # 11/24 夜：同じ催しの中の別の回（予約制の特別拝観など）は、公式の別のボタンで分けて出す（券の広告と混ぜない）
+    for x in mo.get("links", []):
+        act += f'<a class="g" href="{e(x[1])}" target="_blank" rel="noopener">{e(x[0])}</a>'
     ads = False
     for x in TK.get(nm, []):
         act += f'<a class="g" href="{e(x[1])}" target="_blank" rel="noopener sponsored">{e(x[0])}を見る</a>'; ads = True
