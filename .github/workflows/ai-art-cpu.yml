@@ -1,14 +1,10 @@
 name: ai-art-cpu
 # Cloudflare の無料枠が切れた日の代わり：同じ FLUX.2 klein 4B を CPU で分けて描く（21台）。
+# 動かし方: tools/outing_reel/ai-art/cpu/job.txt に「台数 req1.json req2.json」を書いて claude/** に押す
 on:
-  workflow_dispatch:
-    inputs:
-      reqs:
-        description: "頼みの JSON（空白区切り）"
-        required: true
-      shards:
-        description: "台数"
-        default: '21'
+  push:
+    branches: ['claude/**']
+    paths: ['tools/outing_reel/ai-art/cpu/job.txt']
 permissions:
   contents: write
 jobs:
@@ -32,13 +28,13 @@ jobs:
           python-version: '3.12'
       - run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q -U diffusers transformers accelerate safetensors sentencepiece pillow huggingface_hub
       - name: draw
-        if: ${{ matrix.k < fromJSON(github.event.inputs.shards) }}
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_HOME: /mnt/hf
         run: |
           sudo mkdir -p /mnt/hf && sudo chmod 777 /mnt/hf
-          python3 tools/outing_reel/ai-art/cpu/klein_cpu.py ${{ matrix.k }} ${{ github.event.inputs.shards }} ${{ github.event.inputs.reqs }}
+          read N R < tools/outing_reel/ai-art/cpu/job.txt
+          if [ ${{ matrix.k }} -lt $N ]; then python3 tools/outing_reel/ai-art/cpu/klein_cpu.py ${{ matrix.k }} $N $R; fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
