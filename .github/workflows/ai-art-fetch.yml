@@ -1,0 +1,26 @@
+name: ai-art-fetch
+# CPU で描いた絵の箱（artifact）を、run の番号から取り出して枝に入れる（save が押せなかった時用）
+# 動かし方: tools/outing_reel/ai-art/cpu/fetch.txt に run の番号を書いて claude/** に押す
+on:
+  push:
+    branches: ['claude/**']
+    paths: ['tools/outing_reel/ai-art/cpu/fetch.txt']
+permissions:
+  contents: write
+  actions: read
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "RID=$(head -1 tools/outing_reel/ai-art/cpu/fetch.txt | cut -d' ' -f1)" >> $GITHUB_ENV
+      - uses: actions/download-artifact@v4
+        with:
+          path: dl
+          run-id: ${{ env.RID }}
+          github-token: ${{ github.token }}
+      - run: |
+          mkdir -p shots/ai-art; for d in dl/art-*; do [ -d "$d" ] && cp -r "$d"/* shots/ai-art/ ; done; ls -R shots/ai-art | tail -40
+          git config user.name "art bot"; git config user.email "actions@users.noreply.github.com"
+          git add shots/ai-art; git diff --cached --quiet || git commit -m "[CF-Pages-Skip] ai-art-fetch: CPU で描いた絵"
+          for i in 1 2 3 4 5 6; do git push origin HEAD:refs/heads/${GITHUB_REF_NAME} && break; git pull --rebase -q origin ${GITHUB_REF_NAME}; sleep $((i*7)); done
