@@ -1,6 +1,9 @@
 """Cloudflare の無料枠が切れた日に、同じ絵のAI（FLUX.2 klein 4B・Apache-2.0）を GitHub の機械（CPU）で描く。
 使い方: python3 klein_cpu.py 番号 全体の数 req1.json req2.json ...  → out/<名前>/<item>.jpg"""
-import json, os, sys, time, gc, torch
+import json, os, sys, time, gc
+T = (os.environ.pop('HF_TOKEN', '') or '').strip()
+if T: os.environ['HF_TOKEN'] = T
+import torch
 from diffusers import Flux2KleinPipeline
 k, n = int(sys.argv[1]), int(sys.argv[2]); jobs = []
 for p in sys.argv[3:]:
@@ -9,7 +12,7 @@ for p in sys.argv[3:]:
 mine = [j for i, j in enumerate(jobs) if i % n == k]
 print('mine', [(a, b['name']) for a, b, c in mine], flush=True)
 torch.set_num_threads(os.cpu_count()); t = time.time()
-pipe = Flux2KleinPipeline.from_pretrained('black-forest-labs/FLUX.2-klein-4B', torch_dtype=torch.bfloat16, token=os.environ.get('HF_TOKEN') or None)
+pipe = Flux2KleinPipeline.from_pretrained('black-forest-labs/FLUX.2-klein-4B', dtype=torch.bfloat16, token=T or None)
 print('load', round(time.time() - t), flush=True)
 for nm, it, st in mine:
     t = time.time(); os.makedirs(f'out/{nm}', exist_ok=True)

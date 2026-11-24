@@ -1,1 +1,1 @@
-21 tools/outing_reel/ai-art/cpu/req-tofukuji1.json tools/outing_reel/ai-art/cpu/req-rikugien1.json
+21 tools/outing_reel/ai-art/cpu/req-tofukuji1.json tools/outing_reel/ai-art/cpu/req-rikugien1.json #2

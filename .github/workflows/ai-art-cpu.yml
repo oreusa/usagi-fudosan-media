@@ -33,8 +33,8 @@ jobs:
           HF_HOME: /mnt/hf
         run: |
           sudo mkdir -p /mnt/hf && sudo chmod 777 /mnt/hf
-          read N R < tools/outing_reel/ai-art/cpu/job.txt
-          if [ ${{ matrix.k }} -lt $N ]; then python3 tools/outing_reel/ai-art/cpu/klein_cpu.py ${{ matrix.k }} $N $R; fi
+          read N R1 R2 _ < tools/outing_reel/ai-art/cpu/job.txt
+          if [ ${{ matrix.k }} -lt $N ]; then python3 tools/outing_reel/ai-art/cpu/klein_cpu.py ${{ matrix.k }} $N $R1 $R2; fi
       - uses: actions/upload-artifact@v4
         if: always()
         with:
