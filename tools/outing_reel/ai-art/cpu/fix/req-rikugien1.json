@@ -1,0 +1,68 @@
+{
+ "models": [
+  "@cf/black-forest-labs/flux-2-klein-4b"
+ ],
+ "style": "Photorealistic travel photograph, shot on a full-frame mirrorless camera, natural true-to-life colors, realistic soft light, high detail, vertical composition. No people, no text, no letters, no logos, no signs with writing",
+ "items": [
+  {
+   "name": "01-pond-night",
+   "prompt": "A traditional Japanese stroll garden at night with red and orange maple trees illuminated by warm lights, perfectly reflected in a calm pond, deep blue night sky, Tokyo",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "02-bridge-night",
+   "prompt": "A small wooden arched bridge in a Japanese garden at night, illuminated autumn maple leaves above, reflection in water",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "03-teahouse",
+   "prompt": "A small rustic thatched-roof Japanese teahouse on the edge of a pond at night, warm light glowing from inside, illuminated maple trees around",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "05-bamboo",
+   "prompt": "A bamboo grove at night illuminated with soft projected light patterns, green bamboo stalks glowing, Japanese garden",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "11-day-maple",
+   "prompt": "Red maple trees along the shore of a garden pond in daylight, stone lanterns, Japanese daimyo garden",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "12-dodan",
+   "prompt": "Bright red Enkianthus shrubs (dodan tsutsuji) in autumn in a Japanese garden, neatly pruned, soft daylight",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "13-path-day",
+   "prompt": "A stone path through a Japanese stroll garden with red maples arching overhead, daytime, dappled light",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "14-gate",
+   "prompt": "A traditional wooden gate of a Japanese garden at dusk, lanterns lit, autumn leaves",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "15-reflection",
+   "prompt": "Close-up of illuminated red maple leaves reflected in dark water at night, mirror-like",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "17-overview-night",
+   "prompt": "Wide view of an illuminated Japanese garden at night, glowing red and yellow trees around a pond, city glow on the horizon",
+   "W": 1088,
+   "H": 1680
+  }
+ ]
+}

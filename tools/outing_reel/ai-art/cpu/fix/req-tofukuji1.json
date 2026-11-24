@@ -1,0 +1,68 @@
+{
+ "models": [
+  "@cf/black-forest-labs/flux-2-klein-4b"
+ ],
+ "style": "Photorealistic travel photograph, shot on a full-frame mirrorless camera, natural true-to-life colors, realistic soft light, high detail, vertical composition. No people, no text, no letters, no logos, no signs with writing",
+ "items": [
+  {
+   "name": "01-sea",
+   "prompt": "Looking down from a high wooden covered bridge onto a deep valley completely filled with blazing red and orange maple trees like a sea of clouds, Zen temple in Kyoto, soft morning light",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "02-bridge",
+   "prompt": "A long wooden covered corridor bridge with a tiled roof spanning a deep ravine filled with red autumn maples, seen from the side from another bridge, Kyoto Zen temple",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "03-inside",
+   "prompt": "Inside a long wooden covered bridge corridor, dark wooden pillars and railings framing bright red maple leaves outside, perspective toward the far end",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "05-gate",
+   "prompt": "A huge two-story wooden Zen temple main gate with deep vermilion and dark wood, surrounded by autumn trees, early morning, Kyoto",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "11-backlit",
+   "prompt": "Red maple leaves backlit by low morning sun, glowing, a dark wooden temple roof edge in the corner",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "12-moss",
+   "prompt": "Green moss ground covered with fallen red maple leaves under maple trees, temple garden, soft light",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "13-veranda",
+   "prompt": "View from a dark wooden temple veranda looking out at a garden of red maples, polished wooden floor reflecting the red colors",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "14-steps",
+   "prompt": "Stone steps leading down into a ravine under arching red maple branches, temple garden, morning",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "15-autumn-wide",
+   "prompt": "Wide view of a Kyoto Zen temple valley in peak autumn, red, orange and yellow maples, covered wooden bridges crossing the valley",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "17-hall",
+   "prompt": "A large old wooden Zen temple hall with a massive roof, bright autumn maple trees in front, clear blue sky",
+   "W": 1088,
+   "H": 1680
+  }
+ ]
+}
