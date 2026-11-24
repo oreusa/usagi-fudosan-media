@@ -1,2 +1,1 @@
-shots/ai-depth-jingoji4 shots/ai-art/jingoji4 none
-shots/ai-depth-gaien4 shots/ai-art/gaien4 none
+shots/ai-depth-gaien7 shots/ai-art/none 35.6747,139.7186

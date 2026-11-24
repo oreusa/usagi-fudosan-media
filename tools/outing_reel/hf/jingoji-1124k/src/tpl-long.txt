@@ -80,7 +80,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
   <div class="sc" id="s4" style="z-index:1"><div class="face"><div class="info"><h2>高雄・神護寺の紅葉</h2>
    <div class="r"><b>色づき</b><span>今見頃<small>11/23の色づき（ライトアップはなし）</small></span></div><div class="r"><b>拝観</b><span>9時〜16時<small>拝観料 中学生以上1000円・小学生500円</small></span></div>
    <div class="r"><b>行き方</b><span>高雄バス停から徒歩20分<small>JR京都駅からJRバス約50分</small></span></div><div class="r"><b>混む時間</b><span>休日の10時〜14時<small>朝早くがおすすめ</small></span></div>
-   <div class="r"><b>車</b><span>駐車場なし<small>11月の土日は府道138号に通行制限</small></span></div><p>保存して、紅葉のおでかけに。</p>
+   <div class="r"><b>車</b><span>お寺の駐車場なし<small>紅葉の時期はバスがおすすめ・11月の土日は府道138号に通行制限</small></span></div><p>保存して、紅葉のおでかけに。</p>
    <div class="ph"><img src="a/L0.jpg"></div></div><div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
   <div class="sc" id="s3" style="z-index:2"><div class="face"><div class="edge" id="e3"></div>@S3@<div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
   <div class="sc" id="s2" style="z-index:3"><div class="face"><div class="edge" id="e2"></div>@S2@<div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
