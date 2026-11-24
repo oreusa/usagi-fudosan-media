@@ -169,7 +169,7 @@ PAGE.update({k: BR[k] for k in ('top_en', 'top_jp', 'cover_sub', 'hp_en', 'hp_jp
 _tt = T.get('date_title', '') + T.get('point_title', '') + T.get('seal', '') + ''.join(T.get('title', []))
 PAGE['emblem'] = ('icho' if re.search('イチョウ|銀杏|いちょう|黄色', _tt) or T.get('icho') else
                   'star' if re.search('イルミ|ツリー|クリスマス|光|灯', _tt) and not re.search('もみじ|紅葉|モミジ', _tt) else
-                  'wave' if BR.get('scene') == 'hama' or re.search('浜|海', _tt) else
+                  'wave' if BR.get('scene') == 'hama' or (re.search('浜|海', _tt) and not re.search('もみじ|紅葉|モミジ', _tt)) else
                   'taki' if T.get('taki') or re.search('滝', _tt) else
                   'tou' if re.search('寺|堂|塔|舞台', ALLTXT) else 'momiji')
 # 11/19 owner「また使い回し？？」：関東 11/18 偕楽園と 11/19 小石川後楽園のページの絵が同じだった（紅葉の絵が1種類だけ）。
