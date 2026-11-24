@@ -124,6 +124,9 @@ for sp in spots:
             _y0, _m0 = int(sp["st"][:4]), int(sp["st"][5:7])
             _why = KY.shut(sp.get("dy"), sp.get("cl"), d0, KY.cl_from_text(sp.get("dline", ""), lambda mo: _y0 + (1 if mo < _m0 else 0)))
             if _why: stat = {"休館日": "きょうは休館日", "休みの日": "きょうはお休み"}.get(_why, "きょうは" + _why) + (f"・あと{left}日" if left else "・きょうまで")
+            # 11/24 夜：開く日だけの催しは、休みの日に「次は◯月◯日」を出す（希望が丘キッチンカーが毎日やっているように読めた）
+            _dl = sorted(d for d in (sp.get("dy") or "").split(",") if re.fullmatch(r"\d{4}-\d\d-\d\d", d) and d >= TODAY)
+            if _why == "休みの日" and _dl and _dl[0] > TODAY: stat = "きょうはお休み・次は " + ("あした " if (datetime.date.fromisoformat(_dl[0]) - d0).days == 1 else "") + jd(_dl[0])
         else: stat = "開催中"
     kv = sp.get("kv", {})
     if not when and kv.get("見頃"): when = "見頃は" + kv["見頃"]
@@ -139,7 +142,8 @@ for sp in spots:
     # 11/20 見直し：カードの2つ目が場所ではなく説明文（「江戸の町並みで」「16時半からの列車で」）の時は、場所に使わない
     if re.search(r"(で|から|まで|の道)$|\d+時|\d+/\d+", sp["place"] or ""): sp["place"] = ""
     where = (sp["city"] + ("の" + sp["place"] if sp["place"] and sp["place"] != sp["city"] else "")) or fu
-    lead = f"{nm}は、{'' if where.startswith(fu) else fu}{where}で" + (f"、{jd(sp['st'])}から{jd(sp['en'])}まで開かれます。" if sp["st"] and sp["en"] and sp["en"] != sp["st"] else (f"、{jd(sp['st'])}に開かれます。" if sp["st"] else "楽しめます。"))
+    _ds = [d for d in (sp.get("dy") or "").split(",") if re.fullmatch(r"\d{4}-\d\d-\d\d", d)]
+    lead = f"{nm}は、{'' if where.startswith(fu) else fu}{where}で" + (f"、{'・'.join(jd(d) for d in _ds)}の{len(_ds)}日だけ開かれます。" if 1 < len(_ds) <= 8 and _ds[0] == sp["st"] and _ds[-1] == sp["en"] else f"、{jd(sp['st'])}から{jd(sp['en'])}まで開かれます。" if sp["st"] and sp["en"] and sp["en"] != sp["st"] else (f"、{jd(sp['st'])}に開かれます。" if sp["st"] else "楽しめます。"))
     if sp["free"]: lead += "入場は無料です（一部有料の所があります）。" if sp.get("part") else "入場は無料です。"
     mo = dict(MORE.get(sp["key"], {}))
     # 紅葉・イルミのカードの「料金・時間・駐車場・メモ」も1件ページに出す（11/18 カードからは外して1件ページへ回した）
