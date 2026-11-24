@@ -1,0 +1,3 @@
+const {chromium}=require('playwright');const fs=require('fs');(async()=>{const b=await chromium.launch({args:['--allow-file-access-from-files']});const p=await b.newPage({viewport:{width:1080,height:1920}});
+const [q,secs,out]=process.argv.slice(2);await p.goto('file://'+__dirname+'/map3.html?'+q);await p.waitForFunction('window.ready',null,{timeout:60000});fs.mkdirSync(out,{recursive:true});
+const N=Math.round(+secs*30);for(let i=0;i<N;i++){await p.evaluate(t=>draw(t),i/(N-1));const d=await p.evaluate(()=>document.getElementById('c').toDataURL('image/jpeg',.93));fs.writeFileSync(`${out}/f${String(i).padStart(4,'0')}.jpg`,Buffer.from(d.split(',')[1],'base64'))}await b.close()})();
