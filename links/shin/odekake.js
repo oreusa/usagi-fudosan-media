@@ -16,9 +16,12 @@ function avg(b){try{var h=Uint8Array.from(atob(b),function(c){return c.charCodeA
   var f=function(v){return Math.round(255*Math.max(0,Math.min(1,v)))};return "rgb("+f(r)+","+f(g)+","+f(bb)+")"}catch(e){return ""}}
 function img(x){return "/assets/ph/"+x.im}
 function tile(x){return '<div class="tile" style="--gc:'+x.g[1]+';--gt:'+x.g[2]+'"><svg viewBox="0 0 24 24">'+(D.icons[x.k]||D.icons.spot||"")+'</svg><b>'+x.g[3]+'</b></div>'}
-function lt(x){if(x.sh)return '<span class="lt sh">'+(x.sh==="休みの日"?"きょうはお休み":"きょうは休館")+'</span>';if(x.st==="up"){var n=diff(TD,x.s);return '<span class="lt">'+(n<=1?"あしたから":n+"日後から")+'</span>'}
+/* 11/24 夜：開く日だけの催し（希望が丘キッチンカー 11/14・15・28・29）が「11/29まで」だけで毎日やっているように読めた → 次に開く日を出す */
+function nx(x){if(!/^\d{4}-\d\d-\d\d(,\d{4}-\d\d-\d\d)*$/.test(x.dy||""))return "";var L=x.dy.split(",").filter(function(d){return d>=TD});return L[0]===TD?"":(L[0]||"")}
+function wdj(d){return "日月火水木金土".charAt(new Date(d+"T00:00:00Z").getUTCDay())}
+function lt(x){if(x.sh==="休みの日"&&nx(x)){var n0=diff(TD,nx(x));return '<span class="lt">'+(n0<=1?"次はあした":"次は"+md(nx(x)))+'</span>'}if(x.sh)return '<span class="lt sh">'+(x.sh==="休みの日"?"きょうはお休み":"きょうは休館")+'</span>';if(x.st==="up"){var n=diff(TD,x.s);return '<span class="lt">'+(n<=1?"あしたから":n+"日後から")+'</span>'}
   if(x.left===0)return '<span class="lt">きょうまで</span>';if(x.left<=7)return '<span class="lt">あと'+x.left+'日</span>';return '<span class="lt now">開催中</span>'}
-function when(x){return x.st==="up"?md(x.s)+"から":md(x.e)+"まで"}
+function when(x){if(x.dy&&/^\d{4}-/.test(x.dy)){var A=x.dy.split(","),L=A.filter(function(d){return d>=TD});if(L.length&&L.length<=6&&A[A.length-1]===x.e)return L.map(md).join("・")+"のみ"}return x.st==="up"?md(x.s)+"から":md(x.e)+"まで"}
 var Q=new URLSearchParams(location.search),S={p:Q.get("p")||PG.p||"",w:Q.get("w")||"now",g:Q.get("g")||"",n:24};
 if(REM&&!Q.get("p")){try{var _rp=localStorage.getItem(PK);if(_rp&&PREF.indexOf(_rp)>=0)S.p=_rp}catch(e){}}
 function saveQ(){var u=new URLSearchParams(location.search);["p","w","g"].forEach(function(k){if(S[k]&&!(k==="w"&&S[k]==="now"))u.set(k,S[k]);else u.delete(k)});
@@ -138,7 +141,7 @@ function openItem(x,from){if(!x)return;var tot=Math.max(1,diff(x.s,x.e)),gone=Ma
   S_.sheet('<div class="pim" style="background-color:'+(x.th?avg(x.th):x.g[2])+'">'+(x.im?'<img src="'+img(x)+'" alt="">':tile(x))+'</div><div class="bd" style="--gc:'+x.g[1]+'">'+
    '<div class="lb"><span class="g">'+x.g[3]+'</span><span>'+esc(x.p)+'・'+esc(x.a)+'</span></div><h2>'+esc(x.t)+'</h2>'+(x.hk?'<p class="hk">'+esc(x.hk)+'</p>':"")+
    '<div class="per"><div class="row"><span>'+md(x.s)+'</span><span>'+md(x.e)+'</span></div><div class="tr"><i data-w="'+pc.toFixed(3)+'" style="background:'+x.g[1]+'"></i>'+(x.st==="now"?'<b style="left:'+(pc*100)+'%;border-color:'+x.g[1]+'"></b>':"")+'</div>'+
-   '<div class="big">'+(x.sh?(x.sh==="休みの日"?"きょうはお休み":"きょうは"+x.sh)+"・終わりまで あと"+x.left+"日":x.pk?(x.st==="up"?"見頃の時期まで あと"+diff(TD,x.s)+"日":"いまが見頃の時期です"):x.st==="up"?"あと"+diff(TD,x.s)+"日で始まります":x.left===0?"きょうまで":"終わりまで あと"+x.left+"日")+'</div></div>'+
+   '<div class="big">'+(x.sh==="休みの日"&&nx(x)?"きょうはお休み・次は "+(diff(TD,nx(x))===1?"あした ":"")+md(nx(x))+"（"+wdj(nx(x))+"）":x.sh?(x.sh==="休みの日"?"きょうはお休み":"きょうは"+x.sh)+"・終わりまで あと"+x.left+"日":x.pk?(x.st==="up"?"見頃の時期まで あと"+diff(TD,x.s)+"日":"いまが見頃の時期です"):x.st==="up"?"あと"+diff(TD,x.s)+"日で始まります":x.left===0?"きょうまで":"終わりまで あと"+x.left+"日")+'</div></div>'+
    '<dl class="kv">'+(x.v?'<dt>会場</dt><dd>'+esc(x.v)+'</dd>':"")+'<dt>場所</dt><dd>'+esc(x.a||x.p)+'</dd>'+(x.h?'<dt>時間</dt><dd>'+esc(x.h)+'</dd>':"")+(x.fe?'<dt>料金</dt><dd>'+esc(x.fe)+'</dd>':x.f?'<dt>料金</dt><dd>無料</dd>':"")+(x.pk?'<dt>見頃</dt><dd>'+esc(x.pk)+'</dd>':"")+'</dl>'+
    (x.ds?'<p class="ds">'+esc(x.ds)+'</p>':"")+
    '<div class="acts"><a class="pr" href="'+esc(x.u)+'" target="_blank" rel="noopener">公式サイトで確かめる</a><a href="https://www.google.com/maps/search/?api=1&query='+mq+'" target="_blank" rel="noopener">地図で開く</a>'+(x.o?'<a href="/o/'+x.o+'">くわしいページ</a>':'<button data-share="1">送る</button>')+'</div>'+
