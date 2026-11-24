@@ -1,0 +1,24 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#000}</style></head><body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<script>
+const W=1080,H=1920,c=document.getElementById('c'),x=c.getContext('2d');let info,im={};const QQ=new URLSearchParams(location.search),SD=QQ.get('sat')||'sat',LB=QQ.get('label')||'京都・高雄 神護寺';
+const m=document.createElement('canvas');m.width=W;m.height=H;const mx=m.getContext('2d');
+(async()=>{info=await (await fetch(SD+'/info.json')).json();await Promise.all(Object.keys(info).map(z=>new Promise(r=>{const i=new Image();i.onload=r;i.src=`${SD}/z${z}.jpg`;im[z]=i})));window.ready=1})();
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+function lay(g,z,s,al){const [cx,cy]=info[z];g.globalAlpha=al;g.drawImage(im[z],W/2-cx*s,H*.46-cy*s,1280*s,1280*s);g.globalAlpha=1}
+window.draw=function(t){const Z=5.9+(13.75-5.9)*ease(Math.min(1,t/.9));const L=Math.min(13,Math.floor(Z));
+ x.fillStyle='#0b2236';x.fillRect(0,0,W,H);x.filter='saturate(1.25) contrast(1.08) brightness(1.05)';
+ const lo=Math.max(5,L-1);lay(x,lo,Math.pow(2,Z-lo),1);
+ // 細かい段を中央にぼかした縁で重ねる
+ mx.clearRect(0,0,W,H);mx.globalCompositeOperation='source-over';lay(mx,L,Math.pow(2,Z-L),1);
+ mx.globalCompositeOperation='destination-in';const s=Math.pow(2,Z-L)*1280,rg=mx.createRadialGradient(W/2,H*.46,s*.18,W/2,H*.46,s*.42);rg.addColorStop(0,'#000');rg.addColorStop(1,'rgba(0,0,0,0)');mx.fillStyle=rg;mx.fillRect(0,0,W,H);
+ x.drawImage(m,0,0);x.filter='none';
+ const px=W/2,py=H*.46,pt=Math.max(0,Math.min(1,(t-.6)/.18));
+ if(pt>0){const dy=(1-ease(pt))*-260;x.save();x.globalAlpha=Math.min(1,pt*2);
+  for(let r=0;r<2;r++){const rr=((t*1.6+r*.5)%1);x.beginPath();x.ellipse(px,py,20+rr*90,(20+rr*90)*.42,0,0,7);x.strokeStyle=`rgba(255,255,255,${.7*(1-rr)*pt})`;x.lineWidth=3;x.stroke()}
+  x.translate(px,py+dy);x.beginPath();x.moveTo(0,0);x.bezierCurveTo(-8,-26,-38,-52,-38,-86);x.arc(0,-86,38,Math.PI,0);x.bezierCurveTo(38,-52,8,-26,0,0);
+  x.shadowColor='rgba(0,0,0,.5)';x.shadowBlur=18;x.shadowOffsetY=8;x.fillStyle='#e8452f';x.fill();x.shadowColor='transparent';x.beginPath();x.arc(0,-86,14,0,7);x.fillStyle='#fff';x.fill();x.restore();
+  const lt=Math.max(0,Math.min(1,(t-.7)/.15));if(lt>0){x.save();x.globalAlpha=lt;x.font='700 46px Goth, sans-serif';const s2=LB,tw=x.measureText(s2).width,bx=px-tw/2-30,by=py+34;x.fillStyle='rgba(255,255,255,.92)';x.beginPath();x.roundRect(bx,by,tw+60,78,39);x.fill();x.fillStyle='#2b1d16';x.textBaseline='middle';x.fillText(s2,bx+30,by+40);x.restore()}}
+ x.save();x.font='22px sans-serif';x.fillStyle='rgba(255,255,255,.7)';x.fillText('衛星写真: Sentinel-2 cloudless 2016 by EOX (CC BY 4.0)',40,H-120);x.restore();
+};
+</script></body></html>
