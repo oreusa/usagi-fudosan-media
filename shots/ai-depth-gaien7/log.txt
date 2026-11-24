@@ -1,0 +1,15 @@
+https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/4/4/16.jpg HTTP Error 404: Not Found
+https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/4/5/16.jpg HTTP Error 404: Not Found
+https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/4/6/16.jpg HTTP Error 404: Not Found
+https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/4/7/16.jpg HTTP Error 404: Not Found
+https://tiles.maps.eox.at/wmts/1.0.0/s2cloudless_3857/default/g/4/8/16.jpg HTTP Error 404: Not Found
+衛星 z4 20枚 中心 14.210,6.301
+衛星 z5 25枚 中心 28.419,12.602
+衛星 z6 25枚 中心 56.839,25.203
+衛星 z7 25枚 中心 113.678,50.406
+衛星 z8 25枚 中心 227.355,100.813
+衛星 z9 25枚 中心 454.711,201.626
+衛星 z10 25枚 中心 909.422,403.252
+衛星 z11 25枚 中心 1818.844,806.503
+衛星 z12 25枚 中心 3637.687,1613.006
+衛星 z13 25枚 中心 7275.374,3226.013
