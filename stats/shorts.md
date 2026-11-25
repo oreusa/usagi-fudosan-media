@@ -1,4 +1,4 @@
-# YouTube ショート・TikTok の数（夜の【夜 YouTube 数】【夜 TikTok 数】を月が写す・朝の回）
+# YouTube ショート・TikTok の数（11/25〜 正本はドライブの表「うさぎぐるーぷ YouTube・TikTok の数」。夜が毎日10:30に書く。ここは古い写し）
 # 日（公開日）｜地域｜場所｜どこ｜再生｜いいね｜コメント｜保存｜URL
 
 2026-11-23｜関西｜勝尾寺｜YouTube｜991｜1｜0｜-｜https://www.youtube.com/shorts/rg58J0E66XM
