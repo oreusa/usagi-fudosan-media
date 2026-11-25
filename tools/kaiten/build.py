@@ -433,12 +433,12 @@ def store_page(x, shell, near):
     title = (f"【{(fz or (f'{d.year}/' if d.year != TODAY.year else '') + f'{d.month}/{d.day}')}{lab}】{x['n']}｜{area}"
              + ("の閉店のお知らせ（いつまで・場所）" if x["k"] == "close" else "の新しいお店（いつ・場所・時間）"))[:70]
     desc = (f"{x['n']}は{when}。{x['pt']} 場所は{x['p']}{('・' + pl2) if pl2 else ''}。"
-            f"{('営業時間は' + x['tm'] + '。') if x.get('tm') else ''}公式の発表と地図へすぐ行けます。")[:150]
+            f"{('営業時間は' + x['tm'].lstrip('は') + '。') if x.get('tm') else ''}公式の発表と地図へすぐ行けます。")[:150]
     rows = [("いつ", E(when)), ("場所", E(x["p"] + ("・" + pl2 if pl2 else "")))]
     if stn:
         rows.append(("駅から", E(stn)))
     if x.get("tm"):
-        rows.append(("営業時間", E(x["tm"])))
+        rows.append(("営業時間", E(x["tm"].lstrip("は"))))
     if x.get("end"):
         e = datetime.date.fromisoformat(x["end"]); rows.append(("いつまで", E(wdate(e))))
     rows.append(("ジャンル", E(g)))

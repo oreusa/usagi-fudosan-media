@@ -193,7 +193,7 @@ def from_release(u, t, pub, h):
     if m:
         st = f"{m.group(1)}から徒歩{m.group(2)}分"
     tm = ""
-    m = re.search(r"営業時間\s*[:：]?\s*([^\n]{3,50})", z2h(body))
+    m = re.search(r"営業時間\s*(?:[:：]|は)?\s*([^\n]{3,50})", z2h(body))  # 11/25「営業時間はは昼12時」になっていた
     if m:
         tm = re.split(r"※|（L\.?O|\(L\.?O|[:：][^\s:：\d]{2,8}[:：]", m.group(1))[0].strip(" ・:：")[:40]
     k = kind_of(t)
