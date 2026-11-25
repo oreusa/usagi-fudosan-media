@@ -1,0 +1,49 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body style="margin:0;background:#000">
+<canvas id="g" width="1080" height="1662"></canvas>
+<script>
+// 絵＋奥行きで「カメラが進む」映像にする。d=1 が手前。
+const cv=document.getElementById('g'),gl=cv.getContext('webgl',{preserveDrawingBuffer:true,antialias:false});
+const vs=`attribute vec2 p;varying vec2 uv;void main(){uv=p*.5+.5;uv.y=1.-uv.y;gl_Position=vec4(p,0,1);}`;
+const fs=`precision highp float;varying vec2 uv;uniform sampler2D im,dp;uniform vec2 c,pan,sc;uniform float z,base,rot,tm,mist,ray,wind;uniform vec2 rc;uniform float st,wy,shk;
+float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float n2(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
+float fb(vec2 p){float a=.5,r=0.;for(int i=0;i<4;i++){r+=a*n2(p);p*=2.03;a*=.5;}return r;}
+float D(vec2 s){return texture2D(dp,s).r;}
+vec2 M(vec2 s){return 1.-abs(1.-mod(s,2.));}
+void main(){vec2 q=uv-.5;float cr=cos(rot),sr=sin(rot);q=mat2(cr,-sr,sr,cr)*q;q=q*sc/base+.5;
+ vec2 jt=shk*vec2(n2(vec2(tm*.6,1.))-.5,n2(vec2(2.,tm*.5))-.5);
+ vec2 s=q;for(int i=0;i<10;i++){float d=D(M(s));s=c+(q-c)/(1.+z*(d-st*.5))+(pan+jt)*(d-st);}
+ s=M(s);
+ // 水面：wy より下だけ、横にゆらぐ（映り込みが揺れる）
+ if(wy>0.&&s.y>wy){float k=smoothstep(wy,wy+.04,s.y);s.x+=k*.0035*sin(s.y*140.-tm*2.2+n2(vec2(s.y*30.,tm*.3))*3.);s.y+=k*.0015*sin(s.x*60.+tm*1.7);}
+ // 風：もみじ・いちょう（赤・橙・黄）だけをゆっくり揺らす。水色・白っぽい所（空・水・石）は動かさない
+ vec3 c0=texture2D(im,s).rgb;float mx=max(c0.r,max(c0.g,c0.b)),mn=min(c0.r,min(c0.g,c0.b));
+ float sat=(mx-mn)/(mx+.001);float warm=smoothstep(.02,.18,c0.r-c0.b)*smoothstep(.25,.55,sat)*smoothstep(.15,.35,mx);
+ float gust=(.55+.45*sin(tm*.9+s.y*3.+n2(s*2.)*4.))*(.45+.55*D(s));
+ vec2 w=vec2(n2(s*7.+vec2(tm*.55,0.))-.5,n2(s*7.+vec2(3.1,tm*.45))-.5)+.5*vec2(n2(s*19.+tm*1.1)-.5,n2(s*19.+9.+tm*1.)-.5);
+ vec2 s2=s+wind*warm*gust*w;
+ vec3 col=texture2D(im,M(s2)).rgb;float d=D(s);
+ // もや：奥ほど濃く、横へゆっくり流れる
+ float m=fb(vec2(s.x*3.+tm*.06,s.y*5.+tm*.015))*fb(vec2(s.x*1.7-tm*.03,s.y*2.3));
+ col=mix(col,vec3(1.,.96,.9),mist*m*(1.-d)*.9);
+ // 光の筋：光の元 rc から放射、ゆっくり揺れる
+ vec2 v=uv-rc;float an=atan(v.y,v.x);float st=n2(vec2(an*18.,tm*.25))*n2(vec2(an*41.,-tm*.18));
+ float fall=exp(-length(v)*1.6);col+=ray*vec3(1.,.86,.62)*pow(st,2.2)*fall*(.35+.65*(1.-d));
+ gl_FragColor=vec4(col,1.);}`;
+function sh(t,s){const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS))throw gl.getShaderInfoLog(o);return o}
+const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);const l=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(l);gl.vertexAttribPointer(l,2,gl.FLOAT,false,0,0);
+const U=n=>gl.getUniformLocation(pr,n);
+function tex(img,unit,blur){const t=gl.createTexture();gl.activeTexture(gl.TEXTURE0+unit);gl.bindTexture(gl.TEXTURE_2D,t);
+ let src=img;if(blur){const c=document.createElement('canvas');c.width=img.width;c.height=img.height;const x=c.getContext('2d');x.filter=`blur(${blur}px)`;x.drawImage(img,0,0);src=c}
+ gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,src);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);return t}
+const cache={};
+window.setPair=async function(key,iu,du){if(!cache[key]){const L=u=>new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src=u});const [a,d]=await Promise.all([L(iu),L(du)]);cache[key]={a,d,ti:null,td:null}}
+ const C=cache[key];if(!C.ti){C.ti=tex(C.a,0);C.td=tex(C.d,1,4)}else{gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,C.ti);gl.activeTexture(gl.TEXTURE1);gl.bindTexture(gl.TEXTURE_2D,C.td)}
+ gl.uniform1i(U('im'),0);gl.uniform1i(U('dp'),1);
+ const ia=C.a.width/C.a.height,sa=1080/1662;gl.uniform2f(U('sc'),ia>sa?sa/ia:1,ia>sa?1:ia/sa);window._cur=key}
+// m: {z:進む量, cx,cy:消失点, px,py:横移動, base:拡大, rot}
+window.usePair=function(k){const C=cache[k];gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,C.ti);gl.activeTexture(gl.TEXTURE1);gl.bindTexture(gl.TEXTURE_2D,C.td);gl.uniform1i(U('im'),0);gl.uniform1i(U('dp'),1);const ia=C.a.width/C.a.height,sa=1080/1662;gl.uniform2f(U('sc'),ia>sa?sa/ia:1,ia>sa?1:ia/sa)};
+window.frame=function(m){gl.uniform2f(U('c'),m.cx??.5,m.cy??.45);gl.uniform2f(U('pan'),m.px||0,m.py||0);gl.uniform1f(U('z'),m.z||0);gl.uniform1f(U('base'),m.base||1.08);gl.uniform1f(U('rot'),m.rot||0);gl.uniform1f(U('tm'),m.tm||0);gl.uniform1f(U('mist'),m.mist||0);gl.uniform1f(U('ray'),m.ray||0);gl.uniform1f(U('wind'),m.wind??.0045);gl.uniform2f(U('rc'),m.rx??.5,m.ry??-.1);gl.uniform1f(U('st'),m.st??.3);gl.uniform1f(U('wy'),m.wy||0);gl.uniform1f(U('shk'),m.shk??.004);gl.drawArrays(gl.TRIANGLE_STRIP,0,4)}
+window.ready=1;
+</script></body></html>
