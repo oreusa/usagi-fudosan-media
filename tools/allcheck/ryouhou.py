@@ -11,7 +11,7 @@ ONLY_OK = {"gyosha": "関西だけの業者の窓口（11/23 決め）", "rankin
            "okaimono": "おかいものは関東が作り、関西からはリンク", "furusato": "ふるさと納税は関東が作り、関西からはリンク",
            "tanka": "おかいもの（関東）", "nesage": "おかいもの（関東）", "kaimawari": "両方にある（関西は shin/）", "privacy": "",
            "tomari": "", "ima": "", "uru": "", "sagasu": "", "hatsumode": ""}
-TODAY = (dt.datetime.utcnow() + dt.timedelta(hours=9)).date()
+TODAY = (dt.datetime.now(dt.timezone.utc).replace(tzinfo=None) + dt.timedelta(hours=9)).date()
 out, bad = [], []
 
 
@@ -61,7 +61,7 @@ for r, h in H.items():
     for u in urls:
         by[kind(u.replace(h, ""))].append(u)
     sm[r] = by
-out.append(f"# 関西と関東の並べ（{TODAY} {dt.datetime.utcnow().strftime('%H:%M')}UTC）\n")
+out.append(f"# 関西と関東の並べ（{TODAY} {dt.datetime.now(dt.timezone.utc).replace(tzinfo=None).strftime('%H:%M')}UTC）\n")
 out.append("## 1. ページの種類（sitemap-all）\n")
 for k in sorted(set(sm["kansai"]) | set(sm["kanto"])):
     a, b = len(sm["kansai"].get(k, [])), len(sm["kanto"].get(k, []))
@@ -128,10 +128,9 @@ for d in (TODAY, TODAY + dt.timedelta(days=1)):
         posts = posts if isinstance(posts, list) else (posts or {}).get("posts", [])
         s = json.dumps(posts, ensure_ascii=False)
         links = re.findall(re.escape(host) + r"(/[^\s\"\\?]*)", s)
-        return {"本数": len(posts), "HPへのリンク": len(links), "1件ページへ": len([l for l in links if re.match(r"/(o|kaiten)/", l)]),
-                "絵": len(re.findall(r'"(?:img|image|pic|card_head|photo)[^"]*"\s*:', s))}
+        return {"本数": len(posts), "HPへのリンク": len(links), "1件ページへ": len([l for l in links if re.match(r"/(o|kaiten)/", l)])}  # 絵は関東が公開の時に作る（photo_auto.py）ので予定では数えない
     if ka is None or kt is None:
-        if d == TODAY + dt.timedelta(days=1) and dt.datetime.utcnow().hour < 13:  # あすの予定は夜に出来る
+        if d == TODAY + dt.timedelta(days=1) and dt.datetime.now(dt.timezone.utc).replace(tzinfo=None).hour < 13:  # あすの予定は夜に出来る
             out.append(f"- {d}：まだ（関西 {'あり' if ka else 'なし'}・関東 {'あり' if kt else 'なし'}）"); continue
         bad.append(f"{d} の投稿の予定：関西 {'あり' if ka else 'なし'}・関東 {'あり' if kt else 'なし'}")
         out.append(f"- × {d}：関西 {'あり' if ka else 'なし'}・関東 {'あり' if kt else 'なし'}"); continue
@@ -144,7 +143,7 @@ for d in (TODAY, TODAY + dt.timedelta(days=1)):
 out.append("\n## 5. その日の動画のファイル\n")
 for d in (TODAY, TODAY + dt.timedelta(days=1)):
     a, b = raw("usagi-fudosan-media", f"ig/reels/{d}.json"), raw("akari-auto", f"reel/yt/{d}.json")
-    m = "" if (a and b) or (d > TODAY and dt.datetime.utcnow().hour < 4) else "× "
+    m = "" if (a and b) or (d > TODAY and dt.datetime.now(dt.timezone.utc).replace(tzinfo=None).hour < 4) else "× "
     if m: bad.append(f"{d} の動画：関西 {'あり' if a else 'なし'}・関東 {'あり' if b else 'なし'}")
     out.append(f"- {m}{d}：関西 {'あり' if a else 'なし'}・関東 {'あり' if b else 'なし'}")
 
