@@ -2,7 +2,7 @@
 const {chromium}=require('playwright');const fs=require('fs');const {execSync}=require('child_process');(async()=>{
 const [sj,outmp4]=process.argv.slice(2);const shots=JSON.parse(fs.readFileSync(sj));
 const b=await chromium.launch({args:['--allow-file-access-from-files','--use-gl=swiftshader','--enable-unsafe-swiftshader']});const p=await b.newPage({viewport:{width:1080,height:1662}});
-await p.goto('file://'+__dirname+'/par5.html');await p.waitForFunction('window.ready');
+await p.goto('file://'+__dirname+'/par5.html');await p.waitForFunction('window.ready');await p.evaluate(u=>setLeaves(u),'file://'+__dirname+'/leaves.png');
 const E={soft:t=>.5-.5*Math.cos(Math.PI*t)*1, io:t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2,out:t=>1-Math.pow(1-t,3),lin:t=>t,o2:t=>1-Math.pow(1-t,2)};
 const tmp=outmp4+'.d';fs.rmSync(tmp,{recursive:true,force:true});fs.mkdirSync(tmp,{recursive:true});const parts=[];
 for(const [k,s] of shots.entries()){await p.evaluate(([k,a,d])=>setPair(k,a,d),['s'+k,'file://'+s.img,'file://'+s.dep]);const m=s.m;const N=Math.round(s.dur*30);const es=E[s.ease||'o2'];const dir=`${tmp}/c${k}`;fs.mkdirSync(dir);

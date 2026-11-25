@@ -9,7 +9,7 @@ def plan(extra):
     for k in range(NS):
         T.append(round(v[k] + D[k] + .45 + extra, 2)); v.append(round(T[-1] + .6, 2))
     T.append(round(v[NS] + D[NS] + .9, 2)); v.append(round(T[-1] + .7, 2))
-    END = round(v[NS+1] + D[NS+1] + 1.0, 2)  # リストのページを短く; return v, T, END
+    END = round(v[NS+1] + D[NS+1] + 1.0, 2); return v, T, END  # リストのページを短く
 lo, hi = 0.0, 3.0
 for _ in range(30):
     mid = (lo + hi) / 2; _, _, e = plan(mid)
@@ -53,7 +53,7 @@ css = tpl[:css_end] + """
 .info .r b{color:rgba(255,255,255,.78);font-family:G;font-size:24px;letter-spacing:.2em;width:130px}
 .info small{color:rgba(255,255,255,.82);font-family:G;font-size:25px}
 .info p{font-family:G;color:#fff;font-size:32px;letter-spacing:.06em}
-.info .ph{position:absolute;left:52px;right:52px;bottom:52px;height:330px;border-radius:26px;border:1px solid rgba(255,255,255,.35);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.info .ph{position:absolute;left:52px;right:52px;bottom:52px;height:620px;border-radius:26px;border:1px solid rgba(255,255,255,.35);box-shadow:0 20px 50px rgba(0,0,0,.35)}
 """
 # 古い場面ごとの位置の上書きは消す
 css = re.sub(r"#s[0-9] \.cap\{top:\d+px\}\n", "", css)
