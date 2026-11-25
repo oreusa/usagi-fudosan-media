@@ -11,6 +11,9 @@ ONLY_OK = {"gyosha": "関西だけの業者の窓口（11/23 決め）", "rankin
            "okaimono": "おかいものは関東が作り、関西からはリンク", "furusato": "ふるさと納税は関東が作り、関西からはリンク",
            "tanka": "おかいもの（関東）", "nesage": "おかいもの（関東）", "kaimawari": "両方にある（関西は shin/）", "privacy": "",
            "tomari": "", "ima": "", "uru": "", "sagasu": "", "hatsumode": ""}
+# 11/25 量の違いが「載せる物の数」から来る物（中身の作りは同じ）。× にせず理由を書いて残す。足す時は理由を書く
+SOFT = {("kaiten", "字の量"): "開店の数が違う（関西 約80件・関東 約170件）。カードの作りは同じ",
+        ("ranking", "字の量"): "関西だけ駅の乗降の数字の欄がある（関東は国の駅の数字が無い）"}
 TODAY = (dt.datetime.now(dt.timezone.utc).replace(tzinfo=None) + dt.timedelta(hours=9)).date()
 out, bad = [], []
 
@@ -78,7 +81,10 @@ FIX = ["/", "/odekake", "/kaiten", "/koyo", "/illumination", "/jikka", "/kaitai"
 pairs = []
 for k in sorted(set(sm["kansai"]) & set(sm["kanto"])):
     if k in ("top",): continue
-    pairs.append((k, sm["kansai"][k][-3:], sm["kanto"][k][-3:]))
+    # 11/25 新しい方から3枚だと、片方だけ特別なページ（関西 illumination-muryo）が混ざって比べにならなかった
+    # → 10枚以下の種類は全部の平均。多い種類（o/ など）は新しい方から3枚
+    na, nb = sm["kansai"][k], sm["kanto"][k]
+    pairs.append((k, na if len(na) <= 10 else na[-3:], nb if len(nb) <= 10 else nb[-3:]))
 for p in FIX:
     a, b = (p.split("|") + [p])[:2]
     pairs.append(("固定 " + p, [H["kansai"] + a], [H["kanto"] + b]))
@@ -98,16 +104,17 @@ for k, ua, ub in pairs:
         if isinstance(v[0], bool): return all(v)
         if isinstance(v[0], str): return v[0]
         return round(sum(v) / len(v))
-    diffs = []
+    diffs, soft = [], []
+    kb = k.replace("固定 /", "").strip("/")
     for key in fa[0]:
         a, b = avg(fa, key), avg(fb, key)
         if mark(a, b, key):
-            diffs.append(f"{key} 関西 {a}／関東 {b}")
+            (soft if (kb, key) in SOFT else diffs).append(f"{key} 関西 {a}／関東 {b}" + (f"（{SOFT[(kb, key)]}）" if (kb, key) in SOFT else ""))
     if diffs:
         bad.append(f"「{k}」のページ：" + "・".join(diffs))
         out.append(f"- × {k}：" + "・".join(diffs) + f"（例 {ua[-1]} ／ {ub[-1]}）")
     else:
-        out.append(f"- {k}：同じ")
+        out.append(f"- {k}：同じ" + ("（量だけ違う：" + "・".join(soft) + "）" if soft else ""))
 
 # ---------- 3. 無いアドレス ----------
 out.append("\n## 3. 無いアドレスが 404 を返すか（200 だと Google に中身の無いページと見られる）\n")
