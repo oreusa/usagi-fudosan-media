@@ -1,6 +1,6 @@
-# リンクの確かめ（2026-11-25 14:39 JST・1689件・HPの全ページ）
+# リンクの確かめ（2026-11-25 22:33 JST・1728件・HPの全ページ）
 
-種類ごと（見た数／開けない数）：不動産 778／4・紅葉 21／2・イルミ 107／7・初もうで 24／0・おでかけ 657／12・ほか 102／0
+種類ごと（見た数／開けない数）：不動産 778／4・紅葉 21／2・イルミ 107／8・初もうで 24／0・おでかけ 686／11・ほか 112／0
 行き先の分からないアフィリエイトの入口 0本（押さないので見ていない）
 
 ## 開けない（直す）
@@ -13,7 +13,6 @@
 - ✗ [おでかけ] ペダルで時を漕ぐ デジタルスタンプラリー（links/index.html）404 https://event.city.kobe.lg.jp/event/OSHoI3B50boJ3RrtuNtr
 - ✗ [おでかけ] アニタッチ OSAKA なんば（links/index.html）404 https://www.afpbb.com/articles/-/3648165
 - ✗ [おでかけ] 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
-- ✗ [おでかけ] おでかけ掲載新しいお店や、毎年のイベント。うさぎがご紹介します。ご相談はこちら（links/index.html）429 https://ig.me/m/fudousan_ai_si
 - ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/14952151.html）404 https://www.wakayama-kanko.or.jp/events/detail_4480.html
 - ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/1e3f68ee.html）404 https://www.city.takasago.lg.jp/soshikikarasagasu/citypromotionshitsu/kanko_tokusan/2/13744.html
 - ✗ [イルミ] 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
@@ -22,6 +21,7 @@
 - ✗ [イルミ] HEP FIVE クリスマスイルミネーション（links/illumination-muryo.html）URLError https://www.hepfive.jp/
 - ✗ [イルミ] 大阪梅田ツインタワーズ・ノース クリスマスイルミネーション（links/illumination-muryo.html）URLError https://www.hhp.co.jp/
 - ✗ [イルミ] UMEDA MEETS HEART（links/illumination-muryo.html）URLError https://umedameetsheart.com/
+- ✗ [イルミ] しあわせ回廊 なら瑠璃絵（links/illumination-muryo.html）TimeoutError https://rurie.jp/
 - ✗ [イルミ] 勝尾寺 錦秋の宵詣り2026（links/illumination-osaka.html）URLError https://katsuo-ji-temple.or.jp/autumn/
 - ✗ [不動産] https://www.pref.shiga.lg.jp/file/attach（links/chika-kansai.html）404 https://www.pref.shiga.lg.jp/file/attachment/5598454.pdf
 - ✗ [不動産] 紀美野町（国勢調査 速報）紀美野町 人口 7,235人2025年10月1日の国勢（links/fudosan-list.html）404 https://www.pref.wakayama.lg.jp/prefg/020300/d00219934_d/fil/R7sokuho.pdf
