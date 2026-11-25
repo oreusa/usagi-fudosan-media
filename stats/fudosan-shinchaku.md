@@ -3,8 +3,10 @@
 月曜と木曜の 19:47 の回が、上から公式ページで確かめ、合う物を tools/fudosan_list/facts.json に足して make.py を回す。
 足した物・合わない物は stats/fudosan-watch.json の done に URL を入れる（次から出ない）。
 
-## 候補（42件）
+## 候補（44件）
 - 2026-11-25｜兵庫県｜[seido] 公示送達を閲覧する前に（禁止事項等）｜https://web.pref.hyogo.lg.jp/awk05/koujisoutatu/smtkenzei08.html
+- 2026-11-25｜法務省（相続登記）｜[seido] 11月25日（水）令和８年９月分月報公表（訟務事件統計、登記統計、検察統計、矯正統計、少年矯正統計、保護統計及び人権侵犯事件統計）｜https://www.moj.go.jp/housei/toukei/toukei_ichiran_index.html
+- 2026-11-25｜滋賀県｜[seido] 令和８年度スマート・ライフスタイル普及促進事業補助金における 重点対策加速化事業(省エネ分)の受付終了について｜https://www.pref.shiga.lg.jp/cg00/press-release/35145.html
 - 2026-11-24｜兵庫県｜[seido] 令和8年度自家消費型非住宅用太陽光発電設備導入補助事業｜https://web.pref.hyogo.lg.jp/nk19/taiyokohojojigyosya2026.html
 - 2026-11-24｜奈良県｜[seido] 奈良県と吉野町とのまちづくりに関する包括協定 締結式｜https://www.pref.nara.lg.jp/n151/p037010.html
 - 2026-11-22｜Osaka Metro ニュース｜[dekiru] 2026年度 第5回 大阪・まち・再発見 ぶらりウォーク"【開業20周年】今里筋線をぶらりあるき その2"を2026年12月5日（土曜日）に開催します｜https://subway.osakametro.co.jp/tourism/event/2026_12_burariwalk.php
