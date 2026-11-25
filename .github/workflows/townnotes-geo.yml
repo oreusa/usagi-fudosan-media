@@ -5,6 +5,8 @@ on:
     branches: [claude/project-thread-fofi9q]
     paths: [tools/townnotes/geocode.py, .github/workflows/townnotes-geo.yml]
   workflow_dispatch:
+  schedule:
+    - cron: "30 20 * * *"   # 5:30 JST 毎日（11/25 owner「足してよい」。新しい紅葉・おでかけに場所が付かず、泊まりのリンクが減っていた）
 permissions:
   contents: write
 jobs:
