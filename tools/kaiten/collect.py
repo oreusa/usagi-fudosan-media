@@ -195,7 +195,7 @@ def from_release(u, t, pub, h):
     tm = ""
     m = re.search(r"営業時間\s*(?:[:：]|は)?\s*([^\n]{3,50})", z2h(body))  # 11/25「営業時間はは昼12時」になっていた
     if m:
-        tm = re.split(r"※|（L\.?O|\(L\.?O|[:：][^\s:：\d]{2,8}[:：]", m.group(1))[0].strip(" ・:：")[:40]
+        tm = re.split(r"※|（L\.?O|\(L\.?O|[:：][^\s:：\d]{2,8}[:：]|(?<=まで)として|(?<=\d時)として|、", m.group(1))[0].strip(" ・:：")[:40]
     k = kind_of(t)
     ds = [d for d in find_date(t, pub) if pub - datetime.timedelta(days=45) <= d <= pub + datetime.timedelta(days=400)]
     if not ds:
