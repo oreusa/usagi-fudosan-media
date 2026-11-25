@@ -139,6 +139,9 @@ for d in (TODAY, TODAY + dt.timedelta(days=1)):
     if ka is None or kt is None:
         if d == TODAY + dt.timedelta(days=1) and dt.datetime.now(dt.timezone.utc).replace(tzinfo=None).hour < 13:  # あすの予定は夜に出来る
             out.append(f"- {d}：まだ（関西 {'あり' if ka else 'なし'}・関東 {'あり' if kt else 'なし'}）"); continue
+        # 11/25 関西のその日の予定は、その日の朝6:30ごろの回で作る決まり（関東は前の晩22時ごろ）。あすの関西が無いのは正しい
+        if d == TODAY + dt.timedelta(days=1) and ka is None and kt is not None:
+            out.append(f"- {d}：関西 まだ（その日の朝6:30ごろに作る決まり）・関東 あり"); continue
         bad.append(f"{d} の投稿の予定：関西 {'あり' if ka else 'なし'}・関東 {'あり' if kt else 'なし'}")
         out.append(f"- × {d}：関西 {'あり' if ka else 'なし'}・関東 {'あり' if kt else 'なし'}"); continue
     sa, sb = summ(ka, H["kansai"]), summ(kt, H["kanto"])
