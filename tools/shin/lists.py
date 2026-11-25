@@ -62,8 +62,7 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
             it['lnote'] = '宿は楽天トラベルの評価3.5以上・口コミ10件以上。値段は1泊の最安の目安で、日や人数で変わります。宿のリンクは広告（PR）です。'
             it['hk'] = f'近くの宿 {len(hs)}軒・' + (hs[0][3] if hs and hs[0][3] else '')
             it['hk'] = it['hk'].rstrip('・')
-            it.pop('o', None)
-            tm.append(it)
+            tm.append(it)  # 11/25 1件ページへのリンク（o）も残す（関東と同じ。前は外していて、泊まりから1件ページへ行けなかった）
     nin = sum(len(x['links']) for x in tm)
     ode('tomari', '/tomari', '泊まりで行く関西のおでかけ｜近くの評価の高い宿つき｜TOWN NOTE',
         f'関西の少し遠いおでかけ{len(tm)}か所と、近くの評価の高い宿をまとめました。宿は楽天トラベルの評価と口コミの数から選んでいます。',
@@ -223,7 +222,8 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
                       ['このサイト', [['相談・申し込み', '/moushikomi'], ['リクエスト・感想', '/koe'], ['プライバシーポリシー', '/privacy']]]],
                'sns': [['Instagram', 'https://www.instagram.com/fudousan_ai_si/'], ['Threads', 'https://www.threads.com/@fudousan_ai_si'], ['X', 'https://x.com/fudosan_ai_si']]}
         # 11/19 23:15 owner「朝9時には反映」→ この形を表紙（/）に。前の表紙は /shin/cover1 に残す
-        write('cover', 'TOWN NOTE（タウンノート）｜関西のおでかけと、家と土地の値段', c2, D2, js='cover2')
+        c2['desc'] = '関西のくらしで見つけたことを、ノートにまとめています。開催中のおでかけ・イベント、街の家と土地の値段、日用品の値段くらべ、開店・閉店を、公式の発表と数字で。'  # 11/25 関東と同じく入口にも説明文
+        write('cover', 'TOWN NOTE（タウンノート）｜関西のおでかけと、家と土地の値段', copy.deepcopy(c2), D2, js='cover2')
         write('cover2', 'TOWN NOTE（タウンノート）｜関西のおでかけと、家と土地の値段', c2, D2, js='cover2')
 
 
