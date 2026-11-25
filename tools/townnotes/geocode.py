@@ -21,6 +21,16 @@ def gsi(q):
     except Exception as e: print('gsi err', q, e); return None
     return (r[0]['geometry']['coordinates'][1], r[0]['geometry']['coordinates'][0]) if r else None
 src = ''.join(open(f, encoding='utf-8').read() for f in SRC)
+# 11/25 紅葉・イルミのページは新しい土台（links/shin/*.html の JSON）になり、前の形のカードが1枚しか無かった
+# → 紅葉38か所などに場所が無く、近くの宿も「泊まり」のページも付かなかった。新しい土台の JSON からも同じ形のカードにして読む
+for _f in ('links/shin/koyo.html', 'links/shin/illumination.html', 'links/shin/odekake.html'):
+    try:
+        _m = re.search(r'<script id="d" type="application/json">(.*?)</script>', open(_f, encoding='utf-8').read(), re.S)
+        for _x in json.loads(_m.group(1)).get('items', []) if _m else []:
+            src += ('<a class="card" data-pref="' + html.escape(_x.get('p', '')) + '" data-map="' + html.escape((_x.get('v') or '') + ' ' + (_x.get('a') or '')).strip() + '">'
+                    '<div class="t">' + html.escape(_x.get('t', '')) + '</div><div class="m">' + html.escape(_x.get('a', '')) + '｜' + html.escape(_x.get('v', '')) + '</div></a>')
+    except Exception as e:
+        print('新しい土台のカードは読めず', _f, e)
 old = json.load(open(OUT)) if os.path.exists(OUT) else {}
 res = {}
 for m in re.finditer(r'<a class="card[^"]*"([^>]*)>(.*?)</a>', src, re.S):
