@@ -37,10 +37,10 @@ void main(){vec2 q=uv-.5;float cr=cos(rot),sr=sin(rot);q=mat2(cr,-sr,sr,cr)*q;q=
  // きらめき：明るい所に小さな十字の光が瞬く
  if(spk>0.){float g=34.;vec2 cu=uv*vec2(g,g*1662./1080.);vec2 ci=floor(cu);float sp=0.;
   for(int j=-1;j<=1;j++)for(int i=-1;i<=1;i++){vec2 cc=ci+vec2(i,j);float r=h(cc+sd);vec2 pp=cc+vec2(h(cc+1.7+sd),h(cc+4.3+sd));
-   vec2 ps=s+(pp-cu)/vec2(g,g*1662./1080.)*sc/base;float b=dot(texture2D(im,M(ps)).rgb,vec3(.3,.59,.11));float bn=0.;for(int q=0;q<4;q++){float aq=float(q)*1.5708+.4;bn+=dot(texture2D(im,M(ps+vec2(cos(aq),sin(aq))*.018)).rgb,vec3(.3,.59,.11));}bn*=.25;b=b*smoothstep(.12,.3,b-bn);
-   float on=smoothstep(.06,.25,b)*step(.25,r)*step(.86,h(cc+9.1+sd));float tw=pow(.5+.5*sin(tm*(.8+r*1.2)+r*40.),6.);
+   vec2 ps=s+(pp-cu)/vec2(g,g*1662./1080.)*sc/base;vec3 c0=texture2D(im,M(ps)).rgb;float b=dot(c0,vec3(.3,.59,.11));float wh=smoothstep(.55,.8,min(c0.r,min(c0.g,c0.b))/max(max(c0.r,max(c0.g,c0.b)),.001))*smoothstep(.6,.85,b);float bn=0.;for(int q=0;q<4;q++){float aq=float(q)*1.5708+.4;bn+=dot(texture2D(im,M(ps+vec2(cos(aq),sin(aq))*.018)).rgb,vec3(.3,.59,.11));}bn*=.25;b=b*smoothstep(.12,.3,b-bn);
+   float on=smoothstep(.06,.25,b)*wh*step(.25,r)*step(.5,h(cc+9.1+sd));float tw=pow(.5+.5*sin(tm*(.8+r*1.2)+r*40.),6.);
    vec2 dv=(cu-pp);dv.y*=1.;float cr=exp(-abs(dv.x)*7.)*exp(-abs(dv.y)*.9)+exp(-abs(dv.y)*7.)*exp(-abs(dv.x)*.9);float co=exp(-dot(dv,dv)*14.);
-   sp+=on*tw*(cr*.8+co*1.4);}
+   sp+=on*tw*(cr*.25+co*1.1);}
   col+=spk*sp*vec3(1.,.93,.8);
   if(wy>0.&&s.y>wy){float gl2=pow(n2(vec2(uv.x*220.,uv.y*70.-tm*1.3)),14.)*pow(n2(vec2(uv.x*90.+tm*.7,uv.y*40.)),2.);col+=spk*gl2*smoothstep(.15,.6,Y)*vec3(2.,1.7,1.3);}}
  // 舞う紅葉：手前は大きくぼけて、奥は小さく
