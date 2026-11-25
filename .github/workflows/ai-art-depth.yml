@@ -1,0 +1,27 @@
+name: ai-art-depth
+# 11/25 owner「絵をどんどん足すだけでなく、1枚を動かして欲しい」：1枚の絵の奥行き（手前・奥）を Depth Anything V2 で出す。
+# 動かし方: tools/outing_reel/ai-art/depth/list.txt に「名前 画像URL」を1行ずつ書いて claude/** に押す → shots/ai-art-depth/<名前>.png
+on:
+  push:
+    branches: ['claude/**']
+    paths: ['tools/outing_reel/ai-art/depth/list.txt']
+permissions:
+  contents: write
+jobs:
+  depth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -q torch --index-url https://download.pytorch.org/whl/cpu && pip install -q transformers pillow numpy scipy
+      - name: depth
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: python3 tools/outing_reel/ai-art/depth/depth.py tools/outing_reel/ai-art/depth/list.txt shots/ai-art-depth
+      - run: |
+          git config user.name "art bot"; git config user.email "actions@users.noreply.github.com"
+          git add shots/ai-art-depth; git diff --cached --quiet || git commit -m "[CF-Pages-Skip] ai-art-depth: 絵の奥行き"
+          for i in 1 2 3 4 5 6; do git push origin HEAD:refs/heads/${GITHUB_REF_NAME} && break; git pull --rebase --autostash -q origin ${GITHUB_REF_NAME}; sleep $((i*7)); done
