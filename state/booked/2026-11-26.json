@@ -8,5 +8,82 @@
    "宝厳院（京都市右京区）\n宝厳院。獅子吼の庭の紅葉\n\n・夜の拝観 12/6まで 17:30〜20:30\n・夜の料金 1000円\n・昼の拝観 9:00〜17:00・大人700円\n・行き方 嵐電 嵐山駅から徒歩3分\n\n出かける前に、公式ページで確かめてください。\n\n#関西おでかけ #宝厳院"
   ],
   "at": "2026-11-26T05:10:56+09:00"
+ },
+ "n1": {
+  "time": "07:00",
+  "digest": "0801083719ecaabb",
+  "at": "2026-11-26T06:28:53+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x07": {
+  "time": "07:00",
+  "digest": "1de9629c536ae221",
+  "at": "2026-11-26T06:28:53+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "S1": {
+  "time": "08:00",
+  "digest": "a0faea314f277a84",
+  "at": "2026-11-26T06:28:53+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n2": {
+  "time": "09:00",
+  "digest": "b099192cc6120c17",
+  "at": "2026-11-26T06:28:53+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x09": {
+  "time": "09:00",
+  "digest": "f7855410069be40f",
+  "at": "2026-11-26T06:28:53+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x0930": {
+  "time": "09:30",
+  "digest": "fe23d096ca2bd3df",
+  "at": "2026-11-26T06:28:53+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n3": {
+  "time": "12:00",
+  "digest": "c8aeac1f35c855c1",
+  "at": "2026-11-26T06:28:53+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x12": {
+  "time": "12:00",
+  "digest": "a4b7b8e3ad8b584f",
+  "at": "2026-11-26T06:28:53+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n8": {
+  "time": "13:00",
+  "digest": "6884c29e2ee561d9",
+  "at": "2026-11-26T06:28:53+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n5": {
+  "time": "15:00",
+  "digest": "14db5b6619f695f8",
+  "at": "2026-11-26T06:28:53+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n6": {
+  "time": "18:00",
+  "digest": "3549b618e60ec7b4",
+  "at": "2026-11-26T06:28:53+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x18": {
+  "time": "18:00",
+  "digest": "19ed2852aaa24067",
+  "at": "2026-11-26T06:28:53+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
  }
 }
