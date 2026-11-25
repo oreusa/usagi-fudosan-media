@@ -27,6 +27,8 @@ KIKAI = [
     ("oreusa/usagi-fudosan-media", "post-img.yml", "投稿の絵", 30),
     ("oreusa/usagi-fudosan-media", "metrics.yml", "関西の数字", 16),
     # 関西は点検が公開を止めない（赤になるだけ）。赤のまま出ている＝お客さんに見えている
+    # 11/25 オーナー「全部は全部だよ」：関西と関東の違い（ページの種類・中身・無いアドレス・投稿の予定・動画）。赤＝違いがある＝その回に直す（stats/ryouhou.md）
+    ("oreusa/usagi-fudosan-media", "ryouhou.yml", "関西と関東の違い（stats/ryouhou.md）", 99999),
     ("oreusa/usagi-fudosan-media", "ngcheck.yml", "関西のページの見せてはいけない言葉", 99999),
 ]
 
