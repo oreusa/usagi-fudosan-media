@@ -1,10 +1,9 @@
-# 関西と関東の並べ（2026-11-25 11:55UTC）
+# 関西と関東の並べ（2026-11-25 12:51UTC）
 
 
-**違い 3 件**
-- × 「koyo」のページ：1件へのリンク 関西 68／関東 33
-- × 「koyo-*」のページ：字の量 関西 374／関東 181・1件へのリンク 関西 11／関東 5
-- × 「固定 /koyo」のページ：1件へのリンク 関西 68／関東 33
+**違い 2 件**
+- × 「tomari」のページ：字の量 関西 2245／関東 4780・内リンク 関西 63／関東 136・1件へのリンク 関西 59／関東 132
+- × 「固定 /tomari」のページ：字の量 関西 2245／関東 4780・内リンク 関西 63／関東 136・1件へのリンク 関西 59／関東 132
 
 ## 1. ページの種類（sitemap-all）
 
@@ -18,7 +17,7 @@
 - hatsumode：関西 1・関東 1
 - ikura：関西 1・関東 1
 - illumination：関西 1・関東 1
-- illumination-*：関西 7・関東 7
+- illumination-*：関西 7・関東 8
 - ima：関西 1・関東 1
 - jikka：関西 1・関東 1
 - jikka/：関西 201・関東 329
@@ -31,7 +30,7 @@
 - koyo-*：関西 6・関東 7
 - machi/：関西 205・関東 329
 - nesage：関西 0・関東 1（おかいもの（関東））
-- o/：関西 266・関東 246
+- o/：関西 266・関東 277
 - odekake：関西 1・関東 1
 - odekake-*：関西 6・関東 7
 - okaimono：関西 0・関東 1（おかいものは関東が作り、関西からはリンク）
@@ -60,27 +59,27 @@
 - kaitai-*：同じ
 - kaiten：同じ（量だけ違う：字の量 関西 4571／関東 9205（開店の数が違う（関西 約80件・関東 約170件）。カードの作りは同じ））
 - kaiten/：同じ
-- × koyo：1件へのリンク 関西 68／関東 33（例 https://kansai.townnote.app/koyo ／ https://kanto.townnote.app/koyo）
-- × koyo-*：字の量 関西 374／関東 181・1件へのリンク 関西 11／関東 5（例 https://kansai.townnote.app/koyo-wakayama ／ https://kanto.townnote.app/koyo-tokyo）
+- koyo：同じ
+- koyo-*：同じ
 - machi/：同じ
 - o/：同じ
 - odekake：同じ
 - odekake-*：同じ
 - ranking：同じ（量だけ違う：字の量 関西 1752／関東 688（関西だけ駅の乗降の数字の欄がある（関東は国の駅の数字が無い）））
 - sagasu：同じ
-- tomari：同じ
+- × tomari：字の量 関西 2245／関東 4780・内リンク 関西 63／関東 136・1件へのリンク 関西 59／関東 132（例 https://kansai.townnote.app/tomari ／ https://kanto.townnote.app/tomari）
 - uru：同じ
 - 固定 /：同じ
 - 固定 /odekake：同じ
 - 固定 /kaiten：同じ（量だけ違う：字の量 関西 4571／関東 9205（開店の数が違う（関西 約80件・関東 約170件）。カードの作りは同じ））
-- × 固定 /koyo：1件へのリンク 関西 68／関東 33（例 https://kansai.townnote.app/koyo ／ https://kanto.townnote.app/koyo）
+- 固定 /koyo：同じ
 - 固定 /illumination：同じ
 - 固定 /jikka：同じ
 - 固定 /kaitai：同じ
 - 固定 /moushikomi：同じ
 - 固定 /sagasu：同じ
 - 固定 /uru：同じ
-- 固定 /tomari：同じ
+- × 固定 /tomari：字の量 関西 2245／関東 4780・内リンク 関西 63／関東 136・1件へのリンク 関西 59／関東 132（例 https://kansai.townnote.app/tomari ／ https://kanto.townnote.app/tomari）
 - 固定 /ima：同じ
 - 固定 /hatsumode：同じ
 - 固定 /kaimawari：同じ
