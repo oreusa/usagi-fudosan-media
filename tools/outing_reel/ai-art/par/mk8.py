@@ -26,12 +26,30 @@ I = {  # 絵ごとの動き
  'view': S('hasedera4/07-view', 'hasedera-07', M(z1=.10, py0=-.03, py1=.03, b0=1.1, b1=1.1, **dict(NIGHT, spk=.9, lf=.3))),
  'ginkgo': S('hasedera1/05-ginkgo', 'hasedera-05', M(z1=.12, py0=-.03, py1=.03, b0=1.1, b1=1.1, wind=.003, spk=.5, lf=.8, ly=1, bok=0)),
  'hsvi': S('hasedera2/01-gate-night', 'hasedera-01', M(z1=.12, **NIGHT)),
+ 'rock0': S('ishiyama1/01-rock', 'ishiyama-01', M(z1=.26, cy=.42, **NIGHT)),
+ 'sando': S('ishiyama1/02-sando', 'ishiyama-02', M(z1=.34, cy=.5, **NIGHT, **LIGHTUP)),
+ 'irock': S('ishiyama1/04-rockclose-b', 'ishiyama-04', M(z1=.14, py0=.03, py1=-.03, b0=1.1, b1=1.1, **NIGHT)),
+ 'tahoto': S('ishiyama1/03-tahoto-b', 'ishiyama-03', M(z1=.18, cy=.4, py0=.02, py1=-.02, b0=1.1, b1=1.1, **NIGHT)),
+ 'ihondo': S('ishiyama2/05-hondo-b', 'ishiyama-05', M(z1=.12, px0=.025, px1=-.025, b0=1.1, b1=1.1, **NIGHT)),
+ 'tsukimi': S('ishiyama2/06-river', 'ishiyama-06', M(z1=.08, px0=-.02, px1=.02, wy=.62, **dict(NIGHT, spk=.6))),
+ 'ilantern': S('ishiyama2/07-fallen-b', 'ishiyama-07', M(z1=.30, cy=.5, **NIGHT)),
+ 'isvi': S('ishiyama1/02-sando-b', 'ishiyama-02b', M(z1=.12, **NIGHT)),
+ 'steps0': S('oyama1/01-steps', 'oyama-01', M(z1=.32, cy=.42, **NIGHT)),
+ 'cable': S('oyama1/02-cable-b', 'oyama-02', M(z1=.22, cy=.5, **NIGHT)),
+ 'ohondo': S('oyama1/03-hondo', 'oyama-03', M(z1=.14, cy=.45, py0=.02, py1=-.02, b0=1.1, b1=1.1, **NIGHT)),
+ 'arch': S('oyama1/04-lantern-b', 'oyama-04', M(z1=.30, cy=.4, **NIGHT, **LIGHTUP)),
+ 'shrine': S('oyama2/05-shrine-b', 'oyama-05', M(z1=.12, px0=.025, px1=-.025, b0=1.1, b1=1.1, **NIGHT)),
+ 'oview': S('oyama2/06-view', 'oyama-06', M(z1=.10, py0=-.03, py1=.03, b0=1.1, b1=1.1, **dict(NIGHT, spk=.9, lf=.3))),
+ 'ofree': S('oyama2/07-fallen', 'oyama-07', M(z1=.30, cy=.45, **NIGHT)),
+ 'oyvi': S('oyama1/01-steps-b', 'oyama-01b', M(z1=.12, **NIGHT)),
 }
 import copy
 SETS = {  # キー: (hf ディレクトリ, 場面ごとの絵, 案内の後ろの絵)  'MAP' は地図（ここでは作らない）
  'hgI': ('hogonin-1126', [['rock'], ['shakkei'], ['canopy'], ['night']], 'hgvi'),
  'hsI': ('hasedera-1126', [['pond'], ['grounds'], [('steps', 1.1), ('kannon', 1)], ['ginkgo']], 'hsvi'),
  'hgT': ('hogonin-1126t', [['tunnel'], 'MAP', ['shakkei'], ['rock'], ['canopy'], ['mossfall'], ['night'], ['nleaves']], 'hgvi'),
+ 'isN': ('ishiyama-1126n', [['rock0'], 'MAP', ['sando'], ['irock'], ['tahoto'], ['ihondo'], ['tsukimi'], ['ilantern']], 'isvi'),
+ 'oyN': ('oyama-1126n', [['steps0'], 'MAP', ['cable'], ['ohondo'], ['arch'], ['shrine'], ['oview'], ['ofree']], 'oyvi'),
  'hsT': ('hasedera-1126t', [['pond'], 'MAP', ['grounds'], ['dusk'], ['steps'], ['kannon'], ['view'], ['ginkgo']], 'hsvi'),
 }
 only = sys.argv[3:] or list(SETS)
