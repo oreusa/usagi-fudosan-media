@@ -1,0 +1,27 @@
+name: ryouhou（関西と関東を本番の全種類で並べる）
+# 11/25 オーナー「全部見直して…全部の意味わかってない」「仕組みも改善して」「全部は全部だよ」。違いは stats/ryouhou.md。kikai.py が × を拾う。
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "40 23 * * *"   # 8:40（朝の回の前）
+    - cron: "40 10 * * *"   # 19:40（関東の予定ができた後・夜の回の前）
+permissions:
+  contents: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: 並べる
+        id: r
+        continue-on-error: true
+        run: python3 tools/allcheck/ryouhou.py
+      - name: 保存
+        run: |
+          git config user.name "ryouhou bot"; git config user.email "actions@users.noreply.github.com"
+          git add stats/ryouhou.md stats/ryouhou.json; git diff --cached --quiet || git commit -q -m "[CF-Pages-Skip] ryouhou: $(TZ=Asia/Tokyo date '+%F %H:%M')"
+          for i in 1 2 3 4 5; do git pull --rebase -X theirs --autostash -q origin main && git push -q origin HEAD:main && break; sleep $((i*5)); done
+      - name: 違いがあれば赤
+        if: steps.r.outcome == 'failure'
+        run: exit 1
