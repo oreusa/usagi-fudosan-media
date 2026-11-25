@@ -5,7 +5,7 @@ SPEC = json.load(open(sys.argv[4])); NS = len(SPEC['scenes']); NV = NS + 2
 def dur(f): return float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]).decode())
 D = [dur(f"{VD}/20-{i:02d}.wav") for i in range(NV)]
 def plan(extra):
-    v = [1.25]; T = []  # 11/25 最初の1秒：表紙を早く開いて声も早く
+    v = [2.1]; T = []  # 11/25 夕：表紙が開く所をしっかり見せる（1.05秒から開く）
     for k in range(NS):
         T.append(round(v[k] + D[k] + .45 + extra, 2)); v.append(round(T[-1] + .6, 2))
     T.append(round(v[NS] + D[NS] + .9, 2)); v.append(round(T[-1] + .7, 2))
@@ -15,7 +15,7 @@ for _ in range(30):
     mid = (lo + hi) / 2; _, _, e = plan(mid)
     lo, hi = (mid, hi) if e < TARGET else (lo, mid)
 v, T, END = plan(round(lo, 2))
-spans = [round((T[k] + .7) - (0.25 if k == 0 else T[k - 1]), 2) for k in range(NS)]
+spans = [round((T[k] + .7) - (1.0 if k == 0 else T[k - 1]), 2) for k in range(NS)]
 print("END", END, "T", T, "v", v, "spans", spans)
 json.dump(spans, open(HERE + "/spans.json", "w"))
 tpl = open(HERE + "/src/tpl-long.txt").read()
@@ -64,7 +64,7 @@ SC = [(m, cap(*c)) for m, c in SPEC['scenes']]
 # 映像は各ページが見える間だけ再生
 pages = []
 for k, (m, c) in enumerate(SC):
-    st = 0.25 if k == 0 else T[k - 1]; du = round(T[k] + .7 - st, 2)
+    st = 1.0 if k == 0 else T[k - 1]; du = round(T[k] + .7 - st, 2)
     pages.append(f'<div class="sc" id="s{k}" style="z-index:{NS+2-k}"><div class="face"><div class="edge" id="e{k}"></div><video class="clip" src="a/v{k}.mp4" muted data-start="{st}" data-duration="{du}"></video>{c}<div class="shade"></div>{"<div class=cast></div>" if k else ""}<div class="gut"></div></div><div class="bk"></div></div>')
 h = tpl[body_start + len("<body>"):]
 hp = h[h.index('<div class="sc" id="s5"'):h.index('<div class="sc" id="s4"')].replace('id="s5" style="z-index:0"', f'id="s{NS+1}" style="z-index:0"')
@@ -73,7 +73,7 @@ cover = h[h.index('<div class="sc" id="cv"'):h.index('</div>\n <div id="dust">')
 rest = h[h.index(' <div id="dust">'):h.index('<script>')]
 info = re.sub(r'<div class="info">.*?(<div class="ph">)', lambda m_: '<div class="info">' + SPEC['info'] + m_.group(1), info, flags=re.S)
 info = info.replace('<div class="info">', f'<div class="info"><video class="ibg" src="a/vvi.mp4" muted data-start="{T[NS-1]}" data-duration="{round(T[NS]+1.2-T[NS-1],2)}"></video>', 1)
-html_book = ' <div id="stage">\n <div id="halo"></div>\n <div id="book">\n  ' + hp + info + "\n  ".join(reversed(pages)) + "\n  " + cover.replace('z-index:6', 'z-index:9') + '</div>\n'
+html_book = ' <div id="stage">\n <div id="halo"></div>\n <div id="book">\n  ' + hp + info + "\n  ".join(reversed(pages)) + "\n  " + cover.replace('z-index:6', 'z-index:50') + '</div>\n'
 pre = h[:h.index(' <div id="stage">')]
 js = h[h.index('<script>'):]
 # ---- JS を6場面＋案内＋リスト用に組み直す
