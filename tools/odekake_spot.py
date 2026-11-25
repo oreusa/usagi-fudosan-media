@@ -107,7 +107,29 @@ CSS += """.act{display:grid;gap:8px;margin:22px 0 0}.act a{display:block;text-al
 .tmap svg{display:block;width:100%;height:auto}.tmap p{margin:0;padding:10px 14px 12px;text-align:center;font-size:11.5px;letter-spacing:.06em;color:#8C7B6E}""" + spot_map.night_css()
 
 os.makedirs("links/o", exist_ok=True)
-for f in glob.glob("links/o/*.html"): os.remove(f)
+# 11/25 夜：終わった催しの1件ページを消すと、保存や検索から来た人が何の説明もなく一覧へ飛ばされていた
+# → 終わった物は「終わりました」の札を付けて90日残す（検索には出さない noindex）。開催中の物はこのあと作り直す
+_live = {sp["id"] for sp in spots}
+for f in glob.glob("links/o/*.html"):
+    _id = os.path.basename(f)[:-5]
+    if _id in _live: os.remove(f); continue
+    try: _t = open(f, encoding="utf-8").read()
+    except Exception: os.remove(f); continue
+    _m = re.search(r'data-ended="(\d{4}-\d\d-\d\d)"', _t)
+    if _m:
+        if (d0 - datetime.date.fromisoformat(_m.group(1))).days > 90: os.remove(f)
+        continue
+    _span = re.search(r'<span>日程</span><b>(.*?)</b>', _t)
+    _back = re.search(r'<a [^>]*href="(/odekake-[a-z]+)"[^>]*>([^<]*おでかけリスト)へ?</a>', _t)
+    _bn = (f'<p class="lead" data-ended="{TODAY}"><b>このおでかけは終わりました。</b>' + (f'（日程は {_span.group(1)}）' if _span else '') +
+           (f'いま行けるおでかけは <a href="{_back.group(1)}">{_back.group(2)}</a> から。' if _back else 'いま行けるおでかけは <a href="/odekake">関西おでかけリスト</a> から。') + '</p>')
+    _t = _t.replace('<div class="big">', _bn + '<div class="big">', 1)
+    _t = re.sub(r'(<span>いまは</span><b[^>]*>)[^<]*(</b>)', r'\1終わりました\2', _t, count=1)
+    _t = re.sub(r'<a class="g" href="[^"]*" target="_blank" rel="noopener sponsored">[^<]*</a>', '', _t)  # 終わった催しの券の広告は外す
+    _t = _t.replace("まで開かれます。", "まで開かれました。").replace("に開かれます。", "に開かれました。")
+    _t = re.sub(r'<script type="application/ld\+json">.*?</script>', '', _t, flags=re.S)  # 終わった催しの Event は検索に渡さない
+    if 'name="robots"' not in _t: _t = _t.replace('</title>', '</title><meta name="robots" content="noindex,follow">', 1)
+    open(f, "w", encoding="utf-8").write(_t)
 # 11/23 夜の見回り：永源寺の場所が「小学生以下は無料」（カードの2つ目が料金の注記）→ 料金・年齢の言葉は場所に使わない（地図の読み上げ・近くのカードも）
 for _o in spots:
     if re.search(r"無料|有料|\d+円|以下|以上|\d+歳|料金|入場", _o.get("place") or ""): _o["place"] = ""
