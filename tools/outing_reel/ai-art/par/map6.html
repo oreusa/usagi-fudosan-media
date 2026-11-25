@@ -1,0 +1,74 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:MB;src:url(ShipporiMincho-Bold.ttf)}@font-face{font-family:MM;src:url(ShipporiMincho-Medium.ttf)}
+html,body{margin:0;width:1080px;height:1662px;overflow:hidden;background:#060b17}
+#wrap{position:absolute;inset:0;perspective:1500px;overflow:hidden}
+#c{position:absolute;left:-180px;top:-1000px;width:1440px;height:2800px;transform-origin:50% 60%}
+#t{position:absolute;left:0;right:0;bottom:170px;text-align:center;color:#f4e6c6}
+#en{font:500 25px MM;letter-spacing:.42em;opacity:0;color:#d8bd85}
+#jp{font:700 92px MB;letter-spacing:.08em;margin-top:14px;opacity:0;text-shadow:0 0 30px rgba(255,200,120,.35)}
+#sub{font:500 32px MM;letter-spacing:.2em;opacity:0;margin-top:10px;color:#e9d6ae}
+#hl{width:0;height:1px;background:linear-gradient(90deg,transparent,#e2c48a,transparent);margin:22px auto 0}
+#vg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 45%,transparent 45%,rgba(2,4,10,.75));pointer-events:none}
+#fd{position:absolute;inset:0;background:#060b17;pointer-events:none}
+</style>
+<script src="d3-array-3.2.5/package/dist/d3-array.min.js"></script><script src="d3-geo-3.1.2/package/dist/d3-geo.min.js"></script><script src="topojson-client-3.1.0/package/dist/topojson-client.min.js"></script></head><body>
+<div id="wrap"><canvas id="c" width="1440" height="2800"></canvas></div><div id="vg"></div>
+<div id="t"><div id="en"></div><div id="jp"></div><div id="sub"></div><div id="hl"></div></div><div id="fd"></div>
+<script>
+// 11/25 owner「地図の演出もっとお洒落に・古い」→ 夜の地図：濃紺に金の細い線、街の明かりが瞬き、寄ってピンが灯る
+const W=1440,H=2800,c=document.getElementById('c'),x=c.getContext('2d');const Q=new URLSearchParams(location.search);
+const LON=+Q.get('lon'),LAT=+Q.get('lat'),PREF=+Q.get('pref'),MUNI=Q.get('muni'),F1=+(Q.get('f1')||40),DUR=+(Q.get('dur')||4.5);
+document.getElementById('en').textContent=Q.get('en');document.getElementById('jp').textContent=Q.get('jp');document.getElementById('sub').textContent=Q.get('sub');
+const C0=[+(Q.get('lon0')||137.2),+(Q.get('lat0')||36.0)];
+const P0=d3.geoAzimuthalEqualArea().center([138.5,36-18/60]).rotate([-138.5,-36+18/60]).scale(1700).translate([2500,-1930]);
+let prefs,tP,tM,bord,coast,lights=[];
+const R=(()=>{let s=7;return()=>(s=(s*16807)%2147483647)/2147483647})();
+(async()=>{const j=await (await fetch('jpn-atlas-1.0.2/package/japan/japan.json')).json();
+ prefs=topojson.feature(j,j.objects.prefectures);bord=topojson.mesh(j,j.objects.prefectures,(a,b)=>a!==b);coast=topojson.mesh(j,j.objects.prefectures,(a,b)=>a===b);
+ tP=prefs.features.find(f=>+f.id===PREF);const mu=topojson.feature(j,j.objects.municipalities);tM=mu.features.find(f=>String(f.id)===MUNI);
+ // 街の明かり：陸の上にだけ点を置く（目的地のまわりは多め）
+ const off=document.createElement('canvas');off.width=W;off.height=H;const o=off.getContext('2d');o.beginPath();d3.geoPath(null,o)(prefs);o.fill();const im=o.getImageData(0,0,W,H).data;
+ const pc=P0([LON,LAT]);
+ for(let i=0;i<9000&&lights.length<2600;i++){let px,py;if(R()<.45){const a=R()*6.28,r=Math.pow(R(),1.6)*60;px=pc[0]+Math.cos(a)*r;py=pc[1]+Math.sin(a)*r}else{px=R()*W;py=R()*H}
+  px|=0;py|=0;if(px<0||py<0||px>=W||py>=H)continue;if(im[(py*W+px)*4+3]>0)lights.push([px+R(),py+R(),R(),.2+R()*.8])}
+ await document.fonts.load('92px MB');await document.fonts.load('25px MM');window.ready=1})();
+const io=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2,o3=t=>1-Math.pow(1-t,3),cl=v=>Math.max(0,Math.min(1,v));
+function path(o,geo){x.beginPath();d3.geoPath(geo?P0:null,x)(o)}
+window.draw=function(t){
+ const e=io(cl(t/(DUR*.72)));const f=Math.pow(F1,e);
+ const a=P0(C0),b=P0([LON,LAT]);const kk=Math.pow(e,.7);const cx=a[0]+(b[0]-a[0])*kk,cy=a[1]+(b[1]-a[1])*kk;
+ x.setTransform(1,0,0,1,0,0);const g=x.createRadialGradient(W/2,H*.45,50,W/2,H*.45,H*.8);g.addColorStop(0,'#13213d');g.addColorStop(1,'#050913');x.fillStyle=g;x.fillRect(0,0,W,H);
+ // 経緯線：うすく
+ x.save();x.globalAlpha=.08;x.strokeStyle='#9fb6e0';x.lineWidth=1;const gr=d3.geoGraticule().step([1,1])();x.setTransform(f,0,0,f,W/2-f*cx,H*.64-f*cy);x.lineWidth=1/f;path(gr,1);x.stroke();x.restore();
+ x.setTransform(f,0,0,f,W/2-f*cx,H*.64-f*cy);
+ // 陸：ほんのり明るい紺、海岸に淡い光
+ path(prefs);x.fillStyle='#16233f';x.fill();
+ x.save();x.shadowColor='rgba(120,170,255,.55)';x.shadowBlur=14;path(coast);x.strokeStyle='rgba(150,190,255,.45)';x.lineWidth=1.4/f;x.stroke();x.restore();
+ // 県境：金の細い線
+ path(bord);x.strokeStyle='rgba(226,196,138,.35)';x.lineWidth=1/f;x.stroke();
+ // 目的の府県：金がにじむ
+ const pa=o3(cl((t-DUR*.18)/(DUR*.3)));if(tP&&pa>0){x.save();path(tP);x.fillStyle=`rgba(226,180,110,${.13*pa})`;x.fill();x.shadowColor='rgba(255,205,130,.9)';x.shadowBlur=18;x.strokeStyle=`rgba(240,205,140,${.9*pa})`;x.lineWidth=1.8/f;x.stroke();x.restore()}
+ // 目的の市：線が描かれていく
+ const ma=cl((t-DUR*.4)/(DUR*.32));if(tM&&ma>0){x.save();path(tM);x.fillStyle=`rgba(255,190,110,${.22*o3(ma)})`;x.fill();x.setLineDash([3000/f,3000/f]);x.lineDashOffset=(1-o3(ma))*3000/f;x.shadowColor='rgba(255,215,150,1)';x.shadowBlur=20;x.strokeStyle='#ffdca0';x.lineWidth=2.4/f;x.stroke();x.restore()}
+ // 街の明かり：瞬く
+ x.setTransform(1,0,0,1,0,0);
+ for(const [lx,ly,ph,s] of lights){const X=W/2+f*(lx-cx),Y=H*.64+f*(ly-cy);if(X<-10||Y<-10||X>W+10||Y>H+10)continue;
+  const tw=.55+.45*Math.sin(t*(2+ph*3)+ph*30);const r=(.7+s*1.1)*Math.min(2.2,.8+f*.02);x.globalAlpha=tw*(.35+.65*s);
+  x.fillStyle=ph<.15?'#fff4d6':'#ffd58f';x.beginPath();x.arc(X,Y,r,0,6.283);x.fill()}
+ x.globalAlpha=1;
+ // ピン：光の柱＋波紋＋十字のきらめき
+ const pt=cl((t-DUR*.62)/(DUR*.2));if(pt>0){const X=W/2+f*(b[0]-cx),Y=H*.64+f*(b[1]-cy);
+  const bm=x.createLinearGradient(X,Y-420,X,Y);bm.addColorStop(0,'rgba(255,220,160,0)');bm.addColorStop(1,`rgba(255,220,160,${.55*o3(pt)})`);x.fillStyle=bm;x.fillRect(X-3,Y-420*o3(pt),6,420*o3(pt));
+  for(let k=0;k<3;k++){const q=((t-DUR*.62)*0.7+k/3)%1;x.strokeStyle=`rgba(255,215,150,${(1-q)*.7*pt})`;x.lineWidth=2;x.beginPath();x.ellipse(X,Y,20+q*120,(20+q*120)*.45,0,0,6.283);x.stroke()}
+  const gl=x.createRadialGradient(X,Y,0,X,Y,46);gl.addColorStop(0,`rgba(255,250,230,${pt})`);gl.addColorStop(.25,`rgba(255,210,140,${.8*pt})`);gl.addColorStop(1,'rgba(255,200,120,0)');x.fillStyle=gl;x.beginPath();x.arc(X,Y,46,0,6.283);x.fill();
+  const sp=pt*(.75+.25*Math.sin(t*5));x.save();x.translate(X,Y);x.rotate(t*.4);x.fillStyle=`rgba(255,245,220,${.9*sp})`;for(let k=0;k<4;k++){x.rotate(Math.PI/2);x.beginPath();x.moveTo(0,-4);x.lineTo(70*sp,0);x.lineTo(0,4);x.fill()}x.restore()}
+ // 傾き：寄るほど立ち上がる
+ document.getElementById('c').style.transform=`rotateX(${34-18*e}deg) translateY(${-60*e}px)`;
+ // 字
+ const ta=cl((t-DUR*.55)/.6),tb=cl((t-DUR*.62)/.7),tc=cl((t-DUR*.7)/.6);
+ const E=document.getElementById('en'),J=document.getElementById('jp'),S=document.getElementById('sub');
+ E.style.opacity=o3(ta);E.style.transform=`translateY(${(1-o3(ta))*16}px)`;J.style.opacity=o3(tb);J.style.transform=`translateY(${(1-o3(tb))*24}px)`;J.style.filter=`blur(${(1-o3(tb))*8}px)`;
+ S.style.opacity=o3(tc);document.getElementById('hl').style.width=(o3(tc)*520)+'px';
+ document.getElementById('fd').style.opacity=1-o3(cl(t/.5));
+};
+</script></body></html>

@@ -5,17 +5,17 @@ SPEC = json.load(open(sys.argv[4])); NS = len(SPEC['scenes']); NV = NS + 2
 def dur(f): return float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]).decode())
 D = [dur(f"{VD}/20-{i:02d}.wav") for i in range(NV)]
 def plan(extra):
-    v = [1.8]; T = []
+    v = [1.25]; T = []  # 11/25 最初の1秒：表紙を早く開いて声も早く
     for k in range(NS):
         T.append(round(v[k] + D[k] + .45 + extra, 2)); v.append(round(T[-1] + .6, 2))
     T.append(round(v[NS] + D[NS] + .9, 2)); v.append(round(T[-1] + .7, 2))
-    END = round(v[NS+1] + D[NS+1] + 1.6, 2); return v, T, END
+    END = round(v[NS+1] + D[NS+1] + 1.0, 2); return v, T, END  # リストのページを短く
 lo, hi = 0.0, 3.0
 for _ in range(30):
     mid = (lo + hi) / 2; _, _, e = plan(mid)
     lo, hi = (mid, hi) if e < TARGET else (lo, mid)
 v, T, END = plan(round(lo, 2))
-spans = [round((T[k] + .7) - (0.8 if k == 0 else T[k - 1]), 2) for k in range(NS)]
+spans = [round((T[k] + .7) - (0.25 if k == 0 else T[k - 1]), 2) for k in range(NS)]
 print("END", END, "T", T, "v", v, "spans", spans)
 json.dump(spans, open(HERE + "/spans.json", "w"))
 tpl = open(HERE + "/src/tpl-long.txt").read()
@@ -53,7 +53,7 @@ css = tpl[:css_end] + """
 .info .r b{color:rgba(255,255,255,.78);font-family:G;font-size:24px;letter-spacing:.2em;width:130px}
 .info small{color:rgba(255,255,255,.82);font-family:G;font-size:25px}
 .info p{font-family:G;color:#fff;font-size:32px;letter-spacing:.06em}
-.info .ph{position:absolute;left:52px;right:52px;bottom:52px;height:330px;border-radius:26px;border:1px solid rgba(255,255,255,.35);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.info .ph{position:absolute;left:52px;right:52px;bottom:52px;height:620px;border-radius:26px;border:1px solid rgba(255,255,255,.35);box-shadow:0 20px 50px rgba(0,0,0,.35)}
 """
 # 古い場面ごとの位置の上書きは消す
 css = re.sub(r"#s[0-9] \.cap\{top:\d+px\}\n", "", css)
@@ -64,7 +64,7 @@ SC = [(m, cap(*c)) for m, c in SPEC['scenes']]
 # 映像は各ページが見える間だけ再生
 pages = []
 for k, (m, c) in enumerate(SC):
-    st = 0.8 if k == 0 else T[k - 1]; du = round(T[k] + .7 - st, 2)
+    st = 0.25 if k == 0 else T[k - 1]; du = round(T[k] + .7 - st, 2)
     pages.append(f'<div class="sc" id="s{k}" style="z-index:{NS+2-k}"><div class="face"><div class="edge" id="e{k}"></div><video class="clip" src="a/v{k}.mp4" muted data-start="{st}" data-duration="{du}"></video>{c}<div class="shade"></div>{"<div class=cast></div>" if k else ""}<div class="gut"></div></div><div class="bk"></div></div>')
 h = tpl[body_start + len("<body>"):]
 hp = h[h.index('<div class="sc" id="s5"'):h.index('<div class="sc" id="s4"')].replace('id="s5" style="z-index:0"', f'id="s{NS+1}" style="z-index:0"')
