@@ -15,13 +15,13 @@ ok = [post("n1", "07:00", "rank", "【京阪本線｜大阪府内の駅で1位�
       post("S1", "08:00", "jikka", "【実家が摂津市なら｜昨年度の平均は2,173万円】", "https://kansai.townnote.app/jikka/settsu?f=th-jikka-1114b"),
       post("n2", "09:00", "odekake", "【11/15から｜紅葉】", "https://kansai.townnote.app/koyo-osaka?f=th-odekake-1114c",
            x="【11/15から】 https://kansai.townnote.app/koyo-osaka?f=x-odekake-1114c"),
-      post("n3", "12:00", "dekiru", "【ルクア サウス、28店舗が開業】", "https://kansai.townnote.app/odekake-osaka?f=th-dekiru-1114d1"),
+      post("n3", "12:00", "dekiru", "【ルクア サウス、28店舗が開業】", "https://kansai.townnote.app/kaiten/20261114-aaaaaa?f=th-dekiru-1114d1"),
       post("n8", "13:00", "rank", "【南海本線｜府内で2位】", "https://kansai.townnote.app/ranking?f=th-rank-1114e#r31",
            x="【南海本線】 https://kansai.townnote.app/ranking?f=x-rank-1114e#r31"),
       post("n7", "21:00", "hitoeki", "【ひと駅しらべ その22｜南草津駅】", "https://kansai.townnote.app/machi/shiga-03?f=th-hitoeki-1114f1",
            x="【ひと駅しらべ】 https://kansai.townnote.app/machi/shiga-03?f=x-hitoeki-1114f"),
       post("n5", "15:00", "odekake", "【今週末だけ｜夜の紅葉】", "https://kansai.townnote.app/koyo-osaka?f=th-odekake-1114g"),
-      post("n6", "18:00", "dekiru", "【11/20開店｜草津駅前】", "https://kansai.townnote.app/odekake-shiga?f=th-dekiru-1114h")]
+      post("n6", "18:00", "dekiru", "【11/20開店｜草津駅前】", "https://kansai.townnote.app/kaiten/20261120-bbbbbb?f=th-dekiru-1114h")]
 for p_ in ok: p_.update(x_text="", x_thread=[])  # 11/14〜 Threads の枠は X に出さない（X は x07〜x21 の別枠）
 def xpost(h, text):
     return {"date": D, "slot": "x" + h, "time": h + ":00", "type": "sokuhou", "threads_text": "", "threads_thread": [],
@@ -29,7 +29,7 @@ def xpost(h, text):
 ok += [xpost(h, f"【{h}時｜草津市】駅前に新しい店が11/20開店\n草津駅から歩いて3分\n#草津市 #草津駅") for h in ("07", "09", "12", "15", "18", "21")]
 CASES = [  # (直す枠, 直し方, × に入るはずの言葉)
     ("S1", lambda p: p.update(threads_text=p["threads_text"].replace("/jikka/settsu", "/kaitai-settsu")), "売れた値段"),
-    ("n3", lambda p: p.update(threads_text=p["threads_text"].replace("/odekake-osaka", "/machi/osaka-19")), "開業"),
+    ("n3", lambda p: p.update(threads_text=p["threads_text"].replace("/kaiten/20261114-aaaaaa", "/machi/osaka-19")), "開業"),
     ("n8", lambda p: p.update(threads_text=p["threads_text"] + "\nお名前なしでも大丈夫"), "名前なしでも"),
     ("n7", lambda p: p.update(threads_text=p["threads_text"].replace(LAST, "毎朝7時と夜8時に、関西の街の数字を出しています。")), "最後の行"),
     ("x09", lambda p: p.update(x_text=""), "x_text が空"),
