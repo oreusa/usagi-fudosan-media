@@ -104,6 +104,17 @@ def main(paths):
             for b in bad:
                 print("   → " + b)
             n_bad += bool(bad)
+            # 11/26 △：1件ページ（links/o・links/kaiten）があるのに一覧へ向けている枠（× にはしない。直すのは tools/book/deepen.py）
+            try:
+                import copy
+                import os as _os
+                sys.path.insert(0, _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "..", "book"))
+                import deepen
+                h = deepen.deepen(copy.deepcopy(d))
+                if h:
+                    print(f"   △ 1件ページ /{h[0]}/{h[1]} があるのに一覧へ向けている → python3 tools/book/deepen.py <予定表> で付け替え")
+            except Exception:
+                pass
     print(f"× {n_bad} 件")
     return 1 if n_bad else 0
 
