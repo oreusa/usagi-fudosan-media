@@ -591,9 +591,11 @@
    "day": "2026-11-20"
   },
   "NAKED meets 二条城 2026": {
-   "price": "月〜木 2,000円、金土日祝 2,400円（早割は 1,600円・2,000円）",
-   "src": "https://nijo-jocastle.city.kyoto.lg.jp/event/matsuri2026-1/",
-   "day": "2026-11-20"
+   "price": "高校生以上 月〜木 2,000円、金土日祝 2,400円（学生・京都市に住む人は当日500円戻り）",
+   "src": "https://ja.kyoto.travel/event/single.php?event_id=8811",
+   "day": "2026-11-26",
+   "time": "18:00〜22:00（最終入場21:00）",
+   "note": "中学生以下は無料で券は要りません（中学生以下だけでは入れず、保護者か18歳以上の人と一緒に）。二の丸御殿・本丸御殿には入れません。会期中は休みなし。"
   },
   "びっくり構図展": {
    "price": "一般 1,200円、大学・高校・中学生 1,100円、小学生以下 300円",
@@ -682,6 +684,12 @@
    ],
    "src": "https://www.kyoto-aquarium.com/lp/suzuki/",
    "day": "2026-11-25"
+  },
+  "中之島ChristmasCommons": {
+   "time": "17:00〜22:00",
+   "price": "無料（食べ物・飲み物は有料）",
+   "src": "https://www.pref.osaka.lg.jp/hodo/fumin/o070080/prs_51258.html",
+   "day": "2026-11-26"
   }
  }
 }
