@@ -1,31 +1,25 @@
 #!/usr/bin/env python3
-"""11/26 owner「遅くしないで」「繋げるなら違和感なく」→ 元の速さのまま、盛り上がる前（38.1秒の拍）で
-曲の頭の落ち着いた所（9.2秒の拍＝低い音が入る所）へ拍をそろえてつなぐ。盛り上がり（38秒〜）は使わない。
+"""リールの曲の下地（11/26〜）。owner「遅くしないで」「繋げるなら違和感なく」「もうちょい上手く」。
+元の速さのまま。元の曲は38秒から盛り上がるので使わない。和音と音色が一番そろう所（機械で全部の拍を比べた）＝
+31.45秒の拍 → 8小節前の 13.67秒の拍 へ戻ってくり返す。拍の頭は音の立ち上がりの時刻でそろえ、
+拍の直前 0.2秒 で重ねて入れ替える（拍の頭の音は入る方だけ）。
 使い方: bgm_bed.py <長さ秒> <出力.wav>   （元 = tools/brand/reel_bgm.m4a・オーナーのオリジナル）"""
 import sys,subprocess,os,numpy as np,wave
 L=float(sys.argv[1]);O=sys.argv[2];R=os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-SR=48000
-src=os.path.join(R,'tools/brand/reel_bgm.m4a')
+SR=48000;src=os.path.join(R,'tools/brand/reel_bgm.m4a')
 raw=subprocess.run(['ffmpeg','-loglevel','error','-i',src,'-f','f32le','-ac','2','-ar',str(SR),'pipe:1'],capture_output=True,check=True).stdout
-x=np.frombuffer(raw,dtype=np.float32).reshape(-1,2).copy()
-assert len(x)>SR*60,'曲が読めない'
+x=np.frombuffer(raw,dtype=np.float32).reshape(-1,2).copy();assert len(x)>SR*60,'曲が読めない'
 S=lambda t:int(round(t*SR))
-A0,A1=0.19,38.100   # 頭〜盛り上がりの直前の拍
-B0=9.190            # 低い音が入る拍（A1 と同じ位置の拍）
-need=S(L+1)
-out=[x[S(A0):S(A1)]]
-got=len(out[0])
-while got<need:      # 長い時は 9.19〜38.10 を何回でも（同じつなぎ目）
-    seg=x[S(B0):S(A1)];out.append(seg);got+=len(seg)
-y=np.concatenate(out)[:need]
-# つなぎ目：出る方は 60ms で消え、入る方は 15ms で立ち上がる（拍の頭の音は消さない）
-fo,fi=S(0.06),S(0.015);pos=len(out[0])
-while pos<len(y):
-    tail=x[S(A1):S(A1)+fo]*np.linspace(1,0,fo)[:,None]
-    n=min(fo,len(y)-pos);y[pos:pos+n]+=tail[:n]
-    m=min(fi,len(y)-pos);y[pos:pos+m]*=np.linspace(0,1,fi)[:m,None]**0.5+0  # 軽い立ち上がり
-    pos+=S(A1)-S(B0)
+A0,A1,B0=0.19,31.4427,13.6461   # どちらも拍の頭の音の立ち上がり（onset）
+b0=S(B0);a1=S(A1);XF=S(0.2);pre=S(0.01)
+need=S(L+1);y=x[S(A0):a1-pre].copy()
+while len(y)<need:
+    # 出る方（a1-pre-XF〜a1-pre）を下げ、入る方（b0-pre-XF〜）を上げて重ねる
+    t=np.linspace(0,np.pi/2,XF)[:,None]
+    y[-XF:]=y[-XF:]*np.cos(t)+x[b0-pre-XF:b0-pre]*np.sin(t)
+    y=np.concatenate([y,x[b0-pre:a1-pre]])
+y=y[:need]
 tmp=O+'.raw.wav'
-with wave.open(tmp,'wb') as w:
-    w.setnchannels(2);w.setsampwidth(2);w.setframerate(SR);w.writeframes((np.clip(y,-1,1)*32767).astype('<i2').tobytes())
+with wave.open(tmp,'wb') as f:
+    f.setnchannels(2);f.setsampwidth(2);f.setframerate(SR);f.writeframes((np.clip(y,-1,1)*32767).astype('<i2').tobytes())
 subprocess.run(['ffmpeg','-loglevel','error','-y','-i',tmp,'-af','loudnorm=I=-20:TP=-1.5:LRA=9','-ar','48000',O],check=True);os.remove(tmp)
