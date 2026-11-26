@@ -33,6 +33,26 @@ KIKAI = [
 ]
 
 
+# 11/26 オーナー「ちゃんと全部仕組みづくり」：上の表に載せ忘れた機械は見られていなかった（ig-post-reel・townnotes-geo）。
+# 時刻で動く機械（cron のある .github/workflows）を両方のリポジトリから自分で探し、表に無い物も30時間で見る。
+def _kakure():
+    import os, re
+    base = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+    have = {(r, w) for r, w, _, _ in KIKAI}
+    out = []
+    for repo in ("oreusa/usagi-fudosan-media", "oreusa/akari-auto"):
+        d = os.path.join(base, repo.split("/")[1], ".github", "workflows")
+        if not os.path.isdir(d):
+            continue
+        for f in sorted(os.listdir(d)):
+            if f.endswith((".yml", ".yaml")) and (repo, f) not in have:
+                if re.search(r"^\s*-\s*cron:", open(os.path.join(d, f), encoding="utf-8").read(), re.M):
+                    out.append((repo, f, f"表に無い時刻の機械 {f}", 30))
+    return out
+
+
+KIKAI += _kakure()
+
 def gh(path):
     out = subprocess.run(["gh", "api", path], capture_output=True, text=True, timeout=60)
     if out.returncode != 0:
