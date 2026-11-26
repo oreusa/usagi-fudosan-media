@@ -18,7 +18,7 @@ import sys
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
 HOST = "https://kansai.townnote.app"
-TYPES = ("odekake", "dekiru")
+TYPES = ("odekake", "dekiru", "sokuhou")
 LIST_URL = re.compile(r"https://kansai\.townnote\.app/(?:odekake|koyo|illumination|hatsumode|ima|kaiten)(?:-[a-z]+)?(?:\.html)?/?(?=[?#\s]|$)")
 ONE_URL = re.compile(r"kansai\.townnote\.app/(?:o|kaiten)/[0-9a-z-]+")
 LEAD = {"o": "地図と行き方、近くのほかのおでかけは、こちら。", "kaiten": "開く日・場所・地図、近くの新しいお店は、こちら。"}
@@ -99,6 +99,35 @@ def deepen(item):
     return hit
 
 
+def deepen_x(item):
+    """X の2本目（x_thread）の一覧リンクも、1行目の店・催しの1件ページへ（11/27 門 #1281 が速報の X にも1件ページを求める）。
+    「〜を、日付と地図で：URL」の1行は「開く日・場所・地図：URL」に替える。"""
+    if item.get("type") not in TYPES:
+        return None
+    xs = list(item.get("x_thread") or [])
+    if not xs or not any(LIST_URL.search(p) for p in xs) or any(ONE_URL.search(p) for p in xs):
+        return None
+    hit = find((item.get("x_text") or "").split("\n")[0])
+    if not hit:
+        return None
+    kind, key = hit
+    for i, p in enumerate(xs):
+        if not LIST_URL.search(p):
+            continue
+        lines = p.split("\n")
+        for j, ln in enumerate(lines):
+            m = LIST_URL.search(ln)
+            if m:
+                pre = ln[:m.start()]
+                url = LIST_URL.sub(f"{HOST}/{kind}/{key}", ln[m.start():], count=1)
+                lines[j] = (("開く日・場所・地図：" if kind == "kaiten" else "地図と行き方：") + url) if pre.endswith("：") and len(pre) <= 30 else pre + url
+                break
+        xs[i] = "\n".join(lines)
+        break
+    item["x_thread"] = xs
+    return hit
+
+
 def main(argv):
     check = "--check" in argv
     files = [a for a in argv if not a.startswith("--")]
@@ -107,7 +136,8 @@ def main(argv):
         rows = rows if isinstance(rows, list) else [rows]
         hits = []
         for r in rows:
-            h = deepen(dict(r) if check else r)
+            rr = dict(r) if check else r
+            h = deepen(rr) or deepen_x(rr)
             if h:
                 hits.append((r.get("slot"), f"/{h[0]}/{h[1]}"))
         if not check:
