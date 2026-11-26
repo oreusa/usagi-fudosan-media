@@ -1,0 +1,146 @@
+{
+ "date": "2026-11-27",
+ "bad": 0,
+ "slots": {
+  "n1": {
+   "ok": true,
+   "time": "07:00",
+   "head": "太秦天神川と椥辻、1日の乗り降りの差は406人でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "48f4c5dd4de12a80",
+   "x": false,
+   "th": true
+  },
+  "x07": {
+   "ok": true,
+   "time": "07:00",
+   "head": "心斎橋・クオーツ心斎橋に「フェンディ 心斎橋店」、11/28（土）オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "f44810d3f9d201c9",
+   "x": true,
+   "th": false
+  },
+  "S1": {
+   "ok": true,
+   "time": "08:00",
+   "head": "奈良県の中古一戸建て、7〜9月の平均は1,771万円でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "ed4e543605a2c1f0",
+   "x": false,
+   "th": true
+  },
+  "n2": {
+   "ok": true,
+   "time": "09:00",
+   "head": "きょう11/27（金）も、京都の北野天満宮は「もみじ苑」を開いています。",
+   "bad": [],
+   "warn": [],
+   "digest": "b223f5bc51895dad",
+   "x": false,
+   "th": true
+  },
+  "x09": {
+   "ok": true,
+   "time": "09:00",
+   "head": "京都駅・イオンモールKYOTOに「ロフト」、きょう11/27（金）10時オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "3edc87a5b542cc88",
+   "x": true,
+   "th": false
+  },
+  "x0930": {
+   "ok": true,
+   "time": "09:30",
+   "head": "三宮・神戸BAL本館1階に「BYREDO」、きょう11/27（金）神戸初オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "0d04a152227a7d9e",
+   "x": true,
+   "th": false
+  },
+  "n3": {
+   "ok": true,
+   "time": "12:00",
+   "head": "きょう11/27（金）、京都駅から歩いて5分のイオンモールKYOTOに、ロフトが開きます。",
+   "bad": [],
+   "warn": [],
+   "digest": "4bcbf9424abb414e",
+   "x": false,
+   "th": true
+  },
+  "x12": {
+   "ok": true,
+   "time": "12:00",
+   "head": "梅田・大丸梅田店の地下2階に「ヤマダストアー」、12/12（土）大阪初出店",
+   "bad": [],
+   "warn": [],
+   "digest": "f84a9001b2976a5d",
+   "x": true,
+   "th": false
+  },
+  "n8": {
+   "ok": true,
+   "time": "13:00",
+   "head": "箸尾と佐味田川、1日の乗り降りの差は210人でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "b56d22427f4f53e3",
+   "x": false,
+   "th": true
+  },
+  "n5": {
+   "ok": true,
+   "time": "15:00",
+   "head": "あす11/28（土）、奈良の「秋夜の奈良旅」は今年の最終日です。",
+   "bad": [],
+   "warn": [],
+   "digest": "03e577b55ee046b4",
+   "x": false,
+   "th": true
+  },
+  "n6": {
+   "ok": true,
+   "time": "18:00",
+   "head": "あす11/28（土）、心斎橋にフェンディの大阪の旗艦店が開きます。",
+   "bad": [],
+   "warn": [],
+   "digest": "c9fcb8de5fc96a62",
+   "x": false,
+   "th": true
+  },
+  "x18": {
+   "ok": true,
+   "time": "18:00",
+   "head": "京都市営地下鉄東西線、太秦天神川と椥辻は1日406人差",
+   "bad": [],
+   "warn": [],
+   "digest": "5f2b408032e6ac7a",
+   "x": true,
+   "th": false
+  },
+  "n7": {
+   "ok": true,
+   "time": "21:00",
+   "head": "阪急の夙川駅は1日25,370人、となりの芦屋川の約1.9倍でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "3121e92240f3dec9",
+   "x": false,
+   "th": true
+  },
+  "x21": {
+   "ok": true,
+   "time": "21:00",
+   "head": "奈良・興福寺や春日大社の夜間特別参拝「秋夜の奈良旅」、あす11/28（土）が最終日",
+   "bad": [],
+   "warn": [],
+   "digest": "8b92767835bcb6dc",
+   "x": true,
+   "th": false
+  }
+ }
+}
