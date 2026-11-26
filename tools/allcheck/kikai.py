@@ -33,6 +33,26 @@ KIKAI = [
 ]
 
 
+# 11/26 オーナー「ちゃんと全部仕組みづくり」：上の表に載せ忘れた機械は見られていなかった（ig-post-reel・townnotes-geo）。
+# 時刻で動く機械（cron のある .github/workflows）を両方のリポジトリから自分で探し、表に無い物も30時間で見る。
+def _kakure():
+    import os, re
+    base = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+    have = {(r, w) for r, w, _, _ in KIKAI}
+    out = []
+    for repo in ("oreusa/usagi-fudosan-media", "oreusa/akari-auto"):
+        d = os.path.join(base, repo.split("/")[1], ".github", "workflows")
+        if not os.path.isdir(d):
+            continue
+        for f in sorted(os.listdir(d)):
+            if f.endswith((".yml", ".yaml")) and (repo, f) not in have:
+                if re.search(r"^\s*-\s*cron:", open(os.path.join(d, f), encoding="utf-8").read(), re.M):
+                    out.append((repo, f, f"表に無い時刻の機械 {f}", 30))
+    return out
+
+
+KIKAI += _kakure()
+
 def gh(path):
     out = subprocess.run(["gh", "api", path], capture_output=True, text=True, timeout=60)
     if out.returncode != 0:
@@ -93,6 +113,31 @@ try:
             rows.append(f"○ 申し込みの通し（{k}・{fc.get('at')}）")
 except Exception as e:
     bad.append(f"× 申し込みの通し：stats/formcheck.json が読めない {e}")
+
+# 11/26 オーナー「bufferとかその他ツールにも使用制限あるんじゃなかった？」「管理する担当も」：
+# GitHub Pages は公開するサイトが1GBまで。関西は出し終わったリール動画で約2GBになっていた（#1260 で消した）。
+# main の中身の大きさを数え、900MB を越えたら ×（media/reels の古い mp4 を消す。HP からの参照は無い）。
+import os as _os
+for _repo, _dir in (("oreusa/usagi-fudosan-media", "usagi-fudosan-media"), ("oreusa/akari-auto", "akari-auto")):
+    _path = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))), _dir)
+    try:
+        subprocess.run(["git", "-C", _path, "fetch", "-q", "origin", "main"], timeout=120, check=True)
+        out = subprocess.run(["git", "-C", _path, "ls-tree", "-r", "-l", "origin/main"], capture_output=True, text=True, timeout=60).stdout
+        tot, big = 0, {}
+        for ln in out.splitlines():
+            f = ln.split()
+            if len(f) >= 5 and f[3].isdigit():
+                n = int(f[3]); tot += n
+                top = "/".join(ln.split("\t", 1)[1].split("/")[:2])
+                big[top] = big.get(top, 0) + n
+        top3 = "・".join(f"{k} {v/1e6:.0f}MB" for k, v in sorted(big.items(), key=lambda x: -x[1])[:3])
+        line = f"サイトの大きさ（{_dir}・GitHub Pages の上限1GB）：{tot/1e6:.0f}MB（大きい所 {top3}）"
+        if tot > 900e6:
+            bad.append("× " + line + " → 出し終わった media/reels の mp4 などを消す")
+        else:
+            rows.append("○ " + line)
+    except Exception as e:
+        rows.append(f"－ サイトの大きさ（{_dir}）：数えられない {e}")
 
 print("\n".join(rows))
 if bad:

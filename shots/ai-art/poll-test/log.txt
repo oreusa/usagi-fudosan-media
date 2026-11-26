@@ -1,7 +1,0 @@
-shots/ai-art/poll-test/b-steps-21.webp pollinations 失敗0 HTTP Error 503: Service Unavailable
-shots/ai-art/poll-test/b-steps-21.webp pollinations 失敗1 HTTP Error 402: Payment Required
-shots/ai-art/poll-test/b-steps-21.webp pollinations 失敗2 HTTP Error 402: Payment Required
-shots/ai-art/poll-test/e-valley-51.jpg OK（pollinations 79919）
-shots/ai-art/poll-test/f-river-61.webp pollinations 失敗0 HTTP Error 402: Payment Required
-shots/ai-art/poll-test/f-river-61.webp pollinations 失敗1 HTTP Error 402: Payment Required
-shots/ai-art/poll-test/f-river-61.webp pollinations 失敗2 HTTP Error 402: Payment Required

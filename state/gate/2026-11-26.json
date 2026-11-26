@@ -1,0 +1,146 @@
+{
+ "date": "2026-11-26",
+ "bad": 0,
+ "slots": {
+  "n1": {
+   "ok": true,
+   "time": "07:00",
+   "head": "交野市と河内森、1日の利用者数の差はたった4人でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "0801083719ecaabb",
+   "x": false,
+   "th": true
+  },
+  "x07": {
+   "ok": true,
+   "time": "07:00",
+   "head": "天王寺・あべのハルカス近鉄本店に「GOD OF BUTTERCHEESE」、11/30（月）全国初出店",
+   "bad": [],
+   "warn": [],
+   "digest": "1de9629c536ae221",
+   "x": true,
+   "th": false
+  },
+  "S1": {
+   "ok": true,
+   "time": "08:00",
+   "head": "和歌山県の中古一戸建て、7〜9月の平均は1,052万円でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "a0faea314f277a84",
+   "x": false,
+   "th": true
+  },
+  "n2": {
+   "ok": true,
+   "time": "09:00",
+   "head": "きょう11/26（木）、東近江市の永源寺は紅葉のライトアップをしています。",
+   "bad": [],
+   "warn": [],
+   "digest": "b099192cc6120c17",
+   "x": false,
+   "th": true
+  },
+  "x09": {
+   "ok": true,
+   "time": "09:00",
+   "head": "梅田・大丸梅田店の地下1階に、12/1（火）お菓子の店4つ",
+   "bad": [],
+   "warn": [],
+   "digest": "f7855410069be40f",
+   "x": true,
+   "th": false
+  },
+  "x0930": {
+   "ok": true,
+   "time": "09:30",
+   "head": "東近江・永源寺で、紅葉のライトアップ",
+   "bad": [],
+   "warn": [],
+   "digest": "fe23d096ca2bd3df",
+   "x": true,
+   "th": false
+  },
+  "n3": {
+   "ok": true,
+   "time": "12:00",
+   "head": "11/30（月）、あべのハルカス近鉄本店に「GOD OF BUTTERCHEESE」が全国で初めて開きます。",
+   "bad": [],
+   "warn": [],
+   "digest": "c8aeac1f35c855c1",
+   "x": false,
+   "th": true
+  },
+  "x12": {
+   "ok": true,
+   "time": "12:00",
+   "head": "神戸市営地下鉄 西神・山手線、名谷と西神中央は1日1,250人差",
+   "bad": [],
+   "warn": [],
+   "digest": "a4b7b8e3ad8b584f",
+   "x": true,
+   "th": false
+  },
+  "n8": {
+   "ok": true,
+   "time": "13:00",
+   "head": "名谷と西神中央、1日の利用者数の差は1,250人でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "6884c29e2ee561d9",
+   "x": false,
+   "th": true
+  },
+  "n5": {
+   "ok": true,
+   "time": "15:00",
+   "head": "梅田スカイビルの光と音のショーは、今夜も6時から30分ごとです。",
+   "bad": [],
+   "warn": [],
+   "digest": "14db5b6619f695f8",
+   "x": false,
+   "th": true
+  },
+  "n6": {
+   "ok": true,
+   "time": "18:00",
+   "head": "12/1（火）、大丸梅田店の地下1階に、4つのお菓子の店が開きます。",
+   "bad": [],
+   "warn": [],
+   "digest": "3549b618e60ec7b4",
+   "x": false,
+   "th": true
+  },
+  "x18": {
+   "ok": true,
+   "time": "18:00",
+   "head": "梅田スカイビルの光と音のショー「MUSIC SELECTION II」、11/30（月）まで",
+   "bad": [],
+   "warn": [],
+   "digest": "19ed2852aaa24067",
+   "x": true,
+   "th": false
+  },
+  "n7": {
+   "ok": true,
+   "time": "21:00",
+   "head": "JR石山駅は1日20,684人が乗る駅、となりの瀬田より3,537人多い駅でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "01764f53cddcdd4a",
+   "x": false,
+   "th": true
+  },
+  "x21": {
+   "ok": true,
+   "time": "21:00",
+   "head": "京阪交野線、交野市と河内森は1日の差がたった4人",
+   "bad": [],
+   "warn": [],
+   "digest": "9f3cce4278aac7e4",
+   "x": true,
+   "th": false
+  }
+ }
+}

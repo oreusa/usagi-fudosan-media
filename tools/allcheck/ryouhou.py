@@ -14,7 +14,8 @@ ONLY_OK = {"gyosha": "関西だけの業者の窓口（11/23 決め）", "rankin
 # 11/25 量の違いが「載せる物の数」から来る物（中身の作りは同じ）。× にせず理由を書いて残す。足す時は理由を書く
 SOFT = {("kaiten", "字の量"): "開店の数が違う（関西 約80件・関東 約170件）。カードの作りは同じ",
         ("ranking", "字の量"): "関西だけ駅の乗降の数字の欄がある（関東は国の駅の数字が無い）"}
-TODAY = (dt.datetime.now(dt.timezone.utc).replace(tzinfo=None) + dt.timedelta(hours=9)).date()
+JST_NOW = dt.datetime.now(dt.timezone.utc).replace(tzinfo=None) + dt.timedelta(hours=9)
+TODAY = JST_NOW.date()
 out, bad = [], []
 
 
@@ -137,8 +138,12 @@ for d in (TODAY, TODAY + dt.timedelta(days=1)):
         links = re.findall(re.escape(host) + r"(/[^\s\"\\?]*)", s)
         return {"本数": len(posts), "HPへのリンク": len(links), "1件ページへ": len([l for l in links if re.match(r"/(o|kaiten)/", l)])}  # 絵は関東が公開の時に作る（photo_auto.py）ので予定では数えない
     if ka is None or kt is None:
-        if d == TODAY + dt.timedelta(days=1) and dt.datetime.now(dt.timezone.utc).replace(tzinfo=None).hour < 13:  # あすの予定は夜に出来る
+        # 11/26 直し：前は UTC の時で見ていて、朝5時（UTC 20時）に「あす無し」「きょうの関西無し」を×にしていた。日本の時で見る
+        if (d > TODAY and JST_NOW.hour < 22) or (d == TODAY and ka is None and kt is not None and JST_NOW.hour < 7):  # あすの予定は夜22時ごろ・関西のきょうは朝6:30ごろに出来る
             out.append(f"- {d}：まだ（関西 {'あり' if ka else 'なし'}・関東 {'あり' if kt else 'なし'}）"); continue
+        # 11/25 関西のその日の予定は、その日の朝6:30ごろの回で作る決まり（関東は前の晩22時ごろ）。あすの関西が無いのは正しい
+        if d == TODAY + dt.timedelta(days=1) and ka is None and kt is not None:
+            out.append(f"- {d}：関西 まだ（その日の朝6:30ごろに作る決まり）・関東 あり"); continue
         bad.append(f"{d} の投稿の予定：関西 {'あり' if ka else 'なし'}・関東 {'あり' if kt else 'なし'}")
         out.append(f"- × {d}：関西 {'あり' if ka else 'なし'}・関東 {'あり' if kt else 'なし'}"); continue
     sa, sb = summ(ka, H["kansai"]), summ(kt, H["kanto"])
@@ -150,7 +155,7 @@ for d in (TODAY, TODAY + dt.timedelta(days=1)):
 out.append("\n## 5. その日の動画のファイル\n")
 for d in (TODAY, TODAY + dt.timedelta(days=1)):
     a, b = raw("usagi-fudosan-media", f"ig/reels/{d}.json"), raw("akari-auto", f"reel/yt/{d}.json")
-    m = "" if (a and b) or (d > TODAY and dt.datetime.now(dt.timezone.utc).replace(tzinfo=None).hour < 4) else "× "
+    m = "" if (a and b) or (d > TODAY and JST_NOW.hour < 22) else "× "  # あすの動画は夜までに出来る（日本の時で見る）
     if m: bad.append(f"{d} の動画：関西 {'あり' if a else 'なし'}・関東 {'あり' if b else 'なし'}")
     out.append(f"- {m}{d}：関西 {'あり' if a else 'なし'}・関東 {'あり' if b else 'なし'}")
 
