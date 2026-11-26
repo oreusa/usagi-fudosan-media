@@ -94,6 +94,31 @@ try:
 except Exception as e:
     bad.append(f"× 申し込みの通し：stats/formcheck.json が読めない {e}")
 
+# 11/26 オーナー「bufferとかその他ツールにも使用制限あるんじゃなかった？」「管理する担当も」：
+# GitHub Pages は公開するサイトが1GBまで。関西は出し終わったリール動画で約2GBになっていた（#1260 で消した）。
+# main の中身の大きさを数え、900MB を越えたら ×（media/reels の古い mp4 を消す。HP からの参照は無い）。
+import os as _os
+for _repo, _dir in (("oreusa/usagi-fudosan-media", "usagi-fudosan-media"), ("oreusa/akari-auto", "akari-auto")):
+    _path = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))))), _dir)
+    try:
+        subprocess.run(["git", "-C", _path, "fetch", "-q", "origin", "main"], timeout=120, check=True)
+        out = subprocess.run(["git", "-C", _path, "ls-tree", "-r", "-l", "origin/main"], capture_output=True, text=True, timeout=60).stdout
+        tot, big = 0, {}
+        for ln in out.splitlines():
+            f = ln.split()
+            if len(f) >= 5 and f[3].isdigit():
+                n = int(f[3]); tot += n
+                top = "/".join(ln.split("\t", 1)[1].split("/")[:2])
+                big[top] = big.get(top, 0) + n
+        top3 = "・".join(f"{k} {v/1e6:.0f}MB" for k, v in sorted(big.items(), key=lambda x: -x[1])[:3])
+        line = f"サイトの大きさ（{_dir}・GitHub Pages の上限1GB）：{tot/1e6:.0f}MB（大きい所 {top3}）"
+        if tot > 900e6:
+            bad.append("× " + line + " → 出し終わった media/reels の mp4 などを消す")
+        else:
+            rows.append("○ " + line)
+    except Exception as e:
+        rows.append(f"－ サイトの大きさ（{_dir}）：数えられない {e}")
+
 print("\n".join(rows))
 if bad:
     print("\n直すもの：")
