@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="ja" data-resolution="portrait">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=1080, height=1920" />
+<script src="gsap.min.js"></script>
+<style>
+@font-face{font-family:MB;src:url(a/ShipporiMincho-Bold.ttf)}@font-face{font-family:M;src:url(a/ShipporiMincho-Medium.ttf)}@font-face{font-family:G;src:url(a/ZenKakuGothicNew-Medium.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#21160f}
+#root{position:relative;width:1080px;height:1920px;background:url(a/cover.png);overflow:hidden}
+#vig{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 50%,transparent 55%,rgba(10,5,2,.55));pointer-events:none;z-index:20}
+#stage{position:absolute;inset:0}
+#book{position:absolute;left:85px;top:235px;width:925px;height:1425px;perspective:7000px;perspective-origin:30% 50%;background:#efe5d2}
+.sc{position:absolute;inset:0;transform-origin:0 50%;transform-style:preserve-3d}
+.sc .face{position:absolute;inset:0;backface-visibility:hidden;overflow:hidden;background:#f4ecdc}
+.sc .bk{position:absolute;inset:0;backface-visibility:hidden;transform:rotateY(180deg);background:linear-gradient(90deg,#e6dac4,#f2e8d6)}
+/* 切り紙の層：ページに寝ていて、めくると起き上がる */
+.pop{position:absolute;inset:0;perspective:1500px;perspective-origin:50% 38%}
+.pl{position:absolute;left:0;top:0;width:925px;height:1425px}
+.pl.up{filter:drop-shadow(0 10px 9px rgba(40,18,6,.42))}.pl.drop{filter:drop-shadow(0 14px 10px rgba(20,24,6,.35))}.pl.lt{mix-blend-mode:screen}
+#dust{position:absolute;left:85px;top:235px;width:925px;height:1425px;overflow:hidden;pointer-events:none;z-index:8;opacity:0}
+#dust i{position:absolute;border-radius:50%;background:radial-gradient(circle,rgba(255,246,214,.95),rgba(255,226,160,.35) 45%,rgba(255,220,150,0) 70%)}
+.shine{position:absolute;inset:0;pointer-events:none;mix-blend-mode:soft-light;opacity:0;background:radial-gradient(ellipse 40% 30% at 50% 50%,rgba(255,240,200,.9),rgba(255,240,200,0) 70%)}
+.shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,20,10,0) 30%,rgba(40,20,10,.4));opacity:0;z-index:5}
+.cast{position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,10,5,.7),rgba(20,10,5,.25) 60%,rgba(20,10,5,0));opacity:0;z-index:5}
+.gut{position:absolute;left:0;top:0;bottom:0;width:46px;background:linear-gradient(90deg,rgba(0,0,0,.35),transparent);z-index:4}
+.cap{position:absolute;left:110px;right:121px;top:207px;font-family:M;color:#fffaf0;font-size:60px;line-height:1.45;letter-spacing:.12em;text-shadow:0 2px 20px rgba(30,8,2,.8),0 0 3px rgba(30,8,2,.6);z-index:3}
+.cap:before{content:'';position:absolute;left:-200px;right:-200px;top:-260px;height:calc(100% + 520px);background:radial-gradient(ellipse 62% 48% at 32% 46%,rgba(30,10,4,.6),rgba(30,10,4,.25) 60%,rgba(30,10,4,0));z-index:-1}
+.cap .w{display:inline-block}.cap .lb{display:block;font-family:G;font-size:22px;letter-spacing:.42em;color:rgba(255,240,215,.92);margin-bottom:22px}
+.cap .ul{display:block;height:1px;width:200px;margin:26px 0 18px;background:rgba(255,236,200,.85);transform-origin:0 50%}
+.cap small{display:block;font-family:G;font-size:28px;letter-spacing:.14em;color:rgba(255,240,215,.95);line-height:1.6}
+#halo{position:absolute;left:85px;top:235px;width:925px;height:1425px;border-radius:10px;box-shadow:0 0 90px 30px rgba(255,200,110,.9),0 0 240px 80px rgba(255,150,60,.5);opacity:0}
+#leak{position:absolute;right:-4px;top:20px;bottom:20px;width:14px;background:linear-gradient(180deg,rgba(255,230,160,0),rgba(255,240,190,1) 20%,rgba(255,250,220,1) 50%,rgba(255,240,190,1) 80%,rgba(255,230,160,0));filter:blur(6px);opacity:0;z-index:7}
+#burst{position:absolute;left:85px;top:235px;width:925px;height:1425px;background:radial-gradient(ellipse 85% 70% at 4% 50%,rgba(255,244,210,.95),rgba(255,200,120,.55) 35%,rgba(255,170,80,0) 80%);mix-blend-mode:screen;opacity:0;z-index:9;pointer-events:none}
+#parts{position:absolute;inset:0;pointer-events:none;z-index:15}
+.p{position:absolute;left:0;top:0;border-radius:50%;pointer-events:none}.lf{position:absolute;left:0;top:0;pointer-events:none}
+.fx{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;z-index:2;overflow:hidden}
+.edge{position:absolute;top:0;bottom:0;right:0;width:60px;background:linear-gradient(90deg,rgba(255,236,190,0),rgba(255,246,220,.95),rgba(255,236,190,0));filter:blur(8px);opacity:0;z-index:6;mix-blend-mode:screen}
+#cover{background:url(a/cvface.png) center/100% 100%}
+#foil{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;background:linear-gradient(115deg,rgba(255,240,200,0) 40%,rgba(255,240,200,.55) 50%,rgba(255,240,200,0) 60%);background-size:300% 100%;background-position:120% 0;opacity:.8}
+.info{position:absolute;inset:0;padding:70px 56px;font-family:M;color:#3a2a20;background:#f4ecdc}
+.info h2{font-family:MB;font-size:58px;margin:0 0 22px}
+.info .r{display:flex;gap:26px;padding:18px 0;border-top:1px solid #d8c8b0;font-size:40px;align-items:baseline}.info .r b{width:150px;flex:none;font-size:28px;color:#8a6a50;font-weight:normal}
+.info small{display:block;font-size:28px;color:#7a6050;margin-top:4px}.info p{font-size:34px;line-height:1.6;color:#7a3a1a;margin:22px 0 0;font-family:MB}
+.info .ph{position:absolute;left:56px;right:56px;bottom:56px;height:640px;border-radius:14px;overflow:hidden}.info .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+#tab{position:absolute;right:130px;top:235px;width:150px;height:0;overflow:hidden;z-index:12}
+#tab div{position:absolute;left:0;right:0;bottom:0;height:280px;background:linear-gradient(180deg,#b03a2c,#8e2a20);clip-path:polygon(0 0,100% 0,100% 100%,50% 86%,0 100%);display:flex;align-items:flex-end;justify-content:center;padding-bottom:70px;font-family:MB;color:#fbe7c0;font-size:34px;writing-mode:vertical-rl;letter-spacing:.2em}
+.hp{position:absolute;inset:0;background:#f4ecdc;font-family:M;color:#3d2a22}
+#h0{position:absolute;left:0;right:0;top:64px;text-align:center}#h0 img{width:96px;height:96px;border-radius:50%}#h0 .en{font:500 26px G;letter-spacing:.42em;color:#8a6a55;margin-top:10px}#h0 .jp{font:700 62px MB;letter-spacing:.12em;margin-top:8px}
+#ph{position:absolute;left:70px;top:330px;width:440px;height:880px;border-radius:58px;background:#2b211c;padding:15px;box-shadow:0 30px 60px rgba(60,35,20,.4)}
+#ph .scr{width:100%;height:100%;border-radius:44px;overflow:hidden;position:relative;background:#fff}#ph img{position:absolute;left:0;top:0;width:100%}
+#pc{position:absolute;left:16px;right:16px;bottom:30px;background:#fff;border-radius:24px;box-shadow:0 12px 30px rgba(60,35,20,.35),0 0 0 3px #a5332a;padding:16px;display:flex;gap:16px;align-items:center}
+#pc .pci{flex:none;width:120px;height:150px;border-radius:14px;background:url(a/L0.jpg) 50% 70%/cover}#pc b{display:inline-block;font:700 19px M;color:#fff;background:#a5332a;border-radius:999px;padding:4px 14px}
+#pc .t{font:700 34px MB;margin-top:8px}#pc .s{font:500 24px M;color:#7a5b4a}#pc .d{font:700 22px M;color:#a5332a;margin-top:4px}
+#h1{position:absolute;right:40px;top:520px;width:340px;text-align:center;font:700 38px MB;letter-spacing:.12em;line-height:1.8;color:#6b4a3a}#h1 span{display:block;font:500 28px M;letter-spacing:.04em;line-height:1.6;margin-top:24px;color:#8a6a55}
+#endb{position:absolute;left:0;right:0;top:1250px;text-align:center}#endb div{display:inline-block;font:700 50px MB;letter-spacing:.14em;color:#f8ecd8;background:#a5332a;border-radius:999px;padding:24px 56px;box-shadow:0 10px 30px rgba(165,51,42,.35)}
+#lk{position:absolute;inset:-12%;opacity:0;pointer-events:none;mix-blend-mode:screen;z-index:20}
+#lk i{position:absolute;inset:-20%}
+#lk .a{background:radial-gradient(ellipse 52% 110% at 10% 58%,rgba(255,241,197,.85),transparent 45%),radial-gradient(ellipse 72% 120% at 24% 54%,rgba(255,126,57,.6),transparent 66%);filter:blur(28px)}
+#lk .r{background:radial-gradient(ellipse 58% 105% at 82% 30%,rgba(255,79,61,.5),rgba(255,44,92,.18) 48%,transparent 76%);filter:blur(40px)}
+#lk .g{background:linear-gradient(104deg,transparent 24%,rgba(255,144,62,.25) 40%,rgba(255,247,205,.6) 51%,rgba(255,124,48,.18) 62%,transparent 78%);filter:blur(20px)}
+
+.clip{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cap{left:120px;right:150px;top:120px;padding:34px 40px 32px;border-radius:30px;font-family:G;color:#fff;font-size:46px;line-height:1.5;letter-spacing:.05em;text-shadow:0 1px 12px rgba(0,0,0,.25);
+ background:linear-gradient(135deg,rgba(255,255,255,.16),rgba(30,16,12,.38) 55%,rgba(20,10,8,.46));backdrop-filter:blur(26px) saturate(1.4) brightness(.8);-webkit-backdrop-filter:blur(26px) saturate(1.4) brightness(.8);
+ border:1px solid rgba(255,255,255,.30);box-shadow:0 24px 60px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.45)}
+.cap:before{display:none}
+.cap .lb{font-family:G;font-size:20px;letter-spacing:.36em;color:rgba(255,255,255,.82);margin-bottom:16px}
+.cap .ul{height:3px;width:150px;border-radius:3px;margin:22px 0 16px;background:linear-gradient(90deg,#FFB65C,#F6A6C8,#B7A4F2,#2EC4B6)}
+.cap small{font-family:G;font-size:26px;letter-spacing:.08em;color:rgba(255,255,255,.88)}
+.cap.lo{top:auto;bottom:150px}
+/* 11/23 夜 owner「本もデザインアップデートしてお洒落に」：案内ページを写真の上のガラスに */
+#dust{display:none}
+
+/* 11/23 23:30 owner「綺麗に見えない」：ガラスの札をやめ、字は下に大きく。下だけ暗くして読ませる */
+#dust,#parts{display:none !important}
+.cap{left:130px;right:100px;top:auto !important;bottom:160px;white-space:nowrap;padding:0;border-radius:0;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;border:0;box-shadow:none;isolation:isolate;z-index:4;
+ font-family:MB;font-size:62px;line-height:1.38;letter-spacing:.06em;color:#fff;text-shadow:0 2px 22px rgba(0,0,0,.55),0 0 3px rgba(0,0,0,.35)}
+.cap:after{content:'';position:absolute;left:-200px;right:-200px;bottom:-160px;height:900px;z-index:-1;background:linear-gradient(0deg,rgba(10,5,2,.78),rgba(10,5,2,.45) 45%,rgba(10,5,2,0))}
+.cap .lb{display:block;font-family:G;font-size:22px;letter-spacing:.42em;color:#F6D9A2;margin-bottom:22px;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.cap .ul{display:block;height:3px;width:120px;margin:28px 0 20px}
+.cap small{font-family:G;font-size:30px;letter-spacing:.1em;color:rgba(255,255,255,.92)}
+
+/* 11/24 早朝：案内ページの後ろを、ぼかした景色がゆっくり進む映像に */
+.info:before{display:none}
+.info > video.ibg{position:absolute;left:-40px;top:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(14px) brightness(.58) saturate(1.15)}
+.info{background:#120c09;color:#fff;padding:64px 52px}
+.info:before{content:'';position:absolute;inset:-30px;background:url(a/L0.jpg) center/cover;filter:blur(18px) brightness(.62) saturate(1.15)}
+.info > *{position:relative}
+.info h2{font-family:G;font-weight:700;font-size:54px;letter-spacing:.04em;color:#fff;margin:0 0 26px;padding-bottom:22px;border-bottom:3px solid transparent;border-image:linear-gradient(90deg,#FFB65C,#F6A6C8,#B7A4F2,#2EC4B6) 1}
+.info .r{border:1px solid rgba(255,255,255,.28);border-radius:22px;margin:0 0 14px;padding:18px 24px;background:linear-gradient(135deg,rgba(255,255,255,.16),rgba(255,255,255,.06));backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);font-family:G;font-size:38px;color:#fff}
+.info .r b{color:rgba(255,255,255,.78);font-family:G;font-size:24px;letter-spacing:.2em;width:130px}
+.info small{color:rgba(255,255,255,.82);font-family:G;font-size:25px}
+.info p{font-family:G;color:#fff;font-size:32px;letter-spacing:.06em}
+.info .ph{position:absolute;left:52px;right:52px;bottom:52px;height:620px;border-radius:26px;border:1px solid rgba(255,255,255,.35);box-shadow:0 20px 50px rgba(0,0,0,.35)}
+#s1 .cap{display:none}
+</style>
+</head>
+<body>
+
+<div id="root" data-composition-id="main" data-start="0" data-duration="62.55" data-width="1080" data-height="1920">
+ <div id="stage">
+ <div id="halo"></div>
+ <div id="book">
+  <div class="sc" id="s9" style="z-index:0"><div class="face"><div class="hp">
+   <div id="h0"><img src="a/logo.png"><div class="en">TOWN NOTE</div><div class="jp">関西おでかけリスト</div></div>
+   <div id="ph"><div class="scr"><img id="ph1" src="a/hp1.jpg"><img id="ph2" src="a/hp2.jpg">
+    <div id="pc"><div class="pci"></div><div><b>今日のおでかけ</b><div class="t">石山寺</div><div class="s">あたら夜もみじ</div><div class="d">11/29まで</div></div></div></div></div>
+   <div id="h1">無料・登録なし<br>毎日更新<br><span>関西の府県ごとに<br>今やっている催し</span></div>
+   <div id="endb"><div>プロフィールのリンクから</div></div>
+  </div><div class="cast"></div><div class="gut"></div></div></div>
+  <div class="sc" id="s8" style="z-index:1"><div class="face"><div class="info"><video class="ibg" src="a/vvi.mp4" muted data-start="49.67" data-duration="9.07"></video><h2>石山寺の夜の紅葉</h2><div class="r"><b>夜</b><span>11/29まで 17:30〜21時<small>最終入山20:30・一般800円</small></span></div><div class="r"><b>提灯</b><span>無料で借りられる<small>数に限りあり</small></span></div><div class="r"><b>行き方</b><span>JR石山駅からバス約10分<small>「石山寺山門前」下車</small></span></div><p>保存して、大津のおでかけに。</p><div class="ph"><img src="a/L0.jpg"></div></div><div class="shade"></div><div class="cast"></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s7" style="z-index:3"><div class="face"><div class="edge" id="e7"></div><video class="clip" src="a/v7.mp4" muted data-start="44.53" data-duration="5.84"></video><div class="cap"><span class="w lb">LANTERN</span><span class="w">提灯を手に</span><br><span class="w">夜の境内を歩く</span><i class="ul"></i><small class="w"></small></div><div class="shade"></div><div class=cast></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s6" style="z-index:4"><div class="face"><div class="edge" id="e6"></div><video class="clip" src="a/v6.mp4" muted data-start="37.88" data-duration="7.35"></video><div class="cap"><span class="w lb">TSUKIMI-TEI</span><span class="w">山の上の月見亭</span><br><span class="w">近江八景「石山秋月」</span><i class="ul"></i><small class="w"></small></div><div class="shade"></div><div class=cast></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s5" style="z-index:5"><div class="face"><div class="edge" id="e5"></div><video class="clip" src="a/v5.mp4" muted data-start="30.32" data-duration="8.26"></video><div class="cap"><span class="w lb">HONDO</span><span class="w">国宝の本堂</span><br><span class="w">紫式部ゆかりの寺</span><i class="ul"></i><small class="w"></small></div><div class="shade"></div><div class=cast></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s4" style="z-index:6"><div class="face"><div class="edge" id="e4"></div><video class="clip" src="a/v4.mp4" muted data-start="21.95" data-duration="9.07"></video><div class="cap"><span class="w lb">TAHOTO</span><span class="w">日本最古の多宝塔</span><br><span class="w">国宝</span><i class="ul"></i><small class="w"></small></div><div class="shade"></div><div class=cast></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s3" style="z-index:7"><div class="face"><div class="edge" id="e3"></div><video class="clip" src="a/v3.mp4" muted data-start="14.81" data-duration="7.84"></video><div class="cap"><span class="w lb">WOLLASTONITE</span><span class="w">寺の名の由来</span><br><span class="w">大きな硅灰石</span><i class="ul"></i><small class="w"></small></div><div class="shade"></div><div class=cast></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s2" style="z-index:8"><div class="face"><div class="edge" id="e2"></div><video class="clip" src="a/v2.mp4" muted data-start="9.96" data-duration="5.55"></video><div class="cap"><span class="w lb">NIGHT VIEWING</span><span class="w">夜の参道に</span><br><span class="w">明かりがともる</span><i class="ul"></i><small class="w"></small></div><div class="shade"></div><div class=cast></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s1" style="z-index:9"><div class="face"><div class="edge" id="e1"></div><video class="clip" src="a/v1.mp4" muted data-start="6.07" data-duration="4.59"></video><div class="cap"><span class="w lb"></span><span class="w"></span><br><span class="w"></span><i class="ul"></i><small class="w"></small></div><div class="shade"></div><div class=cast></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="s0" style="z-index:10"><div class="face"><div class="edge" id="e0"></div><video class="clip" src="a/v0.mp4" muted data-start="1.0" data-duration="5.77"></video><div class="cap"><span class="w lb">ISHIYAMA-DERA · OTSU</span><span class="w">大きな岩の上に</span><br><span class="w">紅葉に包まれた塔</span><i class="ul"></i><small class="w"></small></div><div class="shade"></div><div class="gut"></div></div><div class="bk"></div></div>
+  <div class="sc" id="cv" style="z-index:50"><div class="face" id="cover"><img src="a/cvface.jpg" style="position:absolute;inset:0;width:100%;height:100%;display:block"><div id="foil"></div><div class="shade"></div></div><div id="leak"></div><div class="bk"></div></div>
+ </div>
+ <div id="dust"><i style="left:822px;top:719px;width:14px;height:14px" data-d="457" data-x="-50"></i><i style="left:78px;top:397px;width:15px;height:15px" data-d="362" data-x="-51"></i><i style="left:284px;top:806px;width:8px;height:8px" data-d="409" data-x="-14"></i><i style="left:467px;top:812px;width:10px;height:10px" data-d="355" data-x="-7"></i><i style="left:121px;top:1202px;width:12px;height:12px" data-d="452" data-x="-56"></i><i style="left:381px;top:910px;width:13px;height:13px" data-d="181" data-x="4"></i><i style="left:280px;top:1440px;width:8px;height:8px" data-d="482" data-x="-32"></i><i style="left:829px;top:820px;width:7px;height:7px" data-d="444" data-x="-8"></i><i style="left:285px;top:1326px;width:11px;height:11px" data-d="470" data-x="17"></i><i style="left:120px;top:1284px;width:10px;height:10px" data-d="453" data-x="-25"></i><i style="left:576px;top:694px;width:10px;height:10px" data-d="290" data-x="37"></i><i style="left:430px;top:1472px;width:10px;height:10px" data-d="495" data-x="8"></i><i style="left:525px;top:949px;width:16px;height:16px" data-d="431" data-x="5"></i><i style="left:705px;top:824px;width:12px;height:12px" data-d="392" data-x="-70"></i></div>
+ <div id="tab"><div>保存してね</div></div>
+ </div>
+ <div id="burst"></div>
+ <div id="parts"></div>
+ <div id="lk"><i class="a"></i><i class="r"></i><i class="g"></i></div>
+ <div id="vig"></div>
+ <audio id="flipcv" src="a/flip.wav" data-start="1.05" data-duration="0.6" data-volume="0.8"></audio>
+ <audio id="v0" src="a/w0.wav" data-start="2.1" data-duration="3.52" data-volume="1.7"></audio>
+ <audio id="v1" src="a/w1.wav" data-start="6.67" data-duration="2.84" data-volume="1.7"></audio>
+ <audio id="v2" src="a/w2.wav" data-start="10.56" data-duration="3.8" data-volume="1.7"></audio>
+ <audio id="v3" src="a/w3.wav" data-start="15.41" data-duration="6.09" data-volume="1.7"></audio>
+ <audio id="v4" src="a/w4.wav" data-start="22.55" data-duration="7.32" data-volume="1.7"></audio>
+ <audio id="v5" src="a/w5.wav" data-start="30.92" data-duration="6.51" data-volume="1.7"></audio>
+ <audio id="v6" src="a/w6.wav" data-start="38.48" data-duration="5.6" data-volume="1.7"></audio>
+ <audio id="v7" src="a/w7.wav" data-start="45.13" data-duration="4.09" data-volume="1.7"></audio>
+ <audio id="v8" src="a/w8.wav" data-start="50.27" data-duration="6.37" data-volume="1.7"></audio>
+ <audio id="v9" src="a/w9.wav" data-start="58.24" data-duration="3.31" data-volume="1.7"></audio>
+ <audio id="flip0" src="a/flip.wav" data-start="6.07" data-duration="0.6" data-volume="0.7"></audio>
+ <audio id="flip1" src="a/flip.wav" data-start="9.96" data-duration="0.6" data-volume="0.7"></audio>
+ <audio id="flip2" src="a/flip.wav" data-start="14.81" data-duration="0.6" data-volume="0.7"></audio>
+ <audio id="flip3" src="a/flip.wav" data-start="21.95" data-duration="0.6" data-volume="0.7"></audio>
+ <audio id="flip4" src="a/flip.wav" data-start="30.32" data-duration="0.6" data-volume="0.7"></audio>
+ <audio id="flip5" src="a/flip.wav" data-start="37.88" data-duration="0.6" data-volume="0.7"></audio>
+ <audio id="flip6" src="a/flip.wav" data-start="44.53" data-duration="0.6" data-volume="0.7"></audio>
+ <audio id="flip7" src="a/flip.wav" data-start="49.67" data-duration="0.6" data-volume="0.7"></audio>
+ <audio id="flip8" src="a/flip.wav" data-start="57.54" data-duration="0.6" data-volume="0.7"></audio>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const tl = gsap.timeline({ paused: true });
+const T=[6.07, 9.96, 14.81, 21.95, 30.32, 37.88, 44.53, 49.67, 57.54],V=[2.1, 6.67, 10.56, 15.41, 22.55, 30.92, 38.48, 45.13, 50.27, 58.24],END=62.55;
+// ===== 1. 前の絵本と同じ始まり：表紙を光の帯が1回走り、表紙が開く =====
+gsap.set("#stage",{transformOrigin:"547.5px 947.5px"});tl.fromTo("#stage",{scale:.97},{scale:1.02,duration:1.15,ease:"sine.out"},0);
+tl.fromTo("#foil",{backgroundPosition:"120% 0"},{backgroundPosition:"-50% 0",duration:.9,ease:"sine.inOut"},0.15);
+tl.to("#cv",{rotationY:-178,duration:1.1,ease:"power2.inOut"},1.05);
+tl.to("#cv .shade",{opacity:.7,duration:1.1,ease:"power2.in"},1.05);
+// ===== 2b. 表紙が開いたら絵へ寄って画面いっぱいに（本の枠に閉じこめない）。案内ページで本に戻る =====
+gsap.set("#stage",{transformOrigin:"547.5px 947.5px"});
+tl.to("#stage",{scale:1.36,x:-7.5,y:12.5,duration:1.2,ease:"power2.inOut"},1.75);
+tl.to("#stage",{scale:1,x:0,y:0,duration:1.1,ease:"power2.inOut"},T[7]);
+// ===== 3. ページをめくる =====
+const turns=[0,1,2,3,4,5,6,7,8].map(k=>["#s"+k,"#s"+(k+1),T[k]]);
+turns.forEach(([a,b,t])=>{tl.to(a,{rotationY:-178,duration:.65,ease:"power3.inOut"},t);tl.to(a+" .shade",{opacity:1,duration:.65,ease:"power2.in"},t);
+ tl.fromTo(b+" .cast",{opacity:.4},{opacity:0,duration:.6,ease:"power2.out"},t+.25)});
+// ===== 4. 字：ガラスのカードがふわっと出て、字が浮かぶ =====
+[0,1,2,3,4,5,6,7].forEach(k=>{tl.from("#s"+k+" .cap",{opacity:0,y:40,duration:.9,ease:"power3.out"},V[k]-.6);tl.to("#s"+k+" .cap",{opacity:0,y:-16,duration:.45,ease:"power2.in"},T[k]-.5)});
+[0,1,2,3,4,5,6,7].map(k=>["#s"+k,V[k]]).forEach(([id,s])=>{
+ tl.from(id+" .cap .w",{opacity:0,y:18,filter:"blur(8px)",duration:.9,ease:"power2.out",stagger:.28},s-.3);
+ tl.from(id+" .cap .ul",{scaleX:0,duration:.9,ease:"power3.inOut"},s+.4)});
+tl.from("#s8 .info > *",{opacity:0,y:24,duration:.5,ease:"power2.out",stagger:.1},T[7]+.4);
+// 光の粒：ゆっくり上へ漂う（場面のあいだだけ）
+tl.to("#dust",{opacity:.3,duration:1.2},2.4);tl.to("#dust",{opacity:0,duration:.6},T[7]-.2);
+document.querySelectorAll("#dust i").forEach((el,i)=>{const d=+el.dataset.d,dx=+el.dataset.x;tl.fromTo(el,{y:0,x:0},{y:-d,x:dx,duration:T[7],ease:"none"},0);tl.to(el,{opacity:.25,duration:1.3+(i%5)*.3,ease:"sine.inOut",yoyo:true,repeat:Math.floor(T[7]/(1.3+(i%5)*.3))},0)});
+// ===== 7. エフェクト（好古園の型を戻して、さらに足す） =====
+let seed=1121;const R=()=>(seed=(seed*16807)%2147483647)/2147483647;
+const mk=(par,cls,css)=>{const d=document.createElement("div");d.className=cls;Object.assign(d.style,css);par.appendChild(d);return d};
+const P=document.getElementById("parts");
+// 閉じた本が金に光る → ふちから光がもれる → 開くと光が吹き出す
+tl.fromTo("#halo",{opacity:0},{opacity:.3,duration:.6,ease:"sine.inOut"},0.0);
+tl.to("#halo",{opacity:0,duration:.6},1.1);
+tl.to("#leak",{opacity:.5,duration:.3,ease:"power2.in"},0.75);tl.to("#leak",{opacity:0,duration:.3},1.15);
+tl.fromTo("#burst",{opacity:0},{opacity:.18,duration:.5,ease:"power2.out"},1.4);tl.to("#burst",{opacity:0,duration:.8,ease:"power2.in"},1.75);
+// 金の粒：本のふちから立ちのぼる
+for(let i=0;i<6;i++){const s=3+R()*5,side=R();const x=side<.5?85+R()*925:(R()<.5?85:1010)+(R()-.5)*30,y=side<.5?235+(R()<.5?0:1425):235+R()*1425;
+ const d=mk(P,"p",{width:s+"px",height:s+"px",background:"radial-gradient(circle,#fff6d8,rgba(255,200,110,0) 70%)",boxShadow:"0 0 "+(s*2)+"px rgba(255,210,130,.9)"});
+ const t0=.2+R()*.8;gsap.set(d,{opacity:0});tl.fromTo(d,{x,y,opacity:0},{x:x+(R()-.5)*160,y:y-200-R()*300,opacity:1,duration:1.3+R(),ease:"sine.out"},t0);tl.to(d,{opacity:0,duration:.6},t0+1.1+R()*.6)}
+// 開いた瞬間、紅葉が手前へ吹き出す（1回だけ）
+const cols=["#d2452c","#e8702e","#b8321f","#f0a03a","#c93a24"];
+const LEAF="M0,-20 L4,-8 L15,-13 L10,-2 L20,2 L8,5 L11,15 L2,9 L0,20 L-2,9 L-11,15 L-8,5 L-20,2 L-10,-2 L-15,-13 L-4,-8Z";
+const leafEl=(c,sz,blur)=>{const d=mk(P,"lf",{width:sz+"px",height:sz+"px",filter:blur?`blur(${blur}px)`:"none"});d.innerHTML=`<svg viewBox="-22 -22 44 44" width="${sz}" height="${sz}"><path fill="${c}" d="${LEAF}"/></svg>`;gsap.set(d,{opacity:0});return d};
+for(let i=0;i<14;i++){const a=R()*Math.PI*2,dist=500+R()*700,big=R()<.35;const d=leafEl(cols[i%5],big?84:46,big?3:0);
+ tl.fromTo(d,{x:520,y:930,scale:.2,rotation:R()*360,opacity:0},{x:520+Math.cos(a)*dist,y:930+Math.sin(a)*dist*.8+200,scale:big?2.6:1.3,rotation:"+="+(300+R()*500),opacity:1,duration:1.6+R()*.6,ease:"power2.out"},1.4+R()*.25);
+ tl.to(d,{opacity:0,duration:.4,overwrite:false},3.5+R()*.3)}
+// ページをめくる時：めくる辺が光り、金の粒が辺から散る
+T.forEach((t,k)=>{if(k<8){tl.fromTo("#e"+k,{opacity:0},{opacity:1,duration:.2},t);tl.to("#e"+k,{opacity:0,duration:.4},t+.35)}
+ for(let i=0;i<0;i++){const s=3+R()*5;const d=mk(P,"p",{width:s+"px",height:s+"px",background:"radial-gradient(circle,#fff6d8,rgba(255,200,110,0) 70%)",boxShadow:"0 0 "+(s*2)+"px rgba(255,210,130,.9)"});gsap.set(d,{opacity:0});
+  const y=300+R()*1300;tl.fromTo(d,{x:900+R()*120,y,opacity:0},{x:"-="+(150+R()*500),y:y-60-R()*200,opacity:1,duration:.9+R()*.5,ease:"power2.out"},t+.15);tl.to(d,{opacity:0,duration:.4},t+.9+R()*.4)}});
+// 光もれ（organic light leak の型）：表紙が開く時とページをめくる時に、暖かい光がふわっと差す
+const LK=document.getElementById("lk");[1.2,...T.slice(0,4)].forEach((t,i)=>{tl.fromTo(LK,{opacity:0,xPercent:i%2?12:-12},{opacity:i?.4:.3,xPercent:0,duration:.45,ease:"sine.out"},t);tl.to(LK,{opacity:0,xPercent:i%2?-10:10,duration:.9,ease:"sine.in"},t+.45)});
+// 最後のページで本がもう一度光る
+tl.to("#halo",{opacity:.3,duration:.8,ease:"sine.inOut"},T[8]+.2);tl.to("#halo",{opacity:.15,duration:1.2,ease:"sine.inOut",yoyo:true,repeat:2},T[8]+1);
+// ===== 6. おでかけリストの紹介（最後の止まりは短く） =====
+const T5=T[8];
+tl.to("#tab",{height:280,duration:.7,ease:"power3.out"},T[7]+1.6);
+tl.to("#tab",{opacity:0,duration:.3},T5);
+tl.from("#h0",{opacity:0,y:-30,duration:.6,ease:"power3.out"},T5+.3);
+tl.from("#ph",{opacity:0,y:80,duration:.8,ease:"power3.out"},T5+.5);
+tl.from("#pc",{opacity:0,y:60,duration:.6,ease:"power3.out"},T5+1.1);
+tl.from("#h1",{opacity:0,x:30,duration:.6,ease:"power2.out"},T5+1.5);
+tl.fromTo("#ph2",{opacity:0},{opacity:1,duration:.8,ease:"sine.inOut"},T5+2.0);tl.to("#ph1",{y:-40,duration:.8,ease:"sine.inOut"},T5+2.0);
+tl.from("#endb",{opacity:0,y:30,duration:.6,ease:"power3.out"},T5+2.3);
+tl.to("#endb div",{scale:1.04,duration:.5,ease:"sine.inOut",yoyo:true,repeat:Math.max(1,Math.floor((END-T5-2.9)/.5))},T5+2.9);
+tl.to("#root",{opacity:1,duration:.1},END-.1);
+window.__timelines["main"] = tl;
+tl.seek(0);
+</script>
+</body>
+</html>
