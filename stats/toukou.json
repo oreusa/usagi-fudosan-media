@@ -5196,6 +5196,105 @@
    "pic": true,
    "views": 0,
    "likes": 0
+  },
+  {
+   "day": "2026-11-26",
+   "svc": "threads",
+   "slot": "07:00",
+   "type": "rank",
+   "head": "交野市と河内森、1日の利用者数の差はたった4人でした。",
+   "kata": "そのほか",
+   "pic": true,
+   "views": 0,
+   "likes": 0
+  },
+  {
+   "day": "2026-11-26",
+   "svc": "x",
+   "slot": "07:00",
+   "type": "rank",
+   "head": "天王寺・あべのハルカス近鉄本店に「GOD OF BUTTERCHEESE」、11/30（月）全国初出店",
+   "kata": "そのほか",
+   "pic": true,
+   "views": 0,
+   "likes": 0
+  },
+  {
+   "day": "2026-11-26",
+   "svc": "x",
+   "slot": "07:30",
+   "type": "",
+   "head": "宝厳院（京都市右京区）",
+   "kata": "そのほか",
+   "pic": true,
+   "views": 0,
+   "likes": 0
+  },
+  {
+   "day": "2026-11-26",
+   "svc": "threads",
+   "slot": "08:00",
+   "type": "jikka",
+   "head": "和歌山県の中古一戸建て、7〜9月の平均は1,052万円でした。",
+   "kata": "そのほか",
+   "pic": true,
+   "views": 0,
+   "likes": 0
+  },
+  {
+   "day": "2026-11-26",
+   "svc": "threads",
+   "slot": "09:00",
+   "type": "odekake",
+   "head": "きょう11/26（木）、東近江市の永源寺は紅葉のライトアップをしています。",
+   "kata": "そのほか",
+   "pic": true,
+   "views": 0,
+   "likes": 0
+  },
+  {
+   "day": "2026-11-26",
+   "svc": "x",
+   "slot": "09:00",
+   "type": "odekake",
+   "head": "梅田・大丸梅田店の地下1階に、12/1（火）お菓子の店4つ",
+   "kata": "防犯・火事の数字",
+   "pic": true,
+   "views": 0,
+   "likes": 0
+  },
+  {
+   "day": "2026-11-26",
+   "svc": "x",
+   "slot": "09:30",
+   "type": "odekake",
+   "head": "東近江・永源寺で、紅葉のライトアップ",
+   "kata": "そのほか",
+   "pic": true,
+   "views": 0,
+   "likes": 0
+  },
+  {
+   "day": "2026-11-26",
+   "svc": "threads",
+   "slot": "12:00",
+   "type": "dekiru",
+   "head": "11/30（月）、あべのハルカス近鉄本店に「GOD OF BUTTERCHEESE」が全国で初めて開きます。",
+   "kata": "日付つきの催し",
+   "pic": true,
+   "views": 0,
+   "likes": 0
+  },
+  {
+   "day": "2026-11-26",
+   "svc": "x",
+   "slot": "12:00",
+   "type": "dekiru",
+   "head": "神戸市営地下鉄 西神・山手線、名谷と西神中央は1日1,250人差",
+   "kata": "駅・路線の順位",
+   "pic": true,
+   "views": 0,
+   "likes": 0
   }
  ],
  "followers": [
@@ -5653,12 +5752,19 @@
    }
   },
   "2026-11-26": {
-   "Threads": {},
-   "X": {}
+   "Threads": {
+    "日付つきの催し": 1,
+    "そのほか": 3
+   },
+   "X": {
+    "駅・路線の順位": 1,
+    "そのほか": 3,
+    "防犯・火事の数字": 1
+   }
   }
  },
  "machine": {
-  "at": "2026-11-26T05:30:38+09:00",
+  "at": "2026-11-26T12:46:51+09:00",
   "by": "tools/book/metrics.py",
   "metric_types": [
    "clicks",
