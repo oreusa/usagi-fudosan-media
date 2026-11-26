@@ -139,6 +139,12 @@ def check_one(dr, d, tab, seen_heads):
                     bad.append(f"{svc} の文なのに印が {mk.group(1)}-（{pre}- にする）")
                 if mk.group(3) != mmdd:
                     bad.append(f"印の日付が {mk.group(3)}（{mmdd} にする）")
+    # 11/26 ryouhou ×（関西の速報・できるが1件ページへ1／関東6）：開店・速報の投稿は、その店の1件ページ（/kaiten/・/o/）へ連れて行く。
+    # 一覧（/odekake-osaka など）では店が見つからない。1件ページが無い時は tools/kaiten/kansai.json に足して build.py を回してから。
+    if dr.get("type") in ("sokuhou", "dekiru"):
+        hp = [m.group(0) for t in th + xs for m in TOWN_RE.finditer(t)]
+        if hp and not any(re.search(r"townnote\.app/(kaiten|o)/", u) for u in hp):
+            bad.append("開店・速報の投稿なのに、HPのリンクが店の1件ページ（/kaiten/…）ではない（無ければ tools/kaiten/kansai.json に足して build.py）")
     if want and want.get("link", True) and not links:
         bad.append("HP（kansai.townnote.app）へのリンクが無い")
     if want and want.get("link") is False and LINK_RE.search(xs[0]):
