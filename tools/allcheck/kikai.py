@@ -67,11 +67,23 @@ def t(s):
 now = dt.datetime.now(dt.timezone.utc)
 bad = []
 rows = []
-for repo, wf, what, hours in KIKAI:
+# 11/26 オーナー「仕組みが良くてパフォーマンス落ちるのはダメ」：1つずつ聞くと45秒かかった→同時に聞く（30秒以内の決まり）
+from concurrent.futures import ThreadPoolExecutor
+
+
+def _runs(item):
+    repo, wf = item[0], item[1]
     try:
-        runs = gh(f"repos/{repo}/actions/workflows/{wf}/runs?per_page=15&exclude_pull_requests=true")["workflow_runs"]
-    except Exception as e:  # 読めない＝見えていない、も × にする
-        bad.append(f"× {what}（{repo.split('/')[1]} {wf}）：読めない {e}")
+        return gh(f"repos/{repo}/actions/workflows/{wf}/runs?per_page=15&exclude_pull_requests=true")["workflow_runs"], None
+    except Exception as e:
+        return None, e
+
+
+with ThreadPoolExecutor(8) as _ex:
+    _got = list(_ex.map(_runs, KIKAI))
+for (repo, wf, what, hours), (runs, err) in zip(KIKAI, _got):
+    if err is not None:  # 読めない＝見えていない、も × にする
+        bad.append(f"× {what}（{repo.split('/')[1]} {wf}）：読めない {err}")
         continue
     runs = [r for r in runs if r.get("head_branch") in ("main", None) or r.get("event") in ("schedule", "workflow_dispatch")]
     done = [r for r in runs if r["status"] == "completed" and r["conclusion"] not in ("cancelled", "skipped")]
