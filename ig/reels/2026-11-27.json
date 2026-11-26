@@ -1,0 +1,147 @@
+{
+ "date": "2026-11-27",
+ "time": "07:30",
+ "pref": "kyoto",
+ "tab": "京都",
+ "lat": 34.9997,
+ "lon": 135.781,
+ "audio_id": "",
+ "text": {
+  "corner": "KYOTO ─ HIGASHIYAMA",
+  "title": [
+   "高台寺",
+   "秋の夜間特別拝観"
+  ],
+  "place": "高台寺｜京都市東山区",
+  "map_tag": [
+   "KODAI-JI ─ HIGASHIYAMA",
+   "高台寺",
+   "京都市東山区"
+  ],
+  "map_caption": "ねねが建てた寺の、灯りに浮かぶ紅葉。",
+  "date": [
+   "10.23",
+   "",
+   "12.13",
+   ""
+  ],
+  "date_title": "秋の夜間特別拝観",
+  "date_note": "17:00点灯〜22:00（受付21:30まで）",
+  "point_kicker": "MOMIJI",
+  "point_title": "灯りに浮かぶ庭",
+  "points": [
+   "ねねが建てた寺",
+   "小堀遠州の庭に灯り",
+   "方丈前庭の光の演出"
+  ],
+  "info": [
+   [
+    "夜の拝観",
+    "12/13まで 17:00〜22:00"
+   ],
+   [
+    "受付",
+    "21:30まで"
+   ],
+   [
+    "拝観料",
+    "大人800円（昼夜同じ）"
+   ],
+   [
+    "行き方",
+    "市バス「東山安井」から徒歩7分"
+   ]
+  ],
+  "info_note": "入れ替えなし・昼から夜まで続けて見られます",
+  "list_caption": "ほかの紅葉も。",
+  "motif": "temple",
+  "scene": "momiji",
+  "seal": "紅葉",
+  "ehon1": [
+   "苔の庭と",
+   "紅葉"
+  ],
+  "ehon2": [
+   "嵐山を",
+   "庭に取り込む"
+  ],
+  "ehon4": [
+   "天蓋のような",
+   "紅葉"
+  ],
+  "ehon_night": [
+   "12.6",
+   "まで",
+   "夜の",
+   "拝観"
+  ],
+  "ehon5": [
+   "日付でさがせる",
+   "地図でさがせる",
+   "紅葉もイルミも"
+  ]
+ },
+ "source": "https://www.kodaiji.com/saiji.html",
+ "facts": [
+  {
+   "q": "12月13日",
+   "url": "https://www.kodaiji.com/saiji.html"
+  },
+  {
+   "q": "9時半",
+   "url": "https://www.kodaiji.com/saiji.html"
+  },
+  {
+   "q": "21:30",
+   "url": "https://www.kodaiji.com/haikan.html"
+  },
+  {
+   "q": "800円",
+   "url": "https://www.kodaiji.com/haikan.html"
+  },
+  {
+   "q": "昼夜同じ",
+   "url": "https://www.kodaiji.com/saiji.html"
+  },
+  {
+   "q": "入替制ではございません",
+   "url": "https://www.kodaiji.com/haikan.html"
+  },
+  {
+   "q": "北政所",
+   "url": "https://www.kodaiji.com/rekishi.html"
+  },
+  {
+   "q": "小堀遠州",
+   "url": "https://ja.kyoto.travel/event/single.php?event_id=5528"
+  },
+  {
+   "q": "プロジェクションマッピング",
+   "url": "https://ja.kyoto.travel/event/single.php?event_id=5528"
+  },
+  {
+   "q": "東山安井",
+   "url": "https://ja.kyoto.travel/event/single.php?event_id=5528"
+  },
+  {
+   "q": "7分",
+   "url": "https://ja.kyoto.travel/event/single.php?event_id=5528"
+  }
+ ],
+ "voice_lines": [
+  "紅葉の向こうに、灯りに浮かぶお堂。",
+  "京都・ひがしやまの、こうだいじ。",
+  "ねねの道から、石段を上がって入ります。",
+  "秀吉の妻、ねねが、秀吉をとむらうために建てたお寺です。",
+  "こぼりえんしゅうの庭が、夜はやわらかな灯りに浮かびます。",
+  "方丈の前の白い砂の庭では、光の演出も。",
+  "見上げれば、灯りに透ける、真っ赤なもみじ。",
+  "拝観料は、昼も夜も同じ。入れ替えなしで、夜まで歩けます。",
+  "夜の拝観は12月13日まで。夜9時半まで入れて、大人800円です。",
+  "ほかのおでかけ先は、プロフィールのリンクから。"
+ ],
+ "made": "1分2秒（インスタ・TikTok・YouTube 共通）1場面1枚を奥行きで動かす＋夜の地図 tools/outing_reel/hf/kodaiji-1127n",
+ "video_url": "https://oreusa.github.io/usagi-fudosan-media/media/reels/2026-11-27-popup.mp4",
+ "cover_url": "https://oreusa.github.io/usagi-fudosan-media/media/reels/2026-11-27-cover.jpg",
+ "caption": "紅葉の向こうに、灯りに浮かぶお堂。京都・東山の高台寺で「秋の夜間特別拝観」が開かれています\n\n✦ 豊臣秀吉の妻・ねね（北政所）が、秀吉をとむらうために建てたお寺です\n✦ 小堀遠州の作と伝わる庭が、夜はやわらかな灯りに浮かびます\n✦ 方丈の前の白い砂の庭では、光の演出（プロジェクションマッピング）も\n✦ 拝観料は昼も夜も同じ・入れ替えなし。昼から夜まで続けて歩けます\n✦ 夜の拝観は 12/13まで、17:00点灯〜22:00（受付21:30まで）・大人800円\n✦ 市バス「東山安井」から歩いて約7分。ねねの道から石段を上がります\n\n一緒に行く人に送っておくと、当日迷いません\nほかの紅葉は、プロフィールのリンク「関西おでかけリスト」から\n\n✧ 内容は変わることがあります。出かける前に高台寺のお知らせで確かめてください\n\n音声：VOICEVOX:もち子(cv 明日葉よもぎ)\n地図：地球地図日本（国土地理院）を加工して作成\n絵：画像AIで描いた絵（実際の景色と違う所があります）\n曲：オリジナル\n\n#関西おでかけ #京都紅葉 #高台寺 #ライトアップ"
+}
