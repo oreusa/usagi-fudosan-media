@@ -3,7 +3,8 @@
 月曜と木曜の 19:47 の回が、上から公式ページで確かめ、合う物を tools/fudosan_list/facts.json に足して make.py を回す。
 足した物・合わない物は stats/fudosan-watch.json の done に URL を入れる（次から出ない）。
 
-## 候補（45件）
+## 候補（46件）
+- 2026-11-26｜総務省統計局｜[jinko] 住民基本台帳人口移動報告 2026年（令和8年）10月分｜https://www.stat.go.jp/data/idou/sokuhou/tsuki/index.html
 - 2026-11-25｜兵庫県｜[seido] 公示送達を閲覧する前に（禁止事項等）｜https://web.pref.hyogo.lg.jp/awk05/koujisoutatu/smtkenzei08.html
 - 2026-11-25｜法務省（相続登記）｜[seido] 11月25日（水）令和８年９月分月報公表（訟務事件統計、登記統計、検察統計、矯正統計、少年矯正統計、保護統計及び人権侵犯事件統計）｜https://www.moj.go.jp/housei/toukei/toukei_ichiran_index.html
 - 2026-11-25｜滋賀県｜[seido] 令和８年度スマート・ライフスタイル普及促進事業補助金における 重点対策加速化事業(省エネ分)の受付終了について｜https://www.pref.shiga.lg.jp/cg00/press-release/35145.html
