@@ -57,6 +57,22 @@ I = {  # 絵ごとの動き
  'nshrine': S('nagatoro/06-shrine', 'nagatoro-06', M(z1=.14, cy=.5, py0=.02, py1=-.02, b0=1.1, b1=1.1, **NIGHT)),
  'npath': S('nagatoro/07-path', 'nagatoro-07', M(z1=.30, cy=.5, **NIGHT)),
  'ngvi': S('nagatoro/05-reflect', 'nagatoro-05', M(z1=.10, **NIGHT)),
+ 'kb0': S('kitano/01-bridge-b', 'kitano-01b', M(z1=.22, cy=.45, **NIGHT)),
+ 'kodoi': S('kitano/02-odoi-b', 'kitano-02b', M(z1=.30, cy=.55, **NIGHT)),
+ 'kmitsu': S('kitano/03-mitsumata-b', 'kitano-03b', M(z1=.12, py0=.03, py1=-.03, b0=1.1, b1=1.1, **NIGHT, **LIGHTUP)),
+ 'kriver': S('kitano/04-river', 'kitano-04', M(z1=.12, px0=-.02, px1=.02, wy=.60, **NIGHT)),
+ 'kbridge': S('kitano/01-bridge', 'kitano-01', M(z1=.16, cy=.6, **NIGHT)),
+ 'khonden': S('kitano/06-honden', 'kitano-06', M(z1=.10, px0=.025, px1=-.025, b0=1.1, b1=1.1, **NIGHT)),
+ 'ktea': S('kitano/05-teahouse', 'kitano-05', M(z1=.14, cy=.55, **NIGHT)),
+ 'ktvi': S('kitano/07-path', 'kitano-07', M(z1=.10, **NIGHT)),
+ 'og0': S('ootaguro/01-gate-b', 'ootaguro-01b', M(z1=.24, cy=.5, **NIGHT)),
+ 'oginkgo': S('ootaguro/02-ginkgo', 'ootaguro-02', M(z1=.32, cy=.5, **NIGHT)),
+ 'opond': S('ootaguro/03-pond', 'ootaguro-03', M(z1=.10, px0=-.02, px1=.02, wy=.62, **NIGHT)),
+ 'ostream': S('ootaguro/04-stream', 'ootaguro-04', M(z1=.20, cy=.6, wy=.70, **NIGHT)),
+ 'ohouse': S('ootaguro/05-house-b', 'ootaguro-05b', M(z1=.14, cy=.55, **NIGHT, **LIGHTUP)),
+ 'omaple': S('ootaguro/06-maple', 'ootaguro-06', M(z1=.12, py0=.03, py1=-.03, b0=1.1, b1=1.1, **NIGHT)),
+ 'opath': S('ootaguro/07-path', 'ootaguro-07', M(z1=.30, cy=.5, **NIGHT)),
+ 'ogvi': S('ootaguro/03-pond-b', 'ootaguro-03b', M(z1=.10, **NIGHT)),
  'oyvi': S('oyama1/01-steps-b', 'oyama-01b', M(z1=.12, **NIGHT)),
 }
 import copy
@@ -68,6 +84,8 @@ SETS = {  # キー: (hf ディレクトリ, 場面ごとの絵, 案内の後ろ�
  'kdN': ('kodaiji-1127n', [['hall0'], 'MAP', ['klane'], ['kaisan'], ['kgarden'], ['ksand'], ['kmaple'], ['kpath']], 'kdvi'),
  'ngN': ('nagatoro-1127n', [['river0'], 'MAP', ['npark'], ['nlit'], ['ncliff'], ['nreflect'], ['nshrine'], ['npath']], 'ngvi'),
  'oyN': ('oyama-1126n', [['steps0'], 'MAP', ['cable'], ['ohondo'], ['arch'], ['shrine'], ['oview'], ['ofree']], 'oyvi'),
+ 'ktN': ('kitano-1128n', [['kb0'], 'MAP', ['kodoi'], ['kmitsu'], ['kriver'], ['kbridge'], ['khonden'], ['ktea']], 'ktvi'),
+ 'ogN': ('ootaguro-1128n', [['og0'], 'MAP', ['oginkgo'], ['opond'], ['ostream'], ['ohouse'], ['omaple'], ['opath']], 'ogvi'),
  'hsT': ('hasedera-1126t', [['pond'], 'MAP', ['grounds'], ['dusk'], ['steps'], ['kannon'], ['view'], ['ginkgo']], 'hsvi'),
 }
 only = sys.argv[3:] or list(SETS)
