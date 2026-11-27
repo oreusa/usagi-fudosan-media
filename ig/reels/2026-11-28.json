@@ -1,0 +1,155 @@
+{
+ "date": "2026-11-28",
+ "time": "07:30",
+ "pref": "kyoto",
+ "tab": "京都",
+ "lat": 35.0312,
+ "lon": 135.7352,
+ "audio_id": "",
+ "text": {
+  "corner": "KYOTO ─ KITANO",
+  "title": [
+   "北野天満宮",
+   "御土居のもみじ苑"
+  ],
+  "place": "北野天満宮｜京都市上京区",
+  "map_tag": [
+   "KITANO TENMANGU ─ KYOTO",
+   "北野天満宮",
+   "京都市上京区"
+  ],
+  "map_caption": "秀吉が築いた土の壁に、灯りの紅葉。",
+  "date": [
+   "11.13",
+   "",
+   "12.06",
+   ""
+  ],
+  "date_title": "もみじ苑のライトアップ",
+  "date_note": "日没〜20:00（受付19:40まで）",
+  "point_kicker": "MOMIJI",
+  "point_title": "御土居のもみじ",
+  "points": [
+   "樹齢400年の三叉のもみじ",
+   "紙屋川に映る紅葉",
+   "朱塗りの鶯橋"
+  ],
+  "info": [
+   [
+    "夜",
+    "12/6まで 日没〜20:00"
+   ],
+   [
+    "受付",
+    "19:40まで"
+   ],
+   [
+    "拝観料",
+    "大人1,500円（お茶菓子付き）"
+   ],
+   [
+    "行き方",
+    "市バス「北野天満宮前」"
+   ]
+  ],
+  "info_note": "小学生700円・未就学児無料",
+  "list_caption": "ほかの紅葉も。",
+  "motif": "temple",
+  "scene": "momiji",
+  "seal": "紅葉",
+  "ehon1": [
+   "朱い橋と",
+   "紅葉の谷"
+  ],
+  "ehon2": [
+   "秀吉が築いた",
+   "御土居"
+  ],
+  "ehon4": [
+   "樹齢400年の",
+   "三叉のもみじ"
+  ],
+  "ehon_night": [
+   "12.6",
+   "まで",
+   "夜の",
+   "ライトアップ"
+  ],
+  "ehon5": [
+   "日付でさがせる",
+   "地図でさがせる",
+   "紅葉もイルミも"
+  ]
+ },
+ "source": "https://kitanotenmangu.or.jp/guidance/odoi/",
+ "facts": [
+  {
+   "q": "12月6日",
+   "url": "https://kitanotenmangu.or.jp/guidance/odoi/"
+  },
+  {
+   "q": "20時",
+   "url": "https://kitanotenmangu.or.jp/guidance/odoi/"
+  },
+  {
+   "q": "19時40分",
+   "url": "https://kitanotenmangu.or.jp/guidance/odoi/"
+  },
+  {
+   "q": "1,500円",
+   "url": "https://kitanotenmangu.or.jp/guidance/odoi/"
+  },
+  {
+   "q": "700円",
+   "url": "https://kitanotenmangu.or.jp/guidance/odoi/"
+  },
+  {
+   "q": "約350本",
+   "url": "https://kitanotenmangu.or.jp/guidance/odoi/"
+  },
+  {
+   "q": "400年",
+   "url": "https://kitanotenmangu.or.jp/guidance/odoi/"
+  },
+  {
+   "q": "鶯橋",
+   "url": "https://kitanotenmangu.or.jp/guidance/odoi/"
+  },
+  {
+   "q": "梅交軒",
+   "url": "https://kitanotenmangu.or.jp/guidance/odoi/"
+  },
+  {
+   "q": "北野天満宮前",
+   "url": "https://kitanotenmangu.or.jp/access/"
+  },
+  {
+   "q": "北野白梅町",
+   "url": "https://kitanotenmangu.or.jp/access/"
+  },
+  {
+   "q": "5分",
+   "url": "https://kitanotenmangu.or.jp/access/"
+  },
+  {
+   "q": "御土居",
+   "url": "https://ja.kyoto.travel/event/single.php?event_id=5054"
+  }
+ ],
+ "voice_lines": [
+  "紅葉の谷を、朱い橋がわたる。",
+  "京都・きたのてんまんぐうの、もみじえん。",
+  "秀吉が京都のまわりに築いた土の壁、おどいの上を歩きます。",
+  "樹齢400年をこえる、三つにわかれた大もみじ。",
+  "かみやがわの水面に、もうひとつの紅葉。",
+  "朱塗りの橋、うぐいすばしをわたって、谷の底へ。",
+  "展望所からは、国宝の御本殿も見わたせます。",
+  "拝観料には、お茶菓子も付いています。",
+  "夜のライトアップは12月6日まで。夜7時40分まで入れて、大人1500円です。",
+  "ほかのおでかけ先は、プロフィールのリンクから。"
+ ],
+ "made": "1分2秒（インスタ・TikTok・YouTube 共通）1場面1枚を奥行きで動かす＋夜の地図 tools/outing_reel/hf/kitano-1128n",
+ "video_url": "https://oreusa.github.io/usagi-fudosan-media/media/reels/2026-11-28-popup.mp4",
+ "cover_url": "https://oreusa.github.io/usagi-fudosan-media/media/reels/2026-11-28-cover.jpg",
+ "caption": "紅葉の谷を、朱い橋がわたる。京都・北野天満宮の「史跡御土居のもみじ苑」で、紅葉のライトアップが開かれています\n\n✦ 豊臣秀吉が京都のまわりに築いた土の壁「御土居」。その上と下から、約350本のもみじを見られます\n✦ 樹齢400年をこえる「三叉のもみじ」\n✦ 紙屋川の水面に映る紅葉と、朱塗りの太鼓橋「鶯橋」\n✦ 展望所からは、国宝の御本殿も見わたせます\n✦ 夜のライトアップは 12/6まで、日没〜20:00（受付19:40まで）\n✦ 拝観料は大人1,500円・小学生700円（お茶菓子付き）・未就学児無料\n✦ 市バス「北野天満宮前」で降りる。嵐電 北野白梅町駅からは歩いて約5分\n\n一緒に行く人に送っておくと、当日迷いません\nほかの紅葉は、プロフィールのリンク「関西おでかけリスト」から\n\n✧ 内容は変わることがあります。出かける前に北野天満宮のお知らせで確かめてください\n\n音声：VOICEVOX:もち子(cv 明日葉よもぎ)\n地図：地球地図日本（国土地理院）を加工して作成\n絵：画像AIで描いた絵（実際の景色と違う所があります）\n曲：オリジナル\n\n#関西おでかけ #京都紅葉 #北野天満宮 #ライトアップ"
+}
