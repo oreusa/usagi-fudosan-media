@@ -1,0 +1,121 @@
+<!doctype html><html><head><meta charset="utf-8"></head><body style="margin:0;background:#000">
+<canvas id="g" width="1080" height="1920"></canvas>
+<script>
+// 絵＋奥行きで「カメラが進む」映像にする。d=1 が手前。
+const cv=document.getElementById('g'),gl=cv.getContext('webgl',{preserveDrawingBuffer:true,antialias:false});
+const vs=`attribute vec2 p;varying vec2 uv;void main(){uv=p*.5+.5;uv.y=1.-uv.y;gl_Position=vec4(p,0,1);}`;
+const fs=`precision highp float;varying vec2 uv;uniform sampler2D im,dp,lvt;uniform vec2 c,pan,sc;uniform float z,base,rot,tm,mist,ray,wind;uniform vec2 rc;uniform float st,wy,shk,spk,lf,bok,lu,sd,ly,fl;uniform sampler2D wmk;uniform vec2 fsrc;uniform float gf,gfy,cl,cly,fk,flk;uniform vec2 mo;
+float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float n2(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
+float fb(vec2 p){float a=.5,r=0.;for(int i=0;i<4;i++){r+=a*n2(p);p*=2.03;a*=.5;}return r;}
+float D(vec2 s){return texture2D(dp,s).r;}
+vec2 M(vec2 s){return 1.-abs(1.-mod(s,2.));}
+void main(){vec2 q=uv-.5;float cr=cos(rot),sr=sin(rot);q=mat2(cr,-sr,sr,cr)*q;q=q*sc/base+.5;
+ vec2 jt=shk*vec2(n2(vec2(tm*.6,1.))-.5,n2(vec2(2.,tm*.5))-.5);
+ vec2 s=q;for(int i=0;i<10;i++){float d=D(M(s));s=c+(q-c)/(1.+z*(d-st*.5))+(pan+jt)*(d-st);}
+ s=M(s);
+ // 水面：wy より下だけ、横にゆらぐ（映り込みが揺れる）
+ if(wy>0.&&s.y>wy){float k=smoothstep(wy,wy+.04,s.y);s.x+=k*.0035*sin(s.y*140.-tm*2.2+n2(vec2(s.y*30.,tm*.3))*3.);s.y+=k*.0015*sin(s.x*60.+tm*1.7);}
+ // 風：もみじ・いちょう（赤・橙・黄）だけをゆっくり揺らす。水色・白っぽい所（空・水・石）は動かさない
+ vec3 c0=texture2D(im,s).rgb;float mx=max(c0.r,max(c0.g,c0.b)),mn=min(c0.r,min(c0.g,c0.b));
+ float sat=(mx-mn)/(mx+.001);float warm=smoothstep(.02,.18,c0.r-c0.b)*smoothstep(.25,.55,sat)*smoothstep(.15,.35,mx);
+ float gust=(.55+.45*sin(tm*.9+s.y*3.+n2(s*2.)*4.))*(.45+.55*D(s));
+ vec2 w=vec2(n2(s*7.+vec2(tm*.55,0.))-.5,n2(s*7.+vec2(3.1,tm*.45))-.5)+.5*vec2(n2(s*19.+tm*1.1)-.5,n2(s*19.+9.+tm*1.)-.5);
+ vec2 s2=s+wind*warm*gust*w;
+ vec3 col=texture2D(im,M(s2)).rgb;float d=D(s);
+ // 雲：空（いちばん奥）だけ、雲の形がゆっくり横へ流れる。月・明るい所は動かさない
+ // 雲：空（いちばん奥）に雲の層を描き足し、横へ流す。月に近い雲は明るく、ふちが銀色に光る
+ if(cl>0.){float skk=smoothstep(.16,.05,d)*smoothstep(cly,cly-.1,s.y);if(skk>.01){
+   vec2 p=vec2(s.x*1.5-tm*cl,s.y*3.4);vec2 w0=vec2(fb(p*.9+vec2(0.,tm*.02)),fb(p*.9+vec2(5.2,1.3)));
+   float cd=fb(p*1.8+w0*1.6);float cd2=fb(p*4.+w0*2.+vec2(-tm*cl*.6,0.));
+   float dens=smoothstep(.40,.72,cd*.75+cd2*.35);
+   vec2 mv=(s-mo)*vec2(1.,1920./1080.);float md=length(mv);
+   vec3 cc=mix(vec3(.12,.14,.19),vec3(.80,.83,.90),exp(-md*4.5));
+   float edge=smoothstep(.25,.5,dens)*(1.-smoothstep(.5,.85,dens));
+   cc+=vec3(1.,.97,.9)*edge*exp(-md*6.)*.7;
+   col=mix(col,cc,dens*skk*.78);}}
+ // 流れ：水面を手前へ流れる平面として扱う（奥は細かく遅く、手前は大きく速い）。映り込みはその場に残し、さざ波のゆがみと横長のきらめきだけが手前へ進む
+ if(fl>0.){float k=texture2D(wmk,s).r;if(k>.01){float dy=max(s.y-fsrc.y,.015);
+   float zz=1./dy;                                  // 奥行き（地平に近いほど大きい）
+   vec2 P=vec2((s.x-fsrc.x)*zz*1.2,zz*.9);          // 水面の上の座標
+   float t=tm*.55;
+   float w1=fb(vec2(P.x*1.6,P.y*2.2+t*2.)),w2=fb(vec2(P.x*3.5+4.,P.y*5.+t*3.));
+   vec2 dsp=vec2((w2-.5)*1.2,(w1-.5))*fl*.10*dy*3.*k;
+   if(fk>0.){for(int j=0;j<3;j++){float fj=float(j);float tt=tm/3.4+fj*.37;float ph=fract(tt);float rc2=floor(tt);
+     vec2 rcn=vec2(mix(.22,.88,h(vec2(rc2,fj+1.))),mix(fsrc.y+.06,fsrc.y+.30,h(vec2(fj+2.,rc2+3.))));
+     vec2 dv=(s-rcn)*vec2(1.,1920./1080.);dv.y*=2.4;float rr2=length(dv);float R=ph*.10;
+     float ring=exp(-abs(rr2-R)*150.)*(1.-ph)*(1.-ph)*step(.5,texture2D(wmk,rcn).r);dsp+=dv/(rr2+1e-4)*ring*.005;}}
+   vec3 wc=texture2D(im,M(s+dsp)).rgb;float Yw=dot(wc,vec3(.3,.59,.11));
+   float g=n2(vec2(P.x*2.2,P.y*9.+t*5.))*n2(vec2(P.x*.9+7.,P.y*4.+t*3.5));
+   float gl=pow(max(0.,g*1.7-.55),2.)*5.;
+   col=mix(col,wc+gl*smoothstep(.10,.45,Yw)*vec3(1.,.94,.84)*.55,k);}}
+ // 足元の霧：gfy より下に低くうすく、横へゆっくり流れる。灯りの近くは暖かく光る
+ if(gf>0.){float yy=smoothstep(gfy-.05,gfy+.05,uv.y)*(1.-smoothstep(gfy+.16,gfy+.34,uv.y));
+   float fn=fb(vec2(uv.x*2.6+tm*.05,uv.y*7.-tm*.01))*fb(vec2(uv.x*1.3-tm*.03,uv.y*3.5+1.7));
+   float band=yy*smoothstep(.10,.42,fn*2.2);
+   vec3 lit=texture2D(im,M(s+vec2(0.,-.05))).rgb;float Yl=dot(lit,vec3(.3,.59,.11));
+   vec3 fc=mix(vec3(.50,.58,.70),vec3(1.,.82,.62),smoothstep(.25,.7,Yl));
+   col=mix(col,fc*(.6+.6*Yl),clamp(gf*band*.6,0.,.7));}
+ // 光の筋：光の元 rc から放射、ゆっくり揺れる
+ vec2 v=uv-rc;float an=atan(v.y,v.x);float st=n2(vec2(an*18.,tm*.25))*n2(vec2(an*41.,-tm*.18));
+ float fall=exp(-length(v)*1.6);col+=ray*vec3(1.,.86,.62)*pow(st,2.2)*fall*(.35+.65*(1.-d));
+
+ // 明かりがともる：lu=0 で暗く、1 で灯る（明るい所ほど遅れて強く）
+ float Y=dot(col,vec3(.3,.59,.11));
+ col=mix(col*vec3(.38,.42,.55),col,clamp(lu*1.15-(1.-smoothstep(.25,.8,Y))*.15,0.,1.));
+ col+=lu*smoothstep(.55,.95,Y)*col*.18*(.85+.15*sin(tm*2.3+s.x*20.));
+ // きらめき：明るい所に小さな十字の光が瞬く
+ if(spk>0.){float g=34.;vec2 cu=uv*vec2(g,g*1920./1080.);vec2 ci=floor(cu);float sp=0.;
+  for(int j=-1;j<=1;j++)for(int i=-1;i<=1;i++){vec2 cc=ci+vec2(i,j);float r=h(cc+sd);vec2 pp=cc+vec2(h(cc+1.7+sd),h(cc+4.3+sd));
+   vec2 ps=s+(pp-cu)/vec2(g,g*1920./1080.)*sc/base;vec3 c0=texture2D(im,M(ps)).rgb;float b=dot(c0,vec3(.3,.59,.11));float wh=smoothstep(.55,.8,min(c0.r,min(c0.g,c0.b))/max(max(c0.r,max(c0.g,c0.b)),.001))*smoothstep(.6,.85,b);float bn=0.;for(int q=0;q<4;q++){float aq=float(q)*1.5708+.4;bn+=dot(texture2D(im,M(ps+vec2(cos(aq),sin(aq))*.018)).rgb,vec3(.3,.59,.11));}bn*=.25;b=b*smoothstep(.12,.3,b-bn);
+   float on=smoothstep(.06,.25,b)*wh*step(.25,r)*step(.5,h(cc+9.1+sd));float tw=pow(.5+.5*sin(tm*(1.1+r*1.4)+r*40.),12.);
+   vec2 dv=(cu-pp);dv.y*=1.;float cr=exp(-abs(dv.x)*9.)*exp(-abs(dv.y)*2.4)+exp(-abs(dv.y)*9.)*exp(-abs(dv.x)*2.4);float co=exp(-dot(dv,dv)*45.);
+   sp+=on*tw*(cr*.3+co*2.4);}
+  col+=spk*sp*vec3(1.,.93,.8);
+  if(wy>0.&&s.y>wy){float gl2=pow(n2(vec2(uv.x*220.,uv.y*70.-tm*1.3)),14.)*pow(n2(vec2(uv.x*90.+tm*.7,uv.y*40.)),2.);col+=spk*gl2*smoothstep(.15,.6,Y)*vec3(2.,1.7,1.3);}}
+ // 水面に浮かぶ紅葉：池（wmk）の上にだけ、平たく浮かんでゆっくり漂う
+ if(fk>0.){float kw=texture2D(wmk,s).r;if(kw>.2){for(int i=0;i<10;i++){float fi=float(i)+3.7;float r1=h(vec2(fi,11.)),r2=h(vec2(fi,12.)),r3=h(vec2(fi,13.));
+   vec2 cpos=vec2(fract(r1+tm*(.003+.005*r3)),mix(fsrc.y+.04,fsrc.y+.34,r2));cpos.y+=.0015*sin(tm*1.1+fi);
+   float per=(cpos.y-fsrc.y)*3.+.3;float sz=.05*per*(.8+.4*r3);
+   vec2 v3=s-cpos;v3.y*=1920./1080.;v3.y/=.42;float an=r1*6.28+tm*.12*(r2-.5);vec2 rr=mat2(cos(an),-sin(an),sin(an),cos(an))*v3;
+   vec2 tu=rr/(sz*2.)+.5;
+   if(tu.x>0.&&tu.x<1.&&tu.y>0.&&tu.y<1.&&texture2D(wmk,cpos).r>.5){tu.x=(r3>.7?.5:0.)+tu.x*.5;vec4 L=texture2D(lvt,tu);
+     float Yb=dot(col,vec3(.3,.59,.11));vec3 lc=L.rgb*(.42+.8*smoothstep(.0,.5,Yb));col=mix(col,lc,L.a*kw*.95);}}}}
+ // 灯りのゆらぎ：暖かく明るい所だけ、火のようにかすかに揺れる
+ if(flk>0.){float Yf=dot(col,vec3(.3,.59,.11));float wk=smoothstep(.45,.85,Yf)*smoothstep(.03,.15,col.r-col.b);
+   vec2 cel=floor(s*vec2(18.,32.));float fn=n2(vec2(tm*5.,cel.x*3.1+cel.y*7.7))*.6+n2(vec2(tm*11.,cel.x+cel.y*2.+5.))*.4;col*=1.+wk*flk*(fn-.5)*2.;}
+ // 舞う紅葉：手前は大きくぼけて、奥は小さく
+ if(lf>0.){for(int i=0;i<14;i++){float fi=float(i)+sd*13.;float r1=h(vec2(fi,1.)),r2=h(vec2(fi,2.)),r3=h(vec2(fi,3.));
+   float near=step(.72,r3);float sz=mix(.018,.03,r2)*(1.+near*1.3);float sp2=mix(.035,.07,r1)*(1.+near);
+   float yy=fract(r2+tm*sp2/1.3)*1.3-.15;float xx=r1+.06*sin(tm*(.6+r2)+fi)+.04*tm*(r3-.5);
+   vec2 v2=(uv-vec2(fract(xx),yy));v2.y*=1920./1080.;float an=tm*(.8+r1*1.5)+fi;vec2 rr=mat2(cos(an),-sin(an),sin(an),cos(an))*v2;
+   float fl=sin(tm*(1.+r2)+fi);rr.x/=mix(.25,1.,abs(fl));
+   vec2 tu=rr/(sz*2.)+.5;
+   if(tu.x>0.&&tu.x<1.&&tu.y>0.&&tu.y<1.){tu.x=(ly>.5?.5:0.)+tu.x*.5;if(h(vec2(fi,8.))>.5&&ly<.5)tu.y=1.-tu.y;
+    vec4 L=texture2D(lvt,tu,near*2.5);float sh=(.75+.25*abs(fl))*(.35+.75*smoothstep(.02,.45,Y));vec3 lc=L.rgb*sh;
+    col=mix(col,lc,L.a*lf*mix(1.,.85,near));}}}
+ // 光のぼけ：上の方に暖かい丸い光がふわっと
+ if(bok>0.){for(int i=0;i<9;i++){float fi=float(i)+sd*7.;float r1=h(vec2(fi,5.)),r2=h(vec2(fi,6.));
+   vec2 pc=vec2(fract(r1+tm*.008*(r2-.5)),mix(.05,.45,r2)+.01*sin(tm*.4+fi));vec2 v3=uv-pc;v3.y*=1920./1080.;float rad=mix(.035,.08,h(vec2(fi,7.)));
+   float dd=length(v3);float disk=1.-smoothstep(rad*.85,rad,dd);float rim=smoothstep(rad*.6,rad*.95,dd)*disk;
+   col+=bok*(disk*.10+rim*.08)*vec3(1.,.78,.45)*(.6+.4*sin(tm*.7+fi*2.));}}
+ gl_FragColor=vec4(col,1.);}`;
+function sh(t,s){const o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS))throw gl.getShaderInfoLog(o);return o}
+const pr=gl.createProgram();gl.attachShader(pr,sh(gl.VERTEX_SHADER,vs));gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,fs));gl.linkProgram(pr);gl.useProgram(pr);
+const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);const l=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(l);gl.vertexAttribPointer(l,2,gl.FLOAT,false,0,0);
+const U=n=>gl.getUniformLocation(pr,n);
+function tex(img,unit,blur){const t=gl.createTexture();gl.activeTexture(gl.TEXTURE0+unit);gl.bindTexture(gl.TEXTURE_2D,t);
+ let src=img;if(blur){const c=document.createElement('canvas');c.width=img.width;c.height=img.height;const x=c.getContext('2d');x.filter=`blur(${blur}px)`;x.drawImage(img,0,0);src=c}
+ gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,src);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);return t}
+const cache={};
+window.setPair=async function(key,iu,du){if(!cache[key]){const L=u=>new Promise(r=>{const i=new Image();i.onload=()=>r(i);i.src=u});const [a,d]=await Promise.all([L(iu),L(du)]);cache[key]={a,d,ti:null,td:null}}
+ const C=cache[key];if(!C.ti){C.ti=tex(C.a,0);C.td=tex(C.d,1,4)}else{gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,C.ti);gl.activeTexture(gl.TEXTURE1);gl.bindTexture(gl.TEXTURE_2D,C.td)}
+ gl.uniform1i(U('im'),0);gl.uniform1i(U('dp'),1);
+ const ia=C.a.width/C.a.height,sa=1080/1920;gl.uniform2f(U('sc'),ia>sa?sa/ia:1,ia>sa?1:ia/sa);window._cur=key}
+// m: {z:進む量, cx,cy:消失点, px,py:横移動, base:拡大, rot}
+window.usePair=function(k){const C=cache[k];gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,C.ti);gl.activeTexture(gl.TEXTURE1);gl.bindTexture(gl.TEXTURE_2D,C.td);gl.uniform1i(U('im'),0);gl.uniform1i(U('dp'),1);const ia=C.a.width/C.a.height,sa=1080/1920;gl.uniform2f(U('sc'),ia>sa?sa/ia:1,ia>sa?1:ia/sa)};
+window.frame=function(m){gl.uniform2f(U('c'),m.cx??.5,m.cy??.45);gl.uniform2f(U('pan'),m.px||0,m.py||0);gl.uniform1f(U('z'),m.z||0);gl.uniform1f(U('base'),m.base||1.08);gl.uniform1f(U('rot'),m.rot||0);gl.uniform1f(U('tm'),m.tm||0);gl.uniform1f(U('mist'),m.mist||0);gl.uniform1f(U('ray'),m.ray||0);gl.uniform1f(U('wind'),m.wind??.0045);gl.uniform2f(U('rc'),m.rx??.5,m.ry??-.1);gl.uniform1f(U('st'),m.st??.3);gl.uniform1f(U('wy'),m.wy||0);gl.uniform1f(U('shk'),m.shk??.004);gl.uniform1f(U('spk'),m.spk||0);gl.uniform1f(U('lf'),m.lf||0);gl.uniform1f(U('bok'),m.bok||0);gl.uniform1f(U('lu'),m.lu??1);gl.uniform1f(U('sd'),m.sd||0);gl.uniform1f(U('ly'),m.ly||0);gl.uniform1f(U('fl'),m.fl||0);gl.uniform2f(U('fsrc'),m.fx??.5,m.fy??.45);gl.uniform1i(U('wmk'),3);gl.uniform1f(U('gf'),m.gf||0);gl.uniform1f(U('gfy'),m.gfy??.7);gl.uniform1f(U('cl'),m.cl||0);gl.uniform1f(U('cly'),m.cly??.45);gl.uniform1f(U('fk'),m.fk||0);gl.uniform1f(U('flk'),m.flk||0);gl.uniform2f(U('mo'),m.mx??.5,m.my??.25);gl.drawArrays(gl.TRIANGLE_STRIP,0,4)}
+window.setMask=u=>new Promise(r=>{const i=new Image();i.onload=()=>{const t=gl.createTexture();gl.activeTexture(gl.TEXTURE3);gl.bindTexture(gl.TEXTURE_2D,t);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,i);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.activeTexture(gl.TEXTURE0);r()};i.src=u});
+window.setLeaves=u=>new Promise(r=>{const i=new Image();i.onload=()=>{const t=gl.createTexture();gl.activeTexture(gl.TEXTURE2);gl.bindTexture(gl.TEXTURE_2D,t);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,i);gl.generateMipmap(gl.TEXTURE_2D);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.uniform1i(U('lvt'),2);r()};i.src=u});
+window.ready=1;
+</script></body></html>

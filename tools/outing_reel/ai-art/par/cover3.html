@@ -1,0 +1,53 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:MB;src:url(fonts/ShipporiMincho-Bold.ttf)}@font-face{font-family:MM;src:url(fonts/ShipporiMincho-Medium.ttf)}
+@font-face{font-family:CG;src:url(fonts/cormorant-garamond-latin-500-normal.woff2)}@font-face{font-family:CGI;src:url(fonts/cormorant-garamond-latin-500-italic.woff2)}@font-face{font-family:CGB;src:url(fonts/cormorant-garamond-latin-600-normal.woff2)}
+html,body{margin:0;width:925px;height:1425px;overflow:hidden;background:#000}
+#c{position:absolute;inset:0;overflow:hidden;border-radius:6px 10px 10px 6px}
+.img{background-size:cover;background-position:50% 50%}
+#sp{position:absolute;left:0;top:0;bottom:0;width:46px;background:linear-gradient(90deg,rgba(0,0,0,.45),rgba(255,255,255,.10) 55%,rgba(0,0,0,.14) 70%,rgba(0,0,0,0));z-index:9}
+.lg{width:44px;height:44px;border-radius:50%;background:#f6ecd8 center/86% no-repeat}
+/* A 和の装丁：和紙の地・写真の窓・縦書き・朱の印 */
+.A #c{background:#f3ede2}
+.A #paper{position:absolute;inset:0;background:radial-gradient(120% 80% at 30% 20%,#faf6ee,#efe7d8 70%,#e6dccb);}
+.A #paper:after{content:'';position:absolute;inset:0;opacity:.35;background-image:repeating-linear-gradient(97deg,rgba(150,120,80,.06) 0 1px,transparent 1px 7px),repeating-linear-gradient(7deg,rgba(150,120,80,.05) 0 1px,transparent 1px 11px)}
+.A #win{position:absolute;left:110px;right:72px;top:92px;height:780px;box-shadow:0 1px 0 rgba(0,0,0,.08),0 18px 40px rgba(60,40,20,.18)}
+.A #win .im{position:absolute;inset:0;filter:saturate(1.05) contrast(1.04) brightness(.95)}
+.A #vt{position:absolute;right:92px;top:930px;writing-mode:vertical-rl;font:700 74px MB;letter-spacing:.12em;color:#1d1a17;line-height:1}
+.A #vs{position:absolute;right:200px;top:938px;writing-mode:vertical-rl;font:500 32px MM;letter-spacing:.3em;color:#5b4f43}
+.A #en{position:absolute;left:110px;top:912px;font:500 30px CGI;letter-spacing:.06em;color:#6d5f50}
+.A #dt{position:absolute;left:110px;top:960px;font:500 44px CG;letter-spacing:.12em;color:#1d1a17}
+.A #seal{position:absolute;left:112px;bottom:150px;width:84px;height:84px;border-radius:8px;background:#b8352a;color:#f8ecdf;font:700 30px/1 MB;display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;letter-spacing:.05em;box-shadow:inset 0 0 0 3px #b8352a,inset 0 0 0 5px rgba(248,236,223,.8);transform:rotate(-2deg)}
+.A #br{position:absolute;left:112px;bottom:92px;font:500 22px MM;letter-spacing:.32em;color:#5b4f43;display:flex;align-items:center;gap:14px}
+/* B 雑誌：写真いっぱい・上に英字の題字・右に縦書き・号数 */
+.B .full{position:absolute;inset:0;filter:saturate(1.06) contrast(1.06) brightness(.86)}
+.B #sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,0) 26%,rgba(0,0,0,0) 62%,rgba(0,0,0,.7))}
+.B #mast{position:absolute;left:76px;right:56px;top:70px;font:600 148px/0.9 CGB;letter-spacing:-.01em;color:#fffaf0;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.B #mast small{display:block;font:500 26px CGI;letter-spacing:.18em;margin-top:18px;color:rgba(255,248,235,.9)}
+.B #no{position:absolute;right:58px;top:84px;text-align:right;font:500 24px CG;letter-spacing:.14em;color:#fffaf0}
+.B #no b{display:block;font:600 64px/1 CGB;letter-spacing:0}
+.B #vt{position:absolute;right:66px;top:420px;writing-mode:vertical-rl;font:700 96px MB;letter-spacing:.14em;color:#fff;text-shadow:0 2px 26px rgba(0,0,0,.5)}
+.B #vs{position:absolute;right:190px;top:430px;writing-mode:vertical-rl;font:500 32px MM;letter-spacing:.3em;color:rgba(255,250,240,.95);text-shadow:0 2px 16px rgba(0,0,0,.6)}
+.B #foot{position:absolute;left:76px;right:56px;bottom:84px;display:flex;align-items:flex-end;justify-content:space-between;color:#fffaf0}
+.B #foot .d{font:500 46px CG;letter-spacing:.1em}.B #foot .d i{display:block;font:500 24px CGI;letter-spacing:.16em;opacity:.85}
+.B #foot .r{display:flex;align-items:center;gap:12px;font:500 22px MM;letter-spacing:.28em}
+/* C 布張り＋箔押し：深い色の布・アーチの窓・金の箔 */
+.C #c{background:#1f2a3a}
+.C #cloth{position:absolute;inset:0;background:radial-gradient(110% 70% at 50% 30%,#2b3a50,#18212e 80%)}
+.C #cloth:after{content:'';position:absolute;inset:0;opacity:.5;background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 3px),repeating-linear-gradient(90deg,rgba(0,0,0,.08) 0 1px,transparent 1px 3px)}
+.C #arch{position:absolute;left:170px;right:130px;top:250px;height:760px;border-radius:330px 330px 10px 10px;overflow:hidden;box-shadow:0 0 0 2px #cfae6b,0 0 0 12px rgba(0,0,0,0),0 0 0 13px rgba(207,174,107,.55),0 30px 60px rgba(0,0,0,.45)}
+.C #arch .im{position:absolute;inset:0;filter:saturate(1.05) contrast(1.05) brightness(.92)}
+.C .foil{background:linear-gradient(100deg,#b8924f,#f2dc9f 38%,#c9a35c 55%,#f6e3ad 72%,#ad8646);-webkit-background-clip:text;background-clip:text;color:transparent}
+.C #en{position:absolute;left:64px;right:38px;top:120px;text-align:center;font:500 30px CG;letter-spacing:.42em}
+.C #dt{position:absolute;left:64px;right:38px;top:166px;text-align:center;font:500 30px CGI;letter-spacing:.2em}
+.C #tt{position:absolute;left:64px;right:38px;top:1060px;text-align:center;font:700 112px MB;letter-spacing:.1em}
+.C #st{position:absolute;left:64px;right:38px;top:1205px;text-align:center;font:500 36px MM;letter-spacing:.28em}
+.C #br{position:absolute;left:64px;right:38px;bottom:70px;display:flex;align-items:center;justify-content:center;gap:14px;font:500 22px MM;letter-spacing:.3em;color:#d9bd84}
+.C #orn{position:absolute;left:50%;top:1272px;width:220px;margin-left:-96px;height:1px;background:linear-gradient(90deg,transparent,#cfae6b,transparent)}
+</style></head><body><div id="c"></div>
+<script>const Q=new URLSearchParams(location.search),v=Q.get('v')||'A',g=k=>Q.get(k)||'',img=`url(${g('img')})`,pos=g('pos')||'50% 50%';
+document.body.className=v;const c=document.getElementById('c');const lg=`<span class="lg" style="background-image:url(${g('logo')})"></span>`;
+const IM=`<div class="im img" style="background-image:${img};background-position:${pos}"></div>`;
+if(v==='A')c.innerHTML=`<div id="paper"></div><div id="win">${IM}</div><div id="en">${g('en')}</div><div id="dt">${g('dt')}</div><div id="vt">${g('tt')}</div><div id="vs">${g('st')}</div><div id="seal">${g('seal')}</div><div id="br">${lg}${g('br')}</div>`;
+if(v==='B')c.innerHTML=`<div class="full img" style="background-image:${img};background-position:${pos}"></div><div id="sh"></div><div id="mast">${g('mast')}<small>${g('en')}</small></div><div id="no">No.<b>${g('no')}</b></div><div id="vt">${g('tt')}</div><div id="vs">${g('st')}</div><div id="foot"><div class="d"><i>light up</i>${g('dt')}</div><div class="r">${lg}${g('br')}</div></div>`;
+if(v==='C')c.innerHTML=`<div id="cloth"></div><div id="en" class="foil">${g('en')}</div><div id="dt" class="foil">${g('dt')}</div><div id="arch">${IM}</div><div id="tt" class="foil">${g('tt')}</div><div id="orn"></div><div id="st" class="foil">${g('st')}</div><div id="br">${lg}${g('br')}</div>`;
+c.insertAdjacentHTML('beforeend','<div id="sp"></div>');document.fonts.ready.then(()=>window.ready=1)</script></body></html>
