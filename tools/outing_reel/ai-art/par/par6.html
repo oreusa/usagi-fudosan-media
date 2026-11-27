@@ -4,7 +4,7 @@
 // 絵＋奥行きで「カメラが進む」映像にする。d=1 が手前。
 const cv=document.getElementById('g'),gl=cv.getContext('webgl',{preserveDrawingBuffer:true,antialias:false});
 const vs=`attribute vec2 p;varying vec2 uv;void main(){uv=p*.5+.5;uv.y=1.-uv.y;gl_Position=vec4(p,0,1);}`;
-const fs=`precision highp float;varying vec2 uv;uniform sampler2D im,dp,lvt;uniform vec2 c,pan,sc;uniform float z,base,rot,tm,mist,ray,wind;uniform vec2 rc;uniform float st,wy,shk,spk,lf,bok,lu,sd,ly,fl;uniform sampler2D wmk;uniform vec2 fsrc;
+const fs=`precision highp float;varying vec2 uv;uniform sampler2D im,dp,lvt;uniform vec2 c,pan,sc;uniform float z,base,rot,tm,mist,ray,wind;uniform vec2 rc;uniform float st,wy,shk,spk,lf,bok,lu,sd,ly,fl;uniform sampler2D wmk;uniform vec2 fsrc;uniform float gf,gfy;
 float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
 float n2(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y);}
 float fb(vec2 p){float a=.5,r=0.;for(int i=0;i<4;i++){r+=a*n2(p);p*=2.03;a*=.5;}return r;}
@@ -23,16 +23,20 @@ void main(){vec2 q=uv-.5;float cr=cos(rot),sr=sin(rot);q=mat2(cr,-sr,sr,cr)*q;q=
  vec2 w=vec2(n2(s*7.+vec2(tm*.55,0.))-.5,n2(s*7.+vec2(3.1,tm*.45))-.5)+.5*vec2(n2(s*19.+tm*1.1)-.5,n2(s*19.+9.+tm*1.)-.5);
  vec2 s2=s+wind*warm*gust*w;
  vec3 col=texture2D(im,M(s2)).rgb;float d=D(s);
- // 流れ：wmk（白＝水）の所だけ、水の模様が fsrc から外へ流れる（2つの位相を重ねて切れ目を隠す）
+ // 流れ（見本1の形）：wmk（白＝水）の所だけ、水の模様が fsrc から外へ流れる（2つの位相を重ねて切れ目を隠す）。白い筋は弱め
  if(fl>0.){float k=texture2D(wmk,s).r;if(k>.01){vec2 dir=normalize(s-fsrc+vec2(0.,.001));float dd2=length(s-fsrc);
    float p1=fract(tm*.45),p2=fract(tm*.45+.5);vec2 nn=vec2(fb(s*vec2(26.,9.)-dir*tm*1.2),fb(s*vec2(26.,9.)+7.-dir*tm*1.2))-.5;
    float a=fl*(.4+dd2);vec2 o1=dir*(p1-.5)*a+nn*.006*fl/.03,o2=dir*(p2-.5)*a+nn*.006*fl/.03;
    vec3 a1=texture2D(im,M(s-o1)).rgb,a2=texture2D(im,M(s-o2)).rgb;float wg=abs(1.-2.*p1);vec3 wc=mix(a1,a2,wg);
-   float fo=pow(fb(vec2(dot(s,vec2(dir.y,-dir.x))*90.,dd2*30.-tm*2.2)),5.)*1.6;
+   float fo=pow(fb(vec2(dot(s,vec2(dir.y,-dir.x))*90.,dd2*30.-tm*2.2)),5.)*.8;
    col=mix(col,wc+fo*smoothstep(.05,.4,dot(wc,vec3(.3,.59,.11)))*vec3(.9,.95,1.),k);}}
- // もや：奥ほど濃く、横へゆっくり流れる
- float m=fb(vec2(s.x*3.+tm*.06,s.y*5.+tm*.015))*fb(vec2(s.x*1.7-tm*.03,s.y*2.3));
- col=mix(col,vec3(1.,.96,.9),mist*m*(1.-d)*.9);
+ // 足元の霧：gfy より下に低くうすく、横へゆっくり流れる。灯りの近くは暖かく光る
+ if(gf>0.){float yy=smoothstep(gfy-.05,gfy+.05,uv.y)*(1.-smoothstep(gfy+.16,gfy+.34,uv.y));
+   float fn=fb(vec2(uv.x*2.6+tm*.05,uv.y*7.-tm*.01))*fb(vec2(uv.x*1.3-tm*.03,uv.y*3.5+1.7));
+   float band=yy*smoothstep(.10,.42,fn*2.2);
+   vec3 lit=texture2D(im,M(s+vec2(0.,-.05))).rgb;float Yl=dot(lit,vec3(.3,.59,.11));
+   vec3 fc=mix(vec3(.50,.58,.70),vec3(1.,.82,.62),smoothstep(.25,.7,Yl));
+   col=mix(col,fc*(.6+.6*Yl),clamp(gf*band*.6,0.,.7));}
  // 光の筋：光の元 rc から放射、ゆっくり揺れる
  vec2 v=uv-rc;float an=atan(v.y,v.x);float st=n2(vec2(an*18.,tm*.25))*n2(vec2(an*41.,-tm*.18));
  float fall=exp(-length(v)*1.6);col+=ray*vec3(1.,.86,.62)*pow(st,2.2)*fall*(.35+.65*(1.-d));
@@ -80,7 +84,7 @@ window.setPair=async function(key,iu,du){if(!cache[key]){const L=u=>new Promise(
  const ia=C.a.width/C.a.height,sa=1080/1662;gl.uniform2f(U('sc'),ia>sa?sa/ia:1,ia>sa?1:ia/sa);window._cur=key}
 // m: {z:進む量, cx,cy:消失点, px,py:横移動, base:拡大, rot}
 window.usePair=function(k){const C=cache[k];gl.activeTexture(gl.TEXTURE0);gl.bindTexture(gl.TEXTURE_2D,C.ti);gl.activeTexture(gl.TEXTURE1);gl.bindTexture(gl.TEXTURE_2D,C.td);gl.uniform1i(U('im'),0);gl.uniform1i(U('dp'),1);const ia=C.a.width/C.a.height,sa=1080/1662;gl.uniform2f(U('sc'),ia>sa?sa/ia:1,ia>sa?1:ia/sa)};
-window.frame=function(m){gl.uniform2f(U('c'),m.cx??.5,m.cy??.45);gl.uniform2f(U('pan'),m.px||0,m.py||0);gl.uniform1f(U('z'),m.z||0);gl.uniform1f(U('base'),m.base||1.08);gl.uniform1f(U('rot'),m.rot||0);gl.uniform1f(U('tm'),m.tm||0);gl.uniform1f(U('mist'),m.mist||0);gl.uniform1f(U('ray'),m.ray||0);gl.uniform1f(U('wind'),m.wind??.0045);gl.uniform2f(U('rc'),m.rx??.5,m.ry??-.1);gl.uniform1f(U('st'),m.st??.3);gl.uniform1f(U('wy'),m.wy||0);gl.uniform1f(U('shk'),m.shk??.004);gl.uniform1f(U('spk'),m.spk||0);gl.uniform1f(U('lf'),m.lf||0);gl.uniform1f(U('bok'),m.bok||0);gl.uniform1f(U('lu'),m.lu??1);gl.uniform1f(U('sd'),m.sd||0);gl.uniform1f(U('ly'),m.ly||0);gl.uniform1f(U('fl'),m.fl||0);gl.uniform2f(U('fsrc'),m.fx??.5,m.fy??.45);gl.uniform1i(U('wmk'),3);gl.drawArrays(gl.TRIANGLE_STRIP,0,4)}
+window.frame=function(m){gl.uniform2f(U('c'),m.cx??.5,m.cy??.45);gl.uniform2f(U('pan'),m.px||0,m.py||0);gl.uniform1f(U('z'),m.z||0);gl.uniform1f(U('base'),m.base||1.08);gl.uniform1f(U('rot'),m.rot||0);gl.uniform1f(U('tm'),m.tm||0);gl.uniform1f(U('mist'),m.mist||0);gl.uniform1f(U('ray'),m.ray||0);gl.uniform1f(U('wind'),m.wind??.0045);gl.uniform2f(U('rc'),m.rx??.5,m.ry??-.1);gl.uniform1f(U('st'),m.st??.3);gl.uniform1f(U('wy'),m.wy||0);gl.uniform1f(U('shk'),m.shk??.004);gl.uniform1f(U('spk'),m.spk||0);gl.uniform1f(U('lf'),m.lf||0);gl.uniform1f(U('bok'),m.bok||0);gl.uniform1f(U('lu'),m.lu??1);gl.uniform1f(U('sd'),m.sd||0);gl.uniform1f(U('ly'),m.ly||0);gl.uniform1f(U('fl'),m.fl||0);gl.uniform2f(U('fsrc'),m.fx??.5,m.fy??.45);gl.uniform1i(U('wmk'),3);gl.uniform1f(U('gf'),m.gf||0);gl.uniform1f(U('gfy'),m.gfy??.7);gl.drawArrays(gl.TRIANGLE_STRIP,0,4)}
 window.setMask=u=>new Promise(r=>{const i=new Image();i.onload=()=>{const t=gl.createTexture();gl.activeTexture(gl.TEXTURE3);gl.bindTexture(gl.TEXTURE_2D,t);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,i);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);gl.activeTexture(gl.TEXTURE0);r()};i.src=u});
 window.setLeaves=u=>new Promise(r=>{const i=new Image();i.onload=()=>{const t=gl.createTexture();gl.activeTexture(gl.TEXTURE2);gl.bindTexture(gl.TEXTURE_2D,t);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,i);gl.generateMipmap(gl.TEXTURE_2D);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR_MIPMAP_LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.uniform1i(U('lvt'),2);r()};i.src=u});
 window.ready=1;
