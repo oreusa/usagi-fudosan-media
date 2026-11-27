@@ -1,0 +1,22 @@
+name: perf
+# 11/27 owner「動作スムーズじゃない」：本番をスマホの条件で開いて重さを測る（tools/review/perf.js）。結果は review の枝 shots/review/<name>/perf.json
+on:
+  workflow_dispatch:
+    inputs:
+      list: {description: "URLの一覧ファイル", required: true}
+      name: {description: "保存するフォルダ名", required: true}
+permissions:
+  contents: write
+jobs:
+  perf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm i --no-save playwright@1.49.1 && (timeout 150 npx playwright install --with-deps chromium || npx playwright install chromium)
+      - run: timeout 2000 node tools/review/perf.js "${{ inputs.list }}" /tmp/rv | tee /tmp/rv.log; mkdir -p /tmp/rv; cp /tmp/rv.log /tmp/rv/perf.log
+      - run: |
+          git config user.name "review-shot"; git config user.email "actions@users.noreply.github.com"
+          if git fetch -q origin review; then git checkout -qB review FETCH_HEAD; else git checkout -q --orphan review && git rm -rfq .; fi
+          rm -rf "shots/review/${{ inputs.name }}"; mkdir -p "shots/review/${{ inputs.name }}" && cp /tmp/rv/* "shots/review/${{ inputs.name }}/"
+          git add -f shots/review && git commit -qm "perf ${{ inputs.name }}" && for i in 1 2 3 4; do git pull -q --rebase origin review 2>/dev/null || true; git push origin review && break; sleep 7; done
