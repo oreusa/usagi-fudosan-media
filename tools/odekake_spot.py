@@ -110,6 +110,20 @@ os.makedirs("links/o", exist_ok=True)
 # 11/25 夜：終わった催しの1件ページを消すと、保存や検索から来た人が何の説明もなく一覧へ飛ばされていた
 # → 終わった物は「終わりました」の札を付けて90日残す（検索には出さない noindex）。開催中の物はこのあと作り直す
 _live = {sp["id"] for sp in spots}
+_byid = {sp["id"]: sp for sp in spots}
+
+
+def _fresh(t):
+    """11/27 夜の見回り：残した「終わりました」のページの「ほかのおでかけ」が、作った日の日程のままだった（コナンの延長が11/29のまま）
+    → 毎回、今の日程に書き直す。もう一覧に無い催しのリンクは外す"""
+    def f(m):
+        o = _byid.get(m.group(1))
+        if not o: return ""
+        if not o["st"]: return m.group(0)
+        span = jd(o["st"]) + ("〜" + jd(o["en"]) if o["en"] and o["en"] != o["st"] else "")
+        x = re.sub(r' data-s="[^"]*" data-e="[^"]*"', f' data-s="{o["st"]}" data-e="{o["en"] or o["st"]}"', m.group(0), count=1)
+        return re.sub(r"<span>[^<]*</span></a>$", f"<span>{e(span)}</span></a>", x)
+    return re.sub(r'<a class="fc" href="/o/([0-9a-f]+)"[^>]*>(?:(?!</a>).)*</a>', f, t, flags=re.S)
 for f in glob.glob("links/o/*.html"):
     _id = os.path.basename(f)[:-5]
     if _id in _live: os.remove(f); continue
@@ -117,7 +131,9 @@ for f in glob.glob("links/o/*.html"):
     except Exception: os.remove(f); continue
     _m = re.search(r'data-ended="(\d{4}-\d\d-\d\d)"', _t)
     if _m:
-        if (d0 - datetime.date.fromisoformat(_m.group(1))).days > 90: os.remove(f)
+        if (d0 - datetime.date.fromisoformat(_m.group(1))).days > 90: os.remove(f); continue
+        _t2 = _fresh(_t)
+        if _t2 != _t: open(f, "w", encoding="utf-8").write(_t2)
         continue
     _span = re.search(r'<span>日程</span><b>(.*?)</b>', _t)
     _back = re.search(r'<a [^>]*href="(/odekake-[a-z]+)"[^>]*>([^<]*おでかけリスト)へ?</a>', _t)
@@ -129,7 +145,7 @@ for f in glob.glob("links/o/*.html"):
     _t = _t.replace("まで開かれます。", "まで開かれました。").replace("に開かれます。", "に開かれました。")
     _t = re.sub(r'<script type="application/ld\+json">.*?</script>', '', _t, flags=re.S)  # 終わった催しの Event は検索に渡さない
     if 'name="robots"' not in _t: _t = _t.replace('</title>', '</title><meta name="robots" content="noindex,follow">', 1)
-    open(f, "w", encoding="utf-8").write(_t)
+    open(f, "w", encoding="utf-8").write(_fresh(_t))
 # 11/23 夜の見回り：永源寺の場所が「小学生以下は無料」（カードの2つ目が料金の注記）→ 料金・年齢の言葉は場所に使わない（地図の読み上げ・近くのカードも）
 for _o in spots:
     if re.search(r"無料|有料|\d+円|以下|以上|\d+歳|料金|入場", _o.get("place") or ""): _o["place"] = ""
