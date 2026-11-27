@@ -45,7 +45,9 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
 
     # ---------- 11/27 年末年始の2枚：/hatsuuri（おかいもの）・/nenmatsu（おでかけ）。中身は tools/shin/nenmatsu.py（関東と同じ） ----------
     _nm = runpy.run_path(os.path.join(R, 'tools/shin/nenmatsu.py'))
-    for nm_, url_, ti_, de_, pg_, its_ in _nm['pages']('関西', 'TOWN NOTE', os.path.join(R, 'tools/nenmatsu/hatsuuri.tsv'), os.path.join(R, 'tools/nenmatsu/gomi.tsv')):
+    # 11/27 12月の2枚 /christmas・/toshikoshi も同じ作り（夜の行が5件そろうまでは作らない）
+    for nm_, url_, ti_, de_, pg_, its_ in _nm['pages']('関西', 'TOWN NOTE', os.path.join(R, 'tools/nenmatsu/hatsuuri.tsv'), os.path.join(R, 'tools/nenmatsu/gomi.tsv')) + \
+            _nm['pages2']('関西', 'TOWN NOTE', os.path.join(R, 'tools/nenmatsu/christmas.tsv'), os.path.join(R, 'tools/nenmatsu/toshikoshi.tsv')):
         for it in its_: fin(it, it['t']); it.pop('o', None)
         if nm_ == 'hatsuuri':
             c = copy.deepcopy(cfg); c['desc'] = de_
@@ -55,7 +57,9 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
             URL[nm_] = url_
             write(nm_, ti_, c, {'items': its_, 'icons': icons, 'page': pg_}, js='list')
         else:
-            pg_.setdefault('also', [['初売り・福袋2027', '/hatsuuri'], ['関西の初詣', '/hatsumode'], ['関西のおでかけ・イベント', '/odekake']])
+            pg_.setdefault('also', {'christmas': [['関西のイルミネーション', '/illumination'], ['除夜の鐘・年越し', '/toshikoshi'], ['関西のおでかけ・イベント', '/odekake']],
+                                    'toshikoshi': [['関西の初詣', '/hatsumode'], ['年末年始のごみ・役所', '/nenmatsu'], ['クリスマスの催し', '/christmas']]}.get(nm_,
+                                   [['初売り・福袋2027', '/hatsuuri'], ['関西の初詣', '/hatsumode'], ['関西のおでかけ・イベント', '/odekake']]))
             ode(nm_, url_, ti_, de_, pg_, its_, url_)
         # サイトマップに無ければ足す（kaiten と同じ）
         for sm in ('sitemap.xml', 'sitemap-all.xml'):
