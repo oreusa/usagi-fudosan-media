@@ -1,1 +1,42 @@
-[{"img": "/home/user/akari-auto/shots/ai-art/ootaguro/03-pond-flux-2-klein-4b.jpg", "dep": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/map/dd/ootaguro-03.png", "dur": 6.57, "m": {"z0": 0.0, "z1": 0.04, "cx": 0.5, "cy": 0.5, "b0": 1.06, "b1": 1.06, "wind": 0.0025, "st": 0.3, "shk": 0.002, "px0": -0.009, "px1": 0.009, "wy": 0.62, "spk": 0.4, "lf": 0.3, "bok": 0, "sd": 5.1, "lu0": 0.45, "lu1": 1, "lut": 2.0, "flk": 0.5, "cl": 0.035, "mx": 0.553, "my": 0.317, "cly": 0.4, "fl": 0.018, "fx": 0.5, "fy": 0.56, "fk": 1}, "tr": "fade", "ease": "lin", "w": 1.0, "up": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/up/ootaguro-03-pond-flux-2-klein-4b.png", "mask": "/home/user/usagi-fudosan-media/tools/outing_reel/ai-art/par/mask/ootaguro-03.png"}]
+[
+ {
+  "img": "/home/user/akari-auto/shots/ai-art/ootaguro/03-pond-flux-2-klein-4b.jpg",
+  "dep": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/map/dd/ootaguro-03.png",
+  "dur": 6.57,
+  "m": {
+   "z0": 0.0,
+   "z1": 0.04,
+   "cx": 0.5,
+   "cy": 0.5,
+   "b0": 1.06,
+   "b1": 1.06,
+   "wind": 0.0025,
+   "st": 0.3,
+   "shk": 0.002,
+   "px0": -0.009,
+   "px1": 0.009,
+   "wy": 0.62,
+   "spk": 0.4,
+   "lf": 0.3,
+   "bok": 0,
+   "sd": 5.1,
+   "lu0": 0.45,
+   "lu1": 1,
+   "lut": 2.0,
+   "flk": 0,
+   "cl": 0.035,
+   "mx": 0.553,
+   "my": 0.317,
+   "cly": 0.4,
+   "fl": 0.018,
+   "fx": 0.5,
+   "fy": 0.56,
+   "fk": 1
+  },
+  "tr": "fade",
+  "ease": "lin",
+  "w": 1.0,
+  "up": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/up/ootaguro-03-pond-flux-2-klein-4b.png",
+  "mask": "/home/user/usagi-fudosan-media/tools/outing_reel/ai-art/par/mask/ootaguro-03.png"
+ }
+]

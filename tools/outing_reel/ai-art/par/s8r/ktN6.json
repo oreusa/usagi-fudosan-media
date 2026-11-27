@@ -1,1 +1,29 @@
-[{"img": "/home/user/akari-auto/shots/ai-art/kitano/06-honden-flux-2-klein-4b.jpg", "dep": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/map/dd/kitano-06.png", "dur": 6.98, "m": {"z0": 0.0, "z1": 0.04, "cx": 0.5, "cy": 0.5, "b0": 1.1, "b1": 1.1, "wind": 0.0025, "st": 0.3, "shk": 0.002, "px0": 0.0113, "px1": -0.0113, "spk": 0.4, "lf": 0.3, "bok": 0, "sd": 10.2, "flk": 0.5}, "tr": "fade", "ease": "lin", "w": 1.0, "up": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/up/kitano-06-honden-flux-2-klein-4b.png"}]
+[
+ {
+  "img": "/home/user/akari-auto/shots/ai-art/kitano/06-honden-flux-2-klein-4b.jpg",
+  "dep": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/map/dd/kitano-06.png",
+  "dur": 6.98,
+  "m": {
+   "z0": 0.0,
+   "z1": 0.04,
+   "cx": 0.5,
+   "cy": 0.5,
+   "b0": 1.1,
+   "b1": 1.1,
+   "wind": 0.0025,
+   "st": 0.3,
+   "shk": 0.002,
+   "px0": 0.0113,
+   "px1": -0.0113,
+   "spk": 0.4,
+   "lf": 0.3,
+   "bok": 0,
+   "sd": 10.2,
+   "flk": 0
+  },
+  "tr": "fade",
+  "ease": "lin",
+  "w": 1.0,
+  "up": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/up/kitano-06-honden-flux-2-klein-4b.png"
+ }
+]

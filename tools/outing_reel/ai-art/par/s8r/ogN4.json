@@ -1,1 +1,35 @@
-[{"img": "/home/user/akari-auto/shots/ai-art/ootaguro/04-stream-flux-2-klein-4b.jpg", "dep": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/map/dd/ootaguro-04.png", "dur": 6.43, "m": {"z0": 0.0, "z1": 0.07, "cx": 0.5, "cy": 0.6, "b0": 1.06, "b1": 1.06, "wind": 0.0025, "st": 0.3, "shk": 0.002, "wy": 0, "spk": 0.4, "lf": 0.3, "bok": 0, "sd": 6.8, "fl": 0.035, "fx": 0.47, "fy": 0.52, "lu0": 0.45, "lu1": 1, "lut": 2.0, "flk": 0.5}, "tr": "fade", "ease": "lin", "w": 1.0, "mask": "/home/user/usagi-fudosan-media/tools/outing_reel/ai-art/par/mask/ootaguro-04.png", "up": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/up/ootaguro-04-stream-flux-2-klein-4b.png"}]
+[
+ {
+  "img": "/home/user/akari-auto/shots/ai-art/ootaguro/04-stream-flux-2-klein-4b.jpg",
+  "dep": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/map/dd/ootaguro-04.png",
+  "dur": 6.43,
+  "m": {
+   "z0": 0.0,
+   "z1": 0.07,
+   "cx": 0.5,
+   "cy": 0.6,
+   "b0": 1.06,
+   "b1": 1.06,
+   "wind": 0.0025,
+   "st": 0.3,
+   "shk": 0.002,
+   "wy": 0,
+   "spk": 0.4,
+   "lf": 0.3,
+   "bok": 0,
+   "sd": 6.8,
+   "fl": 0.035,
+   "fx": 0.47,
+   "fy": 0.52,
+   "lu0": 0.45,
+   "lu1": 1,
+   "lut": 2.0,
+   "flk": 0
+  },
+  "tr": "fade",
+  "ease": "lin",
+  "w": 1.0,
+  "mask": "/home/user/usagi-fudosan-media/tools/outing_reel/ai-art/par/mask/ootaguro-04.png",
+  "up": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/up/ootaguro-04-stream-flux-2-klein-4b.png"
+ }
+]
