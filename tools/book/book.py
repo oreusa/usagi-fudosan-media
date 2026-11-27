@@ -121,8 +121,11 @@ def book_day(d, now):
             elif ("threads", key) in have:
                 rec["threads"] = "もうある"
             else:
+                # 11/27 オーナー「投稿ヤバくない？」：Threads が 11/20 から落ちた（X は横ばい）。11/28〜30 は半分の枠を絵なしでくらべる（関東 akari scripts/book.py と同じ式）
+                _noimg = "2026-11-28" <= d <= "2026-11-30" and (datetime.fromisoformat(d).toordinal() + int(dr["time"][:2])) % 2 == 1
                 rec["threads"] = create("threads", [t for t in th if t.strip()], due_utc, dr.get("threads_topic"),
-                                    dr.get("image_url"), dr.get("image_alt"))["id"]
+                                    None if _noimg else dr.get("image_url"), dr.get("image_alt"))["id"]
+                if dr.get("image_url"): rec["threads_img"] = 0 if _noimg else 1
             xs = [t for t in gate.parts(dr, "x") if t.strip()]
             if g.get("x") and xs and ("twitter", key) in have:
                 rec["twitter"] = "もうある"
