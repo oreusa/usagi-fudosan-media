@@ -1,0 +1,16 @@
+{"u":"kansai.townnote.app/","lcp":6030,"tbt":253,"cls":0,"js":147,"img":884,"dom":332,"slow":"0/79","worst":33}
+{"u":"kansai.townnote.app/odekake","lcp":1589,"tbt":256,"cls":0,"js":164,"img":3816,"dom":959,"slow":"1/83","worst":50}
+{"u":"kansai.townnote.app/ima","lcp":1582,"tbt":244,"cls":0,"js":151,"img":2323,"dom":1093,"slow":"1/81","worst":67}
+{"u":"kansai.townnote.app/okaimono","lcp":1547,"tbt":240,"cls":0.029,"js":147,"img":46,"dom":657,"slow":"1/86","worst":67}
+{"u":"kansai.townnote.app/kaiten","lcp":1512,"tbt":166,"cls":0.022,"js":151,"img":460,"dom":1110,"slow":"2/81","worst":50}
+{"u":"kansai.townnote.app/ie","lcp":720,"tbt":34,"cls":0,"js":108,"img":46,"dom":117,"slow":"10/36","worst":67}
+{"u":"kansai.townnote.app/kaitai","lcp":1624,"tbt":375,"cls":0,"js":134,"img":46,"dom":578,"slow":"0/94","worst":50}
+{"u":"kansai.townnote.app/jikka","lcp":1418,"tbt":156,"cls":0,"js":134,"img":46,"dom":981,"slow":"0/91","worst":50}
+{"u":"kansai.townnote.app/chika","lcp":660,"tbt":10,"cls":0,"js":108,"img":46,"dom":123,"slow":"14/36","worst":67}
+{"u":"kansai.townnote.app/illumination","lcp":1479,"tbt":175,"cls":0,"js":164,"img":3306,"dom":783,"slow":"1/80","worst":50}
+{"u":"kanto.townnote.app/","lcp":2484,"tbt":159,"cls":0,"js":147,"img":1129,"dom":332,"slow":"1/89","worst":67}
+{"u":"kanto.townnote.app/odekake","lcp":1605,"tbt":217,"cls":0,"js":163,"img":5475,"dom":1105,"slow":"0/72","worst":50}
+{"u":"kanto.townnote.app/okaimono","lcp":1487,"tbt":238,"cls":0.029,"js":147,"img":68,"dom":657,"slow":"1/83","worst":67}
+{"u":"kanto.townnote.app/kaiten","lcp":1528,"tbt":175,"cls":0.022,"js":151,"img":209,"dom":1496,"slow":"3/84","worst":67}
+{"u":"kanto.townnote.app/ie","lcp":679,"tbt":4,"cls":0,"js":108,"img":68,"dom":124,"slow":"11/36","worst":67}
+{"u":"kanto.townnote.app/kaitai","lcp":1717,"tbt":418,"cls":0,"js":134,"img":68,"dom":542,"slow":"0/97","worst":34}

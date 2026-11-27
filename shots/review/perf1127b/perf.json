@@ -1,0 +1,622 @@
+[
+ {
+  "url": "https://kansai.townnote.app/",
+  "err": "",
+  "loadMs": 5949,
+  "lcp": 6030,
+  "tbt": 253,
+  "cls": 0,
+  "longtasks": 2,
+  "worstTask": 260,
+  "kb": {
+   "js": 147,
+   "css": 215,
+   "img": 884,
+   "font": 0,
+   "other": 9
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 6,
+   "font": 0,
+   "other": 3
+  },
+  "dom": 332,
+  "imgs": 6,
+  "scroll": {
+   "frames": 79,
+   "slow": 0,
+   "worst": 33
+  },
+  "big": [
+   [
+    263,
+    "https://kansai.townnote.app/assets/ph/c39910a5.webp"
+   ],
+   [
+    193,
+    "https://kansai.townnote.app/assets/ph/ef4f922f.webp"
+   ]
+  ]
+ },
+ {
+  "url": "https://kansai.townnote.app/odekake",
+  "err": "",
+  "loadMs": 1631,
+  "lcp": 1589,
+  "tbt": 256,
+  "cls": 0,
+  "longtasks": 2,
+  "worstTask": 287,
+  "kb": {
+   "js": 164,
+   "css": 215,
+   "img": 3816,
+   "font": 0,
+   "other": 118
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 27,
+   "font": 0,
+   "other": 3
+  },
+  "dom": 959,
+  "imgs": 42,
+  "scroll": {
+   "frames": 83,
+   "slow": 1,
+   "worst": 50
+  },
+  "big": [
+   [
+    263,
+    "https://kansai.townnote.app/assets/ph/c39910a5.webp"
+   ],
+   [
+    236,
+    "https://kansai.townnote.app/assets/ph/f76e5a83.webp"
+   ],
+   [
+    236,
+    "https://kansai.townnote.app/assets/ph/68e40bc3.webp"
+   ],
+   [
+    209,
+    "https://kansai.townnote.app/assets/ph/d753a33c.webp"
+   ],
+   [
+    194,
+    "https://kansai.townnote.app/assets/ph/070f6601.webp"
+   ],
+   [
+    193,
+    "https://kansai.townnote.app/assets/ph/64782bfb.webp"
+   ]
+  ]
+ },
+ {
+  "url": "https://kansai.townnote.app/ima",
+  "err": "",
+  "loadMs": 1627,
+  "lcp": 1582,
+  "tbt": 244,
+  "cls": 0,
+  "longtasks": 2,
+  "worstTask": 288,
+  "kb": {
+   "js": 151,
+   "css": 215,
+   "img": 2323,
+   "font": 0,
+   "other": 154
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 22,
+   "font": 0,
+   "other": 3
+  },
+  "dom": 1093,
+  "imgs": 25,
+  "scroll": {
+   "frames": 81,
+   "slow": 1,
+   "worst": 67
+  },
+  "big": [
+   [
+    162,
+    "https://kansai.townnote.app/assets/ph/33b3d4fa.webp"
+   ],
+   [
+    154,
+    "https://kansai.townnote.app/ima"
+   ]
+  ]
+ },
+ {
+  "url": "https://kansai.townnote.app/okaimono",
+  "err": "",
+  "loadMs": 1649,
+  "lcp": 1547,
+  "tbt": 240,
+  "cls": 0.029,
+  "longtasks": 2,
+  "worstTask": 290,
+  "kb": {
+   "js": 147,
+   "css": 215,
+   "img": 46,
+   "font": 0,
+   "other": 165
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 1,
+   "font": 0,
+   "other": 4
+  },
+  "dom": 657,
+  "imgs": 1,
+  "scroll": {
+   "frames": 86,
+   "slow": 1,
+   "worst": 67
+  },
+  "big": []
+ },
+ {
+  "url": "https://kansai.townnote.app/kaiten",
+  "err": "",
+  "loadMs": 1621,
+  "lcp": 1512,
+  "tbt": 166,
+  "cls": 0.022,
+  "longtasks": 2,
+  "worstTask": 184,
+  "kb": {
+   "js": 151,
+   "css": 215,
+   "img": 460,
+   "font": 0,
+   "other": 228
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 4,
+   "font": 0,
+   "other": 3
+  },
+  "dom": 1110,
+  "imgs": 5,
+  "scroll": {
+   "frames": 81,
+   "slow": 2,
+   "worst": 50
+  },
+  "big": [
+   [
+    228,
+    "https://kansai.townnote.app/kaiten"
+   ],
+   [
+    189,
+    "https://kansai.townnote.app/assets/ph/912502e5.webp"
+   ]
+  ]
+ },
+ {
+  "url": "https://kansai.townnote.app/ie",
+  "err": "",
+  "loadMs": 1098,
+  "lcp": 720,
+  "tbt": 34,
+  "cls": 0,
+  "longtasks": 1,
+  "worstTask": 84,
+  "kb": {
+   "js": 108,
+   "css": 101,
+   "img": 46,
+   "font": 0,
+   "other": 3
+  },
+  "cnt": {
+   "js": 4,
+   "css": 2,
+   "img": 1,
+   "font": 0,
+   "other": 2
+  },
+  "dom": 117,
+  "imgs": 1,
+  "scroll": {
+   "frames": 36,
+   "slow": 10,
+   "worst": 67
+  },
+  "big": []
+ },
+ {
+  "url": "https://kansai.townnote.app/kaitai",
+  "err": "",
+  "loadMs": 1541,
+  "lcp": 1624,
+  "tbt": 375,
+  "cls": 0,
+  "longtasks": 2,
+  "worstTask": 404,
+  "kb": {
+   "js": 134,
+   "css": 215,
+   "img": 46,
+   "font": 0,
+   "other": 93
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 1,
+   "font": 0,
+   "other": 4
+  },
+  "dom": 578,
+  "imgs": 1,
+  "scroll": {
+   "frames": 94,
+   "slow": 0,
+   "worst": 50
+  },
+  "big": []
+ },
+ {
+  "url": "https://kansai.townnote.app/jikka",
+  "err": "",
+  "loadMs": 1526,
+  "lcp": 1418,
+  "tbt": 156,
+  "cls": 0,
+  "longtasks": 1,
+  "worstTask": 206,
+  "kb": {
+   "js": 134,
+   "css": 215,
+   "img": 46,
+   "font": 0,
+   "other": 74
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 1,
+   "font": 0,
+   "other": 3
+  },
+  "dom": 981,
+  "imgs": 1,
+  "scroll": {
+   "frames": 91,
+   "slow": 0,
+   "worst": 50
+  },
+  "big": []
+ },
+ {
+  "url": "https://kansai.townnote.app/chika",
+  "err": "",
+  "loadMs": 1114,
+  "lcp": 660,
+  "tbt": 10,
+  "cls": 0,
+  "longtasks": 1,
+  "worstTask": 60,
+  "kb": {
+   "js": 108,
+   "css": 101,
+   "img": 46,
+   "font": 0,
+   "other": 3
+  },
+  "cnt": {
+   "js": 4,
+   "css": 2,
+   "img": 1,
+   "font": 0,
+   "other": 2
+  },
+  "dom": 123,
+  "imgs": 1,
+  "scroll": {
+   "frames": 36,
+   "slow": 14,
+   "worst": 67
+  },
+  "big": []
+ },
+ {
+  "url": "https://kansai.townnote.app/illumination",
+  "err": "",
+  "loadMs": 10126,
+  "lcp": 1479,
+  "tbt": 175,
+  "cls": 0,
+  "longtasks": 2,
+  "worstTask": 217,
+  "kb": {
+   "js": 164,
+   "css": 215,
+   "img": 3306,
+   "font": 0,
+   "other": 70
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 29,
+   "font": 0,
+   "other": 3
+  },
+  "dom": 783,
+  "imgs": 41,
+  "scroll": {
+   "frames": 80,
+   "slow": 1,
+   "worst": 50
+  },
+  "big": [
+   [
+    290,
+    "https://kansai.townnote.app/assets/ph/5de8873f.webp"
+   ],
+   [
+    171,
+    "https://kansai.townnote.app/assets/ph/9e3c87c3.webp"
+   ],
+   [
+    167,
+    "https://kansai.townnote.app/assets/ph/a9473870.webp"
+   ]
+  ]
+ },
+ {
+  "url": "https://kanto.townnote.app/",
+  "err": "",
+  "loadMs": 6978,
+  "lcp": 2484,
+  "tbt": 159,
+  "cls": 0,
+  "longtasks": 2,
+  "worstTask": 158,
+  "kb": {
+   "js": 147,
+   "css": 215,
+   "img": 1129,
+   "font": 0,
+   "other": 10
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 6,
+   "font": 0,
+   "other": 2
+  },
+  "dom": 332,
+  "imgs": 6,
+  "scroll": {
+   "frames": 89,
+   "slow": 1,
+   "worst": 67
+  },
+  "big": [
+   [
+    374,
+    "https://kanto.townnote.app/assets/ph/f82bc387.webp"
+   ],
+   [
+    321,
+    "https://kanto.townnote.app/assets/ph/7aa8d75a.webp"
+   ],
+   [
+    257,
+    "https://kanto.townnote.app/assets/ph/235cb8b1.webp"
+   ]
+  ]
+ },
+ {
+  "url": "https://kanto.townnote.app/odekake",
+  "err": "",
+  "loadMs": 14960,
+  "lcp": 1605,
+  "tbt": 217,
+  "cls": 0,
+  "longtasks": 2,
+  "worstTask": 250,
+  "kb": {
+   "js": 163,
+   "css": 215,
+   "img": 5475,
+   "font": 0,
+   "other": 144
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 30,
+   "font": 0,
+   "other": 2
+  },
+  "dom": 1105,
+  "imgs": 42,
+  "scroll": {
+   "frames": 72,
+   "slow": 0,
+   "worst": 50
+  },
+  "big": [
+   [
+    414,
+    "https://kanto.townnote.app/assets/ph/2eefabb3.webp"
+   ],
+   [
+    374,
+    "https://kanto.townnote.app/assets/ph/f82bc387.webp"
+   ],
+   [
+    304,
+    "https://kanto.townnote.app/assets/ph/6a480a83.webp"
+   ],
+   [
+    302,
+    "https://kanto.townnote.app/assets/ph/8b726476.webp"
+   ],
+   [
+    275,
+    "https://kanto.townnote.app/assets/ph/243c0a17.webp"
+   ],
+   [
+    257,
+    "https://kanto.townnote.app/assets/ph/235cb8b1.webp"
+   ]
+  ]
+ },
+ {
+  "url": "https://kanto.townnote.app/okaimono",
+  "err": "",
+  "loadMs": 1758,
+  "lcp": 1487,
+  "tbt": 238,
+  "cls": 0.029,
+  "longtasks": 1,
+  "worstTask": 288,
+  "kb": {
+   "js": 147,
+   "css": 215,
+   "img": 68,
+   "font": 0,
+   "other": 166
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 1,
+   "font": 0,
+   "other": 3
+  },
+  "dom": 657,
+  "imgs": 1,
+  "scroll": {
+   "frames": 83,
+   "slow": 1,
+   "worst": 67
+  },
+  "big": []
+ },
+ {
+  "url": "https://kanto.townnote.app/kaiten",
+  "err": "",
+  "loadMs": 2460,
+  "lcp": 1528,
+  "tbt": 175,
+  "cls": 0.022,
+  "longtasks": 2,
+  "worstTask": 179,
+  "kb": {
+   "js": 151,
+   "css": 215,
+   "img": 209,
+   "font": 0,
+   "other": 336
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 2,
+   "font": 0,
+   "other": 2
+  },
+  "dom": 1496,
+  "imgs": 2,
+  "scroll": {
+   "frames": 84,
+   "slow": 3,
+   "worst": 67
+  },
+  "big": [
+   [
+    336,
+    "https://kanto.townnote.app/kaiten"
+   ]
+  ]
+ },
+ {
+  "url": "https://kanto.townnote.app/ie",
+  "err": "",
+  "loadMs": 1248,
+  "lcp": 679,
+  "tbt": 4,
+  "cls": 0,
+  "longtasks": 1,
+  "worstTask": 54,
+  "kb": {
+   "js": 108,
+   "css": 101,
+   "img": 68,
+   "font": 0,
+   "other": 4
+  },
+  "cnt": {
+   "js": 4,
+   "css": 2,
+   "img": 1,
+   "font": 0,
+   "other": 2
+  },
+  "dom": 124,
+  "imgs": 1,
+  "scroll": {
+   "frames": 36,
+   "slow": 11,
+   "worst": 67
+  },
+  "big": []
+ },
+ {
+  "url": "https://kanto.townnote.app/kaitai",
+  "err": "",
+  "loadMs": 1655,
+  "lcp": 1717,
+  "tbt": 418,
+  "cls": 0,
+  "longtasks": 2,
+  "worstTask": 444,
+  "kb": {
+   "js": 134,
+   "css": 215,
+   "img": 68,
+   "font": 0,
+   "other": 101
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 2,
+   "font": 0,
+   "other": 3
+  },
+  "dom": 542,
+  "imgs": 2,
+  "scroll": {
+   "frames": 97,
+   "slow": 0,
+   "worst": 34
+  },
+  "big": []
+ }
+]
