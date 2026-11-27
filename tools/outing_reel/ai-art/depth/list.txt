@@ -14,3 +14,4 @@ ootaguro-05b https://raw.githubusercontent.com/oreusa/akari-auto/claude/project-
 ootaguro-06 https://raw.githubusercontent.com/oreusa/akari-auto/claude/project-thread-wi09n8/shots/ai-art/ootaguro/06-maple-flux-2-klein-4b.jpg
 ootaguro-07 https://raw.githubusercontent.com/oreusa/akari-auto/claude/project-thread-wi09n8/shots/ai-art/ootaguro/07-path-flux-2-klein-4b.jpg
 ootaguro-03b https://raw.githubusercontent.com/oreusa/akari-auto/claude/project-thread-wi09n8/shots/ai-art/ootaguro/03-pond-b-flux-2-klein-4b.jpg
+kitano-dev-bridge https://raw.githubusercontent.com/oreusa/akari-auto/claude/project-thread-wi09n8/shots/ai-art/dev-1128/n2-bridge-flux-2-dev.jpg
