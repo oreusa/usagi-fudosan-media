@@ -138,6 +138,9 @@ def is_chain(x):
 
 def slug(x):
     """1店ずつのページの名前（日付＋店名と元の印）。変えると検索のアドレスが変わるので変えない。"""
+    # 11/27 日付が後で決まった店（万代 堅田）は、検索で育ったアドレスを残すため slug を固定して持つ
+    if x.get("slug"):
+        return x["slug"]
     return x["d"].replace("-", "") + "-" + hashlib.sha1((x["n"] + "|" + x["u"]).encode()).hexdigest()[:6]
 
 
@@ -488,7 +491,7 @@ def store_page(x, shell, near):
         e = datetime.date.fromisoformat(x["end"]); rows.append(("いつまで", E(wdate(e))))
     rows.append(("ジャンル", E(g)))
     rows.append(("元の発表", f'<a href="{E(x["u"])}" target="_blank" rel="noopener" data-k="1店｜公式の発表">{E(srcname)} ↗</a>'))
-    chk = datetime.date.fromisoformat(x.get("added") or TODAY.isoformat())
+    chk = datetime.date.fromisoformat(x.get("checked") or x.get("added") or TODAY.isoformat())
     body = (f'<nav class="sp-bc" aria-label="現在地"><a href="/kaiten">関西の開店・閉店ニュース</a> › <a href="/kaiten#p={E(x["p"])}">{E(x["p"])}</a> › {E(x["n"])}</nav>'
             f'<div class="sp-hero"><div class="dc cmb" style="--pc:{PCM.get(x["p"], "#8a8f98")}"><div class="ib"><svg viewBox="0 0 24 24">{ICON[ic]}</svg><span class="lb">{LBL.get(g, "SHOP")}</span></div></div>'
             f'<div><div class="tp"><span class="gn">{svg(ic)}{E(g)}</span><span class="tag {x["k"]}">{E(x.get("sub") or lab)}</span>'
@@ -511,7 +514,7 @@ def store_page(x, shell, near):
         body += f'<p class="sp-more"><a href="/odekake-{pk}" data-k="1店｜府県のおでかけ">{E(x["p"])}のおでかけ先も見る →</a></p>'
     url = BASE + "kaiten/" + slug(x)
     ldj = [{"@context": "https://schema.org", "@type": "NewsArticle", "headline": title[:110], "description": desc,
-            "datePublished": (x.get("added") or x["d"]) + "T07:00:00+09:00", "dateModified": (x.get("added") or x["d"]) + "T07:00:00+09:00",
+            "datePublished": (x.get("added") or x["d"]) + "T07:00:00+09:00", "dateModified": (x.get("checked") or x.get("added") or x["d"]) + "T07:00:00+09:00",
             "mainEntityOfPage": url, "author": {"@type": "Organization", "name": "TOWN NOTE"}, "publisher": {"@type": "Organization", "name": "TOWN NOTE"},
             "about": {"@type": "Place", "name": x["n"], "address": {"@type": "PostalAddress", "addressRegion": {"大阪": "大阪府", "京都": "京都府"}.get(x["p"], x["p"] + "県"), "streetAddress": pl2[:80]}}},
            {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
