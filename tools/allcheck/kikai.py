@@ -145,7 +145,7 @@ for _repo, _dir in (("oreusa/usagi-fudosan-media", "usagi-fudosan-media"), ("ore
         top3 = "・".join(f"{k} {v/1e6:.0f}MB" for k, v in sorted(big.items(), key=lambda x: -x[1])[:3])
         line = f"サイトの大きさ（{_dir}・GitHub Pages の上限1GB）：{tot/1e6:.0f}MB（大きい所 {top3}）"
         if tot > 900e6:
-            bad.append("× " + line + " → 出し終わった media/reels の mp4 などを消す")
+            bad.append("× " + line + " → 消してよいのは、全部の投稿先（Instagram・Threads・X・YouTube・TikTok）の投稿の記録で済んだ mp4 だけ。予約中・未投稿・その日以降の日付の物は消さない（11/27 石山寺の未投稿を消して18時の投稿が失敗した）")
         else:
             rows.append("○ " + line)
     except Exception as e:
