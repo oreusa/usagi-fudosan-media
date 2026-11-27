@@ -1,0 +1,11 @@
+{
+ "speakers": [20],
+ "speed": 0.95,
+ "intonation": 1.15,
+ "pitch": -0.03,
+ "pause": 0.8,
+ "name": "kitano-1128n2",
+ "lines": [
+  "茶店の縁側で、紅葉の谷をながめて、ひとやすみ。"
+ ]
+}
