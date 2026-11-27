@@ -3,9 +3,9 @@
  "types": [
   {
    "type": "入口",
-   "ext7": 8,
+   "ext7": 10,
    "ext_prev7": 19,
-   "views7": 80
+   "views7": 82
   },
   {
    "type": "おでかけ",
