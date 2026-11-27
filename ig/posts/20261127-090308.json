@@ -1,0 +1,12 @@
+{
+ "spec": "ig/reels/oneoff/2026-11-26-ishiyama.json",
+ "at": "2026-11-27T09:02:05Z",
+ "container": {
+  "id": "18134757883789041"
+ },
+ "status": {
+  "id": "18134757883789041",
+  "status": "Error: Media upload has failed with error code 2207076",
+  "status_code": "ERROR"
+ }
+}
