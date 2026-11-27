@@ -1,0 +1,168 @@
+[
+ {
+  "heavy": [
+   "I. an:lkf1",
+   "I. an:lkf2",
+   "I. an:lkf3",
+   "I. an:lkf2",
+   "I. an:lkf3",
+   "I. an:lkh1",
+   "I. an:lkh2",
+   "I. an:lkh3",
+   "I. an:lkh1",
+   "I. an:lkh2",
+   "DIV.bk bf",
+   "DIV.pn bf"
+  ],
+  "url": "https://kansai.townnote.app/ie",
+  "err": "",
+  "loadMs": 1322,
+  "lcp": 839,
+  "lcpEl": "H1.  このページは見つかりません",
+  "tbt": 137,
+  "cls": 0,
+  "longtasks": 2,
+  "worstTask": 134,
+  "kb": {
+   "js": 108,
+   "css": 101,
+   "img": 46,
+   "font": 0,
+   "other": 3
+  },
+  "cnt": {
+   "js": 4,
+   "css": 2,
+   "img": 1,
+   "font": 0,
+   "other": 2
+  },
+  "dom": 117,
+  "imgs": 1,
+  "scroll": {
+   "frames": 26,
+   "slow": 25,
+   "worst": 100
+  },
+  "big": []
+ },
+ {
+  "heavy": [
+   "I. an:lkf1",
+   "I. an:lkf2",
+   "I. an:lkf3",
+   "I. an:lkf2",
+   "I. an:lkf3",
+   "I. an:lkh1",
+   "I. an:lkh2",
+   "I. an:lkh3",
+   "I. an:lkh1",
+   "I. an:lkh2",
+   "DIV.bk bf",
+   "DIV.pn bf"
+  ],
+  "url": "https://kansai.townnote.app/chika",
+  "err": "",
+  "loadMs": 1166,
+  "lcp": 707,
+  "lcpEl": "H1.  このページは見つかりません",
+  "tbt": 30,
+  "cls": 0,
+  "longtasks": 2,
+  "worstTask": 80,
+  "kb": {
+   "js": 108,
+   "css": 101,
+   "img": 46,
+   "font": 0,
+   "other": 3
+  },
+  "cnt": {
+   "js": 4,
+   "css": 2,
+   "img": 1,
+   "font": 0,
+   "other": 2
+  },
+  "dom": 123,
+  "imgs": 1,
+  "scroll": {
+   "frames": 25,
+   "slow": 23,
+   "worst": 83
+  },
+  "big": []
+ },
+ {
+  "heavy": [
+   "I. an:lkf1",
+   "I. an:lkf2",
+   "I. an:lkf3",
+   "I. an:lkf2",
+   "I. an:lkf3",
+   "I. an:lkh1",
+   "I. an:lkh2",
+   "I. an:lkh3",
+   "I. an:lkh1",
+   "I. an:lkh2",
+   "I.au an:au1",
+   "I.au an:au2"
+  ],
+  "url": "https://kansai.townnote.app/odekake",
+  "err": "",
+  "loadMs": 1662,
+  "lcp": 1411,
+  "lcpEl": "FOOTER.ft  情報は各公式サイトで確かめてから出かけてください。写真の撮影",
+  "tbt": 299,
+  "cls": 0,
+  "longtasks": 3,
+  "worstTask": 245,
+  "kb": {
+   "js": 164,
+   "css": 215,
+   "img": 3816,
+   "font": 0,
+   "other": 118
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 27,
+   "font": 0,
+   "other": 3
+  },
+  "dom": 959,
+  "imgs": 42,
+  "scroll": {
+   "frames": 63,
+   "slow": 1,
+   "worst": 83
+  },
+  "big": [
+   [
+    263,
+    "https://kansai.townnote.app/assets/ph/c39910a5.webp"
+   ],
+   [
+    236,
+    "https://kansai.townnote.app/assets/ph/f76e5a83.webp"
+   ],
+   [
+    236,
+    "https://kansai.townnote.app/assets/ph/68e40bc3.webp"
+   ],
+   [
+    209,
+    "https://kansai.townnote.app/assets/ph/d753a33c.webp"
+   ],
+   [
+    194,
+    "https://kansai.townnote.app/assets/ph/070f6601.webp"
+   ],
+   [
+    193,
+    "https://kansai.townnote.app/assets/ph/64782bfb.webp"
+   ]
+  ]
+ }
+]
