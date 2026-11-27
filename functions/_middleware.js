@@ -39,7 +39,7 @@ const PF = ["osaka", "kyoto", "hyogo", "nara", "shiga", "wakayama"];
 const SHIN = new Set([
   ...PF.map(x => "/odekake-" + x), "/illumination", "/illumination-muryo", ...PF.map(x => "/illumination-" + x),
   "/koyo", ...PF.map(x => "/koyo-" + x),
-  "/hatsumode", "/tomari", "/ima", "/kaiten", "/ranking", "/uru", "/ikura", "/furusato", "/nesage", "/chika-kansai", "/chika-osaka", "/sagasu", "/jikka", "/jikka/shindan", "/akiya-ranking", "/moushikomi", "/koe", "/otoku", "/gyosha", "/gyosha-jikka", "/gyosha-kyoyu", "/gyosha-saikenchiku", "/gyosha-shakuchi", "/gyosha-urenokori",
+  "/hatsumode", "/hatsuuri", "/nenmatsu", "/christmas", "/toshikoshi", "/tomari", "/ima", "/kaiten", "/ranking", "/uru", "/ikura", "/furusato", "/nesage", "/chika-kansai", "/chika-osaka", "/sagasu", "/jikka", "/jikka/shindan", "/akiya-ranking", "/moushikomi", "/koe", "/otoku", "/gyosha", "/gyosha-jikka", "/gyosha-kyoyu", "/gyosha-saikenchiku", "/gyosha-shakuchi", "/gyosha-urenokori",
 ]);
 // 新しい土台のページ（functions/*.js が /shin を出す所）にはかぶせない
 const NOSKIN = new Set(["", "/odekake", "/okaimono", "/fudosan-list", ...SHIN]);

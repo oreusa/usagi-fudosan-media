@@ -91,9 +91,9 @@ def POP(t):
 
 # 11/20 owner「統一されてない・整理されてない」：MENU の項目と並び順は分野ごとにここ1か所だけ（skin.js の FUD・ODE・OKA・KAI も同じ順）
 MENUS = {
-    'Odekake': [['関西おでかけ', '/odekake'], ['イルミネーション', '/illumination'], ['紅葉', '/koyo'], ['いまから行ける', '/ima'], ['泊まり', '/tomari'], ['初詣', '/hatsumode']],
+    'Odekake': [['関西おでかけ', '/odekake'], ['イルミネーション', '/illumination'], ['紅葉', '/koyo'], ['いまから行ける', '/ima'], ['泊まり', '/tomari'], ['初詣', '/hatsumode'], ['年末年始のごみ・役所', '/nenmatsu'], ['クリスマス', '/christmas'], ['除夜の鐘・年越し', '/toshikoshi']],
     'Home & Land': [['家と土地の相場', '/fudosan-list'], ['地価ランキング', '/chika-kansai'], ['まちランキング', '/ranking'], ['家を売る前に', '/uru'], ['いくらで売れる？', '/ikura'], ['実家・空き家', '/jikka/'], ['解体の費用と補助金', '/kaitai']],
-    'Shopping': [['日用品の値段くらべ', '/okaimono'], ['本当に安い？', '/nesage'], ['お得な物', '/otoku'], ['ふるさと納税', '/furusato']],
+    'Shopping': [['日用品の値段くらべ', '/okaimono'], ['本当に安い？', '/nesage'], ['お得な物', '/otoku'], ['ふるさと納税', '/furusato'], ['初売り・福袋', '/hatsuuri']],
     'New Shops': [['関西の開店・閉店', '/kaiten']],
 }
 
@@ -239,6 +239,9 @@ def odekake():
     _s.path.insert(0, os.path.join(R, 'tools/illumi'))
     from data import ITEMS as IL, KOYO as KY, MEISHO as MS
     TD = datetime.date.today().isoformat()
+    # 11/27 一覧の冒頭の1ブロック（tools/shin/ptop.json・公式で確かめた物だけ・e の日を過ぎたら消える）
+    try: PTOP = json.load(open(os.path.join(R, 'tools/shin/ptop.json'), encoding='utf-8'))
+    except Exception: PTOP = {}
     il = []
     for row in IL:
         p_, n, m, s_, e_, free, url = row[:7]
@@ -278,6 +281,11 @@ def odekake():
         if not it.get('f'): it.pop('f', None)
         ky.append(fin(it, n))
     print('illumination', len(il), 'photos', sum('im' in i for i in il), '/ koyo', len(ky), 'photos', sum('im' in i for i in ky))
+    # 11/27 owner「稼げ」：人が来ている府県の一覧（京都イルミ・奈良紅葉など）に、お金のリンクを1本だけ（本文の下・楽天トラベルの府県の宿）
+    def YADO_PR(p_, w):
+        import urllib.parse as _u
+        u = 'https://hb.afl.rakuten.co.jp/hgc/58b50f43.00cd84ff.58b50f44.4872e82d/?pc=' + _u.quote(f'https://travel.rakuten.co.jp/yado/{SLUG[p_]}/', safe='')
+        return {'h': f'{p_}で泊まって{w}を見る', 't': f'楽天トラベルで{PFULL[p_]}の宿を見る', 'u': u, 'n': '楽天トラベルの府県の宿の一覧です（広告・PR）。'}
     page('illumination', '/illumination', '関西イルミネーション2026-2027｜開催中・無料・今週末（大阪・京都・兵庫・奈良・滋賀・和歌山）｜TOWN NOTE',
          f'関西のイルミネーション{len(il)}か所を、開催中・これから・無料に分けて、公式ページつきでまとめています。地図と写真で探せて、毎朝更新しています。',
          {'h1': '関西のイルミネーション', 'sub': f'2026-2027・{len(il)}か所', 'st': 'pref'}, il, '/illumination')
@@ -289,10 +297,11 @@ def odekake():
          {'h1': '関西の紅葉', 'sub': f'見頃とライトアップ・{len(ky)}か所', 'st': 'pref'}, ky, '/koyo')
     for p_ in SLUG:
         ni = sum(1 for i in il if i['p'] == p_); nk = sum(1 for i in ky if i['p'] == p_)
+        _tp = PTOP.get('illumination-' + SLUG[p_]) if TD <= PTOP.get('illumination-' + SLUG[p_], {}).get('e', '') else None
         page('illumination-' + SLUG[p_], '/illumination-' + SLUG[p_], f'{p_}のイルミネーション2026-2027（{PFULL[p_]}）｜TOWN NOTE',
-             f'{PFULL[p_]}のイルミネーション{ni}か所を、開催中・これから・無料に分けてまとめています。', {'h1': f'{p_}のイルミネーション', 'sub': f'2026-2027・{ni}か所', 'p': p_, 'st': 'pref'}, il, '/illumination')
+             (_tp['d'] if _tp else '') + f'{PFULL[p_]}のイルミネーション{ni}か所を、開催中・これから・無料に分けてまとめています。', {'h1': f'{p_}のイルミネーション', 'sub': f'2026-2027・{ni}か所', 'p': p_, 'st': 'pref', 'pr': YADO_PR(p_, 'イルミネーション'), **({'top': {k: _tp[k] for k in ('h', 'r', 'n', 'u')}} if _tp else {})}, il, '/illumination')
         page('koyo-' + SLUG[p_], '/koyo-' + SLUG[p_], f'{p_}の紅葉2026｜見頃とライトアップ（{PFULL[p_]}）｜TOWN NOTE',
-             f'{PFULL[p_]}の紅葉の名所とライトアップ{nk}か所を、見頃の時期つきでまとめています。', {'h1': f'{p_}の紅葉', 'sub': f'見頃とライトアップ・{nk}か所', 'p': p_, 'st': 'pref'}, ky, '/koyo')
+             f'{PFULL[p_]}の紅葉の名所とライトアップ{nk}か所を、見頃の時期つきでまとめています。', {'h1': f'{p_}の紅葉', 'sub': f'見頃とライトアップ・{nk}か所', 'p': p_, 'st': 'pref', 'pr': YADO_PR(p_, '紅葉')}, ky, '/koyo')
     # ---------- 初詣・泊まり・いまから・開店閉店・ランキング（links/shin/list.js） ----------
     import importlib.util as _iu
     _sp = _iu.spec_from_file_location('lists', os.path.join(R, 'tools/shin/lists.py')); _m = _iu.module_from_spec(_sp); _sp.loader.exec_module(_m)

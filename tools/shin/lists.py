@@ -13,8 +13,32 @@ ODE_NAV = lambda cur: [dict(n, **({'cur': 1} if n['href'] == cur else {})) for n
     {'t': '開催中', 'ic': 'now', 'href': '/odekake'}, {'t': '今週末', 'ic': 'we', 'href': '/odekake?w=we'},
     {'t': 'いまから', 'ic': 'map', 'href': '/ima'}, {'t': '泊まり', 'ic': 'inn', 'href': '/tomari'}]]
 ALSO = [['関西のおでかけ・イベント', '/odekake'], ['関西のイルミネーション', '/illumination'], ['関西の紅葉', '/koyo'],
-        ['いまから行けるおでかけ', '/ima'], ['泊まりで行くおでかけ', '/tomari'], ['関西の初詣', '/hatsumode']]
+        ['いまから行けるおでかけ', '/ima'], ['泊まりで行くおでかけ', '/tomari'], ['関西の初詣', '/hatsumode'], ['年末年始のごみ・役所', '/nenmatsu'], ['初売り・福袋2027', '/hatsuuri']]
 
+
+
+# 11/27 owner「改善点ない？オシャレで素晴らしいUI/UX？」：同じ名前の店が同じ日に3店以上開く時（例：ピラティス5店）、一覧を埋めないよう1枚にまとめる。
+def _kt_group(kt):
+    import os as _o, collections as _c
+    out, used = [], set()
+    for i, a in enumerate(kt):
+        if i in used: continue
+        same = [j for j in range(i, len(kt)) if j not in used and kt[j]['w'] == a['w'] and kt[j]['d'] == a['d']
+                and len(_o.path.commonprefix([a['t'], kt[j]['t']])) >= 8]
+        if len(same) < 3:
+            out.append(a); continue
+        g = [kt[j] for j in same]; used.update(same)
+        pre = _o.path.commonprefix([x['t'] for x in g]).rstrip(' ・　')
+        rest = [x['t'][len(pre):].strip(' ・　') or x['p'] for x in g]
+        m = dict(a); m['t'] = f"{pre}（{len(g)}店）"
+        m['p'] = _c.Counter(x['p'] for x in g).most_common(1)[0][0]
+        m['k'] = _c.Counter(x['k'] for x in g).most_common(1)[0][0]
+        m['hk'] = f"同じ日に{len(g)}店：" + "・".join(f"{r}（{x['p']}）" for r, x in zip(rest, g))
+        m['a'] = "・".join(sorted({x['p'] for x in g}, key=[x['p'] for x in g].index))
+        m['rows'] = [(['場所', '・'.join(f"{r}（{x['p']}）" for r, x in zip(rest, g))] if r0[0] == '場所' else r0) for r0 in a.get('rows', [])]
+        m.pop('im', None); m.pop('cr', None); m.pop('cu', None)
+        out.append(m)
+    return out
 
 def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
     TD = datetime.date.today().isoformat()
@@ -42,6 +66,32 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
         {'h1': '関西の初詣', 'sub': f'2027年・大晦日と三が日・{len(hm)}か所', 'dl': f'2027年の案内が出た所 <b>{n27}</b>か所',
          'K': {'hatsu': ['初詣', '#A23B3B']}, 'cnt': 'か所', 'unit': '初詣',
          'note': '時間と交通規制は、各神社の公式ページの案内です。2027年の案内がまだの所は、昨年・例年の案内を載せ、出たら書き換えます。出かける前に公式で確かめてください。'}, hm, '/hatsumode')
+
+    # ---------- 11/27 年末年始の2枚：/hatsuuri（おかいもの）・/nenmatsu（おでかけ）。中身は tools/shin/nenmatsu.py（関東と同じ） ----------
+    _nm = runpy.run_path(os.path.join(R, 'tools/shin/nenmatsu.py'))
+    # 11/27 12月の2枚 /christmas・/toshikoshi も同じ作り（夜の行が5件そろうまでは作らない）
+    for nm_, url_, ti_, de_, pg_, its_ in _nm['pages']('関西', 'TOWN NOTE', os.path.join(R, 'tools/nenmatsu/hatsuuri.tsv'), os.path.join(R, 'tools/nenmatsu/gomi.tsv')) + \
+            _nm['pages2']('関西', 'TOWN NOTE', os.path.join(R, 'tools/nenmatsu/christmas.tsv'), os.path.join(R, 'tools/nenmatsu/toshikoshi.tsv')):
+        for it in its_: fin(it, it['t']); it.pop('o', None)
+        if nm_ == 'hatsuuri':
+            c = copy.deepcopy(cfg); c['desc'] = de_
+            c['nav'] = [{'t': 'おかいもの', 'ic': 'yen', 'href': '/okaimono'}, {'t': '初売り', 'ic': 'now', 'href': '/hatsuuri', 'cur': 1}, {'t': '年末年始', 'ic': 'we', 'href': '/nenmatsu'}]
+            c['menu'] = {'k': 'Shopping', 'items': [['初売り・福袋', '/hatsuuri', 1]]}
+            pg_.setdefault('also', [['年末年始のごみ・役所', '/nenmatsu'], ['関西の初詣', '/hatsumode'], ['日用品の値段くらべ', '/okaimono'], ['お得な物', '/otoku']])
+            URL[nm_] = url_
+            write(nm_, ti_, c, {'items': its_, 'icons': icons, 'page': pg_}, js='list')
+        else:
+            pg_.setdefault('also', {'christmas': [['関西のイルミネーション', '/illumination'], ['除夜の鐘・年越し', '/toshikoshi'], ['関西のおでかけ・イベント', '/odekake']],
+                                    'toshikoshi': [['関西の初詣', '/hatsumode'], ['年末年始のごみ・役所', '/nenmatsu'], ['クリスマスの催し', '/christmas']]}.get(nm_,
+                                   [['初売り・福袋2027', '/hatsuuri'], ['関西の初詣', '/hatsumode'], ['関西のおでかけ・イベント', '/odekake']]))
+            ode(nm_, url_, ti_, de_, pg_, its_, url_)
+        # サイトマップに無ければ足す（kaiten と同じ）
+        for sm in ('sitemap.xml', 'sitemap-all.xml'):
+            _p = os.path.join(L, sm)
+            if os.path.exists(_p):
+                _x = open(_p, encoding='utf-8').read()
+                if f'/{nm_}<' not in _x:
+                    open(_p, 'w', encoding='utf-8').write(_x.replace('</urlset>', f'<url><loc>https://kansai.townnote.app/{nm_}</loc><lastmod>{TD}</lastmod></url>\n</urlset>', 1))
 
     # ---------- 泊まり（遠いおでかけ＋近くの評価の高い宿3軒） ----------
     yado = json.load(open(os.path.join(L, 'kansai-yado.json'), encoding='utf-8'))
@@ -102,7 +152,7 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
         b = K['bucket'](x); g, _ = K['genre'](x); h = K['hatsu'](x); v = K['vphoto'](x); d = datetime.date.fromisoformat(x['d'])
         lab = {'open': '開店', 'pop': '期間限定', 'close': '閉店'}[x['k']]
         it = {'t': x['n'], 'p': x['p'], 'a': x.get('pl') or '', 'k': g, 'w': b, 'u': x['u'], 'ub': '公式の発表を見る', 'id': K['slug'](x),
-              'd': f"{d.month}/{d.day}（{'月火水木金土日'[d.weekday()]}）{lab}", 'hk': x.get('pt', ''),
+              'd': f"{d.month}/{d.day}（{'月火水木金土日'[d.weekday()]}）{lab}", 'hk': K['ptc'](x),
               'bg': (h or lab) if b != 'close' else '閉店', 'bgc': 'off' if b == 'close' else ('pop' if not h else ''),
               'rows': [r for r in [['日', f"{d.month}月{d.day}日（{'月火水木金土日'[d.weekday()]}）{lab}" + (f"〜{x['end']}" if x.get('end') else '')], ['場所', x.get('pl') or x['p']], ['時間', x.get('tm') or '']] if r[1]],
               'mq': (x.get('pl') or '') + ' ' + x['n'], 'big': ('あと' + str((d - datetime.date.today()).days) + '日で' + lab if d.isoformat() > TD else ('きょう' + lab if d.isoformat() == TD else ''))}
@@ -115,6 +165,7 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
             _e = datetime.date.fromisoformat(x["end"]); it["rows"][0][1] = it["rows"][0][1].replace("〜" + x["end"], f"〜{_e.month}月{_e.day}日")
         if v: it.update({'im': v['img'], 'cr': v['cr'], 'cu': v.get('page', '')})
         kt.append(it)
+    kt = _kt_group(kt)
     kt.reverse()
     cn = {k: sum(1 for x in kt if x['w'] == k) for k in ('soon', 'done', 'close')}
     gk = {g: [g, GC.get(g, '#6E6E73')] for g in GC if any(x['k'] == g for x in kt)}
