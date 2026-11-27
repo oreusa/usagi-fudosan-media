@@ -73,6 +73,11 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
     for nm_, url_, ti_, de_, pg_, its_ in _nm['pages']('関西', 'TOWN NOTE', os.path.join(R, 'tools/nenmatsu/hatsuuri.tsv'), os.path.join(R, 'tools/nenmatsu/gomi.tsv')) + \
             _nm['pages2']('関西', 'TOWN NOTE', os.path.join(R, 'tools/nenmatsu/christmas.tsv'), os.path.join(R, 'tools/nenmatsu/toshikoshi.tsv')):
         for it in its_: fin(it, it['t']); it.pop('o', None)
+        # 11/27 月：1件ずつのページ（/hatsuuri/<id> など）。一覧の行に「くわしいページ」（sp）が付く
+        try:
+            _dt = _nm['details'](nm_, its_, '関西', 'TOWN NOTE', _nm['machi_map'](os.path.join(L, 'machi')))
+        except Exception as _e:
+            print('年末年始の1件ページは作らない', repr(_e)); _dt = []
         if nm_ == 'hatsuuri':
             c = copy.deepcopy(cfg); c['desc'] = de_
             c['nav'] = [{'t': 'おかいもの', 'ic': 'yen', 'href': '/okaimono'}, {'t': '初売り', 'ic': 'now', 'href': '/hatsuuri', 'cur': 1}, {'t': '年末年始', 'ic': 'we', 'href': '/nenmatsu'}]
@@ -85,7 +90,23 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
                                     'toshikoshi': [['関西の初詣', '/hatsumode'], ['年末年始のごみ・役所', '/nenmatsu'], ['クリスマスの催し', '/christmas']]}.get(nm_,
                                    [['初売り・福袋2027', '/hatsuuri'], ['関西の初詣', '/hatsumode'], ['関西のおでかけ・イベント', '/odekake']]))
             ode(nm_, url_, ti_, de_, pg_, its_, url_)
-        # サイトマップに無ければ足す（kaiten と同じ）
+        if _dt:
+            os.makedirs(os.path.join(L, 'shin', nm_), exist_ok=True)
+            for _pth, _u, _ti, _de, _d in _dt:
+                _c = copy.deepcopy(cfg); _c['desc'] = _de
+                _c['nav'] = [{'t': '一覧へ', 'ic': 'now', 'href': '/' + nm_}]
+                _c['menu'] = {'k': 'Shopping' if nm_ == 'hatsuuri' else 'Odekake', 'items': [[x[0], x[1]] for x in cfg['menu']['items']] if nm_ != 'hatsuuri' else [['初売り・福袋', '/hatsuuri', 1]]}
+                _c['foot'] = '各市区・各店・各主催の公式の案内をもとにしています。出かける前・出す前に公式の案内をご確認ください。'
+                URL[_pth] = _u
+                write(_pth, _ti, _c, _d, js='doc')
+            print(nm_, '1件ページ', len(_dt))
+        # サイトマップに無ければ足す（kaiten と同じ）。1件ページも
+        for sm in ('sitemap.xml', 'sitemap-all.xml'):
+            _p = os.path.join(L, sm)
+            if os.path.exists(_p) and _dt:
+                _x = open(_p, encoding='utf-8').read()
+                _add = ''.join(f'<url><loc>https://kansai.townnote.app{_u}</loc><lastmod>{TD}</lastmod></url>\n' for _pth, _u, *_r in _dt if f'{_u}<' not in _x)
+                if _add: open(_p, 'w', encoding='utf-8').write(_x.replace('</urlset>', _add + '</urlset>', 1))
         for sm in ('sitemap.xml', 'sitemap-all.xml'):
             _p = os.path.join(L, sm)
             if os.path.exists(_p):
