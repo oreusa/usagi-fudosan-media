@@ -3,8 +3,9 @@
 月曜と木曜の 19:47 の回が、上から公式ページで確かめ、合う物を tools/fudosan_list/facts.json に足して make.py を回す。
 足した物・合わない物は stats/fudosan-watch.json の done に URL を入れる（次から出ない）。
 
-## 候補（37件）
+## 候補（38件）
 - 2026-11-27｜JR西日本 ニュースリリース｜[dekiru] 京都駅開業150周年記念イベントについて～「きょうと、ずっと。」プロジェクトJR京都線・京都駅開業150周年、京都駅ビル開業30周年～｜https://www.westjr.co.jp/press/article/2026/11/20/page_31224.html
+- 2026-11-27｜京都府｜[seido] 令和8年度京都府社会福祉施設等生産性向上・人手不足対策事業費補助金｜https://www.pref.kyoto.jp/kaigo-jigyo/news/r7/seisannsei.html
 - 2026-11-20｜南海 ニュース｜[dekiru] 深井 昭和46年(1971)年4月1日に開業した深井駅は、堺市中区にあり、中区唯一の駅です。 泉北ニュータウンの手前に位置するため、他の駅とは少し異なる雰囲気を持っており、飲食店や冠婚葬祭施設も多く見られます。 高架駅で、高架下にはショッピングゾーン「深井プラザ」があります。｜https://www.nankai.co.jp/community/station/fukai.html
 - 2026-11-20｜阪急阪神HD ニュース｜[dekiru] 2026.11.20 不動産 【リリース】 大阪･梅田エリアおよび芝田地区のまちづくりの方向性を議論する 「芝田地区まちづくり推進会議」が本日開催されました（阪急電鉄、阪急阪神不動産）｜https://www.hankyu-hanshin.co.jp/release/2026/11/1b916b6cff8441dd59eb589b74aec44f8feba88f.pdf
 - 2026-11-20｜南海 ニュース｜[dekiru] 萩ノ茶屋 明治40年(1907)12月に開業しました。 駅名の由来といわれる「萩の茶屋」は、かつて紀州街道沿いにあった茶店の1つで、大阪方面から住吉詣りに向かう途中、敷地内に植えられた萩の花が旅人の目を楽しませたと言われています。｜https://www.nankai.co.jp/community/station/haginochaya.html
