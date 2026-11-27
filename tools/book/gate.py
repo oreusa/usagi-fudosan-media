@@ -51,9 +51,34 @@ def x_len(text):
     return n
 
 
+_URL_LINE = re.compile(r"^\s*https?://\S+\s*$")
+
+
+def url_to_reply(text):
+    """11/27 owner「URL2個目につけないの」：Threads の1本目に URL があり返信が無い時、
+    URL の行とその前置きの1行（「〜は、こちら。」）を2本目へ移す。決まりの最後の1行は1本目に残る。"""
+    ls = text.split("\n")
+    take = set()
+    for i, l in enumerate(ls):
+        if _URL_LINE.match(l):
+            take.add(i)
+            if i > 0 and ls[i - 1].strip() and not _URL_LINE.match(ls[i - 1]):
+                take.add(i - 1)
+    if not take:
+        return text, []
+    reply = "\n".join(ls[i] for i in sorted(take)).strip()
+    body = "\n".join(l for i, l in enumerate(ls) if i not in take)
+    body = re.sub(r"\n{3,}", "\n\n", body).strip()
+    return body, [reply]
+
+
 def parts(d, svc):
     if svc == "threads":
-        return [d.get("threads_text") or ""] + list(d.get("threads_thread") or [])
+        th = list(d.get("threads_thread") or [])
+        main = d.get("threads_text") or ""
+        if not th:
+            main, th = url_to_reply(main)
+        return [main] + th
     return [d.get("x_text") or ""] + list(d.get("x_thread") or [])
 
 
