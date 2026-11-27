@@ -1,21 +1,20 @@
-# リンクの確かめ（2026-11-26 14:20 JST・1731件・HPの全ページ）
+# リンクの確かめ（2026-11-27 09:25 JST・1741件・HPの全ページ）
 
-種類ごと（見た数／開けない数）：不動産 779／4・紅葉 21／2・イルミ 107／7・初もうで 24／0・おでかけ 686／12・ほか 114／0
+種類ごと（見た数／開けない数）：不動産 783／4・紅葉 21／2・イルミ 107／7・初もうで 24／0・おでかけ 686／11・ほか 120／0
 行き先の分からないアフィリエイトの入口 0本（押さないので見ていない）
 
 ## 開けない（直す）
 - ✗ [おでかけ] 魯山人の宇宙 魂を刳る美がほしい（links/index.html）TimeoutError https://www.mistore.jp/store/kyoto/museum/event_list/event21.html
-- ✗ [おでかけ] スワップミート in 花博公園（links/index.html）404 https://www.tsurumi-ryokuchi.jp/events/28742
-- ✗ [おでかけ] そんな“バーガー”なフェス（links/index.html）404 https://www.blumenooka.jp/post-19317/
-- ✗ [おでかけ] 万呂須佐神社例祭（万呂の獅子舞）（links/index.html）404 https://www.wakayama-kanko.or.jp/events/detail_2968.html
 - ✗ [おでかけ] 大阪ステーションシティ×ドラマチック謎解きゲーム（links/index.html）URLError https://osakastationcity-nazo.com/
 - ✗ [おでかけ] 梅小路公園 紅葉まつり ライトアップ（links/index.html）503 https://www.kyoto-ga.jp/event/umekouji/index.html
-- ✗ [おでかけ] ペダルで時を漕ぐ デジタルスタンプラリー（links/index.html）404 https://event.city.kobe.lg.jp/event/OSHoI3B50boJ3RrtuNtr
 - ✗ [おでかけ] アニタッチ OSAKA なんば（links/index.html）404 https://www.afpbb.com/articles/-/3648165
 - ✗ [おでかけ] 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
-- ✗ [おでかけ] おでかけ掲載新しいお店や、毎年のイベント。うさぎがご紹介します。ご相談はこちら（links/index.html）429 https://ig.me/m/fudousan_ai_si
+- ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/080c01f2.html）404 https://event.city.kobe.lg.jp/event/OSHoI3B50boJ3RrtuNtr
 - ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/14952151.html）404 https://www.wakayama-kanko.or.jp/events/detail_4480.html
+- ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/15d4d935.html）404 https://www.tsurumi-ryokuchi.jp/events/28742
 - ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/1e3f68ee.html）404 https://www.city.takasago.lg.jp/soshikikarasagasu/citypromotionshitsu/kanko_tokusan/2/13744.html
+- ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/6d78d21e.html）404 https://www.blumenooka.jp/post-19317/
+- ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/bf891431.html）404 https://www.wakayama-kanko.or.jp/events/detail_2968.html
 - ✗ [イルミ] 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
 - ✗ [イルミ] 宝厳院 紅葉ライトアップ（links/illumination-kyoto.html）URLError https://hogonin.jp/
 - ✗ [イルミ] HERBIS CHRISTMAS（links/illumination-muryo.html）URLError https://www.herbis.jp/
