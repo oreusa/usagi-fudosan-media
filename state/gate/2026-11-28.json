@@ -1,0 +1,146 @@
+{
+ "date": "2026-11-28",
+ "bad": 0,
+ "slots": {
+  "n1": {
+   "ok": true,
+   "time": "07:00",
+   "head": "大日と都島、1日の乗り降りの差は210人でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "1f0e63f2a42bb8da",
+   "x": false,
+   "th": true
+  },
+  "x07": {
+   "ok": true,
+   "time": "07:00",
+   "head": "宇治・アル・プラザ宇治東に「ケンタッキーフライドチキン」、きょう11/28（土）オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "04af48fb37444f7b",
+   "x": true,
+   "th": false
+  },
+  "S1": {
+   "ok": true,
+   "time": "08:00",
+   "head": "滋賀県の中古一戸建て、7〜9月の平均は2,044万円でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "b0bf713eecceec9d",
+   "x": false,
+   "th": true
+  },
+  "n2": {
+   "ok": true,
+   "time": "09:00",
+   "head": "きょう11/28（土）も夕方5時ごろから、大阪の御堂筋が光ります。",
+   "bad": [],
+   "warn": [],
+   "digest": "081df1ffe8c01a5a",
+   "x": false,
+   "th": true
+  },
+  "x09": {
+   "ok": true,
+   "time": "09:00",
+   "head": "大阪・御堂筋に「御堂筋イルミネーション2026」、今夜11/28（土）も17時ごろから",
+   "bad": [],
+   "warn": [],
+   "digest": "20ab195484a17f4b",
+   "x": true,
+   "th": false
+  },
+  "x0930": {
+   "ok": true,
+   "time": "09:30",
+   "head": "京都・木屋町に「冷麺 to カルビ」、12/21（月）オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "6405ba199c0c480a",
+   "x": true,
+   "th": false
+  },
+  "n3": {
+   "ok": true,
+   "time": "12:00",
+   "head": "きょう11/28（土）、宇治市のアル・プラザ宇治東に、ケンタッキーが開きます。",
+   "bad": [],
+   "warn": [],
+   "digest": "aaffb9113d0775f5",
+   "x": false,
+   "th": true
+  },
+  "x12": {
+   "ok": true,
+   "time": "12:00",
+   "head": "滋賀・大津と栗東に「万代」、12/5（土）2店同時オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "3b8aa6a7429e8e71",
+   "x": true,
+   "th": false
+  },
+  "n8": {
+   "ok": true,
+   "time": "13:00",
+   "head": "紀伊小倉と紀伊山田、1日の乗り降りの差はたった6人でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "038364b2b2b5ffc2",
+   "x": false,
+   "th": true
+  },
+  "n5": {
+   "ok": true,
+   "time": "15:00",
+   "head": "今夜11/28（土）も、兵庫県三木市のネスタリゾート神戸で「ネスタイルミナ」が18時から。",
+   "bad": [],
+   "warn": [],
+   "digest": "008fc107b994a274",
+   "x": false,
+   "th": true
+  },
+  "n6": {
+   "ok": true,
+   "time": "18:00",
+   "head": "12/9（水）、堺東駅直結の「HiViE堺東」に、ライフが先に開きます。",
+   "bad": [],
+   "warn": [],
+   "digest": "5fb1ae4369398764",
+   "x": false,
+   "th": true
+  },
+  "x18": {
+   "ok": true,
+   "time": "18:00",
+   "head": "Osaka Metro谷町線、大日と都島は1日210人差",
+   "bad": [],
+   "warn": [],
+   "digest": "1389d1332a9bad6b",
+   "x": true,
+   "th": false
+  },
+  "n7": {
+   "ok": true,
+   "time": "21:00",
+   "head": "紀伊田辺駅は1日2,252人、となりの芳養駅の約18倍でした。",
+   "bad": [],
+   "warn": [],
+   "digest": "3249bc278f53e777",
+   "x": false,
+   "th": true
+  },
+  "x21": {
+   "ok": true,
+   "time": "21:00",
+   "head": "堺東駅直結「HiViE堺東」に「ライフ」、12/9（水）オープン",
+   "bad": [],
+   "warn": [],
+   "digest": "731b243dc93c47c4",
+   "x": true,
+   "th": false
+  }
+ }
+}

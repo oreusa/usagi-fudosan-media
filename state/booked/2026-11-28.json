@@ -1,0 +1,93 @@
+{
+ "n1": {
+  "time": "07:00",
+  "digest": "1f0e63f2a42bb8da",
+  "at": "2026-11-28T06:28:19+09:00",
+  "threads": "6b09f5f4585cafb820e29322",
+  "threads_img": 0
+ },
+ "x07": {
+  "time": "07:00",
+  "digest": "04af48fb37444f7b",
+  "at": "2026-11-28T06:28:19+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "S1": {
+  "time": "08:00",
+  "digest": "b0bf713eecceec9d",
+  "at": "2026-11-28T06:28:19+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n2": {
+  "time": "09:00",
+  "digest": "081df1ffe8c01a5a",
+  "at": "2026-11-28T06:28:19+09:00",
+  "threads": "6b09f5f52ea34800c2974576",
+  "threads_img": 0
+ },
+ "x09": {
+  "time": "09:00",
+  "digest": "20ab195484a17f4b",
+  "at": "2026-11-28T06:28:19+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x0930": {
+  "time": "09:30",
+  "digest": "6405ba199c0c480a",
+  "at": "2026-11-28T06:28:19+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n3": {
+  "time": "12:00",
+  "digest": "aaffb9113d0775f5",
+  "at": "2026-11-28T06:28:19+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x12": {
+  "time": "12:00",
+  "digest": "3b8aa6a7429e8e71",
+  "at": "2026-11-28T06:28:19+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "n8": {
+  "time": "13:00",
+  "digest": "038364b2b2b5ffc2",
+  "at": "2026-11-28T06:28:19+09:00",
+  "threads": "6b09f5f62ea34800c297462c",
+  "threads_img": 0
+ },
+ "n5": {
+  "time": "15:00",
+  "digest": "008fc107b994a274",
+  "at": "2026-11-28T06:28:19+09:00",
+  "threads": "6b09f5f671e8cc12a6d04cd8",
+  "threads_img": 0
+ },
+ "n6": {
+  "time": "18:00",
+  "digest": "5fb1ae4369398764",
+  "at": "2026-11-28T06:28:19+09:00",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "x18": {
+  "time": "18:00",
+  "digest": "1389d1332a9bad6b",
+  "at": "2026-11-28T06:28:19+09:00",
+  "threads": "X だけの枠",
+  "error": "InvalidInputError: Invalid post: Image could not be read from its URL."
+ },
+ "reel_twitter": {
+  "tries": 1,
+  "id": "6b09f5f8585cafb820e294ce",
+  "url": "https://oreusa.github.io/usagi-fudosan-media/media/reels/2026-11-28-popup.mp4",
+  "time": "07:30",
+  "texts": [
+   "北野天満宮（京都市上京区）\n北野天満宮。御土居のもみじ苑\n\n・夜 12/6まで 日没〜20:00\n・受付 19:40まで\n・拝観料 大人1,500円（お茶菓子付き）\n・行き方 市バス「北野天満宮前」\n\n出かける前に、公式ページで確かめてください。\n\n#関西おでかけ #北野天満宮"
+  ],
+  "at": "2026-11-28T06:28:19+09:00"
+ }
+}
