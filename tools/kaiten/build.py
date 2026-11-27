@@ -417,7 +417,7 @@ def sp_fig(x):
 RAKU = "https://hb.afl.rakuten.co.jp/hgc/58b50f43.00cd84ff.58b50f44.4872e82d/?pc="
 YVC = "https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3786315&pid=892753208&vc_url="
 SHOPWORD = re.compile(r"(店|モール|アウトレット|パーク|百貨|館|ストア|プラザ|SC|梅田|心斎橋|なんば|難波|三宮|河原町|四条|天王寺|あべの)$")
-PLACE = r"大阪|京都|神戸|奈良|滋賀|和歌山|梅田|心斎橋|なんば|難波|三宮|元町|河原町|四条|錦|天王寺|あべの|ルクア|LUCUA|サウス|KYOTO|Kyoto|OSAKA|Osaka|KOBE|Kobe|BAL|東京|TOKYO|Tokyo|渋谷|新宿|銀座|池袋|横浜|表参道|原宿|丸の内|日本橋|有楽町|六本木"
+PLACE = r"大阪|京都|神戸|奈良|滋賀|和歌山|梅田|心斎橋|なんば|難波|三宮|元町|河原町|四条|錦|天王寺|あべの|ルクア|LUCUA|サウス|KYOTO|Kyoto|OSAKA|Osaka|KOBE|Kobe|BAL|東京|TOKYO|Tokyo|渋谷|新宿|銀座|池袋|リンクス|AOYAMA|青山|SHIBUYA|IKEBUKURO|横浜|表参道|原宿|丸の内|日本橋|有楽町|六本木"
 
 
 def brand(x):
@@ -426,7 +426,7 @@ def brand(x):
         return ""
     if g not in ("服・雑貨", "パン・スイーツ") and not (g == "美容・からだ" and re.search(r"コスメ|化粧|香水|フレグランス|THANN|BYREDO|バイレード", x["n"] + x.get("pt", ""))):
         return ""
-    if re.search(r"書店|本屋|ホームセンター|ドン・キホーテ|ドンキ|ダイソー|DAISO|キャンドゥ|セリア|ギャラリー|GALLERY|スタジオ|フロア|^イオンモール|^大丸|^阪急|^高島屋|^近鉄|ヤマダストアー|BOOKHOME|ブックホーム|リカー|テレ東", x["n"]):
+    if re.search(r"書店|本屋|ホームセンター|ドン・キホーテ|ドンキ|ダイソー|DAISO|キャンドゥ|セリア|ギャラリー|GALLERY|スタジオ|フロア|^イオンモール|^大丸|^阪急|^高島屋|^近鉄|ヤマダストアー|BOOKHOME|ブックホーム|リカー|テレ東|^西武|キッザニア|BUFFET|ビュッフェ|Bistro|ビストロ|楽しむ|実家|^[0-9]|%|図書館|なだ万|キッカケ|メモリアル|有隣堂|LINKS|DONUT|ドーナツ|MOM’S TOUCH|KUA`AINA|WELLNESS|ブラリバ|＆found|DOOR TO GOLF|カンパネラ|桐松屋|POPUPショップ|クレープ", x["n"]):
         return ""
     w = re.sub(r"（.*?）|\(.*?\)|「|」", " ", x["n"]).replace("　", " ").split()
     while len(w) > 1 and (SHOPWORD.search(w[-1]) or re.fullmatch(PLACE, w[-1])):
