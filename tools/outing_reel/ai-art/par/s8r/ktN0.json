@@ -1,1 +1,35 @@
-[{"img": "/home/user/akari-auto/shots/ai-art/kitano/01-bridge-b-flux-2-klein-4b.jpg", "dep": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/map/dd/kitano-01b.png", "dur": 6.5, "m": {"z0": 0.0, "z1": 0.077, "cx": 0.5, "cy": 0.45, "b0": 1.06, "b1": 1.06, "wind": 0.0025, "st": 0.3, "shk": 0.002, "spk": 0.4, "lf": 0.3, "bok": 0, "sd": 0.0, "fl": 0.03, "fx": 0.61, "fy": 0.6, "wy": 0, "lu0": 0.45, "lu1": 1, "lut": 2.0, "flk": 0.5}, "tr": "fade", "ease": "lin", "w": 1.0, "mask": "/home/user/usagi-fudosan-media/tools/outing_reel/ai-art/par/mask/kitano-01b.png", "up": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/up/kitano-01-bridge-b-flux-2-klein-4b.png"}]
+[
+ {
+  "img": "/home/user/akari-auto/shots/ai-art/kitano/01-bridge-b-flux-2-klein-4b.jpg",
+  "dep": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/map/dd/kitano-01b.png",
+  "dur": 6.5,
+  "m": {
+   "z0": 0.0,
+   "z1": 0.077,
+   "cx": 0.5,
+   "cy": 0.45,
+   "b0": 1.06,
+   "b1": 1.06,
+   "wind": 0.0025,
+   "st": 0.3,
+   "shk": 0.002,
+   "spk": 0.4,
+   "lf": 0.3,
+   "bok": 0,
+   "sd": 0.0,
+   "fl": 0.03,
+   "fx": 0.61,
+   "fy": 0.6,
+   "wy": 0,
+   "lu0": 0.45,
+   "lu1": 1,
+   "lut": 2.0,
+   "flk": 0
+  },
+  "tr": "fade",
+  "ease": "lin",
+  "w": 1.0,
+  "mask": "/home/user/usagi-fudosan-media/tools/outing_reel/ai-art/par/mask/kitano-01b.png",
+  "up": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/up/kitano-01-bridge-b-flux-2-klein-4b.png"
+ }
+]
