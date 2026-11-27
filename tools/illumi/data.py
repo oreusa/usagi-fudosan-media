@@ -15,7 +15,7 @@ ITEMS = [
  ("京都","NAKED meets 二条城 2026","京都市中京区｜二条城","2026-10-23","2026-12-05",False,"https://event.naked.works/nijojo/",None),
  ("京都","嵯峨野トロッコ列車 光の幻想列車","京都市右京区｜嵯峨野トロッコ列車（運賃のみ）","2026-10-24","2026-12-29",False,"https://www.sagano-kanko.co.jp/news/2664/",None),
  ("京都","福知山イル未来と2026","福知山市｜福知山城","2026-10-31","2026-11-01",True,"https://www.facebook.com/fukuchiyamaillumi",None),
- ("京都","京都駅ビル グラフィカルイルミネーション","京都市下京区｜京都駅ビル",None,None,True,"https://www.kyoto-station-building.co.jp/graphical_illumination/","12/1〜3/31"),
+ ("京都","京都駅ビル クリスマスツリー・大階段イルミネーション","京都市下京区｜京都駅ビル","2026-11-18","2026-12-25",False,"https://www.kyoto-station-building.co.jp/events/ksb-christmas/",None),  # 11/27 夜の文書＋公式で確かめた（ツリー15:00〜23:00・大階段15:00〜22:00・料金の記載なし→無料の札は付けない）
  ("京都","バンビオイルミネーション","長岡京市｜JR長岡京駅西口",None,None,True,"https://totteoki.kyoto.travel/events/12138/","12/12〜1/12"),
  ("兵庫","神戸イルミナージュ","神戸市北区｜神戸フルーツ・フラワーパーク大沢","2026-10-23","2027-02-14",False,"https://fruit-flowerpark.jp/uvqiuz/",None),
  ("兵庫","Himeji大手前通り・姫路城イルミネーション","姫路市｜大手前通り・姫路城","2026-11-20","2027-01-11",True,"https://www.city.himeji.lg.jp/sangyo/0000028413.html",None),

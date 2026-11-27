@@ -239,6 +239,9 @@ def odekake():
     _s.path.insert(0, os.path.join(R, 'tools/illumi'))
     from data import ITEMS as IL, KOYO as KY, MEISHO as MS
     TD = datetime.date.today().isoformat()
+    # 11/27 一覧の冒頭の1ブロック（tools/shin/ptop.json・公式で確かめた物だけ・e の日を過ぎたら消える）
+    try: PTOP = json.load(open(os.path.join(R, 'tools/shin/ptop.json'), encoding='utf-8'))
+    except Exception: PTOP = {}
     il = []
     for row in IL:
         p_, n, m, s_, e_, free, url = row[:7]
@@ -289,8 +292,9 @@ def odekake():
          {'h1': '関西の紅葉', 'sub': f'見頃とライトアップ・{len(ky)}か所', 'st': 'pref'}, ky, '/koyo')
     for p_ in SLUG:
         ni = sum(1 for i in il if i['p'] == p_); nk = sum(1 for i in ky if i['p'] == p_)
+        _tp = PTOP.get('illumination-' + SLUG[p_]) if TD <= PTOP.get('illumination-' + SLUG[p_], {}).get('e', '') else None
         page('illumination-' + SLUG[p_], '/illumination-' + SLUG[p_], f'{p_}のイルミネーション2026-2027（{PFULL[p_]}）｜TOWN NOTE',
-             f'{PFULL[p_]}のイルミネーション{ni}か所を、開催中・これから・無料に分けてまとめています。', {'h1': f'{p_}のイルミネーション', 'sub': f'2026-2027・{ni}か所', 'p': p_, 'st': 'pref'}, il, '/illumination')
+             (_tp['d'] if _tp else '') + f'{PFULL[p_]}のイルミネーション{ni}か所を、開催中・これから・無料に分けてまとめています。', {'h1': f'{p_}のイルミネーション', 'sub': f'2026-2027・{ni}か所', 'p': p_, 'st': 'pref', **({'top': {k: _tp[k] for k in ('h', 'r', 'n', 'u')}} if _tp else {})}, il, '/illumination')
         page('koyo-' + SLUG[p_], '/koyo-' + SLUG[p_], f'{p_}の紅葉2026｜見頃とライトアップ（{PFULL[p_]}）｜TOWN NOTE',
              f'{PFULL[p_]}の紅葉の名所とライトアップ{nk}か所を、見頃の時期つきでまとめています。', {'h1': f'{p_}の紅葉', 'sub': f'見頃とライトアップ・{nk}か所', 'p': p_, 'st': 'pref'}, ky, '/koyo')
     # ---------- 初詣・泊まり・いまから・開店閉店・ランキング（links/shin/list.js） ----------
