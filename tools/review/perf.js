@@ -26,7 +26,7 @@ const urls = fs.readFileSync(list, 'utf8').split('\n').map(l => l.split('\t')[0]
     });
     await p.addInitScript(() => {
       window.__lcp = 0; window.__cls = 0; window.__lt = [];
-      new PerformanceObserver(l => { for (const e of l.getEntries()) window.__lcp = e.startTime }).observe({type: 'largest-contentful-paint', buffered: true});
+      new PerformanceObserver(l => { for (const e of l.getEntries()) { window.__lcp = e.startTime; const el = e.element; window.__lcpEl = el ? (el.tagName + '.' + (el.className || '') + ' ' + (e.url || '').slice(-60) + ' ' + (el.textContent || '').trim().slice(0, 30)) : e.url } }).observe({type: 'largest-contentful-paint', buffered: true});
       new PerformanceObserver(l => { for (const e of l.getEntries()) if (!e.hadRecentInput) window.__cls += e.value }).observe({type: 'layout-shift', buffered: true});
       new PerformanceObserver(l => { for (const e of l.getEntries()) window.__lt.push([Math.round(e.startTime), Math.round(e.duration)]) }).observe({type: 'longtask', buffered: true});
     });
@@ -34,7 +34,7 @@ const urls = fs.readFileSync(list, 'utf8').split('\n').map(l => l.split('\t')[0]
     try { await p.goto(u, {waitUntil: 'load', timeout: 60000}) } catch (e) { err = e.message.slice(0, 120) }
     const loadMs = Date.now() - t0;
     await p.waitForTimeout(3000);
-    const m1 = await p.evaluate(() => ({lcp: Math.round(window.__lcp), cls: +window.__cls.toFixed(3), lt: window.__lt.slice(), dom: document.getElementsByTagName('*').length, imgs: document.images.length}));
+    const m1 = await p.evaluate(() => ({lcp: Math.round(window.__lcp), lcpEl: window.__lcpEl, cls: +window.__cls.toFixed(3), lt: window.__lt.slice(), dom: document.getElementsByTagName('*').length, imgs: document.images.length}));
     // 下へ流した時のカクつき：1秒に60回の絵のうち、50ms以上あいた回数
     const jank = await p.evaluate(async () => {
       const gaps = []; let last = performance.now(), run = true;
@@ -45,10 +45,10 @@ const urls = fs.readFileSync(list, 'utf8').split('\n').map(l => l.split('\t')[0]
       return {frames: g.length, slow: g.filter(x => x > 50).length, worst: Math.round(Math.max(0, ...g))};
     });
     const tbt = m1.lt.reduce((s, x) => s + Math.max(0, x[1] - 50), 0);
-    const r = {url: u, err, loadMs, lcp: m1.lcp, tbt, cls: m1.cls, longtasks: m1.lt.length, worstTask: Math.max(0, ...m1.lt.map(x => x[1])),
+    const r = {url: u, err, loadMs, lcp: m1.lcp, lcpEl: m1.lcpEl, tbt, cls: m1.cls, longtasks: m1.lt.length, worstTask: Math.max(0, ...m1.lt.map(x => x[1])),
       kb: Object.fromEntries(Object.entries(bytes).map(([k, v]) => [k, Math.round(v / 1e3)])), cnt, dom: m1.dom, imgs: m1.imgs, scroll: jank, big: big.sort((a, b) => b[0] - a[0]).slice(0, 6)};
     res.push(r);
-    console.log(JSON.stringify({u: u.replace(/^https:\/\//, ''), lcp: r.lcp, tbt, cls: r.cls, js: r.kb.js, img: r.kb.img, dom: r.dom, slow: jank.slow + '/' + jank.frames, worst: jank.worst}));
+    console.log(JSON.stringify({u: u.replace(/^https:\/\//, ''), lcp: r.lcp, el: r.lcpEl, tbt, cls: r.cls, js: r.kb.js, img: r.kb.img, dom: r.dom, slow: jank.slow + '/' + jank.frames, worst: jank.worst}));
     await c.close();
   }
   fs.writeFileSync(out + '/perf.json', JSON.stringify(res, null, 1));
