@@ -1,0 +1,90 @@
+[
+ {
+  "url": "https://kansai.townnote.app/",
+  "err": "",
+  "loadMs": 5937,
+  "lcp": 6208,
+  "lcpEl": "IMG. https://kansai.townnote.app/assets/ph/c39910a5.webp ",
+  "tbt": 298,
+  "cls": 0,
+  "longtasks": 2,
+  "worstTask": 257,
+  "kb": {
+   "js": 147,
+   "css": 215,
+   "img": 884,
+   "font": 0,
+   "other": 9
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 6,
+   "font": 0,
+   "other": 3
+  },
+  "dom": 332,
+  "imgs": 6,
+  "scroll": {
+   "frames": 55,
+   "slow": 4,
+   "worst": 83
+  },
+  "big": [
+   [
+    263,
+    "https://kansai.townnote.app/assets/ph/c39910a5.webp"
+   ],
+   [
+    193,
+    "https://kansai.townnote.app/assets/ph/ef4f922f.webp"
+   ]
+  ]
+ },
+ {
+  "url": "https://kanto.townnote.app/",
+  "err": "",
+  "loadMs": 7061,
+  "lcp": 2666,
+  "lcpEl": "IMG.on https://kanto.townnote.app/assets/ph/002efcd6.webp ",
+  "tbt": 246,
+  "cls": 0,
+  "longtasks": 3,
+  "worstTask": 195,
+  "kb": {
+   "js": 147,
+   "css": 215,
+   "img": 1129,
+   "font": 0,
+   "other": 10
+  },
+  "cnt": {
+   "js": 6,
+   "css": 2,
+   "img": 6,
+   "font": 0,
+   "other": 2
+  },
+  "dom": 332,
+  "imgs": 6,
+  "scroll": {
+   "frames": 62,
+   "slow": 1,
+   "worst": 83
+  },
+  "big": [
+   [
+    374,
+    "https://kanto.townnote.app/assets/ph/f82bc387.webp"
+   ],
+   [
+    321,
+    "https://kanto.townnote.app/assets/ph/7aa8d75a.webp"
+   ],
+   [
+    257,
+    "https://kanto.townnote.app/assets/ph/235cb8b1.webp"
+   ]
+  ]
+ }
+]
