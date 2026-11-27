@@ -1,19 +1,10 @@
-# 不動産リストの新着の候補（2026-11-26・22ページを見た）
+# 不動産リストの新着の候補（2026-11-27・22ページを見た）
 
 月曜と木曜の 19:47 の回が、上から公式ページで確かめ、合う物を tools/fudosan_list/facts.json に足して make.py を回す。
 足した物・合わない物は stats/fudosan-watch.json の done に URL を入れる（次から出ない）。
 
-## 候補（46件）
-- 2026-11-26｜総務省統計局｜[jinko] 住民基本台帳人口移動報告 2026年（令和8年）10月分｜https://www.stat.go.jp/data/idou/sokuhou/tsuki/index.html
-- 2026-11-25｜兵庫県｜[seido] 公示送達を閲覧する前に（禁止事項等）｜https://web.pref.hyogo.lg.jp/awk05/koujisoutatu/smtkenzei08.html
-- 2026-11-25｜法務省（相続登記）｜[seido] 11月25日（水）令和８年９月分月報公表（訟務事件統計、登記統計、検察統計、矯正統計、少年矯正統計、保護統計及び人権侵犯事件統計）｜https://www.moj.go.jp/housei/toukei/toukei_ichiran_index.html
-- 2026-11-25｜滋賀県｜[seido] 令和８年度スマート・ライフスタイル普及促進事業補助金における 重点対策加速化事業(省エネ分)の受付終了について｜https://www.pref.shiga.lg.jp/cg00/press-release/35145.html
-- 2026-11-25｜阪急阪神HD ニュース｜[dekiru] 2026.11.25 不動産 【お知らせ】 阪急阪神ホテルズ 月次営業概況（2026年10月）を更新しました｜https://www.hankyu-hanshin.co.jp/2026/11/17c6491d4e53ad47d136dcd3a8aa101f5962f7c8.pdf
-- 2026-11-24｜兵庫県｜[seido] 令和8年度自家消費型非住宅用太陽光発電設備導入補助事業｜https://web.pref.hyogo.lg.jp/nk19/taiyokohojojigyosya2026.html
-- 2026-11-24｜奈良県｜[seido] 奈良県と吉野町とのまちづくりに関する包括協定 締結式｜https://www.pref.nara.lg.jp/n151/p037010.html
-- 2026-11-22｜Osaka Metro ニュース｜[dekiru] 2026年度 第5回 大阪・まち・再発見 ぶらりウォーク"【開業20周年】今里筋線をぶらりあるき その2"を2026年12月5日（土曜日）に開催します｜https://subway.osakametro.co.jp/tourism/event/2026_12_burariwalk.php
-- 2026-11-21｜法務省（相続登記）｜[seido] 11月20日（金）令和８年度土地家屋調査士試験筆記試験（多肢択一式問題）の正解及び基準点等について｜https://www.moj.go.jp/MINJI/minji05_00804.html
-- 2026-11-21｜阪急阪神HD ニュース｜[dekiru] 2026.11.20 不動産 【リリース】 グラングリーン大阪「うめきたの森」本日開園、「ひらめきの道」全面開通 ～JR大阪駅前に“都市の森”が誕生。都心の新たな憩いの場が広がる～｜https://www.hankyu-hanshin.co.jp/release/2026/11/f1ef06bb42567258734f956151fce9b924cb17e5.pdf
+## 候補（37件）
+- 2026-11-27｜JR西日本 ニュースリリース｜[dekiru] 京都駅開業150周年記念イベントについて～「きょうと、ずっと。」プロジェクトJR京都線・京都駅開業150周年、京都駅ビル開業30周年～｜https://www.westjr.co.jp/press/article/2026/11/20/page_31224.html
 - 2026-11-20｜南海 ニュース｜[dekiru] 深井 昭和46年(1971)年4月1日に開業した深井駅は、堺市中区にあり、中区唯一の駅です。 泉北ニュータウンの手前に位置するため、他の駅とは少し異なる雰囲気を持っており、飲食店や冠婚葬祭施設も多く見られます。 高架駅で、高架下にはショッピングゾーン「深井プラザ」があります。｜https://www.nankai.co.jp/community/station/fukai.html
 - 2026-11-20｜阪急阪神HD ニュース｜[dekiru] 2026.11.20 不動産 【リリース】 大阪･梅田エリアおよび芝田地区のまちづくりの方向性を議論する 「芝田地区まちづくり推進会議」が本日開催されました（阪急電鉄、阪急阪神不動産）｜https://www.hankyu-hanshin.co.jp/release/2026/11/1b916b6cff8441dd59eb589b74aec44f8feba88f.pdf
 - 2026-11-20｜南海 ニュース｜[dekiru] 萩ノ茶屋 明治40年(1907)12月に開業しました。 駅名の由来といわれる「萩の茶屋」は、かつて紀州街道沿いにあった茶店の1つで、大阪方面から住吉詣りに向かう途中、敷地内に植えられた萩の花が旅人の目を楽しませたと言われています。｜https://www.nankai.co.jp/community/station/haginochaya.html
