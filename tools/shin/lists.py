@@ -128,7 +128,7 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
         b = K['bucket'](x); g, _ = K['genre'](x); h = K['hatsu'](x); v = K['vphoto'](x); d = datetime.date.fromisoformat(x['d'])
         lab = {'open': '開店', 'pop': '期間限定', 'close': '閉店'}[x['k']]
         it = {'t': x['n'], 'p': x['p'], 'a': x.get('pl') or '', 'k': g, 'w': b, 'u': x['u'], 'ub': '公式の発表を見る', 'id': K['slug'](x),
-              'd': f"{d.month}/{d.day}（{'月火水木金土日'[d.weekday()]}）{lab}", 'hk': x.get('pt', ''),
+              'd': f"{d.month}/{d.day}（{'月火水木金土日'[d.weekday()]}）{lab}", 'hk': K['ptc'](x),
               'bg': (h or lab) if b != 'close' else '閉店', 'bgc': 'off' if b == 'close' else ('pop' if not h else ''),
               'rows': [r for r in [['日', f"{d.month}月{d.day}日（{'月火水木金土日'[d.weekday()]}）{lab}" + (f"〜{x['end']}" if x.get('end') else '')], ['場所', x.get('pl') or x['p']], ['時間', x.get('tm') or '']] if r[1]],
               'mq': (x.get('pl') or '') + ' ' + x['n'], 'big': ('あと' + str((d - datetime.date.today()).days) + '日で' + lab if d.isoformat() > TD else ('きょう' + lab if d.isoformat() == TD else ''))}
