@@ -60,6 +60,23 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
               'd': '大晦日〜三が日', 'mq': f'{n} {city}'}
         fin(it, n); it.pop('o', None)
         hm.append(it)
+    # 11/27 月：神社ごとの1件ページ（/hatsumode/<id>）
+    _nm0 = runpy.run_path(os.path.join(R, 'tools/shin/nenmatsu.py'))
+    try: _dt0 = _nm0['details']('hatsumode', hm, '関西', 'TOWN NOTE', _nm0['machi_map'](os.path.join(L, 'machi')))
+    except Exception as _e: print('初詣の1件ページは作らない', repr(_e)); _dt0 = []
+    if _dt0:
+        os.makedirs(os.path.join(L, 'shin', 'hatsumode'), exist_ok=True)
+        for _pth, _u, _ti, _de, _d in _dt0:
+            _c = copy.deepcopy(cfg); _c['desc'] = _de; _c['nav'] = [{'t': '一覧へ', 'ic': 'now', 'href': '/hatsumode'}]
+            _c['foot'] = '各神社・お寺の公式の案内をもとにしています。出かける前に公式の案内をご確認ください。'
+            URL[_pth] = _u; write(_pth, _ti, _c, _d, js='doc')
+        for sm in ('sitemap.xml', 'sitemap-all.xml'):
+            _p = os.path.join(L, sm)
+            if os.path.exists(_p):
+                _x = open(_p, encoding='utf-8').read()
+                _add = ''.join(f'<url><loc>https://kansai.townnote.app{_u}</loc><lastmod>{TD}</lastmod></url>\n' for _pth, _u, *_r in _dt0 if f'{_u}<' not in _x)
+                if _add: open(_p, 'w', encoding='utf-8').write(_x.replace('</urlset>', _add + '</urlset>', 1))
+        print('hatsumode 1件ページ', len(_dt0))
     n27 = sum(1 for r in rows if r[5] == '2027年')
     ode('hatsumode', '/hatsumode', f'関西の初詣2027｜大晦日・三が日の時間と交通規制（{len(hm)}か所）｜TOWN NOTE',
         f'関西6府県の初詣{len(hm)}か所の、大晦日と三が日の参拝時間・交通規制・駐車場を、各神社の公式ページからまとめました。',
