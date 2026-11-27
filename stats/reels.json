@@ -1,5 +1,5 @@
 {
- "at": "2026-11-27T18:03+09:00",
+ "at": "2026-11-28T07:32+09:00",
  "followers": {
   "2026-11-11": 2,
   "2026-11-12": 2,
@@ -17,10 +17,35 @@
   "2026-11-24": 2,
   "2026-11-25": 2,
   "2026-11-26": 2,
-  "2026-11-27": 2
+  "2026-11-27": 2,
+  "2026-11-28": 3
  },
- "media_count": 18,
+ "media_count": 20,
  "reels": [
+  {
+   "at": "2026-11-28 07:32",
+   "title": "紅葉の谷を、朱い橋がわたる。京都・北野天満宮の「史跡御土居のもみじ苑」で、紅葉の",
+   "url": "https://www.instagram.com/reel/DgQwpGKqDcZ/",
+   "views": null,
+   "reach": null,
+   "avg_sec": null,
+   "saved": null,
+   "shares": null,
+   "likes": 0,
+   "comments": 0
+  },
+  {
+   "at": "2026-11-27 18:17",
+   "title": "大きな岩の上に、紅葉に包まれた塔。滋賀・大津の石山寺で、秋のライトアップ「あたら",
+   "url": "https://www.instagram.com/reel/DgPVj84hnuF/",
+   "views": null,
+   "reach": null,
+   "avg_sec": null,
+   "saved": null,
+   "shares": null,
+   "likes": 0,
+   "comments": 0
+  },
   {
    "at": "2026-11-27 09:27",
    "title": "紅葉の向こうに、灯りに浮かぶお堂。京都・東山の高台寺で「秋の夜間特別拝観」が開か",
