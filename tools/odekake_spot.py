@@ -3,7 +3,7 @@
 1つの名前で調べた人にも届くよう、1件1ページにする。中身はリストに書いてある事実だけ（日程・場所・無料・公式リンク・前売り券・近くの宿）。
 毎朝 link-stats.yml で odekake_pref.py のあとに作り直す（終わった物のページは消す）。
 python3 tools/odekake_spot.py [YYYY-MM-DD]"""
-import re, json, html, sys, datetime, hashlib, os, glob
+import re, json, html, sys, datetime, hashlib, os, glob, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import spot_map
 import kyukan as KY
@@ -223,6 +223,17 @@ for sp in spots:
     # 11/24 夜：同じ催しの中の別の回（予約制の特別拝観など）は、公式の別のボタンで分けて出す（券の広告と混ぜない）
     for x in mo.get("links", []):
         act += f'<a class="g" href="{e(x[1])}" target="_blank" rel="noopener">{e(x[0])}</a>'
+    # 11/27 夜の案・owner「新しいこともどんどん」：行く日を忘れない「カレンダーに入れる」（広告ではない・自動で保存はしない）。
+    # 3日までの催しは開く日を、長い催しは終わる日を「きょうまで」の予定に。日付が公式で決まっている物だけ。
+    if re.fullmatch(r"\d{4}-\d\d-\d\d", sp["st"]) and re.fullmatch(r"\d{4}-\d\d-\d\d", sp["en"]) and sp["en"] >= TODAY:
+        _s, _e = datetime.date.fromisoformat(sp["st"]), datetime.date.fromisoformat(sp["en"])
+        _short = (_e - _s).days <= 2
+        _a, _b = ((max(_s, d0), _e) if _short else (_e, _e))
+        _ttl = nm if _short else f"{nm}（きょうまで）"
+        _cu = ("https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + urllib.parse.quote(_ttl)
+               + f"&dates={_a:%Y%m%d}/{(_b + datetime.timedelta(days=1)):%Y%m%d}&ctz=Asia%2FTokyo"
+               + "&location=" + urllib.parse.quote(q) + "&details=" + urllib.parse.quote(f"公式ページ：{sp['url']}\nTOWN NOTE：{BASE}/o/{sp['id']}"))
+        act += f'<a class="g" href="{e(_cu)}" target="_blank" rel="noopener" data-k="1件｜カレンダー">{"行く日をカレンダーに入れる" if _short else f"{_e.month}/{_e.day}までをカレンダーに入れる"}</a>'
     ads = False
     for x in TK.get(nm, []):
         act += f'<a class="g" href="{e(x[1])}" target="_blank" rel="noopener sponsored">{e(x[0])}を見る</a>'; ads = True
