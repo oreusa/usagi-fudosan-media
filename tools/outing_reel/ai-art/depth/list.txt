@@ -1,15 +1,1 @@
-ek-00 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/eikando1129/00-cover-c.jpg
-ek-01 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/eikando1129r/01-pond-c.jpg
-ek-02 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/eikando1129/02-sando-d.jpg
-ek-03 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/eikando1129/03-tahoto-c.jpg
-ek-04 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/eikando1129/04-benten-a.jpg
-ek-05 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/eikando1129/05-leaves-c.jpg
-ek-06 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/eikando1129/06-hall-b.jpg
-ek-07 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/eikando1129/07-path-c.jpg
-sw-00 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/showa1129/00-cover-a.jpg
-sw-01 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/showa1129/01-pond-a.jpg
-sw-02 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/showa1129r/02-canal-c.jpg
-sw-03 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/showa1129r/03-ginkgo-a.jpg
-sw-05 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/showa1129r/05-yukitsuri-c.jpg
-sw-06 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/showa1129r/06-bonsai-c.jpg
-sw-07 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/showa1129/07-path-c.jpg
+sw-04 https://raw.githubusercontent.com/oreusa/usagi-fudosan-media/claude/project-thread-wi09n8/shots/ai-art/showa1129/04-kasa-d.jpg
