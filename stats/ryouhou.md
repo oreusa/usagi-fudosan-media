@@ -1,9 +1,8 @@
-# 関西と関東の並べ（2026-11-28 08:56UTC）
+# 関西と関東の並べ（2026-11-28 08:59UTC）
 
 
-**違い 2 件**
-- × 「kaitai」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style2／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style0
-- × 「固定 /kaitai」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style2／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style0
+**違い 1 件**
+- × 「固定 /moushikomi」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style2
 
 ## 1. ページの種類（sitemap-all）
 
@@ -71,7 +70,7 @@
 - ima：同じ
 - jikka：同じ
 - jikka/：同じ
-- × kaitai：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style2／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style0（例 https://kansai.townnote.app/kaitai ／ https://kanto.townnote.app/kaitai）
+- kaitai：同じ
 - kaitai-*：同じ
 - kaiten：同じ
 - kaiten/：同じ
@@ -97,8 +96,8 @@
 - 固定 /koyo：同じ
 - 固定 /illumination：同じ
 - 固定 /jikka：同じ
-- × 固定 /kaitai：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style2／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style0（例 https://kansai.townnote.app/kaitai ／ https://kanto.townnote.app/kaitai）
-- 固定 /moushikomi：同じ
+- 固定 /kaitai：同じ
+- × 固定 /moushikomi：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style2（例 https://kansai.townnote.app/moushikomi ／ https://kanto.townnote.app/moushikomi）
 - 固定 /sagasu：同じ
 - 固定 /uru：同じ
 - 固定 /tomari：同じ
