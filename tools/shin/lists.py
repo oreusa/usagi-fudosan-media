@@ -104,7 +104,8 @@ def build(write, URL, L, R, cfg, items, il, ky, fin, icons, norm, MAP=None):
             write(nm_, ti_, c, {'items': its_, 'icons': icons, 'page': pg_}, js='list')
         else:
             pg_.setdefault('also', {'christmas': [['関西のイルミネーション', '/illumination'], ['除夜の鐘・年越し', '/toshikoshi'], ['関西のおでかけ・イベント', '/odekake']],
-                                    'toshikoshi': [['関西の初詣', '/hatsumode'], ['年末年始のごみ・役所', '/nenmatsu'], ['クリスマスの催し', '/christmas']]}.get(nm_,
+                                    'toshikoshi': [['関西の初詣', '/hatsumode'], ['年末年始のごみ・役所', '/nenmatsu'], ['クリスマスの催し', '/christmas']],
+                                    'kawaru': [['関西の初詣', '/hatsumode'], ['年末年始のごみ・役所', '/nenmatsu'], ['関西のおでかけ・イベント', '/odekake']]}.get(nm_,
                                    [['初売り・福袋2027', '/hatsuuri'], ['関西の初詣', '/hatsumode'], ['関西のおでかけ・イベント', '/odekake']]))
             ode(nm_, url_, ti_, de_, pg_, its_, url_)
         if _dt:
