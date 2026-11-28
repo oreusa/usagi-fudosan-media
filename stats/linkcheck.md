@@ -1,6 +1,6 @@
-# リンクの確かめ（2026-11-27 16:21 JST・1958件・HPの全ページ）
+# リンクの確かめ（2026-11-28 09:27 JST・2057件・HPの全ページ）
 
-種類ごと（見た数／開けない数）：不動産 791／4・紅葉 21／2・イルミ 107／7・初もうで 24／0・おでかけ 684／12・ほか 331／60
+種類ごと（見た数／開けない数）：不動産 791／4・紅葉 21／2・イルミ 107／8・初もうで 24／0・おでかけ 684／11・ほか 430／73
 行き先の分からないアフィリエイトの入口 0本（押さないので見ていない）
 
 ## 開けない（直す）
@@ -9,7 +9,6 @@
 - ✗ [おでかけ] 梅小路公園 紅葉まつり ライトアップ（links/index.html）503 https://www.kyoto-ga.jp/event/umekouji/index.html
 - ✗ [おでかけ] アニタッチ OSAKA なんば（links/index.html）404 https://www.afpbb.com/articles/-/3648165
 - ✗ [おでかけ] 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
-- ✗ [おでかけ] おでかけ掲載新しいお店や、毎年のイベント。うさぎがご紹介します。ご相談はこちら（links/index.html）429 https://ig.me/m/fudousan_ai_si
 - ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/080c01f2.html）404 https://event.city.kobe.lg.jp/event/OSHoI3B50boJ3RrtuNtr
 - ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/14952151.html）404 https://www.wakayama-kanko.or.jp/events/detail_4480.html
 - ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/15d4d935.html）404 https://www.tsurumi-ryokuchi.jp/events/28742
@@ -31,18 +30,30 @@
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261120-874390.html）500 https://shopping.yahoo.co.jp/search?p=%E3%83%AB%E3%83%BB%E3%82%AF%E3%83%AB%E3%83%BC%E3%82%BC
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261120-cde6ad.html）500 https://shopping.yahoo.co.jp/search?p=%E3%83%A1%E3%82%AC%E3%83%8D%E3%81%AE%E6%84%9B%E7%9C%BC
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261120-f44bcf.html）500 https://shopping.yahoo.co.jp/search?p=%E3%82%AC%E3%82%B7%E3%83%A3%E3%83%9D%E3%83%B3%E3%83%90%E3%83%B3%E3%83%80%E3%82%A4
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-1eb313.html）500 https://shopping.yahoo.co.jp/search?p=EVERYTHING%20MINECRAFT
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-3c04b5.html）500 https://shopping.yahoo.co.jp/search?p=%E3%81%82%E3%81%A3%E3%81%A1%E3%81%93%E3%81%A3%E3%81%A1Journal
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-402856.html）500 https://shopping.yahoo.co.jp/search?p=%E3%81%97%E3%82%8D%E3%81%9F%E3%82%93
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-51753f.html）500 https://shopping.yahoo.co.jp/search?p=STRICT-G
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-55db8d.html）500 https://shopping.yahoo.co.jp/search?p=%E3%83%8F%E3%83%AA%E3%83%BC%E3%83%BB%E3%83%9D%E3%83%83%E3%82%BF%E3%83%BC%20%E3%83%9E%E3%83%9B%E3%82%A6%E3%83%89%E3%82%B3%E3%83%AD
-- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-942abe.html）500 https://shopping.yahoo.co.jp/search?p=%E3%81%A1%E3%81%84%E3%81%8B%E3%82%8F
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-5bbce4.html）500 https://shopping.yahoo.co.jp/search?p=ULTRAMAN%20STORE
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-6204ea.html）500 https://shopping.yahoo.co.jp/search?p=%E3%83%93%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%89%E3%83%AC%E3%83%BC%E3%83%99%E3%83%AB
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-699eb2.html）500 https://shopping.yahoo.co.jp/search?p=%E3%81%A1%E3%81%84%E3%81%8B%E3%82%8F
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-751477.html）500 https://shopping.yahoo.co.jp/search?p=%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%B3%E3%83%AC
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-7e5346.html）500 https://shopping.yahoo.co.jp/search?p=NHK%E3%82%AD%E3%83%A3%E3%83%A9%E3%82%AF%E3%82%BF%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-af411d.html）500 https://shopping.yahoo.co.jp/search?p=%E3%82%A8%E3%83%B4%E3%82%A1%E3%83%B3%E3%82%B2%E3%83%AA%E3%82%AA%E3%83%B3%E3%82%B9%E3%83%88%E3%82%A2%20%E3%82%AA%E3%82%AA%E3%82%B5%E3%82%AB
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-c2145c.html）500 https://shopping.yahoo.co.jp/search?p=NARUMIYA%20HAPPY%20PARK
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-c3f8d7.html）500 https://shopping.yahoo.co.jp/search?p=%E3%83%AC%E3%82%B4
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-d34382.html）500 https://shopping.yahoo.co.jp/search?p=%E3%82%B5%E3%83%B3%E3%83%AA%E3%82%AA%20%E3%83%8F%E3%83%AD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%82%B8
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261124-f8bea6.html）500 https://shopping.yahoo.co.jp/search?p=PUPPET%20SUNSUN%20STORE
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261127-1df98b.html）500 https://shopping.yahoo.co.jp/search?p=LUNA%20EARTH
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261127-270ab3.html）500 https://shopping.yahoo.co.jp/search?p=%E3%83%93%E3%83%83%E3%82%B0%E3%82%A6%E3%83%83%E3%83%89
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261127-4cfab5.html）500 https://shopping.yahoo.co.jp/search?p=BYREDO
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261128-e25fcd.html）500 https://shopping.yahoo.co.jp/search?p=%E3%83%A2%E3%83%AD%E3%82%BE%E3%83%95
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261201-1663c3.html）500 https://shopping.yahoo.co.jp/search?p=%E3%82%B5%E3%83%B3%E5%AE%9D%E7%9F%B3%20%E5%B9%B3%E6%88%90%E3%83%AC%E3%83%88%E3%83%AD%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97%20%E4%BA%AC%E9%83%BD%E3%83%9D%E3%83%AB%E3%82%BF
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261201-1c9f71.html）500 https://shopping.yahoo.co.jp/search?p=Pandora
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261201-331b0a.html）500 https://shopping.yahoo.co.jp/search?p=%E3%83%9E%E3%83%83%E3%82%AF%E3%83%AD%20%E3%83%AB%E3%82%AF%E3%82%A2%20%E3%82%A4%E3%83%BC%E3%83%AC
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261201-5fff3a.html）500 https://shopping.yahoo.co.jp/search?p=La%20Maison%20du%20R
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261201-81f72b.html）500 https://shopping.yahoo.co.jp/search?p=QUEEN%20SHOP
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261201-a4be00.html）500 https://shopping.yahoo.co.jp/search?p=%E3%82%AF%E3%82%A4%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261201-bb2cd8.html）500 https://shopping.yahoo.co.jp/search?p=%E3%83%8A%E3%83%A0%E3%82%B3
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261201-c0d570.html）500 https://shopping.yahoo.co.jp/search?p=%E3%82%AF%E3%83%AD%E3%83%8E%E3%82%B9
@@ -76,6 +87,7 @@
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20270101-09eaf5.html）500 https://shopping.yahoo.co.jp/search?p=%E3%83%A9%E3%82%B3%E3%83%AA%E3%83%BC%E3%83%8A%20%E3%82%AC%E3%83%AC%E3%83%BC%E3%82%B8%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97%20%E3%82%B8%E3%83%A5%E3%83%96%E3%83%AA%E3%83%AB%E3%82%BF%E3%83%B3
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20270101-edd538.html）500 https://shopping.yahoo.co.jp/search?p=KOMEHYO%E8%B2%B7%E5%8F%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20%E3%82%BD%E3%82%B3%E3%83%A9%E5%A1%9A%E5%8F%A3%E3%82%AF%E3%83%AD%E3%82%B9
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20270129-2b9293.html）500 https://shopping.yahoo.co.jp/search?p=%E3%81%8D%E3%81%BF%E3%81%8C%E6%AD%BB%E3%81%AC%E3%81%BE%E3%81%A7%E6%81%8B%E3%82%92%E3%81%97%E3%81%9F%E3%81%84%20POP%20UP%20STORE%20%E6%A2%85%E7%94%B0%E3%83%AD%E3%83%95%E3%83%88
+- ✗ [ほか] 公式の案内を見る ↗（links/shin/hatsuuri/393d10.html）TimeoutError https://isetan.mistore.jp/kyoto/shops/fukubukuro/index.html
 - ✗ [イルミ] 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
 - ✗ [イルミ] 宝厳院 紅葉ライトアップ（links/illumination-kyoto.html）URLError https://hogonin.jp/
 - ✗ [イルミ] HERBIS CHRISTMAS（links/illumination-muryo.html）URLError https://www.herbis.jp/
@@ -83,6 +95,7 @@
 - ✗ [イルミ] 大阪梅田ツインタワーズ・ノース クリスマスイルミネーション（links/illumination-muryo.html）URLError https://www.hhp.co.jp/
 - ✗ [イルミ] UMEDA MEETS HEART（links/illumination-muryo.html）URLError https://umedameetsheart.com/
 - ✗ [イルミ] 勝尾寺 錦秋の宵詣り2026（links/illumination-osaka.html）URLError https://katsuo-ji-temple.or.jp/autumn/
+- ✗ [イルミ] 百済寺 紅葉ライトアップ（links/illumination-shiga.html）URLError http://www.hyakusaiji.jp/topics/
 - ✗ [不動産] https://www.pref.shiga.lg.jp/file/attach（links/chika-kansai.html）404 https://www.pref.shiga.lg.jp/file/attachment/5598454.pdf
 - ✗ [不動産] 紀美野町（国勢調査 速報）紀美野町 人口 7,235人2025年10月1日の国勢（links/fudosan-list.html）404 https://www.pref.wakayama.lg.jp/prefg/020300/d00219934_d/fil/R7sokuho.pdf
 - ✗ [不動産] 奈良市奈良市 耐震改修の補助 上限50万円木造住宅の耐震改修に、工事費の1/3を（links/fudosan-list.html）404 https://www.pref.nara.lg.jp/documents/8512/20260727155339.pdf
