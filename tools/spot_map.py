@@ -50,7 +50,8 @@ def path(g, tol=0.0):
 def where(title, city, pref):
     """会場の経度・緯度。geo.json に無ければ市区町村の名前の位置。"""
     g = GEO.get(re.sub(r"\s+", "", title))
-    if g: return g[1], g[0], True
+    # 11/28 毎日の作り直しが止まった：geo.json の吉野山が [None, None]（位置が取れなかった）→ 位置の無い物は市区町村の位置にする
+    if g and g[0] is not None and g[1] is not None: return g[1], g[0], True
     for f in K["lab"]["features"]:
         pr = f["properties"]
         if pr.get("p") == pref and pr.get("n") and pr["n"] in city:
