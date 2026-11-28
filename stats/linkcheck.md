@@ -1,6 +1,6 @@
-# リンクの確かめ（2026-11-28 09:27 JST・2057件・HPの全ページ）
+# リンクの確かめ（2026-11-28 14:54 JST・2063件・HPの全ページ）
 
-種類ごと（見た数／開けない数）：不動産 791／4・紅葉 21／2・イルミ 107／8・初もうで 24／0・おでかけ 684／11・ほか 430／73
+種類ごと（見た数／開けない数）：不動産 791／4・紅葉 21／2・イルミ 107／7・初もうで 24／0・おでかけ 681／12・ほか 439／73
 行き先の分からないアフィリエイトの入口 0本（押さないので見ていない）
 
 ## 開けない（直す）
@@ -9,6 +9,7 @@
 - ✗ [おでかけ] 梅小路公園 紅葉まつり ライトアップ（links/index.html）503 https://www.kyoto-ga.jp/event/umekouji/index.html
 - ✗ [おでかけ] アニタッチ OSAKA なんば（links/index.html）404 https://www.afpbb.com/articles/-/3648165
 - ✗ [おでかけ] 高槻城公園 北エリア（links/index.html）404 https://www.city.takatsuki.osaka.jp/uploaded/attachment/51872.pdf
+- ✗ [おでかけ] おでかけ掲載新しいお店や、毎年のイベント。うさぎがご紹介します。ご相談はこちら（links/index.html）429 https://ig.me/m/fudousan_ai_si
 - ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/080c01f2.html）404 https://event.city.kobe.lg.jp/event/OSHoI3B50boJ3RrtuNtr
 - ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/14952151.html）404 https://www.wakayama-kanko.or.jp/events/detail_4480.html
 - ✗ [おでかけ] 公式ページで最新の情報を見る（links/o/15d4d935.html）404 https://www.tsurumi-ryokuchi.jp/events/28742
@@ -95,7 +96,6 @@
 - ✗ [イルミ] 大阪梅田ツインタワーズ・ノース クリスマスイルミネーション（links/illumination-muryo.html）URLError https://www.hhp.co.jp/
 - ✗ [イルミ] UMEDA MEETS HEART（links/illumination-muryo.html）URLError https://umedameetsheart.com/
 - ✗ [イルミ] 勝尾寺 錦秋の宵詣り2026（links/illumination-osaka.html）URLError https://katsuo-ji-temple.or.jp/autumn/
-- ✗ [イルミ] 百済寺 紅葉ライトアップ（links/illumination-shiga.html）URLError http://www.hyakusaiji.jp/topics/
 - ✗ [不動産] https://www.pref.shiga.lg.jp/file/attach（links/chika-kansai.html）404 https://www.pref.shiga.lg.jp/file/attachment/5598454.pdf
 - ✗ [不動産] 紀美野町（国勢調査 速報）紀美野町 人口 7,235人2025年10月1日の国勢（links/fudosan-list.html）404 https://www.pref.wakayama.lg.jp/prefg/020300/d00219934_d/fil/R7sokuho.pdf
 - ✗ [不動産] 奈良市奈良市 耐震改修の補助 上限50万円木造住宅の耐震改修に、工事費の1/3を（links/fudosan-list.html）404 https://www.pref.nara.lg.jp/documents/8512/20260727155339.pdf
