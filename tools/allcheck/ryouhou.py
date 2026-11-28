@@ -42,8 +42,6 @@ def kind(path):
 
 def feat(t):
     b = re.sub(r"<script.*?</script>|<style.*?</style>", "", t, flags=re.S)
-    ss = [t[m.start():m.start() + 90].replace("\n", " ") for m in re.finditer(r"<style(?![^>]*data-kyu-old)", t)]
-    if ss and "申し込" in t[:3000]: print("STYLE", (re.findall(r"<title>([^<]{0,30})", t) or [""])[0], ss[:4])
     txt = re.sub(r"<[^>]+>", " ", b)
     links = re.findall(r'href="(/[^"#?]*)', t)
     return {"字の量": len(re.sub(r"\s", "", txt)), "内リンク": len(links), "1件へのリンク": len([l for l in links if re.match(r"/(o|kaiten)/", l)]),
