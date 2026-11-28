@@ -1,1 +1,1 @@
-8 tools/outing_reel/ai-art/cpu/fix3/req-tofukuji1.json tools/outing_reel/ai-art/cpu/fix3/req-rikugien1.json #5
+21 tools/outing_reel/ai-art/cpu/req-eikando1129.json tools/outing_reel/ai-art/cpu/req-showa1129.json #1129
