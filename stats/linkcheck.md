@@ -1,9 +1,10 @@
-# リンクの確かめ（2026-11-28 14:54 JST・2063件・HPの全ページ）
+# リンクの確かめ（2026-11-28 22:18 JST・2111件・HPの全ページ）
 
-種類ごと（見た数／開けない数）：不動産 791／4・紅葉 21／2・イルミ 107／7・初もうで 24／0・おでかけ 681／12・ほか 439／73
+種類ごと（見た数／開けない数）：不動産 792／4・紅葉 21／2・イルミ 107／8・初もうで 28／3・おでかけ 681／13・ほか 482／75
 行き先の分からないアフィリエイトの入口 0本（押さないので見ていない）
 
 ## 開けない（直す）
+- ✗ [おでかけ] NHK日曜美術館50年展（links/index.html）URLError https://nichibiten50.jp/overview.html
 - ✗ [おでかけ] 魯山人の宇宙 魂を刳る美がほしい（links/index.html）TimeoutError https://www.mistore.jp/store/kyoto/museum/event_list/event21.html
 - ✗ [おでかけ] 大阪ステーションシティ×ドラマチック謎解きゲーム（links/index.html）URLError https://osakastationcity-nazo.com/
 - ✗ [おでかけ] 梅小路公園 紅葉まつり ライトアップ（links/index.html）503 https://www.kyoto-ga.jp/event/umekouji/index.html
@@ -77,6 +78,7 @@
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261209-d7745a.html）500 https://shopping.yahoo.co.jp/search?p=IGIN%20APPLE%20HOLIDAY
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261210-07842f.html）500 https://shopping.yahoo.co.jp/search?p=%E4%BC%8A%E8%97%A4%E6%BD%A4%E4%BA%8C%20POP%20UP%20STORE%20%E6%AE%8B%E5%8F%AB%20%E5%AE%88%E5%8F%A3
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261210-75d772.html）500 https://shopping.yahoo.co.jp/search?p=%E4%BC%8A%E8%97%A4%E6%BD%A4%E4%BA%8C%20POP%20UP%20STORE%20%E6%AE%8B%E5%8F%AB
+- ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261211-5ab1f2.html）500 https://shopping.yahoo.co.jp/search?p=%E3%82%AB%E3%83%8A%E3%83%80%E3%82%B0%E3%83%BC%E3%82%B9
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261211-8a01d4.html）500 https://shopping.yahoo.co.jp/search?p=%E6%9A%AE%E3%82%89%E3%81%97%E3%81%AE%E9%9B%91%E8%B2%A8%E5%BA%97%20LEAF
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261216-5ffe71.html）500 https://shopping.yahoo.co.jp/search?p=V.A.
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20261216-8576dd.html）500 https://shopping.yahoo.co.jp/search?p=%E3%83%AA%E3%82%B5%E3%81%A8%E3%82%AC%E3%82%B9%E3%83%91%E3%83%BC%E3%83%AB%20%E6%9C%9F%E9%96%93%E9%99%90%E5%AE%9A%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97%20%E7%A5%9E%E6%88%B8%E9%98%AA%E6%80%A5
@@ -89,8 +91,10 @@
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20270101-edd538.html）500 https://shopping.yahoo.co.jp/search?p=KOMEHYO%E8%B2%B7%E5%8F%96%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%20%E3%82%BD%E3%82%B3%E3%83%A9%E5%A1%9A%E5%8F%A3%E3%82%AF%E3%83%AD%E3%82%B9
 - ✗ [ほか] Yahoo!で見る ↗（links/kaiten/20270129-2b9293.html）500 https://shopping.yahoo.co.jp/search?p=%E3%81%8D%E3%81%BF%E3%81%8C%E6%AD%BB%E3%81%AC%E3%81%BE%E3%81%A7%E6%81%8B%E3%82%92%E3%81%97%E3%81%9F%E3%81%84%20POP%20UP%20STORE%20%E6%A2%85%E7%94%B0%E3%83%AD%E3%83%95%E3%83%88
 - ✗ [ほか] 公式の案内を見る ↗（links/shin/hatsuuri/393d10.html）TimeoutError https://isetan.mistore.jp/kyoto/shops/fukubukuro/index.html
+- ✗ [ほか] 公式の案内を見る ↗（links/shin/toshikoshi/d13a15.html）URLError https://suijo-bus.osaka/cruise/cruise-637/
 - ✗ [イルミ] 光のページェント TWINKLE JOYO（links/illumination-kyoto.html）UnicodeEncodeError http://城陽市観光協会.jp/
 - ✗ [イルミ] 宝厳院 紅葉ライトアップ（links/illumination-kyoto.html）URLError https://hogonin.jp/
+- ✗ [イルミ] 醍醐寺 秋期夜間拝観（links/illumination-kyoto.html）URLError https://www.daigoji.or.jp/event/detail7.html
 - ✗ [イルミ] HERBIS CHRISTMAS（links/illumination-muryo.html）URLError https://www.herbis.jp/
 - ✗ [イルミ] HEP FIVE クリスマスイルミネーション（links/illumination-muryo.html）URLError https://www.hepfive.jp/
 - ✗ [イルミ] 大阪梅田ツインタワーズ・ノース クリスマスイルミネーション（links/illumination-muryo.html）URLError https://www.hhp.co.jp/
@@ -100,6 +104,9 @@
 - ✗ [不動産] 紀美野町（国勢調査 速報）紀美野町 人口 7,235人2025年10月1日の国勢（links/fudosan-list.html）404 https://www.pref.wakayama.lg.jp/prefg/020300/d00219934_d/fil/R7sokuho.pdf
 - ✗ [不動産] 奈良市奈良市 耐震改修の補助 上限50万円木造住宅の耐震改修に、工事費の1/3を（links/fudosan-list.html）404 https://www.pref.nara.lg.jp/documents/8512/20260727155339.pdf
 - ✗ [不動産] 大阪府 推計人口池田市 1年で+424人、住宅地の地価+2.7%大阪府の最新の推（links/machi/osaka-35.html）404 https://www.pref.osaka.lg.jp/documents/12055/jk20260901.pdf
+- ✗ [初もうで] 例年の案内八坂神社京都市東山区時間24時間お参りできます。をけら詣り 12/31（links/hatsumode.html）URLError https://www.yasaka-jinja.or.jp/event/shougatsu/
+- ✗ [初もうで] 例年の案内石清水八幡宮八幡市時間12/31 6〜23時・元日0〜20時30分 開（links/hatsumode.html）URLError https://iwashimizu.or.jp/news/r6_hatumoude/
+- ✗ [初もうで] 例年の案内清荒神清澄寺宝塚市時間1/1〜3 10時から大般若経の法要。三が日で約（links/hatsumode.html）URLError https://www.kiyoshikojin.or.jp/event/shinnenshukuto/
 - ✗ [紅葉] 見頃の時期です毘沙門堂京都市山科区見頃11月中旬〜12月上旬→（links/koyo-kyoto.html）404 https://www.kyoto-kankou.or.jp/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6Mzg1NzAsInB1ciI6ImJsb2JfaWQifX0=--397e7cc41940b4193b458ec691899f40a63f5cb5/%E7%B4%85%E8%91%89%E3%81%A0%E3%82%88%E3%82%8A.pdf
 - ✗ [紅葉] 見頃の時期です百済寺（湖東三山）東近江市見頃11月上旬〜12月上旬→（links/koyo-shiga.html）URLError https://www.hyakusaiji.jp/
 
