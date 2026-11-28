@@ -1,8 +1,14 @@
-# 関西と関東の並べ（2026-11-28 02:48UTC）
+# 関西と関東の並べ（2026-11-28 04:56UTC）
 
 
-**違い 2 件**
+**違い 8 件**
 - × 「kaitai」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style2／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style0
+- × 関西 https://kansai.townnote.app/kawaru が 404
+- × 関西 https://kansai.townnote.app/kawaru/cf7fe9 が 404
+- × 関西 https://kansai.townnote.app/kawaru/51ba8f が 404
+- × 関西 https://kansai.townnote.app/kawaru/77e6f7 が 404
+- × 関西 https://kansai.townnote.app/kawaru/3765e9 が 404
+- × 関西 https://kansai.townnote.app/kawaru/a511fd が 404
 - × 「固定 /kaitai」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style2／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style0
 
 ## 1. ページの種類（sitemap-all）
@@ -31,6 +37,8 @@
 - kaitai-*：関西 40・関東 44
 - kaiten：関西 1・関東 1
 - kaiten/：関西 250・関東 342
+- kawaru：関西 1・関東 1
+- kawaru/：関西 5・関東 5
 - koyo：関西 1・関東 1
 - koyo-*：関西 6・関東 7
 - machi/：関西 205・関東 329
