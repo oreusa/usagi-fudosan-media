@@ -51,7 +51,7 @@ def feat(t):
             "パンくず": bool(re.search(r"BreadcrumbList|class=\"[^\"]*(crumb|pan)", t)), "数える": bool(re.search(r"data-k=|/c\?|sendBeacon", t)),
             "noindex": bool(re.search(r'name="robots" content="[^"]*noindex', t)),
             # 11/28 owner「毎回それあるな」：関東の開店閉店だけ前の作りのままだった（字や数は同じで見逃した）。使う土台の部品と独自の style の数をくらべる
-            "作り": " ".join(sorted(set(re.findall(r'(?:href|src)="/shin/([a-z0-9]+\.(?:css|js))', t)))) + f" style{len(re.findall(r'<style', t))}"}
+            "作り": " ".join(sorted(set(re.findall(r'(?:href|src)="/shin/([a-z0-9]+\.(?:css|js))', t)))) + f" style{len(re.findall(r'<style(?![^>]*data-kyu-old)', t))}"}
 
 
 def mark(a, b, k):
