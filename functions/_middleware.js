@@ -14,7 +14,7 @@ export async function onRequest(ctx) {
     return look(await ctx.env.ASSETS.fetch(new Request(u.toString(), request)));
   }
   // 11/20 owner「月が決めていいよ」→ 街のページ（/machi/<id>）は新しい形（links/shin/machi/<id>.html・tools/shin/machi2.py）。無ければ前のページ
-  if ((request.method === "GET" || request.method === "HEAD") && /^\/((machi|jikka)\/[a-z]+-\d+|kaitai(-[a-z]+)?|o\/[0-9a-f]+|kaiten\/\d{8}-[0-9a-f]+|(hatsuuri|nenmatsu|christmas|toshikoshi|hatsumode)\/[0-9a-f]{6}|kaimawari)$/.test(p)) {
+  if ((request.method === "GET" || request.method === "HEAD") && /^\/((machi|jikka)\/[a-z]+-\d+|kaitai(-[a-z]+)?|o\/[0-9a-f]+|kaiten\/\d{8}-[0-9a-f]+|(hatsuuri|nenmatsu|christmas|toshikoshi|hatsumode|kawaru)\/[0-9a-f]{6}|kaimawari)$/.test(p)) {
     const u = new URL(request.url); u.pathname = "/shin" + p;
     const r2 = await ctx.env.ASSETS.fetch(new Request(u.toString(), request));
     if (r2.ok) return look(r2);
@@ -39,7 +39,7 @@ const PF = ["osaka", "kyoto", "hyogo", "nara", "shiga", "wakayama"];
 const SHIN = new Set([
   ...PF.map(x => "/odekake-" + x), "/illumination", "/illumination-muryo", ...PF.map(x => "/illumination-" + x),
   "/koyo", ...PF.map(x => "/koyo-" + x),
-  "/hatsumode", "/hatsuuri", "/nenmatsu", "/christmas", "/toshikoshi", "/tomari", "/ima", "/kaiten", "/ranking", "/uru", "/ikura", "/furusato", "/nesage", "/chika-kansai", "/chika-osaka", "/sagasu", "/jikka", "/jikka/shindan", "/akiya-ranking", "/moushikomi", "/koe", "/otoku", "/gyosha", "/gyosha-jikka", "/gyosha-kyoyu", "/gyosha-saikenchiku", "/gyosha-shakuchi", "/gyosha-urenokori",
+  "/hatsumode", "/hatsuuri", "/nenmatsu", "/christmas", "/toshikoshi", "/kawaru", "/tomari", "/ima", "/kaiten", "/ranking", "/uru", "/ikura", "/furusato", "/nesage", "/chika-kansai", "/chika-osaka", "/sagasu", "/jikka", "/jikka/shindan", "/akiya-ranking", "/moushikomi", "/koe", "/otoku", "/gyosha", "/gyosha-jikka", "/gyosha-kyoyu", "/gyosha-saikenchiku", "/gyosha-shakuchi", "/gyosha-urenokori",
 ]);
 // 新しい土台のページ（functions/*.js が /shin を出す所）にはかぶせない
 const NOSKIN = new Set(["", "/odekake", "/okaimono", "/fudosan-list", ...SHIN]);
