@@ -1,13 +1,8 @@
-# 関西と関東の並べ（2026-11-28 19:38UTC）
+# 関西と関東の並べ（2026-11-28 02:48UTC）
 
 
-**違い 7 件**
-- × 「christmas/」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js skin.css skin.js style0
-- × 「hatsumode/」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js skin.css skin.js style0
-- × 「hatsuuri/」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js skin.css skin.js style0
+**違い 2 件**
 - × 「kaitai」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style2／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style0
-- × 「nenmatsu/」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js skin.css skin.js style0
-- × 「toshikoshi/」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js skin.css skin.js style0
 - × 「固定 /kaitai」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style2／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style0
 
 ## 1. ページの種類（sitemap-all）
@@ -35,7 +30,7 @@
 - kaitai：関西 1・関東 1
 - kaitai-*：関西 40・関東 44
 - kaiten：関西 1・関東 1
-- kaiten/：関西 249・関東 340
+- kaiten/：関西 250・関東 342
 - koyo：関西 1・関東 1
 - koyo-*：関西 6・関東 7
 - machi/：関西 205・関東 329
@@ -54,7 +49,7 @@
 - tomari：関西 1・関東 1
 - top：関西 1・関東 1
 - toshikoshi：関西 1・関東 1
-- toshikoshi/：関西 14・関東 12
+- toshikoshi/：関西 15・関東 14
 - uru：関西 1・関東 1
 
 ## 2. 同じ種類のページの中身（それぞれ新しい方から3枚の平均）
@@ -62,12 +57,12 @@
 - akiya-*：同じ
 - chika-*：同じ
 - christmas：同じ
-- × christmas/：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js skin.css skin.js style0（例 https://kansai.townnote.app/christmas/cb3391 ／ https://kanto.townnote.app/christmas/21b7bf）
+- christmas/：同じ
 - fudosan-*：同じ
 - hatsumode：同じ
-- × hatsumode/：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js skin.css skin.js style0（例 https://kansai.townnote.app/hatsumode/c370c8 ／ https://kanto.townnote.app/hatsumode/4481e6）
+- hatsumode/：同じ
 - hatsuuri：同じ
-- × hatsuuri/：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js skin.css skin.js style0（例 https://kansai.townnote.app/hatsuuri/c2bb4f ／ https://kanto.townnote.app/hatsuuri/1f1fc3）
+- hatsuuri/：同じ
 - ikura：同じ
 - illumination：同じ
 - illumination-*：同じ
@@ -82,15 +77,15 @@
 - koyo-*：同じ
 - machi/：同じ
 - nenmatsu：同じ
-- × nenmatsu/：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js skin.css skin.js style0（例 https://kansai.townnote.app/nenmatsu/b6b730 ／ https://kanto.townnote.app/nenmatsu/29a008）
+- nenmatsu/：同じ
 - o/：同じ
 - odekake：同じ
 - odekake-*：同じ
-- ranking：同じ（量だけ違う：字の量 関西 1911／関東 688（関西だけ駅の乗降の数字の欄がある（関東は国の駅の数字が無い）））
+- ranking：同じ（量だけ違う：字の量 関西 2000／関東 688（関西だけ駅の乗降の数字の欄がある（関東は国の駅の数字が無い）））
 - sagasu：同じ
 - tomari：同じ
 - toshikoshi：同じ
-- × toshikoshi/：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js skin.css skin.js style0（例 https://kansai.townnote.app/toshikoshi/49f9bb ／ https://kanto.townnote.app/toshikoshi/d9a6cb）
+- toshikoshi/：同じ
 - uru：同じ
 - 固定 /：同じ
 - 固定 /odekake：同じ
@@ -119,7 +114,7 @@
 
 ## 4. 投稿の予定（usagi schedule/D.json ・ akari schedule/D.json）
 
-- 2026-11-28：まだ（関西 なし・関東 あり）
+- 2026-11-28：関西 {'本数': 14, 'HPへのリンク': 14, '1件ページへ': 8}／関東 {'本数': 15, 'HPへのリンク': 23, '1件ページへ': 15}
 - 2026-11-29：まだ（関西 なし・関東 なし）
 
 ## 5. その日の動画のファイル
