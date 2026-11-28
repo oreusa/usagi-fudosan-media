@@ -1,14 +1,12 @@
-# 関西と関東の並べ（2026-11-28 04:56UTC）
+# 関西と関東の並べ（2026-11-28 08:48UTC）
 
 
-**違い 8 件**
+**違い 6 件**
 - × 「kaitai」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style2／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style0
 - × 関西 https://kansai.townnote.app/kawaru が 404
-- × 関西 https://kansai.townnote.app/kawaru/cf7fe9 が 404
-- × 関西 https://kansai.townnote.app/kawaru/51ba8f が 404
-- × 関西 https://kansai.townnote.app/kawaru/77e6f7 が 404
-- × 関西 https://kansai.townnote.app/kawaru/3765e9 が 404
-- × 関西 https://kansai.townnote.app/kawaru/a511fd が 404
+- × 関西 https://kansai.townnote.app/kawaru/605d5c が 404
+- × 関西 https://kansai.townnote.app/kawaru/dda10c が 404
+- × 関西 https://kansai.townnote.app/kawaru/a9aeb4 が 404
 - × 「固定 /kaitai」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style2／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style0
 
 ## 1. ページの種類（sitemap-all）
@@ -16,16 +14,16 @@
 - akiya-*：関西 1・関東 1
 - chika-*：関西 2・関東 2
 - christmas：関西 1・関東 1
-- christmas/：関西 19・関東 18
+- christmas/：関西 23・関東 22
 - fudosan-*：関西 1・関東 1
 - furusato：関西 0・関東 1（ふるさと納税は関東が作り、関西からはリンク）
 - furusato-*：関西 0・関東 2（ふるさと納税は関東が作り、関西からはリンク）
 - gyosha：関西 1・関東 0（関西だけの業者の窓口（11/23 決め））
 - gyosha-*：関西 5・関東 0（関西だけの業者の窓口（11/23 決め））
 - hatsumode：関西 1・関東 1
-- hatsumode/：関西 24・関東 14
+- hatsumode/：関西 28・関東 19
 - hatsuuri：関西 1・関東 1
-- hatsuuri/：関西 15・関東 15
+- hatsuuri/：関西 17・関東 20
 - ikura：関西 1・関東 1
 - illumination：関西 1・関東 1
 - illumination-*：関西 7・関東 8
@@ -36,16 +34,16 @@
 - kaitai：関西 1・関東 1
 - kaitai-*：関西 40・関東 44
 - kaiten：関西 1・関東 1
-- kaiten/：関西 250・関東 342
+- kaiten/：関西 250・関東 343
 - kawaru：関西 1・関東 1
-- kawaru/：関西 5・関東 5
+- kawaru/：関西 17・関東 20
 - koyo：関西 1・関東 1
 - koyo-*：関西 6・関東 7
 - machi/：関西 205・関東 329
 - nenmatsu：関西 1・関東 1
-- nenmatsu/：関西 31・関東 35
+- nenmatsu/：関西 39・関東 46
 - nesage：関西 0・関東 1（おかいもの（関東））
-- o/：関西 266・関東 288
+- o/：関西 266・関東 291
 - odekake：関西 1・関東 1
 - odekake-*：関西 6・関東 7
 - okaimono：関西 0・関東 1（おかいものは関東が作り、関西からはリンク）
@@ -57,7 +55,7 @@
 - tomari：関西 1・関東 1
 - top：関西 1・関東 1
 - toshikoshi：関西 1・関東 1
-- toshikoshi/：関西 15・関東 14
+- toshikoshi/：関西 23・関東 16
 - uru：関西 1・関東 1
 
 ## 2. 同じ種類のページの中身（それぞれ新しい方から3枚の平均）
@@ -128,4 +126,4 @@
 ## 5. その日の動画のファイル
 
 - 2026-11-28：関西 あり・関東 あり
-- 2026-11-29：関西 なし・関東 なし
+- 2026-11-29：関西 あり・関東 なし
