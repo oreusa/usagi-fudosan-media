@@ -24,6 +24,8 @@ CITY = {
     "京都市": ("kyoto", "京都府", 60, "1/2"), "吹田市": ("suita", "大阪府", 50, "4/5"), "西宮市": ("nishinomiya", "兵庫県", None, None)
 }
 END = ("受付停止", "受付終了")
+# 11/28 夜の見直し：順位は「その市のだれでも使える主な制度」の上限。地区だけの別の制度は順位に入れず、市の行に小さく併記（公式で月が確かめた物だけ）
+EXTRA = {"大阪市": ("決まった地区（重点対策地区）の狭い道に面した古い木造は、別の制度で戸建上限170万円", "https://www.city.osaka.lg.jp/toshiseibi/page/0000531835.html")}
 
 
 def load():
@@ -186,12 +188,12 @@ def ranking(base, have, J, J_DATE):
     for i, (cap, c, slug, pref, ratio, st) in enumerate(items, 1):
         if cap != prev: rank = i; prev = cap
         tr += (f'<tr data-p="{pref}"><th>{rank}位</th><td><a href="/kaitai-{slug}" data-k="補助ランキング｜{E(c)}">{E(c)}</a><small style="display:block;font-size:11px;color:#8A7F76">{pref}'
-               + (f'・{st}' if st in END else "") + f'</small></td><td><b>{cap}万円</b>' + (f'<small style="display:block;font-size:11px;color:#8A7F76">費用の{ratio}まで</small>' if ratio else "") + '</td></tr>')
+               + (f'・{st}' if st in END else "") + '</small>' + (f'<small style="display:block;font-size:11px;color:#8A7F76">{E(EXTRA[c][0])}（<a href="{EXTRA[c][1]}" target="_blank" rel="noopener">公式</a>）</small>' if c in EXTRA else '') + f'</td><td><b>{cap}万円</b>' + (f'<small style="display:block;font-size:11px;color:#8A7F76">費用の{ratio}まで</small>' if ratio else "") + '</td></tr>')
     top = items[0]
     sec = (f'<section id="rank" class="ps" style="--c:#4F7BA8"><h2>解体の補助金 上限ランキング（関西 {len(items)}市）</h2><p class="rk-sub">市の公式ページで確かめた上限額・高い順</p>'
            '<div class="kt-f"><button type="button" class="on" data-p="">すべて</button>' + "".join(f'<button type="button" data-p="{q}">{q[:-1]}</button>' for q in dict.fromkeys(x[3] for x in items)) + '</div>'
            '<div class="kt-w"><table class="kt"><thead><tr><th>順位</th><th>市</th><th>上限</th></tr></thead><tbody>' + tr + '</tbody></table></div>'
-           '<p class="kt-n">上限は、いちばん多く出る場合の額です。建った年・空き家の期間・所得・場所などの条件で変わります。市の名前を押すと、条件と受付の状況、公式ページへ進めます。'
+           '<p class="kt-n">順位は、その市のだれでも使える主な解体の補助の上限で並べています（決まった地区だけの別の制度は順位に入れず、市の行に書いています）。上限は、いちばん多く出る場合の額です。建った年・空き家の期間・所得・場所などの条件で変わります。市の名前を押すと、条件と受付の状況、公式ページへ進めます。'
            '載っていない市は、公式ページで確かめられた順に足しています。</p>'
            + (lambda nc: ('<p class="kt-n">上限が1つの額で決まらない市（広さなどで変わる）：' + "・".join(f'<a href="/kaitai-{CITY[c][0]}" data-k="補助ランキング｜{E(c)}">{E(c)}</a>' for c in nc) + '。額は市のページでご確認ください。</p>') if nc else "")([c for c in have if not CITY[c][2]])
            + '</section>')
