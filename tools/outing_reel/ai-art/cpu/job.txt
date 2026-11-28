@@ -1,1 +1,1 @@
-4 tools/outing_reel/ai-art/cpu/req-showa1129k.json #1129k
+4 tools/outing_reel/ai-art/cpu/req-showa1129k.json
