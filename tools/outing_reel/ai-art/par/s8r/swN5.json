@@ -1,0 +1,30 @@
+[
+ {
+  "img": "/home/user/usagi-fudosan-media/shots/ai-art/showa1129r/05-yukitsuri-c.jpg",
+  "dep": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/map/dd/sw-05.png",
+  "m": {
+   "z0": 0,
+   "z1": 0.05,
+   "cx": 0.5,
+   "cy": 0.5,
+   "b0": 1.06,
+   "b1": 1.06,
+   "wind": 0.0025,
+   "st": 0.3,
+   "shk": 0.002,
+   "spk": 0.4,
+   "lf": 0.3,
+   "bok": 0,
+   "flk": 0,
+   "py0": 0.015,
+   "py1": -0.015,
+   "cly": 0.35,
+   "sd": 8.5
+  },
+  "tr": "fade",
+  "ease": "lin",
+  "w": 1.0,
+  "up": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/up/showa1129r-05-yukitsuri-c.png",
+  "dur": 6.41
+ }
+]
