@@ -1,8 +1,7 @@
-# 関西と関東の並べ（2026-11-28 12:22UTC）
+# 関西と関東の並べ（2026-11-28 12:43UTC）
 
 
-**違い 1 件**
-- × 「固定 /moushikomi」のページ：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style2
+**違い 0 件**
 
 ## 1. ページの種類（sitemap-all）
 
@@ -50,7 +49,7 @@
 - tomari：関西 1・関東 1
 - top：関西 1・関東 1
 - toshikoshi：関西 1・関東 1
-- toshikoshi/：関西 25・関東 17
+- toshikoshi/：関西 25・関東 18
 - uru：関西 1・関東 1
 
 ## 2. 同じ種類のページの中身（それぞれ新しい方から3枚の平均）
@@ -97,7 +96,7 @@
 - 固定 /illumination：同じ
 - 固定 /jikka：同じ
 - 固定 /kaitai：同じ
-- × 固定 /moushikomi：作り 関西 bx.js doc.js ip.js look.css look.js shin.css shin.js style0／関東 bx.js doc.js ip.js look.css look.js shin.css shin.js style2（例 https://kansai.townnote.app/moushikomi ／ https://kanto.townnote.app/moushikomi）
+- 固定 /moushikomi：同じ
 - 固定 /sagasu：同じ
 - 固定 /uru：同じ
 - 固定 /tomari：同じ
