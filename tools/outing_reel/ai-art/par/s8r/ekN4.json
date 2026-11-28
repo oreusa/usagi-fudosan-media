@@ -1,0 +1,33 @@
+[
+ {
+  "img": "/home/user/usagi-fudosan-media/shots/ai-art/eikando1129/04-benten-a.jpg",
+  "dep": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/map/dd/ek-04.png",
+  "m": {
+   "z0": 0,
+   "z1": 0.06,
+   "cx": 0.6,
+   "cy": 0.5,
+   "b0": 1.06,
+   "b1": 1.06,
+   "wind": 0.0025,
+   "st": 0.3,
+   "shk": 0.002,
+   "spk": 0.4,
+   "lf": 0.3,
+   "bok": 0,
+   "flk": 0,
+   "sd": 6.8,
+   "fl": 0.014,
+   "fx": 0.7,
+   "fy": 0.59,
+   "fk": 1,
+   "wy": 0
+  },
+  "tr": "fade",
+  "ease": "lin",
+  "w": 1.0,
+  "up": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/up/eikando1129-04-benten-a.png",
+  "mask": "/home/user/usagi-fudosan-media/tools/outing_reel/ai-art/par/mask/ek-04.png",
+  "dur": 6.85
+ }
+]

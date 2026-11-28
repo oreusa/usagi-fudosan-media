@@ -1,0 +1,32 @@
+{
+ "models": [
+  "@cf/black-forest-labs/flux-2-klein-4b"
+ ],
+ "style": "Photorealistic travel photograph, shot on a full-frame mirrorless camera, natural true-to-life colors, realistic soft light, high detail, vertical composition. No people, no text, no letters, no logos, no signs with writing",
+ "items": [
+  {
+   "name": "04-kasa2-a",
+   "prompt": "Several large red Japanese paper umbrellas (wagasa) standing upright and open on tall bamboo poles in a Japanese garden at night, arranged in a row beside a pond, softly lit from below so the red paper glows, illuminated red maples behind, deep blue sky",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "04-kasa2-b",
+   "prompt": "Several large red Japanese paper umbrellas (wagasa) standing upright and open on tall bamboo poles in a Japanese garden at night, arranged in a row beside a pond, softly lit from below so the red paper glows, illuminated red maples behind, deep blue sky Wide view, the umbrellas reflected in the still pond.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "04-kasa2-c",
+   "prompt": "Several large red Japanese paper umbrellas (wagasa) standing upright and open on tall bamboo poles in a Japanese garden at night, arranged in a row beside a pond, softly lit from below so the red paper glows, illuminated red maples behind, deep blue sky Low viewpoint looking up through the glowing umbrellas at the maples.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "04-kasa2-d",
+   "prompt": "Several large red Japanese paper umbrellas (wagasa) standing upright and open on tall bamboo poles in a Japanese garden at night, arranged in a row beside a pond, softly lit from below so the red paper glows, illuminated red maples behind, deep blue sky Calm, elegant, natural colors.",
+   "W": 1088,
+   "H": 1680
+  }
+ ]
+}

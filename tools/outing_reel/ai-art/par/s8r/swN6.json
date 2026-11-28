@@ -1,0 +1,27 @@
+[
+ {
+  "img": "/home/user/usagi-fudosan-media/shots/ai-art/showa1129r/06-bonsai-c.jpg",
+  "dep": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/map/dd/sw-06.png",
+  "m": {
+   "z0": 0,
+   "z1": 0.05,
+   "cx": 0.5,
+   "cy": 0.6,
+   "b0": 1.06,
+   "b1": 1.06,
+   "wind": 0.0025,
+   "st": 0.3,
+   "shk": 0.002,
+   "spk": 0.4,
+   "lf": 0.3,
+   "bok": 0,
+   "flk": 0,
+   "sd": 10.2
+  },
+  "tr": "fade",
+  "ease": "lin",
+  "w": 1.0,
+  "up": "/tmp/claude-0/-home-user/26a03ff5-4665-5ecb-80de-75bf562d97ce/scratchpad/up/showa1129r-06-bonsai-c.png",
+  "dur": 5.48
+ }
+]

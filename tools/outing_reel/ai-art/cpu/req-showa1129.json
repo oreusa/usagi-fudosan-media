@@ -1,0 +1,200 @@
+{
+ "models": [
+  "@cf/black-forest-labs/flux-2-klein-4b"
+ ],
+ "style": "Photorealistic travel photograph, shot on a full-frame mirrorless camera, natural true-to-life colors, realistic soft light, high detail, vertical composition. No people, no text, no letters, no logos, no signs with writing",
+ "items": [
+  {
+   "name": "00-cover-a",
+   "prompt": "Night at a large Japanese garden in Tokyo in late autumn: a wide calm pond reflecting illuminated red maples and a traditional wooden teahouse, deep blue night sky",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "00-cover-b",
+   "prompt": "Night at a large Japanese garden in Tokyo in late autumn: a wide calm pond reflecting illuminated red maples and a traditional wooden teahouse, deep blue night sky Wide-angle view, deep layered composition with dark foreground branches, middle ground and distant background.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "00-cover-c",
+   "prompt": "Night at a large Japanese garden in Tokyo in late autumn: a wide calm pond reflecting illuminated red maples and a traditional wooden teahouse, deep blue night sky Calm windless night, mirror-like still water, deep blue-violet twilight sky.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "00-cover-d",
+   "prompt": "Night at a large Japanese garden in Tokyo in late autumn: a wide calm pond reflecting illuminated red maples and a traditional wooden teahouse, deep blue night sky Slightly lower viewpoint, gentle glow around the lights, rich but natural colors.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "01-pond-a",
+   "prompt": "A Japanese strolling garden pond at night, illuminated red and orange maples and a traditional wooden pavilion on the far shore reflected perfectly in the dark still water, deep blue sky, Tokyo",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "01-pond-b",
+   "prompt": "A Japanese strolling garden pond at night, illuminated red and orange maples and a traditional wooden pavilion on the far shore reflected perfectly in the dark still water, deep blue sky, Tokyo Wide-angle view, deep layered composition with dark foreground branches, middle ground and distant background.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "01-pond-c",
+   "prompt": "A Japanese strolling garden pond at night, illuminated red and orange maples and a traditional wooden pavilion on the far shore reflected perfectly in the dark still water, deep blue sky, Tokyo Calm windless night, mirror-like still water, deep blue-violet twilight sky.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "01-pond-d",
+   "prompt": "A Japanese strolling garden pond at night, illuminated red and orange maples and a traditional wooden pavilion on the far shore reflected perfectly in the dark still water, deep blue sky, Tokyo Slightly lower viewpoint, gentle glow around the lights, rich but natural colors.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "02-canal-a",
+   "prompt": "A long straight formal canal with fountains in a big park at night, two rows of illuminated golden-yellow ginkgo trees on both sides, the trees reflected in the water, symmetrical one-point perspective, Tokyo",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "02-canal-b",
+   "prompt": "A long straight formal canal with fountains in a big park at night, two rows of illuminated golden-yellow ginkgo trees on both sides, the trees reflected in the water, symmetrical one-point perspective, Tokyo Wide-angle view, deep layered composition with dark foreground branches, middle ground and distant background.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "02-canal-c",
+   "prompt": "A long straight formal canal with fountains in a big park at night, two rows of illuminated golden-yellow ginkgo trees on both sides, the trees reflected in the water, symmetrical one-point perspective, Tokyo Calm windless night, mirror-like still water, deep blue-violet twilight sky.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "02-canal-d",
+   "prompt": "A long straight formal canal with fountains in a big park at night, two rows of illuminated golden-yellow ginkgo trees on both sides, the trees reflected in the water, symmetrical one-point perspective, Tokyo Slightly lower viewpoint, gentle glow around the lights, rich but natural colors.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "03-ginkgo-a",
+   "prompt": "A long straight walking path under a tunnel of huge illuminated ginkgo trees at night, warm golden yellow leaves overhead, yellow leaves covering the ground, Tokyo park",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "03-ginkgo-b",
+   "prompt": "A long straight walking path under a tunnel of huge illuminated ginkgo trees at night, warm golden yellow leaves overhead, yellow leaves covering the ground, Tokyo park Wide-angle view, deep layered composition with dark foreground branches, middle ground and distant background.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "03-ginkgo-c",
+   "prompt": "A long straight walking path under a tunnel of huge illuminated ginkgo trees at night, warm golden yellow leaves overhead, yellow leaves covering the ground, Tokyo park Calm windless night, mirror-like still water, deep blue-violet twilight sky.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "03-ginkgo-d",
+   "prompt": "A long straight walking path under a tunnel of huge illuminated ginkgo trees at night, warm golden yellow leaves overhead, yellow leaves covering the ground, Tokyo park Slightly lower viewpoint, gentle glow around the lights, rich but natural colors.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "04-kasa-a",
+   "prompt": "Large red Japanese paper umbrellas (wagasa) set up in a Japanese garden at night, softly lit from below, illuminated red maples behind them",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "04-kasa-b",
+   "prompt": "Large red Japanese paper umbrellas (wagasa) set up in a Japanese garden at night, softly lit from below, illuminated red maples behind them Wide-angle view, deep layered composition with dark foreground branches, middle ground and distant background.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "04-kasa-c",
+   "prompt": "Large red Japanese paper umbrellas (wagasa) set up in a Japanese garden at night, softly lit from below, illuminated red maples behind them Calm windless night, mirror-like still water, deep blue-violet twilight sky.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "04-kasa-d",
+   "prompt": "Large red Japanese paper umbrellas (wagasa) set up in a Japanese garden at night, softly lit from below, illuminated red maples behind them Slightly lower viewpoint, gentle glow around the lights, rich but natural colors.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "05-yukitsuri-a",
+   "prompt": "A pine tree in a Japanese garden at night with traditional yukitsuri: straight ropes stretched in a cone shape from a central pole to the branches, a stone lantern glowing beside a pond, illuminated maples behind",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "05-yukitsuri-b",
+   "prompt": "A pine tree in a Japanese garden at night with traditional yukitsuri: straight ropes stretched in a cone shape from a central pole to the branches, a stone lantern glowing beside a pond, illuminated maples behind Wide-angle view, deep layered composition with dark foreground branches, middle ground and distant background.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "05-yukitsuri-c",
+   "prompt": "A pine tree in a Japanese garden at night with traditional yukitsuri: straight ropes stretched in a cone shape from a central pole to the branches, a stone lantern glowing beside a pond, illuminated maples behind Calm windless night, mirror-like still water, deep blue-violet twilight sky.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "05-yukitsuri-d",
+   "prompt": "A pine tree in a Japanese garden at night with traditional yukitsuri: straight ropes stretched in a cone shape from a central pole to the branches, a stone lantern glowing beside a pond, illuminated maples behind Slightly lower viewpoint, gentle glow around the lights, rich but natural colors.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "06-bonsai-a",
+   "prompt": "A row of bonsai trees on wooden display stands in a Japanese garden at night, a small autumn maple bonsai with red leaves in front, softly spotlit, dark background with a bamboo fence",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "06-bonsai-b",
+   "prompt": "A row of bonsai trees on wooden display stands in a Japanese garden at night, a small autumn maple bonsai with red leaves in front, softly spotlit, dark background with a bamboo fence Wide-angle view, deep layered composition with dark foreground branches, middle ground and distant background.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "06-bonsai-c",
+   "prompt": "A row of bonsai trees on wooden display stands in a Japanese garden at night, a small autumn maple bonsai with red leaves in front, softly spotlit, dark background with a bamboo fence Calm windless night, mirror-like still water, deep blue-violet twilight sky.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "06-bonsai-d",
+   "prompt": "A row of bonsai trees on wooden display stands in a Japanese garden at night, a small autumn maple bonsai with red leaves in front, softly spotlit, dark background with a bamboo fence Slightly lower viewpoint, gentle glow around the lights, rich but natural colors.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "07-path-a",
+   "prompt": "A garden path around a pond in a Japanese garden at night, illuminated maple canopy above in red, orange and yellow, low lanterns glowing softly beside the path, Tokyo",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "07-path-b",
+   "prompt": "A garden path around a pond in a Japanese garden at night, illuminated maple canopy above in red, orange and yellow, low lanterns glowing softly beside the path, Tokyo Wide-angle view, deep layered composition with dark foreground branches, middle ground and distant background.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "07-path-c",
+   "prompt": "A garden path around a pond in a Japanese garden at night, illuminated maple canopy above in red, orange and yellow, low lanterns glowing softly beside the path, Tokyo Calm windless night, mirror-like still water, deep blue-violet twilight sky.",
+   "W": 1088,
+   "H": 1680
+  },
+  {
+   "name": "07-path-d",
+   "prompt": "A garden path around a pond in a Japanese garden at night, illuminated maple canopy above in red, orange and yellow, low lanterns glowing softly beside the path, Tokyo Slightly lower viewpoint, gentle glow around the lights, rich but natural colors.",
+   "W": 1088,
+   "H": 1680
+  }
+ ]
+}
